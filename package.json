@@ -13,6 +13,7 @@
     "gatsby-plugin-react-helmet": "^3.2.5",
     "gatsby-plugin-sass": "^2.2.4",
     "gatsby-plugin-sharp": "^2.5.7",
+    "gatsby-plugin-typography": "^2.5.2",
     "gatsby-remark-copy-linked-files": "^2.2.4",
     "gatsby-remark-images": "^3.2.6",
     "gatsby-remark-relative-images": "^0.3.0",
@@ -28,7 +29,13 @@
     "prop-types": "^15.6.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
+    "react-grid-system": "^6.4.2",
+    "react-headroom": "^3.0.0",
     "react-helmet": "^6.0.0",
+    "react-typography": "^0.16.19",
+    "styled-components": "^5.1.1",
+    "typography": "^0.16.19",
+    "typography-theme-fairy-gates": "^0.16.19",
     "uuid": "^7.0.0"
   },
   "keywords": [

@@ -1,115 +1,113 @@
+import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
-import { Link } from 'gatsby'
+import { Col, Container, Row } from 'react-grid-system'
+import styled from 'styled-components'
 
-import logo from '../img/logo.svg'
-import facebook from '../img/social/facebook.svg'
-import instagram from '../img/social/instagram.svg'
-import twitter from '../img/social/twitter.svg'
-import vimeo from '../img/social/vimeo.svg'
+import theme from '../utils/theme'
+import { Anchor, Link } from './Anchor'
 
-const Footer = class extends React.Component {
-  render() {
-    return (
-      <footer className="footer has-background-black has-text-white-ter">
-        <div className="content has-text-centered">
-          <img
-            src={logo}
-            alt="Kaldi"
-            style={{ width: '14em', height: '10em' }}
-          />
-        </div>
-        <div className="content has-text-centered has-background-black has-text-white-ter">
-          <div className="container has-background-black has-text-white-ter">
-            <div style={{ maxWidth: '100vw' }} className="columns">
-              <div className="column is-4">
-                <section className="menu">
-                  <ul className="menu-list">
-                    <li>
-                      <Link to="/" className="navbar-item">
-                        Home
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/about">
-                        About
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/products">
-                        Products
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/contact/examples">
-                        Form Examples
-                      </Link>
-                    </li>
-                    <li>
-                      <a
-                        className="navbar-item"
-                        href="/admin/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Admin
-                      </a>
-                    </li>
-                  </ul>
-                </section>
-              </div>
-              <div className="column is-4">
-                <section>
-                  <ul className="menu-list">
-                    <li>
-                      <Link className="navbar-item" to="/blog">
-                        Latest Stories
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/contact">
-                        Contact
-                      </Link>
-                    </li>
-                  </ul>
-                </section>
-              </div>
-              <div className="column is-4 social">
-                <a title="facebook" href="https://facebook.com">
-                  <img
-                    src={facebook}
-                    alt="Facebook"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
-                <a title="twitter" href="https://twitter.com">
-                  <img
-                    className="fas fa-lg"
-                    src={twitter}
-                    alt="Twitter"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
-                <a title="instagram" href="https://instagram.com">
-                  <img
-                    src={instagram}
-                    alt="Instagram"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
-                <a title="vimeo" href="https://vimeo.com">
-                  <img
-                    src={vimeo}
-                    alt="Vimeo"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-    )
-  }
+const Root = styled.footer`
+  margin-top: ${theme.spacing(8)};
+  padding-top: ${theme.spacing(2)};
+  padding-bottom: ${theme.spacing(2)};
+  background: ${theme.palette.deepOcean};
+`
+
+const Small = styled.small`
+  display: block;
+  width: fit-content;
+  color: ${theme.palette.white};
+  margin-top: ${theme.spacing(2)};
+  font-size: ${theme.fontSize(12)};
+
+  ${({ right }) => right && `margin-left: auto`}
+`
+
+const Nav = styled.nav`
+  width: fit-content;
+  ${({ right }) => right && `margin-left: auto`}
+`
+
+export default function Footer() {
+  const { site } = useStaticQuery(graphql`
+    query FooterQuery {
+      site {
+        siteMetadata {
+          company
+          social {
+            twitter
+            linkedin
+            facebook
+          }
+        }
+      }
+    }
+  `)
+
+  const company = site.siteMetadata.company
+  const social = site.siteMetadata.social
+
+  return (
+    <Root>
+      <Container>
+        <Row>
+          <Col>
+            <Nav>
+              <Link footer to="/terms-of-use">
+                Terms of use
+              </Link>
+              <Link footer to="/security-policy">
+                Security policy
+              </Link>
+              <Link footer to="/privacy-policy">
+                Privacy policy
+              </Link>
+            </Nav>
+          </Col>
+          <Col>
+            <Nav right>
+              <Anchor
+                footer
+                target="_blank"
+                rel="noopener noreferrer"
+                href={`https://www.linkedin.com/company/${social.facebook}`}
+              >
+                LinkedIn
+              </Anchor>
+              <Anchor
+                footer
+                target="_blank"
+                rel="noopener noreferrer"
+                href={`https://www.twitter.com/${social.twitter}`}
+              >
+                Twitter
+              </Anchor>
+              <Anchor
+                footer
+                target="_blank"
+                rel="noopener noreferrer"
+                href={`https://www.facebook.com/${social.facebook}`}
+              >
+                Facebook
+              </Anchor>
+            </Nav>
+          </Col>
+        </Row>
+
+        <Row>
+          <Col>
+            <Small>
+              <strong>{company}</strong> © 2018 - {new Date().getFullYear()}.
+              All rights reserved.
+            </Small>
+          </Col>
+          <Col>
+            <Small right>
+              Made in <strong>Cluj-Napoca, Romania</strong>
+            </Small>
+          </Col>
+        </Row>
+      </Container>
+    </Root>
+  )
 }
-
-export default Footer
