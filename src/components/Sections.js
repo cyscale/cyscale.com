@@ -1,4 +1,3 @@
-import Image from 'gatsby-image'
 import { map } from 'lodash'
 import React from 'react'
 import { Col, Container, Row } from 'react-grid-system'
@@ -6,6 +5,7 @@ import styled from 'styled-components'
 
 import theme from '../utils/theme'
 import { Anchor } from './Anchor'
+import PreviewCompatibleImage from './PreviewCompatibleImage'
 
 const Root = styled.div``
 
@@ -44,7 +44,7 @@ export default function Sections({ sections }) {
                         </Col>
                         <Col md={2}></Col>
                         <Col md={5}>
-                            <Image fluid={image.childImageSharp.fluid} />
+                            <PreviewCompatibleImage imageInfo={image} />
                         </Col>
                     </Content>
                 ))}

@@ -1,10 +1,10 @@
-import Image from 'gatsby-image'
 import React from 'react'
 import { Col, Container, Row } from 'react-grid-system'
 import styled, { keyframes } from 'styled-components'
 
 import theme from '../utils/theme'
 import { Anchor } from './Anchor'
+import PreviewCompatibleImage from './PreviewCompatibleImage'
 
 const pulse = keyframes`
 0% {
@@ -103,7 +103,7 @@ const Small = styled.small`
     font-size: ${theme.fontSize(14)};
 `
 
-const Mockup = styled(Image)`
+const Mockup = styled(PreviewCompatibleImage)`
     border: 2px solid ${theme.palette.white};
     border-radius: ${theme.radius};
 `
@@ -117,12 +117,12 @@ export default function Hero({ image, title, heading, subheading }) {
                         <H1>{title}</H1>
                         <Description>{heading}</Description>
                         <Anchor contained target='_blank' rel='noopener noreferrer' href='https://app.cyscale.com/#'>
-                          Request Demo
+                            Request Demo
                         </Anchor>
                         <Small>{subheading}</Small>
                     </Col>
                     <Col>
-                        <Mockup fluid={image.childImageSharp.fluid} />
+                        <Mockup imageInfo={image} />
                     </Col>
                 </Row>
             </Container>

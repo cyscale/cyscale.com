@@ -6,22 +6,30 @@ import Hero from '../components/Hero'
 import Layout from '../components/Layout'
 import Sections from '../components/Sections'
 
-export function IndexPageTemplate({ data }) {
-    const { image, title, sections, heading, subheading, description } = get(data, 'markdownRemark.frontmatter')
+export function IndexPageTemplate({ image, title, sections, heading, subheading, description }) {
     return (
         <>
             <Hero image={image} title={title} heading={heading} subheading={subheading} description={description} />
             <main>
-                <Sections data={sections} />
+                <Sections sections={sections} />
             </main>
         </>
     )
 }
 
-export default function IndexPage(props) {
+export default function IndexPage({data}) {
+    const { image, title, sections, heading, subheading, description } = get(data, 'markdownRemark.frontmatter')
+
     return (
         <Layout>
-            <IndexPageTemplate {...props} />
+            <IndexPageTemplate
+                image={image}
+                title={title}
+                heading={heading}
+                sections={sections}
+                subheading={subheading}
+                description={description}
+            />
         </Layout>
     )
 }
