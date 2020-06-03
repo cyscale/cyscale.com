@@ -30,8 +30,8 @@ const Root = styled.div`
     ${({ cta }) =>
         cta &&
         `
-        border-radius: 100em;
         padding:${theme.spacing(1)};
+        border-radius: ${theme.radius};
         background-color: ${theme.palette.primary};
 
         & > span {
@@ -42,10 +42,11 @@ const Root = styled.div`
 
     & > a {
         align-items: center;
-        border-radius: 100em;
         display: inline-flex;
         justify-content: center;
-        padding: ${theme.spacing(1.314)};
+        width: ${theme.spacing(3.5)};
+        height: ${theme.spacing(3.5)};
+        border-radius: ${theme.radius};
         margin-right: ${theme.spacing(1)};
         background-color: ${theme.palette.white};
 
@@ -57,12 +58,13 @@ const Root = styled.div`
     & > span {
         color: ${theme.palette.white};
         font-size: ${theme.fontSize(14)};
-        margin-right: ${theme.spacing(2)};
+        margin-right: ${theme.spacing(1)};
     }
 
     @media (max-width: ${theme.bp.lg}) {
         & > a {
-            padding: ${theme.spacing(1)};
+            width: ${theme.spacing(3)};
+            height: ${theme.spacing(3)};
             margin-right: ${theme.spacing(1 / 2)};
         }
     }
@@ -71,15 +73,15 @@ const Root = styled.div`
 export default function Login({ separator = false, cta = false }) {
     return (
         <Root separator={separator} cta={cta}>
-            <span>Signup with</span>
+            <span>Login with</span>
             <a rel='noopener noreferrer' href='https://app.cyscale.com/#/login'>
-                <Provider src={microsoft} alt='Signup with Microsoft' />
+                <Provider src={microsoft} alt='Login with Microsoft' />
             </a>
             <a rel='noopener noreferrer' href='https://app.cyscale.com/#/login'>
-                <Provider src={google} alt='Signup with Google' />
+                <Provider src={google} alt='Login with Google' />
             </a>
             <a rel='noopener noreferrer' href='https://app.cyscale.com/#/login'>
-                <Provider src={github} alt='Signup with Github' />
+                <Provider src={github} alt='Login with Github' />
             </a>
         </Root>
     )

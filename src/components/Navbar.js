@@ -56,9 +56,16 @@ const Dropdown = styled.div`
 
 const Logo = styled(GatsbyLink)`
     margin-right: auto;
-
+    align-items: center;
+    display: inline-flex;
     & > img {
         height: ${theme.spacing(4)};
+    }
+
+    @media (max-width: ${theme.bp.lg}) {
+        & > img {
+            height: ${theme.spacing(3)};
+        }
     }
 `
 export default function Header() {
