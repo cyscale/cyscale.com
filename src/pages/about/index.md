@@ -1,19 +1,48 @@
 ---
 templateKey: 'about-page'
 path: /about
-title: About our values
+title: About us
+founders:
+    - image: /img/ceo.png
+      name: Ovidiu Cical
+      position: Founder, CEO
+      about: >
+          Cybersecurity Visionary, OWASP Cluj Chapter Leader, Biker
+    - image: /img/pm.jpg
+      name: Manuela Țicudean
+      position: Co-Founder, PM
+      about: >
+          Software and Project planning Specialist, Travel lover
+    - image: /img/cto.jpg
+      name: Andrei Milaș
+      position: Co-Founder, CTO
+      about: >
+          Enterprise Software Development Expert, Cloud addict
+strengths:
+    - image: /img/multi-cloud-security.png
+      title: Multi-Cloud Security
+      description: >
+          Scalable, cost-effective Security tailored for your multi-cloud environments and workflows. Works with AWS, Azure and Google Cloud.
+    - image: /img/dev-ops.png
+      title: DevSecOps
+      description: >
+          Enrich your teams with Docker, k8s, Terraform & give them application and platform security insights earlier in the development lifecycle.
+    - image: /img/enterprise-dev-ops.png
+      title: Enterprise DevOps
+      description: >
+          We offer secure, easy, adaptive and proven solutions across the entire DevOps workflow. And we do it at scale.
+    - image: /img/managed-security.png
+      title: Managed Security
+      description: >
+          Never before was there such a need to keep your business safe. The granular approach we have can easily take you there.
 ---
-### Shade-grown coffee
-Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade. The forest-like structure of shade coffee farms provides habitat for a great number of migratory and resident species.
 
-### Single origin
-Single-origin coffee is coffee grown within a single known geographic origin. Sometimes, this is a single farm or a specific collection of beans from a single country. The name of the coffee is then usually the place it was grown to whatever degree available.
+![cloud-native-security](/img/cloud-native-security.png)
 
-### Sustainable farming
-Sustainable agriculture is farming in sustainable ways based on an understanding of ecosystem services, the study of relationships between organisms and their environment. What grows where and how it is grown are a matter of choice and careful consideration for nature and communities.
-
-### Direct sourcing
-Direct trade is a form of sourcing practiced by some coffee roasters. Advocates of direct trade practices promote direct communication and price negotiation between buyer and farmer, along with systems that encourage and incentivize quality.
-
-### Reinvest profits
-We want to truly empower the communities that bring amazing coffee to you. That’s why we reinvest 20% of our profits into farms, local businesses and schools everywhere our coffee is grown. You can see the communities grow and learn more about coffee farming on our blog.
+# What makes us Unique
+**It all works seamlessly. Our Platform supports all major Cloud Providers: Amazon Web Services, Microsoft Azure, Google Cloud (soon Oracle Cloud and IBM Cloud).**
+-   Full multi-cloud providers coverage
+-   Customer Oriented Products and Services
+-   Total Ownership, from deployment to data acquisition
+-   Strong Partnership Program
+-   Cloud Agnostic Installation

@@ -19,7 +19,12 @@ module.exports = {
             },
         },
         {
-            // keep as first gatsby-source-filesystem plugin for gatsby image support
+            resolve: `gatsby-plugin-styled-components`,
+            options: {
+                displayName: false,
+            },
+        },
+        {
             resolve: 'gatsby-source-filesystem',
             options: {
                 path: `${__dirname}/static/img`,
@@ -40,6 +45,12 @@ module.exports = {
                 name: 'images',
             },
         },
+        {
+            resolve: 'gatsby-plugin-load-script',
+            options: {
+                src: '//js.hsforms.net/forms/shell.js',
+            },
+        },
         'gatsby-plugin-sharp',
         'gatsby-transformer-sharp',
         {
@@ -55,10 +66,7 @@ module.exports = {
                     {
                         resolve: 'gatsby-remark-images',
                         options: {
-                            // It's important to specify the maxWidth (in pixels) of
-                            // the content container as this plugin uses this as the
-                            // base for generating different widths of each image.
-                            maxWidth: 2048,
+                            maxWidth: 1140,
                         },
                     },
                     {
@@ -77,12 +85,11 @@ module.exports = {
             },
         },
         {
-            resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
+            resolve: 'gatsby-plugin-purgecss',
             options: {
-                develop: true, // Activates purging in npm run develop
-                purgeOnly: ['/all.sass'], // applies purging only on the bulma css file
+                develop: true,
             },
-        }, // must be after other CSS plugins
-        'gatsby-plugin-netlify', // make sure to keep it last in the array
+        },
+        'gatsby-plugin-netlify',
     ],
 }

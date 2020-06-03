@@ -3,29 +3,53 @@ import fairyGatesTheme from 'typography-theme-fairy-gates'
 
 import theme from './theme'
 
+const fallbackFonts = [
+    '-apple-system',
+    'BlinkMacSystemFont',
+    'Segoe UI',
+    'Roboto',
+    'Oxygen',
+    'Ubuntu',
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    'sans-serif',
+]
 fairyGatesTheme.baseFontSize = 16
 fairyGatesTheme.baseLineHeight = 1.5
 fairyGatesTheme.scaleRatio = 2
 fairyGatesTheme.blockMarginBottom = 0
 fairyGatesTheme.headerColor = theme.palette.deepOcean
 fairyGatesTheme.bodyColor = theme.palette.black70
+fairyGatesTheme.googleFonts = [
+    {
+        name: 'Work Sans',
+        styles: ['600'],
+    },
+    {
+        name: 'Quattrocento Sans',
+        styles: ['400', '400i', '700&display=swap'],
+    },
+]
+fairyGatesTheme.headerFontFamily = ['Work Sans', ...fallbackFonts]
+fairyGatesTheme.bodyFontFamily = ['Quattrocento Sans', ...fallbackFonts]
 
 fairyGatesTheme.overrideThemeStyles = () => ({
-  a: {
-    textShadow: "none",
-    backgroundImage: "none",
-    color: theme.palette.link,
-  },
-  "a.gatsby-resp-image-link": {
-    boxShadow: `none`,
-  },
+    a: {
+        textShadow: 'none',
+        backgroundImage: 'none',
+        color: theme.palette.link,
+    },
+    'a.gatsby-resp-image-link': {
+        boxShadow: `none`,
+    },
 })
 
 const typography = new Typography(fairyGatesTheme)
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== `production`) {
-  typography.injectStyles()
+    typography.injectStyles()
 }
 
 export default typography

@@ -6,23 +6,31 @@ import Hero from '../components/Hero'
 import Layout from '../components/Layout'
 import Sections from '../components/Sections'
 
-export function IndexPageTemplate({ image, title, sections, heading, subheading, description }) {
+export function IndexPageTemplate({ image, title, cta, sections, heading, subheading, description }) {
     return (
         <>
-            <Hero image={image} title={title} heading={heading} subheading={subheading} description={description} />
-            <main>
+            <Hero
+                cta={cta}
+                image={image}
+                title={title}
+                heading={heading}
+                subheading={subheading}
+                description={description}
+            />
+            <div name='content'>
                 <Sections sections={sections} />
-            </main>
+            </div>
         </>
     )
 }
 
-export default function IndexPage({data}) {
-    const { image, title, sections, heading, subheading, description } = get(data, 'markdownRemark.frontmatter')
+export default function IndexPage({ data }) {
+    const { image, title, sections, heading, cta, subheading, description } = get(data, 'markdownRemark.frontmatter')
 
     return (
         <Layout>
             <IndexPageTemplate
+                cta={cta}
                 image={image}
                 title={title}
                 heading={heading}
@@ -41,17 +49,21 @@ export const pageQuery = graphql`
                 title
                 image {
                     childImageSharp {
-                        fluid(maxWidth: 2048, quality: 100) {
+                        fluid(maxWidth: 720, quality: 100) {
                             ...GatsbyImageSharpFluid
                         }
                     }
+                }
+                cta {
+                    label
+                    link
                 }
                 heading
                 subheading
                 sections {
                     image {
                         childImageSharp {
-                            fluid(maxWidth: 2048, quality: 100) {
+                            fluid(maxWidth: 720, quality: 100) {
                                 ...GatsbyImageSharpFluid
                             }
                         }

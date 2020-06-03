@@ -1,9 +1,11 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-grid-system'
+import { Link as ScrollLink } from 'react-scroll'
 import styled, { keyframes } from 'styled-components'
 
 import theme from '../utils/theme'
-import { Anchor } from './Anchor'
+import { Link } from './Anchor'
+import Divider from './Divider'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
 const pulse = keyframes`
@@ -22,7 +24,7 @@ const pulse = keyframes`
 }
 `
 
-const Scroll = styled.a`
+const Scroll = styled(ScrollLink)`
     left: 50%;
     color: ${theme.palette.white};
     position: absolute;
@@ -81,8 +83,6 @@ const Scroll = styled.a`
 const Root = styled.section`
     position: relative;
     color: ${theme.palette.white};
-    padding-top: ${theme.spacing(8)};
-    padding-bottom: ${theme.spacing(17)};
     background: ${theme.palette.deepOcean};
 `
 
@@ -108,27 +108,31 @@ const Mockup = styled(PreviewCompatibleImage)`
     border-radius: ${theme.radius};
 `
 
-export default function Hero({ image, title, heading, subheading }) {
+export default function Hero({ image, title, cta, heading, subheading, scroll = true }) {
     return (
         <Root>
             <Container>
+                <Divider spacing={6} />
                 <Row>
                     <Col>
                         <H1>{title}</H1>
                         <Description>{heading}</Description>
-                        <Anchor contained target='_blank' rel='noopener noreferrer' href='https://app.cyscale.com/#'>
-                            Request Demo
-                        </Anchor>
+                        <Link contained to={cta.link}>
+                            {cta.label}
+                        </Link>
                         <Small>{subheading}</Small>
                     </Col>
                     <Col>
                         <Mockup imageInfo={image} />
                     </Col>
                 </Row>
+                <Divider spacing={12} />
             </Container>
-            <Scroll href='#'>
-                <span></span>
-            </Scroll>
+            {scroll && (
+                <Scroll to='content' smooth={true} duration={500}>
+                    <span></span>
+                </Scroll>
+            )}
         </Root>
     )
 }

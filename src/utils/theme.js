@@ -6,7 +6,7 @@ const theme = {
     accent: "#009B95",
 
     //Links
-    link: "#007FFF",
+    link: "#1071F2",
 
     //Messages
     error: "#CC0066",
@@ -35,7 +35,7 @@ const theme = {
     black70: "#4C4C4C",
   },
 
-  radius: `${4 / 16}rem`,
+  radius: `${3 / 16}rem`,
   spacing: n => `${(8 * n) / 16}rem`,
   fontSize: n => `${n / 16}rem`,
 }

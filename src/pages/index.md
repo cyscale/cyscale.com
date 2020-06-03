@@ -3,14 +3,17 @@ templateKey: index-page
 title: Built to protect the Cloud
 image: /img/mockup.png
 heading: Next-generation security, compliance & governance tools to continuously identify vulnerabilities, avoid data loss & protect cloud environments with automatic remediations.
-subheading: No credit card required. Access Demo for an interactive experience!
+subheading: No credit card required. Request Demo for an interactive experience!
+cta: 
+    link: /demo
+    label: Request Demo
 sections: 
 - image: /img/control-and-visibility.png
   title: Cloud Security for a safer World
   text: >
     A multi-Cloud Platform for all major Cloud Providers: Amazon Web Services, Microsoft Azure, Google Cloud, Oracle Cloud and IBM Cloud. We handle Cloud Native Security (VMs, Network, Serverless, Databases, Apps), Vulnerability and Threat Management, Cloud Inventory, Cost reduction, Compliance and Secure Cloud Design.
   cta: 
-    link: https://cyscale.com
+    link: /demo
     label: Request Demo
 - image: /img/control-and-visibility.png
   title: Control and Visibility
