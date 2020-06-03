@@ -6,12 +6,6 @@ import styled from 'styled-components'
 import theme from '../utils/theme'
 
 const sharedStyle = `
-margin-right: ${theme.spacing(4)};
-
-&:last-child {
-  margin-right: 0;
-}
-
 &:hover {
   cursor: pointer;
   opacity: 0.8;
@@ -33,8 +27,8 @@ const borderStyle = `
 display: inline-block;
 font-weight: bold;
 text-align: center;
-border-radius: 100em;
-border: 2px solid  ${theme.palette.link};
+border-radius:${theme.radius};
+border: 1px solid  ${theme.palette.link};
 padding: ${theme.spacing(1)} ${theme.spacing(3)};
 
 &:hover {
@@ -47,6 +41,10 @@ padding: ${theme.spacing(1)} ${theme.spacing(3)};
 const footerStyle = `
 color: ${theme.palette.white};
 font-size: ${theme.fontSize(14)};
+margin-right: ${theme.spacing(2)};
+&:last-child {
+    margin-right: 0;
+}
 `
 
 const menuStyle = `
@@ -54,6 +52,13 @@ color: ${theme.palette.white};
 font-weight: bold;
 text-transform: uppercase;
 font-size: ${theme.fontSize(14)};
+`
+
+const ctaStyle =
+    containedStyle +
+    `
+font-size: ${theme.fontSize(18)};
+padding: ${theme.spacing(2)} ${theme.spacing(4)};   
 `
 
 const darkStyle = `
@@ -69,6 +74,7 @@ export const Link = styled(FilteredLink)`
   ${({ border }) => border && borderStyle}
   ${({ contained }) => contained && containedStyle}
   ${({ footer }) => footer && footerStyle}
+  ${({ cta }) => cta && ctaStyle}
 `
 
 export const ScrollLink = styled(FilteredScrollLink)`
@@ -78,6 +84,7 @@ export const ScrollLink = styled(FilteredScrollLink)`
   ${({ border }) => border && borderStyle}
   ${({ contained }) => contained && containedStyle}
   ${({ footer }) => footer && footerStyle}
+  ${({ cta }) => cta && ctaStyle}
 `
 
 export const Anchor = styled('a')`
@@ -87,4 +94,5 @@ export const Anchor = styled('a')`
   ${({ border }) => border && borderStyle}
   ${({ contained }) => contained && containedStyle}
   ${({ footer }) => footer && footerStyle}
+  ${({ cta }) => cta && ctaStyle}
 `

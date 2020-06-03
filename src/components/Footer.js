@@ -1,10 +1,11 @@
 import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
-import { Col, Container, Row } from 'react-grid-system'
+import { Col, Container, Row, useScreenClass } from 'react-grid-system'
 import styled from 'styled-components'
 
 import theme from '../utils/theme'
 import { Anchor, Link } from './Anchor'
+import Divider from './Divider'
 
 const Root = styled.footer`
     padding-top: ${theme.spacing(2)};
@@ -24,10 +25,12 @@ const Small = styled.small`
 
 const Nav = styled.nav`
     width: fit-content;
-    ${({ right }) => right && `margin-left: auto`}
+    ${({ right }) => right && `margin-left: auto;`}
 `
 
 export default function Footer() {
+    const screenClass = useScreenClass()
+
     const { site } = useStaticQuery(graphql`
         query FooterQuery {
             site {
@@ -50,23 +53,23 @@ export default function Footer() {
         <Root>
             <Container>
                 <Row>
-                    <Col>
+                    <Col md={6} sm={12}>
                         <Nav>
-                            <Link footer={true} to='/policies/terms-of-use'>
+                            <Link footer to='/policies/terms-of-use'>
                                 Terms of use
                             </Link>
-                            <Link footer={true} to='/policies/security-policy'>
+                            <Link footer to='/policies/security-policy'>
                                 Security policy
                             </Link>
-                            <Link footer={true} to='/policies/privacy-policy'>
+                            <Link footer to='/policies/privacy-policy'>
                                 Privacy policy
                             </Link>
                         </Nav>
                     </Col>
-                    <Col>
-                        <Nav right>
+                    <Col md={6} sm={12}>
+                        <Nav right={['xl', 'lg', 'md'].includes(screenClass)}>
                             <Anchor
-                                footer={true}
+                                footer
                                 target='_blank'
                                 rel='noopener noreferrer'
                                 href={`https://www.linkedin.com/company/${social.facebook}`}
@@ -74,7 +77,7 @@ export default function Footer() {
                                 LinkedIn
                             </Anchor>
                             <Anchor
-                                footer={true}
+                                footer
                                 target='_blank'
                                 rel='noopener noreferrer'
                                 href={`https://www.twitter.com/${social.twitter}`}
@@ -82,7 +85,7 @@ export default function Footer() {
                                 Twitter
                             </Anchor>
                             <Anchor
-                                footer={true}
+                                footer
                                 target='_blank'
                                 rel='noopener noreferrer'
                                 href={`https://www.facebook.com/${social.facebook}`}
@@ -92,15 +95,15 @@ export default function Footer() {
                         </Nav>
                     </Col>
                 </Row>
-
+                {!['xl', 'lg', 'md'].includes(screenClass) && <Divider spacing={2} />}
                 <Row>
-                    <Col>
+                    <Col md={6} sm={12}>
                         <Small>
                             <strong>{company}</strong> © 2018 - {new Date().getFullYear()}. All rights reserved.
                         </Small>
                     </Col>
-                    <Col>
-                        <Small right>
+                    <Col md={6} sm={12}>
+                        <Small right={['xl', 'lg', 'md'].includes(screenClass)}>
                             Made in <strong>Cluj-Napoca, Romania</strong>
                         </Small>
                     </Col>

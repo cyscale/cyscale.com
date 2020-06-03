@@ -14,9 +14,8 @@ export default function Consent() {
     return (
         <CookieConsent
             style={{
-                backdropFilter: 'blur(4px)',
-                background: 'rgba(255, 255, 255, 0.95)',
                 alignItems: 'center',
+                background: theme.palette.white,
                 borderTop: `1px solid ${theme.palette.black05}`,
             }}
             enableDeclineButton
@@ -24,17 +23,16 @@ export default function Consent() {
                 boxSizing: 'border-box',
                 borderRadius: theme.radius,
                 color: theme.palette.white,
-                fontSize: theme.fontSize(13),
+                fontSize: theme.fontSize(14),
                 backgroundColor: theme.palette.link,
+                fontWeight: 'bold',
                 padding: `${theme.spacing(1 / 2)} ${theme.spacing(2)}`,
             }}
             declineButtonStyle={{
                 marginRight: 0,
-                borderRadius: theme.radius,
-                color: theme.palette.white,
-                fontSize: theme.fontSize(13),
-                backgroundColor: theme.palette.error,
-                padding: `${theme.spacing(1 / 2)} ${theme.spacing(2)}`,
+                color: theme.palette.black,
+                fontSize: theme.fontSize(14),
+                backgroundColor: 'transparent',
             }}
             location='bottom'
             expires={150}

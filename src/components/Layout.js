@@ -14,6 +14,7 @@ const Main = styled.main`
 
 const TemplateWrapper = ({ children }) => {
     const { title, description } = useSiteMetadata()
+
     return (
         <div>
             <Helmet>

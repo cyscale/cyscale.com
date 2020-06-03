@@ -1,11 +1,11 @@
 import React from 'react'
-import { Col, Container, Row } from 'react-grid-system'
+import { Col, Container, Row, useScreenClass } from 'react-grid-system'
 import { Link as ScrollLink } from 'react-scroll'
 import styled, { keyframes } from 'styled-components'
 
 import theme from '../utils/theme'
-import { Link } from './Anchor'
 import Divider from './Divider'
+import Login from './Login'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
 const pulse = keyframes`
@@ -90,17 +90,21 @@ const H1 = styled.h1`
     margin: 0;
     color: ${theme.palette.white};
     font-size: ${theme.fontSize(64)};
+
+    @media (max-width: ${theme.bp.lg}) {
+        font-size: ${theme.fontSize(42)};
+    }
 `
 
 const Description = styled.p`
     margin-top: ${theme.spacing(1)};
-    margin-bottom: ${theme.spacing(5)};
 `
 
-const Small = styled.small`
+const Small = styled.p`
     display: block;
     margin-top: ${theme.spacing(1)};
-    font-size: ${theme.fontSize(14)};
+    margin-bottom: ${theme.spacing(5)};
+    // font-size: ${theme.fontSize(14)};
 `
 
 const Mockup = styled(PreviewCompatibleImage)`
@@ -109,26 +113,31 @@ const Mockup = styled(PreviewCompatibleImage)`
 `
 
 export default function Hero({ image, title, cta, heading, subheading, scroll = true }) {
+    const screenClass = useScreenClass()
+
     return (
         <Root>
             <Container>
-                <Divider spacing={6} />
+                <Divider spacing={['xl', 'lg'].includes(screenClass) ? 6 : 2} />
                 <Row>
-                    <Col>
+                    <Col xl={6} lg={7} md={12}>
                         <H1>{title}</H1>
                         <Description>{heading}</Description>
-                        <Link contained to={cta.link}>
-                            {cta.label}
-                        </Link>
                         <Small>{subheading}</Small>
+                        <Login cta />
                     </Col>
-                    <Col>
+                    {!['xl', 'lg'].includes(screenClass) && (
+                        <Col md={12}>
+                            <Divider spacing={2} />
+                        </Col>
+                    )}
+                    <Col xl={6} lg={5} md={12}>
                         <Mockup imageInfo={image} />
                     </Col>
                 </Row>
-                <Divider spacing={12} />
+                <Divider spacing={['xl', 'lg'].includes(screenClass) ? 12 : 2} />
             </Container>
-            {scroll && (
+            {['xl', 'lg'].includes(screenClass) && scroll && (
                 <Scroll to='content' smooth={true} duration={500}>
                     <span></span>
                 </Scroll>
