@@ -11,7 +11,7 @@ export function PolicyPageTemplate({ title, content, component }) {
     return (
         <Container>
             <Divider spacing={2} />
-            <PageContent className='content' content={content} />
+            <PageContent  content={content} />
             <Divider spacing={2} />
         </Container>
     )

@@ -1,3 +1,5 @@
+import '../utils/grid.scss'
+
 import { withPrefix } from 'gatsby'
 import React from 'react'
 import { Helmet } from 'react-helmet'

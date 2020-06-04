@@ -11,7 +11,10 @@ cta:
 
 # Supported Compliance Standards
 
-## AWS Amazon Web Services Compliance
+<div class="row">
+<div class="col-md-4 col-sm-12">
+
+#### AWS Amazon Web Services Compliance
 
 -   CIS v1.2.0
 -   ISO 27001
@@ -24,8 +27,11 @@ cta:
 -   HITRUST Version 9.2
 -   SOC2 NIST CSF 1.1
 -   NIST 800-171 Rev 1
+</div>
 
-## Microsoft Azure Compliance
+<div class="col-md-4 col-sm-12">
+
+#### Microsoft Azure Compliance
 
 -   CIS 1.1
 -   ISO 27001
@@ -37,8 +43,11 @@ cta:
 -   NIST CSF 1.1
 -   NIST 800-53 Rev 4
 -   CSA CCM v3.0.1
+</div>
 
-## GCP Google Cloud Platform Compliance
+<div class="col-md-4 col-sm-12">
+
+#### GCP Google Cloud Platform Compliance
 
 -   CIS v1.0.0
 -   ISO 27001
@@ -48,14 +57,28 @@ cta:
 -   PCI-DSS v3.2
 -   NIST 800-53 Rev 4
 
+</div>
+</div>
+
 # CIS v1.5 Kubernetes
+
+<div class="row">
+
+<div class="col-md-6">
 
 The Center for Internet Security (CIS) Kubernetes Benchmark is a reference document that can be used by system administrators, security and audit professionals and other IT roles to establish a secure configuration baseline for Kubernetes. CIS Benchmarks are developed by an open community of security practitioners and licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike](/) 4.0 Internal Public License. Cyscale Platform is using the latest benchmark for Kubernetes (CIS Benchmark v1.5.0). This benchmark can be used to harden the Kubernetes components.
 
+</div>
+
+<div class="col-md-6">
+
 ![flavor wheel](/img/cis.png)
 
-# See if for yourself
+</div>
+</div>
 
-Cyscale Cloud Asset Inventory - Management, Security and Compliance
+# See if for yourself!
 
-[![Demo video](https://img.youtube.com/vi/6ziXncxzbBc/0.jpg)](https://www.youtube.com/watch?v=6ziXncxzbBc 'Click to watch')
+### Cyscale Cloud Asset Inventory - Management, Security and Compliance
+
+<iframe width="720" height="360" src="https://www.youtube-nocookie.com/embed/6ziXncxzbBc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

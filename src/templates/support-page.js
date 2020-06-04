@@ -14,7 +14,7 @@ export function SupportPageTemplate({ title, content, component }) {
             <Divider spacing={2} />
             <Row component='section' justify='center'>
                 <Col>
-                    <PageContent className='content' content={content} />
+                    <PageContent  content={content} />
                 </Col>
             </Row>
             <Divider spacing={2} />

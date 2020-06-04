@@ -50,11 +50,15 @@ collections:
                 - { label: Heading, name: heading, widget: string }
                 - { label: Subheading, name: subheading, widget: string }
                 - {
-                      label: CTA,
-                      name: cta,
-                      widget: object,
+                      label: Providers,
+                      name: providers,
+                      widget: list,
                       fields:
-                          [{ label: Link, name: link, widget: string }, { label: Label, name: label, widget: string }],
+                          [
+                              { label: Image, name: image, widget: image },
+                              { label: Name, name: name, widget: string },
+                              { label: Production, name: production, widget: boolean },
+                          ],
                   }
                 - {
                       label: Sections,

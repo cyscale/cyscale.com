@@ -59,12 +59,12 @@ const Logo = styled(GatsbyLink)`
     align-items: center;
     display: inline-flex;
     & > img {
-        height: ${theme.spacing(4)};
+        height: ${theme.spacing(5)};
     }
 
     @media (max-width: ${theme.bp.lg}) {
         & > img {
-            height: ${theme.spacing(3)};
+            height: ${theme.spacing(2.5)};
         }
     }
 `

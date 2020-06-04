@@ -1,11 +1,13 @@
 import { graphql } from 'gatsby'
 import React from 'react'
-import { Col, Container, Row } from 'react-grid-system'
+import { Container } from 'react-grid-system'
 
 import Content, { HTMLContent } from '../components/Content'
 import Divider from '../components/Divider'
 import Hero from '../components/Hero'
 import Layout from '../components/Layout'
+
+
 
 export function CompliancePageTemplate({ image, title, cta, component, content, heading, subheading }) {
     const PageContent = component || Content
@@ -15,11 +17,7 @@ export function CompliancePageTemplate({ image, title, cta, component, content, 
             <Hero cta={cta} image={image} title={title} heading={heading} subheading={subheading} />
             <Container name='content'>
                 <Divider spacing={2} />
-                <Row>
-                    <Col>
-                        <PageContent className='content' content={content} />
-                    </Col>
-                </Row>
+                    <PageContent content={content} />
                 <Divider spacing={2} />
             </Container>
         </>

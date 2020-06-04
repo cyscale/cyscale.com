@@ -6,14 +6,15 @@ import Hero from '../components/Hero'
 import Layout from '../components/Layout'
 import Sections from '../components/Sections'
 
-export function IndexPageTemplate({ image, title, cta, sections, heading, subheading, description }) {
+export function IndexPageTemplate({ image, title, sections, providers, production, heading, subheading, description }) {
     return (
         <>
             <Hero
-                cta={cta}
                 image={image}
                 title={title}
                 heading={heading}
+                providers={providers}
+                production={production}
                 subheading={subheading}
                 description={description}
             />
@@ -25,16 +26,20 @@ export function IndexPageTemplate({ image, title, cta, sections, heading, subhea
 }
 
 export default function IndexPage({ data }) {
-    const { image, title, sections, heading, cta, subheading, description } = get(data, 'markdownRemark.frontmatter')
+    const { image, title, sections, heading, subheading, production, providers, description } = get(
+        data,
+        'markdownRemark.frontmatter'
+    )
 
     return (
         <Layout>
             <IndexPageTemplate
-                cta={cta}
                 image={image}
                 title={title}
                 heading={heading}
                 sections={sections}
+                providers={providers}
+                production={production}
                 subheading={subheading}
                 description={description}
             />
@@ -54,12 +59,19 @@ export const pageQuery = graphql`
                         }
                     }
                 }
-                cta {
-                    label
-                    link
-                }
                 heading
                 subheading
+                providers {
+                    image {
+                        childImageSharp {
+                            fluid(maxWidth: 720, quality: 100) {
+                                ...GatsbyImageSharpFluid
+                            }
+                        }
+                    }
+                    name
+                    production
+                }
                 sections {
                     image {
                         childImageSharp {

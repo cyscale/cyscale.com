@@ -84,12 +84,6 @@ module.exports = {
                 modulePath: `${__dirname}/src/cms/cms.js`,
             },
         },
-        {
-            resolve: 'gatsby-plugin-purgecss',
-            options: {
-                develop: true,
-            },
-        },
         'gatsby-plugin-netlify',
     ],
 }

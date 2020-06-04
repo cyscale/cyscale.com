@@ -7,6 +7,7 @@ import theme from '../utils/theme'
 import Divider from './Divider'
 import Login from './Login'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
+import Providers from './Providers'
 
 const pulse = keyframes`
 0% {
@@ -29,7 +30,7 @@ const Scroll = styled(ScrollLink)`
     color: ${theme.palette.white};
     position: absolute;
     display: inline-block;
-    bottom: ${theme.spacing(2)};
+    bottom: ${theme.spacing(3)};
     transform: translateX(-50%);
     padding-top: ${theme.spacing(8)};
 
@@ -98,12 +99,12 @@ const H1 = styled.h1`
 
 const Description = styled.p`
     margin-top: ${theme.spacing(1)};
+    margin-bottom: ${theme.spacing(4)};
 `
 
 const Small = styled.p`
     display: block;
-    margin-top: ${theme.spacing(1)};
-    margin-bottom: ${theme.spacing(5)};
+    margin-top: ${theme.spacing(2)};
     // font-size: ${theme.fontSize(14)};
 `
 
@@ -112,7 +113,7 @@ const Mockup = styled(PreviewCompatibleImage)`
     border-radius: ${theme.radius};
 `
 
-export default function Hero({ image, title, cta, heading, subheading, scroll = true }) {
+export default function Hero({ image, title, cta, heading, providers, subheading, scroll = true }) {
     const screenClass = useScreenClass()
 
     return (
@@ -123,8 +124,10 @@ export default function Hero({ image, title, cta, heading, subheading, scroll = 
                     <Col xl={6} lg={7} md={12}>
                         <H1>{title}</H1>
                         <Description>{heading}</Description>
-                        <Small>{subheading}</Small>
                         <Login cta />
+                        <Small>
+                            <strong>{subheading}</strong>
+                        </Small>
                     </Col>
                     {!['xl', 'lg'].includes(screenClass) && (
                         <Col md={12}>
@@ -135,7 +138,8 @@ export default function Hero({ image, title, cta, heading, subheading, scroll = 
                         <Mockup imageInfo={image} />
                     </Col>
                 </Row>
-                <Divider spacing={['xl', 'lg'].includes(screenClass) ? 12 : 2} />
+                {providers && <Providers providers={providers} />}
+                <Divider spacing={['xl', 'lg'].includes(screenClass) ? 8 : 2} />
             </Container>
             {['xl', 'lg'].includes(screenClass) && scroll && (
                 <Scroll to='content' smooth={true} duration={500}>

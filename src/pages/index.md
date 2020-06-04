@@ -3,10 +3,23 @@ templateKey: index-page
 title: Built to protect the Cloud
 image: /img/mockup.png
 heading: Next-generation security, compliance & governance tools to continuously identify vulnerabilities, avoid data loss & protect cloud environments with automatic remediations.
-subheading: No credit card required. Signup for an interactive experience!
-cta:
-    link: https://app.cyscale.com/#/login
-    label: Signup for Free
+subheading: No credit card required. Sign up for free!
+providers:
+    - image: /img/aws.png
+      name: AWS Security
+      production: true
+    - image: /img/azure.png
+      production: true
+      name: Azure Security
+    - image: /img/gcp.png
+      production: true
+      name: GCP Security
+    - image: /img/kubernetes.png
+      name: Kubernetes
+      production: false
+    - image: /img/oracle.png
+      name: Oracle
+      production: false
 sections:
     - image: /img/control-and-visibility.png
       title: Cloud Security for a safer World

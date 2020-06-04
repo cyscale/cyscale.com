@@ -10,15 +10,6 @@ import Layout from '../components/Layout'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import theme from '../utils/theme'
 
-const Body = styled.div`
-    margin-top: ${theme.spacing(8)};
-    & img {
-        padding-left: ${theme.spacing(2)};
-        float: right;
-        max-width: 50%;
-    }
-`
-
 const Founder = styled.div`
     text-align: center;
     & img {
@@ -50,40 +41,40 @@ export function AboutPageTemplate({ title, founders, strengths, content, compone
     return (
         <Container>
             <Divider spacing={2} />
-            <Row component='section' justify='center'>
-                {map(founders, ({ name, position, image, about }, key) => (
-                    <Col key={key} md={3}>
-                        <Founder>
-                            <PreviewCompatibleImage imageInfo={image} />
-                            <h3>{name}</h3>
-                            <small>{position}</small>
-                            <p>{about}</p>
-                        </Founder>
-                    </Col>
-                ))}
+            <Row component='section'>
+                <Col>
+                    <PageContent content={content} />
+                </Col>
             </Row>
-            <Divider spacing={8} />
-            <Row>
+            <Divider spacing={6} />
+            <Row component='section'>
                 {map(strengths, ({ title, description, image }, key) => (
-                    <Col key={key}>
+                    <Col md={3} sm={6} xs={6} key={key}>
                         <Strength>
                             <PreviewCompatibleImage imageInfo={image} />
                             <h3>{title}</h3>
                             <p>{description}</p>
                         </Strength>
+                        <Divider spacing={2} />
                     </Col>
                 ))}
             </Row>
-            <Divider spacing={8} />
-            <Row>
-                <Col>
-                    <Body>
-                        <PageContent className='content' content={content} />
-                    </Body>
-                </Col>
+            <Divider spacing={6} />
+            <Row component='section'>
+                {map(founders, ({ name, position, image, about }, key) => (
+                    <Col md={3} sm={6} xs={6} key={key}>
+                        <Founder>
+                            <PreviewCompatibleImage imageInfo={image} />
+                            <h3>{name}</h3>
+                            <small>{position}</small>
+                            <p>{about}</p>
+                            <Divider spacing={2} />
+                        </Founder>
+                    </Col>
+                ))}
             </Row>
-            <Divider spacing={2} />
-                    
+
+            <Divider spacing={4} />
         </Container>
     )
 }

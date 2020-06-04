@@ -12,12 +12,17 @@ founders:
       name: Manuela Țicudean
       position: Co-Founder, PM
       about: >
-          Software and Project planning Specialist, Travel lover
+          Software and Project planning Specialist
     - image: /img/cto.jpg
       name: Andrei Milaș
       position: Co-Founder, CTO
       about: >
           Enterprise Software Development Expert, Cloud addict
+    - image: /img/fe.jpg
+      name: Gabriel Ceicoschi
+      position: Front-End
+      about: >
+          Javascript, UI/UX and Cloud Security – not necessarily in this order
 strengths:
     - image: /img/multi-cloud-security.png
       title: Multi-Cloud Security
@@ -37,12 +42,33 @@ strengths:
           Never before was there such a need to keep your business safe. The granular approach we have can easily take you there.
 ---
 
+<div class='about'>
+
 ![cloud-native-security](/img/cloud-native-security.png)
 
 # What makes us Unique
-**It all works seamlessly. Our Platform supports all major Cloud Providers: Amazon Web Services, Microsoft Azure, Google Cloud (soon Oracle Cloud and IBM Cloud).**
--   Full multi-cloud providers coverage
--   Customer Oriented Products and Services
--   Total Ownership, from deployment to data acquisition
--   Strong Partnership Program
--   Cloud Agnostic Installation
+
+**Cyscale Power Cloud Platform supports all major providers: Amazon Web Services, Microsoft Azure, Google Cloud (soon Oracle and IBM Cloud).**
+
+-   Continuous Security and Compliance for AWS, Azure, and GCP
+-   Automatic remediations by learning your cloud infrastructure
+-   Integrate your CI/CD tools or scan your IaC templates
+-   Cloud-agnostic installation available
+
+</div>
+
+<style>
+.about  img {
+  padding-left: 16px;
+  float: right;
+  max-width: 50%;
+}
+
+  @media (max-width: 992px) {
+    .about  img {
+        padding-left: unset;
+        float: unset;
+        max-width: 100%;
+    }
+  }
+</style>
