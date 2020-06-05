@@ -14,14 +14,14 @@ const Main = styled.main`
     min-height: calc(100vh - 160px);
 `
 
-const TemplateWrapper = ({ children }) => {
-    const { title, description } = useSiteMetadata()
+const Layout = ({ children, title }) => {
+    const { title: metaTitle, description } = useSiteMetadata()
 
     return (
         <div>
             <Helmet>
                 <html lang='en' />
-                <title>{title}</title>
+                <title>{`${metaTitle}${title ? ' | ' + title : ''}`}</title>
                 <meta name='description' content={description} />
                 <link
                     sizes='57x57'
@@ -110,4 +110,4 @@ const TemplateWrapper = ({ children }) => {
     )
 }
 
-export default TemplateWrapper
+export default Layout

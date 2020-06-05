@@ -14,7 +14,7 @@ export function ContactPageTemplate({ title, content, component }) {
             <Divider spacing={2} />
             <Row component='section' justify='center'>
                 <Col>
-                    <PageContent  content={content} />
+                    <PageContent content={content} />
                 </Col>
             </Row>
             <Divider spacing={2} />
@@ -41,7 +41,7 @@ function ContactPage({ data }) {
     }, [])
 
     return (
-        <Layout>
+        <Layout title={title}>
             <ContactPageTemplate title={title} content={post.html} component={HTMLContent} />
         </Layout>
     )

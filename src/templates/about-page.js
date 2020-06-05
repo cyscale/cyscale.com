@@ -84,7 +84,7 @@ function AboutPage({ data }) {
     const { founders, strengths, title } = post.frontmatter
 
     return (
-        <Layout>
+        <Layout title={title}>
             <AboutPageTemplate
                 title={title}
                 founders={founders}
@@ -108,7 +108,7 @@ export const aboutPageQuery = graphql`
                     image {
                         childImageSharp {
                             fluid(maxWidth: 256, quality: 100) {
-                                ...GatsbyImageSharpFluid
+                                ...GatsbyImageSharpFluid_withWebp
                             }
                         }
                     }
@@ -120,7 +120,7 @@ export const aboutPageQuery = graphql`
                     image {
                         childImageSharp {
                             fluid(maxWidth: 250, quality: 100) {
-                                ...GatsbyImageSharpFluid
+                                ...GatsbyImageSharpFluid_withWebp
                             }
                         }
                     }

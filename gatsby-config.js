@@ -51,6 +51,12 @@ module.exports = {
                 src: '//js.hsforms.net/forms/shell.js',
             },
         },
+        {
+            resolve: 'gatsby-plugin-load-script',
+            options: {
+                src: '//js.hs-scripts.com/5413427.js',
+            },
+        },
         'gatsby-plugin-sharp',
         'gatsby-transformer-sharp',
         {

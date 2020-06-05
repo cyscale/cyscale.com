@@ -4,9 +4,53 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+
+.custom-shape-divider-bottom-1591349939 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1591349939 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 79px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1591349939 .shape-fill {
+    fill: #ffffff;
+}
+
+// #hubspot-messages-iframe-container {
+//     z-index: (998 !important);
+// }
+
+/** For tablet devices **/
+@media (min-width: 768px) and (max-width: 1023px) {
+    .custom-shape-divider-bottom-1591349939 svg {
+        width: calc(200% + 1.3px);
+        height: 79px;
+    }
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .custom-shape-divider-bottom-1591349939 svg {
+        width: calc(225% + 1.3px);
+        height: 80px;
+    }
+}
+
 html {
     box-sizing: border-box;
     -ms-overflow-style: scrollbar;
+    font-size: 100%;
 }
 
 *,

@@ -21,20 +21,24 @@ fairyGatesTheme.scaleRatio = 2
 fairyGatesTheme.blockMarginBottom = 0
 fairyGatesTheme.headerColor = theme.palette.deepOcean
 fairyGatesTheme.bodyColor = theme.palette.black70
-fairyGatesTheme.googleFonts = [
-    {
-        name: 'Work Sans',
-        styles: ['600'],
-    },
-    {
-        name: 'Quattrocento Sans',
-        styles: ['400', '400i', '700&display=swap'],
-    },
-]
-fairyGatesTheme.headerFontFamily = ['Work Sans', ...fallbackFonts]
-fairyGatesTheme.bodyFontFamily = ['Quattrocento Sans', ...fallbackFonts]
+// fairyGatesTheme.googleFonts = [
+//     {
+//         name: 'Work Sans',
+//         styles: ['600'],
+//     },
+//     {
+//         name: 'Quattrocento Sans',
+//         styles: ['400', '400i', '700&display=swap'],
+//     },
+// ]
+delete fairyGatesTheme.googleFonts
+fairyGatesTheme.headerFontFamily = [...fallbackFonts]
+fairyGatesTheme.bodyFontFamily = [...fallbackFonts]
 
 fairyGatesTheme.overrideThemeStyles = () => ({
+    html: {
+        fontSize: '100%'
+    },
     a: {
         textShadow: 'none',
         backgroundImage: 'none',

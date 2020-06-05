@@ -41,7 +41,7 @@ function SupportPage({ data }) {
     }, [])
 
     return (
-        <Layout>
+        <Layout title={title}>
             <SupportPageTemplate title={title} content={post.html} component={HTMLContent} />
         </Layout>
     )

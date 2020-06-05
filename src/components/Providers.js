@@ -33,7 +33,7 @@ export default function Providers({ providers }) {
     )
     return (
         <div>
-            <Divider spacing={2} />
+            <Divider spacing={['lg', 'xl'].includes(screenClass) ? 4 : 2} />
             <Row>
                 {!!providers &&
                     map(filteredProviders, ({ image, name, production }) => (

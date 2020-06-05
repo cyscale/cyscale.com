@@ -41,7 +41,7 @@ function DemoPage({ data }) {
     }, [])
 
     return (
-        <Layout>
+        <Layout title={title}>
             <DemoPageTemplate title={title} content={post.html} component={HTMLContent} />
         </Layout>
     )

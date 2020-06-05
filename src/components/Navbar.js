@@ -6,7 +6,7 @@ import HamburgerMenu from 'react-hamburger-menu'
 import Headroom from 'react-headroom'
 import styled from 'styled-components'
 
-import logoWhite from '../img/logo.png'
+import logoWhite from '../img/logo.svg'
 import theme from '../utils/theme'
 import { Link, ScrollLink } from './Anchor'
 import Login from './Login'
@@ -22,7 +22,7 @@ const Menu = styled.nav`
     align-items: center;
 
     & > * {
-        margin-right: ${theme.spacing(2)};
+        margin-right: ${theme.spacing(3)};
         &:last-child {
             margin-right: 0;
         }
@@ -62,7 +62,7 @@ const Logo = styled(GatsbyLink)`
         height: ${theme.spacing(5)};
     }
 
-    @media (max-width: ${theme.bp.lg}) {
+    @media (max-width: ${theme.bp.md}) {
         & > img {
             height: ${theme.spacing(2.5)};
         }
@@ -114,7 +114,7 @@ export default function Header() {
                                         Support
                                     </Link>
                                     <Link menu to='/demo'>
-                                        Request Demo
+                                        Access Demo
                                     </Link>
                                 </>
                             )}

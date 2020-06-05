@@ -49,8 +49,6 @@ margin-right: ${theme.spacing(2)};
 
 const menuStyle = `
 color: ${theme.palette.white};
-font-weight: bold;
-text-transform: uppercase;
 font-size: ${theme.fontSize(14)};
 `
 

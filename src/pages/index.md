@@ -21,13 +21,13 @@ providers:
       name: Oracle
       production: false
 sections:
-    - image: /img/control-and-visibility.png
+    - image: /img/safer-world.png
       title: Cloud Security for a safer World
       text: >
           A multi-Cloud Platform for all major Cloud Providers: Amazon Web Services, Microsoft Azure, Google Cloud, Oracle Cloud and IBM Cloud. We handle Cloud Native Security (VMs, Network, Serverless, Databases, Apps), Vulnerability and Threat Management, Cloud Inventory, Cost reduction, Compliance and Secure Cloud Design.
       cta:
-          link: https://app.cyscale.com/#/login
-          label: Signup for Free
+          link: /demo
+          label: Access Demo
     - image: /img/control-and-visibility.png
       title: Control and Visibility
       text: >

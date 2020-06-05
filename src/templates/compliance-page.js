@@ -7,8 +7,6 @@ import Divider from '../components/Divider'
 import Hero from '../components/Hero'
 import Layout from '../components/Layout'
 
-
-
 export function CompliancePageTemplate({ image, title, cta, component, content, heading, subheading }) {
     const PageContent = component || Content
 
@@ -17,7 +15,7 @@ export function CompliancePageTemplate({ image, title, cta, component, content, 
             <Hero cta={cta} image={image} title={title} heading={heading} subheading={subheading} />
             <Container name='content'>
                 <Divider spacing={2} />
-                    <PageContent content={content} />
+                <PageContent content={content} />
                 <Divider spacing={2} />
             </Container>
         </>
@@ -29,7 +27,7 @@ export default function CompliancePage({ data }) {
     const { image, title, heading, cta, subheading } = post.frontmatter
 
     return (
-        <Layout>
+        <Layout title={title}>
             <CompliancePageTemplate
                 cta={cta}
                 image={image}
@@ -53,7 +51,7 @@ export const pageQuery = graphql`
                 image {
                     childImageSharp {
                         fluid(maxWidth: 720, quality: 100) {
-                            ...GatsbyImageSharpFluid
+                            ...GatsbyImageSharpFluid_withWebp
                         }
                     }
                 }

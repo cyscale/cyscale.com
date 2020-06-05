@@ -1,16 +1,16 @@
-import { graphql, Link } from 'gatsby'
-import { kebabCase } from 'lodash'
+import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { Col, Container, Row } from 'react-grid-system'
 import styled from 'styled-components'
 
 import Content, { HTMLContent } from '../components/Content'
+import Divider from '../components/Divider'
 import Layout from '../components/Layout'
 
 const Root = styled.div``
 
-export const BlogPostTemplate = ({ content, contentComponent, description, tags, title }) => {
+export const BlogPostTemplate = ({ content, contentComponent, description, title }) => {
     const PostContent = contentComponent || Content
 
     return (
@@ -21,18 +21,7 @@ export const BlogPostTemplate = ({ content, contentComponent, description, tags,
                         <h1>{title}</h1>
                         <p>{description}</p>
                         <PostContent content={content} />
-                        {tags && tags.length ? (
-                            <div style={{ marginTop: `4rem` }}>
-                                <h4>Tags</h4>
-                                <ul className='taglist'>
-                                    {tags.map((tag) => (
-                                        <li key={tag + `tag`}>
-                                            <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        ) : null}
+                        <Divider spacing={2} />
                     </Col>
                 </Row>
             </Container>
@@ -52,12 +41,11 @@ const BlogPost = ({ data }) => {
     const { markdownRemark: post } = data
 
     return (
-        <Layout>
+        <Layout title={post.frontmatter.title}>
             <BlogPostTemplate
                 content={post.html}
                 contentComponent={HTMLContent}
                 description={post.frontmatter.description}
-                tags={post.frontmatter.tags}
                 title={post.frontmatter.title}
             />
         </Layout>

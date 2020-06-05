@@ -54,8 +54,8 @@ export const pageQuery = graphql`
                 title
                 image {
                     childImageSharp {
-                        fluid(maxWidth: 720, quality: 100) {
-                            ...GatsbyImageSharpFluid
+                        fluid(maxWidth: 650, quality: 90) {
+                            ...GatsbyImageSharpFluid_withWebp
                         }
                     }
                 }
@@ -64,8 +64,8 @@ export const pageQuery = graphql`
                 providers {
                     image {
                         childImageSharp {
-                            fluid(maxWidth: 720, quality: 100) {
-                                ...GatsbyImageSharpFluid
+                            fluid(maxWidth: 200, quality: 90) {
+                                ...GatsbyImageSharpFluid_withWebp
                             }
                         }
                     }
@@ -75,8 +75,8 @@ export const pageQuery = graphql`
                 sections {
                     image {
                         childImageSharp {
-                            fluid(maxWidth: 720, quality: 100) {
-                                ...GatsbyImageSharpFluid
+                            fluid(maxWidth: 500, quality: 90) {
+                                ...GatsbyImageSharpFluid_withWebp
                             }
                         }
                     }

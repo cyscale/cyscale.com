@@ -21,7 +21,7 @@ function PolicyPage({ data }) {
     const { markdownRemark: post } = data
 
     return (
-        <Layout>
+        <Layout title={post.frontmatter.title}>
             <PolicyPageTemplate component={HTMLContent} title={post.frontmatter.title} content={post.html} />
         </Layout>
     )

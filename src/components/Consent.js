@@ -11,12 +11,15 @@ const Content = styled.div`
 `
 
 export default function Consent() {
+
     return (
         <CookieConsent
             style={{
-                alignItems: 'center',
                 background: theme.palette.white,
                 borderTop: `1px solid ${theme.palette.black05}`,
+                flexDirection: 'column',
+                justifyContent: 'flex-start',
+                alignItems: 'flex-start',
             }}
             enableDeclineButton
             buttonStyle={{
@@ -27,12 +30,18 @@ export default function Consent() {
                 backgroundColor: theme.palette.link,
                 fontWeight: 'bold',
                 padding: `${theme.spacing(1 / 2)} ${theme.spacing(2)}`,
+                marginRight: theme.spacing(10),
             }}
             declineButtonStyle={{
                 marginRight: 0,
                 color: theme.palette.black,
                 fontSize: theme.fontSize(14),
                 backgroundColor: 'transparent',
+            }}
+            contentStyle={{
+                flex: 'unset',
+                margin: theme.spacing(1),
+                marginBottom: 0,
             }}
             location='bottom'
             expires={150}

@@ -55,7 +55,7 @@ const Root = styled.div`
         `
     padding:${theme.spacing(3)};
     border-radius: ${theme.radius};
-    background-color: ${theme.palette.primary};
+    background-color: ${theme.palette.link};
 
     & > span {
       font-weight: bold;
@@ -76,6 +76,11 @@ const Root = styled.div`
             width: ${theme.spacing(3)};
             height: ${theme.spacing(3)};
             margin-right: ${theme.spacing(1 / 2)};
+        }
+    }
+    @media (max-width: ${theme.bp.md}) {
+        & > span {
+            font-size: ${theme.fontSize(12)};
         }
     }
 `

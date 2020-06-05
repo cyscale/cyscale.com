@@ -57,7 +57,7 @@ export default function PoliciesIndexPage() {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-        <Layout>
+        <Layout Title='Policies'>
             <Container>
                 <Divider spacing={2} />
                 <Row>

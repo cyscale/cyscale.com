@@ -1,7 +1,7 @@
 ---
 templateKey: 'about-page'
 path: /about
-title: About us
+title: About
 founders:
     - image: /img/ceo.png
       name: Ovidiu Cical
@@ -48,7 +48,7 @@ strengths:
 
 # What makes us Unique
 
-**Cyscale Power Cloud Platform supports all major providers: Amazon Web Services, Microsoft Azure, Google Cloud (soon Oracle and IBM Cloud).**
+#### Cyscale Power Cloud Platform supports all major providers: Amazon Web Services, Microsoft Azure, Google Cloud (soon Oracle and IBM Cloud). 
 
 -   Continuous Security and Compliance for AWS, Azure, and GCP
 -   Automatic remediations by learning your cloud infrastructure

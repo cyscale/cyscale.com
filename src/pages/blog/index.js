@@ -53,7 +53,7 @@ export default function BlogIndexPage() {
                             featuredimage {
                                 childImageSharp {
                                     fluid(maxWidth: 120, quality: 100) {
-                                        ...GatsbyImageSharpFluid
+                                        ...GatsbyImageSharpFluid_withWebp
                                     }
                                 }
                             }
@@ -66,7 +66,7 @@ export default function BlogIndexPage() {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-        <Layout>
+        <Layout title='Blog'>
             <Container>
                 <Divider spacing={2} />
                 <Row>
@@ -77,7 +77,7 @@ export default function BlogIndexPage() {
                         return (
                             <Col md={4}>
                                 <Post to={slug}>
-                                  <PreviewCompatibleImage imageInfo={featuredimage}/>
+                                    <PreviewCompatibleImage imageInfo={featuredimage} />
                                     <h3>{title}</h3>
                                     <small>{date}</small>
                                     <p>{excerpt}</p>

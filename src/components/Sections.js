@@ -4,7 +4,7 @@ import { Col, Container, Row, useScreenClass } from 'react-grid-system'
 import styled from 'styled-components'
 
 import theme from '../utils/theme'
-import { Anchor } from './Anchor'
+import { Link } from './Anchor'
 import Divider from './Divider'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
@@ -14,17 +14,16 @@ const Heading = styled.h1`
     margin-top: 0;
 `
 
-const CTA = styled(Anchor)`
+const CTA = styled(Link)`
     margin-top: ${theme.spacing(2)};
 `
 
 export default function Sections({ sections }) {
     const screenClass = useScreenClass()
-
     return (
         <Root>
             <Container>
-                <Divider spacing={['xl', 'lg', 'md'].includes(screenClass) ? 10 : 2} />
+                <Divider spacing={['xl', 'lg', 'md'].includes(screenClass) ? 6 : 2} />
                 {map(sections, ({ image, title, text, cta }, key) => (
                     <React.Fragment key={key}>
                         {key > 0 && <Divider spacing={8} border={!['xl', 'lg', 'md'].includes(screenClass)} />}
@@ -44,7 +43,7 @@ export default function Sections({ sections }) {
                                 <Heading>{title}</Heading>
                                 <p>{text}</p>
                                 {cta && (
-                                    <CTA contained href={cta.link}>
+                                    <CTA contained to={cta.link}>
                                         {cta.label}
                                     </CTA>
                                 )}
