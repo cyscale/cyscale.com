@@ -10,6 +10,14 @@ module.exports = {
         },
     },
     plugins: [
+        {
+            resolve: `gatsby-plugin-google-analytics`,
+            options: {
+                trackingId: 'UA-145426770-1',
+                head: true,
+                anonymize: true,
+            },
+        },
         'gatsby-plugin-react-helmet',
         'gatsby-plugin-sass',
         {
