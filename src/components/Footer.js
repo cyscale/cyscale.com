@@ -3,6 +3,9 @@ import React from 'react'
 import { Col, Container, Row, useScreenClass } from 'react-grid-system'
 import styled from 'styled-components'
 
+import facebook from '../img/social/facebook.svg'
+import linkedin from '../img/social/linkedin.svg'
+import twitter from '../img/social/twitter.svg'
 import theme from '../utils/theme'
 import { Anchor, Link } from './Anchor'
 import Divider from './Divider'
@@ -24,8 +27,23 @@ const Small = styled.small`
 `
 
 const Nav = styled.nav`
+    display: flex;
     width: fit-content;
     ${({ right }) => right && `margin-left: auto;`}
+`
+
+const Social = styled.span`
+    display: flex;
+    align-items: center;
+
+    & object {
+        width: ${theme.spacing(2)};
+        height: ${theme.spacing(2)};
+    }
+
+    & span {
+        margin-left: ${theme.spacing(1)};
+    }
 `
 
 export default function Footer() {
@@ -72,9 +90,12 @@ export default function Footer() {
                                 footer
                                 target='_blank'
                                 rel='noopener noreferrer'
-                                href={`https://www.linkedin.com/company/${social.facebook}`}
+                                href={`https://www.linkedin.com/company/${social.linkedin}`}
                             >
-                                LinkedIn
+                                <Social>
+                                    <object type='image/svg+xml' data={linkedin} aria-label='LinkedIn' />
+                                    <span>LinkedIn</span>
+                                </Social>
                             </Anchor>
                             <Anchor
                                 footer
@@ -82,7 +103,10 @@ export default function Footer() {
                                 rel='noopener noreferrer'
                                 href={`https://www.twitter.com/${social.twitter}`}
                             >
-                                Twitter
+                                <Social>
+                                    <object type='image/svg+xml' data={twitter} aria-label='Twitter' />
+                                    <span>Twitter</span>
+                                </Social>
                             </Anchor>
                             <Anchor
                                 footer
@@ -90,7 +114,10 @@ export default function Footer() {
                                 rel='noopener noreferrer'
                                 href={`https://www.facebook.com/${social.facebook}`}
                             >
-                                Facebook
+                                <Social>
+                                    <object type='image/svg+xml' data={facebook} aria-label='Facebook' />
+                                    <span>Facebook</span>
+                                </Social>
                             </Anchor>
                         </Nav>
                     </Col>

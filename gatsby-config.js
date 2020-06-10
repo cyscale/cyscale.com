@@ -18,6 +18,7 @@ module.exports = {
                 anonymize: true,
             },
         },
+        `gatsby-plugin-offline`,
         'gatsby-plugin-react-helmet',
         'gatsby-plugin-sass',
         {

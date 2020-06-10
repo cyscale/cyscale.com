@@ -37,7 +37,7 @@ export default function Providers({ providers }) {
             <Row>
                 {!!providers &&
                     map(filteredProviders, ({ image, name, production }) => (
-                        <Col>
+                        <Col key={name}>
                             <Provider production={production}>
                                 <PreviewCompatibleImage imageInfo={image} alt={name} />
                                 <div>

@@ -7,7 +7,7 @@ const theme = {
 
         //Links
         link: '#1071F2',
-
+        active: '#CC0066',
         //Messages
         error: '#CC0066',
         warning: '#FF8000',

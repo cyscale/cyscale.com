@@ -38,6 +38,7 @@ const Dropdown = styled.div`
     display: flex;
     position: absolute;
     flex-direction: column;
+    align-items: flex-start;
     top: ${theme.spacing(5)};
     backdrop-filter: blur(4px);
     padding: ${theme.spacing(2)};
@@ -47,7 +48,8 @@ const Dropdown = styled.div`
     & > * {
         margin-bottom: ${theme.spacing(1 / 2)};
         margin-right: 0;
-
+        width: fit-content;
+        white-space: nowrap;
         &:last-child {
             margin-bottom: 0;
         }
@@ -75,13 +77,13 @@ export default function Header() {
     const rootPath = `${__PATH_PREFIX__}/`
     const screenClass = useScreenClass()
 
-    const SmartLink = ({ children, linkTo, scrollTo }) =>
+    const SmartLink = ({ children, linkTo, scrollTo, activeClassName }) =>
         location.pathname === rootPath ? (
-            <ScrollLink to={scrollTo} menu smooth={true} duration={500} activeClass='active'>
+            <ScrollLink to={scrollTo} menu smooth={true} duration={500} className='active'>
                 {children}
             </ScrollLink>
         ) : (
-            <Link menu to={linkTo}>
+            <Link menu to={linkTo} activeClassName='active'>
                 {children}
             </Link>
         )
@@ -98,22 +100,22 @@ export default function Header() {
 
                             {['lg', 'xl'].includes(screenClass) && (
                                 <>
-                                    <SmartLink scrollTo='section-1' linkTo='/'>
+                                    <SmartLink scrollTo='section-1' linkTo='/' activeClassName='active'>
                                         Platform
                                     </SmartLink>
-                                    <Link menu to='/compliance'>
+                                    <Link menu to='/compliance' activeClassName='active'>
                                         Compliance
                                     </Link>
-                                    <Link menu to='/about'>
+                                    <Link menu to='/about' activeClassName='active'>
                                         About
                                     </Link>
-                                    <Link menu to='/contact'>
+                                    <Link menu to='/contact' activeClassName='active'>
                                         Contact
                                     </Link>
-                                    <Link menu to='/support'>
+                                    <Link menu to='/support' activeClassName='active'>
                                         Support
                                     </Link>
-                                    <Link menu to='/demo'>
+                                    <Link menu to='/demo' activeClassName='active'>
                                         Access Demo
                                     </Link>
                                 </>
@@ -136,22 +138,22 @@ export default function Header() {
                                     />
                                     {open && (
                                         <Dropdown>
-                                            <SmartLink scrollTo='section-1' linkTo='/'>
+                                            <SmartLink scrollTo='section-1' linkTo='/' activeClassName='active'>
                                                 Platform
                                             </SmartLink>
-                                            <Link menu to='/compliance'>
+                                            <Link menu to='/compliance' activeClassName='active'>
                                                 Compliance
                                             </Link>
-                                            <Link menu to='/about'>
+                                            <Link menu to='/about' activeClassName='active'>
                                                 About
                                             </Link>
-                                            <Link menu to='/contact'>
+                                            <Link menu to='/contact' activeClassName='active'>
                                                 Contact
                                             </Link>
-                                            <Link menu to='/support'>
+                                            <Link menu to='/support' activeClassName='active'>
                                                 Support
                                             </Link>
-                                            <Link menu to='/demo'>
+                                            <Link menu to='/demo' activeClassName='active'>
                                                 Request Demo
                                             </Link>
                                         </Dropdown>

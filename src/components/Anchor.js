@@ -50,6 +50,11 @@ margin-right: ${theme.spacing(2)};
 const menuStyle = `
 color: ${theme.palette.white};
 font-size: ${theme.fontSize(14)};
+border-bottom: 2px solid transparent;
+
+&.active {
+  border-bottom: 2px solid ${theme.palette.link};
+}
 `
 
 const ctaStyle =

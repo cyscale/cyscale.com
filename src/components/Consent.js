@@ -11,7 +11,6 @@ const Content = styled.div`
 `
 
 export default function Consent() {
-
     return (
         <CookieConsent
             style={{
@@ -44,7 +43,7 @@ export default function Consent() {
                 marginBottom: 0,
             }}
             location='bottom'
-            expires={150}
+            sameSite='strict'
         >
             <Content>
                 <p>
@@ -53,7 +52,7 @@ export default function Consent() {
                     information <strong>in order to improve and customize your browsing experience</strong> and for{' '}
                     <strong>analytics and metrics about our visitors</strong> both on this website and other media. To
                     find out more about the cookies we use, see our{' '}
-                    <Link to='policies/privacy-policy'>
+                    <Link to='/policies/privacy-policy'>
                         <strong>Privacy Policy.</strong>
                     </Link>
                 </p>
