@@ -4,7 +4,7 @@ title: Security Policy
 date: 2020-01-20T15:04:10.000Z
 ---
 
-# This Security Policy applies only to your data on **Cyscale** Platform.
+## This Security Policy applies only to your data on **Cyscale** Platform.
 
 ## Data Safety
 
