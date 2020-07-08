@@ -38,8 +38,8 @@ const Root = styled.div`
     }
 
     & > span {
+        letter-spacing: 1px;
         color: ${theme.palette.white};
-        font-size: ${theme.fontSize(14)};
         margin-right: ${theme.spacing(1)};
     }
 

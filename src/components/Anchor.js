@@ -48,12 +48,33 @@ margin-right: ${theme.spacing(2)};
 `
 
 const menuStyle = `
+letter-spacing: 1px; 
 color: ${theme.palette.white};
 font-size: ${theme.fontSize(14)};
 border-bottom: 2px solid transparent;
+position: relative;
 
-&.active {
-  border-bottom: 2px solid ${theme.palette.link};
+&:before {
+  left: 0;
+  top: 100%;
+  width: 0;
+  content: "";
+  height: 2px;
+  position: absolute;
+  transition: width 0.1s ease-in;
+  background: ${theme.palette.link};
+}
+
+&:hover {
+  opacity: 1;
+
+  &:before {
+    width: 100%;
+  }
+}
+
+&.active:before {
+    width: 100%;
 }
 `
 

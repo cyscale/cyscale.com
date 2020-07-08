@@ -1,20 +1,31 @@
 import { useLocation } from '@reach/router'
 import { Link as GatsbyLink } from 'gatsby'
+import { map } from 'lodash'
 import React, { useState } from 'react'
-import { Container, useScreenClass } from 'react-grid-system'
+import { Col, Container, Row, useScreenClass } from 'react-grid-system'
 import HamburgerMenu from 'react-hamburger-menu'
 import Headroom from 'react-headroom'
 import styled from 'styled-components'
 
+import siteMap from '../../site-map.json'
 import logoWhite from '../img/logo.svg'
 import theme from '../utils/theme'
-import { Link, ScrollLink } from './Anchor'
+import { Anchor, Link, ScrollLink } from './Anchor'
+import Dropdown from './Dropdown'
 import Login from './Login'
 
 const Root = styled.div`
     padding-top: ${theme.spacing(2)};
     padding-bottom: ${theme.spacing(2)};
     background: ${theme.palette.deepOcean};
+`
+
+const GroupName = styled.span`
+    position: relative;
+    letter-spacing: 1px;
+    color: ${theme.palette.white};
+    font-size: ${theme.fontSize(16)};
+    padding-right: ${theme.spacing(1.5)};
 `
 
 const Menu = styled.nav`
@@ -29,31 +40,29 @@ const Menu = styled.nav`
     }
 `
 
-const MobileNav = styled.div`
-    position: relative;
-`
-
-const Dropdown = styled.div`
-    right: 0;
+const Group = styled.div`
     display: flex;
-    position: absolute;
     flex-direction: column;
     align-items: flex-start;
-    top: ${theme.spacing(5)};
-    backdrop-filter: blur(4px);
-    padding: ${theme.spacing(2)};
-    border-radius: ${theme.radius};
-    background: rgba(0, 0, 0, 0.75);
 
     & > * {
         margin-bottom: ${theme.spacing(1 / 2)};
-        margin-right: 0;
-        width: fit-content;
-        white-space: nowrap;
-        &:last-child {
-            margin-bottom: 0;
+
+        &:first-child {
+            font-weight: bold;
         }
     }
+`
+
+const Arrow = styled.span`
+    width: 0;
+    height: 0;
+    top: 45%;
+    right: 0;
+    position: absolute;
+    border-left: ${theme.spacing(1 / 2)} solid transparent;
+    border-right: ${theme.spacing(1 / 2)} solid transparent;
+    border-top: ${theme.spacing(1 / 2)} solid ${theme.palette.white};
 `
 
 const Logo = styled(GatsbyLink)`
@@ -72,7 +81,6 @@ const Logo = styled(GatsbyLink)`
 `
 export default function Header() {
     const [open, setOpen] = useState(false)
-
     const location = useLocation()
     const rootPath = `${__PATH_PREFIX__}/`
     const screenClass = useScreenClass()
@@ -88,6 +96,28 @@ export default function Header() {
             </Link>
         )
 
+    const ChosenLink = ({ item }) => {
+        if (item.extern) {
+            return (
+                <Anchor menu target='_blank' href={item.link} rel='noopener noreferrer'>
+                    {item.label}
+                </Anchor>
+            )
+        }
+        if (item.scrollTo) {
+            return (
+                <SmartLink linkTo={item.link} scrollTo={item.scrollTo} activeClassName='active'>
+                    {item.label}
+                </SmartLink>
+            )
+        }
+        return (
+            <Link menu to={item.link} activeClassName='active'>
+                {item.label}
+            </Link>
+        )
+    }
+
     return (
         <header>
             <Headroom component='header'>
@@ -100,65 +130,59 @@ export default function Header() {
 
                             {['lg', 'xl'].includes(screenClass) && (
                                 <>
-                                    <SmartLink scrollTo='section-1' linkTo='/' activeClassName='active'>
-                                        Platform
-                                    </SmartLink>
-                                    <Link menu to='/compliance' activeClassName='active'>
-                                        Compliance
-                                    </Link>
-                                    <Link menu to='/about' activeClassName='active'>
-                                        About
-                                    </Link>
-                                    <Link menu to='/contact' activeClassName='active'>
-                                        Contact
-                                    </Link>
-                                    <Link menu to='/support' activeClassName='active'>
-                                        Support
-                                    </Link>
-                                    <Link menu to='/demo' activeClassName='active'>
-                                        Access Demo
-                                    </Link>
+                                    {map(siteMap, (group, name) => (
+                                        <Dropdown
+                                            button={
+                                                <GroupName>
+                                                    {name}
+                                                    <Arrow />
+                                                </GroupName>
+                                            }
+                                            key={name}
+                                        >
+                                            {map(group, (item, key) => (
+                                                <ChosenLink item={item} key={key} />
+                                            ))}
+                                        </Dropdown>
+                                    ))}
                                 </>
                             )}
 
                             <Login separator={['lg', 'xl'].includes(screenClass)} />
 
                             {!['lg', 'xl'].includes(screenClass) && (
-                                <MobileNav>
-                                    <HamburgerMenu
-                                        width={24}
-                                        rotate={0}
-                                        height={20}
-                                        color='white'
+                                <div>
+                                    <Dropdown
                                         isOpen={open}
-                                        strokeWidth={1}
-                                        borderRadius={0}
-                                        menuClicked={() => setOpen(!open)}
-                                        animationDuration={0.25}
-                                    />
-                                    {open && (
-                                        <Dropdown>
-                                            <SmartLink scrollTo='section-1' linkTo='/' activeClassName='active'>
-                                                Platform
-                                            </SmartLink>
-                                            <Link menu to='/compliance' activeClassName='active'>
-                                                Compliance
-                                            </Link>
-                                            <Link menu to='/about' activeClassName='active'>
-                                                About
-                                            </Link>
-                                            <Link menu to='/contact' activeClassName='active'>
-                                                Contact
-                                            </Link>
-                                            <Link menu to='/support' activeClassName='active'>
-                                                Support
-                                            </Link>
-                                            <Link menu to='/demo' activeClassName='active'>
-                                                Request Demo
-                                            </Link>
-                                        </Dropdown>
-                                    )}
-                                </MobileNav>
+                                        onClick={(value) => setOpen(value)}
+                                        onClose={(value) => setOpen(value)}
+                                        button={
+                                            <HamburgerMenu
+                                                width={24}
+                                                rotate={0}
+                                                height={20}
+                                                color='white'
+                                                isOpen={open}
+                                                strokeWidth={1}
+                                                borderRadius={0}
+                                                animationDuration={0.25}
+                                            />
+                                        }
+                                    >
+                                        <Row wrap={true} style={{ width: 345 }}>
+                                            {map(siteMap, (group, name) => (
+                                                <Col xs={6} key={name}>
+                                                    <Group>
+                                                        <GroupName>{name}</GroupName>
+                                                        {map(group, (item, key) => (
+                                                            <ChosenLink item={item} key={key} />
+                                                        ))}
+                                                    </Group>
+                                                </Col>
+                                            ))}
+                                        </Row>
+                                    </Dropdown>
+                                </div>
                             )}
                         </Menu>
                     </Container>

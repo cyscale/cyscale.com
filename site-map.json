@@ -1,0 +1,37 @@
+{
+    "Platform": [
+        {
+            "link": "/",
+            "label": "Security",
+            "scrollTo": "section-1",
+            "extern": false
+        },
+        {
+            "link": "/compliance",
+            "label": "Compliance",
+            "extern": false
+        },
+        {
+            "link": "/demo",
+            "label": "Access Demo",
+            "extern": false
+        }
+    ],
+    "Company": [
+        {
+            "link": "/about",
+            "label": "About",
+            "extern": false
+        },
+        {
+            "link": "/contact",
+            "label": "Contact",
+            "extern": false
+        },
+        {
+            "link": "/support",
+            "label": "Support",
+            "extern": false
+        }
+    ]
+}
