@@ -17,6 +17,23 @@
             "extern": false
         }
     ],
+    "Resources": [
+        {
+            "link": "/blog",
+            "label": "Blog",
+            "extern": false
+        },
+        {
+            "link": "https://docs.cyscale.com",
+            "label": "Documentation",
+            "extern": true
+        },
+        {
+            "link": "/support",
+            "label": "Support",
+            "extern": false
+        }
+    ],
     "Company": [
         {
             "link": "/about",
@@ -26,11 +43,6 @@
         {
             "link": "/contact",
             "label": "Contact",
-            "extern": false
-        },
-        {
-            "link": "/support",
-            "label": "Support",
             "extern": false
         }
     ]

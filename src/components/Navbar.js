@@ -47,9 +47,11 @@ const Group = styled.div`
 
     & > * {
         margin-bottom: ${theme.spacing(1 / 2)};
-
+        margin-left: ${theme.spacing(1)};
         &:first-child {
+            margin-left: 0;
             font-weight: bold;
+            margin-top: ${theme.spacing(2)};
         }
     }
 `
@@ -75,9 +77,13 @@ const Logo = styled(GatsbyLink)`
 
     @media (max-width: ${theme.bp.md}) {
         & > img {
-            height: ${theme.spacing(2.5)};
+            height: ${theme.spacing(4)};
         }
     }
+`
+const LoginIntoDropdown = styled(Col)`
+    padding-bottom: ${theme.spacing(2)};
+    border-bottom: 1px solid ${theme.palette.white};
 `
 export default function Header() {
     const [open, setOpen] = useState(false)
@@ -147,9 +153,9 @@ export default function Header() {
                                     ))}
                                 </>
                             )}
-
-                            <Login separator={['lg', 'xl'].includes(screenClass)} />
-
+                            {['lg', 'xl'].includes(screenClass) && (
+                                <Login separator={['lg', 'xl'].includes(screenClass)} />
+                            )}
                             {!['lg', 'xl'].includes(screenClass) && (
                                 <div>
                                     <Dropdown
@@ -170,6 +176,9 @@ export default function Header() {
                                         }
                                     >
                                         <Row wrap={true} style={{ width: 345 }}>
+                                            <LoginIntoDropdown xs={12}>
+                                                <Login largeLabel={true} />
+                                            </LoginIntoDropdown>
                                             {map(siteMap, (group, name) => (
                                                 <Col xs={6} key={name}>
                                                     <Group>

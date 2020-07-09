@@ -31,6 +31,12 @@ const Root = styled.div`
         border-radius: ${theme.radius};
         margin-right: ${theme.spacing(1)};
         background-color: ${theme.palette.white};
+        transition: transform 0.1s ease-out;
+
+        &:hover {
+            transform: scale(1.1);
+            transition: transform 0.1s ease-in;
+        }
 
         &:last-child {
             margin-right: 0;
@@ -85,10 +91,17 @@ const Root = styled.div`
     }
 `
 
-export default function Login({ separator = false, cta = false }) {
+const LargeLabel = styled.span`
+    letter-spacing: 1px;
+    color: ${theme.palette.white};
+    font-size: ${theme.fontSize(14)} !important;
+    margin-right: ${theme.spacing(1)};
+`
+
+export default function Login({ separator = false, cta = false, largeLabel = false }) {
     return (
         <Root separator={separator} cta={cta}>
-            <span>Sign up with</span>
+            {largeLabel ? <LargeLabel>Sign up with</LargeLabel> : <span>Sign up with</span>}
             <a rel='noopener noreferrer' href='https://auth.cyscale.com/authorize?provider=microsoft'>
                 <Provider src={microsoft} alt='Sign up with Microsoft' />
             </a>
