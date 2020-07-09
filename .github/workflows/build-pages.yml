@@ -28,6 +28,6 @@ jobs:
     - name: Run npm deploy command
       run: |
         git config --global user.name "Ceico"
-        git config --global user.email ceicoschi.gabriel@gmail.com
+        git config --global user.email "ceicoschi.gabriel@gmail.com"
         npm install
         npm run deploy --if-present
