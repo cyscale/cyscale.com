@@ -25,7 +25,7 @@ jobs:
         node-version: 12
 
     # Runs the npm build command
-    - name: Run npm build command
+    - name: Run npm deploy command
       run: |
         npm install
-        npm run build --if-present
+        npm run deploy --if-present
