@@ -1,17 +1,39 @@
 ---
 templateKey: blog-post
-title: Sample blog
-date: 2020-06-12T15:04:10.000Z
+title: Introducing the next level of cloud security, by Cyscale
+date: 2020-07-15T07:05:00.000Z
+description: We're on a mission to enhance your business, so get ready to
+  embrace the digital future and secure your apps & data in a multi-cloud world!
 featuredpost: false
-featuredimage: /img/compliance-regulatory.png
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ornare condimentum est, id imperdiet est porta nec. Vivamus dapibus porttitor mi eu mattis. Ut viverra id elit ac bibendum.
+featuredimage: /img/mockup.png
 tags:
-    - flavor
-    - tasting
+  - release
+  - cloud
+  - security
+  - cloud security
+  - information security
+  - compliance
+  - aws
+  - azure
+  - gcp
+  - continuous integration
+  - continuous delivery
+  - slack
+  - teams
+  - datadog
+  - notifications
+  - azure marketplace
+  - cloud adoption
+  - cloud migration
 ---
+### Dear friend, get ready to secure your apps & data in a multi-cloud world.
 
-![flavor wheel](/img/compliance-regulatory.png)
+#### The era of remote work and cloud computing is here, and we're excited to share that you can experience enhanced cloud security right from your Cyscale account. This includes:
 
-# Lorem ipsum dolor sit amet
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ornare condimentum est, id imperdiet est porta nec. Vivamus dapibus porttitor mi eu mattis. Ut viverra id elit ac bibendum.
+* Multi-tenancy support for a Corporate Account and associated Users.
+* Single auto-onboarding step for multiple Azure Subscriptions under a Tenant.
+* [Microsoft Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/cyscale.power-cloud-saas-basic) listing of the Cyscale Power Cloud Platform.
+* Signup & access the Cyscale account using Microsoft, Google, or GitHub social logins.
+* Notifications to *Slack*, *Teams*, *Datadog,* and *Email*. Whenever your security policies are violated, you're instantly notified. You can also manually share an alert later.
+* Simplified onboarding for AWS and GCP using CloudFormation and Terraform.
+* Use API Keys to speed up integrations with CI/CD and other developer tools.
