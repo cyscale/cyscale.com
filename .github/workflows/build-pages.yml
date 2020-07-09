@@ -27,7 +27,7 @@ jobs:
     # Runs the npm build command
     - name: Run npm deploy command
       run: |
-        git config user.name "Gabriel Ceicoschi"
-        git config user.email gabriel.ceicoschi@cyscale.com
+        git config --global user.name "Ceico"
+        git config --global user.email ceicoschi.gabriel@gmail.com
         npm install
         npm run deploy --if-present
