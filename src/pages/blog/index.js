@@ -47,6 +47,7 @@ export default function BlogIndexPage() {
                         }
                         frontmatter {
                             title
+                            permalink
                             templateKey
                             date(formatString: "MMMM DD, YYYY")
                             featuredpost
@@ -72,11 +73,11 @@ export default function BlogIndexPage() {
                 <Row>
                     {map(posts, ({ node }) => {
                         const { frontmatter, excerpt, fields } = node
-                        const { title, date, featuredimage } = frontmatter
+                        const { title, date, featuredimage, permalink } = frontmatter
                         const { slug } = fields
                         return (
                             <Col md={4}>
-                                <Post to={slug}>
+                                <Post to={permalink || slug}>
                                     <PreviewCompatibleImage imageInfo={featuredimage} />
                                     <h3>{title}</h3>
                                     <small>{date}</small>

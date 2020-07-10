@@ -1,7 +1,7 @@
 backend:
     name: github
     repo: cyscale/cyscale.com
-    branch: develop
+    branch: master
     commit_messages:
         create: 'Create {{collection}} “{{slug}}”'
         update: 'Update {{collection}} “{{slug}}”'
@@ -21,6 +21,7 @@ collections:
       fields:
           - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'blog-post' }
           - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Permalink', name: 'permalink', widget: 'string' }
           - { label: 'Publish Date', name: 'date', widget: 'datetime' }
           - { label: 'Description', name: 'description', widget: 'text' }
           - { label: 'Featured Post', name: 'featuredpost', widget: 'boolean' }
