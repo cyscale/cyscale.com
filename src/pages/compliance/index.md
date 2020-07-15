@@ -2,13 +2,14 @@
 templateKey: compliance-page
 title: One Compliance Engine to rule them All!
 image: /img/compliance.png
-heading: Cyscale offers one-click Compliance Checks for 30+ standards. CIS (AWS, Azure, GCP, Kubernetes), PCI-DSS, ISO, SOC 2, HIPAA, GDPR, NIST and customer created Standards are part of the Cyscale Platform.
+heading: Cyscale offers one-click Compliance Checks for 30+ standards. CIS (AWS,
+  Azure, GCP, Kubernetes), PCI-DSS, ISO, SOC 2, HIPAA, GDPR, NIST and customer
+  created Standards are part of the Cyscale Platform.
 subheading: No credit card required. Sign up for free!
 cta:
-    link: /demo
-    label: Request Demo
+  link: /demo
+  label: Request Demo
 ---
-
 # Supported Compliance Standards
 
 <div class="row">
@@ -16,46 +17,44 @@ cta:
 
 #### AWS Amazon Web Services Compliance
 
--   CIS v1.2.0
--   ISO 27001
--   HIPAA
--   GDPR
--   CCPA
--   PCI-DSS v3.2
--   NIST 800-53 Rev 4
--   CSA CCM v3.0.1
--   HITRUST Version 9.2
--   SOC2 NIST CSF 1.1
--   NIST 800-171 Rev 1
-</div>
+* CIS v1.2.0
+* ISO 27001
+* HIPAA
+* GDPR
+* CCPA
+* PCI-DSS v3.2
+* NIST 800-53 Rev 4
+* CSA CCM v3.0.1
+* HITRUST Version 9.2
+* SOC2 NIST CSF 1.1
+* NIST 800-171 Rev 1
 
 <div class="col-md-4 col-sm-12">
 
 #### Microsoft Azure Compliance
 
--   CIS 1.1
--   ISO 27001
--   HIPAA
--   GDPR
--   CCPA
--   PCI-DSS v3.2
--   SOC 2
--   NIST CSF 1.1
--   NIST 800-53 Rev 4
--   CSA CCM v3.0.1
-</div>
+* CIS 1.1
+* ISO 27001
+* HIPAA
+* GDPR
+* CCPA
+* PCI-DSS v3.2
+* SOC 2
+* NIST CSF 1.1
+* NIST 800-53 Rev 4
+* CSA CCM v3.0.1
 
 <div class="col-md-4 col-sm-12">
 
 #### GCP Google Cloud Platform Compliance
 
--   CIS v1.0.0
--   ISO 27001
--   HIPAA
--   CCP
--   NIST CSF v1.1
--   PCI-DSS v3.2
--   NIST 800-53 Rev 4
+* CIS v1.0.0
+* ISO 27001
+* HIPAA
+* CCP
+* NIST CSF v1.1
+* PCI-DSS v3.2
+* NIST 800-53 Rev 4
 
 </div>
 </div>
@@ -82,5 +81,5 @@ The Center for Internet Security (CIS) Kubernetes Benchmark is a reference docum
 ### Cyscale Cloud Asset Inventory - Management, Security and Compliance
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0;">
-<iframe style=" position: absolute; top: 0; left: 0; width: 100%; height: 100%;" width="720" height="360" src="https://www.youtube-nocookie.com/embed/6ziXncxzbBc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe style=" position: absolute; top: 0; left: 0; width: 100%; height: 100%;" width="720" height="360" src="https://www.youtube-nocookie.com/embed/KuUzyidTZug" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
