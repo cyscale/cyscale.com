@@ -2,13 +2,14 @@
 templateKey: compliance-page
 title: One Compliance Engine to rule them All!
 image: /img/compliance.png
-heading: Cyscale offers one-click Compliance Checks for 30+ standards. CIS (AWS, Azure, GCP, Kubernetes), PCI-DSS, ISO, SOC 2, HIPAA, GDPR, NIST and customer created Standards are part of the Cyscale Platform.
+heading: Cyscale offers one-click Compliance Checks for 30+ standards. CIS (AWS,
+  Azure, GCP, Kubernetes), PCI-DSS, ISO, SOC 2, HIPAA, GDPR, NIST and customer
+  created Standards are part of the Cyscale Platform.
 subheading: No credit card required. Sign up for free!
 cta:
-    link: /demo
-    label: Request Demo
+  link: /demo
+  label: Request Demo
 ---
-
 # Supported Compliance Standards
 
 <div class="row">
@@ -82,5 +83,5 @@ The Center for Internet Security (CIS) Kubernetes Benchmark is a reference docum
 ### Cyscale Cloud Asset Inventory - Management, Security and Compliance
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0;">
-<iframe style=" position: absolute; top: 0; left: 0; width: 100%; height: 100%;" width="720" height="360" src="https://www.youtube-nocookie.com/embed/6ziXncxzbBc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe style="border: 1px solid #000; position: absolute; top: 0; left: 0; width: 100%; height: 100%;" width="720" height="360" src="https://www.youtube-nocookie.com/embed/KuUzyidTZug" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
