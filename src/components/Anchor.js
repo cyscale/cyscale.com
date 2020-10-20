@@ -1,15 +1,15 @@
-import { Link as GatsbyLink } from 'gatsby'
-import React from 'react'
-import * as Scroll from 'react-scroll'
-import styled from 'styled-components'
+import { Link as GatsbyLink } from 'gatsby';
+import React from 'react';
+import * as Scroll from 'react-scroll';
+import styled from 'styled-components';
 
-import theme from '../utils/theme'
+import theme from '../utils/theme';
 
 const sharedStyle = `
 &:hover {
   cursor: pointer;
   opacity: 0.8;
-  transition: opacity 0.1s ease-in;
+  transition: all 0.1s ease-in;
 }
 `
 
@@ -30,12 +30,6 @@ text-align: center;
 border-radius:${theme.radius};
 border: 1px solid  ${theme.palette.link};
 padding: ${theme.spacing(1)} ${theme.spacing(3)};
-
-&:hover {
-  opacity: 1;
-  transition: background-color 0.1s ease-in;
-  background-color: ${theme.palette.link};
-}
 `
 
 const footerStyle = `

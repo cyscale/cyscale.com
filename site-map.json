@@ -15,6 +15,11 @@
             "link": "/demo",
             "label": "Access Demo",
             "extern": false
+        },
+        {
+            "link": "/pricing",
+            "label": "Pricing",
+            "extern": false
         }
     ],
     "Resources": [

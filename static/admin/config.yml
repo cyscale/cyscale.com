@@ -87,16 +87,19 @@ collections:
             name: 'compliance'
             fields:
                 - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'compliance-page' }
-                - { label: Title, name: title, widget: string }
-                - { label: Image, name: image, widget: image }
-                - { label: Heading, name: heading, widget: string }
-                - { label: Subheading, name: subheading, widget: string }
+                - { label: 'Title', name: 'title', widget: 'string' }
+                - { label: 'Image', name: 'image', widget: 'image' }
+                - { label: 'Heading', name: 'heading', widget: 'string' }
+                - { label: 'Subheading', name: 'subheading', widget: 'string' }
                 - {
                       label: CTA,
                       name: cta,
                       widget: object,
                       fields:
-                          [{ label: Link, name: link, widget: string }, { label: Label, name: label, widget: string }],
+                          [
+                              { label: 'Link', name: 'link', widget: 'string' },
+                              { label: 'Label', name: 'label', widget: 'string' },
+                          ],
                   }
                 - { label: 'Body', name: 'body', widget: 'markdown' }
           - file: 'src/pages/about/index.md'
@@ -111,10 +114,10 @@ collections:
                       widget: 'list',
                       fields:
                           [
-                              { label: Name, name: name, widget: string },
-                              { label: Image, name: image, widget: image },
-                              { label: Position, name: position, widget: text },
-                              { label: About, name: about, widget: text },
+                              { label: 'Name', name: 'name', widget: 'string' },
+                              { label: 'Image', name: 'image', widget: 'image' },
+                              { label: 'Position', name: 'position', widget: 'text' },
+                              { label: 'About', name: 'about', widget: 'text' },
                           ],
                   }
                 - {
@@ -123,9 +126,9 @@ collections:
                       widget: 'list',
                       fields:
                           [
-                              { label: Title, name: title, widget: string },
-                              { label: Image, name: image, widget: image },
-                              { label: Description, name: description, widget: text },
+                              { label: 'Title', name: 'title', widget: 'string' },
+                              { label: 'Image', name: 'image', widget: 'image' },
+                              { label: 'Description', name: 'description', widget: 'text' },
                           ],
                   }
                 - { label: 'Body', name: 'body', widget: 'markdown' }
@@ -150,3 +153,51 @@ collections:
                 - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'support-page' }
                 - { label: 'Title', name: 'title', widget: 'string' }
                 - { label: 'Body', name: 'body', widget: 'markdown' }
+          - file: 'src/pages/pricing/index.md'
+            label: 'Pricing'
+            name: 'pricing'
+            fields:
+                - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'pricing-page' }
+                - { label: 'Title', name: 'title', widget: 'string' }
+                - { label: 'Heading', name: 'heading', widget: 'string' }
+                - { label: 'Subheading', name: 'subheading', widget: 'markdown' }
+                - {
+                      label: 'Plans',
+                      name: 'plans',
+                      widget: 'list',
+                      fields:
+                          [
+                              { label: 'Name', name: 'name', widget: 'string' },
+                              { label: 'Description', name: 'description', widget: 'markdown' },
+                              { label: 'Base Price', name: 'basePrice', widget: 'number' },
+                              { label: 'Offer Price', name: 'offerPrice', widget: 'number' },
+                              { label: 'Type', name: 'type', widget: 'text' },
+                              { label: 'Billing', name: 'billing', widget: 'text' },
+                              { label: 'Featured', name: 'featured', widget: 'boolean' },
+                              {
+                                  label: CTA,
+                                  name: cta,
+                                  widget: object,
+                                  fields:
+                                      [
+                                          { label: Link, name: link, widget: string },
+                                          { label: Label, name: label, widget: string },
+                                          { label: Extern, name: extern, widget: boolean },
+                                      ],
+                              },
+                          ],
+                  }
+                - {
+                      label: 'Features',
+                      name: 'features',
+                      widget: 'list',
+                      fields:
+                          [
+                              { label: 'Name', name: 'name', widget: 'string' },
+                              { label: 'Category', name: 'category', widget: 'string' },
+                              { label: Description, name: description, widget: 'markdown' },
+                              { label: 'Community available', name: 'community', widget: 'string' },
+                              { label: 'Business available', name: 'business', widget: 'string' },
+                              { label: 'Pro available', name: 'pro', widget: 'string' },
+                          ],
+                  }
