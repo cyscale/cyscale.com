@@ -18,6 +18,12 @@ module.exports = {
                 anonymize: true,
             },
         },
+        {
+            resolve: `gatsby-plugin-facebook-pixel`,
+            options: {
+                pixelId: 'pixel id here',
+            },
+        },
         `gatsby-plugin-offline`,
         'gatsby-plugin-react-helmet',
         'gatsby-plugin-sass',

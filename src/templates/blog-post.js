@@ -1,12 +1,12 @@
-import { graphql } from 'gatsby'
-import PropTypes from 'prop-types'
-import React from 'react'
-import { Col, Container, Row } from 'react-grid-system'
-import styled from 'styled-components'
+import { graphql } from 'gatsby';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { Col, Container, Row } from 'react-grid-system';
+import styled from 'styled-components';
 
-import Content, { HTMLContent } from '../components/Content'
-import Divider from '../components/Divider'
-import Layout from '../components/Layout'
+import Content, { HTMLContent } from '../components/Content';
+import Divider from '../components/Divider';
+import Layout from '../components/Layout';
 
 const Root = styled.div``
 

@@ -1,18 +1,23 @@
-import { useLocation } from '@reach/router'
-import { Link as GatsbyLink } from 'gatsby'
-import { map } from 'lodash'
-import React, { useState } from 'react'
-import { Col, Container, Row, useScreenClass } from 'react-grid-system'
-import HamburgerMenu from 'react-hamburger-menu'
-import Headroom from 'react-headroom'
-import styled from 'styled-components'
+import { useLocation } from '@reach/router';
+import { Link as GatsbyLink } from 'gatsby';
+import { map, size } from 'lodash';
+import React, { useState } from 'react';
+import { Col, Container, Row, useScreenClass } from 'react-grid-system';
+import HamburgerMenu from 'react-hamburger-menu';
+import Headroom from 'react-headroom';
+import styled from 'styled-components';
 
-import siteMap from '../../site-map.json'
-import logoWhite from '../img/logo.svg'
-import theme from '../utils/theme'
-import { Anchor, Link, ScrollLink } from './Anchor'
-import Dropdown from './Dropdown'
-import Login from './Login'
+import siteMap from '../../site-map.json';
+import logoWhite from '../img/logo.svg';
+import theme from '../utils/theme';
+import { Anchor, Link, ScrollLink } from './Anchor';
+import Dropdown from './Dropdown';
+import Login from './Login';
+
+const Wrapper = styled.header`
+    position: relative;
+    z-index: 2;
+`
 
 const Root = styled.div`
     padding-top: ${theme.spacing(2)};
@@ -26,6 +31,22 @@ const GroupName = styled.span`
     color: ${theme.palette.white};
     font-size: ${theme.fontSize(16)};
     padding-right: ${theme.spacing(1.5)};
+
+    ${({ noDropdown }) =>
+        noDropdown &&
+        `
+        padding-right: 0;
+
+        & > a {
+            letter-spacing: 1px;
+            color: ${theme.palette.white};
+            font-size: ${theme.fontSize(16)};
+
+            &:before {
+                top: calc(100% + 4px);
+            }
+        }
+        `}
 `
 
 const Menu = styled.nav`
@@ -125,8 +146,8 @@ export default function Header() {
     }
 
     return (
-        <header>
-            <Headroom component='header'>
+        <Wrapper>
+            <Headroom>
                 <Root>
                     <Container>
                         <Menu>
@@ -136,21 +157,30 @@ export default function Header() {
 
                             {['lg', 'xl'].includes(screenClass) && (
                                 <>
-                                    {map(siteMap, (group, name) => (
-                                        <Dropdown
-                                            button={
-                                                <GroupName>
-                                                    {name}
-                                                    <Arrow />
+                                    {map(siteMap, (group, name) => {
+                                        if (size(group) < 2) {
+                                            return (
+                                                <GroupName noDropdown>
+                                                    <ChosenLink item={group[0]} />
                                                 </GroupName>
-                                            }
-                                            key={name}
-                                        >
-                                            {map(group, (item, key) => (
-                                                <ChosenLink item={item} key={key} />
-                                            ))}
-                                        </Dropdown>
-                                    ))}
+                                            )
+                                        }
+                                        return (
+                                            <Dropdown
+                                                button={
+                                                    <GroupName>
+                                                        {name}
+                                                        <Arrow />
+                                                    </GroupName>
+                                                }
+                                                key={name}
+                                            >
+                                                {map(group, (item, key) => (
+                                                    <ChosenLink item={item} key={key} />
+                                                ))}
+                                            </Dropdown>
+                                        )
+                                    })}
                                 </>
                             )}
                             {['lg', 'xl'].includes(screenClass) && (
@@ -179,16 +209,29 @@ export default function Header() {
                                             <LoginIntoDropdown xs={12}>
                                                 <Login largeLabel={true} />
                                             </LoginIntoDropdown>
-                                            {map(siteMap, (group, name) => (
-                                                <Col xs={6} key={name}>
-                                                    <Group>
-                                                        <GroupName>{name}</GroupName>
-                                                        {map(group, (item, key) => (
-                                                            <ChosenLink item={item} key={key} />
-                                                        ))}
-                                                    </Group>
-                                                </Col>
-                                            ))}
+                                            {map(siteMap, (group, name) => {
+                                                if (size(group) < 2) {
+                                                    return (
+                                                        <Col xs={6} key={name} style={{ order: 1 }}>
+                                                            <Group>
+                                                                <GroupName noDropdown>
+                                                                    <ChosenLink item={group[0]} />
+                                                                </GroupName>
+                                                            </Group>
+                                                        </Col>
+                                                    )
+                                                }
+                                                return (
+                                                    <Col xs={6} key={name}>
+                                                        <Group>
+                                                            <GroupName>{name}</GroupName>
+                                                            {map(group, (item, key) => (
+                                                                <ChosenLink item={item} key={key} />
+                                                            ))}
+                                                        </Group>
+                                                    </Col>
+                                                )
+                                            })}
                                         </Row>
                                     </Dropdown>
                                 </div>
@@ -197,6 +240,6 @@ export default function Header() {
                     </Container>
                 </Root>
             </Headroom>
-        </header>
+        </Wrapper>
     )
 }

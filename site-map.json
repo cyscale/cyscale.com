@@ -17,6 +17,13 @@
             "extern": false
         }
     ],
+    "Pricing": [
+        {
+            "link": "/pricing",
+            "label": "Pricing",
+            "extern": false
+        }
+    ],
     "Resources": [
         {
             "link": "/blog",
