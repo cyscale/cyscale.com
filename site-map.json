@@ -15,7 +15,9 @@
             "link": "/demo",
             "label": "Access Demo",
             "extern": false
-        },
+        }
+    ],
+    "Pricing": [
         {
             "link": "/pricing",
             "label": "Pricing",

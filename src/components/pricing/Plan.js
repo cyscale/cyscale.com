@@ -124,7 +124,13 @@ export default function Plan({
                     {basePrice !== 0 && <span>€</span>}
                     <strong>{!yearly ? basePrice || 'Free' : offerPrice || 'Free'}</strong>
                 </Price>
-                {billing && <small>{billing}</small>}
+                {billing ? (
+                    <small>
+                        {billing} billed {!yearly ? 'monthly' : 'annually'}
+                    </small>
+                ) : (
+                    <small>Always Free</small>
+                )}
             </PriceWrapper>
             {cta.extern ? (
                 <CtaExtern

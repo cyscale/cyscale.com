@@ -7,7 +7,6 @@ plans:
     - name: Community
       description: >
           A rich Inventory to provide visibility into your cloud environments.
-      billing: Always Free
       basePrice: 0
       offerPrice: 0
       type: community
@@ -19,7 +18,7 @@ plans:
     - name: Business
       description: >
           Essential tools to ensure your cloud environments stay protected.
-      billing: per asset/mo billed monthly
+      billing: per asset/mo
       basePrice: 6
       offerPrice: 5
       type: business
@@ -31,7 +30,7 @@ plans:
     - name: Pro
       description: >
           Advanced management of security posture for your cloud environments.
-      billing: per asset/mo billed monthly
+      billing: per asset/mo
       basePrice: 12
       offerPrice: 10
       featured: false

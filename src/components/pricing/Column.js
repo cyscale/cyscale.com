@@ -46,7 +46,7 @@ const Root = styled.div`
             font-size: ${theme.fontSize(13)};
             border-radius: ${theme.radius};
             background: ${theme.palette.error};
-            padding: ${theme.spacing(1 / 4)} 0;
+            padding: ${theme.spacing(1 / 2)} 0;
         }
        
     `}

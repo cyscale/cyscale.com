@@ -55,7 +55,7 @@ export default function Features({ onChange, yearly, features }) {
             <YearlySwitch yearly={yearly}>
                 <span>Monthly</span>
                 <Switch onChange={onChange} />
-                <span>Annual</span>
+                <span>Annual (discount)</span>
             </YearlySwitch>
             <FeatureNames>
                 {map(features, ({ name }, key) => (
