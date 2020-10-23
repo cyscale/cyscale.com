@@ -52,7 +52,7 @@ const Content = styled.div`
 `
 
 export function PricingPageTemplate({ plans, features, title, heading, subheading }) {
-    const [yearly, setYearly] = useState(false)
+    const [yearly, setYearly] = useState(true)
 
     return (
         <Root>

@@ -54,7 +54,7 @@ export default function Features({ onChange, yearly, features }) {
             <Title>Pick your plan</Title>
             <YearlySwitch yearly={yearly}>
                 <span>Monthly</span>
-                <Switch onChange={onChange} />
+                <Switch checked={yearly} onChange={onChange} />
                 <span>Annual (discount)</span>
             </YearlySwitch>
             <FeatureNames>
