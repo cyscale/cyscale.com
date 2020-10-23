@@ -39,10 +39,10 @@ const HiddenInput = styled.input`
     }
 `
 
-export const Switch = ({ onChange }) => {
+export const Switch = ({checked, onChange }) => {
     return (
         <>
-            <HiddenInput onChange={onChange} type='checkbox' id='switch' />
+            <HiddenInput checked={checked} onChange={onChange} type='checkbox' id='switch' />
             <Label for='switch'>Toggle</Label>
         </>
     )
