@@ -40,10 +40,12 @@ const PriceWrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     padding: 0 ${theme.spacing(2)};
-    min-height: ${theme.spacing(24)};
+    // min-height: ${theme.spacing(24)};
+    min-height: ${theme.spacing(8)};
 
     @media (max-width: ${theme.bp.lg}) {
-        min-height: ${theme.spacing(20)};
+        // min-height: ${theme.spacing(20)};
+        min-height: ${theme.spacing(4)};
     }
 `
 
@@ -120,7 +122,7 @@ export default function Plan({
             <Title>{name}</Title>
             <Description>{description}</Description>
             <PriceWrapper>
-                <Price>
+                {/* <Price>
                     {basePrice !== 0 && <span>€</span>}
                     <strong>{!yearly ? basePrice || 'Free' : offerPrice || 'Free'}</strong>
                 </Price>
@@ -130,7 +132,7 @@ export default function Plan({
                     </small>
                 ) : (
                     <small>Always Free</small>
-                )}
+                )} */}
             </PriceWrapper>
             {cta.extern ? (
                 <CtaExtern
