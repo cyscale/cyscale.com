@@ -1,6 +1,6 @@
 ---
 templateKey: career-page
-title: " "
+title: ""
 date: 2022-03-11T11:00:00.000Z
 description: Cyscale is a startup from Cluj-Napoca, activating in the cloud
   cybersecurity industry.
