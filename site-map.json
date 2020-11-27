@@ -51,6 +51,11 @@
             "link": "/contact",
             "label": "Contact",
             "extern": false
+        },
+        {
+            "link": "/careers",
+            "label": "Careers",
+            "extern": false
         }
     ]
 }

@@ -28,6 +28,17 @@ collections:
           - { label: 'Featured Image', name: 'featuredimage', widget: image }
           - { label: 'Body', name: 'body', widget: 'markdown' }
           - { label: 'Tags', name: 'tags', widget: 'list' }
+    - name: 'careers'
+      label: 'Career'
+      folder: 'src/pages/careers'
+      create: true
+      slug: '{{slug}}'
+      fields:
+          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'career-page' }
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+          - { label: 'Description', name: 'description', widget: 'text' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
     - name: 'policies'
       label: 'Policies'
       folder: 'src/pages/policies'
