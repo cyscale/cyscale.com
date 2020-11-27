@@ -1,9 +1,10 @@
 ---
 templateKey: career-page
-date: 2020-27-11T11:00:00.000Z
-description: Cyscale is a startup from Cluj-Napoca, activating in the cloud cybersecurity industry.
+title: " "
+date: 2022-03-11T11:00:00.000Z
+description: Cyscale is a startup from Cluj-Napoca, activating in the cloud
+  cybersecurity industry.
 ---
-
 <div style="max-width: 50%; margin: auto;">
 
 ![Careers](/img/careers.svg)
@@ -26,15 +27,15 @@ If you are looking for a career with an innovative and vibrant cybersecurity com
 
 ### Our mission
 
-_At Cyscale, we believe that a safer Cloud means a safer World. We need to do something extraordinary to have a better, easier, and more secure way of designing & deploying any Cloud Infrastructure in AWS, Azure, GCP, OpenStack, VMWare, IBM Cloud, Oracle Cloud, and even Alibaba Cloud._
+*At Cyscale, we believe that a safer Cloud means a safer World. We need to do something extraordinary to have a better, easier, and more secure way of designing & deploying any Cloud Infrastructure in AWS, Azure, GCP, OpenStack, VMWare, IBM Cloud, Oracle Cloud, and even Alibaba Cloud.*
 
 ## Open positions
 
 #### Developing
 
--   [Senior Backend developer](/careers/senior-backend-developer)
--   [Senior Frontend developer](/careers/senior-frontend-developer)
+* [Senior Backend Developer](/careers/senior-backend-developer)
+* [Senior Frontend Developer](/careers/senior-frontend-developer)
 
 #### Marketing
 
--   [Marketing Specialist](/careers/marketing-specialist)
+* [Marketing Specialist](/careers/marketing-specialist)
