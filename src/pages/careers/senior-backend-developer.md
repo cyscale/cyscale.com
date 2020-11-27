@@ -1,6 +1,6 @@
 ---
 templateKey: career-page
-title: Senior Backend Engineer / Golang Developer
+title: Senior Backend Developer / Golang Developer
 date: 2020-27-11T11:00:00.000Z
 description: Cyscale is a startup from Cluj-Napoca, activating in the cloud cybersecurity industry. We are looking for an experienced backend developer.
 ---
@@ -15,11 +15,11 @@ For this, we are looking for an experienced backend developer for the Cyscale Po
 
 ## Role:
 
-**Senior Backend Engineer / Golang Developer: build globally distributed and scalable cloud-based systems in Golang.**
+**Senior Backend Developer / Golang Developer: build globally distributed and scalable cloud-based systems in Golang.**
 
 ## Benefits:
 
--   working with the most up-to-date technologies for Cloud and Cybesecurity;
+-   working with the most up-to-date technologies for Cloud and Cybersecurity;
 -   competitive salary
 -   possibility to receive shares from the options pool
 -   flexible schedule and working hours
@@ -44,7 +44,6 @@ For this, we are looking for an experienced backend developer for the Cyscale Po
 
 # If the Cyscale team and our product sounds like something you can get excited about, apply for this role by
 
--   open a [Pull Request](https://github.com/cyscale/careers/pulls) on this Github project
 -   email us [hr@cyscale.com](mailto:hr@cyscale.com)
 -   contact us via [website contact form](https://cyscale.com/contact)
 

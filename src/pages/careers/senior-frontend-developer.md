@@ -1,6 +1,6 @@
 ---
 templateKey: career-page
-title: Senior Frontend Engineer / ReactJS Developer
+title: Senior Frontend Developer / ReactJS Developer
 date: 2020-27-11T11:00:00.000Z
 description: Cyscale is a startup from Cluj-Napoca, activating in the cloud cybersecurity industry. We are looking for an experienced frontend developer.
 
@@ -13,10 +13,10 @@ Following our most recent [Successful Investment Round](https://www.eu-startups.
 For this, we are looking for an experienced frontend developer for the Cyscale Power Cloud Platform.  
 
 ## Role:
-**Senior Frontend Engineer / ReactJS Developer**
+**Senior Frontend Developer / ReactJS Developer**
 
 ## Benefits:
-- working with the most up-to-date technologies for cloud and cybesecurity
+- working with the most up-to-date technologies for Cloud and Cybersecurity
 - competitive salary
 - possibility to receive shares from the options pool
 - flexible schedule and working hours
@@ -45,7 +45,7 @@ For this, we are looking for an experienced frontend developer for the Cyscale P
   - An eye for design
 
 # If the Cyscale team and our product sounds like something you can get excited about, apply for this role by
-- open a [Pull Request](https://github.com/cyscale/careers/pulls) on this Github project
+
 - email us [hr@cyscale.com](mailto:hr@cyscale.com)
 - contact us via [website contact form](https://cyscale.com/contact)
 

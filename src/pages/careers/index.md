@@ -6,7 +6,7 @@ description: Cyscale is a startup from Cluj-Napoca, activating in the cloud cybe
 
 <div style="max-width: 50%; margin: auto;">
 
-![Careers](img/careers.png)
+![Careers](/img/careers.svg)
 
 </div>
 
@@ -20,7 +20,7 @@ We are a remote-first company since day 1. You get to do your job from wherever 
 
 We aim for the highest quality in everything we do and we reward this commitment on the way.
 
-We are a founders-managed company and have recently raised a [successfully investment round of €350,000](https://www.eu-startups.com/2020/09/romanian-startup-cyscale-raises-e350k-in-4-hours-on-seedblink-for-its-international-expansion).
+We are a founders-managed company and have recently had a [successful investment round of €350,000](https://www.eu-startups.com/2020/09/romanian-startup-cyscale-raises-e350k-in-4-hours-on-seedblink-for-its-international-expansion).
 
 If you are looking for a career with an innovative and vibrant cybersecurity company, Cyscale is the place for you!
 
@@ -30,11 +30,11 @@ _At Cyscale, we believe that a safer Cloud means a safer World. We need to do so
 
 ## Open positions
 
-#### Engineering
+#### Developing
 
--   [Senior Backend Engineer](/careers/senior-backend-engineer)
--   [Senior Frontend Engineer](/careers/senior-frontend-engineer)
+-   [Senior Backend developer](/careers/senior-backend-developer)
+-   [Senior Frontend developer](/careers/senior-frontend-developer)
 
 #### Marketing
 
--   Marketing Specialist
+-   [Marketing Specialist](/careers/marketing-specialist)
