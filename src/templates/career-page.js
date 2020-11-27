@@ -40,7 +40,7 @@ const CareerPage = ({ data }) => {
     const { markdownRemark: post } = data
 
     return (
-        <Layout title={post.frontmatter.title}>
+        <Layout title={post.frontmatter.title || 'Career'}>
             <CareerPageTemplate
                 content={post.html}
                 contentComponent={HTMLContent}
