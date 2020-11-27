@@ -1,18 +1,18 @@
-import { useLocation } from '@reach/router';
-import { Link as GatsbyLink } from 'gatsby';
-import { map, size } from 'lodash';
-import React, { useState } from 'react';
-import { Col, Container, Row, useScreenClass } from 'react-grid-system';
-import HamburgerMenu from 'react-hamburger-menu';
-import Headroom from 'react-headroom';
-import styled from 'styled-components';
+import { useLocation } from '@reach/router'
+import { Link as GatsbyLink } from 'gatsby'
+import { map, size } from 'lodash'
+import React, { useState } from 'react'
+import { Col, Container, Row, useScreenClass } from 'react-grid-system'
+import HamburgerMenu from 'react-hamburger-menu'
+import Headroom from 'react-headroom'
+import styled from 'styled-components'
 
-import siteMap from '../../site-map.json';
-import logoWhite from '../img/logo.svg';
-import theme from '../utils/theme';
-import { Anchor, Link, ScrollLink } from './Anchor';
-import Dropdown from './Dropdown';
-import Login from './Login';
+import siteMap from '../../site-map.json'
+import logoWhite from '../img/logo.svg'
+import theme from '../utils/theme'
+import { Anchor, Link, ScrollLink } from './Anchor'
+import Dropdown from './Dropdown'
+import Login from './Login'
 
 const Wrapper = styled.header`
     position: relative;
@@ -160,7 +160,7 @@ export default function Header() {
                                     {map(siteMap, (group, name) => {
                                         if (size(group) < 2) {
                                             return (
-                                                <GroupName noDropdown>
+                                                <GroupName noDropdown key={name}>
                                                     <ChosenLink item={group[0]} />
                                                 </GroupName>
                                             )
@@ -201,11 +201,12 @@ export default function Header() {
                                                 isOpen={open}
                                                 strokeWidth={1}
                                                 borderRadius={0}
+                                                menuClicked={() => {}}
                                                 animationDuration={0.25}
                                             />
                                         }
                                     >
-                                        <Row wrap={true} style={{ width: 345 }}>
+                                        <Row style={{ width: 345 }}>
                                             <LoginIntoDropdown xs={12}>
                                                 <Login largeLabel={true} />
                                             </LoginIntoDropdown>

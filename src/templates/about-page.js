@@ -10,12 +10,10 @@ import Layout from '../components/Layout'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import theme from '../utils/theme'
 
-const Founder = styled.div`
+const Founder = styled.a`
+    display: block;
     text-align: center;
-    & img {
-        border-radius: 50%;
-        object-fit: center;
-    }
+    color: ${theme.palette.black70};
 
     & h3 {
         margin-bottom: 0;
@@ -25,6 +23,34 @@ const Founder = styled.div`
         display: block;
         margin-bottom: ${theme.spacing(1)};
     }
+
+    &:hover {
+        & > div {
+            border-color: ${theme.palette.primary};
+            transition: border-color .15s ease-in;
+        }
+    }
+`
+
+const Avatar = styled.div`
+    margin: auto;
+    max-width: 120px;
+    max-height: 120px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    transition: border-color .15s ease-out;
+
+    & img {
+        border-radius: 50%;
+        object-fit: center;
+    }
+`
+
+const Blob = styled.div`
+    margin: auto;
+    max-width: 120px;
+    max-height: 120px;
 `
 
 const Strength = styled.div`
@@ -51,7 +77,9 @@ export function AboutPageTemplate({ title, founders, strengths, content, compone
                 {map(strengths, ({ title, description, image }, key) => (
                     <Col md={3} sm={6} xs={6} key={key}>
                         <Strength>
-                            <PreviewCompatibleImage imageInfo={image} />
+                            <Blob>
+                                <PreviewCompatibleImage imageInfo={image} />
+                            </Blob>
                             <h3>{title}</h3>
                             <p>{description}</p>
                         </Strength>
@@ -61,10 +89,12 @@ export function AboutPageTemplate({ title, founders, strengths, content, compone
             </Row>
             <Divider spacing={6} />
             <Row component='section'>
-                {map(founders, ({ name, position, image, about }, key) => (
+                {map(founders, ({ name, position, link, image, about }, key) => (
                     <Col md={3} sm={6} xs={6} key={key}>
-                        <Founder>
-                            <PreviewCompatibleImage imageInfo={image} />
+                        <Founder href={link} target='_blank' rel='noopener noreferrer'>
+                            <Avatar>
+                                <PreviewCompatibleImage imageInfo={image} />
+                            </Avatar>
                             <h3>{name}</h3>
                             <small>{position}</small>
                             <p>{about}</p>
@@ -107,13 +137,14 @@ export const aboutPageQuery = graphql`
                 founders {
                     image {
                         childImageSharp {
-                            fluid(maxWidth: 256, quality: 100) {
+                            fluid(maxWidth: 250, quality: 100) {
                                 ...GatsbyImageSharpFluid_withWebp
                             }
                         }
                     }
                     name
                     position
+                    link
                     about
                 }
                 strengths {
