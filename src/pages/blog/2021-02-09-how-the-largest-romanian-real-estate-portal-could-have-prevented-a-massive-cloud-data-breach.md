@@ -66,10 +66,13 @@ background-color: rgb(16, 113, 242);
 padding: 1rem 1.5rem;
 }
 </style>
-<div class="row pt-8 pb-8">
+<div class="row pb-4 pb-4">
 <a class="register-cta" href="https://app.cyscale.com/#/register">Get started for free</a>
 </div>
 
 
 
 Mistakes such as having your company’s buckets exposed, without password protection or encryption can be detected and fixed in time, you just need someone to guide you. We are ready to assist you with your Cloud Security.
+
+<br/>
+<br/>
