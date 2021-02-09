@@ -19,15 +19,7 @@ tags:
   - exposed bucket
   - GDPR
 ---
-The adoption of public cloud providers can bring many advantages to a business, but at the same time, cybersecurity threats can appear because of this usage.
-
-
-
-Allocating the required resources to address the security configurations and compliance of the cloud infrastructures is still a big challenge for many companies.
-
-
-
-Can cloud misconfigurations affect your company?
+### Can cloud misconfigurations affect your company?
 
 Yes, it can. In this case, Romania’s largest real estate portal has suffered a data breach due to a misconfiguration. Website Planet detected that the portal's AWS S3 buckets were publicly available without any protection, back in December 2020. As a result, more than 200,000 records were exposed.
 
