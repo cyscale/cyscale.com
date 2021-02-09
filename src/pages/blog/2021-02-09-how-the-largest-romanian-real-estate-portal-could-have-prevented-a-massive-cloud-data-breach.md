@@ -23,8 +23,8 @@ tags:
 
 Yes, they can! In this case, Romania’s largest real estate portal has suffered a data breach due to a misconfiguration. Website Planet detected that the portal's AWS S3 buckets were publicly available without any protection, back in December 2020. As a result, more than 200,000 records were exposed.
 
-![how this breach would have been prevented diagram](/img/data-breach.jpg)
-
+<br/>
+ 
 Anyone with the URL could access the buckets and Personal Identifying Information (PII) stored there. Users' data such as full names, emails, phone numbers, Social Security Numbers (CNP), or even scanned copies of national ID cards including identifying codes were leaked.
 
 <br/>
@@ -36,6 +36,10 @@ The AWS (Amazon Web Services) S3 Access Points feature provides settings for acc
 By default, new buckets do not allow public access. However, users can modify bucket policies and allow public access. Since these individual settings are customizations enabled to better suit a specific organization’s needs, the responsibility is no longer with the cloud provider.
 
 Even if the unintentional breach was fixed after Website Planet reported it, the precise number of people affected remains unknown and the culpability for this data leak lies entirely with the real estate portal.
+
+<br/>
+
+![how this breach would have been prevented diagram](/img/frame-1.jpg)
 
 <br/>
 
