@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1382.242" height="922.691" viewBox="0 0 1382.242 922.691">
+  <defs>
+    <linearGradient id="linear-gradient" x1="-0.776" y1="0.57" x2="1.042" y2="0.57" gradientUnits="objectBoundingBox">
+      <stop offset="0.107" stop-color="#0f26aa"/>
+      <stop offset="0.88" stop-color="#ff4a56"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.225" y1="0.57" x2="2.043" y2="0.57" xlink:href="#linear-gradient"/>
+  </defs>
+  <g id="Group_418" data-name="Group 418" transform="translate(0 -126.621)">
+    <g id="Group_330" data-name="Group 330" transform="translate(-2876.484 5196.293)">
+      <g id="Group_328" data-name="Group 328" transform="translate(3180.199 -4909.188)">
+        <rect id="Rectangle_2128" data-name="Rectangle 2128" width="154.778" height="762.207" transform="translate(0 0)" fill="#fff"/>
+      </g>
+      <g id="Group_329" data-name="Group 329" transform="translate(2876.484 -4605.474)">
+        <rect id="Rectangle_2129" data-name="Rectangle 2129" width="762.207" height="154.778" fill="#fff"/>
+      </g>
+    </g>
+    <g id="Group_344" data-name="Group 344" transform="translate(-336.134 1161.481)">
+      <g id="Group_341" data-name="Group 341" transform="translate(1261.111 -1034.86)">
+        <path id="Path_218" data-name="Path 218" d="M1410.817-874.706V-1034.86c-252.142,0-457.265,207.58-457.265,462.734h158.256C1111.808-738.971,1245.948-874.706,1410.817-874.706Z" transform="translate(-953.552 1034.86)" fill="url(#linear-gradient)"/>
+      </g>
+      <g id="Group_342" data-name="Group 342" transform="translate(797.134 -1034.86)">
+        <path id="Path_219" data-name="Path 219" d="M797.134-1034.86v160.154c164.881,0,299.017,135.735,299.017,302.58h158.256C1254.408-827.28,1049.276-1034.86,797.134-1034.86Z" transform="translate(-797.134 1034.86)" fill="url(#linear-gradient-2)"/>
+      </g>
+    </g>
+  </g>
+</svg>

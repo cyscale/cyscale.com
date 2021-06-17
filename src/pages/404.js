@@ -1,41 +1,27 @@
-import { Link } from 'gatsby'
-import React from 'react'
-import styled from 'styled-components'
-
-import Divider from '../components/Divider'
-import road from '../img/hit-the-road.svg'
-import theme from '../utils/theme'
-
-const Root = styled.main`
-    text-align: center;
-    height: 100vh;
-`
-
-const Road = styled.img`
-    max-width: 30vw;
-`
-
-const Title = styled.h1`
-    margin: 0;
-    font-weight: bold;
-    font-size: ${theme.fontSize(128)};
-    letter-spacing: ${theme.spacing(4)};
-`
-
+import { Link } from 'gatsby';
+import React from 'react';
+import road from '../assets/images/hit-the-road.svg';
+import Footer from '../components/layout/footer';
+import TopNav from '../components/layout/topNav';
+import SEO from '../components/SEO/SEO';
 const NotFoundPage = () => (
-    <Root>
-        <Divider spacing={6} />
-        <Title>404</Title>
-        <p>
-            You just hit the <strong>404 Route</strong> that doesn't exist... Go
-            <Link to='/'>
-                <strong> Home </strong>
-            </Link>
-            instead.
-        </p>
-        <Divider spacing={6} />
-        <Road src={road} />
-    </Root>
-)
+    <>
+        <TopNav pageName='404' scrollable={false} />
+        <SEO title='Cyscale | Not found' description='Not found page' pageName='404' />
+        <div className='text-center height-screen pt-20 pb-32 max-w-xl mx-auto'>
+            <h1 className='m-0 font-bold text-9xl'>404</h1>
+            <p className='text-lg'>
+                You just hit the <strong>404 Route</strong> that doesn't exist... Go
+                <Link className='text-blue' to='/'>
+                    <strong> Home </strong>
+                </Link>
+                instead.
+            </p>
+            <div className='border-t border-grey3 mt-10 mb-10' />
+            <img className='max-w-md lg:max-w-xl mx-auto mt-6' src={road} />
+        </div>
+        <Footer />
+    </>
+);
 
-export default NotFoundPage
+export default NotFoundPage;

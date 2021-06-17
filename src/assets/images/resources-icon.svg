@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="108.267" height="64.001" viewBox="0 0 108.267 64.001">
+  <defs>
+    <linearGradient id="linear-gradient" x1="-1.25" y1="0.5" x2="0.915" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0.107" stop-color="#0f26aa"/>
+      <stop offset="0.88" stop-color="#ff4a56"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="-0.249" y1="0.5" x2="1.915" y2="0.5" xlink:href="#linear-gradient"/>
+  </defs>
+  <g id="Group_412" data-name="Group 412" transform="translate(-10116 3907)">
+    <path id="Exclusion_1" data-name="Exclusion 1" d="M46,62V10.828L37.173,2H2V62H46m2,2H0V0H38L48,10Z" transform="translate(10116 -3907)" fill="#ffc988"/>
+    <path id="Rectangle_2256" data-name="Rectangle 2256" d="M2,2V6H20V2H2M1,0H21a1,1,0,0,1,1,1V7a1,1,0,0,1-1,1H1A1,1,0,0,1,0,7V1A1,1,0,0,1,1,0Z" transform="translate(10124 -3899)" fill="#ffc988"/>
+    <rect id="Rectangle_2257" data-name="Rectangle 2257" width="8" height="2" rx="1" transform="translate(10124 -3883)" fill="#fff"/>
+    <path id="Rectangle_2257_-_Outline" data-name="Rectangle 2257 - Outline" d="M1,0H7A1,1,0,0,1,7,2H1A1,1,0,0,1,1,0Z" transform="translate(10124 -3883)" fill="#ffc988"/>
+    <rect id="Rectangle_2260" data-name="Rectangle 2260" width="8" height="2" rx="1" transform="translate(10124 -3877)" fill="#fff"/>
+    <path id="Rectangle_2260_-_Outline" data-name="Rectangle 2260 - Outline" d="M1,0H7A1,1,0,0,1,7,2H1A1,1,0,0,1,1,0Z" transform="translate(10124 -3877)" fill="#ffc988"/>
+    <rect id="Rectangle_2262" data-name="Rectangle 2262" width="8" height="2" rx="1" transform="translate(10124 -3871)" fill="#fff"/>
+    <path id="Rectangle_2262_-_Outline" data-name="Rectangle 2262 - Outline" d="M1,0H7A1,1,0,0,1,7,2H1A1,1,0,0,1,1,0Z" transform="translate(10124 -3871)" fill="#ffc988"/>
+    <rect id="Rectangle_2264" data-name="Rectangle 2264" width="8" height="2" rx="1" transform="translate(10124 -3865)" fill="#fff"/>
+    <path id="Rectangle_2264_-_Outline" data-name="Rectangle 2264 - Outline" d="M1,0H7A1,1,0,0,1,7,2H1A1,1,0,0,1,1,0Z" transform="translate(10124 -3865)" fill="#ffc988"/>
+    <rect id="Rectangle_2266" data-name="Rectangle 2266" width="8" height="2" rx="1" transform="translate(10124 -3859)" fill="#fff"/>
+    <path id="Rectangle_2266_-_Outline" data-name="Rectangle 2266 - Outline" d="M1,0H7A1,1,0,0,1,7,2H1A1,1,0,0,1,1,0Z" transform="translate(10124 -3859)" fill="#ffc988"/>
+    <rect id="Rectangle_2268" data-name="Rectangle 2268" width="8" height="2" rx="1" transform="translate(10124 -3853)" fill="#fff"/>
+    <path id="Rectangle_2268_-_Outline" data-name="Rectangle 2268 - Outline" d="M1,0H7A1,1,0,0,1,7,2H1A1,1,0,0,1,1,0Z" transform="translate(10124 -3853)" fill="#ffc988"/>
+    <rect id="Rectangle_2258" data-name="Rectangle 2258" width="20" height="2" rx="1" transform="translate(10136 -3883)" fill="#fff"/>
+    <path id="Rectangle_2258_-_Outline" data-name="Rectangle 2258 - Outline" d="M1,0H19a1,1,0,0,1,0,2H1A1,1,0,0,1,1,0Z" transform="translate(10136 -3883)" fill="#ffc988"/>
+    <rect id="Rectangle_2259" data-name="Rectangle 2259" width="20" height="2" rx="1" transform="translate(10136 -3877)" fill="#fff"/>
+    <path id="Rectangle_2259_-_Outline" data-name="Rectangle 2259 - Outline" d="M1,0H19a1,1,0,0,1,0,2H1A1,1,0,0,1,1,0Z" transform="translate(10136 -3877)" fill="#ffc988"/>
+    <rect id="Rectangle_2261" data-name="Rectangle 2261" width="20" height="2" rx="1" transform="translate(10136 -3871)" fill="#fff"/>
+    <path id="Rectangle_2261_-_Outline" data-name="Rectangle 2261 - Outline" d="M1,0H19a1,1,0,0,1,0,2H1A1,1,0,0,1,1,0Z" transform="translate(10136 -3871)" fill="#ffc988"/>
+    <rect id="Rectangle_2263" data-name="Rectangle 2263" width="20" height="2" rx="1" transform="translate(10136 -3865)" fill="#fff"/>
+    <path id="Rectangle_2263_-_Outline" data-name="Rectangle 2263 - Outline" d="M1,0H19a1,1,0,0,1,0,2H1A1,1,0,0,1,1,0Z" transform="translate(10136 -3865)" fill="#ffc988"/>
+    <rect id="Rectangle_2265" data-name="Rectangle 2265" width="20" height="2" rx="1" transform="translate(10136 -3859)" fill="#fff"/>
+    <path id="Rectangle_2265_-_Outline" data-name="Rectangle 2265 - Outline" d="M1,0H19a1,1,0,0,1,0,2H1A1,1,0,0,1,1,0Z" transform="translate(10136 -3859)" fill="#ffc988"/>
+    <rect id="Rectangle_2267" data-name="Rectangle 2267" width="20" height="2" rx="1" transform="translate(10136 -3853)" fill="#fff"/>
+    <path id="Rectangle_2267_-_Outline" data-name="Rectangle 2267 - Outline" d="M1,0H19a1,1,0,0,1,0,2H1A1,1,0,0,1,1,0Z" transform="translate(10136 -3853)" fill="#ffc988"/>
+    <g id="Group_411" data-name="Group 411" transform="translate(8711.709 -4286.121)">
+      <g id="Group_7" data-name="Group 7" transform="translate(1475.932 387.121)">
+        <path id="Path_11" data-name="Path 11" d="M1579.09,399.8V387.121a36.667,36.667,0,0,0-36.625,36.627h12.676A23.977,23.977,0,0,1,1579.09,399.8Z" transform="translate(-1542.465 -387.121)" fill="url(#linear-gradient)"/>
+      </g>
+      <g id="Group_8" data-name="Group 8" transform="translate(1439.291 387.121)">
+        <path id="Path_12" data-name="Path 12" d="M1439.291,387.121V399.8a23.977,23.977,0,0,1,23.95,23.95h12.676A36.668,36.668,0,0,0,1439.291,387.121Z" transform="translate(-1439.291 -387.121)" fill="url(#linear-gradient-2)"/>
+      </g>
+    </g>
+  </g>
+</svg>

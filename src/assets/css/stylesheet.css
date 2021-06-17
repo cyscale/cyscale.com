@@ -1,0 +1,739 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
+
+  
+
+body,html,p, ul, li, ol,a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700 !important;
+}
+.topNav .navbar-light .navbar-nav .nav-link{
+    color: rgba(0, 0, 0, 1)
+}
+.topNav .dropdown-toggle::after{
+    display: none !important;
+}
+.bg-footer-texture {
+    background-image: url('../images/footerbg.png');
+    background-repeat: no-repeat;
+    background-position: 101% 103%;
+    background-size: 173px;
+}
+.new-line {
+    white-space: pre-line;
+  }
+.blackBorder{
+    border: thin solid #000000 !important;
+}
+.greyBorder{
+    border: thin solid #707070 !important;
+}
+.sectionTitle:after{
+    content: "";
+    display: block;
+    width: 100%;
+    max-width: 384px;
+    height: 8px;
+    background-image: linear-gradient(to right, #0F26AA , #FF4A56);
+    margin-top: 20px;
+}
+.heroBg{
+    background-position: left -80px !important;
+}
+.heroBg.CSPMPage{
+    background-position: left -138px !important;
+}
+.config-items{
+    border-bottom: thin solid #B5B5B5;
+}
+.hoverBorder:hover .config-items{
+    border-bottom: 5px solid #FBB040;
+}
+@media screen and (max-width: 1500px) {
+    .heroBg, .heroBg.CSPMPage{
+        background-position: right top !important;
+    }
+  }
+.gradientBgBtn{
+    background-image: linear-gradient(to right, #0F26AA , #FF4A56);
+}
+.gradientBgBtn:hover{
+    background-image: linear-gradient(to left, #0F26AA , #FF4A56);
+}
+.offerBox:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: block;
+    left: -100%; 
+    background-position: right 57px;
+    border-right: 10px solid transparent;
+    background-size: 18px;
+    background-repeat: no-repeat;
+    -ms-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.offerLink:hover .offerBox{
+    background-color: #ffffff;
+}
+.offerLink:hover .offerBox:before{ 
+    background-color: #ffffff;   
+    background-image: url(../images/arrow-right.svg);    
+}
+@media screen and (min-width: 768px) {
+    .offerLink.active .offerBox{
+        background-color: #ffffff;
+    }
+    .offerLink.active .offerBox:before{ 
+        background-color: #ffffff;   
+        background-image: url(../images/arrow-right.svg);    
+    }
+  }
+.offer-right-banner{
+    min-height: calc(100% - 120px);
+    background-image: url(../images/offerBG.svg);
+    background-size: cover;
+    background-position: left top;
+}
+.offer-right-banner > p{
+    line-height: 66px;
+}
+.menu-fixed {
+    background: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+}
+@media screen and (max-width: 767px) {
+    .offerBox:before{
+        border-right: 5px solid transparent;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    .offerBox:after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        display: block;
+        right: -100%; 
+        -ms-transition: all 0.3s;
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+        }
+        .offerLink:hover .offerBox:after,
+        .offerLink.active .offerBox:after{ 
+            background-color: #ffffff;      
+        }
+  }
+  .proposal h2{
+      max-width: 370px;
+  }
+  .proposal .avatarCon img{
+      width: 431px
+  }
+  .proposal  .description p{
+      max-width: 518px;
+  }
+  .cloudBenifits{
+    background-image: url(../images/elemente-vectoriale-06.svg);
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-position: calc(100% + 45px) -57px;
+    background-size: 520px;
+}
+.CSPMtestamonials .slick-prev {
+    left: -35px !important;
+}
+.CSPMtestamonials .slick-next {
+    right: -35px !important;
+}
+.CSPMtestamonials  .slick-dots{
+    top: calc(100% + 100px) !important;
+}
+.CSPMtestamonials .slick-dots li button{
+    padding: 7px !important;
+    width: 10px !important;
+    background-color: #fff !important;
+    border-radius: 100px !important;
+    height: 10px !important;
+}
+.CSPMtestamonials .slick-dots li button:before{
+    font-size: 8px !important;
+    color: #ffffff !important;
+    opacity: 1 !important;
+    line-height: 15px !important;
+    width: 13px !important;
+    height: 13px !important;
+}
+.CSPMtestamonials .slick-dots li button:hover:before, 
+.CSPMtestamonials .slick-dots li button:focus:before,
+.CSPMtestamonials .slick-dots li.slick-active button:before{
+    color: #A5A5A5 !important;
+    opacity: 1 !important;
+}
+  @media screen and (max-width: 768px) {
+    .proposal h2,
+    .proposal  .description p{
+        max-width: 100%;
+    }
+    .proposal  .description p{
+        margin-top: 20px;
+    }
+    .proposal .flex{
+        flex-wrap: wrap !important;
+    }
+    .proposal .flex > div{
+        width: 100% !important;
+    }
+    .cloudBenifits{
+        background-size: 320px;
+    }
+    .slick-prev {
+        left: -5px !important;
+    }
+    
+    .CSPMtestamonials .slick-prev{
+        left: -20px !important;
+    }
+    .slick-next {
+        right: -5px !important;
+    }
+    
+    .CSPMtestamonials .slick-next{
+        right: -20px !important;
+    }
+  }  
+  @media screen and (max-width: 767px) {
+    .config-items{
+        border-top: thin solid #B5B5B5;
+    }
+    .heroBg.HomePage {
+        background-image: none !important;
+    }
+    .heroBg.HomePage {
+        background: url("../images/mobile-banner.svg") no-repeat center !important;
+        background-position: top center !important;
+        background-size: cover !important;
+    }
+    .header-padding {
+        padding-top: 370px !important;
+    }
+    .skills .itemBox .title {
+        padding-right: 190px;
+        padding-bottom: 190px;
+    }
+    .gradientBG {
+        background-position: bottom !important;
+    }
+    .offer-container .offerLink.block:nth-child(odd) {
+        --tw-bg-opacity: 1!important;
+        background-color: rgba(238,238,238,var(--tw-bg-opacity))!important;
+        padding: 20px;
+        padding-bottom: 60px;
+    }
+    .offer-container .offerLink.block:nth-child(even) {
+        padding: 20px;
+        padding-bottom: 60px;
+    }
+  }
+  .slick-prev:before, .slick-next:before{
+    display: none;
+  }
+  .slick-prev,.slick-next{
+    background-position: center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    width: 30px !important;
+    height: 24px !important;
+  }
+  .slick-prev{
+      background-image: url(../images/arrow-left.svg) !important;
+  }
+  .slick-next{
+    background-image: url(../images/arrow-right-1.svg) !important;
+    }
+.featureSlider .slick-prev,
+.featureSlider .slick-next{
+    width: 50px !important;
+    height: 100px !important;
+}
+.featureSlider .slick-prev {
+    left: 0 !important;
+}
+.featureSlider .slick-next {
+    right: 0 !important;
+}
+.featureSlider .slick-prev{
+    background-image: url(../images/f-slider-left-arrow.svg) !important;
+}
+.featureSlider .slick-next{
+  background-image: url(../images/f-slider-right-arrow.svg) !important;
+  }
+  .featuredProducts{
+    background-image: url(../images/featured-product-bg.svg);
+    background-size: 100% 899px;
+    background-position: top left;
+    background-repeat: no-repeat;
+  }
+.skills .description{
+    min-height: 176px;
+}
+.skills a:hover{
+    background-image: linear-gradient(to right, #0F26AA , #FF4A56);
+    color: #fff !important;
+}
+.skills a:hover .title,
+.skills a:hover .description,
+.skills a:hover .date{
+    color: #fff !important;
+}
+.skills .itemBox{
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.skills .itemBox:first-child{
+    background-image: url(../images/cupTea.png);
+}
+.skills .itemBox:nth-child(2){
+    background-image: url(../images/cupTea.png);
+}
+.skills .itemBox:nth-child(3){
+    background-image: url(../images/keyboard.png);
+}
+.gradientBG{
+    background-image: url(../images/gradient-bg.svg);
+    background-size: cover;
+    background-position: left bottom;
+}
+.gradientBGCSPM{
+    background-image:url(../images/half-circle.svg), url(../images/gradient-bg.svg);
+    background-position: left bottom, left bottom;
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto, cover;
+}
+.gradientBGCSPM-2{
+    background-image:url(../images/half-circle-2.svg), url(../images/gradient-bg.svg);
+    background-position: right bottom, left bottom;
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto, cover;
+}
+.featureTabs .react-tabs ul.react-tabs__tab-list{
+    justify-content: space-evenly;
+    flex-wrap: unset;
+    border-bottom: none;
+    display: flex;
+}
+.featureTabs .react-tabs ul.react-tabs__tab-list .react-tabs__tab{
+    text-align: center;
+    box-shadow: none;
+    flex-basis: 240px;
+    flex-grow: 1;
+    background-color: #EEEEEE;
+    border: none !important;
+    border-radius: 0 !important;
+    margin: 2px;
+    margin-top: 0;
+    font-size: 22px;
+    line-height: 27px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 45px;
+    color: #292929;
+    position: relative;
+}
+.featureTabs .react-tabs ul.react-tabs__tab-list .react-tabs__tab.react-tabs__tab--selected{
+    background-color: #ffffff !important;
+    color: #ffffff !important;
+    background-image: url(../images/active-tab-arrow.svg), url(../images/active-tabs-background.svg);
+    background-position: center bottom, left top;
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto, cover;
+}
+
+@media screen and (max-width: 1025px) {
+    .featuredProducts{
+        background-size: 100% 1003px;
+    }
+    .featureTabs .react-tabs ul.react-tabs__tab-list .react-tabs__tab{
+        line-height: 24px;
+        font-size: 16px;
+        padding: 20px;
+    }
+}
+@media screen and (max-width: 1023px) {
+    .featuredProducts{
+        background-size: 100% 1288px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .featureTabs .react-tabs ul.react-tabs__tab-list{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .featureTabs .react-tabs ul.react-tabs__tab-list .react-tabs__tab{
+        flex-basis: auto;
+    }
+    .featuredProducts {
+        background-size: 100% 1768px;
+    }
+}
+.additionalBenefits .featureSlider{
+        margin-top: 75px;
+}
+.additionalBenefits .featuredProducts{
+    background-image: url(../images/additional-features-bg.svg) !important;
+    background-position: bottom left !important;
+    background-size: 100% 415px !important;
+}
+.additionalBenefits .featuredProducts .sectionTitle:after{
+    margin-top: 92px !important;
+}
+.CSPMServices{
+    background-image: url(../images/CSPM-services-bg.svg);
+    background-position: top left;
+    background-repeat: no-repeat;
+}
+.CSPMServices.securityGaps{
+    background-size: contain;
+}
+@media screen and (max-width: 768px) {
+    .CSPMServices,
+    .CSPMServices.securityGaps{
+        background-size: 30%;
+    }
+}
+.ContactUs{
+    background-size: cover;
+    background-position: right top;
+}
+.contactForm .sectionTitle::after{
+    margin-top: 40px;
+}
+.contactForm .sectionTitle{
+    margin-top: 15px;
+}
+.contactForm input,
+.contactForm textarea{
+    padding: 11.5px 16px 11.5px 16px;
+    border: thin solid #A0A0A0;
+    border-radius: 4px;
+}
+.contactForm textarea{
+    height: 122px;
+}
+.contactForm label.css-checkbox{
+    position: relative;
+    padding-left: 20px;
+}
+.contactForm label.css-checkbox input{
+    display: none;
+}
+.contactForm label.css-checkbox input:checked + i{
+    background-image: url(../images/checked.svg);
+    background-color: #ffffff;
+}
+.contactForm label.css-checkbox i{
+    width: 12px;
+    height: 12px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 6px;
+    background-color: #ffffff;
+    background-size: 100% 100%;
+    background-position: center center;
+    border: thin solid #000000;
+    box-sizing: border-box;
+}
+.contactForm label.css-checkbox i::before,
+.contactForm label.css-checkbox i::before{
+    box-sizing: border-box;
+}
+.pricingTable .h-gradientBG{
+    background-image: url(../images/price-table-header-bg.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.pricingTable th{
+    vertical-align: top !important;
+    padding: 0;
+}
+.pricingTable tr:nth-child(odd){
+    background-color: #fff;
+}
+.pricingTable tr:nth-child(even){
+    background-color: rgba(255, 255, 255, 0.6);
+}
+.pricingTable tr td,
+.pricingTable tr th{
+    border: thin solid #EDEDED;
+}
+.pricingTable .businessCol{
+    background-image: url(../images/mostPopularTag.svg);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 16px) top;
+}
+.innerShadow{
+    box-shadow:inset -4px 1px 21px -11px rgba(0, 0, 0, 0.3) !important
+}
+@media screen and (max-width: 1199px) {
+    .pricingTable{
+       overflow-x: auto;
+    }
+}
+.pagination button{
+    width: 12px;
+    height: 12px;
+    border-radius: 100px;
+    outline: none !important;
+    background-image: url(../images/grey-normal-dot.png);
+    background-size: cover;
+}
+.pagination button.active{
+    background-image: url(../images/active-dot.png);
+}
+
+@media screen and (min-width: 1280px) {
+    .aboutHistory::after{
+        content: "";
+        display: block;
+        width: 100%;
+        height: 8px;
+        background-color: #E6E6E6;
+        position: absolute;
+        left: 100%;
+        top: -8px;
+    }
+}
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 453px;
+    overflow: hidden;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    cursor: pointer;
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 2px);
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  .flip-card-front img{
+      width: auto;
+      height: auto;
+      margin: auto;
+  }
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: #EEEEEE;
+    padding: 45px 45px 45px 45px;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-image: url(../images/flip-card-bg.svg);
+    background-size: cover;
+    background-position: left bottom;
+    color: white;
+    transform: rotateY(180deg);
+    padding: 45px;
+  }
+  .flip-card .lastCol{
+      background-image: url(../images/team-last-bg.svg);
+      background-position: center center;
+      background-repeat: no-repeat;
+  }
+  .otherPages.sectionTitle:after{
+      max-width: 100%;
+  }
+  .partneres .slick-slide{
+      padding: 20px;
+  }
+  .partneres img{
+      -webkit-filter: grayscale(100%);
+      -ms-filter: grayscale(100%);
+      -moz-filter: grayscale(100%);
+      -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }
+  .partneres img:hover{
+      cursor: pointer;
+      -webkit-filter: grayscale(0);
+      -ms-filter: grayscale(0);
+      -moz-filter: grayscale(0);
+      -o-filter: grayscale(0);
+    filter: grayscale(0);
+  }
+  .heroBg.SKGPage{
+    background-position: center right !important;
+    background-size: 53.81%
+  }
+  .topRisks{
+    background-image: url(../images/Group-395.svg);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+}
+.dataSecurity{
+    background-position: left bottom !important;
+    background-image: url(../images/data-security-bg.svg);
+    background-repeat: no-repeat;
+}
+  @media screen and (max-width: 640px) {
+    .heroBg.SKGPage{
+        background-size: cover;
+      }
+      .topRisks{
+        background-size: 50%;
+    }
+}
+@media screen and (min-width: 768px) {
+    .greyBGAfter{
+        background:  linear-gradient(to bottom, #EEEEEE 0%, #EEEEEE 100%) no-repeat;
+        background-size: 50% calc(100% - 91px);
+        background-position: right top;
+    }
+}
+.performance{
+        background:  linear-gradient(to bottom, #EEEEEE 0%, #EEEEEE 100%) no-repeat;
+        background-size: 100% 27%;
+        background-position: right bottom;
+}
+@media screen and (min-width: 768px) {
+    .performance .slick-prev{
+        background-image: url(../images/f-slider-left-arrow.svg) !important;
+    }
+    .performance .slick-next{
+        background-image: url(../images/f-slider-right-arrow.svg) !important;
+    }
+    .performance .slick-prev,
+    .performance .slick-next{
+        width: 54px !important;
+        height: 103px !important;
+        top: 60%;
+    }
+}
+.careers{
+    z-index: 2;
+}
+.careers .bannerImage{
+    z-index: -1;
+}
+.jobs .card{
+    background-position: calc(100% - 25px) calc(100% - 25px);
+}
+.FAQs .tabTitle.active .tabsArrow{
+   -webkit-transform: rotate(180deg);
+   -ms-transform: rotate(180deg);
+   -o-transform: rotate(180deg);
+   -moz-transform: rotate(180deg);
+   transform: rotate(180deg);
+}
+
+@import url("mega-menu.css"); 
+.custon-blog-heading {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50% ,0);
+}
+
+
+.remove-right-end  {
+  margin-right: 0px;
+}
+/* .bigger-box{
+  width: 100% !important;
+ 
+} */
+
+.bigger-box .w-full{ 
+    width: 100% !important;
+   
+}
+ #dropdown-basic{
+    outline:none  !important;
+    color: #000;
+    border: 1px solid #000 !important;
+    background-color: #fff !important;
+    margin-bottom: 20px;
+}
+#dropdown-basic:hover{
+    color: #fff;
+    background-color: #000 !important;
+}
+
+
+@media screen and  (min-width: 1200px)  {
+    .BLogPage .header-section {
+        margin-top: -165px !important;
+        margin-left: 78px;
+        right: 21%;
+    }
+}
+
+.BLogPage .header-section .h-8px {
+    margin-top: -65px !important;
+}
+
+.BLogPager .gradientBgBtn {
+    display: none;
+}
+
+.BLogPager .gradientBgBtn.dual {
+    display: block;
+}
+
+.customcardwidth {
+  width: 32%;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 991px) {
+    .customcardwidth {
+        width: 48%;
+    }
+}
+
+@media (max-width: 767px) {
+    .customcardwidth {
+        width: 100%;
+    }
+}

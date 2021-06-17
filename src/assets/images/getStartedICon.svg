@@ -1,0 +1,10 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88 43" width="88" height="43">
+	<title>New Project</title>
+	<defs>
+		<image  width="88" height="43" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAAArCAMAAADL/b9pAAAAAXNSR0IB2cksfwAAAKtQTFRFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz8/////////////////////////////////AAAAAAAAAAAA////////AAAA////////////AAAA////////AAAAAAAAAAAAAAAAHBwcdHR0////////////////////AAAAAAAAAAAA////AAAAAAAA////AAAA////////////hl7trAAAADl0Uk5TAAEPCVCPw/9jGAQjeKj/j2MYBCN4qP/gEDAQJD/DPwEkCeDEUUCQUXlkqeGQQDFk4Rl5GTGpUcQo09xItAAAAqZJREFUeJyll+t6ojAQhsETFLF0XUVa4xYrsNt6wOrS7v1f2UqOEzOBVr4fLc985M1kQg46DiK3h0W7qT8Yjrxao6F/Z7jBOBxOvPsoevhhR0x/zqJ5rIXcAYMKLfwEuo8TFr6Pa82eUOxyTl0IdsnCM+S7wh5Ll4HjOJqa2BX3ADhBsHXWY1aioQoJcBz/0rHPkXQU+BHF0qQvbgoDChzPngF3vYpNsG/l1mSNC8HxXJHXL7EJBtxNlqdJmmcbFQJl8Ir895/XNwWIEO52t9+z4EG2K/syg352vM69SPlcTpdbQXng9Z2LwO5dIuRIC4WtFZw07OYMJ2ovQIzzKrJVWMcV30PpXAsWt3B1TyS9ooXg3Df4Cea8ZWpwIdns9YnDlpfnHefCrySwtqx15oXOEO+vTJknvF1Du+QjRbmXOawLXZ1Rj+e5dj7Yw15zeYUDC7hm2wxejA/nk/7/hIVwzvahtosBV2vRAVTZmnCDeAneRUmgCsqtbuLKWuj7AxNLOO8EZqtji4EPt4Gne6p/9O9SsxIGTiwtb1dncECojMl3u4KtmbE4vrK+ATY/1y7roxbfy02jovHJzWC2Zx9NI2M9uqbzJfE5OplOp71CbuaptcumzaJhNOL0wV7hu1BoaRqEl7ZD2+foN2zm4gTBtwtxQSKoK453vF+ecsuZ5ze4yNTRlMX9wcwKntImmQjLNj9n8UKovxGEHtQosbjYUJly2Xig0IF5rQ3VXbyvbmX48c4ErjyjAen1eoRMVKhSj4uQkDtCfHBDtx3vTKVnV3l129R1almzubVlPVI7uX3FpsbdkurIDq2kwt20lXtZnRmWrhzoAek4++LWFZR642Op/Wo6VFfud+4iSVbwZkVpnirBoSho31WRW+9dDXKTW3dnpf+P/FUhkx7eVgAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+	</style>
+	<use id="Layer 1" href="#img1" x="0" y="0" />
+</svg>

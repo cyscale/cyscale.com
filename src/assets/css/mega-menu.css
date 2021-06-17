@@ -1,0 +1,88 @@
+.mega-menu {
+    
+    left: 0;
+    position: absolute;
+    text-align: left;
+    width: 100%;
+    z-index: -99;
+    -ms-transition: all .5s;
+    transition: all .5s;
+    -ms-transform: translateY(-20px);
+    transform: translateY(-20px);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .topNav a,
+  .topNav .parentItem{
+    font-weight: 500;
+    box-sizing: border-box;
+    outline: none;
+  }
+  .topNav .parentItem{
+    color: #ffffff;
+  }
+  .topNav .loginBtn{
+    background-color: #ffffff;
+  }
+  .topNav .parentItem:hover{
+    font-weight: 600;
+  }
+  .topNav .parentItem > span{
+    position: relative;
+    padding-bottom: 4px;
+  }
+  .topNav .parentItem > span::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    visibility: hidden;
+    -ms-transition: all .25s ease-in-out 0s;
+    transition: all .25s ease-in-out 0s;
+  }
+  .topNav .parentItem:hover span::before,
+  .topNav .parentItem.active span::before{
+  visibility: visible;
+    width: 100%;
+}
+  /* #hoverable Class Styles */
+  .hoverable {
+    position: static;
+  }
+
+
+  .hoverable:hover .mega-menu {
+    z-index: 99;
+   visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .topNav .parentItem.active,
+  .topNav .parentItem:hover{
+    font-weight: 600;
+  }
+  .menuBgMobile{
+    background-image: linear-gradient(to right, #0F26AA , #FF4A56);
+  }
+  @media screen and (min-width: 1280px) {
+    .topNav .parentItem{
+      color: #000000;
+    }
+    .topNav .loginBtn{
+      background-color: transparent;
+    }
+    .topNav .parentItem.active,
+    .topNav .parentItem:hover{
+      color: #0F26AA;
+    }
+    .topNav .parentItem > span::before{
+      background-color: #0F26AA;
+    }
+    .menuBgMobile{
+      background: none;
+    }   
+  }
