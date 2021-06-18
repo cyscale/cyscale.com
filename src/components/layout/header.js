@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import TopNav from './topNav';
-import downDoubleArrow from '../../assets/images/banner-arrow-down.svg';
+import downDoubleArrow from '../../images/banner-arrow-down.svg';
 import HeaderContext from './HeaderContext';
 import ScrollButton from '../ScrollButton/ScrollButton';
 

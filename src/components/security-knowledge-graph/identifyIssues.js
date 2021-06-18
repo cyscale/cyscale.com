@@ -1,9 +1,9 @@
 import React from "react";
-import f_image from "../../assets/images/Group-393.svg";
-import icon1 from '../../assets/images/logo_iso27001.png'
-import icon2 from '../../assets/images/logo_soc2.png'
-import icon3 from '../../assets/images/logo_cis.png'
-import icon4 from '../../assets/images/logo_gdpr.png'
+import f_image from "../../images/Group-393.svg";
+import icon1 from '../../images/logo_iso27001.png'
+import icon2 from '../../images/logo_soc2.png'
+import icon3 from '../../images/logo_cis.png'
+import icon4 from '../../images/logo_gdpr.png'
 
 const Issues = () => {
   return (

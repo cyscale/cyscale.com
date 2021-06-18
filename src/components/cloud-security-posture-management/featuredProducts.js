@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import Sectionheader from '../layout/sectionheader'
-import left from '../../assets/images/f-slider-left-arrow.svg'
-import right from '../../assets/images/f-slider-right-arrow.svg'
+import left from '../../images/f-slider-left-arrow.svg'
+import right from '../../images/f-slider-right-arrow.svg'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 

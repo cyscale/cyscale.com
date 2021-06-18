@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 
-import TabsArrow from '../../assets/images/arrow-Down-red.svg'
-import f_image from '../../assets/images/Group-398.svg'
+import TabsArrow from '../../images/arrow-Down-red.svg'
+import f_image from '../../images/Group-398.svg'
 
 const FAQs = () => {
   const [tabActive, setTabActive] = useState(0);

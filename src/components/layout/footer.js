@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "gatsby";
-import logo from "../../assets/images/logofooter.png";
+import logo from "../../images/logofooter.png";
 import { FaLinkedin, FaTwitter, FaFacebook } from "react-icons/fa";
-import CrunchbaseIcon from '../../assets/images/cib-crunchbase.svg';
-import AngelIcon from '../../assets/images/angel.svg';
+import CrunchbaseIcon from '../../images/cib-crunchbase.svg';
+import AngelIcon from '../../images/angel.svg';
 const Footer = () => {
   return (
     <div className=" bg-gray  bg-footer-texture">

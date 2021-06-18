@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import arrowDOwn from "../../assets/images/arrow-Down.svg";
+import arrowDOwn from "../../images/arrow-Down.svg";
 
 const Support = ({ title, data, sectionName }) => {
   return (

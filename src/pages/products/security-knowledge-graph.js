@@ -1,6 +1,6 @@
 import React from 'react'
 
-import heroBG from '../../assets/images/security-graph-bg.svg'
+import heroBG from '../../images/security-graph-bg.svg'
 import Layout from '../../components/layout/layout.js'
 import SKG from '../../components/security-knowledge-graph'
 

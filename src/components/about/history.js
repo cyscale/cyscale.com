@@ -1,5 +1,5 @@
 import React from "react";
-import LogoSymbol from '../../assets/images/cyscale-logo-symbols.svg'
+import LogoSymbol from '../../images/cyscale-logo-symbols.svg'
 
 const History = () => {  
   

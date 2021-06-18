@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import ViewIcon from "../../assets/images/eye.svg";
+import ViewIcon from "../../images/eye.svg";
 
 const Jobs = ({data}) => {
   return (

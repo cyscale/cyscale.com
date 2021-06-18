@@ -1,11 +1,11 @@
 import React from 'react';
-import icon1 from '../../assets/images/logo_iso27001.png'
-import icon2 from '../../assets/images/logo_soc2.png'
-import icon3 from '../../assets/images/logo_cis.png'
-import icon4 from '../../assets/images/logo_gdpr.png'
-import icon6 from '../../assets/images/logo_hipaa.png'
-import icon7 from '../../assets/images/logo_nist.png'
-import icon8 from '../../assets/images/logo_pci-dss.png'
+import icon1 from '../../images/logo_iso27001.png'
+import icon2 from '../../images/logo_soc2.png'
+import icon3 from '../../images/logo_cis.png'
+import icon4 from '../../images/logo_gdpr.png'
+import icon6 from '../../images/logo_hipaa.png'
+import icon7 from '../../images/logo_nist.png'
+import icon8 from '../../images/logo_pci-dss.png'
 
 const Cloud = ({title, sectionName, f_image , data}) => {
     return (

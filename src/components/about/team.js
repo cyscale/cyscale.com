@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import CyscaleTeam from "../../assets/images/Cyscale-Team.png";
+import CyscaleTeam from "../../images/Cyscale-Team.png";
 
 const Team = () => {
   return (

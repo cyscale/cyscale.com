@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "gatsby";
-import icon1 from "../../assets/images/Group-388.svg";
-import icon2 from "../../assets/images/Group-390.svg";
-import icon3 from "../../assets/images/Group-389.svg";
-import icon4 from "../../assets/images/Group-420.svg";
-import feauterImage from "../../assets/images/pricing-banner-image.svg";
+import icon1 from "../../images/Group-388.svg";
+import icon2 from "../../images/Group-390.svg";
+import icon3 from "../../images/Group-389.svg";
+import icon4 from "../../images/Group-420.svg";
+import feauterImage from "../../images/pricing-banner-image.svg";
 
 const Automation = () => {
   return (

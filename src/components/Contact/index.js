@@ -3,11 +3,11 @@ import {Formik} from 'formik'
 import React from 'react'
 import Swal from 'sweetalert2'
 
-import heroBG from '../../assets/images/contact-hero.jpg'
-import facebook from '../../assets/images/facebook.svg'
-import linkedin from '../../assets/images/linkedin.svg'
-import LocationIcon from '../../assets/images/location.svg'
-import twitter from '../../assets/images/twitter.svg'
+import heroBG from '../../images/contact-hero.jpg'
+import facebook from '../../images/facebook.svg'
+import linkedin from '../../images/linkedin.svg'
+import LocationIcon from '../../images/location.svg'
+import twitter from '../../images/twitter.svg'
 import TopNav from '../layout/topNav'
 
 const Index = () => {

@@ -3,10 +3,10 @@ import TopNav from "../layout/topNav";
 import Sectionheader from "../layout/sectionheader";
 import Jobs from "./jobs";
 import ContactForm from "./contactForm";
-import fullStackImage from "../../assets/images/full-stack-engineer.svg";
-import UXUI from "../../assets/images/UX-UI.svg";
-import PM from "../../assets/images/project-manager.svg";
-import BannerImage from "../../assets/images/careers-banner-bg.svg";
+import fullStackImage from "../../images/full-stack-engineer.svg";
+import UXUI from "../../images/UX-UI.svg";
+import PM from "../../images/project-manager.svg";
+import BannerImage from "../../images/careers-banner-bg.svg";
 
 const Index = () => {
     const dataJobs = [

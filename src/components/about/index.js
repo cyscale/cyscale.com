@@ -6,9 +6,9 @@ import GetStarted from '../Home/getstarted'
 import OurMission from '../layout/sectionheader'
 import MeetTeam from '../layout/sectionheader'
 import Team from '../about/team'
-import feauterImage from "../../assets/images/about-us-f-image.svg";
-import downDoubleArrow from "../../assets/images/banner-arrow-down.svg";
-import iconOne from '../../assets/images/getStartedICon.svg';
+import feauterImage from "../../images/about-us-f-image.svg";
+import downDoubleArrow from "../../images/banner-arrow-down.svg";
+import iconOne from '../../images/getStartedICon.svg';
 
 const Index = () => {
     const pageName = "aboutUs"

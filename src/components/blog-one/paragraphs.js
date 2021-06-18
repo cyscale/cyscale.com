@@ -1,5 +1,5 @@
 import React from 'react';
-import image from '../../assets/images/Image 2.svg'
+import image from '../../images/Image 2.svg'
 
 
 const ParaGraphs = () => {

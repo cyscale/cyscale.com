@@ -1,6 +1,6 @@
 import { Link } from 'gatsby';
 import React from 'react';
-import road from '../assets/images/hit-the-road.svg';
+import road from '../images/hit-the-road.svg';
 import Footer from '../components/layout/footer';
 import TopNav from '../components/layout/topNav';
 import SEO from '../components/SEO/SEO';

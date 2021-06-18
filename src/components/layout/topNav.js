@@ -1,19 +1,19 @@
 import React, { useEffect, useRef, useState, useContext } from 'react';
 import { Link } from 'gatsby';
-import feauterImage from '../../assets/images/about-us-f-image-yellow-pot.svg';
-import ArrowRight from '../../assets/images/arrow-right.svg';
-import image2 from '../../assets/images/big_oracle.png';
-import heroBG from '../../assets/images/knowledge-graph-hero-image.svg';
-import image5 from '../../assets/images/Kubernetes_logo_without_wordmark.svg';
-import logo from '../../assets/images/logo.png';
-import usescasesImage from '../../assets/images/menu-f-image.svg';
-import CloudDataImage from '../../assets/images/resources-icon.svg';
-import image6 from '../../assets/images/snyk.png';
-import image7 from '../../assets/images/svg_aws.svg';
-import image8 from '../../assets/images/svg_azure.svg';
-import image9 from '../../assets/images/svg_gcp.svg';
-import menuIcon from '../../assets/images/menuIcon.svg';
-import menuClsoe from '../../assets/images/menuClose.svg';
+import feauterImage from '../../images/about-us-f-image-yellow-pot.svg';
+import ArrowRight from '../../images/arrow-right.svg';
+import image2 from '../../images/big_oracle.png';
+import heroBG from '../../images/knowledge-graph-hero-image.svg';
+import image5 from '../../images/Kubernetes_logo_without_wordmark.svg';
+import logo from '../../images/logo.png';
+import usescasesImage from '../../images/menu-f-image.svg';
+import CloudDataImage from '../../images/resources-icon.svg';
+import image6 from '../../images/snyk.png';
+import image7 from '../../images/svg_aws.svg';
+import image8 from '../../images/svg_azure.svg';
+import image9 from '../../images/svg_gcp.svg';
+import menuIcon from '../../images/menuIcon.svg';
+import menuClsoe from '../../images/menuClose.svg';
 import HeaderContext from './HeaderContext';
 
 const TopNav = ({ pageName, scrollable = true }) => {

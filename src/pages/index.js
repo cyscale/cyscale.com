@@ -1,6 +1,6 @@
 import React from 'react'
 
-import heroBG from '../assets/images/hero-home-bg.jpg'
+import heroBG from '../images/hero-home-bg.jpg'
 import Home from '../components/Home'
 import Layout from '../components/layout/layout.js'
 

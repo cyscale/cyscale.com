@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
-import Check  from "../../assets/images/blue-check.svg"
-import Line from "../../assets/images/dash-line.svg"
+import Check  from "../../images/blue-check.svg"
+import Line from "../../images/dash-line.svg"
 
 const Hero = () => {  
   

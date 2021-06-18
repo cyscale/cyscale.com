@@ -8,12 +8,12 @@ import Sectionheader from "../layout/sectionheader";
 import CSPMtestamonials from "../cloud-security-posture-management/CSPMtestamonials";
 import Relationship from "./relationship";
 import Performance from "./performance";
-import getStartedICon from "../../assets/images/getStartedIconCPSM.svg";
-import icon1 from "../../assets/images/Group-409.svg";
-import icon2 from "../../assets/images/Group-411.svg";
-import icon3 from "../../assets/images/Group-412.svg";
-import icon4 from "../../assets/images/Path-270.svg";
-import F_Image from "../../assets/images/fImage1.svg";
+import getStartedICon from "../../images/getStartedIconCPSM.svg";
+import icon1 from "../../images/Group-409.svg";
+import icon2 from "../../images/Group-411.svg";
+import icon3 from "../../images/Group-412.svg";
+import icon4 from "../../images/Path-270.svg";
+import F_Image from "../../images/fImage1.svg";
 
 const Index = () => {
   const dataServices = [

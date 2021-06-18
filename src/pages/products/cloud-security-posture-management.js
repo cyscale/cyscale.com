@@ -1,6 +1,6 @@
 import React from 'react'
 
-import heroBG from '../../assets/images/hero-CSPM-bg.svg'
+import heroBG from '../../images/hero-CSPM-bg.svg'
 import CSPM from '../../components/cloud-security-posture-management'
 import Layout from '../../components/layout/layout.js'
 

@@ -2,10 +2,10 @@ import React from "react";
 import { Formik } from "formik";
 import axios from "axios";
 import Swal from "sweetalert2";
-import LocationIcon from "../../assets/images/location.svg";
-import linkedin from '../../assets/images/linkedin.svg';
-import twitter from '../../assets/images/twitter.svg';
-import facebook from '../../assets/images/facebook.svg';
+import LocationIcon from "../../images/location.svg";
+import linkedin from '../../images/linkedin.svg';
+import twitter from '../../images/twitter.svg';
+import facebook from '../../images/facebook.svg';
 const ContactForm = () => {
   return (
     <>

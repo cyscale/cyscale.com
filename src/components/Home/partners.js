@@ -2,16 +2,16 @@ import React  from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import image1 from '../../assets/images/big_docker.svg'
-import image2 from '../../assets/images/big_oracle.png'
-import image3 from '../../assets/images/github.svg'
-import image4 from '../../assets/images/gitlab.svg'
-import image5 from '../../assets/images/Kubernetes_logo_without_wordmark.svg'
-import image6 from '../../assets/images/snyk.png'
-import image7 from '../../assets/images/svg_aws.svg'
-import image8 from '../../assets/images/svg_azure.svg'
-import image9 from '../../assets/images/svg_gcp.svg'
-import image10 from '../../assets/images/teams.png'
+import image1 from '../../images/big_docker.svg'
+import image2 from '../../images/big_oracle.png'
+import image3 from '../../images/github.svg'
+import image4 from '../../images/gitlab.svg'
+import image5 from '../../images/Kubernetes_logo_without_wordmark.svg'
+import image6 from '../../images/snyk.png'
+import image7 from '../../images/svg_aws.svg'
+import image8 from '../../images/svg_azure.svg'
+import image9 from '../../images/svg_gcp.svg'
+import image10 from '../../images/teams.png'
 
 const Partners = () => {
     const settings = {

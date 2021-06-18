@@ -1,6 +1,6 @@
 import React from "react";
 import TopNav from "../layout/topNav";
-import heroBG from "../../assets/images/privacy&blog-bg.svg";
+import heroBG from "../../images/privacy&blog-bg.svg";
 
 const Index = () => {
   return (

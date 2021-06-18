@@ -1,6 +1,6 @@
 import React from 'react';
-// import images from '../../assets/images/price-table-header-bg.svg';
-// import logo from '../../assets/images/banner-arrow-down.svg';
+// import images from '../../images/price-table-header-bg.svg';
+// import logo from '../../images/banner-arrow-down.svg';
 
 function blogCard({ images, title, description, time, ButtonLogo }) {
     return (

@@ -8,15 +8,15 @@ import CSPMgetStarted from "../cloud-security-posture-management/CSPMgetStarted"
 import CSPMtestamonials from '../cloud-security-posture-management/CSPMtestamonials';
 import FAQs from './faqs'
 import Video from "./video";
-import getStartedICon from "../../assets/images/getStartedIconCPSM.svg";
-import SKG_F_image from "../../assets/images/skg_f_image.svg";
-import SKG_F_image_2 from "../../assets/images/Group-421.svg";
-import icon1 from "../../assets/images/feature_icon_1.svg";
-import icon2 from "../../assets/images/feature_icon_2.svg";
-import icon3 from "../../assets/images/feature_icon_3.svg";
-import icon4 from "../../assets/images/feature_icon_4.svg";
-import icon5 from "../../assets/images/feature_icon_5.svg";
-import icon6 from "../../assets/images/feature_icon_6.svg";
+import getStartedICon from "../../images/getStartedIconCPSM.svg";
+import SKG_F_image from "../../images/skg_f_image.svg";
+import SKG_F_image_2 from "../../images/Group-421.svg";
+import icon1 from "../../images/feature_icon_1.svg";
+import icon2 from "../../images/feature_icon_2.svg";
+import icon3 from "../../images/feature_icon_3.svg";
+import icon4 from "../../images/feature_icon_4.svg";
+import icon5 from "../../images/feature_icon_5.svg";
+import icon6 from "../../images/feature_icon_6.svg";
 
 const Index = () => {
   const dataCloud = [

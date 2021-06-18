@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactPlayer from 'react-player';
-import graphVideoThumbnail from '../../assets/images/graph-video-thumbnail.png'
+import graphVideoThumbnail from '../../images/graph-video-thumbnail.png'
 const Video = () => {
     return (
         <div className='relative' style={{ paddingTop: '56.25%' }}>

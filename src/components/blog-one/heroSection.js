@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from "gatsby";
-import Linked from '../../assets/images/linkedin.svg';
-import twitter from '../../assets/images/twitter.svg';
-import faceBook from '../../assets/images/facebook.svg';
+import Linked from '../../images/linkedin.svg';
+import twitter from '../../images/twitter.svg';
+import faceBook from '../../images/facebook.svg';
 
 const heroSection = () => {
     return (
