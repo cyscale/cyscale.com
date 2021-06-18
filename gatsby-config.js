@@ -15,6 +15,7 @@ module.exports = {
     },
     "gatsby-plugin-react-helmet",
     // "gatsby-plugin-sitemap",
+    "gatsby-plugin-remove-serviceworker",
     "gatsby-transformer-remark",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
