@@ -3,11 +3,11 @@ import {Formik} from 'formik'
 import React from 'react'
 import Swal from 'sweetalert2'
 
-import heroBG from '../../images/contact-hero.jpg'
-import facebook from '../../images/facebook.svg'
-import linkedin from '../../images/linkedin.svg'
-import LocationIcon from '../../images/location.svg'
-import twitter from '../../images/twitter.svg'
+import heroBG from '../../assets/images/contact-hero.jpg'
+import facebook from '../../assets/images/facebook.svg'
+import linkedin from '../../assets/images/linkedin.svg'
+import LocationIcon from '../../assets/images/location.svg'
+import twitter from '../../assets/images/twitter.svg'
 import TopNav from '../layout/topNav'
 
 const Index = () => {
@@ -21,7 +21,7 @@ const Index = () => {
                     <TopNav
                         pageName = "contact_us"
                     />
-                    <div className="max-w-1366px contactForm mx-auto mt-20 xl:mt-28 lg:mt-44 pt-67px pb-67px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px">
+                    <div className="max-w-1366px contactForm pt-72 pb-67px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px">
                         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
                             <div>
                                 <h1 className="text-69px lg:text-80px font-proximaBold uppercase text-white">
@@ -45,7 +45,7 @@ const Index = () => {
                                         View map
                   </a>
                                     <div>
-                                        <div className="flex flex-row flex-nowrap space-x-4">
+                                        <div className="flex flex-row flex-nowrap space-x-4 justify-start">
                                             <a href="https://www.linkedin.com/company/cyscale">
                                                 <img src={linkedin} alt="" />
                                             </a>
@@ -201,9 +201,9 @@ const Index = () => {
                                                             value={values.terms}
 
                                                         />
-                                                        <i></i>I agree to&nbsp; <a
+                                                        <i></i>I agree to <a
                                                         href="https://cyscale.com/policies/privacy-policy"
-                                                        className="text-12px text-blue leading-6"
+                                                        className="text-12px text-blue leading-6 underline hover:no-underline hover:text-red"
                                                     >
                                                         Cyscale’s Privacy Policy
                           </a>

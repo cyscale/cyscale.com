@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import Owsap from "../../images/owsap-logo.svg"
+import Owsap from "../../assets/images/owsap-logo.svg"
 const Relationship = () => {
   return (
     <div>

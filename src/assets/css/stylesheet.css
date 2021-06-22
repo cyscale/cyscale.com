@@ -109,14 +109,9 @@ h1,h2,h3,h4,h5,h6 {
 .offer-right-banner > p{
     line-height: 66px;
 }
-.menu-fixed {
-    background: rgba(255, 255, 255, 0.9);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 50;
-}
+.dropdown-menu.show {
+    background-color: #0F26AA !important;
+ }
 @media screen and (max-width: 767px) {
     .offerBox:before{
         border-right: 5px solid transparent;
@@ -234,7 +229,8 @@ h1,h2,h3,h4,h5,h6 {
         background-size: cover !important;
     }
     .header-padding {
-        padding-top: 370px !important;
+        padding-top: 222px !important;
+    padding-bottom: 35px;
     }
     .skills .itemBox .title {
         padding-right: 190px;
@@ -456,7 +452,7 @@ h1,h2,h3,h4,h5,h6 {
     display: block;
     position: absolute;
     left: 0;
-    top: 6px;
+    top: 2px;
     background-color: #ffffff;
     background-size: 100% 100%;
     background-position: center center;
@@ -552,13 +548,11 @@ h1,h2,h3,h4,h5,h6 {
   .flip-card-front, .flip-card-back {
     position: absolute;
     width: 100%;
-    height: calc(100% - 2px);
+    height: calc(100% + 2px);
     -webkit-backface-visibility: hidden; /* Safari */
     backface-visibility: hidden;
   }
   .flip-card-front img{
-      width: auto;
-      height: auto;
       margin: auto;
   }
   /* Style the front side (fallback if image is missing) */
@@ -616,9 +610,9 @@ h1,h2,h3,h4,h5,h6 {
     background-image: url(../images/data-security-bg.svg);
     background-repeat: no-repeat;
 }
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 767px) {
     .heroBg.SKGPage{
-        background-size: cover;
+        background-size: contain;
       }
       .topRisks{
         background-size: 50%;
@@ -656,8 +650,23 @@ h1,h2,h3,h4,h5,h6 {
 .careers .bannerImage{
     z-index: -1;
 }
+.jobs .card-container{
+    background-color: #ffffff;
+}
+.jobs .card-container h3,
+.jobs .card-container span{
+    color: #000000;
+}
 .jobs .card{
     background-position: calc(100% - 25px) calc(100% - 25px);
+}
+.jobs .card-container:hover{
+    background-image: linear-gradient(to right, #0F26AA , #FF4A56);
+    color:#ffffff;
+}
+.jobs .card-container:hover h3,
+.jobs .card-container:hover span{
+    color: #ffffff;
 }
 .FAQs .tabTitle.active .tabsArrow{
    -webkit-transform: rotate(180deg);
@@ -668,13 +677,6 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 @import url("mega-menu.css"); 
-.custon-blog-heading {
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translate(-50% ,0);
-}
-
 
 .remove-right-end  {
   margin-right: 0px;
@@ -688,6 +690,23 @@ h1,h2,h3,h4,h5,h6 {
     width: 100% !important;
    
 }
+.bigger-box .customimgmain{ 
+    height:230px !important;
+   
+}
+@media screen and (max-width: 768px) {
+    .bigger-box .customimgmain{ 
+        height:600px;
+       
+    }
+}
+@media screen and (max-width: 1024px) {
+    .bigger-box .customimgmain{ 
+        height:600px ;
+       
+    }
+}
+
  #dropdown-basic{
     outline:none  !important;
     color: #000;
@@ -722,7 +741,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .customcardwidth {
-  width: 32%;
+  width: 32%; padding: 13px; padding: 13px; padding: 13px; padding: 13px; padding: 13px; padding: 13px; padding: 13px; padding: 13px; padding: 13px;
   margin-bottom: 20px;
 }
 
@@ -737,3 +756,40 @@ h1,h2,h3,h4,h5,h6 {
         width: 100%;
     }
 }
+ 
+.dropdown-menu.show {
+    width: 60%;
+    padding: 13px;
+    background-color:#C5CAE9 !important;
+}
+.flex {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+@keyframes pulse {
+    0% {
+       
+    }
+    30% {
+        
+    }
+    60% {
+       
+        box-shadow: 0 0 0 20px #0F26AA11;
+    }
+    100% {
+        
+    }
+}
+.scroll-button{
+    border-radius: 100px;
+    width: 18px;
+    height: 18px;
+    display: block;
+    animation: pulse 3s infinite;
+    margin: auto;
+    animation: pulse 3s infinite;
+}
+

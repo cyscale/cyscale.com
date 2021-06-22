@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from "gatsby";
-import Linked from '../../images/linkedin.svg';
-import twitter from '../../images/twitter.svg';
-import faceBook from '../../images/facebook.svg';
+import Linked from '../../assets/images/linkedin.svg';
+import twitter from '../../assets/images/twitter.svg';
+import faceBook from '../../assets/images/facebook.svg';
 
 const heroSection = () => {
     return (
@@ -16,7 +16,7 @@ const heroSection = () => {
                 <div className="flex justify-between  lg:justify-start">
                     <h3 className="text-14px mt-3px">Interesting? Share it</h3>
 
-                    <div className="w-80px lg:mt-20px xl:mt-20px ml-10px 2xl:mt-20px ml-10px">
+                    <div className="w-80px lg:mt-20px xl:mt-20px 2xl:mt-20px ml-10px">
                         <div className="flex justify-center">
                             <img className="w-13px h-13px" src={Linked} alt="" />
                             <img className="w-16px h-13px mx-13px" src={twitter} alt="" />

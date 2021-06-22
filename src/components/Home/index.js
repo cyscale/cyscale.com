@@ -8,19 +8,19 @@ import Cloud from './cloud'
 import Partners from './partners'
 import Skills from './skills'
 import Sectionheader from '../layout/sectionheader'
-import messageIcon from '../../images/chat_icon.svg'
-import searchIcon from '../../images/search.svg'
-import cloudIcon from '../../images/cloud.svg' 
-import poster from '../../images/offer-dashboard.svg'
-import avatar from '../../images/avatar.png' 
-import iconOne from '../../images/getStartedICon.svg'
-import iconTwo from '../../images/elemente-vectoriale-07.svg'
-import iconThree from '../../images/elemente-vectoriale-08.svg'
-import offer_image1 from '../../images/graph.png'
-import offer_image2 from '../../images/inventory.png'
-import offer_image3 from '../../images/wfh.png'
-import offer_image4 from '../../images/evidence.png'
-import icon5 from '../../images/visuals-vectorial-5.svg'
+import messageIcon from '../../assets/images/chat_icon.svg'
+import searchIcon from '../../assets/images/search.svg'
+import cloudIcon from '../../assets/images/cloud.svg' 
+import poster from '../../assets/images/offer-dashboard.svg'
+import avatar from '../../assets/images/avatar.png' 
+import iconOne from '../../assets/images/getStartedICon.svg'
+import iconTwo from '../../assets/images/elemente-vectoriale-07.svg'
+import iconThree from '../../assets/images/elemente-vectoriale-08.svg'
+import offer_image1 from '../../assets/images/graph.png'
+import offer_image2 from '../../assets/images/inventory.png'
+import offer_image3 from '../../assets/images/wfh.png'
+import offer_image4 from '../../assets/images/evidence.png'
+import icon5 from '../../assets/images/visuals-vectorial-5.svg'
 
 const Home = () => {
   const dataService = [
@@ -102,13 +102,13 @@ const Home = () => {
         divider:"⁃",
         description:  [
           "Optimize compliance efforts and costs with compliance as code. Integrate",
-          <a href="https://api-reference.cyscale.com/" className="text-blue underline text-16px hover:no-underline hover:text-red" key="1asd"> the Cyscale API</a>,
-          " to automate compliance scans, data exports and to feed findings into your SIEM or other security tools.",
-          "",
+          " ",
+          <a href="https://api-reference.cyscale.com/" className="text-blue underline text-16px hover:no-underline hover:text-red" key="1asd">the Cyscale API</a>,
+          " to automate compliance scans, data exports and to feed findings into your SIEM or other security tools."
         ],
     }
   ]
-  const dataCloudBenifits = [
+  const dataCloudBenefits = [
     {
         title: "Data Security ",
         description: "Manage users, roles, permissions, and controls with powerful contextual analysis and alerts that cover your entire cloud infrastructure.",
@@ -117,7 +117,7 @@ const Home = () => {
     },
      {
         title: "Compliance",
-        description: "Prove alignment with the highest standards, enforce policies consistently across cloud providers and scale compliance efforts without overhead. ",
+        description: "Prove alignment with the highest standards, enforce policies consistently across cloud providers and scale compliance efforts without overhead.",
         lintText: "Use Cyscale for compliance",
         linkURL: "/use-cases/cloud-compliance-and-auditing"
     }, 
@@ -125,7 +125,8 @@ const Home = () => {
         title: "Remote Work",
         description: [
           "Fix misconfigurations as soon as they appear, curb overly permissive access rights and keep publicly available data in check from the same dashboard or through",
-          <a href="https://api-reference.cyscale.com/" className="text-blue underline text-16px hover:no-underline hover:text-red" key="1asdd"> our API</a>,
+          " ",
+          <a href="https://api-reference.cyscale.com/" className="text-blue underline text-16px hover:no-underline hover:text-red" key="1asdd">our API</a>,
           ".",
         ],
         lintText: "Use Cyscale to reduce exposure",
@@ -205,7 +206,7 @@ const Home = () => {
         <Cloud
             sectionName="cloudBenefits"
             title = "A Cloud Security Posture Management platform the entire organization benefits from"
-            data={dataCloudBenifits}
+            data={dataCloudBenefits}
         />
        </div>
        <div className="max-w-1366px m-auto pt-67px pb-67px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px">

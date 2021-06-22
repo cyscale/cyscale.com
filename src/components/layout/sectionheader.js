@@ -5,7 +5,7 @@ const Sectionheader = ({headingText, description, subText, pageName}) => {
         <>
          <div className={`grid grid-cols-1 ${pageName === "aboutUs" || pageName === "dataSecurity"?("md:grid-cols-2"):("md:grid-cols-3")} ${!!pageName && pageName === "CSPMPage"?("gap-4 md:gap-x-52"):("gap-4")}`}>
                     <div>
-                        <h2 className={`text-blue text-34px leading-8 ${pageName === "dataSecurity"?(""):("md:max-w-sm")} sectionTitle new-line`}>{headingText}</h2>
+                        <h2 className={`text-blue text-34px leading-8 ${pageName === "dataSecurity"?("md:max-w-md"):("md:max-w-sm")} sectionTitle new-line`}>{headingText}</h2>
                         {!!subText && (                                       
                             <p className="text-black text-16px mt-12 md:mt-32 capitalize">{subText}</p> 
                         )}

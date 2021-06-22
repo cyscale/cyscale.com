@@ -1,5 +1,5 @@
 import React from 'react'
-import image1 from '../../images/elemente-vectoriale-04.png';
+import image1 from '../../assets/images/elemente-vectoriale-04.png';
  
 const testamonials = () => {
     return (

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
-import Check  from "../../images/blue-check.svg"
-import Line from "../../images/dash-line.svg"
+import Check  from "../../assets/images/blue-check.svg"
+import Line from "../../assets/images/dash-line.svg"
 
 const Hero = () => {  
   
@@ -27,7 +27,7 @@ const Hero = () => {
                                                             A rich Inventory to provide
                                                             visibility into your cloud environments.
                                                         </p>
-                                                        <Link to="" className="blackBorder w-full block mt-75px text-15px font-normal rounded text-black uppercase text-center pt-18px pb-18px pl-49px pr-49px no-underline transition-all duration-300 hover:border-black hover:bg-black hover:text-white blackBorder">GET IT FREE</Link>
+                                                        <Link to="#" className="blackBorder w-full block mt-75px text-15px font-normal rounded text-black uppercase text-center pt-18px pb-18px pl-49px pr-49px no-underline transition-all duration-300 hover:border-black hover:bg-black hover:text-white blackBorder">GET IT FREE</Link>
                                                         
                                                 </div>
                                             </div>
@@ -40,7 +40,7 @@ const Hero = () => {
                                                             Essential tools to ensure your
                                                             cloud environments stay protected.
                                                         </p>
-                                                        <Link to="" className="gradientBgBtn w-full block mt-75px text-15px font-normal rounded text-white uppercase text-center pt-19px pb-19px pl-49px pr-49px no-underline">START FREE TRIAL</Link>
+                                                        <Link to="#" className="gradientBgBtn w-full block mt-75px text-15px font-normal rounded text-white uppercase text-center pt-19px pb-19px pl-49px pr-49px no-underline">START FREE TRIAL</Link>
                                                         
                                                 </div>
                                             </div>

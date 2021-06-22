@@ -1,8 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
 import Sectionheader from "../layout/sectionheader";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 const Performance = ({ data }) => {
   const settings = {
@@ -18,7 +16,7 @@ const Performance = ({ data }) => {
       <div className="max-w-1366px mx-auto pt-40px pb-67px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px">
         <Slider {...settings}>
           {data.map((content, index) => (
-            <div>
+            <div key={index}>
               <div className="pl-45px pr-45px xl:pl-0 xl:pr-0">
                 <Sectionheader
                   headingText={content.title}

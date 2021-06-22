@@ -68,7 +68,15 @@
   .menuBgMobile{
     background-image: linear-gradient(to right, #0F26AA , #FF4A56);
   }
-  @media screen and (min-width: 1280px) {
+  .topNav .headerLogo{
+    width: 176px;
+    height: 40.5375px;
+  }
+  .transparent-bg {
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 1;
+}
+  @media (min-width: 1280px) {
     .topNav .parentItem{
       color: #000000;
     }

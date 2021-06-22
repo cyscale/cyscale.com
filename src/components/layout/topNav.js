@@ -1,31 +1,48 @@
-import React, { useEffect, useRef, useState, useContext } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'gatsby';
-import feauterImage from '../../images/about-us-f-image-yellow-pot.svg';
-import ArrowRight from '../../images/arrow-right.svg';
-import image2 from '../../images/big_oracle.png';
-import heroBG from '../../images/knowledge-graph-hero-image.svg';
-import image5 from '../../images/Kubernetes_logo_without_wordmark.svg';
-import logo from '../../images/logo.png';
-import usescasesImage from '../../images/menu-f-image.svg';
-import CloudDataImage from '../../images/resources-icon.svg';
-import image6 from '../../images/snyk.png';
-import image7 from '../../images/svg_aws.svg';
-import image8 from '../../images/svg_azure.svg';
-import image9 from '../../images/svg_gcp.svg';
-import menuIcon from '../../images/menuIcon.svg';
-import menuClsoe from '../../images/menuClose.svg';
-import HeaderContext from './HeaderContext';
+import featureImage from '../../assets/images/about-us-f-image-yellow-pot.svg';
+import ArrowRight from '../../assets/images/arrow-right.svg';
+import image2 from '../../assets/images/big_oracle.png';
+import heroBG from '../../assets/images/knowledge-graph-hero-image.svg';
+import image5 from '../../assets/images/Kubernetes_logo_without_wordmark.svg';
+import logo from '../../assets/images/logo.png';
+import usescasesImage from '../../assets/images/menu-f-image.svg';
+import CloudDataImage from '../../assets/images/resources-icon.svg';
+import image6 from '../../assets/images/snyk.png';
+import image7 from '../../assets/images/svg_aws.svg';
+import image8 from '../../assets/images/svg_azure.svg';
+import image9 from '../../assets/images/svg_gcp.svg';
+import menuIcon from '../../assets/images/menuIcon.svg';
+import menuClsoe from '../../assets/images/menuClose.svg';
+import { useStaticQuery, graphql } from 'gatsby';
 
-const TopNav = ({ pageName, scrollable = true }) => {
-    const sticky = useRef();
-    const { sticker, setSticker } = useContext(HeaderContext);
-    const [menu, setMenu] = useState({ Icon: menuIcon, menuToggle: 'hidden', toggleLogo: '', toggleBg: '' });
-
+const TopNav = ({ pageName }) => {
+    const [, setSticker] = useState(false);
+    const stickyNav = () => {
+        if (window.scrollY < 50) {
+            !!sticky.current && sticky.current.classList.remove('transparent-bg');
+            setSticker(false);
+        } else {
+            !!sticky.current && sticky.current.classList.add('transparent-bg');
+            setSticker(true);
+        }
+    };
     useEffect(() => {
-        const onScroll = () => (window.scrollY < 50 ? setSticker(false) : setSticker(true));
-        if (typeof window !== 'undefined' && scrollable) window.addEventListener('scroll', onScroll);
-        return () => window.removeEventListener('scroll', onScroll);
-    }, [scrollable]);
+        stickyNav();
+        document.body.classList.add('home-page');
+        typeof window !== 'undefined' &&
+            (window.onscroll = () => {
+                stickyNav();
+            });
+    }, []);
+
+    const sticky = useRef();
+    const [menu, setMenu] = useState({
+        Icon: menuIcon,
+        menuToggle: 'hidden',
+        toggleLogo: '',
+        toggleBg: ''
+    });
 
     const toggleMenuIcon = () => {
         if (menu.Icon === menuIcon) {
@@ -45,17 +62,40 @@ const TopNav = ({ pageName, scrollable = true }) => {
         }
     };
 
+    const data = useStaticQuery(graphql`
+        query CareersQueryForMenu {
+            allMarkdownRemark(
+                sort: { fields: frontmatter___date, order: DESC }
+                filter: { frontmatter: { templateKey: { eq: "career-page" } } }
+            ) {
+                nodes {
+                    frontmatter {
+                        date
+                        description
+                        permalink
+                        icon
+                        templateKey
+                        title
+                    }
+                }
+            }
+        }
+    `);
+
+    let jobs = data.allMarkdownRemark.nodes;
+    jobs = jobs.filter(({ frontmatter }) => frontmatter.templateKey === 'career-page');
+
     return (
-        <div ref={sticky} className={sticker && 'menu-fixed'}>
+        <div className='fixed top-0 left-0 block w-full mx-auto' ref={sticky}>
             <div
                 className={`topNav ${menu.toggleBg} max-w-1366px m-auto pt-10px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px`}
             >
                 <nav className='relative '>
                     <div className='mx-auto flex flex-col xl:flex-row justify-between'>
-                        <div className='relative flex xl:block pt-4 pb-4 lg:pt-6 lg:pb-6 '>
-                            <a href='/' className={`${menu.toggleLogo} xl:inline-flex`}>
-                                <img className='block w-44 h-auto' src={logo} alt='CYSCALE' />
-                            </a>
+                        <div className='relative flex xl:block pt-4 pb-4 lg:pt-6 lg:pb-6 justify-start'>
+                            <Link to='/' className={`${menu.toggleLogo} xl:inline-flex`}>
+                                <img className='block headerLogo' src={logo} alt='CYSCALE' />
+                            </Link>
                             <button
                                 type='button'
                                 className='absolute right-0 top-6 inline-block xl:hidden'
@@ -90,15 +130,15 @@ const TopNav = ({ pageName, scrollable = true }) => {
                                                     to='/products/security-knowledge-graph'
                                                     activeStyle={{ color: '#0F26AA' }}
                                                     activeClassName='active'
-                                                    className='text-base text-black hover:text-blue hover:no-underline leading-6 mt-5'
+                                                    className='text-base text-black hover:text-blue hover:no-underline leading-6 mt-7'
                                                 >
-                                                    Security Knowledge Graph<sup>TM</sup>
+                                                    Security Knowledge Graph™
                                                 </Link>
                                             </div>
                                         </div>
                                         <div className='hidden lg:inline-block'>
                                             <p className='text-base font-semibold text-black leading-6'>Our Partners</p>
-                                            <div className='flex flex-row flex-wrap space-x-4 mt-5'>
+                                            <div className='flex flex-row flex-wrap space-x-4 mt-7'>
                                                 <img src={image7} className='w-auto h-8' alt='' />
                                                 <img src={image8} className='w-auto h-8' alt='' />
                                                 <img src={image9} className='w-auto h-8' alt='' />
@@ -156,7 +196,7 @@ const TopNav = ({ pageName, scrollable = true }) => {
                                                     to='/use-cases/remote-work-security'
                                                     activeStyle={{ color: '#0F26AA' }}
                                                     activeClassName='active'
-                                                    className='text-base text-black hover:text-blue hover:no-underline leading-6 mt-5'
+                                                    className='text-base text-black hover:text-blue hover:no-underline leading-6 mt-7'
                                                 >
                                                     Remote Work
                                                 </Link>
@@ -164,7 +204,7 @@ const TopNav = ({ pageName, scrollable = true }) => {
                                                     to='/use-cases/cloud-compliance-and-auditing'
                                                     activeStyle={{ color: '#0F26AA' }}
                                                     activeClassName='active'
-                                                    className='text-base text-black hover:text-blue hover:no-underline leading-6 mt-5'
+                                                    className='text-base text-black hover:text-blue hover:no-underline leading-6 mt-7'
                                                 >
                                                     Compliance and Auditing
                                                 </Link>
@@ -190,7 +230,6 @@ const TopNav = ({ pageName, scrollable = true }) => {
                             <li className='hover:bg-teal-700 hover:text-white'>
                                 <Link
                                     to='/pricing'
-                                    activeStyle={{ color: '#0F26AA' }}
                                     activeClassName='active'
                                     className='relative parentItem block my-6 mx-4 lg:m-8 text-base hover:no-underline leading-6'
                                 >
@@ -218,27 +257,27 @@ const TopNav = ({ pageName, scrollable = true }) => {
                                                 </Link>
                                                 <a
                                                     href='https://docs.cyscale.com'
-                                                    className='text-base text-black hover:text-blue hover:no-underline leading-6 mt-5'
+                                                    className='text-base text-black hover:text-blue hover:no-underline leading-6 mt-7'
                                                 >
                                                     Documentation
                                                 </a>
                                                 <a
                                                     href='/resources/cyscale-cloud-data-security-datasheet.pdf'
                                                     download
-                                                    className='text-base text-black hover:text-blue hover:no-underline leading-6 mt-5'
+                                                    className='text-base text-black hover:text-blue hover:no-underline leading-6 mt-7'
                                                 >
                                                     Data Sheet
                                                 </a>
                                                 <a
                                                     href='https://docs.cyscale.com'
-                                                    className='text-base text-black hover:text-blue hover:no-underline leading-6 mt-5'
+                                                    className='text-base text-black hover:text-blue hover:no-underline leading-6 mt-7'
                                                 >
                                                     Support
                                                 </a>
                                             </div>
                                         </div>
                                         <div className='hidden lg:inline-block'>
-                                            <img src={CloudDataImage} className='w-44 mx-auto' height='128' alt='' />
+                                            <img src={CloudDataImage} className='w-44 mx-auto' height='128px' alt='' />
                                             <p className='text-center mt-5'>
                                                 <a
                                                     href='/resources/cyscale-cloud-data-security-datasheet.pdf'
@@ -283,7 +322,7 @@ const TopNav = ({ pageName, scrollable = true }) => {
                                                     to='/careers'
                                                     activeStyle={{ color: '#0F26AA' }}
                                                     activeClassName='active'
-                                                    className='text-base text-black hover:text-blue hover:no-underline leading-6 mt-5'
+                                                    className='text-base text-black hover:text-blue hover:no-underline leading-6 mt-7'
                                                 >
                                                     Careers
                                                 </Link>
@@ -291,7 +330,7 @@ const TopNav = ({ pageName, scrollable = true }) => {
                                                     to='/contact-us'
                                                     activeStyle={{ color: '#0F26AA' }}
                                                     activeClassName='active'
-                                                    className='text-base text-black hover:text-blue hover:no-underline leading-6 mt-5'
+                                                    className='text-base text-black hover:text-blue hover:no-underline leading-6 mt-7'
                                                 >
                                                     Contact us
                                                 </Link>
@@ -301,35 +340,31 @@ const TopNav = ({ pageName, scrollable = true }) => {
                                             <p className='text-base font-semibold text-black leading-6'>
                                                 Open positions
                                             </p>
-                                            <div className='flex flex-col'>
-                                                <Link
-                                                    to=''
-                                                    activeStyle={{ color: '#0F26AA' }}
-                                                    activeClassName='active'
-                                                    className='text-base text-black hover:text-blue hover:no-underline leading-6 mt-5'
-                                                >
-                                                    Senior Backend Developer
-                                                </Link>
-                                                <Link
-                                                    to=''
-                                                    activeStyle={{ color: '#0F26AA' }}
-                                                    activeClassName='active'
-                                                    className='text-base text-black hover:text-blue hover:no-underline leading-6 mt-5'
-                                                >
-                                                    Senior Frontend Developer
-                                                </Link>
-                                                <Link
-                                                    to=''
-                                                    activeStyle={{ color: '#0F26AA' }}
-                                                    activeClassName='active'
-                                                    className='text-base text-black hover:text-blue hover:no-underline leading-6 mt-5'
-                                                >
-                                                    Marketing Specialist
-                                                </Link>
+                                            <div className='flex flex-col mt-6'>
+                                                {jobs.map(({ frontmatter }, index) => {
+                                                    const { permalink, title } = frontmatter;
+                                                    return (
+                                                        <Link
+                                                            key={index}
+                                                            to={`/careers/${permalink}`}
+                                                            activeStyle={{ color: '#0F26AA' }}
+                                                            activeClassName='active'
+                                                            className='text-base text-black hover:text-blue hover:no-underline leading-6 mb-1'
+                                                        >
+                                                            <span
+                                                                title={title}
+                                                                style={{ maxWidth: 250 }}
+                                                                className='max-w-xs block whitespace-nowrap overflow-ellipsis overflow-hidden'
+                                                            >
+                                                                {title}
+                                                            </span>
+                                                        </Link>
+                                                    );
+                                                })}
                                             </div>
                                         </div>
                                         <div className='hidden lg:inline-block'>
-                                            <img src={feauterImage} className='w-28 mx-auto' alt='' />
+                                            <img src={featureImage} className='w-28 mx-auto' alt='' />
                                             <p className='text-center mt-5'>
                                                 <Link
                                                     to='/careers'
@@ -347,7 +382,7 @@ const TopNav = ({ pageName, scrollable = true }) => {
                             </li>
                             <li className='py-6 px-4 lg:p-6'>
                                 <a
-                                    className='bg-gradient-to-r from-blue to-red hover:bg-blue w-153px text-14px border-transparent border border-solid rounded-31px  h-10 hidden xl:flex justify-center items-center uppercase leading-none text-white transition duration-500 hover:to-blue hover:no-underline'
+                                    className='bg-gradient-to-r from-blue to-red hover:bg-blue w-153px text-14px border-transparent box-border rounded-31px  h-10 hidden xl:flex justify-center items-center uppercase leading-none text-white transition duration-500 hover:to-blue hover:no-underline'
                                     href='https://app.cyscale.com'
                                 >
                                     Start Free Trial

@@ -1,9 +1,9 @@
 import React from "react";
-import f_image from "../../images/Group-393.svg";
-import icon1 from '../../images/logo_iso27001.png'
-import icon2 from '../../images/logo_soc2.png'
-import icon3 from '../../images/logo_cis.png'
-import icon4 from '../../images/logo_gdpr.png'
+import f_image from "../../assets/images/Group-393.svg";
+import icon1 from '../../assets/images/logo_iso27001.png'
+import icon2 from '../../assets/images/logo_soc2.png'
+import icon3 from '../../assets/images/logo_cis.png'
+import icon4 from '../../assets/images/logo_gdpr.png'
 
 const Issues = () => {
   return (
@@ -22,7 +22,7 @@ const Issues = () => {
                   <br />
                   <br />
                   Because each cloud asset is a node in the Security Knowledge
-                  Graph<sup>TM</sup>, it’s easy to see how it interacts with
+                  Graph™, it’s easy to see how it interacts with
                   other entities. You can move across the graph and identify
                   issues in a much broader, richer context – with no additional
                   effort.
@@ -86,7 +86,7 @@ const Issues = () => {
         <div className="block w-full">
           <div className="max-w-1366px mx-auto pl-20px pt-100px pb-100px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px">
             <div className="grid grid-cols-1 xl:grid-cols-2 gap-12 xl:gap-32">
-              <div className="flex flex-wrap flex-grow">
+              <div className="flex flex-wrap flex-grow justify-start">
                   <p className="text-16px text-black new-line leading-6">
                       <strong>Improve confidence in your security and compliance posture with real-time evidence</strong>
                   </p>
@@ -104,10 +104,10 @@ const Issues = () => {
                 Cloud security can be a jungle. Data gets misplaced, duplicated, mismatched, unsecured, or simply forgotten. So when you lack visibility that goes beyond disparate reports, it’s difficult to gain a strong grasp of your security posture.
                   <br />
                   <br />
-                  With Security Knowledge Graph<sup>TM</sup> at its core, Cyscale helps you easily track security and compliance for your multi-cloud infrastructure. 
+                  With Security Knowledge Graph™ at its core, Cyscale helps you easily track security and compliance for your multi-cloud infrastructure.
                   <br />
                   <br />
-                  Use an extensive collection of ready-to-use policies and standards with instant access to inline evidence collection for each of them. 
+                  Use an extensive collection of ready-to-use policies and standards with instant access to inline evidence collection for each of them.
                 </p>
               </div>
             </div>

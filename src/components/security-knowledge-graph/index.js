@@ -8,26 +8,22 @@ import CSPMgetStarted from "../cloud-security-posture-management/CSPMgetStarted"
 import CSPMtestamonials from '../cloud-security-posture-management/CSPMtestamonials';
 import FAQs from './faqs'
 import Video from "./video";
-import getStartedICon from "../../images/getStartedIconCPSM.svg";
-import SKG_F_image from "../../images/skg_f_image.svg";
-import SKG_F_image_2 from "../../images/Group-421.svg";
-import icon1 from "../../images/feature_icon_1.svg";
-import icon2 from "../../images/feature_icon_2.svg";
-import icon3 from "../../images/feature_icon_3.svg";
-import icon4 from "../../images/feature_icon_4.svg";
-import icon5 from "../../images/feature_icon_5.svg";
-import icon6 from "../../images/feature_icon_6.svg";
+import getStartedICon from "../../assets/images/getStartedIconCPSM.svg";
+import SKG_F_image from "../../assets/images/skg_f_image.svg";
+import SKG_F_image_2 from "../../assets/images/Group-421.svg";
+import icon1 from "../../assets/images/feature_icon_1.svg";
+import icon2 from "../../assets/images/feature_icon_2.svg";
+import icon3 from "../../assets/images/feature_icon_3.svg";
+import icon4 from "../../assets/images/feature_icon_4.svg";
+import icon5 from "../../assets/images/feature_icon_5.svg";
+import icon6 from "../../assets/images/feature_icon_6.svg";
 
 const Index = () => {
   const dataCloud = [
     {
       description: 
       [
-        "Cyscale Security Knowledge Graph",
-        <sup key="1ab">
-          TM
-        </sup>,
-        " uses a data model that maps networks of cloud entities in an exhaustive graph which supports automated reasoning across multi-cloud infrastructures.\n\nWhen applied to cloud security, the knowledge graph model charts the full scale of your cloud assets, including their type, properties, and the relationships between them. Based on deep understanding, it makes semantic interpretations that factor in both the complexity and diversity of assets that generate security issues",
+        "Cyscale Security Knowledge Graph™ uses a data model that maps networks of cloud entities in an exhaustive graph which supports automated reasoning across multi-cloud infrastructures.\n\nWhen applied to cloud security, the knowledge graph model charts the full scale of your cloud assets, including their type, properties, and the relationships between them. Based on deep understanding, it makes semantic interpretations that factor in both the complexity and diversity of assets that generate security issues",
       
         "",
       ],
@@ -35,11 +31,7 @@ const Index = () => {
     {
       description: 
       [
-        "For example, the Cyscale Power Cloud Platform can interrelate dissimilar entities such as user identity, endpoints, code repositories, production environments, VMs, and production databases. \n\nCyscale Security Knowledge Graph",
-        <sup key="1ab">
-          TM
-        </sup>,
-        " enables machines to understand these complex relations and derive new knowledge that human specialists can use without having to perform effort-intensive analyses themselves.",
+        "For example, the Cyscale Power Cloud Platform can interrelate dissimilar entities such as user identity, endpoints, code repositories, production environments, VMs, and production databases. \n\nCyscale Security Knowledge Graph™ enables machines to understand these complex relations and derive new knowledge that human specialists can use without having to perform effort-intensive analyses themselves.",
       
         "",
       ],
@@ -99,11 +91,7 @@ const Index = () => {
     {
       description:
       [
-        "\n\n\n\nThe Security Knowledge Graph",
-        <sup key="1ab">
-        TM
-        </sup>,
-        " brings an orchestrated approach to cybersecurity and policy enforcement. Edit and customize standards across all your cloud providers in a single dashboard, tracking implementation and consolidating your data-rich archive as you go.",
+        "\n\n\n\nThe Security Knowledge Graph™ brings an orchestrated approach to cybersecurity and policy enforcement. Edit and customize standards across all your cloud providers in a single dashboard, tracking implementation and consolidating your data-rich archive as you go.",
       
         "",
       ]
@@ -120,7 +108,7 @@ const Index = () => {
           <br />
           <br />
         </span>,
-        " Offset risks associated with SaaS providers and complex cloud infrastructures by using the Cyscale Power Cloud Platform. Banking on the robust capabilities of our Security Knowledge Graph",<sup key="sup123">TM</sup>,", it instantly checks on how your cloud assets fare in terms of user privacy, multi-tenancy, exposure of non-production environments, and all other top cloud security issues OWASP prioritizes.",
+        " Offset risks associated with SaaS providers and complex cloud infrastructures by using the Cyscale Power Cloud Platform. Banking on the robust capabilities of our Security Knowledge Graph™, it instantly checks on how your cloud assets fare in terms of user privacy, multi-tenancy, exposure of non-production environments, and all other top cloud security issues OWASP prioritizes.",
         <strong key="2a" className="text-blue">
           <br />
           <br />
@@ -149,21 +137,23 @@ const Index = () => {
   return (
     <>
       <div>
-        <Cloud
-          title={`What is a \nSecurity Knowledge \nGraph™?`}
-          f_image={SKG_F_image}
-          sectionName="SKGSection"
-          data={dataCloud}
-        />
+        <div id="start">
+          <Cloud
+            title= 
+              {["What is a Security Knowledge Graph",
+              <sup key="113a">
+                TM
+              </sup>]}
+            f_image={SKG_F_image}
+            sectionName="SKGSection"
+            data={dataCloud}
+          />
+        </div>
         <Video />
         <div className="block w-full bg-white">
           <Features
-            title={  [
-              "The Cyscale Security Knowledge Graph",
-              <sup key="1ab">
-                TM
-              </sup>,
-              " in a nutshell",
+            title={[
+              "The Cyscale Security Knowledge Graph in a nutshell",
             
               "",
             ]}
@@ -173,7 +163,7 @@ const Index = () => {
           />
         </div>
         <Cloud
-          title={`If knowledge graph tech \nis this useful, why hasn’t \nanyone used it before?`}
+          title={`If knowledge graph tech is this useful, why hasn’t anyone used it before?`}
           sectionName="SKGBeneifts"
           data={dataSKGBenifits}
         />
@@ -194,8 +184,7 @@ const Index = () => {
       </div>
       <div className="gradientBGCSPM-2">
         <CSPMgetStarted
-          title={`Discover the most \nflexible pricing in the cloud security industry`}
-          description="Start seeing value & saving money in minutes"
+          title={`Discover the most flexible pricing in the cloud security industry`}
           btnText="SEE PRICING OPTIONS"
           btnLink="/pricing"
         />
@@ -211,7 +200,7 @@ const Index = () => {
       <Cloud sectionName="systemGov" data={dataPayCloud} />
       <div className="gradientBGCSPM pt-60px pb-60px">
         <GetStarted
-          description={`Accurate. Real-time. \nContext-aware.`}
+          description={`Accurate. Real-time. Context-aware.`}
           btnText="TRY CYSCALE FOR FREE"
           btnLink="https://app.cyscale.com"
           sectionName = "dataSecFoot"

@@ -1,3 +1,7 @@
-import './src/styles/global.css';
-import './src/styles/mega-menu.css';
-import './src/styles/stylesheet.css';
+import './src/styles/global.css'
+import "slick-carousel/slick/slick.css";
+import 'react-tabs/style/react-tabs.css';
+import "slick-carousel/slick/slick-theme.css";
+
+
+

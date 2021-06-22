@@ -2,10 +2,10 @@ import React from "react";
 import { Formik } from "formik";
 import axios from "axios";
 import Swal from "sweetalert2";
-import LocationIcon from "../../images/location.svg";
-import linkedin from '../../images/linkedin.svg';
-import twitter from '../../images/twitter.svg';
-import facebook from '../../images/facebook.svg';
+import LocationIcon from "../../assets/images/location.svg";
+import linkedin from "../../assets/images/linkedin.svg";
+import twitter from "../../assets/images/twitter.svg";
+import facebook from "../../assets/images/facebook.svg";
 const ContactForm = () => {
   return (
     <>
@@ -41,6 +41,9 @@ const ContactForm = () => {
                   }
                   if (!values.message) {
                     errors.message = "Required";
+                  }
+                  if (!values.terms) {
+                    errors.terms = "Required";
                   }
                   return errors;
                 }}
@@ -114,13 +117,52 @@ const ContactForm = () => {
                         onBlur={handleBlur}
                         value={values.message}
                         placeholder="Your Message"
-                        className="block w-full bg-white text-16px text-formInputColor placeholder-formInputColor"
+                        className="block w-full bg-white text-16px mb-30px text-formInputColor placeholder-formInputColor"
                       >
                         Your Message
                       </textarea>
                       <div className="text-red">
                         {" "}
                         {errors.message && touched.message && errors.message}
+                      </div>
+                      <div className="block w-full mb-30px">
+                        <p className="text-12px leading-6 text-black">
+                          By submitting this form you understand and agree that
+                          CYSCALE SYSTEMS may contact you regarding your
+                          interest about our services, partners and products as
+                          well as receiving electronic communications from us
+                          and our partners including news, events, updates, and
+                          promotional offers. You may withdraw your consent and
+                          unsubscribe from such marketing communication at any
+                          time. You also acknowledge and accept Cyscale’s
+                          Privacy Policy, including its use of cookies.
+                        </p>
+                      </div>
+                      <div className="block w-full mb-30px">
+                        <label
+                          htmlFor="termsAccept"
+                          className="css-checkbox text-12px leading-6 text-black"
+                        >
+                          <input
+                            type="checkbox"
+                            id="termsAccept"
+                            name="terms"
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                            value={values.terms}
+                          />
+                          <i></i>I agree to{" "}
+                          <a
+                            href="https://cyscale.com/policies/privacy-policy"
+                            className="text-12px text-blue leading-6 underline hover:no-underline hover:text-red"
+                          >
+                            Cyscale’s Privacy Policy
+                          </a>
+                        </label>
+                        <div className="text-red">
+                          {" "}
+                          {errors.terms && touched.terms && errors.terms}
+                        </div>
                       </div>
                     </div>
                     <div className="block w-full">
@@ -176,12 +218,12 @@ const ContactForm = () => {
               </a>
             </div>
           </div>
-         <div className="order-2 xl:order-3">
-         <h2 className="text-blue text-34px leading-8 sectionTitle new-line">
-              join us <br />
+          <div className="order-2 xl:order-3">
+            <h2 className="text-blue text-34px lg:w-96 leading-8 sectionTitle new-line">
+              join us
               or just say hello.
             </h2>
-         </div>
+          </div>
         </div>
       </div>
     </>

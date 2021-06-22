@@ -1,13 +1,13 @@
 import { Link } from 'gatsby';
 import React from 'react';
-import road from '../images/hit-the-road.svg';
+import road from '../assets/images/hit-the-road.svg';
 import Footer from '../components/layout/footer';
 import TopNav from '../components/layout/topNav';
-import SEO from '../components/SEO/SEO';
+import Seo from '../components/Seo';
 const NotFoundPage = () => (
     <>
         <TopNav pageName='404' scrollable={false} />
-        <SEO title='Cyscale | Not found' description='Not found page' pageName='404' />
+        <Seo title='Cyscale | Not found' description='Not found page' pageName='404' />
         <div className='text-center height-screen pt-20 pb-32 max-w-xl mx-auto'>
             <h1 className='m-0 font-bold text-9xl'>404</h1>
             <p className='text-lg'>
@@ -18,7 +18,7 @@ const NotFoundPage = () => (
                 instead.
             </p>
             <div className='border-t border-grey3 mt-10 mb-10' />
-            <img className='max-w-md lg:max-w-xl mx-auto mt-6' src={road} />
+            <img className='max-w-md lg:max-w-xl mx-auto mt-6' src={road} alt="" />
         </div>
         <Footer />
     </>

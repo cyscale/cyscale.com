@@ -5,18 +5,18 @@ import GetStarted from '../Home/getstarted'
 import CSPMtestamonials from './CSPMtestamonials'
 import Services from '../Home/services'
 import CSPMgetStarted from './CSPMgetStarted'
-import icon1 from '../../images/onboardingIcon.svg'
-import icon2 from '../../images/gear.svg'
-import icon3 from '../../images/management.svg'
-import icon4 from '../../images/message.svg'
-import getStartedICon from '../../images/getStartedIconCPSM.svg'
-import image1 from '../../images/prevent-missconfiguration.png'
-import image4 from '../../images/noise.png'
-import image5 from '../../images/compliance.png'
-import image3 from '../../images/Group-379.svg'
-import image6 from '../../images/optimize-ops.png'
-import image7 from '../../images/hidden-costs.png' 
-import image8 from '../../images/security-gaps.png'
+import icon1 from '../../assets/images/onboardingIcon.svg'
+import icon2 from '../../assets/images/gear.svg'
+import icon3 from '../../assets/images/management.svg'
+import icon4 from '../../assets/images/message.svg'
+import getStartedICon from '../../assets/images/getStartedIconCPSM.svg'
+import image1 from '../../assets/images/prevent-missconfiguration.png'
+import image4 from '../../assets/images/noise.png'
+import image5 from '../../assets/images/compliance.png'
+import image3 from '../../assets/images/Group-379.svg'
+import image6 from '../../assets/images/optimize-ops.png'
+import image7 from '../../assets/images/hidden-costs.png' 
+import image8 from '../../assets/images/security-gaps.png'
 
 const Index = () => {
   const dataOnboarding = [
@@ -54,9 +54,10 @@ const Index = () => {
       sectionDescription: 
       [
         "Get relevant alerts when your cloud assets drift away from established security and compliance standards.\n\nMake Cyscale your single source of truth for CSPM and never miss an important security event. \n\nMove beyond bulky, list-based management. Cyscale’s",
-        <a href="/products/security-knowledge-graph" key="1asd" className="text-blue underline text-16px hover:no-underline hover:text-red">  Security Knowledge Graph<sup>TM</sup></a>,
-        " makes precise correlations between all your cloud assets and data repositories to automatically pinpoint critical security improvements.",
-        "",
+        " ",
+        <a href="/products/security-knowledge-graph" key="1asd" className="text-blue underline text-16px hover:no-underline hover:text-red">Security Knowledge Graph™</a>,
+        " ",
+        "makes precise correlations between all your cloud assets and data repositories to automatically pinpoint critical security improvements.",
       ],
       featureImage: image4
     },
@@ -65,9 +66,10 @@ const Index = () => {
       sectionTitle: "Automate compliance checks",
       sectionDescription:[
         "Use Cyscale for",
-        <a href="/use-cases/cloud-compliance-and-auditing" key="1as4d" className="text-blue underline text-16px hover:no-underline hover:text-red">  governance automation</a>,
+        " ",
+        <a href="/use-cases/cloud-compliance-and-auditing" key="1as4d" className="text-blue underline text-16px hover:no-underline hover:text-red">governance automation</a>,
         " across cloud providers and internal teams to ensure consistent security and compliance.\n\nWe keep your clouds under continuous assessment and provide in-app security consultancy so you make the most of your time and effort.\n\n",<strong>Coming soon: </strong>,
-        "create custom Controls that tap into our Security Knowledge Graph",<sup>TM </sup>, "and automate the security and compliance checks that matter the most for your organization.",
+        "create custom Controls that tap into our Security Knowledge Graph™ and automate the security and compliance checks that matter the most for your organization.",
       ],
        featureImage: image5
     }
@@ -85,8 +87,8 @@ const Index = () => {
       tabTitle : "Reveal and reduce hidden costs",
       sectionTitle: "Reveal & curb hidden costs",
       sectionDescription: [
-        "Keep your cloud infrastructure on track and on budget with Cyscale.\n\nWith a",
-        <a href="/products/security-knowledge-graph" className=" text-blue underline text-16px hover:no-underline hover:text-red" key="1as4d">  full map of your cloud inventory</a>,
+        "Keep your cloud infrastructure on track and on budget with Cyscale.\n\nWith a ",
+        <a href="/products/security-knowledge-graph" className=" text-blue underline text-16px hover:no-underline hover:text-red" key="1as4d">full map of your cloud inventory</a>,
         " and a deep understanding of your cloud attack surface, you can reduce overhead in multiple areas:\n",
       ],
        featureImage: image7
@@ -96,8 +98,12 @@ const Index = () => {
       sectionTitle: "Close security gaps",
       sectionDescription: [
         "Get the visibility you need to fill in security gaps left by cloud service providers.\n\n",
-        <a href="/use-cases/cloud-data-security" className="text-blue underline text-16px hover:no-underline hover:text-red" key="1as4d">  Discover and classify data repositories</a>,
-        " across multi-cloud environments. Bring databases, cloud and network storage, data lakes, code and IP repositories on the same platform for comprehensive asset inventory and management.\n\nFollow reliable hardening steps our",<a href="/products/security-knowledge-graph" className="text-blue underline text-16px hover:no-underline hover:text-red" key="123e"> Security Knowledge Graph<sup>TM</sup></a>,"provides based on deep contextual correlations between all your cloud assets to keep data security issues under control."
+        <a href="/use-cases/cloud-data-security" className="text-blue underline text-16px hover:no-underline hover:text-red" key="1as4d">Discover and classify data repositories</a>,
+        " ",
+        "across multi-cloud environments. Bring databases, cloud and network storage, data lakes, code and IP repositories on the same platform for comprehensive asset inventory and management.\n\nFollow reliable hardening steps our ",
+        <a href="/products/security-knowledge-graph" className="text-blue underline text-16px hover:no-underline hover:text-red" key="123e">Security Knowledge Graph™</a>,
+        " ",
+        "provides based on deep contextual correlations between all your cloud assets to keep data security issues under control."
       ],
       featureImage: image8
     }
@@ -123,9 +129,9 @@ const Index = () => {
     {
       title:"API ready for CI/CD flows",
       description1:[
-        "Automate compliance and security scans and feed data exports with",
-        <a href="https://api-reference.cyscale.com/" className="text-blue underline text-16px hover:no-underline hover:text-red" key="1as4d">  the Cyscale API </a>,
-        "into SIEM or other cybersecurity tools "
+        "Automate compliance and security scans and feed data exports with ",
+        <a href="https://api-reference.cyscale.com" className="text-blue underline text-16px hover:no-underline hover:text-red" key="1as4d">the Cyscale API</a>,
+        " into SIEM or other cybersecurity tools "
       ],
     },
     {
@@ -195,7 +201,7 @@ const Index = () => {
       </div>
       <div className="gradientBGCSPM-2">
           <CSPMgetStarted
-            title = {`AGENTLESS, MULTI-CLOUD, \nPAINLESS CSPM`}
+            title = {`AGENTLESS, MULTI-CLOUD, PAINLESS CSPM`}
             description="Start seeing value & saving money in minutes"
             btnText="TRY CYSCALE FOR FREE"
             btnLink="https://app.cyscale.com"

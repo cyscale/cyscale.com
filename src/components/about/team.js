@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import CyscaleTeam from "../../images/Cyscale-Team.png";
+import CyscaleTeam from "../../assets/images/Cyscale-Team.png";
 
 const Team = () => {
   return (
@@ -10,8 +10,8 @@ const Team = () => {
           <div className="bg-lightGrey">
             <div className="flip-card">
               <div className="flip-card-inner">
-                <div className="flip-card-front">
-                  <p className=" w-full text-center text-black font-bold text-20px pt-10px pb-10px pr-10px pl-10px mt-200px">
+                <div className="flip-card-front flex flex-wrap h-full content-center">
+                  <p className=" w-full text-center text-black font-bold text-20px pt-10px pb-10px pr-10px pl-10px">
                     Ovidiu Cical, Founder & CEO
                   </p>
                 </div>
@@ -45,8 +45,8 @@ const Team = () => {
           <div className="bg-lightGrey">
             <div className="flip-card">
               <div className="flip-card-inner">
-                <div className="flip-card-front">
-                  <p className=" w-full text-center text-black font-bold text-20px pt-10px pb-10px pr-10px pl-10px mt-200px">
+                <div className="flip-card-front flex flex-wrap h-full content-center">
+                  <p className=" w-full text-center text-black font-bold text-20px pt-10px pb-10px pr-10px pl-10px">
                     Manuela Ticudean, COO
                   </p>
                 </div>
@@ -75,8 +75,8 @@ const Team = () => {
           <div className="bg-lightGrey">
             <div className="flip-card">
               <div className="flip-card-inner">
-                <div className="flip-card-front">
-                  <p className=" w-full text-center text-black font-bold text-20px pt-10px pb-10px pr-10px pl-10px mt-200px">
+                <div className="flip-card-front flex flex-wrap h-full content-center">
+                  <p className=" w-full text-center text-black font-bold text-20px pt-10px pb-10px pr-10px pl-10px">
                     Andrei Milaș, CTO
                   </p>
                 </div>
@@ -105,9 +105,9 @@ const Team = () => {
           <div className="bg-lightGrey xl:col-span-2">
             <div className="flip-card lg:h-full">
               <div className="flip-card-inner">
-                <div className="flip-card-front flex flex-wrap h-full content-center">
+                <div className="flip-card-front flex flex-wrap h-full content-end">
                   <img src={CyscaleTeam} className="h-full w-auto" alt="Avatar" />
-                  <p className="absolute left-0 -bottom-4 w-full text-center text-black font-bold text-20px pt-10px pb-10px pr-10px pl-10px">
+                  <p className="absolute left-0 -bottom-2 w-full text-center text-black font-bold text-20px pt-10px pb-10px pr-10px pl-10px">
                     Cyscale Team
                   </p>
                 </div>
@@ -139,8 +139,8 @@ const Team = () => {
           <div className="bg-lightGrey">
             <div className="flip-card">
               <div className="flip-card-inner">
-                <div className="flip-card-front">
-                  <p className=" w-full text-center text-black font-bold text-20px pt-10px pb-10px pr-10px pl-10px mt-200px">
+                <div className="flip-card-front flex flex-wrap h-full content-center">
+                  <p className=" w-full text-center text-black font-bold text-20px pt-10px pb-10px pr-10px pl-10px">
                     Gabriel Ceicoschi, Design & UI
                   </p>
                 </div>
@@ -170,7 +170,7 @@ const Team = () => {
             <div className="flip-card">
               <div className="flip-card-inner">
                 <div className="flip-card-front flex flex-wrap h-full content-center">
-                  <p className=" w-full text-center text-black font-bold text-20px pt-10px pb-10px pr-10px pl-10px mt-200px">
+                  <p className=" w-full text-center text-black font-bold text-20px pt-10px pb-10px pr-10px pl-10px">
                     Virginia Mitea, Sales & BD
                   </p>
                 </div>
@@ -201,8 +201,8 @@ const Team = () => {
           <div className="xl:col-span-2 bg-lightGrey">
             <div className="flip-card">
               <div className="flip-card-inner">
-                <div className="flip-card-front lastCol flex flex-wrap h-full content-center">
-                  <p className="absolute left-0 -bottom-4 w-full text-center text-black font-bold text-20px pt-10px pb-10px pr-10px pl-10px">
+                <div className="flip-card-front lastCol flex flex-wrap h-full content-end">
+                  <p className="absolute left-0 -bottom-2 w-full text-center text-black font-bold text-20px pt-10px pb-10px pr-10px pl-10px">
                     Let's build the future of cyber security together!
                   </p>
                 </div>

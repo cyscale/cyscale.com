@@ -1,24 +1,29 @@
-import React from 'react'
-import { Link } from "gatsby";
+import React from 'react';
+import { Link } from 'gatsby';
 
-const pageLeft = ({ images, title, description, time, read }) => {
+const PageLeft = ({ data }) => {
     return (
-        <>
-            <div className="w-full md:w-195px lg:w-282px xl:w-376px mb-16px shadow-md">
-                <img className="w-full" src={images} alt="imge" />
-                <div className="bg-white p-15px">
-                    <h6 className="text-13px ">{time}</h6>
+        <Link to={'/blog/' + data.permalink}>
+            <div className='w-full  md:w-195px lg:w-282px xl:w-376px mb-16px shadow-md'>
+                <div
+                    className='w-full customimgmain customimgmain bg-no-repeat h-200px bg-grey3 bg-contain bg-center'
+                    style={{ backgroundImage: 'url(' + data.featuredimage.publicURL + ')' }}
+                    alt='imge'
+                />
+                <div className='bg-white p-15px'>
+                    <h6 className='text-13px '>Category: {data.category}</h6>
                     <div>
-                        <h3 className="text-blue text-24px leading-24px mt-3px">{title}</h3>
-                        <p className="text-16px leading-24px mt-6px">{description}</p>
+                        <h3 className='text-blue text-24px leading-24px mt-3px'>{data.title}</h3>
+                        <h6 className='text-13px '>{data.date?.split('T')?.[0]}</h6>
+                        <p className='text-16px leading-24px mt-6px'>{data.description}</p>
                     </div>
-                    <div className="flex justify-content-end">
-                        <Link className="text-12px text-blue font-bold" to="../blog/detail">{read}</Link>
+                    <div className='flex '>
+                        <span className='text-12px text-blue font-bold '>read</span>
                     </div>
                 </div>
             </div>
-        </>
-    )
+        </Link>
+    );
 };
 
-export default pageLeft
+export default PageLeft;

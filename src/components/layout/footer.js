@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "gatsby";
-import logo from "../../images/logofooter.png";
+import logo from "../../assets/images/logofooter.png";
 import { FaLinkedin, FaTwitter, FaFacebook } from "react-icons/fa";
-import CrunchbaseIcon from '../../images/cib-crunchbase.svg';
-import AngelIcon from '../../images/angel.svg';
+import CrunchbaseIcon from '../../assets/images/cib-crunchbase.svg';
+import AngelIcon from '../../assets/images/angel.svg';
 const Footer = () => {
   return (
     <div className=" bg-gray  bg-footer-texture">
@@ -13,7 +13,7 @@ const Footer = () => {
             <img src={logo} className="w-162px" alt="" />
           </Link>
           <div className="mt-20px text-14px font-light leading-24 text-white pr-20px">
-            Cyscale helps companies embrace their digital future by protecting apps and data in the cloud. With the innovative Security Knowledge Graph<sup>TM</sup> at its core, Cyscale helps you easily track security and compliance across your multi-cloud environment.
+            Cyscale helps companies embrace their digital future by protecting apps and data in the cloud. With the innovative Security Knowledge Graph™ at its core, Cyscale helps you easily track security and compliance across your multi-cloud environment.
           </div>
           <div className="items-center mt-20px md:mt-auto hidden lg:flex">
             <div className="mr-25px">
@@ -57,7 +57,7 @@ const Footer = () => {
                    <a href="/products/cloud-security-posture-management" className="font-light text-white no-underline hover:underline">Cloud Security Posture Management</a>
                 </li>
                 <li className="text-12px leading-24 pb-7px">
-                   <a href="/products/security-knowledge-graph" className="font-light text-white no-underline hover:underline">Security Knowledge Graph<sup>TM</sup></a>
+                   <a href="/products/security-knowledge-graph" className="font-light text-white no-underline hover:underline">Security Knowledge Graph™</a>
                 </li>
               </ul>
             </div>
@@ -70,10 +70,10 @@ const Footer = () => {
                    <a href="/use-cases/cloud-data-security" className="font-light text-white no-underline hover:underline">Data Security</a>
                 </li>
                 <li className="text-12px leading-24 pb-7px">
-                   <a href="" className="font-light text-white no-underline hover:underline">Remote Work</a>
+                   <a href="/use-cases/remote-work-security" className="font-light text-white no-underline hover:underline">Remote Work</a>
                 </li>
                 <li className="text-12px leading-24 pb-7px">
-                   <a href="" className="font-light text-white no-underline hover:underline">Compliance and Auditing</a>
+                   <a href="/use-cases/cloud-compliance-and-auditing" className="font-light text-white no-underline hover:underline">Compliance and Auditing</a>
                 </li>
               </ul>
             </div>
@@ -84,16 +84,16 @@ const Footer = () => {
               </h3>
               <ul>
               <li className="text-12px leading-24 pb-7px">
-                   <a href="" className="font-light text-white no-underline hover:underline">Blog</a>
+                   <a href="/blog" className="font-light text-white no-underline hover:underline">Blog</a>
                 </li>
                 <li className="text-12px leading-24 pb-7px">
-                   <a href="https://docs.cyscale.com/" className="font-light text-white no-underline hover:underline">Documentation</a>
+                   <a href="https://docs.cyscale.com" className="font-light text-white no-underline hover:underline">Documentation</a>
                 </li>
                 <li className="text-12px leading-24 pb-7px">
-                   <a href="/resources/cyscale-cloud-data-security-datasheet.pdf" className="font-light text-white no-underline hover:underline">Datasheet</a>
+                   <a href="/resources/cyscale-cloud-data-security-datasheet.pdf" download className="font-light text-white no-underline hover:underline">Data Sheet</a>
                 </li>
                 <li className="text-12px leading-24 pb-7px">
-                   <a href="/" className="font-light text-white no-underline hover:underline">FAQ + Support</a>
+                   <a href="https://docs.cyscale.com" className="font-light text-white no-underline hover:underline">FAQ + Support</a>
                 </li>
                 <li className="text-12px leading-24 pb-7px">
                    <a href="/pricing" className="font-light text-white no-underline hover:underline">Pricing</a>
@@ -131,7 +131,7 @@ const Footer = () => {
                 <a href="/policies/security-policy" className="font-light text-white no-underline hover:underline">Security Policy</a>
               </li>
               <li className="inline-block mr-10px lg:mr-30px text-12px  leading-24 ">
-                <a href="/policies/privacy-policy" className="font-light text-white no-underline hover:underline">Privacy policy </a>
+                <a href="/policies/privacy-policy" className="font-light text-white no-underline hover:underline">Privacy Policy </a>
               </li>
               <li className="inline-block mr-10px text-12px leading-24 ">
                 <a href="https://status.cyscale.com" rel="noreferrer" target="_blank" className="font-light text-white no-underline hover:underline">Status</a>

@@ -1,9 +1,9 @@
 import React from 'react'
 
-import SEO from '../SEO/SEO'
+import Seo from '../Seo'
 import Footer from './footer'
 import Header from './header'
-
+import Consent from '../consent'
 const TemplateWrapper = ({
     children,
     title,
@@ -15,11 +15,12 @@ const TemplateWrapper = ({
     bannerBtn1Link,
     bannerBtn2Text,
     bannerBtn2Link,
-    pageName
+    pageName,
+    blogDataTitle
 }) => {
     return (
         <div>
-            <SEO title={title} description={description} pageName={pageName} />
+            <Seo title={title} description={description} pageName={pageName} />
             {!!pageName && pageName === 'ContactUs' ? (
                 <></>
             ) : pageName === 'Pricing' ||
@@ -40,6 +41,7 @@ const TemplateWrapper = ({
                     bannerBtn2Text={bannerBtn2Text}
                     bannerBtn2Link={bannerBtn2Link}
                     pageName={pageName}
+                    blogDataTitle={blogDataTitle}
                 />
             )}
 
@@ -47,6 +49,7 @@ const TemplateWrapper = ({
                 <div>{children}</div>
             </main>
             <Footer />
+            <Consent/>
         </div>
     );
 };

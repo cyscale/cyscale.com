@@ -8,12 +8,12 @@ import Sectionheader from "../layout/sectionheader";
 import CSPMtestamonials from "../cloud-security-posture-management/CSPMtestamonials";
 import Relationship from "./relationship";
 import Performance from "./performance";
-import getStartedICon from "../../images/getStartedIconCPSM.svg";
-import icon1 from "../../images/Group-409.svg";
-import icon2 from "../../images/Group-411.svg";
-import icon3 from "../../images/Group-412.svg";
-import icon4 from "../../images/Path-270.svg";
-import F_Image from "../../images/fImage1.svg";
+import getStartedICon from "../../assets/images/getStartedIconCPSM.svg";
+import icon1 from "../../assets/images/Group-409.svg";
+import icon2 from "../../assets/images/Group-411.svg";
+import icon3 from "../../assets/images/Group-412.svg";
+import icon4 from "../../assets/images/Path-270.svg";
+import F_Image from "../../assets/images/fImage1.svg";
 
 const Index = () => {
   const dataServices = [
@@ -150,7 +150,7 @@ const Index = () => {
   const dataPerformance = [
     {
       image: F_Image,
-      title: `Do it all with zero \nerformance degradation \nfor your workloads`,
+      title: `Do it all with zero performance degradation for your workloads`,
       description: `Because we use serverless technologies to categorize and inspect data repositories, we never interrupt or overload your systems. \nThe Cyscale Power Cloud Platform reduces your attack surface through continuous risk assessments with zero negative impact on performance. \n\nRun an efficient data security program that covers your entire range of cloud entities. Improve your flexibility, compliance and increase job satisfaction for your engineers. `,
     }
   ];
@@ -161,13 +161,13 @@ const Index = () => {
           pageName = "Data_Security"
         />
         <Banner
-          title={`Data security \nfor resilient \ncloud environments`}
+          title={`Data security for resilient cloud environments`}
           description={`Stuck playing catch-up with data security, with no breathing space for projects that move the needle? It’s time for a change of pace.\n\n Give your engineers clarity and accuracy – use the Cyscale Power Cloud Platform to turn cloud data security into a manageable routine.\n\nKeep tabs on your fast-growing cloud inventory with automated data discovery and classification, compliance scans on autopilot and a fully auditable evidence trail. And that’s just a taste!`}
         />
       </div>
       <Services
         bannerBtn1Text="Try Cyscale for free"
-        bannerBtn1Link="https://app.cyscale.com"
+        bannerBtn1Link="/"
         data={dataServices}
       />
       <div className="max-w-1366px mx-auto pt-70px pb-70px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px">
@@ -214,7 +214,7 @@ const Index = () => {
       <Relationship />
       <div className="max-w-1366px mx-auto pt-70px pb-70px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px">
         <Sectionheader
-          headingText={`Comprehensive, \nblazing-fast classification \nthat closes security gaps`}
+          headingText={`Comprehensive, blazing-fast classification that closes security gaps`}
           description = {`\n\nOur Power Cloud Platform gives you the visibility that goes deep into every layer of your cloud infrastructures.`}
           pageName="dataSecurity"
         />

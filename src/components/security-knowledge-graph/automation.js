@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "gatsby";
-import icon1 from "../../images/Group-388.svg";
-import icon2 from "../../images/Group-390.svg";
-import icon3 from "../../images/Group-389.svg";
-import icon4 from "../../images/Group-420.svg";
-import feauterImage from "../../images/pricing-banner-image.svg";
+import icon1 from "../../assets/images/Group-388.svg";
+import icon2 from "../../assets/images/Group-390.svg";
+import icon3 from "../../assets/images/Group-389.svg";
+import icon4 from "../../assets/images/Group-420.svg";
+import feauterImage from "../../assets/images/pricing-banner-image.svg";
 
 const Automation = () => {
   return (
@@ -14,8 +14,8 @@ const Automation = () => {
           <div className="grid xl:grid-cols-3 mt-24 mb-24">
             <div></div>
             <div className="xl:col-span-2">
-              <h2 className="text-blue text-24px max-w-full sm:text-34px leading-9 sectionTitle">
-                How Security Knowledge Graph<sup>TM</sup> <br />
+              <h2 className="text-blue text-24px max-w-full lg:w-9/12 sm:text-34px leading-9 sectionTitle">
+                How Security Knowledge Graph<sup>TM </sup>
                 delivers knowledge-driven automation
               </h2>
             </div>
@@ -46,12 +46,12 @@ const Automation = () => {
                   </Link>
                   , we create a micrograph for every cloud system you have. We
                   then connect these micrographs to generate your own Security
-                  Knowledge Graph<sup>TM</sup>. That’s how the
+                  Knowledge Graph™. That’s how the
                   <br />
                   <Link to="/products/security-knowledge-graph" className=" text-blue underline text-16px hover:no-underline hover:text-red">
-                        Cyscale Power Cloud Platform&nbsp;
+                        Cyscale Power Cloud Platform
                   </Link>
-                   gives you a truly contextual understanding of your digital
+                  &nbsp;gives you a truly contextual understanding of your digital
                   assets.
                 </p>
               </div>
@@ -88,7 +88,7 @@ const Automation = () => {
                   <div className="pt-45px pb-45px">
                     <div className="flex flex-wrap flex-grow h-full justify-center xl:justify-start">
                       <img src={feauterImage} className="w-48" alt="" />
-                      <h2 className="text-blue text-24px max-w-full sm:text-34px leading-9 mt-auto text-center text-xl-left">
+                      <h2 className="text-blue text-24px max-w-full sm:text-34px leading-9 mt-auto text-left text-xl-left">
                           Valuable insights for peace of mind.  :)
                       </h2>
                     </div>
