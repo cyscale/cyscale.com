@@ -44,7 +44,7 @@ const Header = ({
             <div className="flex mt-44">
               <div className="mx-auto w-full xl:w-2/4">
                 <h1 className="text-34px text-blue leading-10 font-bold otherPages sectionTitle">
-                  {blogDataTitle || "Cyscale Blogs"}
+                  {blogDataTitle || "Cyscale Blog"}
                 </h1>
               </div>
             </div>
@@ -85,16 +85,23 @@ const Header = ({
                 </p>
               </div>
               <div className="flex flex-wrap flex-row justify-start space-x-0 md:space-x-4 mt-40px">
-                {bannerBtn1Text && bannerBtn1Link && (
-                  <div className="mt-24px w-full sm:w-auto">
-                    <a
-                      href={bannerBtn1Link}
-                      className="gradientBgBtn w-full sm:min-w-232px block text-16px font-medium rounded text-white uppercase text-center pt-21px pb-21px pl-49px pr-49px hover:no-underline no-underline"
-                    >
-                      {bannerBtn1Text}
-                    </a>
-                  </div>
-                )}
+                {bannerBtn1Text &&
+                  bannerBtn1Link &&
+                  (pageName === "jobDetails" ? (
+                    <ScrollButton
+                    pageName = "jobDetails"
+                    btnText = {bannerBtn1Text}
+                    to="applyForm" />
+                  ) : (
+                    <div className="mt-24px w-full sm:w-auto">
+                      <a
+                        href={bannerBtn1Link}
+                        className="gradientBgBtn w-full sm:min-w-232px block text-16px font-medium rounded text-white uppercase text-center pt-21px pb-21px pl-49px pr-49px hover:no-underline no-underline"
+                      >
+                        {bannerBtn1Text}
+                      </a>
+                    </div>
+                  ))}
                 {!!pageName && pageName === "HomePage" && (
                   <div className="mt-24px w-full sm:w-auto hidden sm:inline-block">
                     <a

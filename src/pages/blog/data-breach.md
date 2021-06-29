@@ -24,7 +24,11 @@ Anyone with the URL could access the buckets and Personal Identifying Informatio
 
 <br/>
 
-The AWS (Amazon Web Services) S3 Access Points feature provides settings for access points, buckets, and accounts to help companies manage the public access to their resources. More information can be found on Amazon's Documentation Portal: https://aws.amazon.com/premiumsupport/knowledge-center/read-access-objects-s3-bucket  
+The AWS (Amazon Web Services) S3 Access Points feature provides settings for access points, buckets, and accounts to help companies manage the public access to their resources. More information can be found on Amazon's Documentation Portal:
+ https://aws.amazon.com/
+ premiumsupport/
+knowledge-center/
+read-access-objects-s3-bucket  
 
 <br/>
 

@@ -44,7 +44,7 @@ const Index = () => {
           <GetStarted
             description="Let us help you improve your Cloud Security Posture"
             btnText="Try Cyscale for free and see for yourself"
-            btnLink="/"
+            btnLink="https://app.cyscale.com"
             icon={iconOne}
             sectionName="aboutUsGetStarted"
           />

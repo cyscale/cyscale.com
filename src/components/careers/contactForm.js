@@ -219,7 +219,7 @@ const ContactForm = () => {
             </div>
           </div>
           <div className="order-2 xl:order-3">
-            <h2 className="text-blue text-34px lg:w-96 leading-8 sectionTitle new-line">
+            <h2 className="text-blue text-34px lg:w-96 leading-8 new-line sectionTitle">
               join us
               or just say hello.
             </h2>

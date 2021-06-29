@@ -106,7 +106,7 @@ const Team = () => {
             <div className="flip-card lg:h-full">
               <div className="flip-card-inner">
                 <div className="flip-card-front flex flex-wrap h-full content-end">
-                  <img src={CyscaleTeam} className="h-full w-auto" alt="Avatar" />
+                  <img src={CyscaleTeam} className="lg:h-full w-auto" alt="Avatar" />
                   <p className="absolute left-0 -bottom-2 w-full text-center text-black font-bold text-20px pt-10px pb-10px pr-10px pl-10px">
                     Cyscale Team
                   </p>

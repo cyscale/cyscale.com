@@ -4,13 +4,13 @@ import Layout from '../../components/layout/layout.js'
 import TermsofUse from '../../components/policies/terms-of-use'
 
 const Index = () => (
-  <Layout 
-    pageName = "termsOfUse"
-    title="Total cloud visibility & control | Cyscale Power Cloud Platform"
-    description="Map all your cloud assets across providers in under 5 mins. Optimize costs, ensure cloud security, and prove compliance with the scalable Cyscale CSPM."
+  <Layout
+    pageName="termsOfUse"
+    title="Term of use Policy - Cyscale Power Cloud Platform"
+    description="Terms of use Policy for the Cyscale Power Cloud Platform for protecting cloud-native apps and data in the cloud. Avoid cloud misconfigurations."
   >
     <TermsofUse />
-    
+
   </Layout>
 )
 

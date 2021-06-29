@@ -4,10 +4,10 @@ import Layout from '../components/layout/layout.js'
 import Pricing from '../components/pricing'
 
 const Index = () => (
-  <Layout 
-    pageName = "Pricing"
-    title="Total cloud visibility & control | Cyscale Power Cloud Platform"
-    description="Map all your cloud assets across providers in under 5 mins. Optimize costs, ensure cloud security, and prove compliance with the scalable Cyscale CSPM."
+  <Layout
+    pageName="Pricing"
+    title="Pricing - Cyscale Power Cloud Platform"
+    description="Pay fair for security experts' advice and guidance. Quantifiable ROI for cloud data security and compliance. Reduce cloud costs and consumption."
   >
     <Pricing />
   </Layout>

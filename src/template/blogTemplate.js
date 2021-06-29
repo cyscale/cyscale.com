@@ -11,6 +11,8 @@ const BlodDetail = ({ pageContext }) => {
             pageName="blog-detail"
             heroBG={heroBG}
             blogDataTitle={alldata?.frontmatter.title}
+            title="Cloud and Data Security Blog - Cyscale Power Cloud Platform"
+            description={alldata?.frontmatter.title}
         >
             <BlogOne data={alldata} />
         </Layout>

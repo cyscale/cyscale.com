@@ -8,20 +8,21 @@ import icon7 from "../../assets/images/logo_nist.png";
 import icon8 from "../../assets/images/logo_pci-dss.png";
 
 const Cloud = ({ title, sectionName, f_image, data }) => {
+
   return (
     <>
       <div
-        className={`block w-full ${
-          sectionName === "topRisks"
-            ? "pt-100px lg:pt-0 pb-172px"
-            : "pt-71px pb-71px"
-        }`}
+        className={`block w-full ${sectionName === "topRisks"
+          ? "pt-100px lg:pt-0 pb-172px"
+          : "pt-71px pb-71px"
+          }`}
       >
         <div className="max-w-1366px m-auto pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 pt-40 sm:pt-0">
             {!!title && (
               <div>
-                <h2 className="text-blue text-24px sm:text-34px leading-10 lg:max-w-sm sectionTitle">
+                <h2
+                  className=" text-blue text-24px sm:text-34px leading-10 lg:max-w-sm sectionTitle">
                   {title}
                 </h2>
               </div>
@@ -31,9 +32,8 @@ const Cloud = ({ title, sectionName, f_image, data }) => {
             )}
 
             <div
-              className={`${
-                !!sectionName && sectionName !== "cloudBenefits" && "col-span-2"
-              }`}
+              className={`${!!sectionName && sectionName !== "cloudBenefits" && "col-span-2"
+                }`}
             >
               {!!sectionName && sectionName === "compliance" && (
                 <div className="flex flex-row justify-end flex-wrap sapce-y-6 space-x-6">
@@ -57,19 +57,17 @@ const Cloud = ({ title, sectionName, f_image, data }) => {
           >
             {!!f_image && (
               <div
-                className={`w-full lg:w-2/5 ${
-                  sectionName === "systemGov" ? "order-1 lg:order-2" : ""
-                }`}
+                className={`w-full lg:w-2/5 ${sectionName === "systemGov" ? "order-1 lg:order-2" : ""
+                  }`}
               >
                 <img
                   src={f_image}
-                  className={`${
-                    sectionName === "SKGSection"
-                      ? "mb-30px sm:w-235px"
-                      : sectionName === "systemGov"
+                  className={`${sectionName === "SKGSection"
+                    ? "mb-30px sm:w-235px"
+                    : sectionName === "systemGov"
                       ? "sm:w-96 lg:mt-200px"
                       : "sm:h-72 lg:mt-138px"
-                  }`}
+                    }`}
                   alt=""
                 />
               </div>
@@ -81,9 +79,8 @@ const Cloud = ({ title, sectionName, f_image, data }) => {
             )}
             <div className="w-full lg:w-3/5">
               <div
-                className={`grid grid-cols-1 md:grid-cols-2 gap-6  ${
-                  sectionName === "systemGov" ? "order-2 lg:order-1" : ""
-                }`}
+                className={`grid grid-cols-1 md:grid-cols-2 gap-6  ${sectionName === "systemGov" ? "order-2 lg:order-1" : ""
+                  }`}
               >
                 {data.map((content, index) => (
                   <div

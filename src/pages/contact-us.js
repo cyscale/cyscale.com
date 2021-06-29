@@ -4,10 +4,10 @@ import Contact from '../components/Contact'
 import Layout from '../components/layout/layout.js'
 
 const Index = () => (
-  <Layout 
-    pageName = "ContactUs"
-    title="Total cloud visibility & control | Cyscale Power Cloud Platform"
-    description="Map all your cloud assets across providers in under 5 mins. Optimize costs, ensure cloud security, and prove compliance with the scalable Cyscale CSPM."
+  <Layout
+    pageName="ContactUs"
+    title="Contact us - Cyscale Power Cloud Platform"
+    description="We are always happy to assist with more information about us or our product which covers cloud security, kubernetes security and hybrid multi-cloud environments."
   >
     <Contact />
   </Layout>

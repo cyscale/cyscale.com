@@ -8,9 +8,17 @@ module.exports = {
     plugins: [
         'gatsby-plugin-sass',
         'gatsby-plugin-postcss',
-        'gatsby-plugin-sitemap',
         'gatsby-plugin-react-helmet',
         'gatsby-plugin-remove-serviceworker',
+        {
+            resolve: 'gatsby-plugin-robots-txt',
+            options: {
+                host: 'https://cyscale.com/',
+                sitemap: 'https://cyscale.com/sitemap.xml',
+                policy: [{ userAgent: '*', allow: '/', }]
+            }
+        },
+        `gatsby-plugin-sitemap`,
         {
             resolve: `gatsby-plugin-purgecss`,
             options: {

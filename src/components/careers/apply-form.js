@@ -3,8 +3,8 @@ import { Formik } from "formik";
 
 const Apply = () => {
   return (
-    <div>
-      <div className="max-w-1366px jobs mx-auto mt-100px mb-100px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px">
+    <div id="applyForm">
+      <div className="max-w-1366px jobs mx-auto pt-100px mb-100px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px">
         <div className="mt-20px lg:mb-100px block w-full contactForm ">
           <Formik
             initialValues={{

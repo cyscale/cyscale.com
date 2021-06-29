@@ -122,7 +122,7 @@ const Index = () => {
     {
         title: "Medical information",
         subItems: [
-          ["lectronic health records"],
+          ["Electronic health records"],
           ["Medical insurance data"],
           ["Clinical trials data"],
           ["Disease registries"]
@@ -167,7 +167,7 @@ const Index = () => {
       </div>
       <Services
         bannerBtn1Text="Try Cyscale for free"
-        bannerBtn1Link="/"
+        bannerBtn1Link="https://app.cyscale.com"
         data={dataServices}
       />
       <div className="max-w-1366px mx-auto pt-70px pb-70px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px">

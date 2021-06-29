@@ -53,7 +53,7 @@ function Marge() {
                             (curItem, index) =>
                                 curItem.frontmatter.featuredpost && (
                                     <div key={index} className='bigger-box'>
-                                        <PageLeft data={curItem.frontmatter} />
+                                        <PageLeft data={curItem.frontmatter} feature={true} />
                                     </div>
                                 )
                         )}

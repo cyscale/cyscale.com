@@ -14,10 +14,13 @@ import image8 from '../../assets/images/svg_azure.svg';
 import image9 from '../../assets/images/svg_gcp.svg';
 import menuIcon from '../../assets/images/menuIcon.svg';
 import menuClsoe from '../../assets/images/menuClose.svg';
+// import SearchIcon from '../../assets/images/search_icon.svg';
+// import CloseIcon from '../../assets/images/close.png';
 import { useStaticQuery, graphql } from 'gatsby';
 
 const TopNav = ({ pageName }) => {
     const [, setSticker] = useState(false);
+    const [expand, setExpand] = useState(false);
     const stickyNav = () => {
         if (window.scrollY < 50) {
             !!sticky.current && sticky.current.classList.remove('transparent-bg');
@@ -37,6 +40,7 @@ const TopNav = ({ pageName }) => {
     }, []);
 
     const sticky = useRef();
+    const focussearch = useRef();
     const [menu, setMenu] = useState({
         Icon: menuIcon,
         menuToggle: 'hidden',
@@ -108,9 +112,8 @@ const TopNav = ({ pageName }) => {
                             <li className='hoverable '>
                                 <button
                                     type='button'
-                                    className={`${
-                                        pageName === 'SKGPage' || pageName === 'CSPMPage' ? 'active' : ''
-                                    }  relative parentItem block my-6 mx-4 lg:m-8 text-base hover:no-underline leading-6`}
+                                    className={`${pageName === 'SKGPage' || pageName === 'CSPMPage' ? 'active' : ''
+                                        }  relative parentItem block my-6 mx-4 lg:m-8 text-base hover:no-underline leading-6`}
                                 >
                                     <span>Products</span>
                                 </button>
@@ -132,7 +135,7 @@ const TopNav = ({ pageName }) => {
                                                     activeClassName='active'
                                                     className='text-base text-black hover:text-blue hover:no-underline leading-6 mt-7'
                                                 >
-                                                    Security Knowledge Graph™
+                                                    Security Knowledge Graph<sup>TM</sup>
                                                 </Link>
                                             </div>
                                         </div>
@@ -174,9 +177,8 @@ const TopNav = ({ pageName }) => {
                             <li className='hoverable'>
                                 <button
                                     type='button'
-                                    className={`${
-                                        pageName === 'Data_Security' || pageName === 'Data_Security' ? 'active' : ''
-                                    } relative parentItem block my-6 mx-4 lg:m-8 text-base no-underline leading-6`}
+                                    className={`${pageName === 'Data_Security' || pageName === 'Data_Security' ? 'active' : ''
+                                        } relative parentItem block my-6 mx-4 lg:m-8 text-base no-underline leading-6`}
                                 >
                                     <span>Use Cases</span>
                                 </button>
@@ -295,14 +297,13 @@ const TopNav = ({ pageName }) => {
                             <li className='hoverable hover:bg-teal-700 hover:text-white'>
                                 <button
                                     type='button'
-                                    className={`${
-                                        pageName === 'aboutUs' ||
+                                    className={`${pageName === 'aboutUs' ||
                                         pageName === 'aboutUs' ||
                                         pageName === 'careers' ||
                                         pageName === 'contact_us'
-                                            ? 'active'
-                                            : ''
-                                    } relative parentItem block my-6 mx-4 lg:m-8 text-base leading-6`}
+                                        ? 'active'
+                                        : ''
+                                        } relative parentItem block my-6 mx-4 lg:m-8 text-base leading-6`}
                                 >
                                     <span>Company</span>
                                 </button>
@@ -380,7 +381,7 @@ const TopNav = ({ pageName }) => {
                                     </div>
                                 </div>
                             </li>
-                            <li className='py-6 px-4 lg:p-6'>
+                            <li className='py-6 px-4 lg:py-6 lg:pr-0 lg:pl-26px'>
                                 <a
                                     className='bg-gradient-to-r from-blue to-red hover:bg-blue w-153px text-14px border-transparent box-border rounded-31px  h-10 hidden xl:flex justify-center items-center uppercase leading-none text-white transition duration-500 hover:to-blue hover:no-underline'
                                     href='https://app.cyscale.com'
@@ -388,7 +389,7 @@ const TopNav = ({ pageName }) => {
                                     Start Free Trial
                                 </a>
                             </li>
-                            <li className='py-6 px-4 lg:p-6'>
+                            <li className='py-6 px-4 lg:py-6 lg:pr-6'>
                                 {' '}
                                 <a
                                     className='loginBtn text-black hover:text-black mt-0px lg:mt-0 text-14px  uppercase w-84px rounded-31px greyBorder flex h-10 justify-center items-center leading-none transition-all duration-500 hover:bg-grey3 hover:no-underline'
@@ -397,9 +398,13 @@ const TopNav = ({ pageName }) => {
                                     Log in
                                 </a>
                             </li>
+
                         </ul>
+
                     </div>
+
                 </nav>
+
             </div>
         </div>
     );

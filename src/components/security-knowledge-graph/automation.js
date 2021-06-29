@@ -42,14 +42,14 @@ const Automation = () => {
                   <br />
                   When you{" "}
                   <Link to="/pricing" className="text-blue underline text-16px hover:no-underline hover:text-red">
-                        start using Cyscale
+                    start using Cyscale
                   </Link>
                   , we create a micrograph for every cloud system you have. We
                   then connect these micrographs to generate your own Security
                   Knowledge Graph™. That’s how the
                   <br />
                   <Link to="/products/security-knowledge-graph" className=" text-blue underline text-16px hover:no-underline hover:text-red">
-                        Cyscale Power Cloud Platform
+                    Cyscale Power Cloud Platform
                   </Link>
                   &nbsp;gives you a truly contextual understanding of your digital
                   assets.
@@ -89,7 +89,7 @@ const Automation = () => {
                     <div className="flex flex-wrap flex-grow h-full justify-center xl:justify-start">
                       <img src={feauterImage} className="w-48" alt="" />
                       <h2 className="text-blue text-24px max-w-full sm:text-34px leading-9 mt-auto text-left text-xl-left">
-                          Valuable insights for peace of mind.  :)
+                        Valuable insights for peace of mind.  :)
                       </h2>
                     </div>
                   </div>

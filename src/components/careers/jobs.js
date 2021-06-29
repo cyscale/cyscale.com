@@ -23,7 +23,7 @@ const Jobs = ({ data }) => {
                                     className='block w-full card pt-25px pb-25px pl-25px pr-25px bg-no-repeat'
                                     style={{ backgroundImage: `url(${icons[icon]})  ` }}
                                 >
-                                    <h3 className='text-24px font-bold lg:w-40 leading-6 new-line uppercase'>
+                                    <h3 className='text-24px font-bold lg:w-64 leading-6 new-line uppercase'>
                                         {title}
                                     </h3>
                                     <div className='mt-44'>
