@@ -145,7 +145,6 @@ const TopNav = ({ pageName }) => {
                                                 <img src={image9} className='w-auto h-8' alt='' />
                                                 <img src={image2} className='w-auto h-8' alt='' />
                                                 <img src={image5} className='w-auto h-8' alt='' />
-                                                <img src={image6} className='w-auto h-8' alt='' />
                                             </div>
                                             <p className='text-base leading-6 text-black mt-36'>
                                                 <strong className='leading-6 text-sm'>
