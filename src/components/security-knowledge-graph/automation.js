@@ -15,7 +15,7 @@ const Automation = () => {
             <div></div>
             <div className="xl:col-span-2">
               <h2 className="text-blue text-24px max-w-full lg:w-9/12 sm:text-34px leading-9 sectionTitle">
-                How Security Knowledge Graph<sup>TM </sup>
+                How Security Knowledge Graph™
                 delivers knowledge-driven automation
               </h2>
             </div>

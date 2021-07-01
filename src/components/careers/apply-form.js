@@ -1,7 +1,16 @@
 import React from "react";
+import axios from "axios";
+import Swal from "sweetalert2";
 import { Formik } from "formik";
 
-const Apply = () => {
+const Apply = ({ data }) => {
+  console.log(data)
+  const toBase64 = file => new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = error => reject(error);
+  });
   return (
     <div id="applyForm">
       <div className="max-w-1366px jobs mx-auto pt-100px mb-100px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px">
@@ -9,11 +18,10 @@ const Apply = () => {
           <Formik
             initialValues={{
               email: "",
-              firstName: "",
-              lastName: "",
-              phoneNumber: "",
+              name: "",
               message: "",
-              attachments: false,
+              attachment: null,
+              job_title: data.frontmatter.title,
             }}
             validate={(values) => {
               const errors = {};
@@ -24,22 +32,39 @@ const Apply = () => {
               ) {
                 errors.email = "Invalid email address";
               }
-              if (!values.firstName) {
-                errors.firstName = "Required";
-              }
-              if (!values.lastName) {
-                errors.lastName = "Required";
-              }
-              if (!values.phoneNumber) {
-                errors.phoneNumber = "Required";
+              if (!values.name) {
+                errors.name = "Required";
               }
               if (!values.message) {
                 errors.message = "Required";
               }
-              if (!values.attachments) {
-                errors.attachments = "Required";
+              if (!values.attachment) {
+                errors.attachment = "Required";
               }
               return errors;
+            }}
+            onSubmit={(values, { setSubmitting, resetForm }) => {
+
+              axios
+                .post(
+                  "https://23cl113kk3.execute-api.eu-central-1.amazonaws.com/production/apply-job",
+                  values
+                )
+                .then(function (response) {
+                  Swal.fire({
+                    icon: "success",
+                    text: "Form Submitted.",
+                  });
+                  setSubmitting(false);
+                  resetForm()
+                })
+                .catch(function (error) {
+                  Swal.fire({
+                    icon: "error",
+                    text: "Something went wrong",
+                  });
+                  setSubmitting(false);
+                });
             }}
           >
             {({
@@ -50,6 +75,7 @@ const Apply = () => {
               handleBlur,
               handleSubmit,
               isSubmitting,
+              setFieldValue,
               /* and other goodies */
             }) => (
               <form onSubmit={handleSubmit} name="contact" method="post">
@@ -60,30 +86,15 @@ const Apply = () => {
                       type="text"
                       onChange={handleChange}
                       onBlur={handleBlur}
-                      value={values.firstName}
-                      placeholder="Your First Name"
+                      value={values.name}
+                      placeholder="Your Name"
                       className="block w-full text-formInputColor bg-white text-16px placeholder-formInputColor"
                     />
                     <div className="text-red">
                       {" "}
-                      {errors.firstName &&
-                        touched.firstName &&
-                        errors.firstName}
-                    </div>
-                  </div>
-                  <div className="block w-full">
-                    <input
-                      name="name"
-                      type="text"
-                      onChange={handleChange}
-                      onBlur={handleBlur}
-                      value={values.lastName}
-                      placeholder="Your Last Name"
-                      className="block w-full text-formInputColor bg-white text-16px placeholder-formInputColor"
-                    />
-                    <div className="text-red">
-                      {" "}
-                      {errors.lastName && touched.lastName && errors.lastName}
+                      {errors.name &&
+                        touched.name &&
+                        errors.name}
                     </div>
                   </div>
                   <div className="block w-full">
@@ -99,23 +110,6 @@ const Apply = () => {
                     <div className="text-red">
                       {" "}
                       {errors.email && touched.email && errors.email}
-                    </div>
-                  </div>
-                  <div className="block w-full">
-                    <input
-                      type="text"
-                      name="email"
-                      onChange={handleChange}
-                      onBlur={handleBlur}
-                      value={values.phoneNumber}
-                      placeholder="Your Phone Number"
-                      className="block w-full text-formInputColor bg-white text-16px placeholder-formInputColor"
-                    />
-                    <div className="text-red">
-                      {" "}
-                      {errors.phoneNumber &&
-                        touched.phoneNumber &&
-                        errors.phoneNumber}
                     </div>
                   </div>
                   <div className="block w-full">
@@ -135,47 +129,79 @@ const Apply = () => {
                     </div>
                   </div>
                   <div>
-                    <label htmlFor="attachments">
+                    <label htmlFor="attachment">
                       <input
                         type="file"
-                        id="attachments"
+                        id="attachment"
+                        name="file"
                         className="hidden"
-                        name="attachments"
+                        onChange={async (event) => {
+                          console.log(event.target.files[0].type)
+                          if ((event.target.files[0].type.includes("pdf"))
+                            || (event.target.files[0].type.includes("doc"))
+                            || (event.target.files[0].type.includes("docs"))
+                            || (event.target.files[0].type.includes("msword"))) {
+                            const result = await toBase64(event.target.files[0]);
+                            setFieldValue("attachment", result);
+
+                          } else {
+                            Swal.fire({
+                              title: 'Invalid File',
+                              icon: 'error',
+                              text: 'please select pdf or doc ',
+
+                            });
+                          }
+
+
+                        }
+                        }
                       />
+                      <input
+                        name="job_title"
+                        type="text"
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        disabled
+                        value={values.job_title}
+                        placeholder="job Title"
+                        className="block job_title w-full text-formInputColor bg-white text-16px placeholder-formInputColor bg-lightGrey2"
+                      />
+                      <br />
                       <span className="block max-w-220px uppercase text-16px text-white bg-blue rounded hover:bg-grey2 pt-25px pb-25px pl-15x pr-15px cursor-pointer text-center transition-all duration-300">
-                        attach resume
+                        attachment
                       </span>
                     </label>
-                    <p className="text-black text-16px font-semibold">
+                    {/* <p className="text-black text-16px font-semibold">
                       Attachment Name
-                    </p>
+                    </p> */}
                     <div className="text-red">
                       {" "}
-                      {errors.attachments &&
-                        touched.attachments &&
-                        errors.attachments}
+                      {errors.attachment &&
+                        touched.attachment &&
+                        errors.attachment}
                     </div>
                   </div>
                   <div>
-                  <div className="block w-full">
-                    {!isSubmitting ? (
-                      <button
-                        disabled={isSubmitting}
-                        type="submit"
-                        className="gradientBgBtn min-w-232px text-16px font-normal rounded text-white uppercase text-center pt-21px pb-21px pl-49px pr-49px no-underline"
-                      >
-                        APPLY
-                      </button>
-                    ) : (
-                      <button
-                        disabled={isSubmitting}
-                        type="button"
-                        className="gradientBgBtn  min-w-232px text-16px font-normal rounded text-white uppercase text-center pt-21px pb-21px pl-49px pr-49px no-underline"
-                      >
-                        SUBMITING ...
-                      </button>
-                    )}
-                  </div>
+                    <div className="block w-full">
+                      {!isSubmitting ? (
+                        <button
+                          disabled={isSubmitting}
+                          type="submit"
+                          className="gradientBgBtn min-w-232px text-16px font-normal rounded text-white uppercase text-center pt-21px pb-21px pl-49px pr-49px no-underline"
+                        >
+                          APPLY
+                        </button>
+                      ) : (
+                        <button
+                          disabled={isSubmitting}
+                          type="button"
+                          className="gradientBgBtn  min-w-232px text-16px font-normal rounded text-white uppercase text-center pt-21px pb-21px pl-49px pr-49px no-underline"
+                        >
+                          SUBMITING ...
+                        </button>
+                      )}
+                    </div>
                   </div>
                 </div>
               </form>

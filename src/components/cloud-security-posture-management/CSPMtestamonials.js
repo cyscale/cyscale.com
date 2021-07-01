@@ -17,12 +17,14 @@ const CSPMtestamonials = ({sectionName, data}) => {
                 <Slider {...settings}>
                 {data.map((content, index) => (
                  <div key = {index}>
-                        <div className="flex-none md:flex space-x-0  md:space-x-4 lg:space-x-4 xl:space-x-4 2xl:space-x-4">
+                        <div className="flex-none md:flex space-x-0 md:space-x-4 lg:space-x-4 xl:space-x-4 2xl:space-x-4 md:items-center">
                         <div className="w-full lg:w-2/4">
-                            {!!content.image && (
-                                <img src={content.image} className="w-auto mb-1" alt="" />
+                           <div className="flex flex-row md:flex-col">
+                           {!!content.image && (
+                                <img src={content.image} className="w-52 md:w-20 h-auto mb-1 order-2 md:order-1 transform rotate-180 md:rotate-0" alt="" />
                             )}
-                            <h2 className="text-blue text-34px leading-8 max-w-274px new-line">{content.title}</h2>
+                            <h2 className="text-blue text-34px leading-10 max-w-274px order-1 md:order-2 new-line">{content.title}</h2>
+                           </div>
                             
                     </div>
                     <div className="w-full lg:w-2/4">

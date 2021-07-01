@@ -9,7 +9,7 @@ const getstarted = ({description, btnText, btnLink, sectionName, icon, icon2}) =
                     {!!sectionName && sectionName === "getStartedFooter"?("grid grid-cols-1 lg:grid-cols-2 gap-6"):("text-center")}                >
                                         
                     <div>
-                        <div className={`block w-full  ${sectionName !== "aboutUsGetStarted" && ("md:w-96")} m-auto text-white text-24px leading-8 text-center ${!!sectionName && sectionName === "getStartedFooter"?("sm:text-left"):("")}`}>
+                        <div className={`block w-full  ${sectionName !== "aboutUsGetStarted" && (sectionName ==="RemoteWork"? null:("md:w-96"))} m-auto text-white text-24px leading-8 text-center ${!!sectionName && sectionName === "getStartedFooter"?("sm:text-left"):("")}`}>
                             {!!icon && (
                                 <img src={icon} alt="" className={`mb-30px mx-auto ${!!sectionName && sectionName === "getStartedFooter"?("sm:m-0 h-28"):("")}`} />
                             )}

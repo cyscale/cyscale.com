@@ -15,18 +15,18 @@ const PageLeft = ({ data, feature }) => {
                     <h6 className='text-13px '>Category: {data.category}</h6>
                     <div>
 
-                        <h3 title={data.title} className='text-blue text-24px leading-24px mt-3px'>
+                        <h3 title={data.title} className='text-blue text-24px leading-24px mt-11px'>
 
                             {feature === true ? data.title : data.title?.slice(0, 28) + "..."}
 
 
                         </h3>
-                        <h6 className='text-13px mt-8px'>{data.date?.split('T')?.[0]}</h6>
+                        <h6 className='text-13px mt-11px'>{data.date?.split('T')?.[0]}</h6>
                         <p title={data.description} className='text-16px leading-24px mt-8px'>
                             {feature === true ? data.description : data.description?.slice(0, 120) + "..."}
                         </p>
                     </div>
-                    <div className='flex justify-end mt-8px'>
+                    <div className='flex justify-end mt-13px mb-7px'>
                         <span className='text-12px text-blue font-bold '>read</span>
                     </div>
                 </div>

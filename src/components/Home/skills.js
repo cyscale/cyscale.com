@@ -1,7 +1,6 @@
 import React from 'react';
 import PageLeft from '../blogs/pageLeft';
 import { Link, graphql, useStaticQuery } from 'gatsby';
-import { node } from 'prop-types';
 
 const Skills = ({ btnText, btnLink }) => {
     const data = useStaticQuery(graphql`

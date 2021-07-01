@@ -20,7 +20,6 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 const TopNav = ({ pageName }) => {
     const [, setSticker] = useState(false);
-    const [expand, setExpand] = useState(false);
     const stickyNav = () => {
         if (window.scrollY < 50) {
             !!sticky.current && sticky.current.classList.remove('transparent-bg');
@@ -40,7 +39,6 @@ const TopNav = ({ pageName }) => {
     }, []);
 
     const sticky = useRef();
-    const focussearch = useRef();
     const [menu, setMenu] = useState({
         Icon: menuIcon,
         menuToggle: 'hidden',
@@ -135,7 +133,7 @@ const TopNav = ({ pageName }) => {
                                                     activeClassName='active'
                                                     className='text-base text-black hover:text-blue hover:no-underline leading-6 mt-7'
                                                 >
-                                                    Security Knowledge Graph<sup>TM</sup>
+                                                    Security Knowledge Graph™
                                                 </Link>
                                             </div>
                                         </div>
@@ -177,7 +175,7 @@ const TopNav = ({ pageName }) => {
                             <li className='hoverable'>
                                 <button
                                     type='button'
-                                    className={`${pageName === 'Data_Security' || pageName === 'Data_Security' ? 'active' : ''
+                                    className={`${pageName === 'Data_Security' || pageName === "RemoteWork" || pageName === "ComplianceAuditing" ? 'active' : ''
                                         } relative parentItem block my-6 mx-4 lg:m-8 text-base no-underline leading-6`}
                                 >
                                     <span>Use Cases</span>
@@ -241,7 +239,7 @@ const TopNav = ({ pageName }) => {
                             <li className='hoverable hover:bg-teal-700 hover:text-white'>
                                 <button
                                     type='button'
-                                    className='relative parentItem block my-6 mx-4 lg:m-8 text-base leading-6'
+                                    className={`relative parentItem block my-6 mx-4 lg:m-8 text-base leading-6 ${pageName === "blogs" || pageName === "blog-detail" ? ("active"):null}`}
                                 >
                                     <span>Resources</span>
                                 </button>
@@ -294,12 +292,13 @@ const TopNav = ({ pageName }) => {
                                     </div>
                                 </div>
                             </li>
-                            <li className='hoverable hover:bg-teal-700 hover:text-white'>
+                            <li className={`hoverable hover:bg-teal-700 hover:text-white`}>
                                 <button
                                     type='button'
                                     className={`${pageName === 'aboutUs' ||
                                         pageName === 'aboutUs' ||
                                         pageName === 'careers' ||
+                                        pageName === 'jobDetails' ||
                                         pageName === 'contact_us'
                                         ? 'active'
                                         : ''

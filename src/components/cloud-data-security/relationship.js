@@ -22,7 +22,7 @@ const Relationship = () => {
                 <img src={Owsap} alt="" className="w-384px" />
                 <p className="mt-32px mb-38px text-black text-36px leading-6">Data Security Top 10</p>
                 <p className="new-line text-black text-16px leading-6">
-                    Cyscale is built by the authors of the <a target='_blank' className="text-blue underline text-16px hover:no-underline hover:text-red" href="https://owasp.org/www-project-data-security-top-10/">OWASP Data Security Top 10</a> standard that helps security, IT, and compliance specialists ensure critical data is safe against unauthorized exposure, data breaches, and accidental or malicious misuse.
+                    Cyscale is built by the authors of the <a target='_blank' rel="noreferrer" className="text-blue underline text-16px hover:no-underline hover:text-red" href="https://owasp.org/www-project-data-security-top-10/">OWASP Data Security Top 10</a> standard that helps security, IT, and compliance specialists ensure critical data is safe against unauthorized exposure, data breaches, and accidental or malicious misuse.
                 </p>
             </div>
         </div>

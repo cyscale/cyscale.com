@@ -10,7 +10,7 @@ const services = ({ headingText, description, data, sectionName }) => {
 
                         <div className="hidden md:block"></div>
                         <div>
-                            <h2 className="text-blue text-34px leading-8 md:max-w-xs sectionTitle">{headingText}</h2>
+                            <h2 className="text-blue text-34px leading-10 md:max-w-xs sectionTitle">{headingText}</h2>
 
                         </div>
                     </>
@@ -19,7 +19,7 @@ const services = ({ headingText, description, data, sectionName }) => {
 
                     <>
                         <div>
-                            <h2 className="text-blue text-34px leading-8 md:max-w-xs sectionTitle">{headingText}</h2>
+                            <h2 className="text-blue text-34px leading-10 md:max-w-xs sectionTitle">{headingText}</h2>
 
                         </div>
                         <div className="hidden md:block"></div>

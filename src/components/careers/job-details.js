@@ -2,11 +2,11 @@ import React from "react";
 import Description from "./description";
 import Apply from "./apply-form";
 
-const Details = ({data}) => {
+const Details = ({ data }) => {
   return (
     <div>
       <Description data={data} />
-      <Apply />
+      <Apply data={data} />
     </div>
   );
 };

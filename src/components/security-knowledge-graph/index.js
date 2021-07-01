@@ -130,7 +130,7 @@ const Index = () => {
     {
       title: "Cyscale makes it easy to holistically view your security posture and maintain awareness of it.",
       description: `With just a few clicks, I can register my AWS environment and get a comprehensive inventory of all the resources we have, then evaluate all of those resources.\n\nThen, as an added bonus, the ongoing evaluation of our environment helps me understand if we’ve had configuration drift.`,
-      author: "OVIDIU POP",
+      author: "Ovidiu Pop",
       designation: "SYMBOLD STUDIO"
     }
   ]
@@ -139,11 +139,7 @@ const Index = () => {
       <div>
         <div id="start">
           <Cloud
-            title= 
-              {["What is a Security Knowledge Graph",
-              <sup key="113a">
-                TM
-              </sup>]}
+            title={`What is a Security Knowledge Graph™`}
             f_image={SKG_F_image}
             sectionName="SKGSection"
             data={dataCloud}
@@ -152,12 +148,7 @@ const Index = () => {
         <Video />
         <div className="block w-full bg-white">
           <Features
-            title={[
-              "The Cyscale Security Knowledge Graph in a nutshell",
-            
-              "",
-            ]}
-            
+            title={`The Cyscale Security Knowledge Graph in a nutshell`}
             bottomDescripton="No cloud security vendor leverages the power of the knowledge graph technology to deliver precise correlations between cloud resources and data loss risks."
             data={dataFeatures}
           />

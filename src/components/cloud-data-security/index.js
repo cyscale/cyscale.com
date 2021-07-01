@@ -43,7 +43,7 @@ const Index = () => {
       title:
         "Cyscale makes it easy to holistically view your security posture and maintain awareness of it.",
       description: `With just a few clicks, I can register my AWS environment and get a comprehensive inventory of all the resources we have, then evaluate all of those resources.\n\nThen, as an added bonus, the ongoing evaluation of our environment helps me understand if we’ve had configuration drift.`,
-      author: "OVIDIU POP",
+      author: "Ovidiu Pop",
       designation: "SYMBOLD STUDIO",
     },
   ];
@@ -83,7 +83,7 @@ const Index = () => {
       {
         title: "BIG DATA/DATA LAKES",
         subItems: [
-          ["WS Lake Formation"],
+          ["AWS Lake Formation"],
           ["AWS Redshift"],
           ["GCP BigQuery"],
           ["Azure Synapse"],

@@ -10,7 +10,7 @@ const testamonials = () => {
                 <img src={image1} className="w-20 sm:w-40 block lg:inline lg:w-40 float-right lg:float-left" alt="" />
                     <h2 className="text-blue text-24px lg:text-34px leading-9 lg:pl-60">Cyscale keeps <br />our infrastructure compliant and drift free
                         <small className="text-12px leading-4 mt-32px text-grey2 opacity-60 hidden sm:block">
-                            <strong>OVIDIU POP</strong><br />SYMBOLD STUDIO
+                            <strong>Ovidiu Pop</strong><br />SYMBOLD STUDIO
                         </small>
                     </h2>
                     

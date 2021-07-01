@@ -36,8 +36,8 @@ const Cloud = ({ title, sectionName, f_image, data }) => {
                 }`}
             >
               {!!sectionName && sectionName === "compliance" && (
-                <div className="flex flex-row justify-end flex-wrap sapce-y-6 space-x-6">
-                  <img src={icon1} className="h-76px" alt="" />
+                <div className="flex flex-row justify-between items-center lg:justify-end flex-wrap space-y-6 lg:space-y-0 lg:space-x-6">
+                  <img src={icon1} className="h-76px mt-30px lg:mt-0" alt="" />
                   <img src={icon2} className="h-76px" alt="" />
                   <img src={icon3} className="h-76px" alt="" />
                   <img src={icon4} className="h-76px" alt="" />

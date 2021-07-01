@@ -415,9 +415,15 @@ h1,h2,h3,h4,h5,h6 {
 .CSPMServices.securityGaps{
     background-size: contain;
 }
+.gradientWingBg{
+    background-image: url(../images/compliance-code-image.svg);
+    background-position: right bottom;
+    background-repeat: no-repeat;
+}
 @media screen and (max-width: 768px) {
     .CSPMServices,
-    .CSPMServices.securityGaps{
+    .CSPMServices.securityGaps,
+    .gradientWingBg{
         background-size: 30%;
     }
 }
@@ -489,7 +495,7 @@ h1,h2,h3,h4,h5,h6 {
     border: thin solid #EDEDED;
 }
 .pricingTable .businessCol{
-    background-image: url(../images/mostPopularTag.svg);
+    background-image: url(../images/most-popular-badge.png);
     background-repeat: no-repeat;
     background-position: calc(100% - 16px) top;
 }
@@ -616,7 +622,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 .dataSecurity{
     background-position: left bottom !important;
-    background-image: url(../images/data-security-bg.svg);
+    background-image: url(../images/data-security-background-image.png);
     background-repeat: no-repeat;
 }
   @media screen and (max-width: 767px) {
@@ -704,6 +710,19 @@ h1,h2,h3,h4,h5,h6 {
 .bigger-box .customimgmain{ 
     height:230px !important;
    
+}
+.complianceGetStartedGreyBg,
+.greyBgImage{
+    background-image: linear-gradient(to right, #EEEEEE , #EEEEEE);
+    background-repeat: no-repeat;
+}
+.greyBgImage{
+    background-position: left bottom;    
+    background-size: 100% 80%;
+}
+.complianceGetStartedGreyBg{
+    background-position: left top;    
+    background-size: 100% 70%;
 }
 @media screen and (max-width: 768px) {
     .bigger-box .customimgmain{ 
