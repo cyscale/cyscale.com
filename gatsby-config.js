@@ -10,6 +10,7 @@ module.exports = {
         'gatsby-plugin-postcss',
         'gatsby-plugin-react-helmet',
         'gatsby-plugin-remove-serviceworker',
+        'gatsby-plugin-remove-trailing-slashes',
         {
             resolve: 'gatsby-plugin-robots-txt',
             options: {
