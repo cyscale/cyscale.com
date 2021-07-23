@@ -60,25 +60,25 @@ const Automation = () => {
                   <div className="xl:col-span-2 pt-45px pb-45px pl-76px pr-76px">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                       <div>
-                        <img src={icon1} className="h-45px" alt="" />
+                        <img src={icon1} className="h-45px" alt="Bring all your cloud data under one roof" />
                         <p className="text-16px text-black font-bold mt-22px">
                           Bring all your cloud data under one roof
                         </p>
                       </div>
                       <div>
-                        <img src={icon2} className="h-45px" alt="" />
+                        <img src={icon2} className="h-45px" alt="Identify and track all your cloud entities" />
                         <p className="text-16px text-black font-bold mt-22px">
                           Identify and track all your cloud entities
                         </p>
                       </div>
                       <div>
-                        <img src={icon3} className="h-45px" alt="" />
+                        <img src={icon3} className="h-45px" alt="Remove the limitations of list-based inventories" />
                         <p className="text-16px text-black font-bold mt-22px">
                           Remove the limitations of list-based inventories
                         </p>
                       </div>
                       <div>
-                        <img src={icon4} className="h-45px" alt="" />
+                        <img src={icon4} className="h-45px" alt="Create rich security profiles for each asset" />
                         <p className="text-16px text-black font-bold mt-22px">
                           Create rich security profiles for each asset
                         </p>
@@ -87,7 +87,7 @@ const Automation = () => {
                   </div>
                   <div className="pt-45px pb-45px">
                     <div className="flex flex-wrap flex-grow h-full justify-center xl:justify-start">
-                      <img src={feauterImage} className="w-48" alt="" />
+                      <img src={feauterImage} className="w-48" alt="Valuable insights for peace of mind." />
                       <h2 className="text-blue text-24px max-w-full sm:text-34px leading-9 mt-auto text-left text-xl-left">
                         Valuable insights for peace of mind.  :)
                       </h2>

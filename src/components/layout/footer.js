@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import logo from "../../assets/images/logofooter.png";
+import logo from "../../assets/images/logo-footer.svg";
 import { FaLinkedin, FaTwitter, FaFacebook } from "react-icons/fa";
 import CrunchbaseIcon from '../../assets/images/cib-crunchbase.svg';
 import AngelIcon from '../../assets/images/angel.svg';
@@ -10,7 +10,7 @@ const Footer = () => {
       <div className=" justify-between md:flex text-white pl-20px pr-20px md:pl-100px pt-68px md:pr-114px lg:pb-82px pb-20px max-w-1366px m-auto">
         <div className="md:flex w-full md:w-6/12 lg:w-4/12 md:flex-col">
           <Link to="/">
-            <img src={logo} className="w-162px" alt="" />
+            <img src={logo} className="w-162px footerLogo" alt="cyscale logo" />
           </Link>
           <div className="mt-20px text-14px font-light leading-24 text-white pr-20px">
             Cyscale helps companies embrace their digital future by protecting apps and data in the cloud. With the innovative Security Knowledge Graph™ at its core, Cyscale helps you easily track security and compliance across your multi-cloud environment.
@@ -34,13 +34,13 @@ const Footer = () => {
             </div>
             <div className="mr-25px">
               <a href="https://www.crunchbase.com/organization/cyscale" className="text-white" rel="noreferrer" target="_blank">                
-                  <img src={CrunchbaseIcon} className="w-16px" alt="" />
+                  <img src={CrunchbaseIcon} className="w-16px" alt="crunch base icon" />
               </a>
               
             </div>
             <div className="mr-25px">
               <a href=" https://angel.co/company/cyscale" className="text-white" rel="noreferrer" target="_blank">                
-                  <img src={AngelIcon} className="w-16px" alt="" />
+                  <img src={AngelIcon} className="w-16px" alt="angel icon" />
               </a>
               
             </div>
@@ -57,7 +57,7 @@ const Footer = () => {
                    <a href="/products/cloud-security-posture-management" className="font-light text-white no-underline hover:underline">Cloud Security Posture Management</a>
                 </li>
                 <li className="text-12px leading-24 pb-7px">
-                   <a href="/products/security-knowledge-graph" className="font-light text-white no-underline hover:underline">Security Knowledge Graph™</a>
+                   <a href="/products/security-knowledge-graph" className="font-light text-white no-underline hover:underline">Security Knowledge Graph<sup>TM</sup></a>
                 </li>
               </ul>
             </div>
@@ -87,13 +87,13 @@ const Footer = () => {
                    <a href="/blog" className="font-light text-white no-underline hover:underline">Blog</a>
                 </li>
                 <li className="text-12px leading-24 pb-7px">
-                   <a href="https://docs.cyscale.com" className="font-light text-white no-underline hover:underline">Documentation</a>
+                   <a href="https://docs.cyscale.com" target="_blank" className="font-light text-white no-underline hover:underline">Documentation</a>
                 </li>
                 <li className="text-12px leading-24 pb-7px">
                    <a href="/resources/cyscale-cloud-data-security-datasheet.pdf" download className="font-light text-white no-underline hover:underline">Data Sheet</a>
                 </li>
                 <li className="text-12px leading-24 pb-7px">
-                   <a href="https://docs.cyscale.com" className="font-light text-white no-underline hover:underline">FAQ + Support</a>
+                   <a href="https://docs.cyscale.com" target="_blank" className="font-light text-white no-underline hover:underline">FAQ + Support</a>
                 </li>
                 <li className="text-12px leading-24 pb-7px">
                    <a href="/pricing" className="font-light text-white no-underline hover:underline">Pricing</a>
@@ -157,13 +157,13 @@ const Footer = () => {
             </div>
             <div className="mr-25px">
               <a href="https://www.crunchbase.com/organization/cyscale" className="text-white" rel="noreferrer" target="_blank">                
-                  <img src={CrunchbaseIcon} className="w-16px" alt="" />
+                  <img src={CrunchbaseIcon} className="w-16px" alt="crunch base icon" />
               </a>
               
             </div>
             <div className="mr-25px">
               <a href=" https://angel.co/company/cyscale" className="text-white" rel="noreferrer" target="_blank">                
-                  <img src={AngelIcon} className="w-16px" alt="" />
+                  <img src={AngelIcon} className="w-16px" alt="angel icon" />
               </a>
               
             </div>

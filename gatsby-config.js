@@ -6,17 +6,17 @@ module.exports = {
             'Map all your cloud assets across providers in under 5 mins. Optimize costs, ensure cloud security, and prove compliance with the scalable Cyscale CSPM.'
     },
     plugins: [
+        `gatsby-plugin-image`,
         'gatsby-plugin-sass',
         'gatsby-plugin-postcss',
         'gatsby-plugin-react-helmet',
         'gatsby-plugin-remove-serviceworker',
-        'gatsby-plugin-remove-trailing-slashes',
         {
             resolve: 'gatsby-plugin-robots-txt',
             options: {
                 host: 'https://cyscale.com/',
                 sitemap: 'https://cyscale.com/sitemap.xml',
-                policy: [{ userAgent: '*', allow: '/', }]
+                policy: [{ userAgent: '*', allow: '/' }]
             }
         },
         `gatsby-plugin-sitemap`,
@@ -43,15 +43,15 @@ module.exports = {
         {
             resolve: 'gatsby-source-filesystem',
             options: {
-                path: `${__dirname}/src/pages`,
-                name: 'pages'
+                path: `${__dirname}/src/assets/images`,
+                name: 'images'
             }
         },
         {
             resolve: 'gatsby-source-filesystem',
             options: {
-                path: `${__dirname}/src/img`,
-                name: 'images'
+                path: `${__dirname}/src/pages`,
+                name: 'pages'
             }
         },
         'gatsby-plugin-sharp',

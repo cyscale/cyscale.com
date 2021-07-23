@@ -22,21 +22,21 @@ const ogImages = {
     ComplianceAuditing: ComplianceOg
 };
 
-const Seo = ({ title, description, pageName, location }) => {
+const Seo = ({ title, description, pageName }) => {
     const ogImage = pageName && ogImages[pageName] ? ogImages[pageName] : ogImages['HomePage'];
     return (
         <Helmet>
             <html lang='en' />
             <title>{title}</title>
+            <meta name='theme-color' content='#fff' />
+            <meta property='image' content={ogImage} />
+            <meta property='og:title' content={title} />
+            <meta property='og:url' content={title} />
+            <meta property='og:image' content={ogImage} />
             <meta name='description' content={description} />
             <meta name='og:description' content={description} />
-            <meta property='og:title' content={title} />
+            {/* <meta property='url' content={location && location.pathname} /> */}
 
-            <meta name='theme-color' content='#fff' />
-            <meta property='og:type' content='business.business' />
-            <meta property='og:url' content={location && location.pathname} />
-
-            <meta property='og:image' content={ogImage} />
 
             <link rel='apple-touch-icon' sizes='180x180' href={icon180} />
             <link rel='icon' type='image/png' href={icon128} sizes='128x128' />

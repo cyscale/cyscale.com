@@ -16,7 +16,7 @@ const Onboarding = ({data}) => {
                         </div>
                         <div className="mt-45px mb-13px pr-20px">
                             <div className="h-25px">
-                                <img src={content.icon} alt="" />
+                                <img src={content.icon} alt={content.title} />
                             </div>
                             <p className="text-base mt-9px text-black new-line">
                                 {content.description}

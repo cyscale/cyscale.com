@@ -6,7 +6,7 @@ import GetStarted from "../Home/getstarted";
 import CSPMtestamonials from "../cloud-security-posture-management/CSPMtestamonials";
 import Shield from "../../assets/images/shield.svg";
 import workFromHome from "../../assets/images/work-from-home.svg";
-import RemoteTeams from "../../assets/images/remote-teams.svg";
+import CodeAnalysis from "../../assets/images/graph-viewer-code-analysis.svg";
 import EmployeeAccessFootprint from "../../assets/images/employee-access-footprint.svg";
 import getStartedICon from "../../assets/images/getStartedIconCPSM.svg";
 import image3 from "../../assets/images/Group-379.svg";
@@ -45,8 +45,8 @@ export default function RemoteWorkContent() {
       image: image3,
       title: "“Cyscale Power Cloud Platform is a life-saver for companies requiring reliable protection and access”",
       description: `“We really enjoy the quick deployment and scalability and fully functional CSPM available in the cloud. We were able to scale as required based on load and performance.\n\nWith Covid-19, our users, including our Customer Center agents, are completely remote and we use Cyscale to make sure they have secure and appropriate access to all the resources they need.”`,
-      author: "Xulescu Smith,",
-      designation: "IT Director @ Famous Company",
+      author: "Ovidiu Pop",
+      designation: "SYMBOLD STUDIO",
     },
   ];
   return (
@@ -63,7 +63,7 @@ export default function RemoteWorkContent() {
       <Services data={dataWFHServices} />
 
       <SecureRemoteAccess
-        image={RemoteTeams}
+        image={CodeAnalysis}
         headingFirst="Protect remote teams & their work"
         headingSecond="Ensure secure remote access from day one"
         description={`Onboard remote team members fast and provide the secure setup they need to be productive with substantially less effort.\n\nUse our Power Cloud Platform to correctly configure permissions and avoid errors that expose your environment to additional vulnerabilities. \n\nWe provide a ready-to-use Remote Work policy that includes safety provisions for equipment (including mobile and BYOD), communications, and security layers.\n\nKeep the risks employee workarounds introduce to a minimum and make sure workflows stay compliant during digital transformation projects. `}
@@ -75,7 +75,7 @@ export default function RemoteWorkContent() {
         />
       </div>
       <div className="max-w-1366px m-auto mb-12 lg:mb-24 pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px">
-        <img src={EmployeeAccessFootprint} className="w-full h-auto" alt="" />
+        <img src={EmployeeAccessFootprint} className="w-full h-auto" alt="employee-access-footprint" />
       </div>
       <div className="max-w-1366px m-auto pt-12 lg:pt-24 pb-12 lg:pb-24 pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px">
         <Sectionheader
@@ -98,6 +98,7 @@ export default function RemoteWorkContent() {
           description="Support productive, secure & compliant remote workflows"
           btnText="START YOUR FREE TRIAL"
           btnLink="https://app.cyscale.com/"
+          ExternalLink
           icon={getStartedICon}
           sectionName="RemoteWork"
         />
@@ -184,6 +185,7 @@ export default function RemoteWorkContent() {
           description={`Prevent cloud data spills and keep remote work incident-free`}
           btnText="Start your free trial"
           btnLink="https://app.cyscale.com/"
+          ExternalLink
         />
       </div>
     </>

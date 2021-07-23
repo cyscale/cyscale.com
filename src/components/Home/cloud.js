@@ -1,12 +1,5 @@
 import React from "react";
-import icon1 from "../../assets/images/logo_iso27001.png";
-import icon2 from "../../assets/images/logo_soc2.png";
-import icon3 from "../../assets/images/logo_cis.png";
-import icon4 from "../../assets/images/logo_gdpr.png";
-import icon6 from "../../assets/images/logo_hipaa.png";
-import icon7 from "../../assets/images/logo_nist.png";
-import icon8 from "../../assets/images/logo_pci-dss.png";
-
+ import { ISO27001, AicpaSoc2, CisBenchmarks, EuEuropeanGdpr, USHipaa, PciDss, Nist } from "./images";
 const Cloud = ({ title, sectionName, f_image, data }) => {
 
   return (
@@ -37,13 +30,13 @@ const Cloud = ({ title, sectionName, f_image, data }) => {
             >
               {!!sectionName && sectionName === "compliance" && (
                 <div className="flex flex-row justify-between items-center lg:justify-end flex-wrap space-y-6 lg:space-y-0 lg:space-x-6">
-                  <img src={icon1} className="h-76px mt-30px lg:mt-0" alt="" />
-                  <img src={icon2} className="h-76px" alt="" />
-                  <img src={icon3} className="h-76px" alt="" />
-                  <img src={icon4} className="h-76px" alt="" />
-                  <img src={icon6} className="h-76px" alt="" />
-                  <img src={icon7} className="h-76px" alt="" />
-                  <img src={icon8} className="h-76px" alt="" />
+                  <ISO27001/>
+                  <AicpaSoc2/>
+                  <CisBenchmarks/>
+                  <EuEuropeanGdpr/>
+                  <USHipaa/>
+                  <PciDss/>
+                  <Nist/>
                 </div>
               )}
             </div>
@@ -68,7 +61,7 @@ const Cloud = ({ title, sectionName, f_image, data }) => {
                       ? "sm:w-96 lg:mt-200px"
                       : "sm:h-72 lg:mt-138px"
                     }`}
-                  alt=""
+                  alt={title}
                 />
               </div>
             )}

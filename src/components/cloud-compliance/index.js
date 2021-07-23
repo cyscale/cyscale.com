@@ -110,6 +110,7 @@ export default function CloudComplianceContent() {
           description="Easier compliance is just a login away! Leave the heavy lifting to us"
           btnText="START YOUR FREE TRIAL"
           btnLink="https://app.cyscale.com/"
+          ExternalLink
           icon={getStartedICon}
           sectionName="RemoteWork"
         />
@@ -151,6 +152,7 @@ export default function CloudComplianceContent() {
           description="Explore the full toolbox for your GRC system"
           btnText="START YOUR FREE TRIAL"
           btnLink="https://app.cyscale.com/"
+          ExternalLink
           icon={getStartedICon}
           sectionName="RemoteWork"
         />

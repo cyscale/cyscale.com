@@ -47,7 +47,7 @@ const PageRight = ({ fiulterCategory, data }) => {
             <div id="example-collapse-text " className="md:block ">
                 <div className="w-full pl-20px pr-20px md:pl-0 md:pr-0 mt-50px md:mt-0 md:w-184px lg:w-210px xl:w-330px absolute top-605px left-0 md:relative md:top-0px">
                     <div className="bg-indigo-100 w-200px p-20px rounded-md shadow-md hidden md:block ">
-                        <h4 className="text-blue text-18px ">FILTER BY TOPIC</h4>
+                        <p className="text-blue text-18px ">FILTER BY TOPIC</p>
                         {category?.map((cat, Index) => (
                             <p
                                 onClick={() => fiulterCategory(cat)}

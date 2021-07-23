@@ -2,16 +2,15 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'gatsby';
 import featureImage from '../../assets/images/about-us-f-image-yellow-pot.svg';
 import ArrowRight from '../../assets/images/arrow-right.svg';
-import image2 from '../../assets/images/big_oracle.png';
+import image2 from '../../assets/images/integration-oracle-cloud-infrastructure-oci-security-logo.png';
 import heroBG from '../../assets/images/knowledge-graph-hero-image.svg';
-import image5 from '../../assets/images/Kubernetes_logo_without_wordmark.svg';
-import logo from '../../assets/images/logo.png';
+import image5 from '../../assets/images/integration-kubernetes-cluster-k8s-security-logo.png';
+import logo from '../../assets/images/logo.svg';
 import usescasesImage from '../../assets/images/menu-f-image.svg';
 import CloudDataImage from '../../assets/images/resources-icon.svg';
-import image6 from '../../assets/images/snyk.png';
-import image7 from '../../assets/images/svg_aws.svg';
-import image8 from '../../assets/images/svg_azure.svg';
-import image9 from '../../assets/images/svg_gcp.svg';
+import image7 from '../../assets/images/integration-amazon-web-services-aws-logo.png';
+import image8 from '../../assets/images/integration-microsoft-azure-cloud-logo.png';
+import image9 from '../../assets/images/integration-google-cloud-platform-gcp-logo.png';
 import menuIcon from '../../assets/images/menuIcon.svg';
 import menuClsoe from '../../assets/images/menuClose.svg';
 // import SearchIcon from '../../assets/images/search_icon.svg';
@@ -103,7 +102,7 @@ const TopNav = ({ pageName }) => {
                                 className='absolute right-0 top-6 inline-block xl:hidden'
                                 onClick={toggleMenuIcon}
                             >
-                                <img src={menu.Icon} alt='' />
+                                <img src={menu.Icon} alt='toggle menu' />
                             </button>
                         </div>
                         <ul className={`flex-col xl:flex-row ${menu.menuToggle} xl:flex`}>
@@ -133,18 +132,18 @@ const TopNav = ({ pageName }) => {
                                                     activeClassName='active'
                                                     className='text-base text-black hover:text-blue hover:no-underline leading-6 mt-7'
                                                 >
-                                                    Security Knowledge Graph™
+                                                    Security Knowledge Graph<sup>TM</sup>
                                                 </Link>
                                             </div>
                                         </div>
                                         <div className='hidden lg:inline-block'>
                                             <p className='text-base font-semibold text-black leading-6'>Our Partners</p>
                                             <div className='flex flex-row flex-wrap space-x-4 mt-7'>
-                                                <img src={image7} className='w-auto h-8' alt='' />
-                                                <img src={image8} className='w-auto h-8' alt='' />
-                                                <img src={image9} className='w-auto h-8' alt='' />
-                                                <img src={image2} className='w-auto h-8' alt='' />
-                                                <img src={image5} className='w-auto h-8' alt='' />
+                                                <img src={image7} className='w-auto h-8' alt='svg_aws' />
+                                                <img src={image8} className='w-auto h-8' alt='svg_azure' />
+                                                <img src={image9} className='w-auto h-8' alt='svg_gcp' />
+                                                <img src={image2} className='w-auto h-8' alt='big_oracle' />
+                                                <img src={image5} className='w-auto h-8' alt='Kubernetes_logo_without_wordmark' />
                                             </div>
                                             <p className='text-base leading-6 text-black mt-36'>
                                                 <strong className='leading-6 text-sm'>
@@ -155,7 +154,7 @@ const TopNav = ({ pageName }) => {
                                             </p>
                                         </div>
                                         <div className='hidden lg:inline-block'>
-                                            <img src={heroBG} className='w-full h-auto' alt='' />
+                                            <img src={heroBG} className='w-full h-auto' alt='Explore the Knowledge Graph' />
                                             <p className='text-center mt-5'>
                                                 <Link
                                                     to='/products/security-knowledge-graph/'
@@ -164,7 +163,7 @@ const TopNav = ({ pageName }) => {
                                                     className='text-blue font-semibold text-base no-underline hover:underline flex flex-row justify-center'
                                                 >
                                                     Explore the Knowledge Graph&nbsp;
-                                                    <img src={ArrowRight} className='w-5 h-auto' alt='' />
+                                                    <img src={ArrowRight} className='w-5 h-auto' alt='arrow right icon' />
                                                 </Link>
                                             </p>
                                         </div>
@@ -210,7 +209,7 @@ const TopNav = ({ pageName }) => {
                                             </div>
                                         </div>
                                         <div className='hidden lg:inline-block'>
-                                            <img src={usescasesImage} className='w-44 mx-auto' alt='' />
+                                            <img src={usescasesImage} className='w-44 mx-auto' alt='Explore Data Security' />
                                             <p className='text-center mt-5'>
                                                 <Link
                                                     to='/use-cases/cloud-data-security/'
@@ -219,7 +218,7 @@ const TopNav = ({ pageName }) => {
                                                     className='text-blue font-semibold text-base no-underline hover:underline flex flex-row justify-center'
                                                 >
                                                     Explore Data Security&nbsp;
-                                                    <img src={ArrowRight} className='w-5 h-auto' alt='' />
+                                                    <img src={ArrowRight} className='w-5 h-auto' alt='arrow right icon' />
                                                 </Link>
                                             </p>
                                         </div>
@@ -256,6 +255,7 @@ const TopNav = ({ pageName }) => {
                                                 </Link>
                                                 <a
                                                     href='https://docs.cyscale.com'
+                                                    target="_blank"
                                                     className='text-base text-black hover:text-blue hover:no-underline leading-6 mt-7'
                                                 >
                                                     Documentation
@@ -263,12 +263,14 @@ const TopNav = ({ pageName }) => {
                                                 <a
                                                     href='/resources/cyscale-cloud-data-security-datasheet.pdf'
                                                     download
+                                                    target="_blank"
                                                     className='text-base text-black hover:text-blue hover:no-underline leading-6 mt-7'
                                                 >
                                                     Data Sheet
                                                 </a>
                                                 <a
                                                     href='https://docs.cyscale.com'
+                                                    target="_blank"
                                                     className='text-base text-black hover:text-blue hover:no-underline leading-6 mt-7'
                                                 >
                                                     Support
@@ -276,7 +278,7 @@ const TopNav = ({ pageName }) => {
                                             </div>
                                         </div>
                                         <div className='hidden lg:inline-block'>
-                                            <img src={CloudDataImage} className='w-44 mx-auto' height='128px' alt='' />
+                                            <img src={CloudDataImage} className='w-44 mx-auto' height='128px' alt='Download Data Sheet' />
                                             <p className='text-center mt-5'>
                                                 <a
                                                     href='/resources/cyscale-cloud-data-security-datasheet.pdf'
@@ -284,7 +286,7 @@ const TopNav = ({ pageName }) => {
                                                     className='text-blue font-semibold text-base no-underline hover:underline flex flex-row justify-center'
                                                 >
                                                     Download Data Sheet&nbsp;
-                                                    <img src={ArrowRight} className='w-5 h-auto' alt='' />
+                                                    <img src={ArrowRight} className='w-5 h-auto' alt='arrow right icon' />
                                                 </a>
                                             </p>
                                         </div>
@@ -363,7 +365,7 @@ const TopNav = ({ pageName }) => {
                                             </div>
                                         </div>
                                         <div className='hidden lg:inline-block'>
-                                            <img src={featureImage} className='w-28 mx-auto' alt='' />
+                                            <img src={featureImage} className='w-28 mx-auto' alt='Join the Cyscale Team' />
                                             <p className='text-center mt-5'>
                                                 <Link
                                                     to='/careers'
@@ -372,7 +374,7 @@ const TopNav = ({ pageName }) => {
                                                     className='text-blue font-semibold text-base no-underline hover:underline flex flex-row justify-center'
                                                 >
                                                     Join the Cyscale Team&nbsp;
-                                                    <img src={ArrowRight} className='w-5 h-auto' alt='' />
+                                                    <img src={ArrowRight} className='w-5 h-auto' alt='arrow right icon' />
                                                 </Link>
                                             </p>
                                         </div>
@@ -383,6 +385,7 @@ const TopNav = ({ pageName }) => {
                                 <a
                                     className='bg-gradient-to-r from-blue to-red hover:bg-blue w-153px text-14px border-transparent box-border rounded-31px  h-10 hidden xl:flex justify-center items-center uppercase leading-none text-white transition duration-500 hover:to-blue hover:no-underline'
                                     href='https://app.cyscale.com'
+                                    target="_blank"
                                 >
                                     Start Free Trial
                                 </a>
@@ -392,6 +395,7 @@ const TopNav = ({ pageName }) => {
                                 <a
                                     className='loginBtn text-black hover:text-black mt-0px lg:mt-0 text-14px  uppercase w-84px rounded-31px greyBorder flex h-10 justify-center items-center leading-none transition-all duration-500 hover:bg-grey3 hover:no-underline'
                                     href='https://app.cyscale.com'
+                                    target="_blank"
                                 >
                                     Log in
                                 </a>

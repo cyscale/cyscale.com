@@ -24,7 +24,7 @@ const Performance = ({ data }) => {
                   pageName="dataSecurity"
                 />
               </div>
-              <img src={content.image} className="mx-auto" alt="" />
+              <img src={content.image} className="mx-auto" alt={content.title} />
             </div>
           ))}
         </Slider>

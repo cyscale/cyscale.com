@@ -27,7 +27,7 @@ export default function ScrollButton({ to, pageName, btnText }) {
           duration={500}
         >
           <span>
-            <img src={downDoubleArrow} alt="" className="mx-auto" />
+            <img src={downDoubleArrow} alt="down arrow icon" className="mx-auto" />
           </span>
         </ScrollLink>
       )}

@@ -36,7 +36,7 @@ const services = ({ headingText, description, data, sectionName }) => {
                     <div key={index} className="relative">
                         {!!content.img && (
                             <div className="block">
-                                <img src={content.img} className="h-42px" alt="" />
+                                <img src={content.img} className="h-42px" alt={content.title} />
                             </div>
 
                         )}

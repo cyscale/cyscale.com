@@ -1,5 +1,5 @@
 import React from "react";
-import SecurityControlsandPolicies_image from "../../assets/images/Security-Controls-and-Policies.svg"
+import SecurityControlsandPolicies_image from "../../assets/images/Security-Controls-and-Policies.png"
 
 export default function SecurityControlsandPolicies() {
   

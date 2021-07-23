@@ -28,6 +28,7 @@ const Support = ({ title, data, sectionName }) => {
                 <p className="mt-40px">
                   <a
                     href={content.viewMoreLink}
+                    target="_blank"
                     className="uppercase text-blue underline text-16px hover:no-underline hover:text-red font-medium"
                   >
                     {content.viewMoreText}
@@ -62,11 +63,12 @@ const Support = ({ title, data, sectionName }) => {
             <div className="max-w-1366px mx-auto mt-40px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px">
               <a
                 href="https://docs.cyscale.com"
+                target="_blank"
                 className="uppercase text-blue underline text-16px hover:no-underline hover:text-red font-medium"
               >
                 <img
                   src={arrowDOwn}
-                  alt=""
+                  alt="arrow icon"
                   className="mx-auto mb-23px w-20px"
                 />
                 <span className="block w-full text-center">

@@ -13,7 +13,7 @@ const Features = ({title, bottomDescripton, data}) => {
           {data.map((content, index) => (
                 <div key = {index} className="pt-50px pb-50px">
                 <div>
-                    <img src={content.icon} alt="" className="h-31px" />
+                    <img src={content.icon} alt={content.description} className="h-31px" />
                 </div>
                 <p className="mt-20px text-black text-16px leading-6">
                     {content.description}

@@ -20,7 +20,7 @@ const Index = () => {
         >
           <TopNav pageName={pageName} />
           <Hero
-            title={`How this story started:`}
+            title={`How this story started`}
             description="As more and more companies were moving their business applications and data in the cloud, many of them were lacking the knowledge or manpower required to mitigate security risks associated with this accelerated cloud adoption."
             description2="Being on the front line as cybersecurity experts, the founders (Ovidiu, Manuela and Andrei) have realized the struggle faced by these companies and started working on a solution to help them handle better and more efficiently their Cloud Security. And so… Cyscale was born."
             fimage={feauterImage}
@@ -35,7 +35,7 @@ const Index = () => {
         </div>
         <div className="max-w-1366px m-auto pt-67px pb-67px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px">
           <OurMission
-            headingText="Our Mission:"
+            headingText="Our Mission"
             description={`To help companies of all sizes to start, improve and maintain their Cloud Security Program based on the industry best practices, to ensure continuous security and compliance. Reducing the risk of security breaches when migrating or developing solutions in the cloud should be a continues priority and responsibility, and we can make sure that this task will not be overwhelming for you.\n\nUsing the unique power of our Security Knowledge Graph™, we can generate precise correlations between all cloud assets and data repositories so we can offer to our customers full visibility over their infrastructure. This allows them to immediately detect and fix potential misconfigurations, policy violations or compliance risks that could lead to data breaches.`}
             pageName={pageName}
           />
@@ -45,6 +45,7 @@ const Index = () => {
             description="Let us help you improve your Cloud Security Posture"
             btnText="Try Cyscale for free and see for yourself"
             btnLink="https://app.cyscale.com"
+            ExternalLink
             icon={iconOne}
             sectionName="aboutUsGetStarted"
           />

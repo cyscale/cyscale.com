@@ -25,6 +25,12 @@ h1,h2,h3,h4,h5,h6 {
     background-position: 101% 103%;
     background-size: 173px;
 }
+.footerLogo{
+    filter: brightness(0) invert(1);
+}
+.footerLogo:hover{
+    filter: none;
+}
 .new-line {
     white-space: pre-line;
   }
@@ -557,6 +563,10 @@ h1,h2,h3,h4,h5,h6 {
   /* Do an horizontal flip when you move the mouse over the flip box container */
   .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
+  }
+
+  .flip-card:hover .flip-card-front .to-hide {
+      opacity: 0;
   }
   
   /* Position the front and back side */

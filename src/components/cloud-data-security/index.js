@@ -195,6 +195,7 @@ const Index = () => {
           description={`Automate key data security tasks & keep your head above water`}
           btnText="START YOUR FREE TRIAL"
           btnLink="https://app.cyscale.com"
+          ExternalLink
           sectionName="cloudDataSecurity"
           icon={getStartedICon}
         />

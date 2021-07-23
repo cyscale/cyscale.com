@@ -15,7 +15,7 @@ const Proposal = ({ headingText, description, poster }) => {
                         </div>
                         <div className="flex-initial avatarCon">
                             <div className="imageBox">
-                                <img src={poster} className="lg:w-full block float-right" alt="" />
+                                <img src={poster} className="lg:w-full block float-right" alt={headingText} />
                             </div>
                         </div>
                         <div className="flex-initial description">

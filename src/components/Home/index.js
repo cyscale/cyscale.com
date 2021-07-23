@@ -16,11 +16,8 @@ import avatar from '../../assets/images/avatar.png'
 import iconOne from '../../assets/images/getStartedICon.svg'
 import iconTwo from '../../assets/images/elemente-vectoriale-07.svg'
 import iconThree from '../../assets/images/elemente-vectoriale-08.svg'
-import offer_image1 from '../../assets/images/graph.png'
-import offer_image2 from '../../assets/images/inventory.png'
-import offer_image3 from '../../assets/images/wfh.png'
-import offer_image4 from '../../assets/images/evidence.png'
 import icon5 from '../../assets/images/visuals-vectorial-5.svg'
+import {SecurityKnowledgeGraph, CloudNative, RemoteWorkWft, DataGathering} from './images'
 
 const Home = () => {
   const dataService = [
@@ -53,7 +50,7 @@ const Home = () => {
       btnText: "See how it works",
       bntLink: "/products/security-knowledge-graph",
       tabBodyTitle: "Security Knowledge Graph™",
-      tabBodyImage: offer_image1
+      tabBodyImage: <SecurityKnowledgeGraph/>
     },
     {
       title: "Real-time cloud inventory management with contextual analysis",
@@ -61,7 +58,7 @@ const Home = () => {
       btnText: "Explore features",
       bntLink: "/use-cases/cloud-data-security",
       tabBodyTitle: "Real-time cloud inventory",
-      tabBodyImage: offer_image2
+      tabBodyImage: <CloudNative/>
     },
     {
       title: "Comprehensive WFH compliance overview with granular control options",
@@ -69,7 +66,7 @@ const Home = () => {
       btnText: "Get the details",
       bntLink: "/use-cases/remote-work-security",
       tabBodyTitle: "Remote work compliance",
-      tabBodyImage: offer_image3
+      tabBodyImage: <RemoteWorkWft/>
     },
     {
       title: "Automated evidence collection with data exports and 1-year retention",
@@ -77,7 +74,7 @@ const Home = () => {
       btnText: "Streamline compliance",
       bntLink: "/use-cases/cloud-compliance-and-auditing",
       tabBodyTitle: "Automated evidence collection",
-      tabBodyImage: offer_image4
+      tabBodyImage: <DataGathering/>
     },
   ]
 
@@ -194,6 +191,7 @@ const Home = () => {
           description="Start seeing value & saving money in minutes"
           btnText=" Try Cyscale for free"
           btnLink="https://app.cyscale.com"
+          ExternalLink
           icon={iconOne}
         />
       </div>
@@ -233,6 +231,7 @@ const Home = () => {
           description="When did you last scan your cloud for misconfigurations?"
           btnText="Start scanning for free"
           btnLink="https://app.cyscale.com"
+          ExternalLink
           icon={iconTwo}
           icon2={iconThree}
           sectionName="getStartedFooter"

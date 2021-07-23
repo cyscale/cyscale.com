@@ -36,7 +36,8 @@ const Offer = ({ headingText, description, data, poster }) => {
                                     {data.map((tabBody, index) => (
                                         <div key={index} className={`${index === 0 && tabActive === 0 ? ("block") : ("")} ${index === tabActive ? ("block") : ("hidden")}`}>
                                             <p className="text-white font-proximaBold text-80px mt-10 mb-10 uppercase leading-none">{tabBody.tabBodyTitle}</p>
-                                            <img src={tabBody.tabBodyImage} alt="" className="w-full h-auto mt-20" />
+                                            {React.cloneElement(tabBody.tabBodyImage)}
+                                            {/* <img src={tabBody.tabBodyImage} alt={tabBody.tabBodyTitle} className="w-full h-auto mt-20" /> */}
                                         </div>
                                     ))}
                                 </div>

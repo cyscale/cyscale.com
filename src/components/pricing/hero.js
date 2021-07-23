@@ -23,7 +23,7 @@ const Hero = ({ title, description, fimage, description2, pageName }) => {
               )}
             </div>
             <div className="ml-auto">
-              <img src={fimage} alt="" className="w-auto" />
+              <img src={fimage} alt={title} className="w-auto" />
             </div>
           </div>
         </div>

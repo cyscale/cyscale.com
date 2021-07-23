@@ -10,7 +10,7 @@ const History = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-12 xl:gap-6 xl:border-t-8 xl:border-aboutBorder relative aboutHistory">
                     <div className="border-t-8 border-aboutBorder xl:border-none">
                         <div className="-mt-10">
-                            <img src={LogoSymbol} className="w-37px" alt="" />
+                            <img src={LogoSymbol} className="w-37px" alt="cyscale-logo-symbols" />
                             <span className="block w-36px h-36px rounded-full bg-white border-8 border-aboutBorder"></span>
                         </div>
                         <p className="text-black1 text-16px mt-28px"><strong>2018:</strong></p>
@@ -18,7 +18,7 @@ const History = () => {
                     </div>
                     <div className="border-t-8 border-aboutBorder xl:border-none">
                         <div className="-mt-10 xl:-mt-64px">
-                            <img src={LogoSymbol} className="w-37px xl:mb-24px" alt="" />
+                            <img src={LogoSymbol} className="w-37px xl:mb-24px" alt="cyscale-logo-symbols" />
                             <span className="block w-36px h-36px rounded-full bg-white border-8 border-aboutBorder"></span>
                         </div>
                         <p className="text-black1 text-16px mt-28px"><strong>2019:</strong></p>
@@ -26,7 +26,7 @@ const History = () => {
                     </div>
                     <div className="border-t-8 border-aboutBorder xl:border-none">
                         <div className="-mt-10 xl:-mt-83px">
-                            <img src={LogoSymbol} className="w-37px xl:mb-42px" alt="" />
+                            <img src={LogoSymbol} className="w-37px xl:mb-42px" alt="cyscale-logo-symbols" />
                             <span className="block w-36px h-36px rounded-full bg-white border-8 border-aboutBorder"></span>
                         </div>
                         <p className="text-black1 text-16px mt-28px"><strong>2020:</strong></p>
@@ -34,7 +34,7 @@ const History = () => {
                     </div>
                     <div className="border-t-8 border-aboutBorder xl:border-none">
                         <div className="-mt-10 xl:-mt-124px">
-                            <img src={LogoSymbol} className="w-37px xl:mb-82px" alt="" />
+                            <img src={LogoSymbol} className="w-37px xl:mb-82px" alt="cyscale-logo-symbols" />
                             <span className="block w-36px h-36px rounded-full bg-white border-8 border-aboutBorder"></span>
                         </div>
                         <p className="text-black1 text-16px mt-28px"><strong>2021:</strong></p>

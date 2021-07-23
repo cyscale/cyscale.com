@@ -164,6 +164,7 @@ const Index = () => {
           description="Ready to give it a try and see how it works?"
           btnText="START YOUR FREE TRIAL"
           btnLink="https://app.cyscale.com"
+          ExternalLink
           icon={getStartedICon}
         />
       </div>
@@ -194,6 +195,7 @@ const Index = () => {
           description={`Accurate. Real-time. Context-aware.`}
           btnText="TRY CYSCALE FOR FREE"
           btnLink="https://app.cyscale.com"
+          ExternalLink
           sectionName = "dataSecFoot"
         />
       </div>

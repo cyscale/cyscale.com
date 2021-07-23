@@ -40,6 +40,7 @@ const Skills = ({ btnText, btnLink }) => {
                             nodes.map((content, index) => {
                                 return (
                                     <PageLeft
+                                        key={index}
                                         data={content.frontmatter}
                                     />
                                 );

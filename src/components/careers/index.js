@@ -57,7 +57,7 @@ const Index = () => {
         className={`w-full careers bg-lightGreyEEE bg-contain bg-no-repeat relative`}
       >
         <div className="absolute top-153px left-0 w-full bannerImage">
-          <img src={BannerImage} className=" mx-auto" alt="" />
+          <img src={BannerImage} className=" mx-auto" alt="Join the Cyscale Team" />
         </div>
         <TopNav pageName="careers" />
         <div className="block w-full bannerBG pt-120px">
