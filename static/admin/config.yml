@@ -1,7 +1,7 @@
 backend:
   name: github
   branch: main
-  repo: cyscale/v2.cyscale.com
+  repo: cyscale/cyscale.com
   commit_messages:
     create: 'Create {{collection}} “{{slug}}”'
     update: 'Update {{collection}} “{{slug}}”'
