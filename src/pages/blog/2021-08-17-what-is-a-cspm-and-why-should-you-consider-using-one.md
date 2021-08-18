@@ -3,12 +3,12 @@ templateKey: blog-post
 title: "What is a CSPM and why should you consider using one? "
 authors: Virginia Mitea
 permalink: why-cspm
-category: category3
+category: Cloud Native Security
 date: 2021-08-17T12:26:54.609Z
 description: "A CSPM or Cloud Security Posture Management is a tool designed to
   identify misconfiguration and compliance risks in the cloud while making sure
   there are no gaps in security policy enforcement. "
-featuredpost: false
+featuredpost: true
 featuredimage: /img/christina-wocintechchat-com-glrqywjguey-unsplash.jpg
 tags:
   - cspm
