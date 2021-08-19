@@ -7,7 +7,7 @@ category: News
 date: 2020-07-15T07:05:00.000Z
 description: We're on a mission to enhance your business, so get ready to
   embrace the digital future and secure your apps & data in a multi-cloud world!
-featuredpost: true
+featuredpost: false
 featuredimage: /img/mockup.png
 tags:
   - release
