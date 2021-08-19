@@ -36,3 +36,7 @@
 .blog-reset small {
     font-size: 0.8rem;
 }
+
+.blog-reset a {
+    color: #0f26aa;
+}
