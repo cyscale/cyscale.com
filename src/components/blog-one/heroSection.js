@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import Share from '../../components/Share/Share'
+import Share from '../../components/Share/Share';
 
-const heroSection = ({location, data}) => {
+const heroSection = ({ location, data }) => {
     return (
         <>
             <Link
@@ -13,12 +13,15 @@ const heroSection = ({location, data}) => {
             </Link>
 
             <div className='max-w-588px m-auto '>
-                {/* <h3 className="text-14px mt-60px mb-30px">Thank you!</h3> */}
                 <hr className='bg-black mb-2 mt-60px' />
                 <div className='flex justify-between  '>
                     <p className='text-14px mt-3px'>Interesting? Share it</p>
-                    <div className='w-80px mt-3px'>
-                       <Share title={data.title} description={data.description}/>
+                    <div className='mt-3px' style={{ width: 48 }}>
+                        <Share
+                            title={data?.frontmatter?.title}
+                            permalink={data?.frontmatter?.permalink}
+                            description={data?.frontmatter?.description}
+                        />
                     </div>
                 </div>
             </div>

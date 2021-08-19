@@ -23,6 +23,9 @@ exports.createPages = ({ graphql, actions }) => {
                                 permalink
                                 title
                                 tags
+                                featuredimage {
+                                    publicURL
+                                }
                             }
                             rawMarkdownBody
                         }

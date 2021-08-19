@@ -3,24 +3,41 @@ import linked from '../../assets/images/linkedin.svg';
 import twitter from '../../assets/images/twitter.svg';
 import faceBook from '../../assets/images/facebook.svg';
 import { Location } from '@reach/router';
-import { TwitterShareButton, LinkedinShareButton, FacebookShareButton } from 'react-share';
+import { map } from 'lodash';
 
-export default function Share({title, description}) {
+const baseUrl = 'https://cyscale.com/blog/';
+
+export default function Share({ title, description, permalink }) {
+    const platforms = {
+        twitter: {
+            name: 'Twitter',
+            shareUrl: `https://twitter.com/share?text=${title}: &url=${baseUrl + permalink}&via=cyscale`,
+            icon: twitter
+        },
+        linkedin: {
+            name: 'LinkedIn',
+            shareUrl: `https://www.linkedin.com/sharing/share-offsite/?url=${baseUrl + permalink}`,
+            icon: linked
+        }
+    };
+
     return (
         <Location>
             {({ location }) => {
-                const url = 'https://cyscale.com' + location.pathname
                 return (
-                    <div className='flex justify-between' style={{width: 80}}>
-                        <LinkedinShareButton url={url} title={title}>
-                            <img className='w-13px h-13px' src={linked} alt='linkedin' />
-                        </LinkedinShareButton>
-                        <TwitterShareButton url={url} title={title}>
-                            <img className='w-16px h-13px' src={twitter} alt='twitter' />
-                        </TwitterShareButton>
-                        <FacebookShareButton url={url} quote={title}>
-                            <img className='w-13px h-13px' src={faceBook} alt='facebook' />
-                        </FacebookShareButton>
+                    <div className='flex justify-between' style={{ width: 48 }}>
+                        {map(platforms, ({ name, shareUrl, icon }, key) => (
+                            <a
+                                href={shareUrl}
+                                title={`Share on ${name}`}
+                                onClick={e => {
+                                    e.preventDefault();
+                                    window.open(shareUrl, 'newwindow', 'width=720,height=720');
+                                }}
+                            >
+                                <img className='w-16px h-13px' src={icon} alt={name} />
+                            </a>
+                        ))}
                     </div>
                 );
             }}

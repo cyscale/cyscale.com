@@ -45,7 +45,6 @@ const Apply = ({ data }) => {
                             return errors;
                         }}
                         onSubmit={(values, { setSubmitting, resetForm }) => {
-                            console.log(JSON.stringify(values));
                             axios
                                 .post(APPLY_JOB_ENDPOINT, values)
                                 .then(function (response) {
