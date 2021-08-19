@@ -2,16 +2,19 @@
 templateKey: blog-post
 title: "What is a CSPM and why should you consider using one? "
 authors: Virginia Mitea
-permalink: why-cspm
+permalink: cspm-visibility-compliance-security
 category: Cloud Native Security
 date: 2021-08-17T12:26:54.609Z
 description: "A CSPM or Cloud Security Posture Management is a tool designed to
   identify misconfiguration and compliance risks in the cloud while making sure
   there are no gaps in security policy enforcement. "
 featuredpost: true
-featuredimage: /img/christina-wocintechchat-com-glrqywjguey-unsplash.jpg
+featuredimage: /img/christina-wocintechchat-com-glrqywjguey-unsplash-1-.jpg
 tags:
   - cspm
+  - visibility
+  - compliance
+  - security
 ---
 <!--StartFragment-->
 
@@ -76,5 +79,13 @@ Unlike other CSPM solutions that provide you with endless lists of logs, Cysca
 It will surface crucial issues of all your interlinked cloud assets, helping you improve your security and data governance procedures.  
 
 Complete visibility over your infrastructure and deep contextual understanding of your cloud assets inventory is possible only by using the unique power of Cyscale Power Cloud Platform, so start your free trial today! 
+
+
+
+<!--StartFragment-->
+
+Photo by [Christina @ wocintechchat.com](https://unsplash.com/@wocintechchat?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) 
+
+<!--EndFragment-->
 
 <!--EndFragment-->
