@@ -13,6 +13,8 @@ h1,h2,h3,h4,h5,h6 {
     font-family: 'Roboto', sans-serif;
     font-weight: 700 !important;
 }
+
+
 .topNav .navbar-light .navbar-nav .nav-link{
     color: rgba(0, 0, 0, 1)
 }
@@ -867,6 +869,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 @import url("mega-menu.css"); 
+@import url("blog-reset.css"); 
 
 
 

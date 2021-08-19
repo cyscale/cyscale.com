@@ -13,7 +13,7 @@ import icon64 from '../../assets/images/favicon-64.png';
 import icon32 from '../../assets/images/favicon-32.png';
 import icon16 from '../../assets/images/favicon-16.png';
 
-const ogImages = {
+const defaultOg = {
     HomePage: HomeOg,
     CSPMPage: CspmOg,
     SKGPage: SkgOG,
@@ -22,8 +22,12 @@ const ogImages = {
     ComplianceAuditing: ComplianceOg
 };
 
-const Seo = ({ title, description, pageName }) => {
-    const ogImage = pageName && ogImages[pageName] ? ogImages[pageName] : ogImages['HomePage'];
+const Seo = ({ title, description, pageName, banner }) => {
+    let ogImage = banner;
+    if (!banner) {
+        ogImage = pageName && defaultOg[pageName] ? defaultOg[pageName] : defaultOg['HomePage'];
+    }
+
     return (
         <Helmet>
             <html lang='en' />
@@ -35,8 +39,7 @@ const Seo = ({ title, description, pageName }) => {
             <meta property='og:image' content={ogImage} />
             <meta name='description' content={description} />
             <meta name='og:description' content={description} />
-            {/* <meta property='url' content={location && location.pathname} /> */}
-
+            <meta property='og:type' content={pageName !== 'blog-detail' ? 'website' : 'article'} />
 
             <link rel='apple-touch-icon' sizes='180x180' href={icon180} />
             <link rel='icon' type='image/png' href={icon128} sizes='128x128' />

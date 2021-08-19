@@ -16,11 +16,12 @@ const TemplateWrapper = ({
     bannerBtn2Text,
     bannerBtn2Link,
     pageName,
+    banner,
     blogDataTitle
 }) => {
     return (
         <div>
-            <Seo title={title} description={description} pageName={pageName} />
+            <Seo title={title} description={description} pageName={pageName} banner={banner} />
             {!!pageName && pageName === 'ContactUs' ? (
                 <></>
             ) : pageName === 'Pricing' ||

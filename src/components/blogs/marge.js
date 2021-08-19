@@ -6,7 +6,6 @@ import { globalHistory } from "@reach/router";
 function Marge() {
     const [allItem, setAllItem] = useState([]);
     const [activeAuthor, setActiveAuthor] = useState("");
-    console.log(globalHistory.location.search?.split("=")[1])
 
     useEffect(() => {
         setActiveAuthor(globalHistory?.location.search?.split("=")[1])
