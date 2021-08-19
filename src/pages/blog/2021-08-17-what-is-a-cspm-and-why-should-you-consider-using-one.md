@@ -84,7 +84,7 @@ Complete visibility over your infrastructure and deep contextual understanding o
 
 <!--StartFragment-->
 
-Photo by [Christina @ wocintechchat.com](https://unsplash.com/@wocintechchat?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) 
+*Photo by [christina@wocintechchat.com](https://unsplash.com/@wocintechchat?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)*
 
 <!--EndFragment-->
 

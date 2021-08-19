@@ -31,12 +31,6 @@ tags:
 
 At Cyscale, we see Darkness as a force for good. It can obscure the less relevant and make the vital signals glow even brighter. We’re introducing a **dark mode for all users**, regardless of their plan.
 
-<br/>
-
-![flavor wheel](/img/darkprev.png)
-
-<br/>
-
 The new dark mode adapts automatically to your system’s theme settings. It revamps every color, icon, and font in the app. It's easier on the eyes and even easier on the batteries of certain devices.
 
 <br/>
