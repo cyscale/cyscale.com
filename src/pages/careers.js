@@ -2,12 +2,15 @@ import React from 'react'
 
 import Careers from '../components/careers'
 import Layout from '../components/layout/layout.js'
+import banner from '../assets/images/careers-bg.svg';
 
 const Index = () => (
   <Layout
     pageName="careers"
+    heroBG={banner}
+    bannerTitle='Join the Cyscale Team'
     title="Careers - Cyscale Power Cloud Platform"
-    description="Easily track security and compliance across multi-cloud environments. Join the OWASP cloud data security top 10 experts."
+    description='Together, we can make the world a safer place!'
   >
     <Careers />
   </Layout>

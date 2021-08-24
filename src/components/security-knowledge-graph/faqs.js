@@ -60,7 +60,7 @@ const FAQs = () => {
                   <div key={index} className="mb-5">
                     <button type="button" tabIndex={index} onKeyDown={() => setTabActive(index)} onClick={() => setTabActive(index)} className={`block w-full text-left pr-20px text-16px text-black font-bold leading-6 cursor-pointer relative tabTitle border-none outline-none ${index === 0 && tabActive === 0 && ("active")} ${index === tabActive && ("active")}`}>
                       {content.question}
-                      <img src={TabsArrow} alt="arrow icon" className="tabsArrow absolute top-8px right-0" alt="" />
+                      <img src={TabsArrow} alt="arrow icon" className="tabsArrow absolute top-8px right-0" />
                     </button>
                     <p className={`text-16px text-black leading-6 mt-40px new-line ${index === 0 && tabActive === 0 ? ("block") : ("")} ${index === tabActive ? ("block") : ("hidden")}`}>
                       {content.answer}

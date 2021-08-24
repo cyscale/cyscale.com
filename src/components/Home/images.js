@@ -423,7 +423,7 @@ export const Teams = withImageData(props => (
         alt='Notifications and Collaboration Microsoft Teams'
     />
 ));
-export const AWS = withImageData(props => (
+export const Aws = withImageData(props => (
     <Img
         fixed={props.imageData.aws.childImageSharp.fixed}
         alt='Amazon Web Services (AWS)'
@@ -453,7 +453,7 @@ export const Azure = withImageData(props => (
         alt='Microsoft Azure Cloud'
     />
 ));
-export const GCP = withImageData(props => (
+export const Gcp = withImageData(props => (
     <Img
         fixed={props.imageData.gcp.childImageSharp.fixed}
         alt='Google Cloud Platform (GCP)'

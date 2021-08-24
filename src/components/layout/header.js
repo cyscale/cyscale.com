@@ -131,6 +131,8 @@ const Header = ({
                                                     <a
                                                         href={bannerBtn1Link}
                                                         target='_blank'
+                                    rel='noopener noreferrer'
+
                                                         className='gradientBgBtn w-full sm:min-w-232px block text-16px font-medium rounded text-white uppercase text-center pt-21px pb-21px pl-49px pr-49px hover:no-underline no-underline'
                                                     >
                                                         {bannerBtn1Text}

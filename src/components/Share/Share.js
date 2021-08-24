@@ -1,7 +1,6 @@
 import React from 'react';
 import linked from '../../assets/images/linkedin.svg';
 import twitter from '../../assets/images/twitter.svg';
-import faceBook from '../../assets/images/facebook.svg';
 import { map } from 'lodash';
 
 const baseUrl = 'https://cyscale.com/blog/';

@@ -9,7 +9,7 @@ function Marge() {
 
     useEffect(() => {
         setActiveAuthor(globalHistory?.location.search?.split("=")[1])
-    }, [globalHistory.location.search])
+    }, [])
 
     const data = useStaticQuery(graphql`
         query HeaderQuery {

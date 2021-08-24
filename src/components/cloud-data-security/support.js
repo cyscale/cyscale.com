@@ -29,6 +29,7 @@ const Support = ({ title, data, sectionName }) => {
                   <a
                     href={content.viewMoreLink}
                     target="_blank"
+                    rel='noopener noreferrer'
                     className="uppercase text-blue underline text-16px hover:no-underline hover:text-red font-medium"
                   >
                     {content.viewMoreText}
@@ -64,6 +65,8 @@ const Support = ({ title, data, sectionName }) => {
               <a
                 href="https://docs.cyscale.com"
                 target="_blank"
+                rel='noopener noreferrer'
+
                 className="uppercase text-blue underline text-16px hover:no-underline hover:text-red font-medium"
               >
                 <img
