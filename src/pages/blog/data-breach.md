@@ -36,12 +36,6 @@ By default, new buckets do not allow public access. However, users can modify bu
 
 Even if the unintentional breach was fixed after Website Planet reported it, the precise number of people affected remains unknown and the culpability for this data leak lies entirely with the real estate portal.
 
-<br/>
-
-![how this breach would have been prevented diagram](/img/data-breach.jpeg)
-
-<br/>
-
 This could have easily been prevented with the implementation of a Cloud Security Posture Management (CSPM) tool. These solutions are developed to detect any misconfigurations and to prevent this type of event.
 
 As a CSPM, Cyscale Power Platform is the perfect tool that helps companies reduce risk. It enables complete visibility and control over cloud accounts in under 5 minutes since deployment.

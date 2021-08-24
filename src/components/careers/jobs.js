@@ -8,7 +8,7 @@ import Display from '../../assets/images/project-manager.svg';
 const Jobs = ({ data }) => {
     const icons = { display: Display, pen: Pen, stack: Stack };
     return (
-        <div>
+        <div id="start">
             <div className='max-w-1366px jobs mx-auto mt-158px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px'>
                 <div className='block w-full'>
                     <h3 className='text-blue text-34px leading-8 md:max-w-sm new-line mb-50px'>Open positions</h3>
@@ -20,7 +20,7 @@ const Jobs = ({ data }) => {
                             <div className='card-container hover:shadow-lg transition-all duration-300' key={index}>
                                 <Link
                                     to={`/careers/${permalink}`}
-                                    className='block w-full card pt-25px pb-25px pl-25px pr-25px bg-no-repeat'
+                                    className='block w-full card pt-25px pb-25px pl-25px pr-25px bg-no-repeat no-underline'
                                     style={{ backgroundImage: `url(${icons[icon]})  ` }}
                                 >
                                     <h4 className='text-24px font-bold lg:w-64 leading-6 new-line uppercase'>

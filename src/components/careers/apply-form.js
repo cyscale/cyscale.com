@@ -152,8 +152,9 @@ const Apply = ({ data }) => {
                                                 className='block job_title w-full text-formInputColor bg-white text-16px placeholder-formInputColor bg-lightGrey2'
                                             />
                                             <br />
-                                            <span className='block max-w-220px uppercase text-16px text-white bg-blue rounded hover:bg-grey2 pt-25px pb-25px pl-15x pr-15px cursor-pointer text-center transition-all duration-300'>
-                                                attachment
+                                            <span className='block w-full truncate text-16px text-white bg-blue rounded hover:bg-grey2 p-3 cursor-pointer text-center transition-all duration-300'>
+                                                Attachment
+                                                {values.attachment && <strong> {values?.attachment?.filename}</strong>}
                                             </span>
                                         </label>
                                         {/* <p className="text-black text-16px font-semibold">

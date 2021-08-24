@@ -26,9 +26,8 @@ const TemplateWrapper = ({
                 <></>
             ) : pageName === 'Pricing' ||
                 pageName === 'aboutUs' ||
-                pageName === 'careers' ||
-                pageName === 'privacyPolicy' ||
                 pageName === 'termsOfUse' ||
+                pageName === 'privacyPolicy' ||
                 pageName === 'SecurityPolicy' ||
                 pageName === 'dataSecurity' || pageName === "blog" ? (
                 <></>

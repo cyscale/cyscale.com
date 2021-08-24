@@ -2,8 +2,8 @@ import React from 'react';
 import Slider from 'react-slick';
 import {
     Docker,
-    AWS,
-    GCP,
+    Aws,
+    Gcp,
     Azure,
     Snyk,
     Oracle,
@@ -82,13 +82,13 @@ const Partners = () => {
                                 <Snyk />
                             </div>
                             <div>
-                                <AWS />
+                                <Aws />
                             </div>
                             <div>
                                 <Azure />
                             </div>
                             <div>
-                                <GCP />
+                                <Gcp />
                             </div>
                             <div>
                                 <Teams />

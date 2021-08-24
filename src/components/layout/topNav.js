@@ -109,8 +109,9 @@ const TopNav = ({ pageName }) => {
                             <li className='hoverable '>
                                 <button
                                     type='button'
-                                    className={`${pageName === 'SKGPage' || pageName === 'CSPMPage' ? 'active' : ''
-                                        }  relative parentItem block my-6 mx-4 lg:m-8 text-base hover:no-underline leading-6`}
+                                    className={`${
+                                        pageName === 'SKGPage' || pageName === 'CSPMPage' ? 'active' : ''
+                                    }  relative parentItem block my-6 mx-4 lg:m-8 text-base hover:no-underline leading-6`}
                                 >
                                     <span>Products</span>
                                 </button>
@@ -143,7 +144,11 @@ const TopNav = ({ pageName }) => {
                                                 <img src={image8} className='w-auto h-8' alt='svg_azure' />
                                                 <img src={image9} className='w-auto h-8' alt='svg_gcp' />
                                                 <img src={image2} className='w-auto h-8' alt='big_oracle' />
-                                                <img src={image5} className='w-auto h-8' alt='Kubernetes_logo_without_wordmark' />
+                                                <img
+                                                    src={image5}
+                                                    className='w-auto h-8'
+                                                    alt='Kubernetes_logo_without_wordmark'
+                                                />
                                             </div>
                                             <p className='text-base leading-6 text-black mt-36'>
                                                 <strong className='leading-6 text-sm'>
@@ -154,7 +159,11 @@ const TopNav = ({ pageName }) => {
                                             </p>
                                         </div>
                                         <div className='hidden lg:inline-block'>
-                                            <img src={heroBG} className='w-full h-auto' alt='Explore the Knowledge Graph' />
+                                            <img
+                                                src={heroBG}
+                                                className='w-full h-auto'
+                                                alt='Explore the Knowledge Graph'
+                                            />
                                             <p className='text-center mt-5'>
                                                 <Link
                                                     to='/products/security-knowledge-graph/'
@@ -163,7 +172,11 @@ const TopNav = ({ pageName }) => {
                                                     className='text-blue font-semibold text-base no-underline hover:underline flex flex-row justify-center'
                                                 >
                                                     Explore the Knowledge Graph&nbsp;
-                                                    <img src={ArrowRight} className='w-5 h-auto' alt='arrow right icon' />
+                                                    <img
+                                                        src={ArrowRight}
+                                                        className='w-5 h-auto'
+                                                        alt='arrow right icon'
+                                                    />
                                                 </Link>
                                             </p>
                                         </div>
@@ -173,8 +186,13 @@ const TopNav = ({ pageName }) => {
                             <li className='hoverable'>
                                 <button
                                     type='button'
-                                    className={`${pageName === 'Data_Security' || pageName === "RemoteWork" || pageName === "ComplianceAuditing" ? 'active' : ''
-                                        } relative parentItem block my-6 mx-4 lg:m-8 text-base no-underline leading-6`}
+                                    className={`${
+                                        pageName === 'Data_Security' ||
+                                        pageName === 'RemoteWork' ||
+                                        pageName === 'ComplianceAuditing'
+                                            ? 'active'
+                                            : ''
+                                    } relative parentItem block my-6 mx-4 lg:m-8 text-base no-underline leading-6`}
                                 >
                                     <span>Use Cases</span>
                                 </button>
@@ -209,7 +227,11 @@ const TopNav = ({ pageName }) => {
                                             </div>
                                         </div>
                                         <div className='hidden lg:inline-block'>
-                                            <img src={usescasesImage} className='w-44 mx-auto' alt='Explore Data Security' />
+                                            <img
+                                                src={usescasesImage}
+                                                className='w-44 mx-auto'
+                                                alt='Explore Data Security'
+                                            />
                                             <p className='text-center mt-5'>
                                                 <Link
                                                     to='/use-cases/cloud-data-security/'
@@ -218,7 +240,11 @@ const TopNav = ({ pageName }) => {
                                                     className='text-blue font-semibold text-base no-underline hover:underline flex flex-row justify-center'
                                                 >
                                                     Explore Data Security&nbsp;
-                                                    <img src={ArrowRight} className='w-5 h-auto' alt='arrow right icon' />
+                                                    <img
+                                                        src={ArrowRight}
+                                                        className='w-5 h-auto'
+                                                        alt='arrow right icon'
+                                                    />
                                                 </Link>
                                             </p>
                                         </div>
@@ -237,7 +263,9 @@ const TopNav = ({ pageName }) => {
                             <li className='hoverable hover:bg-teal-700 hover:text-white'>
                                 <button
                                     type='button'
-                                    className={`relative parentItem block my-6 mx-4 lg:m-8 text-base leading-6 ${pageName === "blogs" || pageName === "blog-detail" ? ("active"):null}`}
+                                    className={`relative parentItem block my-6 mx-4 lg:m-8 text-base leading-6 ${
+                                        pageName === 'blogs' || pageName === 'blog-detail' ? 'active' : null
+                                    }`}
                                 >
                                     <span>Resources</span>
                                 </button>
@@ -255,7 +283,8 @@ const TopNav = ({ pageName }) => {
                                                 </Link>
                                                 <a
                                                     href='https://docs.cyscale.com'
-                                                    target="_blank"
+                                                    target='_blank'
+                                                    rel='noopener noreferrer'
                                                     className='text-base text-black hover:text-blue hover:no-underline leading-6 mt-7'
                                                 >
                                                     Documentation
@@ -263,14 +292,16 @@ const TopNav = ({ pageName }) => {
                                                 <a
                                                     href='/resources/cyscale-cloud-data-security-datasheet.pdf'
                                                     download
-                                                    target="_blank"
+                                                    target='_blank'
+                                                    rel='noopener noreferrer'
                                                     className='text-base text-black hover:text-blue hover:no-underline leading-6 mt-7'
                                                 >
                                                     Data Sheet
                                                 </a>
                                                 <a
                                                     href='https://docs.cyscale.com'
-                                                    target="_blank"
+                                                    target='_blank'
+                                                    rel='noopener noreferrer'
                                                     className='text-base text-black hover:text-blue hover:no-underline leading-6 mt-7'
                                                 >
                                                     Support
@@ -278,7 +309,12 @@ const TopNav = ({ pageName }) => {
                                             </div>
                                         </div>
                                         <div className='hidden lg:inline-block'>
-                                            <img src={CloudDataImage} className='w-44 mx-auto' height='128px' alt='Download Data Sheet' />
+                                            <img
+                                                src={CloudDataImage}
+                                                className='w-44 mx-auto'
+                                                height='128px'
+                                                alt='Download Data Sheet'
+                                            />
                                             <p className='text-center mt-5'>
                                                 <a
                                                     href='/resources/cyscale-cloud-data-security-datasheet.pdf'
@@ -286,7 +322,11 @@ const TopNav = ({ pageName }) => {
                                                     className='text-blue font-semibold text-base no-underline hover:underline flex flex-row justify-center'
                                                 >
                                                     Download Data Sheet&nbsp;
-                                                    <img src={ArrowRight} className='w-5 h-auto' alt='arrow right icon' />
+                                                    <img
+                                                        src={ArrowRight}
+                                                        className='w-5 h-auto'
+                                                        alt='arrow right icon'
+                                                    />
                                                 </a>
                                             </p>
                                         </div>
@@ -296,14 +336,15 @@ const TopNav = ({ pageName }) => {
                             <li className={`hoverable hover:bg-teal-700 hover:text-white`}>
                                 <button
                                     type='button'
-                                    className={`${pageName === 'aboutUs' ||
+                                    className={`${
+                                        pageName === 'aboutUs' ||
                                         pageName === 'aboutUs' ||
                                         pageName === 'careers' ||
                                         pageName === 'jobDetails' ||
                                         pageName === 'contact_us'
-                                        ? 'active'
-                                        : ''
-                                        } relative parentItem block my-6 mx-4 lg:m-8 text-base leading-6`}
+                                            ? 'active'
+                                            : ''
+                                    } relative parentItem block my-6 mx-4 lg:m-8 text-base leading-6`}
                                 >
                                     <span>Company</span>
                                 </button>
@@ -365,7 +406,11 @@ const TopNav = ({ pageName }) => {
                                             </div>
                                         </div>
                                         <div className='hidden lg:inline-block'>
-                                            <img src={featureImage} className='w-28 mx-auto' alt='Join the Cyscale Team' />
+                                            <img
+                                                src={featureImage}
+                                                className='w-28 mx-auto'
+                                                alt='Join the Cyscale Team'
+                                            />
                                             <p className='text-center mt-5'>
                                                 <Link
                                                     to='/careers'
@@ -374,7 +419,11 @@ const TopNav = ({ pageName }) => {
                                                     className='text-blue font-semibold text-base no-underline hover:underline flex flex-row justify-center'
                                                 >
                                                     Join the Cyscale Team&nbsp;
-                                                    <img src={ArrowRight} className='w-5 h-auto' alt='arrow right icon' />
+                                                    <img
+                                                        src={ArrowRight}
+                                                        className='w-5 h-auto'
+                                                        alt='arrow right icon'
+                                                    />
                                                 </Link>
                                             </p>
                                         </div>
@@ -385,7 +434,8 @@ const TopNav = ({ pageName }) => {
                                 <a
                                     className='bg-gradient-to-r from-blue to-red hover:bg-blue w-153px text-14px border-transparent box-border rounded-31px  h-10 hidden xl:flex justify-center items-center uppercase leading-none text-white transition duration-500 hover:to-blue hover:no-underline'
                                     href='https://app.cyscale.com'
-                                    target="_blank"
+                                    target='_blank'
+                                    rel='noopener noreferrer'
                                 >
                                     Start Free Trial
                                 </a>
@@ -395,18 +445,15 @@ const TopNav = ({ pageName }) => {
                                 <a
                                     className='loginBtn text-black hover:text-black mt-0px lg:mt-0 text-14px  uppercase w-84px rounded-31px greyBorder flex h-10 justify-center items-center leading-none transition-all duration-500 hover:bg-grey3 hover:no-underline'
                                     href='https://app.cyscale.com'
-                                    target="_blank"
+                                    target='_blank'
+                                    rel='noopener noreferrer'
                                 >
                                     Log in
                                 </a>
                             </li>
-
                         </ul>
-
                     </div>
-
                 </nav>
-
             </div>
         </div>
     );

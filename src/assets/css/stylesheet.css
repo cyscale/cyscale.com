@@ -684,7 +684,7 @@ h1,h2,h3,h4,h5,h6 {
 .jobs .card-container{
     background-color: #ffffff;
 }
-.jobs .card-container h3,
+
 .jobs .card-container span{
     color: #000000;
 }
@@ -695,9 +695,10 @@ h1,h2,h3,h4,h5,h6 {
     background-image: linear-gradient(to right, #0F26AA , #FF4A56);
     color:#ffffff;
 }
-.jobs .card-container:hover h3,
+.jobs .card-container:hover h4,
 .jobs .card-container:hover span{
     color: #ffffff;
+    
 }
 .FAQs .tabTitle.active .tabsArrow{
    -webkit-transform: rotate(180deg);
@@ -838,14 +839,10 @@ h1,h2,h3,h4,h5,h6 {
 }
 .jobs a{
     color: #0F26AA;
-    text-decoration: underline;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
 }
-.jobs a:hover{
-    color: #FF4A56;
-    text-decoration: none;
-}
+
 .pulse {
     animation: pulse-animation 2s infinite;
   }
@@ -866,6 +863,10 @@ h1,h2,h3,h4,h5,h6 {
     margin: auto;
     border-radius: 50%;
     box-shadow: 0px 0px 1px 1px #0000001a;
+}
+
+.blog-detail {
+    background-position: center 70%  !important;
 }
 
 @import url("mega-menu.css"); 

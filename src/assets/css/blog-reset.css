@@ -6,31 +6,36 @@
     margin-bottom: 1rem;
 }
 
-.blog-reset h1,h2,h3,h4,h5,h6 {
+.blog-reset h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 600;
-    margin:0 1.5rem;
+    margin: 0 1.5rem;
     line-height: 1.5;
     font-family: 'Roboto', sans-serif;
 }
 
 .blog-reset h1 {
-    font-size: 3.052rem;
+    font-size: 2rem;
 }
 
 .blog-reset h2 {
-    font-size: 2.441rem;
+    font-size: 1.7rem;
 }
 
 .blog-reset h3 {
-    font-size: 1.953rem;
+    font-size: 1.5rem;
 }
 
 .blog-reset h4 {
-    font-size: 1.563rem;
+    font-size: 1.4rem;
 }
 
 .blog-reset h4 {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
 }
 
 .blog-reset small {
@@ -39,4 +44,34 @@
 
 .blog-reset a {
     color: #0f26aa;
+}
+
+@media (min-width: 640px) {
+    .blog-reset h1 {
+        font-size: 3.052rem;
+    }
+
+    .blog-reset h2 {
+        font-size: 2.441rem;
+    }
+
+    .blog-reset h3 {
+        font-size: 1.953rem;
+    }
+
+    .blog-reset h4 {
+        font-size: 1.563rem;
+    }
+
+    .blog-reset h4 {
+        font-size: 1.25rem;
+    }
+
+    .blog-reset small {
+        font-size: 0.8rem;
+    }
+
+    .blog-reset a {
+        color: #0f26aa;
+    }
 }

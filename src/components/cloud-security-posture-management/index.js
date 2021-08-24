@@ -15,7 +15,6 @@ import {
     DetectPreventMisconfigurations,
     CutNoise,
     AutomateCompliance,
-    OptimizeWorkflow,
     OptimizeCosts,
     EliminateSecurityGaps
 } from './images';
@@ -164,6 +163,7 @@ const Index = () => {
                 <a
                     href='https://api-reference.cyscale.com'
                     target='_blank'
+                    rel='noopener noreferrer'
                     className='text-blue underline text-16px hover:no-underline hover:text-red'
                     key='1as4d'
                 >

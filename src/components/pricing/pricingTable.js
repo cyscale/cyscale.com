@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import Check from '../../assets/images/blue-check.svg';
 import Line from '../../assets/images/dash-line.svg';
 
@@ -32,6 +31,7 @@ const Hero = () => {
                                                     </p>
                                                     <a
                                                         target='_blank'
+                                                        rel='noopener noreferrer'
                                                         href='https://app.cyscale.com'
                                                         className='blackBorder w-full block mt-75px text-15px font-normal rounded text-black uppercase text-center pt-18px pb-18px pl-49px pr-49px no-underline transition-all duration-300 hover:border-black hover:bg-black hover:text-white blackBorder'
                                                     >
@@ -53,6 +53,7 @@ const Hero = () => {
                                                     </p>
                                                     <a
                                                         target='_blank'
+                                                        rel='noopener noreferrer'
                                                         href='https://app.cyscale.com'
                                                         className='gradientBgBtn w-full block mt-75px text-15px font-normal rounded text-white uppercase text-center pt-19px pb-19px pl-49px pr-49px no-underline'
                                                     >
@@ -74,7 +75,6 @@ const Hero = () => {
                                         <td className='shadow-lg drop-shadow-lg text-center text-15px text-black font-normal pt-16px pb-16px pl-24px pr-24px'>
                                             Unlimited
                                         </td>
-                                      
                                     </tr>
                                     <tr>
                                         <td className='text-15px text-black font-normal pt-16px pb-16px pl-24px pr-24px'>
@@ -86,7 +86,6 @@ const Hero = () => {
                                         <td className='shadow-lg drop-shadow-lg text-center text-15px text-black font-normal pt-16px pb-16px pl-24px pr-24px'>
                                             <img src={Check} className='w-22px mx-auto' alt='check icon' />
                                         </td>
-                                       
                                     </tr>
                                     <tr>
                                         <td className='text-15px text-black font-normal pt-16px pb-16px pl-24px pr-24px'>
@@ -98,7 +97,6 @@ const Hero = () => {
                                         <td className='shadow-lg drop-shadow-lg text-center text-15px text-black font-normal pt-16px pb-16px pl-24px pr-24px'>
                                             <img src={Check} className='w-22px mx-auto' alt='check icon' />
                                         </td>
-                                      
                                     </tr>
                                     <tr>
                                         <td className='text-15px text-black font-normal pt-16px pb-16px pl-24px pr-24px'>
@@ -110,7 +108,6 @@ const Hero = () => {
                                         <td className='shadow-lg drop-shadow-lg text-center text-15px text-black font-normal pt-16px pb-16px pl-24px pr-24px'>
                                             <img src={Check} className='w-22px mx-auto' alt='check icon' />
                                         </td>
-                                      
                                     </tr>
                                     <tr>
                                         <td className='text-15px text-black font-normal pt-16px pb-16px pl-24px pr-24px'>
@@ -122,7 +119,6 @@ const Hero = () => {
                                         <td className='shadow-lg drop-shadow-lg text-center text-15px text-black font-normal pt-16px pb-16px pl-24px pr-24px'>
                                             <img src={Check} className='w-22px mx-auto' alt='check icon' />
                                         </td>
-                                        
                                     </tr>
                                     <tr>
                                         <td className='text-15px text-black font-normal pt-16px pb-16px pl-24px pr-24px'>
@@ -134,7 +130,6 @@ const Hero = () => {
                                         <td className='shadow-lg drop-shadow-lg text-center text-15px text-black font-normal pt-16px pb-16px pl-24px pr-24px'>
                                             <img src={Check} className='w-22px mx-auto' alt='check icon' />
                                         </td>
-                                       
                                     </tr>
                                     <tr>
                                         <td className='text-15px text-black font-normal pt-16px pb-16px pl-24px pr-24px'>
@@ -146,7 +141,6 @@ const Hero = () => {
                                         <td className='shadow-lg drop-shadow-lg text-center text-15px text-black font-normal pt-16px pb-16px pl-24px pr-24px'>
                                             <img src={Check} className='w-22px mx-auto' alt='check icon' />
                                         </td>
-                                       
                                     </tr>
                                     <tr>
                                         <td className='text-15px text-black font-normal pt-16px pb-16px pl-24px pr-24px'>
@@ -158,7 +152,6 @@ const Hero = () => {
                                         <td className='shadow-lg drop-shadow-lg text-center text-15px text-black font-normal pt-16px pb-16px pl-24px pr-24px'>
                                             <img src={Check} className='w-22px mx-auto' alt='check icon' />
                                         </td>
-                                       
                                     </tr>
                                     <tr>
                                         <td className='text-15px text-black font-normal pt-16px pb-16px pl-24px pr-24px'>
@@ -170,7 +163,6 @@ const Hero = () => {
                                         <td className='shadow-lg drop-shadow-lg text-center text-15px text-black font-normal pt-16px pb-16px pl-24px pr-24px'>
                                             <img src={Check} className='w-22px mx-auto' alt='check icon' />
                                         </td>
-                                        
                                     </tr>
                                     <tr>
                                         <td className='text-15px text-black font-normal pt-16px pb-16px pl-24px pr-24px'>
@@ -182,7 +174,6 @@ const Hero = () => {
                                         <td className='shadow-lg drop-shadow-lg text-center text-15px text-black font-normal pt-16px pb-16px pl-24px pr-24px'>
                                             <img src={Check} className='w-22px mx-auto' alt='check icon' />
                                         </td>
-                                       
                                     </tr>
                                 </tbody>
                             </table>
