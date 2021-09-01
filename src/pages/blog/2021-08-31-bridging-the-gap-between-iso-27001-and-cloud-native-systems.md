@@ -19,7 +19,7 @@ tags:
 ---
 <!--StartFragment-->
 
-(And no, unfortunately, ISO/IEC 270**17** which focuses on cloud servicesdoesn’t fill in the gap. Or at least not entirely.)
+And no, unfortunately, ISO/IEC 270**17** - which focuses on cloud services - doesn’t fill in the gap. Or at least not entirely.
 
 The trend over the past few years has been clear: shift left. The idea is to identify and prevent issues (not only security-related) as soon as possible. This implies more collaboration during the day-to-day development and even mixed teams that handle all the aspects of the product (there is no limit to how many words we can fit between “Dev” and “Ops”).
 
