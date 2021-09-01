@@ -75,3 +75,7 @@ h6 {
         color: #0f26aa;
     }
 }
+
+.blog-reset ol, ul {
+    list-style: initial;
+}

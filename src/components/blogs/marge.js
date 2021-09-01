@@ -2,14 +2,14 @@ import React, { useState, useEffect } from 'react';
 import PageLeft from './pageLeft';
 import PageRight from './pageRight';
 import { useStaticQuery, graphql } from 'gatsby';
-import { globalHistory } from "@reach/router";
+import { globalHistory } from '@reach/router';
 function Marge() {
     const [allItem, setAllItem] = useState([]);
-    const [activeAuthor, setActiveAuthor] = useState("");
+    const [activeAuthor, setActiveAuthor] = useState('');
 
     useEffect(() => {
-        setActiveAuthor(globalHistory?.location.search?.split("=")[1])
-    }, [])
+        setActiveAuthor(globalHistory?.location.search?.split('=')[1]);
+    }, []);
 
     const data = useStaticQuery(graphql`
         query HeaderQuery {
@@ -45,11 +45,8 @@ function Marge() {
         setAllItem(nodes);
     }, [nodes]);
 
-
-
-
-    const fiulterCategory = name => {
-        setAllItem(nodes.filter(data => data.frontmatter.category === name));
+    const filterCategory = (name) => {
+        setAllItem(nodes.filter((data) => data.frontmatter.category === name));
     };
 
     return (
@@ -68,22 +65,25 @@ function Marge() {
                     </div>
 
                     <div className='flex justify-center sm:flex-row flex-col-reverse'>
-                        {!!activeAuthor ?
+                        {!!activeAuthor ? (
                             <div className='flex flex-wrap justify-between md:mr-25px rounded-lg'>
-                                {allItem.map((curItem, index) => (
-                                    activeAuthor.replace(/_/gi, " ") === curItem.frontmatter.authors && <PageLeft key={index} data={curItem.frontmatter} />
-                                ))}
+                                {allItem.map(
+                                    (curItem, index) =>
+                                        activeAuthor.replace(/_/gi, ' ') === curItem.frontmatter.authors && (
+                                            <PageLeft key={index} data={curItem.frontmatter} />
+                                        )
+                                )}
                             </div>
-                            :
+                        ) : (
                             <div className='flex flex-wrap justify-between md:mr-25px rounded-lg'>
                                 {allItem.map((curItem, index) => (
                                     <PageLeft key={index} data={curItem.frontmatter} />
                                 ))}
                             </div>
-                        }
+                        )}
                     </div>
                 </div>
-                <PageRight fiulterCategory={fiulterCategory} data={nodes} />
+                <PageRight fiulterCategory={filterCategory} data={nodes} />
             </div>
         </div>
     );

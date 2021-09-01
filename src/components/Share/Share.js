@@ -21,18 +21,19 @@ export default function Share({ title, description, permalink }) {
 
     return (
         <div className='flex justify-between' style={{ width: 48 }}>
-        {map(platforms, ({ name, shareUrl, icon }, key) => (
-            <a
-                href={shareUrl}
-                title={`Share on ${name}`}
-                onClick={e => {
-                    e.preventDefault();
-                    window.open(shareUrl, 'newwindow', 'width=720,height=720');
-                }}
-            >
-                <img className='w-16px h-13px' src={icon} alt={name} />
-            </a>
-        ))}
-    </div>
+            {map(platforms, ({ name, shareUrl, icon }, key) => (
+                <a
+                    href={shareUrl}
+                    title={`Share on ${name}`}
+                    onClick={(e) => {
+                        e.preventDefault();
+                        window.open(shareUrl, 'newwindow', 'width=720,height=720');
+                    }}
+                    key={key}
+                >
+                    <img className='w-16px h-13px' src={icon} alt={name} />
+                </a>
+            ))}
+        </div>
     );
 }

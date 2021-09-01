@@ -23,7 +23,7 @@ const PageLeft = ({ data, feature }) => {
 
     return (
         <Link to={'/blog/' + data.permalink}>
-            <div className='w-full  md:w-195px lg:w-282px xl:w-376px mb-16px shadow-md'>
+            <div className='w-full md:w-195px lg:w-282px xl:w-376px mb-16px shadow-md'>
                 <div
                     className='w-full customimgmain customimgmain bg-no-repeat h-200px bg-grey3 bg-cover bg-left-center'
                     style={{ backgroundImage: 'url(' + data.featuredimage.publicURL + ')' }}
