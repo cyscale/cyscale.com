@@ -56,15 +56,15 @@ Assuming they are building their software on top of a hyperscaler (AWS, Azure, G
 
 After 6 days of research, they might have identified the following options, let’s say on AWS:
 
-* Since they have been using AWS for the past 9 years, they have to make sure all their EC2 instances are migrated and deployed in a VPC, as opposed to EC2-Classic.
-* The security groups attached to the load balancers should allow traffic only on port 443.
-* The load balancers should have TLS listeners set up and accept only safe cipher suites - e.g. it shouldn’t accept TLS 1.0 or older SSL protocols that are considered unsafe.
-* The security groups attached to virtual machines running the application should only accept traffic from the load balancer.
-* Self-hosted databases such as Elasticsearch should only accept traffic from the EC2 instances running the application.
-* RDS instances should not be publicly accessible and should only accept traffic from the same EC2 instances.
-* S3 buckets should have a bucket policy that enforces HTTPS.
-* S3 buckets should not allow public access through the bucket policy or the ACL (some buckets are pretty old so they heavily rely on ACLs).
-* And finally, since they leverage AMIs, they would like to ensure that these are private.
+1. Since they have been using AWS for the past 9 years, they have to make sure all their EC2 instances are migrated and deployed in a VPC, as opposed to EC2-Classic.
+2. The security groups attached to the load balancers should allow traffic only on port 443.
+3. The load balancers should have TLS listeners set up and accept only safe cipher suites - e.g. it shouldn’t accept TLS 1.0 or older SSL protocols that are considered unsafe.
+4. The security groups attached to virtual machines running the application should only accept traffic from the load balancer.
+5. Self-hosted databases such as Elasticsearch should only accept traffic from the EC2 instances running the application.
+6. RDS instances should not be publicly accessible and should only accept traffic from the same EC2 instances.
+7. S3 buckets should have a bucket policy that enforces HTTPS.
+8. S3 buckets should not allow public access through the bucket policy or the ACL (some buckets are pretty old so they heavily rely on ACLs).
+9. And finally, since they leverage AMIs, they would like to ensure that these are private.
 
 Covering all these should provide a great starting point to ensure electronic messaging security. The compliance team adds them to the policy (remember, the output of ISO 27001 is an ISMS which is a set of policies), the development team configures the infrastructure, and the target is achieved. Or is it?
 
@@ -76,11 +76,11 @@ Being smart engineers, the development team decides to use AWS Config and implem
 
 Now, if your organization is at this point, you adopted the DevOps culture at this level and you have all these resources, you will probably be fine. Of course, you will have to:
 
-* practically spam all your employees with presentations about the policies
-* train and retrain everyone involved including every new employee
-* wonder whether anyone has actually ever read the policies
-* wonder whether your research was comprehensive enough
-* oppose adopting any new cloud provider because it would mean implementing and mapping all the controls again and again
+1. practically spam all your employees with presentations about the policies
+2. train and retrain everyone involved including every new employee
+3. wonder whether anyone has actually ever read the policies
+4. wonder whether your research was comprehensive enough
+5. oppose adopting any new cloud provider because it would mean implementing and mapping all the controls again and again
 
 **However, if this sounds like a lot of work to do and/or you want to take your compliance and cloud security to the next level by giving power to your policies and ultimately to your people, check out [cyscale.com](https://app.cyscale.com/ "https\://app.cyscale.com/").**
 
