@@ -5,7 +5,7 @@ import Share from '../Share/Share';
 const maxTitle = 48;
 const maxDescription = 128;
 
-const PageLeft = ({ data, feature }) => {
+const BlogCard = ({ data, feature }) => {
     let title = data.title?.slice(0, maxTitle);
     let description = data.description?.slice(0, maxDescription);
 
@@ -23,12 +23,10 @@ const PageLeft = ({ data, feature }) => {
 
     return (
         <Link to={'/blog/' + data.permalink}>
-            <div className='w-full md:w-195px lg:w-282px xl:w-376px mb-16px shadow-md'>
-                <div
-                    className='w-full customimgmain customimgmain bg-no-repeat h-200px bg-grey3 bg-cover bg-left-center'
-                    style={{ backgroundImage: 'url(' + data.featuredimage.publicURL + ')' }}
-                    alt={data.title}
-                />
+            <div className='shadow-md'>
+                <div className='bg-grey3 bigger-box-image '>
+                    <img src={data.featuredimage.publicURL} alt={data.title} />
+                </div>
                 <div className='bg-white p-4'>
                     <strong className='text-xs block'>{data.category}</strong>
                     <div>
@@ -53,4 +51,4 @@ const PageLeft = ({ data, feature }) => {
     );
 };
 
-export default PageLeft;
+export default BlogCard;

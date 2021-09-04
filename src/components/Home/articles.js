@@ -1,11 +1,12 @@
 import React from 'react';
-import PageLeft from '../blogs/pageLeft';
+import BlogCard from '../blogs/BlogCard';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 
-const Skills = ({ btnText, btnLink }) => {
+const Articles = ({ btnText, btnLink }) => {
     const data = useStaticQuery(graphql`
         query HeaderQuery1ss {
             allMarkdownRemark(
+                limit: 3
                 sort: { fields: frontmatter___date, order: DESC }
                 filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
             ) {
@@ -35,14 +36,13 @@ const Skills = ({ btnText, btnLink }) => {
         <>
             <div className='bg-white block'>
                 <div className='max-w-1366px m-auto pb-86px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px'>
-                    <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6'>
+                    <div className='flex flex-wrap justify-left'>
                         {nodes &&
                             nodes.map((content, index) => {
                                 return (
-                                    <PageLeft
-                                        key={index}
-                                        data={content.frontmatter}
-                                    />
+                                    <div key={index} className='block w-full p-2 lg:p-4 lg:w-1/2 xl:w-1/3'>
+                                        <BlogCard data={content.frontmatter} />
+                                    </div>
                                 );
                             })}
                     </div>
@@ -62,4 +62,4 @@ const Skills = ({ btnText, btnLink }) => {
     );
 };
 
-export default Skills;
+export default Articles;

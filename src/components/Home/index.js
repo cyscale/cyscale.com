@@ -6,7 +6,7 @@ import Offer from './offer'
 import Proposal from './proposal'
 import Cloud from './cloud'
 import Partners from './partners'
-import Skills from './skills'
+import Articles from './articles'
 import Sectionheader from '../layout/sectionheader'
 import messageIcon from '../../assets/images/chat_icon.svg'
 import searchIcon from '../../assets/images/search.svg'
@@ -221,10 +221,9 @@ const Home = () => {
           headingText={`What we’re up to`}
         />
       </div>
-      <Skills
+      <Articles
         btnText="Read more about Cloud Security"
         btnLink="/blog"
-        data={dataSkills}
       />
       <div className="gradientBG">
         <GetStarted

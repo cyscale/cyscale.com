@@ -1,15 +1,30 @@
-import React, { useState, useEffect } from 'react';
-import PageLeft from './pageLeft';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
+import BlogCard from './BlogCard';
 import PageRight from './pageRight';
 import { useStaticQuery, graphql } from 'gatsby';
 import { globalHistory } from '@reach/router';
-function Marge() {
-    const [allItem, setAllItem] = useState([]);
-    const [activeAuthor, setActiveAuthor] = useState('');
+import { find } from 'lodash';
 
-    useEffect(() => {
-        setActiveAuthor(globalHistory?.location.search?.split('=')[1]);
-    }, []);
+const getFeaturedAndPosts = (nodes) => {
+    const posts = [];
+    let featuredPost = null;
+
+    nodes?.map((item) => {
+        console.log(Boolean(featuredPost));
+        if (item?.frontmatter?.featuredpost === true && featuredPost === null) {
+            featuredPost = item;
+        } else {
+            posts.push(item);
+        }
+    });
+
+    return { posts, featuredPost };
+};
+
+function Marge() {
+    const [allPosts, setAllPosts] = useState([]);
+    const [featuredPost, setFeaturedPost] = useState(null);
+    const activeAuthor = globalHistory?.location.search?.split('=')[1];
 
     const data = useStaticQuery(graphql`
         query HeaderQuery {
@@ -37,51 +52,39 @@ function Marge() {
         }
     `);
 
-    const {
-        allMarkdownRemark: { nodes }
-    } = data;
+    const nodes = data?.allMarkdownRemark?.nodes;
 
     useEffect(() => {
-        setAllItem(nodes);
+        const { posts, featuredPost } = getFeaturedAndPosts(nodes);
+        setAllPosts(posts);
+        setFeaturedPost(featuredPost);
     }, [nodes]);
 
-    const filterCategory = (name) => {
-        setAllItem(nodes.filter((data) => data.frontmatter.category === name));
-    };
+    const filterCategory = useCallback(
+        (name) => {
+            const { posts, featuredPost } = getFeaturedAndPosts(nodes);
+            if (name === 'All') {
+                return setAllPosts(posts);
+            }
+            setAllPosts(posts.filter((data) => data.frontmatter.category === name));
+        },
+        [nodes]
+    );
 
     return (
         <div>
-            <div className='flex flex-col-reverse md:flex-row justify-between max-w-1366pmx-auto pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px mt-40px'>
-                <div className='flex-col'>
-                    <div className='block md:mr-25px rounded-lg'>
-                        {allItem.map(
-                            (curItem, index) =>
-                                curItem.frontmatter.featuredpost && (
-                                    <div key={index} className='bigger-box'>
-                                        <PageLeft data={curItem.frontmatter} feature={true} />
-                                    </div>
-                                )
-                        )}
-                    </div>
-
-                    <div className='flex justify-center sm:flex-row flex-col-reverse'>
-                        {!!activeAuthor ? (
-                            <div className='flex flex-wrap justify-between md:mr-25px rounded-lg'>
-                                {allItem.map(
-                                    (curItem, index) =>
-                                        activeAuthor.replace(/_/gi, ' ') === curItem.frontmatter.authors && (
-                                            <PageLeft key={index} data={curItem.frontmatter} />
-                                        )
-                                )}
-                            </div>
-                        ) : (
-                            <div className='flex flex-wrap justify-between md:mr-25px rounded-lg'>
-                                {allItem.map((curItem, index) => (
-                                    <PageLeft key={index} data={curItem.frontmatter} />
-                                ))}
-                            </div>
-                        )}
-                    </div>
+            <div className='relative max-w-3xl mx-auto pt-12 lg:pt-6'>
+                <div className='flex flex-wrap justify-left'>
+                    {featuredPost && (
+                        <div className='w-full p-2 pt-0 lg:p-6 lg:pt-0'>
+                            <BlogCard fullWidth={true} data={featuredPost.frontmatter} feature={true} />
+                        </div>
+                    )}
+                    {allPosts.map((curItem, index) => (
+                        <div  key={index}  className='block w-full p-2 lg:p-6 md:w-1/2'>
+                            <BlogCard data={curItem.frontmatter} />
+                        </div>
+                    ))}
                 </div>
                 <PageRight fiulterCategory={filterCategory} data={nodes} />
             </div>
