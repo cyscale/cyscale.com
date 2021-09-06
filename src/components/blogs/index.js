@@ -10,7 +10,7 @@ const Index = () => {
             </div>
 
             <div className="max-w-1366px mx-auto  pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px ">
-                <Marge />
+            <Marge />
             </div>
 
         </>
