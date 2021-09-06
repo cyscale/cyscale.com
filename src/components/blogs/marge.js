@@ -1,21 +1,20 @@
-import React, { useState, useEffect, useMemo, useCallback } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import BlogCard from './BlogCard';
 import PageRight from './pageRight';
 import { useStaticQuery, graphql } from 'gatsby';
-import { globalHistory } from '@reach/router';
-import { find } from 'lodash';
+// import { globalHistory } from '@reach/router';
 
 const getFeaturedAndPosts = (nodes) => {
     const posts = [];
     let featuredPost = null;
 
     nodes?.map((item) => {
-        console.log(Boolean(featuredPost));
         if (item?.frontmatter?.featuredpost === true && featuredPost === null) {
             featuredPost = item;
         } else {
             posts.push(item);
         }
+        return null;
     });
 
     return { posts, featuredPost };
@@ -24,7 +23,7 @@ const getFeaturedAndPosts = (nodes) => {
 function Marge() {
     const [allPosts, setAllPosts] = useState([]);
     const [featuredPost, setFeaturedPost] = useState(null);
-    const activeAuthor = globalHistory?.location.search?.split('=')[1];
+    // const activeAuthor = globalHistory?.location.search?.split('=')[1];
 
     const data = useStaticQuery(graphql`
         query HeaderQuery {
@@ -62,7 +61,7 @@ function Marge() {
 
     const filterCategory = useCallback(
         (name) => {
-            const { posts, featuredPost } = getFeaturedAndPosts(nodes);
+            const { posts } = getFeaturedAndPosts(nodes);
             if (name === 'All') {
                 return setAllPosts(posts);
             }
@@ -81,12 +80,12 @@ function Marge() {
                         </div>
                     )}
                     {allPosts.map((curItem, index) => (
-                        <div  key={index}  className='block w-full p-2 lg:p-6 md:w-1/2'>
+                        <div key={index} className='block w-full p-2 lg:p-6 md:w-1/2'>
                             <BlogCard data={curItem.frontmatter} />
                         </div>
                     ))}
                 </div>
-                <PageRight fiulterCategory={filterCategory} data={nodes} />
+                <PageRight filterCategory={filterCategory} data={nodes} />
             </div>
         </div>
     );

@@ -1,6 +1,5 @@
 const path = require(`path`);
 
-//doc dynamic
 exports.createPages = ({ graphql, actions }) => {
     const { createPage } = actions;
     const blogTemplate = path.resolve(`src/template/blogTemplate.js`);
@@ -33,13 +32,15 @@ exports.createPages = ({ graphql, actions }) => {
                 }
             }
         `
-    ).then(result => {
+    ).then((result) => {
         if (result.errors) {
             throw result.errors;
         }
         const posts = result.data.allMarkdownRemark.edges;
 
-        posts.map(edge => {
+        const blogs = posts.filter((edge) => edge.node.frontmatter.templateKey === 'blog-post');
+
+        posts.map((edge, index) => {
             const node = edge.node;
             switch (node.frontmatter.templateKey) {
                 case 'blog-post':
@@ -48,7 +49,8 @@ exports.createPages = ({ graphql, actions }) => {
                         path: '/blog/' + node.frontmatter.permalink,
                         component: blogTemplate,
                         context: {
-                            alldata: node
+                            alldata: node,
+                            suggestions: [blogs[0], blogs[1], blogs[2], blogs[4]]
                         }
                     });
                     break;
