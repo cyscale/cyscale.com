@@ -5,7 +5,7 @@ import BlogOne from '../components/blog-one';
 import heroBG from '../assets/images/blog-hero.jpeg';
 
 const BlodDetail = ({ pageContext }) => {
-    const { alldata } = pageContext;
+    const { alldata, suggestions } = pageContext;
 
     return (
         <div className='BLogPager'>
@@ -17,7 +17,7 @@ const BlodDetail = ({ pageContext }) => {
                 banner={alldata?.frontmatter?.featuredimage?.publicURL}
                 title={alldata?.frontmatter?.title}
             >
-                <BlogOne data={alldata} />
+                <BlogOne data={alldata} suggestions={suggestions} />
             </Layout>
         </div>
     );
