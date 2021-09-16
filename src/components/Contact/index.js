@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { Formik } from 'formik';
-import React from 'react';
+import React, {useEffect} from 'react';
+import { Helmet } from 'react-helmet';
 import Swal from 'sweetalert2';
 
 import heroBG from '../../assets/images/contact-hero.jpg';
@@ -11,8 +12,20 @@ import twitter from '../../assets/images/twitter.svg';
 import TopNav from '../layout/topNav';
 
 const Index = () => {
+    useEffect(() => {
+        if (window.hbspt) {
+            window.hbspt.forms.create({
+                portalId: '5413427',
+                formId: 'c29fe5d0-179d-4bff-a8ac-36790a48a6c2',
+                target: '#contact-form'
+            });
+        }
+    }, []);
     return (
         <>
+            <Helmet>
+                <script charset='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js'></script>
+            </Helmet>
             <div>
                 <div
                     className={`w-full pb-20px ContactUs bg-lightGreyEEE bg-contain bg-no-repeat`}
@@ -66,180 +79,7 @@ const Index = () => {
                                     out the form here and we will get back to you.{' '}
                                 </p>
                                 <div className='mt-55px lg:mb-200px block w-full'>
-                                    <Formik
-                                        initialValues={{ email: '', name: '', phone: '', message: '', terms: false }}
-                                        validate={values => {
-                                            const errors = {};
-                                            if (!values.email) {
-                                                errors.email = 'Required';
-                                            } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
-                                                errors.email = 'Invalid email address';
-                                            }
-                                            if (!values.name) {
-                                                errors.name = 'Required';
-                                            }
-                                            if (!values.message) {
-                                                errors.message = 'Required';
-                                            }
-                                            if (!values.terms) {
-                                                errors.terms = 'Required';
-                                            }
-                                            return errors;
-                                        }}
-                                        onSubmit={(values, { setSubmitting }) => {
-                                            axios
-                                                .post(
-                                                    'https://23cl113kk3.execute-api.eu-central-1.amazonaws.com/production/contact-us',
-                                                    values
-                                                )
-                                                .then(function (response) {
-                                                    Swal.fire({
-                                                        icon: 'success',
-                                                        text: 'Form Submitted.'
-                                                    });
-                                                    setSubmitting(false);
-                                                })
-                                                .catch(function (error) {
-                                                    Swal.fire({
-                                                        icon: 'error',
-                                                        text: 'Something went wrong'
-                                                    });
-                                                    setSubmitting(false);
-                                                });
-                                        }}
-                                    >
-                                        {({
-                                            values,
-                                            errors,
-                                            touched,
-                                            handleChange,
-                                            handleBlur,
-                                            handleSubmit,
-                                            isSubmitting
-                                            /* and other goodies */
-                                        }) => (
-                                            <form onSubmit={handleSubmit} name='contact' method='post'>
-                                                <div className='block w-full mb-30px'>
-                                                    <input
-                                                        name='name'
-                                                        type='text'
-                                                        onChange={handleChange}
-                                                        onBlur={handleBlur}
-                                                        value={values.name}
-                                                        placeholder='Your First Name'
-                                                        className='block w-full text-formInputColor bg-white text-16px placeholder-formInputColor'
-                                                    />
-                                                    <div className='text-red'>
-                                                        {' '}
-                                                        {errors.name && touched.name && errors.name}
-                                                    </div>
-                                                </div>
-                                                <div className='block w-full mb-30px'>
-                                                    <input
-                                                        type='email'
-                                                        name='email'
-                                                        onChange={handleChange}
-                                                        onBlur={handleBlur}
-                                                        value={values.email}
-                                                        placeholder='E-mail Address'
-                                                        className='block w-full text-formInputColor bg-white text-16px placeholder-formInputColor'
-                                                    />
-                                                    <div className='text-red'>
-                                                        {' '}
-                                                        {errors.email && touched.email && errors.email}
-                                                    </div>
-                                                </div>
-                                                <div className='block w-full mb-30px'>
-                                                    <input
-                                                        type='phone'
-                                                        name='phone'
-                                                        onChange={handleChange}
-                                                        onBlur={handleBlur}
-                                                        value={values.phone}
-                                                        placeholder='Phone'
-                                                        className='block w-full text-formInputColor bg-white text-16px placeholder-formInputColor'
-                                                    />
-                                                    <div className='text-red'>
-                                                        {' '}
-                                                        {errors.phone && touched.phone && errors.phone}
-                                                    </div>
-                                                </div>
-                                                <div className='block w-full mb-30px'>
-                                                    <textarea
-                                                        name='message'
-                                                        onChange={handleChange}
-                                                        onBlur={handleBlur}
-                                                        value={values.message}
-                                                        placeholder='Your Message'
-                                                        className='block w-full bg-white text-16px text-formInputColor placeholder-formInputColor'
-                                                    >
-                                                        Your Message
-                                                    </textarea>
-                                                    <div className='text-red'>
-                                                        {' '}
-                                                        {errors.message && touched.message && errors.message}
-                                                    </div>
-                                                </div>
-                                                <div className='block w-full mb-30px'>
-                                                    <p className='text-12px leading-6 text-black'>
-                                                        By submitting this form you understand and agree that CYSCALE
-                                                        SYSTEMS may contact you regarding your interest about our
-                                                        services, partners and products as well as receiving electronic
-                                                        communications from us and our partners including news, events,
-                                                        updates, and promotional offers. You may withdraw your consent
-                                                        and unsubscribe from such marketing communication at any time.
-                                                        You also acknowledge and accept Cyscale’s Privacy Policy,
-                                                        including its use of cookies.
-                                                    </p>
-                                                </div>
-                                                <div className='block w-full mb-30px'>
-                                                    <label
-                                                        htmlFor='termsAccept'
-                                                        className='css-checkbox text-12px leading-6 text-black'
-                                                    >
-                                                        <input
-                                                            type='checkbox'
-                                                            id='termsAccept'
-                                                            name='terms'
-                                                            onChange={handleChange}
-                                                            onBlur={handleBlur}
-                                                            value={values.terms}
-                                                        />
-                                                        <i></i>I agree to{' '}
-                                                        <a
-                                                            href='https://cyscale.com/policies/privacy-policy'
-                                                            className='text-12px text-blue leading-6 underline hover:no-underline hover:text-red'
-                                                        >
-                                                            Cyscale’s Privacy Policy
-                                                        </a>
-                                                    </label>
-                                                    <div className='text-red'>
-                                                        {' '}
-                                                        {errors.terms && touched.terms && errors.terms}
-                                                    </div>
-                                                </div>
-                                                <div className='block w-full'>
-                                                    {!isSubmitting ? (
-                                                        <button
-                                                            disabled={isSubmitting}
-                                                            type='submit'
-                                                            className='gradientBgBtn w-full  block text-16px font-normal rounded text-white uppercase text-center pt-21px pb-21px pl-49px pr-49px no-underline'
-                                                        >
-                                                            SUBMIT
-                                                        </button>
-                                                    ) : (
-                                                        <button
-                                                            disabled={isSubmitting}
-                                                            type='button'
-                                                            className='gradientBgBtn w-full  block text-16px font-normal rounded text-white uppercase text-center pt-21px pb-21px pl-49px pr-49px no-underline'
-                                                        >
-                                                            SUBMITING ...
-                                                        </button>
-                                                    )}
-                                                </div>
-                                            </form>
-                                        )}
-                                    </Formik>
+                                    <div id='contact-form' />
                                 </div>
                                 <div className='w-full contactAddress mt-100px flex lg:hidden flex-col'>
                                     <img src={LocationIcon} className='w-5' alt='location icon' />
