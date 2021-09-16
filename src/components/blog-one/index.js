@@ -2,16 +2,16 @@ import React from 'react';
 import BlogCard from '../blogs/BlogCard';
 import ParaGraphs from './paragraphs';
 import HeroSection from './heroSection';
-import { map } from 'lodash-es';
 
 const Index = ({ data, suggestions, location }) => {
     const permalink = data?.frontmatter?.permalink;
 
     const suggestedPosts = [];
-    map(suggestions, ({ node }) => {
+    suggestions?.map(({ node }) => {
         if (suggestedPosts.length < 3 && node?.frontmatter?.permalink !== permalink) {
             suggestedPosts.push(node);
         }
+        return null;
     });
     return (
         <>

@@ -69,9 +69,6 @@ module.exports = {
                     {
                         resolve: 'gatsby-remark-images',
                         options: {
-                            // It's important to specify the maxWidth (in pixels) of
-                            // the content container as this plugin uses this as the
-                            // base for generating different widths of each image.
                             maxWidth: 2048
                         }
                     },
@@ -97,18 +94,6 @@ module.exports = {
             options: {
                 head: true,
                 trackingId: 'UA-145426770-1'
-            }
-        },
-        {
-            resolve: 'gatsby-plugin-load-script',
-            options: {
-                src: '//js.hsforms.net/forms/shell.js'
-            }
-        },
-        {
-            resolve: 'gatsby-plugin-load-script',
-            options: {
-                src: '//js.hs-scripts.com/5413427.js'
             }
         },
         {

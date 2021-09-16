@@ -1,8 +1,6 @@
 import React from 'react';
 import linked from '../../assets/images/linkedin.svg';
 import twitter from '../../assets/images/twitter.svg';
-import { map } from 'lodash';
-
 const baseUrl = 'https://cyscale.com/blog/';
 
 export default function Share({ title, description, permalink }) {
@@ -21,7 +19,7 @@ export default function Share({ title, description, permalink }) {
 
     return (
         <div className='flex justify-between' style={{ width: 48 }}>
-            {map(platforms, ({ name, shareUrl, icon }, key) => (
+            {Object.values(platforms).map(({ name, shareUrl, icon }) => (
                 <a
                     href={shareUrl}
                     title={`Share on ${name}`}
@@ -29,7 +27,7 @@ export default function Share({ title, description, permalink }) {
                         e.preventDefault();
                         window.open(shareUrl, 'newwindow', 'width=720,height=720');
                     }}
-                    key={key}
+                    key={name}
                 >
                     <img className='w-16px h-13px' src={icon} alt={name} />
                 </a>
