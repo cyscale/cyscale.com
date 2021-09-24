@@ -1,8 +1,5 @@
-import axios from 'axios';
-import { Formik } from 'formik';
 import React, {useEffect} from 'react';
 import { Helmet } from 'react-helmet';
-import Swal from 'sweetalert2';
 
 import heroBG from '../../assets/images/contact-hero.jpg';
 import facebook from '../../assets/images/facebook.svg';

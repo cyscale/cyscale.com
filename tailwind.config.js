@@ -692,6 +692,7 @@ module.exports = {
             },
 
             colors: {
+                primary: '#0F26AA',
                 gray: '#303B41 !important',
                 blue: '#0F26AA !important',
                 red: '#FF4A56 !important',
