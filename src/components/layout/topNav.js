@@ -89,7 +89,7 @@ const TopNav = ({ pageName }) => {
     return (
         <div className='fixed top-0 left-0 block w-full mx-auto' ref={sticky}>
             <div
-                className={`topNav ${menu.toggleBg} max-w-1366px m-auto pt-10px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px`}
+                className={`topNav ${menu.toggleBg} container max-w-7xl m-auto px-8 pt-2.5`}
             >
                 <nav className='relative '>
                     <div className='mx-auto flex flex-col xl:flex-row justify-between'>
@@ -223,6 +223,14 @@ const TopNav = ({ pageName }) => {
                                                     className='text-base text-black hover:text-blue hover:no-underline leading-6 mt-7'
                                                 >
                                                     Compliance and Auditing
+                                                </Link>
+                                                <Link
+                                                    to='/use-cases/iso-27001-compliance'
+                                                    activeStyle={{ color: '#0F26AA' }}
+                                                    activeClassName='active'
+                                                    className='text-base text-black hover:text-blue hover:no-underline leading-6 mt-7'
+                                                >
+                                                    ISO 27001 Compliance
                                                 </Link>
                                             </div>
                                         </div>
