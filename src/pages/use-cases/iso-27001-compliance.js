@@ -16,12 +16,12 @@ const StepCard = ({ groups, list, order }) => {
                 <span className='font-bold text-xl text-white'>{order}</span>
             </div>
             {groups.map((g, key) => (
-                <div key={key} className={`py-4 border-grey3 ${key < groups.length - 1 ? 'border-b' : ''}`}>
-                    <p className='text-sm font-medium'>{g.main}</p>
+                <div key={key} className='py-4'>
+                    <p className='text-sm'>{g.main}</p>
                     {g.list && (
                         <ul className='list-disc pl-4'>
                             {React.Children.map(g.list, (item, key) => (
-                                <li key={key} className='text-xs leading-tight mt-2'>
+                                <li key={key} className='text-xs leading-snug mt-2'>
                                     {item}
                                 </li>
                             ))}
@@ -37,7 +37,7 @@ export default function CloudCompliance() {
     return (
         <Layout
             pageName='ISO27001Compliance'
-            title='Why is ISO 27001 Important? - Cyscale Power Cloud Platform'
+            title='Achieve true continuous compliance for ISO 27001 - Cyscale Power Cloud Platform'
             description='ISO/IEC 27001:2013 is the golden standard when it comes to information security. Part of the ISO 27000 family, it helps organizations protect their assets such as employee information, user data, and intellectual property.'
         >
             <div className='bg-lightGrey'>
@@ -45,17 +45,26 @@ export default function CloudCompliance() {
                     <div className='pt-20 max-w-lg mx-auto lg:mx-0 lg:max-w-none'>
                         <Section>
                             <Row>
-                                <div className='col-span-12 lg:col-span-6'>
+                                <div className='col-span-12 lg:col-span-6 order-2 lg:order-1'>
                                     <h1 className='text-3xl lg:text-5xl leading-normal text-primary'>
-                                        Achieve True Continuous Compliance for ISO 27001
+                                        Achieve true continuous compliance for ISO 27001
                                     </h1>
                                     <p className='text-base lg:text-lg mt-8 leading-relaxed'>
                                         Cyscale helps you prepare your ISMS, inventory your cloud assets across all your
                                         accounts, secure your assets with cutting-edge controls, and connect policies
                                         and procedures to actual evidence.
                                     </p>
+
+                                    <a
+                                        href='https://app.cyscale.com'
+                                        target='_blank'
+                                        rel='noopener noreferrer'
+                                        className='bg-gradient-to-r from-blue to-red lg:max-w-xs block font-medium rounded text-white uppercase text-center py-5 px-12 mt-8 no-underline hover:no-underline '
+                                    >
+                                        Start Free Trial
+                                    </a>
                                 </div>
-                                <div className='col-span-12 mt-10 lg:mt-0 lg:col-span-6 lg:pl-8'>
+                                <div className='col-span-12 mb-10 lg:mb-0 lg:col-span-6 lg:pl-8 order-1 lg:order-2'>
                                     <img src={whyIso} alt='Why is ISO 27001' className='mx-auto w-auto h-auto' />
                                 </div>
                             </Row>
@@ -71,7 +80,7 @@ export default function CloudCompliance() {
                     <div className='max-w-lg mx-auto lg:mx-0 lg:max-w-none'>
                         <Row>
                             <div className='col-span-12 text-center py-16'>
-                                <h2 className='text-primary text-3xl lg:text-5xl'>Why is ISO 27001 Important?</h2>
+                                <h2 className='text-primary text-3xl lg:text-5xl'>Why is ISO 27001 important?</h2>
                                 <p className='text-base lg:text-xl leading-relaxed max-w-5xl mx-auto mt-8'>
                                     <strong>ISO/IEC 27001:2013</strong> is the golden standard when it comes to
                                     information security. Part of the <strong>ISO 27000 family</strong>, it helps
@@ -228,7 +237,7 @@ export default function CloudCompliance() {
                                 />
                             </div>
                             <div className='col-span-12 lg:col-span-6 lg:pl-8'>
-                                <h2 className='text-primary text-2xl lg:text-4xl'>Annex A Controls and Beyond</h2>
+                                <h2 className='text-primary text-2xl lg:text-4xl'>Annex A Controls and beyond</h2>
                                 <p className='text-base lg:text-lg leading-relaxed  mt-4 lg:mt-8'>
                                     Continuously keep your systems and your data secure by following industry best
                                     practices such as CIS benchmarks and well-architected frameworks, all neatly mapped
@@ -243,7 +252,7 @@ export default function CloudCompliance() {
                     <div className='max-w-lg mx-auto lg:mx-0 lg:max-w-none'>
                         <Row style={{ alignItems: 'center' }}>
                             <div className='col-span-12 lg:col-span-6 order-2 lg:order-1 lg:pr-8'>
-                                <h2 className='text-primary text-2xl lg:text-4xl'>Out of the Box Policies</h2>
+                                <h2 className='text-primary text-2xl lg:text-4xl'>Out of the box Policies</h2>
                                 <p className='text-base lg:text-lg leading-relaxed  mt-4 lg:mt-8'>
                                     Cyscale provides you with a set of battle-tested policies to jumpstart your ISMS.
                                     They are applicable to all your assets such as employee information, intelectual
@@ -289,7 +298,7 @@ export default function CloudCompliance() {
                     icon={getStartedICon}
                     btnText='Start your free trial'
                     btnLink='https://app.cyscale.com/'
-                    description='Achieve True Continuous Compliance for ISO 27001'
+                    description='Achieve true continuous compliance for ISO 27001'
                 />
             </div>
         </Layout>
