@@ -7,11 +7,11 @@
 }
 
 .blog-reset h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.blog-reset h2,
+.blog-reset h3,
+.blog-reset h4,
+.blog-reset h5,
+.blog-reset h6 {
     font-weight: 600;
     margin: 0 1.5rem;
     line-height: 1.5;
@@ -76,6 +76,7 @@ h6 {
     }
 }
 
-.blog-reset ol, ul {
+.blog-reset ol,
+.blog-reset ul {
     list-style: initial;
 }
