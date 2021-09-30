@@ -26,26 +26,22 @@ At some point during its activity, perhaps depending on size or maturity level, 
 
 **Why empowering?**
 
-Going through an ISO 27001 implementation means that people in your company must work closely together towards that end, as most everyone will need to be involved in the process at one stage or the other. Across departments, team members will have to question their processes and their day-to-day-work to make sure they are doing the right thing in the right way from a security perspective. Some things may need to change, which means that employees will have to take part in security awareness training sessions. Others will be involved in evidence collection: can your company prove that it is operating securely? One thing’s for sure: everyone in the company will have to CARE. It is empowering and meaningful to care about your place of work and the people you serve as a business.
+Going through an ISO 27001 implementation means that people in your company must work closely together towards that end, as most everyone will need to be involved in the process at one stage or the other. Across departments, team members will have to question their processes and their day-to-day work to make sure they are doing the right thing in the right way from a security perspective. Some things may need to change, which means that employees will have to take part in security awareness training sessions. Others will be involved in evidence collection: can your company prove that it is operating securely? One thing’s for sure: everyone in the company will have to CARE. It is empowering and meaningful to care about your place of work and the people you serve as a business.
 
 **Why intimidating?**
 
 If you’ve never dealt with regulatory standards before, you might find the text hard to distill in terms of “to-do items" — it’s not necessarily vague, but not that specific either. Its purpose is to offer guidelines that are general enough to encompass the particularities of each organisation. The standard references quite a few documents that the company may need to create from scratch and then adhere to. On top of it all, the entire process ends with an audit, which means that an external entity will analyse your work and judge its value.
 
- 
-
 **There’s help out there!**
 
 There are many comprehensive resources available regarding ISO implementation, and all of them will point to documents that need to be created — be it policies, procedures, or other lists and registers. It’s important to understand that some of them will be mandatory for ANY organisation getting certified, while others will be mandatory only for some, depending on identified risks. Keep in mind that some of these policies might exist in your organisation even before considering implementing the standard.
-
- 
 
 Below is the list of documents that any organisation must create:
 
 * ISMS scope document (cl. 4.3) 
 * Information Security Policy (cl. 5.1, 5.2, 5.3, 6.2) 
 
-  * defines how security objectives will be set, and it may include the objectives themselves
+  * defines how security objectives will be set, and it may include the objectives themselves 
   * should include roles and responsibilities
 * Risk assessment process definition (cl. 6.1.2) 
 
@@ -56,8 +52,6 @@ Below is the list of documents that any organisation must create:
 * Risk treatment process (cl. 6.1.3)
 
   * describes how addressing risk is done
-
- 
 
 Then there will be the documented results of performing certain actions:
 
@@ -76,7 +70,7 @@ Then there will be the documented results of performing certain actions:
 \
 **And then there’s the Annex**
 
-The risks identified during risk assessment can and should be addressed with controls provided by the Standard in the Annex A. As some of these controls mandate that other policies, procedures or documents are created, we can conclude that these will only be required when they help mitigate an identified risk. These additional documents are:
+The risks identified during risk assessment can and should be addressed with controls provided by the Standard in  Annex A. As some of these controls mandate that other policies, procedures or documents are created, we can conclude that these will only be required when they help mitigate an identified risk. These additional documents are:
 
 * Mobile device policy (A.6.2.1)
 * Teleworking (Remote working) policy (A.6.2.2)
@@ -105,15 +99,9 @@ The risks identified during risk assessment can and should be addressed with con
 * Legislation and contractual requirements (A.18.1.1)
 * IP (A.18.1.2)
 
- 
-
 If you’re a company that’s just beginning to consider developing an ISMS and getting certified, you might need help creating some or all of these documents. Cyscale offers quite a few of them out-of-the-box, giving you the possibility to use them as templates and add customisations to your needs, or to just use them as they are.
 
- 
-
 Start your ISO 27001 implementation journey today!
-
-
 
 *Photo by Scott Graham*
 
