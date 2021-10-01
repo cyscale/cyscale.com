@@ -41,26 +41,27 @@ Below is the list of documents that any organization must create:
 * ISMS scope document (cl. 4.3) 
 * Information Security Policy (cl. 5.1, 5.2, 5.3, 6.2) 
 
-  * defines how security objectives will be set, and it may include the objectives themselves 
-  * should include roles and responsibilities
+  defines how security objectives will be set, and it may include the objectives themselves 
+
+  should include roles and responsibilities
 * Risk assessment process definition (cl. 6.1.2) 
 
-  * describes how risk assessment is done
+  describes how risk assessment is done
 * Statement of Applicability (cl. 6.1.3)
 
-  * for each control from the Annex, the company must state whether it applies to them or not
+  for each control from the Annex, the company must state whether it applies to them or not
 * Risk treatment process (cl. 6.1.3)
 
-  * describes how addressing risk is done
+  describes how addressing risk is done
 
 Then there will be the documented results of performing certain actions:
 
 * Risk assessment results - performed regularly  (cl. 8.2) 
 
-  * contains the results of the risk assessment
+  contains the results of the risk assessment
 * Risk treatment plan - performed regularly (cl. 6.1.3, cl. 8.3)
 
-  * contains the plan to address identified risk
+  contains the plan to address identified risk
 * Evidence of competence of persons doing work that affects information security performance (cl 7.20)
 * Evidence of monitoring and measurement results (cl 9.1)
 * Evidence of audit results (9.2)
