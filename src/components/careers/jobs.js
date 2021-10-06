@@ -17,7 +17,7 @@ const Jobs = ({ data }) => {
                     {data.map(({ frontmatter }, index) => {
                         const { title, icon, permalink } = frontmatter;
                         return (
-                            <div className='card-container hover:shadow-lg transition-all duration-300' key={index}>
+                            <div className='card-container rounded-md shadow-md hover:shadow-lg transition-all duration-300' key={index}>
                                 <Link
                                     to={`/careers/${permalink}`}
                                     className='block w-full card pt-25px pb-25px pl-25px pr-25px bg-no-repeat no-underline'
