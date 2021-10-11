@@ -42,6 +42,11 @@ exports.createPages = ({ graphql, actions }) => {
 
         posts.map((edge, index) => {
             const node = edge.node;
+
+            if (node.frontmatter.hidden === true) {
+                return;
+            }
+
             switch (node.frontmatter.templateKey) {
                 case 'blog-post':
                     createPage({

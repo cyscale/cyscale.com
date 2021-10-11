@@ -5,8 +5,8 @@ permalink: marketing-specialist
 title: Marketing Specialist
 date: 2020-27-11T11:00:00.000Z
 description: Cyscale is a startup from Cluj-Napoca, activating in the cloud cybersecurity industry. We are looking for a marketing specialist
+hidden: true
 ---
-
 
 # Job description
 
