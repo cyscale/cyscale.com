@@ -30,7 +30,7 @@ const Index = () => {
                         fimage={featureImage}
                     />
 
-                    <div className='mt-55px lg:mb-200px block w-full'>
+                    <div className='mt-55px w-full flex justify-center'>
                         <div id='contact-form' />
                     </div>
                 </div>
