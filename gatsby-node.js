@@ -25,6 +25,7 @@ exports.createPages = ({ graphql, actions }) => {
                                 featuredimage {
                                     publicURL
                                 }
+                                hidden
                             }
                             rawMarkdownBody
                         }
@@ -40,7 +41,7 @@ exports.createPages = ({ graphql, actions }) => {
 
         const blogs = posts.filter((edge) => edge.node.frontmatter.templateKey === 'blog-post');
 
-        posts.map((edge, index) => {
+        posts.forEach((edge) => {
             const node = edge.node;
 
             if (node.frontmatter.hidden === true) {

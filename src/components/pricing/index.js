@@ -1,27 +1,42 @@
-import React from "react";
-import TopNav from '../layout/topNav'
-import Hero from './hero'
-import PricingTable from './pricingTable'
-import feauterImage from '../../assets/images/pricing-banner-image.svg'
+import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
+import TopNav from '../layout/topNav';
+import Hero from './hero';
+import featureImage from '../../assets/images/undraw_Investing_re_bov7.svg';
 
-const Index = () => {  
-  
-  return (
-    <>
-        <div>
-            <div className={`w-full pb-20px ContactUs bg-lightGrey2 bg-contain bg-no-repeat`}>
-                <TopNav />  
-                <Hero
-                    title={`Choose\nYour Cyscale Plan`}
-                    description="All of our plans are commitment-free and have a 30-day money-back guarantee."
-                    fimage={feauterImage}
-                /> 
-                <PricingTable />
+const Index = () => {
+    useEffect(() => {
+        if (window.hbspt) {
+            window.hbspt.forms.create({
+                portalId: '5413427',
+                formId: 'c29fe5d0-179d-4bff-a8ac-36790a48a6c2',
+                target: '#contact-form'
+            });
+        }
+    }, []);
+
+    return (
+        <>
+            <Helmet>
+                <script charset='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js'></script>
+            </Helmet>
+            <div>
+                <div className={`w-full pb-20px ContactUs bg-lightGrey2 bg-contain bg-no-repeat`}>
+                    <TopNav />
+                    <Hero
+                        title={`Let's make it win-win`}
+                        description={`We don't want Cyscale to be just another expense on your balance sheet.
+                        Let's talk about your team, about your products, and about your challenges and come up with a pricing scheme that ultimately brings a positive ROI and helps you move faster`}
+                        fimage={featureImage}
+                    />
+
+                    <div className='mt-55px lg:mb-200px block w-full'>
+                        <div id='contact-form' />
+                    </div>
+                </div>
             </div>
-          
-        </div>
-    </>
-  );
+        </>
+    );
 };
 
 export default Index;

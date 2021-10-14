@@ -1,6 +1,6 @@
 ---
 templateKey: career-page
-title: Senior Backend Developer / Golang Developer
+title: Mid/Senior Golang Developer
 permalink: backend-developer
 icon: stack
 date: 2020-27-11T11:00:00.000Z

@@ -1,6 +1,6 @@
 ---
 templateKey: career-page
-title: Senior Frontend Developer / ReactJS Developer
+title: Mid/Senior ReactJS Developer
 permalink: frontend-developer
 icon: pen
 date: 2020-27-11T11:00:00.000Z

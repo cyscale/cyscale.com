@@ -77,6 +77,7 @@ const TopNav = ({ pageName }) => {
                         icon
                         templateKey
                         title
+                        hidden
                     }
                 }
             }
@@ -84,13 +85,11 @@ const TopNav = ({ pageName }) => {
     `);
 
     let jobs = data.allMarkdownRemark.nodes;
-    jobs = jobs.filter(({ frontmatter }) => frontmatter.templateKey === 'career-page');
+    jobs = jobs.filter(({ frontmatter }) => frontmatter.templateKey === 'career-page' && frontmatter.hidden !== true);
 
     return (
         <div className='fixed top-0 left-0 block w-full mx-auto' ref={sticky}>
-            <div
-                className={`topNav ${menu.toggleBg} container max-w-7xl m-auto px-8 pt-2.5`}
-            >
+            <div className={`topNav ${menu.toggleBg} container max-w-7xl m-auto px-8 pt-2.5`}>
                 <nav className='relative '>
                     <div className='mx-auto flex flex-col xl:flex-row justify-between'>
                         <div className='relative flex xl:block pt-4 pb-4 lg:pt-6 lg:pb-6 justify-start'>
@@ -113,7 +112,7 @@ const TopNav = ({ pageName }) => {
                                         pageName === 'SKGPage' || pageName === 'CSPMPage' ? 'active' : ''
                                     }  relative parentItem block my-6 mx-4 lg:m-8 text-base hover:no-underline leading-6`}
                                 >
-                                    <span>Products</span>
+                                    <span>Platform</span>
                                 </button>
                                 <div className='p-9 mega-menu mb-16 sm:mb-0 shadow-2xl bg-white'>
                                     <div className='mx-auto w-full grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 justify-between'>
