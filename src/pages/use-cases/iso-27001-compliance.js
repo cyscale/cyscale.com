@@ -83,8 +83,7 @@ export default function CloudCompliance() {
                                     <strong>ISO/IEC 27001:2013</strong> is the golden standard when it comes to
                                     information security. Part of the <strong>ISO 27000 family</strong>, it helps
                                     organizations protect their assets such as employee information, user data, and
-                                    intellectual property. Being
-                                    <strong>ISO 27001 compliant</strong> gives you and your customers the confidence to
+                                    intellectual property. Being <strong>ISO 27001 compliant</strong> gives you and your customers the confidence to
                                     run and expand your business.
                                 </p>
                             </div>
