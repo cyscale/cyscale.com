@@ -41,7 +41,7 @@ export default function Iso27001() {
             <Helmet>
                 <script charset='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js' />
             </Helmet>
-            <header id='head' className='bg-lightGrey py-6'>
+            <header id='head' className='bg-lightGrey py-3'>
                 <Container>
                     <Link to='/' className='inline-flex'>
                         <img className='block ' src={logo} alt='CYSCALE' />
@@ -50,7 +50,7 @@ export default function Iso27001() {
             </header>
             <main>
                 <section>
-                    <div className='bg-primary py-16'>
+                    <div className='bg-primary py-8'>
                         <Container>
                             <Row>
                                 <div className='col-span-12 lg:col-span-5 text-white'>
@@ -80,12 +80,12 @@ export default function Iso27001() {
                                     </div>
                                 </div>
                                 <div className='col-span-12 lg:col-span-7'>
-                                    <div className='bg-white rounded-xl shadow-lg  pb-0 py-8 px-12 max-w-lg mx-auto lg:mr-0 lg:ml-auto relative'>
-                                        <img src={arrow} className="absolute left-0 top-0 mt-4 -ml-8" width={70} />
-                                        <h2 className='text-4xl leading-normal text-primary mb-6'>
+                                    <div className='bg-white rounded-xl shadow-lg  pb-0 py-6 px-12 max-w-lg mx-auto lg:mr-0 lg:ml-auto relative'>
+                                        <img src={arrow} className="absolute left-0 top-0 mt-3 -ml-8" width={70} />
+                                        <h2 className='text-3xl leading-normal text-primary mb-2'>
                                             Request a live demo
                                         </h2>
-                                        <div id='request-demo'style={{ minHeight: 400 }}>
+                                        <div id='request-demo'style={{ minHeight: 465 }}>
                                         </div>
                                     </div>
                                 </div>
