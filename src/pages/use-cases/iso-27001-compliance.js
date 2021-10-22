@@ -37,8 +37,8 @@ export default function CloudCompliance() {
     return (
         <Layout
             pageName='ISO27001Compliance'
-            title='Achieve true continuous compliance for ISO 27001 - Cyscale Power Cloud Platform'
-            description='ISO/IEC 27001:2013 is the golden standard when it comes to information security. Part of the ISO 27000 family, it helps organizations protect their assets such as employee information, user data, and intellectual property.'
+            title='ISO 27001 Compliance & Security for Cloud Environment - Cyscale'
+            description='Easy & continuous compliance for ISO 27001, with a set of battle-tested policies to jumpstart your ISMS. Secure your assets with cutting-edge controls & policies.'
         >
             <div className='bg-lightGrey'>
                 <Container>
