@@ -47,12 +47,10 @@ export default function CloudCompliance() {
                             <Row>
                                 <div className='col-span-12 lg:col-span-6 order-2 lg:order-1'>
                                     <h1 className='text-3xl lg:text-5xl leading-normal text-primary'>
-                                        Achieve true continuous compliance for ISO 27001
+                                        ISO 27001 Compliance & Security for Cloud Environment
                                     </h1>
                                     <p className='text-base lg:text-lg mt-8 leading-relaxed'>
-                                        Cyscale helps you prepare your ISMS, inventory your cloud assets across all your
-                                        accounts, secure your assets with cutting-edge controls, and connect policies
-                                        and procedures to actual evidence.
+                                        Easy & continuous compliance for ISO 27001, with a set of battle-tested policies to jumpstart your ISMS. Secure your assets with cutting-edge controls & policies.
                                     </p>
 
                                     <a
