@@ -18,6 +18,7 @@ import GetStarted from '../../components/Home/getstarted';
 import { Link as ScrollLink } from 'react-scroll';
 import { Helmet } from 'react-helmet';
 import arrow from '../../assets/images/arrow.svg'
+import Consent from '../../components/consent';
 
 export default function Iso27001() {
     useEffect(() => {
@@ -38,10 +39,11 @@ export default function Iso27001() {
                 description="'ISO/IEC 27001:2013 is the golden standard when it comes to information security. Part of the ISO 27000 family, it helps organizations protect their assets such as employee information, user data, and intellectual property."
                 pageName='ISO27001Campaign'
             />
+            <Consent/>
             <Helmet>
                 <script charset='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js' />
             </Helmet>
-            <header id='head' className='bg-lightGrey py-3'>
+            <header id='head' className='bg-lightGrey pt-3 pb-2'>
                 <Container>
                     <Link to='/' className='inline-flex'>
                         <img className='block ' src={logo} alt='CYSCALE' />
@@ -52,7 +54,7 @@ export default function Iso27001() {
                 <section>
                     <div className='bg-primary py-8'>
                         <Container>
-                            <Row>
+                            <Row className="items-center">
                                 <div className='col-span-12 lg:col-span-5 text-white'>
                                     <div className='max-w-lg mx-auto lg:ml-0 lg:mr-auto'>
                                         <h1 className='text-3xl lg:text-5xl leading-normal mb-10'>
@@ -80,19 +82,19 @@ export default function Iso27001() {
                                     </div>
                                 </div>
                                 <div className='col-span-12 lg:col-span-7'>
-                                    <div className='bg-white rounded-xl shadow-lg  pb-0 py-6 px-12 max-w-lg mx-auto lg:mr-0 lg:ml-auto relative'>
-                                        <img src={arrow} className="absolute left-0 top-0 mt-3 -ml-8" width={70} />
-                                        <h2 className='text-3xl leading-normal text-primary mb-2'>
+                                    <div className='bg-white rounded-xl shadow-lg  pt-4 pb-0 px-12 max-w-lg mx-auto lg:mr-0 lg:ml-auto relative'>
+                                        <img src={arrow} className="absolute left-0 top-0 -mt-1 -ml-8" width={70} />
+                                        <h2 className='text-2xl leading-normal text-primary mb-1'>
                                             Request a live demo
                                         </h2>
-                                        <div id='request-demo'style={{ minHeight: 465 }}>
+                                        <div id='request-demo'style={{ minHeight: 510 }}>
                                         </div>
                                     </div>
                                 </div>
                             </Row>
                         </Container>
                     </div>
-                    <div className='bg-grey1 py-8'>
+                    <div className='bg-grey1 py-4'>
                         <Container>
                             <div className='flex justify-between items-center'>
                                 <div className='px-2'>
