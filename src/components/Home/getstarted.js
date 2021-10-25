@@ -1,6 +1,6 @@
 import React from 'react';
 
-const getstarted = ({ description, btnText, btnLink, sectionName, icon, icon2, ExternalLink }) => {
+const getstarted = ({ description, btnText, btnLink, sectionName, icon, icon2, ExternalLink, btnComponent }) => {
     return (
         <div className='block w-full pt-40 pb-40 sm:pt-92px sm:pb-92px'>
             <div className='max-w-1366px m-auto pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px'>
@@ -40,14 +40,21 @@ const getstarted = ({ description, btnText, btnLink, sectionName, icon, icon2, E
                             >
                                 {description}
                             </p>
-                            <a
-                                href={btnLink}
-                                target={!!ExternalLink ? '_blank' : '_self'}
-                                rel='noopener noreferrer'
-                                className='inline-block min-w-289px text-16px font-medium rounded bg-white text-black uppercase text-center pt-21px pb-21px pl-49px pr-49px no-underline transition-all duration-300 border border-black hover:border-black border-solid hover:bg-black hover:text-white hover:no-underline blackBorder'
-                            >
-                                {btnText}
-                            </a>
+                            {btnComponent ? (
+                                React.cloneElement(btnComponent, {
+                                    className:
+                                        'inline-block min-w-289px text-16px font-medium rounded bg-white text-black uppercase text-center pt-21px pb-21px pl-49px pr-49px no-underline transition-all duration-300 border border-black hover:border-black border-solid hover:bg-black hover:text-white hover:no-underline blackBorder cursor-pointer'
+                                })
+                            ) : (
+                                <a
+                                    href={btnLink}
+                                    target={!!ExternalLink ? '_blank' : '_self'}
+                                    rel='noopener noreferrer'
+                                    className='inline-block min-w-289px text-16px font-medium rounded bg-white text-black uppercase text-center pt-21px pb-21px pl-49px pr-49px no-underline transition-all duration-300 border border-black hover:border-black border-solid hover:bg-black hover:text-white hover:no-underline blackBorder'
+                                >
+                                    {btnText}
+                                </a>
+                            )}
                         </div>
                     </div>
                     {!!sectionName && sectionName === 'getStartedFooter' ? (

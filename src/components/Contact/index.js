@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 
 import heroBG from '../../assets/images/contact-hero.jpg';
@@ -10,13 +10,15 @@ import TopNav from '../layout/topNav';
 
 const Index = () => {
     useEffect(() => {
-        if (window.hbspt) {
-            window.hbspt.forms.create({
-                portalId: '5413427',
-                formId: 'c29fe5d0-179d-4bff-a8ac-36790a48a6c2',
-                target: '#contact-form'
-            });
-        }
+        setTimeout(() => {
+            if (window && window.hbspt) {
+                window.hbspt.forms.create({
+                    portalId: '5413427',
+                    formId: 'c29fe5d0-179d-4bff-a8ac-36790a48a6c2',
+                    target: '#contact-form'
+                });
+            }
+        }, 600);
     }, []);
     return (
         <>
