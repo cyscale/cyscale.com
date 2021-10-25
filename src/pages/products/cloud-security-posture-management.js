@@ -12,8 +12,8 @@ const Index = () => (
     bannerBtn1Text="Try Cyscale for free"
     bannerBtn1Link="https://app.cyscale.com"
     pageName="CSPMPage"
-    title="Cyscale Power Cloud - Cloud Security Posture Management"
-    description="Discover the features that make Cyscale Power Cloud Platform a cost-effective Cloud Security Posture Management solution. Scan, monitor, and remediate across AWS, Azure, Google Cloud, Oracle Cloud"
+    title="Cloud Security Posture Management - CSPM Tool - Cyscale"
+    description="Continuous visibility of multi-cloud environments to identify cloud misconfiguration vulnerabilities. Scan, monitor, and remediate across AWS, Azure, Google Cloud, Oracle Cloud"
   >
     <Cspm />
   </Layout>
