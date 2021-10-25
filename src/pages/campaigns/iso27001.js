@@ -3,11 +3,10 @@ import { Container, Row, Section } from '../../components/atoms/Containers';
 import Seo from '../../components/Seo';
 import { Link } from 'gatsby';
 import logo from '../../assets/images/logo.svg';
-import capex from '../../assets/images/capex.svg';
-import quali from '../../assets/images/quali.svg';
-import salesflare from '../../assets/images/salesflare.svg';
-import youscale from '../../assets/images/youscale.svg';
-import zitec from '../../assets/images/zitec.svg';
+import alibaba from '../../assets/images/alibabacloud-icon.svg';
+import aws from '../../assets/images/svg_aws_white.svg';
+import azure from '../../assets/images/svg_azure.svg';
+import gcp from '../../assets/images/svg_gcp.svg';
 import avatar from '../../assets/images/avatar.png';
 import inventoryMock from '../../assets/images/optimize-costs-reveal-analyze-cloud-budget-spendings.png';
 import controlMock from '../../assets/images/maintain-3rd-party-data-image.png';
@@ -17,7 +16,7 @@ import getStartedICon from '../../assets/images/getStartedIconCPSM.svg';
 import GetStarted from '../../components/Home/getstarted';
 import { Link as ScrollLink } from 'react-scroll';
 import { Helmet } from 'react-helmet';
-import arrow from '../../assets/images/arrow.svg'
+import arrow from '../../assets/images/arrow.svg';
 import Consent from '../../components/consent';
 
 export default function Iso27001() {
@@ -39,7 +38,7 @@ export default function Iso27001() {
                 description="'ISO/IEC 27001:2013 is the golden standard when it comes to information security. Part of the ISO 27000 family, it helps organizations protect their assets such as employee information, user data, and intellectual property."
                 pageName='ISO27001Campaign'
             />
-            <Consent/>
+            <Consent />
             <Helmet>
                 <script charset='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js' />
             </Helmet>
@@ -54,7 +53,7 @@ export default function Iso27001() {
                 <section>
                     <div className='bg-primary py-8'>
                         <Container>
-                            <Row className="items-center">
+                            <Row className='items-center'>
                                 <div className='col-span-12 lg:col-span-5 text-white'>
                                     <div className='max-w-lg mx-auto lg:ml-0 lg:mr-auto'>
                                         <h1 className='text-3xl lg:text-5xl leading-normal mb-10'>
@@ -87,8 +86,7 @@ export default function Iso27001() {
                                         <h2 className='text-2xl leading-normal text-primary mb-1'>
                                             Request a live demo
                                         </h2>
-                                        <div id='request-demo'style={{ minHeight: 510 }}>
-                                        </div>
+                                        <div id='request-demo' style={{ minHeight: 510 }}></div>
                                     </div>
                                 </div>
                             </Row>
@@ -97,21 +95,18 @@ export default function Iso27001() {
                     <div className='bg-grey1 py-4'>
                         <Container>
                             <div className='flex justify-between items-center'>
-                                <div className='px-2'>
-                                    <img src={zitec} className='h-10' alt='zitec' />
+                                <div className='px-3'>
+                                    <img src={aws} className='h-12' alt='AWS' />
                                 </div>
-                                <div className='px-2'>
-                                    <img src={capex} className='h-8' alt='major league baseball' />
+                                <div className='px-3'>
+                                    <img src={azure} className='h-12' alt='Azure' />
                                 </div>
-                                <div className='px-2'>
-                                    <img src={youscale} className='h-10' alt='youscale' />
+                                <div className='px-3'>
+                                    <img src={gcp} className='h-12' alt='GCP' />
                                 </div>
 
-                                <div className='px-2'>
-                                    <img src={quali} className='h-8' alt='quali' />
-                                </div>
-                                <div className='px-2'>
-                                    <img src={salesflare} className='h-10' alt='salesflare' />
+                                <div className='px-3'>
+                                    <img src={alibaba} className='h-12' alt='Alibaba' />
                                 </div>
                             </div>
                         </Container>
