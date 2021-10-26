@@ -13,7 +13,7 @@
 .blog-reset h5,
 .blog-reset h6 {
     font-weight: 600;
-    margin: 0 1.5rem;
+    margin: 1.5rem 0;
     line-height: 1.5;
     font-family: 'Roboto', sans-serif;
 }
