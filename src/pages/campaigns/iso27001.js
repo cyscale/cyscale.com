@@ -26,7 +26,14 @@ export default function Iso27001() {
                 window.hbspt.forms.create({
                     portalId: '5413427',
                     formId: 'aa6ef10b-be0a-4959-be34-1f00fb1cac4b',
-                    target: '#request-demo'
+                    target: '#request-demo',
+                    onFormSubmit: () => {
+                        ga('send', {
+                            eventCategory: 'Form Request',
+                            eventAction: 'Sent',
+                            eventLabel: 'ISO 27001 Compliance for cloud'
+                        });
+                    }
                 });
             }
         }, 600);
