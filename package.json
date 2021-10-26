@@ -38,6 +38,7 @@
     "react-scroll": "^1.8.2",
     "react-slick": "^0.28.1",
     "react-tabs": "^3.2.2",
+    "rehype-raw": "^6.1.0",
     "sass": "^1.41.0",
     "slick-carousel": "^1.8.1",
     "sweetalert2": "^11.0.18"
