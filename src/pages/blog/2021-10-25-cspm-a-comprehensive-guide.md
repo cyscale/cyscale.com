@@ -63,7 +63,7 @@ These unintentional configuration mistakes are likely to occur because of the 
 
 </div>
 
-We’ve all heard about major breaches that happened because of AWS S3 buckets being publicly accessible. (This exact *[misconfiguration happened to Romania’s largest real estate porta](https://cyscale.com/blog/realestate-data-breach "https\://cyscale.com/blog/realestate-data-breach")*l). 
+We’ve all heard about major breaches that happened because of AWS S3 buckets being publicly accessible. (This exact [misconfiguration happened to Romania’s largest real estate portal](https://cyscale.com/blog/realestate-data-breach "https\://cyscale.com/blog/realestate-data-breach") ). 
 
 Many cloud application creators or maintainers don’t believe this can happen to them, but, for example, when new virtual machines are launched in a hurry by a less experienced DevOps engineer, mistakes can occur and networks that should have been private are now public and exposed.
 
