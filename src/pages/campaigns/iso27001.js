@@ -21,24 +21,6 @@ import Consent from '../../components/consent';
 
 export default function Iso27001() {
     useEffect(() => {
-        window.addEventListener('message', handler);
-        return () => {
-            window.removeEventListener('message', handler);
-        };
-    }, []);
-
-    function handler(event) {
-        if (event.data.type === 'hsFormCallback' && event.data.eventName === 'onFormSubmitted') {
-            console.log(`Form submitted`)
-            ga('send', {
-                eventCategory: 'Form Request',
-                eventAction: 'Sent',
-                eventLabel: 'ISO 27001 Compliance for cloud'
-            });
-        }
-    }
-
-    useEffect(() => {
         setTimeout(() => {
             if (typeof window !== 'undefined' && window['hbspt']) {
                 window.hbspt.forms.create({
@@ -48,8 +30,18 @@ export default function Iso27001() {
                 });
             }
         }, 600);
+        function handler(event) {
+            if (window['ga'] && event.data.type === 'hsFormCallback' && event.data.eventName === 'onFormSubmit') {
+                window.ga('send', {
+                    eventAction: 'Sent',
+                    eventCategory: 'Form Request',
+                    eventLabel: 'ISO 27001 Compliance for cloud'
+                });
+            }
+        }
+        window.addEventListener('message', handler);
+        return () => window.removeEventListener('message', handler);
     }, []);
-
     return (
         <>
             <Seo
