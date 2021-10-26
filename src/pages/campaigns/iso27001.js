@@ -28,7 +28,8 @@ export default function Iso27001() {
     }, []);
 
     function handler(event) {
-        if (event.data.type === 'hsFormCallback' && event.data.eventName === 'onFormSubmit') {
+        if (event.data.type === 'hsFormCallback' && event.data.eventName === 'onFormSubmitted') {
+            console.log(`Form submitted`)
             ga('send', {
                 eventCategory: 'Form Request',
                 eventAction: 'Sent',
