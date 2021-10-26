@@ -88,6 +88,6 @@ Now, if your organization is at this point, you adopted the DevOps culture at th
 4. wonder whether your research was comprehensive enough
 5. oppose adopting any new cloud provider because it would mean implementing and mapping all the controls again and again
 
-**However, if this sounds like a lot of work to do and/or you want to take your compliance and cloud security to the next level by giving power to your policies and ultimately to your people, check out [cyscale.com](https://app.cyscale.com/ "https\://app.cyscale.com/").**
+**However, if this sounds like a lot of work to do and/or you want to take your [ISO 27001 Compliance & Cloud Security](https://cyscale.com/use-cases/iso-27001-compliance) to the next level by giving power to your policies and ultimately to your people, check out [cyscale.com](https://app.cyscale.com/ "https\://app.cyscale.com/").**
 
 <!--EndFragment-->
