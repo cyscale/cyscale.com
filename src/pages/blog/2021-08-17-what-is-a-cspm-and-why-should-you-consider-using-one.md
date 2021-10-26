@@ -18,7 +18,7 @@ tags:
 ---
 <!--StartFragment-->
 
-Some CSPM tools may be limited to only one cloud provider, others can be used to detect misconfigurations in a multi-cloud environment, but they all share a purpose: to examine your cloud infrastructure and compare it against a set of best practices, policies and known security risks, in order to help you improve your compliance with certain regulations, as well as your cloud security posture.  
+Some [CSPM tools](https://cyscale.com/blog/cloud-security-posture-management-cspm-guide) may be limited to only one cloud provider, others can be used to detect misconfigurations in a multi-cloud environment, but they all share a purpose: to examine your cloud infrastructure and compare it against a set of best practices, policies and known security risks, in order to help you improve your compliance with certain regulations, as well as your cloud security posture.  
 
 By now we should all be aware of the Shared Responsibility Model practiced by the cloud providers. According to these rules, the customer is entirely responsible for his security configuration. The cloud provider’s responsibility is the data center's security only.   
 
@@ -79,8 +79,6 @@ Unlike other CSPM solutions that provide you with endless lists of logs, Cysca
 It will surface crucial issues of all your interlinked cloud assets, helping you improve your security and data governance procedures.  
 
 Complete visibility over your infrastructure and deep contextual understanding of your cloud assets inventory is possible only by using the unique power of Cyscale Power Cloud Platform, so start your free trial today! 
-
-
 
 <!--StartFragment-->
 
