@@ -13,13 +13,36 @@ description: >-
   These unintentional configuration mistakes are likely to occur because of the complexity of the environment or because of poor visibility. Regardless of the reason, it is important to understand that even one misconfiguration can lead to data breaches and possibly data leakage. 
 featuredpost: true
 featuredimage: /img/hal-gatewood-tzc3vjpck-q-unsplash.jpg
-tags:
-  - cspm; benchmarks & regulations; compliance policies; governance procedures;
-    cloud security;
+tags: []
 ---
 <!--StartFragment-->
 
+
+
+<style>
+.toc a {color: rgba(0,0,0,.8); padding-bottom: 0.5rem;display: inline-block;  font-size: 0.875rem}
+.toc h4 {font-weight: medium; margin-bottom: 0.5rem;}
+.toc {padding-bottom: 1rem;}
+</style>
+
+<div class="toc">
+
+#### Table of content
+
+[CSPM- short history & definition](#one) <br/>
+[When to choose a CSPM and when not to ](#two) <br/>
+[Misconfigurations – cause and effect ](#three) <br/>
+[Take advantage of the extra visibility ](#four) <br/>
+[Better security for your cloud environment  ](#five) <br/>
+[Compliance controls across your environment in the cloud ](#six)
+
+</div>
+
+<div id="one">
+
 ### **CSPM – short history & definition** 
+
+</div>
 
 The increasing rate of cloud adoption encountered in the last few years has brought new security challenges along, the main one being the need to correctly configure cloud infrastructures.  
 
@@ -35,17 +58,21 @@ As the products quickly evolved and gained in complexity, the initial name w
 
 Included in Gartner’s “Top 10 Security Projects for 2019”, the CSPM represents one of the most important technologies that leaders should invest in when using cloud or multi-cloud infrastructures.   
 
-
+<div id="two">
 
 ### **When to choose a CSPM and when not to** 
+
+</div>
 
 A Cloud Security Posture Management solution is a critical part of a Cloud Security Program because it covers the **unintentional risks** that can expose your data. 
 
 These unintentional configuration mistakes are likely to occur because of the complexity of the environment or because of poor visibility. Regardless of the reason, it is important to understand that even one misconfiguration can lead to data breaches and possibly data leakage. 
 
-
+<div id="three">
 
 #### ***Misconfigurations – cause and effect*** 
+
+</div>
 
 We’ve all heard about major breaches that happened because of AWS S3 buckets being publicly accessible. (This exact *[misconfiguration happened to Romania’s largest real estate porta](https://cyscale.com/blog/realestate-data-breach "https\://cyscale.com/blog/realestate-data-breach")*l). 
 
@@ -65,9 +92,11 @@ Unlike other security software which takes a lot of time to set up, requir
 
 The scan of your cloud account infrastructure will start immediately after onboarding and the results, meaning the identified issues and security risks will be displayed, usually ranked by severity or risk score.
 
-
+<div id="four">
 
 ### ***Take advantage of the extra visibility*** 
+
+</div>
 
 A CSPM will provide you with a comprehensive overview of the vulnerabilities in your cloud infrastructure, making it easy to prioritize the order and urgency of solving these issues.
 
@@ -81,9 +110,11 @@ Managing your cloud assets from a single dashboard is an important and useful fe
 
 Your Security team is responsible for monitoring the cloud against threats, possible attacks, or malicious behavior. Your DevOps team is rapidly building and deploying applications in the cloud (and therefore adding new cloud assets), while your Compliance and Auditing team needs to make sure the company and its cloud infrastructure stay compliant with regulations and standards. What a dedicated solution such as a CSPM does for you, is to make sure that the relevant information is available to each of these teams in an easily comprehensible manner.
 
-
+<div id="five">
 
 ### ***Better security for your cloud environments with the CSPM*** ***solution***
+
+</div>
 
 Some cloud providers like AWS, Azure, or Google Cloud Platform have security recommendations in place, however, you need to understand that they apply only to that specific cloud provider and in many cases, they turn out to be false positives, since the context is not taken into consideration. 
 
@@ -103,9 +134,11 @@ CWPP comprises agent-based solutions that offer visibility and security manag
 
 Even if CASB, CWPP, and CSPM may sound similar at first, their scope and coverage are different, as they represent different categories. You will need to decide which tool or tools are the right ones for your organization. 
 
-
+<div id="six">
 
 ### ***Compliance controls across your environment in the cloud*** 
+
+</div>
 
 Companies that closely follow regulatory compliance are using Cloud Security Posture Management tools to avoid breaches that usually ruin the brand reputation and bring monetary fines to the company. 
 
@@ -115,13 +148,9 @@ Considering the compliance aspect, you could be tempted to believe that a CSPM s
 
 Using CSPM software, you can get a grip on your cloud compliance strategy in just a couple of steps: 
 
-
-
 #### **Start by identifying the applicable standards for your company.** 
 
 Usually, you will find a specific section in the platform where the most common standards and regulations are defined and implemented from a cloud security perspective. PCI-DSS, NIST, GDPR, CIS, ISO, HIPPA – are just some examples of what you can expect to find.  
-
-
 
 #### **Next, you will determine the requirements and start documenting your compliance processes.** 
 
@@ -130,8 +159,6 @@ Predefined compliance policies are offered, but you will be able to define cust
 A CSPM solution can be a powerful reporting and evidence collection tool, making it easy to always be prepared for audits and inspections.
 
 When it comes to defining Policies and Procedures for the governance of your organization — for example, Access Management Policy, Change Management Policy, and so on — Cyscale's solution offers these out-of-the-box and you can use them as baselines, customizable to your needs. 
-
-
 
 #### **The last but very important step is to monitor changes and configuration drifts.** 
 
