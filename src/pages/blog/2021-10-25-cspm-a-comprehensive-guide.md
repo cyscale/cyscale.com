@@ -18,25 +18,14 @@ tags: []
 <!--StartFragment-->
 
 
-
-<style>
-.toc a {color: rgba(0,0,0,.8); padding-bottom: 0.5rem;display: inline-block;  font-size: 0.875rem}
-.toc h4 {font-weight: medium; margin-bottom: 0.5rem;}
-.toc {padding-bottom: 1rem;}
-</style>
-
-<div class="toc">
-
 #### Table of content
 
-[CSPM- short history & definition](#one) <br/>
-[When to choose a CSPM and when not to ](#two) <br/>
-[Misconfigurations – cause and effect ](#three) <br/>
-[Take advantage of the extra visibility ](#four) <br/>
-[Better security for your cloud environment  ](#five) <br/>
-[Compliance controls across your environment in the cloud ](#six)
-
-</div>
+<a class="text-black block" href="#one">CSPM- short history & definition</a>
+<a class="text-black block" href="#two">When to choose a CSPM and when not to</a>
+<a class="text-black block" href="#three">Misconfigurations – cause and effect</a>
+<a class="text-black block" href="#four">Take advantage of the extra visibility</a>
+<a class="text-black block" href="#five">Better security for your cloud environment</a>
+<a class="text-black block" href="#six">Compliance controls across your environment in the cloud</a>
 
 <div id="one">
 
