@@ -28,11 +28,7 @@ export default function Iso27001() {
     }, []);
 
     function handler(event) {
-        if (event.data.type === 'hsFormCallback' && event.data.eventName === 'onFormSubmitted') {
-            if (event.data.id !== 'aa6ef10b-be0a-4959-be34-1f00fb1cac4b') {
-                return;
-            }
-
+        if (event.data.type === 'hsFormCallback' && event.data.eventName === 'onFormSubmit') {
             ga('send', {
                 eventCategory: 'Form Request',
                 eventAction: 'Sent',
@@ -104,7 +100,12 @@ export default function Iso27001() {
                                 </div>
                                 <div className='col-span-12 lg:col-span-7'>
                                     <div className='bg-white rounded-xl shadow-lg  pt-4 pb-0 px-12 max-w-lg mx-auto lg:mr-0 lg:ml-auto relative'>
-                                        <img src={arrow} className="absolute left-0 top-0 -mt-1 -ml-8" width={70} alt="arrow" />
+                                        <img
+                                            src={arrow}
+                                            className='absolute left-0 top-0 -mt-1 -ml-8'
+                                            width={70}
+                                            alt='arrow'
+                                        />
                                         <h2 className='text-2xl leading-normal text-primary mb-1'>
                                             Request a live demo
                                         </h2>
