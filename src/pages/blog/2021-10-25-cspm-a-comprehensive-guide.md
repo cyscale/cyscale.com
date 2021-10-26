@@ -17,7 +17,6 @@ tags: []
 ---
 <!--StartFragment-->
 
-
 #### Table of content
 
 <a class="text-black block mb-1" href="#one">CSPM - short history & definition</a>
@@ -69,7 +68,7 @@ Many cloud application creators or maintainers don’t believe this can happen t
 
 Other common misconfigurations that attackers are often exploiting are overprivileged credentials. Restricting users' access to data and resources to only what is strictly required for them to do their jobs is a must, in other words, you need to use the **least privilege principle**.
 
-The CSPM solution will report and advise against using overly permissive account settings for your users, and at the same time remind you to use encryption, thus strengthening your security and making it even harder for an unauthorized or malicious individual to access and expose your data. 
+The [CSPM tool](https://cyscale.com/products/cloud-security-posture-management) will report and advise against using overly permissive account settings for your users, and at the same time remind you to use encryption, thus strengthening your security and making it even harder for an unauthorized or malicious individual to access and expose your data. 
 
 The advanced CSPM solutions we see these days offer continuous monitoring, risk assessments, remediation recommendations based on security best practices, and assistance for compliance with the most common security frameworks and standards. 
 
