@@ -21,23 +21,38 @@ import Consent from '../../components/consent';
 
 export default function Iso27001() {
     useEffect(() => {
+        window.addEventListener('message', handler);
+        return () => {
+            window.removeEventListener('message', handler);
+        };
+    }, []);
+
+    function handler(event) {
+        if (event.data.type === 'hsFormCallback' && event.data.eventName === 'onFormSubmitted') {
+            if (event.data.id !== 'aa6ef10b-be0a-4959-be34-1f00fb1cac4b') {
+                return;
+            }
+
+            ga('send', {
+                eventCategory: 'Form Request',
+                eventAction: 'Sent',
+                eventLabel: 'ISO 27001 Compliance for cloud'
+            });
+        }
+    }
+
+    useEffect(() => {
         setTimeout(() => {
             if (typeof window !== 'undefined' && window['hbspt']) {
                 window.hbspt.forms.create({
                     portalId: '5413427',
                     formId: 'aa6ef10b-be0a-4959-be34-1f00fb1cac4b',
-                    target: '#request-demo',
-                    onFormSubmit: () => {
-                        ga('send', {
-                            eventCategory: 'Form Request',
-                            eventAction: 'Sent',
-                            eventLabel: 'ISO 27001 Compliance for cloud'
-                        });
-                    }
+                    target: '#request-demo'
                 });
             }
         }, 600);
     }, []);
+
     return (
         <>
             <Seo
