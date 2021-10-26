@@ -20,12 +20,12 @@ tags: []
 
 #### Table of content
 
-<a class="text-black block" href="#one">CSPM- short history & definition</a>
-<a class="text-black block" href="#two">When to choose a CSPM and when not to</a>
-<a class="text-black block" href="#three">Misconfigurations – cause and effect</a>
-<a class="text-black block" href="#four">Take advantage of the extra visibility</a>
-<a class="text-black block" href="#five">Better security for your cloud environment</a>
-<a class="text-black block" href="#six">Compliance controls across your environment in the cloud</a>
+<a class="text-black block mb-1" href="#one">CSPM - short history & definition</a>
+<a class="text-black block mb-1" href="#two">When to choose a CSPM and when not to</a>
+<a class="text-black block mb-1" href="#three">Misconfigurations – cause and effect</a>
+<a class="text-black block mb-1" href="#four">Take advantage of the extra visibility</a>
+<a class="text-black block mb-1" href="#five">Better security for your cloud environment</a>
+<a class="text-black block mb-1" href="#six">Compliance controls across your environment in the cloud</a>
 
 <div id="one">
 
