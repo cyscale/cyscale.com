@@ -42,7 +42,6 @@ Below is the list of documents that any organization must create:
 * Information Security Policy (cl. 5.1, 5.2, 5.3, 6.2) 
 
   * defines how security objectives will be set, and it may include the objectives themselves 
-
   * should include roles and responsibilities
 * Risk assessment process definition (cl. 6.1.2) 
 
@@ -102,7 +101,7 @@ The risks identified during risk assessment can and should be addressed with con
 
 If you’re a company that’s just beginning to consider developing an ISMS and getting certified, you might need help creating some or all of these documents. Cyscale offers quite a few of them out-of-the-box, giving you the possibility to use them as templates and add customizations to your needs, or to just use them as they are.
 
-Start your ISO 27001 implementation journey today!
+[Easy & continuous compliance for ISO 27001](https://cyscale.com/use-cases/iso-27001-compliance/), with a set of battle-tested policies to jumpstart your ISMS
 
 *Photo by Scott Graham*
 
