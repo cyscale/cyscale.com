@@ -18,6 +18,7 @@ import { Link as ScrollLink } from 'react-scroll';
 import { Helmet } from 'react-helmet';
 import arrow from '../../assets/images/arrow.svg';
 import Consent from '../../components/consent';
+import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
 
 export default function Iso27001() {
     useEffect(() => {
@@ -31,11 +32,11 @@ export default function Iso27001() {
             }
         }, 600);
         function handler(event) {
-            if (window['ga'] && event.data.type === 'hsFormCallback' && event.data.eventName === 'onFormSubmit') {
-                window.ga('send', {
-                    eventAction: 'Sent',
-                    eventCategory: 'Form Request',
-                    eventLabel: 'ISO 27001 Compliance for cloud'
+            if (event.data.type === 'hsFormCallback' && event.data.eventName === 'onFormSubmit') {
+                trackCustomEvent({
+                    category: 'Form Request',
+                    action: 'Sent',
+                    label: 'ISO 27001 Compliance for cloud'
                 });
             }
         }
