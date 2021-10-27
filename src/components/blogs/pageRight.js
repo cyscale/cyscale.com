@@ -27,8 +27,8 @@ const PageRight = ({ filterCategory, data }) => {
 
                         <Dropdown.Menu>
                             {category?.map((cat, key) => (
-                                <Dropdown.Item onClick={() => filterCategory(cat)}>
-                                    <p key={key} className='text-base leading-normal mb-1 cursor-pointer '>
+                                <Dropdown.Item key={key} onClick={() => filterCategory(cat)}>
+                                    <p   className='text-base leading-normal mb-1 cursor-pointer '>
                                         {cat}
                                     </p>
                                 </Dropdown.Item>

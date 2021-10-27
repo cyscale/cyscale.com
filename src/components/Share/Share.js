@@ -25,6 +25,7 @@ export default function Share({ title, description, permalink }) {
                     title={`Share on ${name}`}
                     onClick={(e) => {
                         e.preventDefault();
+                        e.stopPropagation();
                         window.open(shareUrl, 'newwindow', 'width=720,height=720');
                     }}
                     key={name}
