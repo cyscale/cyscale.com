@@ -1,39 +1,38 @@
 .mega-menu {
-    
     left: 0;
     position: absolute;
     text-align: left;
     width: 100%;
     z-index: -99;
-    -ms-transition: all .5s;
-    transition: all .5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s;
     -ms-transform: translateY(-20px);
     transform: translateY(-20px);
     opacity: 0;
     visibility: hidden;
-  }
+}
 
-  .topNav a,
-  .topNav .parentItem{
+.topNav a,
+.topNav .parentItem {
     font-weight: 500;
     box-sizing: border-box;
     outline: none;
-  }
-  .topNav .parentItem{
+}
+.topNav .parentItem {
     color: #ffffff;
-  }
-  .topNav .loginBtn{
+}
+.topNav .loginBtn {
     background-color: #ffffff;
-  }
-  .topNav .parentItem:hover{
+}
+.topNav .parentItem:hover {
     font-weight: 600;
-  }
-  .topNav .parentItem > span{
+}
+.topNav .parentItem > span {
     position: relative;
     padding-bottom: 4px;
-  }
-  .topNav .parentItem > span::before{
-    content: "";
+}
+.topNav .parentItem > span::before {
+    content: '';
     position: absolute;
     width: 0;
     height: 2px;
@@ -41,57 +40,55 @@
     left: 0;
     background-color: #ffffff;
     visibility: hidden;
-    -ms-transition: all .25s ease-in-out 0s;
-    transition: all .25s ease-in-out 0s;
-  }
-  .topNav .parentItem:hover span::before,
-  .topNav .parentItem.active span::before{
-  visibility: visible;
+    -ms-transition: all 0.25s ease-in-out 0s;
+    transition: all 0.25s ease-in-out 0s;
+}
+.topNav .parentItem:hover span::before,
+.topNav .parentItem.active span::before {
+    visibility: visible;
     width: 100%;
 }
-  /* #hoverable Class Styles */
-  .hoverable {
+/* #hoverable Class Styles */
+.hoverable {
     position: static;
-  }
+}
 
-
-  .hoverable:hover .mega-menu {
+.hoverable:hover .mega-menu {
     z-index: 99;
-   visibility: visible;
+    visibility: visible;
     opacity: 1;
     transform: translateY(0);
-  }
-  .topNav .parentItem.active,
-  .topNav .parentItem:hover{
+}
+.topNav .parentItem.active,
+.topNav .parentItem:hover {
     font-weight: 600;
-  }
-  .menuBgMobile{
-    background-image: linear-gradient(to right, #0F26AA , #FF4A56);
-  }
-  .topNav .headerLogo{
+}
+.menuBgMobile {
+    background-image: linear-gradient(to right, #0f26aa, #ff4a56);
+}
+.topNav .headerLogo {
     width: 176px;
     height: 40.5375px;
-  }
-  .transparent-bg {
+}
+.transparent-bg {
     background: rgba(255, 255, 255, 0.9);
-    z-index: 1;
     box-shadow: 2px 0 20px rgba(0, 0, 0, 0.2);
 }
-  @media (min-width: 1280px) {
-    .topNav .parentItem{
-      color: #000000;
+@media (min-width: 1280px) {
+    .topNav .parentItem {
+        color: #000000;
     }
-    .topNav .loginBtn{
-      background-color: transparent;
+    .topNav .loginBtn {
+        background-color: transparent;
     }
     .topNav .parentItem.active,
-    .topNav .parentItem:hover{
-      color: #0F26AA;
+    .topNav .parentItem:hover {
+        color: #0f26aa;
     }
-    .topNav .parentItem > span::before{
-      background-color: #0F26AA;
+    .topNav .parentItem > span::before {
+        background-color: #0f26aa;
     }
-    .menuBgMobile{
-      background: none;
-    }   
-  }
+    .menuBgMobile {
+        background: none;
+    }
+}

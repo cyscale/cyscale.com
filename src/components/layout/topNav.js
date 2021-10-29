@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { Link } from 'gatsby';
 import featureImage from '../../assets/images/about-us-f-image-yellow-pot.svg';
 import ArrowRight from '../../assets/images/arrow-right.svg';
@@ -13,37 +13,41 @@ import image8 from '../../assets/images/integration-microsoft-azure-cloud-logo.p
 import image9 from '../../assets/images/integration-google-cloud-platform-gcp-logo.png';
 import menuIcon from '../../assets/images/menuIcon.svg';
 import menuClsoe from '../../assets/images/menuClose.svg';
-// import SearchIcon from '../../assets/images/search_icon.svg';
-// import CloseIcon from '../../assets/images/close.png';
 import { useStaticQuery, graphql } from 'gatsby';
+import useScrollTrigger from '../scrollTrigger';
+
+const initMenu = {
+    Icon: menuIcon,
+    menuToggle: 'hidden',
+    toggleLogo: '',
+    toggleBg: ''
+};
 
 const TopNav = ({ pageName }) => {
-    const [, setSticker] = useState(false);
-    const stickyNav = () => {
-        if (window.scrollY < 50) {
-            !!sticky.current && sticky.current.classList.remove('transparent-bg');
-            setSticker(false);
-        } else {
-            !!sticky.current && sticky.current.classList.add('transparent-bg');
-            setSticker(true);
-        }
-    };
-    useEffect(() => {
-        stickyNav();
-        document.body.classList.add('home-page');
-        typeof window !== 'undefined' &&
-            (window.onscroll = () => {
-                stickyNav();
-            });
-    }, []);
+    const root = useRef();
+    const trigger = useScrollTrigger();
+    const [menu, setMenu] = useState(initMenu);
 
-    const sticky = useRef();
-    const [menu, setMenu] = useState({
-        Icon: menuIcon,
-        menuToggle: 'hidden',
-        toggleLogo: '',
-        toggleBg: ''
-    });
+    useEffect(() => {
+        const onScroll = () => {
+            if (window.scrollY === 0) {
+                root.current.classList.remove('transparent-bg');
+            } else {
+                root.current.classList.add('transparent-bg');
+            }
+        };
+
+        if (typeof window !== 'undefined' && root.current) {
+            onScroll();
+            window.addEventListener('scroll', onScroll);
+        }
+
+        return () => {
+            if (typeof window !== 'undefined') {
+                window.removeEventListener('scroll', onScroll);
+            }
+        };
+    }, []);
 
     const toggleMenuIcon = () => {
         if (menu.Icon === menuIcon) {
@@ -86,9 +90,9 @@ const TopNav = ({ pageName }) => {
 
     let jobs = data.allMarkdownRemark.nodes;
     jobs = jobs.filter(({ frontmatter }) => frontmatter.templateKey === 'career-page' && frontmatter.hidden !== true);
-
+    const rootClasses = !trigger ? 'translate-y-0' : '-translate-y-full';
     return (
-        <div className='fixed top-0 left-0 block w-full mx-auto' ref={sticky}>
+        <div ref={root} className={`fixed top-0 left-0 block w-full mx-auto z-10 transition duration-300 transform ${rootClasses}`}>
             <div className={`topNav ${menu.toggleBg} container max-w-7xl m-auto px-8 pt-2.5`}>
                 <nav className='relative '>
                     <div className='mx-auto flex flex-col xl:flex-row justify-between'>
