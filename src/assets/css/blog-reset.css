@@ -1,9 +1,11 @@
-.blog-reset p {
-    font-weight: 400;
+.blog-reset {
     line-height: 1.5;
     font-size: 1.2rem;
-    margin-bottom: 2.5rem;
     font-family: 'Roboto', sans-serif;
+}
+.blog-reset p {
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
 }
 
 .blog-reset h1,
@@ -12,10 +14,9 @@
 .blog-reset h4,
 .blog-reset h5,
 .blog-reset h6 {
+    margin: 0;
     font-weight: 600;
-    margin: 1.5rem 0;
-    line-height: 1.5;
-    font-family: 'Roboto', sans-serif;
+    margin-top: 2rem;
 }
 
 .blog-reset h1 {
@@ -48,5 +49,11 @@
 
 .blog-reset ol,
 .blog-reset ul {
+    margin-top: 1.5rem;
     list-style: initial;
+    padding-left: 2.5rem;
+}
+
+.blog-reset li {
+    margin-top: 1rem;
 }
