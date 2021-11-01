@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState, useCallback } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'gatsby';
 import featureImage from '../../assets/images/about-us-f-image-yellow-pot.svg';
 import ArrowRight from '../../assets/images/arrow-right.svg';

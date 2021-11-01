@@ -6,17 +6,6 @@ const ParaGraphs = ({ data }) => {
     return (
         <>
             <div>
-                <div className='relative lg:absolute top-50 lg:left-16 mb-8'>
-                    <span className='text-xs text-grey2  block'>
-                        Published <strong>{data?.frontmatter?.date?.split('T')?.[0]}</strong>
-                    </span>
-                    <span className='text-xs text-grey2 block'>
-                        By <strong>{data?.frontmatter?.authors}</strong>
-                    </span>
-                    <span className='text-xs text-grey2 block'>
-                        Category <strong>{data?.frontmatter?.category}</strong>
-                    </span>
-                </div>
                 <div className='max-w-2xl m-auto relative blog-reset'>
                     {preview && (
                         <img
@@ -26,6 +15,17 @@ const ParaGraphs = ({ data }) => {
                         />
                     )}
                     <ReactMarkdown rehypePlugins={[rehypeRaw]}>{data && data?.rawMarkdownBody}</ReactMarkdown>
+                    <div className='absolute flex lg:block -top-4 left-0 lg:top-0 lg:-left-40'>
+                        <span className='text-xs text-grey2  block mr-2'>
+                            Published <strong>{data?.frontmatter?.date?.split('T')?.[0]}</strong>
+                        </span>
+                        <span className='text-xs text-grey2 block mr-2'>
+                            By <strong>{data?.frontmatter?.authors}</strong>
+                        </span>
+                        <span className='text-xs text-grey2 block'>
+                            Category <strong>{data?.frontmatter?.category}</strong>
+                        </span>
+                    </div>
                 </div>
             </div>
         </>
