@@ -2,11 +2,14 @@
 templateKey: blog-post
 title: How the largest Romanian real estate portal could have prevented a
   massive cloud data breach
-permalink: realestate-data-breach
-date: 2021-02-09T06:08:46.468Z
-category: News
-description: The adoption of public cloud providers can bring many advantages to a business, but at the same time, cybersecurity threats can appear because of this usage.
 authors: Ovidiu Cical
+permalink: realestate-data-breach
+category: News
+date: 2021-02-09T06:08:46.468Z
+description: The adoption of public cloud providers can bring many advantages to
+  a business, but at the same time, cybersecurity threats can appear because of
+  this usage.
+featuredpost: true
 featuredimage: /img/data-breach.jpeg
 tags:
   - data breach prevention
@@ -36,9 +39,9 @@ By default, new buckets do not allow public access. However, users can modify bu
 
 Even if the unintentional breach was fixed after Website Planet reported it, the precise number of people affected remains unknown and the culpability for this data leak lies entirely with the real estate portal.
 
-This could have easily been prevented with the implementation of a Cloud Security Posture Management (CSPM) tool. These solutions are developed to detect any misconfigurations and to prevent this type of event.
+This could have easily been prevented with the implementation of a [Cloud Security Posture Management (CSPM) tool](https://cyscale.com/products/cloud-security-posture-management). These solutions are developed to detect any misconfigurations and to prevent this type of event.
 
-As a CSPM, Cyscale Power Platform is the perfect tool that helps companies reduce risk. It enables complete visibility and control over cloud accounts in under 5 minutes since deployment.
+As a [CSPM](https://cyscale.com/blog/cloud-security-posture-management-cspm-guide), Cyscale Power Platform is the perfect tool that helps companies reduce risk. It enables complete visibility and control over cloud accounts in under 5 minutes since deployment.
 
 <br/>
 
