@@ -6,13 +6,15 @@ exports.createPages = ({ graphql, actions }) => {
     createRedirect({
         fromPath: '/blog/ISO%2027001%20certification-standard-policies-procedures',
         toPath: '/blog/ISO-27001-certification-standard-policies-procedures',
-        isPermanent: true
+        isPermanent: true,
+        redirectInBrowser: true
     });
 
     createRedirect({
         fromPath: '/blog/ISO%2027001%20certification-standard-policies-procedures/',
         toPath: '/blog/ISO-27001-certification-standard-policies-procedures',
-        isPermanent: true
+        isPermanent: true,
+        redirectInBrowser: true
     });
 
     const blogTemplate = path.resolve(`src/template/blogTemplate.js`);
