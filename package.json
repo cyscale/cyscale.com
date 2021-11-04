@@ -12,6 +12,7 @@
     "gatsby-plugin-google-analytics": "^3.7.1",
     "gatsby-plugin-hotjar": "^1.1.1",
     "gatsby-plugin-image": "^1.9.0",
+    "gatsby-plugin-meta-redirect": "^1.1.1",
     "gatsby-plugin-netlify-cms": "^5.7.1",
     "gatsby-plugin-purgecss": "^6.0.2",
     "gatsby-plugin-react-helmet": "^4.7.1",

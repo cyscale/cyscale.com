@@ -1,7 +1,20 @@
 const path = require(`path`);
 
 exports.createPages = ({ graphql, actions }) => {
-    const { createPage } = actions;
+    const { createPage, createRedirect } = actions;
+
+    createRedirect({
+        fromPath: '/blog/ISO%2027001%20certification-standard-policies-procedures',
+        toPath: '/blog/ISO-27001-certification-standard-policies-procedures',
+        isPermanent: true
+    });
+
+    createRedirect({
+        fromPath: '/blog/ISO%2027001%20certification-standard-policies-procedures/',
+        toPath: '/blog/ISO-27001-certification-standard-policies-procedures',
+        isPermanent: true
+    });
+
     const blogTemplate = path.resolve(`src/template/blogTemplate.js`);
     const careerTemplate = path.resolve(`src/template/careerTemplate.js`);
 
