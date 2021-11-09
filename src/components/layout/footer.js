@@ -76,20 +76,20 @@ const Footer = () => {
                             <h3 className='text-14px font-bold leading-24 text-white pb-40px '>Platform</h3>
                             <ul>
                                 <li className='text-12px leading-24 pb-7px'>
-                                    <a
-                                        href='/products/cloud-security-posture-management'
+                                    <Link
+                                        to='/products/cloud-security-posture-management/'
                                         className='font-light text-white no-underline hover:underline'
                                     >
                                         Cloud Security Posture Management
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li className='text-12px leading-24 pb-7px'>
-                                    <a
-                                        href='/products/security-knowledge-graph'
+                                    <Link
+                                        to='/products/security-knowledge-graph/'
                                         className='font-light text-white no-underline hover:underline'
                                     >
                                         Security Knowledge Graph<sup>TM</sup>
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
@@ -97,28 +97,28 @@ const Footer = () => {
                             <h3 className='text-14px font-bold leading-24  text-white pb-40px '>Use cases</h3>
                             <ul>
                                 <li className='text-12px leading-24 pb-7px'>
-                                    <a
-                                        href='/use-cases/cloud-data-security'
+                                    <Link
+                                        to='/use-cases/cloud-data-security/'
                                         className='font-light text-white no-underline hover:underline'
                                     >
                                         Data Security
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li className='text-12px leading-24 pb-7px'>
-                                    <a
-                                        href='/use-cases/remote-work-security'
+                                    <Link
+                                        to='/use-cases/remote-work-security/'
                                         className='font-light text-white no-underline hover:underline'
                                     >
                                         Remote Work
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li className='text-12px leading-24 pb-7px'>
-                                    <a
-                                        href='/use-cases/cloud-compliance-and-auditing'
+                                    <Link
+                                        to='/use-cases/cloud-compliance-and-auditing/'
                                         className='font-light text-white no-underline hover:underline'
                                     >
                                         Compliance and Auditing
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
@@ -127,9 +127,9 @@ const Footer = () => {
                             <h3 className='text-14px font-bold leading-24  text-white pb-40px '>Resources</h3>
                             <ul>
                                 <li className='text-12px leading-24 pb-7px'>
-                                    <a href='/blog' className='font-light text-white no-underline hover:underline'>
+                                    <Link to='/blog' className='font-light text-white no-underline hover:underline'>
                                         Blog
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li className='text-12px leading-24 pb-7px'>
                                     <a
@@ -161,9 +161,9 @@ const Footer = () => {
                                     </a>
                                 </li>
                                 <li className='text-12px leading-24 pb-7px'>
-                                    <a href='/pricing' className='font-light text-white no-underline hover:underline'>
+                                    <Link to='/pricing/' className='font-light text-white no-underline hover:underline'>
                                         Pricing
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
@@ -172,22 +172,25 @@ const Footer = () => {
                             <h3 className='text-14px font-bold leading-24  text-white pb-40px '>Company</h3>
                             <ul>
                                 <li className='text-12px leading-24 pb-7px'>
-                                    <a href='/about-us' className='font-light text-white no-underline hover:underline'>
+                                    <Link
+                                        to='/about-us/'
+                                        className='font-light text-white no-underline hover:underline'
+                                    >
                                         About us
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li className='text-12px leading-24 pb-7px'>
-                                    <a href='/careers' className='font-light text-white no-underline hover:underline'>
+                                    <Link to='/careers/' className='font-light text-white no-underline hover:underline'>
                                         Careers
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li className='text-12px leading-24 pb-7px'>
-                                    <a
-                                        href='/contact-us'
+                                    <Link
+                                        to='/contact-us/'
                                         className='font-light text-white no-underline hover:underline'
                                     >
                                         Contact Us
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
@@ -199,28 +202,28 @@ const Footer = () => {
                                 Cyscale &copy; 2018 - 2021. All rights reserved.
                             </li>
                             <li className='inline-block mr-10px lg:mr-30px  text-12px leading-24  '>
-                                <a
-                                    href='/policies/terms-of-use'
+                                <Link
+                                    to='/policies/terms-of-use/'
                                     className='font-light text-white no-underline hover:underline'
                                 >
                                     Terms of use
-                                </a>
+                                </Link>
                             </li>
                             <li className='inline-block mr-10px lg:mr-30px text-12px leading-24 '>
-                                <a
-                                    href='/policies/security-policy'
+                                <Link
+                                    to='/policies/security-policy/'
                                     className='font-light text-white no-underline hover:underline'
                                 >
                                     Security Policy
-                                </a>
+                                </Link>
                             </li>
                             <li className='inline-block mr-10px lg:mr-30px text-12px  leading-24 '>
-                                <a
-                                    href='/policies/privacy-policy'
+                                <Link
+                                    to='/policies/privacy-policy/'
                                     className='font-light text-white no-underline hover:underline'
                                 >
                                     Privacy Policy{' '}
-                                </a>
+                                </Link>
                             </li>
                             <li className='inline-block mr-10px text-12px leading-24 '>
                                 <a

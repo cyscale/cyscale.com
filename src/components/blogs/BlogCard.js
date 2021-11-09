@@ -1,4 +1,4 @@
-import React, {useRef, useCallback} from 'react';
+import React, { useRef, useCallback } from 'react';
 import { Link } from 'gatsby';
 import Share from '../Share/Share';
 
@@ -29,14 +29,14 @@ const BlogCard = ({ data, feature }) => {
 
     return (
         <div>
-            <div className='shadow-md cursor-pointer' role="link" onClick={handleClick}>
+            <div className='shadow-md cursor-pointer' role='link' onClick={handleClick}>
                 <div className='bg-grey3 bigger-box-image '>
                     <img src={data.featuredimage.publicURL} alt={data.title} />
                 </div>
                 <div className='bg-white p-4'>
                     <strong className='text-xs block'>{data.category}</strong>
                     <div>
-                        <Link ref={link} to={'/blog/' + data.permalink}>
+                        <Link ref={link} to={`/blog/${data.permalink}/`}>
                             <h3 title={data.title} className='text-blue text-24px leading-24px mt-11px'>
                                 {title}
                             </h3>

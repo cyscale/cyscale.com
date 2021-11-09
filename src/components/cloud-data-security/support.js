@@ -50,7 +50,7 @@ const Support = ({ title, data, sectionName }) => {
             </div>
             <div className="lg:col-span-3">
               <Link
-                to="/contact-us"
+                to="/contact-us/"
                 className="uppercase text-blue underline text-16px hover:no-underline hover:text-red font-medium"
               >
                 Contact us and let’s talk about adding support for it
@@ -86,7 +86,7 @@ const Support = ({ title, data, sectionName }) => {
                   <div className="col-span-3 md:pl-128px lg:pl-100px">
                     <p className="new-line text-16px text-black leading-6">
                     <Link
-                    to="/use-cases/cloud-compliance-and-auditing"
+                    to="/use-cases/cloud-compliance-and-auditing/"
                     className="text-blue underline text-16px hover:no-underline hover:text-red"
                   >
                     Manage your compliance

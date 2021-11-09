@@ -123,7 +123,7 @@ const TopNav = ({ pageName }) => {
                                         <div>
                                             <div className='flex flex-col'>
                                                 <Link
-                                                    to='/products/cloud-security-posture-management'
+                                                    to='/products/cloud-security-posture-management/'
                                                     activeStyle={{ color: '#0F26AA' }}
                                                     activeClassName='active'
                                                     className='text-base text-black hover:text-blue hover:no-underline leading-6'
@@ -131,7 +131,7 @@ const TopNav = ({ pageName }) => {
                                                     Cloud Security Posture Management
                                                 </Link>
                                                 <Link
-                                                    to='/products/security-knowledge-graph'
+                                                    to='/products/security-knowledge-graph/'
                                                     activeStyle={{ color: '#0F26AA' }}
                                                     activeClassName='active'
                                                     className='text-base text-black hover:text-blue hover:no-underline leading-6 mt-7'
@@ -204,7 +204,7 @@ const TopNav = ({ pageName }) => {
                                         <div>
                                             <div className='flex flex-col'>
                                                 <Link
-                                                    to='/use-cases/cloud-data-security'
+                                                    to='/use-cases/cloud-data-security/'
                                                     activeStyle={{ color: '#0F26AA' }}
                                                     activeClassName='active'
                                                     className='text-base text-black hover:text-blue hover:no-underline leading-6'
@@ -212,7 +212,7 @@ const TopNav = ({ pageName }) => {
                                                     Data Security
                                                 </Link>
                                                 <Link
-                                                    to='/use-cases/remote-work-security'
+                                                    to='/use-cases/remote-work-security/'
                                                     activeStyle={{ color: '#0F26AA' }}
                                                     activeClassName='active'
                                                     className='text-base text-black hover:text-blue hover:no-underline leading-6 mt-7'
@@ -220,7 +220,7 @@ const TopNav = ({ pageName }) => {
                                                     Remote Work
                                                 </Link>
                                                 <Link
-                                                    to='/use-cases/cloud-compliance-and-auditing'
+                                                    to='/use-cases/cloud-compliance-and-auditing/'
                                                     activeStyle={{ color: '#0F26AA' }}
                                                     activeClassName='active'
                                                     className='text-base text-black hover:text-blue hover:no-underline leading-6 mt-7'
@@ -228,7 +228,7 @@ const TopNav = ({ pageName }) => {
                                                     Compliance and Auditing
                                                 </Link>
                                                 <Link
-                                                    to='/use-cases/iso-27001-compliance'
+                                                    to='/use-cases/iso-27001-compliance/'
                                                     activeStyle={{ color: '#0F26AA' }}
                                                     activeClassName='active'
                                                     className='text-base text-black hover:text-blue hover:no-underline leading-6 mt-7'
@@ -264,7 +264,7 @@ const TopNav = ({ pageName }) => {
                             </li>
                             <li className='hover:bg-teal-700 hover:text-white'>
                                 <Link
-                                    to='/pricing'
+                                    to='/pricing/'
                                     activeClassName='active'
                                     className='relative parentItem block my-6 mx-4 lg:m-8 text-base hover:no-underline leading-6'
                                 >
@@ -285,7 +285,7 @@ const TopNav = ({ pageName }) => {
                                         <div>
                                             <div className='flex flex-col'>
                                                 <Link
-                                                    to='/blog'
+                                                    to='/blog/'
                                                     activeStyle={{ color: '#0F26AA' }}
                                                     activeClassName='active'
                                                     className='text-base text-black hover:text-blue hover:no-underline leading-6'
@@ -364,7 +364,7 @@ const TopNav = ({ pageName }) => {
                                         <div>
                                             <div className='flex flex-col'>
                                                 <Link
-                                                    to='/about-us'
+                                                    to='/about-us/'
                                                     activeStyle={{ color: '#0F26AA' }}
                                                     activeClassName='active'
                                                     className={`text-base text-black hover:text-blue hover:no-underline leading-6`}
@@ -372,7 +372,7 @@ const TopNav = ({ pageName }) => {
                                                     About us
                                                 </Link>
                                                 <Link
-                                                    to='/careers'
+                                                    to='/careers/'
                                                     activeStyle={{ color: '#0F26AA' }}
                                                     activeClassName='active'
                                                     className='text-base text-black hover:text-blue hover:no-underline leading-6 mt-7'
@@ -380,7 +380,7 @@ const TopNav = ({ pageName }) => {
                                                     Careers
                                                 </Link>
                                                 <Link
-                                                    to='/contact-us'
+                                                    to='/contact-us/'
                                                     activeStyle={{ color: '#0F26AA' }}
                                                     activeClassName='active'
                                                     className='text-base text-black hover:text-blue hover:no-underline leading-6 mt-7'
@@ -399,7 +399,7 @@ const TopNav = ({ pageName }) => {
                                                     return (
                                                         <Link
                                                             key={index}
-                                                            to={`/careers/${permalink}`}
+                                                            to={`/careers/${permalink}/`}
                                                             activeStyle={{ color: '#0F26AA' }}
                                                             activeClassName='active'
                                                             className='text-base text-black hover:text-blue hover:no-underline leading-6 mb-1'
@@ -424,7 +424,7 @@ const TopNav = ({ pageName }) => {
                                             />
                                             <p className='text-center mt-5'>
                                                 <Link
-                                                    to='/careers'
+                                                    to='/careers/'
                                                     activeStyle={{ color: '#0F26AA' }}
                                                     activeClassName='active'
                                                     className='text-blue font-semibold text-base no-underline hover:underline flex flex-row justify-center'

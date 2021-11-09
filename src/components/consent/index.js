@@ -44,7 +44,7 @@ export default function Consent() {
                     information <strong>in order to improve and customize your browsing experience</strong> and for{' '}
                     <strong>analytics and metrics about our visitors</strong> both on this website and other media. To
                     find out more about the cookies we use, see our{' '}
-                    <Link to='/policies/privacy-policy'>
+                    <Link to='/policies/privacy-policy/'>
                         <strong>Privacy Policy.</strong>
                     </Link>
                 </p>

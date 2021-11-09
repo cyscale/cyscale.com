@@ -19,7 +19,7 @@ const Jobs = ({ data }) => {
                         return (
                             <div className='card-container rounded-md shadow-md hover:shadow-lg transition-all duration-300' key={index}>
                                 <Link
-                                    to={`/careers/${permalink}`}
+                                    to={`/careers/${permalink}/`}
                                     className='block w-full card pt-25px pb-25px pl-25px pr-25px bg-no-repeat no-underline'
                                     style={{ backgroundImage: `url(${icons[icon]})  ` }}
                                 >

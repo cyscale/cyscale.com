@@ -267,7 +267,7 @@ const Team = () => {
                     <h2 className='text-blue text-34px leading-8 text-center new-line'>Join the team</h2>
                     <div className='mt-12 w-full flex justify-center text-center'>
                         <Link
-                            to='/careers'
+                            to='/careers/'
                             className='gradientBgBtn md:min-w-232px sm:min-w-232px lg:min-w-232px xl:min-w-232px 2xl:min-w-232px text-16px font-medium rounded text-white uppercase text-center pt-21px pb-21px pl-49px pr-49px no-underline'
                         >
                             See our open positions
