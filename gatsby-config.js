@@ -99,6 +99,7 @@ module.exports = {
         {
             resolve: 'gatsby-plugin-netlify-cms'
         },
-        `gatsby-plugin-meta-redirect`
+        `gatsby-plugin-meta-redirect`,
+        `gatsby-plugin-force-trailing-slashes`
     ]
 };
