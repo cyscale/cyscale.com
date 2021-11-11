@@ -14,7 +14,7 @@ const Index = () => (
         bannerBtn2Text='Explore use cases'
         bannerBtn2Link='#powerCloud'
         pageName='HomePage'
-        title='Total cloud visibility & control | Cyscale Power Cloud Platform'
+        title='Cyscale - Complete Cloud Visibility & Control Platform'
         description='Map all your cloud assets across providers in under 5 mins. Optimize costs, ensure cloud security, and prove compliance with the scalable Cyscale CSPM.'
     >
         <Home />
