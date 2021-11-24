@@ -3,6 +3,7 @@ templateKey: career-page
 experience: Mid/Senior
 title: Golang Developer
 location: Romania
+disabled: false
 permalink: backend-developer
 icon: stack
 date: 2020-27-11T11:00:00.000Z

@@ -97,7 +97,7 @@ const Index = () => {
         query JobsQuery {
             allMarkdownRemark(
                 sort: { fields: frontmatter___date, order: DESC }
-                filter: { frontmatter: { templateKey: { eq: "career-page" } } }
+                filter: { frontmatter: { templateKey: { eq: "career-page" }, disabled: { eq: false } } }
             ) {
                 nodes {
                     frontmatter {
@@ -192,7 +192,7 @@ const Index = () => {
                                 {benefits.map(({ title, description, icon }) => (
                                     <div className='col-span-12 lg:col-span-6 my-6'>
                                         <div className='flex items-center'>
-                                            <img src={icon} width={80} height={80} />
+                                            <img src={icon} alt='' width={80} height={80} />
                                             <div className='ml-8'>
                                                 <h3 className='text-xl lg:text-2xl'>{title}</h3>
                                                 <p className='text-normal lg:text-lg'>{description}</p>
@@ -223,11 +223,7 @@ const Index = () => {
                                     </div>
                                     <div className='flex flex-col items-center absolute -right-16 -bottom-52'>
                                         <div className='grad mb-2 w-20 h-20 rounded-full overflow-hidden bg-gradient-primary'>
-                                            <img
-                                                src={photo}
-                                                alt={`A photo of ${name}`}
-                                                className='w-20 h-20 rounded-full'
-                                            />
+                                            <img src={photo} alt={name} className='w-20 h-20 rounded-full' />
                                         </div>
                                         <div className='bg-gradient-primary w-64 h-64 rounded-full'></div>
                                     </div>

@@ -3,6 +3,7 @@ templateKey: career-page
 experience: Mid/Senior
 title: ReactJS Developer
 location: Romania
+disabled: false
 permalink: frontend-developer
 icon: pen
 date: 2020-27-11T11:00:00.000Z

@@ -18,6 +18,7 @@ export default function Arrow({ direction = 'left', ...rest }) {
             `}
             >
                 <img
+                    alt=""
                     width={16}
                     height={16}
                     src={arrowLeft}
