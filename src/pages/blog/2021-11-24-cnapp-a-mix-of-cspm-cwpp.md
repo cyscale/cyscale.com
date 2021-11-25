@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: "CNAPP: A mix of CSPM & CWPP"
 authors: Virginia Mitea
-permalink: cloud-native-application-protection-platform-cnapp-cspm-cwpp
+permalink: cnapp-a-mix-of-cspm-cwpp
 category: Research
 date: 2021-11-24T15:35:49.333Z
 description: >-
