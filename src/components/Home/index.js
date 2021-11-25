@@ -3,7 +3,6 @@ import Services from './services';
 import GetStarted from './getstarted';
 import Testamonials from './testamonials';
 import Offer from './offer';
-import Proposal from './proposal';
 import Cloud from './cloud';
 import Partners from './partners';
 import Articles from './articles';
@@ -12,7 +11,6 @@ import messageIcon from '../../assets/images/chat_icon.svg';
 import searchIcon from '../../assets/images/search.svg';
 import cloudIcon from '../../assets/images/cloud.svg';
 import poster from '../../assets/images/offer-dashboard.svg';
-import avatar from '../../assets/images/avatar.png';
 import iconOne from '../../assets/images/getStartedICon.svg';
 import iconTwo from '../../assets/images/elemente-vectoriale-07.svg';
 import iconThree from '../../assets/images/elemente-vectoriale-08.svg';
@@ -183,11 +181,6 @@ const Home = () => {
                 description={`Only the best tools fade into the background and help you focus on getting your best work done. \n\nThat’s why we’ve built all of this and more into the platform.`}
                 poster={poster}
                 data={dataOffer}
-            />
-            <Proposal
-                headingText='Cyscale makes it easy to holistically view your security posture and maintain awareness of it.'
-                description={`“With just a few clicks, I can register my AWS environment and get a comprehensive inventory of all the resources we have, then evaluate all of those resources. \n\nThen, as an added bonus, the ongoing evaluation of our environment helps me understand if we’ve had configuration drift.”`}
-                poster={avatar}
             />
             <div className='gradientBG'>
                 <GetStarted
