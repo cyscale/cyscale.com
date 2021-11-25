@@ -1,21 +1,36 @@
 const path = require(`path`);
 
+const redirects = [
+    {
+        fromPath: '/blog/ISO%2027001%20certification-standard-policies-procedures',
+        toPath: '/blog/ISO-27001-certification-standard-policies-procedures/'
+    },
+    {
+        fromPath: '/blog/cloud-native-application-protection-platform-cnapp-cspm-cwpp',
+        toPath: '/blog/cnapp-a-mix-of-cspm-cwpp/'
+    }
+];
+
 exports.createPages = ({ graphql, actions }) => {
     const { createPage, createRedirect } = actions;
 
-    createRedirect({
-        fromPath: '/blog/ISO%2027001%20certification-standard-policies-procedures',
-        toPath: '/blog/ISO-27001-certification-standard-policies-procedures',
-        isPermanent: true,
-        redirectInBrowser: true
-    });
+    for(let i=0; i< redirects.length; i++){
+        createRedirect({
+            fromPath: redirects[i].fromPath,
+            toPath: redirects[i].toPath,
+            isPermanent: true,
+            redirectInBrowser: true
+        });
+        createRedirect({
+            fromPath: redirects[i].fromPath + '/',
+            toPath: redirects[i].toPath,
+            isPermanent: true,
+            redirectInBrowser: true
+        });
+    }
 
-    createRedirect({
-        fromPath: '/blog/ISO%2027001%20certification-standard-policies-procedures/',
-        toPath: '/blog/ISO-27001-certification-standard-policies-procedures',
-        isPermanent: true,
-        redirectInBrowser: true
-    });
+   
+
 
     const blogTemplate = path.resolve(`src/template/blogTemplate.js`);
     const careerTemplate = path.resolve(`src/template/careerTemplate.js`);
