@@ -28,7 +28,7 @@ As a result, Gartner predicted that by the end of 2021 “public cloud deploymen
 
 Once again, security specialists insist that cloud security is a complex subject that should be considered a high priority.
 
-There already are a lot of tools to take into consideration when you’re concerned with cloud security. Up until now, cloud professionals were talking about three main security solutions: Cloud Security Posture Management (CSPM), Cloud Workload Protection Platform (CWPP), and Cloud Access Security Broker (CASB).
+There already are a lot of tools to take into consideration when you’re concerned with cloud security. Up until now, cloud professionals were talking about three main security solutions: [Cloud Security Posture Management (CSPM)](https://cyscale.com/blog/cloud-security-posture-management-cspm-guide/), Cloud Workload Protection Platform (CWPP), and Cloud Access Security Broker (CASB).
 
 But recently, Gartner has defined a new category that is focused on securing cloud services and cloud-native applications, the so-called CNAPP- Cloud-Native Application Protection Platform.
 
@@ -44,13 +44,13 @@ If you dig deeper, CNAPP is basically a mix of 2 separate solutions:  Cloud Sec
 
 What is CSPM?
 
-Cloud Security Posture Management solutions (CSPM) have as main purpose the detection of misconfigurations. They will continuously monitor the cloud environment in order to provide visibility across multi-cloud and alert the company about compliance drift or risky behavior. CSPMs focus on cloud infrastructure.
+[Cloud Security Posture Management solutions (CSPM)](https://cyscale.com/products/cloud-security-posture-management/) have as main purpose the detection of misconfigurations. They will continuously monitor the cloud environment in order to provide visibility across multi-cloud and alert the company about compliance drift or risky behavior. CSPMs focus on cloud infrastructure.
 
 What is CWPP?
 
 Cloud Workload Protection Platforms (CWPPs) are designed to protect the workloads deployed in the cloud. They will perform vulnerability assessments and handle the security of the applications. Based on assessment results, you can implement security controls or you can remediate the threats. CWPPs focus on the applications running in the cloud.
 
-## **Which is better? CNAPP vs CSPM+CWPP** 
+## **Which is better? CNAPP vs CSPM+CWPP**
 
 The increasing features overlap between these two solutions will make this "merge" inevitable.
 
@@ -76,7 +76,7 @@ CWPP vendors have started to add new features capabilities, including IaC scanni
 Some CSPMs have cutting edge-technology in place and can already give you some of the features promised by the CNAPP.
 
 This is the case of Cyscale Cloud Platform, the solution that offers advanced visibility, but more importantly, gives you context so you can better prioritize.\
-The Security Knowledge Graph™ built within the platform may reveal, for example, that one of the resources usually reported to have a high-security risk, is not as vulnerable as it seems. (Let’s think about a VM that has unencrypted disks attached, but is not being used in a production environment, or is not externally accessible from the internet).\
+The [Security Knowledge Graph](https://cyscale.com/products/security-knowledge-graph/)™ built within the platform may reveal, for example, that one of the resources usually reported to have a high-security risk, is not as vulnerable as it seems. (Let’s think about a VM that has unencrypted disks attached, but is not being used in a production environment, or is not externally accessible from the internet).\
 This type of approach can make you realize that you need a more advanced risk analysis and a look beyond the classic list of logs, where the vulnerable components are reported without taking into consideration the bigger picture.
 
 Regardless of your choice of tool, just remember to give security posture the importance it deserves.
