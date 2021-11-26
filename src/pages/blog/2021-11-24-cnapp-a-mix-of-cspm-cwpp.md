@@ -16,7 +16,7 @@ description: >-
 
   The legitimate question would be: Why do I need another security tool?
 featuredpost: true
-featuredimage: /img/markus-spiske-upxs5vx5big-unsplash.jpg
+featuredimage: /img/cspm-cwpp.png
 ---
 <!--StartFragment-->
 
