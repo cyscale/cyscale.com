@@ -1,7 +1,6 @@
 import React from 'react';
 import Services from './services';
 import GetStarted from './getstarted';
-import Testamonials from './testamonials';
 import Offer from './offer';
 import Cloud from './cloud';
 import Partners from './partners';
@@ -175,7 +174,6 @@ const Home = () => {
                     icon={iconOne}
                 />
             </div>
-            <Testamonials />
             <Offer
                 headingText='Cyscale Power Cloud Platform – supercharged cloud security'
                 description={`Only the best tools fade into the background and help you focus on getting your best work done. \n\nThat’s why we’ve built all of this and more into the platform.`}

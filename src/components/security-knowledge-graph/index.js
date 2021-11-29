@@ -5,7 +5,6 @@ import GetStarted from "../Home/getstarted";
 import Automation from "./automation";
 import IdentifyIssues from "./identifyIssues";
 import CSPMgetStarted from "../cloud-security-posture-management/CSPMgetStarted";
-import CSPMtestamonials from '../cloud-security-posture-management/CSPMtestamonials';
 import FAQs from './faqs'
 import Video from "./video";
 import getStartedICon from "../../assets/images/getStartedIconCPSM.svg";
@@ -126,14 +125,7 @@ const Index = () => {
       description: `Would it be cheaper to build this in-house?” It’s a common dilemma but does your organization have what it takes to become a security company? \n\nImplementing the knowledge graph model is a resource-intensive process that requires industry-specific know-how, specialized technical components, and broad security expertise. It also takes time, the most invaluable resource of all. \n\nWith Cyscale, you pay for what you use and nothing more. As your business grows, you remain fully in control of how you scale your security program, as our Power Cloud Platform adapts to your changing needs.`,
     },
   ];
-  const dataSecuritytestamonials = [
-    {
-      title: "Cyscale makes it easy to holistically view your security posture and maintain awareness of it.",
-      description: `With just a few clicks, I can register my AWS environment and get a comprehensive inventory of all the resources we have, then evaluate all of those resources.\n\nThen, as an added bonus, the ongoing evaluation of our environment helps me understand if we’ve had configuration drift.`,
-      author: "Ovidiu Pop",
-      designation: "SYMBOLD STUDIO"
-    }
-  ]
+  
   return (
     <>
       <div>
@@ -199,12 +191,7 @@ const Index = () => {
           sectionName = "dataSecFoot"
         />
       </div>
-      <div className="CSPMtestamonials bg-lightGrey pt-162px pb-162px">
-         <CSPMtestamonials
-          data = {dataSecuritytestamonials}
-          sectionName = "dataSecurityTest"
-         />
-      </div>
+      
       <FAQs />
     </>
   );

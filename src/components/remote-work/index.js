@@ -3,13 +3,11 @@ import Sectionheader from "../layout/sectionheader";
 import Services from "./remoteWorkServices";
 import SecureRemoteAccess from "./secureRemoteAccess";
 import GetStarted from "../Home/getstarted";
-import CSPMtestamonials from "../cloud-security-posture-management/CSPMtestamonials";
 import Shield from "../../assets/images/shield.svg";
 import workFromHome from "../../assets/images/work-from-home.svg";
 import CodeAnalysis from "../../assets/images/graph-viewer-code-analysis.svg";
 import EmployeeAccessFootprint from "../../assets/images/employee-access-footprint.svg";
 import getStartedICon from "../../assets/images/getStartedIconCPSM.svg";
-import image3 from "../../assets/images/Group-379.svg";
 import SuperChargeCloudSecurityImage from "../../assets/images/supercharge-cloud-security.svg";
 import CloudSecuirtyConfigurationImage from "../../assets/images/cloud-secuity-configuration.svg";
 
@@ -38,15 +36,6 @@ export default function RemoteWorkContent() {
         ],
         ["+	loads more!"],
       ],
-    },
-  ];
-  const dataCSPMtestamonials = [
-    {
-      image: image3,
-      title: "“Cyscale Power Cloud Platform is a life-saver for companies requiring reliable protection and access”",
-      description: `“We really enjoy the quick deployment and scalability and fully functional CSPM available in the cloud. We were able to scale as required based on load and performance.\n\nWith Covid-19, our users, including our Customer Center agents, are completely remote and we use Cyscale to make sure they have secure and appropriate access to all the resources they need.”`,
-      author: "Ovidiu Pop",
-      designation: "SYMBOLD STUDIO",
     },
   ];
   return (
@@ -102,9 +91,6 @@ export default function RemoteWorkContent() {
           icon={getStartedICon}
           sectionName="RemoteWork"
         />
-      </div>
-      <div className="CSPMtestamonials bg-lightGrey pt-116px pb-158px">
-        <CSPMtestamonials data={dataCSPMtestamonials} />
       </div>
       <div className="max-w-1366px m-auto pt-12 lg:pt-24 pb-12 lg:pb-24 pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px">
         <Sectionheader

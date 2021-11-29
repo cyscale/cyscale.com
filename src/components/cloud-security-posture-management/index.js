@@ -2,7 +2,6 @@ import React from 'react';
 import Onboarding from './onboarding';
 import Fproducts from './featuredProducts';
 import GetStarted from '../Home/getstarted';
-import CSPMtestamonials from './CSPMtestamonials';
 import Services from '../Home/services';
 import CSPMgetStarted from './CSPMgetStarted';
 import icon1 from '../../assets/images/onboardingIcon.svg';
@@ -10,7 +9,6 @@ import icon2 from '../../assets/images/gear.svg';
 import icon3 from '../../assets/images/management.svg';
 import icon4 from '../../assets/images/message.svg';
 import getStartedICon from '../../assets/images/getStartedIconCPSM.svg';
-import image3 from '../../assets/images/Group-379.svg';
 import {
     DetectPreventMisconfigurations,
     CutNoise,
@@ -138,15 +136,7 @@ const Index = () => {
             featureImage: <EliminateSecurityGaps />
         }
     ];
-    const dataCSPMtestamonials = [
-        {
-            image: image3,
-            title: 'Cyscale keeps our infrastructure compliant and drift free',
-            description: `“Cyscale continuously monitors for changes that might cause compliance violations or weaken our security, then alerts our staff so we can fix things before they cause any real problems. \n\nWe have reduced the number of accidental changes, and completely eliminated changes which were not made through our Infrastructure as Code solution.”`,
-            author: 'Ovidiu Pop',
-            designation: 'SYMBOLD STUDIO'
-        }
-    ];
+ 
     const dataService = [
         {
             title: 'Data discovery',
@@ -197,14 +187,6 @@ const Index = () => {
                 'The Cyscale Power Cloud Platform is fully managed and agentless, so all you have to do is put it to work'
         }
     ];
-    const dataCSPMtestamonialsFooter = [
-        {
-            title: 'Cyscale makes it easy to holistically view your security posture and maintain awareness of it.',
-            description: `With just a few clicks, I can register my AWS environment and get a comprehensive inventory of all the resources we have, then evaluate all of those resources. \n\nThen, as an added bonus, the ongoing evaluation of our environment helps me understand if we’ve had configuration drift.`,
-            author: 'Ovidiu Pop',
-            designation: 'SYMBOLD STUDIO'
-        }
-    ];
     return (
         <>
             <Onboarding data={dataOnboarding} />
@@ -220,9 +202,7 @@ const Index = () => {
             <div className='additionalBenefits'>
                 <Fproducts sectionTitle='Optimize your operations' data={dataAdditionalBenefits} />
             </div>
-            <div className='CSPMtestamonials bg-lightGrey pt-116px pb-158px'>
-                <CSPMtestamonials data={dataCSPMtestamonials} />
-            </div>
+           
             <div className='block w-full CSPMServices'>
                 <Services
                     headingText='The Cyscale Power Cloud Platform packs all the CSPM features you need'
@@ -239,9 +219,7 @@ const Index = () => {
                     ExternalLink
                 />
             </div>
-            <div className='CSPMtestamonials bg-lightGrey pt-158px pb-158px'>
-                <CSPMtestamonials data={dataCSPMtestamonialsFooter} />
-            </div>
+           
         </>
     );
 };
