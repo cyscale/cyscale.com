@@ -7,7 +7,6 @@ import alibaba from '../../assets/images/alibabacloud-icon.svg';
 import aws from '../../assets/images/svg_aws_white.svg';
 import azure from '../../assets/images/svg_azure.svg';
 import gcp from '../../assets/images/svg_gcp.svg';
-import avatar from '../../assets/images/avatar.png';
 import inventoryMock from '../../assets/images/optimize-costs-reveal-analyze-cloud-budget-spendings.png';
 import controlMock from '../../assets/images/maintain-3rd-party-data-image.png';
 import policiesMock from '../../assets/images/Security-Controls-and-Policies.png';
@@ -126,36 +125,6 @@ export default function Iso27001() {
                                     <img src={alibaba} className='h-12' alt='Alibaba' />
                                 </div>
                             </div>
-                        </Container>
-                    </div>
-                </section>
-                <section>
-                    <div className='bg-lightGrey pt-16'>
-                        <Container>
-                            <Row>
-                                <div className='col-span-12 md:col-span-4'>
-                                    <h2 className='text-primary text-3xl '>
-                                        Cyscale makes it easy to holistically view your security posture and maintain
-                                        awareness of it.
-                                    </h2>
-                                </div>
-                                <div className='my-8 md:my-0 col-span-12 md:col-span-3'>
-                                    <img src={avatar} alt='Ovidiu Pop Avatar' />
-                                </div>
-                                <div className='pb-16 md:pb-0 col-span-12 md:col-span-5'>
-                                    <p className='italic'>
-                                        <q>
-                                            With just a few clicks, I can register my AWS environment and get a
-                                            comprehensive inventory of all the resources we have, then evaluate all of
-                                            those resources.
-                                            <br />
-                                            <br />
-                                            Then, as an added bonus, the ongoing evaluation of our environment helps me
-                                            understand if we’ve had configuration drift.
-                                        </q>
-                                    </p>
-                                </div>
-                            </Row>
                         </Container>
                     </div>
                 </section>

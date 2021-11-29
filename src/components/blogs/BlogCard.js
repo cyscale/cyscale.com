@@ -29,7 +29,13 @@ const BlogCard = ({ data, feature }) => {
 
     return (
         <div>
-            <div className='shadow-md cursor-pointer' role='link' onClick={handleClick}>
+            <div
+                role='link'
+                tabIndex={0}
+                onClick={handleClick}
+                className='shadow-md cursor-pointer'
+                onKeyDown={(e) => (e.code === 13 || e.code === 32) && handleClick(e)}
+            >
                 <div className='bg-grey3 bigger-box-image '>
                     <img src={data.featuredimage.publicURL} alt={data.title} />
                 </div>

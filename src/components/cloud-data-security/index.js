@@ -5,7 +5,6 @@ import Services from "./cloudDataServices";
 import Support from "./support";
 import GetStarted from "../Home/getstarted";
 import Sectionheader from "../layout/sectionheader";
-import CSPMtestamonials from "../cloud-security-posture-management/CSPMtestamonials";
 import Relationship from "./relationship";
 import Performance from "./performance";
 import getStartedICon from "../../assets/images/getStartedIconCPSM.svg";
@@ -36,15 +35,6 @@ const Index = () => {
       icon: icon4,
       title: `Comprehensive `,
       description: `extensive multi-cloud range & flexibility`,
-    },
-  ];
-  const dataSecuritytestamonials = [
-    {
-      title:
-        "Cyscale makes it easy to holistically view your security posture and maintain awareness of it.",
-      description: `With just a few clicks, I can register my AWS environment and get a comprehensive inventory of all the resources we have, then evaluate all of those resources.\n\nThen, as an added bonus, the ongoing evaluation of our environment helps me understand if we’ve had configuration drift.`,
-      author: "Ovidiu Pop",
-      designation: "SYMBOLD STUDIO",
     },
   ];
   const dataSupport = [
@@ -198,12 +188,6 @@ const Index = () => {
           ExternalLink
           sectionName="cloudDataSecurity"
           icon={getStartedICon}
-        />
-      </div>
-      <div className="CSPMtestamonials bg-lightGrey pt-162px pb-162px">
-        <CSPMtestamonials
-          data={dataSecuritytestamonials}
-          sectionName="dataSecurityTest"
         />
       </div>
       <div className="max-w-1366px mx-auto pt-70px pb-70px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px">
