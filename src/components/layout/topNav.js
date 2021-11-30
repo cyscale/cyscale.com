@@ -78,7 +78,6 @@ const TopNav = ({ pageName }) => {
                         date
                         description
                         permalink
-                        icon
                         templateKey
                         title
                         experience
@@ -393,9 +392,9 @@ const TopNav = ({ pageName }) => {
                                             </div>
                                         </div>
                                         <div className='hidden lg:inline-block'>
-                                            <p className='text-base font-medium text-black leading-6'>
+                                            <Link to='/careers' className='text-base font-medium text-black leading-6'>
                                                 Open positions
-                                            </p>
+                                            </Link>
                                             <div className='flex flex-col mt-2'>
                                                 {jobs.map(({ frontmatter }, index) => {
                                                     const { permalink, title, experience } = frontmatter;

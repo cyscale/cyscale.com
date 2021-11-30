@@ -1,11 +1,13 @@
 ---
 templateKey: career-page
-experience: Mid/Senior
-title: ReactJS Developer
+title: ReactJS Developer (also remote, mid/senior)
 location: Romania
+workType: hybrid
+employmentType: full-time
+experience: mid/senior
+skills: React.js, JavaScript, GraphQL, Node.js, Cloud Computing.
 disabled: false
 permalink: frontend-developer
-icon: pen
 date: 2020-27-11T11:00:00.000Z
 description: Cyscale is a startup from Cluj-Napoca, activating in the cloud cybersecurity industry. We are looking for an experienced frontend developer.
 ---
@@ -15,10 +17,6 @@ description: Cyscale is a startup from Cluj-Napoca, activating in the cloud cybe
 Our mission at Cyscale is to enable companies to build on the cloud with confidence. The Cyscale Cloud Platform, which is a SaaS product, helps people visualize and secure their resources such as VMs, functions, users, etc. across multiple cloud providers and cloud accounts.
 
 You will build new features such as the graph visualization for new integrations such as Kubernetes and Github, change/fix existing features such as improving the policy editor, take part in product discussions, and even meetings with potential customers and investors (if it's something you would like to do, of course).
-
-## Role
-
-**Mid/Senior ReactJS Developer**
 
 ## Benefits
 

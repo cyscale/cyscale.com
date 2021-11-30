@@ -9,7 +9,7 @@ import facebook from '../../assets/images/facebook.svg';
 const ContactForm = () => {
     return (
         <>
-            <div className='max-w-1366px contactForm mx-auto mt-20 xl:mt-28 lg:mt-44 pt-67px pb-67px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px'>
+            <div className='max-w-1366px contactForm mx-auto pt-67px pb-67px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px'>
                 <div className='grid grid-cols-1 xl:grid-cols-3 gap-6'>
                     <div className='order-1'>
                         <h5 className='text-69px lg:text-80px hidden lg:block font-proximaBold uppercase text-white'>

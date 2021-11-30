@@ -4,6 +4,10 @@ import Layout from '../components/layout/CleanLayout';
 import hire from '../assets/images/hire.svg';
 import stocks from '../assets/images/stocks.svg';
 import gabriel from '../assets/images/gabriel.jpg';
+import manuela from '../assets/images/manuela.jpg';
+// import ovidiu from '../assets/images/ovidiu.jpg';
+// import andreiM from '../assets/images/andrei-m.jpg';
+import andreiS from '../assets/images/andrei-s.jpg';
 import personalDayOff from '../assets/images/personal-day-off.svg';
 import homeWork from '../assets/images/home-work.svg';
 import certification from '../assets/images/certification.svg';
@@ -66,29 +70,41 @@ const benefits = [
 ];
 
 const employee = [
+    // {
+    //     photo: ovidiu,
+    //     name: 'Ovidiu Cical',
+    //     position: 'Founder & CEO',
+    //     quote: 'Ovidiu wears many hats, from CEO to Innovation Officer or Spokesperson. He is a Certified Professional Cloud Architect with a solid background in software development focused on Information Security, Innovation and Product Strategy.'
+    // },
+    {
+        photo: manuela,
+        name: 'Manuela Ticudean',
+        position: 'Co-Founder & PM',
+        quote: `At Cyscale I have a constant opportunity to grow, professionally and personally. Moreover, I feel that my contribution matters and that we’re creating something truly special.`
+    },
+    // {
+    //     photo: gabriel,
+    //     name: 'Andrei Milas',
+    //     position: 'Co-Founder & CTO',
+    //     quote: 'At Cyscale I have a constant opportunity to grow, professionally and personally. Moreover, I feel that my contribution matters and that we’re creating something truly special.'
+    // },
     {
         photo: gabriel,
-        name: 'Ovidiu Cical',
-        position: 'Founder & CEO',
-        quote: 'Ovidiu wears many hats, from CEO to Innovation Officer or Spokesperson. He is a Certified Professional Cloud Architect with a solid background in software development focused on Information Security, Innovation and Product Strategy.'
+        name: 'Gabriel Ceicoschi',
+        position: 'Design & Front-end',
+        quote: 'I jumped into Cyscale “express” 🚂 by the time things were getting together. Two years later and I’m still here, facing new challenges and opportunities every single day. I’ve never imaged how many things Cyscale will teach.'
     },
     {
-        photo: gabriel,
-        name: 'Ovidiu Cical',
-        position: 'Founder & CEO',
-        quote: 'Ovidiu wears many hats, from CEO to Innovation Officer or Spokesperson. He is a Certified Professional Cloud Architect with a solid background in software development focused on Information Security, Innovation and Product Strategy.'
+        photo: andreiS,
+        name: 'Andrei Stefanie',
+        position: 'Product Engineer',
+        quote: `Being passionate about start-ups and what we can build on the cloud, Cyscale was the clear path onwards for me. I knew it will be fun, but hard and so it is. When it’s fun, we laugh together, and when it’s hard, we work together.`
     },
     {
-        photo: gabriel,
-        name: 'Ovidiu Cical',
-        position: 'Founder & CEO',
-        quote: 'Ovidiu wears many hats, from CEO to Innovation Officer or Spokesperson. He is a Certified Professional Cloud Architect with a solid background in software development focused on Information Security, Innovation and Product Strategy.'
-    },
-    {
-        photo: gabriel,
-        name: 'Ovidiu Cical',
-        position: 'Founder & CEO',
-        quote: 'Ovidiu wears many hats, from CEO to Innovation Officer or Spokesperson. He is a Certified Professional Cloud Architect with a solid background in software development focused on Information Security, Innovation and Product Strategy.'
+        // photo: gabriel,
+        name: 'Virginia Mitea',
+        position: 'Sales & BD',
+        quote: `Friendly atmosphere: that's the first thing that comes to my mind when someone asks me to describe how working at Cyscale is. I discovered how the other teams are working, learned from them, and applied their agile-specific methods to my role.`
     }
 ];
 
@@ -104,7 +120,6 @@ const Index = () => {
                         date
                         description
                         permalink
-                        icon
                         templateKey
                         title
                         experience
@@ -115,7 +130,6 @@ const Index = () => {
         }
     `);
     let jobs = data.allMarkdownRemark.nodes.map(({ frontmatter }) => frontmatter);
-    console.log(jobs);
     return (
         <Layout
             pageName='careers'
@@ -153,9 +167,9 @@ const Index = () => {
                 <Section>
                     <div className='max-w-lg mx-auto lg:mx-0 lg:max-w-none'>
                         <Row>
-                            <div className='lg:col-span-6 col-span-12'>
+                            <div className='lg:col-span-5 col-span-12'>
                                 <h2 className='text-blue text-4xl leading-10 md:max-w-xs sectionTitle'>Our Mission</h2>
-                                <p className='max-w-lg mt-8'>
+                                <p className='max-w-lg lg:max-w-md mt-8 leading-relaxed'>
                                     To help companies of all sizes to start, improve and maintain their{' '}
                                     <strong>Cloud Security Program</strong> based on the industry best practices, to
                                     ensure continuous security and compliance.{' '}
@@ -163,24 +177,45 @@ const Index = () => {
                                     solutions in the cloud should be a continues priority and responsibility, and we can
                                     make sure that this task will not be overwhelming for you.
                                 </p>
+                                <ScrollLink
+                                    smooth={true}
+                                    duration={500}
+                                    to='open-positions'
+                                    className='mt-4 cursor-pointer block w-52 text-sm text-black uppercase py-4 px-8 border-black border rounded-md hover:bg-black hover:text-white transition'
+                                >
+                                    See open positions
+                                </ScrollLink>
                             </div>
-                            <div className='mt-12 lg:mt-0 lg:col-span-6 col-span-12'>
+                            <div className='mt-12 lg:mt-0 lg:col-span-7 col-span-12 leading-relaxed'>
                                 <h2 className='text-blue text-4xl leading-10 md:max-w-xs sectionTitle'>Our Values</h2>
-                                <p className='max-w-lg mt-8'>
-                                    Our culture is built on the principles of autonomy, flexibility and trust, fostering
-                                    a diverse, inclusive and supportive work environment that enables our people to push
-                                    the boundaries of what’s possible.
+                                <p className='max-w-lg lg:max-w-xl mt-8'>
+                                    In everything we do at Cyscale, we are guided by our commitment to:
+                                    <ul>
+                                        <li>
+                                            <strong>Openness</strong> - in the way we talk to each other, our customers,
+                                            and our investors
+                                        </li>
+                                        <li>
+                                            <strong>Transparency</strong> - the ground for true collaboration
+                                        </li>
+                                        <li>
+                                            <strong>Hard work</strong> - we know that being talented is only half of the
+                                            story
+                                        </li>
+                                        <li>
+                                            <strong>Learning</strong> - we embrace the challenges we face each day and
+                                            strive for continuous improvement
+                                        </li>
+                                        <li>
+                                            <strong>Perseverance</strong> - no matter if the times are good or bad, our
+                                            vision is our north star
+                                        </li>
+                                    </ul>
+                                    We're here for the long run, which means we care deeply about our work environment,
+                                    our partnerships, the communities we're part of and our customers' success.
                                 </p>
                             </div>
                         </Row>
-                        <ScrollLink
-                            smooth={true}
-                            duration={500}
-                            to='open-positions'
-                            className='mt-8  cursor-pointer block w-52 mx-auto text-sm text-black uppercase py-4 px-8 border-black border rounded-md hover:bg-black hover:text-white transition'
-                        >
-                            See open positions
-                        </ScrollLink>
                     </div>
                 </Section>
             </Container>
@@ -223,7 +258,7 @@ const Index = () => {
                                     </div>
                                     <div className='flex flex-col items-center absolute -right-16 -bottom-52'>
                                         <div className='grad mb-2 w-20 h-20 rounded-full overflow-hidden bg-gradient-primary'>
-                                            <img src={photo} alt={name} className='w-20 h-20 rounded-full' />
+                                            {photo && <img src={photo} alt={name} className='w-20 h-20 rounded-full' />}
                                         </div>
                                         <div className='bg-gradient-primary w-64 h-64 rounded-full'></div>
                                     </div>
@@ -261,23 +296,23 @@ const Index = () => {
                         <h2 className='text-blue text-center mx-auto mb-12 max-w-sm text-5xl leading-10'>
                             Open positions
                         </h2>
-                        <div className='max-w-xl mx-auto'>
+                        <div className='max-w-2xl mx-auto'>
                             <div className='flex text-sm text-gray px-4 py-3'>
-                                <div className='w-5/12'>Job Title</div>
-                                <div className='w-2/12'>Location</div>
-                                <div className='w-3/12'>Experience</div>
+                                <div className='w-6/12 pr-2'>Job Title</div>
+                                <div className='w-2/12 pr-2'>Location</div>
+                                <div className='w-2/12 pr-2'>Employment</div>
                                 <div className='w-2/12'></div>
                             </div>
                             {jobs.map(({ title, experience, location, permalink }) => (
                                 <Link
                                     to={`/careers/${permalink}/`}
-                                    className='flex text-sm text-gray shadow-md rounded-md mb-4 leading-relaxed  px-4 py-3 hover:bg-lightGreyEEE transition-colors'
+                                    className='flex items-center text-sm text-gray shadow-md rounded-md mb-4 leading-relaxed  px-4 py-3 hover:bg-lightGreyEEE transition-colors'
                                 >
-                                    <span className='w-5/12'>
+                                    <span className='w-6/12 pr-2'>
                                         <strong>{title}</strong>
                                     </span>
-                                    <span className='w-2/12'>{location}</span>
-                                    <span className='w-3/12'>{experience}</span>
+                                    <span className='w-2/12 pr-2'>{location}</span>
+                                    <span className='w-2/12 pr-2'>{experience}</span>
                                     <span className='w-2/12'>
                                         <span className='bg-primary text-white text-xm px-3 py-1 w-14 block ml-auto leading-tight rounded-sm'>
                                             Apply

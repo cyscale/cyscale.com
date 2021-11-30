@@ -30,17 +30,21 @@ exports.createPages = ({ graphql, actions }) => {
                                 authors
                                 category
                                 description
-                                icon
                                 date
                                 featuredpost
                                 templateKey
                                 permalink
                                 title
                                 tags
+                                location
+                                workType
+                                employmentType
+                                experience
+                                skills
+                                disabled
                                 featuredimage {
                                     publicURL
                                 }
-                                hidden
                             }
                             rawMarkdownBody
                         }
@@ -58,10 +62,6 @@ exports.createPages = ({ graphql, actions }) => {
 
         posts.forEach((edge) => {
             const node = edge.node;
-
-            if (node.frontmatter.hidden === true) {
-                return;
-            }
 
             switch (node.frontmatter.templateKey) {
                 case 'blog-post':

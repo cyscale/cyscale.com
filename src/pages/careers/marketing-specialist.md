@@ -1,11 +1,13 @@
 ---
 templateKey: career-page
-icon: display
-permalink: marketing-specialist
-experience: Senior
-disabled: true
 title: Marketing Specialist
 location: Romania
+workType: hybrid
+employmentType: full-time
+experience: senior
+skills: Leading marketing campaigns, Digital Marketing, Strong communications, HubSpot/Mailchimp, Google Ads, Google Analytics
+disabled: true
+permalink: marketing-specialist
 date: 2020-27-11T11:00:00.000Z
 description: Cyscale is a startup from Cluj-Napoca, activating in the cloud cybersecurity industry. We are looking for a marketing specialist
 ---
