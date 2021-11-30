@@ -92,7 +92,7 @@ const employee = [
         photo: gabriel,
         name: 'Gabriel Ceicoschi',
         position: 'Design & Front-end',
-        quote: 'I jumped into Cyscale “express” 🚂 by the time things were getting together. Two years later and I’m still here, facing new challenges and opportunities every single day. I’ve never thought how many things Cyscale will teach.'
+        quote: 'I jumped into Cyscale “express” 🚂 by the time things were getting together. Two years later and I’m still here, facing new challenges and opportunities every single day. I’ve never thought how many things Cyscale will teach me.'
     },
     {
         photo: andreiS,
@@ -170,12 +170,11 @@ const Index = () => {
                             <div className='lg:col-span-5 col-span-12'>
                                 <h2 className='text-blue text-4xl leading-10 md:max-w-xs sectionTitle'>Our Mission</h2>
                                 <p className='max-w-lg lg:max-w-md mt-8 leading-relaxed'>
-                                    To help companies of all sizes to start, improve and maintain their{' '}
-                                    <strong>Cloud Security Program</strong> based on the industry best practices, to
-                                    ensure continuous security and compliance.{' '}
-                                    <strong>Reducing the risk of security breaches</strong> when migrating or developing
-                                    solutions in the cloud should be a continues priority and responsibility, and we can
-                                    make sure that this task will not be overwhelming for you.
+                                    To help companies of all sizes start, improve and maintain their{' '}
+                                    <strong>Cloud Security Program</strong>, based on expert know-how and industry best
+                                    practices. <strong>Reducing the risk of security breaches</strong> when migrating or
+                                    developing solutions in the cloud should be a continuous priority, and we make sure
+                                    this task is not an overwhelming one.
                                 </p>
                                 <ScrollLink
                                     smooth={true}

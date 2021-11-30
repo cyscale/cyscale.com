@@ -63,3 +63,4 @@ collections:
                 options: ['full-time', 'part-time', 'contract', ''],
                 default: 'hybrid'
             }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
