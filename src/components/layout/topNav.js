@@ -71,17 +71,16 @@ const TopNav = ({ pageName }) => {
         query CareersQueryForMenu {
             allMarkdownRemark(
                 sort: { fields: frontmatter___date, order: DESC }
-                filter: { frontmatter: { templateKey: { eq: "career-page" } } }
+                filter: { frontmatter: { templateKey: { eq: "career-page" }, disabled: { eq: false } } }
             ) {
                 nodes {
                     frontmatter {
                         date
                         description
                         permalink
-                        icon
                         templateKey
                         title
-                        hidden
+                        experience
                     }
                 }
             }
@@ -89,10 +88,13 @@ const TopNav = ({ pageName }) => {
     `);
 
     let jobs = data.allMarkdownRemark.nodes;
-    jobs = jobs.filter(({ frontmatter }) => frontmatter.templateKey === 'career-page' && frontmatter.hidden !== true);
+    jobs = jobs.filter(({ frontmatter }) => frontmatter.templateKey === 'career-page');
     const rootClasses = !trigger ? 'translate-y-0' : '-translate-y-full';
     return (
-        <div ref={root} className={`fixed top-0 left-0 block w-full mx-auto z-10 transition duration-300 transform ${rootClasses}`}>
+        <div
+            ref={root}
+            className={`fixed top-0 left-0 block w-full mx-auto z-10 transition duration-300 transform ${rootClasses}`}
+        >
             <div className={`topNav ${menu.toggleBg} container max-w-7xl m-auto px-8 pt-2.5`}>
                 <nav className='relative '>
                     <div className='mx-auto flex flex-col xl:flex-row justify-between'>
@@ -390,26 +392,26 @@ const TopNav = ({ pageName }) => {
                                             </div>
                                         </div>
                                         <div className='hidden lg:inline-block'>
-                                            <p className='text-base font-semibold text-black leading-6'>
+                                            <Link to='/careers' className='text-base font-medium text-black leading-6'>
                                                 Open positions
-                                            </p>
-                                            <div className='flex flex-col mt-6'>
+                                            </Link>
+                                            <div className='flex flex-col mt-2'>
                                                 {jobs.map(({ frontmatter }, index) => {
-                                                    const { permalink, title } = frontmatter;
+                                                    const { permalink, title, experience } = frontmatter;
                                                     return (
                                                         <Link
                                                             key={index}
                                                             to={`/careers/${permalink}/`}
                                                             activeStyle={{ color: '#0F26AA' }}
                                                             activeClassName='active'
-                                                            className='text-base text-black hover:text-blue hover:no-underline leading-6 mb-1'
+                                                            className='text-sm text-black hover:text-blue hover:no-underline leading-6 mb-1'
                                                         >
                                                             <span
                                                                 title={title}
                                                                 style={{ maxWidth: 250 }}
-                                                                className='max-w-xs block whitespace-nowrap overflow-ellipsis overflow-hidden'
+                                                                className='max-w-xs block font-normal whitespace-nowrap overflow-ellipsis overflow-hidden'
                                                             >
-                                                                {title}
+                                                                {title} ({experience})
                                                             </span>
                                                         </Link>
                                                     );

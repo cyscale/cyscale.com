@@ -4,15 +4,14 @@ import Details from '../components/careers/job-details.js';
 
 const CareerTemplate = ({ pageContext }) => {
     const { alldata } = pageContext;
-
     return (
         <Layout
-            bannerTitle={alldata.frontmatter.title}
-            bannerBtn1Text='Apply'
-            bannerBtn1Link='/'
             pageName='jobDetails'
-            title="Careers - Cyscale Power Cloud Platform"
+            bannerTitle={alldata.frontmatter.title}
             description={alldata.frontmatter.title}
+            title='Careers - Cyscale Power Cloud Platform'
+            bannerBtn1Link={!alldata.frontmatter.disabled ? '/' : false}
+            bannerBtn1Text={!alldata.frontmatter.disabled ? 'Apply' : false}
         >
             <Details data={alldata} />
         </Layout>

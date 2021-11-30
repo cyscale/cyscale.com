@@ -42,7 +42,24 @@ collections:
       fields:
           - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'blog-post' }
           - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Disabled', name: 'disabled', widget: 'boolean', default: false }
+          - { label: 'Location', name: 'location', widget: 'string', default: 'Romania' }
           - { label: 'Publish Date', name: 'date', widget: 'datetime' }
           - { label: 'Permalink', name: 'permalink', widget: 'string' }
           - { label: 'Description', name: 'description', widget: 'text' }
-          - { label: 'Icon', name: 'icon', widget: 'select', options: ['stack', 'pen', 'display'] }
+          - { label: 'Skills', name: 'skills', widget: 'text' }
+          - {
+                label: 'Experience',
+                name: 'experience',
+                widget: 'select',
+                options: ['intern', 'junior', 'junior/mid', 'mid', 'mid/senior', 'senior', ''],
+                default: 'mid/senior'
+            }
+          - { label: 'Work Type', name: 'workType', widget: 'select', options: ['hybrid', 'remote', 'in-office', ''] }
+          - {
+                label: 'Employment Type',
+                name: 'employmentType',
+                widget: 'select',
+                options: ['full-time', 'part-time', 'contract', ''],
+                default: 'hybrid'
+            }
