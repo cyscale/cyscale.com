@@ -92,7 +92,7 @@ const employee = [
         photo: gabriel,
         name: 'Gabriel Ceicoschi',
         position: 'Design & Front-end',
-        quote: 'I jumped into Cyscale “express” 🚂 by the time things were getting together. Two years later and I’m still here, facing new challenges and opportunities every single day. I’ve never imaged how many things Cyscale will teach.'
+        quote: 'I jumped into Cyscale “express” 🚂 by the time things were getting together. Two years later and I’m still here, facing new challenges and opportunities every single day. I’ve never thought how many things Cyscale will teach.'
     },
     {
         photo: andreiS,
