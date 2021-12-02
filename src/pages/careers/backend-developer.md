@@ -1,20 +1,23 @@
 ---
 templateKey: career-page
 title: Golang Developer (also remote, mid/senior)
+disabled: false
 location: Romania
+date: null
+permalink: backend-developer
+description: Cyscale is a startup from Cluj-Napoca, activating in the cloud
+  cybersecurity industry. We are looking for an experienced backend developer.
+skills: Go (Programming Language), Amazon Web Services (AWS), GraphQL, Google
+  Cloud Platform (GCP), Microsoft Azure, Security, Cloud Security, Cloud-Native
+  Architecture, Cryptography.
+experience: mid/senior
 workType: hybrid
 employmentType: full-time
-experience: mid/senior
-skills: Go (Programming Language), Amazon Web Services (AWS), GraphQL, Google Cloud Platform (GCP), Microsoft Azure, Security, Cloud Security, Cloud-Native Architecture, Cryptography.
-disabled: false
-permalink: backend-developer
-date: 2020-27-11T11:00:00.000Z
-description: Cyscale is a startup from Cluj-Napoca, activating in the cloud cybersecurity industry. We are looking for an experienced backend developer.
 ---
 
 # Job description
 
-You will build new features such as the graph visualization for new integrations such as Kubernetes and Github, change/fix existing features such as improving the policy editor, take part in product discussions, and even meetings with potential customers and investors (if it's something you would like to do, of course).
+You will build new features such as the integration with Kubernetes, Github, Okta, etc., change/fix existing ones such as switching to a different messaging broker for inter-service communication, taking part in product discussions, and even meeting with potential customers and partners (if it's something you would like to do, of course).
 
 ## Benefits
 
@@ -25,7 +28,7 @@ You will build new features such as the graph visualization for new integrations
 -   An informal work environment with transparency and no hierarchies
 -   Training and certifications to boost your career path (up to €1000 annually)
 -   25 minimum vacation days
--   -   an additional 3 personal days (take them for yourself, whenever you need them)
+-   an additional 3 personal days (take them for yourself, whenever you need them)
 -   Work from home allowance (up to 50€ for internet, electricity, etc.)
 
 ## Bonus
@@ -36,23 +39,20 @@ You will build new features such as the graph visualization for new integrations
 
 ## Responsibilities
 
--   Take ownership of components of the frontend application
--   Help us build an application architecture that will allow performance and scaling
--   Write quality ReactJS components
--   Communicate often and clearly - we are a remote team, so we know communication is key
--   Attend daily standup, weekly meetings, perform code reviews
--   Have a collaborative and helpful attitude towards colleagues
+-   Develop great backend systems to make Cloud Security more manageable and desirable
+- Write quality Golang code, tests, and deployments for the Cyscale Backend
+- Contribute to the CI/CD processes and to the platform itself which runs on Kubernetes
 
 ## Required Skills
 
--   5+ years of experience as a software developer
--   Extensive experience with Javascript
--   3+ years experience with React and/or Single Page Applications
--   Experience with Typescript and/or GraphQL is considered a plus
--   Git and CI/CD
--   Nice to have:
-    -   Experience with server-side Javascript (NodeJS)
-    -   An eye for design
+- Well, Golang (Go), of course
+- AWS, Azure, Google Cloud, and/or Kubernetes (or being deeply interested in at least one of them)
+- Graph Databases - the entire platform is powered by a knowledge graph
+- GraphQL
+- Redis, NoSQL (Mongo) and SQL (MySQL)
+- Git, CI/CD
+- Testing (unit, integration, e2e)
+- SDLC (Secure SDLC) procedures and workflows
 
 # Apply for this role by:
 
