@@ -5,6 +5,7 @@ location: Romania
 workType: hybrid
 employmentType: full-time
 experience: mid/senior
+department: Customer Success
 skills: Sales, SaaS Sales, Cybersecurity Sales, Account Executive
 disabled: false
 permalink: account-executive

@@ -5,6 +5,7 @@ import hire from '../assets/images/hire.svg';
 import stocks from '../assets/images/stocks.svg';
 import gabriel from '../assets/images/gabriel.jpg';
 import manuela from '../assets/images/manuela.jpg';
+import virginia from '../assets/images/virginia.png';
 // import ovidiu from '../assets/images/ovidiu.jpg';
 // import andreiM from '../assets/images/andrei-m.jpg';
 import andreiS from '../assets/images/andrei-s.jpg';
@@ -101,7 +102,7 @@ const employee = [
         quote: `Being passionate about start-ups and what we can build on the cloud, Cyscale was the clear path onwards for me. I knew it will be fun, but hard and so it is. When it’s fun, we laugh together, and when it’s hard, we work together.`
     },
     {
-        // photo: gabriel,
+        photo: virginia,
         name: 'Virginia Mitea',
         position: 'Sales & BD',
         quote: `Friendly atmosphere: that's the first thing that comes to my mind when someone asks me to describe how working at Cyscale is. I discovered how the other teams are working, learned from them, and applied their agile-specific methods to my role.`
@@ -123,6 +124,7 @@ const Index = () => {
                         templateKey
                         title
                         experience
+                        department
                         location
                     }
                 }
@@ -295,24 +297,26 @@ const Index = () => {
                         <h2 className='text-blue text-center mx-auto mb-12 max-w-sm text-5xl leading-10'>
                             Open positions
                         </h2>
-                        <div className='max-w-2xl mx-auto'>
+                        <div className='max-w-3xl mx-auto'>
                             <div className='flex text-sm text-gray px-4 py-3'>
-                                <div className='w-6/12 pr-2'>Job Title</div>
+                                <div className='w-7/12 md:w-5/12 pr-2'>Job Title</div>
                                 <div className='w-2/12 pr-2'>Location</div>
                                 <div className='w-2/12 pr-2'>Employment</div>
-                                <div className='w-2/12'></div>
+                                <div className='w-2/12 pr-2 hidden md:block'>Department</div>
+                                <div className='w-1/12 hidden md:block '></div>
                             </div>
-                            {jobs.map(({ title, experience, location, permalink }) => (
+                            {jobs.map(({ title, experience, location, department, permalink }) => (
                                 <Link
                                     to={`/careers/${permalink}/`}
-                                    className='flex items-center text-sm text-gray shadow-md rounded-md mb-4 leading-relaxed  px-4 py-3 hover:bg-lightGreyEEE transition-colors'
+                                    className='flex items-center text-sm text-gray bg-white shadow-md rounded-md mb-4 leading-relaxed  px-4 py-3 hover:bg-lightGreyEEE transition-colors'
                                 >
-                                    <span className='w-6/12 pr-2'>
+                                    <span className='w-7/12 md:w-5/12 pr-2'>
                                         <strong>{title}</strong>
                                     </span>
                                     <span className='w-2/12 pr-2'>{location}</span>
                                     <span className='w-2/12 pr-2'>{experience}</span>
-                                    <span className='w-2/12'>
+                                    <span className='w-2/12 pr-2 hidden md:block'>{department}</span>
+                                    <span className='w-1/12 hidden md:block'>
                                         <span className='bg-primary text-white text-xm px-3 py-1 w-14 block ml-auto leading-tight rounded-sm'>
                                             Apply
                                         </span>

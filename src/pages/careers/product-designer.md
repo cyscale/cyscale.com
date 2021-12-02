@@ -7,6 +7,7 @@ employmentType: full-time
 experience: senior
 skills: Product, SaaS Software, Cybersecurity, User Interface, User Experience, User Interaction, Usability Testing
 disabled: false
+department: Product
 permalink: product-designer
 date: 2021-30-11T11:00:00.000Z
 description: Cyscale is a startup from Cluj-Napoca, activating in the cloud cybersecurity industry. We are looking for an experienced product designer.

@@ -51,6 +51,7 @@ exports.createPages = ({ graphql, actions }) => {
                                 permalink
                                 title
                                 tags
+                                department
                                 location
                                 workType
                                 employmentType
