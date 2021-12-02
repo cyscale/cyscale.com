@@ -1,16 +1,17 @@
 ---
 templateKey: career-page
 title: Account Executive (Mid-Market, SMB)
+disabled: false
 location: Romania
+date: 2021-12-01T12:54:22.847Z
+permalink: account-executive
+description: Cyscale is a startup from Cluj-Napoca, activating in the cloud
+  cybersecurity industry. We are looking for an experienced account executive.
+skills: Sales, SaaS Sales, Cybersecurity Sales, Account Executive
+experience: mid/senior
+department: Sales
 workType: hybrid
 employmentType: full-time
-experience: mid/senior
-department: Customer Success
-skills: Sales, SaaS Sales, Cybersecurity Sales, Account Executive
-disabled: false
-permalink: account-executive
-date: 2021-30-11T11:00:00.000Z
-description: Cyscale is a startup from Cluj-Napoca, activating in the cloud cybersecurity industry. We are looking for an experienced account executive.
 ---
 
 # Job description
