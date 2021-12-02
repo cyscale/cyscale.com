@@ -5,6 +5,7 @@ location: Romania
 workType: hybrid
 employmentType: full-time
 experience: senior
+department: Marketing
 skills: Leading marketing campaigns, Digital Marketing, Strong communications, HubSpot/Mailchimp, Google Ads, Google Analytics
 disabled: true
 permalink: marketing-specialist

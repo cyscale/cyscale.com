@@ -55,6 +55,23 @@ collections:
                 options: ['intern', 'junior', 'junior/mid', 'mid', 'mid/senior', 'senior', ''],
                 default: 'mid/senior'
             }
+          - {
+                label: 'Department',
+                name: 'department',
+                widget: 'select',
+                options:
+                    [
+                        'Sales',
+                        'Product',
+                        'Marketing',
+                        'Management',
+                        'Engineering',
+                        'Customer Success',
+                        'HR & Recruiting',
+                        ''
+                    ],
+                default: 'mid/senior'
+            }
           - { label: 'Work Type', name: 'workType', widget: 'select', options: ['hybrid', 'remote', 'in-office', ''] }
           - {
                 label: 'Employment Type',

@@ -4,6 +4,7 @@ title: Cloud Security Analyst / Architect
 location: Romania
 workType: hybrid
 employmentType: full-time
+department: Engineering
 experience: senior
 skills: Cloud Architect, Cybersecurity, Cloud, Threat Analysis, Research, AWS, GCP, Azure
 disabled: false

@@ -29,6 +29,7 @@ const Description = ({ data }) => {
                     <ul>
                         {data.frontmatter.location && <li>Job location: {data.frontmatter.location}</li>}
                         {data.frontmatter.workType && <li>Work type: {workTypes[data.frontmatter.workType]}</li>}
+                        {data.frontmatter.department && <li>Department: {data.frontmatter.department}</li>}
                         {data.frontmatter.employmentType && (
                             <li>Employment type: {employmentTypes[data.frontmatter.employmentType]}</li>
                         )}

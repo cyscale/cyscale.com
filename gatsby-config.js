@@ -90,10 +90,10 @@ module.exports = {
             }
         },
         {
-            resolve: `gatsby-plugin-google-analytics`,
+            resolve: 'gatsby-plugin-google-tagmanager',
             options: {
-                head: true,
-                trackingId: 'UA-145426770-1'
+                id: 'GTM-K6LKHQH',
+                includeInDevelopment: false
             }
         },
         {
