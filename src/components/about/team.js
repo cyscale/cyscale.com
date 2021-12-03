@@ -137,7 +137,7 @@ const Team = () => {
                                     <div className='flex flex-wrap h-full content-center text-left'>
                                         <div>
                                             <div className='flex flex-col flex-wrap text-16px leading-6 text-white'>
-                                                <p className='block w-full'>Cyscale Team</p>
+                                                <p className='block w-full font-bold'>Cyscale Team</p>
                                                 <p className='block w-full mt-40px'>
                                                     We take great pride in being part of an industry that serves and
                                                     does good for humanity. We believe that Cybersecurity is a right
@@ -233,7 +233,44 @@ const Team = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='xl:col-span-2 bg-lightGrey'>
+                    <div className='bg-lightGrey'>
+                        <div className='flip-card'>
+                            <div className='flip-card-inner'>
+                                <div className='flip-card-front flex flex-wrap h-full content-center'>
+                                    <p className=' w-full text-center text-black font-bold text-20px pt-10px pb-10px pr-10px pl-10px'>
+                                        Andrei Ștefănie, Product Engineer
+                                    </p>
+                                </div>
+                                <div className='flip-card-back'>
+                                    <div className='flex flex-wrap h-full content-center text-left'>
+                                        <div>
+                                            <div className='flex flex-col flex-wrap text-16px leading-6 text-white'>
+                                                <p className='block w-full'>
+                                                    <a
+                                                        target='_blank'
+                                                        rel='noopener noreferrer'
+                                                        className='font-bold underline'
+                                                        href='https://www.linkedin.com/in/andreistefanie'
+                                                    >
+                                                        Andrei Ștefănie, Product Engineer
+                                                    </a>
+                                                </p>
+                                                <p className='block w-full mt-40px'>
+                                                    Andrei is deeply passionate about startups, cloud, and teaching.
+                                                    <br /> He is a cloud solutions architect having worked with the
+                                                    largest reinsurance companies and being part of their digitalization
+                                                    journey, from on-premises SAP ERP to cloud-native serverless
+                                                    systems. We still cannot pinpoint what exactly he does, but his
+                                                    favorite book is "Hello, Startup!".
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='bg-lightGrey'>
                         <div className='flip-card'>
                             <div className='flip-card-inner'>
                                 <div className='flip-card-front lastCol flex flex-wrap h-full content-end'>

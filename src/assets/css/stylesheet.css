@@ -612,6 +612,7 @@ h6 {
     background-image: url(../images/team-last-bg.svg);
     background-position: center center;
     background-repeat: no-repeat;
+    background-size: 70%;
 }
 .otherPages.sectionTitle:after {
     max-width: 100%;

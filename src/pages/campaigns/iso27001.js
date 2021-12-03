@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Container, Row, Section } from '../../components/atoms/Containers';
 import Seo from '../../components/Seo';
 import { Link } from 'gatsby';
@@ -17,31 +17,8 @@ import { Link as ScrollLink } from 'react-scroll';
 import { Helmet } from 'react-helmet';
 import arrow from '../../assets/images/arrow.svg';
 import Consent from '../../components/consent';
-import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
 
 export default function Iso27001() {
-    useEffect(() => {
-        setTimeout(() => {
-            if (typeof window !== 'undefined' && window['hbspt']) {
-                window.hbspt.forms.create({
-                    portalId: '5413427',
-                    formId: 'aa6ef10b-be0a-4959-be34-1f00fb1cac4b',
-                    target: '#request-demo'
-                });
-            }
-        }, 600);
-        function handler(event) {
-            if (event.data.type === 'hsFormCallback' && event.data.eventName === 'onFormSubmit') {
-                trackCustomEvent({
-                    category: 'Form Request',
-                    action: 'Sent',
-                    label: 'ISO 27001 Compliance for cloud'
-                });
-            }
-        }
-        window.addEventListener('message', handler);
-        return () => window.removeEventListener('message', handler);
-    }, []);
     return (
         <>
             <Seo

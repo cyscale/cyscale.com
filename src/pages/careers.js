@@ -6,7 +6,7 @@ import stocks from '../assets/images/stocks.svg';
 import gabriel from '../assets/images/gabriel.jpg';
 import manuela from '../assets/images/manuela.jpg';
 import virginia from '../assets/images/virginia.png';
-// import ovidiu from '../assets/images/ovidiu.jpg';
+import ovidiu from '../assets/images/ovidiu.jpg';
 // import andreiM from '../assets/images/andrei-m.jpg';
 import andreiS from '../assets/images/andrei-s.jpg';
 import personalDayOff from '../assets/images/personal-day-off.svg';
@@ -71,33 +71,9 @@ const benefits = [
 ];
 
 const employee = [
-    // {
-    //     photo: ovidiu,
-    //     name: 'Ovidiu Cical',
-    //     position: 'Founder & CEO',
-    //     quote: 'Ovidiu wears many hats, from CEO to Innovation Officer or Spokesperson. He is a Certified Professional Cloud Architect with a solid background in software development focused on Information Security, Innovation and Product Strategy.'
-    // },
-    {
-        photo: manuela,
-        name: 'Manuela Ticudean',
-        position: 'Co-Founder & PM',
-        quote: `At Cyscale I have a constant opportunity to grow, professionally and personally. Moreover, I feel that my contribution matters and that we’re creating something truly special.`
-    },
-    // {
-    //     photo: gabriel,
-    //     name: 'Andrei Milas',
-    //     position: 'Co-Founder & CTO',
-    //     quote: 'At Cyscale I have a constant opportunity to grow, professionally and personally. Moreover, I feel that my contribution matters and that we’re creating something truly special.'
-    // },
-    {
-        photo: gabriel,
-        name: 'Gabriel Ceicoschi',
-        position: 'Design & Front-end',
-        quote: 'I jumped into Cyscale “express” 🚂 by the time things were getting together. Two years later and I’m still here, facing new challenges and opportunities every single day. I’ve never thought how many things Cyscale will teach me.'
-    },
     {
         photo: andreiS,
-        name: 'Andrei Stefanie',
+        name: 'Andrei Ștefănie',
         position: 'Product Engineer',
         quote: `Being passionate about start-ups and what we can build on the cloud, Cyscale was the clear path onwards for me. I knew it will be fun, but hard and so it is. When it’s fun, we laugh together, and when it’s hard, we work together.`
     },
@@ -106,7 +82,32 @@ const employee = [
         name: 'Virginia Mitea',
         position: 'Sales & BD',
         quote: `Friendly atmosphere: that's the first thing that comes to my mind when someone asks me to describe how working at Cyscale is. I discovered how the other teams are working, learned from them, and applied their agile-specific methods to my role.`
+    },
+    {
+        photo: gabriel,
+        name: 'Gabriel Ceicoschi',
+        position: 'Design & Front-end',
+        quote: 'I jumped into Cyscale “express” 🚂 by the time things were getting together. Two years later and I’m still here, facing new challenges and opportunities every single day. I’ve never thought how many things Cyscale will teach me.'
+    },
+    // {
+    //     photo: gabriel,
+    //     name: 'Andrei Milas',
+    //     position: 'Co-Founder & CTO',
+    //     quote: 'At Cyscale I have a constant opportunity to grow, professionally and personally. Moreover, I feel that my contribution matters and that we’re creating something truly special.'
+    // },
+    {
+        photo: manuela,
+        name: 'Manuela Ticudean',
+        position: 'Co-Founder & PM',
+        quote: `At Cyscale I have a constant opportunity to grow, professionally and personally. Moreover, I feel that my contribution matters and that we’re creating something truly special.`
+    },
+    {
+        photo: ovidiu,
+        name: 'Ovidiu Cical',
+        position: 'Founder & CEO',
+        quote: 'Founding Cyscale is the best decision of my life: it allows me to build the type of company that puts people first, promotes fairness and inclusion, and simultaneously, we get the chance to create something extraordinary for the cybersecurity world. All wins!'
     }
+
 ];
 
 const Index = () => {
