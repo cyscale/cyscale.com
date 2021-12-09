@@ -25,7 +25,7 @@ const Hero = () => {
                                                     <h2 className='text-20px xl:text-34px mb-43px text-black font-proximaBold'>
                                                         Basic
                                                     </h2>
-                                                    <p className='text-15px text-black leading-6'>
+                                                    <p className='text-15px text-black leading-normal'>
                                                         -<br />A rich Inventory to provide visibility into your cloud
                                                         environments.
                                                     </p>
@@ -46,7 +46,7 @@ const Hero = () => {
                                                     <h2 className='text-20px xl:text-34px mb-43px text-black font-proximaBold'>
                                                         Business
                                                     </h2>
-                                                    <p className='text-15px text-black leading-6'>
+                                                    <p className='text-15px text-black leading-normal'>
                                                         -<br />
                                                         Essential tools to ensure your cloud environments stay
                                                         protected.

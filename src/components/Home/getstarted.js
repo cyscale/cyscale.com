@@ -15,7 +15,7 @@ const getstarted = ({ description, btnText, btnLink, sectionName, icon, icon2, E
                         <div
                             className={`block w-full  ${
                                 sectionName !== 'aboutUsGetStarted' && (sectionName === 'RemoteWork' ? null : 'md:w-96')
-                            } m-auto text-white text-24px leading-8 text-center ${
+                            } m-auto text-white text-24px leading-normal text-center ${
                                 !!sectionName && sectionName === 'getStartedFooter' ? 'sm:text-left' : ''
                             }`}
                         >
@@ -59,7 +59,7 @@ const getstarted = ({ description, btnText, btnLink, sectionName, icon, icon2, E
                     </div>
                     {!!sectionName && sectionName === 'getStartedFooter' ? (
                         <div>
-                            <div className='block w-full md:w-96 mx-auto sm:m-auto text-white text-24px leading-8 text-center sm:text-left mt-20px sm:mt-0px'>
+                            <div className='block w-full md:w-96 mx-auto sm:m-auto text-white text-24px leading-normal text-center sm:text-left mt-20px sm:mt-0px'>
                                 <img
                                     src={icon2}
                                     alt='icon'

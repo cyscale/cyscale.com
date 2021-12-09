@@ -6,7 +6,7 @@ const Sectionheader = ({ headingText, description, subText, pageName, section })
         <>
             <div className={`grid grid-cols-1 ${pageName === "aboutUs" || pageName === "dataSecurity" || pageName === "cloudCompliance" ? ("lg:grid-cols-2") : ("lg:grid-cols-3")} ${!!pageName && pageName === "CSPMPage" ? ("gap-4 lg:gap-x-52") : ("gap-4")} ${!!pageName && pageName === "RemoteWork" ? ("items-center") : null}`}>
                 <div>
-                    <h2 className={`text-blue text-34px leading-10 ${pageName === "dataSecurity" ? ("lg:max-w-md") : (pageName === "cloudCompliance" ? null: ("lg:max-w-sm"))} ${!!section && section === "complianceAutoUpdates" ? ("lg:pr-32"):null} sectionTitle new-line`}>{headingText}</h2>
+                    <h2 className={`text-blue text-34px leading-normal ${pageName === "dataSecurity" ? ("lg:max-w-md") : (pageName === "cloudCompliance" ? null: ("lg:max-w-sm"))} ${!!section && section === "complianceAutoUpdates" ? ("lg:pr-32"):null} sectionTitle new-line`}>{headingText}</h2>
                     {!!subText && (
                         <p className="text-black text-16px mt-12 lg:mt-32 capitalize">{subText}</p>
                     )}
@@ -20,7 +20,7 @@ const Sectionheader = ({ headingText, description, subText, pageName, section })
                 )}`}></div>
                 {!!description && (
                     <div className={`${!!pageName && pageName === "CSPMPage" && ("lg:col-span-2")}`}>
-                        <p className="text-block text-16px leading-7 new-line">
+                        <p className="text-block text-16px leading-normal new-line">
                             {description}
                         </p>
                         {headingText === "Reveal & curb hidden costs" && (

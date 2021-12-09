@@ -93,6 +93,7 @@ const TopNav = ({ pageName }) => {
     return (
         <div
             ref={root}
+            style={{maxWidth: '100vw'}}
             className={`fixed top-0 left-0 block w-full mx-auto z-10 transition duration-300 transform ${rootClasses}`}
         >
             <div className={`topNav ${menu.toggleBg} container max-w-7xl m-auto px-8 pt-2.5`}>
@@ -116,7 +117,7 @@ const TopNav = ({ pageName }) => {
                                     type='button'
                                     className={`${
                                         pageName === 'SKGPage' || pageName === 'CSPMPage' ? 'active' : ''
-                                    }  relative parentItem block my-6 mx-4 lg:m-8 text-base hover:no-underline leading-6`}
+                                    }  relative parentItem block my-6 mx-4 lg:m-8 text-base hover:no-underline leading-normal`}
                                 >
                                     <span>Platform</span>
                                 </button>
@@ -128,7 +129,7 @@ const TopNav = ({ pageName }) => {
                                                     to='/products/cloud-security-posture-management/'
                                                     activeStyle={{ color: '#0F26AA' }}
                                                     activeClassName='active'
-                                                    className='text-base text-black hover:text-blue hover:no-underline leading-6'
+                                                    className='text-base text-black hover:text-blue hover:no-underline leading-normal'
                                                 >
                                                     Cloud Security Posture Management
                                                 </Link>
@@ -136,14 +137,14 @@ const TopNav = ({ pageName }) => {
                                                     to='/products/security-knowledge-graph/'
                                                     activeStyle={{ color: '#0F26AA' }}
                                                     activeClassName='active'
-                                                    className='text-base text-black hover:text-blue hover:no-underline leading-6 mt-7'
+                                                    className='text-base text-black hover:text-blue hover:no-underline leading-normal mt-7'
                                                 >
                                                     Security Knowledge Graph<sup>TM</sup>
                                                 </Link>
                                             </div>
                                         </div>
                                         <div className='hidden lg:inline-block'>
-                                            <p className='text-base font-semibold text-black leading-6'>Our Partners</p>
+                                            <p className='text-base font-semibold text-black leading-normal'>Our Partners</p>
                                             <div className='flex flex-row flex-wrap space-x-4 mt-7'>
                                                 <img src={image7} className='w-auto h-8' alt='svg_aws' />
                                                 <img src={image8} className='w-auto h-8' alt='svg_azure' />
@@ -155,8 +156,8 @@ const TopNav = ({ pageName }) => {
                                                     alt='Kubernetes_logo_without_wordmark'
                                                 />
                                             </div>
-                                            <p className='text-base leading-6 text-black mt-36'>
-                                                <strong className='leading-6 text-sm'>
+                                            <p className='text-base leading-normal text-black mt-36'>
+                                                <strong className='leading-normal text-sm'>
                                                     Built-in Compliance Standards & Security Frameworks
                                                 </strong>
                                                 <br /> CIS, ISO 27001:2013, SOC 2, NIST 800, NIST CSF, PCIDSS,
@@ -197,7 +198,7 @@ const TopNav = ({ pageName }) => {
                                         pageName === 'ComplianceAuditing'
                                             ? 'active'
                                             : ''
-                                    } relative parentItem block my-6 mx-4 lg:m-8 text-base no-underline leading-6`}
+                                    } relative parentItem block my-6 mx-4 lg:m-8 text-base no-underline leading-normal`}
                                 >
                                     <span>Use Cases</span>
                                 </button>
@@ -209,7 +210,7 @@ const TopNav = ({ pageName }) => {
                                                     to='/use-cases/cloud-data-security/'
                                                     activeStyle={{ color: '#0F26AA' }}
                                                     activeClassName='active'
-                                                    className='text-base text-black hover:text-blue hover:no-underline leading-6'
+                                                    className='text-base text-black hover:text-blue hover:no-underline leading-normal'
                                                 >
                                                     Data Security
                                                 </Link>
@@ -217,7 +218,7 @@ const TopNav = ({ pageName }) => {
                                                     to='/use-cases/remote-work-security/'
                                                     activeStyle={{ color: '#0F26AA' }}
                                                     activeClassName='active'
-                                                    className='text-base text-black hover:text-blue hover:no-underline leading-6 mt-7'
+                                                    className='text-base text-black hover:text-blue hover:no-underline leading-normal mt-7'
                                                 >
                                                     Remote Work
                                                 </Link>
@@ -225,7 +226,7 @@ const TopNav = ({ pageName }) => {
                                                     to='/use-cases/cloud-compliance-and-auditing/'
                                                     activeStyle={{ color: '#0F26AA' }}
                                                     activeClassName='active'
-                                                    className='text-base text-black hover:text-blue hover:no-underline leading-6 mt-7'
+                                                    className='text-base text-black hover:text-blue hover:no-underline leading-normal mt-7'
                                                 >
                                                     Compliance and Auditing
                                                 </Link>
@@ -233,7 +234,7 @@ const TopNav = ({ pageName }) => {
                                                     to='/use-cases/iso-27001-compliance/'
                                                     activeStyle={{ color: '#0F26AA' }}
                                                     activeClassName='active'
-                                                    className='text-base text-black hover:text-blue hover:no-underline leading-6 mt-7'
+                                                    className='text-base text-black hover:text-blue hover:no-underline leading-normal mt-7'
                                                 >
                                                     ISO 27001 Compliance
                                                 </Link>
@@ -268,7 +269,7 @@ const TopNav = ({ pageName }) => {
                                 <Link
                                     to='/pricing/'
                                     activeClassName='active'
-                                    className='relative parentItem block my-6 mx-4 lg:m-8 text-base hover:no-underline leading-6'
+                                    className='relative parentItem block my-6 mx-4 lg:m-8 text-base hover:no-underline leading-normal'
                                 >
                                     <span>Pricing</span>
                                 </Link>
@@ -276,7 +277,7 @@ const TopNav = ({ pageName }) => {
                             <li className='hoverable hover:bg-teal-700 hover:text-white'>
                                 <button
                                     type='button'
-                                    className={`relative parentItem block my-6 mx-4 lg:m-8 text-base leading-6 ${
+                                    className={`relative parentItem block my-6 mx-4 lg:m-8 text-base leading-normal ${
                                         pageName === 'blogs' || pageName === 'blog-detail' ? 'active' : null
                                     }`}
                                 >
@@ -290,7 +291,7 @@ const TopNav = ({ pageName }) => {
                                                     to='/blog/'
                                                     activeStyle={{ color: '#0F26AA' }}
                                                     activeClassName='active'
-                                                    className='text-base text-black hover:text-blue hover:no-underline leading-6'
+                                                    className='text-base text-black hover:text-blue hover:no-underline leading-normal'
                                                 >
                                                     Blog
                                                 </Link>
@@ -298,7 +299,7 @@ const TopNav = ({ pageName }) => {
                                                     href='https://docs.cyscale.com'
                                                     target='_blank'
                                                     rel='noopener noreferrer'
-                                                    className='text-base text-black hover:text-blue hover:no-underline leading-6 mt-7'
+                                                    className='text-base text-black hover:text-blue hover:no-underline leading-normal mt-7'
                                                 >
                                                     Documentation
                                                 </a>
@@ -307,7 +308,7 @@ const TopNav = ({ pageName }) => {
                                                     download
                                                     target='_blank'
                                                     rel='noopener noreferrer'
-                                                    className='text-base text-black hover:text-blue hover:no-underline leading-6 mt-7'
+                                                    className='text-base text-black hover:text-blue hover:no-underline leading-normal mt-7'
                                                 >
                                                     Data Sheet
                                                 </a>
@@ -315,7 +316,7 @@ const TopNav = ({ pageName }) => {
                                                     href='https://docs.cyscale.com'
                                                     target='_blank'
                                                     rel='noopener noreferrer'
-                                                    className='text-base text-black hover:text-blue hover:no-underline leading-6 mt-7'
+                                                    className='text-base text-black hover:text-blue hover:no-underline leading-normal mt-7'
                                                 >
                                                     Support
                                                 </a>
@@ -357,7 +358,7 @@ const TopNav = ({ pageName }) => {
                                         pageName === 'contact_us'
                                             ? 'active'
                                             : ''
-                                    } relative parentItem block my-6 mx-4 lg:m-8 text-base leading-6`}
+                                    } relative parentItem block my-6 mx-4 lg:m-8 text-base leading-normal`}
                                 >
                                     <span>Company</span>
                                 </button>
@@ -369,7 +370,7 @@ const TopNav = ({ pageName }) => {
                                                     to='/about-us/'
                                                     activeStyle={{ color: '#0F26AA' }}
                                                     activeClassName='active'
-                                                    className={`text-base text-black hover:text-blue hover:no-underline leading-6`}
+                                                    className={`text-base text-black hover:text-blue hover:no-underline leading-normal`}
                                                 >
                                                     About us
                                                 </Link>
@@ -377,7 +378,7 @@ const TopNav = ({ pageName }) => {
                                                     to='/careers/'
                                                     activeStyle={{ color: '#0F26AA' }}
                                                     activeClassName='active'
-                                                    className='text-base text-black hover:text-blue hover:no-underline leading-6 mt-7'
+                                                    className='text-base text-black hover:text-blue hover:no-underline leading-normal mt-7'
                                                 >
                                                     Careers
                                                 </Link>
@@ -385,14 +386,14 @@ const TopNav = ({ pageName }) => {
                                                     to='/contact-us/'
                                                     activeStyle={{ color: '#0F26AA' }}
                                                     activeClassName='active'
-                                                    className='text-base text-black hover:text-blue hover:no-underline leading-6 mt-7'
+                                                    className='text-base text-black hover:text-blue hover:no-underline leading-normal mt-7'
                                                 >
                                                     Contact us
                                                 </Link>
                                             </div>
                                         </div>
                                         <div className='hidden lg:inline-block'>
-                                            <Link to='/careers' className='text-base font-medium text-black leading-6'>
+                                            <Link to='/careers' className='text-base font-medium text-black leading-normal'>
                                                 Open positions
                                             </Link>
                                             <div className='flex flex-col mt-2'>
@@ -404,7 +405,7 @@ const TopNav = ({ pageName }) => {
                                                             to={`/careers/${permalink}/`}
                                                             activeStyle={{ color: '#0F26AA' }}
                                                             activeClassName='active'
-                                                            className='text-sm text-black hover:text-blue hover:no-underline leading-6 mb-1'
+                                                            className='text-sm text-black hover:text-blue hover:no-underline leading-normal mb-1'
                                                         >
                                                             <span
                                                                 title={title}

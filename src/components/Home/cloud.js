@@ -15,7 +15,7 @@ const Cloud = ({ title, sectionName, f_image, data }) => {
             {!!title && (
               <div>
                 <h2
-                  className=" text-blue text-24px sm:text-34px leading-10 lg:max-w-sm sectionTitle">
+                  className=" text-blue text-24px sm:text-34px leading-normal lg:max-w-sm sectionTitle">
                   {title}
                 </h2>
               </div>
@@ -78,7 +78,7 @@ const Cloud = ({ title, sectionName, f_image, data }) => {
                 {data.map((content, index) => (
                   <div
                     key={index}
-                    className="text-16px relative text-black leading-6"
+                    className="text-16px relative text-black leading-normal"
                   >
                     {!!content.title && (
                       <h3 className="text-16px font-medium mb-5px">

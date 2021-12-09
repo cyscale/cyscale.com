@@ -14,7 +14,7 @@ const Automation = () => {
           <div className="grid xl:grid-cols-3 mt-24 mb-24">
             <div></div>
             <div className="xl:col-span-2">
-              <h2 className="text-blue text-24px max-w-full lg:w-9/12 sm:text-34px leading-9 sectionTitle">
+              <h2 className="text-blue text-24px max-w-full lg:w-9/12 sm:text-34px leading-normal sectionTitle">
                 How Security Knowledge Graph™
                 delivers knowledge-driven automation
               </h2>
@@ -88,7 +88,7 @@ const Automation = () => {
                   <div className="pt-45px pb-45px">
                     <div className="flex flex-wrap flex-grow h-full justify-center xl:justify-start">
                       <img src={feauterImage} className="w-48" alt="Valuable insights for peace of mind." />
-                      <h2 className="text-blue text-24px max-w-full sm:text-34px leading-9 mt-auto text-left text-xl-left">
+                      <h2 className="text-blue text-24px max-w-full sm:text-34px leading-normal mt-auto text-left text-xl-left">
                         Valuable insights for peace of mind.  :)
                       </h2>
                     </div>

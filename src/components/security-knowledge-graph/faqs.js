@@ -41,7 +41,7 @@ const FAQs = () => {
         <div className="block w-full">
           <div className="max-w-1366px mx-auto pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px">
             <div className="grid grid-cols-1">
-              <h2 className="text-blue w-full text-24px sm:text-34px leading-8 lg:max-w-sm sectionTitle">
+              <h2 className="text-blue w-full text-24px sm:text-34px leading-normal lg:max-w-sm sectionTitle">
                 FAQs
               </h2>
             </div>
@@ -58,11 +58,11 @@ const FAQs = () => {
               <div>
                 {dataFAQs.map((content, index) => (
                   <div key={index} className="mb-5">
-                    <button type="button" tabIndex={index} onKeyDown={() => setTabActive(index)} onClick={() => setTabActive(index)} className={`block w-full text-left pr-20px text-16px text-black font-bold leading-6 cursor-pointer relative tabTitle border-none outline-none ${index === 0 && tabActive === 0 && ("active")} ${index === tabActive && ("active")}`}>
+                    <button type="button" tabIndex={index} onKeyDown={() => setTabActive(index)} onClick={() => setTabActive(index)} className={`block w-full text-left pr-20px text-16px text-black font-bold leading-normal cursor-pointer relative tabTitle border-none outline-none ${index === 0 && tabActive === 0 && ("active")} ${index === tabActive && ("active")}`}>
                       {content.question}
                       <img src={TabsArrow} alt="arrow icon" className="tabsArrow absolute top-8px right-0" />
                     </button>
-                    <p className={`text-16px text-black leading-6 mt-40px new-line ${index === 0 && tabActive === 0 ? ("block") : ("")} ${index === tabActive ? ("block") : ("hidden")}`}>
+                    <p className={`text-16px text-black leading-normal mt-40px new-line ${index === 0 && tabActive === 0 ? ("block") : ("")} ${index === tabActive ? ("block") : ("hidden")}`}>
                       {content.answer}
                     </p>
                   </div>

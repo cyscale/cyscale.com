@@ -18,7 +18,7 @@ const Team = () => {
                                 <div className='flip-card-back'>
                                     <div className='flex flex-wrap h-full content-center text-left'>
                                         <div>
-                                            <div className='flex flex-col flex-wrap text-16px leading-6 text-white'>
+                                            <div className='flex flex-col flex-wrap text-16px leading-normal text-white'>
                                                 <p className='block w-full'>
                                                     <a
                                                         target='_blank'
@@ -59,7 +59,7 @@ const Team = () => {
                                 <div className='flip-card-back'>
                                     <div className='flex flex-wrap h-full content-center text-left'>
                                         <div>
-                                            <div className='flex flex-col flex-wrap text-16px leading-6 text-white'>
+                                            <div className='flex flex-col flex-wrap text-16px leading-normal text-white'>
                                                 <p className='block w-full'>
                                                     <a
                                                         target='_blank'
@@ -97,7 +97,7 @@ const Team = () => {
                                 <div className='flip-card-back'>
                                     <div className='flex flex-wrap h-full content-center text-left'>
                                         <div>
-                                            <div className='flex flex-col flex-wrap text-16px leading-6 text-white'>
+                                            <div className='flex flex-col flex-wrap text-16px leading-normal text-white'>
                                                 <p className='block w-full'>
                                                     <a
                                                         target='_blank'
@@ -136,7 +136,7 @@ const Team = () => {
                                 <div className='flip-card-back'>
                                     <div className='flex flex-wrap h-full content-center text-left'>
                                         <div>
-                                            <div className='flex flex-col flex-wrap text-16px leading-6 text-white'>
+                                            <div className='flex flex-col flex-wrap text-16px leading-normal text-white'>
                                                 <p className='block w-full font-bold'>Cyscale Team</p>
                                                 <p className='block w-full mt-40px'>
                                                     We take great pride in being part of an industry that serves and
@@ -167,7 +167,7 @@ const Team = () => {
                                 <div className='flip-card-back'>
                                     <div className='flex flex-wrap h-full content-center text-left'>
                                         <div>
-                                            <div className='flex flex-col flex-wrap text-16px leading-6 text-white'>
+                                            <div className='flex flex-col flex-wrap text-16px leading-normal text-white'>
                                                 <p className='block w-full'>
                                                     <a
                                                         target='_blank'
@@ -206,7 +206,7 @@ const Team = () => {
                                 <div className='flip-card-back'>
                                     <div className='flex flex-wrap h-full content-center text-left'>
                                         <div>
-                                            <div className='flex flex-col flex-wrap text-16px leading-6 text-white'>
+                                            <div className='flex flex-col flex-wrap text-16px leading-normal text-white'>
                                                 <p className='block w-full'>
                                                     <a
                                                         target='_blank'
@@ -244,7 +244,7 @@ const Team = () => {
                                 <div className='flip-card-back'>
                                     <div className='flex flex-wrap h-full content-center text-left'>
                                         <div>
-                                            <div className='flex flex-col flex-wrap text-16px leading-6 text-white'>
+                                            <div className='flex flex-col flex-wrap text-16px leading-normal text-white'>
                                                 <p className='block w-full'>
                                                     <a
                                                         target='_blank'
@@ -281,7 +281,7 @@ const Team = () => {
                                 <div className='flip-card-back'>
                                     <div className='flex flex-wrap h-full content-center text-left'>
                                         <div>
-                                            <div className='flex flex-col flex-wrap text-16px leading-6 text-white'>
+                                            <div className='flex flex-col flex-wrap text-16px leading-normal text-white'>
                                                 <p className='block w-full'>
                                                     Let's build the future of cyber security together!
                                                 </p>
@@ -301,7 +301,7 @@ const Team = () => {
                     </div>
                 </div>
                 <div className='max-w-1366px mx-auto mt-24 mb-24 pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px'>
-                    <h2 className='text-blue text-34px leading-8 text-center new-line'>Join the team</h2>
+                    <h2 className='text-blue text-34px leading-normal text-center new-line'>Join the team</h2>
                     <div className='mt-12 w-full flex justify-center text-center'>
                         <Link
                             to='/careers/'

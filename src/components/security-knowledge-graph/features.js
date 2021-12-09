@@ -15,14 +15,14 @@ const Features = ({title, bottomDescripton, data}) => {
                 <div>
                     <img src={content.icon} alt={content.description} className="h-31px" />
                 </div>
-                <p className="mt-20px text-black text-16px leading-6">
+                <p className="mt-20px text-black text-16px leading-normal">
                     {content.description}
                 </p>
                 </div>
              ))}
           </div>
           <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 mt-62px">
-              <p className="mt-20px text-black text-16px leading-6">{bottomDescripton}</p>
+              <p className="mt-20px text-black text-16px leading-normal">{bottomDescripton}</p>
           </div>
         </div>
       </div>

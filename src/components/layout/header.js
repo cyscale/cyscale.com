@@ -45,7 +45,7 @@ const Header = ({
                     {pageName === 'blog-detail' || pageName === 'blogs' ? (
                         <div className='flex mt-44'>
                             <div className='mx-auto w-full xl:w-2/4'>
-                                <h1 className='text-34px text-blue leading-10 font-bold otherPages sectionTitle'>
+                                <h1 className='text-34px text-blue leading-normal font-bold otherPages sectionTitle'>
                                     {blogDataTitle || 'Cyscale Blog'}
                                 </h1>
                             </div>
@@ -65,7 +65,7 @@ const Header = ({
                                     }`}
                                 >
                                     <h1
-                                        className={` text-blue text-38px sm:text-30px md:text-60px leading-40px sm:leading-60px font-semibold sm:mt-20 new-line`}
+                                        className={` text-blue text-38px sm:text-30px md:text-60px leading-normal sm:leading-normal font-semibold sm:mt-20 new-line`}
                                     >
                                         {pageName === 'SKGPage' ? (
                                             <span>

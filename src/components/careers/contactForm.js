@@ -138,7 +138,7 @@ const ContactForm = () => {
                                                 {errors.message && touched.message && errors.message}
                                             </div>
                                             <div className='block w-full mb-30px'>
-                                                <p className='text-12px leading-6 text-black'>
+                                                <p className='text-12px leading-normal text-black'>
                                                     By submitting this form you understand and agree that CYSCALE
                                                     SYSTEMS may contact you regarding your interest about our services,
                                                     partners and products as well as receiving electronic communications
@@ -151,7 +151,7 @@ const ContactForm = () => {
                                             <div className='block w-full mb-30px'>
                                                 <label
                                                     htmlFor='termsAccept'
-                                                    className='css-checkbox text-12px leading-6 text-black'
+                                                    className='css-checkbox text-12px leading-normal text-black'
                                                 >
                                                     <input
                                                         type='checkbox'
@@ -164,7 +164,7 @@ const ContactForm = () => {
                                                     <i></i>I agree to{' '}
                                                     <a
                                                         href='https://cyscale.com/policies/privacy-policy'
-                                                        className='text-12px text-blue leading-6 underline hover:no-underline hover:text-red'
+                                                        className='text-12px text-blue leading-normal underline hover:no-underline hover:text-red'
                                                     >
                                                         Cyscale’s Privacy Policy
                                                     </a>
@@ -200,8 +200,8 @@ const ContactForm = () => {
                         </div>
                         <div className='w-full contactAddress mt-100px flex lg:hidden flex-col'>
                             <img src={LocationIcon} className='w-5' alt='location' />
-                            <p className='text-16px leading-6 text-black font-bold mb-30px'>CYSCALE</p>
-                            <p className='text-16px leading-6 text-black font-light mb-30px'>
+                            <p className='text-16px leading-normal text-black font-bold mb-30px'>CYSCALE</p>
+                            <p className='text-16px leading-normal text-black font-light mb-30px'>
                                 Made in Cluj-Napoca, Romania
                                 <br />
                                 Abatorului 150D str, Floresti
@@ -227,7 +227,7 @@ const ContactForm = () => {
                         </div>
                     </div>
                     <div className='order-2 xl:order-3'>
-                        <h6 className='text-blue text-34px lg:w-96 leading-8 new-line sectionTitle'>
+                        <h6 className='text-blue text-34px lg:w-96 leading-normal new-line sectionTitle'>
                             join us or just say hello.
                         </h6>
                     </div>

@@ -171,7 +171,7 @@ const Index = () => {
                     <div className='max-w-lg mx-auto lg:mx-0 lg:max-w-none'>
                         <Row>
                             <div className='lg:col-span-5 col-span-12'>
-                                <h2 className='text-blue text-4xl leading-10 md:max-w-xs sectionTitle'>Our Mission</h2>
+                                <h2 className='text-blue text-4xl leading-normal md:max-w-xs sectionTitle'>Our Mission</h2>
                                 <p className='max-w-lg lg:max-w-md mt-8 leading-relaxed'>
                                     To help companies of all sizes start, improve and maintain their{' '}
                                     <strong>Cloud Security Program</strong>, based on expert know-how and industry best
@@ -189,7 +189,7 @@ const Index = () => {
                                 </ScrollLink>
                             </div>
                             <div className='mt-12 lg:mt-0 lg:col-span-7 col-span-12 leading-relaxed'>
-                                <h2 className='text-blue text-4xl leading-10 md:max-w-xs sectionTitle'>Our Values</h2>
+                                <h2 className='text-blue text-4xl leading-normal md:max-w-xs sectionTitle'>Our Values</h2>
                                 <p className='max-w-lg lg:max-w-xl mt-8'>
                                     In everything we do at Cyscale, we are guided by our commitment to:
                                     <ul>
@@ -229,10 +229,10 @@ const Index = () => {
                                 {benefits.map(({ title, description, icon }) => (
                                     <div className='col-span-12 lg:col-span-6 my-6'>
                                         <div className='flex items-center'>
-                                            <img src={icon} alt='' width={80} height={80} />
+                                            <img src={icon} alt='' className="w-16 h-16 md:w-20 md:h-20"  />
                                             <div className='ml-8'>
-                                                <h3 className='text-xl lg:text-2xl'>{title}</h3>
-                                                <p className='text-normal lg:text-lg'>{description}</p>
+                                                <h3 className='text-normal md:text-xl lg:text-2xl'>{title}</h3>
+                                                <p className='text-sm md:text-normal lg:text-lg'>{description}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -244,7 +244,7 @@ const Index = () => {
             </div>
             <Section>
                 <Container>
-                    <h2 className='text-blue text-center mx-auto mb-12 max-w-sm text-4xl leading-10 sectionTitle'>
+                    <h2 className='text-blue text-center mx-auto mb-12 max-w-sm text-4xl leading-normal sectionTitle'>
                         Words from the inside
                     </h2>
                 </Container>
@@ -252,13 +252,13 @@ const Index = () => {
                     <Slider {...settings}>
                         {employee.map(({ name, position, photo, quote }) => (
                             <div className='p-2 mb-2'>
-                                <div className='p-6 shadow-lg rounded-lg bg-white relative overflow-hidden'>
-                                    <div className='h-56 pr-20 text-sm flex flex-col'>
+                                <div className='p-3 md:p-6 shadow-lg rounded-lg bg-white relative overflow-hidden'>
+                                    <div className='h-56 pr-0 md:pr-20 text-sm flex flex-col'>
                                         <quote>"{quote}"</quote>
                                         <strong className='block mt-auto'>{name}</strong>
                                         <span className='block'>{position}</span>
                                     </div>
-                                    <div className='flex flex-col items-center absolute -right-16 -bottom-52'>
+                                    <div className='flex flex-col items-center absolute -right-20 -bottom-64 md:-right-16 md:-bottom-52'>
                                         <div className='grad mb-2 w-20 h-20 rounded-full overflow-hidden bg-gradient-primary'>
                                             {photo && <img src={photo} alt={name} className='w-20 h-20 rounded-full' />}
                                         </div>
@@ -268,8 +268,8 @@ const Index = () => {
                             </div>
                         ))}
                         <div className='p-2 mb-2'>
-                            <div className='p-6 shadow-lg rounded-lg bg-white relative overflow-hidden'>
-                                <div className='h-56 pr-16 flex flex-col'>
+                            <div className='p-3 shadow-lg rounded-lg bg-white relative overflow-hidden'>
+                                <div className='h-56 pr-0 flex flex-col'>
                                     <p className='text-2xl font-bold mt-4 mb-4'>Think you’ve got what it takes?</p>
                                     <p className='text-normal'>
                                         If so, check out our open positions below. We’d love to have you onboard.
@@ -283,7 +283,7 @@ const Index = () => {
                                         See open positions
                                     </ScrollLink>
                                 </div>
-                                <div className='flex flex-col items-center absolute -right-16 -bottom-52'>
+                                <div className='hidden md:flex flex-col items-center absolute -right-16 -bottom-52'>
                                     <div className='grad mb-2 w-20 h-20 rounded-full overflow-hidden bg-gradient-primary'></div>
                                     <div className='bg-gradient-primary w-64 h-64 rounded-full'></div>
                                 </div>
@@ -295,14 +295,14 @@ const Index = () => {
             <Section id='open-positions'>
                 <Container>
                     <div className='bg-image-jobs'>
-                        <h2 className='text-blue text-center mx-auto mb-12 max-w-sm text-5xl leading-10'>
+                        <h2 className='text-blue text-center mx-auto mb-12 max-w-sm text-5xl leading-normal'>
                             Open positions
                         </h2>
                         <div className='max-w-3xl mx-auto'>
                             <div className='flex text-sm text-gray px-4 py-3'>
-                                <div className='w-7/12 md:w-5/12 pr-2'>Job Title</div>
-                                <div className='w-2/12 pr-2'>Location</div>
-                                <div className='w-2/12 pr-2'>Employment</div>
+                                <div className='w-12/12 md:w-5/12 pr-2'>Job Title</div>
+                                <div className='w-2/12 pr-2 hidden md:block'>Location</div>
+                                <div className='w-2/12 pr-2 hidden md:block'>Employment</div>
                                 <div className='w-2/12 pr-2 hidden md:block'>Department</div>
                                 <div className='w-1/12 hidden md:block '></div>
                             </div>
@@ -311,11 +311,11 @@ const Index = () => {
                                     to={`/careers/${permalink}/`}
                                     className='flex items-center text-sm text-gray bg-white shadow-md rounded-md mb-4 leading-relaxed  px-4 py-3 hover:bg-lightGreyEEE transition-colors'
                                 >
-                                    <span className='w-7/12 md:w-5/12 pr-2'>
+                                    <span className='w-12/12 md:w-5/12 pr-2 overflow-ellipsis'>
                                         <strong>{title}</strong>
                                     </span>
-                                    <span className='w-2/12 pr-2'>{location}</span>
-                                    <span className='w-2/12 pr-2'>{experience}</span>
+                                    <span className='w-2/12 pr-2 hidden md:block'>{location}</span>
+                                    <span className='w-2/12 pr-2 hidden md:block'>{experience}</span>
                                     <span className='w-2/12 pr-2 hidden md:block'>{department}</span>
                                     <span className='w-1/12 hidden md:block'>
                                         <span className='bg-primary text-white text-xm px-3 py-1 w-14 block ml-auto leading-tight rounded-sm'>

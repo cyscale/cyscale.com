@@ -37,7 +37,7 @@ const Description = ({ data }) => {
                         {data.frontmatter.experience && <li>Experience: {data.frontmatter.experience}</li>}
                     </ul>
                 </div>
-                <p className='text-2xl uppercase mb-50px text-blue leading-8'>{data.title}</p>
+                <p className='text-2xl uppercase mb-50px text-blue leading-normal'>{data.title}</p>
                 <ReactMarkdown skipHtml={true}>{data && data?.rawMarkdownBody}</ReactMarkdown>
             </div>
         </div>

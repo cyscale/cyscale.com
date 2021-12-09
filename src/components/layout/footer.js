@@ -12,7 +12,7 @@ const Footer = () => {
                     <Link to='/'>
                         <img src={logo} className='w-162px footerLogo' alt='cyscale logo' />
                     </Link>
-                    <div className='mt-20px text-14px font-light leading-24 text-white pr-20px'>
+                    <div className='mt-20px text-14px font-light leading-normal text-white pr-20px'>
                         Cyscale helps companies embrace their digital future by protecting apps and data in the cloud.
                         With the innovative Security Knowledge Graph™ at its core, Cyscale helps you easily track
                         security and compliance across your multi-cloud environment.
@@ -73,9 +73,9 @@ const Footer = () => {
                 <div className='w-full md:w-6/12 lg:w-8/12 mt-20px md:mt-0'>
                     <div className='grid-cols-2 lg:grid-cols-4 justify-between hidden sm:grid'>
                         <div className=''>
-                            <h3 className='text-14px font-bold leading-24 text-white pb-40px '>Platform</h3>
+                            <h3 className='text-14px font-bold leading-normal text-white pb-40px '>Platform</h3>
                             <ul>
-                                <li className='text-12px leading-24 pb-7px'>
+                                <li className='text-12px leading-normal pb-7px'>
                                     <Link
                                         to='/products/cloud-security-posture-management/'
                                         className='font-light text-white no-underline hover:underline'
@@ -83,7 +83,7 @@ const Footer = () => {
                                         Cloud Security Posture Management
                                     </Link>
                                 </li>
-                                <li className='text-12px leading-24 pb-7px'>
+                                <li className='text-12px leading-normal pb-7px'>
                                     <Link
                                         to='/products/security-knowledge-graph/'
                                         className='font-light text-white no-underline hover:underline'
@@ -94,9 +94,9 @@ const Footer = () => {
                             </ul>
                         </div>
                         <div className=''>
-                            <h3 className='text-14px font-bold leading-24  text-white pb-40px '>Use cases</h3>
+                            <h3 className='text-14px font-bold leading-normal  text-white pb-40px '>Use cases</h3>
                             <ul>
-                                <li className='text-12px leading-24 pb-7px'>
+                                <li className='text-12px leading-normal pb-7px'>
                                     <Link
                                         to='/use-cases/cloud-data-security/'
                                         className='font-light text-white no-underline hover:underline'
@@ -104,7 +104,7 @@ const Footer = () => {
                                         Data Security
                                     </Link>
                                 </li>
-                                <li className='text-12px leading-24 pb-7px'>
+                                <li className='text-12px leading-normal pb-7px'>
                                     <Link
                                         to='/use-cases/remote-work-security/'
                                         className='font-light text-white no-underline hover:underline'
@@ -112,7 +112,7 @@ const Footer = () => {
                                         Remote Work
                                     </Link>
                                 </li>
-                                <li className='text-12px leading-24 pb-7px'>
+                                <li className='text-12px leading-normal pb-7px'>
                                     <Link
                                         to='/use-cases/cloud-compliance-and-auditing/'
                                         className='font-light text-white no-underline hover:underline'
@@ -124,14 +124,14 @@ const Footer = () => {
                         </div>
 
                         <div className=''>
-                            <h3 className='text-14px font-bold leading-24  text-white pb-40px '>Resources</h3>
+                            <h3 className='text-14px font-bold leading-normal  text-white pb-40px '>Resources</h3>
                             <ul>
-                                <li className='text-12px leading-24 pb-7px'>
+                                <li className='text-12px leading-normal pb-7px'>
                                     <Link to='/blog' className='font-light text-white no-underline hover:underline'>
                                         Blog
                                     </Link>
                                 </li>
-                                <li className='text-12px leading-24 pb-7px'>
+                                <li className='text-12px leading-normal pb-7px'>
                                     <a
                                         href='https://docs.cyscale.com'
                                         target='_blank'
@@ -141,7 +141,7 @@ const Footer = () => {
                                         Documentation
                                     </a>
                                 </li>
-                                <li className='text-12px leading-24 pb-7px'>
+                                <li className='text-12px leading-normal pb-7px'>
                                     <a
                                         href='/resources/cyscale-cloud-data-security-datasheet.pdf'
                                         download
@@ -150,7 +150,7 @@ const Footer = () => {
                                         Data Sheet
                                     </a>
                                 </li>
-                                <li className='text-12px leading-24 pb-7px'>
+                                <li className='text-12px leading-normal pb-7px'>
                                     <a
                                         href='https://docs.cyscale.com'
                                         target='_blank'
@@ -160,7 +160,7 @@ const Footer = () => {
                                         FAQ + Support
                                     </a>
                                 </li>
-                                <li className='text-12px leading-24 pb-7px'>
+                                <li className='text-12px leading-normal pb-7px'>
                                     <Link to='/pricing/' className='font-light text-white no-underline hover:underline'>
                                         Pricing
                                     </Link>
@@ -169,9 +169,9 @@ const Footer = () => {
                         </div>
 
                         <div className=''>
-                            <h3 className='text-14px font-bold leading-24  text-white pb-40px '>Company</h3>
+                            <h3 className='text-14px font-bold leading-normal  text-white pb-40px '>Company</h3>
                             <ul>
-                                <li className='text-12px leading-24 pb-7px'>
+                                <li className='text-12px leading-normal pb-7px'>
                                     <Link
                                         to='/about-us/'
                                         className='font-light text-white no-underline hover:underline'
@@ -179,12 +179,12 @@ const Footer = () => {
                                         About us
                                     </Link>
                                 </li>
-                                <li className='text-12px leading-24 pb-7px'>
+                                <li className='text-12px leading-normal pb-7px'>
                                     <Link to='/careers/' className='font-light text-white no-underline hover:underline'>
                                         Careers
                                     </Link>
                                 </li>
-                                <li className='text-12px leading-24 pb-7px'>
+                                <li className='text-12px leading-normal pb-7px'>
                                     <Link
                                         to='/contact-us/'
                                         className='font-light text-white no-underline hover:underline'
@@ -198,10 +198,10 @@ const Footer = () => {
 
                     <div className='lg:pt-102px'>
                         <ul className='lg:flex m-0'>
-                            <li className='block lg:inline-block lg:mr-50px text-12px font-light leading-24 text-white '>
+                            <li className='block lg:inline-block lg:mr-50px text-12px font-light leading-normal text-white '>
                                 Cyscale &copy; 2018 - 2021. All rights reserved.
                             </li>
-                            <li className='inline-block mr-10px lg:mr-30px  text-12px leading-24  '>
+                            <li className='inline-block mr-10px lg:mr-30px  text-12px leading-normal  '>
                                 <Link
                                     to='/policies/terms-of-use/'
                                     className='font-light text-white no-underline hover:underline'
@@ -209,7 +209,7 @@ const Footer = () => {
                                     Terms of use
                                 </Link>
                             </li>
-                            <li className='inline-block mr-10px lg:mr-30px text-12px leading-24 '>
+                            <li className='inline-block mr-10px lg:mr-30px text-12px leading-normal '>
                                 <Link
                                     to='/policies/security-policy/'
                                     className='font-light text-white no-underline hover:underline'
@@ -217,7 +217,7 @@ const Footer = () => {
                                     Security Policy
                                 </Link>
                             </li>
-                            <li className='inline-block mr-10px lg:mr-30px text-12px  leading-24 '>
+                            <li className='inline-block mr-10px lg:mr-30px text-12px  leading-normal '>
                                 <Link
                                     to='/policies/privacy-policy/'
                                     className='font-light text-white no-underline hover:underline'
@@ -225,7 +225,7 @@ const Footer = () => {
                                     Privacy Policy{' '}
                                 </Link>
                             </li>
-                            <li className='inline-block mr-10px text-12px leading-24 '>
+                            <li className='inline-block mr-10px text-12px leading-normal '>
                                 <a
                                     href='https://status.cyscale.com'
                                     rel='noopener noreferrer'

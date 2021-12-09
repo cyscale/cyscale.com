@@ -39,8 +39,8 @@ const Index = () => {
                                 </h1>
                                 <div className='w-full contactAddress mt-272px hidden lg:flex flex-col'>
                                     <img src={LocationIcon} className='w-5' alt='location icon' />
-                                    <p className='text-16px leading-6 text-black font-bold mb-30px'>CYSCALE</p>
-                                    <p className='text-16px leading-6 text-black font-light mb-30px'>
+                                    <p className='text-16px leading-normal text-black font-bold mb-30px'>CYSCALE</p>
+                                    <p className='text-16px leading-normal text-black font-light mb-30px'>
                                         Made in Cluj-Napoca, Romania
                                         <br />
                                         Abatorului 150D str, Floresti
@@ -68,12 +68,12 @@ const Index = () => {
                                 </div>
                             </div>
                             <div>
-                                <h2 className='text-blue text-34px leading-8 sectionTitle'>
+                                <h2 className='text-blue text-34px leading-normal sectionTitle'>
                                     Hello!
                                     <br />
                                     How can we help you?
                                 </h2>
-                                <p className='text-16px text-black leading-6 mt-57px'>
+                                <p className='text-16px text-black leading-normal mt-57px'>
                                     We are always happy to assist with more information about us or product. Just fill
                                     out the form here and we will get back to you.{' '}
                                 </p>
@@ -82,8 +82,8 @@ const Index = () => {
                                 </div>
                                 <div className='w-full contactAddress mt-100px flex lg:hidden flex-col'>
                                     <img src={LocationIcon} className='w-5' alt='location icon' />
-                                    <p className='text-16px leading-6 text-black font-bold mb-30px'>CYSCALE</p>
-                                    <p className='text-16px leading-6 text-black font-light mb-30px'>
+                                    <p className='text-16px leading-normal text-black font-bold mb-30px'>CYSCALE</p>
+                                    <p className='text-16px leading-normal text-black font-light mb-30px'>
                                         Made in Cluj-Napoca, Romania
                                         <br />
                                         Abatorului 150D str, Floresti

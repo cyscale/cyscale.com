@@ -23,14 +23,14 @@ const Hero = ({ title, description, fimage, description2, pageName }) => {
                             {!!pageName && pageName === 'aboutUs' ? (
                                 <div className='grid grid-col-1 xl:grid-cols-2 gap-6'>
                                     <div>
-                                        <p className='text-16px leading-6 text-black mb-0'>{description}</p>
+                                        <p className='text-16px leading-normal text-black mb-0'>{description}</p>
                                     </div>
                                     <div>
-                                        <p className='text-16px leading-6 text-black mb-0'>{description2}</p>
+                                        <p className='text-16px leading-normal text-black mb-0'>{description2}</p>
                                     </div>
                                 </div>
                             ) : (
-                                <p className='text-16px leading-6 text-black mb-0'>{description}</p>
+                                <p className='text-16px leading-normal text-black mb-0'>{description}</p>
                             )}
                         </div>
 

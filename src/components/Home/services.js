@@ -10,7 +10,7 @@ const services = ({ headingText, description, data, sectionName }) => {
 
                         <div className="hidden md:block"></div>
                         <div>
-                            <h2 className="text-blue text-34px leading-10 md:max-w-xs sectionTitle">{headingText}</h2>
+                            <h2 className="text-blue text-34px leading-normal md:max-w-xs sectionTitle">{headingText}</h2>
 
                         </div>
                     </>
@@ -19,12 +19,12 @@ const services = ({ headingText, description, data, sectionName }) => {
 
                     <>
                         <div>
-                            <h2 className="text-blue text-34px leading-10 md:max-w-xs sectionTitle">{headingText}</h2>
+                            <h2 className="text-blue text-34px leading-normal md:max-w-xs sectionTitle">{headingText}</h2>
 
                         </div>
                         <div className="hidden md:block"></div>
                         <div>
-                            <p className="text-block text-16px leading-7 new-line">
+                            <p className="text-block text-16px leading-normal new-line">
                                 {description}
                             </p>
                         </div>
@@ -42,9 +42,9 @@ const services = ({ headingText, description, data, sectionName }) => {
                         )}
 
                         <div className={`block ${!!sectionName && sectionName === "CSPMServices" ? ("mb-45px") : ("mt-45px")}`}>
-                            <h3 className={`text-green leading-6 ${!!sectionName && sectionName === "CSPMServices" ? ("text-20px") : ("text-24px")}`}>{content.title}</h3>
+                            <h3 className={`text-green leading-normal ${!!sectionName && sectionName === "CSPMServices" ? ("text-20px") : ("text-24px")}`}>{content.title}</h3>
                             <div className={`block ${!!sectionName && sectionName === "CSPMServices" ? ("mt-30px") : ("mt-45px pb-45px")}`}>
-                                <p className="text-16px text-black leading-6 new-line">{content.description1}</p>
+                                <p className="text-16px text-black leading-normal new-line">{content.description1}</p>
                             </div>
                         </div>
                         {!!content.linkText && (

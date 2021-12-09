@@ -16,10 +16,10 @@ const Support = ({ title, data, sectionName }) => {
         >
           {data.map((content, index) => (
             <div key={index}>
-              <p className="text-16px text-black leading-6 mb-30px">
+              <p className="text-16px text-black leading-normal mb-30px">
                 <strong>{content.title}</strong>
               </p>
-              <ul className="list-none text-16px text-black leading-6">
+              <ul className="list-none text-16px text-black leading-normal">
                 {content.subItems.map((items, index2) => (
                   <li key={index2}>{items}</li>
                 ))}
@@ -44,7 +44,7 @@ const Support = ({ title, data, sectionName }) => {
         <div className="max-w-1366px mx-auto mt-62px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div>
-              <p className="text-16px text-black leading-6">
+              <p className="text-16px text-black leading-normal">
                 <strong>Don’t see your Data Repo? </strong>
               </p>
             </div>
@@ -84,7 +84,7 @@ const Support = ({ title, data, sectionName }) => {
                 <div className="grid grid-cols-1 md:grid-cols-4">
                   <div></div>
                   <div className="col-span-3 md:pl-128px lg:pl-100px">
-                    <p className="new-line text-16px text-black leading-6">
+                    <p className="new-line text-16px text-black leading-normal">
                     <Link
                     to="/use-cases/cloud-compliance-and-auditing/"
                     className="text-blue underline text-16px hover:no-underline hover:text-red"

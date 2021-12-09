@@ -43,14 +43,14 @@ const BlogCard = ({ data, feature }) => {
                     <strong className='text-xs block'>{data.category}</strong>
                     <div>
                         <Link ref={link} to={`/blog/${data.permalink}/`}>
-                            <h3 title={data.title} className='text-blue text-24px leading-24px mt-11px'>
+                            <h3 title={data.title} className='text-blue text-24px leading-normal mt-11px'>
                                 {title}
                             </h3>
                         </Link>
                         <span className='text-xs mt-2 block bold text-grey2'>
                             <strong>{data.authors} </strong> · <strong>{data.date?.split('T')?.[0]}</strong>
                         </span>
-                        <p title={data.description} className='text-base leading-24px mt-2'>
+                        <p title={data.description} className='text-base leading-normal mt-2'>
                             {description}
                         </p>
                     </div>

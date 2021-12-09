@@ -24,7 +24,7 @@ export default function SecurityControlsandPolicies() {
             </div>
             <div> 
                 <img src={SecurityControlsandPolicies_image} className="w-full max-w-full" alt="Minimize overlap between cloud compliance and security " />
-                <p className="text-lg leading-6 text-black mt-7">Pool your expertise and take advantage of the full control and transparency Cyscale gives you over your multi-cloud environment.</p>
+                <p className="text-lg leading-normal text-black mt-7">Pool your expertise and take advantage of the full control and transparency Cyscale gives you over your multi-cloud environment.</p>
             </div>
         </div>
     </div>

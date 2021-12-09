@@ -9,7 +9,7 @@ export default function MaintainThirdPartyData() {
                 <img src={image} className="w-full max-w-full" alt="Maintain a 3rd-party, fully auditable data trail" />
             </div>
             <div>
-                <p className="text-base text-black leading-6 font-normal">
+                <p className="text-base text-black leading-normal font-normal">
                     Achieve third-party validation for global security frameworks and compliance requirements with the Cyscale Power Cloud Platform. 
                     <br />
                     <br />

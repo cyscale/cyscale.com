@@ -47,10 +47,10 @@ export default function AutoUpdateFeature() {
   return (
     <div className="bg-lightGrey">
       <div className="max-w-1366px m-auto py-12 lg:py-20 pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px">
-        <p className="text-black leading-6 text-xl text-center">
+        <p className="text-black leading-normal text-xl text-center">
           See it in action
         </p>
-        <p className="text-black leading-6 text-base text-center mt-6 lg:max-w-2xl mx-auto">
+        <p className="text-black leading-normal text-base text-center mt-6 lg:max-w-2xl mx-auto">
           At Cyscale, we practice what we preach and use our Power Cloud
           Platform to automatically pull information and update{" "}
           <a
@@ -68,7 +68,7 @@ export default function AutoUpdateFeature() {
                 <img src={content.icon} className="h-45px w-auto flex-shrink-0 mx-auto md:mx-0" alt="icon" />
                 <img src={RightArrow} className="w-153px h-auto flex-shrink-0 hidden md:inline-flex" alt="icon" />
               </div>
-              <p className="text-blue leading-6 mt-3 text-base">
+              <p className="text-blue leading-normal mt-3 text-base">
                 {content.description}
               </p>
               <img src={DownArrow} alt="icon" className="mx-auto mt-2 md:hidden" />

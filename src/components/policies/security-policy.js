@@ -14,7 +14,7 @@ const Index = () => {
           <div className="max-w-1366px mx-auto pt-72 pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px">
             <div className="flex">
               <div className="mx-auto w-full xl:w-2/4">
-                <h1 className="text-34px text-blue leading-8 font-bold otherPages sectionTitle">
+                <h1 className="text-34px text-blue leading-normal font-bold otherPages sectionTitle">
                 Security Policy
                 </h1>
               </div>
@@ -23,7 +23,7 @@ const Index = () => {
         </div>
         <div className="max-w-1366px mx-auto mt-88px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px">
           <div className="flex">
-            <div className="mx-auto w-full xl:w-2/4 text-16px font-bold tetx-black leading-6">
+            <div className="mx-auto w-full xl:w-2/4 text-16px font-bold tetx-black leading-normal">
               <h2 className="font-bold mb-36px text-24px">This Security Policy applies only to your data on <strong> Cyscale</strong> Platform.</h2>
               <h2 className="font-bold mb-36px text-24px">Data Safety</h2>
               <p className="mb-36px">

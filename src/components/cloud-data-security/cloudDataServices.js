@@ -8,7 +8,7 @@ const Services = ({ data, bannerBtn1Text, bannerBtn1Link }) => {
                     {data.map((content, index) => (
                         <div key={index}>
                             <img src={content.icon} alt={content.title} className='h-68px' />
-                            <p className='text-16px text-black new-line leading-6 mt-24px'>
+                            <p className='text-16px text-black new-line leading-normal mt-24px'>
                                 <strong className='block w-auto'>{content.title}</strong>
                                 {content.description}
                             </p>
