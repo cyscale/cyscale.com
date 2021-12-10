@@ -146,8 +146,8 @@ const Index = () => {
                             <Row>
                                 <div className='col-span-12 lg:col-span-6 order-2 lg:order-1'>
                                     <h1 className='text-4xl lg:text-6xl leading-large text-primary'>
-                                        Join the
-                                        <br /> Cyscale Team
+                                    Building a new product is fun.
+                                        <br /> Creating a new category? Stunning.
                                     </h1>
                                     <ScrollLink
                                         smooth={true}
