@@ -107,7 +107,6 @@ const employee = [
         position: 'Founder & CEO',
         quote: 'Founding Cyscale is the best decision of my life: it allows me to build the type of company that puts people first, promotes fairness and inclusion, and simultaneously, we get the chance to create something extraordinary for the cybersecurity world. All wins!'
     }
-
 ];
 
 const Index = () => {
@@ -146,7 +145,7 @@ const Index = () => {
                             <Row>
                                 <div className='col-span-12 lg:col-span-6 order-2 lg:order-1'>
                                     <h1 className='text-4xl lg:text-6xl leading-large text-primary'>
-                                    Building a new product is fun.
+                                        Building a new product is fun.
                                         <br /> Creating a new category? Stunning.
                                     </h1>
                                     <ScrollLink
@@ -171,7 +170,9 @@ const Index = () => {
                     <div className='max-w-lg mx-auto lg:mx-0 lg:max-w-none'>
                         <Row>
                             <div className='lg:col-span-5 col-span-12'>
-                                <h2 className='text-blue text-4xl leading-normal md:max-w-xs sectionTitle'>Our Mission</h2>
+                                <h2 className='text-blue text-4xl leading-normal md:max-w-xs sectionTitle'>
+                                    Our Mission
+                                </h2>
                                 <p className='max-w-lg lg:max-w-md mt-8 leading-relaxed'>
                                     To help companies of all sizes start, improve and maintain their{' '}
                                     <strong>Cloud Security Program</strong>, based on expert know-how and industry best
@@ -189,7 +190,9 @@ const Index = () => {
                                 </ScrollLink>
                             </div>
                             <div className='mt-12 lg:mt-0 lg:col-span-7 col-span-12 leading-relaxed'>
-                                <h2 className='text-blue text-4xl leading-normal md:max-w-xs sectionTitle'>Our Values</h2>
+                                <h2 className='text-blue text-4xl leading-normal md:max-w-xs sectionTitle'>
+                                    Our Values
+                                </h2>
                                 <p className='max-w-lg lg:max-w-xl mt-8'>
                                     In everything we do at Cyscale, we are guided by our commitment to:
                                     <ul>
@@ -221,15 +224,20 @@ const Index = () => {
                     </div>
                 </Section>
             </Container>
-            <div className='gradientBG'>
+            <Section>
                 <Container>
-                    <Section>
+                    <h2 className='text-blue text-4xl text-center mx-auto  mb-4 leading-normal md:max-w-lg'>
+                        Not your average benefits
+                    </h2>
+                </Container>
+                <div className='gradientBG py-8'>
+                    <Container>
                         <div className='max-w-lg mx-auto lg:mx-0 lg:max-w-none text-white'>
                             <Row>
                                 {benefits.map(({ title, description, icon }) => (
                                     <div className='col-span-12 lg:col-span-6 my-6'>
                                         <div className='flex items-center'>
-                                            <img src={icon} alt='' className="w-16 h-16 md:w-20 md:h-20"  />
+                                            <img src={icon} alt='' className='w-16 h-16 md:w-20 md:h-20' />
                                             <div className='ml-8'>
                                                 <h3 className='text-normal md:text-xl lg:text-2xl'>{title}</h3>
                                                 <p className='text-sm md:text-normal lg:text-lg'>{description}</p>
@@ -239,9 +247,9 @@ const Index = () => {
                                 ))}
                             </Row>
                         </div>
-                    </Section>
-                </Container>
-            </div>
+                    </Container>
+                </div>
+            </Section>
             <Section>
                 <Container>
                     <h2 className='text-blue text-center mx-auto mb-12 max-w-sm text-4xl leading-normal sectionTitle'>
@@ -268,7 +276,7 @@ const Index = () => {
                             </div>
                         ))}
                         <div className='p-2 mb-2'>
-                            <div className='p-3 shadow-lg rounded-lg bg-white relative overflow-hidden'>
+                            <div className='p-3 md:p-6 shadow-lg rounded-lg bg-white relative overflow-hidden'>
                                 <div className='h-56 pr-0 flex flex-col'>
                                     <p className='text-2xl font-bold mt-4 mb-4'>Think you’ve got what it takes?</p>
                                     <p className='text-normal'>

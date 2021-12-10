@@ -7,9 +7,9 @@ const CareerTemplate = ({ pageContext }) => {
     return (
         <Layout
             pageName='jobDetails'
+            title={alldata.frontmatter.title}
             bannerTitle={alldata.frontmatter.title}
-            description={alldata.frontmatter.title}
-            title='Careers - Cyscale Power Cloud Platform'
+            description={alldata.frontmatter.description}
             bannerBtn1Link={!alldata.frontmatter.disabled ? '/' : false}
             bannerBtn1Text={!alldata.frontmatter.disabled ? 'Apply' : false}
         >
