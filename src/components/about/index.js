@@ -9,6 +9,7 @@ import Team from "../about/team";
 import feauterImage from "../../assets/images/about-us-f-image.svg";
 import iconOne from "../../assets/images/getStartedICon.svg";
 import ScrollButton from "../ScrollButton/ScrollButton";
+import { FREE_TRIAL_LINK } from "../../common/links";
 
 const Index = () => {
   const pageName = "aboutUs";
@@ -44,7 +45,7 @@ const Index = () => {
           <GetStarted
             description="Let us help you improve your Cloud Security Posture"
             btnText="Try Cyscale for free and see for yourself"
-            btnLink="https://app.cyscale.com"
+            btnLink={FREE_TRIAL_LINK}
             ExternalLink
             icon={iconOne}
             sectionName="aboutUsGetStarted"

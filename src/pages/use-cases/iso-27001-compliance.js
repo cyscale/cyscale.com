@@ -9,6 +9,8 @@ import whyIso from '../../assets/images/components-iso.svg';
 import ScrollButton from '../../components/ScrollButton/ScrollButton';
 import getStartedICon from '../../assets/images/getStartedIconCPSM.svg';
 import GetStarted from '../../components/Home/getstarted';
+import { FREE_TRIAL_LINK } from '../../common/links';
+
 const StepCard = ({ groups, list, order }) => {
     return (
         <div className='shadow-lg p-4 rounded-lg col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-3 relative'>
@@ -54,7 +56,7 @@ export default function CloudCompliance() {
                                     </p>
 
                                     <a
-                                        href='https://app.cyscale.com'
+                                        href={FREE_TRIAL_LINK}
                                         target='_blank'
                                         rel='noopener noreferrer'
                                         className='bg-gradient-to-r from-blue to-red lg:max-w-xs block font-medium rounded text-white uppercase text-center py-5 px-12 mt-8 no-underline hover:no-underline '
@@ -294,7 +296,7 @@ export default function CloudCompliance() {
                     ExternalLink
                     icon={getStartedICon}
                     btnText='Start your free trial'
-                    btnLink='https://app.cyscale.com/'
+                    btnLink={FREE_TRIAL_LINK}
                     description='Achieve true continuous compliance for ISO 27001'
                 />
             </div>

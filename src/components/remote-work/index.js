@@ -10,6 +10,7 @@ import EmployeeAccessFootprint from "../../assets/images/employee-access-footpri
 import getStartedICon from "../../assets/images/getStartedIconCPSM.svg";
 import SuperChargeCloudSecurityImage from "../../assets/images/supercharge-cloud-security.svg";
 import CloudSecuirtyConfigurationImage from "../../assets/images/cloud-secuity-configuration.svg";
+import { FREE_TRIAL_LINK } from '../../common/links';
 
 export default function RemoteWorkContent() {
   const dataWFHServices = [
@@ -86,7 +87,7 @@ export default function RemoteWorkContent() {
         <GetStarted
           description="Support productive, secure & compliant remote workflows"
           btnText="START YOUR FREE TRIAL"
-          btnLink="https://app.cyscale.com/"
+          btnLink={FREE_TRIAL_LINK}
           ExternalLink
           icon={getStartedICon}
           sectionName="RemoteWork"
@@ -170,7 +171,7 @@ export default function RemoteWorkContent() {
         icon={getStartedICon}
           description={`Prevent cloud data spills and keep remote work incident-free`}
           btnText="Start your free trial"
-          btnLink="https://app.cyscale.com/"
+          btnLink={FREE_TRIAL_LINK}
           ExternalLink
         />
       </div>

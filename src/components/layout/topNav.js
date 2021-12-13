@@ -15,6 +15,7 @@ import menuIcon from '../../assets/images/menuIcon.svg';
 import menuClsoe from '../../assets/images/menuClose.svg';
 import { useStaticQuery, graphql } from 'gatsby';
 import useScrollTrigger from '../scrollTrigger';
+import { FREE_TRIAL_LINK } from '../../common/links';
 
 const initMenu = {
     Icon: menuIcon,
@@ -447,7 +448,7 @@ const TopNav = ({ pageName }) => {
                             <li className='py-6 px-4 lg:py-6 lg:pr-0 lg:pl-26px'>
                                 <a
                                     className='bg-gradient-to-r from-blue to-red hover:bg-blue w-153px text-14px border-transparent box-border rounded-31px  h-10 hidden xl:flex justify-center items-center uppercase leading-none text-white transition duration-500 hover:to-blue hover:no-underline'
-                                    href='https://app.cyscale.com'
+                                    href={FREE_TRIAL_LINK}
                                     target='_blank'
                                     rel='noopener noreferrer'
                                 >

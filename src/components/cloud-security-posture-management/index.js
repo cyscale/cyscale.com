@@ -16,6 +16,8 @@ import {
     OptimizeCosts,
     EliminateSecurityGaps
 } from './images';
+import { FREE_TRIAL_LINK } from '../../common/links';
+
 const Index = () => {
     const dataOnboarding = [
         {
@@ -215,7 +217,7 @@ const Index = () => {
                     title={`AGENTLESS, MULTI-CLOUD, PAINLESS CSPM`}
                     description='Start seeing value & saving money in minutes'
                     btnText='TRY CYSCALE FOR FREE'
-                    btnLink='https://app.cyscale.com'
+                    btnLink={FREE_TRIAL_LINK}
                     ExternalLink
                 />
             </div>

@@ -15,6 +15,7 @@ import iconTwo from '../../assets/images/elemente-vectoriale-07.svg';
 import iconThree from '../../assets/images/elemente-vectoriale-08.svg';
 import icon5 from '../../assets/images/visuals-vectorial-5.svg';
 import { SecurityKnowledgeGraph, CloudNative, RemoteWorkWft, DataGathering } from './images';
+import { FREE_TRIAL_LINK } from '../../common/links';
 
 const Home = () => {
     const dataService = [
@@ -184,7 +185,7 @@ const Home = () => {
                 <GetStarted
                     description='Start seeing value & saving money in minutes'
                     btnText=' Try Cyscale for free'
-                    btnLink='https://app.cyscale.com'
+                    btnLink={FREE_TRIAL_LINK}
                     ExternalLink
                     icon={iconOne}
                 />
@@ -218,7 +219,7 @@ const Home = () => {
                 <GetStarted
                     description='When did you last scan your cloud for misconfigurations?'
                     btnText='Start scanning for free'
-                    btnLink='https://app.cyscale.com'
+                    btnLink={FREE_TRIAL_LINK}
                     ExternalLink
                     icon={iconTwo}
                     icon2={iconThree}
