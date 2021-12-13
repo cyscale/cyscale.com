@@ -1,6 +1,6 @@
 ---
 templateKey: career-page
-title: Product Marketing Manager
+title: Product Marketing Manager (Remote) - Cyscale
 disabled: false
 location: Romania
 date: null
@@ -15,7 +15,7 @@ employmentType: full-time
 ---
 # Job description
 
-You will play a key role in defining the technologies and products Cyscale is developing, as well as in positioning and crafting the right messages for our audience. You will understand what the market is asking for and help the product team deliver on those features.
+You will play a key role in defining the technologies and products Cyscale is developing, as well as in positioning and crafting the right messages for our audience, but also take on strategic responsibilities for our overall sales motion and the trajectory of its SaaS offerings. You will understand what the market is asking for and help the product team deliver on those features.
 
 You will tell the world why Cyscale is the best solution for protecting complex cloud environments across AWS, Azure and GCP. Through the right messaging, you will help educate operations and development teams, enabling them to deliver fast without compromising on security and compliance.
 
@@ -37,12 +37,11 @@ You will tell the world why Cyscale is the best solution for protecting complex 
 
 ## Responsibilities
 
-* Define and maintain marketing campaigns for Cloud Security, Cloud Data Security, CNAPP, CSPM, and other xSPM solutions
+* Drive and support marketing campaigns for Cloud Security, Cloud Data Security, CNAPP, CSPM, and other xSPM solutions
 * Help establish and execute our Product-Led Growth strategy to successfully deliver key product outcomes
 * Package and deliver product updates and features in such a way that it drives more product adoption
 * Develop product positioning and messaging that differentiates our products in the market
-* Partner daily with cross-functional teams including Engineering, Finance, Design, Sales, and Customer Experience to build and deliver the Cyscale Products
-* Partner daily with cross-functional teams including Engineering, Finance, Design, Sales, and Customer Experience to build and deliver the Cyscale Platform
+* Partner daily with cross-functional teams including Engineering, Finance, Design, Sales, and Customer Experience to align on overall direction and amplify impact
 * Constantly evaluate if our solutions solve customer’s problems through quantitative and qualitative measures on user behavior, as well as experimentation (e.g. a/b testing, survey data, usability studies).
 
 ## Required Skills:
