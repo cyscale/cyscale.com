@@ -1,5 +1,5 @@
 ---
-templateKey: blog-post
+templateKey: career-page
 title: TypeScript / JavaScript Developer
 disabled: false
 location: Romania

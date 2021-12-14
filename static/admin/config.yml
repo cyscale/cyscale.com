@@ -40,7 +40,7 @@ collections:
       create: true
       slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
       fields:
-          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'blog-post' }
+          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'career-page' }
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Disabled', name: 'disabled', widget: 'boolean', default: false }
           - { label: 'Location', name: 'location', widget: 'string', default: 'Romania' }

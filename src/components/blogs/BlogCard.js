@@ -37,7 +37,7 @@ const BlogCard = ({ data, feature }) => {
                 onKeyDown={(e) => (e.code === 13 || e.code === 32) && handleClick(e)}
             >
                 <div className='bg-grey3 bigger-box-image '>
-                    <img src={data.featuredimage.publicURL} alt={data.title} />
+                    <img src={data?.featuredimage?.publicURL} alt={data.title} />
                 </div>
                 <div className='bg-white p-4'>
                     <strong className='text-xs block'>{data.category}</strong>
