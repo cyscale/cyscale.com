@@ -56,8 +56,8 @@ You will build new features such as the integration with Kubernetes, Github, Okt
 
 # Apply for this role by:
 
-* Emailing us [hr@cyscale.com](mailto:hr@cyscale.com)
-* Writing us a message on LinkedIn or
+* Emailing us at [hr@cyscale.com](mailto:hr@cyscale.com)
+* Writing us a message on LinkedIn
 * Applying directly to the job post via LinkedIn
 
 ## About Cyscale
