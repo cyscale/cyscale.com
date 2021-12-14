@@ -1,10 +1,9 @@
 ---
 templateKey: career-page
-title: Golang Developer (also remote, mid/senior)
+title: Golang Developer
 disabled: false
 location: Romania
-date: 2021-30-11T11:00:00.000Z
-department: Engineering
+date: null
 permalink: backend-developer
 description: Cyscale is a startup from Cluj-Napoca, activating in the cloud
   cybersecurity industry. We are looking for an experienced backend developer.
@@ -12,6 +11,7 @@ skills: Go (Programming Language), Amazon Web Services (AWS), GraphQL, Google
   Cloud Platform (GCP), Microsoft Azure, Security, Cloud Security, Cloud-Native
   Architecture, Cryptography.
 experience: mid/senior
+department: Engineering
 workType: hybrid
 employmentType: full-time
 ---
