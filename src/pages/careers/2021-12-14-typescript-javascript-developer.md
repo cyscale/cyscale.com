@@ -25,7 +25,7 @@ You will be part of a dedicated and autonomous product team, committed to solvi
 * An informal work environment with transparency and no hierarchies
 * Training and certifications to boost your career path (up to €1000 annually)
 * 25 minimum vacation days
-* + an additional 3 personal days (take them for yourself, whenever you need them)
+* * an additional 3 personal days (take them for yourself, whenever you need them)
 * Work from home allowance (up to 50€ for internet, electricity, etc.)
 * Private medical insurance
 
@@ -56,13 +56,14 @@ You will be part of a dedicated and autonomous product team, committed to solvi
 * Experience with  GraphQL API is considered an advantage  
 * Experience with cloud applications is considered an advantage 
 
-# If the Cyscale team and our product sound like something you can get excited about, apply for this role by
+## Apply for this role by:
 
-* Opening a [Pull Request](https://github.com/cyscale/careers/pulls) on this Github project
-* Emailing us [hr@cyscale.com](mailto:hr@cyscale.com)
-* Contacting us via [website contact form](https://cyscale.com/contact)
-* Writing us on [Linkedin](https://www.linkedin.com/company/cyscale)
+* Emailing us at [hr@cyscale.com](mailto:hr@cyscale.com)
+* Writing us a message on LinkedIn
+* Applying directly to the job post via LinkedIn
 
-We are looking forward to hearing from you!
+## About Cyscale
 
-https://app.cyscale.com
+Our mission is to enable companies to build on the cloud with confidence. The Cyscale Cloud Platform, which is a SaaS product, helps people visualize and secure their resources such as VMs, functions, users, etc. across multiple cloud providers and cloud accounts.
+
+https://cyscale.com
