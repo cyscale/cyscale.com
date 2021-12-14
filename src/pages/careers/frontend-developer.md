@@ -3,7 +3,7 @@ templateKey: career-page
 title: ReactJS Developer
 disabled: false
 location: Romania
-date: null
+date: 2021-12-14T15:42:55.900Z
 permalink: frontend-developer
 description: Cyscale is a startup from Cluj-Napoca, activating in the cloud
   cybersecurity industry. We are looking for an experienced frontend developer.
@@ -15,7 +15,7 @@ employmentType: full-time
 ---
 ## Job description
 
-*You will be part of*  a dedicated and autonomous product team, committed to solving real problems for our customers. You will build new user-facing features such as graph visualisation for integrations with Kubernetes or Github, fix/improve existing functionality such as our rich text editor for security policies. You will participate in all phases of the product (discovery, delivery, iteration), and your performance will be measured on the satisfaction of our users. 
+You will be part of a dedicated and autonomous product team, committed to solving real problems for our customers. You will build new user-facing features such as graph visualisation for integrations with Kubernetes or Github, fix/improve existing functionality such as our rich text editor for security policies. You will participate in all phases of the product (discovery, delivery, iteration), and your performance will be measured on the satisfaction of our users. 
 
 ## Benefits
 
@@ -35,8 +35,6 @@ employmentType: full-time
 * The opportunity to have a key role in the early development stage of what we believe will be a landmark product in cloud security
 * A startup involves a lot more than just writing code - you will get to learn a lot in a lot of areas such as marketing, sales, and communication (if you want)
 
-
-
 ## Responsibilities
 
 * Understand and align with Cyscale's mission and be committed to solving our customer's problems 
@@ -44,8 +42,6 @@ employmentType: full-time
 * Provide input in product discovery activities, help shaping requirements 
 * Ensure the technical feasibility of UI/UX designs 
 * Enhance the performance of the main frontend app, optimize for speed and scalability
-
-
 
 ## Required Skills:
 
@@ -59,15 +55,11 @@ employmentType: full-time
 * Experience with end-to-end testing frameworks such as Cypress is considered an advantage 
 * An eye for design
 
-
-
 ## Apply for this role by:
 
-* Emailing us [hr@cyscale.com](mailto:hr@cyscale.com)
-* Writing us a message on LinkedIn or
+* Emailing us at [hr@cyscale.com](mailto:hr@cyscale.com)
+* Writing us a message on LinkedIn
 * Applying directly to the job post via LinkedIn
-
-
 
 ## About Cyscale
 
