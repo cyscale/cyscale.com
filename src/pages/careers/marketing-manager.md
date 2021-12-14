@@ -1,9 +1,9 @@
 ---
 templateKey: career-page
-title: Product Marketing Manager (Remote) - Cyscale
+title: Product Marketing Manager
 disabled: false
 location: Romania
-date: null
+date: 2021-12-14T15:44:48.479Z
 permalink: marketing-manager
 description: Cyscale is a startup from Cluj-Napoca, activating in the cloud
   cybersecurity industry. We are looking for an experienced marketing manager.
@@ -56,13 +56,14 @@ You will tell the world why Cyscale is the best solution for protecting complex 
   * Experience with a high-growth SaaS trial and purchasing setup is a plus
   * HubSpot, Pipedrive, or Salesforce and Marketing Automation experience
 
-# If the Cyscale team and our product sounds like something you can get excited about, apply for this role by
+## Apply for this role by:
 
-* Opening a [Pull Request](https://github.com/cyscale/careers/pulls) on this Github project
-* Emailing us [hr@cyscale.com](mailto:hr@cyscale.com)
-* Contacting us via [website contact form](https://cyscale.com/contact)
-* Writing us on [Linkedin](https://www.linkedin.com/company/cyscale)
+* Emailing us at [hr@cyscale.com](mailto:hr@cyscale.com)
+* Writing us a message on LinkedIn
+* Applying directly to the job post via LinkedIn
 
-We are looking forward to hearing from you!
+## About Cyscale
 
-https://app.cyscale.com
+Our mission is to enable companies to build on the cloud with confidence. The Cyscale Cloud Platform, which is a SaaS product, helps people visualize and secure their resources such as VMs, functions, users, etc. across multiple cloud providers and cloud accounts.
+
+https://cyscale.com
