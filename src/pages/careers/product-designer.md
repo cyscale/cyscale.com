@@ -3,7 +3,7 @@ templateKey: career-page
 title: Product Designer UI/UX
 disabled: false
 location: Romania
-date: null
+date: 2021-12-16T08:39:41.951Z
 permalink: product-designer
 description: Cyscale is a startup from Cluj-Napoca, activating in the cloud
   cybersecurity industry. We are looking for an experienced product designer.
@@ -20,7 +20,6 @@ You will design a successful customer experience and a product that users love, 
 
 ## Benefits
 
-* €50,000 to €100,000 annual salary
 * Equity - shares/stock options (ESOP) - simulation available during interview
 * Sign-on bonus at hiring - cash in hand up to 2 salaries
 * Flexible schedule and working hours
