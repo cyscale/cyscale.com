@@ -19,7 +19,7 @@ export default function SecurityControlsandPolicies() {
                     <li className="mb-7 font-bold">Remote Working</li>
                     <li className="mb-7 font-bold">Secure Software Development Lifecycle (SDLC)</li>
                     <li className="mb-7 font-bold">Security Architecture and Design</li>
-                    <li className="mb-7 font-bold">Third-Party Vendors and Due Diligence, and more.  </li>
+                    <li className="mb-7 font-bold">Third-Party Vendors and Due Diligence, and more.</li>
                 </ul>
             </div>
             <div> 

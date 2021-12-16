@@ -142,7 +142,7 @@ const Index = () => {
     {
       image: F_Image,
       title: `Do it all with zero performance degradation for your workloads`,
-      description: `Because we use serverless technologies to categorize and inspect data repositories, we never interrupt or overload your systems. \nThe Cyscale Power Cloud Platform reduces your attack surface through continuous risk assessments with zero negative impact on performance. \n\nRun an efficient data security program that covers your entire range of cloud entities. Improve your flexibility, compliance and increase job satisfaction for your engineers. `,
+      description: `Because we use serverless technologies to categorize and inspect data repositories, we never interrupt or overload your systems. \nThe Cyscale Cloud Platform reduces your attack surface through continuous risk assessments with zero negative impact on performance. \n\nRun an efficient data security program that covers your entire range of cloud entities. Improve your flexibility, compliance and increase job satisfaction for your engineers. `,
     }
   ];
   return (
@@ -153,7 +153,7 @@ const Index = () => {
         />
         <Banner
           title={`Data security for resilient cloud environments`}
-          description={`Stuck playing catch-up with data security, with no breathing space for projects that move the needle? It’s time for a change of pace.\n\n Give your engineers clarity and accuracy – use the Cyscale Power Cloud Platform to turn cloud data security into a manageable routine.\n\nKeep tabs on your fast-growing cloud inventory with automated data discovery and classification, compliance scans on autopilot and a fully auditable evidence trail. And that’s just a taste!`}
+          description={`Stuck playing catch-up with data security, with no breathing space for projects that move the needle? It’s time for a change of pace.\n\n Give your engineers clarity and accuracy – use the Cyscale Cloud Platform to turn cloud data security into a manageable routine.\n\nKeep tabs on your fast-growing cloud inventory with automated data discovery and classification, compliance scans on autopilot and a fully auditable evidence trail. And that’s just a taste!`}
         />
       </div>
       <Services
@@ -164,7 +164,7 @@ const Index = () => {
       <div className="max-w-1366px mx-auto pt-70px pb-70px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px">
         <Sectionheader
           headingText="Discover & map data repositories across multi-cloud environments"
-          description={`When you’re growing fast, it’s easy to lose track of your cloud assets. But that comes at a cost, both in terms of $$$ and compliance issues. \n\nLiquidate your data security debt with the Cyscale Power Cloud Platform. Bring all your entities under one roof with comprehensive asset inventory and management – as soon as you log in.\n\nExpand visibility to cover your entire cloud infrastructure, across providers and services. It’s much easier to meet data security requirements when you know exactly where all your cloud assets are.`}
+          description={`When you’re growing fast, it’s easy to lose track of your cloud assets. But that comes at a cost, both in terms of $$$ and compliance issues. \n\nLiquidate your data security debt with the Cyscale Cloud Platform. Bring all your entities under one roof with comprehensive asset inventory and management – as soon as you log in.\n\nExpand visibility to cover your entire cloud infrastructure, across providers and services. It’s much easier to meet data security requirements when you know exactly where all your cloud assets are.`}
           pageName="aboutUs"
         />
       </div>
@@ -178,7 +178,7 @@ const Index = () => {
       <div className="max-w-1366px mx-auto pt-70px pb-70px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px">
         <Sectionheader
           headingText="Prioritize security-critical data repos to avoid exposure & breaches"
-          description={`With all cloud assets mapped out, IT and security teams can build a clear roadmap to protect data from external threats (unauthorized access, cyber threats, etc.) and internal risks (insider threats and human error).\n\nWe make it even easier to triage security tasks by automatically identifying which cloud assets hold critical data, who uses it and how. \n\nThe Cyscale Power Cloud Platform also automates the detection of policy violations and risky behavior. Avoid losing trade secrets and intellectual property that future innovation and profitability depend on.`}
+          description={`With all cloud assets mapped out, IT and security teams can build a clear roadmap to protect data from external threats (unauthorized access, cyber threats, etc.) and internal risks (insider threats and human error).\n\nWe make it even easier to triage security tasks by automatically identifying which cloud assets hold critical data, who uses it and how. \n\nThe Cyscale Cloud Platform also automates the detection of policy violations and risky behavior. Avoid losing trade secrets and intellectual property that future innovation and profitability depend on.`}
         />
       </div>
       <div className="gradientBGCSPM pt-60px pb-60px">
@@ -201,7 +201,7 @@ const Index = () => {
       <div className="max-w-1366px mx-auto pt-70px pb-70px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px">
         <Sectionheader
           headingText={`Comprehensive, blazing-fast classification that closes security gaps`}
-          description = {`\n\nOur Power Cloud Platform gives you the visibility that goes deep into every layer of your cloud infrastructures.`}
+          description = {`\n\nOur Cloud Platform gives you the visibility that goes deep into every layer of your cloud infrastructures.`}
           pageName="dataSecurity"
         />
       </div>

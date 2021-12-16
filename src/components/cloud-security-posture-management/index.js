@@ -186,7 +186,7 @@ const Index = () => {
         {
             title: 'Zero maintenance platform',
             description1:
-                'The Cyscale Power Cloud Platform is fully managed and agentless, so all you have to do is put it to work'
+                'The Cyscale Cloud Platform is fully managed and agentless, so all you have to do is put it to work'
         }
     ];
     return (
@@ -207,7 +207,7 @@ const Index = () => {
            
             <div className='block w-full CSPMServices'>
                 <Services
-                    headingText='The Cyscale Power Cloud Platform packs all the CSPM features you need'
+                    headingText='The Cyscale Cloud Platform packs all the CSPM features you need'
                     sectionName='CSPMServices'
                     data={dataService}
                 />

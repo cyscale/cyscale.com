@@ -35,7 +35,7 @@ const Sectionheader = ({ headingText, description, subText, pageName, section })
                 )}
                 {pageName === "RemoteWork" && (
                     <div className="hidden lg:inline-flex">
-                        <img src={headerImage} alt="Use the Cyscale Power Cloud Platform to" className="w-auto h-auto ml-auto" />
+                        <img src={headerImage} alt="Use the Cyscale Cloud Platform to" className="w-auto h-auto ml-auto" />
                     </div>
                 )}
 

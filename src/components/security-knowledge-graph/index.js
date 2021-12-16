@@ -31,7 +31,7 @@ const Index = () => {
     {
       description: 
       [
-        "For example, the Cyscale Power Cloud Platform can interrelate dissimilar entities such as user identity, endpoints, code repositories, production environments, VMs, and production databases. \n\nCyscale Security Knowledge Graph™ enables machines to understand these complex relations and derive new knowledge that human specialists can use without having to perform effort-intensive analyses themselves.",
+        "For example, the Cyscale Cloud Platform can interrelate dissimilar entities such as user identity, endpoints, code repositories, production environments, VMs, and production databases. \n\nCyscale Security Knowledge Graph™ enables machines to understand these complex relations and derive new knowledge that human specialists can use without having to perform effort-intensive analyses themselves.",
       
         "",
       ],
@@ -85,7 +85,7 @@ const Index = () => {
         <a href="/use-cases/cloud-compliance-and-auditing" key="link123" className=" text-blue underline text-16px hover:no-underline hover:text-red">
           GRC (Governance, Risk and Compliance system)
         </a>,
-        " system doesn’t have to take ages and more in-house resources than you can ever afford. \n\nThe Cyscale Power Cloud Platform is a GRC tool you can truly count on!\n\nIt packs rich, customizable features you can use to build and manage a competitive governance process that gets technical teams and management on the same page. "
+        " system doesn’t have to take ages and more in-house resources than you can ever afford. \n\nThe Cyscale Cloud Platform is a GRC tool you can truly count on!\n\nIt packs rich, customizable features you can use to build and manage a competitive governance process that gets technical teams and management on the same page. "
       ]
     },
     {
@@ -108,7 +108,7 @@ const Index = () => {
           <br />
           <br />
         </span>,
-        " Offset risks associated with SaaS providers and complex cloud infrastructures by using the Cyscale Power Cloud Platform. Banking on the robust capabilities of our Security Knowledge Graph™, it instantly checks on how your cloud assets fare in terms of user privacy, multi-tenancy, exposure of non-production environments, and all other top cloud security issues OWASP prioritizes.",
+        " Offset risks associated with SaaS providers and complex cloud infrastructures by using the Cyscale Cloud Platform. Banking on the robust capabilities of our Security Knowledge Graph™, it instantly checks on how your cloud assets fare in terms of user privacy, multi-tenancy, exposure of non-production environments, and all other top cloud security issues OWASP prioritizes.",
         <strong key="2a" className="text-blue">
           <br />
           <br />
@@ -123,7 +123,7 @@ const Index = () => {
       title: ` Pay-per-use and scale your cloud security program as you grow`,
     },
     {
-      description: `Would it be cheaper to build this in-house?” It’s a common dilemma but does your organization have what it takes to become a security company? \n\nImplementing the knowledge graph model is a resource-intensive process that requires industry-specific know-how, specialized technical components, and broad security expertise. It also takes time, the most invaluable resource of all. \n\nWith Cyscale, you pay for what you use and nothing more. As your business grows, you remain fully in control of how you scale your security program, as our Power Cloud Platform adapts to your changing needs.`,
+      description: `Would it be cheaper to build this in-house?” It’s a common dilemma but does your organization have what it takes to become a security company? \n\nImplementing the knowledge graph model is a resource-intensive process that requires industry-specific know-how, specialized technical components, and broad security expertise. It also takes time, the most invaluable resource of all. \n\nWith Cyscale, you pay for what you use and nothing more. As your business grows, you remain fully in control of how you scale your security program, as our Cloud Platform adapts to your changing needs.`,
     },
   ];
   

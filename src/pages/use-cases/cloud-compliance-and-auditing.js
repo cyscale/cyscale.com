@@ -8,7 +8,7 @@ export default function CloudCompliance() {
         <Layout
             pageName='ComplianceAuditing'
             bannerTitle={`Compliance toolbox for cloud-native and cloud-first organizations`}
-            bannerDescription={`Compliance toolbox for cloud-native and cloud-first organizations\n\nThe Cyscale Power Cloud Platform gives you full visibility across cloud and data repos, from app-level to your overall compliance posture. `}
+            bannerDescription={`Compliance toolbox for cloud-native and cloud-first organizations\n\nThe Cyscale Cloud Platform gives you full visibility across cloud and data repos, from app-level to your overall compliance posture. `}
             bannerBtn1Text='Try Cyscale for free'
             bannerBtn1Link={FREE_TRIAL_LINK}
             title="Cloud Security Compliance. Security & Compliance Checks - Cyscale"

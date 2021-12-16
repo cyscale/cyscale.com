@@ -13,7 +13,7 @@ const Index = () => (
     bannerBtn1Text = "Try Cyscale for free "
     bannerBtn1Link = {FREE_TRIAL_LINK}
     pageName = "SKGPage"
-    title="Security Knowledge Graph™ - Cyscale Power Cloud Platform"
+    title="Security Knowledge Graph™ - Cyscale Cloud Platform"
     description="Pinpoint cloud security issues created by cross-cloud interactions with the Cyscale Security Knowledge Graph™. Strengthen GRC with context-aware automation for digital assets."
   >
       <Skg />

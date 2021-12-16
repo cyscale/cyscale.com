@@ -10,7 +10,7 @@ export default function MaintainThirdPartyData() {
             </div>
             <div>
                 <p className="text-base text-black leading-normal font-normal">
-                    Achieve third-party validation for global security frameworks and compliance requirements with the Cyscale Power Cloud Platform. 
+                    Achieve third-party validation for global security frameworks and compliance requirements with the Cyscale Cloud Platform. 
                     <br />
                     <br />
                     Easily demonstrate implementation for must-have cloud security controls and policies for every entity in your environment. We keep a fully auditable data trail for up to 1 year that includes identity, access, changes, application and system logs, and operations. 

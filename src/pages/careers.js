@@ -135,7 +135,7 @@ const Index = () => {
     return (
         <Layout
             pageName='careers'
-            title='Careers - Cyscale Power Cloud Platform'
+            title='Careers - Cyscale Cloud Platform'
             description='Together, we can make the world a safer place!'
         >
             <div className='bg-lightGrey'>

@@ -102,7 +102,7 @@ export default function CloudComplianceContent() {
       <div className="max-w-1366px m-auto pt-12 lg:pt-32 pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px">
         <Sectionheader
           headingText= "Minimize overlap between cloud compliance and security"
-          description= {`Avoid duplicate work and solve two issues at the same time with the Cyscale Power Cloud Platform.\n\nOnboard teams in 30 minutes and coordinate efforts to apply 500+ out-of-the-box security controls and policies. Baked into the platform, they underpin key areas where you need to prove cloud compliance: `}
+          description= {`Avoid duplicate work and solve two issues at the same time with the Cyscale Cloud Platform.\n\nOnboard teams in 30 minutes and coordinate efforts to apply 500+ out-of-the-box security controls and policies. Baked into the platform, they underpin key areas where you need to prove cloud compliance: `}
        />
       </div>
       <SecurityControlsandPolicies />
@@ -128,7 +128,7 @@ export default function CloudComplianceContent() {
             </span>,
           ]}
           description={[
-            "Consolidate all the key elements of cloud compliance in an easy-to-use dashboard. Replace cloud portals with our Power Cloud Platform – the hub for a sweeping overview of your ",
+            "Consolidate all the key elements of cloud compliance in an easy-to-use dashboard. Replace cloud portals with our Cloud Platform - the hub for a sweeping overview of your ",
             <a
               href="/products/cloud-security-posture-management"
               key="csp123"

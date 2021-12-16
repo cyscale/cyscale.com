@@ -6,8 +6,8 @@ import SecurityPolicy from '../../components/policies/security-policy'
 const Index = () => (
   <Layout
     pageName="SecurityPolicy"
-    title="Security Policy - Cyscale Power Cloud Platform"
-    description="Security Policy for the Cyscale Power Cloud Platform for securing cloud-native apps and data in a cloud-first era. Avoid data loss."
+    title="Security Policy - Cyscale Cloud Platform"
+    description="Security Policy for the Cyscale Cloud Platform for securing cloud-native apps and data in a cloud-first era. Avoid data loss."
   >
     <SecurityPolicy />
 

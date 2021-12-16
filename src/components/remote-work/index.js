@@ -46,7 +46,7 @@ export default function RemoteWorkContent() {
         className="max-w-1366px m-auto pt-24 pb-24 pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px"
       >
         <Sectionheader
-          headingText="Use the Cyscale Power Cloud Platform to"
+          headingText="Use the Cyscale Cloud Platform to"
           pageName="RemoteWork"
         />
       </div>
@@ -56,12 +56,12 @@ export default function RemoteWorkContent() {
         image={CodeAnalysis}
         headingFirst="Protect remote teams & their work"
         headingSecond="Ensure secure remote access from day one"
-        description={`Onboard remote team members fast and provide the secure setup they need to be productive with substantially less effort.\n\nUse our Power Cloud Platform to correctly configure permissions and avoid errors that expose your environment to additional vulnerabilities. \n\nWe provide a ready-to-use Remote Work policy that includes safety provisions for equipment (including mobile and BYOD), communications, and security layers.\n\nKeep the risks employee workarounds introduce to a minimum and make sure workflows stay compliant during digital transformation projects. `}
+        description={`Onboard remote team members fast and provide the secure setup they need to be productive with substantially less effort.\n\nUse our Cloud Platform to correctly configure permissions and avoid errors that expose your environment to additional vulnerabilities. \n\nWe provide a ready-to-use Remote Work policy that includes safety provisions for equipment (including mobile and BYOD), communications, and security layers.\n\nKeep the risks employee workarounds introduce to a minimum and make sure workflows stay compliant during digital transformation projects. `}
       />
       <div className="max-w-1366px m-auto pt-12 lg:pt-32 pb-12 lg:pb-16 pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px">
         <Sectionheader
           headingText="See every employee’s access footprint in full"
-          description={`Use Cyscale to automatically document access for all employees to every cloud entity in your organization. Cloud storage, collaboration tools, data repos – you name it, we scan it and give you the full picture in real time.\n\nOur Power Cloud Platform runs ongoing Identity and Access Management checks, building an auditable trail of compliance data in the process. You can also use it to manage permissions and revoke them as you need.\n\nFrom logical security to account management and beyond, we constantly audit your cloud environments and notify you when assets drift from compliance.`}
+          description={`Use Cyscale to automatically document access for all employees to every cloud entity in your organization. Cloud storage, collaboration tools, data repos – you name it, we scan it and give you the full picture in real time.\n\nOur Cloud Platform runs ongoing Identity and Access Management checks, building an auditable trail of compliance data in the process. You can also use it to manage permissions and revoke them as you need.\n\nFrom logical security to account management and beyond, we constantly audit your cloud environments and notify you when assets drift from compliance.`}
         />
       </div>
       <div className="max-w-1366px m-auto mb-12 lg:mb-24 pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px">
@@ -136,7 +136,7 @@ export default function RemoteWorkContent() {
         image={CloudSecuirtyConfigurationImage}
         headingFirst="Simplify cloud security configurations"
         description={[
-          "Full integration, clarity, and accuracy overlap to create the holy grail of cloud security. And our Power Cloud Platform sits right in the middle, delivering on all fronts.\n\nReplace separate logins, complex configurations, and disparate security settings with a dashboard so simple anyone in your team can use it.\n\nZoom out to see the ",
+          "Full integration, clarity, and accuracy overlap to create the holy grail of cloud security. And our Cloud Platform sits right in the middle, delivering on all fronts.\n\nReplace separate logins, complex configurations, and disparate security settings with a dashboard so simple anyone in your team can use it.\n\nZoom out to see the ",
           <a
             href="/products/cloud-security-posture-management"
             key="sp123"

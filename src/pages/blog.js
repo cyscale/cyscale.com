@@ -7,7 +7,7 @@ const Index = () => (
     <Layout
         pageName='blogs'
         heroBG={heroBG}
-        title='Cloud and Data Security Blog - Cyscale Power Cloud Platform'
+        title='Cloud and Data Security Blog - Cyscale Cloud Platform'
         description='Cloud & Data Security blog: cloud-native security, Kubernetes Security, Data Security, DevOps Tools, DevSecOps, Continuous integration, Runtime protection and Knowledge Graphs.'
     >
         <Blogs />

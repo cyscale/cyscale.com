@@ -6,7 +6,7 @@ import Pricing from '../components/pricing'
 const Index = () => (
   <Layout
     pageName="Pricing"
-    title="Pricing - Cyscale Power Cloud Platform"
+    title="Pricing - Cyscale Cloud Platform"
     description="Pay fair for security experts' advice and guidance. Quantifiable ROI for cloud data security and compliance. Reduce cloud costs and consumption."
   >
     <Pricing />

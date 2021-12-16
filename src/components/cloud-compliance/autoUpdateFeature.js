@@ -51,8 +51,8 @@ export default function AutoUpdateFeature() {
           See it in action
         </p>
         <p className="text-black leading-normal text-base text-center mt-6 lg:max-w-2xl mx-auto">
-          At Cyscale, we practice what we preach and use our Power Cloud
-          Platform to automatically pull information and update{" "}
+          At Cyscale, we practice what we preach and use our Cloud Platform 
+          to automatically pull information and update{" "}
           <a
             href="/policies/data-security-policy"
             className="text-blue underline text-16px hover:no-underline hover:text-red"

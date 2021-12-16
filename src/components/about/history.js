@@ -22,7 +22,7 @@ const History = () => {
                             <span className="block w-36px h-36px rounded-full bg-white border-8 border-aboutBorder"></span>
                         </div>
                         <p className="text-black1 text-16px mt-28px"><strong>2019:</strong></p>
-                        <p className="text-16px text-grey2 mt-32px new-line">We started development for our CSPM solution: Cyscale Power Cloud Platform  </p>
+                        <p className="text-16px text-grey2 mt-32px new-line">We started development for our CSPM solution: Cyscale Cloud Platform  </p>
                     </div>
                     <div className="border-t-8 border-aboutBorder xl:border-none">
                         <div className="-mt-10 xl:-mt-83px">
@@ -38,7 +38,7 @@ const History = () => {
                             <span className="block w-36px h-36px rounded-full bg-white border-8 border-aboutBorder"></span>
                         </div>
                         <p className="text-black1 text-16px mt-28px"><strong>2021:</strong></p>
-                        <p className="text-16px text-grey2 mt-32px">Cyscale Power Cloud Platform empowers Security teams around the world, to take the correct approach and implement a strong Cloud Security Program. </p>
+                        <p className="text-16px text-grey2 mt-32px">Cyscale Cloud Platform empowers Security teams around the world, to take the correct approach and implement a strong Cloud Security Program. </p>
                     </div>
                 </div>
             </div> 

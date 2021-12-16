@@ -27,7 +27,7 @@ const FAQs = () => {
       question: `03. How reliable is your implementation of the knowledge graph model?`,
       answer:
         [
-          "Not a single node in our Security Knowledge Graph™ is created manually, to ensure you get a reliable experience every single time.\n\nThe Cyscale Power Cloud Platform feeds on the data you provide by connecting your cloud accounts, SaaS platforms and other cloud assets and uses that information to help you visualize how all of these entities work together (and cause security, compliance, and performance issues).",
+          "Not a single node in our Security Knowledge Graph™ is created manually, to ensure you get a reliable experience every single time.\n\nThe Cyscale Cloud Platform feeds on the data you provide by connecting your cloud accounts, SaaS platforms and other cloud assets and uses that information to help you visualize how all of these entities work together (and cause security, compliance, and performance issues).",
         ],
     },
     {

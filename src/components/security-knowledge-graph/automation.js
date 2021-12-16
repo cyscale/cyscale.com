@@ -49,7 +49,7 @@ const Automation = () => {
                   Knowledge Graph™. That’s how the
                   <br />
                   <Link to="/products/security-knowledge-graph/" className=" text-blue underline text-16px hover:no-underline hover:text-red">
-                    Cyscale Power Cloud Platform
+                    Cyscale Cloud Platform
                   </Link>
                   &nbsp;gives you a truly contextual understanding of your digital
                   assets.
