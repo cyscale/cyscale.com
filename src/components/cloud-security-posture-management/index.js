@@ -45,14 +45,14 @@ const Index = () => {
         {
             tabTitle: 'Prevent misconfigurations, mismanagement and mistakes',
             sectionTitle: 'Prevent misconfigurations & mistakes',
-            sectionDescription: `Cyscale automatically detects and reports violations of security controls and compliance risks. \n\nIt’s much easier to keep your cloud assets in check with ongoing change monitoring that bridges cloud providers. \n\nSingle out misconfigured services and see how failed security controls impact compliance from a single, unified view. Plus, you get reliable remediation guidelines in the same place.`,
+            sectionDescription: `Cyscale automatically detects and reports violations of security controls and compliance risks. \n\nIt's much easier to keep your cloud assets in check with ongoing change monitoring that bridges cloud providers. \n\nSingle out misconfigured services and see how failed security controls impact compliance from a single, unified view. Plus, you get reliable remediation guidelines in the same place.`,
             featureImage: <DetectPreventMisconfigurations />
         },
         {
             tabTitle: 'Cut through the noise with targeted alerts',
             sectionTitle: 'Cut through the noise',
             sectionDescription: [
-                'Get relevant alerts when your cloud assets drift away from established security and compliance standards.\n\nMake Cyscale your single source of truth for CSPM and never miss an important security event. \n\nMove beyond bulky, list-based management. Cyscale’s',
+                'Get relevant alerts when your cloud assets drift away from established security and compliance standards.\n\nMake Cyscale your single source of truth for CSPM and never miss an important security event. \n\nMove beyond bulky, list-based management. Cyscale\'s',
                 ' ',
                 <a
                     href='/products/security-knowledge-graph'
@@ -92,7 +92,7 @@ const Index = () => {
             sectionTitle: 'Reduce workflow friction',
             sectionDescription: `Forget the hassle of multiple logins into various cloud accounts, with different dashboards and
       features. Get all your cloud assets under one roof and group them in just a few clicks. \n\nWith Cyscale you get comprehensive, agentless CSPM, compliance and data protection
-      capabilities for your entire cloud inventory – serverless, databases and apps included.`,
+      capabilities for your entire cloud inventory - serverless, databases and apps included.`,
             featureImage: <OptimizeCosts />
         },
         {
@@ -161,7 +161,7 @@ const Index = () => {
                 >
                     the Cyscale API
                 </a>,
-                ' into SIEM or other cybersecurity tools '
+                ' into SIEM or other cybersecurity tools'
             ]
         },
         {
@@ -204,7 +204,6 @@ const Index = () => {
             <div className='additionalBenefits'>
                 <Fproducts sectionTitle='Optimize your operations' data={dataAdditionalBenefits} />
             </div>
-           
             <div className='block w-full CSPMServices'>
                 <Services
                     headingText='The Cyscale Cloud Platform packs all the CSPM features you need'
@@ -221,7 +220,6 @@ const Index = () => {
                     ExternalLink
                 />
             </div>
-           
         </>
     );
 };

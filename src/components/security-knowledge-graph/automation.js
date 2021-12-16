@@ -34,10 +34,10 @@ const Automation = () => {
                   <br />
                   Cybersecurity tools are often designed for specific issues. So
                   assembling and managing each one creates a lot of overhead and
-                  drains your time, energy, and budget. We’ve been there too.
+                  drains your time, energy, and budget. We've been there too.
                   <br />
                   <br />
-                  It’s time for a new m.o.!
+                  It's time for a new m.o.!
                   <br />
                   <br />
                   When you{" "}
@@ -46,7 +46,7 @@ const Automation = () => {
                   </Link>
                   , we create a micrograph for every cloud system you have. We
                   then connect these micrographs to generate your own Security
-                  Knowledge Graph™. That’s how the
+                  Knowledge Graph™. That's how the
                   <br />
                   <Link to="/products/security-knowledge-graph/" className=" text-blue underline text-16px hover:no-underline hover:text-red">
                     Cyscale Cloud Platform

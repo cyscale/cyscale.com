@@ -25,19 +25,18 @@ const CSPMtestamonials = ({sectionName, data}) => {
                             )}
                             <h2 className="text-blue text-34px leading-normal max-w-274px order-1 md:order-2 new-line">{content.title}</h2>
                            </div>
-                            
                     </div>
                     <div className="w-full lg:w-2/4">
                         <p className={`text-14px text-black leading-normal new-line ${!!sectionName && sectionName === "dataSecurityTest"?(""):("italic")} ${!!content.image && ("mt-12")}`}>{content.description}</p>
                             <small className="block text-12px uppercase leading-normal mt-32px text-grey2 opacity-60 font-roboto">
-                                    <strong>{content.author}</strong><br />{content.designation}
-                                </small>
+                                <strong>{content.author}</strong><br />{content.designation}
+                            </small>
                         </div>
                     </div>
                  </div>
                 ))}
-                    </Slider>
-                </div>           
+                </Slider>
+            </div>
         </div>
     </div>
     )

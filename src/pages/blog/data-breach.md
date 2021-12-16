@@ -19,7 +19,7 @@ tags:
 ---
 ### Can cloud misconfigurations affect your company?
 
-Yes, they can! In this case, Romania’s largest real estate portal has suffered a data breach due to a misconfiguration. Website Planet detected that the portal's AWS S3 buckets were publicly available without any protection, back in December 2020. As a result, more than 200,000 records were exposed.
+Yes, they can! In this case, Romania's largest real estate portal has suffered a data breach due to a misconfiguration. Website Planet detected that the portal's AWS S3 buckets were publicly available without any protection, back in December 2020. As a result, more than 200,000 records were exposed.
 
 <br/>
  
@@ -31,11 +31,11 @@ The AWS (Amazon Web Services) S3 Access Points feature provides settings for acc
  https://aws.amazon.com/
  premiumsupport/
 knowledge-center/
-read-access-objects-s3-bucket  
+read-access-objects-s3-bucket
 
 <br/>
 
-By default, new buckets do not allow public access. However, users can modify bucket policies and allow public access. Since these individual settings are customizations enabled to better suit a specific organization’s needs, the responsibility is no longer with the cloud provider.
+By default, new buckets do not allow public access. However, users can modify bucket policies and allow public access. Since these individual settings are customizations enabled to better suit a specific organization's needs, the responsibility is no longer with the cloud provider.
 
 Even if the unintentional breach was fixed after Website Planet reported it, the precise number of people affected remains unknown and the culpability for this data leak lies entirely with the real estate portal.
 
@@ -45,7 +45,7 @@ As a [CSPM](https://cyscale.com/blog/cloud-security-posture-management-cspm-guid
 
 <br/>
 
-Cyscale’s platform is equipped with an alert mechanism, that detects and informs security and cloud ops about exposed assets and helps them address these issues in time.
+Cyscale's platform is equipped with an alert mechanism, that detects and informs security and cloud ops about exposed assets and helps them address these issues in time.
 
 <br/>
 
@@ -68,7 +68,7 @@ padding: 1rem 1.5rem;
 
 <br/>
 
-Mistakes such as having your company’s buckets exposed, without password protection or encryption can be detected and fixed in time, you just need someone to guide you. We are ready to assist you with your Cloud Security.
+Mistakes such as having your company's buckets exposed, without password protection or encryption can be detected and fixed in time, you just need someone to guide you. We are ready to assist you with your Cloud Security.
 
 <br/>
 <br/>

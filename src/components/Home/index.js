@@ -176,8 +176,8 @@ const Home = () => {
                 />
             </div>
             <Offer
-                headingText='Cyscale Cloud Platform – supercharged cloud security'
-                description={`Only the best tools fade into the background and help you focus on getting your best work done. \n\nThat’s why we’ve built all of this and more into the platform.`}
+                headingText='Cyscale Cloud Platform - supercharged cloud security'
+                description={`Only the best tools fade into the background and help you focus on getting your best work done. \n\nThat's why we've built all of this and more into the platform.`}
                 poster={poster}
                 data={dataOffer}
             />
@@ -212,7 +212,7 @@ const Home = () => {
             </div>
             <Partners />
             <div className='max-w-1366px m-auto pt-67px pb-67px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px'>
-                <Sectionheader headingText={`What we’re up to`} />
+                <Sectionheader headingText={`What we're up to`} />
             </div>
             <Articles btnText='Read more about Cloud Security' btnLink='/blog/' />
             <div className='gradientBG'>

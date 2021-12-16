@@ -54,7 +54,7 @@ const Index = () => {
         <div className="max-w-1366px m-auto pt-67px pb-67px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px">
           <MeetTeam
             headingText="Meet the team:"
-            description={`Together, we draw broad industry expertise to create powerful cybersecurity solutions for our customers `}
+            description={`Together, we draw broad industry expertise to create powerful cybersecurity solutions for our customers`}
             pageName={pageName}
           />
         </div>

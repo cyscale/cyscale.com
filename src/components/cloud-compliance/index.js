@@ -36,7 +36,7 @@ export default function CloudComplianceContent() {
       {
         image: image3,
         title: "“Cyscale makes an otherwise daunting task a snap!”",
-        description: `“I had been a customer of another compliance automation platform for years. When I first heard about Cyscale, I was hesitant to switch, but heard great things and knew there had to be a better solution out there than what we were using.\n\nFrom the initial demo, I thought ‘Wow, this is what I’ve been looking for.’\n\nWith the other platform, I’d wake up to so many failed control tests that weren’t actually real failures - the false negatives gave me fatigue and I never received much help from their support email. With Cyscale, the tests are so well designed that I trust when it says we have a gap and then we use their recommendations to take action and be more secure and compliant.”`,
+        description: `“I had been a customer of another compliance automation platform for years. When I first heard about Cyscale, I was hesitant to switch, but heard great things and knew there had to be a better solution out there than what we were using.\n\nFrom the initial demo, I thought ‘Wow, this is what I've been looking for.'\n\nWith the other platform, I'd wake up to so many failed control tests that weren't actually real failures - the false negatives gave me fatigue and I never received much help from their support email. With Cyscale, the tests are so well designed that I trust when it says we have a gap and then we use their recommendations to take action and be more secure and compliant.”`,
         author: "Xulescu Smith,",
         designation: "IT Director @ Famous Company",
       },
@@ -59,7 +59,7 @@ export default function CloudComplianceContent() {
             </span>,
           ]}
           description={[
-            "Get all the help you need to run regular tests on security systems, policies, and processes.\n\nMake better use of your time while the cloud compliance checks continue to run in the background. Act on alerts when ",
+            "Get all the help you need to run regular tests on security systems, policies, and processes.\n\nMake better use of your time while the cloud compliance checks continue to run in the background. Act on alerts when",
             <a
               href="/use-cases/cloud-data-security"
               key="ds123"
@@ -84,7 +84,8 @@ export default function CloudComplianceContent() {
         <Sectionheader
           headingText= "Automate updates to Data Security & Privacy Policies"
           description={[
-            "Keep website pages dedicated to ",
+            "Keep website pages dedicated to",
+            " ",
             <a
               href="/use-cases/cloud-data-security"
               key="au123"
@@ -122,13 +123,14 @@ export default function CloudComplianceContent() {
       <div className="max-w-1366px m-auto py-12 lg:py-32 pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px">
         <Sectionheader
            headingText={[
-            "Align teams & tasks ",
+            "Align teams & tasks",
             <span key="ali123" className="block w-full font-normal">
               Govern all cloud entities from a single dashboard
             </span>,
           ]}
           description={[
-            "Consolidate all the key elements of cloud compliance in an easy-to-use dashboard. Replace cloud portals with our Cloud Platform - the hub for a sweeping overview of your ",
+            "Consolidate all the key elements of cloud compliance in an easy-to-use dashboard. Replace cloud portals with our Cloud Platform - the hub for a sweeping overview of your",
+            " ",
             <a
               href="/products/cloud-security-posture-management"
               key="csp123"

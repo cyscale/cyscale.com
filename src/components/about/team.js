@@ -110,7 +110,7 @@ const Team = () => {
                                                 </p>
                                                 <p className='block w-full mt-40px'>
                                                     Andrei is coming from a strong technical background, and acts as our
-                                                    CTO. With a bachelor’s degree and master's studies in Computer
+                                                    CTO. With a bachelor's degree and master's studies in Computer
                                                     Science for the Technical University of Cluj-Napoca, and more than
                                                     10 years of experience as a Software Security Engineer, he knows the
                                                     ecosystem and is driven by innovation.

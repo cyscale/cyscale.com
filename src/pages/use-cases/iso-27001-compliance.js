@@ -142,7 +142,7 @@ export default function CloudCompliance() {
                                     {
                                         main: 'Identify the scope of the ISMS taking into consideration',
                                         list: [
-                                            'the organization’s objectives regarding managing the risk',
+                                            'the organization's objectives regarding managing the risk',
                                             'the requirements of the involved parties',
                                             'the asset inventory - might include legal documents, user data, cloud resources, and physical equipment.'
                                         ]

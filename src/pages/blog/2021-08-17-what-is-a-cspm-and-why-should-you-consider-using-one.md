@@ -20,7 +20,7 @@ tags:
 
 Some [CSPM tools](https://cyscale.com/products/cloud-security-posture-management) may be limited to only one cloud provider, others can be used to detect misconfigurations in a multi-cloud environment, but they all share a purpose: to examine your cloud infrastructure and compare it against a set of best practices, policies and known security risks, in order to help you improve your compliance with certain regulations, as well as your cloud security posture.  
 
-By now we should all be aware of the Shared Responsibility Model practiced by the cloud providers. According to these rules, the customer is entirely responsible for his security configuration. The cloud provider’s responsibility is the data center's security only.  
+By now we should all be aware of the Shared Responsibility Model practiced by the cloud providers. According to these rules, the customer is entirely responsible for his security configuration. The cloud provider's responsibility is the data center's security only.  
 
 Once you understand that the security offered by cloud providers is insufficient against cloud threats, you might want to look for more efficient tools to secure your cloud assets.  
 
@@ -28,15 +28,15 @@ So why should you consider using this type of tool?
 
 Here are just some of the [CSPM](https://cyscale.com/blog/cloud-security-posture-management-cspm-guide) capabilities that might make you want to start using one for your cloud infrastructure: 
 
-## Misconfiguration detection and prevention    
+## Misconfiguration detection and prevention
 
 Misconfigurations are most often caused due to a lack of visibility and mismanagement of interconnected resources.  
 
 Cloud infrastructures are complex, and they differ from one provider to the other, meaning that misconfigurations can easily happen, and the making of the organization can be vulnerable to attacks and open to the possibility of data breaches.  
 
-Let’s consider the CSPM your configuration drift prevention tool.  
+Let's consider the CSPM your configuration drift prevention tool.  
 
-In many situations, a CSPM solution offers cross-cloud visibility, while potentially dangerous events are highlighted for you to see faster. (Events such as users’ accounts being granted excessive permissions, having accidentally granted public access to storage buckets or containers, and other similar mistakes)  
+In many situations, a CSPM solution offers cross-cloud visibility, while potentially dangerous events are highlighted for you to see faster. (Events such as users' accounts being granted excessive permissions, having accidentally granted public access to storage buckets or containers, and other similar mistakes)
 
 ## Compliance monitoring 
 
@@ -78,7 +78,7 @@ Unlike other CSPM solutions that provide you with endless lists of logs, Cyscale
 
 It will surface crucial issues of all your interlinked cloud assets, helping you improve your security and data governance procedures.  
 
-Complete visibility over your infrastructure and deep contextual understanding of your cloud assets inventory is possible only by using the unique power of Cyscale Cloud Platform, so start your free trial today! 
+Complete visibility over your infrastructure and deep contextual understanding of your cloud assets inventory is possible only by using the unique power of Cyscale Cloud Platform, so start your free trial today!
 
 <!--StartFragment-->
 

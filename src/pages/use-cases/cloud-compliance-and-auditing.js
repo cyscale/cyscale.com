@@ -13,7 +13,6 @@ export default function CloudCompliance() {
             bannerBtn1Link={FREE_TRIAL_LINK}
             title="Cloud Security Compliance. Security & Compliance Checks - Cyscale"
             description="Manage, monitor, and prove cloud compliance with Cyscale. Automate checks for 500+ cloud controls & policies to comply with ISO 27001, PCI, SOC 2 & more."
-         
        >
             <CloudComplianceContent />
         </Layout>

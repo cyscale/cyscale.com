@@ -49,7 +49,7 @@ export default function Consent() {
                     </Link>
                 </p>
                 <p>
-                    If you decline, your information won’t be tracked when you visit this website. A single cookie will
+                    If you decline, your information won't be tracked when you visit this website. A single cookie will
                     be used in your browser to remember your preference not to be tracked.
                 </p>
             </div>

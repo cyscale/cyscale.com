@@ -45,7 +45,7 @@ const Support = ({ title, data, sectionName }) => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div>
               <p className="text-16px text-black leading-normal">
-                <strong>Don’t see your Data Repo? </strong>
+                <strong>Don't see your Data Repo? </strong>
               </p>
             </div>
             <div className="lg:col-span-3">
@@ -53,7 +53,7 @@ const Support = ({ title, data, sectionName }) => {
                 to="/contact-us/"
                 className="uppercase text-blue underline text-16px hover:no-underline hover:text-red font-medium"
               >
-                Contact us and let’s talk about adding support for it
+                Contact us and let's talk about adding support for it
               </Link>
             </div>
           </div>

@@ -5,7 +5,6 @@ const Onboarding = ({data}) => {
         <div  id="start" className="block w-full bg-lightGreyEEE pt-92px pb-92px">
             <div className="max-w-1366px m-auto pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px">
                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 ">
-                
                {data.map((content, index) => (
                     <div key={index} className="hoverBorder">
                         <div className="config-items transition-all duration-300 pr-20px h-138px">
@@ -22,8 +21,8 @@ const Onboarding = ({data}) => {
                                 {content.description}
                             </p>
                         </div>
-                    </div>                                
-                      ))}                
+                    </div>
+                ))}
                </div>
             </div>
         </div>

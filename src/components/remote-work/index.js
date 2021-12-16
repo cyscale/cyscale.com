@@ -56,12 +56,12 @@ export default function RemoteWorkContent() {
         image={CodeAnalysis}
         headingFirst="Protect remote teams & their work"
         headingSecond="Ensure secure remote access from day one"
-        description={`Onboard remote team members fast and provide the secure setup they need to be productive with substantially less effort.\n\nUse our Cloud Platform to correctly configure permissions and avoid errors that expose your environment to additional vulnerabilities. \n\nWe provide a ready-to-use Remote Work policy that includes safety provisions for equipment (including mobile and BYOD), communications, and security layers.\n\nKeep the risks employee workarounds introduce to a minimum and make sure workflows stay compliant during digital transformation projects. `}
+        description={`Onboard remote team members fast and provide the secure setup they need to be productive with substantially less effort.\n\nUse our Cloud Platform to correctly configure permissions and avoid errors that expose your environment to additional vulnerabilities. \n\nWe provide a ready-to-use Remote Work policy that includes safety provisions for equipment (including mobile and BYOD), communications, and security layers.\n\nKeep the risks employee workarounds introduce to a minimum and make sure workflows stay compliant during digital transformation projects.`}
       />
       <div className="max-w-1366px m-auto pt-12 lg:pt-32 pb-12 lg:pb-16 pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px">
         <Sectionheader
-          headingText="See every employee’s access footprint in full"
-          description={`Use Cyscale to automatically document access for all employees to every cloud entity in your organization. Cloud storage, collaboration tools, data repos – you name it, we scan it and give you the full picture in real time.\n\nOur Cloud Platform runs ongoing Identity and Access Management checks, building an auditable trail of compliance data in the process. You can also use it to manage permissions and revoke them as you need.\n\nFrom logical security to account management and beyond, we constantly audit your cloud environments and notify you when assets drift from compliance.`}
+          headingText="See every employee's access footprint in full"
+          description={`Use Cyscale to automatically document access for all employees to every cloud entity in your organization. Cloud storage, collaboration tools, data repos - you name it, we scan it and give you the full picture in real time.\n\nOur Cloud Platform runs ongoing Identity and Access Management checks, building an auditable trail of compliance data in the process. You can also use it to manage permissions and revoke them as you need.\n\nFrom logical security to account management and beyond, we constantly audit your cloud environments and notify you when assets drift from compliance.`}
         />
       </div>
       <div className="max-w-1366px m-auto mb-12 lg:mb-24 pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px">
@@ -71,7 +71,8 @@ export default function RemoteWorkContent() {
         <Sectionheader
           headingText="Keep intellectual property safe across clouds"
           description={[
-            "Avoid inadvertent data leaks that expose business-critical trade secrets, patents, and other copyright-protected data.\n\nOur in-depth ",
+            "Avoid inadvertent data leaks that expose business-critical trade secrets, patents, and other copyright-protected data.\n\nOur in-depth",
+            " ",
             <a
               href="/use-cases/cloud-data-security"
               key="ip123"
@@ -110,7 +111,8 @@ export default function RemoteWorkContent() {
             <strong key="how1">how</strong>,
             " they are using them, and ",
             <strong key="why1">why</strong>,
-            ".\n\nKeep track of cloud users’ activity across your entire range of cloud accounts, SaaS platforms, and cloud assets with Cyscale. Our self-generated ",
+            ".\n\nKeep track of cloud users' activity across your entire range of cloud accounts, SaaS platforms, and cloud assets with Cyscale. Our self-generated",
+            " ",
             <a
               href="/products/security-knowledge-graph"
               key="skg123"
@@ -153,7 +155,7 @@ export default function RemoteWorkContent() {
           <Sectionheader
             headingText="Reduce your attack surface"
             description={[
-              "Cybercriminals love insecure cloud services, especially when packed with confidential data. So when you curb overly permissive access rights and keep publicly available data in check from a single dashboard – or through ",
+              "Cybercriminals love insecure cloud services, especially when packed with confidential data. So when you curb overly permissive access rights and keep publicly available data in check from a single dashboard - or through ",
               <a
                 href="https://api-reference.cyscale.com/"
                 key="api123"
@@ -161,7 +163,7 @@ export default function RemoteWorkContent() {
               >
                 our API
               </a>,
-              " – you make their life hard and yours much easier. \n\nAvoid privilege misuse, malware outbreaks, and other threats to cloud data security by fixing misconfigurations as soon as they appear.\n\nWe help you promote a security-first culture by offering learning paths IT and security staff can use in the form of remediation guidance.",
+              " - you make their life hard and yours much easier. \n\nAvoid privilege misuse, malware outbreaks, and other threats to cloud data security by fixing misconfigurations as soon as they appear.\n\nWe help you promote a security-first culture by offering learning paths IT and security staff can use in the form of remediation guidance.",
             ]}
           />
         </div>

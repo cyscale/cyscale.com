@@ -34,7 +34,7 @@ You will design a successful customer experience and a product that users love, 
 * Continuous collaboration with colleagues
 * You will not only be delivering to requirements, you will be, together with your colleagues in the product team, responsible for shaping the requirements
 * Visual design, as well as interaction design (not necessarily excellent at both, but at least excellent at one and skilled at the other)
-* Develop a deep understanding of the target users (each profile that we’re trying to serve in our product), and come up with tasks, navigation and flows that are both usable and satisfying
+* Develop a deep understanding of the target users (each profile that we're trying to serve in our product), and come up with tasks, navigation and flows that are both usable and satisfying
 * Create the actual pages and user interface look and feel (layouts, colours, fonts, etc.)
 * Prototyping: explore product concepts, quickly try out ideas by creating something that simulates the intended user experience
 * Design usability tests: together with the product manager you will be recruiting appropriate test subjects, administering the tests, evaluating the results, and recommending alternatives
@@ -42,7 +42,7 @@ You will design a successful customer experience and a product that users love, 
 
 ## Required Skills
 
-* You understand that it’s the product that connects customers to its value and you strive for designs that best deliver that value. You also understand that user experience is as important for the customer as the underlying functionality.
+* You understand that it's the product that connects customers to its value and you strive for designs that best deliver that value. You also understand that user experience is as important for the customer as the underlying functionality.
 * Able to create designs that serve both users and buyers
 * Able to create designs that evoke emotion in the user
 * Deeply oriented around actual customers, and the value that our product brings to them

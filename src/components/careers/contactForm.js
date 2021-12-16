@@ -145,7 +145,7 @@ const ContactForm = () => {
                                                     from us and our partners including news, events, updates, and
                                                     promotional offers. You may withdraw your consent and unsubscribe
                                                     from such marketing communication at any time. You also acknowledge
-                                                    and accept Cyscale’s Privacy Policy, including its use of cookies.
+                                                    and accept Cyscale's Privacy Policy, including its use of cookies.
                                                 </p>
                                             </div>
                                             <div className='block w-full mb-30px'>
@@ -166,7 +166,7 @@ const ContactForm = () => {
                                                         href='https://cyscale.com/policies/privacy-policy'
                                                         className='text-12px text-blue leading-normal underline hover:no-underline hover:text-red'
                                                     >
-                                                        Cyscale’s Privacy Policy
+                                                        Cyscale's Privacy Policy
                                                     </a>
                                                 </label>
                                                 <div className='text-red'>

@@ -8,7 +8,7 @@ const Index = () => {
       <div>
         <div
           className={`w-full ContactUs bg-lightGreyEEE bg-cover bg-no-repeat`}
-          style={{ backgroundImage: `url(${heroBG})  ` }}
+          style={{ backgroundImage: `url(${heroBG})` }}
         >
           <TopNav />
           <div className="max-w-1366px mx-auto pt-72 pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px">
@@ -264,7 +264,7 @@ const Index = () => {
                 <strong> Cyscale</strong> may modify or update this Terms of use from time to time
                 to reflect the changes in our business and practices. When we
                 change the policy in a material manner we will let you know and
-                update the ‘last modified’ date at the beginning of this page.{" "}
+                update the ‘last modified' date at the beginning of this page.{" "}
               </p>
             </div>
           </div>

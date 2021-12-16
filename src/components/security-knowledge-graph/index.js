@@ -23,17 +23,13 @@ const Index = () => {
     {
       description: 
       [
-        "Cyscale Security Knowledge Graph™ uses a data model that maps networks of cloud entities in an exhaustive graph which supports automated reasoning across multi-cloud infrastructures.\n\nWhen applied to cloud security, the knowledge graph model charts the full scale of your cloud assets, including their type, properties, and the relationships between them. Based on deep understanding, it makes semantic interpretations that factor in both the complexity and diversity of assets that generate security issues",
-      
-        "",
+        "Cyscale Security Knowledge Graph™ uses a data model that maps networks of cloud entities in an exhaustive graph which supports automated reasoning across multi-cloud infrastructures.\n\nWhen applied to cloud security, the knowledge graph model charts the full scale of your cloud assets, including their type, properties, and the relationships between them. Based on deep understanding, it makes semantic interpretations that factor in both the complexity and diversity of assets that generate security issues"
       ],
     },
     {
       description: 
       [
-        "For example, the Cyscale Cloud Platform can interrelate dissimilar entities such as user identity, endpoints, code repositories, production environments, VMs, and production databases. \n\nCyscale Security Knowledge Graph™ enables machines to understand these complex relations and derive new knowledge that human specialists can use without having to perform effort-intensive analyses themselves.",
-      
-        "",
+        "For example, the Cyscale Cloud Platform can interrelate dissimilar entities such as user identity, endpoints, code repositories, production environments, VMs, and production databases. \n\nCyscale Security Knowledge Graph™ enables machines to understand these complex relations and derive new knowledge that human specialists can use without having to perform effort-intensive analyses themselves."
       ],
     },
   ];
@@ -70,11 +66,11 @@ const Index = () => {
 
   const dataSKGBenifits = [
     {
-      title: `Because it’s difficult and expensive.`,
+      title: `Because it's difficult and expensive.`,
       description: `\nCybersecurity encompasses many heterogeneous systems which produce complex knowledge that is difficult to orchestrate and represent accurately and completely. \n\nKnowledge graph technology can do that but the data model needs to be customized to the specific needs of specialists working in information security.`,
     },
     {
-      description: `\n\nTo enable this flexibility, we merged the knowledge graph model with our cloud security expertise to help our customers effectively manage the escalating risk of losing and damaging cloud data. \n\nWe do the heavy lifting because we enjoy the challenge of building a solution to a big problem that’s not going away anytime soon.`,
+      description: `\n\nTo enable this flexibility, we merged the knowledge graph model with our cloud security expertise to help our customers effectively manage the escalating risk of losing and damaging cloud data. \n\nWe do the heavy lifting because we enjoy the challenge of building a solution to a big problem that's not going away anytime soon.`,
     },
   ];
   const dataSystemGov = [
@@ -85,21 +81,19 @@ const Index = () => {
         <a href="/use-cases/cloud-compliance-and-auditing" key="link123" className=" text-blue underline text-16px hover:no-underline hover:text-red">
           GRC (Governance, Risk and Compliance system)
         </a>,
-        " system doesn’t have to take ages and more in-house resources than you can ever afford. \n\nThe Cyscale Cloud Platform is a GRC tool you can truly count on!\n\nIt packs rich, customizable features you can use to build and manage a competitive governance process that gets technical teams and management on the same page. "
+        " system doesn't have to take ages and more in-house resources than you can ever afford. \n\nThe Cyscale Cloud Platform is a GRC tool you can truly count on!\n\nIt packs rich, customizable features you can use to build and manage a competitive governance process that gets technical teams and management on the same page. "
       ]
     },
     {
       description:
       [
-        "\n\n\n\nThe Security Knowledge Graph™ brings an orchestrated approach to cybersecurity and policy enforcement. Edit and customize standards across all your cloud providers in a single dashboard, tracking implementation and consolidating your data-rich archive as you go.",
-      
-        "",
+        "\n\n\n\nThe Security Knowledge Graph™ brings an orchestrated approach to cybersecurity and policy enforcement. Edit and customize standards across all your cloud providers in a single dashboard, tracking implementation and consolidating your data-rich archive as you go."
       ]
     },
   ];
   const dataTopRisks = [
     {
-      title: `Tackle OWASP Cloud Top 10 security risks with a steady hand `,
+      title: `Tackle OWASP Cloud Top 10 security risks with a steady hand`,
     },
     {
       description: [
@@ -112,18 +106,17 @@ const Index = () => {
         <strong key="2a" className="text-blue">
           <br />
           <br />
-          We do it so you don’t have to.
-        </strong>,
-        "",
+          We do it so you don't have to.
+        </strong>
       ],
     },
   ];
   const dataPayCloud = [
     {
-      title: ` Pay-per-use and scale your cloud security program as you grow`,
+      title: `Pay-per-use and scale your cloud security program as you grow`,
     },
     {
-      description: `Would it be cheaper to build this in-house?” It’s a common dilemma but does your organization have what it takes to become a security company? \n\nImplementing the knowledge graph model is a resource-intensive process that requires industry-specific know-how, specialized technical components, and broad security expertise. It also takes time, the most invaluable resource of all. \n\nWith Cyscale, you pay for what you use and nothing more. As your business grows, you remain fully in control of how you scale your security program, as our Cloud Platform adapts to your changing needs.`,
+      description: `Would it be cheaper to build this in-house?” It's a common dilemma but does your organization have what it takes to become a security company? \n\nImplementing the knowledge graph model is a resource-intensive process that requires industry-specific know-how, specialized technical components, and broad security expertise. It also takes time, the most invaluable resource of all. \n\nWith Cyscale, you pay for what you use and nothing more. As your business grows, you remain fully in control of how you scale your security program, as our Cloud Platform adapts to your changing needs.`,
     },
   ];
   
@@ -147,7 +140,7 @@ const Index = () => {
           />
         </div>
         <Cloud
-          title={`If knowledge graph tech is this useful, why hasn’t anyone used it before?`}
+          title={`If knowledge graph tech is this useful, why hasn't anyone used it before?`}
           sectionName="SKGBeneifts"
           data={dataSKGBenifits}
         />
@@ -192,7 +185,6 @@ const Index = () => {
           sectionName = "dataSecFoot"
         />
       </div>
-      
       <FAQs />
     </>
   );

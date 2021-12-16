@@ -75,7 +75,7 @@ const employee = [
         photo: andreiS,
         name: 'Andrei Ștefănie',
         position: 'Product Engineer',
-        quote: `Being passionate about start-ups and what we can build on the cloud, Cyscale was the clear path onwards for me. I knew it will be fun, but hard and so it is. When it’s fun, we laugh together, and when it’s hard, we work together.`
+        quote: `Being passionate about start-ups and what we can build on the cloud, Cyscale was the clear path onwards for me. I knew it will be fun, but hard and so it is. When it's fun, we laugh together, and when it's hard, we work together.`
     },
     {
         photo: virginia,
@@ -87,19 +87,19 @@ const employee = [
         photo: gabriel,
         name: 'Gabriel Ceicoschi',
         position: 'Design & Front-end',
-        quote: 'I jumped into Cyscale “express” 🚂 by the time things were getting together. Two years later and I’m still here, facing new challenges and opportunities every single day. I’ve never thought how many things Cyscale will teach me.'
+        quote: 'I jumped into Cyscale “express” 🚂 by the time things were getting together. Two years later and I'm still here, facing new challenges and opportunities every single day. I've never thought how many things Cyscale will teach me.'
     },
     // {
     //     photo: gabriel,
     //     name: 'Andrei Milas',
     //     position: 'Co-Founder & CTO',
-    //     quote: 'At Cyscale I have a constant opportunity to grow, professionally and personally. Moreover, I feel that my contribution matters and that we’re creating something truly special.'
+    //     quote: 'At Cyscale I have a constant opportunity to grow, professionally and personally. Moreover, I feel that my contribution matters and that we're creating something truly special.'
     // },
     {
         photo: manuela,
         name: 'Manuela Ticudean',
         position: 'Co-Founder & PM',
-        quote: `At Cyscale I have a constant opportunity to grow, professionally and personally. Moreover, I feel that my contribution matters and that we’re creating something truly special.`
+        quote: `At Cyscale I have a constant opportunity to grow, professionally and personally. Moreover, I feel that my contribution matters and that we're creating something truly special.`
     },
     {
         photo: ovidiu,
@@ -278,9 +278,9 @@ const Index = () => {
                         <div className='p-2 mb-2'>
                             <div className='p-3 md:p-6 shadow-lg rounded-lg bg-white relative overflow-hidden'>
                                 <div className='h-56 pr-0 flex flex-col'>
-                                    <p className='text-2xl font-bold mt-4 mb-4'>Think you’ve got what it takes?</p>
+                                    <p className='text-2xl font-bold mt-4 mb-4'>Think you've got what it takes?</p>
                                     <p className='text-normal'>
-                                        If so, check out our open positions below. We’d love to have you onboard.
+                                        If so, check out our open positions below. We'd love to have you onboard.
                                     </p>
                                     <ScrollLink
                                         smooth={true}

@@ -30,7 +30,7 @@ You will tell the world why Cyscale is the best solution for protecting complex 
 * an additional 3 personal days (take them for yourself, whenever you need them)
 * Work from home allowance (up to 50€ for internet, electricity, etc.)
 
-## Bonus
+_Bonus_
 
 * Working with up2date tech such as cloud computing, cloud-native apps, and cybersecurity
 * The opportunity to have a key role in the early development stage of what we believe will be a landmark product in cloud security
@@ -42,7 +42,7 @@ You will tell the world why Cyscale is the best solution for protecting complex 
 * Package and deliver product updates and features in such a way that it drives more product adoption
 * Develop product positioning and messaging that differentiates our products in the market
 * Partner daily with cross-functional teams including Engineering, Finance, Design, Sales, and Customer Experience to align on overall direction and amplify impact
-* Constantly evaluate if our solutions solve customer’s problems through quantitative and qualitative measures on user behavior, as well as experimentation (e.g. a/b testing, survey data, usability studies).
+* Constantly evaluate if our solutions solve customer's problems through quantitative and qualitative measures on user behavior, as well as experimentation (e.g. a/b testing, survey data, usability studies)
 
 ## Required Skills:
 

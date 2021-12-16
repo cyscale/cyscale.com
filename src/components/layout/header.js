@@ -39,7 +39,7 @@ const Header = ({
 
     return (
         <HeaderContext.Provider value={{ sticker, setSticker }}>
-            <div className={rootClasses} style={{ backgroundImage: `url(${heroBG})  ` }}>
+            <div className={rootClasses} style={{ backgroundImage: `url(${heroBG})` }}>
                 <TopNav pageName={pageName} />
                 <div className='max-w-1366px mx-auto pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px '>
                     {pageName === 'blog-detail' || pageName === 'blogs' ? (
@@ -65,7 +65,7 @@ const Header = ({
                                     }`}
                                 >
                                     <h1
-                                        className={` text-blue text-38px sm:text-30px md:text-60px leading-normal sm:leading-normal font-semibold sm:mt-20 new-line`}
+                                        className={`text-blue text-38px sm:text-30px md:text-60px leading-normal sm:leading-normal font-semibold sm:mt-20 new-line`}
                                     >
                                         {pageName === 'SKGPage' ? (
                                             <span>
@@ -87,10 +87,10 @@ const Header = ({
                                             {pageName === 'SKGPage' ? (
                                                 <span>
                                                     Many tools promise less data to deal with and stronger aggregation.
-                                                    But even when they deliver, it’s not enough to make your job easier.
+                                                    But even when they deliver, it's not enough to make your job easier.
                                                     <br />
                                                     <br />
-                                                    That’s why we built the Security Knowledge Graph™. Because you
+                                                    That's why we built the Security Knowledge Graph™. Because you
                                                     deserve a cloud security platform that surfaces crucial issues based
                                                     on deep understanding of all your interlinked assets.
                                                     <br />

@@ -28,7 +28,7 @@ You will be part of the team that listens to our customers, collects feedback, a
 * * an additional 3 personal days (take them for yourself, whenever you need them)
 * Work from home allowance (up to 50€ for internet, electricity, etc.)
 
-## Bonus
+_Bonus_
 
 * Working with up2date tech such as cloud computing, cloud-native apps, and cybersecurity
 * The opportunity to have a key role in the early development stage of what we believe will be a landmark product in cloud security

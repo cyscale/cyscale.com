@@ -14,7 +14,7 @@ department: Engineering
 workType: hybrid
 employmentType: full-time
 ---
-You will be part of a dedicated and autonomous product team, committed to solving real problems for our customers. You will improve our application architecture, improve and expand our API, build new features for microservices and the frontend app, iterate on and fix bugs in existing features. You will participate in all phases of the product (discovery, delivery, iteration), and your performance will be measured on the satisfaction of our users.  
+You will be part of a dedicated and autonomous product team, committed to solving real problems for our customers. You will improve our application architecture, improve and expand our API, build new features for microservices and the frontend app, iterate on and fix bugs in existing features. You will participate in all phases of the product (discovery, delivery, iteration), and your performance will be measured on the satisfaction of our users.
 
 ## **Benefits**
 
@@ -29,32 +29,32 @@ You will be part of a dedicated and autonomous product team, committed to solvi
 * Work from home allowance (up to 50€ for internet, electricity, etc.)
 * Private medical insurance
 
-## Bonus
+_Bonus_
 
 * Working with up2date tech such as cloud-native apps and cybersecurity
 * The opportunity to have a key role in the early development stage of what we believe will be a landmark product in cloud security
 * A startup involves a lot more than just writing code - you will get to learn a lot in areas such as product, marketing, sales, and communication (if you want to)
 
-## **Responsibilities:** 
+## **Responsibilities:** 
 
-* Understand and align with Cyscale's mission and be committed to solving our customer's problems  
-* Continuous collaboration with your colleagues in the product team (product, design and engineering work out solutions together)  
-* Provide input in product discovery activities, help shaping requirements 
-* Build an application architecture that will allow performance and scaling 
-* Contribute to the design of our GraphQL API 
-* Collaborate closely with our backend engineers in order to build an OGM layer for querying our graph database 
-* Be involved in CI/CD operations  
+* Understand and align with Cyscale's mission and be committed to solving our customer's problems
+* Continuous collaboration with your colleagues in the product team (product, design and engineering work out solutions together)
+* Provide input in product discovery activities, help shaping requirements
+* Build an application architecture that will allow performance and scaling
+* Contribute to the design of our GraphQL API
+* Collaborate closely with our backend engineers in order to build an OGM layer for querying our graph database
+* Be involved in CI/CD operations
 
-## **Required skills:** 
+## **Required skills:** 
 
-* 6+ years of experience as a software developer  
-* Understanding of algorithms and the software development lifecycle 
-* Extensive experience with JavaScript and/or TypeScript 
-* Understanding of microservices architectures 
-* Experience with Single Page Applications  
-* Experience with ReactJS and state management tools is considered an advantage 
-* Experience with  GraphQL API is considered an advantage  
-* Experience with cloud applications is considered an advantage 
+* 6+ years of experience as a software developer
+* Understanding of algorithms and the software development lifecycle
+* Extensive experience with JavaScript and/or TypeScript
+* Understanding of microservices architectures
+* Experience with Single Page Applications
+* Experience with ReactJS and state management tools is considered an advantage
+* Experience with  GraphQL API is considered an advantage
+* Experience with cloud applications is considered an advantage
 
 ## Apply for this role by:
 

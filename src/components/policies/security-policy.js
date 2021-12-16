@@ -8,7 +8,7 @@ const Index = () => {
       <div>
         <div
           className={`w-full ContactUs bg-lightGreyEEE bg-cover bg-no-repeat`}
-          style={{ backgroundImage: `url(${heroBG})  ` }}
+          style={{ backgroundImage: `url(${heroBG})` }}
         >
           <TopNav />
           <div className="max-w-1366px mx-auto pt-72 pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px">
@@ -33,7 +33,7 @@ const Index = () => {
               Data center Security
               </h2>
               <p className="mb-36px">
-              GCP maintains an impressive list of reports, certifications, and independent assessments to ensure complete and ongoing state-of-the-art data center security. They have many years of experience in designing, constructing, and operating large-scale data centers, which makes them the industry standard when it comes to security. The exact physical location of the data center that stores <strong> Cyscale</strong> Platform's data is private. Only those within Google who have a legitimate business know the actual location of Google’s data centers. Additionally, data centers are secured with a variety of physical controls to prevent unauthorized access.
+              GCP maintains an impressive list of reports, certifications, and independent assessments to ensure complete and ongoing state-of-the-art data center security. They have many years of experience in designing, constructing, and operating large-scale data centers, which makes them the industry standard when it comes to security. The exact physical location of the data center that stores <strong> Cyscale</strong> Platform's data is private. Only those within Google who have a legitimate business know the actual location of Google's data centers. Additionally, data centers are secured with a variety of physical controls to prevent unauthorized access.
               </p>
              <h2 className="font-bold mb-36px text-24px">
              Infrastructure Security

@@ -5,7 +5,6 @@ const CSPMgetStarted = ({title, description, btnText, btnLink}) => {
         <div className="block w-full pt-200px pb-200px">
             <div className="max-w-1366px m-auto pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px">
                 <div className="grid grid-cols-1">
-                                        
                     <div>
                         <div className="block w-full text-white text-24px leading-normal">
                             <h3 className="new-line uppercase lg:w-96">{title}</h3>

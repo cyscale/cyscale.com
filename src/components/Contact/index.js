@@ -28,7 +28,7 @@ const Index = () => {
             <div>
                 <div
                     className={`w-full pb-20px ContactUs bg-lightGreyEEE bg-contain bg-no-repeat`}
-                    style={{ backgroundImage: `url(${heroBG})  ` }}
+                    style={{ backgroundImage: `url(${heroBG})` }}
                 >
                     <TopNav pageName='contact_us' />
                     <div className='max-w-1366px mx-auto contactForm pt-72 pb-67px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px'>

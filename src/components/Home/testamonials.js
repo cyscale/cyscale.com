@@ -13,7 +13,6 @@ const testamonials = () => {
                             <strong>Ovidiu Pop</strong><br />SYMBOLD STUDIO
                         </small>
                     </h2>
-                    
                </div>
                <div className="w-full lg:w-2/4">
                    <p className="italic text-14px text-black leading-normal pt-20 sm:pt-0">“Cyscale continuously monitors for changes that might cause compliance violations or weaken our security, then alerts our staff so we can fix things before they cause any real problems. 

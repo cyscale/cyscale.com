@@ -29,9 +29,6 @@ exports.createPages = ({ graphql, actions }) => {
         });
     }
 
-   
-
-
     const blogTemplate = path.resolve(`src/template/blogTemplate.js`);
     const careerTemplate = path.resolve(`src/template/careerTemplate.js`);
 

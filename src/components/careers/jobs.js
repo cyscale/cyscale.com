@@ -21,7 +21,7 @@ const Jobs = ({ data }) => {
                                 <Link
                                     to={`/careers/${permalink}/`}
                                     className='block w-full card pt-25px pb-25px pl-25px pr-25px bg-no-repeat no-underline'
-                                    style={{ backgroundImage: `url(${icons[icon]})  ` }}
+                                    style={{ backgroundImage: `url(${icons[icon]})` }}
                                 >
                                     <h4 className='text-24px font-bold lg:w-64 leading-normal new-line uppercase'>
                                         {title}
