@@ -3,7 +3,7 @@ templateKey: career-page
 title: Cloud Security Analyst / Architect
 disabled: false
 location: Romania
-date: null
+date: 2021-12-16T10:05:59.202Z
 permalink: cloud-security-analyst
 description: Cyscale is a startup from Cluj-Napoca, activating in the cloud
   cybersecurity industry. We are looking for an experienced cloud security
@@ -21,7 +21,7 @@ You will be responsible for researching and identifying new threats, vulnerabili
 
 ## Benefits
 
-* €50,000 to €100,000 annual salary
+* €50,000 to €80,000 annual salary
 * Equity - shares/stock options (ESOP) - simulation available during interview
 * Sign-on bonus at hiring - cash in hand up to 2 salaries
 * Flexible schedule and working hours
