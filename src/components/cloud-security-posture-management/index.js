@@ -38,7 +38,7 @@ const Index = () => {
         {
             icon: icon4,
             title: 'REPORTING',
-            description: `See complaianc with regulatory standards and policies at a glance \n\nUpto 1-year data retention \n\nData Exports (CSV)`
+            description: `See compliance with regulatory standards and policies at a glance \n\nUp to 1-year data retention \n\nData Exports (CSV)`
         }
     ];
     const dataFeaturedProducts = [
