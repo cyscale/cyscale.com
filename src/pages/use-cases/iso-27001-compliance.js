@@ -52,7 +52,9 @@ export default function CloudCompliance() {
                                         ISO 27001 Compliance & Security for Cloud Environment
                                     </h1>
                                     <p className='text-base lg:text-lg mt-8 leading-relaxed'>
-                                        Easy & continuous compliance for ISO 27001, with a set of battle-tested policies to jumpstart your ISMS. Secure your assets with cutting-edge controls & policies.
+                                        Easy & continuous compliance for ISO 27001, with a set of battle-tested policies
+                                        to jumpstart your ISMS. Secure your assets with cutting-edge controls &
+                                        policies.
                                     </p>
 
                                     <a
@@ -85,8 +87,8 @@ export default function CloudCompliance() {
                                     <strong>ISO/IEC 27001:2013</strong> is the golden standard when it comes to
                                     information security. Part of the <strong>ISO 27000 family</strong>, it helps
                                     organizations protect their assets such as employee information, user data, and
-                                    intellectual property. Being <strong>ISO 27001 compliant</strong> gives you and your customers the confidence to
-                                    run and expand your business.
+                                    intellectual property. Being <strong>ISO 27001 compliant</strong> gives you and your
+                                    customers the confidence to run and expand your business.
                                 </p>
                             </div>
                         </Row>
@@ -142,7 +144,7 @@ export default function CloudCompliance() {
                                     {
                                         main: 'Identify the scope of the ISMS taking into consideration',
                                         list: [
-                                            'the organization's objectives regarding managing the risk',
+                                            "the organization's objectives regarding managing the risk",
                                             'the requirements of the involved parties',
                                             'the asset inventory - might include legal documents, user data, cloud resources, and physical equipment.'
                                         ]
