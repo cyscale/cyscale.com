@@ -61,7 +61,7 @@ Having the messages persisted also enables us to take different approaches based
 ```typescript
 
 
-export type MessageHandler = (data: NotificationDto\[]) => Promise<void>;
+export type MessageHandler = (data: NotificationDto[]) => Promise<void>;
 
 export const handleNotificationMessages = async (handler: MessageHandler) => {
 
@@ -91,7 +91,7 @@ export const handleNotificationMessages = async (handler: MessageHandler) => {
 
     const done = (async () => {
 
-      let notifications: NotificationDto\[] = \[];
+      let notifications: NotificationDto[] = [];
 
       for await (const m of psub) {
 
@@ -109,7 +109,7 @@ export const handleNotificationMessages = async (handler: MessageHandler) => {
 
             logger.info(`Processing ${notifications.length} messages`);
 
-            notifications = \[];
+            notifications = [];
 
           }
 
