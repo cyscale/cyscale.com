@@ -9,6 +9,7 @@
         "formik": "^2.2.9",
         "gatsby": "^3.7.2",
         "gatsby-image": "^3.7.1",
+        "gatsby-plugin-canonical-urls": "^4.4.0",
         "gatsby-plugin-force-trailing-slashes": "^1.0.5",
         "gatsby-plugin-google-tagmanager": "^4.4.0",
         "gatsby-plugin-hotjar": "^1.1.1",

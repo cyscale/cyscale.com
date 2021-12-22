@@ -40,6 +40,8 @@ export default function Iso27001() {
             <Consent />
             <Helmet>
                 <script charset='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js' />
+                <meta name='robots' content='noindex' />
+                <meta name='robots' content='nofollow' />
             </Helmet>
             <header id='head' className='bg-lightGrey pt-3 pb-2'>
                 <Container>

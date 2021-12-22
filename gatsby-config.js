@@ -82,6 +82,13 @@ module.exports = {
             }
         },
         {
+            resolve: `gatsby-plugin-canonical-urls`,
+            options: {
+                siteUrl: `https://www.example.com`,
+                stripQueryString: true
+            }
+        },
+        {
             resolve: `gatsby-plugin-hotjar`,
             options: {
                 sv: 6,
