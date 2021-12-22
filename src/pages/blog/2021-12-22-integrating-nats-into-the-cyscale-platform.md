@@ -40,7 +40,7 @@ The rest of the article will cover the main steps we took to integrate NATS into
 
 ### Core NATS
 
-At its core, **the NATS server** is a **publish/subscribe** message broker. It offers **at most once delivery** and works based on **subjects**. These can have a hierarchical structure such as \`sync.aws\` and \`sync.gcp\`. Services concerned with messages related to syncing operations for AWS will only subscribe to \`sync.aws\` while other services might listen for all sync-related messages on \`sync.*\` (which covers both subjects) or even \`sync.>\` (which will also cover \`sync.aws.ec2\` - a separate subject).
+At its core, **the NATS server** is a **publish/subscribe** message broker. It offers **at most once delivery** and works based on **subjects**. These can have a hierarchical structure such as `sync.aws` and `sync.gcp`. Services concerned with messages related to syncing operations for AWS will only subscribe to `sync.aws` while other services might listen for all sync-related messages on `sync.*` (which covers both subjects) or even `sync.>` (which will also cover `sync.aws.ec2` - a separate subject).
 
 Another feature that provides us with great value is called **queue groups**. This helps us horizontally scale our consumers while making sure that only one instance of a service receives a certain message. If you have experience with Kafka, it resembles consumer groups. What’s nice about queue groups is that they are automatically created when consumers subscribe to a subject and provide the queue group parameter (a simple string that, just like subjects, can have a hierarchical structure). For example, we use the name of the service (e.g. notifier) as the queue group.
 
@@ -58,7 +58,8 @@ On the other hand, **you do have to create the actual streams** (we will talk ab
 
 Having the messages persisted also enables us to take different approaches based on what we want to achieve. We might still follow a pub/sub approach for certain subscribers (these are known as **push consumers**) (e.g. we use this approach for generating user-requested reports) or we might want to have more control over how messages are retrieved in which case we will use a **pull consumer**. This enables us to batch messages (e.g. we do this for sending notifications). Here is how we handle the messages in our notifier service:
 
-\`\``typescript
+```typescript
+
 
 export type MessageHandler = (data: NotificationDto\[]) => Promise<void>;
 
@@ -106,7 +107,7 @@ export const handleNotificationMessages = async (handler: MessageHandler) => {
 
             await handler(notifications);
 
-            logger.info(\`Processing ${notifications.length} messages\`);
+            logger.info(`Processing ${notifications.length} messages`);
 
             notifications = \[];
 
@@ -130,7 +131,7 @@ export const handleNotificationMessages = async (handler: MessageHandler) => {
 
     logger.info(
 
-      \`Listening for messages on ${process.env.NOTIFICATIONS_SUBJECT}\`
+      `Listening for messages on ${process.env.NOTIFICATIONS_SUBJECT}`
 
     );
 
@@ -140,13 +141,12 @@ export const handleNotificationMessages = async (handler: MessageHandler) => {
 
   } catch (e) {
 
-    logger.error(\`Failed to initiate message listening ${e}\`);
+    logger.error(`Failed to initiate message listening ${e}`);
 
   }
 
 };
-
-\`\``
+```
 
 (yes, most of our services are actually written in Go, hence the naming of some variables)
 
@@ -162,10 +162,9 @@ As a side note regarding persistence/streaming with NATS, the precursor of JetSt
 
 Being part of the CNCF, we can expect NATS to have first-class support for Kubernetes. And it does.
 
-Since the entire Cyscale platform is specified as a Helm chart we just needed to add the [NATS](https://github.com/nats-io/k8s/tree/main/helm/charts/nats) subchart as a dependency and configure the values. You can check the [values file](https://github.com/nats-io/k8s/blob/main/helm/charts/nats/values.yaml) from the chart repo for reference. One small detail that cost us a few hours was how we were specifying the values for NATS. If you look at [the documentation](https://docs.nats.io/running-a-nats-service/introduction/running/nats-kubernetes/helm-charts#jetstream), you will notice the \`nats\` object. However, since we are deploying NATS as a subchart, we will need an additional parent \`nats\` object to instruct Helm to pass the values down to the nats subchart. Here are our values for NATS on the dev cluster:
+Since the entire Cyscale platform is specified as a Helm chart we just needed to add the [NATS](https://github.com/nats-io/k8s/tree/main/helm/charts/nats) subchart as a dependency and configure the values. You can check the [values file](https://github.com/nats-io/k8s/blob/main/helm/charts/nats/values.yaml) from the chart repo for reference. One small detail that cost us a few hours was how we were specifying the values for NATS. If you look at [the documentation](https://docs.nats.io/running-a-nats-service/introduction/running/nats-kubernetes/helm-charts#jetstream), you will notice the `nats` object. However, since we are deploying NATS as a subchart, we will need an additional parent `nats` object to instruct Helm to pass the values down to the nats subchart. Here are our values for NATS on the dev cluster:
 
-\`\``yml
-
+```yaml
 nats:
 
   nats:
@@ -205,22 +204,20 @@ nats:
         storageDirectory: /data/
 
         storageClassName: default
+```
 
-\`\``
+(notice the two `nats`)
 
-(notice the two \`nats\`)
-
-Besides the actual NATS server (which is a container running in the NATS pod along with the monitoring and config reloader containers), we also have a **NATS Box** pod (comes with the NATS Helm chart) that helps us with testing and administrative tasks - basically its a **preconfigured NATS CLI**. We access it using the command \`kubectl exec -it <nats-box-container> -- /bin/sh -l\`. The other alternative would have been to install the NATS CLI on our machines and port forward the NATS server from the cluster.
+Besides the actual NATS server (which is a container running in the NATS pod along with the monitoring and config reloader containers), we also have a **NATS Box** pod (comes with the NATS Helm chart) that helps us with testing and administrative tasks - basically its a **preconfigured NATS CLI**. We access it using the command `kubectl exec -it <nats-box-container> -- /bin/sh -l`. The other alternative would have been to install the NATS CLI on our machines and port forward the NATS server from the cluster.
 
 ### Creating the Streams with NACK
 
 Besides NATS, we also added the [NACK subchart](https://github.com/nats-io/k8s/tree/main/helm/charts/nack) which requires the NACK **CRDs** (install using `kubectl apply -f <https://raw.githubusercontent.com/nats-io/nack/v0.6.0/deploy/crds.yml>`). That’s because it enables us to treat JetStream streams as Kubernetes resources deployed as part of the rest of the platform.
 
-Instead of having our services handle the stream creation or manually creating them from the NATS box, we specify them declaratively as follows (\`templates/nats-streams.yaml\`):
+Instead of having our services handle the stream creation or manually creating them from the NATS box, we specify them declaratively as follows (`templates/nats-streams.yaml`):
 
-\`\``yml
-
-\# See https://github.com/nats-io/nack/blob/main/deploy/crds.yml for more properties
+```yaml
+# See https://github.com/nats-io/nack/blob/main/deploy/crds.yml for more properties
 
 {{- range .Values.nack.streams }}
 
@@ -242,15 +239,14 @@ spec:
 
   retention: {{ .retention | quote | default "limits" }}
 
-\---
+---
 
 {{- end }}
+```
 
-\`\``
+We also declare the streams as a list in the values file (notice the `range`).
 
-We also declare the streams as a list in the values file (notice the \`range\`).
-
-Once these are deployed, you can inspect the streams just like any other k8s resource using \`kubectl get streams\`. One issue we faced was that the streams were not actually created in JetStream (\`nats stream ls\` from the nats box) even though the k8s resources existed. We simply manually deleted them from the cluster (\`kubectl delete streams.jetstream.nats.io --all\`) and re-deployed the helm chart.
+Once these are deployed, you can inspect the streams just like any other k8s resource using `kubectl get streams`. One issue we faced was that the streams were not actually created in JetStream (`nats stream ls` from the nats box) even though the k8s resources existed. We simply manually deleted them from the cluster (`kubectl delete streams.jetstream.nats.io --all`) and re-deployed the helm chart.
 
 There is another alternative we considered - the [jetstream Terraform provider](https://registry.terraform.io/providers/nats-io/jetstream/latest/docs). While we do use Terraform to declare our infrastructure on top of which the Kubernetes cluster is running, we chose NACK because it fit our abstraction layers best and because the terraform provider, running locally or in our pipelines, has to somehow reach the NATS server. In our case, the NATS server is not exposed outside of the cluster (again, port-forwarding is an option).
 
