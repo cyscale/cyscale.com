@@ -57,3 +57,36 @@
 .blog-reset li {
     margin-top: 1rem;
 }
+
+.blog-reset code {
+    font-family: Roboto Mono, monospace;
+    font-size: inherit;
+}
+
+.blog-reset p > code,
+.blog-reset li > code,
+.blog-reset dd > code,
+.blog-reset td > code {
+    background: rgba(242, 242, 242, 1);
+    word-wrap: break-word;
+    border-radius: 0.2rem;
+    box-decoration-break: clone;
+    padding: 0.1rem 0.3rem 0.2rem;
+}
+
+.blog-reset pre > code {
+    display: block;
+    background: none;
+    white-space: pre;
+    background: rgba(242, 242, 242, 1);
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: scroll;
+    max-width: 100%;
+    min-width: 100px;
+}
