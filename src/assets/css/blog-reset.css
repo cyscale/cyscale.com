@@ -60,7 +60,7 @@
 
 .blog-reset code {
     font-family: Roboto Mono, monospace;
-    font-size: inherit;
+    font-size: 1rem;
 }
 
 .blog-reset p > code,
