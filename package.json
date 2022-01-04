@@ -40,6 +40,7 @@
         "react-player": "^2.9.0",
         "react-scroll": "^1.8.2",
         "react-slick": "^0.28.1",
+        "react-syntax-highlighter": "^15.4.5",
         "react-tabs": "^3.2.3",
         "rehype-raw": "^6.1.0",
         "sass": "^1.45.0",
