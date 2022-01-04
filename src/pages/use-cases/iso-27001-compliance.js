@@ -9,7 +9,7 @@ import whyIso from '../../assets/images/components-iso.svg';
 import ScrollButton from '../../components/ScrollButton/ScrollButton';
 import getStartedICon from '../../assets/images/getStartedIconCPSM.svg';
 import GetStarted from '../../components/Home/getstarted';
-import { FREE_TRIAL_LINK } from '../../common/links';
+import { useAppLink } from '../../common/links';
 
 const StepCard = ({ groups, list, order }) => {
     return (
@@ -36,6 +36,8 @@ const StepCard = ({ groups, list, order }) => {
 };
 
 export default function CloudCompliance() {
+    const appLink = useAppLink();
+
     return (
         <Layout
             pageName='ISO27001Compliance'
@@ -58,7 +60,7 @@ export default function CloudCompliance() {
                                     </p>
 
                                     <a
-                                        href={FREE_TRIAL_LINK}
+                                        href={appLink}
                                         target='_blank'
                                         rel='noopener noreferrer'
                                         className='bg-gradient-to-r from-blue to-red lg:max-w-xs block font-medium rounded text-white uppercase text-center py-5 px-12 mt-8 no-underline hover:no-underline '
@@ -298,7 +300,7 @@ export default function CloudCompliance() {
                     ExternalLink
                     icon={getStartedICon}
                     btnText='Start your free trial'
-                    btnLink={FREE_TRIAL_LINK}
+                    btnLink={appLink}
                     description='Achieve true continuous compliance for ISO 27001'
                 />
             </div>

@@ -16,9 +16,11 @@ import {
     OptimizeCosts,
     EliminateSecurityGaps
 } from './images';
-import { FREE_TRIAL_LINK } from '../../common/links';
+import { useAppLink } from '../../common/links';
 
 const Index = () => {
+    const appLink = useAppLink();
+
     const dataOnboarding = [
         {
             icon: icon1,
@@ -52,7 +54,7 @@ const Index = () => {
             tabTitle: 'Cut through the noise with targeted alerts',
             sectionTitle: 'Cut through the noise',
             sectionDescription: [
-                'Get relevant alerts when your cloud assets drift away from established security and compliance standards.\n\nMake Cyscale your single source of truth for CSPM and never miss an important security event. \n\nMove beyond bulky, list-based management. Cyscale\'s',
+                "Get relevant alerts when your cloud assets drift away from established security and compliance standards.\n\nMake Cyscale your single source of truth for CSPM and never miss an important security event. \n\nMove beyond bulky, list-based management. Cyscale's",
                 ' ',
                 <a
                     href='/products/security-knowledge-graph'
@@ -138,7 +140,7 @@ const Index = () => {
             featureImage: <EliminateSecurityGaps />
         }
     ];
- 
+
     const dataService = [
         {
             title: 'Data discovery',
@@ -216,7 +218,7 @@ const Index = () => {
                     title={`AGENTLESS, MULTI-CLOUD, PAINLESS CSPM`}
                     description='Start seeing value & saving money in minutes'
                     btnText='TRY CYSCALE FOR FREE'
-                    btnLink={FREE_TRIAL_LINK}
+                    btnLink={appLink}
                     ExternalLink
                 />
             </div>

@@ -8,9 +8,11 @@ import MaintainThirdPartyData from './maintainThirdPartyData';
 import CheckSquareIcon from '../../assets/images/check-square.svg';
 import AchieveClarityConsistencyImage from '../../assets/images/Achieve-clarity-consistency-image.svg';
 import getStartedICon from '../../assets/images/getStartedICon.svg';
-import { FREE_TRIAL_LINK } from '../../common/links';
+import { useAppLink } from '../../common/links';
 
 export default function CloudComplianceContent() {
+    const appLink = useAppLink();
+
     const dataServices = [
         {
             icon: CheckSquareIcon,
@@ -98,7 +100,7 @@ export default function CloudComplianceContent() {
                 <GetStarted
                     description='Easier compliance is just a login away! Leave the heavy lifting to us'
                     btnText='START YOUR FREE TRIAL'
-                    btnLink={FREE_TRIAL_LINK}
+                    btnLink={appLink}
                     ExternalLink
                     icon={getStartedICon}
                     sectionName='RemoteWork'
@@ -135,7 +137,7 @@ export default function CloudComplianceContent() {
                 <GetStarted
                     description='Explore the full toolbox for your GRC system'
                     btnText='START YOUR FREE TRIAL'
-                    btnLink={FREE_TRIAL_LINK}
+                    btnLink={appLink}
                     ExternalLink
                     icon={getStartedICon}
                     sectionName='RemoteWork'

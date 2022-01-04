@@ -15,7 +15,7 @@ import menuIcon from '../../assets/images/menuIcon.svg';
 import menuClsoe from '../../assets/images/menuClose.svg';
 import { useStaticQuery, graphql } from 'gatsby';
 import useScrollTrigger from '../scrollTrigger';
-import { FREE_TRIAL_LINK } from '../../common/links';
+import { useAppLink } from '../../common/links';
 
 const initMenu = {
     Icon: menuIcon,
@@ -28,6 +28,7 @@ const TopNav = ({ pageName }) => {
     const root = useRef();
     const trigger = useScrollTrigger();
     const [menu, setMenu] = useState(initMenu);
+    const appLink = useAppLink();
 
     useEffect(() => {
         const onScroll = () => {
@@ -94,7 +95,7 @@ const TopNav = ({ pageName }) => {
     return (
         <div
             ref={root}
-            style={{maxWidth: '100vw'}}
+            style={{ maxWidth: '100vw' }}
             className={`fixed top-0 left-0 block w-full mx-auto z-10 transition duration-300 transform ${rootClasses}`}
         >
             <div className={`topNav ${menu.toggleBg} container max-w-7xl m-auto px-8 pt-2.5`}>
@@ -145,7 +146,9 @@ const TopNav = ({ pageName }) => {
                                             </div>
                                         </div>
                                         <div className='hidden lg:inline-block'>
-                                            <p className='text-base font-semibold text-black leading-normal'>Our Partners</p>
+                                            <p className='text-base font-semibold text-black leading-normal'>
+                                                Our Partners
+                                            </p>
                                             <div className='flex flex-row flex-wrap space-x-4 mt-7'>
                                                 <img src={image7} className='w-auto h-8' alt='svg_aws' />
                                                 <img src={image8} className='w-auto h-8' alt='svg_azure' />
@@ -394,7 +397,10 @@ const TopNav = ({ pageName }) => {
                                             </div>
                                         </div>
                                         <div className='hidden lg:inline-block'>
-                                            <Link to='/careers' className='text-base font-medium text-black leading-normal'>
+                                            <Link
+                                                to='/careers'
+                                                className='text-base font-medium text-black leading-normal'
+                                            >
                                                 Open positions
                                             </Link>
                                             <div className='flex flex-col mt-2'>
@@ -447,8 +453,8 @@ const TopNav = ({ pageName }) => {
                             </li>
                             <li className='py-6 px-4 lg:py-6 lg:pr-0 lg:pl-26px'>
                                 <a
-                                    className='bg-gradient-to-r from-blue to-red hover:bg-blue w-153px text-14px border-transparent box-border rounded-31px  h-10 hidden xl:flex justify-center items-center uppercase leading-none text-white transition duration-500 hover:to-blue hover:no-underline'
-                                    href={FREE_TRIAL_LINK}
+                                    className='bg-gradient-to-r from-blue to-red hover:from-red hover:to-blue w-153px text-14px border-transparent box-border rounded-31px  h-10 hidden xl:flex justify-center items-center uppercase leading-none text-white transition duration-500  hover:no-underline'
+                                    href={appLink}
                                     target='_blank'
                                     rel='noopener noreferrer'
                                 >
@@ -456,7 +462,6 @@ const TopNav = ({ pageName }) => {
                                 </a>
                             </li>
                             <li className='py-6 px-4 lg:py-6 lg:pr-6'>
-                                {' '}
                                 <a
                                     className='loginBtn text-black hover:text-black mt-0px lg:mt-0 text-14px  uppercase w-84px rounded-31px greyBorder flex h-10 justify-center items-center leading-none transition-all duration-500 hover:bg-grey3 hover:no-underline'
                                     href='https://app.cyscale.com'
