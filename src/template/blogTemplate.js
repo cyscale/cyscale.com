@@ -4,12 +4,13 @@ import BlogOne from '../components/blog-one';
 // import heroBG from '../assets/images/privacy&blog-bg.svg';
 import heroBG from '../assets/images/blog-hero.jpeg';
 
-const BlodDetail = ({ pageContext }) => {
+const BlodDetail = ({ pageContext, location }) => {
     const { alldata, suggestions } = pageContext;
 
     return (
         <div className='BLogPager'>
             <Layout
+                location={location}
                 heroBG={heroBG}
                 pageName='blog-detail'
                 description={alldata?.frontmatter?.description}

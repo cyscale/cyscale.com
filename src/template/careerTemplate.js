@@ -2,10 +2,11 @@ import React from 'react';
 import Layout from '../components/layout/layout.js';
 import Details from '../components/careers/job-details.js';
 
-const CareerTemplate = ({ pageContext }) => {
+const CareerTemplate = ({ pageContext, location }) => {
     const { alldata } = pageContext;
     return (
         <Layout
+            location={location}
             pageName='jobDetails'
             title={alldata.frontmatter.title}
             bannerTitle={alldata.frontmatter.title}

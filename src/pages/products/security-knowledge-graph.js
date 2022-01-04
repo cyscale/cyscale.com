@@ -5,11 +5,12 @@ import { useAppLink } from '../../common/links';
 import Layout from '../../components/layout/layout.js';
 import Skg from '../../components/security-knowledge-graph';
 
-const Index = () => {
+const Index = ({ location }) => {
     const appLink = useAppLink();
 
     return (
         <Layout
+            location={location}
             heroBG={heroBG}
             bannerTitle={`Security \nKnowledge Graph™`}
             bannerDescription={`Many tools promise less data to deal with and stronger aggregation. But even when they deliver, it's not enough to make your job easier. \n\nThat's why we built the Security Knowledge Graph™. Because you deserve a cloud security platform that surfaces crucial issues based on deep understanding of all your interlinked assets.\n\n Go far beyond the limits of list-based inventories.`}

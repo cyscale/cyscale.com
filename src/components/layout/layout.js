@@ -1,12 +1,13 @@
-import React from 'react'
+import React from 'react';
 
-import Seo from '../Seo'
-import Footer from './footer'
-import Header from './header'
-import Consent from '../consent'
+import Seo from '../Seo';
+import Footer from './footer';
+import Header from './header';
+import Consent from '../consent';
 const TemplateWrapper = ({
     children,
     title,
+    location,
     description,
     heroBG,
     bannerTitle,
@@ -21,15 +22,16 @@ const TemplateWrapper = ({
 }) => {
     return (
         <div>
-            <Seo title={title} description={description} pageName={pageName} banner={banner} />
+            <Seo title={title} description={description} pageName={pageName} banner={banner} url={location?.href} />
             {!!pageName && pageName === 'ContactUs' ? (
                 <></>
             ) : pageName === 'Pricing' ||
-                pageName === 'aboutUs' ||
-                pageName === 'termsOfUse' ||
-                pageName === 'privacyPolicy' ||
-                pageName === 'SecurityPolicy' ||
-                pageName === 'dataSecurity' || pageName === "blog" ? (
+              pageName === 'aboutUs' ||
+              pageName === 'termsOfUse' ||
+              pageName === 'privacyPolicy' ||
+              pageName === 'SecurityPolicy' ||
+              pageName === 'dataSecurity' ||
+              pageName === 'blog' ? (
                 <></>
             ) : (
                 <Header
@@ -49,7 +51,7 @@ const TemplateWrapper = ({
                 <div>{children}</div>
             </main>
             <Footer />
-            <Consent/>
+            <Consent />
         </div>
     );
 };

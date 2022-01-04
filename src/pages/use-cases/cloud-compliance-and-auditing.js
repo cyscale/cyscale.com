@@ -3,11 +3,12 @@ import { useAppLink } from '../../common/links';
 import CloudComplianceContent from '../../components/cloud-compliance';
 import Layout from '../../components/layout/layout.js';
 
-export default function CloudCompliance() {
+export default function CloudCompliance({location}) {
     const appLink = useAppLink();
 
     return (
         <Layout
+            location={location}
             pageName='ComplianceAuditing'
             bannerTitle={`Compliance toolbox for cloud-native and cloud-first organizations`}
             bannerDescription={`Compliance toolbox for cloud-native and cloud-first organizations\n\nThe Cyscale Cloud Platform gives you full visibility across cloud and data repos, from app-level to your overall compliance posture. `}

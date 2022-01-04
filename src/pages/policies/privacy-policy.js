@@ -1,17 +1,17 @@
-import React from 'react'
+import React from 'react';
 
-import Layout from '../../components/layout/layout.js'
-import PrivacyPolicy from '../../components/policies/privacy-policy'
+import Layout from '../../components/layout/layout.js';
+import PrivacyPolicy from '../../components/policies/privacy-policy';
 
-const Index = () => (
-  <Layout
-    pageName="privacyPolicy"
-    title="Privacy Policy - Cyscale Cloud Platform"
-    description="Privacy Policy for the Cyscale Cloud Platform for securing cloud-native apps and data in a cloud-first world. Prevent cloud data leakage."
-  >
-    <PrivacyPolicy />
+const Index = ({ location }) => (
+    <Layout
+        location={location}
+        pageName='privacyPolicy'
+        title='Privacy Policy - Cyscale Cloud Platform'
+        description='Privacy Policy for the Cyscale Cloud Platform for securing cloud-native apps and data in a cloud-first world. Prevent cloud data leakage.'
+    >
+        <PrivacyPolicy />
+    </Layout>
+);
 
-  </Layout>
-)
-
-export default Index
+export default Index;

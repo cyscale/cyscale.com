@@ -109,7 +109,7 @@ const employee = [
     }
 ];
 
-const Index = () => {
+const Index = ({location}) => {
     const data = useStaticQuery(graphql`
         query JobsQuery {
             allMarkdownRemark(
@@ -134,6 +134,7 @@ const Index = () => {
     let jobs = data.allMarkdownRemark.nodes.map(({ frontmatter }) => frontmatter);
     return (
         <Layout
+            location={location}
             pageName='careers'
             title='Careers - Cyscale Cloud Platform'
             description='Together, we can make the world a safer place!'

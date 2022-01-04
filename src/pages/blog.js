@@ -3,8 +3,9 @@ import Layout from '../components/layout/layout.js';
 import Blogs from '../components/blogs';
 import heroBG from '../assets/images/privacy&blog-bg.svg';
 
-const Index = () => (
+const Index = ({ location }) => (
     <Layout
+        location={location}
         pageName='blogs'
         heroBG={heroBG}
         title='Cloud and Data Security Blog - Cyscale Cloud Platform'

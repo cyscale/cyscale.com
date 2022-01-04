@@ -5,10 +5,11 @@ import { useAppLink } from '../../common/links';
 import Cspm from '../../components/cloud-security-posture-management';
 import Layout from '../../components/layout/layout.js';
 
-const Index = () => {
+const Index = ({ location }) => {
     const appLink = useAppLink();
     return (
         <Layout
+            location={location}
             heroBG={heroBG}
             bannerTitle={`Cloud Security Posture\n Management Tool`}
             bannerDescription={`Continuous visibility of multi-cloud environments to identify cloud misconfiguration vulnerabilities. Scan, monitor, and remediate across AWS, Azure, Google Cloud, Oracle Cloud.`}

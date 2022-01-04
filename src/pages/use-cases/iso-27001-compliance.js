@@ -35,11 +35,12 @@ const StepCard = ({ groups, list, order }) => {
     );
 };
 
-export default function CloudCompliance() {
+export default function CloudCompliance({ location }) {
     const appLink = useAppLink();
 
     return (
         <Layout
+            location={location}
             pageName='ISO27001Compliance'
             title='ISO 27001 Compliance & Security for Cloud Environment - Cyscale'
             description='Easy & continuous compliance for ISO 27001, with a set of battle-tested policies to jumpstart your ISMS. Secure your assets with cutting-edge controls & policies.'
