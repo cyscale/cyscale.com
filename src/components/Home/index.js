@@ -15,9 +15,11 @@ import iconTwo from '../../assets/images/elemente-vectoriale-07.svg';
 import iconThree from '../../assets/images/elemente-vectoriale-08.svg';
 import icon5 from '../../assets/images/visuals-vectorial-5.svg';
 import { SecurityKnowledgeGraph, CloudNative, RemoteWorkWft, DataGathering } from './images';
-import { FREE_TRIAL_LINK } from '../../common/links';
+import { useAppLink } from '../../common/links';
 
 const Home = () => {
+    const appLink = useAppLink();
+
     const dataService = [
         {
             title: 'Compliance Officers optimize their effort and results',
@@ -185,7 +187,7 @@ const Home = () => {
                 <GetStarted
                     description='Start seeing value & saving money in minutes'
                     btnText=' Try Cyscale for free'
-                    btnLink={FREE_TRIAL_LINK}
+                    btnLink={appLink}
                     ExternalLink
                     icon={iconOne}
                 />
@@ -219,7 +221,7 @@ const Home = () => {
                 <GetStarted
                     description='When did you last scan your cloud for misconfigurations?'
                     btnText='Start scanning for free'
-                    btnLink={FREE_TRIAL_LINK}
+                    btnLink={appLink}
                     ExternalLink
                     icon={iconTwo}
                     icon2={iconThree}

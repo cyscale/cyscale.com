@@ -1,14 +1,15 @@
 import React from 'react';
-import { FREE_TRIAL_LINK } from '../../common/links';
+import { useAppLink } from '../../common/links';
 import Share from '../../components/Share/Share';
 
-const heroSection = ({ location, data }) => {
+const HeroSection = ({ location, data }) => {
+    const appLink = useAppLink();
     return (
         <>
             <a
                 target='_blank'
                 rel='noopener noreferrer'
-                href={FREE_TRIAL_LINK}
+                href={appLink}
                 className='gradientBgBtn dual max-w-282px sm:w-282px md:w-282px lg:w-282px xl:w-282px 2xl:w-282px m-auto block mt-75px text-15px font-normal rounded text-white uppercase text-center pt-19px pb-19px pl-49px pr-49px no-underline'
             >
                 START FREE TRIAL
@@ -31,4 +32,4 @@ const heroSection = ({ location, data }) => {
     );
 };
 
-export default heroSection;
+export default HeroSection;

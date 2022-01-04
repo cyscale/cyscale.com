@@ -13,9 +13,11 @@ import icon2 from "../../assets/images/Group-411.svg";
 import icon3 from "../../assets/images/Group-412.svg";
 import icon4 from "../../assets/images/Path-270.svg";
 import F_Image from "../../assets/images/fImage1.svg";
-import { FREE_TRIAL_LINK } from "../../common/links";
+import {  useAppLink } from "../../common/links";
 
 const Index = () => {
+  const appLink = useAppLink();
+
   const dataServices = [
     {
       icon: icon1,
@@ -158,7 +160,7 @@ const Index = () => {
       </div>
       <Services
         bannerBtn1Text="Try Cyscale for free"
-        bannerBtn1Link={FREE_TRIAL_LINK}
+        bannerBtn1Link={appLink}
         data={dataServices}
       />
       <div className="max-w-1366px mx-auto pt-70px pb-70px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px">
@@ -185,7 +187,7 @@ const Index = () => {
         <GetStarted
           description={`Automate key data security tasks & keep your head above water`}
           btnText="START YOUR FREE TRIAL"
-          btnLink={FREE_TRIAL_LINK}
+          btnLink={appLink}
           ExternalLink
           sectionName="cloudDataSecurity"
           icon={getStartedICon}

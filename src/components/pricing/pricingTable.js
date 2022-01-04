@@ -1,9 +1,11 @@
 import React from 'react';
 import Check from '../../assets/images/blue-check.svg';
 import Line from '../../assets/images/dash-line.svg';
-import { FREE_TRIAL_LINK } from '../../common/links';
+import { useAppLink } from '../../common/links';
 
 const Hero = () => {
+    const appLink = useAppLink();
+
     return (
         <>
             <div>
@@ -33,7 +35,7 @@ const Hero = () => {
                                                     <a
                                                         target='_blank'
                                                         rel='noopener noreferrer'
-                                                        href={FREE_TRIAL_LINK}
+                                                        href={appLink}
                                                         className='blackBorder w-full block mt-75px text-15px font-normal rounded text-black uppercase text-center pt-18px pb-18px pl-49px pr-49px no-underline transition-all duration-300 hover:border-black hover:bg-black hover:text-white blackBorder'
                                                     >
                                                         GET IT FREE
@@ -55,7 +57,7 @@ const Hero = () => {
                                                     <a
                                                         target='_blank'
                                                         rel='noopener noreferrer'
-                                                        href={FREE_TRIAL_LINK}
+                                                        href={appLink}
                                                         className='gradientBgBtn w-full block mt-75px text-15px font-normal rounded text-white uppercase text-center pt-19px pb-19px pl-49px pr-49px no-underline'
                                                     >
                                                         START FREE TRIAL

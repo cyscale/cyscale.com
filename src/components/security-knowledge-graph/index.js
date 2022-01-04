@@ -16,9 +16,11 @@ import icon3 from "../../assets/images/feature_icon_3.svg";
 import icon4 from "../../assets/images/feature_icon_4.svg";
 import icon5 from "../../assets/images/feature_icon_5.svg";
 import icon6 from "../../assets/images/feature_icon_6.svg";
-import { FREE_TRIAL_LINK } from "../../common/links";
+import { useAppLink } from "../../common/links";
 
 const Index = () => {
+  const appLink = useAppLink();
+
   const dataCloud = [
     {
       description: 
@@ -149,7 +151,7 @@ const Index = () => {
         <GetStarted
           description="Ready to give it a try and see how it works?"
           btnText="START YOUR FREE TRIAL"
-          btnLink={FREE_TRIAL_LINK}
+          btnLink={appLink}
           ExternalLink
           icon={getStartedICon}
         />
@@ -180,7 +182,7 @@ const Index = () => {
         <GetStarted
           description={`Accurate. Real-time. Context-aware.`}
           btnText="TRY CYSCALE FOR FREE"
-          btnLink={FREE_TRIAL_LINK}
+          btnLink={appLink}
           ExternalLink
           sectionName = "dataSecFoot"
         />
