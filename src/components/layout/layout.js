@@ -22,7 +22,7 @@ const TemplateWrapper = ({
 }) => {
     return (
         <div>
-            <Seo title={title} description={description} pageName={pageName} banner={banner} url={location?.href} />
+            <Seo title={title} description={description} pageName={pageName} banner={banner} location={location} />
             {!!pageName && pageName === 'ContactUs' ? (
                 <></>
             ) : pageName === 'Pricing' ||

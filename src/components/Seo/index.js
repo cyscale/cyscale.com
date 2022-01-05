@@ -27,7 +27,7 @@ const Seo = ({ title, description, pageName, banner, location }) => {
     if (!banner) {
         ogImage = pageName && defaultOg[pageName] ? defaultOg[pageName] : defaultOg['HomePage'];
     }
-    console.log(location);
+
     return (
         <Helmet>
             <html lang='en' />
