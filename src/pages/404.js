@@ -5,7 +5,7 @@ import road from '../assets/images/hit-the-road.svg';
 import Footer from '../components/layout/footer';
 import TopNav from '../components/layout/topNav';
 import Seo from '../components/Seo';
-const NotFoundPage = () => {
+const NotFoundPage = ({location}) => {
     useEffect(() => {
         if (window) {
             window.history.pushState({}, null, '/404');
@@ -15,7 +15,7 @@ const NotFoundPage = () => {
     return (
         <>
             <TopNav pageName='404' scrollable={false} />
-            <Seo title='Cyscale | Not found' description='Not found page' pageName='404' />
+            <Seo title='Cyscale | Not found' description='Not found page' pageName='404' location={location} />
             <Helmet>
                 <meta name='robots' content='noindex' />
                 <meta name='robots' content='nofollow' />

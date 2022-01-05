@@ -18,7 +18,7 @@ import { Helmet } from 'react-helmet';
 import arrow from '../../assets/images/arrow.svg';
 import Consent from '../../components/consent';
 
-export default function Iso27001() {
+export default function Iso27001({ location }) {
     useEffect(() => {
         setTimeout(() => {
             if (typeof window !== 'undefined' && window['hbspt']) {
@@ -36,6 +36,7 @@ export default function Iso27001() {
                 title='ISO 27001 Compliance for cloud'
                 description="'ISO/IEC 27001:2013 is the golden standard when it comes to information security. Part of the ISO 27000 family, it helps organizations protect their assets such as employee information, user data, and intellectual property."
                 pageName='ISO27001Campaign'
+                location={location}
             />
             <Consent />
             <Helmet>

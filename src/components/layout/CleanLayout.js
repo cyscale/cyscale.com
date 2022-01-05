@@ -5,12 +5,12 @@ import Footer from './footer';
 import Consent from '../consent';
 import TopNav from './topNav';
 import HeaderContext from './HeaderContext';
-const Layout = ({ children, title, description, pageName }) => {
+const Layout = ({ children, title, description, pageName, location }) => {
     const [sticker, setSticker] = useState(false);
 
     return (
         <div>
-            <Seo title={title} description={description} pageName={pageName} />
+            <Seo title={title} description={description} pageName={pageName}  location={location}/>
             <HeaderContext.Provider value={{ sticker, setSticker }}>
                 <TopNav pageName={pageName} />
             </HeaderContext.Provider>
