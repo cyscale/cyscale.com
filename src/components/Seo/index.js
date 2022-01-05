@@ -33,10 +33,10 @@ const Seo = ({ title, description, pageName, banner, location }) => {
             <html lang='en' />
             <title>{title}</title>
             <meta name='theme-color' content='#fff' />
-            <meta property='image' content={location?.origin + ogImage} />
+            <meta property='image' content={ogImage} />
             <meta property='og:title' content={title} />
             {location && <meta property='og:url' content={location.href} />}
-            <meta property='og:image' content={location?.origin + ogImage} />
+            <meta property='og:image' content={ogImage} />
             <meta name='description' content={description} />
             <meta name='og:description' content={description} />
             <meta property='og:type' content={pageName !== 'blog-detail' ? 'website' : 'article'} />
@@ -46,7 +46,7 @@ const Seo = ({ title, description, pageName, banner, location }) => {
             {location && <meta property='twitter:url' content={location.href} />}
             <meta name='twitter:title' content={title} />
             <meta name='twitter:description' content={description} />
-            <meta name='twitter:image' content={location?.origin + ogImage} />
+            <meta name='twitter:image' content={ogImage} />
 
             <link rel='apple-touch-icon' sizes='180x180' href={icon180} />
             <link rel='icon' type='image/png' href={icon128} sizes='128x128' />
