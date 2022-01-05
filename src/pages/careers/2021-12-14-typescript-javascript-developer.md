@@ -20,7 +20,7 @@ You will be part of a dedicated and autonomous product team, committed to solvin
 
 * €50,000 to €75,000 annual salary
 * Equity - shares/stock options (ESOP) - simulation available during interview
-* Sign-on bonus at hiring - cash in hand up to 2 salaries
+* Sign-on bonus at hiring
 * Flexible schedule and working hours
 * An informal work environment with transparency and no hierarchies
 * Training and certifications to boost your career path (up to €1000 annually)
@@ -29,13 +29,13 @@ You will be part of a dedicated and autonomous product team, committed to solvin
 * Work from home allowance (up to 50€ for internet, electricity, etc.)
 * Private medical insurance
 
-_Bonus_
+*Bonus*
 
 * Working with up2date tech such as cloud-native apps and cybersecurity
 * The opportunity to have a key role in the early development stage of what we believe will be a landmark product in cloud security
 * A startup involves a lot more than just writing code - you will get to learn a lot in areas such as product, marketing, sales, and communication (if you want to)
 
-## **Responsibilities:** 
+## **Responsibilities:**
 
 * Understand and align with Cyscale's mission and be committed to solving our customer's problems
 * Continuous collaboration with your colleagues in the product team (product, design and engineering work out solutions together)
@@ -45,7 +45,7 @@ _Bonus_
 * Collaborate closely with our backend engineers in order to build an OGM layer for querying our graph database
 * Be involved in CI/CD operations
 
-## **Required skills:** 
+## **Required skills:**
 
 * 6+ years of experience as a software developer
 * Understanding of algorithms and the software development lifecycle
