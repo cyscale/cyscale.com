@@ -21,7 +21,7 @@ You will design a successful customer experience and a product that users love, 
 ## Benefits
 
 * Equity - shares/stock options (ESOP) - simulation available during interview
-* Sign-on bonus at hiring - cash in hand up to 2 salaries
+* Sign-on bonus at hiring
 * Flexible schedule and working hours
 * An informal work environment with transparency and no hierarchies
 * Training and certifications to boost your career path (up to €1000 annually)
