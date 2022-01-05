@@ -23,7 +23,7 @@ You will be responsible for researching and identifying new threats, vulnerabili
 
 * €50,000 to €80,000 annual salary
 * Equity - shares/stock options (ESOP) - simulation available during interview
-* Sign-on bonus at hiring - cash in hand up to 2 salaries
+* Sign-on bonus at hiring
 * Flexible schedule and working hours
 * An informal work environment with transparency and no hierarchies
 * Training and certifications to boost your career path (up to €1000 annually)
@@ -31,7 +31,7 @@ You will be responsible for researching and identifying new threats, vulnerabili
 * an additional 3 personal days (take them for yourself, whenever you need them)
 * Work from home allowance (up to 50€ for internet, electricity, etc.)
 
-_Bonus_
+*Bonus*
 
 * Working with up2date tech such as cloud computing, cloud-native apps, and cybersecurity
 * The opportunity to have a key role in the early development stage of what we believe will be a landmark product in cloud security
