@@ -36,10 +36,11 @@ const Header = ({
             ? 'bg-lightGreyEEE'
             : 'bg-cover'
     }`;
+    const rootStyle = heroBG ? { backgroundImage: `url(${heroBG})` } : null
 
     return (
         <HeaderContext.Provider value={{ sticker, setSticker }}>
-            <div className={rootClasses} style={{ backgroundImage: `url(${heroBG})` }}>
+            <div className={rootClasses} style={rootStyle}>
                 <TopNav pageName={pageName} />
                 <div className='max-w-1366px mx-auto pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px '>
                     {pageName === 'blog-detail' || pageName === 'blogs' ? (

@@ -14,7 +14,7 @@ const redirects = [
 exports.createPages = ({ graphql, actions }) => {
     const { createPage, createRedirect } = actions;
 
-    for(let i=0; i< redirects.length; i++){
+    for (let i = 0; i < redirects.length; i++) {
         createRedirect({
             fromPath: redirects[i].fromPath,
             toPath: redirects[i].toPath,
@@ -32,10 +32,51 @@ exports.createPages = ({ graphql, actions }) => {
     const blogTemplate = path.resolve(`src/template/blogTemplate.js`);
     const careerTemplate = path.resolve(`src/template/careerTemplate.js`);
 
-    return graphql(
+    graphql(`
+        query loadPagesQuery {
+            allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "career-page" } } }) {
+                edges {
+                    node {
+                        frontmatter {
+                            title
+                            description
+                            date
+                            department
+                            location
+                            workType
+                            permalink
+                            employmentType
+                            experience
+                            skills
+                            disabled
+                        }
+                        rawMarkdownBody
+                    }
+                }
+            }
+        }
+    `).then((result) => {
+        if (result.errors) throw result.errors;
+
+        const posts = result.data.allMarkdownRemark.edges;
+
+        posts.forEach((edge) => {
+            const node = edge.node;
+            createPage({
+                // Path for this page — required
+                path: '/careers/' + node.frontmatter.permalink,
+                component: careerTemplate,
+                context: {
+                    alldata: node
+                }
+            });
+        });
+    });
+
+    graphql(
         `
             query loadPagesQuery {
-                allMarkdownRemark {
+                allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "blog-post" } } }) {
                     edges {
                         node {
                             frontmatter {
@@ -48,13 +89,6 @@ exports.createPages = ({ graphql, actions }) => {
                                 permalink
                                 title
                                 tags
-                                department
-                                location
-                                workType
-                                employmentType
-                                experience
-                                skills
-                                disabled
                                 featuredimage {
                                     publicURL
                                 }
@@ -66,41 +100,21 @@ exports.createPages = ({ graphql, actions }) => {
             }
         `
     ).then((result) => {
-        if (result.errors) {
-            throw result.errors;
-        }
-        const posts = result.data.allMarkdownRemark.edges;
+        if (result.errors) throw result.errors;
 
-        const blogs = posts.filter((edge) => edge.node.frontmatter.templateKey === 'blog-post');
+        const posts = result.data.allMarkdownRemark.edges;
 
         posts.forEach((edge) => {
             const node = edge.node;
-
-            switch (node.frontmatter.templateKey) {
-                case 'blog-post':
-                    createPage({
-                        // Path for this page — required
-                        path: '/blog/' + node.frontmatter.permalink,
-                        component: blogTemplate,
-                        context: {
-                            alldata: node,
-                            suggestions: [blogs[0], blogs[1], blogs[2], blogs[4]]
-                        }
-                    });
-                    break;
-                case 'career-page':
-                    createPage({
-                        // Path for this page — required
-                        path: '/careers/' + node.frontmatter.permalink,
-                        component: careerTemplate,
-                        context: {
-                            alldata: node
-                        }
-                    });
-                    break;
-                default:
-                    break;
-            }
+            createPage({
+                // Path for this page — required
+                path: '/blog/' + node.frontmatter.permalink,
+                component: blogTemplate,
+                context: {
+                    alldata: node,
+                    suggestions: [posts[0], posts[1], posts[2], posts[4]]
+                }
+            });
         });
     });
 };
