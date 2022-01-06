@@ -59,92 +59,56 @@ On the other hand, **you do have to create the actual streams** (we will talk ab
 Having the messages persisted also enables us to take different approaches based on what we want to achieve. We might still follow a pub/sub approach for certain subscribers (these are known as **push consumers**) (e.g. we use this approach for generating user-requested reports) or we might want to have more control over how messages are retrieved in which case we will use a **pull consumer**. This enables us to batch messages (e.g. we do this for sending notifications). Here is how we handle the messages in our notifier service:
 
 ```typescript
-
-
 export type MessageHandler = (data: NotificationDto[]) => Promise<void>;
 
 export const handleNotificationMessages = async (handler: MessageHandler) => {
-
   try {
-
     const nc = await getNatsClient();
 
-    if (!process.env.NOTIFICATIONS_SUBJECT) {
-
+    if (!process.env.NOTIFICATIONS_SUBJECT) {
       throw Error('NOTIFICATIONS_SUBJECT not set');
-
     }
 
     const jc = JSONCodec<NotificationDto>();
 
     const psub = await nc
-
       .jetstream()
-
       .pullSubscribe(process.env.NOTIFICATIONS_SUBJECT, {
-
         queue: 'notifier',
-
         config: { durable_name: 'notifier' },
-
       });
 
     const done = (async () => {
-
       let notifications: NotificationDto[] = [];
-
       for await (const m of psub) {
-
         try {
-
           notifications.push(jc.decode(m.data));
-
           m.ack();
-
           // Wait to gather all messages from the current batch
-
           if (m.info.pending === 0) {
-
             await handler(notifications);
-
             logger.info(`Processing ${notifications.length} messages`);
-
             notifications = [];
-
           }
-
         } catch (error) {
-
           logger.error(error);
-
         }
-
       }
-
     })();
 
     setInterval(() => {
-
       psub.pull({ batch: 30, expires: 1000 });
-
     }, 1000 * 30);
 
     logger.info(
-
       `Listening for messages on ${process.env.NOTIFICATIONS_SUBJECT}`
-
     );
 
     await done;
-
     await psub.destroy();
-
   } catch (e) {
-
     logger.error(`Failed to initiate message listening ${e}`);
-
   }
-
 };
 ```
 
@@ -166,43 +130,24 @@ Since the entire Cyscale platform is specified as a Helm chart we just needed to
 
 ```yaml
 nats:
-
   nats:
-
     image: nats:alpine
-
     resources:
-
       requests:
-
         cpu: 100m
-
         memory: 100Mi
-
       limits:
-
         cpu: 200m
-
         memory: 200Mi
-
     jetstream:
-
       enabled: true
-
       memStorage:
-
         enabled: true
-
         size: 80Mi
-
       fileStorage:
-
         enabled: true
-
         size: 1Gi
-
         storageDirectory: /data/
-
         storageClassName: default
 ```
 
@@ -218,29 +163,17 @@ Instead of having our services handle the stream creation or manually creating t
 
 ```yaml
 # See https://github.com/nats-io/nack/blob/main/deploy/crds.yml for more properties
-
 {{- range .Values.nack.streams }}
-
 apiVersion: jetstream.nats.io/v1beta2
-
 kind: Stream
-
 metadata:
-
   name: {{ .name | quote }}
-
 spec:
-
   name: {{ .name }}
-
   subjects: {{ .subjects }}
-
   storage: {{ .storage | quote | default "file" }}
-
   retention: {{ .retention | quote | default "limits" }}
-
 ---
-
 {{- end }}
 ```
 
