@@ -22,6 +22,7 @@ const getFeaturedAndPosts = (nodes) => {
 
 function Marge() {
     const [allPosts, setAllPosts] = useState([]);
+    const [filter, setFilter] = useState('All');
     const [featuredPost, setFeaturedPost] = useState(null);
     // const activeAuthor = globalHistory?.location.search?.split('=')[1];
 
@@ -61,11 +62,14 @@ function Marge() {
 
     const filterCategory = useCallback(
         (name) => {
-            const { posts } = getFeaturedAndPosts(nodes);
+            setFilter(name);
+            const { posts, featuredPost } = getFeaturedAndPosts(nodes);
+            
             if (name === 'All') {
-                return setAllPosts(posts);
+                setAllPosts(posts);
+            } else {
+                setAllPosts([...posts, featuredPost].filter((data) => data.frontmatter.category === name));
             }
-            setAllPosts(posts.filter((data) => data.frontmatter.category === name));
         },
         [nodes]
     );
@@ -74,7 +78,7 @@ function Marge() {
         <div>
             <div className='relative max-w-3xl mx-auto pt-12 lg:pt-6'>
                 <div className='flex flex-wrap justify-left'>
-                    {featuredPost && (
+                    {featuredPost && filter === 'All' && (
                         <div className='w-full p-2 pt-0 lg:p-6 lg:pt-0'>
                             <BlogCard fullWidth={true} data={featuredPost.frontmatter} feature={true} />
                         </div>
@@ -85,7 +89,7 @@ function Marge() {
                         </div>
                     ))}
                 </div>
-                <PageRight filterCategory={filterCategory} data={nodes} />
+                <PageRight filterCategory={filterCategory} appliedFilter={filter} data={nodes} />
             </div>
         </div>
     );

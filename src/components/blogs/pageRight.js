@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import { Dropdown } from 'react-bootstrap';
 
-const PageRight = ({ filterCategory, data }) => {
+const PageRight = ({ filterCategory, data, appliedFilter }) => {
     const [category, setCategory] = useState();
 
     useEffect(() => {
@@ -28,9 +28,7 @@ const PageRight = ({ filterCategory, data }) => {
                         <Dropdown.Menu>
                             {category?.map((cat, key) => (
                                 <Dropdown.Item key={key} onClick={() => filterCategory(cat)}>
-                                    <p   className='text-base leading-normal mb-1 cursor-pointer '>
-                                        {cat}
-                                    </p>
+                                    <p className='text-base leading-normal mb-1 cursor-pointer '>{cat}</p>
                                 </Dropdown.Item>
                             ))}
                         </Dropdown.Menu>
@@ -47,7 +45,9 @@ const PageRight = ({ filterCategory, data }) => {
                                 key={key}
                                 tabIndex={key}
                                 onClick={() => filterCategory(cat)}
-                                className='w-full text-left p-1  block mb-1 text-sm leading-normal cursor-pointer'
+                                className={`w-full text-left p-1  block mb-1 text-sm leading-normal cursor-pointer ${
+                                    cat === appliedFilter ? 'underline' : ''
+                                }`}
                             >
                                 {cat}
                             </button>
