@@ -23,12 +23,14 @@ const ParaGraphs = ({ data }) => {
                             code({ node, inline, className, children, ...props }) {
                                 const match = /language-(\w+)/.exec(className || '');
                                 return !inline && match ? (
-                                    <SyntaxHighlighter
-                                        children={String(children).replace(/\n$/, '')}
-                                        language={match[1]}
-                                        PreTag='div'
-                                        {...props}
-                                    />
+                                    <div style={{ fontSize: '0.875rem' }}>
+                                        <SyntaxHighlighter
+                                            children={String(children).replace(/\n$/, '')}
+                                            language={match[1]}
+                                            PreTag='div'
+                                            {...props}
+                                        />
+                                    </div>
                                 ) : (
                                     <code className={className} {...props}>
                                         {children}
