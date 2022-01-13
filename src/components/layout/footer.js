@@ -199,7 +199,7 @@ const Footer = () => {
                     <div className='lg:pt-102px'>
                         <ul className='lg:flex m-0'>
                             <li className='block lg:inline-block lg:mr-50px text-12px font-light leading-normal text-white '>
-                                Cyscale &copy; 2021. All rights reserved.
+                                &copy; 2022 Cyscale Limited
                             </li>
                             <li className='inline-block mr-10px lg:mr-30px  text-12px leading-normal  '>
                                 <Link

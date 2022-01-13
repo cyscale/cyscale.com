@@ -39,7 +39,7 @@ const Index = () => {
                                 </h1>
                                 <div className='w-full contactAddress mt-272px hidden lg:flex flex-col'>
                                     <img src={LocationIcon} className='w-5' alt='location icon' />
-                                    <p className='text-16px leading-normal text-black font-bold mb-30px'>Cyscale Limited</p>
+                                    <p className='text-16px leading-normal text-black font-bold mb-30px'>&copy; 2022 Cyscale Limited</p>
                                     <p className='text-16px leading-normal text-black font-light mb-30px'>
                                         Registered in England and Wales
                                         <br />
@@ -49,7 +49,7 @@ const Index = () => {
                                         <br />
                                     </p>
                                     <a
-                                        href='https://www.google.com/maps/place/Cyscale/@46.7448487,23.5033424,15z'
+                                        href='https://www.google.com/maps/place/Cyscale/@51.5209922,-0.0811234,17z'
                                         className='uppercase text-blue underline text-16px hover:no-underline hover:text-red font-medium mb-30px'
                                     >
                                         View map
@@ -84,7 +84,7 @@ const Index = () => {
                                 </div>
                                 <div className='w-full contactAddress mt-100px flex lg:hidden flex-col'>
                                     <img src={LocationIcon} className='w-5' alt='location icon' />
-                                    <p className='text-16px leading-normal text-black font-bold mb-30px'>Cyscale Limited</p>
+                                    <p className='text-16px leading-normal text-black font-bold mb-30px'>&copy; 2022 Cyscale Limited</p>
                                     <p className='text-16px leading-normal text-black font-light mb-30px'>
                                         Registered in England and Wales
                                         <br />
@@ -94,7 +94,7 @@ const Index = () => {
                                         <br />
                                     </p>
                                     <a
-                                        href='https://www.google.com/maps/place/Cyscale/@51.52139942942094,-0.07977730405943381z'
+                                        href='https://www.google.com/maps/place/Cyscale/@51.5209922,-0.0811234,17z'
                                         className='uppercase text-blue underline text-16px hover:no-underline hover:text-red font-medium mb-30px'
                                     >
                                         View map

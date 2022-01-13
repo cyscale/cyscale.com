@@ -220,7 +220,7 @@ export default function Iso27001({ location }) {
                     <div className='flex-col md:flex-row flex justify-between py-20 max-w-3xl mx-auto'>
                         <div className='order-10 md:order-1'>
                             <small className='text-white text-sm'>
-                                Cyscale &copy; 2022. All rights reserved.
+                            &copy; 2022 Cyscale Limited
                             </small>
                         </div>
                         <div className='order-1'>
