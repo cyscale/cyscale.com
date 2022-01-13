@@ -2,12 +2,12 @@
 templateKey: career-page
 title: Product Marketing Manager
 disabled: false
-location: Romania
+location: Global
 date: 2021-12-14T15:44:48.479Z
 permalink: marketing-manager
-description: Cyscale is a startup with offices in London (UK) and Cluj-Napoca (RO), 
-  activating in the cloud cybersecurity industry. 
-  We are looking for an experienced Product Marketing Manager.
+description: Cyscale is a startup with offices in London (UK) and Cluj-Napoca
+  (RO), activating in the cloud cybersecurity industry. We are looking for an
+  experienced Product Marketing Manager.
 skills: Marketing, SaaS, Cybersecurity, Cloud, PLG
 experience: mid/senior
 department: Marketing
