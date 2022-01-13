@@ -139,8 +139,8 @@ const ContactForm = () => {
                                             </div>
                                             <div className='block w-full mb-30px'>
                                                 <p className='text-12px leading-normal text-black'>
-                                                    By submitting this form you understand and agree that CYSCALE
-                                                    SYSTEMS may contact you regarding your interest about our services,
+                                                    By submitting this form you understand and agree that Cyscale
+                                                    Limited may contact you regarding your interest about our services,
                                                     partners and products as well as receiving electronic communications
                                                     from us and our partners including news, events, updates, and
                                                     promotional offers. You may withdraw your consent and unsubscribe
@@ -200,11 +200,13 @@ const ContactForm = () => {
                         </div>
                         <div className='w-full contactAddress mt-100px flex lg:hidden flex-col'>
                             <img src={LocationIcon} className='w-5' alt='location' />
-                            <p className='text-16px leading-normal text-black font-bold mb-30px'>CYSCALE</p>
+                            <p className='text-16px leading-normal text-black font-bold mb-30px'>Cyscale Limited</p>
                             <p className='text-16px leading-normal text-black font-light mb-30px'>
-                                Made in Cluj-Napoca, Romania
+                                Registered in England and Wales
                                 <br />
-                                Abatorului 150D str, Floresti
+                                Company number: 13695269
+                                <br />
+                                The Broadgate Tower, 20 Primrose Street, London, EC2A 2RS
                                 <br />
                             </p>
                             <a

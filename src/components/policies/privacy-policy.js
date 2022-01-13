@@ -253,13 +253,13 @@ const Index = () => {
                             <p className='mb-36px'>
                                 If you have any questions about this Privacy Policy or the Service, please contact us at
                                 support@<strong>Cyscale</strong>
-                                .com or at <strong>Str. Abatorului 150D, Floresti, Jud. Cluj, Romania</strong>.
+                                .com or at <strong>The Broadgate Tower, 20 Primrose Street, London, EC2A 2RS</strong>.
                             </p>
                             <h2 className='font-bold mb-36px text-24px'>8. Changes to our privacy policy</h2>
                             <p className='mb-36px'>
                                 <strong>Cyscale</strong> may modify or update this Privacy Policy from time to time to
                                 reflect the changes in our business and practices. When we change the policy in a
-                                material manner we will let you know and update the ‘last modified' date at the
+                                material manner we will let you know and update the 'last modified' date at the
                                 beginning of this page.
                             </p>
                         </div>

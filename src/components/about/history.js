@@ -44,7 +44,7 @@ const History = () => {
                                 <span className='block w-36px h-36px rounded-full bg-white border-8 border-aboutBorder'></span>
                             </div>
                             <p className='text-black1 text-16px mt-28px'>
-                                <strong>2021:</strong>
+                                <strong>2022:</strong>
                             </p>
                             <p className='text-16px text-grey2 mt-32px'>
                                 Cyscale Cloud Platform empowers Security teams around the world, to take the correct

@@ -47,7 +47,7 @@ export default function Iso27001({ location }) {
             <header id='head' className='bg-lightGrey pt-3 pb-2'>
                 <Container>
                     <Link to='/' className='inline-flex'>
-                        <img className='block ' src={logo} alt='CYSCALE' />
+                        <img className='block ' src={logo} alt='Cyscale' />
                     </Link>
                 </Container>
             </header>
@@ -220,7 +220,7 @@ export default function Iso27001({ location }) {
                     <div className='flex-col md:flex-row flex justify-between py-20 max-w-3xl mx-auto'>
                         <div className='order-10 md:order-1'>
                             <small className='text-white text-sm'>
-                                Cyscale &copy; 2018 - 2021. All rights reserved.
+                                Cyscale &copy; 2022. All rights reserved.
                             </small>
                         </div>
                         <div className='order-1'>

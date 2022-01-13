@@ -5,9 +5,9 @@ disabled: false
 location: Romania
 date: 2021-12-16T10:05:59.202Z
 permalink: cloud-security-analyst
-description: Cyscale is a startup from Cluj-Napoca, activating in the cloud
-  cybersecurity industry. We are looking for an experienced cloud security
-  analyst
+description: Cyscale is a startup with offices in London (UK) and Cluj-Napoca (RO), 
+  activating in the cloud cybersecurity industry. 
+  We are looking for an experienced Cloud Security Analyst.
 skills: Cloud Architect, Cybersecurity, Cloud, Threat Analysis, Research, AWS,
   GCP, Azure
 experience: senior

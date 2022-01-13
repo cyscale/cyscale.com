@@ -103,7 +103,7 @@ const TopNav = ({ pageName }) => {
                     <div className='mx-auto flex flex-col xl:flex-row justify-between'>
                         <div className='relative flex xl:block pt-4 pb-4 lg:pt-6 lg:pb-6 justify-start'>
                             <Link to='/' className={`${menu.toggleLogo} xl:inline-flex`}>
-                                <img className='block headerLogo' src={logo} alt='CYSCALE' />
+                                <img className='block headerLogo' src={logo} alt='Cyscale' />
                             </Link>
                             <button
                                 type='button'

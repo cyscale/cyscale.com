@@ -25,7 +25,7 @@ const Index = () => {
           <div className="flex">
             <div className="mx-auto w-full xl:w-2/4 text-16px font-bold tetx-black leading-normal">
               <p className="mb-36px">
-                <strong> Cyscale</strong>, a company registered in Romania and its subsidiaries
+                <strong> Cyscale</strong>, a company registered in Registered in England and Wales and its subsidiaries
                 and affiliates (collectively, “<strong> Cyscale</strong>,” “we,” “our” or “us”),
                 understands that proper terms of use is important for our users.
                 <br />
@@ -230,10 +230,9 @@ const Index = () => {
               </h2>
               <p className="mb-36px">
                 All matters relating to your access to, and use of, the <strong> Cyscale</strong>
-                Resources shall be governed by Romanian federal law or the laws
-                of the State of Cluj . Any legal action or proceeding relating
+                Resources shall be governed by the English and Wales laws. Any legal action or proceeding relating
                 to your access to, or use of, the <strong> Cyscale</strong> Resources shall be
-                instituted in a state or federal court in Cluj-Napoca, Cluj. You
+                instituted in a state or federal court in English and Wales. You
                 and *<strong> Cyscale</strong>\* agree to submit to the jurisdiction of, and agree
                 that venue is proper in, these courts in any such legal action
                 or proceeding.
@@ -242,7 +241,7 @@ const Index = () => {
                 13. Copyright/Trademark Information
               </h2>
               <p className="mb-36px">
-                Copyright &copy; 2018-2020, <strong> Cyscale</strong>. All rights reserved.
+                Copyright &copy; 2022, <strong> Cyscale</strong>. All rights reserved.
                 <br />
                 <strong> Cyscale</strong> is a trademark of <strong> Cyscale</strong> SYSTEMS SRL and/or its
                 affiliates. Microsoft, Amazon, Google are partners. and <strong> Cyscale</strong>
@@ -255,7 +254,7 @@ const Index = () => {
               <p className="mb-36px">
                 If you have any questions about this Terms of use or any of the
                 <strong> Cyscale</strong> Services, please contact us at support@<strong> Cyscale</strong>.com or at
-                Str. Abatorului 150D, Floresti Jud. Cluj, Romania.
+                The Broadgate Tower, 20 Primrose Street, London, EC2A 2RS.
               </p>
               <h2 className="font-bold mb-36px text-24px">
                 15. Changes to our Terms of use
@@ -264,7 +263,7 @@ const Index = () => {
                 <strong> Cyscale</strong> may modify or update this Terms of use from time to time
                 to reflect the changes in our business and practices. When we
                 change the policy in a material manner we will let you know and
-                update the ‘last modified' date at the beginning of this page.{" "}
+                update the 'last modified' date at the beginning of this page.{" "}
               </p>
             </div>
           </div>

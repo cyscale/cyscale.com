@@ -5,8 +5,9 @@ disabled: true
 location: Romania
 date: null
 permalink: marketing-specialist
-description: Cyscale is a startup from Cluj-Napoca, activating in the cloud
-  cybersecurity industry. We are looking for a marketing specialist
+description: Cyscale is a startup with offices in London (UK) and Cluj-Napoca (RO), 
+  activating in the cloud cybersecurity industry. 
+  We are looking for a Marketing Specialist.
 skills: Leading marketing campaigns, Digital Marketing, Strong communications,
   HubSpot/Mailchimp, Google Ads, Google Analytics
 experience: senior
@@ -16,7 +17,7 @@ employmentType: full-time
 ---
 # Job description
 
-Cyscale is a startup from Cluj-Napoca, activating in the cloud cybersecurity industry.
+Cyscale is a startup with offices in London (UK) and Cluj-Napoca (RO), activating in the cloud cybersecurity industry.
 
 Following our most recent [Successful Investment Round](https://www.eu-startups.com/2020/09/romanian-startup-cyscale-raises-e350k-in-4-hours-on-seedblink-for-its-international-expansion), we are now looking to expand our team in order to drive forward the development of our business. Our goals are ambitious: we want to become one of the strongest cloud security companies in Europe and beyond.
 
