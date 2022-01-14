@@ -6,7 +6,7 @@ import Cspm from '../../components/cloud-security-posture-management';
 import Layout from '../../components/layout/layout.js';
 
 const Index = ({ location }) => {
-    const appLink = useAppLink();
+    const appLink = useAppLink({location});
     return (
         <Layout
             location={location}

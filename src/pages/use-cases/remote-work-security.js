@@ -4,7 +4,7 @@ import Layout from '../../components/layout/layout.js';
 import { useAppLink } from '../../common/links';
 
 export default function RemoteWorkSecurity({ location }) {
-    const appLink = useAppLink();
+    const appLink = useAppLink({location});
 
     return (
         <Layout

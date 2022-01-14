@@ -36,7 +36,7 @@ const StepCard = ({ groups, list, order }) => {
 };
 
 export default function CloudCompliance({ location }) {
-    const appLink = useAppLink();
+    const appLink = useAppLink({location});
 
     return (
         <Layout

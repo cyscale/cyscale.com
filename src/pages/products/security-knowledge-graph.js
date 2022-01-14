@@ -6,7 +6,7 @@ import Layout from '../../components/layout/layout.js';
 import Skg from '../../components/security-knowledge-graph';
 
 const Index = ({ location }) => {
-    const appLink = useAppLink();
+    const appLink = useAppLink({location});
 
     return (
         <Layout
