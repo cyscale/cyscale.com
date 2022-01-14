@@ -17,6 +17,7 @@ import { Link as ScrollLink } from 'react-scroll';
 import { Helmet } from 'react-helmet';
 import arrow from '../../assets/images/arrow.svg';
 import Consent from '../../components/consent';
+import GlobalContext from '../../context/GlobalContext';
 
 export default function Iso27001({ location }) {
     useEffect(() => {
@@ -31,7 +32,7 @@ export default function Iso27001({ location }) {
         }, 600);
     }, []);
     return (
-        <>
+        <GlobalContext.Provider value={{ location }}>
             <Seo
                 title='ISO 27001 Compliance for cloud'
                 description="'ISO/IEC 27001:2013 is the golden standard when it comes to information security. Part of the ISO 27000 family, it helps organizations protect their assets such as employee information, user data, and intellectual property."
@@ -220,7 +221,7 @@ export default function Iso27001({ location }) {
                     <div className='flex-col md:flex-row flex justify-between py-20 max-w-3xl mx-auto'>
                         <div className='order-10 md:order-1'>
                             <small className='text-white text-sm'>
-                            &copy; {new Date().getFullYear()} Cyscale Limited
+                                &copy; {new Date().getFullYear()} Cyscale Limited
                             </small>
                         </div>
                         <div className='order-1'>
@@ -260,6 +261,6 @@ export default function Iso27001({ location }) {
                     </div>
                 </Container>
             </footer>
-        </>
+        </GlobalContext.Provider>
     );
 }

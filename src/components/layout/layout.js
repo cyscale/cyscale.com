@@ -4,7 +4,8 @@ import Seo from '../Seo';
 import Footer from './footer';
 import Header from './header';
 import Consent from '../consent';
-const TemplateWrapper = ({
+import GlobalContext from '../../context/GlobalContext';
+const Layout = ({
     children,
     title,
     location,
@@ -21,7 +22,7 @@ const TemplateWrapper = ({
     blogDataTitle
 }) => {
     return (
-        <div>
+        <GlobalContext.Provider value={{ location }}>
             <Seo title={title} description={description} pageName={pageName} banner={banner} location={location} />
             {!!pageName && pageName === 'ContactUs' ? (
                 <></>
@@ -52,8 +53,8 @@ const TemplateWrapper = ({
             </main>
             <Footer />
             <Consent />
-        </div>
+        </GlobalContext.Provider>
     );
 };
 
-export default TemplateWrapper;
+export default Layout;

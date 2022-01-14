@@ -1,7 +1,12 @@
-export const FFREE_TRIAL_LINK = 'https://app.cyscale.com/#/register';
+import { useContext } from 'react';
+import GlobalContext from '../context/GlobalContext';
+export const FREE_TRIAL_LINK = 'https://app.cyscale.com/#/register';
 
 export const useAppLink = () => {
-    const path = typeof window !== 'undefined' ? window.location.pathname || '/home' : '';
+    const context = useContext(GlobalContext);
+    const location = context.location;
+    const path = location?.href;
     const source = path ? `?source=${path || '/'}` : '';
-    return `https://app.cyscale.com/#/register${source}`;
+
+    return `${FREE_TRIAL_LINK}${source}`;
 };
