@@ -241,7 +241,7 @@ const Index = () => {
                 13. Copyright/Trademark Information
               </h2>
               <p className="mb-36px">
-                Copyright &copy; 2022, <strong> Cyscale</strong>. All rights reserved.
+                Copyright &copy; {new Date().getFullYear()}, <strong> Cyscale</strong>. All rights reserved.
                 <br />
                 <strong> Cyscale</strong> is a trademark of <strong> Cyscale</strong> SYSTEMS SRL and/or its
                 affiliates. Microsoft, Amazon, Google are partners. and <strong> Cyscale</strong>

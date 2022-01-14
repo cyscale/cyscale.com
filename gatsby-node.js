@@ -11,7 +11,7 @@ const redirects = [
     }
 ];
 
-exports.createPages = ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions }) => {
     const { createPage, createRedirect } = actions;
 
     for (let i = 0; i < redirects.length; i++) {
@@ -32,7 +32,7 @@ exports.createPages = ({ graphql, actions }) => {
     const blogTemplate = path.resolve(`src/template/blogTemplate.js`);
     const careerTemplate = path.resolve(`src/template/careerTemplate.js`);
 
-    graphql(`
+    await graphql(`
         query loadPagesQuery {
             allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "career-page" } } }) {
                 edges {
@@ -73,7 +73,7 @@ exports.createPages = ({ graphql, actions }) => {
         });
     });
 
-    graphql(
+    await graphql(
         `
             query loadPagesQuery {
                 allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "blog-post" } } }) {

@@ -200,7 +200,7 @@ const ContactForm = () => {
                         </div>
                         <div className='w-full contactAddress mt-100px flex lg:hidden flex-col'>
                             <img src={LocationIcon} className='w-5' alt='location' />
-                            <p className='text-16px leading-normal text-black font-bold mb-30px'>&copy; 2022 Cyscale Limited</p>
+                            <p className='text-16px leading-normal text-black font-bold mb-30px'>&copy; {new Date().getFullYear()} Cyscale Limited</p>
                             <p className='text-16px leading-normal text-black font-light mb-30px'>
                                 Registered in England and Wales
                                 <br />
