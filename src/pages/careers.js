@@ -7,7 +7,7 @@ import gabriel from '../assets/images/gabriel.jpg';
 import manuela from '../assets/images/manuela.jpg';
 import virginia from '../assets/images/virginia.png';
 import ovidiu from '../assets/images/ovidiu.jpg';
-// import andreiM from '../assets/images/andrei-m.jpg';
+import andreiM from '../assets/images/andrei-m.jpg';
 import andreiS from '../assets/images/andrei-s.jpg';
 import personalDayOff from '../assets/images/personal-day-off.svg';
 import homeWork from '../assets/images/home-work.svg';
@@ -89,12 +89,12 @@ const employee = [
         position: 'Design & Front-end',
         quote: `I jumped into Cyscale “express” 🚂 by the time things were getting together. Two years later and I'm still here, facing new challenges and opportunities every single day. I've never thought how many things Cyscale will teach me.`
     },
-    // {
-    //     photo: gabriel,
-    //     name: 'Andrei Milas',
-    //     position: 'Co-Founder & CTO',
-    //     quote: 'At Cyscale I have a constant opportunity to grow, professionally and personally. Moreover, I feel that my contribution matters and that we're creating something truly special.'
-    // },
+    {
+        photo: andreiM,
+        name: 'Andrei Milas',
+        position: 'Co-Founder & CTO',
+        quote: `One of the greatest things about Cyscale is the variety of challenges we're tackling every single day. Either from the business perspective or from a technical point of view, I'm constantly learning, this leading to a great sense of accomplishment.`
+    },
     {
         photo: manuela,
         name: 'Manuela Ticudean',
