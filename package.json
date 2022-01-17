@@ -12,7 +12,6 @@
         "gatsby-plugin-canonical-urls": "^4.4.0",
         "gatsby-plugin-force-trailing-slashes": "^1.0.5",
         "gatsby-plugin-google-tagmanager": "^4.4.0",
-        "gatsby-plugin-hotjar": "^1.1.1",
         "gatsby-plugin-image": "^1.14.2",
         "gatsby-plugin-meta-redirect": "^1.1.1",
         "gatsby-plugin-netlify-cms": "^5.7.1",

@@ -89,14 +89,6 @@ module.exports = {
             }
         },
         {
-            resolve: `gatsby-plugin-hotjar`,
-            options: {
-                sv: 6,
-                id: 2375755,
-                includeInDevelopment: false
-            }
-        },
-        {
             resolve: 'gatsby-plugin-google-tagmanager',
             options: {
                 id: 'GTM-K6LKHQH',
