@@ -5,6 +5,7 @@ import Footer from './footer';
 import Header from './header';
 import Consent from '../consent';
 import GlobalContext from '../../context/GlobalContext';
+import useHubspotEvents from '../../common/hbspotEvents';
 const Layout = ({
     children,
     title,
@@ -21,6 +22,7 @@ const Layout = ({
     banner,
     blogDataTitle
 }) => {
+    useHubspotEvents({ location, pageName });
     return (
         <div>
             <GlobalContext.Provider value={{ location }}>

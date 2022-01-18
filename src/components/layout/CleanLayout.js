@@ -6,7 +6,9 @@ import Consent from '../consent';
 import TopNav from './topNav';
 import HeaderContext from './HeaderContext';
 import GlobalContext from '../../context/GlobalContext';
+import useHubspotEvents from '../../common/hbspotEvents';
 const Layout = ({ children, title, description, pageName, location }) => {
+    useHubspotEvents({ location, pageName });
     const [sticker, setSticker] = useState(false);
 
     return (
