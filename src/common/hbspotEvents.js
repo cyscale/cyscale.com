@@ -3,7 +3,7 @@ import { useTrackingCode } from 'react-hubspot-tracking-code-hook';
 export default function useHubspotEvents({ location, pageName }) {
     const { setPathPageView, setIdentity, setContentType } = useTrackingCode();
 
-    if (localStorage) {
+    if (typeof window !== 'undefined') {
         const userEmail = localStorage.getItem('user-email');
         if (userEmail) {
             setIdentity(userEmail);
