@@ -6,9 +6,12 @@ export default function useHubspotEvents({ location, pageName }) {
 
     useEffect(() => {
         const userEmail = localStorage.getItem('user-email');
-        const contentType = pageName === 'blog-detail' ? 'blog-post' : 'standard-page';
-        if (userEmail && location.pathname) {
+        if (userEmail) {
             setIdentity(userEmail);
+        }
+
+        if (location.pathname) {
+            const contentType = pageName === 'blog-detail' ? 'blog-post' : 'standard-page';
             setContentType(contentType);
             setPathPageView(location.pathname);
         }
