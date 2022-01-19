@@ -89,10 +89,13 @@ module.exports = {
             }
         },
         {
-            resolve: 'gatsby-plugin-google-tagmanager',
+            resolve: `gatsby-plugin-gdpr-cookies`,
             options: {
-                id: 'GTM-K6LKHQH',
-                includeInDevelopment: false
+               
+                googleTagManager: {
+                    trackingId: 'GTM-K6LKHQH',
+                    cookieName: 'CookieConsent', 
+                }
             }
         },
         {
