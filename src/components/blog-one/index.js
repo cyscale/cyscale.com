@@ -3,7 +3,7 @@ import BlogCard from '../blogs/BlogCard';
 import ParaGraphs from './paragraphs';
 import HeroSection from './heroSection';
 
-const Index = ({ data, suggestions, location }) => {
+const Index = ({ data, suggestions }) => {
     const permalink = data?.frontmatter?.permalink;
 
     const suggestedPosts = [];

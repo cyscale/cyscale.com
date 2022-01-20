@@ -91,15 +91,18 @@ module.exports = {
         {
             resolve: `gatsby-plugin-gdpr-cookies`,
             options: {
-               
                 googleTagManager: {
                     trackingId: 'GTM-K6LKHQH',
-                    cookieName: 'CookieConsent', 
+                    cookieName: 'CookieConsent'
                 }
             }
         },
         {
-            resolve: 'gatsby-plugin-netlify-cms'
+            resolve: 'gatsby-plugin-netlify-cms',
+            options: {
+                modulePath: `${__dirname}/src/common/netlify.js`,
+                stylesPath: `${__dirname}/src/assets/css/stylesheet.css`
+            }
         },
         `gatsby-plugin-meta-redirect`,
         `gatsby-plugin-force-trailing-slashes`
