@@ -100,8 +100,7 @@ module.exports = {
         {
             resolve: 'gatsby-plugin-netlify-cms',
             options: {
-                modulePath: `${__dirname}/src/common/netlify.js`,
-                stylesPath: `${__dirname}/src/assets/css/stylesheet.css`
+                modulePath: `${__dirname}/src/common/netlify.js`
             }
         },
         `gatsby-plugin-meta-redirect`,
