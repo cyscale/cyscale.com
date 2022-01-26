@@ -7,6 +7,7 @@ import SkgOG from '../../assets/images/graph-og.jpg';
 import DataOg from '../../assets/images/data-security-og.jpg';
 import RemoteOg from '../../assets/images/remote-work-og.jpg';
 import ComplianceOg from '../../assets/images/compliance-auditing-og.jpg';
+import MisconfigurationsOg from '../../assets/images/Misconfigurations-og.jpg';
 import icon128 from '../../assets/images/favicon-128.png';
 import icon180 from '../../assets/images/favicon-180.png';
 import icon64 from '../../assets/images/favicon-64.png';
@@ -20,7 +21,8 @@ const defaultOg = {
     SKGPage: SkgOG,
     dataSecurity: DataOg,
     RemoteWork: RemoteOg,
-    ComplianceAuditing: ComplianceOg
+    ComplianceAuditing: ComplianceOg,
+    MisconfigurationsPage: MisconfigurationsOg
 };
 
 const Seo = ({ title, description, pageName, banner, location }) => {
