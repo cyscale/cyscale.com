@@ -211,20 +211,12 @@ const TopNav = ({ pageName }) => {
                                         <div>
                                             <div className='flex flex-col'>
                                                 <Link
-                                                    to='/use-cases/cloud-data-security/'
-                                                    activeStyle={{ color: '#0F26AA' }}
                                                     activeClassName='active'
-                                                    className='text-base text-black hover:text-blue hover:no-underline leading-normal'
-                                                >
-                                                    Data Security
-                                                </Link>
-                                                <Link
-                                                    to='/use-cases/remote-work-security/'
+                                                    to='/use-cases/misconfigurations'
                                                     activeStyle={{ color: '#0F26AA' }}
-                                                    activeClassName='active'
                                                     className='text-base text-black hover:text-blue hover:no-underline leading-normal mt-7'
                                                 >
-                                                    Remote Work
+                                                    Cloud Misconfigurations
                                                 </Link>
                                                 <Link
                                                     to='/use-cases/cloud-compliance-and-auditing/'
@@ -241,6 +233,22 @@ const TopNav = ({ pageName }) => {
                                                     className='text-base text-black hover:text-blue hover:no-underline leading-normal mt-7'
                                                 >
                                                     ISO 27001 Compliance
+                                                </Link>
+                                                <Link
+                                                    to='/use-cases/remote-work-security/'
+                                                    activeStyle={{ color: '#0F26AA' }}
+                                                    activeClassName='active'
+                                                    className='text-base text-black hover:text-blue hover:no-underline leading-normal mt-7'
+                                                >
+                                                    Remote Work
+                                                </Link>
+                                                <Link
+                                                    to='/use-cases/cloud-data-security/'
+                                                    activeStyle={{ color: '#0F26AA' }}
+                                                    activeClassName='active'
+                                                    className='text-base text-black hover:text-blue hover:no-underline leading-normal'
+                                                >
+                                                    Data Security
                                                 </Link>
                                             </div>
                                         </div>

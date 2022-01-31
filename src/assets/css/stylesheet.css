@@ -431,6 +431,13 @@ h6 {
     background-position: top left;
     background-repeat: no-repeat;
 }
+.MisconfigurationsPage {
+    background-image: url(../images/elemente-vectoriale-06.svg);
+    background-position: 105% -40px;
+    background-repeat: no-repeat;
+    background-size: 25%;
+
+}
 .CSPMServices.securityGaps {
     background-size: contain;
 }
