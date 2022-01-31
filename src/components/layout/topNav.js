@@ -212,7 +212,7 @@ const TopNav = ({ pageName }) => {
                                             <div className='flex flex-col'>
                                                 <Link
                                                     activeClassName='active'
-                                                    to='/use-cases/misconfigurations'
+                                                    to='/use-cases/cloud-misconfigurations'
                                                     activeStyle={{ color: '#0F26AA' }}
                                                     className='text-base text-black hover:text-blue hover:no-underline leading-normal mt-7'
                                                 >
