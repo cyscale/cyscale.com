@@ -74,7 +74,7 @@ const Index = ({ location }) => {
             description='Improve your security posture in the cloud, a centralized view of all your assets and servers in one place. Detect and eliminate critical misconfigurations, policy violations, and mistakes.'
         >
             <Fproducts sectionTitle='Cyscale has you covered' data={dataFeaturedProducts} />
-            <div  className='bg-lightGreyEEE MisconfigurationsPage'>
+            <div className='bg-lightGreyEEE MisconfigurationsPage'>
                 <Container>
                     <Section>
                         <h2 className='text-blue text-34px leading-normal lg:max-w-md sectionTitle new-line mb-12'>
@@ -86,8 +86,9 @@ const Index = ({ location }) => {
                                     <p>
                                         <strong>Analyze cloud misconfigurations</strong>
                                         <br />
-                                        Analyze misconfigurations against more than [N] industry and regulatory
-                                        frameworks, including a wide range of CIS control benchmarks.
+                                        Analyze misconfigurations against the most popular industry and regulatory
+                                        frameworks, including a wide range of CIS control benchmarks, ISO 27001, and SOC
+                                        2.
                                     </p>
                                 </div>
                                 <div className='lg:col-span-6 col-span-12'>
@@ -101,9 +102,9 @@ const Index = ({ location }) => {
                                 </div>
                                 <div className='lg:col-span-6 col-span-12'>
                                     <p>
-                                        <strong>[NR] unique configuration controls</strong>
+                                        <strong>400+ unique configuration controls</strong>
                                         <br />
-                                        Unique controls across [NR] categories, including authentication, data
+                                        Unique controls across 400+ categories, including authentication, data
                                         protection, logging and monitoring, network configurations, system integrity,
                                         etc.
                                     </p>
