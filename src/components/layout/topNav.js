@@ -24,6 +24,29 @@ const initMenu = {
     toggleBg: ''
 };
 
+const useCases = [
+    {
+        link: 'cloud-misconfigurations',
+        text: 'Cloud Misconfigurations'
+    },
+    {
+        link: 'cloud-compliance-and-auditing',
+        text: 'Compliance and Auditing'
+    },
+    {
+        link: 'iso-27001-compliance',
+        text: 'ISO 27001 Compliance'
+    },
+    {
+        link: 'remote-work-security',
+        text: 'Remote Work'
+    },
+    {
+        link: 'cloud-data-security',
+        text: 'Data Security'
+    }
+];
+
 const TopNav = ({ pageName }) => {
     const root = useRef();
     const trigger = useScrollTrigger();
@@ -210,46 +233,16 @@ const TopNav = ({ pageName }) => {
                                     <div className=' max-w-4xl grid grid-cols-1 lg:grid-cols-2  gap-6 ml-auto justify-end p-6 mb-16 sm:mb-0 shadow-2xl bg-teal-700 bg-white'>
                                         <div>
                                             <div className='flex flex-col'>
-                                                <Link
-                                                    activeClassName='active'
-                                                    to='/use-cases/cloud-misconfigurations'
-                                                    activeStyle={{ color: '#0F26AA' }}
-                                                    className='text-base text-black hover:text-blue hover:no-underline leading-normal mt-7'
-                                                >
-                                                    Cloud Misconfigurations
-                                                </Link>
-                                                <Link
-                                                    to='/use-cases/cloud-compliance-and-auditing/'
-                                                    activeStyle={{ color: '#0F26AA' }}
-                                                    activeClassName='active'
-                                                    className='text-base text-black hover:text-blue hover:no-underline leading-normal mt-7'
-                                                >
-                                                    Compliance and Auditing
-                                                </Link>
-                                                <Link
-                                                    to='/use-cases/iso-27001-compliance/'
-                                                    activeStyle={{ color: '#0F26AA' }}
-                                                    activeClassName='active'
-                                                    className='text-base text-black hover:text-blue hover:no-underline leading-normal mt-7'
-                                                >
-                                                    ISO 27001 Compliance
-                                                </Link>
-                                                <Link
-                                                    to='/use-cases/remote-work-security/'
-                                                    activeStyle={{ color: '#0F26AA' }}
-                                                    activeClassName='active'
-                                                    className='text-base text-black hover:text-blue hover:no-underline leading-normal mt-7'
-                                                >
-                                                    Remote Work
-                                                </Link>
-                                                <Link
-                                                    to='/use-cases/cloud-data-security/'
-                                                    activeStyle={{ color: '#0F26AA' }}
-                                                    activeClassName='active'
-                                                    className='text-base text-black hover:text-blue hover:no-underline leading-normal'
-                                                >
-                                                    Data Security
-                                                </Link>
+                                                {useCases.map((useCase) => (
+                                                    <Link
+                                                        to={`/use-cases/${useCase.link}/`}
+                                                        activeStyle={{ color: '#0F26AA' }}
+                                                        activeClassName='active'
+                                                        className='text-base text-black hover:text-blue hover:no-underline leading-normal mt-7'
+                                                    >
+                                                        {useCase.text}
+                                                    </Link>
+                                                ))}
                                             </div>
                                         </div>
                                         <div className='hidden lg:inline-block'>
