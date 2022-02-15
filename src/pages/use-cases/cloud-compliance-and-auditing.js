@@ -3,8 +3,8 @@ import { useAppLink } from '../../common/links';
 import CloudComplianceContent from '../../components/cloud-compliance';
 import Layout from '../../components/layout/layout.js';
 
-export default function CloudCompliance({location}) {
-    const appLink = useAppLink({location});
+const CloudCompliance = ({ location }) => {
+    const appLink = useAppLink({ location });
 
     return (
         <Layout
@@ -20,4 +20,6 @@ export default function CloudCompliance({location}) {
             <CloudComplianceContent />
         </Layout>
     );
-}
+};
+
+export default CloudCompliance

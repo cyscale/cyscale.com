@@ -3,7 +3,7 @@ import React from 'react';
 import Layout from '../../components/layout/layout.js';
 import TermsofUse from '../../components/policies/terms-of-use';
 
-const Index = ({ location }) => (
+const TermsOfUsePage = ({ location }) => (
     <Layout
         location={location}
         pageName='termsOfUse'
@@ -14,4 +14,4 @@ const Index = ({ location }) => (
     </Layout>
 );
 
-export default Index;
+export default TermsOfUsePage;

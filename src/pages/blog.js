@@ -3,7 +3,7 @@ import Layout from '../components/layout/layout.js';
 import Blogs from '../components/blogs';
 import heroBG from '../assets/images/privacy&blog-bg.svg';
 
-const Index = ({ location }) => (
+const Blog = ({ location }) => (
     <Layout
         location={location}
         pageName='blogs'
@@ -14,4 +14,4 @@ const Index = ({ location }) => (
         <Blogs />
     </Layout>
 );
-export default Index;
+export default Blog;

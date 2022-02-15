@@ -3,8 +3,8 @@ import RemoteWorkContent from '../../components/remote-work';
 import Layout from '../../components/layout/layout.js';
 import { useAppLink } from '../../common/links';
 
-export default function RemoteWorkSecurity({ location }) {
-    const appLink = useAppLink({location});
+const RemoteWorkSecurity = ({ location }) => {
+    const appLink = useAppLink({ location });
 
     return (
         <Layout
@@ -20,4 +20,6 @@ export default function RemoteWorkSecurity({ location }) {
             <RemoteWorkContent />
         </Layout>
     );
-}
+};
+
+export default RemoteWorkSecurity

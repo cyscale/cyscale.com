@@ -3,7 +3,7 @@ import React from 'react';
 import Layout from '../../components/layout/layout.js';
 import PrivacyPolicy from '../../components/policies/privacy-policy';
 
-const Index = ({ location }) => (
+const PrivacyPolicyPage = ({ location }) => (
     <Layout
         location={location}
         pageName='privacyPolicy'
@@ -14,4 +14,4 @@ const Index = ({ location }) => (
     </Layout>
 );
 
-export default Index;
+export default PrivacyPolicyPage;

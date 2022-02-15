@@ -3,7 +3,7 @@ import React from 'react';
 import Contact from '../components/Contact';
 import Layout from '../components/layout/layout.js';
 
-const Index = ({ location }) => (
+const ContactUs = ({ location }) => (
     <Layout
         location={location}
         pageName='ContactUs'
@@ -14,4 +14,4 @@ const Index = ({ location }) => (
     </Layout>
 );
 
-export default Index;
+export default ContactUs;

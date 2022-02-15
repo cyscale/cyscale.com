@@ -2,6 +2,13 @@
     background: linear-gradient(322.03deg, #010103 35.61%, #3144ac 66.66%, #e3565f 87.1%);
 }
 
+.people-avatar {
+    height: 150px;
+    width: 175px;
+    min-width: 175px;
+    min-height: 150px;
+}
+
 @media screen and (min-width: 1024px) {
     .bg-image-jobs {
         background-repeat: no-repeat;

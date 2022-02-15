@@ -5,7 +5,7 @@ import { useAppLink } from '../common/links';
 import Home from '../components/Home';
 import Layout from '../components/layout/layout.js';
 
-const Index = ({ location }) => {
+const HomePage = ({ location }) => {
     const appLink = useAppLink({location});
     return (
         <Layout
@@ -26,4 +26,4 @@ const Index = ({ location }) => {
     );
 };
 
-export default Index;
+export default HomePage;

@@ -3,7 +3,7 @@ import React from 'react';
 import DataSecurity from '../../components/cloud-data-security';
 import Layout from '../../components/layout/layout.js';
 
-const Index = ({ location }) => (
+const CloudDataSecurity = ({ location }) => (
     <Layout
         location={location}
         pageName='dataSecurity'
@@ -14,4 +14,4 @@ const Index = ({ location }) => (
     </Layout>
 );
 
-export default Index;
+export default CloudDataSecurity;

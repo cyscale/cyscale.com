@@ -3,7 +3,7 @@ import React from 'react';
 import Layout from '../components/layout/layout.js';
 import Pricing from '../components/pricing';
 
-const Index = ({ location }) => (
+const PricingPage = ({ location }) => (
     <Layout
         location={location}
         pageName='Pricing'
@@ -14,4 +14,4 @@ const Index = ({ location }) => (
     </Layout>
 );
 
-export default Index;
+export default PricingPage;
