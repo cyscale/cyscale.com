@@ -1,11 +1,11 @@
 import { Link } from 'gatsby';
 import React from 'react';
 import CookieConsent from 'react-cookie-consent';
-// import { useLocation } from '@reach/router';
-// import { initializeAndTrack } from 'gatsby-plugin-gdpr-cookies';
+import { useLocation } from '@reach/router';
+import { initializeAndTrack } from 'gatsby-plugin-gdpr-cookies';
 
 export default function Consent() {
-    // const location = useLocation();
+    const location = useLocation();
     return (
         <CookieConsent
             style={{
@@ -39,9 +39,9 @@ export default function Consent() {
             }}
             location='bottom'
             sameSite='strict'
-            // onAccept={() => {
-            //     initializeAndTrack(location);
-            // }}
+            onAccept={() => {
+                initializeAndTrack(location);
+            }}
         >
             <div className='text-black text-opacity-60 text-sm'>
                 <p>
