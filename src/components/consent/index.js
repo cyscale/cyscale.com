@@ -1,8 +1,11 @@
-import { Link } from 'gatsby'
-import React from 'react'
-import CookieConsent from 'react-cookie-consent'
+import { Link } from 'gatsby';
+import React from 'react';
+import CookieConsent from 'react-cookie-consent';
+import { useLocation } from '@reach/router';
+import { initializeAndTrack } from 'gatsby-plugin-gdpr-cookies';
 
 export default function Consent() {
+    const location = useLocation();
     return (
         <CookieConsent
             style={{
@@ -10,7 +13,7 @@ export default function Consent() {
                 borderTop: '1px solid gray',
                 flexDirection: 'column',
                 justifyContent: 'flex-start',
-                alignItems: 'flex-start',
+                alignItems: 'flex-start'
             }}
             enableDeclineButton
             buttonStyle={{
@@ -21,23 +24,26 @@ export default function Consent() {
                 backgroundColor: '#050A27',
                 fontWeight: 'bold',
                 padding: '8px 16px',
-                marginRight: '40px',
+                marginRight: '40px'
             }}
             declineButtonStyle={{
                 marginRight: 0,
                 color: 'black',
                 fontSize: '14px',
-                backgroundColor: 'transparent',
+                backgroundColor: 'transparent'
             }}
             contentStyle={{
                 flex: 'unset',
                 margin: '8px',
-                marginBottom: 0,
+                marginBottom: 0
             }}
             location='bottom'
             sameSite='strict'
+            onAccept={() => {
+                initializeAndTrack(location);
+            }}
         >
-            <div className="text-black text-opacity-60 text-sm">
+            <div className='text-black text-opacity-60 text-sm'>
                 <p>
                     This website <strong>stores cookies on your computer</strong>. These cookies are used to collect
                     information about how you interact with our website and allow us to remember you. We use this
@@ -54,5 +60,5 @@ export default function Consent() {
                 </p>
             </div>
         </CookieConsent>
-    )
+    );
 }
