@@ -5,7 +5,7 @@
     "author": "Cyscale",
     "dependencies": {
         "ansi-html": "https://registry.npmjs.org/ansi-html-community/-/ansi-html-community-0.0.8.tgz",
-        "axios": "^0.24.0",
+        "axios": "^0.26.0",
         "bootstrap": "4.6.0",
         "formik": "^2.2.9",
         "gatsby": "^3.7.2",
@@ -72,14 +72,14 @@
     "resolutions": {
         "trim": "0.0.3",
         "object-path": "0.11.8",
-        "sanitize-html": "2.3.2",
+        "sanitize-html": "2.7.0",
         "lodash": "4.17.21",
-        "immer": "9.0.6",
+        "immer": "9.0.12",
         "ws": "7.5.0",
-        "browserslist": "4.16.6",
+        "browserslist": "4.19.1",
         "ansi-regex": "5.0.1",
         "nth-check": "2.0.1",
-        "follow-redirects": "1.14.7",
+        "follow-redirects": "1.14.8",
         "ansi-html": "https://registry.npmjs.org/ansi-html-community/-/ansi-html-community-0.0.8.tgz"
     }
 }
