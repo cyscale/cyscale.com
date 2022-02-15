@@ -239,6 +239,7 @@ const TopNav = ({ pageName }) => {
                                                         activeStyle={{ color: '#0F26AA' }}
                                                         activeClassName='active'
                                                         className='text-base text-black hover:text-blue hover:no-underline leading-normal mt-7'
+                                                        key={useCase.link}
                                                     >
                                                         {useCase.text}
                                                     </Link>
