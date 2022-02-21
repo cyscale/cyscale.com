@@ -1,13 +1,13 @@
 ---
 templateKey: career-page
-title: Product Designer UI/UX
+title: Product Designer
 disabled: false
 location: Romania
 date: 2021-12-16T08:39:41.951Z
 permalink: product-designer
-description: Cyscale is a startup with offices in London (UK) and Cluj-Napoca (RO), 
-  activating in the cloud cybersecurity industry. 
-  We are looking for an experienced Product Designer.
+description: Cyscale is a startup with offices in London (UK) and Cluj-Napoca
+  (RO), activating in the cloud cybersecurity industry. We are looking for an
+  experienced Product Designer.
 skills: Product, SaaS Software, Cybersecurity, User Interface, User Experience,
   User Interaction, Usability Testing
 experience: senior
@@ -27,7 +27,8 @@ You will design a successful customer experience and a product that users love, 
 * An informal work environment with transparency and no hierarchies
 * Training and certifications to boost your career path (up to €1000 annually)
 * 25 minimum vacation days
-* an additional 3 personal days (take them for yourself, whenever you need them)
+
+  * + an additional 3 personal days (take them for yourself, whenever you need them)
 * Work from home allowance (up to 50€ for internet, electricity, etc.)
 
 ## Responsibilities
