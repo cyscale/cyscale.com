@@ -6142,6 +6142,14 @@ gatsby-plugin-gdpr-cookies@^2.0.8:
   dependencies:
     "@babel/runtime" "^7.11.2"
 
+gatsby-plugin-google-tagmanager@^4.8.0:
+  version "4.8.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-tagmanager/-/gatsby-plugin-google-tagmanager-4.8.0.tgz#672c4bef1a0135b4de91f2a07410c52348f74dd1"
+  integrity sha512-gRXlR8kKHiQRIL4P4M2moHTcokESrOCI/ps4LiEJ71rmmmcudCYOuqteI08cFETKt+LApD3YXUf+zPZtUiIK0Q==
+  dependencies:
+    "@babel/runtime" "^7.15.4"
+    web-vitals "^1.1.2"
+
 gatsby-plugin-image@^1.14.2:
   version "1.14.2"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-image/-/gatsby-plugin-image-1.14.2.tgz#3955e370d8eb96cd3675001220f315a66ad8ea06"
@@ -15018,6 +15026,11 @@ web-namespaces@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/web-namespaces/-/web-namespaces-2.0.1.tgz#1010ff7c650eccb2592cebeeaf9a1b253fd40692"
   integrity sha512-bKr1DkiNa2krS7qxNtdrtHAmzuYGFQLiQ13TsorsdT6ULTkPLKuu5+GsFpDlg6JFjUTwX2DyhMPG2be8uPrqsQ==
+
+web-vitals@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/web-vitals/-/web-vitals-1.1.2.tgz#06535308168986096239aa84716e68b4c6ae6d1c"
+  integrity sha512-PFMKIY+bRSXlMxVAQ+m2aw9c/ioUYfDgrYot0YUa+/xa0sakubWhSDyxAKwzymvXVdF4CZI71g06W+mqhzu6ig==
 
 webfont-matcher@^1.1.0:
   version "1.1.0"

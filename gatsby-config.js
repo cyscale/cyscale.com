@@ -88,13 +88,19 @@ module.exports = {
                 stripQueryString: true
             }
         },
+        // {
+        //     resolve: `gatsby-plugin-gdpr-cookies`,
+        //     options: {
+        //         googleTagManager: {
+        //             trackingId: 'GTM-K6LKHQH',
+        //             cookieName: 'CookieConsent'
+        //         }
+        //     }
+        // },
         {
-            resolve: `gatsby-plugin-gdpr-cookies`,
+            resolve: `gatsby-plugin-google-tagmanager`,
             options: {
-                googleTagManager: {
-                    trackingId: 'GTM-K6LKHQH',
-                    cookieName: 'CookieConsent'
-                }
+                id: 'GTM-K6LKHQH'
             }
         },
         {
