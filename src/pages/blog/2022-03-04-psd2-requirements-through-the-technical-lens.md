@@ -17,7 +17,7 @@ tags:
   - technical risk
   - ""
 ---
-The fintech sector has known an impressive growth in funding over the past year. A recent Insider Intelligence report shows that the global funding for fintech in the first three quarters of 2021 reached $94.7 billion, which is shy of the total for 2019 and 2020 combined. In the UK alone, fintech funding nearly doubled in the mentioned timeframe, as compared to the year before (2020). \[to add sources]
+The fintech sector has known an impressive growth in funding over the past year. A recent Insider Intelligence report shows that the global funding for fintech in the first three quarters of 2021 reached $94.7 billion, which is shy of the total for 2019 and 2020 combined. In the UK alone, fintech funding nearly doubled in the mentioned timeframe, as compared to the year before (2020). 
 
 Around the fintech businesses, entire ecosystems have emerged. There are national as well as international level organizations that collaborate and launch initiatives to drive the competition as well as innovation in the sector. Regulatory bodies are part of the ecosystems as well, making sure that businesses are doing the best they can to protect fintech consumers. 
 
