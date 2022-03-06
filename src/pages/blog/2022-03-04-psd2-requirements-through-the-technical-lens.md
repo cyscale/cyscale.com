@@ -57,9 +57,9 @@ An **electronic money institution** is a legal entity that is authorized to is
 
 **The second section**, or title, adds further provisions for Payment Service Providers, including the procedure to become licensed as one.  
 
-*Article 5*, titled “Applications for authorization”, contains the list of artefacts to be submitted when a fintech applies for authorization as a payment institution. Among these, the directive requires **a security policy document** that must contain a detailed risk assessment and a description of security control and mitigation measures taken to protect users against those risks, including the illegal use of sensitive and personal data. It is also explicitly states that the policy must indicate how the institution ensures a high level of **technical security and data protection**, including of the software and IT systems used by the applicant, and even when these are entirely or partly outsourced. 
+*Article 5*, titled “Applications for authorization”, contains the list of artefacts to submit when applying to become a payment institution. Among these, the directive requires **a security policy document** that must contain "a detailed risk assessment", along with the "security control and mitigation measures taken" to protect users against identified risk. It also explicitly states that the policy must indicate how the institution ensures "a high level of **technical security and data protection**, including of the software and IT systems used", and even when these are entirely or partly outsourced. 
 
-As we can see, already during the application process, the fintech business must have technical security controls in-place, as well as ways to describe them and prove their enforcement. 
+As we can see, already during the application process, a fintech business must have technical security controls in-place, as well as ways to describe them.
 
 **The third section** (title) of the directive refers to the transparency of conditions, as well as information requirements for payment service providers (data regarding the payments which must be communicated to the service user at specific points in time). It does not contain any requirements for tech.
 
