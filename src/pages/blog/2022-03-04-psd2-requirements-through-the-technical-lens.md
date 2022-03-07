@@ -48,8 +48,8 @@ The different types of **payment services**, as understood from Annex 1 of the 
 * issuing sets of rules agreed between the issuer and the user that are then used to initiate a payment
 * accepting and processing payment transactions
 * money remittance, which is transfer of money without any payment accounts being created or used (think Western Union)
-* payment initiation — initiate payment orders at user request, when the payment account is held at a different provider
-* account information — provides information on payment accounts held by the user at a different provider
+* payment initiation — initiate payment orders on behalf of the user (with his previous consent), from a payment account that is held at a different provider. This is possible due to the open banking framework.
+* account information — provides information on payment accounts held by the user at a different provider. Again, this service has been made possible through open banking.
 
 An **electronic money institution** is a legal entity that is authorized to issue electronic money. An electronic money institution can at the same time be a payment institution. There is a specific authorization license for each of these types of providers.
 
@@ -61,11 +61,11 @@ An **electronic money institution** is a legal entity that is authorized to is
 
 As we can see, already during the application process, a fintech business must have technical security controls in-place, as well as ways to describe them.
 
-**The third section** (title) of the directive refers to the transparency of conditions, as well as information requirements for payment service providers (data regarding the payments which must be communicated to the service user at specific points in time). It does not contain any requirements for tech.
+**The third section** (title) of the directive refers to the transparency of conditions, as well as information requirements for payment service providers, meaning data regarding the payments which must be communicated to the service user at specific points in time. It does not contain any requirements for tech.
 
 ### Proper Security
 
-**The fourth section** (title) details the rights and obligations in relation to the provision and use of payment services, for both the providers and users. This section is again relevant for those in charge of technology inside fintech companies.  
+**The fourth section** (title) details the rights and obligations around the provision and use of payment services, of both the providers and the users. This section is again relevant for those in charge of technology inside fintech companies.  
 
 *Article 66* and *Article 67* describe the obligations of PISPs (payment initiation service providers) and AISPs (account information service providers), which are both types of payment service providers. Among others, they must: 
 
