@@ -122,9 +122,9 @@ const AboutUs = ({ location }) => {
                             <div className='col-span-6 sm:col-span-4 lg:col-span-4'>
                                 <LeaderManuela
                                     className='rounded-md shadow-md mb-4'
-                                    alt='Manuela Ticudean - Founder & COO'
+                                    alt='Manuela Țicudean - Founder & COO'
                                 />
-                                <strong className='text-black sm:text-white'>Manuela Ticudean</strong>
+                                <strong className='text-black sm:text-white'>Manuela Țicudean</strong>
                                 <br />
                                 <a
                                     href='https://www.linkedin.com/in/manuela-ticudean-88a01b81/'
