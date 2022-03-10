@@ -44,7 +44,7 @@ If you dig deeper, CNAPP is basically a mix of 2 separate solutions:  Cloud Secu
 
 What is CSPM?
 
-[Cloud Security Posture Management solutions (CSPM)](https://cyscale.com/products/cloud-security-posture-management/) have as main purpose the detection of misconfigurations. They will continuously monitor the cloud environment in order to provide visibility across multi-cloud and alert the company about compliance drift or risky behavior. CSPMs focus on cloud infrastructure.
+[Cloud Security Posture Management solutions (CSPM)](https://cyscale.com/products/cloud-security-posture-management/) have as main purpose the [detection of misconfigurations](https://cyscale.com/use-cases/cloud-misconfigurations/). They will continuously monitor the cloud environment in order to provide visibility across multi-cloud and alert the company about compliance drift or risky behavior. CSPMs focus on cloud infrastructure.
 
 What is CWPP?
 
