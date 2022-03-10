@@ -16,6 +16,7 @@ import menuClsoe from '../../assets/images/menuClose.svg';
 import { useStaticQuery, graphql } from 'gatsby';
 import useScrollTrigger from '../scrollTrigger';
 import { useAppLink } from '../../common/links';
+import navigation from './navigation.json';
 
 const initMenu = {
     Icon: menuIcon,
@@ -23,29 +24,6 @@ const initMenu = {
     toggleLogo: '',
     toggleBg: ''
 };
-
-const useCases = [
-    {
-        link: 'cloud-misconfigurations',
-        text: 'Cloud Misconfigurations'
-    },
-    {
-        link: 'cloud-compliance-and-auditing',
-        text: 'Compliance and Auditing'
-    },
-    {
-        link: 'iso-27001-compliance',
-        text: 'ISO 27001 Compliance'
-    },
-    {
-        link: 'remote-work-security',
-        text: 'Remote Work'
-    },
-    {
-        link: 'cloud-data-security',
-        text: 'Data Security'
-    }
-];
 
 const TopNav = ({ pageName }) => {
     const root = useRef();
@@ -150,22 +128,17 @@ const TopNav = ({ pageName }) => {
                                     <div className='mx-auto w-full grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 justify-between'>
                                         <div>
                                             <div className='flex flex-col'>
-                                                <Link
-                                                    to='/products/cloud-security-posture-management/'
-                                                    activeStyle={{ color: '#0F26AA' }}
-                                                    activeClassName='active'
-                                                    className='text-base text-black hover:text-blue hover:no-underline leading-normal'
-                                                >
-                                                    Cloud Security Posture Management
-                                                </Link>
-                                                <Link
-                                                    to='/products/security-knowledge-graph/'
-                                                    activeStyle={{ color: '#0F26AA' }}
-                                                    activeClassName='active'
-                                                    className='text-base text-black hover:text-blue hover:no-underline leading-normal mt-7'
-                                                >
-                                                    Security Knowledge Graph<sup>TM</sup>
-                                                </Link>
+                                                {navigation.platform.map(({ link, text }) => (
+                                                    <Link
+                                                        to={link}
+                                                        key={link}
+                                                        activeClassName='active'
+                                                        activeStyle={{ color: '#0F26AA' }}
+                                                        className='text-base text-black hover:text-blue hover:no-underline mb-7 last:mb-0'
+                                                    >
+                                                        {text}
+                                                    </Link>
+                                                ))}
                                             </div>
                                         </div>
                                         <div className='hidden lg:inline-block'>
@@ -233,15 +206,15 @@ const TopNav = ({ pageName }) => {
                                     <div className=' max-w-4xl grid grid-cols-1 lg:grid-cols-2  gap-6 ml-auto justify-end p-6 mb-16 sm:mb-0 shadow-2xl bg-teal-700 bg-white'>
                                         <div>
                                             <div className='flex flex-col'>
-                                                {useCases.map((useCase) => (
+                                                {navigation.usecases.map(({ link, text }) => (
                                                     <Link
-                                                        to={`/use-cases/${useCase.link}/`}
-                                                        activeStyle={{ color: '#0F26AA' }}
+                                                        to={link}
+                                                        key={link}
                                                         activeClassName='active'
-                                                        className='text-base text-black hover:text-blue hover:no-underline leading-normal mt-7'
-                                                        key={useCase.link}
+                                                        activeStyle={{ color: '#0F26AA' }}
+                                                        className='text-base text-black hover:text-blue hover:no-underline leading-normal mb-7 last:mb-0'
                                                     >
-                                                        {useCase.text}
+                                                        {text}
                                                     </Link>
                                                 ))}
                                             </div>
@@ -273,11 +246,11 @@ const TopNav = ({ pageName }) => {
                             </li>
                             <li className='hover:bg-teal-700 hover:text-white'>
                                 <Link
-                                    to='/pricing/'
+                                    to={navigation.pricing[0].link}
                                     activeClassName='active'
                                     className='relative parentItem block my-6 mx-4 lg:m-8 text-base hover:no-underline leading-normal'
                                 >
-                                    <span>Pricing</span>
+                                    <span>{navigation.pricing[0].text}</span>
                                 </Link>
                             </li>
                             <li className='hoverable hover:bg-teal-700 hover:text-white'>
@@ -293,39 +266,29 @@ const TopNav = ({ pageName }) => {
                                     <div className='max-w-4xl grid grid-cols-1 lg:grid-cols-2  gap-6 ml-auto justify-end p-6 mb-16 sm:mb-0 shadow-2xl bg-teal-700 bg-white'>
                                         <div>
                                             <div className='flex flex-col'>
-                                                <Link
-                                                    to='/blog/'
-                                                    activeStyle={{ color: '#0F26AA' }}
-                                                    activeClassName='active'
-                                                    className='text-base text-black hover:text-blue hover:no-underline leading-normal'
-                                                >
-                                                    Blog
-                                                </Link>
-                                                <a
-                                                    href='https://docs.cyscale.com'
-                                                    target='_blank'
-                                                    rel='noopener noreferrer'
-                                                    className='text-base text-black hover:text-blue hover:no-underline leading-normal mt-7'
-                                                >
-                                                    Documentation
-                                                </a>
-                                                <a
-                                                    href='/resources/cyscale-cloud-data-security-datasheet.pdf'
-                                                    download
-                                                    target='_blank'
-                                                    rel='noopener noreferrer'
-                                                    className='text-base text-black hover:text-blue hover:no-underline leading-normal mt-7'
-                                                >
-                                                    Data Sheet
-                                                </a>
-                                                <a
-                                                    href='https://docs.cyscale.com'
-                                                    target='_blank'
-                                                    rel='noopener noreferrer'
-                                                    className='text-base text-black hover:text-blue hover:no-underline leading-normal mt-7'
-                                                >
-                                                    Support
-                                                </a>
+                                                {navigation.resources.map(({ link, text, blank }) =>
+                                                    blank ? (
+                                                        <a
+                                                            href={link}
+                                                            key={link}
+                                                            target='_blank'
+                                                            rel='noopener noreferrer'
+                                                            className='text-base text-black hover:text-blue hover:no-underline leading-normal mb-7 last:mb-0'
+                                                        >
+                                                            {text}
+                                                        </a>
+                                                    ) : (
+                                                        <Link
+                                                            to={link}
+                                                            key={link}
+                                                            activeClassName='active'
+                                                            activeStyle={{ color: '#0F26AA' }}
+                                                            className='text-base text-black hover:text-blue hover:no-underline leading-normal mb-7 last:mb-0'
+                                                        >
+                                                            {text}
+                                                        </Link>
+                                                    )
+                                                )}
                                             </div>
                                         </div>
                                         <div className='hidden lg:inline-block'>
@@ -372,30 +335,17 @@ const TopNav = ({ pageName }) => {
                                     <div className='max-w-4xl grid grid-cols-1 lg:grid-cols-3  gap-6 ml-auto justify-end p-6 mb-16 sm:mb-0 shadow-2xl bg-teal-700 bg-white'>
                                         <div>
                                             <div className='flex flex-col'>
-                                                <Link
-                                                    to='/about-us/'
-                                                    activeStyle={{ color: '#0F26AA' }}
-                                                    activeClassName='active'
-                                                    className={`text-base text-black hover:text-blue hover:no-underline leading-normal`}
-                                                >
-                                                    About us
-                                                </Link>
-                                                <Link
-                                                    to='/careers/'
-                                                    activeStyle={{ color: '#0F26AA' }}
-                                                    activeClassName='active'
-                                                    className='text-base text-black hover:text-blue hover:no-underline leading-normal mt-7'
-                                                >
-                                                    Careers
-                                                </Link>
-                                                <Link
-                                                    to='/contact-us/'
-                                                    activeStyle={{ color: '#0F26AA' }}
-                                                    activeClassName='active'
-                                                    className='text-base text-black hover:text-blue hover:no-underline leading-normal mt-7'
-                                                >
-                                                    Contact us
-                                                </Link>
+                                                {navigation.company.map(({ link, text }) => (
+                                                    <Link
+                                                        to={link}
+                                                        key={link}
+                                                        activeClassName='active'
+                                                        activeStyle={{ color: '#0F26AA' }}
+                                                        className='text-base text-black hover:text-blue hover:no-underline leading-normal mb-7 last:mb-0'
+                                                    >
+                                                        {text}
+                                                    </Link>
+                                                ))}
                                             </div>
                                         </div>
                                         <div className='hidden lg:inline-block'>

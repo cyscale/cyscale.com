@@ -106,28 +106,29 @@ export default function CloudComplianceContent() {
                     sectionName='RemoteWork'
                 />
             </div>
-
-            <Sectionheader
-                headingText={[
-                    'Align teams & tasks',
-                    <span key='ali123' className='block w-full font-normal'>
-                        Govern all cloud entities from a single dashboard
-                    </span>
-                ]}
-                description={[
-                    'Consolidate all the key elements of cloud compliance in an easy-to-use dashboard. Replace cloud portals with our Cloud Platform - the hub for a sweeping overview of your',
-                    ' ',
-                    <a
-                        href='/products/cloud-security-posture-management'
-                        key='csp123'
-                        className=' text-blue underline text-16px hover:no-underline hover:text-red'
-                    >
-                        cloud security posture
-                    </a>,
-                    '.\n\nImplement, manage, and monitor security policies and controls for single cloud, multi-cloud, and hybrid environments through reliable automation.\n\nDemonstrate compliance for multiple projects with read-only dashboard access or reports (CSV, PDF) you can share with internal stakeholders, prospects, or customers.'
-                ]}
-                section='complianceGovern'
-            />
+            <div className='max-w-1366px m-auto pt-12 lg:pt-32 pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px'>
+                <Sectionheader
+                    headingText={[
+                        'Align teams & tasks',
+                        <span key='ali123' className='block w-full font-normal'>
+                            Govern all cloud entities from a single dashboard
+                        </span>
+                    ]}
+                    description={[
+                        'Consolidate all the key elements of cloud compliance in an easy-to-use dashboard. Replace cloud portals with our Cloud Platform - the hub for a sweeping overview of your',
+                        ' ',
+                        <a
+                            href='/products/cloud-security-posture-management'
+                            key='csp123'
+                            className=' text-blue underline text-16px hover:no-underline hover:text-red'
+                        >
+                            cloud security posture
+                        </a>,
+                        '.\n\nImplement, manage, and monitor security policies and controls for single cloud, multi-cloud, and hybrid environments through reliable automation.\n\nDemonstrate compliance for multiple projects with read-only dashboard access or reports (CSV, PDF) you can share with internal stakeholders, prospects, or customers.'
+                    ]}
+                    section='complianceGovern'
+                />
+            </div>
             <ComplianceCode />
             <div className='max-w-1366px m-auto py-12 lg:py-24 pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px'>
                 <Sectionheader headingText='Maintain a 3rd-party, fully auditable data trail' />

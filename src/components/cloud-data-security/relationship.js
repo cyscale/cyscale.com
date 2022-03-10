@@ -11,7 +11,7 @@ const Relationship = () => {
                 Make your cloud assets secure and compliant based on the full context they operate in.
                 <br />
                 <br />
-                Our proprietary <Link to="/products/security-knowledge-graph/" className="text-blue underline text-16px hover:no-underline hover:text-red">Security Knowledge Graph™</Link> makes it easy to see who has access to individual assets and how they interact with one another. A structure of micrographs represents these complex relationships in a visual, intuitive format anyone can navigate with zero training.
+              Our proprietary <Link to="/products/security-knowledge-graph/" className="text-blue underline text-16px hover:no-underline hover:text-red">Security Knowledge Graph™</Link> makes it easy to see who has access to individual assets and how they interact with one another. A structure of micrographs represents these complex relationships in a visual, intuitive format anyone can navigate with zero training.
                 <br />
                 <br />
                 No more shadow access, excessive permissions and other security issues cross-cloud interactions create. Know who's accessing your sensitive data and what they're doing with it.

@@ -7,7 +7,6 @@ import alibaba from '../../assets/images/alibabacloud-icon.svg';
 import aws from '../../assets/images/svg_aws_white.svg';
 import azure from '../../assets/images/svg_azure.svg';
 import gcp from '../../assets/images/svg_gcp.svg';
-import richPolicyMock from '../../assets/images/remote-work-wft-compliance.png';
 import getStartedICon from '../../assets/images/getStartedIconCPSM.svg';
 import GetStarted from '../../components/Home/getstarted';
 import { Link as ScrollLink } from 'react-scroll';

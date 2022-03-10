@@ -64,7 +64,7 @@ exports.createPages = async ({ graphql, actions }) => {
             const node = edge.node;
             createPage({
                 // Path for this page — required
-                path: '/careers/' + node.frontmatter.permalink,
+                path: '/careers/' + node.frontmatter.permalink + '/',
                 component: careerTemplate,
                 context: {
                     alldata: node
@@ -108,7 +108,7 @@ exports.createPages = async ({ graphql, actions }) => {
             const node = edge.node;
             createPage({
                 // Path for this page — required
-                path: '/blog/' + node.frontmatter.permalink,
+                path: '/blog/' + node.frontmatter.permalink + '/',
                 component: blogTemplate,
                 context: {
                     alldata: node,

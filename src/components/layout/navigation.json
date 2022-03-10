@@ -1,0 +1,123 @@
+{
+    "platform": [
+        {
+            "link": "/products/cloud-security-posture-management/",
+            "text": "Cloud Security Posture Management"
+        },
+        {
+            "link": "/products/security-knowledge-graph/",
+            "text": "Security Knowledge Graph™"
+        }
+    ],
+    "usecases": [
+        {
+            "link": "/use-cases/cloud-misconfigurations/",
+            "text": "Cloud Misconfigurations"
+        },
+        {
+            "link": "/use-cases/cloud-compliance-and-auditing/",
+            "text": "Compliance and Auditing"
+        },
+        {
+            "link": "/use-cases/iso-27001-compliance/",
+            "text": "ISO 27001 Compliance"
+        },
+        {
+            "link": "/use-cases/remote-work-security/",
+            "text": "Remote Work"
+        },
+        {
+            "link": "/use-cases/cloud-data-security/",
+            "text": "Data Security"
+        }
+    ],
+    "pricing": [
+        {
+            "link": "/pricing/",
+            "text": "Pricing"
+        }
+    ],
+    "resources": [
+        {
+            "link": "/blog/",
+            "text": "Blog"
+        },
+        {
+            "blank": true,
+            "link": "https://docs.cyscale.com",
+            "text": "Documentation"
+        },
+        {
+            "blank": true,
+            "link": "/resources/cyscale-cloud-data-security-datasheet.pdf",
+            "text": "Data Sheet"
+        },
+        {
+            "blank": true,
+            "link": "https://docs.cyscale.com",
+            "text": "Support"
+        }
+    ],
+    "company": [
+        {
+            "link": "/about-us/",
+            "text": "About us"
+        },
+        {
+            "link": "/careers/",
+            "text": "Careers"
+        },
+        {
+            "link": "/contact-us/",
+            "text": "Contact us"
+        }
+    ],
+    "terms": [
+        {
+            "link": "/policies/terms-of-use/",
+            "text": "Terms of use"
+        },
+        {
+            "link": "/policies/security-policy/",
+            "text": "Security Policy"
+        },
+        {
+            "link": "/policies/privacy-policy/",
+            "text": "Privacy Policy"
+        }
+    ],
+    "status": [
+        {
+            "blank": true,
+            "link": "https://status.cyscale.com",
+            "text": "Status"
+        }
+    ],
+    "social": [
+        {
+            "blank": true,
+            "text": "linkedin",
+            "link": "https://www.linkedin.com/company/cyscale"
+        },
+        {
+            "blank": true,
+            "text": "twitter",
+            "link": "https://www.twitter.com/cyscale"
+        },
+        {
+            "blank": true,
+            "text": "facebook",
+            "link": "https://www.facebook.com/cyscale"
+        },
+        {
+            "blank": true,
+            "text": "crunchbase",
+            "link": "https://www.crunchbase.com/organization/cyscale"
+        },
+        {
+            "blank": true,
+            "text": "angel",
+            "link": "https://angel.co/company/cyscale"
+        }
+    ]
+}

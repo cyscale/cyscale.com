@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import logo from '../../assets/images/logo-footer.svg';
-import { FaLinkedin, FaTwitter, FaFacebook } from 'react-icons/fa';
-import CrunchbaseIcon from '../../assets/images/cib-crunchbase.svg';
-import AngelIcon from '../../assets/images/angel.svg';
+import navigation from './navigation.json';
+import SocialIcon from './SocialIcon';
+
 const Footer = () => {
     return (
         <div className=' bg-gray  bg-footer-texture'>
@@ -18,56 +18,13 @@ const Footer = () => {
                         security and compliance across your multi-cloud environment.
                     </div>
                     <div className='items-center mt-20px md:mt-auto hidden lg:flex'>
-                        <div className='mr-25px'>
-                            <a
-                                href='https://www.linkedin.com/company/cyscale'
-                                className='text-white'
-                                rel='noopener noreferrer'
-                                target='_blank'
-                            >
-                                <FaLinkedin />
-                            </a>
-                        </div>
-                        <div className='mr-25px'>
-                            <a
-                                href='https://www.twitter.com/cyscale'
-                                className='text-white'
-                                rel='noopener noreferrer'
-                                target='_blank'
-                            >
-                                <FaTwitter />
-                            </a>
-                        </div>
-                        <div className='mr-25px'>
-                            <a
-                                href='https://www.facebook.com/cyscale'
-                                className='text-white'
-                                rel='noopener noreferrer'
-                                target='_blank'
-                            >
-                                <FaFacebook />
-                            </a>
-                        </div>
-                        <div className='mr-25px'>
-                            <a
-                                href='https://www.crunchbase.com/organization/cyscale'
-                                className='text-white'
-                                rel='noopener noreferrer'
-                                target='_blank'
-                            >
-                                <img src={CrunchbaseIcon} className='w-16px' alt='crunch base icon' />
-                            </a>
-                        </div>
-                        <div className='mr-25px'>
-                            <a
-                                href=' https://angel.co/company/cyscale'
-                                className='text-white'
-                                rel='noopener noreferrer'
-                                target='_blank'
-                            >
-                                <img src={AngelIcon} className='w-16px' alt='angel icon' />
-                            </a>
-                        </div>
+                        {navigation.social.map(({ link, text }) => (
+                            <div key={link} className='mr-25px'>
+                                <a href={link} className='text-white' rel='noopener noreferrer' target='_blank'>
+                                    <SocialIcon icon={text} />
+                                </a>
+                            </div>
+                        ))}
                     </div>
                 </div>
                 <div className='w-full md:w-6/12 lg:w-8/12 mt-20px md:mt-0'>
@@ -75,94 +32,60 @@ const Footer = () => {
                         <div className=''>
                             <h3 className='text-14px font-bold leading-normal text-white pb-40px '>Platform</h3>
                             <ul>
-                                <li className='text-12px leading-normal pb-7px'>
-                                    <Link
-                                        to='/products/cloud-security-posture-management/'
-                                        className='font-light text-white no-underline hover:underline'
-                                    >
-                                        Cloud Security Posture Management
-                                    </Link>
-                                </li>
-                                <li className='text-12px leading-normal pb-7px'>
-                                    <Link
-                                        to='/products/security-knowledge-graph/'
-                                        className='font-light text-white no-underline hover:underline'
-                                    >
-                                        Security Knowledge Graph<sup>TM</sup>
-                                    </Link>
-                                </li>
+                                {navigation.platform.map(({ link, text }) => (
+                                    <li key={link} className='text-12px leading-normal pb-7px'>
+                                        <Link to={link} className='font-light text-white no-underline hover:underline'>
+                                            {text}
+                                        </Link>
+                                    </li>
+                                ))}
                             </ul>
                         </div>
                         <div className=''>
                             <h3 className='text-14px font-bold leading-normal  text-white pb-40px '>Use cases</h3>
                             <ul>
-                                <li className='text-12px leading-normal pb-7px'>
-                                    <Link
-                                        to='/use-cases/cloud-data-security/'
-                                        className='font-light text-white no-underline hover:underline'
-                                    >
-                                        Data Security
-                                    </Link>
-                                </li>
-                                <li className='text-12px leading-normal pb-7px'>
-                                    <Link
-                                        to='/use-cases/remote-work-security/'
-                                        className='font-light text-white no-underline hover:underline'
-                                    >
-                                        Remote Work
-                                    </Link>
-                                </li>
-                                <li className='text-12px leading-normal pb-7px'>
-                                    <Link
-                                        to='/use-cases/cloud-compliance-and-auditing/'
-                                        className='font-light text-white no-underline hover:underline'
-                                    >
-                                        Compliance and Auditing
-                                    </Link>
-                                </li>
+                                {navigation.usecases.map(({ link, text }) => (
+                                    <li key={link} className='text-12px leading-normal pb-7px'>
+                                        <Link to={link} className='font-light text-white no-underline hover:underline'>
+                                            {text}
+                                        </Link>
+                                    </li>
+                                ))}
                             </ul>
                         </div>
 
                         <div className=''>
                             <h3 className='text-14px font-bold leading-normal  text-white pb-40px '>Resources</h3>
                             <ul>
+                                {navigation.resources.map(({ link, text, blank }) =>
+                                    blank ? (
+                                        <li key={link} className='text-12px leading-normal pb-7px'>
+                                            <a
+                                                href={link}
+                                                target='_blank'
+                                                rel='noopener noreferrer'
+                                                className='font-light text-white no-underline hover:underline'
+                                            >
+                                                {text}
+                                            </a>
+                                        </li>
+                                    ) : (
+                                        <li key={link} className='text-12px leading-normal pb-7px'>
+                                            <Link
+                                                to={link}
+                                                className='font-light text-white no-underline hover:underline'
+                                            >
+                                                {text}
+                                            </Link>
+                                        </li>
+                                    )
+                                )}
                                 <li className='text-12px leading-normal pb-7px'>
-                                    <Link to='/blog' className='font-light text-white no-underline hover:underline'>
-                                        Blog
-                                    </Link>
-                                </li>
-                                <li className='text-12px leading-normal pb-7px'>
-                                    <a
-                                        href='https://docs.cyscale.com'
-                                        target='_blank'
-                                        rel='noopener noreferrer'
+                                    <Link
+                                        to={navigation.pricing[0].link}
                                         className='font-light text-white no-underline hover:underline'
                                     >
-                                        Documentation
-                                    </a>
-                                </li>
-                                <li className='text-12px leading-normal pb-7px'>
-                                    <a
-                                        href='/resources/cyscale-cloud-data-security-datasheet.pdf'
-                                        download
-                                        className='font-light text-white no-underline hover:underline'
-                                    >
-                                        Data Sheet
-                                    </a>
-                                </li>
-                                <li className='text-12px leading-normal pb-7px'>
-                                    <a
-                                        href='https://docs.cyscale.com'
-                                        target='_blank'
-                                        rel='noopener noreferrer'
-                                        className='font-light text-white no-underline hover:underline'
-                                    >
-                                        FAQ + Support
-                                    </a>
-                                </li>
-                                <li className='text-12px leading-normal pb-7px'>
-                                    <Link to='/pricing/' className='font-light text-white no-underline hover:underline'>
-                                        Pricing
+                                        {navigation.pricing[0].text}
                                     </Link>
                                 </li>
                             </ul>
@@ -171,27 +94,13 @@ const Footer = () => {
                         <div className=''>
                             <h3 className='text-14px font-bold leading-normal  text-white pb-40px '>Company</h3>
                             <ul>
-                                <li className='text-12px leading-normal pb-7px'>
-                                    <Link
-                                        to='/about-us/'
-                                        className='font-light text-white no-underline hover:underline'
-                                    >
-                                        About us
-                                    </Link>
-                                </li>
-                                <li className='text-12px leading-normal pb-7px'>
-                                    <Link to='/careers/' className='font-light text-white no-underline hover:underline'>
-                                        Careers
-                                    </Link>
-                                </li>
-                                <li className='text-12px leading-normal pb-7px'>
-                                    <Link
-                                        to='/contact-us/'
-                                        className='font-light text-white no-underline hover:underline'
-                                    >
-                                        Contact Us
-                                    </Link>
-                                </li>
+                                {navigation.company.map(({ link, text }) => (
+                                    <li key={link} className='text-12px leading-normal pb-7px'>
+                                        <Link to={link} className='font-light text-white no-underline hover:underline'>
+                                            {text}
+                                        </Link>
+                                    </li>
+                                ))}
                             </ul>
                         </div>
                     </div>
@@ -201,93 +110,33 @@ const Footer = () => {
                             <li className='block lg:inline-block lg:mr-50px text-12px font-light leading-normal text-white '>
                                 &copy; {new Date().getFullYear()} Cyscale Limited
                             </li>
-                            <li className='inline-block mr-10px lg:mr-30px  text-12px leading-normal  '>
-                                <Link
-                                    to='/policies/terms-of-use/'
-                                    className='font-light text-white no-underline hover:underline'
-                                >
-                                    Terms of use
-                                </Link>
-                            </li>
-                            <li className='inline-block mr-10px lg:mr-30px text-12px leading-normal '>
-                                <Link
-                                    to='/policies/security-policy/'
-                                    className='font-light text-white no-underline hover:underline'
-                                >
-                                    Security Policy
-                                </Link>
-                            </li>
-                            <li className='inline-block mr-10px lg:mr-30px text-12px  leading-normal '>
-                                <Link
-                                    to='/policies/privacy-policy/'
-                                    className='font-light text-white no-underline hover:underline'
-                                >
-                                    Privacy Policy{' '}
-                                </Link>
-                            </li>
+                            {navigation.terms.map(({ link, text }) => (
+                                <li key={link} className='inline-block mr-10px lg:mr-30px  text-12px leading-normal  '>
+                                    <Link to={link} className='font-light text-white no-underline hover:underline'>
+                                        {text}
+                                    </Link>
+                                </li>
+                            ))}
                             <li className='inline-block mr-10px text-12px leading-normal '>
                                 <a
-                                    href='https://status.cyscale.com'
+                                    href={navigation.status[0].link}
                                     rel='noopener noreferrer'
                                     target='_blank'
                                     className='font-light text-white no-underline hover:underline'
                                 >
-                                    Status
+                                    {navigation.status[0].text}
                                 </a>
                             </li>
                         </ul>
                     </div>
                     <div className='mt-48 items-center md:mt-0 flex lg:hidden'>
-                        <div className='mr-25px'>
-                            <a
-                                href='https://www.linkedin.com/company/cyscale'
-                                rel='noopener noreferrer'
-                                className='text-white'
-                                target='_blank'
-                            >
-                                <FaLinkedin />
-                            </a>
-                        </div>
-                        <div className='mr-25px'>
-                            <a
-                                href='https://www.twitter.com/cyscale'
-                                className='text-white'
-                                rel='noopener noreferrer'
-                                target='_blank'
-                            >
-                                <FaTwitter />
-                            </a>
-                        </div>
-                        <div className='mr-25px'>
-                            <a
-                                href='https://www.facebook.com/cyscale'
-                                className='text-white'
-                                rel='noopener noreferrer'
-                                target='_blank'
-                            >
-                                <FaFacebook />
-                            </a>
-                        </div>
-                        <div className='mr-25px'>
-                            <a
-                                href='https://www.crunchbase.com/organization/cyscale'
-                                className='text-white'
-                                rel='noopener noreferrer'
-                                target='_blank'
-                            >
-                                <img src={CrunchbaseIcon} className='w-16px' alt='crunch base icon' />
-                            </a>
-                        </div>
-                        <div className='mr-25px'>
-                            <a
-                                href=' https://angel.co/company/cyscale'
-                                className='text-white'
-                                rel='noopener noreferrer'
-                                target='_blank'
-                            >
-                                <img src={AngelIcon} className='w-16px' alt='angel icon' />
-                            </a>
-                        </div>
+                        {navigation.social.map(({ link, text }) => (
+                            <div key={link} className='mr-25px'>
+                                <a href={link} rel='noopener noreferrer' className='text-white' target='_blank'>
+                                    <SocialIcon icon={text} />
+                                </a>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>

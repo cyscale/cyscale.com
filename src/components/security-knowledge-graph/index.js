@@ -17,6 +17,7 @@ import icon4 from "../../assets/images/feature_icon_4.svg";
 import icon5 from "../../assets/images/feature_icon_5.svg";
 import icon6 from "../../assets/images/feature_icon_6.svg";
 import { useAppLink } from "../../common/links";
+import { Link } from "gatsby";
 
 const Index = () => {
   const appLink = useAppLink();
@@ -80,9 +81,9 @@ const Index = () => {
       title: `Close visibility gaps in your Governance, Risk and Compliance system`,
       description: [
         "\n\nSetting up a reliable ",
-        <a href="/use-cases/cloud-compliance-and-auditing" key="link123" className=" text-blue underline text-16px hover:no-underline hover:text-red">
+        <Link to="/use-cases/cloud-compliance-and-auditing/" key="link123" className=" text-blue underline text-16px hover:no-underline hover:text-red">
           GRC (Governance, Risk and Compliance system)
-        </a>,
+        </Link>,
         " system doesn't have to take ages and more in-house resources than you can ever afford. \n\nThe Cyscale Cloud Platform is a GRC tool you can truly count on!\n\nIt packs rich, customizable features you can use to build and manage a competitive governance process that gets technical teams and management on the same page. "
       ]
     },
