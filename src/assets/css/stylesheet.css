@@ -30,10 +30,10 @@ h6 {
     display: none !important;
 }
 .bg-footer-texture {
-    background-image: url('../images/footerbg.png');
+    background-image: url('../images/footerbg.svg');
     background-repeat: no-repeat;
-    background-position: 101% 103%;
-    background-size: 173px;
+    background-position: right bottom;
+    background-size: 150px;
 }
 .footerLogo {
     filter: brightness(0) invert(1);

@@ -1,6 +1,15 @@
 .bg-gradient-primary {
     background: linear-gradient(322.03deg, #010103 35.61%, #3144ac 66.66%, #e3565f 87.1%);
 }
+.bg-gradient-secondary {
+    background: linear-gradient(81.64deg, #000000 -19.9%, #0F26AA 35.28%, #FF4A56 133.13%);
+}
+.bg-gradient-footer {
+    background-image: url(../images/half-circle-3.svg), linear-gradient(81.64deg, #000000 -19.9%, #0F26AA 35.28%, #FF4A56 133.13%);
+    background-position: left bottom, left bottom;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 320px, cover;
+}
 
 .people-avatar {
     height: 150px;
