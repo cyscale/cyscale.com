@@ -16,7 +16,7 @@ const History = () => {
                                 <strong>2019:</strong>
                             </p>
                             <p className='text-sm text-grey2 mt-8 new-line'>
-                                We started development for our CSPM solution: Cyscale Cloud Platform
+                                We started development for our CSPM solution: Cyscale Cloud Platform.
                             </p>
                         </div>
                         <div className='border-t-8 border-aboutBorder lg:border-none'>
@@ -28,17 +28,19 @@ const History = () => {
                                 <strong>2020:</strong>
                             </p>
                             <p className='text-sm text-grey2 mt-8 new-line'>
-                                Cyscale was named “The Best Technology Startup in 2020” in the InnovX accelerator
-                                program
-                                <ul className='disc'>
-                                    <li>
-                                        The European Union awarded the company with the Seal of Excellence for
-                                        innovation in cloud security.
-                                    </li>
-                                    <li>
-                                        We set the record on Seedblink by raising 350,000 Euro (~$430k) in just 4 hours
-                                    </li>
-                                </ul>
+                                Cyscale was named "The Best Technology Startup in 2020" in the InnovX accelerator
+                                program. In addition, the European Union awarded the company with the Seal of Excellence
+                                for innovation in cloud security. We set the record on{' '}
+                                <a
+                                    className='text-blue'
+                                    href='https://seedblink.com/'
+                                    target='_blank'
+                                    rel='noopener noreferrer'
+                                >
+                                    Seedblink
+                                </a>{' '}
+                                by raising $430k in just 4 hours. Cyscale was named “The Best Technology Startup in
+                                2020” in the InnovX accelerator program
                             </p>
                         </div>
                         <div className='border-t-8 border-aboutBorder lg:border-none'>
@@ -50,8 +52,8 @@ const History = () => {
                                 <strong>2021:</strong>
                             </p>
                             <p className='text-sm text-grey2 mt-8'>
-                                Cyscale Cloud Platform empowers Security teams around the world, to take the correct
-                                approach and implement a strong Cloud Security Program.
+                                Cyscale Cloud Platform empowers Security teams worldwide to take the correct approach
+                                and implement a strong Cloud Security Program.
                             </p>
                         </div>
                         <div className='border-t-8 border-aboutBorder lg:border-none'>
@@ -66,9 +68,9 @@ const History = () => {
                                 Cyscale raises $3.5M in a new seed round led by Notion Capital and Seedcamp.
                             </p>
                             <p className='text-sm text-grey2 mt-8'>
-                                Our team of is growing fast. The Security Knowledge Graph™ helps more and more
+                                Our team is growing fast. The Security Knowledge GraphTM helps more and more
                                 organizations understand their digital footprint, enabling them to secure and protect
-                                their most valuable assets
+                                their most valuable assets.
                             </p>
                         </div>
                     </div>

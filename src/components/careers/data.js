@@ -37,7 +37,7 @@ const data = [
     {
         order: 6,
         photo: <AndreiS />,
-        name: 'Product Engineer',
+        name: 'Andrei Ștefănie',
         position: 'Product Engineer',
         linkedin: 'https://www.linkedin.com/in/andreistefanie/',
         quote: `Being passionate about start-ups and what we can build on the cloud, Cyscale was the clear path onwards for me. I knew it will be fun, but hard and so it is. When it's fun, we laugh together, and when it's hard, we work together.`
@@ -62,7 +62,7 @@ const data = [
         order: 3,
         photo: <AndreiM />,
         name: 'Andrei Milaș',
-        position: 'Backend Engineer',
+        position: 'CTO',
         linkedin: 'https://www.linkedin.com/in/andrei-milas-8a86154b/',
         quote: `One of the greatest things about Cyscale is the variety of challenges we're tackling every single day. Either from the business perspective or from a technical point of view, I'm constantly learning, this leading to a great sense of accomplishment.`
     },

@@ -37,10 +37,10 @@ const AboutUs = ({ location }) => {
                                     Our Mission
                                 </h1>
                                 <p className='text-base lg:text-lg pt-2 lg:pt-10  leading-loose'>
-                                    To help companies of all sizes start, improve and maintain their Cloud Security
-                                    Program based on industry best practices. Reducing the risk of security breaches
-                                    when migrating or developing solutions in the cloud should be a continuous priority,
-                                    and we make sure that this is not an overwhelming task.
+                                    To help companies of all sizes to start, improve and maintain their Cloud Security
+                                    Program based on the industry best practices. Reducing the risk of security breaches
+                                    when migrating or developing solutions in the cloud should be a constant priority
+                                    and responsibility. We can ensure that this task will not be overwhelming for you.
                                 </p>
                             </div>
                         </div>
@@ -60,17 +60,17 @@ const AboutUs = ({ location }) => {
                         </div>
                         <div className='col-span-12 md:col-span-6'>
                             <p className='max-w-lg  leading-loose'>
-                                As more and more companies were moving their business applications and data in the
-                                cloud, many of them were lacking the knowledge or manpower required to mitigate security
-                                risks associated with this accelerated cloud adoption.
+                                As more companies moved their business applications and data to the cloud, many of them
+                                lacked the knowledge or human resources required to mitigate security risks associated
+                                with this accelerated cloud adoption.
                             </p>
                         </div>
                         <div className='col-span-12 md:col-span-6'>
                             <p className='max-w-lg  leading-loose'>
-                                Being on the front line as cybersecurity experts, the founders (Ovidiu, Manuela and
-                                Andrei) have realized the struggle faced by these companies and started working on a
-                                solution to help them handle better and more efficiently their Cloud Security. And so…
-                                Cyscale was born.
+                                Being on the front line as cybersecurity experts, the founders (Ovidiu, Manuela, and
+                                Andrei) have realized the struggle these companies face and start working on a solution
+                                to help them handle their Cloud Security better and more efficiently. And so... Cyscale
+                                was born.
                             </p>
                         </div>
                     </Row>
@@ -81,8 +81,8 @@ const AboutUs = ({ location }) => {
             </div>
             <div className='gradientBG'>
                 <GetStarted
-                    description='Let us help you improve your Cloud Security Posture'
-                    btnText='Try Cyscale for free and see for yourself'
+                    description='Start improving your Cloud Security Posture'
+                    btnText='TRY CYSCALE FOR FREE'
                     btnLink={appLink}
                     ExternalLink
                     icon={getStartedIcon}
