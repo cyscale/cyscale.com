@@ -16,7 +16,7 @@ tags:
   - compliance
   - security
 ---
-<!--StartFragment-->
+<https://cyscale.com/use-cases/cloud-misconfigurations/><!--StartFragment-->
 
 Some [CSPM tools](https://cyscale.com/products/cloud-security-posture-management) may be limited to only one cloud provider, others can be used to detect misconfigurations in a multi-cloud environment, but they all share a purpose: to examine your cloud infrastructure and compare it against a set of best practices, policies and known security risks, in order to help you improve your compliance with certain regulations, as well as your cloud security posture.  
 
@@ -38,7 +38,7 @@ Let's consider the CSPM your configuration drift prevention tool.
 
 In many situations, a CSPM solution offers cross-cloud visibility, while potentially dangerous events are highlighted for you to see faster. (Events such as users' accounts being granted excessive permissions, having accidentally granted public access to storage buckets or containers, and other similar mistakes)
 
-## Compliance monitoring 
+## Compliance monitoring
 
 Cloud resources being created and destroyed often, having data frequently duplicated across regions - these represent common events in a cloud infrastructure, but when it comes to managing compliance, they become challenges that were not encountered before, in an on-premises configuration. 
 
@@ -48,7 +48,7 @@ Once you have set up the policies you consider relevant, the CSPM will give you 
 
 Built-in remediation advice or actions are provided in some cases, making it easier for your team to have the dynamic approach needed to follow cloud compliance requirements. 
 
-## Security investigation & Incident response 
+## Security investigation & Incident response
 
 To effectively apply security best practices, you need to be able to visualize what assets exist, what is the current protection in place, and what are high-risk alerts that you need to attend to first.  
 
@@ -58,7 +58,7 @@ Having automated monitoring, misconfiguration detection and real-time analysis i
 
 CSPM solutions enable organizations to automate cloud security processes and evidence collection and help mitigate attacks. 
 
-## Risk visualization & assessment 
+## Risk visualization & assessment
 
 The CSPM will continuously monitor the cloud environments in real-time for threat detection.  
 
