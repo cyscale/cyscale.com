@@ -39,8 +39,7 @@ const History = () => {
                                 >
                                     Seedblink
                                 </a>{' '}
-                                by raising $430k in just 4 hours. Cyscale was named “The Best Technology Startup in
-                                2020” in the InnovX accelerator program
+                                by raising $430k in just 4 hours.
                             </p>
                         </div>
                         <div className='border-t-8 border-aboutBorder lg:border-none'>
@@ -65,7 +64,25 @@ const History = () => {
                                 <strong>2022:</strong>
                             </p>
                             <p className='text-sm text-grey2 mt-8'>
-                                Cyscale raises $3.5M in a new seed round led by Notion Capital and Seedcamp.
+                                Cyscale raises $3.5M in a new seed round led by{' '}
+                                <a
+                                    className='text-blue'
+                                    href='https://www.notion.vc/'
+                                    target='_blank'
+                                    rel='noopener noreferrer'
+                                >
+                                    Notion Capital
+                                </a>{' '}
+                                and{' '}
+                                <a
+                                    className='text-blue'
+                                    href='https://seedcamp.com/'
+                                    target='_blank'
+                                    rel='noopener noreferrer'
+                                >
+                                    Seedcamp
+                                </a>
+                                .
                             </p>
                             <p className='text-sm text-grey2 mt-8'>
                                 Our team is growing fast. The Security Knowledge GraphTM helps more and more
