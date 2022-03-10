@@ -21,6 +21,13 @@ function withImageData(WrappedComponent) {
                             }
                         }
                     }
+                    leaderAndy: file(relativePath: { eq: "andy.jpg" }) {
+                        childImageSharp {
+                            fluid(maxWidth: 500, quality: 95) {
+                                ...GatsbyImageSharpFluid_withWebp_noBase64
+                            }
+                        }
+                    }
                     leaderManuela: file(relativePath: { eq: "leader-manuela.jpg" }) {
                         childImageSharp {
                             fluid(maxWidth: 500, quality: 95) {
@@ -63,7 +70,35 @@ function withImageData(WrappedComponent) {
                             }
                         }
                     }
+                    andreip: file(relativePath: { eq: "andreip.jpg" }) {
+                        childImageSharp {
+                            fluid(maxWidth: 256, quality: 95) {
+                                ...GatsbyImageSharpFluid_withWebp_noBase64
+                            }
+                        }
+                    }
                     gabriel: file(relativePath: { eq: "gabriel.jpg" }) {
+                        childImageSharp {
+                            fluid(maxWidth: 256, quality: 100) {
+                                ...GatsbyImageSharpFluid_withWebp_noBase64
+                            }
+                        }
+                    }
+                    mihaiB: file(relativePath: { eq: "mihai-b.jpg" }) {
+                        childImageSharp {
+                            fluid(maxWidth: 256, quality: 95) {
+                                ...GatsbyImageSharpFluid_withWebp_noBase64
+                            }
+                        }
+                    }
+                    mihaiM: file(relativePath: { eq: "mihai-m.jpg" }) {
+                        childImageSharp {
+                            fluid(maxWidth: 256, quality: 95) {
+                                ...GatsbyImageSharpFluid_withWebp_noBase64
+                            }
+                        }
+                    }
+                    levi: file(relativePath: { eq: "levi.jpg" }) {
                         childImageSharp {
                             fluid(maxWidth: 256, quality: 95) {
                                 ...GatsbyImageSharpFluid_withWebp_noBase64
@@ -105,15 +140,16 @@ function withImageData(WrappedComponent) {
     );
 }
 
-export const Ovidiu = withImageData((props) => (
-    <Img fluid={props.imageData.ovidiu.childImageSharp.fluid} alt='Ovidiu Avatar' {...props} />
-));
+export const Ovidiu = withImageData((props) => <Img fluid={props.imageData.ovidiu.childImageSharp.fluid} {...props} />);
 
 export const LeaderOvidiu = withImageData((props) => (
-    <Img fluid={props.imageData.leaderOvidiu.childImageSharp.fluid} alt='Ovidiu Cical smiling' {...props} />
+    <Img fluid={props.imageData.leaderOvidiu.childImageSharp.fluid} {...props} />
+));
+export const LeaderAndy = withImageData((props) => (
+    <Img fluid={props.imageData.leaderAndy.childImageSharp.fluid} {...props} />
 ));
 export const LeaderManuela = withImageData((props) => (
-    <Img fluid={props.imageData.leaderManuela.childImageSharp.fluid} alt='Manuela Ticudean smiling' {...props} />
+    <Img fluid={props.imageData.leaderManuela.childImageSharp.fluid} {...props} />
 ));
 export const OvidiuAndManuela = withImageData((props) => (
     <Img
@@ -123,19 +159,25 @@ export const OvidiuAndManuela = withImageData((props) => (
     />
 ));
 export const AndreiM = withImageData((props) => (
-    <Img fluid={props.imageData.andreiM.childImageSharp.fluid} alt='Andrei Avatar' {...props} />
+    <Img fluid={props.imageData.andreiM.childImageSharp.fluid} {...props} />
 ));
 export const AndreiS = withImageData((props) => (
-    <Img fluid={props.imageData.andreiS.childImageSharp.fluid} alt='Andrei Avatar' {...props} />
+    <Img fluid={props.imageData.andreiS.childImageSharp.fluid} {...props} />
 ));
 export const Manuela = withImageData((props) => (
-    <Img fluid={props.imageData.manuela.childImageSharp.fluid} alt='Manuela Avatar' {...props} />
+    <Img fluid={props.imageData.manuela.childImageSharp.fluid} {...props} />
 ));
 export const Gabriel = withImageData((props) => (
-    <Img fluid={props.imageData.gabriel.childImageSharp.fluid} alt='Gabriel Avatar' {...props} />
+    <Img fluid={props.imageData.gabriel.childImageSharp.fluid} {...props} />
 ));
+export const AndreiP = withImageData((props) => (
+    <Img fluid={props.imageData.andreip.childImageSharp.fluid} {...props} />
+));
+export const MihaiM = withImageData((props) => <Img fluid={props.imageData.mihaiM.childImageSharp.fluid} {...props} />);
+export const MihaiB = withImageData((props) => <Img fluid={props.imageData.mihaiB.childImageSharp.fluid} {...props} />);
+export const Levi = withImageData((props) => <Img fluid={props.imageData.levi.childImageSharp.fluid} {...props} />);
 export const Virginia = withImageData((props) => (
-    <Img fluid={props.imageData.virginia.childImageSharp.fluid} alt='Virginia Avatar' {...props} />
+    <Img fluid={props.imageData.virginia.childImageSharp.fluid} {...props} />
 ));
 export const Notion = withImageData((props) => (
     <Img fixed={props.imageData.notion.childImageSharp.fixed} alt='Notion Capital' {...props} />

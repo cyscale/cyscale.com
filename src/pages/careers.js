@@ -215,6 +215,7 @@ const Careers = ({ location }) => {
                 <div className='max-w-xl mx-auto lg:max-w-5xl xl:max-w-none xl:mx-0 px-6'>
                     <Slider {...settings}>
                         {employee
+                            .filter(({ quote }) => Boolean(quote))
                             .sort((a, b) => b.order - a.order)
                             .map(({ name, position, photo, quote }, key) => (
                                 <div className='p-2 mb-2'>
@@ -227,7 +228,10 @@ const Careers = ({ location }) => {
                                         <div className='flex flex-col items-center absolute -right-20 -bottom-64 md:-right-16 md:-bottom-52'>
                                             <div className='grad mb-2 w-20 h-20 rounded-full overflow-hidden bg-gradient-primary'>
                                                 {photo &&
-                                                    React.cloneElement(photo, { className: 'w-20 h-20 rounded-full' })}
+                                                    React.cloneElement(photo, {
+                                                        className: 'w-20 h-20 rounded-full',
+                                                        alt: `${name} - ${position}`
+                                                    })}
                                             </div>
                                             <div className='bg-gradient-primary w-64 h-64 rounded-full'></div>
                                         </div>

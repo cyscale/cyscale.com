@@ -63,12 +63,12 @@ const History = () => {
                                 <strong>2022:</strong>
                             </p>
                             <p className='text-sm text-grey2 mt-8'>
-                                Cyscale raises 3,400,000 Euro in a new seed round led by Notion Capital and Seedcamp
+                                Cyscale raises $3.5M in a new seed round led by Notion Capital and Seedcamp.
                             </p>
                             <p className='text-sm text-grey2 mt-8'>
-                                Our team of Cyscalers is growing fast <br />
-                                The Security Knowledge Graph™ helps more and more organizations understand their digital
-                                footprint, enabling them to secure and protect their most valuable assets
+                                Our team of is growing fast. The Security Knowledge Graph™ helps more and more
+                                organizations understand their digital footprint, enabling them to secure and protect
+                                their most valuable assets
                             </p>
                         </div>
                     </div>
