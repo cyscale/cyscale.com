@@ -29,8 +29,8 @@ const data = [
     {
         order: 7,
         photo: <MihaiM />,
-        name: 'Backend Engineer',
-        position: 'Backend Enginner',
+        name: 'Mihai Matache',
+        position: 'Backend Engineer',
         linkedin: 'https://www.linkedin.com/in/mihai-matache-a3741891/',
         quote: false
     },
