@@ -5,6 +5,7 @@ import road from '../assets/images/hit-the-road.svg';
 import Footer from '../components/layout/footer';
 import TopNav from '../components/layout/topNav';
 import Seo from '../components/Seo';
+
 const NotFoundPage = ({location}) => {
     useEffect(() => {
         if (window) {

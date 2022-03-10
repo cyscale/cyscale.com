@@ -5,7 +5,7 @@ import { useAppLink } from '../../common/links';
 import Layout from '../../components/layout/layout.js';
 import Skg from '../../components/security-knowledge-graph';
 
-const Index = ({ location }) => {
+const SecurityKnowledge = ({ location }) => {
     const appLink = useAppLink({location});
 
     return (
@@ -25,4 +25,4 @@ const Index = ({ location }) => {
     );
 };
 
-export default Index;
+export default SecurityKnowledge;

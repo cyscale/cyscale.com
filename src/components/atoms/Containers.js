@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Row = ({ children, className, ...rest }) => (
+export const Row = ({ children, className = '', ...rest }) => (
     <div {...rest} className={'grid grid-cols-12 gap-4 ' + className}>
         {children}
     </div>

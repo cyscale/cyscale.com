@@ -9,6 +9,7 @@
         "bootstrap": "4.6.0",
         "formik": "^2.2.9",
         "gatsby": "^3.7.2",
+        "gatsby-background-image": "^1.6.0",
         "gatsby-image": "^3.7.1",
         "gatsby-plugin-canonical-urls": "^4.4.0",
         "gatsby-plugin-force-trailing-slashes": "^1.0.5",

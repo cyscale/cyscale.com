@@ -3,12 +3,6 @@ import { Container, Row, Section } from '../components/atoms/Containers';
 import Layout from '../components/layout/CleanLayout';
 import hire from '../assets/images/hire.svg';
 import stocks from '../assets/images/stocks.svg';
-import gabriel from '../assets/images/gabriel.jpg';
-import manuela from '../assets/images/manuela.jpg';
-import virginia from '../assets/images/virginia.png';
-import ovidiu from '../assets/images/ovidiu.jpg';
-import andreiM from '../assets/images/andrei-m.jpg';
-import andreiS from '../assets/images/andrei-s.jpg';
 import personalDayOff from '../assets/images/personal-day-off.svg';
 import homeWork from '../assets/images/home-work.svg';
 import certification from '../assets/images/certification.svg';
@@ -19,7 +13,7 @@ import Arrow from '../components/slick/Arrow';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import { Link as ScrollLink } from 'react-scroll';
 import ContactForm from '../components/careers/contactForm';
-
+import employee from '../components/careers/data';
 const settings = {
     speed: 500,
     dots: false,
@@ -70,46 +64,7 @@ const benefits = [
     { title: 'Personal days off', description: 'up to 3 days / year', icon: personalDayOff }
 ];
 
-const employee = [
-    {
-        photo: andreiS,
-        name: 'Andrei Ștefănie',
-        position: 'Product Engineer',
-        quote: `Being passionate about start-ups and what we can build on the cloud, Cyscale was the clear path onwards for me. I knew it will be fun, but hard and so it is. When it's fun, we laugh together, and when it's hard, we work together.`
-    },
-    {
-        photo: virginia,
-        name: 'Virginia Mitea',
-        position: 'Sales & BD',
-        quote: `Friendly atmosphere: that's the first thing that comes to my mind when someone asks me to describe how working at Cyscale is. I discovered how the other teams are working, learned from them, and applied their agile-specific methods to my role.`
-    },
-    {
-        photo: gabriel,
-        name: 'Gabriel Ceicoschi',
-        position: 'Design & Front-end',
-        quote: `I jumped into Cyscale “express” 🚂 by the time things were getting together. Two years later and I'm still here, facing new challenges and opportunities every single day. I've never thought how many things Cyscale will teach me.`
-    },
-    {
-        photo: andreiM,
-        name: 'Andrei Milas',
-        position: 'Co-Founder & CTO',
-        quote: `One of the greatest things about Cyscale is the variety of challenges we're tackling every single day. Either from the business perspective or from a technical point of view, I'm constantly learning, this leading to a great sense of accomplishment.`
-    },
-    {
-        photo: manuela,
-        name: 'Manuela Ticudean',
-        position: 'Co-Founder & PM',
-        quote: `At Cyscale I have a constant opportunity to grow, professionally and personally. Moreover, I feel that my contribution matters and that we're creating something truly special.`
-    },
-    {
-        photo: ovidiu,
-        name: 'Ovidiu Cical',
-        position: 'Founder & CEO',
-        quote: 'Founding Cyscale is the best decision of my life: it allows me to build the type of company that puts people first, promotes fairness and inclusion, and simultaneously, we get the chance to create something extraordinary for the cybersecurity world. All wins!'
-    }
-];
-
-const Index = ({location}) => {
+const Careers = ({ location }) => {
     const data = useStaticQuery(graphql`
         query JobsQuery {
             allMarkdownRemark(
@@ -259,23 +214,30 @@ const Index = ({location}) => {
                 </Container>
                 <div className='max-w-xl mx-auto lg:max-w-5xl xl:max-w-none xl:mx-0 px-6'>
                     <Slider {...settings}>
-                        {employee.map(({ name, position, photo, quote }) => (
-                            <div className='p-2 mb-2'>
-                                <div className='p-3 md:p-6 shadow-lg rounded-lg bg-white relative overflow-hidden'>
-                                    <div className='h-56 pr-0 md:pr-20 text-sm flex flex-col'>
-                                        <quote>"{quote}"</quote>
-                                        <strong className='block mt-auto'>{name}</strong>
-                                        <span className='block'>{position}</span>
-                                    </div>
-                                    <div className='flex flex-col items-center absolute -right-20 -bottom-64 md:-right-16 md:-bottom-52'>
-                                        <div className='grad mb-2 w-20 h-20 rounded-full overflow-hidden bg-gradient-primary'>
-                                            {photo && <img src={photo} alt={name} className='w-20 h-20 rounded-full' />}
+                        {employee
+                            .filter(({ quote }) => Boolean(quote))
+                            .sort((a, b) => b.order - a.order)
+                            .map(({ name, position, photo, quote }, key) => (
+                                <div className='p-2 mb-2'>
+                                    <div className='p-3 md:p-6 shadow-lg rounded-lg bg-white relative overflow-hidden'>
+                                        <div className='h-56 pr-0 md:pr-20 text-sm flex flex-col'>
+                                            <quote>"{quote}"</quote>
+                                            <strong className='block mt-auto'>{name}</strong>
+                                            <span className='block'>{position}</span>
                                         </div>
-                                        <div className='bg-gradient-primary w-64 h-64 rounded-full'></div>
+                                        <div className='flex flex-col items-center absolute -right-20 -bottom-64 md:-right-16 md:-bottom-52'>
+                                            <div className='grad mb-2 w-20 h-20 rounded-full overflow-hidden bg-gradient-primary'>
+                                                {photo &&
+                                                    React.cloneElement(photo, {
+                                                        className: 'w-20 h-20 rounded-full',
+                                                        alt: `${name} - ${position}`
+                                                    })}
+                                            </div>
+                                            <div className='bg-gradient-primary w-64 h-64 rounded-full'></div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        ))}
+                            ))}
                         <div className='p-2 mb-2'>
                             <div className='p-3 md:p-6 shadow-lg rounded-lg bg-white relative overflow-hidden'>
                                 <div className='h-56 pr-0 flex flex-col'>
@@ -342,4 +304,4 @@ const Index = ({location}) => {
     );
 };
 
-export default Index;
+export default Careers;

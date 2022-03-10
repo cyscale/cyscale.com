@@ -60,7 +60,7 @@ const dataFeaturedProducts = [
     }
 ];
 
-const Index = ({ location }) => {
+const CloudMissConfiguration = ({ location }) => {
     const appLink = useAppLink({ location });
     return (
         <Layout
@@ -92,4 +92,4 @@ const Index = ({ location }) => {
     );
 };
 
-export default Index;
+export default CloudMissConfiguration;

@@ -19,7 +19,7 @@ import arrow from '../../assets/images/arrow.svg';
 import Consent from '../../components/consent';
 import GlobalContext from '../../context/GlobalContext';
 
-export default function Iso27001({ location }) {
+const Iso27001 = ({ location }) => {
     useEffect(() => {
         setTimeout(() => {
             if (typeof window !== 'undefined' && window['hbspt']) {
@@ -263,4 +263,6 @@ export default function Iso27001({ location }) {
             </footer>
         </GlobalContext.Provider>
     );
-}
+};
+
+export default Iso27001;

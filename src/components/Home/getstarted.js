@@ -30,7 +30,7 @@ const getstarted = ({ description, btnText, btnLink, sectionName, icon, icon2, E
                             )}
 
                             <p
-                                className={`${sectionName === 'aboutUsGetStarted' ? 'md:w-96 mx-auto' : ''} ${
+                                className={`${sectionName === 'aboutUsGetStarted' ? 'md:w-xs mx-auto' : ''} ${
                                     sectionName === 'dataSecFoot'
                                         ? 'uppercase font-bold'
                                         : sectionName === 'cloudDataSecurity'
