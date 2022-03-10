@@ -42,7 +42,7 @@ The Cybersecurity market responded with innovation, and so a new security catego
 
 The main objective of tools in this category was to report configuration errors discovered in the rapidly changing environment that is the cloud.
 
-As the products quickly evolved and gained in complexity, the initial name was changed to ***CSPM*** - or ***Cloud Security Posture Management***, but the main purpose of the solutions remained the same: to monitor the cloud infrastructure, identify potential misconfigurations and help with security policy enforcement. 
+As the products quickly evolved and gained in complexity, the initial name was changed to ***CSPM*** - or ***Cloud Security Posture Management***, but the main purpose of the solutions remained the same: to monitor the cloud infrastructure, [identify potential misconfigurations](https://cyscale.com/use-cases/cloud-misconfigurations/) and help with security policy enforcement. 
 
 Included in Gartner's “Top 10 Security Projects for 2019”, the CSPM represents one of the most important technologies that leaders should invest in when using cloud or multi-cloud infrastructures.
 
@@ -136,11 +136,11 @@ Considering the compliance aspect, you could be tempted to believe that a CSPM s
 
 Using CSPM software, you can get a grip on your cloud compliance strategy in just a couple of steps:
 
-#### **Start by identifying the applicable standards for your company.** 
+#### **Start by identifying the applicable standards for your company.**
 
 Usually, you will find a specific section in the platform where the most common standards and regulations are defined and implemented from a cloud security perspective. PCI-DSS, NIST, GDPR, CIS, ISO, HIPPA - are just some examples of what you can expect to find.  
 
-#### **Next, you will determine the requirements and start documenting your compliance processes.** 
+#### **Next, you will determine the requirements and start documenting your compliance processes.**
 
 Predefined compliance policies are offered, but you will be able to define custom ones, specific to your needs. Policies have technical controls attached that are automatically assessed. In case of a failed assessment, remediation actions are suggested.  
 
@@ -148,7 +148,7 @@ A CSPM solution can be a powerful reporting and evidence collection tool, making
 
 When it comes to defining Policies and Procedures for the governance of your organization — for example, Access Management Policy, Change Management Policy, and so on — Cyscale's solution offers these out-of-the-box and you can use them as baselines, customizable to your needs. 
 
-#### **The last but very important step is to monitor changes and configuration drifts.** 
+#### **The last but very important step is to monitor changes and configuration drifts.**
 
 This is when the ongoing monitoring capability of the CSPM software comes in handy. Once you define your set of policies, the solution will help identify compliance drifts.  
 
