@@ -16,7 +16,6 @@ import GetStarted from '../../components/Home/getstarted';
 import { Link as ScrollLink } from 'react-scroll';
 import { Helmet } from 'react-helmet';
 import arrow from '../../assets/images/arrow.svg';
-import Consent from '../../components/consent';
 import GlobalContext from '../../context/GlobalContext';
 
 const Iso27001 = ({ location }) => {
@@ -39,7 +38,6 @@ const Iso27001 = ({ location }) => {
                 pageName='ISO27001Campaign'
                 location={location}
             />
-            <Consent />
             <Helmet>
                 <script charset='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js' />
                 <meta name='robots' content='noindex' />
