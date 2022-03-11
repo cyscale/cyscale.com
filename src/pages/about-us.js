@@ -45,7 +45,9 @@ const AboutUs = ({ location }) => {
                             </div>
                         </div>
                         <div className='col-span-12 md:col-span-6'>
+                            <div className="max-w-xs sm:max-w-none">
                             <OvidiuAndManuela />
+                            </div>
                         </div>
                     </Row>
                 </div>
@@ -101,7 +103,7 @@ const AboutUs = ({ location }) => {
                                 Our Leadership
                             </h2>
                         </div>
-                        <Row className='max-w-4xl mx-auto gap-8'>
+                        <Row className='max-w-4xl mx-auto md:gap-8'>
                             <div className='col-span-6 sm:col-span-4 lg:col-span-4'>
                                 <LeaderOvidiu
                                     className='rounded-md shadow-md mb-4'
@@ -115,8 +117,8 @@ const AboutUs = ({ location }) => {
                                     rel='noopener noreferrer'
                                     target='_blank'
                                 >
-                                    <FaLinkedin className='text-lg' />
-                                    <span className='ml-2'>Founder & CEO</span>
+                                    <FaLinkedin className='text-sm sm:text-lg mt-1 sm:mt-0' />
+                                    <span className='ml-1 sm:ml-2'>Founder & CEO</span>
                                 </a>
                             </div>
                             <div className='col-span-6 sm:col-span-4 lg:col-span-4'>
@@ -132,8 +134,8 @@ const AboutUs = ({ location }) => {
                                     rel='noopener noreferrer'
                                     target='_blank'
                                 >
-                                    <FaLinkedin className='text-lg' />
-                                    <span className='ml-2'>Founder & COO</span>
+                                    <FaLinkedin className='text-sm sm:text-lg mt-1 sm:mt-0' />
+                                    <span className='ml-1 sm:ml-2'>Founder & COO</span>
                                 </a>
                             </div>
                             <div className='col-span-6 sm:col-span-4 lg:col-span-4'>
@@ -149,8 +151,8 @@ const AboutUs = ({ location }) => {
                                     rel='noopener noreferrer'
                                     target='_blank'
                                 >
-                                    <FaLinkedin className='text-lg' />
-                                    <span className='ml-2'>VP Ops in Residence</span>
+                                    <FaLinkedin className='text-sm sm:text-lg mt-1 sm:mt-0' />
+                                    <span className='ml-1 sm:ml-2'>VP Ops in Residence</span>
                                 </a>
                             </div>
                         </Row>
@@ -162,16 +164,34 @@ const AboutUs = ({ location }) => {
                 <Section>
                     <h2 className='text-blue sm:text-3xl text-4xl leading-normal mb-6 text-center'>Backed by</h2>
                     <div className='flex justify-center flex-wrap'>
-                        <Notion />
-                        <Seedcamp />
-                        <Gapminder />
-                        <Seedblink />
+                        <a
+                            className='text-blue'
+                            href='https://www.notion.vc/'
+                            target='_blank'
+                            rel='noopener noreferrer'
+                        >
+                            <Notion />
+                        </a>
+                        <a className='text-blue' href='https://seedcamp.com/' target='_blank' rel='noopener noreferrer'>
+                            <Seedcamp />
+                        </a>
+                        <a className='text-blue' href='https://gapminder.vc/' target='_blank' rel='noopener noreferrer'>
+                            <Gapminder />
+                        </a>
+                        <a
+                            className='text-blue'
+                            href='https://seedblink.com/'
+                            target='_blank'
+                            rel='noopener noreferrer'
+                        >
+                            <Seedblink />
+                        </a>
                     </div>
                 </Section>
             </Container>
             <Container className='relative'>
                 <Section>
-                    <Row className='gap-8'>
+                    <Row className='md:gap-8'>
                         <div className='col-span-12'>
                             <h2 className='text-blue sm:text-3xl text-4xl leading-normal mb-6 text-center'>Our Team</h2>
                         </div>
@@ -184,7 +204,7 @@ const AboutUs = ({ location }) => {
                                         {React.cloneElement(photo, {
                                             ...photo.props,
                                             alt: `${name} - ${position}`,
-                                            className: 'rounded-sm shadow-sm'
+                                            className: 'rounded-md shadow-md'
                                         })}
                                         <div className='mt-4'>
                                             <strong>{name}</strong>
