@@ -15,7 +15,8 @@ tags:
   - fintech
   - regulation
   - technical risk
-  - ""
+  - paymentservices
+  - fintechsecurity
 ---
 The fintech sector has known an impressive growth in funding over the past year. A recent Insider Intelligence [report](https://www.emarketer.com/content/insider-intelligence-fintech-trends-watch-2022) shows that the global funding for fintech in the first three quarters of 2021 reached $94.7 billion, which is shy of the total for 2019 and 2020 combined. [In the UK](https://member.fintech.global/2021/12/15/uk-fintech-funding-nearly-doubled-in-the-first-three-quarters-of-2021-outpacing-global-average/) alone, fintech funding nearly doubled in the mentioned timeframe, as compared to the year before (2020). 
 
@@ -78,7 +79,6 @@ Under PSD2, the PISP and the AISP must: 
 * Protect user's personalized security credentials (PSC), if used, by transmitting them safely, and making sure they are not shared with other parties.
 
   **PSCs** are, for example, your internet banking password, the code you use to authenticate to your neobank's mobile app, or any other means of authenticating with a Payment Service Provider. These credentials should not be shared with a PISP, or, when they are, they must be handled securely.
-
 * Ensure that any information received about the payment service user is only provided to the payee (with user consent) 
 * When communicating with the entity that provides the user's payment account (i.e the bank), use common and secure open standards of communication
 * Not store sensitive payment data of the user 
@@ -94,15 +94,15 @@ Under PSD2, the PISP and the AISP must: 
 
 *Article 95* requires two things from the Payment Service Providers:
 
-* mitigation measures and control mechanisms to manage operational and security risks
-* to regularly provide operational and security risk assessments to competent authorities.
+* mitigation measures and control mechanisms in place, to manage operational and security risks
+* to regularly provide operational and security risk assessments to competent authorities, as well as evidence that mitigation measures are adequate
 
-*Article 97* requires the implementation of strong customer authentication “that includes elements which dynamically link the transaction to a specific amount and a specific payee”. It also requires that “payment service providers have in place adequate security measures to protect the confidentiality and integrity of payment service users’ personalized security credentials”.
+*Article 97* requires from the PSP the implementation of strong customer authentication, meaning multi-factor authentication, involving something the user knows, something the user possesses or something that the user is (knowledge, possession or inherence). It also requires that “payment service providers have in place adequate security measures to protect the confidentiality and integrity of payment service users’ personalized security credentials”.
 
 ### Ending Notes
 
-Finally, *Article 98* requires that, by July 2017, the Euro Bank Association (which is another EU institution) will have drafted regulatory technical standards to address the requirements from the previous article (strong customer authentication and protecting the users’ personalized security credentials).
+Finally, *Article 98* requires that, by July 2017, the Euro Bank Association (which is another EU institution) will have drafted regulatory technical standards to address the security requirements from previous articles (strong customer authentication and protecting the users’ personalized security credentials).
 
-The **last two sections** refer to user information rights, and final provisions, respectively, but neither of them contains additional technical requirements.
+The **last two sections** refer to procedures for the settlement of disputes, user information rights, and final provisions, respectively, but neither of them contains additional technical requirements.
 
-The Regulatory Technical Standards developed by the EBA in cooperation with other relevant bodies will be the subject of the next article in the series, where we will take a deeper dive into what they mean for a fintech.
+The regulatory technical standards developed by the EBA will be the subject of the next article in the series, where we will take a deeper dive into what they mean for a fintech.
