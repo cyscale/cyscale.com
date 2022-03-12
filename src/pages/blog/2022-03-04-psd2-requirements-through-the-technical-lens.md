@@ -77,7 +77,7 @@ Under PSD2, the PISP and the AISP must: 
 
 * Protect user's personalized security credentials (PSC), if used, by transmitting them safely, and making sure they are not shared with other parties.
 
-  PSCs are, for example, your internet banking password, or the code you use to authenticate to your neobank's mobile app. These should ideally not be shared with your PISP, or, if they are, they must be handled securely.
+  PSCs are, for example, your internet banking password, the code you use to authenticate to your neobank's mobile app, or any other means of authenticating with a Payment Service Provider. These credentials should not be shared with a PISP, or, when they are, they must be handled securely.
 
 * Ensure that any information received about the payment service user is only provided to the payee (with user consent) 
 * When communicating with the entity that provides the user's payment account (i.e the bank), use common and secure open standards of communication
