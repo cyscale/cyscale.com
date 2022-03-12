@@ -77,7 +77,7 @@ Under PSD2, the PISP and the AISP must: 
 
 * Protect user's personalized security credentials (PSC), if used, by transmitting them safely, and making sure they are not shared with other parties.
 
-  PSCs are, for example, your internet banking password, the code you use to authenticate to your neobank's mobile app, or any other means of authenticating with a Payment Service Provider. These credentials should not be shared with a PISP, or, when they are, they must be handled securely.
+  **PSCs** are, for example, your internet banking password, the code you use to authenticate to your neobank's mobile app, or any other means of authenticating with a Payment Service Provider. These credentials should not be shared with a PISP, or, when they are, they must be handled securely.
 
 * Ensure that any information received about the payment service user is only provided to the payee (with user consent) 
 * When communicating with the entity that provides the user's payment account (i.e the bank), use common and secure open standards of communication
@@ -86,7 +86,7 @@ Under PSD2, the PISP and the AISP must: 
 * Not use, access, or store any user data for purposes other than the provided service
 * In case of payment transactions, not modify the transaction amount
 
-*Article 70* states the obligations of a Payment Service Provider in relation to payment instruments (remember, these are payment cards, and also procedures agreed between the user and the service provider on how to initiate payment orders), one of which is to make sure that the personalized security credentials are not accessible to other parties.
+*Article 70* states the obligations of a Payment Service Provider in relation to payment instruments (remember, these may be payment cards, but also procedures agreed between the user and the service provider on how to initiate payment orders). Again, the protection of personalized security credentials is required, by making sure that they are not accessible to other parties.
 
 *Article 74* states that when the Payment Service Provider doesn’t enforce strong customer authentication (**SCA**; think MFA), it is liable for any financial losses incurred by the payer because of that.
 
