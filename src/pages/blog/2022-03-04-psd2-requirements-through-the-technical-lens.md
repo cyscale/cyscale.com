@@ -65,15 +65,26 @@ As we can see, already during the application process, a fintech business must h
 
 ### Proper Security
 
-**The fourth section** (title) details the rights and obligations around the provision and use of payment services, of both the providers and the users. This section is again relevant for those in charge of technology inside fintech companies.  
+**The fourth section** (title) details the rights and obligations around the provision and use of payment services, of both the providers and the users. This section is again relevant for those in charge of technology inside fintech companies providing payment services.  
 
-*Article 66* and *Article 67* describe the obligations of PISPs (payment initiation service providers) and AISPs (account information service providers), which are both types of payment service providers. Among others, they must: 
+*Article 66* and *Article 67* describe the obligations of PISPs (Payment Initiation Service Providers) and AISPs (Account Information Service Providers), which are both types of payment service providers. 
 
-* Ensure that the personalized security credentials of the user are not accessible to other parties, and that they are transmitted through safe and efficient channels. 
-* Ensure that any other info about the payment service user is only provided to the payee 
-* Use common and secure open standards of communication with other services involved
+An example of a PISP would be an application that, based on previously given user consent, makes regular (i.e. monthly) payments from the user’s bank account, and invests those funds on behalf of the user. In other words, by providing payment initiation services, the app makes payment transactions without the user having to do anything.
+
+To understand an AISP, think of an application that queries information about a user’s bank account and then analyzes that data in order to give the user insights about his financial behavior. Previously given user consent is, of course, mandatory.
+
+Under PSD2, the PISP and the AISP must: 
+
+* Protect user's personalized security credentials (PSC), if used, by transmitting them safely, and making sure they are not shared with other parties.
+
+  PSCs are, for example, your internet banking password, or the code you use to authenticate to your neobank's mobile app. These should ideally not be shared with your PISP, or, if they are, they must be handled securely.
+
+* Ensure that any information received about the payment service user is only provided to the payee (with user consent) 
+* When communicating with the entity that provides the user's payment account (i.e the bank), use common and secure open standards of communication
 * Not store sensitive payment data of the user 
-* Not use, access, or store any user data for purposes other than provision of the service
+* Not request from the user data that is not needed, in order to provide the services
+* Not use, access, or store any user data for purposes other than the provided service
+* In case of payment transactions, not modify the transaction amount
 
 *Article 70* states the obligations of a Payment Service Provider in relation to payment instruments (remember, these are payment cards, and also procedures agreed between the user and the service provider on how to initiate payment orders), one of which is to make sure that the personalized security credentials are not accessible to other parties.
 
