@@ -1,13 +1,13 @@
 ---
 templateKey: blog-post
-title: PSD2 Requirements through the Technical Lens
+title: PSD2 Requirements through the Technical Security Lens
 authors: Manuela Țicudean
 permalink: PSD2-technical-requirements
 category: Compliance
 date: 2022-03-04T13:12:59.854Z
 description: "A deeper look at the most important regulation for payment
-  services in Europe (PSD2), surfacing requirements for the technology at the
-  core of these businesses, tech-governance included. "
+  services in Europe (PSD2), surfacing security requirements for the technology
+  at the core of these businesses, tech-governance included. "
 featuredpost: true
 featuredimage: /img/cyscale_psd2.png
 tags:
@@ -21,7 +21,7 @@ The fintech sector has known an impressive growth in funding over the past year.
 
 Around the fintech businesses, entire ecosystems have emerged. There are national as well as international level organizations that collaborate and launch initiatives to drive the competition as well as innovation in the sector. Regulatory bodies are part of the ecosystems as well, making sure that businesses are doing the best they can to protect fintech consumers. 
 
-The purpose of this article is to take a deeper look at the most important regulations for payment services (which is a large subset of fintech services) in Europe, trying to showcase the requirements for the technology at the core of these businesses, its governance included. 
+The purpose of this article is to take a deeper look at the most important regulations for payment services (which is a large subset of fintech services) in Europe, trying to showcase the security requirements for the technology at the core of these businesses, its governance included. 
 
 We keep in mind that although the UK has left the European Union, they decided to adopt a great part of the regulation under their legislation as well.
 
@@ -88,7 +88,7 @@ Under PSD2, the PISP and the AISP must: 
 
 *Article 70* states the obligations of a Payment Service Provider in relation to payment instruments (remember, these may be payment cards, but also procedures agreed between the user and the service provider on how to initiate payment orders). Again, the protection of personalized security credentials is required, by making sure that they are not accessible to other parties.
 
-*Article 74* states that when the Payment Service Provider doesn’t enforce strong customer authentication (**SCA**; think MFA), it is liable for any financial losses incurred by the payer because of that.
+*Article 74* states that when a Payment Service Provider doesn’t enforce strong customer authentication (**SCA**; think MFA) to protect transactions, it is liable for any financial losses incurred by the payer because of that.
 
 *Article 89* details the liability of Payment Service Providers in case they fail to correctly and in-time execute payment transactions. This part stresses out the importance of a solid **business continuity policy** and plan.
 
