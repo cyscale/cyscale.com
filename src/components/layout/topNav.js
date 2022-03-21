@@ -350,7 +350,7 @@ const TopNav = ({ pageName }) => {
                                         </div>
                                         <div className='hidden lg:inline-block'>
                                             <Link
-                                                to='/careers'
+                                                to='/careers/'
                                                 className='text-base font-medium text-black leading-normal'
                                             >
                                                 Open positions

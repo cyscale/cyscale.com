@@ -51,7 +51,7 @@ export default function CloudComplianceContent() {
                         description={[
                             'Get all the help you need to run regular tests on security systems, policies, and processes.\n\nMake better use of your time while the cloud compliance checks continue to run in the background. Act on alerts when',
                             <a
-                                href='/use-cases/cloud-data-security'
+                                href='/use-cases/cloud-data-security/'
                                 key='ds123'
                                 className=' text-blue underline text-16px hover:no-underline hover:text-red'
                             >
@@ -77,7 +77,7 @@ export default function CloudComplianceContent() {
                         'Keep website pages dedicated to',
                         ' ',
                         <a
-                            href='/use-cases/cloud-data-security'
+                            href='/use-cases/cloud-data-security/'
                             key='au123'
                             className=' text-blue underline text-16px hover:no-underline hover:text-red'
                         >
@@ -118,7 +118,7 @@ export default function CloudComplianceContent() {
                         'Consolidate all the key elements of cloud compliance in an easy-to-use dashboard. Replace cloud portals with our Cloud Platform - the hub for a sweeping overview of your',
                         ' ',
                         <a
-                            href='/products/cloud-security-posture-management'
+                            href='/products/cloud-security-posture-management/'
                             key='csp123'
                             className=' text-blue underline text-16px hover:no-underline hover:text-red'
                         >

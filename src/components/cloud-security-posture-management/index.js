@@ -57,7 +57,7 @@ const Index = () => {
             sectionDescription: [
                 'Keep your cloud infrastructure on track and on budget with Cyscale.\n\nWith a ',
                 <a
-                    href='/products/security-knowledge-graph'
+                    href='/products/security-knowledge-graph/'
                     className=' text-blue underline text-16px hover:no-underline hover:text-red'
                     key='1as4d'
                 >
@@ -73,7 +73,7 @@ const Index = () => {
             sectionDescription: [
                 'Get the visibility you need to fill in security gaps left by cloud service providers.\n\n',
                 <a
-                    href='/use-cases/cloud-data-security'
+                    href='/use-cases/cloud-data-security/'
                     className='text-blue underline text-16px hover:no-underline hover:text-red'
                     key='1as4d'
                 >
@@ -82,7 +82,7 @@ const Index = () => {
                 ' ',
                 'across multi-cloud environments. Bring databases, cloud and network storage, data lakes, code and IP repositories on the same platform for comprehensive asset inventory and management.\n\nFollow reliable hardening steps our ',
                 <a
-                    href='/products/security-knowledge-graph'
+                    href='/products/security-knowledge-graph/'
                     className='text-blue underline text-16px hover:no-underline hover:text-red'
                     key='123e'
                 >

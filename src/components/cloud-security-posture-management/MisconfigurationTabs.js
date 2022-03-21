@@ -15,7 +15,7 @@ const dataFeaturedProducts = [
             "Get relevant alerts when your cloud assets drift away from established security and compliance standards.\n\nMake Cyscale your single source of truth for CSPM and never miss an important security event. \n\nMove beyond bulky, list-based management. Cyscale's",
             ' ',
             <a
-                href='/products/security-knowledge-graph'
+                href='/products/security-knowledge-graph/'
                 key='1asd'
                 className='text-blue underline text-16px hover:no-underline hover:text-red'
             >
@@ -33,7 +33,7 @@ const dataFeaturedProducts = [
             'Use Cyscale for',
             ' ',
             <a
-                href='/use-cases/cloud-compliance-and-auditing'
+                href='/use-cases/cloud-compliance-and-auditing/'
                 key='1as4d'
                 className='text-blue underline text-16px hover:no-underline hover:text-red'
             >
