@@ -1,5 +1,4 @@
 module.exports = {
-    trailingSlash: 'always',
     siteMetadata: {
         title: 'Cyscale',
         siteUrl: 'https://cyscale.com/',
