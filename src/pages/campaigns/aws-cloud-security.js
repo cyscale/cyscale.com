@@ -18,7 +18,7 @@ const AWSCloudSecurity = ({ location }) => {
     return (
         <GlobalContext.Provider value={{ location }}>
             <Seo
-                title=' AWS Cloud Security amd compliance'
+                title=' AWS Cloud Security and compliance'
                 description='Map, secure, and monitor your AWS assets in minutes.'
                 pageName='AWSCloudSecurityCampaign'
                 location={location}
@@ -43,7 +43,7 @@ const AWSCloudSecurity = ({ location }) => {
                                 <div className='col-span-12 lg:col-span-5 text-white'>
                                     <div className='max-w-lg mx-auto lg:ml-0 lg:mr-auto'>
                                         <h1 style={{ lineHeight: 1.5 }} className='text-3xl lg:text-5xl mb-10'>
-                                            AWS Cloud Security amd compliance
+                                            AWS Cloud Security and compliance
                                         </h1>
                                         <p className='mb-6 text-xl'>
                                             Map, secure, and monitor your AWS assets in minutes.
