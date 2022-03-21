@@ -11,7 +11,7 @@ const CampaignsFooter = () => {
                     </div>
                     <div className='order-1'>
                         <a
-                            href='/policies/terms-of-use'
+                            href='/policies/terms-of-use/'
                             className='font-light text-white no-underline hover:underline text-sm'
                         >
                             Terms of use
@@ -19,7 +19,7 @@ const CampaignsFooter = () => {
                     </div>
                     <div className='order-1'>
                         <a
-                            href='/policies/security-policy'
+                            href='/policies/security-policy/'
                             className='font-light text-white no-underline hover:underline text-sm'
                         >
                             Security Policy
@@ -27,7 +27,7 @@ const CampaignsFooter = () => {
                     </div>
                     <div className='order-1'>
                         <a
-                            href='/policies/privacy-policy'
+                            href='/policies/privacy-policy/'
                             className='font-light text-white no-underline hover:underline text-sm'
                         >
                             Privacy Policy{' '}

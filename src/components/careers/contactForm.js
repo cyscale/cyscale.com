@@ -163,7 +163,7 @@ const ContactForm = () => {
                                                     />
                                                     <i></i>I agree to{' '}
                                                     <a
-                                                        href='https://cyscale.com/policies/privacy-policy'
+                                                        href='https://cyscale.com/policies/privacy-policy/'
                                                         className='text-12px text-blue leading-normal underline hover:no-underline hover:text-red'
                                                     >
                                                         Cyscale's Privacy Policy

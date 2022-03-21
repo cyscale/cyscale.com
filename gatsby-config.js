@@ -1,4 +1,5 @@
 module.exports = {
+    trailingSlash: 'always',
     siteMetadata: {
         title: 'Cyscale',
         siteUrl: 'https://cyscale.com/',
@@ -112,7 +113,6 @@ module.exports = {
                 modulePath: `${__dirname}/src/common/netlify.js`
             }
         },
-        `gatsby-plugin-meta-redirect`,
-        `gatsby-plugin-force-trailing-slashes`
+        `gatsby-plugin-meta-redirect`
     ]
 };
