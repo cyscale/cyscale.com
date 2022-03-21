@@ -1,37 +1,29 @@
-import React, { useEffect } from 'react';
-import { Container, Row, Section } from '../../components/atoms/Containers';
-import Seo from '../../components/Seo';
 import { Link } from 'gatsby';
-import logo from '../../assets/images/logo.svg';
+import React from 'react';
+import { Helmet } from 'react-helmet';
+import { Link as ScrollLink } from 'react-scroll';
 import alibaba from '../../assets/images/alibabacloud-icon.svg';
+import arrow from '../../assets/images/arrow.svg';
+import getStartedICon from '../../assets/images/getStartedIconCPSM.svg';
+import logo from '../../assets/images/logo.svg';
 import aws from '../../assets/images/svg_aws_white.svg';
 import azure from '../../assets/images/svg_azure.svg';
 import gcp from '../../assets/images/svg_gcp.svg';
-import getStartedICon from '../../assets/images/getStartedIconCPSM.svg';
-import GetStarted from '../../components/Home/getstarted';
-import { Link as ScrollLink } from 'react-scroll';
-import { Helmet } from 'react-helmet';
-import arrow from '../../assets/images/arrow.svg';
-import GlobalContext from '../../context/GlobalContext';
-import MisconfigCoverage from '../../components/cloud-security-posture-management/misconfigCoverage';
+import { Container, Row, Section } from '../../components/atoms/Containers';
+import Footer from '../../components/campaigns/footer';
+import useHubSpot from '../../components/campaigns/useHubSpot';
 import {
     AutomateCompliance,
     CutNoise,
     DetectPreventMisconfigurations
 } from '../../components/cloud-security-posture-management/images';
+import MisconfigCoverage from '../../components/cloud-security-posture-management/misconfigCoverage';
+import GetStarted from '../../components/Home/getstarted';
+import Seo from '../../components/Seo';
+import GlobalContext from '../../context/GlobalContext';
 
 export default function Misconfigurations({ location }) {
-    useEffect(() => {
-        setTimeout(() => {
-            if (typeof window !== 'undefined' && window['hbspt']) {
-                window.hbspt.forms.create({
-                    portalId: '5413427',
-                    formId: '8543c2b4-5f8e-4df7-9305-aa991806e01f',
-                    target: '#request-demo'
-                });
-            }
-        }, 600);
-    }, []);
+    useHubSpot({ formId: '8543c2b4-5f8e-4df7-9305-aa991806e01f', target: '#request-demo' });
 
     return (
         <GlobalContext.Provider value={{ location }}>
@@ -200,51 +192,7 @@ export default function Misconfigurations({ location }) {
                     />
                 </div>
             </main>
-            <footer className=' bg-gray  bg-footer-texture'>
-                <Container>
-                    <div className='flex-col md:flex-row flex justify-between py-20 max-w-3xl mx-auto'>
-                        <div className='order-10 md:order-1'>
-                            <small className='text-white text-sm'>
-                                &copy; {new Date().getFullYear()} Cyscale Limited
-                            </small>
-                        </div>
-                        <div className='order-1'>
-                            <a
-                                href='/policies/terms-of-use'
-                                className='font-light text-white no-underline hover:underline text-sm'
-                            >
-                                Terms of use
-                            </a>
-                        </div>
-                        <div className='order-1'>
-                            <a
-                                href='/policies/security-policy'
-                                className='font-light text-white no-underline hover:underline text-sm'
-                            >
-                                Security Policy
-                            </a>
-                        </div>
-                        <div className='order-1'>
-                            <a
-                                href='/policies/privacy-policy'
-                                className='font-light text-white no-underline hover:underline text-sm'
-                            >
-                                Privacy Policy{' '}
-                            </a>
-                        </div>
-                        <div className='order-1'>
-                            <a
-                                href='https://status.cyscale.com'
-                                rel='noopener noreferrer'
-                                target='_blank'
-                                className='font-light text-white no-underline hover:underline text-sm'
-                            >
-                                Status
-                            </a>
-                        </div>
-                    </div>
-                </Container>
-            </footer>
+            <Footer />
         </GlobalContext.Provider>
     );
 }

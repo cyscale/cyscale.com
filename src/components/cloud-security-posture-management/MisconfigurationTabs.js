@@ -47,6 +47,6 @@ const dataFeaturedProducts = [
     }
 ];
 
-export default function MisconfigurationTabs() {
-    return <Fproducts sectionTitle='Unpack The Platform' data={dataFeaturedProducts} />;
+export default function MisconfigurationTabs({ sectionTitle = 'Unpack The Platform' }) {
+    return <Fproducts sectionTitle={sectionTitle} data={dataFeaturedProducts} />;
 }

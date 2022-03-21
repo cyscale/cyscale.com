@@ -1,35 +1,28 @@
-import React, { useEffect } from 'react';
-import { Container, Row, Section } from '../../components/atoms/Containers';
-import Seo from '../../components/Seo';
 import { Link } from 'gatsby';
-import logo from '../../assets/images/logo.svg';
+import React from 'react';
+import { Helmet } from 'react-helmet';
+import { Link as ScrollLink } from 'react-scroll';
 import alibaba from '../../assets/images/alibabacloud-icon.svg';
+import arrow from '../../assets/images/arrow.svg';
+import getStartedICon from '../../assets/images/getStartedIconCPSM.svg';
+import logo from '../../assets/images/logo.svg';
+import controlMock from '../../assets/images/maintain-3rd-party-data-image.png';
+import inventoryMock from '../../assets/images/optimize-costs-reveal-analyze-cloud-budget-spendings.png';
+import richPolicyMock from '../../assets/images/remote-work-wft-compliance.png';
+import policiesMock from '../../assets/images/Security-Controls-and-Policies.png';
 import aws from '../../assets/images/svg_aws_white.svg';
 import azure from '../../assets/images/svg_azure.svg';
 import gcp from '../../assets/images/svg_gcp.svg';
-import inventoryMock from '../../assets/images/optimize-costs-reveal-analyze-cloud-budget-spendings.png';
-import controlMock from '../../assets/images/maintain-3rd-party-data-image.png';
-import policiesMock from '../../assets/images/Security-Controls-and-Policies.png';
-import richPolicyMock from '../../assets/images/remote-work-wft-compliance.png';
-import getStartedICon from '../../assets/images/getStartedIconCPSM.svg';
+import { Container, Row, Section } from '../../components/atoms/Containers';
+import CampaignsFooter from '../../components/campaigns/footer';
+import useHubSpot from '../../components/campaigns/useHubSpot';
 import GetStarted from '../../components/Home/getstarted';
-import { Link as ScrollLink } from 'react-scroll';
-import { Helmet } from 'react-helmet';
-import arrow from '../../assets/images/arrow.svg';
+import Seo from '../../components/Seo';
 import GlobalContext from '../../context/GlobalContext';
 
 const Iso27001 = ({ location }) => {
-    useEffect(() => {
-        setTimeout(() => {
-            if (typeof window !== 'undefined' && window['hbspt']) {
-                window.hbspt.forms.create({
-                    portalId: '5413427',
-                    formId: 'aa6ef10b-be0a-4959-be34-1f00fb1cac4b',
-                    target: '#request-demo'
-                });
-            }
-        }, 600);
-    }, []);
+    useHubSpot({ formId: 'aa6ef10b-be0a-4959-be34-1f00fb1cac4b', target: '#request-demo' });
+
     return (
         <GlobalContext.Provider value={{ location }}>
             <Seo
@@ -214,51 +207,7 @@ const Iso27001 = ({ location }) => {
                     />
                 </div>
             </main>
-            <footer className=' bg-gray  bg-footer-texture'>
-                <Container>
-                    <div className='flex-col md:flex-row flex justify-between py-20 max-w-3xl mx-auto'>
-                        <div className='order-10 md:order-1'>
-                            <small className='text-white text-sm'>
-                                &copy; {new Date().getFullYear()} Cyscale Limited
-                            </small>
-                        </div>
-                        <div className='order-1'>
-                            <a
-                                href='/policies/terms-of-use'
-                                className='font-light text-white no-underline hover:underline text-sm'
-                            >
-                                Terms of use
-                            </a>
-                        </div>
-                        <div className='order-1'>
-                            <a
-                                href='/policies/security-policy'
-                                className='font-light text-white no-underline hover:underline text-sm'
-                            >
-                                Security Policy
-                            </a>
-                        </div>
-                        <div className='order-1'>
-                            <a
-                                href='/policies/privacy-policy'
-                                className='font-light text-white no-underline hover:underline text-sm'
-                            >
-                                Privacy Policy{' '}
-                            </a>
-                        </div>
-                        <div className='order-1'>
-                            <a
-                                href='https://status.cyscale.com'
-                                rel='noopener noreferrer'
-                                target='_blank'
-                                className='font-light text-white no-underline hover:underline text-sm'
-                            >
-                                Status
-                            </a>
-                        </div>
-                    </div>
-                </Container>
-            </footer>
+            <CampaignsFooter />
         </GlobalContext.Provider>
     );
 };
