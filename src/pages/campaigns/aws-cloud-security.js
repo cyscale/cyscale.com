@@ -12,15 +12,15 @@ import MisconfigurationTabs from '../../components/cloud-security-posture-manage
 import Seo from '../../components/Seo';
 import GlobalContext from '../../context/GlobalContext';
 
-const CSPMSolution = ({ location }) => {
-    useHubSpot({ formId: '81943e73-3b0a-4e69-8c8d-92c747a10796', target: '#request-cspm-demo' });
+const AWSCloudSecurity = ({ location }) => {
+    useHubSpot({ formId: 'e2610c67-1db7-4443-b551-784a12a3da64', target: '#request-aws-demo' });
 
     return (
         <GlobalContext.Provider value={{ location }}>
             <Seo
-                title='Comprehensive CSPM solution'
-                description='Streamline posture management for multi-cloud environments, enable teams to continuously detect, prevent misconfigurations and control threats and ensure compliance for your cloud assets.'
-                pageName='CSPMSolutionCampaign'
+                title=' AWS Cloud Security amd compliance'
+                description='Map, secure, and monitor your AWS assets in minutes.'
+                pageName='AWSCloudSecurityCampaign'
                 location={location}
             />
             <Helmet>
@@ -43,25 +43,19 @@ const CSPMSolution = ({ location }) => {
                                 <div className='col-span-12 lg:col-span-5 text-white'>
                                     <div className='max-w-lg mx-auto lg:ml-0 lg:mr-auto'>
                                         <h1 style={{ lineHeight: 1.5 }} className='text-3xl lg:text-5xl mb-10'>
-                                            Comprehensive
-                                            <br /> CSPM solution
+                                            AWS Cloud Security amd compliance
                                         </h1>
-                                        <p className='mb-6'>
-                                            Streamline posture management for multi-cloud environments, enable teams to
-                                            continuously detect, prevent misconfigurations and control threats and
-                                            ensure compliance for your cloud assets.
+                                        <p className='mb-6 text-xl'>
+                                            Map, secure, and monitor your AWS assets in minutes.
                                         </p>
-                                        <ul className='list-disc pl-4 ml-4'>
-                                            <li className='mb-2'>
-                                                A comprehensive Asset Inventory and Asset Management
+                                        <ul className='list-disc pl-3 ml-4'>
+                                            <li className='mb-2 text-lg'>Real-time contextual analysis</li>
+                                            <li className='mb-2 text-lg'>
+                                                Detect and eliminate misconfigurations with drift detection
                                             </li>
-                                            <li className='mb-2'>
-                                                Continuous Security and Compliance for AWS, Azure, GCP & more
+                                            <li className='mb-2 text-lg'>
+                                                Compliance checks with automated policy assessments
                                             </li>
-                                            <li className='mb-2'>
-                                                Automatic remediations by learning your cloud infrastructure
-                                            </li>
-                                            <li className='mb-2'>Detect change and eliminate misconfigurations</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -76,22 +70,20 @@ const CSPMSolution = ({ location }) => {
                                         <h2 className='text-2xl leading-normal text-primary mb-1'>
                                             Request a live demo
                                         </h2>
-                                        <div id='request-cspm-demo' style={{ minHeight: 510 }}></div>
+                                        <div id='request-aws-demo' style={{ minHeight: 510 }}></div>
                                     </div>
                                 </div>
                             </Row>
                         </Container>
                     </div>
                 </section>
-                <MisconfigurationTabs />
+                <MisconfigurationTabs sectionTitle='' />
                 <div className='bg-gradient-footer pt-60px pb-60px'>
                     <Container>
                         <div className='mx-auto max-w-md text-center py-20'>
                             <img className='mx-auto mb-12 w-32' src={cloudIcon} alt='decoration' />
-                            <h3 className='text-white text-xl uppercase '>AGENTLESS, MULTI-CLOUD, PAINLESS CSPM</h3>
-                            <p className='text-white text-base mt-1 mb-12'>
-                                Start seeing value & saving money in minutes
-                            </p>
+                            <h3 className='text-white text-xl uppercase mb-12'>Secure your AWS Assets</h3>
+
                             <ScrollLink
                                 className='bg-white text-black font-medium transition-all cursor-pointer duration-300 border uppercase border-black py-5 px-16 rounded inline-block hover:bg-black hover:text-white'
                                 smooth={true}
@@ -109,4 +101,4 @@ const CSPMSolution = ({ location }) => {
     );
 };
 
-export default CSPMSolution;
+export default AWSCloudSecurity;

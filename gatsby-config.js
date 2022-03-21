@@ -19,7 +19,10 @@ module.exports = {
                 policy: [{ userAgent: '*', allow: '/' }]
             }
         },
-        `gatsby-plugin-sitemap`,
+        {
+            resolve: `gatsby-plugin-sitemap`,
+            options: { exclude: ['/campaigns/**'] }
+        },
         {
             resolve: `gatsby-plugin-purgecss`,
             options: {
