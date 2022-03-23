@@ -18,7 +18,7 @@ tags:
 ---
 <!--StartFragment-->
 
-Some [CSPM tools](https://cyscale.com/products/cloud-security-posture-management) may be limited to only one cloud provider, others can be used to [detect misconfigurations](<https://cyscale.com/use-cases/cloud-misconfigurations/>) in a multi-cloud environment, but they all share a purpose: to examine your cloud infrastructure and compare it against a set of best practices, policies and known security risks, in order to help you improve your compliance with certain regulations, as well as your cloud security posture.  
+Some [CSPM tools](https://cyscale.com/products/cloud-security-posture-management/) may be limited to only one cloud provider, others can be used to [detect misconfigurations](https://cyscale.com/use-cases/cloud-misconfigurations/) in a multi-cloud environment, but they all share a purpose: to examine your cloud infrastructure and compare it against a set of best practices, policies and known security risks, in order to help you improve your compliance with certain regulations, as well as your cloud security posture.  
 
 By now we should all be aware of the Shared Responsibility Model practiced by the cloud providers. According to these rules, the customer is entirely responsible for his security configuration. The cloud provider's responsibility is the data center's security only.  
 
@@ -26,7 +26,7 @@ Once you understand that the security offered by cloud providers is insufficient
 
 So why should you consider using this type of tool?   
 
-Here are just some of the [CSPM](https://cyscale.com/blog/cloud-security-posture-management-cspm-guide) capabilities that might make you want to start using one for your cloud infrastructure: 
+Here are just some of the [CSPM](https://cyscale.com/blog/cloud-security-posture-management-cspm-guide/) capabilities that might make you want to start using one for your cloud infrastructure: 
 
 ## Misconfiguration detection and prevention
 

@@ -190,7 +190,7 @@ const Index = () => {
                 <GetStarted
                     description='Discover the most flexible pricing in the cloud security industry'
                     btnText='SEE PRICING OPTIONS'
-                    btnLink='/pricing'
+                    btnLink='/pricing/'
                     icon={getStartedICon}
                 />
             </div>

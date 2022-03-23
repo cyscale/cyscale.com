@@ -10,7 +10,6 @@ import messageIcon from '../../assets/images/chat_icon.svg';
 import searchIcon from '../../assets/images/search.svg';
 import cloudIcon from '../../assets/images/cloud.svg';
 import poster from '../../assets/images/offer-dashboard.svg';
-import iconOne from '../../assets/images/getStartedICon.svg';
 import iconTwo from '../../assets/images/elemente-vectoriale-07.png';
 import iconThree from '../../assets/images/elemente-vectoriale-08.png';
 import icon5 from '../../assets/images/visuals-vectorial-5.svg';
@@ -26,7 +25,7 @@ const Home = () => {
             description1:
                 'Evaluate, improve, and automatically monitor compliance levels with a great range of regulatory standards, including GDPR, HIPAA, PCI-DSS, ISO 27001, and NIST.\n\n Check if policies are correctly implemented for all cloud service providers from a single dashboard and get alerts for issues as they appear. \n\n Deploy new and updated policies across multi-cloud environments and track every change with our 1-year data retention and data export options.',
             linkText: 'explore compliance features',
-            linkURL: '/use-cases/cloud-compliance-and-auditing',
+            linkURL: '/use-cases/cloud-compliance-and-auditing/',
             img: messageIcon
         },
         {
@@ -34,7 +33,7 @@ const Home = () => {
             description1:
                 'Bridge multiple environments with Cyscale and visualise your cloud inventory in full.\n\n Discover unused, forgotten cloud resources and eliminate them to get smaller invoices from cloud providers and optimize costs for the whole organization. \n\n See accurate correlations across all cloud accounts and assets as soon as you sign up and act on alerts to avoid fines for data breaches.',
             linkText: 'Explore cloud security features',
-            linkURL: '/products/cloud-security-posture-management',
+            linkURL: '/products/cloud-security-posture-management/',
             img: searchIcon
         },
         {
@@ -42,7 +41,7 @@ const Home = () => {
             description1:
                 'Fingerprint all cloud data repositories with Cyscale and quickly identify assets that violate security controls.\n\n Onboard your team in 30 minutes and coordinate efforts to check 500+ out-of-the-box security rules and policies. \n\n The Cyscale Security Knowledge Graph™ captures the interconnectedness between assets, identities, and data so you can easily track, evaluate and remediate cybersecurity issues.',
             linkText: 'explore data security features',
-            linkURL: '/use-cases/cloud-data-security',
+            linkURL: '/use-cases/cloud-data-security/',
             img: cloudIcon
         }
     ];
@@ -52,7 +51,7 @@ const Home = () => {
             description1:
                 'Get rich, accurate correlations between all your cloud accounts, SaaS platforms, and assets. Cyscale provides automated reasoning that pinpoints data security issues in context.',
             btnText: 'See how it works',
-            bntLink: '/products/security-knowledge-graph',
+            bntLink: '/products/security-knowledge-graph/',
             tabBodyTitle: 'Security Knowledge Graph™',
             tabBodyImage: <SecurityKnowledgeGraph />
         },
@@ -61,7 +60,7 @@ const Home = () => {
             description1:
                 'Achieve deep, extensive visibility of your entire cloud environment. Map all cloud assets with zero scripts or manual work and automatically track changes that impact your attack surface.',
             btnText: 'Explore features',
-            bntLink: '/use-cases/cloud-data-security',
+            bntLink: '/use-cases/cloud-data-security/',
             tabBodyTitle: 'Real-time cloud inventory',
             tabBodyImage: <CloudNative />
         },
@@ -70,7 +69,7 @@ const Home = () => {
             description1:
                 'Reduce your workload with the 500+ ready-to-use security controls and policies on the platform and automatically demonstrate compliance.',
             btnText: 'Get the details',
-            bntLink: '/use-cases/remote-work-security',
+            bntLink: '/use-cases/remote-work-security/',
             tabBodyTitle: 'Remote work compliance',
             tabBodyImage: <RemoteWorkWft />
         },
@@ -79,7 +78,7 @@ const Home = () => {
             description1:
                 'Offload collecting inline evidence for each policy to Cyscale and relieve compliance and security specialists of tedious manual data gathering. Export results that match your workflow.',
             btnText: 'Streamline compliance',
-            bntLink: '/use-cases/cloud-compliance-and-auditing',
+            bntLink: '/use-cases/cloud-compliance-and-auditing/',
             tabBodyTitle: 'Automated evidence collection',
             tabBodyImage: <DataGathering />
         }
@@ -127,14 +126,14 @@ const Home = () => {
             description:
                 'Manage users, roles, permissions, and controls with powerful contextual analysis and alerts that cover your entire cloud infrastructure.',
             lintText: 'Use Cyscale for cybersecurity',
-            linkURL: '/use-cases/cloud-data-security'
+            linkURL: '/use-cases/cloud-data-security/'
         },
         {
             title: 'Compliance',
             description:
                 'Prove alignment with the highest standards, enforce policies consistently across cloud providers and scale compliance efforts without overhead.',
             lintText: 'Use Cyscale for compliance',
-            linkURL: '/use-cases/cloud-compliance-and-auditing'
+            linkURL: '/use-cases/cloud-compliance-and-auditing/'
         },
         {
             title: 'Remote Work',
@@ -151,14 +150,14 @@ const Home = () => {
                 '.'
             ],
             lintText: 'Use Cyscale to reduce exposure',
-            linkURL: '/use-cases/remote-work-security'
+            linkURL: '/use-cases/remote-work-security/'
         },
         {
             title: 'Managed security',
             description:
                 'Scale your expertise to serve more customers by using Cyscale to deliver a superior map of their cloud attack surface while managing their cloud security with visible, transparent results.',
             lintText: 'Use Cyscale to grow your business',
-            linkURL: '/products/cloud-security-posture-management'
+            linkURL: '/products/cloud-security-posture-management/'
         }
     ];
 

@@ -62,13 +62,13 @@ These unintentional configuration mistakes are likely to occur because of the co
 
 </div>
 
-We've all heard about major breaches that happened because of AWS S3 buckets being publicly accessible. (This exact [misconfiguration happened to Romania's largest real estate portal](https://cyscale.com/blog/realestate-data-breach "https\://cyscale.com/blog/realestate-data-breach") ). 
+We've all heard about major breaches that happened because of AWS S3 buckets being publicly accessible. (This exact [misconfiguration happened to Romania's largest real estate portal](https://cyscale.com/blog/realestate-data-breach/ "https\://cyscale.com/blog/realestate-data-breach") ). 
 
 Many cloud application creators or maintainers don't believe this can happen to them, but, for example, when new virtual machines are launched in a hurry by a less experienced DevOps engineer, mistakes can occur and networks that should have been private are now public and exposed.
 
 Other common misconfigurations that attackers are often exploiting are overprivileged credentials. Restricting users' access to data and resources to only what is strictly required for them to do their jobs is a must, in other words, you need to use the **least privilege principle**.
 
-The [CSPM tool](https://cyscale.com/products/cloud-security-posture-management) will report and advise against using overly permissive account settings for your users, and at the same time remind you to use encryption, thus strengthening your security and making it even harder for an unauthorized or malicious individual to access and expose your data. 
+The [CSPM tool](https://cyscale.com/products/cloud-security-posture-management/) will report and advise against using overly permissive account settings for your users, and at the same time remind you to use encryption, thus strengthening your security and making it even harder for an unauthorized or malicious individual to access and expose your data. 
 
 The advanced CSPM solutions we see these days offer continuous monitoring, risk assessments, remediation recommendations based on security best practices, and assistance for compliance with the most common security frameworks and standards. 
 

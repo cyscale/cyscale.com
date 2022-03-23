@@ -208,7 +208,7 @@ const Index = () => {
                 <CSPMgetStarted
                     title={`Discover the most flexible pricing in the cloud security industry`}
                     btnText='SEE PRICING OPTIONS'
-                    btnLink='/pricing'
+                    btnLink='/pricing/'
                 />
             </div>
             <Cloud f_image={SKG_F_image_2} sectionName='systemGov' data={dataSystemGov} />
