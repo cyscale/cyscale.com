@@ -43,7 +43,7 @@ const Fproducts = ({ sectionTitle, data }) => {
                         ))}
                     </TabList>
                     {data.map((content, index) => (
-                        <TabPanel key={index}>
+                        <TabPanel forceRender={true} key={index}>
                             <div className='max-w-1366px relative m-auto pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px'>
                                 <div className='mt-32 mb-16'>
                                     <Sectionheader
