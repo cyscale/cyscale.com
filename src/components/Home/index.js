@@ -11,8 +11,8 @@ import searchIcon from '../../assets/images/search.svg';
 import cloudIcon from '../../assets/images/cloud.svg';
 import poster from '../../assets/images/offer-dashboard.svg';
 import iconOne from '../../assets/images/getStartedICon.svg';
-import iconTwo from '../../assets/images/elemente-vectoriale-07.svg';
-import iconThree from '../../assets/images/elemente-vectoriale-08.svg';
+import iconTwo from '../../assets/images/elemente-vectoriale-07.png';
+import iconThree from '../../assets/images/elemente-vectoriale-08.png';
 import icon5 from '../../assets/images/visuals-vectorial-5.svg';
 import { SecurityKnowledgeGraph, CloudNative, RemoteWorkWft, DataGathering } from './images';
 import { useAppLink } from '../../common/links';
@@ -174,7 +174,6 @@ const Home = () => {
                     description='Discover the most flexible pricing in the cloud security industry'
                     btnText='See pricing options'
                     btnLink='/pricing'
-                    icon={iconOne}
                 />
             </div>
             <Offer
@@ -189,7 +188,6 @@ const Home = () => {
                     btnText=' Try Cyscale for free'
                     btnLink={appLink}
                     ExternalLink
-                    icon={iconOne}
                 />
             </div>
             <Cloud

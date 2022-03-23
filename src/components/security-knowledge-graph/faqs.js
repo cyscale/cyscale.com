@@ -2,7 +2,7 @@ import { Link } from 'gatsby';
 import React, { useState } from 'react';
 
 import TabsArrow from '../../assets/images/arrow-Down-red.svg';
-import f_image from '../../assets/images/Group-398.svg';
+import f_image from '../../assets/images/faqs.png';
 
 const FAQs = () => {
     const [tabActive, setTabActive] = useState(0);

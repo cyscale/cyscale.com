@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import TopNav from './topNav';
 import HeaderContext from './HeaderContext';
 import ScrollButton from '../ScrollButton/ScrollButton';
-import RemoteWorkBannerImage from '../../assets/images/remote-work-banner-image.svg';
-import ComplianceBannerImage from '../../assets/images/compliance-banner-image.svg';
+import RemoteWorkBannerImage from '../../assets/images/remote-work-banner-image.png';
+import ComplianceBannerImage from '../../assets/images/compliance-banner-image.png';
 import { ISO27001Small, AicpaSoc2Small, CisBenchmarksSmall, EuEuropeanGdprSmall, USHipaaSmall, PciDssSmall, NistSmall } from '../Home/images';
 const Header = ({
     heroBG,

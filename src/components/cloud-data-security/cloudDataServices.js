@@ -7,7 +7,7 @@ const Services = ({ data, bannerBtn1Text, bannerBtn1Link }) => {
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-16 xl:gap-32 border-t border-b border-white border-solid pt-50px pb-50px'>
                     {data.map((content, index) => (
                         <div key={index}>
-                            <img src={content.icon} alt={content.title} className='h-68px' />
+                            {React.cloneElement(content.icon, { alt: content.title, className: 'h-16' })}
                             <p className='text-16px text-black new-line leading-normal mt-24px'>
                                 <strong className='block w-auto'>{content.title}</strong>
                                 {content.description}

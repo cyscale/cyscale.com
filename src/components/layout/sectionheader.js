@@ -1,5 +1,5 @@
 import React from 'react';
-import headerImage from '../../assets/images/remote-work-heading-image.svg';
+import headerImage from '../../assets/images/remote-work-heading-image.png';
 
 const Sectionheader = ({ headingText, description, subText, pageName, section }) => {
     return (

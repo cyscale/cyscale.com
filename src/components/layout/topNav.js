@@ -1,13 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'gatsby';
-import featureImage from '../../assets/images/about-us-f-image-yellow-pot.svg';
+import featureImage from '../../assets/images/about-us-f-image-yellow-pot.png';
 import ArrowRight from '../../assets/images/arrow-right.svg';
 import image2 from '../../assets/images/integration-oracle-cloud-infrastructure-oci-security-logo.png';
-import heroBG from '../../assets/images/knowledge-graph-hero-image.svg';
+import heroBG from '../../assets/images/knowledge-graph-hero-image.png';
 import image5 from '../../assets/images/integration-kubernetes-cluster-k8s-security-logo.png';
 import logo from '../../assets/images/logo.svg';
 import usescasesImage from '../../assets/images/menu-f-image.svg';
-import CloudDataImage from '../../assets/images/resources-icon.svg';
+import CloudDataImage from '../../assets/images/resources-icon.png';
 import image7 from '../../assets/images/integration-amazon-web-services-aws-logo.png';
 import image8 from '../../assets/images/integration-microsoft-azure-cloud-logo.png';
 import image9 from '../../assets/images/integration-google-cloud-platform-gcp-logo.png';
