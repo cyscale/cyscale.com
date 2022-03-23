@@ -1,14 +1,13 @@
 import React from 'react';
 import Sectionheader from '../layout/sectionheader';
-import Services from './remoteWorkServices';
 import SecureRemoteAccess from './secureRemoteAccess';
 import GetStarted from '../Home/getstarted';
-import Shield from '../../assets/images/shield.svg';
-import workFromHome from '../../assets/images/work-from-home.svg';
+import Shield from '../../assets/images/shield.inline.svg';
+import WorkFromHome from '../../assets/images/work-from-home.inline.svg';
 import CodeAnalysis from '../../assets/images/graph-viewer-code-analysis.svg';
 import EmployeeAccessFootprint from '../../assets/images/employee-access-footprint.svg';
 import getStartedICon from '../../assets/images/getStartedIconCPSM.svg';
-import SuperChargeCloudSecurityImage from '../../assets/images/supercharge-cloud-security.svg';
+import SuperChargeCloudSecurityImage from '../../assets/images/supercharge-cloud-security.png';
 import CloudSecuirtyConfigurationImage from '../../assets/images/cloud-secuity-configuration.svg';
 import { useAppLink } from '../../common/links';
 import { Link } from 'gatsby';
@@ -18,7 +17,7 @@ export default function RemoteWorkContent() {
 
     const dataWFHServices = [
         {
-            icon: Shield,
+            icon: <Shield />,
             title: 'Solve pressing WFH security issues',
             subItems: [
                 ['Limited cloud usage visibility'],
@@ -29,7 +28,7 @@ export default function RemoteWorkContent() {
             ]
         },
         {
-            icon: workFromHome,
+            icon: <WorkFromHome />,
             title: 'Safely support remote work',
             subItems: [
                 ['Built-in Remote Work policy'],
@@ -48,8 +47,23 @@ export default function RemoteWorkContent() {
             >
                 <Sectionheader headingText='Use the Cyscale Cloud Platform to' pageName='RemoteWork' />
             </div>
-            <Services data={dataWFHServices} />
-
+            <div className='max-w-1366px m-auto mb-16 lg:mb-44 pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px'>
+                <div className='grid grid-cols-1 lg:grid-cols-3 gap-6 xl:gap-32'>
+                    {dataWFHServices.map((content, index) => (
+                        <div key={index}>
+                            {React.cloneElement(content.icon, { src: content.icon, alt: content.title })}
+                            <p className='text-base text-black mb-7'>
+                                <strong>{content.title}</strong>
+                            </p>
+                            {content.subItems.map((items, index2) => (
+                                <p key={index2} className='text-base text-black mb-4'>
+                                    {items}
+                                </p>
+                            ))}
+                        </div>
+                    ))}
+                </div>
+            </div>
             <SecureRemoteAccess
                 image={CodeAnalysis}
                 headingFirst='Protect remote teams & their work'

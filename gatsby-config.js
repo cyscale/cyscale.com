@@ -24,6 +24,14 @@ module.exports = {
             options: { exclude: ['/campaigns/**'] }
         },
         {
+            resolve: 'gatsby-plugin-react-svg',
+            options: {
+                rule: {
+                    include: /\.inline\.svg$/
+                }
+            }
+        },
+        {
             resolve: `gatsby-plugin-purgecss`,
             options: {
                 develop: true,

@@ -18,11 +18,11 @@ export default function Arrow({ direction = 'left', ...rest }) {
             `}
             >
                 <img
-                    alt=""
+                    alt=''
                     width={16}
                     height={16}
                     src={arrowLeft}
-                    className={direction === 'right' && 'transform rotate-180'}
+                    className={direction === 'right' ? 'transform rotate-180' : ''}
                 />
             </div>
         </button>

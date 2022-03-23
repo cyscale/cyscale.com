@@ -11,5 +11,5 @@ export default function useHubSpot({ formId, target }) {
                 });
             }
         }, 600);
-    }, []);
+    }, [formId, target]);
 }

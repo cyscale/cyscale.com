@@ -1,13 +1,13 @@
 import React from 'react';
 import { Container, Row, Section } from '../components/atoms/Containers';
 import Layout from '../components/layout/CleanLayout';
-import hire from '../assets/images/hire.svg';
-import stocks from '../assets/images/stocks.svg';
-import personalDayOff from '../assets/images/personal-day-off.svg';
-import homeWork from '../assets/images/home-work.svg';
-import certification from '../assets/images/certification.svg';
-import heart from '../assets/images/heart.svg';
-import daysOff from '../assets/images/day-off.svg';
+import Hire from '../assets/images/hire.inline.svg';
+import Stocks from '../assets/images/stocks.inline.svg';
+import PersonalDayOff from '../assets/images/personal-day-off.inline.svg';
+import HomeWork from '../assets/images/home-work.inline.svg';
+import Certification from '../assets/images/certification.inline.svg';
+import Heart from '../assets/images/heart.inline.svg';
+import DaysOff from '../assets/images/day-off.inline.svg';
 import Slider from 'react-slick';
 import Arrow from '../components/slick/Arrow';
 import { useStaticQuery, graphql, Link } from 'gatsby';
@@ -56,12 +56,12 @@ const settings = {
 };
 
 const benefits = [
-    { title: 'Shares', description: 'from the employee stock options plan (ESOP) ', icon: stocks },
-    { title: 'Private medical insurance', description: '', icon: heart },
-    { title: 'Days off', description: 'a minimum of 25 days annual leave', icon: daysOff },
-    { title: 'Trainings/certifications allowance', description: 'up to 1000 EUR / year', icon: certification },
-    { title: 'Home office setup', description: 'equipment + expenses (up to 50 EUR / month)', icon: homeWork },
-    { title: 'Personal days off', description: 'up to 3 days / year', icon: personalDayOff }
+    { title: 'Shares', description: 'from the employee stock options plan (ESOP) ', icon: <Stocks /> },
+    { title: 'Private medical insurance', description: '', icon: <Heart /> },
+    { title: 'Days off', description: 'a minimum of 25 days annual leave', icon: <DaysOff /> },
+    { title: 'Trainings/certifications allowance', description: 'up to 1000 EUR / year', icon: <Certification /> },
+    { title: 'Home office setup', description: 'equipment + expenses (up to 50 EUR / month)', icon: <HomeWork /> },
+    { title: 'Personal days off', description: 'up to 3 days / year', icon: <PersonalDayOff /> }
 ];
 
 const Careers = ({ location }) => {
@@ -114,7 +114,7 @@ const Careers = ({ location }) => {
                                     </ScrollLink>
                                 </div>
                                 <div className='col-span-12 mb-10 lg:mb-0 lg:col-span-6 lg:pl-8 order-1 lg:order-2'>
-                                    <img src={hire} alt='We are hiring' className='mx-auto w-auto h-auto' />
+                                    <Hire alt='We are hiring' className='mx-auto w-auto h-auto'/>
                                 </div>
                             </Row>
                         </Section>
@@ -193,7 +193,10 @@ const Careers = ({ location }) => {
                                 {benefits.map(({ title, description, icon }) => (
                                     <div className='col-span-12 lg:col-span-6 my-6'>
                                         <div className='flex items-center'>
-                                            <img src={icon} alt='' className='w-16 h-16 md:w-20 md:h-20' />
+                                            {React.cloneElement(icon, {
+                                                className: 'w-16 h-16 md:w-20 md:h-20',
+                                                alt: 'decoration'
+                                            })}
                                             <div className='ml-8'>
                                                 <h3 className='text-normal md:text-xl lg:text-2xl'>{title}</h3>
                                                 <p className='text-sm md:text-normal lg:text-lg'>{description}</p>
