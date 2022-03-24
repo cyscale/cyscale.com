@@ -43,18 +43,18 @@ const AWSCloudSecurity = ({ location }) => {
                                 <div className='col-span-12 lg:col-span-5 text-white'>
                                     <div className='max-w-lg mx-auto lg:ml-0 lg:mr-auto'>
                                         <h1 style={{ lineHeight: 1.5 }} className='text-3xl lg:text-5xl mb-10'>
-                                            AWS Cloud Security and compliance
+                                            AWS Cloud Security and Compliance
                                         </h1>
                                         <p className='mb-6 text-xl'>
-                                            Map, secure, and monitor your AWS assets in minutes.
+                                            Map, secure, and monitor your AWS assets in minutes
                                         </p>
                                         <ul className='list-disc pl-3 ml-4'>
-                                            <li className='mb-2 text-lg'>Real-time contextual analysis</li>
+                                            <li className='mb-2 text-lg'>Have a simple view of all your assets across all regions and accounts</li>
                                             <li className='mb-2 text-lg'>
-                                                Detect and eliminate misconfigurations with drift detection
+                                                Detect, understand the impact of, and remediate infrastructure misconfigurations
                                             </li>
                                             <li className='mb-2 text-lg'>
-                                                Compliance checks with automated policy assessments
+                                                Stay compliant with CIS benchmarks, industry standards, and your internal policies
                                             </li>
                                         </ul>
                                     </div>
@@ -70,7 +70,7 @@ const AWSCloudSecurity = ({ location }) => {
                                         <h2 className='text-2xl leading-normal text-primary mb-1'>
                                             Request a live demo
                                         </h2>
-                                        <div id='request-aws-demo' style={{ minHeight: 510 }}></div>
+                                        <div id='request-aws-demo' style={{ minHeight: 450 }}></div>
                                     </div>
                                 </div>
                             </Row>
