@@ -72,8 +72,8 @@ const History = () => {
                                     rel='noopener noreferrer'
                                 >
                                     Notion Capital
-                                </a>{' '}
-                                and{' '}
+                                </a>
+                                ,{' '}
                                 <a
                                     className='text-blue'
                                     href='https://seedcamp.com/'
@@ -82,10 +82,19 @@ const History = () => {
                                 >
                                     Seedcamp
                                 </a>
+                                , and{' '}
+                                <a
+                                    className='text-blue'
+                                    href='https://gapminder.vc'
+                                    target='_blank'
+                                    rel='noopener noreferrer'
+                                >
+                                    GapMinder
+                                </a>
                                 .
                             </p>
                             <p className='text-sm text-grey2 mt-8'>
-                                Our team is growing fast. The Security Knowledge GraphTM helps more and more
+                                Our team is growing fast. The Security Knowledge Graph™ helps more and more
                                 organizations understand their digital footprint, enabling them to secure and protect
                                 their most valuable assets.
                             </p>
