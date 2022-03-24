@@ -6,13 +6,11 @@ import Cloud from './cloud';
 import Partners from './partners';
 import Articles from './articles';
 import Sectionheader from '../layout/sectionheader';
-import messageIcon from '../../assets/images/chat_icon.svg';
-import searchIcon from '../../assets/images/search.svg';
-import cloudIcon from '../../assets/images/cloud.svg';
-import poster from '../../assets/images/offer-dashboard.svg';
+import messageIcon from '../../assets/images/chat_icon.png';
+import searchIcon from '../../assets/images/search.png';
+import cloudIcon from '../../assets/images/cloud.png';
 import iconTwo from '../../assets/images/elemente-vectoriale-07.png';
 import iconThree from '../../assets/images/elemente-vectoriale-08.png';
-import icon5 from '../../assets/images/visuals-vectorial-5.svg';
 import { SecurityKnowledgeGraph, CloudNative, RemoteWorkWft, DataGathering } from './images';
 import { useAppLink } from '../../common/links';
 
@@ -178,7 +176,6 @@ const Home = () => {
             <Offer
                 headingText='Cyscale Cloud Platform - supercharged cloud security'
                 description={`Only the best tools fade into the background and help you focus on getting your best work done. \n\nThat's why we've built all of this and more into the platform.`}
-                poster={poster}
                 data={dataOffer}
             />
             <div className='gradientBG'>
@@ -192,7 +189,6 @@ const Home = () => {
             <Cloud
                 title='Visibility, governance & compliance for all your cloud assets'
                 sectionName='compliance'
-                f_image={icon5}
                 data={dataCloud}
             />
             <div className='cloudBenifits bg-lightGrey pb-71px'>

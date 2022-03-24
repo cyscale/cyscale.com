@@ -31,7 +31,7 @@ const AWSCloudSecurity = ({ location }) => {
             <header id='head' className='bg-lightGrey pt-3 pb-2'>
                 <Container>
                     <Link to='/' className='inline-flex'>
-                        <img className='block ' src={logo} alt='Cyscale' />
+                        <img className='block h-10' src={logo} alt='Cyscale' />
                     </Link>
                 </Container>
             </header>

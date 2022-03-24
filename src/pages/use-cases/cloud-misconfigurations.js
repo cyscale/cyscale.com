@@ -3,8 +3,8 @@ import React from 'react';
 import heroBG from '../../assets/images/hero-CSPM-bg.svg';
 import { useAppLink } from '../../common/links';
 import Layout from '../../components/layout/layout.js';
-import iconTwo from '../../assets/images/elemente-vectoriale-07.svg';
-import iconThree from '../../assets/images/elemente-vectoriale-08.svg';
+import iconTwo from '../../assets/images/elemente-vectoriale-07.png';
+import iconThree from '../../assets/images/elemente-vectoriale-08.png';
 import {
     DetectPreventMisconfigurations,
     CutNoise,

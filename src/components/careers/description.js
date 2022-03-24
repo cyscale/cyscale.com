@@ -19,7 +19,7 @@ const Description = ({ data }) => {
                 {data.frontmatter.disabled && (
                     <div className='shadow-lg rounded-lg p-6 text-gray'>
                         This job is disabled. Please check the list of{' '}
-                        <Link className='text-primary' to='/careers'>
+                        <Link className='text-primary' to='/careers/'>
                             available jobs
                         </Link>
                         .

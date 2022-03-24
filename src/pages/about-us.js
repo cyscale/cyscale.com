@@ -14,7 +14,7 @@ import { Container, Row, Section } from '../components/atoms/Containers';
 import Layout from '../components/layout/CleanLayout';
 import History from '../components/about/history';
 import GetStarted from '../components/Home/getstarted';
-import getStartedIcon from '../assets/images/getStartedICon.svg';
+import getStartedIcon from '../assets/images/elemente-vectoriale-07.png';
 import { useAppLink } from '../common/links';
 import data from '../components/careers/data';
 import { Link } from 'gatsby';

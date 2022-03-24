@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import TopNav from './topNav';
 import HeaderContext from './HeaderContext';
 import ScrollButton from '../ScrollButton/ScrollButton';
-import RemoteWorkBannerImage from '../../assets/images/remote-work-banner-image.png';
-import ComplianceBannerImage from '../../assets/images/compliance-banner-image.png';
+import remoteWorkBannerImage from '../../assets/images/remote-work-banner-image.png';
+import complianceBannerImage from '../../assets/images/compliance-banner-image2.png';
 import { ISO27001Small, AicpaSoc2Small, CisBenchmarksSmall, EuEuropeanGdprSmall, USHipaaSmall, PciDssSmall, NistSmall } from '../Home/images';
 const Header = ({
     heroBG,
@@ -161,19 +161,11 @@ const Header = ({
                                         ) : null}
                                     </div>
                                 </div>
-                                {pageName === 'RemoteWork' && (
-                                    <div className={`lg:pt-14 order-1 lg:order-2`}>
-                                        <img
-                                            src={RemoteWorkBannerImage}
-                                            alt='Cloud security and visibility for remote work setups'
-                                            className='lg:mx-auto w-36 lg:w-auto h-auto'
-                                        />
-                                    </div>
-                                )}
+                              
                                 {pageName === 'ComplianceAuditing' && (
                                     <div className={`lg:pt-14`}>
                                         <img
-                                            src={ComplianceBannerImage}
+                                            src={complianceBannerImage}
                                             alt='Cloud security and visibility for remote work setups'
                                             className='lg:mx-auto w-36 lg:w-auto h-auto hidden lg:block'
                                         />
@@ -186,6 +178,15 @@ const Header = ({
                                             <PciDssSmall />
                                             <NistSmall />
                                         </div>
+                                    </div>
+                                )}
+                                  {pageName === 'RemoteWork' && (
+                                    <div className={`lg:pt-14 order-1 lg:order-2`}>
+                                        <img
+                                            src={remoteWorkBannerImage}
+                                            alt='Cloud security and visibility for remote work setups'
+                                            className='mx-auto w-40 lg:w-auto h-auto'
+                                        />
                                     </div>
                                 )}
                             </div>
