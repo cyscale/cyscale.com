@@ -12,7 +12,7 @@ const dataFeaturedProducts = [
         tabTitle: 'Cut through the noise with targeted alerts',
         sectionTitle: 'Cut through the noise',
         sectionDescription: [
-            "Get relevant alerts when your cloud assets drift away from established security and compliance standards.\n\nMake Cyscale your single source of truth for CSPM and never miss an important security event. \n\nMove beyond bulky, list-based management. Cyscale's",
+            "Get relevant alerts when your cloud assets drift away from established security and compliance standards.\n\nMake Cyscale your single source of truth for Cloud Security Posture Management (CSPM) and never miss an important security event. \n\nMove beyond bulky, list-based management. Cyscale's",
             ' ',
             <a
                 href='/products/security-knowledge-graph/'
