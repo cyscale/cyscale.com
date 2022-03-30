@@ -47,7 +47,7 @@ const Index = () => {
             tabTitle: 'Reduce friction across your entire workflow',
             sectionTitle: 'Reduce workflow friction',
             sectionDescription: `Forget the hassle of multiple logins into various cloud accounts, with different dashboards and
-      features. Get all your cloud assets under one roof and group them in just a few clicks. \n\nWith Cyscale you get comprehensive, agentless CSPM, compliance and data protection
+      features. Get all your cloud assets under one roof and group them in just a few clicks. \n\nWith Cyscale you get comprehensive, agentless Cloud Security Posture Management (CSPM), compliance and data protection
       capabilities for your entire cloud inventory - serverless, databases and apps included.`,
             featureImage: <OptimizeCosts />
         },
