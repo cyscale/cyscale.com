@@ -6,16 +6,16 @@ location: Romania
 date: 2022-04-01T09:09:55.900Z
 permalink: web-developer
 description: Cyscale is a startup with offices in London (UK) and Cluj-Napoca (RO), activating in the cloud cybersecurity industry. We are looking for an experienced Web Developer.
-skills: HTML5, CSS3, JavaScript, GatsbyJS, React.js, Github
+skills: HTML5, CSS3, JavaScript, GatsbyJS, React.js, Github, CMS
 experience: junior/mid
 department: Engineering
-workType: hybrid
-employmentType: part-time
+workType: remote
+employmentType: full-time
 ---
 
 ## Job description
 
-You will be part of a dedicated web development team committed to improve users conversion, SEO and product discovery. You will build new website pages, fix/improve existing components, aim for web and SEO good practices, monitor the website performance, track user behavior using various tools.
+You will be part of a dedicated web development team committed to improving user conversion, SEO, and product discovery. You will build new website pages, fix/improve existing components, enhance the CMS integration, aim for web and SEO good practices, monitor the website performance, and track user behavior using various tools.
 
 ## Benefits
 
@@ -42,6 +42,7 @@ You will be part of a dedicated web development team committed to improve users 
 -   2+ years of experience as a web developer
 -   Experience with Gatsby, React and TailwindCSS is a plus
 -   Experience with GTM, Google Analytics, Hotjar and Hubspot is a plus
+-   Experience with a headless CMS (we currently use Netlify CMS)
 -   You know how to write quality, reusable components and CSS stylesheets
 -   Proficiency in browser performance tools
 -   Good understanding of SEO and user tracking
