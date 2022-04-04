@@ -32,6 +32,30 @@ module.exports = {
             }
         },
         {
+            resolve: `gatsby-plugin-webfonts`,
+            options: {
+                fonts: {
+                    google: [
+                        {
+                            strategy: 'cdn',
+                            family: 'Roboto',
+                            fontDisplay: 'swap',
+                            variants: ['400', '500', '600', '700'],
+                        },
+                        {
+                            strategy: 'cdn',
+                            fontDisplay: 'swap',
+                            family: 'Roboto Mono',
+                            variants: ['400', '500', '600', '700'],
+                        }
+                    ]
+                },
+                useMinify: true,
+                usePreload: true,
+                usePreconnect: true
+            }
+        },
+        {
             resolve: `gatsby-plugin-purgecss`,
             options: {
                 develop: true,
@@ -61,8 +85,8 @@ module.exports = {
         {
             resolve: 'gatsby-source-filesystem',
             options: {
-                path: `${__dirname}/src/pages`,
-                name: 'pages'
+                path: `${__dirname}/src/markdown`,
+                name: 'markdown'
             }
         },
         'gatsby-plugin-sharp',

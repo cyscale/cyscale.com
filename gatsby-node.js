@@ -35,7 +35,10 @@ exports.createPages = async ({ graphql, actions }) => {
 
     await graphql(`
         query loadPagesQuery {
-            allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "career-page" } } }) {
+            allMarkdownRemark(
+                sort: { order: DESC, fields: frontmatter___date }
+                filter: { frontmatter: { templateKey: { eq: "career-page" } } }
+            ) {
                 edges {
                     node {
                         frontmatter {
@@ -77,7 +80,10 @@ exports.createPages = async ({ graphql, actions }) => {
     await graphql(
         `
             query loadPagesQuery {
-                allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "blog-post" } } }) {
+                allMarkdownRemark(
+                    sort: { order: DESC, fields: frontmatter___date }
+                    filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+                ) {
                     edges {
                         node {
                             frontmatter {
@@ -125,7 +131,7 @@ exports.createPages = async ({ graphql, actions }) => {
                 component: blogTemplate,
                 context: {
                     alldata: node,
-                    suggestions: [posts[0], posts[1], posts[2], posts[4]]
+                    suggestions: [posts[0], posts[1], posts[2]]
                 }
             });
         });

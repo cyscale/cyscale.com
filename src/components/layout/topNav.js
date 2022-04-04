@@ -128,10 +128,10 @@ const TopNav = ({ pageName }) => {
                                     <div className='mx-auto w-full grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 justify-between'>
                                         <div>
                                             <div className='flex flex-col'>
-                                                {navigation.platform.map(({ link, text }) => (
+                                                {navigation.platform.map(({ link, text }, key) => (
                                                     <Link
                                                         to={link}
-                                                        key={link}
+                                                        key={key}
                                                         activeClassName='active'
                                                         activeStyle={{ color: '#0F26AA' }}
                                                         className='text-base text-black hover:text-blue hover:no-underline mb-7 last:mb-0'
@@ -206,10 +206,10 @@ const TopNav = ({ pageName }) => {
                                     <div className=' max-w-4xl grid grid-cols-1 lg:grid-cols-2  gap-6 ml-auto justify-end p-6 mb-16 sm:mb-0 shadow-2xl bg-teal-700 bg-white'>
                                         <div>
                                             <div className='flex flex-col'>
-                                                {navigation.usecases.map(({ link, text }) => (
+                                                {navigation.usecases.map(({ link, text }, key) => (
                                                     <Link
                                                         to={link}
-                                                        key={link}
+                                                        key={key}
                                                         activeClassName='active'
                                                         activeStyle={{ color: '#0F26AA' }}
                                                         className='text-base text-black hover:text-blue hover:no-underline leading-normal mb-7 last:mb-0'
@@ -266,11 +266,11 @@ const TopNav = ({ pageName }) => {
                                     <div className='max-w-4xl grid grid-cols-1 lg:grid-cols-2  gap-6 ml-auto justify-end p-6 mb-16 sm:mb-0 shadow-2xl bg-teal-700 bg-white'>
                                         <div>
                                             <div className='flex flex-col'>
-                                                {navigation.resources.map(({ link, text, blank }) =>
+                                                {navigation.resources.map(({ link, text, blank }, key) =>
                                                     blank ? (
                                                         <a
                                                             href={link}
-                                                            key={link}
+                                                            key={key}
                                                             target='_blank'
                                                             rel='noopener noreferrer'
                                                             className='text-base text-black hover:text-blue hover:no-underline leading-normal mb-7 last:mb-0'
@@ -280,7 +280,7 @@ const TopNav = ({ pageName }) => {
                                                     ) : (
                                                         <Link
                                                             to={link}
-                                                            key={link}
+                                                            key={key}
                                                             activeClassName='active'
                                                             activeStyle={{ color: '#0F26AA' }}
                                                             className='text-base text-black hover:text-blue hover:no-underline leading-normal mb-7 last:mb-0'
@@ -335,10 +335,10 @@ const TopNav = ({ pageName }) => {
                                     <div className='max-w-4xl grid grid-cols-1 lg:grid-cols-3  gap-6 ml-auto justify-end p-6 mb-16 sm:mb-0 shadow-2xl bg-teal-700 bg-white'>
                                         <div>
                                             <div className='flex flex-col'>
-                                                {navigation.company.map(({ link, text }) => (
+                                                {navigation.company.map(({ link, text }, key) => (
                                                     <Link
                                                         to={link}
-                                                        key={link}
+                                                        key={key}
                                                         activeClassName='active'
                                                         activeStyle={{ color: '#0F26AA' }}
                                                         className='text-base text-black hover:text-blue hover:no-underline leading-normal mb-7 last:mb-0'

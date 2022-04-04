@@ -1,10 +1,9 @@
 .blog-reset {
     line-height: 1.5;
-    font-size: 1.2rem;
-    font-family: 'Roboto', sans-serif;
+    font-size: 1.1875rem;
 }
 .blog-reset p {
-    font-size: 1.2rem;
+    font-size: 1.1875rem;
     margin-top: 1.5rem;
 }
 
@@ -12,11 +11,23 @@
 .blog-reset h2,
 .blog-reset h3,
 .blog-reset h4,
-.blog-reset h5,
-.blog-reset h6 {
+.blog-reset h5 {
     margin: 0;
     font-weight: 600;
-    margin-top: 2rem;
+}
+
+.blog-reset h1,
+.blog-reset h2,
+.blog-reset h3 {
+    margin-top: 3rem;
+    margin-bottom: -1rem;
+}
+
+.blog-reset h4,
+.blog-reset h5,
+.blog-reset h5 {
+    margin-top: 1.5rem;
+    margin-bottom: -1rem;
 }
 
 .blog-reset h1 {
@@ -36,7 +47,7 @@
 }
 
 .blog-reset h5 {
-    font-size: 1.1rem;
+    font-size: 1.1875rem;
 }
 
 .blog-reset small {
@@ -51,16 +62,28 @@
 .blog-reset ul {
     margin-top: 1.5rem;
     list-style: initial;
-    padding-left: 2.5rem;
+    padding-left: 3rem;
+}
+
+.blog-reset ol {
+    list-style: number;
+
 }
 
 .blog-reset li {
-    margin-top: 1rem;
+    line-height: 1.5;
+    margin-top: 0rem;
+    padding-left: 0.5rem;
 }
 
 .blog-reset code {
-    font-family: Roboto Mono, monospace;
+    font-family: monospace;
     font-size: 1rem;
+}
+
+.blog-reset img {
+    width: 90%;
+    margin: 0.5rem auto;
 }
 
 .blog-reset p > code,

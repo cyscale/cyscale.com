@@ -5,18 +5,25 @@ import Author from './Author';
 import PostMeta from './PostMeta';
 
 export default function FeaturedPost({ authors, categories, date, permalink, title, featuredimage }) {
+    const linkRef = React.useRef();
+
     return (
-        <Link to={`/blog/${permalink}/`} className='rounded-xl bg-white block overflow-hidden group'>
+        <div
+            onClick={() => linkRef.current.click()}
+            className='rounded-xl bg-white block overflow-hidden group cursor-pointer'
+        >
             <Row>
-                <div style={{ minHeight: 400 }} className='col-span-4 p-5 flex flex-col justify-between shadow-inner'>
+                <div className='col-span-4 p-5 flex flex-col justify-between shadow-inner min-h-72 lg:min-h-100'>
                     <PostMeta date={date} categories={categories} />
-                    <h2 className='text-3xl leading-tight group-hover:text-primary transition-all'>{title}</h2>
+                    <Link to={`/blog/${permalink}/`} ref={linkRef}>
+                        <h2 className='text-xl lg:text-3xl leading-tight group-hover:text-primary transition-all'>{title}</h2>
+                    </Link>
                     <Author author={authors} />
                 </div>
                 <div className='col-span-8'>
                     <img src={featuredimage.publicURL} alt={title} />
                 </div>
             </Row>
-        </Link>
+        </div>
     );
 }

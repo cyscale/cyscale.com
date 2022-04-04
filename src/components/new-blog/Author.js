@@ -9,7 +9,7 @@ export default function Author({ author }) {
     return (
         <div>
             {typeof _author === 'string' ? (
-                <span className='text-sm text-black'>
+                <span className='text-xs text-black  h-7 block py-1'>
                     By <strong>{_author}</strong>
                 </span>
             ) : (
@@ -22,14 +22,17 @@ export default function Author({ author }) {
                             By <strong>{_author.name}</strong>
                         </span>
                     </div>
-                    <a
-                        href={_author.linkedin}
-                        className='text-sm flex hover:text-primary mt-1 text-neutral-600'
-                        rel='noopener noreferrer'
-                        target='_blank'
-                    >
-                        <FaLinkedin className='text-lg' />
-                    </a>
+                    {_author.linkedin && (
+                        <a
+                            href={_author.linkedin}
+                            onClick={(e) => e.stopPropagation()}
+                            className='text-xs flex hover:text-primary mt-1 text-neutral-600'
+                            rel='noopener noreferrer'
+                            target='_blank'
+                        >
+                            <FaLinkedin className='text-lg' />
+                        </a>
+                    )}
                 </div>
             )}
         </div>
