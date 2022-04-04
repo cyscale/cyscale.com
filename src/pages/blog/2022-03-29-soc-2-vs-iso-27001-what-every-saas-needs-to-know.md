@@ -25,50 +25,46 @@ When looking into consolidating your data protection services, you may decide to
 * ISO 27001
 
 Acquiring one of these accreditations is a thorough process and choosing the right one for your company is the first step.
+
 **In case you are a SaaS provider** and are not certain which one to choose, keep reading to understand the key differences between them.
 
 **What are these accreditations** and what is their scope?
 
+The SOC 2 and ISO 27001 standards are normally acquired by B2B (Business-to-business) companies.
 
-The SOC 2 and [ISO 27001](https://cyscale.com/use-cases/iso-27001-compliance/) standards are normally acquired by B2B (Business-to-business) companies.
 They:
-•	represent international standards for Information Technology Management Systems (ISMSs)
-•	describe best practices for service providers who manage customer data
-As a SaaS, in order to obtain one of the two accreditations, you must implement all the policies of that standard that apply to your organization. 
+
+* represent international standards for Information Technology Management Systems (ISMSs)
+* describe best practices for service providers who manage customer data
+  As a SaaS, in order to obtain one of the two accreditations, you must implement all the policies of that standard that apply to your organization. 
 
 **What do these standards say about your company?**
 
-
 SOC 2 and ISO 27001 are very similar. 
 Acquiring one of them promotes the following principles about your organization:
-•	You recognize the importance of cybersecurity
-•	Your company is making efforts to mitigate information security risks
-•	You are properly managing information security
+
+* You recognize the importance of cybersecurity
+* Your company is making efforts to mitigate information security risks
+* You are properly managing information security
+
 Given the statements above, you can safely assume that a customer will prefer an organization with one of the described accreditations in their possession, to the detriment of one without any.
 
 ### A comparison
 
 **Geographical recognition**
 
-
-•	SOC 2 is governed by The American Institute of Certified Public Accountants (AICPA)
-
-•	ISO 27001 was developed by ANSI-ASQ National Accreditation Board (ANAB)
+* SOC 2 is governed by The American Institute of Certified Public Accountants (AICPA)
+* ISO 27001 was developed by ANSI-ASQ National Accreditation Board (ANAB)
 
 **Duration**
 
-
-•	SOC 2: an audit takes **between 3 to 12 months**, depending on the type of audit
-
-•	ISO 27001: takes **between 12 to 18 months** to complete
-
+* SOC 2: an audit takes **between 3 to 12 months**, depending on the type of audit
+* ISO 27001: takes **between 12 to 18 months** to complete
 
 **Validity duration**
 
-•	For SOC 2: one year
-
-•	For ISO 27001: three years (with surveillance audits once every year)
-
+* For SOC 2: one year
+* For ISO 27001: three years (with surveillance audits once every year)
 
 **Requirements**
 
@@ -107,7 +103,6 @@ Given the statements above, you can safely assume that a customer will prefer an
 **For ISO 27001**, you need to:
 
 1. Implement an ISMS (Information Technology Management Systems)
-
 2. Fulfill **7 requirements with 114 suggested controls** divided into 14 sections. 
 
 The requirements are described in the following clauses:
@@ -126,16 +121,12 @@ The requirements are described in the following clauses:
 
 \- Clause 10: Improvement
 
-In the Annex of ISO 27001, you can find a list of controls and objectives to help you meet the requirements.
-
-You can find more information [here](https://cyscale.com/blog/ISO-27001-certification-standard-policies-procedures/).
-
+In the Annex of ISO 27001, you can find [a list of controls and objectives](https://cyscale.com/blog/ISO-27001-certification-standard-policies-procedures/) to help you meet the requirements.
 
 **Price (of audit)**
 
-•	For SOC 2, the cost depends on the type of audit and can range **between $5,000 and $60,000** with an average of about $20,000.
-
-•	For ISO 27001, the price of an audit depends on the number of employees in the organization. It can go **as low as $5,400 up to $27,000**.
+* For SOC 2, the cost depends on the type of audit and can range **between $5,000 and $60,000** with an average of about $20,000.
+* For ISO 27001, the price of an audit depends on the number of employees in the organization. It can go **as low as $5,400 up to $27,000**.
 
 It is important to note that the price of implementing the standards may significantly increase the total cost of obtaining the accreditation. 
 
@@ -143,9 +134,8 @@ One thing to note is that, although SOC 2 and ISO 27001 seem very different, the
 
 The level of similarity between the requirements of the two depends on:
 
-•	The type of business you run
-
-•	The scope of the audit
+* The type of business you run
+* The scope of the audit
 
 The similarity can be between 53% and 90%, according to AICPA’s mapping to ISO 27001.
 
@@ -155,6 +145,6 @@ Finally, implementing all the policies required by the described standards can b
 
 You can make this process easier for you. 
 
-With [Cyscale](https://cyscale.com/), you can ensure easy and continuous compliance for ISO 27001. 
+With Cyscale, you can [ensure easy and continuous compliance for ISO 27001](https://cyscale.com/use-cases/iso-27001-compliance/). 
 
 Cyscale helps you meet the much-needed requirements described by this standard.
