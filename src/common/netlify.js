@@ -1,16 +1,18 @@
 import CMS from 'netlify-cms-app';
 import React from 'react';
-import Article from '../components/blog-one/article';
-import '../styles/global.css'
+import PostContent from '../components/new-blog/PostContent';
+import '../styles/global.css';
 
 const BlogPreview = ({ entry }) => (
-    <Article
-        title={entry.getIn(['data', 'title'])}
-        imageUrl={entry.getIn(['data', 'featuredimage'])}
-        body={entry.getIn(['data', 'body'])}
-        date={entry.getIn(['data', 'date']).toLocaleDateString()}
-        authors={entry.getIn(['data', 'authors'])}
-        categories={entry.getIn(['data', 'categories'])}
+    <PostContent
+        data={{
+            title: entry.getIn(['data', 'title']),
+            featuredimage: { publicURL: entry.getIn(['data', 'featuredimage']) },
+            rawMarkdownBody: entry.getIn(['data', 'body']),
+            date: entry.getIn(['data', 'date']),
+            authors: entry.getIn(['data', 'authors']),
+            categories: entry.getIn(['data', 'categories'])
+        }}
     />
 );
 
