@@ -8,8 +8,8 @@ const PageRight = ({ filterCategory, data, appliedFilter }) => {
     useEffect(() => {
         var array1 = ['All'];
         data.map((x) => {
-            if (!array1.includes(x.frontmatter.category)) {
-                return array1.push(x.frontmatter.category);
+            if (!array1.includes(x.frontmatter.categories[0])) {
+                return array1.push(x.frontmatter.categories[0]);
             }
             return null;
         });

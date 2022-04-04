@@ -20,7 +20,7 @@ h5,
 h6 {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    font-weight: 700 !important;
+    font-weight: 700;
 }
 
 .topNav .navbar-light .navbar-nav .nav-link {

@@ -8,7 +8,7 @@ const ParaGraphs = ({ data }) => (
         body={data?.rawMarkdownBody}
         date={new Date(data?.frontmatter?.date?.split('T')?.[0]).toLocaleDateString()}
         authors={data?.frontmatter?.authors}
-        category={data?.frontmatter?.category}
+        categories={data?.frontmatter?.categories}
     />
 );
 

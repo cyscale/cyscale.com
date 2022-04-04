@@ -35,7 +35,7 @@ function Marge() {
                 nodes {
                     frontmatter {
                         authors
-                        category
+                        categories
                         description
                         date
                         featuredimage {
@@ -68,7 +68,7 @@ function Marge() {
             if (name === 'All') {
                 setAllPosts(posts);
             } else {
-                setAllPosts([...posts, featuredPost].filter((data) => data.frontmatter.category === name));
+                setAllPosts([...posts, featuredPost].filter((data) => data.frontmatter.categories[0] === name));
             }
         },
         [nodes]

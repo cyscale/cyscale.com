@@ -40,7 +40,7 @@ const BlogCard = ({ data, feature }) => {
                     <img src={data?.featuredimage?.publicURL} alt={data.title} />
                 </div>
                 <div className='bg-white p-4'>
-                    <strong className='text-xs block'>{data.category}</strong>
+                    <strong className='text-xs block'>{data.categories[0]}</strong>
                     <div>
                         <Link ref={link} to={`/blog/${data.permalink}/`}>
                             <h3 title={data.title} className='text-blue text-24px leading-normal mt-11px'>

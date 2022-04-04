@@ -31,6 +31,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
     const blogTemplate = path.resolve(`src/template/blogTemplate.js`);
     const careerTemplate = path.resolve(`src/template/careerTemplate.js`);
+    const blogCategoryTemplate = path.resolve(`src/template/blogCategoryTemplate.js`);
 
     await graphql(`
         query loadPagesQuery {
@@ -81,7 +82,7 @@ exports.createPages = async ({ graphql, actions }) => {
                         node {
                             frontmatter {
                                 authors
-                                category
+                                categories
                                 description
                                 date
                                 featuredpost
@@ -102,10 +103,22 @@ exports.createPages = async ({ graphql, actions }) => {
     ).then((result) => {
         if (result.errors) throw result.errors;
 
+        const allNodes = [];
+        const categories = {};
         const posts = result.data.allMarkdownRemark.edges;
 
         posts.forEach((edge) => {
             const node = edge.node;
+            allNodes.push(edge.node);
+            // Get all distinct categories
+            node.frontmatter.categories.forEach((category) => {
+                if (!categories[category]) {
+                    categories[category] = [node];
+                } else {
+                    categories[category].push(node);
+                }
+            });
+
             createPage({
                 // Path for this page — required
                 path: '/blog/' + node.frontmatter.permalink + '/',
@@ -115,6 +128,21 @@ exports.createPages = async ({ graphql, actions }) => {
                     suggestions: [posts[0], posts[1], posts[2], posts[4]]
                 }
             });
+        });
+
+        // Create category pages
+        Object.keys(categories).forEach((key) => {
+            createPage({
+                path: '/blog/' + key.toLowerCase() + '/',
+                component: blogCategoryTemplate,
+                context: { posts: categories[key], category: key, categoriesList: Object.keys(categories) }
+            });
+        });
+
+        createPage({
+            path: '/blog/',
+            component: blogCategoryTemplate,
+            context: { posts: allNodes, category: 'All', categoriesList: Object.keys(categories) }
         });
     });
 };

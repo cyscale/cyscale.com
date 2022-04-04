@@ -23,10 +23,14 @@ collections:
           - { label: 'Authors', name: 'authors', widget: 'string' }
           - { label: 'Permalink', name: 'permalink', widget: 'string' }
           - {
-                label: 'Category',
-                name: 'category',
+                label: 'Categories',
+                name: 'categories',
                 widget: 'select',
-                options: ['News', 'Cloud Native Security', 'Tech', 'Compliance', 'Research']
+                multiple: true,
+                min: 1,
+                max: 3,
+                default: ['News'],
+                options: ['News', 'Product', 'CSPM', 'Compliance', 'CNAPP', 'Engineering']
             }
           - { label: 'Publish Date', name: 'date', widget: 'datetime' }
           - { label: 'Description', name: 'description', widget: 'text' }

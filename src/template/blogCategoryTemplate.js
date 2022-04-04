@@ -1,0 +1,69 @@
+import React from 'react';
+import Layout from '../components/layout/CleanLayout';
+import { Section, Container, Row } from '../components/atoms/Containers';
+import { map, takeRight } from 'lodash';
+import Chip from '../components/atoms/Chip';
+import FeaturedPost from '../components/new-blog/FeaturedPost';
+import Post from '../components/new-blog/Post';
+
+const getFeaturedAndPosts = (nodes) => {
+    const posts = [];
+    let featuredPost = null;
+
+    nodes?.map((item) => {
+        if (item?.frontmatter?.featuredpost === true && featuredPost === null) {
+            featuredPost = item;
+        } else {
+            posts.push(item);
+        }
+        return null;
+    });
+    if (!featuredPost) {
+        featuredPost = posts[0];
+        delete posts[0];
+    }
+    return { posts, featuredPost };
+};
+
+const BlodDetail = ({ pageContext, location }) => {
+    const { posts, category, categoriesList } = pageContext;
+    const { posts: postsList, featuredPost } = getFeaturedAndPosts(posts);
+
+    return (
+        <div className='bg-lightGrey2'>
+            <Layout title={category} description={category} pageName='blog' location={location}>
+                <Container>
+                    <Section>
+                        <h1 className='text-2xl font-normal mb-3'>Welcome to cyscale blog</h1>
+                        <Chip className='mr-2' to={`/blog2/`} active={category === 'All'}>
+                            All
+                        </Chip>
+                        {map(categoriesList, (item) => (
+                            <Chip
+                                className='mr-2'
+                                active={category === item}
+                                to={`/blog/${item.toLowerCase()}/`}
+                                key={item}
+                            >
+                                {item}
+                            </Chip>
+                        ))}
+                        <Row className='mt-8 gap-8'>
+                            <div className='col-span-12'>
+                                {featuredPost && <FeaturedPost {...featuredPost.frontmatter} />}
+                            </div>
+                            <div className='col-span-6'>{postsList[0] && <Post {...postsList[0].frontmatter} />}</div>
+                            <div className='col-span-6'>{postsList[1] && <Post {...postsList[1].frontmatter} />}</div>
+                            {map(takeRight(postsList, postsList.length - 2), (post, key) => (
+                                <div className='col-span-4' key={key}>
+                                    {post && <Post {...post.frontmatter} />}
+                                </div>
+                            ))}
+                        </Row>
+                    </Section>
+                </Container>
+            </Layout>
+        </div>
+    );
+};
+export default BlodDetail;

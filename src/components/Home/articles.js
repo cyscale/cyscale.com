@@ -13,7 +13,7 @@ const Articles = ({ btnText, btnLink }) => {
                 nodes {
                     frontmatter {
                         authors
-                        category
+                        categories
                         description
                         date
                         featuredimage {

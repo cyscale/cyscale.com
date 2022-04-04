@@ -69,7 +69,7 @@ const data = [
     {
         order: 2,
         photo: <Manuela />,
-        name: 'Manuela Ticudean',
+        name: 'Manuela Țicudean',
         leader: true,
         position: 'Co-Founder & PM',
         linkedin: 'https://www.linkedin.com/in/manuela-ticudean-88a01b81/',

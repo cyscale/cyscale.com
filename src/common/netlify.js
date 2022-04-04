@@ -10,7 +10,7 @@ const BlogPreview = ({ entry }) => (
         body={entry.getIn(['data', 'body'])}
         date={entry.getIn(['data', 'date']).toLocaleDateString()}
         authors={entry.getIn(['data', 'authors'])}
-        category={entry.getIn(['data', 'category'])}
+        categories={entry.getIn(['data', 'categories'])}
     />
 );
 

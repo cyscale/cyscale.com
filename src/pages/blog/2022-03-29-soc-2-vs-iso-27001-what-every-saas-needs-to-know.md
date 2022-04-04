@@ -3,7 +3,8 @@ templateKey: blog-post
 title: "SOC 2 vs ISO 27001: What every SaaS needs to know"
 authors: Sabrina Lupșan
 permalink: soc-2-vs-ISO-27001-SaaS
-category: Compliance
+categories: 
+  - Compliance
 date: 2022-03-29T06:31:44.659Z
 description: >
   When looking into consolidating your data protection services, you may decide

@@ -690,7 +690,6 @@ module.exports = {
                 '104px': '104px',
                 '105px': '105px'
             },
-
             colors: {
                 primary: '#0F26AA',
                 gray: '#303B41 !important',
@@ -699,6 +698,7 @@ module.exports = {
                 green: '#09D6B9 !important',
                 grey2: '#707070 !important',
                 grey3: '#D8D8D8 !important',
+                digital: '#079BEE !important',
                 borderGrey: '#B5B5B5 !important',
                 lightOrange: '#FBB040 !important',
                 lightGrey2: '#EEEEEE !important',

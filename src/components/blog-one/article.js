@@ -3,7 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 
-const Article = ({ title, imageUrl, body, date, authors, category }) => (
+const Article = ({ title, imageUrl, body, date, authors, categories }) => (
     <>
         <div>
             <div className='max-w-2xl m-auto relative blog-reset'>
@@ -41,7 +41,7 @@ const Article = ({ title, imageUrl, body, date, authors, category }) => (
                         By <strong>{authors}</strong>
                     </span>
                     <span className='text-xs text-grey2 block'>
-                        Category <strong>{category}</strong>
+                        Category <strong>{categories[0]}</strong>
                     </span>
                 </div>
             </div>
