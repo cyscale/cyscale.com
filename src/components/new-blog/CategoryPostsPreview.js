@@ -39,7 +39,7 @@ const CategoryPostsPreview = ({ category }) => {
             <Container>
                 <Row>
                     <div className='col-span-12 md:col-span-6'>
-                        <h2 className='text-xl md:max-w-xs mb-8'>
+                        <h2 className='font-semibold  text-xl md:max-w-xs mb-8'>
                             Get your latest dose of
                             News and Insights about
                             <strong> {category}</strong>

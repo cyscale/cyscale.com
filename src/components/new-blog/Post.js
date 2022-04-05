@@ -20,7 +20,7 @@ export default function Post({ authors, categories, date, permalink, title, feat
             <div className='p-5 shadow-inner'>
                 <PostMeta date={date} categories={categories} />
                 <Link ref={linkRef} to={`/blog/${permalink}/`}>
-                    <h2 className='text-lg my-4 leading-tight group-hover:text-primary transition-all h-16'>{title}</h2>
+                    <h2 className='text-lg my-4 leading-tight font-medium group-hover:text-primary transition-all h-16'>{title}</h2>
                 </Link>
                 <div className='mt-auto'>
                     <Author author={authors} />

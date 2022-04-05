@@ -17,7 +17,7 @@ const Hero = () => {
                                     <tr>
                                         <th className='h-gradientBG xl:w-1/4'>
                                             <div className=' pr-22px pl-22px pt-24px pb-24px'>
-                                                <h2 className='text-20px xl:text-34px text-white font-proximaBold'>
+                                                <h2 className='font-semibold  text-20px xl:text-34px text-white font-proximaBold'>
                                                     Features
                                                 </h2>
                                             </div>
@@ -25,7 +25,7 @@ const Hero = () => {
                                         <th className='bg-white  xl:w-1/4'>
                                             <div className='pr-22px pl-17px pt-24px pb-24px'>
                                                 <div className='flex flex-col'>
-                                                    <h2 className='text-20px xl:text-34px mb-43px text-black font-proximaBold'>
+                                                    <h2 className='font-semibold  text-20px xl:text-34px mb-43px text-black font-proximaBold'>
                                                         Basic
                                                     </h2>
                                                     <p className='text-15px text-black leading-normal'>
@@ -46,7 +46,7 @@ const Hero = () => {
                                         <th className='bg-white businessCol xl:w-1/4 shadow-lg drop-shadow-lg'>
                                             <div className='pr-22px pl-17px pt-24px pb-24px innerShadow'>
                                                 <div className='flex flex-col'>
-                                                    <h2 className='text-20px xl:text-34px mb-43px text-black font-proximaBold'>
+                                                    <h2 className='font-semibold  text-20px xl:text-34px mb-43px text-black font-proximaBold'>
                                                         Business
                                                     </h2>
                                                     <p className='text-15px text-black leading-normal'>

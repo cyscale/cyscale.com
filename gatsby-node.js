@@ -34,7 +34,7 @@ exports.createPages = async ({ graphql, actions }) => {
     const blogCategoryTemplate = path.resolve(`src/template/blogCategoryTemplate.js`);
 
     await graphql(`
-        query loadPagesQuery {
+        query loadCareersQuery {
             allMarkdownRemark(
                 sort: { order: DESC, fields: frontmatter___date }
                 filter: { frontmatter: { templateKey: { eq: "career-page" } } }
@@ -43,7 +43,9 @@ exports.createPages = async ({ graphql, actions }) => {
                     node {
                         frontmatter {
                             title
+                            seoTitle
                             description
+                            seoDescription
                             date
                             department
                             location
@@ -79,7 +81,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
     await graphql(
         `
-            query loadPagesQuery {
+            query loadPostsQuery {
                 allMarkdownRemark(
                     sort: { order: DESC, fields: frontmatter___date }
                     filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
@@ -89,12 +91,14 @@ exports.createPages = async ({ graphql, actions }) => {
                             frontmatter {
                                 authors
                                 categories
+                                title
+                                seoTitle
                                 description
+                                seoDescription
                                 date
                                 featuredpost
                                 templateKey
                                 permalink
-                                title
                                 tags
                                 featuredimage {
                                     publicURL
@@ -106,22 +110,22 @@ exports.createPages = async ({ graphql, actions }) => {
                 }
             }
         `
-    ).then((result) => {
+    ).then(async (result) => {
         if (result.errors) throw result.errors;
 
-        const allNodes = [];
-        const categories = {};
+        const allPosts = [];
+        const postsByCategory = {};
         const posts = result.data.allMarkdownRemark.edges;
 
         posts.forEach((edge) => {
             const node = edge.node;
-            allNodes.push(edge.node);
+            allPosts.push(edge.node);
             // Get all distinct categories
             node.frontmatter.categories.forEach((category) => {
-                if (!categories[category]) {
-                    categories[category] = [node];
+                if (!postsByCategory[category]) {
+                    postsByCategory[category] = [node];
                 } else {
-                    categories[category].push(node);
+                    postsByCategory[category].push(node);
                 }
             });
 
@@ -136,19 +140,60 @@ exports.createPages = async ({ graphql, actions }) => {
             });
         });
 
-        // Create category pages
-        Object.keys(categories).forEach((key) => {
-            createPage({
-                path: '/blog/' + key.toLowerCase() + '/',
-                component: blogCategoryTemplate,
-                context: { posts: categories[key], category: key, categoriesList: Object.keys(categories) }
-            });
-        });
+        await graphql(
+            `
+                query loadCategoriesQuery {
+                    allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "category" } } }) {
+                        edges {
+                            node {
+                                frontmatter {
+                                    name
+                                    slug
+                                    seoTitle
+                                    seoDescription
+                                    disabled
+                                }
+                            }
+                        }
+                    }
+                }
+            `
+        ).then((result) => {
+            if (result.errors) throw result.errors;
 
-        createPage({
-            path: '/blog/',
-            component: blogCategoryTemplate,
-            context: { posts: allNodes, category: 'All', categoriesList: Object.keys(categories) }
+            const categoriesWithPosts = Object.keys(postsByCategory);
+            const categories = result.data.allMarkdownRemark.edges;
+
+            categories.forEach((edge) => {
+                const node = edge.node;
+
+                if (!node.frontmatter.disabled) {
+                    // Create category pages
+                    createPage({
+                        path: '/blog/' + node.frontmatter.name.toLowerCase() + '/',
+                        component: blogCategoryTemplate,
+                        context: {
+                            category: node.frontmatter.name,
+                            seoTitle: node.frontmatter.seoTitle,
+                            posts: postsByCategory[node.frontmatter.name],
+                            seoDescription: node.frontmatter.seoDescription,
+                            categoriesList: categoriesWithPosts
+                        }
+                    });
+                }
+            });
+
+            createPage({
+                path: '/blog/',
+                component: blogCategoryTemplate,
+                context: {
+                    posts: allPosts,
+                    category: 'All',
+                    seoTitle: 'Blog - Cyscale',
+                    seoDescription: 'Cloud and Data Security Blog',
+                    categoriesList: categoriesWithPosts
+                }
+            });
         });
     });
 };

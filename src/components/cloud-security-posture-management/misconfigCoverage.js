@@ -5,7 +5,7 @@ const MisconfigCoverage = () => (
     <div className='bg-lightGreyEEE MisconfigurationsPage'>
         <Container>
             <Section>
-                <h2 className='text-blue text-34px leading-normal lg:max-w-md sectionTitle new-line mb-12'>
+                <h2 className='font-semibold  text-blue text-34px leading-normal lg:max-w-md sectionTitle new-line mb-12'>
                     Extensive cloud misconfiguration detection across all of your cloud assets
                 </h2>
                 <div className='max-w-xl'>

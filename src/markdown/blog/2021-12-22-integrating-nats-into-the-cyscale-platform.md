@@ -1,11 +1,13 @@
 ---
 templateKey: blog-post
+seoTitle:
 title: Integrating NATS Into the Cyscale Platform
 authors: Andrei Ștefănie
 permalink: integrating-nats-into-the-cyscale-platform
 categories: 
   - Engineering
 date: 2021-12-22T10:11:16.968Z
+seoDescription:
 description: Some concepts and techniques we leveraged to switch to a
   cloud-native message broker.
 featuredpost: true

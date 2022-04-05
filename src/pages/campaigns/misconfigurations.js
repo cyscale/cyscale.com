@@ -52,7 +52,7 @@ export default function Misconfigurations({ location }) {
                             <Row className='items-center'>
                                 <div className='col-span-12 lg:col-span-5 text-white'>
                                     <div className='max-w-lg mx-auto lg:ml-0 lg:mr-auto'>
-                                        <h1 className='text-3xl lg:text-4xl leading-normal mb-10'>
+                                        <h1 className='font-semibold  text-3xl lg:text-4xl leading-normal mb-10'>
                                             Detect and Elimitate
                                             <br /> Cloud Misconfigurations
                                         </h1>
@@ -71,7 +71,7 @@ export default function Misconfigurations({ location }) {
                                             width={70}
                                             alt='arrow'
                                         />
-                                        <h2 className='text-2xl leading-normal text-primary mb-1'>
+                                        <h2 className='font-semibold  text-2xl leading-normal text-primary mb-1'>
                                             Request a live demo
                                         </h2>
                                         <div id='request-demo' style={{ minHeight: 510 }}></div>
@@ -105,7 +105,7 @@ export default function Misconfigurations({ location }) {
                         <div className='max-w-lg mx-auto lg:mx-0 lg:max-w-none'>
                             <Row style={{ alignItems: 'center' }}>
                                 <div className='col-span-12 lg:col-span-6 order-2 lg:order-1 lg:pr-8'>
-                                    <h2 className='text-primary text-2xl lg:text-4xl'>
+                                    <h2 className='font-semibold  text-primary text-2xl lg:text-4xl'>
                                         Prevent misconfigurations & mistakes
                                     </h2>
                                     <p className='text-base lg:text-lg leading-relaxed mt-4 lg:mt-8'>
@@ -135,7 +135,7 @@ export default function Misconfigurations({ location }) {
                                     <CutNoise />
                                 </div>
                                 <div className='col-span-12 lg:col-span-6 lg:pl-8'>
-                                    <h2 className='text-primary text-2xl lg:text-4xl'>Cut through the noise</h2>
+                                    <h2 className='font-semibold  text-primary text-2xl lg:text-4xl'>Cut through the noise</h2>
                                     <p className='text-base lg:text-lg leading-relaxed mt-4 lg:mt-8'>
                                         Get relevant alerts when your cloud assets drift away from established security
                                         and compliance standards.
@@ -157,7 +157,7 @@ export default function Misconfigurations({ location }) {
                         <div className='max-w-lg mx-auto lg:mx-0 lg:max-w-none'>
                             <Row style={{ alignItems: 'center' }}>
                                 <div className='col-span-12 lg:col-span-6 order-2 lg:order-1 lg:pr-8'>
-                                    <h2 className='text-primary text-2xl lg:text-4xl'>Automate compliance checks</h2>
+                                    <h2 className='font-semibold  text-primary text-2xl lg:text-4xl'>Automate compliance checks</h2>
                                     <p className='text-base lg:text-lg leading-relaxed mt-4 lg:mt-8'>
                                         Use Cyscale for governance automation across cloud providers and internal teams
                                         to ensure consistent security and compliance.

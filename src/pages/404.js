@@ -22,7 +22,7 @@ const NotFoundPage = ({location}) => {
                 <meta name='robots' content='nofollow' />
             </Helmet>
             <div className='text-center height-screen pt-20 pb-32 max-w-xl mx-auto'>
-                <h1 className='m-0 font-bold text-9xl'>404</h1>
+                <h1 className='font-semibold m-0 text-9xl'>404</h1>
                 <p className='text-lg'>
                     You just hit the <strong>404 Route</strong> that doesn't exist... Go
                     <Link className='text-blue' to='/'>

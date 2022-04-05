@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+seoTitle:
 title: "CNAPP: A mix of CSPM & CWPP"
 authors: Virginia Mitea
 permalink: cnapp-a-mix-of-cspm-cwpp
@@ -7,6 +8,7 @@ categories:
   - CSPM
   - CNAPP
 date: 2021-11-24T15:35:49.333Z
+seoDescription:
 description: >-
   Gartner has defined a new category that is focused on securing cloud services
   and cloud-native applications, the so-called CNAPP- Cloud-Native Application
@@ -44,11 +46,11 @@ You could argue that your CWPP or your CSPM is already doing something about thi
 
 If you dig deeper, CNAPP is basically a mix of 2 separate solutions:  Cloud Security Posture Management (CSPM) & Cloud Workload Protection Platform (CWPP)
 
-What is CSPM?
+### What is CSPM?
 
 [Cloud Security Posture Management solutions (CSPM)](https://cyscale.com/products/cloud-security-posture-management/) have as main purpose the [detection of misconfigurations](https://cyscale.com/use-cases/cloud-misconfigurations/). They will continuously monitor the cloud environment in order to provide visibility across multi-cloud and alert the company about compliance drift or risky behavior. CSPMs focus on cloud infrastructure.
 
-What is CWPP?
+### What is CWPP?
 
 Cloud Workload Protection Platforms (CWPPs) are designed to protect the workloads deployed in the cloud. They will perform vulnerability assessments and handle the security of the applications. Based on assessment results, you can implement security controls or you can remediate the threats. CWPPs focus on the applications running in the cloud.
 

@@ -12,12 +12,12 @@ const ContactForm = () => {
             <div className='max-w-1366px contactForm mx-auto pt-67px pb-67px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px'>
                 <div className='grid grid-cols-1 xl:grid-cols-3 gap-6'>
                     <div className='order-1'>
-                        <h5 className='text-69px lg:text-80px hidden lg:block font-proximaBold uppercase text-white'>
+                        <h5 className='font-semibold  text-7xl lg:text-8xl hidden lg:block uppercase text-white'>
                             CONTACT
                         </h5>
                     </div>
                     <div className='order-3 xl:order-2'>
-                        <div className='mt-20px lg:mb-100px block w-full'>
+                        <div className='mt-5 lg:mb-24 block w-full'>
                             <Formik
                                 initialValues={{
                                     email: '',
@@ -229,7 +229,7 @@ const ContactForm = () => {
                         </div>
                     </div>
                     <div className='order-2 xl:order-3'>
-                        <h6 className='text-blue text-34px lg:w-96 leading-normal new-line sectionTitle'>
+                        <h6 className='font-semibold  text-blue text-34px lg:w-96 leading-normal new-line sectionTitle'>
                             join us or just say hello.
                         </h6>
                     </div>

@@ -34,7 +34,7 @@ const Index = () => {
                     <div className='max-w-1366px mx-auto contactForm pt-72 pb-67px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px'>
                         <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6'>
                             <div>
-                                <h1 className='text-69px lg:text-80px font-proximaBold uppercase text-white'>
+                                <h1 className='font-semibold  text-69px lg:text-80px font-proximaBold uppercase text-white'>
                                     CONTACT
                                 </h1>
                                 <div className='w-full contactAddress mt-272px hidden lg:flex flex-col'>
@@ -70,7 +70,7 @@ const Index = () => {
                                 </div>
                             </div>
                             <div>
-                                <h2 className='text-blue text-34px leading-normal sectionTitle'>
+                                <h2 className='font-semibold  text-blue text-34px leading-normal sectionTitle'>
                                     Hello!
                                     <br />
                                     How can we help you?

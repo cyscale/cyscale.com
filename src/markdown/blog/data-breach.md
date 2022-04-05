@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+seoTitle:
 title: How the largest Romanian real estate portal could have prevented a
     massive cloud data breach
 authors: Ovidiu Cical
@@ -7,6 +8,7 @@ permalink: realestate-data-breach
 categories:
     - News
 date: 2021-02-09T06:08:46.468Z
+seoDescription:
 description: The adoption of public cloud providers can bring many advantages to
     a business, but at the same time, cybersecurity threats can appear because of
     this usage.

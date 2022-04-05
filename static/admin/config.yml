@@ -20,6 +20,7 @@ collections:
       fields:
           - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'blog-post' }
           - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'SEO Title', name: 'seoTitle', widget: 'string' }
           - { label: 'Authors', name: 'authors', widget: 'string' }
           - { label: 'Permalink', name: 'permalink', widget: 'string' }
           - {
@@ -34,10 +35,25 @@ collections:
             }
           - { label: 'Publish Date', name: 'date', widget: 'datetime' }
           - { label: 'Description', name: 'description', widget: 'text' }
+          - { label: 'SEO Description', name: 'seoDescription', widget: 'string' }
           - { label: 'Featured Post', name: 'featuredpost', widget: 'boolean' }
           - { label: 'Featured Image', name: 'featuredimage', widget: image }
           - { label: 'Body', name: 'body', widget: 'markdown' }
           - { label: 'Tags', name: 'tags', widget: 'list' }
+    - name: 'category'
+      label: 'Category'
+      folder: 'src/pages/categories'
+      create: true
+      slug: '{{slug}}'
+      editor: 
+        preview: false
+      fields:
+          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'category' }
+          - { label: 'SEO Title', name: 'seoTitle', widget: 'string' }
+          - { label: 'Slug', name: 'slug', widget: 'string' }
+          - { label: 'Name', name: 'name', widget: 'string' }
+          - { label: 'SEO Description', name: 'seoDescription', widget: 'string' }
+          - { label: 'Disabled', name: 'disabled', widget: 'boolean', default: false }
     - name: 'career'
       label: 'Careers'
       folder: 'src/pages/careers'
@@ -46,11 +62,13 @@ collections:
       fields:
           - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'career-page' }
           - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'SEO Title', name: 'seoTitle', widget: 'string' }
           - { label: 'Disabled', name: 'disabled', widget: 'boolean', default: false }
           - { label: 'Location', name: 'location', widget: 'string', default: 'Remote' }
           - { label: 'Publish Date', name: 'date', widget: 'datetime' }
           - { label: 'Permalink', name: 'permalink', widget: 'string' }
           - { label: 'Description', name: 'description', widget: 'text' }
+          - { label: 'SEO Description', name: 'seoDescription', widget: 'text' }
           - { label: 'Skills', name: 'skills', widget: 'text' }
           - {
                 label: 'Experience',

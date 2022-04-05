@@ -26,15 +26,15 @@ const getFeaturedAndPosts = (nodes) => {
 };
 
 const BlodDetail = ({ pageContext, location }) => {
-    const { posts, category, categoriesList } = pageContext;
+    const { posts, category, categoriesList, seoTitle, seoDescription } = pageContext;
     const { posts: postsList, featuredPost } = getFeaturedAndPosts(posts);
 
     return (
         <div className='bg-lightGrey2'>
-            <Layout title={category} description={category} pageName='blog' location={location}>
+            <Layout title={seoTitle} description={seoDescription} pageName='blog' location={location}>
                 <Container>
                     <Section>
-                        <h1 className='text-2xl font-normal mb-2'>Welcome to cyscale blog</h1>
+                        <h1 className='text-3xl font-medium mb-4'>Welcome to cyscale blog</h1>
                         <div className='overflow-x-auto py-2 -mx-8 md:mx-0 pl-8 md:pl-0 hide-scrollbar'>
                             <Chip className='mr-2' to={`/blog/`} active={category === 'All'}>
                                 All

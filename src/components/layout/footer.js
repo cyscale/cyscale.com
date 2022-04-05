@@ -30,7 +30,7 @@ const Footer = () => {
                 <div className='w-full md:w-6/12 lg:w-8/12 mt-20px md:mt-0'>
                     <div className='grid-cols-2 lg:grid-cols-4 justify-between hidden sm:grid'>
                         <div className=''>
-                            <h3 className='text-14px font-bold leading-normal text-white pb-40px '>Platform</h3>
+                            <h3 className='font-semibold text-14pxleading-normal text-white pb-40px '>Platform</h3>
                             <ul>
                                 {navigation.platform.map(({ link, text }) => (
                                     <li key={link} className='text-12px leading-normal pb-7px'>
@@ -42,7 +42,7 @@ const Footer = () => {
                             </ul>
                         </div>
                         <div className=''>
-                            <h3 className='text-14px font-bold leading-normal  text-white pb-40px '>Use cases</h3>
+                            <h3 className='font-semibold text-14pxleading-normal  text-white pb-40px '>Use cases</h3>
                             <ul>
                                 {navigation.usecases.map(({ link, text }) => (
                                     <li key={link} className='text-12px leading-normal pb-7px'>
@@ -55,7 +55,7 @@ const Footer = () => {
                         </div>
 
                         <div className=''>
-                            <h3 className='text-14px font-bold leading-normal  text-white pb-40px '>Resources</h3>
+                            <h3 className='font-semibold text-14pxleading-normal  text-white pb-40px '>Resources</h3>
                             <ul>
                                 {navigation.resources.map(({ link, text, blank }) =>
                                     blank ? (
@@ -92,7 +92,7 @@ const Footer = () => {
                         </div>
 
                         <div className=''>
-                            <h3 className='text-14px font-bold leading-normal  text-white pb-40px '>Company</h3>
+                            <h3 className='font-semibold text-14pxleading-normal  text-white pb-40px '>Company</h3>
                             <ul>
                                 {navigation.company.map(({ link, text }) => (
                                     <li key={link} className='text-12px leading-normal pb-7px'>

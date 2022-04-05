@@ -15,7 +15,7 @@ const Sectionheader = ({ headingText, description, subText, pageName, section })
             >
                 <div>
                     <h2
-                        className={`text-blue text-34px leading-normal ${
+                        className={`font-semibold text-blue text-34px leading-normal ${
                             pageName === 'dataSecurity'
                                 ? 'lg:max-w-md'
                                 : pageName === 'cloudCompliance'

@@ -30,7 +30,7 @@ const Index = () => {
                         <Container>
                             <Row className='items-center'>
                                 <div className='col-span-12 order-2 lg:order-1 lg:col-span-6'>
-                                    <h1 className='text-30px md:text-30px xl:text-60px xl:w-96 new-line text-blue font-proximaBold mb-26px'>
+                                    <h1 className='font-semibold  text-30px md:text-30px xl:text-60px xl:w-96 new-line text-blue font-proximaBold mb-26px'>
                                         Let's make it win-win
                                     </h1>
                                     <p className='text-16px leading-normal text-black mb-0'>

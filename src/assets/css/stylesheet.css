@@ -12,10 +12,9 @@ h1,
 h2,
 h3,
 h4,
-h5,
-h6 {
+h5 {
     margin: 0;
-    font-weight: 700;
+    font-weight: bold;
 }
 
 .topNav .navbar-light .navbar-nav .nav-link {
@@ -836,6 +835,7 @@ h6 {
 .jobs h5,
 .jobs h6 {
     color: #0f26aa;
+    font-weight: 700;
     margin-bottom: 10px;
     margin-top: 20px;
 }

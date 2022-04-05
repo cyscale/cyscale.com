@@ -1,6 +1,7 @@
 ---
 templateKey: career-page
 title: Marketing Specialist
+seoTitle:
 disabled: true
 location: Romania
 date: null
@@ -8,6 +9,7 @@ permalink: marketing-specialist
 description: Cyscale is a startup with offices in London (UK) and Cluj-Napoca (RO), 
   activating in the cloud cybersecurity industry. 
   We are looking for a Marketing Specialist.
+seoDescription:
 skills: Leading marketing campaigns, Digital Marketing, Strong communications,
   HubSpot/Mailchimp, Google Ads, Google Analytics
 experience: senior

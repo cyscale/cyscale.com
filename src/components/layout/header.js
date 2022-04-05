@@ -4,7 +4,15 @@ import HeaderContext from './HeaderContext';
 import ScrollButton from '../ScrollButton/ScrollButton';
 import remoteWorkBannerImage from '../../assets/images/remote-work-banner-image.png';
 import complianceBannerImage from '../../assets/images/compliance-banner-image2.png';
-import { ISO27001Small, AicpaSoc2Small, CisBenchmarksSmall, EuEuropeanGdprSmall, USHipaaSmall, PciDssSmall, NistSmall } from '../Home/images';
+import {
+    ISO27001Small,
+    AicpaSoc2Small,
+    CisBenchmarksSmall,
+    EuEuropeanGdprSmall,
+    USHipaaSmall,
+    PciDssSmall,
+    NistSmall
+} from '../Home/images';
 const Header = ({
     heroBG,
     bannerTitle,
@@ -36,7 +44,7 @@ const Header = ({
             ? 'bg-lightGreyEEE'
             : 'bg-cover'
     }`;
-    const rootStyle = heroBG ? { backgroundImage: `url(${heroBG})` } : null
+    const rootStyle = heroBG ? { backgroundImage: `url(${heroBG})` } : null;
 
     return (
         <HeaderContext.Provider value={{ sticker, setSticker }}>
@@ -46,7 +54,7 @@ const Header = ({
                     {pageName === 'blog-detail' || pageName === 'blogs' ? (
                         <div className='flex mt-44'>
                             <div className='mx-auto w-full xl:w-2/4'>
-                                <h1 className='text-34px text-blue leading-normal font-bold otherPages sectionTitle'>
+                                <h1 className='font-semibold text-34px text-blue leading-normal otherPages sectionTitle'>
                                     {blogDataTitle || 'Cyscale Blog'}
                                 </h1>
                             </div>
@@ -65,9 +73,7 @@ const Header = ({
                                             : 'header-padding'
                                     }`}
                                 >
-                                    <h1
-                                        className={`text-blue text-38px sm:text-30px md:text-60px leading-normal sm:leading-normal font-semibold sm:mt-20 new-line`}
-                                    >
+                                    <h1 className='font-semibold text-blue text-38px sm:text-30px md:text-60px leading-normal sm:leading-normal sm:mt-20 new-line'>
                                         {pageName === 'SKGPage' ? (
                                             <span>
                                                 Security <br />
@@ -132,8 +138,7 @@ const Header = ({
                                                     <a
                                                         href={bannerBtn1Link}
                                                         target='_blank'
-                                    rel='noopener noreferrer'
-
+                                                        rel='noopener noreferrer'
                                                         className='gradientBgBtn w-full sm:min-w-232px block text-16px font-medium rounded text-white uppercase text-center pt-21px pb-21px pl-49px pr-49px hover:no-underline no-underline'
                                                     >
                                                         {bannerBtn1Text}
@@ -161,7 +166,7 @@ const Header = ({
                                         ) : null}
                                     </div>
                                 </div>
-                              
+
                                 {pageName === 'ComplianceAuditing' && (
                                     <div className={`lg:pt-14`}>
                                         <img
@@ -180,7 +185,7 @@ const Header = ({
                                         </div>
                                     </div>
                                 )}
-                                  {pageName === 'RemoteWork' && (
+                                {pageName === 'RemoteWork' && (
                                     <div className={`lg:pt-14 order-1 lg:order-2`}>
                                         <img
                                             src={remoteWorkBannerImage}

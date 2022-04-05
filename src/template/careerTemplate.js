@@ -1,18 +1,16 @@
 import React from 'react';
-import Layout from '../components/layout/layout.js';
+import Layout from '../components/layout/CleanLayout';
 import Details from '../components/careers/job-details.js';
 
 const CareerTemplate = ({ pageContext, location }) => {
     const { alldata } = pageContext;
+    const { frontmatter: data } = alldata;
     return (
         <Layout
             location={location}
             pageName='jobDetails'
-            title={alldata.frontmatter.title}
-            bannerTitle={alldata.frontmatter.title}
-            description={alldata.frontmatter.description}
-            bannerBtn1Link={!alldata.frontmatter.disabled ? '/' : false}
-            bannerBtn1Text={!alldata.frontmatter.disabled ? 'Apply' : false}
+            title={data.seoTitle || data.title}
+            description={data.seoDescription || data.description}
         >
             <Details data={alldata} />
         </Layout>

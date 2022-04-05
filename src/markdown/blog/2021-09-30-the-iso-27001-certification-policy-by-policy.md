@@ -1,11 +1,13 @@
 ---
 templateKey: blog-post
+seoTitle:
 title: The ISO 27001 certification, policy by policy
 authors: Manuela Țicudean
 permalink: ISO-27001-certification-standard-policies-procedures
 categories: 
   - Compliance
 date: 2021-09-30T09:07:50.384Z
+seoDescription:
 description: Going through an ISO 27001 implementation means that people in your
   company must work closely together towards that end, as most everyone will
   need to be involved in the process at one stage or the other. Across

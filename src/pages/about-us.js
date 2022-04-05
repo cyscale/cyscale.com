@@ -33,7 +33,7 @@ const AboutUs = ({ location }) => {
                     <Row>
                         <div className='col-span-12 md:col-span-6 '>
                             <div className='pr-12 xl:max-w-lg xl:ml-auto xl:mr-24 2xl:max-w-full 2xl:ml-0 2xl:mr-0'>
-                                <h1 className='text-3xl lg:text-5xl leading-normal text-primary mt-2 lg:mt-12 xl:mt-24'>
+                                <h1 className='font-semibold  text-3xl lg:text-5xl leading-normal text-primary mt-2 lg:mt-12 xl:mt-24'>
                                     Our Mission
                                 </h1>
                                 <p className='text-base lg:text-lg pt-2 lg:pt-10  leading-loose'>
@@ -56,7 +56,7 @@ const AboutUs = ({ location }) => {
                 <Section>
                     <Row>
                         <div className='col-span-12'>
-                            <h2 id='start' className='text-blue sm:text-3xl text-4xl leading-normal mb-6 sectionTitle'>
+                            <h2 id='start' className='text-blue sm:text-3xl text-4xl font-bold leading-normal mb-6 sectionTitle'>
                                 How this story started
                             </h2>
                         </div>
@@ -99,7 +99,7 @@ const AboutUs = ({ location }) => {
                 <Container>
                     <Section>
                         <div className='mb-10'>
-                            <h2 className='text-blue sm:text-3xl text-4xl leading-normal mb-6 text-center'>
+                            <h2 className='font-semibold  text-blue sm:text-3xl text-4xl leading-normal mb-6 text-center'>
                                 Our Leadership
                             </h2>
                         </div>
@@ -162,7 +162,7 @@ const AboutUs = ({ location }) => {
 
             <Container className='relative'>
                 <Section>
-                    <h2 className='text-blue sm:text-3xl text-4xl leading-normal mb-6 text-center'>Backed by</h2>
+                    <h2 className='font-semibold  text-blue sm:text-3xl text-4xl leading-normal mb-6 text-center'>Backed by</h2>
                     <div className='flex justify-center flex-wrap'>
                         <a
                             className='text-blue'
@@ -193,7 +193,7 @@ const AboutUs = ({ location }) => {
                 <Section>
                     <Row className='md:gap-8'>
                         <div className='col-span-12'>
-                            <h2 className='text-blue sm:text-3xl text-4xl leading-normal mb-6 text-center'>Our Team</h2>
+                            <h2 className='font-semibold  text-blue sm:text-3xl text-4xl leading-normal mb-6 text-center'>Our Team</h2>
                         </div>
                         {data
                             .filter(({ leader, photo }) => !leader && photo)
@@ -230,7 +230,7 @@ const AboutUs = ({ location }) => {
                     <div className='pb-12'>
                         <Row>
                             <div className='col-span-12'>
-                                <h2 className='text-blue sm:text-3xl text-4xl leading-normal mb-6 text-center'>
+                                <h2 className='font-semibold  text-blue sm:text-3xl text-4xl leading-normal mb-6 text-center'>
                                     Join the Team
                                 </h2>
                             </div>

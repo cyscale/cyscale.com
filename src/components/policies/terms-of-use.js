@@ -14,7 +14,7 @@ const Index = () => {
           <div className="max-w-1366px mx-auto pt-72 pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px">
             <div className="flex">
               <div className="mx-auto w-full xl:w-2/4">
-                <h1 className="text-34px text-blue leading-normal font-bold otherPages sectionTitle">
+                <h1 className="font-semibold text-34px text-blue leading-normal otherPages sectionTitle">
                   Terms of Use
                 </h1>
               </div>
@@ -36,7 +36,7 @@ const Index = () => {
                 and our Privacy Policy. We may revise the Terms of Use and
                 Privacy Policy at any time without notice to you.
               </p>
-              <h2 className="font-bold mb-36px text-24px">
+              <h2 className="font-semibold mb-36px text-24px">
                 1. Use of <strong> Cyscale</strong> Site Information
               </h2>
               <p className="mb-36px">
@@ -51,7 +51,7 @@ const Index = () => {
                 post, transmit or distribute any information from this Website
                 in whole or in part without the express authorization of <strong> Cyscale</strong>
               </p>
-              <h2 className="font-bold mb-36px text-24px">
+              <h2 className="font-semibold mb-36px text-24px">
                 2. Use of Software
               </h2>
               <p className="mb-36px">
@@ -62,7 +62,7 @@ const Index = () => {
                 to installing or using the software. All rights, title, and
                 interest not expressly granted are reserved.
               </p>
-              <h2 className="font-bold mb-36px text-24px">
+              <h2 className="font-semibold mb-36px text-24px">
                 3. Use of Forums and Public Communication
               </h2>
               <p className="mb-36px">
@@ -86,7 +86,7 @@ const Index = () => {
                 later developed. In addition, you warrant that all so-called
                 moral rights in the content have been waived.
               </p>
-              <h2 className="font-bold mb-36px text-24px">
+              <h2 className="font-semibold mb-36px text-24px">
                 4. Passwords and Security
               </h2>
               <p className="mb-36px">
@@ -99,7 +99,7 @@ const Index = () => {
                 and has taken reasonable steps to prevent unauthorized access to
                 that information.
               </p>
-              <h2 className="font-bold mb-36px text-24px">
+              <h2 className="font-semibold mb-36px text-24px">
                 5. Termination of Use
               </h2>
               <p className="mb-36px">
@@ -109,7 +109,7 @@ const Index = () => {
                 Resources. Access to the <strong> Cyscale</strong> Resources may be monitored by
                 <strong> Cyscale</strong>.
               </p>
-              <h2 className="font-bold mb-36px text-24px">
+              <h2 className="font-semibold mb-36px text-24px">
                 6. Third Party Web Sites, Content, Products and Services
               </h2>
               <p className="mb-36px">
@@ -134,7 +134,7 @@ const Index = () => {
                 for any loss or damage of any sort you may incur from dealing
                 with any third party.
               </p>
-              <h2 className="font-bold mb-36px text-24px">7. Disclaimer</h2>
+              <h2 className="font-semibold mb-36px text-24px">7. Disclaimer</h2>
               <p className="mb-36px">
                 EXCEPT WHERE EXPRESSLY PROVIDED OTHERWISE, the <strong> Cyscale</strong>
                 Resources, AND ALL CONTENT, MATERIALS, INFORMATION, SOFTWARE,
@@ -163,7 +163,7 @@ const Index = () => {
                 <strong> Cyscale</strong> RESERVES THE RIGHT TO MAKE CHANGES OR UPDATES TO the
                 <strong> Cyscale</strong> Resources AT ANY TIME WITHOUT NOTICE.
               </p>
-              <h2 className="font-bold mb-36px text-24px">
+              <h2 className="font-semibold mb-36px text-24px">
                 8. Limitation of Liability
               </h2>
               <p className="mb-36px">
@@ -177,7 +177,7 @@ const Index = () => {
                 LIABILITY. ACCORDINGLY, SOME OF THE ABOVE LIMITATIONS MAY NOT
                 APPLY TO YOU.
               </p>
-              <h2 className="font-bold mb-36px text-24px">9. Indemnity</h2>
+              <h2 className="font-semibold mb-36px text-24px">9. Indemnity</h2>
               <p className="mb-36px">
                 You agree to defend, indemnify and hold harmless <strong> Cyscale</strong>, its
                 officers, directors, employees and agents from and against any
@@ -186,14 +186,14 @@ const Index = () => {
                 or in any way connected with your access to or use of the
                 <strong> Cyscale</strong> Resources.
               </p>
-              <h2 className="font-bold mb-36px text-24px">
+              <h2 className="font-semibold mb-36px text-24px">
                 10. Minors parental consent
               </h2>
               <p className="mb-36px">
                 Minors are not eligible to use the <strong> Cyscale</strong> Resources, and we ask
                 that they do not submit any personal information to us.
               </p>
-              <h2 className="font-bold mb-36px text-24px">
+              <h2 className="font-semibold mb-36px text-24px">
                 11. Export Restrictions/Legal Compliance
               </h2>
               <p className="mb-36px">
@@ -225,7 +225,7 @@ const Index = () => {
                 represents and warrants that you are not located in, under the
                 control of, or a national or resident of any such country.
               </p>
-              <h2 className="font-bold mb-36px text-24px">
+              <h2 className="font-semibold mb-36px text-24px">
                 12. Applicable Laws
               </h2>
               <p className="mb-36px">
@@ -237,7 +237,7 @@ const Index = () => {
                 that venue is proper in, these courts in any such legal action
                 or proceeding.
               </p>
-              <h2 className="font-bold mb-36px text-24px">
+              <h2 className="font-semibold mb-36px text-24px">
                 13. Copyright/Trademark Information
               </h2>
               <p className="mb-36px">
@@ -248,7 +248,7 @@ const Index = () => {
                 Platform™, <strong> Cyscale</strong> CloudStudio™, <strong> Cyscale</strong> CrowdCloud™, Natural
                 Language Security™ are trademarks of <strong> Cyscale</strong>.
               </p>
-              <h2 className="font-bold mb-36px text-24px">
+              <h2 className="font-semibold mb-36px text-24px">
                 14. How to contact us
               </h2>
               <p className="mb-36px">
@@ -256,7 +256,7 @@ const Index = () => {
                 <strong> Cyscale</strong> Services, please contact us at support@<strong> Cyscale</strong>.com or at
                 The Broadgate Tower, 20 Primrose Street, London, EC2A 2RS.
               </p>
-              <h2 className="font-bold mb-36px text-24px">
+              <h2 className="font-semibold mb-36px text-24px">
                 15. Changes to our Terms of use
               </h2>
               <p className="mb-36px">

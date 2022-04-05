@@ -11,7 +11,7 @@ const Jobs = ({ data }) => {
         <div id="start">
             <div className='max-w-1366px jobs mx-auto mt-158px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px'>
                 <div className='block w-full'>
-                    <h3 className='text-blue text-34px leading-normal md:max-w-sm new-line mb-50px'>Open positions</h3>
+                    <h3 className='font-semibold text-blue text-34px leading-normal md:max-w-sm new-line mb-50px'>Open positions</h3>
                 </div>
                 <div className='grid grid-cols-1 xl:grid-cols-3 gap-7'>
                     {data.map(({ frontmatter }, index) => {

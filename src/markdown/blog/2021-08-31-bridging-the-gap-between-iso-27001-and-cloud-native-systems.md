@@ -1,11 +1,13 @@
 ---
 templateKey: blog-post
+seoTitle:
 title: Bridging the Gap Between ISO 27001 and Cloud-Native Systems
 authors: Andrei Ștefănie
 permalink: implementing-iso-27001-for-cloud-native-systems
 categories: 
   - Compliance
 date: 2021-08-31T12:54:05.925Z
+seoDescription:
 description: Being compliant is a huge selling point and many well-established
   customers will even require this from their service providers. One missing
   product feature will probably not make or break the deal, but missing

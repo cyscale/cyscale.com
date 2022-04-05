@@ -11,7 +11,7 @@ const SecureRemoteAccess = ({
     <div className={`${!!sectionName && sectionName === "cloudSecurityConfig" ? null: ("bg-lightGreyEEE")}`}>
       <div className="max-w-1366px m-auto pt-28 pb-28 pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px">
         <div className="block w-full lg:w-3/5">
-          <h2 className={`text-blue text-34px leading-normal ${!!sectionName && sectionName === "cloudSecurityConfig" ? ("md:max-w-md"): ("otherPages")} sectionTitle new-line`}>
+          <h2 className={`text-blue font-medium text-34px leading-normal ${!!sectionName && sectionName === "cloudSecurityConfig" ? ("md:max-w-md"): ("otherPages")} sectionTitle new-line`}>
             {headingFirst}
             {!!headingSecond && (
               <span className="block w-full font-normal">{headingSecond}</span>

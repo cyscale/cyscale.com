@@ -11,7 +11,8 @@
 .blog-reset h2,
 .blog-reset h3,
 .blog-reset h4,
-.blog-reset h5 {
+.blog-reset h5,
+.blog-reset h6 {
     margin: 0;
     font-weight: 600;
 }
@@ -25,7 +26,7 @@
 
 .blog-reset h4,
 .blog-reset h5,
-.blog-reset h5 {
+.blog-reset h6 {
     margin-top: 1.5rem;
     margin-bottom: -1rem;
 }
@@ -50,6 +51,10 @@
     font-size: 1.1875rem;
 }
 
+.blog-reset h6 {
+    font-size: 1rem;
+}
+
 .blog-reset small {
     font-size: 0.8rem;
 }
@@ -67,7 +72,6 @@
 
 .blog-reset ol {
     list-style: number;
-
 }
 
 .blog-reset li {
