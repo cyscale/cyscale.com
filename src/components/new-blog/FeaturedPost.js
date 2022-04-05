@@ -9,7 +9,8 @@ export default function FeaturedPost({ authors, categories, date, permalink, tit
 
     return (
         <div
-            role='tab'
+            role='link'
+            tabIndex={0}
             onClick={() => linkRef.current.click()}
             onKeyDown={(e) => (e.code === 13 || e.code === 32) && linkRef.current.click()}
             className='rounded-xl bg-white block overflow-hidden group cursor-pointer'

@@ -9,9 +9,11 @@ import Post from './Post';
 import { map } from 'lodash';
 import Share from '../Share/Share';
 import { useAppLink } from '../../common/links';
+import { Link as ScrollLink } from 'react-scroll';
+
 export default function PostContent({ data, suggestions }) {
     const appLink = useAppLink();
-
+    
     return (
         <div>
             <div className='container max-w-3xl m-auto px-8 '>
@@ -34,6 +36,13 @@ export default function PostContent({ data, suggestions }) {
                         rehypePlugins={[rehypeRaw]}
                         linkTarget='_blank'
                         components={{
+                            toc({ node, className, children, ...props }) {
+                                return (
+                                    <ScrollLink className={className} {...props} smooth={true} duration={500}>
+                                        {children}
+                                    </ScrollLink>
+                                );
+                            },
                             code({ node, inline, className, children, ...props }) {
                                 const match = /language-(\w+)/.exec(className || '');
                                 return !inline && match ? (
@@ -57,7 +66,7 @@ export default function PostContent({ data, suggestions }) {
                     </ReactMarkdown>
                 </div>
 
-                {data?.frontmatter?.permalink && (
+                {data?.permalink && (
                     <>
                         <a
                             target='_blank'

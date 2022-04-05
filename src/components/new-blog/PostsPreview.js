@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link, graphql, useStaticQuery } from 'gatsby';
-import Post from '../new-blog/Post';
+import Post from './Post';
 import { Row, Container } from '../atoms/Containers';
 
-const Articles = ({ btnText, btnLink }) => {
+const PostsPreview = () => {
     const data = useStaticQuery(graphql`
-        query HeaderQuery1ss {
+        query PostsPreviewQuery {
             allMarkdownRemark(
                 limit: 3
                 sort: { fields: frontmatter___date, order: DESC }
@@ -30,9 +30,11 @@ const Articles = ({ btnText, btnLink }) => {
             }
         }
     `);
+
     const {
         allMarkdownRemark: { nodes }
     } = data;
+
     return (
         <div className='bg-lightGrey mt-0 py-12'>
             <Container>
@@ -46,14 +48,13 @@ const Articles = ({ btnText, btnLink }) => {
                             );
                         })}
                 </Row>
-
                 <div className='block w-full mt-50px text-center'>
-                    <div className='mt-24px mx-auto w-auto flex justify-center'>
+                    <div className='mt-6 mx-auto w-auto flex justify-center'>
                         <Link
-                            to={btnLink}
-                            className='gradientBgBtn min-w-232px text-16px font-medium rounded text-white uppercase text-center pt-21px pb-21px pl-49px pr-49px no-underline'
+                            to='/blog/'
+                            className='gradientBgBtn max-w-md text-base font-medium rounded text-white uppercase text-center py-5 px-12 no-underline'
                         >
-                            {btnText}
+                            Read more about cloud security
                         </Link>
                     </div>
                 </div>
@@ -62,4 +63,4 @@ const Articles = ({ btnText, btnLink }) => {
     );
 };
 
-export default Articles;
+export default PostsPreview;

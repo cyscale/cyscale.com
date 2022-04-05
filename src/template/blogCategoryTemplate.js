@@ -34,7 +34,7 @@ const BlodDetail = ({ pageContext, location }) => {
             <Layout title={category} description={category} pageName='blog' location={location}>
                 <Container>
                     <Section>
-                        <h1 className='text-2xl font-normal'>Welcome to cyscale blog</h1>
+                        <h1 className='text-2xl font-normal mb-2'>Welcome to cyscale blog</h1>
                         <div className='overflow-x-auto py-2 -mx-8 md:mx-0 pl-8 md:pl-0 hide-scrollbar'>
                             <Chip className='mr-2' to={`/blog/`} active={category === 'All'}>
                                 All

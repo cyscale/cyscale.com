@@ -4,7 +4,7 @@ import GetStarted from './getstarted';
 import Offer from './offer';
 import Cloud from './cloud';
 import Partners from './partners';
-import Articles from './articles';
+import PostsPreview from '../new-blog/PostsPreview';
 import Sectionheader from '../layout/sectionheader';
 import messageIcon from '../../assets/images/chat_icon.png';
 import searchIcon from '../../assets/images/search.png';
@@ -209,7 +209,7 @@ const Home = () => {
             <div className='max-w-1366px m-auto pt-67px pb-67px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px'>
                 <Sectionheader headingText={`What we're up to`} />
             </div>
-            <Articles btnText='Read more about Cloud Security' btnLink='/blog/' />
+            <PostsPreview />
             <div className='gradientBG'>
                 <GetStarted
                     description='When did you last scan your cloud for misconfigurations?'
