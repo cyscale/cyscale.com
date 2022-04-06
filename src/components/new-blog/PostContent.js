@@ -25,7 +25,7 @@ export default function PostContent({ data, suggestions, preview = false }) {
                                 <Categories categories={data.categories} />
                             </div>
                             <h1 className='text-2xl my-4 font-medium'>{data.title}</h1>
-                            <PostAuthor date={data.date} author={data.authors} />
+                            <PostAuthor preview={preview} date={data.date} author={data.authors} />
                         </div>
                         <div className='mt-8 lg:mt-0 col-span-12 lg:col-span-6'>
                             {!preview ? (
