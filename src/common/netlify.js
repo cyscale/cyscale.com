@@ -5,6 +5,7 @@ import '../styles/global.css';
 
 const BlogPreview = ({ entry }) => (
     <PostContent
+        preview={true}
         data={{
             title: entry.getIn(['data', 'title']),
             featuredimage: { publicURL: entry.getIn(['data', 'featuredimage']) },

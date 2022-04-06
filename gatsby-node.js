@@ -97,11 +97,12 @@ exports.createPages = async ({ graphql, actions }) => {
                                 seoDescription
                                 date
                                 featuredpost
-                                templateKey
                                 permalink
-                                tags
                                 featuredimage {
                                     publicURL
+                                    childImageSharp {
+                                        gatsbyImageData(width: 820, layout: CONSTRAINED)
+                                    }
                                 }
                             }
                             rawMarkdownBody
@@ -135,7 +136,7 @@ exports.createPages = async ({ graphql, actions }) => {
                 component: blogTemplate,
                 context: {
                     alldata: node,
-                    suggestions: [posts[0], posts[1], posts[2]]
+                    suggestions: [posts[0], posts[1], posts[2], posts[3]]
                 }
             });
         });

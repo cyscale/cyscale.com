@@ -73,6 +73,7 @@ const TopNav = ({ pageName }) => {
     const data = useStaticQuery(graphql`
         query CareersQueryForMenu {
             allMarkdownRemark(
+                limit: 5
                 sort: { fields: frontmatter___date, order: DESC }
                 filter: { frontmatter: { templateKey: { eq: "career-page" }, disabled: { eq: false } } }
             ) {
@@ -81,7 +82,6 @@ const TopNav = ({ pageName }) => {
                         date
                         description
                         permalink
-                        templateKey
                         title
                         experience
                     }
@@ -91,7 +91,6 @@ const TopNav = ({ pageName }) => {
     `);
 
     let jobs = data.allMarkdownRemark.nodes;
-    jobs = jobs.filter(({ frontmatter }) => frontmatter.templateKey === 'career-page');
     const rootClasses = !trigger ? 'translate-y-0' : '-translate-y-full';
     return (
         <div

@@ -741,16 +741,7 @@ h5 {
 .bigger-box .w-full {
     width: 100% !important;
 }
-.bigger-box-image {
-    position: relative;
-    padding-bottom: 56.2%;
-}
-.bigger-box-image img {
-    position: absolute;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
+
 .complianceGetStartedGreyBg,
 .greyBgImage {
     background-image: linear-gradient(to right, #eeeeee, #eeeeee);

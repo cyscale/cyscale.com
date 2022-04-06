@@ -7,13 +7,13 @@ import TopNav from './topNav';
 import HeaderContext from './HeaderContext';
 import GlobalContext from '../../context/GlobalContext';
 import useHubspotEvents from '../../common/hbspotEvents';
-const Layout = ({ children, title, description, pageName, location, banner }) => {
+const Layout = ({ children, title, description, pageName, location }) => {
     useHubspotEvents({ location, pageName });
     const [sticker, setSticker] = useState(false);
 
     return (
         <GlobalContext.Provider value={{ location }}>
-            <Seo title={title} description={description} pageName={pageName} banner={banner} location={location} />
+            <Seo title={title} description={description} pageName={pageName} location={location} />
             <HeaderContext.Provider value={{ sticker, setSticker }}>
                 <TopNav pageName={pageName} />
             </HeaderContext.Provider>

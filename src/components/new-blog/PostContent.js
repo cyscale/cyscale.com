@@ -6,14 +6,15 @@ import rehypeRaw from 'rehype-raw';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import Categories from './Categories';
 import Post from './Post';
-import { map } from 'lodash';
+import { map, filter, slice } from 'lodash';
 import Share from '../Share/Share';
 import { useAppLink } from '../../common/links';
 import { Link as ScrollLink } from 'react-scroll';
+import { GatsbyImage as Img } from 'gatsby-plugin-image';
 
-export default function PostContent({ data, suggestions }) {
+export default function PostContent({ data, suggestions, preview = false }) {
     const appLink = useAppLink();
-    
+
     return (
         <div>
             <div className='container max-w-3xl m-auto px-8 '>
@@ -27,7 +28,15 @@ export default function PostContent({ data, suggestions }) {
                             <PostAuthor date={data.date} author={data.authors} />
                         </div>
                         <div className='mt-8 lg:mt-0 col-span-12 lg:col-span-6'>
-                            <img className='rounded-lg' src={data.featuredimage.publicURL} alt={data.title} />
+                            {!preview ? (
+                                <Img
+                                    image={data.featuredimage.childImageSharp.gatsbyImageData}
+                                    className='rounded-lg'
+                                    alt={data.title}
+                                />
+                            ) : (
+                                <img src={data.featuredimage.publicURL} className='rounded-lg' alt={data.title} />
+                            )}
                         </div>
                     </Row>
                 </div>
@@ -66,7 +75,7 @@ export default function PostContent({ data, suggestions }) {
                     </ReactMarkdown>
                 </div>
 
-                {data?.permalink && (
+                {!preview && (
                     <>
                         <a
                             target='_blank'
@@ -92,15 +101,22 @@ export default function PostContent({ data, suggestions }) {
                     </>
                 )}
             </div>
-            {suggestions && (
+            {!preview && suggestions && (
                 <div className='bg-lightGrey2 mt-12 py-12'>
                     <Container>
                         <Row className='gap-8'>
-                            {map(suggestions, (post, key) => (
-                                <div className='col-span-12 md:col-span-6 lg:col-span-4' key={key}>
-                                    {post?.node && <Post {...post.node.frontmatter} />}
-                                </div>
-                            ))}
+                            {map(
+                                slice(
+                                    filter(suggestions, ({ node }) => node.frontmatter.permalink !== data.permalink),
+                                    0,
+                                    3
+                                ),
+                                (post, key) => (
+                                    <div className='col-span-12 md:col-span-6 lg:col-span-4' key={key}>
+                                        {post?.node && <Post {...post.node.frontmatter} />}
+                                    </div>
+                                )
+                            )}
                         </Row>
                     </Container>
                 </div>

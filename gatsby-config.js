@@ -21,7 +21,7 @@ module.exports = {
         },
         {
             resolve: `gatsby-plugin-sitemap`,
-            options: { exclude: ['/campaigns/**'] }
+            options: { excludes: ['/campaigns/**'] }
         },
         {
             resolve: 'gatsby-plugin-react-svg',
@@ -40,32 +40,19 @@ module.exports = {
                             strategy: 'cdn',
                             family: 'Roboto',
                             fontDisplay: 'swap',
-                            variants: ['400', '500', '600', '700'],
+                            variants: ['400', '500', '600', '700']
                         },
                         {
                             strategy: 'cdn',
                             fontDisplay: 'swap',
                             family: 'Roboto Mono',
-                            variants: ['400', '500', '600', '700'],
+                            variants: ['400', '500', '600', '700']
                         }
                     ]
                 },
                 useMinify: true,
                 usePreload: true,
                 usePreconnect: true
-            }
-        },
-        {
-            resolve: `gatsby-plugin-purgecss`,
-            options: {
-                develop: true,
-                printRejected: true,
-                ignore: [
-                    'slick-carousel/slick/slick.css',
-                    'react-tabs/style/react-tabs.css',
-                    'slick-carousel/slick/slick-theme.css'
-                ],
-                purgeOnly: ['bootstrap/']
             }
         },
         {
@@ -89,33 +76,7 @@ module.exports = {
                 name: 'markdown'
             }
         },
-        'gatsby-plugin-sharp',
-        'gatsby-transformer-sharp',
-        {
-            resolve: 'gatsby-transformer-remark',
-            options: {
-                plugins: [
-                    {
-                        resolve: 'gatsby-remark-relative-images',
-                        options: {
-                            name: 'uploads'
-                        }
-                    },
-                    {
-                        resolve: 'gatsby-remark-images',
-                        options: {
-                            maxWidth: 2048
-                        }
-                    },
-                    {
-                        resolve: 'gatsby-remark-copy-linked-files',
-                        options: {
-                            destinationDir: 'static'
-                        }
-                    }
-                ]
-            }
-        },
+
         {
             resolve: `gatsby-plugin-canonical-urls`,
             options: {
@@ -144,6 +105,34 @@ module.exports = {
                 modulePath: `${__dirname}/src/common/netlify.js`
             }
         },
-        `gatsby-plugin-meta-redirect`
+        `gatsby-plugin-meta-redirect`,
+        `gatsby-plugin-sharp`,
+        `gatsby-plugin-image`,
+        `gatsby-transformer-sharp`,
+        {
+            resolve: 'gatsby-transformer-remark',
+            options: {
+                plugins: [
+                    {
+                        resolve: 'gatsby-remark-relative-images',
+                        options: {
+                            name: 'uploads'
+                        }
+                    },
+                    {
+                        resolve: 'gatsby-remark-images',
+                        options: {
+                            maxWidth: 1024
+                        }
+                    },
+                    {
+                        resolve: 'gatsby-remark-copy-linked-files',
+                        options: {
+                            destinationDir: 'static'
+                        }
+                    }
+                ]
+            }
+        }
     ]
 };

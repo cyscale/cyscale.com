@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { Row } from '../atoms/Containers';
 import Author from './Author';
 import PostMeta from './PostMeta';
+import { GatsbyImage as Img } from 'gatsby-plugin-image';
 
 export default function FeaturedPost({ authors, categories, date, permalink, title, featuredimage }) {
     const linkRef = React.useRef();
@@ -15,7 +15,7 @@ export default function FeaturedPost({ authors, categories, date, permalink, tit
             onKeyDown={(e) => (e.code === 13 || e.code === 32) && linkRef.current.click()}
             className='rounded-xl bg-white block overflow-hidden group cursor-pointer'
         >
-            <Row>
+            <div className='grid grid-cols-12'>
                 <div className='col-span-4 p-5 flex flex-col justify-between shadow-inner min-h-72 lg:min-h-100'>
                     <PostMeta date={date} categories={categories} />
                     <Link to={`/blog/${permalink}/`} ref={linkRef}>
@@ -26,9 +26,9 @@ export default function FeaturedPost({ authors, categories, date, permalink, tit
                     <Author author={authors} />
                 </div>
                 <div className='col-span-8'>
-                    <img src={featuredimage.publicURL} alt={title} />
+                    <Img image={featuredimage.childImageSharp.gatsbyImageData} alt={title} />
                 </div>
-            </Row>
+            </div>
         </div>
     );
 }
