@@ -6,7 +6,7 @@ export default function ComplianceCode() {
         <div className='bg-lightGrey gradientWingBg'>
             <div className='max-w-1366px m-auto py-12 lg:py-20 pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px'>
                 <div className='w-full xl:w-1/3 mx-auto'>
-                    <h2 className='text-blue text-34px leading-normal sectionTitle new-line'>
+                    <h2 className='font-semibold  text-blue text-34px leading-normal sectionTitle new-line'>
                         Use Compliance as Code to automate GRC tasks
                     </h2>
                     <p className='text-base text-black leading-normal mt-12'>

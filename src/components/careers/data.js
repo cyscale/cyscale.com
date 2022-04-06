@@ -1,7 +1,15 @@
 import React from 'react';
-import { AndreiM, AndreiP, AndreiS, Gabriel, Levi, Manuela, MihaiB, MihaiM, Ovidiu, Virginia } from '../about/images';
+import { AndreiM, AndreiP, AndreiS, Gabriel, Levi, Manuela, MihaiB, MihaiM, Ovidiu, Sabrina, Virginia } from '../about/images';
 
 const data = [
+    {
+        order: 11,
+        photo: <Sabrina />,
+        name: 'Sabrina Lupșan',
+        position: 'Content Writer',
+        linkedin: 'https://www.linkedin.com/in/sabrina-lupsan-networking-cybersecurity/',
+        quote: false
+    },
     {
         order: 10,
         photo: <AndreiP />,
@@ -69,7 +77,7 @@ const data = [
     {
         order: 2,
         photo: <Manuela />,
-        name: 'Manuela Ticudean',
+        name: 'Manuela Țicudean',
         leader: true,
         position: 'Co-Founder & PM',
         linkedin: 'https://www.linkedin.com/in/manuela-ticudean-88a01b81/',

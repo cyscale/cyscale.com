@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
-
 body,
 html,
 p,
@@ -8,7 +5,6 @@ ul,
 li,
 ol,
 a {
-    font-family: 'Roboto', sans-serif;
     font-weight: 400;
 }
 
@@ -16,11 +12,9 @@ h1,
 h2,
 h3,
 h4,
-h5,
-h6 {
+h5 {
     margin: 0;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700 !important;
+    font-weight: bold;
 }
 
 .topNav .navbar-light .navbar-nav .nav-link {
@@ -436,7 +430,6 @@ h6 {
     background-position: 105% -40px;
     background-repeat: no-repeat;
     background-size: 25%;
-
 }
 .CSPMServices.securityGaps {
     background-size: contain;
@@ -748,16 +741,7 @@ h6 {
 .bigger-box .w-full {
     width: 100% !important;
 }
-.bigger-box-image {
-    position: relative;
-    padding-bottom: 56.2%;
-}
-.bigger-box-image img {
-    position: absolute;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
+
 .complianceGetStartedGreyBg,
 .greyBgImage {
     background-image: linear-gradient(to right, #eeeeee, #eeeeee);
@@ -842,6 +826,7 @@ h6 {
 .jobs h5,
 .jobs h6 {
     color: #0f26aa;
+    font-weight: 700;
     margin-bottom: 10px;
     margin-top: 20px;
 }

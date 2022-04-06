@@ -10,6 +10,10 @@ module.exports = {
     plugins: [],
     theme: {
         extend: {
+            minHeight: {
+                72: '18rem',
+                100: '25rem'
+            },
             maxWidth: {
                 '1440px': '1440px',
                 '1366px': '1366px',
@@ -27,7 +31,7 @@ module.exports = {
                 '384px': '384px',
                 '294px': '294px'
             },
-            backgroundImage: theme => ({}),
+            backgroundImage: (theme) => ({}),
             spacing: {
                 '588px': '588px',
                 '294px': '294px',
@@ -690,7 +694,6 @@ module.exports = {
                 '104px': '104px',
                 '105px': '105px'
             },
-
             colors: {
                 primary: '#0F26AA',
                 gray: '#303B41 !important',
@@ -699,6 +702,7 @@ module.exports = {
                 green: '#09D6B9 !important',
                 grey2: '#707070 !important',
                 grey3: '#D8D8D8 !important',
+                digital: '#079BEE !important',
                 borderGrey: '#B5B5B5 !important',
                 lightOrange: '#FBB040 !important',
                 lightGrey2: '#EEEEEE !important',
@@ -708,9 +712,23 @@ module.exports = {
                 black1: '#292929 !important'
             },
             fontFamily: {
-                roboto: ['Roboto', 'sans-serif']
+                sans: [
+                    'Roboto',
+                    'system-ui',
+                    '-apple-system',
+                    'BlinkMacSystemFont',
+                    '"Segoe UI"',
+                    '"Helvetica Neue"',
+                    'Arial',
+                    '"Noto Sans"',
+                    'sans-serif',
+                    '"Apple Color Emoji"',
+                    '"Segoe UI Emoji"',
+                    '"Segoe UI Symbol"',
+                    '"Noto Color Emoji"'
+                ]
             },
-            backgroundColor: theme => ({
+            backgroundColor: (theme) => ({
                 ...theme('colors'),
                 primarymain: '#050A27',
                 grey1: '#1E223D',

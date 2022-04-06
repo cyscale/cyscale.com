@@ -14,7 +14,7 @@ const Index = () => {
                     <div className='max-w-1366px mx-auto pt-72 pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px'>
                         <div className='flex'>
                             <div className='mx-auto w-full xl:w-2/4'>
-                                <h1 className='text-34px text-blue leading-normal font-bold otherPages sectionTitle'>
+                                <h1 className='text-34px text-blue leading-normal font-semibold otherPages sectionTitle'>
                                     Privacy Policy
                                 </h1>
                             </div>
@@ -32,7 +32,7 @@ const Index = () => {
                                 through the services we provide (collectively, our “Service”). By using our Service, you
                                 agree to the terms of this Privacy Policy and our Terms of Service.
                             </p>
-                            <h2 className='font-bold mb-36px text-24px'>
+                            <h2 className='font-semibold mb-36px text-24px'>
                                 1. What information do we collect and for what purpose?
                             </h2>
                             <p className='mb-20px'>The categories of information we collect can include:</p>
@@ -69,7 +69,7 @@ const Index = () => {
                                     communication preferences, see “Your Choices Regarding Your Information” below.
                                 </li>
                             </ul>
-                            <h2 className='font-bold mb-36px text-24px'>
+                            <h2 className='font-semibold mb-36px text-24px'>
                                 2. How we use cookies and other tracking technology to collect information
                             </h2>
                             <p className='mb-36px'>
@@ -148,7 +148,7 @@ const Index = () => {
                                 ). Depending on your mobile device, you may not be able to control tracking technologies
                                 through settings.
                             </p>
-                            <h2 className='font-bold mb-36px text-24px'>3. Sharing of your information</h2>
+                            <h2 className='font-semibold mb-36px text-24px'>3. Sharing of your information</h2>
                             <p className='mb-20px'>
                                 We may share your personal information in the instances described below. For further
                                 information on your choices regarding your information, see the “Your Choices About Your
@@ -193,7 +193,7 @@ const Index = () => {
                                     characteristics and may share that aggregated, anonymized data with third parties.
                                 </li>
                             </ul>
-                            <h2 className='font-bold mb-36px text-24px'>4. Your choices about your information</h2>
+                            <h2 className='font-semibold mb-36px text-24px'>4. Your choices about your information</h2>
                             <p className='mb-36px'>
                                 How to control your communications preferences:
                                 <br />
@@ -214,7 +214,7 @@ const Index = () => {
                                 about reviewing, modifying or deleting your account information, you can contact us
                                 directly at <strong>support@Cyscale.com</strong>.
                             </p>
-                            <h2 className='font-bold mb-36px text-24px'>
+                            <h2 className='font-semibold mb-36px text-24px'>
                                 5. How we store and protect your information
                             </h2>
                             <p className='mb-36px'>
@@ -241,7 +241,7 @@ const Index = () => {
                                 notify those individuals whose information may have been compromised and take other
                                 steps, in accordance with any applicable laws and regulations.
                             </p>
-                            <h2 className='font-bold mb-36px text-24px'>6. Links to other web sites and services</h2>
+                            <h2 className='font-semibold mb-36px text-24px'>6. Links to other web sites and services</h2>
                             <p className='mb-36px'>
                                 Our Service may integrate with or contain links to other third party sites and services.
                                 We are not responsible for the practices employed by third party websites or services
@@ -249,13 +249,13 @@ const Index = () => {
                                 with any third-party website or service are subject to that third party's own rules and
                                 policies.
                             </p>
-                            <h2 className='font-bold mb-36px text-24px'>7. How to contact us</h2>
+                            <h2 className='font-semibold mb-36px text-24px'>7. How to contact us</h2>
                             <p className='mb-36px'>
                                 If you have any questions about this Privacy Policy or the Service, please contact us at
                                 support@<strong>Cyscale</strong>
                                 .com or at <strong>The Broadgate Tower, 20 Primrose Street, London, EC2A 2RS</strong>.
                             </p>
-                            <h2 className='font-bold mb-36px text-24px'>8. Changes to our privacy policy</h2>
+                            <h2 className='font-semibold mb-36px text-24px'>8. Changes to our privacy policy</h2>
                             <p className='mb-36px'>
                                 <strong>Cyscale</strong> may modify or update this Privacy Policy from time to time to
                                 reflect the changes in our business and practices. When we change the policy in a

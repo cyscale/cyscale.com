@@ -67,7 +67,7 @@ const AWSCloudSecurity = ({ location }) => {
                                             width={70}
                                             alt='arrow'
                                         />
-                                        <h2 className='text-2xl leading-normal text-primary mb-1'>
+                                        <h2 className='font-semibold  text-2xl leading-normal text-primary mb-1'>
                                             Request a live demo
                                         </h2>
                                         <div id='request-aws-demo' style={{ minHeight: 450 }}></div>
@@ -82,7 +82,7 @@ const AWSCloudSecurity = ({ location }) => {
                     <Container>
                         <div className='mx-auto max-w-md text-center py-20'>
                             <img className='mx-auto mb-12 w-32' src={cloudIcon} alt='decoration' />
-                            <h3 className='text-white text-xl uppercase mb-12'>Secure your AWS Assets</h3>
+                            <h3 className='font-semibold  text-white text-xl uppercase mb-12'>Secure your AWS Assets</h3>
 
                             <ScrollLink
                                 className='bg-white text-black font-medium transition-all cursor-pointer duration-300 border uppercase border-black py-5 px-16 rounded inline-block hover:bg-black hover:text-white'

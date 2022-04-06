@@ -10,6 +10,7 @@ module.exports = {
         'gatsby-plugin-sass',
         'gatsby-plugin-postcss',
         'gatsby-plugin-react-helmet',
+        `gatsby-plugin-meta-redirect`,
         'gatsby-plugin-remove-serviceworker',
         {
             resolve: 'gatsby-plugin-robots-txt',
@@ -21,7 +22,7 @@ module.exports = {
         },
         {
             resolve: `gatsby-plugin-sitemap`,
-            options: { exclude: ['/campaigns/**'] }
+            options: { excludes: ['/campaigns/**'] }
         },
         {
             resolve: 'gatsby-plugin-react-svg',
@@ -32,23 +33,40 @@ module.exports = {
             }
         },
         {
-            resolve: `gatsby-plugin-purgecss`,
+            resolve: `gatsby-plugin-webfonts`,
             options: {
-                develop: true,
-                printRejected: true,
-                ignore: [
-                    'slick-carousel/slick/slick.css',
-                    'react-tabs/style/react-tabs.css',
-                    'slick-carousel/slick/slick-theme.css'
-                ],
-                purgeOnly: ['bootstrap/']
+                fonts: {
+                    google: [
+                        {
+                            strategy: 'cdn',
+                            family: 'Roboto',
+                            fontDisplay: 'swap',
+                            variants: ['400', '500', '600', '700']
+                        },
+                        {
+                            strategy: 'cdn',
+                            fontDisplay: 'swap',
+                            family: 'Roboto Mono',
+                            variants: ['400', '500', '600', '700']
+                        }
+                    ]
+                },
+                useMinify: true,
+                usePreload: true,
+                usePreconnect: true
             }
         },
         {
-            resolve: 'gatsby-source-filesystem',
+            resolve: `gatsby-plugin-canonical-urls`,
             options: {
-                path: `${__dirname}/static/img`,
-                name: 'uploads'
+                siteUrl: `https://cyscale.com/`,
+                stripQueryString: true
+            }
+        },
+        {
+            resolve: `gatsby-plugin-google-tagmanager`,
+            options: {
+                id: 'GTM-K6LKHQH'
             }
         },
         {
@@ -61,57 +79,30 @@ module.exports = {
         {
             resolve: 'gatsby-source-filesystem',
             options: {
-                path: `${__dirname}/src/pages`,
-                name: 'pages'
+                path: `${__dirname}/static/img`,
+                name: 'uploads'
             }
         },
-        'gatsby-plugin-sharp',
-        'gatsby-transformer-sharp',
         {
-            resolve: 'gatsby-transformer-remark',
+            resolve: 'gatsby-source-filesystem',
+            options: {
+                path: `${__dirname}/src/markdown`,
+                name: 'markdown'
+            }
+        },
+
+        `gatsby-transformer-sharp`,
+        `gatsby-plugin-sharp`,
+        {
+            resolve: `gatsby-transformer-remark`,
             options: {
                 plugins: [
+                    `gatsby-remark-relative-images`,
                     {
-                        resolve: 'gatsby-remark-relative-images',
-                        options: {
-                            name: 'uploads'
-                        }
-                    },
-                    {
-                        resolve: 'gatsby-remark-images',
-                        options: {
-                            maxWidth: 2048
-                        }
-                    },
-                    {
-                        resolve: 'gatsby-remark-copy-linked-files',
-                        options: {
-                            destinationDir: 'static'
-                        }
+                        resolve: `gatsby-remark-images`,
+                        options: {}
                     }
                 ]
-            }
-        },
-        {
-            resolve: `gatsby-plugin-canonical-urls`,
-            options: {
-                siteUrl: `https://cyscale.com/`,
-                stripQueryString: true
-            }
-        },
-        // {
-        //     resolve: `gatsby-plugin-gdpr-cookies`,
-        //     options: {
-        //         googleTagManager: {
-        //             trackingId: 'GTM-K6LKHQH',
-        //             cookieName: 'CookieConsent'
-        //         }
-        //     }
-        // },
-        {
-            resolve: `gatsby-plugin-google-tagmanager`,
-            options: {
-                id: 'GTM-K6LKHQH'
             }
         },
         {
@@ -119,7 +110,6 @@ module.exports = {
             options: {
                 modulePath: `${__dirname}/src/common/netlify.js`
             }
-        },
-        `gatsby-plugin-meta-redirect`
+        }
     ]
 };

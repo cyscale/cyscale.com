@@ -9,12 +9,10 @@ import icon2 from '../../assets/images/gear.svg';
 import icon3 from '../../assets/images/management.svg';
 import icon4 from '../../assets/images/message.svg';
 import getStartedICon from '../../assets/images/getStartedIconCPSM.svg';
-import {
-    OptimizeCosts,
-    EliminateSecurityGaps
-} from './images';
+import { OptimizeCosts, EliminateSecurityGaps } from './images';
 import { useAppLink } from '../../common/links';
 import MisconfigurationTabs from './MisconfigurationTabs';
+import CategoryPostsPreview from '../new-blog/CategoryPostsPreview';
 
 const Index = () => {
     const appLink = useAppLink();
@@ -167,6 +165,7 @@ const Index = () => {
                     data={dataService}
                 />
             </div>
+            <CategoryPostsPreview category={'CSPM'} />
             <div className='gradientBGCSPM-2'>
                 <CSPMgetStarted
                     title={`AGENTLESS, MULTI-CLOUD, PAINLESS CSPM`}

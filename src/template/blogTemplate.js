@@ -1,23 +1,21 @@
 import React from 'react';
-import Layout from '../components/layout/layout.js';
-import BlogOne from '../components/blog-one';
-import heroBG from '../assets/images/blog-hero.jpeg';
+import Layout from '../components/layout/CleanLayout';
+import PostContent from '../components/new-blog/PostContent';
 
 const BlodDetail = ({ pageContext, location }) => {
     const { alldata, suggestions } = pageContext;
+    const { frontmatter: data, rawMarkdownBody } = alldata;
 
     return (
-        <div className='BLogPager'>
+        <div className='bg-blog-post pt-28'>
             <Layout
                 location={location}
-                heroBG={heroBG}
                 pageName='blog-detail'
-                description={alldata?.frontmatter?.description}
-                blogDataTitle={alldata?.frontmatter?.title}
-                banner={alldata?.frontmatter?.featuredimage?.publicURL}
-                title={alldata?.frontmatter?.title}
+                title={data.seoTitle || data.title}
+                banner={data.featuredimage.publicURL}
+                description={data.seoDescription || data.description}
             >
-                <BlogOne data={alldata} suggestions={suggestions} />
+                <PostContent data={{ ...data, rawMarkdownBody }} suggestions={suggestions} />
             </Layout>
         </div>
     );

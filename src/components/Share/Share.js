@@ -1,6 +1,5 @@
 import React from 'react';
-import linked from '../../assets/images/linkedin.svg';
-import twitter from '../../assets/images/twitter.svg';
+import { FaLinkedin, FaTwitter } from 'react-icons/fa';
 const baseUrl = 'https://cyscale.com/blog/';
 
 export default function Share({ title, description, permalink }) {
@@ -8,20 +7,21 @@ export default function Share({ title, description, permalink }) {
         twitter: {
             name: 'Twitter',
             shareUrl: `https://twitter.com/share?text=${title}: &url=${baseUrl + permalink}&via=cyscale`,
-            icon: twitter
+            icon: <FaTwitter />
         },
         linkedin: {
             name: 'LinkedIn',
             shareUrl: `https://www.linkedin.com/sharing/share-offsite/?url=${baseUrl + permalink}`,
-            icon: linked
+            icon: <FaLinkedin />
         }
     };
 
     return (
-        <div className='flex justify-between' style={{ width: 48 }}>
+        <div className='flex justify-between' >
             {Object.values(platforms).map(({ name, shareUrl, icon }) => (
                 <a
                     href={shareUrl}
+                    className='group p-3'
                     title={`Share on ${name}`}
                     onClick={(e) => {
                         e.preventDefault();
@@ -30,7 +30,7 @@ export default function Share({ title, description, permalink }) {
                     }}
                     key={name}
                 >
-                    <img className='w-16px h-13px' src={icon} alt={name} />
+                    {React.cloneElement(icon, {className:'group-hover:text-primary  transition-all'})}
                 </a>
             ))}
         </div>

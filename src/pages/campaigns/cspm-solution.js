@@ -73,7 +73,7 @@ const CSPMSolution = ({ location }) => {
                                             width={70}
                                             alt='arrow'
                                         />
-                                        <h2 className='text-2xl leading-normal text-primary mb-1'>
+                                        <h2 className='font-semibold  text-2xl leading-normal text-primary mb-1'>
                                             Request a live demo
                                         </h2>
                                         <div id='request-cspm-demo' style={{ minHeight: 510 }}></div>
@@ -88,7 +88,7 @@ const CSPMSolution = ({ location }) => {
                     <Container>
                         <div className='mx-auto max-w-md text-center py-20'>
                             <img className='mx-auto mb-12 w-32' src={cloudIcon} alt='decoration' />
-                            <h3 className='text-white text-xl uppercase '>AGENTLESS, MULTI-CLOUD, PAINLESS CSPM</h3>
+                            <h3 className='font-semibold  text-white text-xl uppercase '>AGENTLESS, MULTI-CLOUD, PAINLESS CSPM</h3>
                             <p className='text-white text-base mt-1 mb-12'>
                                 Start seeing value & saving money in minutes
                             </p>

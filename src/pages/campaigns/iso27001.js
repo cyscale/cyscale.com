@@ -50,7 +50,7 @@ const Iso27001 = ({ location }) => {
                             <Row className='items-center'>
                                 <div className='col-span-12 lg:col-span-5 text-white'>
                                     <div className='max-w-lg mx-auto lg:ml-0 lg:mr-auto'>
-                                        <h1 className='text-3xl lg:text-5xl leading-normal mb-10'>
+                                        <h1 className='font-semibold  text-3xl lg:text-5xl leading-normal mb-10'>
                                             ISO 27001
                                             <br /> Compliance for Cloud
                                         </h1>
@@ -82,7 +82,7 @@ const Iso27001 = ({ location }) => {
                                             width={70}
                                             alt='arrow'
                                         />
-                                        <h2 className='text-2xl leading-normal text-primary mb-1'>
+                                        <h2 className='font-semibold  text-2xl leading-normal text-primary mb-1'>
                                             Request a live demo
                                         </h2>
                                         <div id='request-demo' style={{ minHeight: 510 }}></div>
@@ -116,7 +116,7 @@ const Iso27001 = ({ location }) => {
                         <div className='max-w-lg mx-auto lg:mx-0 lg:max-w-none'>
                             <Row style={{ alignItems: 'center' }}>
                                 <div className='col-span-12 lg:col-span-6 order-2 lg:order-1 lg:pr-8'>
-                                    <h2 className='text-primary text-2xl lg:text-4xl'>Asset Inventory</h2>
+                                    <h2 className='font-semibold  text-primary text-2xl lg:text-4xl'>Asset Inventory</h2>
                                     <p className='text-base lg:text-lg leading-relaxed mt-4 lg:mt-8'>
                                         Keep track of all your cloud assets such as virtual machines, storage buckets,
                                         and IAM users. Cyscale allows you to connect all your cloud accounts from AWS,
@@ -140,7 +140,7 @@ const Iso27001 = ({ location }) => {
                                     />
                                 </div>
                                 <div className='col-span-12 lg:col-span-6 lg:pl-8'>
-                                    <h2 className='text-primary text-2xl lg:text-4xl'>Annex A Controls and beyond</h2>
+                                    <h2 className='font-semibold  text-primary text-2xl lg:text-4xl'>Annex A Controls and beyond</h2>
                                     <p className='text-base lg:text-lg leading-relaxed  mt-4 lg:mt-8'>
                                         Continuously keep your systems and your data secure by following industry best
                                         practices such as CIS benchmarks and well-architected frameworks, all neatly
@@ -155,7 +155,7 @@ const Iso27001 = ({ location }) => {
                         <div className='max-w-lg mx-auto lg:mx-0 lg:max-w-none'>
                             <Row style={{ alignItems: 'center' }}>
                                 <div className='col-span-12 lg:col-span-6 order-2 lg:order-1 lg:pr-8'>
-                                    <h2 className='text-primary text-2xl lg:text-4xl'>Out of the box Policies</h2>
+                                    <h2 className='font-semibold  text-primary text-2xl lg:text-4xl'>Out of the box Policies</h2>
                                     <p className='text-base lg:text-lg leading-relaxed  mt-4 lg:mt-8'>
                                         Cyscale provides you with a set of battle-tested policies to jumpstart your
                                         ISMS. They are applicable to all your assets such as employee information,
@@ -183,7 +183,7 @@ const Iso27001 = ({ location }) => {
                                     />
                                 </div>
                                 <div className='col-span-12 lg:col-span-6 lg:pl-8'>
-                                    <h2 className='text-primary text-2xl lg:text-4xl'>Actionable Policies</h2>
+                                    <h2 className='font-semibold  text-primary text-2xl lg:text-4xl'>Actionable Policies</h2>
                                     <p className='text-base lg:text-lg leading-relaxed  mt-4 lg:mt-8'>
                                         Cyscale enables you to link procedures to actual technical verifications and
                                         controls. You know at any moment the exact compliance status of your assets
