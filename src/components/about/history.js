@@ -64,36 +64,6 @@ const History = () => {
                                 <strong>2022:</strong>
                             </p>
                             <p className='text-sm text-grey2 mt-8'>
-                                Cyscale raises $3.5M in a new seed round led by{' '}
-                                <a
-                                    className='text-blue'
-                                    href='https://www.notion.vc/'
-                                    target='_blank'
-                                    rel='noopener noreferrer'
-                                >
-                                    Notion Capital
-                                </a>
-                                ,{' '}
-                                <a
-                                    className='text-blue'
-                                    href='https://seedcamp.com/'
-                                    target='_blank'
-                                    rel='noopener noreferrer'
-                                >
-                                    Seedcamp
-                                </a>
-                                , and{' '}
-                                <a
-                                    className='text-blue'
-                                    href='https://gapminder.vc'
-                                    target='_blank'
-                                    rel='noopener noreferrer'
-                                >
-                                    GapMinder
-                                </a>
-                                .
-                            </p>
-                            <p className='text-sm text-grey2 mt-8'>
                                 Our team is growing fast. The Security Knowledge Graph™ helps more and more
                                 organizations understand their digital footprint, enabling them to secure and protect
                                 their most valuable assets.

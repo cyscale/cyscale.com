@@ -32,7 +32,7 @@ Acquiring one of these accreditations is a thorough process and choosing the rig
 
 **What are these accreditations** and what is their scope?
 
-The SOC 2 and [ISO 27001](https://cyscale.com/use-cases/iso-27001-compliance/) standards are normally acquired by B2B (Business-to-business) companies.
+The SOC 2 and standards are normally acquired by B2B (Business-to-business) companies.
 They:
 
 -   represent international standards for Information Technology Management Systems (ISMSs)
