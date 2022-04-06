@@ -2,7 +2,7 @@
 templateKey: category
 name: CNAPP
 slug: cnapp
-seoTitle: "" Cyscale - CNAPP
+seoTitle: Cyscale - CNAPP
 disabled: false
-seoDescription: "" News about Cyscale CNAPP
+seoDescription: News about Cyscale CNAPP
 ---

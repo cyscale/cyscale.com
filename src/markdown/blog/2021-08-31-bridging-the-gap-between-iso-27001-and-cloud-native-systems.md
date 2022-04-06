@@ -1,25 +1,21 @@
 ---
 templateKey: blog-post
-seoTitle: ""
 title: Bridging the Gap Between ISO 27001 and Cloud-Native Systems
 authors: Andrei Ștefănie
 permalink: implementing-iso-27001-for-cloud-native-systems
-categories: 
-  - Compliance
+categories:
+    - Compliance
 date: 2021-08-31T12:54:05.925Z
-seoDescription: ""
-description: Being compliant is a huge selling point and many well-established
-  customers will even require this from their service providers. One missing
-  product feature will probably not make or break the deal, but missing
-  compliance will.
+description: Being compliant is a huge selling point and many well-established customers will even require this from their service providers. One missing product feature will probably not make or break the deal, but missing compliance will.
 featuredpost: true
 featuredimage: /img/romain-dancre-doplsdelx7e-unsplash.jpg
 tags:
-  - compliance
-  - iso27001
-  - standards
-  - policies
+    - compliance
+    - iso27001
+    - standards
+    - policies
 ---
+
 <!--StartFragment-->
 
 <sub><sup>Photo by [Romain Dancre](https://unsplash.com/@romaindancre?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)</sup></sub>
@@ -50,12 +46,12 @@ So basically it helps us document how we protect our assets. Now, these assets c
 
 In fact, ISO 27001 provides 114 controls structured in 14 sections (called clauses), each covering a specific area. For example, clause A.13 refers to communications security and has two objectives:
 
-* Network security management
-* Information transfer
+-   Network security management
+-   Information transfer
 
-Both objectives contain several so-called **controls** that aim to help us **reduce the risk** when applicable. One of the controls, A.13.2.3, refers to *Electronic messaging* and says the following:
+Both objectives contain several so-called **controls** that aim to help us **reduce the risk** when applicable. One of the controls, A.13.2.3, refers to _Electronic messaging_ and says the following:
 
-*Information involved in electronic messaging shall be appropriately protected.*
+_Information involved in electronic messaging shall be appropriately protected._
 
 The control tells us what should be achieved, but doesn't tell us how. This is where the compliance team and the development team (usually represented by the architect) start gathering information. Their duty is to research the options and possibilities they have and to find out how the system/application handles it currently.
 
@@ -91,8 +87,6 @@ Now, if your organization is at this point, you adopted the DevOps culture at th
 4. wonder whether your research was comprehensive enough
 5. oppose adopting any new cloud provider because it would mean implementing and mapping all the controls again and again
 
-
-
-**However, if this sounds like a lot of work to do and/or you want to take your [ISO 27001 Compliance & Cloud Security](https://cyscale.com/use-cases/iso-27001-compliance/) to the next level by giving power to your policies and ultimately to your people, check out [cyscale.com](https://app.cyscale.com/ "https\://app.cyscale.com/").**
+**However, if this sounds like a lot of work to do and/or you want to take your [ISO 27001 Compliance & Cloud Security](https://cyscale.com/use-cases/iso-27001-compliance/) to the next level by giving power to your policies and ultimately to your people, check out [cyscale.com](https://app.cyscale.com/ 'https://app.cyscale.com/').**
 
 <!--EndFragment-->

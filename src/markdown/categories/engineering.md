@@ -2,7 +2,7 @@
 templateKey: category
 name: Engineering
 slug: engineering
-seoTitle: "" Cyscale - Engineering
+seoTitle: Cyscale - Engineering
 disabled: false
-seoDescription: "" News about Cyscale Engineering
+seoDescription: News about Cyscale Engineering
 ---

@@ -1,24 +1,22 @@
 ---
 templateKey: blog-post
-seoTitle: ""
 title: Integrating NATS Into the Cyscale Platform
 authors: Andrei Ștefănie
 permalink: integrating-nats-into-the-cyscale-platform
-categories: 
-  - Engineering
+categories:
+    - Engineering
 date: 2021-12-22T10:11:16.968Z
-seoDescription: ""
-description: Some concepts and techniques we leveraged to switch to a
-  cloud-native message broker.
+description: Some concepts and techniques we leveraged to switch to a cloud-native message broker.
 featuredpost: true
 featuredimage: /img/nats-horizontal-color.png
 tags:
-  - publish-subscribe
-  - messaging
-  - cloud-native
-  - kubernetes
-  - helm
+    - publish-subscribe
+    - messaging
+    - cloud-native
+    - kubernetes
+    - helm
 ---
+
 <!--StartFragment-->
 
 ## Backstory
@@ -39,7 +37,7 @@ The rest of the article will cover the main steps we took to integrate NATS into
 
 **The NATS Ecosystem**
 
-![The NATS ecosystem encompassing the core NATS server, JetStream, the NATS clients and CLI, and the NATS resources for Kubernetes](/img/cyscale-nats.png "The NATS ecosystem")
+![The NATS ecosystem encompassing the core NATS server, JetStream, the NATS clients and CLI, and the NATS resources for Kubernetes](/img/cyscale-nats.png 'The NATS ecosystem')
 
 ### Core NATS
 
@@ -65,53 +63,48 @@ Having the messages persisted also enables us to take different approaches based
 export type MessageHandler = (data: NotificationDto[]) => Promise<void>;
 
 export const handleNotificationMessages = async (handler: MessageHandler) => {
-  try {
-    const nc = await getNatsClient();
+    try {
+        const nc = await getNatsClient();
 
-    if (!process.env.NOTIFICATIONS_SUBJECT) {
-      throw Error('NOTIFICATIONS_SUBJECT not set');
-    }
+        if (!process.env.NOTIFICATIONS_SUBJECT) {
+            throw Error('NOTIFICATIONS_SUBJECT not set');
+        }
 
-    const jc = JSONCodec<NotificationDto>();
+        const jc = JSONCodec<NotificationDto>();
 
-    const psub = await nc
-      .jetstream()
-      .pullSubscribe(process.env.NOTIFICATIONS_SUBJECT, {
-        queue: 'notifier',
-        config: { durable_name: 'notifier' },
-      });
+        const psub = await nc.jetstream().pullSubscribe(process.env.NOTIFICATIONS_SUBJECT, {
+            queue: 'notifier',
+            config: { durable_name: 'notifier' }
+        });
 
-    const done = (async () => {
-      let notifications: NotificationDto[] = [];
-      for await (const m of psub) {
-        try {
-          notifications.push(jc.decode(m.data));
-          m.ack();
-          // Wait to gather all messages from the current batch
-          if (m.info.pending === 0) {
-            await handler(notifications);
-            logger.info(`Processing ${notifications.length} messages`);
-            notifications = [];
-          }
-        } catch (error) {
-          logger.error(error);
-        }
-      }
-    })();
+        const done = (async () => {
+            let notifications: NotificationDto[] = [];
+            for await (const m of psub) {
+                try {
+                    notifications.push(jc.decode(m.data));
+                    m.ack(); // Wait to gather all messages from the current batch
+                    if (m.info.pending === 0) {
+                        await handler(notifications);
+                        logger.info(`Processing ${notifications.length} messages`);
+                        notifications = [];
+                    }
+                } catch (error) {
+                    logger.error(error);
+                }
+            }
+        })();
 
-    setInterval(() => {
-      psub.pull({ batch: 30, expires: 1000 });
-    }, 1000 * 30);
+        setInterval(() => {
+            psub.pull({ batch: 30, expires: 1000 });
+        }, 1000 * 30);
 
-    logger.info(
-      `Listening for messages on ${process.env.NOTIFICATIONS_SUBJECT}`
-    );
+        logger.info(`Listening for messages on ${process.env.NOTIFICATIONS_SUBJECT}`);
 
-    await done;
-    await psub.destroy();
-  } catch (e) {
-    logger.error(`Failed to initiate message listening ${e}`);
-  }
+        await done;
+        await psub.destroy();
+    } catch (e) {
+        logger.error(`Failed to initiate message listening ${e}`);
+    }
 };
 ```
 
