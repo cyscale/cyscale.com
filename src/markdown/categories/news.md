@@ -2,7 +2,7 @@
 templateKey: category
 name: News
 slug: news
-seoTitle: Cyscale - News
+seoTitle: "" Cyscale - News
 disabled: false
-seoDescription: News about Cyscale
+seoDescription: "" News about Cyscale
 ---

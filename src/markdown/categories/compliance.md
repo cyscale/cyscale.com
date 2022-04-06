@@ -2,7 +2,7 @@
 templateKey: category
 name: Compliance
 slug: compliance
-seoTitle: Cyscale - Compliance
+seoTitle: "" Cyscale - Compliance
 disabled: false
-seoDescription: News about Cyscale Compliance
+seoDescription: "" News about Cyscale Compliance
 ---

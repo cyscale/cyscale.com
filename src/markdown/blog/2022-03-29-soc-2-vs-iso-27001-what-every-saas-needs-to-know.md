@@ -1,13 +1,13 @@
 ---
 templateKey: blog-post
-seoTitle:
+seoTitle: ""
 title: 'SOC 2 vs ISO 27001: What every SaaS needs to know'
 authors: Sabrina Lupșan
 permalink: soc-2-vs-ISO-27001-SaaS
 categories:
     - Compliance
 date: 2022-03-29T06:31:44.659Z
-seoDescription:
+seoDescription: ""
 description: >
     When looking into consolidating your data protection services, you may decide
     to implement SOC 2 or ISO 27001. Acquiring one of these accreditations is a

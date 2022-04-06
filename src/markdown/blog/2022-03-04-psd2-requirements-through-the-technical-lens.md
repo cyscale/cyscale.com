@@ -1,13 +1,13 @@
 ---
 templateKey: blog-post
-seoTitle:
+seoTitle: ""
 title: PSD2 Requirements through the Technical Security Lens
 authors: Manuela Țicudean
 permalink: PSD2-technical-requirements
 categories: 
   - Compliance
 date: 2022-03-04T13:12:59.854Z
-seoDescription:
+seoDescription: ""
 description: "A deeper look at the most important regulation for payment
   services in Europe (PSD2), surfacing security requirements for the technology
   at the core of these businesses, tech-governance included. "

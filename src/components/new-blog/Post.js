@@ -17,7 +17,7 @@ export default function Post({ authors, categories, date, permalink, title, feat
         >
             <div className='relative overflow-hidden' style={{ paddingBottom: '56.2%' }}>
                 <div className='absolute top-0 left-0'>
-                    <Img image={featuredimage?.childImageSharp?.gatsbyImageData} alt={title} />
+                    {featuredimage && <Img image={featuredimage?.childImageSharp?.gatsbyImageData} alt={title} />}
                 </div>
             </div>
             <div className='p-5 shadow-inner'>

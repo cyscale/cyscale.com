@@ -1,18 +1,18 @@
 ---
 templateKey: blog-post
-seoTitle:
+seoTitle: ""
 title: "What is a CSPM and why should you consider using one? "
 authors: Virginia Mitea
 permalink: cspm-visibility-compliance-security
 categories: 
   - CSPM
 date: 2021-08-17T12:26:54.609Z
-seoDescription:
+seoDescription: ""
 description: "A CSPM or Cloud Security Posture Management is a tool designed to
   identify misconfiguration and compliance risks in the cloud while making sure
   there are no gaps in security policy enforcement. "
 featuredpost: true
-featuredimage: /img/christina-wocintechchat-com-glrqywjguey-unsplash-1-.jpg
+featuredimage: /img/christina-wocintechchat-com-glrqywjguey-unsplash.jpg
 tags:
   - cspm
   - visibility

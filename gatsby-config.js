@@ -99,15 +99,18 @@ module.exports = {
                 id: 'GTM-K6LKHQH'
             }
         },
+
+        `gatsby-plugin-meta-redirect`,
+        `gatsby-plugin-image`,
         {
-            resolve: 'gatsby-plugin-netlify-cms',
+            resolve: `gatsby-plugin-sharp`,
             options: {
-                modulePath: `${__dirname}/src/common/netlify.js`
+                defaults: {
+                    quality: 95,
+                    placeholder: `none`
+                }
             }
         },
-        `gatsby-plugin-meta-redirect`,
-        `gatsby-plugin-sharp`,
-        `gatsby-plugin-image`,
         `gatsby-transformer-sharp`,
         {
             resolve: 'gatsby-transformer-remark',
@@ -122,7 +125,7 @@ module.exports = {
                     {
                         resolve: 'gatsby-remark-images',
                         options: {
-                            maxWidth: 1024
+                            maxWidth: 820
                         }
                     },
                     {
@@ -133,6 +136,12 @@ module.exports = {
                     }
                 ]
             }
-        }
+        },
+        {
+            resolve: 'gatsby-plugin-netlify-cms',
+            options: {
+                modulePath: `${__dirname}/src/common/netlify.js`
+            }
+        },
     ]
 };

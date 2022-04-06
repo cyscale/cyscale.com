@@ -1,11 +1,11 @@
 ---
 templateKey: blog-post
-seoTitle:
+seoTitle: ""
 title: Hello Darkness, my old friend!
 date: 2020-10-20T14:05:00.000Z
 featuredpost: false
 authors: Ovidiu Cical
-seoDescription:
+seoDescription: ""
 description: At Cyscale, we see Darkness as a force for good. It can obscure the less relevant and make the vital signals glow even brighter. We're introducing a dark mode for all users
 categories:
     - News

@@ -1,13 +1,13 @@
 ---
 templateKey: blog-post
-seoTitle:
+seoTitle: ""
 title: Introducing the next level of security, by Cyscale
 authors: Ovidiu Cical
 permalink: next-level-of-cloud-security
 categories: 
   - Product
 date: 2020-07-15T07:05:00.000Z
-seoDescription:
+seoDescription: ""
 description: We're on a mission to enhance your business, so get ready to
   embrace the digital future and secure your apps & data in a multi-cloud world!
 featuredpost: false

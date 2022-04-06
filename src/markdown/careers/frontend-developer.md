@@ -1,7 +1,7 @@
 ---
 templateKey: career-page
 title: ReactJS Developer
-seoTitle:
+seoTitle: ""
 disabled: false
 location: Romania
 date: 2021-12-14T15:42:55.900Z
@@ -9,7 +9,7 @@ permalink: frontend-developer
 description: Cyscale is a startup with offices in London (UK) and Cluj-Napoca (RO), 
   activating in the cloud cybersecurity industry. 
   We are looking for an experienced Frontend Developer.
-seoDescription:
+seoDescription: ""
 skills: React.js, JavaScript, GraphQL, Node.js, Cloud Computing.
 experience: mid/senior
 department: Engineering

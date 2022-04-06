@@ -85,22 +85,22 @@ function withImageData(WrappedComponent) {
                     }
                     notion: file(relativePath: { eq: "notion.jpg" }) {
                         childImageSharp {
-                            gatsbyImageData(width: 102, layout: CONSTRAINED)
+                            gatsbyImageData(height: 102, layout: CONSTRAINED)
                         }
                     }
                     seedcamp: file(relativePath: { eq: "seedcamp.jpg" }) {
                         childImageSharp {
-                            gatsbyImageData(width: 102, layout: CONSTRAINED)
+                            gatsbyImageData(height: 102, layout: CONSTRAINED)
                         }
                     }
                     gapminder: file(relativePath: { eq: "gapminder.jpg" }) {
                         childImageSharp {
-                            gatsbyImageData(width: 102, layout: CONSTRAINED)
+                            gatsbyImageData(height: 102, layout: CONSTRAINED)
                         }
                     }
                     seedblink: file(relativePath: { eq: "seedblink.jpg" }) {
                         childImageSharp {
-                            gatsbyImageData(width: 102, layout: CONSTRAINED)
+                            gatsbyImageData(height: 102, layout: CONSTRAINED)
                         }
                     }
                 }

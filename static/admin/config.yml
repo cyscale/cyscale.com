@@ -21,7 +21,12 @@ collections:
           - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'blog-post' }
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'SEO Title', name: 'seoTitle', widget: 'string' }
-          - { label: 'Authors', name: 'authors', widget: 'string' }
+          - {
+                label: 'Author',
+                name: 'authors',
+                widget: 'select',
+                options: ['Sabrina Lupșan', 'Andrei Ștefănie', 'Virginia Mitea', 'Manuela Țicudean', 'Ovidiu Cical']
+            }
           - { label: 'Permalink', name: 'permalink', widget: 'string' }
           - {
                 label: 'Categories',
@@ -45,8 +50,8 @@ collections:
       folder: 'src/pages/categories'
       create: true
       slug: '{{slug}}'
-      editor: 
-        preview: false
+      editor:
+          preview: false
       fields:
           - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'category' }
           - { label: 'SEO Title', name: 'seoTitle', widget: 'string' }

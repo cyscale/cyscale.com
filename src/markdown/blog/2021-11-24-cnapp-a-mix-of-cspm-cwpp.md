@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-seoTitle:
+seoTitle: ""
 title: "CNAPP: A mix of CSPM & CWPP"
 authors: Virginia Mitea
 permalink: cnapp-a-mix-of-cspm-cwpp
@@ -8,7 +8,7 @@ categories:
   - CSPM
   - CNAPP
 date: 2021-11-24T15:35:49.333Z
-seoDescription:
+seoDescription: ""
 description: >-
   Gartner has defined a new category that is focused on securing cloud services
   and cloud-native applications, the so-called CNAPP- Cloud-Native Application

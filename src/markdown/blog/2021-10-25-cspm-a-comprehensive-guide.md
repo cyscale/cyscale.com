@@ -1,13 +1,13 @@
 ---
 templateKey: blog-post
-seoTitle:
+seoTitle: ""
 title: 'CSPM: A Comprehensive Guide'
 authors: Virginia Mitea
 permalink: cloud-security-posture-management-cspm-guide
 categories:
     - CSPM
 date: 2021-10-25T13:52:42.171Z
-seoDescription:
+seoDescription: ""
 description: >-
     A Cloud Security Posture Management solution is a critical part of a Cloud
     Security Program because it covers the unintentional risks that can expose
