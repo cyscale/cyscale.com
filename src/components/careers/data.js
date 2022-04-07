@@ -6,7 +6,7 @@ const data = [
         order: 11,
         photo: <Sabrina />,
         name: 'Sabrina Lupșan',
-        position: 'Content Writer',
+        position: 'Cybersecurity Content Writer',
         linkedin: 'https://www.linkedin.com/in/sabrina-lupsan-networking-cybersecurity/',
         quote: false
     },
