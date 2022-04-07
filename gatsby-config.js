@@ -92,7 +92,15 @@ module.exports = {
         },
 
         `gatsby-transformer-sharp`,
-        `gatsby-plugin-sharp`,
+        {
+            resolve: `gatsby-plugin-sharp`,
+            options: {
+                defaults: {
+                    quality: 99,
+                    placeholder: `none`
+                }
+            }
+        },
         {
             resolve: `gatsby-transformer-remark`,
             options: {
