@@ -15,8 +15,8 @@ export default function Author({ author }) {
             ) : (
                 <div className='flex justify-between items-center'>
                     <div className='flex items-center'>
-                        <div className='h-7 w-7 mr-2 rounded-full border-digital md:border overflow-hidden'>
-                            {React.cloneElement(_author.photo, { ..._author.photo.props, className: 'rounded-full overflow-hidden' })}
+                        <div className='h-7 w-7 mr-2 rounded-full border-digital border'>
+                            {React.cloneElement(_author.photo, { ..._author.photo.props, className: 'rounded-full overflow-hidden relative z-0' })}
                         </div>
                         <span className='text-xs text-black'>
                             By <strong>{_author.name}</strong>

@@ -229,10 +229,10 @@ const Careers = ({ location }) => {
                                             <span className='block'>{position}</span>
                                         </div>
                                         <div className='flex flex-col items-center absolute -right-20 -bottom-64 md:-right-16 md:-bottom-52'>
-                                            <div className='grad mb-2 w-20 h-20 rounded-full overflow-hidden bg-gradient-primary'>
+                                            <div className='grad mb-2 w-20 h-20 rounded-full overflow-hidden'>
                                                 {photo &&
                                                     React.cloneElement(photo, {
-                                                        className: 'w-20 h-20 rounded-full',
+                                                        className: 'w-20 h-20 rounded-full overflow-hidden relative z-0',
                                                         alt: `${name} - ${position}`
                                                     })}
                                             </div>

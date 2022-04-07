@@ -27,10 +27,10 @@ export default function PostAuthor({ author, date, preview = false }) {
             ) : (
                 <div className='flex justify-between items-center'>
                     <div className='flex items-center'>
-                        <div className='h-10 w-10 mr-2 rounded-full border-digital md:border overflow-hidden'>
+                        <div className='h-10 w-10 mr-2 rounded-full border-digital border overflow-hidden'>
                             {React.cloneElement(_author.photo, {
                                 ..._author.photo.props,
-                                className: 'rounded-full overflow-hidden'
+                                className: 'rounded-full overflow-hidden relative z-0'
                             })}
                         </div>
                         <span className='text-sm text-black '>
