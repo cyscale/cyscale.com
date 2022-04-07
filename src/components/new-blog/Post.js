@@ -15,11 +15,13 @@ export default function Post({ authors, categories, date, permalink, title, feat
             onKeyDown={(e) => (e.code === 13 || e.code === 32) && linkRef.current.click()}
             className='rounded-xl bg-white block overflow-hidden group h-full cursor-pointer'
         >
-            <div className='relative overflow-hidden' style={{ paddingBottom: '56.2%' }}>
-                <div className='absolute top-0 left-0'>
-                    {featuredimage && <Img image={featuredimage?.childImageSharp?.gatsbyImageData} alt={title} />}
+            {featuredimage && (
+                <div className='relative overflow-hidden' style={{ paddingBottom: '56.2%' }}>
+                    <div className='absolute top-0 left-0'>
+                        <Img image={featuredimage?.childImageSharp?.gatsbyImageData} alt={title} />
+                    </div>
                 </div>
-            </div>
+            )}
             <div className='p-5 shadow-inner'>
                 <PostMeta date={date} categories={categories} />
                 <Link ref={linkRef} to={`/blog/${permalink}/`}>

@@ -12,7 +12,7 @@ const BlogPreview = ({ entry }) => (
             rawMarkdownBody: entry.getIn(['data', 'body']),
             date: entry.getIn(['data', 'date']),
             authors: entry.getIn(['data', 'authors']),
-            categories: entry.getIn(['data', 'categories'])
+            categories: entry.getIn(['data', 'categories']).toArray()
         }}
     />
 );
