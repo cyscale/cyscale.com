@@ -15,6 +15,7 @@ module.exports = {
                 100: '25rem'
             },
             maxWidth: {
+                'screen': '100vw',
                 '1440px': '1440px',
                 '1366px': '1366px',
                 '734px': '734px',
