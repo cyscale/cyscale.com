@@ -50,7 +50,7 @@ const BlodDetail = ({ pageContext, location }) => {
                                 </Chip>
                             ))}
                         </div>
-                        <Row className='mt-8 gap-8'>
+                        <Row className='mt-8 gap-4 lg:gap-8'>
                             <div className='col-span-12'>
                                 <div className='hidden md:block'>
                                     {featuredPost && <FeaturedPost {...featuredPost.frontmatter} />}
