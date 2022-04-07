@@ -14,18 +14,19 @@ import { GatsbyImage as Img } from 'gatsby-plugin-image';
 
 export default function PostContent({ data, suggestions, preview = false }) {
     const appLink = useAppLink();
-
     return (
         <div>
             <div className='container max-w-3xl m-auto px-8 '>
                 <div className='py-10  border-b border-lightGrey2 lg:border-0'>
                     <Row>
                         <div className='col-span-12 lg:col-span-6 flex flex-col justify-between'>
-                            <div>
-                                <Categories categories={data.categories} />
-                            </div>
+                            {data.categories && (
+                                <div>
+                                    <Categories categories={data.categories} />
+                                </div>
+                            )}
                             <h1 className='text-2xl my-4 font-medium'>{data.title}</h1>
-                            <PostAuthor date={data.date} author={data.authors} />
+                            {data.authors && <PostAuthor preview={preview} date={data.date} author={data.authors} />}
                         </div>
                         <div className='mt-8 lg:mt-0 col-span-12 lg:col-span-6'>
                             {!preview ? (
