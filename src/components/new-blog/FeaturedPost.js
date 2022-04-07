@@ -13,7 +13,7 @@ export default function FeaturedPost({ authors, categories, date, permalink, tit
             tabIndex={0}
             onClick={() => linkRef.current.click()}
             onKeyDown={(e) => (e.code === 13 || e.code === 32) && linkRef.current.click()}
-            className='rounded-xl bg-white block overflow-hidden group cursor-pointer'
+            className='rounded-xl shadow-lg bg-white block overflow-hidden group cursor-pointer'
         >
             <div className='grid grid-cols-12'>
                 <div className='col-span-4 p-5 flex flex-col justify-between shadow-inner min-h-72 lg:min-h-100'>

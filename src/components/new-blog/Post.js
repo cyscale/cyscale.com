@@ -13,7 +13,7 @@ export default function Post({ authors, categories, date, permalink, title, feat
             tabIndex={0}
             onClick={() => linkRef.current.click()}
             onKeyDown={(e) => (e.code === 13 || e.code === 32) && linkRef.current.click()}
-            className='rounded-xl bg-white block overflow-hidden group h-full cursor-pointer'
+            className='rounded-xl shadow-lg bg-white block overflow-hidden group h-full cursor-pointer'
         >
             {featuredimage && (
                 <div className='relative overflow-hidden' style={{ paddingBottom: '56.2%' }}>

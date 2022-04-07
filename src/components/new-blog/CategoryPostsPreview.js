@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import { Row, Container } from '../atoms/Containers';
+import { formatDate } from '../../common/utils';
 
 const CategoryPostsPreview = ({ category }) => {
     const data = useStaticQuery(graphql`
@@ -46,7 +47,7 @@ const CategoryPostsPreview = ({ category }) => {
                                     >
                                         <strong>{title}</strong>
                                         <br />
-                                        <span className='opacity-60'>{new Date(date).toLocaleDateString()}</span>
+                                        <span className='opacity-60'>{formatDate(date)}</span>
                                     </Link>
                                 );
                             })}

@@ -16,7 +16,7 @@ export default function PostContent({ data, suggestions, preview = false }) {
     const appLink = useAppLink();
     return (
         <div>
-            <div className='container max-w-3xl m-auto px-8 '>
+            <div className='container max-w-4xl m-auto px-8 '>
                 <div className='py-10  border-b border-lightGrey2 lg:border-0'>
                     <Row>
                         <div className='col-span-12 lg:col-span-6 flex flex-col justify-between'>
@@ -32,7 +32,7 @@ export default function PostContent({ data, suggestions, preview = false }) {
                             {!preview ? (
                                 <Img
                                     image={data.featuredimage.childImageSharp.gatsbyImageData}
-                                    className='rounded-lg'
+                                    className='rounded-lg overflow-hidden shadow-md'
                                     alt={data.title}
                                 />
                             ) : (
