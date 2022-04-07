@@ -39,7 +39,7 @@ const PostsPreview = () => {
     return (
         <div className='bg-lightGrey mt-0 py-12'>
             <Container>
-                <Row className='gap-8'>
+                <Row className='gap-4 lg:gap-8'>
                     {map(posts, ({ node }, index) => {
                         return (
                             <div key={index} className='col-span-12 md:col-span-6 lg:col-span-4'>

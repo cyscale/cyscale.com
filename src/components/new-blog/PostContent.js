@@ -105,7 +105,7 @@ export default function PostContent({ data, suggestions, preview = false }) {
             {!preview && suggestions && (
                 <div className='bg-lightGrey2 mt-12 py-12'>
                     <Container>
-                        <Row className='gap-8'>
+                        <Row className='gap-4 lg:gap-8'>
                             {map(
                                 slice(
                                     filter(suggestions, ({ node }) => node.frontmatter.permalink !== data.permalink),
