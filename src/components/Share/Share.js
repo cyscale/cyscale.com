@@ -2,7 +2,7 @@ import React from 'react';
 import { FaLinkedin, FaTwitter } from 'react-icons/fa';
 const baseUrl = 'https://cyscale.com/blog/';
 
-export default function Share({ title, description, permalink }) {
+export default function Share({ title, permalink }) {
     const platforms = {
         twitter: {
             name: 'Twitter',
@@ -21,7 +21,7 @@ export default function Share({ title, description, permalink }) {
             {Object.values(platforms).map(({ name, shareUrl, icon }) => (
                 <a
                     href={shareUrl}
-                    className='group p-3'
+                    className='p-3'
                     title={`Share on ${name}`}
                     onClick={(e) => {
                         e.preventDefault();
@@ -30,7 +30,7 @@ export default function Share({ title, description, permalink }) {
                     }}
                     key={name}
                 >
-                    {React.cloneElement(icon, {className:'group-hover:text-primary  transition-all'})}
+                    {React.cloneElement(icon, {className:'hover:text-primary  transition-all'})}
                 </a>
             ))}
         </div>

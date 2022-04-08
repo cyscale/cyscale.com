@@ -4,7 +4,7 @@ import PostMeta from './PostMeta';
 import Author from './Author';
 import { GatsbyImage as Img } from 'gatsby-plugin-image';
 
-export default function Post({ authors, categories, date, permalink, title, featuredimage }) {
+export default function Post({ authors, categories, date, permalink, title, description, featuredimage }) {
     const linkRef = React.useRef();
 
     return (
@@ -30,7 +30,7 @@ export default function Post({ authors, categories, date, permalink, title, feat
                     </h2>
                 </Link>
                 <div className='mt-auto'>
-                    <Author author={authors} />
+                    <Author author={authors} title={title} description={description} permalink={permalink} />
                 </div>
             </div>
         </div>

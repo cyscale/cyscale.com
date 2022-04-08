@@ -92,9 +92,9 @@ export default function PostContent({ data, suggestions, preview = false }) {
                                 <p className='text-sm mt-2'>Interesting? Share it</p>
                                 <div className='mt-2'>
                                     <Share
-                                        title={data?.frontmatter?.title}
-                                        permalink={data?.frontmatter?.permalink}
-                                        description={data?.frontmatter?.description}
+                                        title={data?.title}
+                                        permalink={data?.permalink}
+                                        description={data?.description}
                                     />
                                 </div>
                             </div>

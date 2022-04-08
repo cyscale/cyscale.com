@@ -5,7 +5,7 @@ import PostContent from '../components/new-blog/PostContent';
 const BlodDetail = ({ pageContext, location }) => {
     const { alldata, suggestions } = pageContext;
     const { frontmatter: data, rawMarkdownBody } = alldata;
-
+    console.log(data)
     return (
         <div className='bg-blog-post pt-28'>
             <Layout

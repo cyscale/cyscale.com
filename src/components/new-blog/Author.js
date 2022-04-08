@@ -1,9 +1,8 @@
 import React from 'react';
-import { FaLinkedin } from 'react-icons/fa';
 import data from '../careers/data';
 import { find } from 'lodash';
-
-export default function Author({ author }) {
+import Share from '../Share/Share';
+export default function Author({ author, permalink, title }) {
     const _author = find(data, ({ name }) => name === author) || author;
 
     return (
@@ -16,23 +15,16 @@ export default function Author({ author }) {
                 <div className='flex justify-between items-center'>
                     <div className='flex items-center'>
                         <div className='h-7 w-7 mr-2 rounded-full border-digital border'>
-                            {React.cloneElement(_author.photo, { ..._author.photo.props, className: 'rounded-full overflow-hidden relative z-10' })}
+                            {React.cloneElement(_author.photo, {
+                                ..._author.photo.props,
+                                className: 'rounded-full overflow-hidden relative z-10'
+                            })}
                         </div>
                         <span className='text-xs text-black'>
                             By <strong>{_author.name}</strong>
                         </span>
                     </div>
-                    {_author.linkedin && (
-                        <a
-                            href={_author.linkedin}
-                            onClick={(e) => e.stopPropagation()}
-                            className='text-xs flex hover:text-primary mt-1 text-neutral-600'
-                            rel='noopener noreferrer'
-                            target='_blank'
-                        >
-                            <FaLinkedin className='text-lg' />
-                        </a>
-                    )}
+                    <Share title={title} permalink={permalink}  />
                 </div>
             )}
         </div>

@@ -4,7 +4,7 @@ import Author from './Author';
 import PostMeta from './PostMeta';
 import { GatsbyImage as Img } from 'gatsby-plugin-image';
 
-export default function FeaturedPost({ authors, categories, date, permalink, title, featuredimage }) {
+export default function FeaturedPost({ authors, categories, description, date, permalink, title, featuredimage }) {
     const linkRef = React.useRef();
 
     return (
@@ -23,7 +23,7 @@ export default function FeaturedPost({ authors, categories, date, permalink, tit
                             {title}
                         </h2>
                     </Link>
-                    <Author author={authors} />
+                    <Author author={authors} title={title} permalink={permalink} />
                 </div>
                 <div className='col-span-8'>
                     <Img image={featuredimage.childImageSharp.gatsbyImageData} alt={title} />
