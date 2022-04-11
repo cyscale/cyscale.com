@@ -62,7 +62,7 @@ const AboutUs = ({ location }) => {
                         </div>
                         <div className='col-span-12 md:col-span-6'>
                             <p className='max-w-lg  leading-loose'>
-                                As more companies moved their business applications and data to the cloud, many of them
+                                As more companies moved their business applications and data to the cloud, many
                                 lacked the knowledge or human resources required to mitigate security risks associated
                                 with this accelerated cloud adoption.
                             </p>
@@ -70,7 +70,7 @@ const AboutUs = ({ location }) => {
                         <div className='col-span-12 md:col-span-6'>
                             <p className='max-w-lg  leading-loose'>
                                 Being on the front line as cybersecurity experts, the founders (Ovidiu, Manuela, and
-                                Andrei) have realized the struggle these companies face and start working on a solution
+                                Andrei) have realized the struggle these companies face and started working on a solution
                                 to help them handle their Cloud Security better and more efficiently. And so... Cyscale
                                 was born.
                             </p>
