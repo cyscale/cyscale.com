@@ -39,7 +39,8 @@ They:
 
 * represent international standards for Information Security Management Systems (ISMSs)
 * describe best practices for service providers who manage customer data
-  As a SaaS, in order to obtain one of the two accreditations, you must implement all the policies of that standard that apply to your organization.
+
+As a SaaS, in order to obtain one of the two accreditations, you must implement all the policies of that standard that apply to your organization.
 
 **What do these standards say about your company?**
 
@@ -49,7 +50,8 @@ Acquiring one of them promotes the following principles about your organization:
 * You recognize the importance of cybersecurity
 * Your company is making efforts to mitigate information security risks
 * You are properly managing information security
-  Given the statements above, you can safely assume that a customer will prefer an organization with one of the described accreditations in their possession, to the detriment of one without any.
+
+Given the statements above, you can safely assume that a customer will prefer an organization with one of the described accreditations in their possession, to the detriment of one without any.
 
 ### A comparison
 
