@@ -5,7 +5,7 @@ seoTitle: 5 Steps to Improve Your Company’s Cloud Security Posture
 authors: Sabrina Lupșan
 permalink: improve-cloud-security-posture
 categories:
-  - News
+  - CSPM
 date: 2022-04-15T06:10:31.315Z
 description: "Improve your company's cloud security posture by assuring
   discovery and visibility of cloud assets, detecting misconfigurations and
@@ -54,8 +54,6 @@ Here are some key actions that you need to take to make sure that your cloud is 
 
 Let us talk more about these tasks and how to accomplish them. 
 
-  
-
 **1. Assure discovery and visibility of cloud assets** 
 
 Looking at many configurations at once may become overwhelming very fast. 
@@ -65,8 +63,6 @@ It is hard to notice flaws in your security design if discovery and visibility a
 Discovery and visibility in cloud imply being able to visualize cloud assets in an organized and easily readable way, for example in a dashboard.  
 
 Even more useful is when visibility for each asset is enriched by additional context that may be provided in a graph view. 
-
- 
 
 ![A graph from the Cyscale application.](/img/graph_image.png "The Cyscale Security Knowledge Graph™")
 
@@ -88,8 +84,6 @@ For example, [a graph that maps networks of cloud assets. identities and workloa
 
 Visually examining the characteristics of your infrastructure may aid you in taking the right measures to improve security. 
 
-  
-
 **2. Detect misconfigurations** 
 
 According to [Continuity Central](https://www.continuitycentral.com/index.php/news/technology/7117-misconfiguration-was-the-number-one-cause-of-cloud-security-incidents-in-2021), misconfigurations in the cloud environment were the main cause of cloud security breaches in 2021. It is easy to overlook: 
@@ -110,8 +104,6 @@ Ideally, you should have an automated way to check for common cloud misconfigura
 
 We will provide you with a solution later in this article to easily keep misconfigurations under control and be notified when new ones appear. 
 
-  
-
 **3. Implement remediation for findings** 
 
 It is not enough to only discover threats in your design. 
@@ -125,8 +117,6 @@ Examples of misconfigurations remediations are: 
 * restricting overly permissive access to users, 
 * closing unnecessarily open ports, 
 * blocking inbound & outbound traffic. 
-
-  
 
 **4. Ensure logging and monitoring** 
 
@@ -142,8 +132,6 @@ In this case, **targeted alerts** can save your company from disaster by pinpoin
 
 Spotting threats immediately or within a short period of time may save your cloud environment from being breached. 
 
- 
-
 **5. Assure compliance with international standards** 
 
 Making sure that your company is compliant with international standards such as [ISO 27001](https://cyscale.com/blog/ISO-27001-certification-standard-policies-procedures/) not only consolidates your data protection services but also shows your clients that you acknowledge the importance of cybersecurity. 
@@ -153,8 +141,6 @@ Following best practices recommended by standards can greatly improve your cloud
 However, fulfilling all of the requirements consistently to become compliant with an international standard is a very tedious and time-consuming job. 
 
 A solution to this would be automating controls and compliance checks that scan your platform for every requirement and show if you are fulfilling every request. 
-
-  
 
 We have reached the end of the article and now you are probably wondering: 
 
