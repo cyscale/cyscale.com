@@ -63,7 +63,6 @@ It is hard to notice flaws in your security design if discovery and visibility a
 Discovery and visibility in cloud imply being able to visualize cloud assets in an organized and easily readable way, for example in a dashboard.  
 
 Even more useful is when visibility for each asset is enriched by additional context that may be provided in a graph view. 
-
 ![A graph from the Cyscale application.](/img/graph_image.png "The Cyscale Security Knowledge Graph™")
 
 Looking at: 
