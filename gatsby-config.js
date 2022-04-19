@@ -16,13 +16,13 @@ module.exports = {
             resolve: 'gatsby-plugin-robots-txt',
             options: {
                 host: 'https://cyscale.com/',
-                sitemap: 'https://cyscale.com/sitemap.xml',
+                sitemap: 'https://cyscale.com/sitemap-index.xml',
                 policy: [{ userAgent: '*', allow: '/' }]
             }
         },
         {
             resolve: `gatsby-plugin-sitemap`,
-            options: { excludes: ['/campaigns/**'] }
+            options: { excludes: ['/campaigns/**'], output: '/' }
         },
         {
             resolve: 'gatsby-plugin-react-svg',
