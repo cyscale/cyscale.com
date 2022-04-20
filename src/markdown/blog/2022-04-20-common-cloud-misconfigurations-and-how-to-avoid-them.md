@@ -21,8 +21,6 @@ tags:
   - misconfigurations
   - security
 ---
-<!--StartFragment-->
-
 Cloud misconfigurations are the number one reason for security breaches.  
 
 The first step towards securing your environment and improving your cloud security posture is acknowledging and knowing how to avoid mistakes. 
@@ -41,9 +39,7 @@ This article will explain these misconfigurations and help you work them out. �
 
 We will also give you some examples of the controls Cyscale implements to ensure foolproof configurations for your company’s cloud. 
 
-<br/>
-
-**1. Poor storage access configuration** 
+## **1. Poor storage access configuration**
 
 Storage access misconfigurations usually make cloud assets open to the public view. 
 
@@ -58,14 +54,12 @@ Public “READ” access over a company’s buckets creates the risk of a data b
 
 “WRITE” access over a bucket is arguably worse – this means that entities from the internet can infiltrate malware such as 
 
-* backdoors, 
-* ransomware, 
+* backdoors,
+* ransomware,
 
 or even crowd your bucket with their data in order to obtain free storage. 
 
-<br/>
-
-**Solution** 
+### **Solution**
 
 Block public access using access lists and policies.  
 
@@ -76,9 +70,7 @@ Let’s look at some examples of controls offered by Cyscale that check if you h
 * *Ensure that S3 Buckets are configured with 'Block public access (bucket settings)' for AWS Cloud* 
 * *Ensure network access rule for storage bucket is not set to publicly accessible for Alibaba Cloud* 
 
-<br/>
-
-**2. Broken access control** 
+## **2. Broken access control**
 
 When talking about access control misconfigurations, we refer to overly permissive rights. 
 
@@ -91,9 +83,7 @@ Badly implemented access control can lead to cybersecurity incidents because: 
 
 Administrator or root privileges should only be given to those users who absolutely require them. 
 
-<br/>
-
-**Solution** 
+### **Solution**
 
 Restrict access to the lowest privilege every user needs and eliminate all administrator/root accounts that are not strictly necessary. 
 
@@ -111,14 +101,12 @@ The implementation of this feature is checked by Cyscale using, for example, the
 * *Ensure IAM Users receive permissions only through Groups for AWS Cloud* 
 * *Ensure RAM policies are attached only to groups or roles for Alibaba Cloud* 
 
-<br/>
-
-**3. Unrestricted inbound and outbound traffic** 
+## **3. Unrestricted inbound and outbound traffic**
 
 When we talk about cloud networking, we have two types of traffic: 
 
-1. Inbound 
-2. Outbound 
+1. Inbound
+2. Outbound
 
 Each one involves a different type of risk. 
 
@@ -130,9 +118,7 @@ On the other hand, outbound unrestricted traffic allows a perpetrator to: 
 * pivot to other assets in your cloud environment (otherwise known as lateral movement) 
 * scan your infrastructure and gather data about your company 
 
-<br/>
-
-**Solution** 
+### **Solution**
 
 Make sure to close or restrict ports that are not necessary. Use access lists to restrict ranges of IPs and ports. 
 
@@ -141,9 +127,7 @@ Let’s look at two of the hundreds of controls implemented in Cyscale that rest
 * *Ensure firewall rule does not allow all traffic for MySQL (port 3306) for Google Cloud Platform* 
 * *Ensure firewall rule does not allow all traffic on all ports for Google Cloud Platform* 
 
-<br/>
-
-**4. Missing encryption** 
+## **4. Missing encryption**
 
 When we’re considering encryption in the cloud, there are numerous cloud assets we need to have in mind. For example: 
 
@@ -155,9 +139,7 @@ Encryption assures confidentiality. If your sensitive data is accidentally expos
 
 Therefore, it is important to make sure your data is encrypted in the cloud. 
 
-<br/>
-
-**Solution** 
+### **Solution**
 
 Implement strong encryption and use industry-recommended cryptographic algorithms with strong keys.  
 
@@ -167,9 +149,7 @@ Some examples of controls implemented in Cyscale that check if encryption is cor
 * *Ensure that 'Data encryption' is set to 'On' on a SQL Database for Microsoft Azure* 
 * *Ensure VM disks for critical VMs are encrypted with Customer-Supplied Encryption Keys (CSEK) for Google Cloud Platform* 
 
-<br/>
-
-**5. Disabled or unconfigured logging and monitoring**  
+## **5. Disabled or unconfigured logging and monitoring**
 
 It is extremely important to log actions taken in your cloud environment. This can help you: 
 
@@ -181,20 +161,14 @@ Moreover, a key feature would be having targeted alerts alongside logging. This 
 
 Effectiveness can be increased in this way because you do not have to skim through all of the generated logs, since targeted alerts point out specific problems.
 
-
-
-<br/>
-
-
-
-**Solution** 
+### **Solution**
 
 Implement logging and monitoring with automated, targeted alerts. 
 
 Some of the many controls provided by Cyscale that help you configure logging correctly are: 
 
-* *Ensure that activity log alert exists for the Delete Network Security Group Rule for Microsoft Azure* 
-* *Ensure S3 bucket access logging is enabled on the CloudTrail S3 bucket for AWS Cloud* 
+* *Ensure that activity log alert exists for the Delete Network Security Group Rule for Microsoft Azure*
+* *Ensure S3 bucket access logging is enabled on the CloudTrail S3 bucket for AWS Cloud*
 
 <br/>
 
@@ -202,8 +176,6 @@ Now that we’ve looked at the most common cloud misconfigurations and showed yo
 
 You will find: 
 
-* controls that check for the misconfigurations presented in this article and more, 
-* an explanation of what those misconfigurations are, 
-* instructions on how to fix them. 
-
-<!--EndFragment-->
+* controls that check for the misconfigurations presented in this article and more,
+* an explanation of what those misconfigurations are,
+* instructions on how to fix them.
