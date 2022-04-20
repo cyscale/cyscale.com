@@ -47,7 +47,7 @@ We will also give you some examples of the controls Cyscale implements to ensure
 
 
 
-1. **Poor storage access configuration** 
+**1. Poor storage access configuration** 
 
 Storage access misconfigurations usually make cloud assets open to the public view. 
 
@@ -67,11 +67,7 @@ Public “READ” access over a company’s buckets creates the risk of a data b
 
 or even crowd your bucket with their data in order to obtain free storage. 
 
-
-
 <br/>
-
-
 
 **Solution** 
 
@@ -84,13 +80,11 @@ Let’s look at some examples of controls offered by Cyscale that check if you h
 * *Ensure that S3 Buckets are configured with 'Block public access (bucket settings)' for AWS Cloud* 
 * *Ensure network access rule for storage bucket is not set to publicly accessible for Alibaba Cloud* 
 
-
-
 <br/>
 
 
 
-2. **Broken access control** 
+**2. Broken access control** 
 
 When talking about access control misconfigurations, we refer to overly permissive rights. 
 
@@ -103,11 +97,7 @@ Badly implemented access control can lead to cybersecurity incidents because: 
 
 Administrator or root privileges should only be given to those users who absolutely require them. 
 
-
-
 <br/>
-
-
 
 **Solution** 
 
@@ -127,13 +117,9 @@ The implementation of this feature is checked by Cyscale using, for example, the
 * *Ensure IAM Users receive permissions only through Groups for AWS Cloud* 
 * *Ensure RAM policies are attached only to groups or roles for Alibaba Cloud* 
 
-
-
 <br/>
 
-
-
-3. **Unrestricted inbound and outbound traffic** 
+**3. Unrestricted inbound and outbound traffic** 
 
 When we talk about cloud networking, we have two types of traffic: 
 
@@ -150,11 +136,7 @@ On the other hand, outbound unrestricted traffic allows a perpetrator to: 
 * pivot to other assets in your cloud environment (otherwise known as lateral movement) 
 * scan your infrastructure and gather data about your company 
 
-
-
 <br/>
-
-
 
 **Solution** 
 
@@ -165,13 +147,11 @@ Let’s look at two of the hundreds of controls implemented in Cyscale that rest
 * *Ensure firewall rule does not allow all traffic for MySQL (port 3306) for Google Cloud Platform* 
 * *Ensure firewall rule does not allow all traffic on all ports for Google Cloud Platform* 
 
-
-
 <br/>
 
 
 
-4. **Missing encryption** 
+**4. Missing encryption** 
 
 When we’re considering encryption in the cloud, there are numerous cloud assets we need to have in mind. For example: 
 
@@ -183,11 +163,7 @@ Encryption assures confidentiality. If your sensitive data is accidentally expos
 
 Therefore, it is important to make sure your data is encrypted in the cloud. 
 
-
-
 <br/>
-
-
 
 **Solution** 
 
@@ -199,13 +175,11 @@ Some examples of controls implemented in Cyscale that check if encryption is cor
 * *Ensure that 'Data encryption' is set to 'On' on a SQL Database for Microsoft Azure* 
 * *Ensure VM disks for critical VMs are encrypted with Customer-Supplied Encryption Keys (CSEK) for Google Cloud Platform* 
 
-
-
 <br/>
 
 
 
-5. **Disabled or unconfigured logging and monitoring**  
+**5. Disabled or unconfigured logging and monitoring**  
 
 It is extremely important to log actions taken in your cloud environment. This can help you: 
 
@@ -217,8 +191,6 @@ Moreover, a key feature would be having targeted alerts alongside logging. This 
 
 Effectiveness can be increased in this way because you do not have to skim through all of the generated logs, since targeted alerts point out specific problems.
 
- 
-
 **Solution** 
 
 Implement logging and monitoring with automated, targeted alerts. 
@@ -228,11 +200,7 @@ Some of the many controls provided by Cyscale that help you configure logging co
 * *Ensure that activity log alert exists for the Delete Network Security Group Rule for Microsoft Azure* 
 * *Ensure S3 bucket access logging is enabled on the CloudTrail S3 bucket for AWS Cloud* 
 
-
-
 <br/>
-
-
 
 Now that we’ve looked at the most common cloud misconfigurations and showed you how to identify and fix them, make sure to check out [Cyscale](https://cyscale.com/) to solidify your cloud security posture.  
 
