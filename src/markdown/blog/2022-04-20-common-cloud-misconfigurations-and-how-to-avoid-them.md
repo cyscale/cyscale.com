@@ -67,8 +67,8 @@ An access control list (ACL) is a set of rules that limit access to buckets thro
 
 Let’s look at some examples of controls offered by Cyscale that check if you have storage access misconfigurations: 
 
-* *Ensure that S3 Buckets are configured with 'Block public access (bucket settings)' for AWS Cloud* 
-* *Ensure network access rule for storage bucket is not set to publicly accessible for Alibaba Cloud* 
+* *Ensure that S3 Buckets are configured with 'Block public access (bucket settings)'* for AWS Cloud 
+* *Ensure network access rule for storage bucket is not set to publicly accessible* for Alibaba Cloud
 
 ## **2. Broken access control**
 
@@ -89,8 +89,8 @@ Restrict access to the lowest privilege every user needs and eliminate all admin
 
 Two examples of the many controls Cyscale has that regulate this issue are: 
 
-* *Ensure that ServiceAccount has no Admin privileges for Google Cloud Platform* 
-* *Eliminate use of the "root" user for administrative and daily tasks for AWS Cloud* 
+* *Ensure that ServiceAccount has no Admin privileges* for Google Cloud Platform 
+* *Eliminate use of the "root" user for administrative and daily tasks* for AWS Cloud 
 
 Another best practice to mention is having groups with very well-defined rules and privileges. 
 
@@ -98,8 +98,8 @@ In this way, you can assign a user to the correct group and minimize the risk of
 
 The implementation of this feature is checked by Cyscale using, for example, the following controls: 
 
-* *Ensure IAM Users receive permissions only through Groups for AWS Cloud* 
-* *Ensure RAM policies are attached only to groups or roles for Alibaba Cloud* 
+* *Ensure IAM Users receive permissions only through Groups* for AWS Cloud 
+* *Ensure RAM policies are attached only to groups or roles* for Alibaba Cloud 
 
 ## **3. Unrestricted inbound and outbound traffic**
 
@@ -124,8 +124,8 @@ Make sure to close or restrict ports that are not necessary. Use access lists to
 
 Let’s look at two of the hundreds of controls implemented in Cyscale that restrict unnecessary traffic from your cloud.  
 
-* *Ensure firewall rule does not allow all traffic for MySQL (port 3306) for Google Cloud Platform* 
-* *Ensure firewall rule does not allow all traffic on all ports for Google Cloud Platform* 
+* *Ensure firewall rule does not allow all traffic for MySQL (port 3306)* for Google Cloud Platform 
+* *Ensure firewall rule does not allow all traffic on all ports* for Google Cloud Platform 
 
 ## **4. Missing encryption**
 
@@ -145,9 +145,9 @@ Implement strong encryption and use industry-recommended cryptographic algorithm
 
 Some examples of controls implemented in Cyscale that check if encryption is correctly assured in your cloud environment are: 
 
-* *Ensure all S3 buckets employ encryption-at-rest for AWS Cloud* 
-* *Ensure that 'Data encryption' is set to 'On' on a SQL Database for Microsoft Azure* 
-* *Ensure VM disks for critical VMs are encrypted with Customer-Supplied Encryption Keys (CSEK) for Google Cloud Platform* 
+* *Ensure all S3 buckets employ encryption-at-rest* for AWS Cloud 
+* *Ensure that 'Data encryption' is set to 'On' on a SQL Database* for Microsoft Azure 
+* *Ensure VM disks for critical VMs are encrypted with Customer-Supplied Encryption Keys (CSEK)* for Google Cloud Platform 
 
 ## **5. Disabled or unconfigured logging and monitoring**
 
@@ -167,8 +167,8 @@ Implement logging and monitoring with automated, targeted alerts. 
 
 Some of the many controls provided by Cyscale that help you configure logging correctly are: 
 
-* *Ensure that activity log alert exists for the Delete Network Security Group Rule for Microsoft Azure*
-* *Ensure S3 bucket access logging is enabled on the CloudTrail S3 bucket for AWS Cloud*
+* *Ensure that activity log alert exists for the Delete Network Security Group Rule* for Microsoft Azure
+* *Ensure S3 bucket access logging is enabled on the CloudTrail S3 bucket* for AWS Cloud
 
 <br/>
 
