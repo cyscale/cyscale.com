@@ -41,11 +41,7 @@ This article will explain these misconfigurations and help you work them out. �
 
 We will also give you some examples of the controls Cyscale implements to ensure foolproof configurations for your company’s cloud. 
 
-
-
 <br/>
-
-
 
 **1. Poor storage access configuration** 
 
@@ -81,8 +77,6 @@ Let’s look at some examples of controls offered by Cyscale that check if you h
 * *Ensure network access rule for storage bucket is not set to publicly accessible for Alibaba Cloud* 
 
 <br/>
-
-
 
 **2. Broken access control** 
 
@@ -149,8 +143,6 @@ Let’s look at two of the hundreds of controls implemented in Cyscale that rest
 
 <br/>
 
-
-
 **4. Missing encryption** 
 
 When we’re considering encryption in the cloud, there are numerous cloud assets we need to have in mind. For example: 
@@ -177,8 +169,6 @@ Some examples of controls implemented in Cyscale that check if encryption is cor
 
 <br/>
 
-
-
 **5. Disabled or unconfigured logging and monitoring**  
 
 It is extremely important to log actions taken in your cloud environment. This can help you: 
@@ -190,6 +180,12 @@ It is extremely important to log actions taken in your cloud environment. This c
 Moreover, a key feature would be having targeted alerts alongside logging. This can help you cut through the noise of logs. 
 
 Effectiveness can be increased in this way because you do not have to skim through all of the generated logs, since targeted alerts point out specific problems.
+
+
+
+<br/>
+
+
 
 **Solution** 
 
