@@ -72,15 +72,15 @@ module.exports = {
         {
             resolve: 'gatsby-source-filesystem',
             options: {
-                path: `${__dirname}/src/assets/images`,
-                name: 'images'
+                path: `${__dirname}/static/img`,
+                name: 'uploads'
             }
         },
         {
             resolve: 'gatsby-source-filesystem',
             options: {
-                path: `${__dirname}/static/img`,
-                name: 'uploads'
+                path: `${__dirname}/src/assets/images`,
+                name: 'images'
             }
         },
         {
@@ -105,10 +105,18 @@ module.exports = {
             resolve: `gatsby-transformer-remark`,
             options: {
                 plugins: [
-                    `gatsby-remark-relative-images`,
+                    {
+                        resolve: `gatsby-remark-relative-images`,
+                        options: {
+                            staticFolderName: 'static',
+                            include: ['featuredimage']
+                        }
+                    },
                     {
                         resolve: `gatsby-remark-images`,
-                        options: {}
+                        options: {
+                            maxWidth: 1080
+                        }
                     }
                 ]
             }
