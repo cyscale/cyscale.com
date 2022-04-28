@@ -6,11 +6,11 @@ import { useStaticQuery, graphql } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import ScrollButton from '../../components/ScrollButton/ScrollButton';
 
-const AWSCloudSecurity = ({ location }) => {
+const AzureCloudSecurity = ({ location }) => {
     const appLink = useAppLink({ location });
 
     const data = useStaticQuery(graphql`
-        query AWSCloudSecurityQuery {
+        query AzureCloudSecurityQuery {
             dashboard: file(relativePath: { eq: "dashboard.png" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1080, layout: CONSTRAINED)
@@ -23,30 +23,36 @@ const AWSCloudSecurity = ({ location }) => {
                     gatsbyImageData(width: 1080, layout: CONSTRAINED)
                 }
             }
+            azureGraph: file(relativePath: { eq: "azure-graph.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 1080, layout: CONSTRAINED)
+                }
+            }
         }
     `);
     console.log(data);
     return (
         <Layout
             location={location}
-            pageName='AWSCloudSecurity'
-            title='AWS Cloud Security and Compliance'
-            description='Protect AWS environments with a complete Cloud Security Posture Management (CSPM) solution'
+            pageName='AzureCloudSecurity'
+            title='Azure Cloud Security and Compliance'
+            description='Secure your Azure accounts, continuously scan for risks and monitor events for
+            misconfigurations.'
         >
             <div className='bg-cloud' style={{ backgroundColor: '#eeeeee' }}>
                 <Container>
                     <Section>
                         <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-lg pt-16 pb-4'>
                             <h1 className='font-semibold text-center sm:text-left text-4xl lg:text-5xl leading-normal text-primary mb-10'>
-                                AWS Cloud Security
+                                Azure Cloud Security
                                 <br /> and Compliance
                             </h1>
                             <p className='text-center sm:text-left text-base lg:text-lg mb-6 leading-relaxed'>
-                                Protect AWS environments with a complete Cloud Security Posture Management (CSPM)
-                                solution - including support for the CIS AWS Foundations Benchmark.
+                                Secure your Azure accounts, continuously scan for risks and monitor events for
+                                misconfigurations.
                             </p>
                             <p className='text-center sm:text-left text-base lg:text-lg mb-20 leading-relaxed'>
-                                Map, secure, and monitor your AWS assets in minutes
+                                Automatically create and maintain compliance reports for PCI, HIPAA and more.
                             </p>
                             <a
                                 href={appLink}
@@ -66,28 +72,58 @@ const AWSCloudSecurity = ({ location }) => {
             <Container>
                 <Section id='start'>
                     <Row>
-                        <div className='col-span-12 lg:col-span-6'>
-                            <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-lg'>
-                                <GatsbyImage image={data.dashboard.childImageSharp.gatsbyImageData} />
+                        <div className='col-span-12 lg:col-span-5'>
+                            <div className='mx-auto max-w-xl'>
+                                <h2 className='text-2xl mb-4 lg:mb-0 lg:text-4xl font-normal leading-normal mt-8'>
+                                    <strong>Streamline posture management for Azure</strong>
+                                    <br /> or your multi-cloud environments environments
+                                </h2>
                             </div>
                         </div>
-                        <div className='col-span-12 lg:col-span-5'>
+                        <div className='col-span-12 lg:col-span-7'>
+                            <div className='mx-auto max-w-xl ml-auto shadow-sm'>
+                                <GatsbyImage image={data.azureGraph.childImageSharp.gatsbyImageData} />
+                            </div>
+                        </div>
+                        <div className='col-span-12 lg:col-span-6'>
                             <div className='mx-auto lg:mx-0  max-w-xl lg:max-w-none'>
-                                <p className='text-base leading-normal my-12 text-gray'>
-                                    <strong>Streamline posture management for AWS</strong> or your multi-cloud
-                                    environments, enable teams to continuously detect misconfigurations and control
-                                    threats, and ensure compliance for your cloud assets.
-                                </p>
-                                <ul className='list-disc ml-4 text-gray'>
+                                <ul className='list-disc ml-4 text-gray mt-8'>
                                     <li className='mb-4'>
-                                        Have a simple view of all your assets across all regions and accounts
+                                        <strong>Detect & Eliminate Azure Misconfiguration</strong>, understand the
+                                        impact of, and remediate infrastructure misconfigurations in real time.
                                     </li>
                                     <li className='mb-4'>
-                                        Detect, understand the impact of, and remediate infrastructure misconfigurations
+                                        <strong>Gain Visibility into Compliance violations</strong>, monitor your cloud
+                                        assets for Azure compliance violations with predefined rules mapped to CIS Azure
+                                        compliance controls.
                                     </li>
                                     <li className='mb-4'>
-                                        Stay compliant with CIS benchmarks, industry standards, and your internal
-                                        policies
+                                        <strong>Have a simple view of all your assets</strong> across all regions,
+                                        subscriptions and resource groups
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className='col-span-12 lg:col-span-6'>
+                            <div className='mx-auto lg:mx-0  max-w-xl lg:max-w-none'>
+                                <ul className='list-disc ml-4 text-gray mt-8'>
+                                    <li className='mb-4'>
+                                        <strong>Onboard entire tenants at once</strong> and get visibility on multiple
+                                        subscriptions
+                                    </li>
+                                    <li className='mb-4'>
+                                        <strong>
+                                            Use a powerful asset view to understand infrastructure and configurations
+                                        </strong>
+                                        , and see the impact on compliance
+                                    </li>
+                                    <li className='mb-4'>
+                                        <strong>Discover unused Azure cloud resources</strong> and reduce attack surface
+                                        while optimizing costs
+                                    </li>
+                                    <li className='mb-4'>
+                                        <strong>Easily generate security and compliance reports</strong> for internal or
+                                        external stakeholders
                                     </li>
                                 </ul>
                             </div>
@@ -143,6 +179,7 @@ const AWSCloudSecurity = ({ location }) => {
                                     <p className='leading-normal text-base text-gray mb-6'>
                                         <strong>Meet industry regulations</strong>
                                         <br />
+                                        <br />
                                         Protect sensitive data and comply with strict industry regulations in your
                                         Financial organisation Cyscale automatically runs all critical compliance checks
                                         and finds data at-risk.
@@ -150,15 +187,8 @@ const AWSCloudSecurity = ({ location }) => {
                                 </div>
                                 <div className='col-span-12 lg:col-span-6'>
                                     <p className='leading-normal text-base text-gray mb-6'>
-                                        <strong>Built-in compliance templates</strong>
-                                        <br />
-                                        You can either use policy templates as a basis for your custom policies, or
-                                        create them from scratch using a smart text editor.
-                                    </p>
-                                </div>
-                                <div className='col-span-12 lg:col-span-6'>
-                                    <p className='leading-normal text-base text-gray mb-6'>
                                         <strong>PCI-DSS, SOC 2, GDPR, and more.</strong>
+                                        <br />
                                         <br />
                                         Cyscale offers a wide range of benchmarks and frameworks, including: CIS,
                                         ISO27001, PCI-DSS, NIST, SOC2, GDPR.
@@ -166,7 +196,18 @@ const AWSCloudSecurity = ({ location }) => {
                                 </div>
                                 <div className='col-span-12 lg:col-span-6'>
                                     <p className='leading-normal text-base text-gray mb-6'>
+                                        <strong>Built-in compliance templates</strong>
+                                        <br />
+                                        <br />
+                                        You can either use policy templates as a basis for your custom policies, or
+                                        create them from scratch using a smart text editor.
+                                    </p>
+                                </div>
+
+                                <div className='col-span-12 lg:col-span-6'>
+                                    <p className='leading-normal text-base text-gray mb-6'>
                                         <strong>500+ out-of-the-box security controls</strong>
+                                        <br />
                                         <br />
                                         Onboard teams in 30 minutes and coordinate efforts to apply 500+ out-of-the-box
                                         security controls and a large set of policies and standards.
@@ -182,7 +223,7 @@ const AWSCloudSecurity = ({ location }) => {
                     <Container>
                         <div className='mx-auto text-center lg:text-left lg:mx-0 max-w-sm lg:max-w-none'>
                             <h2 className='text-white text-xl md:text-2xl font-semibold uppercase'>
-                                Secure your AWS Assets
+                                Secure your Azure Assets
                             </h2>
                             <p className='text-white text-lg md:text-2xl mb-20'>
                                 Start seeing value & saving money in minutes
@@ -201,4 +242,4 @@ const AWSCloudSecurity = ({ location }) => {
     );
 };
 
-export default AWSCloudSecurity;
+export default AzureCloudSecurity;

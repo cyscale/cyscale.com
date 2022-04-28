@@ -29,6 +29,14 @@
         {
             "link": "/use-cases/cloud-data-security/",
             "text": "Data Security"
+        },
+        {
+            "link": "/use-cases/aws-cloud-security/",
+            "text": "AWS Cloud Security"
+        },
+        {
+            "link": "/use-cases/azure-cloud-security/",
+            "text": "Azure Cloud Security"
         }
     ],
     "pricing": [
