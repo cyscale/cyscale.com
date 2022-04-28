@@ -3,7 +3,7 @@ import Check from '../../assets/images/blue-check.svg';
 import Line from '../../assets/images/dash-line.svg';
 import { useAppLink } from '../../common/links';
 
-const Hero = () => {
+const PricingTable = () => {
     const appLink = useAppLink();
 
     return (
@@ -188,4 +188,4 @@ const Hero = () => {
     );
 };
 
-export default Hero;
+export default PricingTable;
