@@ -17,10 +17,10 @@ const AWSCloudSecurity = ({ location }) => {
                 }
             }
             automateCompliance: file(
-                relativePath: { eq: "automate-compliance-as-code-iac-continuous-assessment.png" }
+                relativePath: { eq: "aws-cloud-overview.png" }
             ) {
                 childImageSharp {
-                    gatsbyImageData(width: 1080, layout: CONSTRAINED)
+                    gatsbyImageData(width: 1920, layout: CONSTRAINED)
                 }
             }
         }
@@ -67,7 +67,7 @@ const AWSCloudSecurity = ({ location }) => {
                 <Section id='start'>
                     <Row>
                         <div className='col-span-12 lg:col-span-6'>
-                            <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-lg'>
+                            <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-xl'>
                                 <GatsbyImage image={data.dashboard.childImageSharp.gatsbyImageData} />
                             </div>
                         </div>

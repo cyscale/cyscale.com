@@ -16,16 +16,16 @@ const AzureCloudSecurity = ({ location }) => {
                     gatsbyImageData(width: 1080, layout: CONSTRAINED)
                 }
             }
-            automateCompliance: file(
-                relativePath: { eq: "automate-compliance-as-code-iac-continuous-assessment.png" }
-            ) {
+            azureGraph: file(relativePath: { eq: "azure-graph.png" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1080, layout: CONSTRAINED)
                 }
             }
-            azureGraph: file(relativePath: { eq: "azure-graph.png" }) {
+            automateCompliance: file(
+                relativePath: { eq: "azure-cloud-overview.png" }
+            ) {
                 childImageSharp {
-                    gatsbyImageData(width: 1080, layout: CONSTRAINED)
+                    gatsbyImageData(width: 1920, layout: CONSTRAINED)
                 }
             }
         }
@@ -72,16 +72,16 @@ const AzureCloudSecurity = ({ location }) => {
             <Container>
                 <Section id='start'>
                     <Row>
-                        <div className='col-span-12 lg:col-span-5'>
-                            <div className='mx-auto max-w-xl'>
+                        <div className='col-span-12 lg:col-span-6'>
+                            <div className='mx-auto max-w-xl lg:max-w-lg'>
                                 <h2 className='text-2xl mb-4 lg:mb-0 lg:text-4xl font-normal leading-normal mt-8'>
                                     <strong>Streamline posture management for Azure</strong>
                                     <br /> or your multi-cloud environments environments
                                 </h2>
                             </div>
                         </div>
-                        <div className='col-span-12 lg:col-span-7'>
-                            <div className='mx-auto max-w-xl ml-auto shadow-sm'>
+                        <div className='col-span-12 lg:col-span-6'>
+                            <div className='mx-auto max-w-xl ml-auto'>
                                 <GatsbyImage image={data.azureGraph.childImageSharp.gatsbyImageData} />
                             </div>
                         </div>
