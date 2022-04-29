@@ -44,7 +44,7 @@ const AzureCloudSecurity = ({ location }) => {
                     <Section>
                         <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-lg pt-16 pb-4'>
                             <h1 className='font-semibold text-center sm:text-left text-4xl lg:text-5xl leading-normal text-primary mb-10'>
-                                Microsoft Azure Cloud Security
+                                Azure Cloud Security
                                 <br /> and Compliance
                             </h1>
                             <p className='text-center sm:text-left text-base lg:text-lg mb-6 leading-relaxed'>
@@ -93,8 +93,8 @@ const AzureCloudSecurity = ({ location }) => {
                                     </li>
                                     <li className='mb-4'>
                                         <strong>Gain Visibility into Compliance violations</strong>, monitor your cloud
-                                        assets for Azure compliance violations with predefined controls mapped to the CIS Azure Security,
-                                        as well as other benchmarks.
+                                        assets for Azure compliance violations with predefined controls mapped to the CIS Azure Security
+                                        and other benchmarks.
                                     </li>
                                     <li className='mb-4'>
                                         <strong>Have a simple view of your cloud assets</strong> across all regions,
@@ -144,11 +144,11 @@ const AzureCloudSecurity = ({ location }) => {
                             <div className='mx-auto lg:mx-0 max-w-xl'>
                                 <p className='leading-normal text-base text-gray mb-6'>
                                     Use Cyscale for governance automation across cloud providers and internal teams to
-                                    ensure consistent sacurity and compliance.
+                                    ensure consistent security and compliance.
                                 </p>
                                 <p className='leading-normal text-base text-gray mb-6'>
                                     We keep your cloud environments under continuous assessment and provide in-app
-                                    security consultancy so you make tI most of your time and effort.
+                                    security consultancy so that you make the most of your time and effort.
                                 </p>
                                 <p className='leading-normal text-base text-gray'>
                                     Coming soon: create custom Controls that tap into our Security Knowledge Graph™ and
@@ -180,7 +180,7 @@ const AzureCloudSecurity = ({ location }) => {
                                         <br />
                                         <br />
                                         Protect sensitive data and comply with strict industry regulations in your
-                                        organisation. Cyscale automatically runs all critical compliance checks
+                                        organization. Cyscale automatically runs all critical compliance checks
                                         and finds data at-risk.
                                     </p>
                                 </div>
