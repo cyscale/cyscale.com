@@ -46,7 +46,7 @@ const AWSCloudSecurity = ({ location }) => {
                                 solution - including support for the CIS AWS Foundations Benchmark.
                             </p>
                             <p className='text-center sm:text-left text-base lg:text-lg mb-20 leading-relaxed'>
-                                Map, secure, and monitor your AWS assets in minutes
+                                Map, secure, and monitor your AWS assets in minutes.
                             </p>
                             <a
                                 href={appLink}
@@ -109,11 +109,11 @@ const AWSCloudSecurity = ({ location }) => {
                             <div className='mx-auto lg:mx-0 max-w-xl'>
                                 <p className='leading-normal text-base text-gray mb-6'>
                                     Use Cyscale for governance automation across cloud providers and internal teams to
-                                    ensure consistent sacurity and compliance.
+                                    ensure consistent security and compliance.
                                 </p>
                                 <p className='leading-normal text-base text-gray mb-6'>
                                     We keep your cloud environments under continuous assessment and provide in-app
-                                    security consultancy so you make tI most of your time and effort.
+                                    security consultancy so you make the most of your time and effort.
                                 </p>
                                 <p className='leading-normal text-base text-gray'>
                                     Coming soon: create custom Controls that tap into our Security Knowledge Graph™ and
@@ -144,7 +144,7 @@ const AWSCloudSecurity = ({ location }) => {
                                         <strong>Meet industry regulations</strong>
                                         <br />
                                         Protect sensitive data and comply with strict industry regulations in your
-                                        Financial organisation Cyscale automatically runs all critical compliance checks
+                                        organization. Cyscale automatically runs all critical compliance checks
                                         and finds data at-risk.
                                     </p>
                                 </div>
