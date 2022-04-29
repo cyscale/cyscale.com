@@ -44,12 +44,11 @@ const AzureCloudSecurity = ({ location }) => {
                     <Section>
                         <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-lg pt-16 pb-4'>
                             <h1 className='font-semibold text-center sm:text-left text-4xl lg:text-5xl leading-normal text-primary mb-10'>
-                                Azure Cloud Security
+                                Microsoft Azure Cloud Security
                                 <br /> and Compliance
                             </h1>
                             <p className='text-center sm:text-left text-base lg:text-lg mb-6 leading-relaxed'>
-                                Secure your Azure accounts, continuously scan for risks and monitor events for
-                                misconfigurations.
+                                Secure your Azure cloud subscriptions by continuously scanning for misconfigurations and surfacing risk.
                             </p>
                             <p className='text-center sm:text-left text-base lg:text-lg mb-20 leading-relaxed'>
                                 Automatically create and maintain compliance reports for PCI, HIPAA and more.
@@ -75,8 +74,8 @@ const AzureCloudSecurity = ({ location }) => {
                         <div className='col-span-12 lg:col-span-6'>
                             <div className='mx-auto max-w-xl lg:max-w-lg'>
                                 <h2 className='text-2xl mb-4 lg:mb-0 lg:text-4xl font-normal leading-normal mt-8'>
-                                    <strong>Streamline posture management for Azure</strong>
-                                    <br /> or your multi-cloud environments environments
+                                    <strong>Streamline posture management for Azure cloud</strong>
+                                    <br /> or for your multi-cloud environments
                                 </h2>
                             </div>
                         </div>
@@ -89,16 +88,16 @@ const AzureCloudSecurity = ({ location }) => {
                             <div className='mx-auto lg:mx-0  max-w-xl lg:max-w-none'>
                                 <ul className='list-disc ml-4 text-gray mt-8'>
                                     <li className='mb-4'>
-                                        <strong>Detect & Eliminate Azure Misconfiguration</strong>, understand the
+                                        <strong>Detect & Eliminate Azure Cloud Misconfigurations</strong>, understand the
                                         impact of, and remediate infrastructure misconfigurations in real time.
                                     </li>
                                     <li className='mb-4'>
                                         <strong>Gain Visibility into Compliance violations</strong>, monitor your cloud
-                                        assets for Azure compliance violations with predefined rules mapped to CIS Azure
-                                        compliance controls.
+                                        assets for Azure compliance violations with predefined controls mapped to the CIS Azure Security,
+                                        as well as other benchmarks.
                                     </li>
                                     <li className='mb-4'>
-                                        <strong>Have a simple view of all your assets</strong> across all regions,
+                                        <strong>Have a simple view of your cloud assets</strong> across all regions,
                                         subscriptions and resource groups
                                     </li>
                                 </ul>
@@ -181,7 +180,7 @@ const AzureCloudSecurity = ({ location }) => {
                                         <br />
                                         <br />
                                         Protect sensitive data and comply with strict industry regulations in your
-                                        Financial organisation Cyscale automatically runs all critical compliance checks
+                                        organisation. Cyscale automatically runs all critical compliance checks
                                         and finds data at-risk.
                                     </p>
                                 </div>
