@@ -115,7 +115,7 @@ Below, you can see a diagram of the IAM components found in Google Cloud. 
 
 ![GCP IAM Components](/img/gcp-iam.png "GCP IAM Components")
 
-<p align="center">Image source – [Google Cloud Platform](https://cloud.google.com/iam/docs/overview)</p>
+Image source – [Google Cloud Platform](https://cloud.google.com/iam/docs/overview) 
 
 ### Microsoft Azure 
 
