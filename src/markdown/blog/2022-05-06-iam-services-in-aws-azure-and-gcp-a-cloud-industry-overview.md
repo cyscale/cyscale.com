@@ -31,9 +31,7 @@ Moreover, access is not restricted to human users; applications and other types 
 
 Therefore, strong IAM policies need to be implemented. 
 
-Let’s first clarify some important concepts. Then, we will look into IAM policies and what different cloud vendors offer for their IAM infrastructure. 
-
-  
+Let’s first clarify some important concepts. Then, we will look into IAM policies and what different cloud vendors offer for their IAM infrastructure.
 
 ### Identity 
 
@@ -59,11 +57,7 @@ Access management also refers to keeping track of users’ actions. Therefore, l
 
 Now that we’ve understood the purpose of IAM, let’s look at three big vendors in the cloud industry and their approach to access management: AWS Cloud, Google Cloud Platform, and Microsoft Azure. 
 
-  
-
-## IAM implementations - An industry overview 
-
-  
+### IAM implementations - An industry overview 
 
 ### Amazon Web Services (AWS) 
 
@@ -96,11 +90,9 @@ You can see below the different types of AWS policies, ordered from the most fre
 3. Permissions boundaries (they define the highest level of permissions an identity-based policy can apply) 
 4. Organization Service Control Policies (used to define the highest level of permissions an identity-based or resource-based policy can apply for account members of an organization) 
 5. Access Control Lists or ACLs (are similar to resource-based policies and define which principals can access a resource) 
-6. Session policies (they limit the permissions granted by identity-based policies in an AWS CLI or API session)  
+6. Session policies (they limit the permissions granted by identity-based policies in an AWS CLI or API session)
 
-  
-
-### Google Cloud Platform 
+### Google Cloud Platform
 
 In GCP, permissions to access resources are organized into roles. To understand how IAM works in Google, we must look at the 3 IAM asset types: 
 
@@ -117,19 +109,13 @@ In GCP, permissions to access resources are organized into roles. To understand 
 * **Policies**, which define associations of principals and roles  
 * **Resources**, which are physical assets, such as computers and hard disk drives, and virtual assets, for example virtual machines. 
 
-
-
 In GCP, permissions cannot be applied to principals directly. Instead, principals must be assigned to roles and thus receive all the permissions allowed for that role. 
 
 Below, you can see a diagram of the IAM components found in Google Cloud. 
 
-
-
 ![GCP IAM Components](/img/gcp-iam.png "GCP IAM Components")
 
-Image source – [Google Cloud Platform](https://cloud.google.com/iam/docs/overview) 
-
-   
+<p align="center">Image source – [Google Cloud Platform](https://cloud.google.com/iam/docs/overview)</p>
 
 ### Microsoft Azure 
 
@@ -185,8 +171,6 @@ Access to resources is granted by assigning: 
 * a Service Principal (process or application) 
 
 to a specific role and a specific scope. 
-
-  
 
 Cyscale integrates with AWS, Azure, GCP and other vendors to check for vulnerabilities and [improve its customers‘ cloud security posture](https://cyscale.com/blog/improve-cloud-security-posture/). 
 
