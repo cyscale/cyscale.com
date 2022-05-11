@@ -16,6 +16,10 @@ seoDescription: An industry overview of the IAM Services. We look at AWS, Azure
   such as Single Sign-On (SSO) and Multi-Factor Authentication (MFA).
 featuredpost: true
 featuredimage: /img/iam-services-in-aws-azure-and-gcp-a-cloud-industry-overview.png
+tags:
+  - CSPM
+  - IAM
+  - security
 ---
 <!--StartFragment-->  
 
@@ -174,6 +178,6 @@ to a specific role and a specific scope. 
 
 Cyscale integrates with AWS, Azure, GCP and other vendors to check for vulnerabilities and [improve its customers‘ cloud security posture](https://cyscale.com/blog/improve-cloud-security-posture/). 
 
-In the following article, we will look at best practices described by these vendors and how to check if your cloud infrastructure is implementing them correctly. 
+[In the following article](https://cyscale.com/blog/iam-best-practices-from-aws-azure-gcp/), we will look at best practices described by these vendors and how to check if your cloud infrastructure is implementing them correctly. 
 
 <!--EndFragment-->
