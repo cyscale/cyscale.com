@@ -1,7 +1,15 @@
 import React from 'react';
-import { AndreiM, AndreiP, AndreiS, Gabriel, Levi, Manuela, MihaiB, MihaiM, Ovidiu, Sabrina, Virginia } from '../about/images';
+import { AndreiM, AndreiP, AndreiS, Gabriel, Levi, Manuela, MihaiB, MihaiM, Ovidiu, Sabrina, George, Virginia } from '../about/images';
 
 const data = [
+    {
+        order: 12,
+        photo: <George />,
+        name: 'George Gaina',
+        position: 'Head of People, Culture & Growth',
+        linkedin: 'https://www.linkedin.com/in/georgegaina/',
+        quote: false
+    },
     {
         order: 11,
         photo: <Sabrina />,
