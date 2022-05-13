@@ -13,6 +13,8 @@ import { OptimizeCosts, EliminateSecurityGaps } from './images';
 import { useAppLink } from '../../common/links';
 import MisconfigurationTabs from './MisconfigurationTabs';
 import CategoryPostsPreview from '../new-blog/CategoryPostsPreview';
+import { Container, Section } from '../atoms/Containers';
+import Faqs from './Faqs';
 
 const Index = () => {
     const appLink = useAppLink();
@@ -164,6 +166,13 @@ const Index = () => {
                     sectionName='CSPMServices'
                     data={dataService}
                 />
+            </div>
+            <div className='bg-gray '>
+                <Section>
+                    <Container>
+                        <Faqs />
+                    </Container>
+                </Section>
             </div>
             <CategoryPostsPreview category={'CSPM'} />
             <div className='gradientBGCSPM-2'>
