@@ -21,16 +21,14 @@ const AzureCloudSecurity = ({ location }) => {
                     gatsbyImageData(width: 1080, layout: CONSTRAINED)
                 }
             }
-            automateCompliance: file(
-                relativePath: { eq: "azure-cloud-overview.png" }
-            ) {
+            automateCompliance: file(relativePath: { eq: "azure-cloud-overview.png" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1920, layout: CONSTRAINED)
                 }
             }
         }
     `);
-    console.log(data);
+
     return (
         <Layout
             location={location}
@@ -48,7 +46,8 @@ const AzureCloudSecurity = ({ location }) => {
                                 <br /> and Compliance
                             </h1>
                             <p className='text-center sm:text-left text-base lg:text-lg mb-6 leading-relaxed'>
-                                Secure your Azure cloud subscriptions by continuously scanning for misconfigurations and surfacing risk.
+                                Secure your Azure cloud subscriptions by continuously scanning for misconfigurations and
+                                surfacing risk.
                             </p>
                             <p className='text-center sm:text-left text-base lg:text-lg mb-20 leading-relaxed'>
                                 Automatically create and maintain compliance reports for PCI, HIPAA and more.
@@ -88,13 +87,13 @@ const AzureCloudSecurity = ({ location }) => {
                             <div className='mx-auto lg:mx-0  max-w-xl lg:max-w-none'>
                                 <ul className='list-disc ml-4 text-gray mt-8'>
                                     <li className='mb-4'>
-                                        <strong>Detect & Eliminate Azure Cloud Misconfigurations</strong>, understand the
-                                        impact of, and remediate infrastructure misconfigurations in real time.
+                                        <strong>Detect & Eliminate Azure Cloud Misconfigurations</strong>, understand
+                                        the impact of, and remediate infrastructure misconfigurations in real time.
                                     </li>
                                     <li className='mb-4'>
                                         <strong>Gain Visibility into Compliance violations</strong>, monitor your cloud
-                                        assets for Azure compliance violations with predefined controls mapped to the CIS Azure Security
-                                        and other benchmarks.
+                                        assets for Azure compliance violations with predefined controls mapped to the
+                                        CIS Azure Security and other benchmarks.
                                     </li>
                                     <li className='mb-4'>
                                         <strong>Have a simple view of your cloud assets</strong> across all regions,
@@ -180,8 +179,8 @@ const AzureCloudSecurity = ({ location }) => {
                                         <br />
                                         <br />
                                         Protect sensitive data and comply with strict industry regulations in your
-                                        organization. Cyscale automatically runs all critical compliance checks
-                                        and finds data at-risk.
+                                        organization. Cyscale automatically runs all critical compliance checks and
+                                        finds data at-risk.
                                     </p>
                                 </div>
                                 <div className='col-span-12 lg:col-span-6'>

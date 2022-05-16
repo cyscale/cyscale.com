@@ -37,6 +37,10 @@
         {
             "link": "/use-cases/azure-cloud-security/",
             "text": "Azure Cloud Security"
+        },
+        {
+            "link": "/use-cases/gcp-cloud-security/",
+            "text": "Google Cloud Security"
         }
     ],
     "pricing": [

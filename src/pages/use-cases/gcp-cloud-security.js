@@ -6,11 +6,11 @@ import { useStaticQuery, graphql } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import ScrollButton from '../../components/ScrollButton/ScrollButton';
 
-const AWSCloudSecurity = ({ location }) => {
+const GCPCloudSecurity = ({ location }) => {
     const appLink = useAppLink({ location });
 
     const data = useStaticQuery(graphql`
-        query AWSCloudSecurityQuery {
+        query GCPCloudSecurityQuery {
             dashboard: file(relativePath: { eq: "dashboard.png" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1080, layout: CONSTRAINED)
@@ -27,24 +27,24 @@ const AWSCloudSecurity = ({ location }) => {
     return (
         <Layout
             location={location}
-            pageName='AWSCloudSecurity'
-            title='AWS Cloud Security and Compliance'
-            description='Protect AWS environments with a complete Cloud Security Posture Management (CSPM) solution'
+            pageName='GCPCloudSecurity'
+            title='Google Cloud Security and Compliance'
+            description='Protect Google  environments with a complete Cloud Security Posture Management (CSPM) solution'
         >
             <div className='bg-cloud' style={{ backgroundColor: '#eeeeee' }}>
                 <Container>
                     <Section>
                         <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-lg pt-16 pb-4'>
                             <h1 className='font-semibold text-center sm:text-left text-4xl lg:text-5xl leading-normal text-primary mb-10'>
-                                AWS Cloud Security
+                                Google Cloud Security
                                 <br /> and Compliance
                             </h1>
                             <p className='text-center sm:text-left text-base lg:text-lg mb-6 leading-relaxed'>
-                                Protect AWS environments with a complete Cloud Security Posture Management (CSPM)
-                                solution - including support for the CIS AWS Foundations Benchmark.
+                                Protect Google Cloud environments with a complete Cloud Security Posture Management
+                                (CSPM) solution - including support for the CIS AWS Foundations Benchmark.
                             </p>
                             <p className='text-center sm:text-left text-base lg:text-lg mb-20 leading-relaxed'>
-                                Map, secure, and monitor your AWS assets in minutes.
+                                Map, secure, and monitor your GCP assets in minutes.
                             </p>
                             <a
                                 href={appLink}
@@ -73,19 +73,27 @@ const AWSCloudSecurity = ({ location }) => {
                             <div className='mx-auto lg:mx-0  max-w-xl lg:max-w-none'>
                                 <p className='text-base leading-normal my-12 text-gray'>
                                     <strong>Streamline posture management for AWS</strong> or your multi-cloud
-                                    environments, enable teams to continuously detect misconfigurations and control
-                                    threats, and ensure compliance for your cloud assets.
+                                    environments. Get visibility into your cloud security, achieve continuous compliance
+                                    and enable security automation with CI/CD integration.
                                 </p>
                                 <ul className='list-disc ml-4 text-gray'>
                                     <li className='mb-4'>
-                                        Have a simple view of all your assets across all regions and accounts
+                                        Security controls for Storage, Compute, Containers, IAM, Cloud SQL and many
+                                        other services to ensure misconfiguration coverage
                                     </li>
                                     <li className='mb-4'>
-                                        Detect, understand the impact of, and remediate infrastructure misconfigurations
+                                        CIS Google Cloud Platform benchmark available in-app to get guidance on and to
+                                        ensure best practices
                                     </li>
                                     <li className='mb-4'>
-                                        Stay compliant with CIS benchmarks, industry standards, and your internal
-                                        policies
+                                        Alerts to help you stay in control of dynamic cloud infrastructures and avoid
+                                        breaches
+                                    </li>
+                                    <li className='mb-4'>
+                                        Improve team workflows by configuring prefered notification channels
+                                    </li>
+                                    <li className='mb-4'>
+                                        Audit-ready PDF report with Asset Inventory across multiple Google Projects
                                     </li>
                                 </ul>
                             </div>
@@ -180,7 +188,7 @@ const AWSCloudSecurity = ({ location }) => {
                     <Container>
                         <div className='mx-auto text-center lg:text-left lg:mx-0 max-w-sm lg:max-w-none'>
                             <h2 className='text-white text-xl md:text-2xl font-semibold uppercase'>
-                                Secure your AWS Assets
+                                Secure your GCP Assets
                             </h2>
                             <p className='text-white text-lg md:text-2xl mb-20'>
                                 Start seeing value & saving money in minutes
@@ -199,4 +207,4 @@ const AWSCloudSecurity = ({ location }) => {
     );
 };
 
-export default AWSCloudSecurity;
+export default GCPCloudSecurity;
