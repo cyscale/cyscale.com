@@ -31,6 +31,8 @@ After we've described the [IAM implementations for AWS, GCP, and Azure](https://
 
 With Cyscale, you can efficiently scan your cloud infrastructure and verify whether it follows the best practices that we're going to describe in this article. 
 
+<div id="MFA">
+
 ### Enable Multi-Factor Authentication (MFA) 
 
 Multi-Factor Authentication is a form of authenticating where the user needs to provide at least two different credentials of different types.  
@@ -48,6 +50,8 @@ Here are some of the controls implemented in Cyscale that check if MFA is config
 * *Ensure multi-factor authentication (MFA) is enabled for all IAM users that have a console password* for AWS Cloud 
 * *Ensure that multi-factor authentication is enabled for all privileged users* for Microsoft Azure 
 * *Ensure that multi-factor authentication is enabled for all non-privileged users* for Microsoft Azure 
+
+</div>
 
 ### Rotate credentials and keys regularly 
 
