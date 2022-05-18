@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import GlobalContext from '../context/GlobalContext';
-export const FREE_TRIAL_LINK = 'https://app.cyscale.com/#/register';
+export const FREE_TRIAL_LINK = 'https://app.cyscale.com/register';
 
 export const useAppLink = (props) => {
     const context = useContext(GlobalContext);
