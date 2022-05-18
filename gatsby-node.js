@@ -73,7 +73,8 @@ exports.createPages = async ({ graphql, actions }) => {
                 path: '/careers/' + node.frontmatter.permalink + '/',
                 component: careerTemplate,
                 context: {
-                    alldata: node
+                    alldata: node,
+                    jobs: posts.map(({ node }) => node.frontmatter.title)
                 }
             });
         });

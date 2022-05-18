@@ -3,7 +3,7 @@ import Layout from '../components/layout/CleanLayout';
 import Details from '../components/careers/job-details.js';
 
 const CareerTemplate = ({ pageContext, location }) => {
-    const { alldata } = pageContext;
+    const { alldata, jobs } = pageContext;
     const { frontmatter: data } = alldata;
     return (
         <Layout
@@ -12,7 +12,7 @@ const CareerTemplate = ({ pageContext, location }) => {
             title={data.seoTitle || data.title}
             description={data.seoDescription || data.description}
         >
-            <Details data={alldata} />
+            <Details data={alldata} jobs={jobs} />
         </Layout>
     );
 };

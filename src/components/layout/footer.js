@@ -18,8 +18,8 @@ const Footer = () => {
                         security and compliance across your multi-cloud environment.
                     </div>
                     <div className='items-center mt-20px md:mt-auto hidden lg:flex'>
-                        {navigation.social.map(({ link, text }) => (
-                            <div key={link} className='mr-25px'>
+                        {navigation.social.map(({ link, text }, key) => (
+                            <div key={key} className='mr-25px'>
                                 <a href={link} className='text-white' rel='noopener noreferrer' target='_blank'>
                                     <SocialIcon icon={text} />
                                 </a>
@@ -32,8 +32,8 @@ const Footer = () => {
                         <div className=''>
                             <h3 className='font-semibold text-14pxleading-normal text-white pb-40px '>Platform</h3>
                             <ul>
-                                {navigation.platform.map(({ link, text }) => (
-                                    <li key={link} className='text-12px leading-normal pb-7px'>
+                                {navigation.platform.map(({ link, text }, key) => (
+                                    <li key={key} className='text-12px leading-normal pb-7px'>
                                         <Link to={link} className='font-light text-white no-underline hover:underline'>
                                             {text}
                                         </Link>
@@ -44,8 +44,8 @@ const Footer = () => {
                         <div className=''>
                             <h3 className='font-semibold text-14pxleading-normal  text-white pb-40px '>Use cases</h3>
                             <ul>
-                                {navigation.usecases.map(({ link, text }) => (
-                                    <li key={link} className='text-12px leading-normal pb-7px'>
+                                {navigation.usecases.map(({ link, text }, key) => (
+                                    <li key={key} className='text-12px leading-normal pb-7px'>
                                         <Link to={link} className='font-light text-white no-underline hover:underline'>
                                             {text}
                                         </Link>
@@ -57,9 +57,9 @@ const Footer = () => {
                         <div className=''>
                             <h3 className='font-semibold text-14pxleading-normal  text-white pb-40px '>Resources</h3>
                             <ul>
-                                {navigation.resources.map(({ link, text, blank }) =>
+                                {navigation.resources.map(({ link, text, blank }, key) =>
                                     blank ? (
-                                        <li key={link} className='text-12px leading-normal pb-7px'>
+                                        <li key={key} className='text-12px leading-normal pb-7px'>
                                             <a
                                                 href={link}
                                                 target='_blank'
@@ -70,7 +70,7 @@ const Footer = () => {
                                             </a>
                                         </li>
                                     ) : (
-                                        <li key={link} className='text-12px leading-normal pb-7px'>
+                                        <li key={key} className='text-12px leading-normal pb-7px'>
                                             <Link
                                                 to={link}
                                                 className='font-light text-white no-underline hover:underline'
@@ -94,8 +94,8 @@ const Footer = () => {
                         <div className=''>
                             <h3 className='font-semibold text-14pxleading-normal  text-white pb-40px '>Company</h3>
                             <ul>
-                                {navigation.company.map(({ link, text }) => (
-                                    <li key={link} className='text-12px leading-normal pb-7px'>
+                                {navigation.company.map(({ link, text }, key) => (
+                                    <li key={key} className='text-12px leading-normal pb-7px'>
                                         <Link to={link} className='font-light text-white no-underline hover:underline'>
                                             {text}
                                         </Link>
@@ -110,8 +110,8 @@ const Footer = () => {
                             <li className='block lg:inline-block lg:mr-50px text-12px font-light leading-normal text-white '>
                                 &copy; {new Date().getFullYear()} Cyscale Limited
                             </li>
-                            {navigation.terms.map(({ link, text }) => (
-                                <li key={link} className='inline-block mr-10px lg:mr-30px  text-12px leading-normal  '>
+                            {navigation.terms.map(({ link, text }, key) => (
+                                <li key={key} className='inline-block mr-10px lg:mr-30px  text-12px leading-normal  '>
                                     <Link to={link} className='font-light text-white no-underline hover:underline'>
                                         {text}
                                     </Link>
@@ -130,8 +130,8 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div className='mt-48 items-center md:mt-0 flex lg:hidden'>
-                        {navigation.social.map(({ link, text }) => (
-                            <div key={link} className='mr-25px'>
+                        {navigation.social.map(({ link, text }, key) => (
+                            <div key={key} className='mr-25px'>
                                 <a href={link} rel='noopener noreferrer' className='text-white' target='_blank'>
                                     <SocialIcon icon={text} />
                                 </a>

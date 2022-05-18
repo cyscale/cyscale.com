@@ -12,7 +12,7 @@ import Slider from 'react-slick';
 import Arrow from '../components/slick/Arrow';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import { Link as ScrollLink } from 'react-scroll';
-import ContactForm from '../components/careers/contactForm';
+import Apply from '../components/careers/apply-form';
 import employee from '../components/careers/data';
 const settings = {
     speed: 500,
@@ -114,7 +114,7 @@ const Careers = ({ location }) => {
                                     </ScrollLink>
                                 </div>
                                 <div className='col-span-12 mb-10 lg:mb-0 lg:col-span-6 lg:pl-8 order-1 lg:order-2'>
-                                    <Hire alt='We are hiring' className='mx-auto w-auto h-auto max-w-xl'/>
+                                    <Hire alt='We are hiring' className='mx-auto w-auto h-auto max-w-xl' />
                                 </div>
                             </Row>
                         </Section>
@@ -198,7 +198,9 @@ const Careers = ({ location }) => {
                                                 alt: 'decoration'
                                             })}
                                             <div className='ml-8'>
-                                                <h3 className='font-semibold  text-normal md:text-xl lg:text-2xl'>{title}</h3>
+                                                <h3 className='font-semibold  text-normal md:text-xl lg:text-2xl'>
+                                                    {title}
+                                                </h3>
                                                 <p className='text-sm md:text-normal lg:text-lg'>{description}</p>
                                             </div>
                                         </div>
@@ -232,7 +234,8 @@ const Careers = ({ location }) => {
                                             <div className='grad mb-2 w-20 h-20 rounded-full'>
                                                 {photo &&
                                                     React.cloneElement(photo, {
-                                                        className: 'w-20 h-20 rounded-full overflow-hidden relative z-10',
+                                                        className:
+                                                            'w-20 h-20 rounded-full overflow-hidden relative z-10',
                                                         alt: `${name} - ${position}`
                                                     })}
                                             </div>
@@ -302,7 +305,16 @@ const Careers = ({ location }) => {
                     </div>
                 </Container>
             </Section>
-            <ContactForm />
+            <Section>
+                <Container>
+                    <h6 className='font-semibold  text-blue text-4xl mx-auto mb-8 w-full max-w-md leading-normal new-line'>
+                        Join us
+                    </h6>
+                    <div className='max-w-md mx-auto'>
+                        <Apply dispaly='column' jobs={jobs.map(({ title }) => title)} />
+                    </div>
+                </Container>
+            </Section>
         </Layout>
     );
 };
