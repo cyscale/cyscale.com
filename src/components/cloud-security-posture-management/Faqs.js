@@ -29,14 +29,14 @@ const qas = [
                     areas such as storage, encryption, and permissions
                 </li>
                 <li className='mb-4'>
-                    Policy-based definitions and consistent enforcement of who can access what data to help reduce risk
-                    and ensure that compliance standards are met.
+                    Technical security controls and visibility over access configuration, to help reduce risk
+                    and ensure that compliance standards are met
                 </li>
                 <li className='mb-4'>
-                    Security and threat detection to identify risks that could compromise your cloud network
+                    Easily identify risks that could compromise your cloud network
                 </li>
 
-                <li>Remediation, to immediately and intuitively identify risk and resolve compliance violations</li>
+                <li>Remediation guidance, to quickly solve misconfigurations leading to compliance violations</li>
             </ul>
         )
     },
@@ -49,24 +49,24 @@ const qas = [
                         Visibility into your company's cloud infrastructure and security configurations.
                     </strong>
                     <br />
-                    Security teams can assess across multiple cloud environments and accounts while providing it through
-                    a centralized dashboard that can give actionable metrics and training behaviors.
+                    Security teams can assess posture across multiple cloud environments and accounts through
+                    a centralized dashboard that can give actionable metrics.
                 </p>
                 <p className='mb-4'>
                     <strong className='text-base'>Evidence.</strong>
                     <br />
-                    Provided by the mapping of your cloud's infrastructure to regulatory standards, security control
-                    frameworks, as well as internal security policies to help maintain your cloud's compliance.
+                    Violations in your cloud infrastructure are mapped to regulatory standards, security frameworks, 
+                    as well as internal policies, resulting in evidence collection that enables audits.            
                 </p>
                 <p className='mb-4'>
                     <strong className='text-base'>Reporting and alerting.</strong>
-                    Insights on your cloud's risk posture, as well as the alerting notifications, brought to your
-                    attention to identifying risks to enable investigations or remediation done as soon as possible
+                    Insights on your cloud's risk posture, as well as alerts and notifications bring risk to your attention,
+                    enabling investigation and in-time remediation.
                 </p>
                 <p className='mb-4'>
                     <strong className='text-base'>Automation.</strong>
                     One of the most important features of a CSPM tool. Automated remediation, helps security teams
-                    reduce the time and effort required for manual remediation, as well as evidence gathering.
+                    reduce the time and effort required by manual remediation, at the same time enabling evidence collection.
                 </p>
                 <Link className='underline' to='/blog/cloud-security-posture-management-cspm-guide/'>
                     Read more in our guide
