@@ -41,7 +41,7 @@ const GCPCloudSecurity = ({ location }) => {
                             </h1>
                             <p className='text-center sm:text-left text-base lg:text-lg mb-6 leading-relaxed'>
                                 Protect Google Cloud environments with a complete Cloud Security Posture Management
-                                (CSPM) solution - including support for the CIS AWS Foundations Benchmark.
+                                (CSPM) solution - including support for the CIS GCP Foundations Benchmark.
                             </p>
                             <p className='text-center sm:text-left text-base lg:text-lg mb-20 leading-relaxed'>
                                 Map, secure, and monitor your GCP assets in minutes.
@@ -72,9 +72,9 @@ const GCPCloudSecurity = ({ location }) => {
                         <div className='col-span-12 lg:col-span-5'>
                             <div className='mx-auto lg:mx-0  max-w-xl lg:max-w-none'>
                                 <p className='text-base leading-normal my-12 text-gray'>
-                                    <strong>Streamline posture management for AWS</strong> or your multi-cloud
-                                    environments. Get visibility into your cloud security, achieve continuous compliance
-                                    and enable security automation with CI/CD integration.
+                                    <strong>Streamline posture management for GCP</strong> or your multi-cloud
+                                    environments. Get visibility into your cloud security and achieve continuous
+                                    compliance.
                                 </p>
                                 <ul className='list-disc ml-4 text-gray'>
                                     <li className='mb-4'>
