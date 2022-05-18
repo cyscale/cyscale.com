@@ -457,7 +457,8 @@ h5 {
     margin-top: 15px;
 }
 .contactForm input,
-.contactForm textarea {
+.contactForm textarea,
+.contactForm select {
     padding: 11.5px 16px 11.5px 16px;
     border: thin solid #a0a0a0;
     border-radius: 4px;

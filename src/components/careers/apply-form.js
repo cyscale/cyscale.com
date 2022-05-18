@@ -2,31 +2,34 @@ import React from 'react';
 import axios from 'axios';
 import Swal from 'sweetalert2';
 import { Formik } from 'formik';
+import { Container, Section, Row } from '../atoms/Containers';
+import { Link } from 'gatsby';
+import classNames from 'classnames';
 
 const ALLOWED_FILES = ['application/pdf', 'application/msword'];
 const APPLY_JOB_ENDPOINT = 'https://23cl113kk3.execute-api.eu-central-1.amazonaws.com/production/apply-job';
-const toDataURL = file =>
+const toDataURL = (file) =>
     new Promise((resolve, reject) => {
         const reader = new FileReader();
         reader.readAsDataURL(file);
         reader.onload = () => resolve(reader.result);
-        reader.onerror = error => reject(error);
+        reader.onerror = (error) => reject(error);
     });
 
-const Apply = ({ data }) => {
+const Apply = ({ jobTitle, jobs, dispaly = 'row' }) => {
     return (
         <div id='applyForm'>
-            <div className='max-w-1366px jobs mx-auto pt-100px mb-100px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px'>
-                <div className='mt-20px lg:mb-100px block w-full contactForm '>
+            <div className='contactForm'>
+                <div className='jobs'>
                     <Formik
                         initialValues={{
                             email: '',
                             name: '',
                             message: '',
                             attachment: null,
-                            job_title: data.frontmatter.title
+                            job_title: jobTitle
                         }}
-                        validate={values => {
+                        validate={(values) => {
                             const errors = {};
                             if (!values.email) {
                                 errors.email = 'Required';
@@ -35,6 +38,9 @@ const Apply = ({ data }) => {
                             }
                             if (!values.name) {
                                 errors.name = 'Required';
+                            }
+                            if (!values.job_title) {
+                                errors.job_title = 'Required';
                             }
                             if (!values.message) {
                                 errors.message = 'Required';
@@ -75,8 +81,13 @@ const Apply = ({ data }) => {
                             setFieldValue
                         }) => (
                             <form onSubmit={handleSubmit} name='contact' method='post'>
-                                <div className='grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-6'>
-                                    <div className='block w-full'>
+                                <Row>
+                                    <div
+                                        className={classNames({
+                                            'col-span-12 lg:col-span-6': dispaly === 'row',
+                                            'col-span-12': dispaly === 'column'
+                                        })}
+                                    >
                                         <input
                                             name='name'
                                             type='text'
@@ -84,11 +95,18 @@ const Apply = ({ data }) => {
                                             onBlur={handleBlur}
                                             value={values.name}
                                             placeholder='Your Name'
-                                            className='block w-full text-formInputColor bg-white text-16px placeholder-formInputColor'
+                                            className='block w-full bg-white text-base'
                                         />
-                                        <div className='text-red'> {errors.name && touched.name && errors.name}</div>
+                                        <div className='text-red text-sm pt-1' style={{ height: 20 }}>
+                                            {errors.name && touched.name && errors.name}
+                                        </div>
                                     </div>
-                                    <div className='block w-full'>
+                                    <div
+                                        className={classNames({
+                                            'col-span-12 lg:col-span-6': dispaly === 'row',
+                                            'col-span-12': dispaly === 'column'
+                                        })}
+                                    >
                                         <input
                                             type='email'
                                             name='email'
@@ -96,34 +114,45 @@ const Apply = ({ data }) => {
                                             onBlur={handleBlur}
                                             value={values.email}
                                             placeholder='Your E-mail'
-                                            className='block w-full text-formInputColor bg-white text-16px placeholder-formInputColor'
+                                            className='block w-full bg-white text-base'
                                         />
-                                        <div className='text-red'> {errors.email && touched.email && errors.email}</div>
+                                        <div className='text-red text-sm pt-1' style={{ height: 20 }}>
+                                            {errors.email && touched.email && errors.email}
+                                        </div>
                                     </div>
-                                    <div className='block w-full'>
+                                    <div
+                                        className={classNames({
+                                            'col-span-12 lg:col-span-6': dispaly === 'row',
+                                            'col-span-12': dispaly === 'column'
+                                        })}
+                                    >
                                         <textarea
                                             name='message'
                                             onChange={handleChange}
                                             onBlur={handleBlur}
                                             value={values.message}
                                             placeholder='Personal Note'
-                                            className='block w-full bg-white text-16px text-formInputColor placeholder-formInputColor'
+                                            className='block w-full bg-white text-base'
                                         >
                                             Your Message
                                         </textarea>
-                                        <div className='text-red'>
-                                            {' '}
+                                        <div className='text-red text-sm pt-1' style={{ height: 20 }}>
                                             {errors.message && touched.message && errors.message}
                                         </div>
                                     </div>
-                                    <div>
+                                    <div
+                                        className={classNames({
+                                            'col-span-12 lg:col-span-6': dispaly === 'row',
+                                            'col-span-12': dispaly === 'column'
+                                        })}
+                                    >
                                         <label htmlFor='attachment'>
                                             <input
                                                 type='file'
                                                 id='attachment'
                                                 name='file'
                                                 className='hidden'
-                                                onChange={async event => {
+                                                onChange={async (event) => {
                                                     const file = event.target.files[0];
                                                     if (file && ALLOWED_FILES.includes(file.type)) {
                                                         const result = await toDataURL(file);
@@ -134,59 +163,58 @@ const Apply = ({ data }) => {
                                                         });
                                                     } else {
                                                         Swal.fire({
-                                                            title: 'Invalid File',
                                                             icon: 'error',
+                                                            title: 'Invalid File',
                                                             text: 'please select pdf or doc '
                                                         });
                                                     }
                                                 }}
                                             />
-                                            <input
+
+                                            <select
                                                 name='job_title'
-                                                type='text'
-                                                onChange={handleChange}
+                                                type='select'
                                                 onBlur={handleBlur}
-                                                disabled
-                                                value={values.job_title}
-                                                placeholder='job Title'
-                                                className='block job_title w-full text-formInputColor bg-white text-16px placeholder-formInputColor bg-lightGrey2'
-                                            />
+                                                placeholder='Job Title'
+                                                onChange={handleChange}
+                                                disabled={Boolean(jobTitle)}
+                                                className='block w-full  bg-white text-base'
+                                            >
+                                                {jobs.map((v, key) => (
+                                                    <option value={v} key={key} selected={v === jobTitle}>
+                                                        {v}
+                                                    </option>
+                                                ))}
+                                            </select>
                                             <br />
-                                            <span className='block w-full truncate text-16px text-white bg-blue rounded hover:bg-grey2 p-3 cursor-pointer text-center transition-all duration-300'>
+                                            <span className='block w-full truncate text-base text-white bg-blue rounded hover:bg-opacity-70 p-3 cursor-pointer text-center transition-all duration-300'>
                                                 Attachment
                                                 {values.attachment && <strong> {values?.attachment?.filename}</strong>}
                                             </span>
                                         </label>
-                                        {/* <p className="text-black text-16px font-semibold">
-                      Attachment Name
-                    </p> */}
-                                        <div className='text-red'>
-                                            {' '}
+                                        <div className='text-red text-sm pt-1' style={{ height: 20 }}>
                                             {errors.attachment && touched.attachment && errors.attachment}
                                         </div>
                                     </div>
-                                    <div>
-                                        <div className='block w-full'>
-                                            {!isSubmitting ? (
-                                                <button
-                                                    disabled={isSubmitting}
-                                                    type='submit'
-                                                    className='gradientBgBtn min-w-232px text-16px font-normal rounded text-white uppercase text-center pt-21px pb-21px pl-49px pr-49px no-underline'
-                                                >
-                                                    APPLY
-                                                </button>
-                                            ) : (
-                                                <button
-                                                    disabled={isSubmitting}
-                                                    type='button'
-                                                    className='gradientBgBtn  min-w-232px text-16px font-normal rounded text-white uppercase text-center pt-21px pb-21px pl-49px pr-49px no-underline'
-                                                >
-                                                    SUBMITING ...
-                                                </button>
+                                    <div className='col-span-12'>
+                                        <button
+                                            disabled={isSubmitting}
+                                            type='submit'
+                                            className={classNames(
+                                                'gradientBgBtn  w-full text-base font-normal rounded text-white uppercase text-center py-5 px-16 no-underline',
+                                                { 'lg:max-w-xs': dispaly === 'row' }
                                             )}
-                                        </div>
+                                        >
+                                            {!isSubmitting ? 'APPLY' : 'SUBMITING ...'}
+                                        </button>
+                                        <p className='text-xs leading-normal text-gray mt-4'>
+                                            By submitting this form, you agree to the{' '}
+                                            <Link className='text-primary' to='/policies/privacy-policy/'>
+                                                Privacy Policy
+                                            </Link>
+                                        </p>
                                     </div>
-                                </div>
+                                </Row>
                             </form>
                         )}
                     </Formik>
