@@ -47,13 +47,13 @@ It connects any person with any application securely through its features, such 
 * B2B Integration for 3rd party access, 
 * Mobile Identity Management, and others. 
 
-
-
 ### Okta Security Best Practices for Cloud Access 
 
 Okta can be configured as an external identity provider to enable SSO in the cloud. 
 
 Let's look at the best practices recommended by Okta and how you can make sure you're implementing them correctly to secure your cloud environment and keep your solutions protected.
+
+<br/>
 
 #### 1. Use multi-factor authentication (MFA) 
 
@@ -74,6 +74,8 @@ They should be of the following:  
 * What you are (example: a fingerprint)  
 
 Okta recommends you use a one-time password or a biometric verification in your authentication scheme in order to add an extra layer of security. 
+
+<br/>
 
 #### 2. Stop using passwords 
 
@@ -98,6 +100,8 @@ Okta suggests solutions that can help you go passwordless. You can use: 
 * Okta Fastpass, which allows you to authenticate passwordless from any device or location to any Okta-managed application; 
 * WebAuthn, a standard that simplifies authentication. 
 
+<br/>
+
 #### 3. Manage user access by following the Least Privilege Principle 
 
 ##### Scenario 
@@ -116,7 +120,7 @@ For example, a regular user should not have administrator rights unless they nee
 
 Make sure to restrict users as much as possible in accordance with their jobs. 
 
-
+<br/>
 
 #### 4. Ensure the Separation of Duties 
 
@@ -131,6 +135,8 @@ A critical vulnerability appears in the cloud infrastructure, but nobody has the
 The Separation of Duties Principle helps eliminate a single point of failure by assuring no entity has the rights to execute a critical task by themselves. 
 
 Configuring at least two administrators eliminates the single point of failure. It ensures that if one of them is missing, the other can still perform tasks requiring administrative privileges. 
+
+<br/>
 
 #### 5. Monitor activity 
 
@@ -153,6 +159,8 @@ These technologies can help you identify suspicious behavior, such as: 
 
 Okta recommends that you constantly look for odd activity in your cloud infrastructure and make sure you take actions when you identify them, such as verifying a user's identity through MFA. 
 
+<br/>
+
 #### 6. Automate onboarding and offboarding 
 
 ##### Scenario 
@@ -170,7 +178,9 @@ There should be a well-defined set of steps when an employee leaves the company.
 * You correctly deprovision their account, and 
 * They cannot access and make changes to your systems anymore. 
 
-  
+
+
+<br/>
 
 Are you following these best practices in your company? 
 
