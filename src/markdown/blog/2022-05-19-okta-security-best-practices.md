@@ -36,7 +36,7 @@ tags:
 
 What is Okta? 
 
-Okta is an identity and access management (IAM) service built for the cloud. 
+Okta is an [identity and access management (IAM)](https://cyscale.com/blog/iam-best-practices-from-aws-azure-gcp/) service built for the cloud. 
 
 It connects any person with any application securely through its features, such as: 
 
@@ -177,8 +177,6 @@ There should be a well-defined set of steps when an employee leaves the company.
 
 * You correctly deprovision their account, and 
 * They cannot access and make changes to your systems anymore. 
-
-
 
 <br/>
 
