@@ -188,7 +188,7 @@ const Apply = ({ jobTitle, jobs, dispaly = 'row' }) => {
                                             </select>
                                             <br />
                                             <span className='block w-full truncate text-base text-white bg-blue rounded hover:bg-opacity-70 p-3 cursor-pointer text-center transition-all duration-300'>
-                                                Attachment
+                                                CV Attachment (PDF)
                                                 {values.attachment && <strong> {values?.attachment?.filename}</strong>}
                                             </span>
                                         </label>
