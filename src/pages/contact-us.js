@@ -43,8 +43,8 @@ const ContactUs = ({ location }) => {
                                         How can we help you?
                                     </h2>
                                     <p className='text-base text-gray leading-normal mt-4 mb-4'>
-                                        We are always happy to assist with more information about us or product. Just
-                                        fill out the form here and we will get back to you.{' '}
+                                        We are always happy to assist with more information about us or our product. Just
+                                        fill out the form below and we will get back to you.{' '}
                                     </p>
                                     <div style={{ minHeight: 510 }} id='contact-form' />
                                 </div>
