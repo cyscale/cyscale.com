@@ -39,8 +39,6 @@ A [Cloud Security Posture Management (CSPM) tool](https://cyscale.com/products/c
 
 This article will discuss what you need to look for in a CSPM and help you make the right choice regarding your [cloud's security posture](https://cyscale.com/blog/improve-cloud-security-posture/). 
 
-
-
 ### Does it check for a wide variety of vulnerabilities? 
 
 There is a long list of possible misconfigurations, policy violations, and mistakes that can disrupt your cloud system. 
@@ -55,8 +53,6 @@ Some of [the most common cloud misconfigurations](https://cyscale.com/blog/commo
 * Missing encryption, 
 * Disabled or unconfigured logging and monitoring. 
 
-
-
 ### Does it have an integration with your preferred cloud platform? 
 
 The CSPM tool you choose must be compatible with the cloud platform your system is using. The top three vendors in the cloud industry are: 
@@ -68,8 +64,6 @@ The CSPM tool you choose must be compatible with the cloud platform your system 
 With Cyscale, you can scan and maintain your cloud security posture for all three of the vendors mentioned above, as well as Alibaba Cloud. 
 
 Another essential feature is that Cyscale integrates Okta identities. 
-
-
 
 ### What compliance frameworks does it support? 
 
@@ -102,7 +96,7 @@ Vulnerability scoring is another essential feature that can help you avoid false
 
 This is why it is essential to ensure that false positives are avoided because they can cause noise that may distract employees from more important matters. 
 
-![Alerts divided by severity](/img/alerts_severity_light.png "Risk scoring in Cyscale")
+![Alerts divided by severity](/img/alerts-severity.jpeg "Risk scoring in Cyscale")
 
 ### Do you receive targeted alerts? 
 
@@ -132,8 +126,6 @@ Cyscale provides, along with the controls that pinpoint what vulnerability has b
 
 The remediation steps can ensure you're applying the modifications correctly and speed up the process of securing your assets. 
 
-  
-
 Make the right decision for your company by using a robust [CSPM](https://cyscale.com/blog/cloud-security-posture-management-cspm-guide/) that helps secure your cloud infrastructure and provides all of the features mentioned above and more. 
 
 Cyscale ensures the following features: 
@@ -144,9 +136,5 @@ Cyscale ensures the following features: 
 * prioritization of assets remediation and alerts, 
 * targeted and custom alerts, 
 * remediation steps and vulnerabilities reports. 
-
- 
-
- 
 
 <!--EndFragment-->
