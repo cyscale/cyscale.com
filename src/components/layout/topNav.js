@@ -17,6 +17,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import useScrollTrigger from '../scrollTrigger';
 import { useAppLink } from '../../common/links';
 import navigation from './navigation.json';
+import { Row } from '../atoms/Containers';
 
 const initMenu = {
     Icon: menuIcon,
@@ -204,19 +205,20 @@ const TopNav = ({ pageName }) => {
                                 <div className='mega-menu'>
                                     <div className=' max-w-4xl grid grid-cols-1 lg:grid-cols-2  gap-6 ml-auto justify-end p-6 mb-16 sm:mb-0 shadow-2xl bg-teal-700 bg-white'>
                                         <div>
-                                            <div className='flex flex-col'>
+                                            <Row>
                                                 {navigation.usecases.map(({ link, text }, key) => (
-                                                    <Link
-                                                        to={link}
-                                                        key={key}
-                                                        activeClassName='active'
-                                                        activeStyle={{ color: '#0F26AA' }}
-                                                        className='text-base text-black hover:text-blue hover:no-underline leading-normal mb-7 last:mb-0'
-                                                    >
-                                                        {text}
-                                                    </Link>
+                                                    <div className='col-span-6' key={key}>
+                                                        <Link
+                                                            to={link}
+                                                            activeClassName='active'
+                                                            activeStyle={{ color: '#0F26AA' }}
+                                                            className='text-base text-black hover:text-blue hover:no-underline leading-normal mb-7 last:mb-0'
+                                                        >
+                                                            {text}
+                                                        </Link>
+                                                    </div>
                                                 ))}
-                                            </div>
+                                            </Row>
                                         </div>
                                         <div className='hidden lg:inline-block'>
                                             <img

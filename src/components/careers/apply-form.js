@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import Swal from 'sweetalert2';
 import { Formik } from 'formik';
-import { Container, Section, Row } from '../atoms/Containers';
+import { Row } from '../atoms/Containers';
 import { Link } from 'gatsby';
 import classNames from 'classnames';
 
