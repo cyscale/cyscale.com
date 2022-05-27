@@ -15,8 +15,8 @@ const HomePage = ({ location }) => {
             bannerDescription={`Map, secure, and monitor your cloud assets across platforms in under 5 minutes.\n\nOptimize operations and costs with an agentless CSPM solution that uses our Security Knowledge Graph™ to ensure scalable, consistent protection and governance.`}
             bannerBtn1Text='Start your free trial'
             bannerBtn1Link={appLink}
-            bannerBtn2Text='Explore use cases'
-            bannerBtn2Link='#powerCloud'
+            bannerBtn2Text='Request demo'
+            bannerBtn2Link='/request-demo'
             pageName='HomePage'
             title='Cyscale - Complete Cloud Visibility & Control Platform'
             description='Map all your cloud assets across providers in under 5 mins. Optimize costs, ensure cloud security, and prove compliance with the scalable Cyscale CSPM.'

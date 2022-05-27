@@ -68,6 +68,10 @@
             "blank": true,
             "link": "https://docs.cyscale.com",
             "text": "Support"
+        },
+        {
+            "link": "/request-demo",
+            "text": "Request Demo"
         }
     ],
     "company": [
