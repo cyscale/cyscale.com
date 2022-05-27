@@ -6,6 +6,7 @@ authors: Sabrina Lupșan
 permalink: provide-visibility-in-cloud-okta-integration
 categories:
   - CSPM
+  - Product
 date: 2022-05-27T06:52:44.138Z
 description: "Okta is an identity and access management (IAM) service built for
   the cloud that connects persons with applications through SSO, AD, LDAP MFA,
