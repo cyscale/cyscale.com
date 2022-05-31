@@ -15,20 +15,28 @@
             "text": "Cloud Misconfigurations"
         },
         {
-            "link": "/use-cases/cloud-compliance-and-auditing/",
-            "text": "Compliance and Auditing"
+            "link": "/use-cases/remote-work-security/",
+            "text": "Remote Work"
         },
         {
             "link": "/use-cases/iso-27001-compliance/",
             "text": "ISO 27001 Compliance"
         },
         {
-            "link": "/use-cases/remote-work-security/",
-            "text": "Remote Work"
+            "link": "/use-cases/cloud-compliance-and-auditing/",
+            "text": "Compliance and Auditing"
         },
         {
             "link": "/use-cases/cloud-data-security/",
             "text": "Data Security"
+        },
+        {
+            "link": "/use-cases/iam-security/",
+            "text": "IAM Security"
+        },
+        {
+            "link": "/use-cases/gcp-cloud-security/",
+            "text": "Google Cloud Security"
         },
         {
             "link": "/use-cases/aws-cloud-security/",
@@ -37,10 +45,6 @@
         {
             "link": "/use-cases/azure-cloud-security/",
             "text": "Azure Cloud Security"
-        },
-        {
-            "link": "/use-cases/gcp-cloud-security/",
-            "text": "Google Cloud Security"
         }
     ],
     "pricing": [

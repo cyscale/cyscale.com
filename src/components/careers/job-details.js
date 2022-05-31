@@ -2,7 +2,7 @@ import React from 'react';
 import Description from './description';
 import Apply from './apply-form';
 import ScrollButton from '../ScrollButton/ScrollButton';
-import { Container, Section } from '../atoms/Containers';
+import { Container } from '../atoms/Containers';
 
 const Details = ({ data, jobs }) => {
     return (
