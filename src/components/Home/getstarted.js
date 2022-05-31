@@ -71,7 +71,7 @@ const getstarted = ({ description, btnText, btnLink, sectionName, icon, icon2, E
                                     Learn all the ways Cyscale can help you keep security risks in check
                                 </p>
                                 <a
-                                    href='/contact-us/'
+                                    href='/request-demo/'
                                     className='inline-block min-w-289px text-16px font-medium rounded text-white uppercase text-center pt-21px pb-21px pl-49px pr-49px no-underline transition-all duration-300 border border-white hover:border-black border-solid hover:bg-black hover:text-white hover:no-underline'
                                 >
                                     BOOK YOUR DEMO
