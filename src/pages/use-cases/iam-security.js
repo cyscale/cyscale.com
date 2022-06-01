@@ -28,7 +28,7 @@ const IAMSecurity = ({ location }) => {
         <Layout
             location={location}
             pageName='IAMSecurity'
-            title='IAM Security Tool for Cloud'
+            title='IAM Security for Cloud'
             description='Scan, monitor and prioritize cloud IAM risk'
         >
             <div className='bg-cloud' style={{ backgroundColor: '#eeeeee' }}>
@@ -36,7 +36,7 @@ const IAMSecurity = ({ location }) => {
                     <Section>
                         <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-xl pt-16 pb-4'>
                             <h1 className='font-semibold text-center sm:text-left text-4xl lg:text-5xl leading-normal text-primary mb-16'>
-                                IAM Security Tool
+                                Identity and Access Management Security
                                 <br /> for Cloud
                             </h1>
                             <p className='text-center sm:text-left text-base lg:text-lg mb-2 leading-relaxed'>
@@ -187,7 +187,7 @@ const IAMSecurity = ({ location }) => {
                     <Container>
                         <div className='mx-auto text-center lg:text-left lg:mx-0 max-w-sm lg:max-w-none'>
                             <h2 className='text-white text-xl md:text-2xl font-semibold uppercase'>
-                                IAM Cloud Secirty
+                                IAM Cloud Security
                             </h2>
                             <p className='text-white text-lg md:text-2xl mb-20'>
                                 Start seeing value & saving money in minutes
