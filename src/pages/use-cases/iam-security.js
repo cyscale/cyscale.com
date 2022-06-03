@@ -11,7 +11,7 @@ const IAMSecurity = ({ location }) => {
 
     const data = useStaticQuery(graphql`
         query IAMSecurityQuery {
-            cisGCP: file(relativePath: { eq: "new-cis-gcp-screen.png" }) {
+            identityDashboard: file(relativePath: { eq: "identity_dashboard.png" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1080, layout: CONSTRAINED)
                 }
@@ -67,7 +67,7 @@ const IAMSecurity = ({ location }) => {
                     <Row>
                         <div className='col-span-12 lg:col-span-6'>
                             <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-xl'>
-                                <GatsbyImage image={data.cisGCP.childImageSharp.gatsbyImageData} />
+                                <GatsbyImage image={data.identityDashboard.childImageSharp.gatsbyImageData} />
                             </div>
                         </div>
                         <div className='col-span-12 lg:col-span-5'>
