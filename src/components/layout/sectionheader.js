@@ -10,7 +10,7 @@ const Sectionheader = ({ headingText, description, subText, pageName, section })
                         ? 'lg:grid-cols-2'
                         : 'lg:grid-cols-3'
                 } ${!!pageName && pageName === 'CSPMPage' ? 'gap-4 lg:gap-x-52' : 'gap-4'} ${
-                    !!pageName && pageName === 'RemoteWork' ? 'items-center' : null
+                    !!pageName && (pageName === 'RemoteWork' || pageName === 'PCIDSS') ? 'items-center' : null
                 }`}
             >
                 <div>
@@ -19,11 +19,11 @@ const Sectionheader = ({ headingText, description, subText, pageName, section })
                             pageName === 'dataSecurity'
                                 ? 'lg:max-w-md'
                                 : pageName === 'cloudCompliance'
-                                ? null
-                                : 'lg:max-w-sm'
+                                    ? null
+                                    : 'lg:max-w-sm'
                         } ${
                             !!section && section === 'complianceAutoUpdates' ? 'lg:pr-32' : null
-                        } sectionTitle new-line`}
+                        } sectionTitle new-line ${pageName === 'PCIDSS' ? 'max-w-xl mx-auto' : null}`}
                     >
                         {headingText}
                     </h2>
@@ -41,12 +41,13 @@ const Sectionheader = ({ headingText, description, subText, pageName, section })
                         pageName === 'CSPMPage' || pageName === 'cloudCompliance'
                             ? 'hidden'
                             : pageName === 'aboutUs' || pageName === 'dataSecurity'
-                            ? 'hidden'
-                            : 'hidden lg:block'
+                                ? 'hidden'
+                                : 'hidden lg:block'
                     }`}
                 ></div>
                 {!!description && (
-                    <div className={`${!!pageName && pageName === 'CSPMPage' ? 'lg:col-span-2' : ''}`}>
+                    <div
+                        className={`${!!pageName && pageName === 'CSPMPage' ? 'lg:col-span-2' : ''} ${!!pageName && pageName === 'PCIDSS' ? 'max-w-xl mx-auto mb-12' : ''}`}>
                         <p className='text-block text-16px leading-normal new-line mt-8'>{description}</p>
                         {headingText === 'Reveal & curb hidden costs' && (
                             <ul className='text-16px list-disc ml-30px'>
