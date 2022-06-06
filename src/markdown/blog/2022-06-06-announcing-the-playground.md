@@ -48,11 +48,11 @@ You can observe the following features: 
 
 By providing risk scoring, Cyscale can help you prioritize remediation for assets and highlight critical vulnerabilities. 
 
-![Controls from the Playground](/img/playground_controls_3.png "Playground controls")
+![Controls from the Playground](/img/playground_controls_4.png "Playground controls")
 
 Below, you can find an example of 3 of the [compliance standards](https://cyscale.com/use-cases/cloud-compliance-and-auditing/) that we support: 
 
-![Compliance standards from the Playground](/img/playground_compliance_2.png "Playground compliance standards")
+![Compliance standards from the Playground](/img/playground_compliance_3.png "Playground compliance standards")
 
 See for yourself how the Cyscale application suits your needs and check out [the Playground](https://app.cyscale.com/playground)! 
 
