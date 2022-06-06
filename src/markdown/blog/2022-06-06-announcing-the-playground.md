@@ -30,7 +30,7 @@ tags:
 
 We are releasing a new feature in Cyscale, [the Playground](https://app.cyscale.com/playground)! It is an application demo that you can access in less than 1 minute. 
 
-Currently, the Playground is populated with data from four cloud vendors: 
+Currently, the Playground is populated with data from three cloud vendors: 
 
 * [AWS (Amazon Cloud)](https://cyscale.com/use-cases/aws-cloud-security/), 
 * [Microsoft Azure,](https://cyscale.com/use-cases/azure-cloud-security/) and 
@@ -46,15 +46,13 @@ You can observe the following features: 
 * compliance frameworks and controls associated with them, 
 * graph-based visibility of assets, and many more! 
 
-  
-
 By providing risk scoring, Cyscale can help you prioritize remediation for assets and highlight critical vulnerabilities. 
 
-![Controls from the Playground](/img/playground_controls.png "Playground controls")
+![Controls from the Playground](/img/playground_controls_2.png "Playground controls")
 
-Below, you can find an example of 4 of the [compliance standards](https://cyscale.com/use-cases/cloud-compliance-and-auditing/) that we support: 
+Below, you can find an example of 3 of the [compliance standards](https://cyscale.com/use-cases/cloud-compliance-and-auditing/) that we support: 
 
-![Compliance standards from the Playground](/img/playground_compliance.png "Playground compliance standards")
+![Compliance standards from the Playground](/img/playground_compliance_2.png "Playground compliance standards")
 
 See for yourself how the Cyscale application suits your needs and check out [the Playground](https://app.cyscale.com/playground)! 
 
