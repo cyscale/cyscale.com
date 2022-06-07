@@ -1,14 +1,14 @@
 import React from 'react';
-import { Container, Row, Section } from '../../components/atoms/Containers';
+import {Container, Row, Section} from '../../components/atoms/Containers';
 import Layout from '../../components/layout/CleanLayout';
-import { useAppLink } from '../../common/links';
-import { useStaticQuery, graphql } from 'gatsby';
-import { GatsbyImage } from 'gatsby-plugin-image';
+import {useAppLink} from '../../common/links';
+import {useStaticQuery, graphql} from 'gatsby';
+import {GatsbyImage} from 'gatsby-plugin-image';
 import ScrollButton from '../../components/ScrollButton/ScrollButton';
-import Sectionheader from '../../components/layout/sectionheader';
+import headerImage from "../../assets/images/remote-work-heading-image.png";
 
-const IAMSecurity = ({ location }) => {
-    const appLink = useAppLink({ location });
+const PciDss = ({location}) => {
+    const appLink = useAppLink({location});
 
     const data = useStaticQuery(graphql`
         query PSIteQuery {
@@ -17,7 +17,7 @@ const IAMSecurity = ({ location }) => {
                     gatsbyImageData(width: 1080, layout: CONSTRAINED)
                 }
             }
-            automateCompliance: file(relativePath: { eq: "automate-compliance-as-code-iac-continuous-assessment.png" }) {
+            automateCompliance: file(relativePath: { eq: "automate-compliance-as-code-iac-continuous-assessment-pci.png" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1080, layout: CONSTRAINED)
                 }
@@ -38,7 +38,7 @@ const IAMSecurity = ({ location }) => {
                         <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-xl pt-16 pb-4'>
                             <h1 className='font-semibold text-center sm:text-left text-4xl lg:text-5xl leading-normal text-primary mb-16'>
                                 PCI DSS
-                                <br /> Compliance for Cloud
+                                <br/> Compliance for Cloud
                             </h1>
                             <p className='text-center sm:text-left text-base lg:text-lg mb-6 leading-relaxed'>
                                 Cyscale helps you develop a strong cloud security process for payment card data that
@@ -59,98 +59,80 @@ const IAMSecurity = ({ location }) => {
                         </div>
                     </Section>
                     <div className='pb-8'>
-                        <ScrollButton to='start' />
+                        <ScrollButton to='start'/>
                     </div>
                 </Container>
             </div>
-            <Container className='sm:h-96'>
-                <Section>
+            <Container className='h-96 sm:h-96 md:h-80'>
+                <div className="lg:pt-32 lg:pb-32">
                     <Row>
                         <div className='col-span-12 lg:col-span-6'>
-                            <div className='mx-auto max-w-xl lg:max-w-lg'>
+                            <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-lg'>
                                 <h2 className='text-2xl mb-4 lg:mb-0 lg:text-4xl font-normal leading-normal mt-8'>
                                     <strong>Automate cloud security</strong>
-                                    <br /> and PCI DSSx compliance
+                                    <br/> <strong>and PCI DSS compliance</strong>
                                 </h2>
                             </div>
                         </div>
                         <div className='col-span-12 lg:col-span-6'>
                             <div className='mx-auto max-w-xl ml-auto'>
-                                <GatsbyImage image={data.graph.childImageSharp.gatsbyImageData} alt='' />
+                                <GatsbyImage image={data.graph.childImageSharp.gatsbyImageData} alt=''/>
                             </div>
                         </div>
                     </Row>
-                </Section>
+                </div>
             </Container>
-            <div className='bg-lightGrey sm:mt-28 md:mt-1 '>
-                <Container className='pt-0 sm:pt-10 md:pt-48 lg:pt-0'>
-                    <Section id="start">
-                        <Row>
-                            <div className='col-span-12 lg:col-span-6'>
-                                <div className='mx-auto lg:mx-0  max-w-xl lg:max-w-none'>
-                                    <ul className='list-disc ml-4 text-gray mt-8'>
-                                        <li className='mb-4'>
-                                            <strong>Detect & Eliminate Azure Cloud Misconfigurations</strong>,
-                                            understand
-                                            the impact of, and remediate infrastructure misconfigurations in real time.
-                                        </li>
-                                        <li className='mb-4'>
-                                            <strong>Gain Visibility into Compliance violations</strong>, monitor your
-                                            cloud
-                                            assets for Azure compliance violations with predefined controls mapped to
-                                            the
-                                            CIS Azure Security and other benchmarks.
-                                        </li>
-                                        <li className='mb-4'>
-                                            <strong>Have a simple view of your cloud assets</strong> across all regions,
-                                            subscriptions and resource groups
-                                        </li>
-                                    </ul>
-                                </div>
+            <div className='bg-lightGrey sm:mt-0 md:mt-0 lg:mt-12'>
+                <Container className='pt-0 sm:pt-10 md:pt-24 lg:pt-0'>
+                    <div className="pt-12 sm:pt-24 pb-24 lg:pt-32 lg:pb-32 lg:grid lg:grid-cols-12" id="start">
+
+                        <div className='col-span-12 lg:col-start-1 col-end-5'>
+                            <div className='mx-auto lg:mx-0  max-w-xl lg:max-w-none'>
+                                <ul className='list-disc ml-4 text-gray mt-8'>
+                                    <li className='mb-4'>
+                                        <strong>Protect Cardholder Data: </strong>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                        tempor
+                                    </li>
+                                    <li className='mb-4'>
+                                        <strong>Policy-based security: </strong> out-of-the-box assurance and
+                                        enforcement policies that you can configure across the build, workload, and
+                                        infrastructure.
+                                    </li>
+                                </ul>
                             </div>
-                            <div className='col-span-12 lg:col-span-6'>
-                                <div className='mx-auto lg:mx-0  max-w-xl lg:max-w-none'>
-                                    <ul className='list-disc ml-4 text-gray mt-8'>
-                                        <li className='mb-4'>
-                                            <strong>Onboard entire tenants at once</strong> and get visibility on
-                                            multiple
-                                            subscriptions
-                                        </li>
-                                        <li className='mb-4'>
-                                            <strong>
-                                                Use a powerful asset view to understand infrastructure and
-                                                configurations
-                                            </strong>
-                                            , and see the impact on compliance
-                                        </li>
-                                        <li className='mb-4'>
-                                            <strong>Discover unused Azure cloud resources</strong> and reduce attack
-                                            surface
-                                            while optimizing costs
-                                        </li>
-                                        <li className='mb-4'>
-                                            <strong>Easily generate security and compliance reports</strong> for
-                                            internal or
-                                            external stakeholders
-                                        </li>
-                                    </ul>
-                                </div>
+                        </div>
+                        <div className='col-span-12 lg:col-start-8 col-span-4'>
+                            <div className='mx-auto lg:mx-0  max-w-xl lg:max-w-none'>
+                                <ul className='list-disc ml-4 text-gray mt-8'>
+                                    <li className='mb-4'>
+                                        <strong>Strong access control: </strong> Restrict access to cardholder data
+                                        and identify, authenticate access to system components
+                                    </li>
+                                    <li className='mb-4'>
+                                        <strong>
+                                            Real-time visibility with detection and response:
+                                        </strong>
+                                        Comprehensive visibility across the entire cloud native lifecycle from
+                                        build, to infrastructure, to run time
+                                    </li>
+                                </ul>
                             </div>
-                        </Row>
-                    </Section>
+                        </div>
+                    </div>
                 </Container>
             </div>
             <Container>
                 <Section>
-                    <Row className='gap-12'>
-                        <div className='hidden sm:block col-span-12 px-3 lg:col-span-4'>
+                    <div className="sm:grid sm:grid-cols-12 sm:gap-12">
+                        <div className='col-span-12 sm:px-3 lg:col-span-4'>
                             <div className='mx-auto lg:mx-0 max-w-xl'>
                                 <h2 className='text-4xl font-semibold text-primary leading-normal border-title'>
                                     Automate compliance checks & security control audits
                                 </h2>
                             </div>
                         </div>
-                        <div className='hidden sm:block col-span-12 px-3 lg:col-span-8'>
+                        <div className='col-span-12  mt-8 sm:mt-0 sm:px-3 lg:col-span-8'>
                             <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-full'>
                                 <p className='leading-normal text-base text-gray mb-6'>
                                     Use Cyscale for governance automation across cloud providers and internal teams to
@@ -166,54 +148,53 @@ const IAMSecurity = ({ location }) => {
                                 </p>
                             </div>
                         </div>
-                    </Row>
-                    <div className='mx-auto max-w-xl sm:hidden'>
-                        <h2 className='text-4xl font-semibold text-primary leading-normal border-title'>
-                            Automate compliance checks & security control audits
-                        </h2>
-                    </div>
-                    <div className='mx-auto max-w-xl mt-12 sm:hidden'>
-                        <p className='leading-normal text-base text-gray mb-6'>
-                            Use Cyscale for governance automation across cloud providers and internal teams to
-                            ensure consistent security and compliance.
-                        </p>
-                        <p className='leading-normal text-base text-gray mb-6'>
-                            We keep your cloud environments under continuous assessment and provide in-app
-                            security consultancy so that you make the most of your time and effort.
-                        </p>
-                        <p className='leading-normal text-base text-gray'>
-                            Coming soon: create custom Controls that tap into our Security Knowledge Graph™ and
-                            automate the security and compliance checks that matter most for your organization.
-                        </p>
                     </div>
                     <div className='max-w-xl lg:max-w-5xl mx-auto pt-12'>
-                        <GatsbyImage image={data.automateCompliance.childImageSharp.gatsbyImageData} alt='' />
+                        <GatsbyImage image={data.automateCompliance.childImageSharp.gatsbyImageData} alt=''/>
                     </div>
                 </Section>
             </Container>
             <Container>
-                <Sectionheader
-                    headingText={[
-                        'Align teams & tasks',
-                        <span key='ali123' className='block w-full font-normal'>
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 items-center">
+                    <div>
+                        <h2 className="font-semibold text-blue text-34px leading-normal lg:max-w-sm null sectionTitle new-line max-w-xl mx-auto">
+                            Align teams & tasks
+                            <span key='ali123' className='block w-full font-normal'>
                             Govern all cloud entities from a single dashboard
                         </span>
-                    ]}
-                    description={[
-                        'Consolidate all the key elements of cloud compliance in an easy-to-use dashboard. Replace cloud portals with our Cloud Platform - the hub for a sweeping overview of your',
-                        ' ',
-                        <a
+                        </h2>
+                        <img
+                            src={headerImage}
+                            alt='Govern all cloud entities from a single dashboard'
+                            className='w-auto h-auto mt-8 mx-auto lg:mx-0'
+                        />
+                    </div>
+                    <div className="hidden lg:block"></div>
+                    <div className=" max-w-xl mx-auto mb-12">
+                        <p className="text-block text-16px leading-normal new-line mt-8">
+                            Consolidate all the key elements of cloud compliance in an easy-to-use dashboard. Replace
+                            cloud
+                            portals with our Cloud Platform - the hub for a sweeping overview of your <a
                             href='/products/cloud-security-posture-management/'
                             key='csp123'
                             className=' text-blue underline text-16px hover:no-underline hover:text-red'
                         >
                             cloud security posture
-                        </a>,
-                        '.\n\nImplement, manage, and monitor security policies and controls for single cloud, multi-cloud, and hybrid environments through reliable automation.\n\nDemonstrate compliance for multiple projects with read-only dashboard access or reports (CSV, PDF) you can share with internal stakeholders, prospects, or customers.'
-                    ]}
-                    section='complianceGovern'
-                    pageName="PCIDSS"
-                />
+                        </a>
+                            .
+                        </p>
+                        <p className="text-block text-16px leading-normal new-line mt-8">
+                            Implement, manage, and monitor security policies and controls for single cloud, multi-cloud,
+                            and
+                            hybrid environments through reliable automation.
+                        </p>
+                        <p className="text-block text-16px leading-normal new-line mt-8">
+                            Demonstrate compliance for multiple projects with read-only dashboard access or reports
+                            (CSV,
+                            PDF) you can share with internal stakeholders, prospects, or customers.
+                        </p>
+                    </div>
+                </div>
             </Container>
             <div className='bg-semicircle'>
                 <Container>
@@ -228,8 +209,8 @@ const IAMSecurity = ({ location }) => {
                                 <div className='col-span-12 lg:col-span-6'>
                                     <p className='leading-normal text-base text-gray mb-6'>
                                         <strong>Meet industry regulations</strong>
-                                        <br />
-                                        Protect sensitive data and comply with strict industry regulations in your
+                                        <br/>
+                                        Protect sensitive data and comply with strict industry in your Financial
                                         organization. Cyscale automatically runs all critical compliance checks and
                                         finds data at-risk.
                                     </p>
@@ -237,7 +218,7 @@ const IAMSecurity = ({ location }) => {
                                 <div className='col-span-12 lg:col-span-6'>
                                     <p className='leading-normal text-base text-gray mb-6'>
                                         <strong>PCI-DSS, SOC 2, GDPR, and more.</strong>
-                                        <br />
+                                        <br/>
                                         Cyscale offers a wide range of benchmarks and frameworks, including: CIS,
                                         ISO27001, PCI-DSS, NIST, SOC2, GDPR.
                                     </p>
@@ -245,17 +226,17 @@ const IAMSecurity = ({ location }) => {
                                 <div className='col-span-12 lg:col-span-6'>
                                     <p className='leading-normal text-base text-gray mb-6'>
                                         <strong>Built-in compliance templates</strong>
-                                        <br />
+                                        <br/>
                                         You can either use policy templates as a basis for your custom policies, or
-                                        create them from scratch using a smart text editor.
+                                        create them from scratch.
                                     </p>
                                 </div>
                                 <div className='col-span-12 lg:col-span-6'>
                                     <p className='leading-normal text-base text-gray mb-6'>
                                         <strong>500+ out-of-the-box security controls</strong>
-                                        <br />
+                                        <br/>
                                         Onboard teams in 30 minutes and coordinate efforts to apply 500+ out-of-the-box
-                                        security controls and a large set of policies and standards.
+                                        security controls and policies.
                                     </p>
                                 </div>
                             </Row>
@@ -287,4 +268,4 @@ const IAMSecurity = ({ location }) => {
     );
 };
 
-export default IAMSecurity;
+export default PciDss;

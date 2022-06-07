@@ -10,7 +10,7 @@ const Sectionheader = ({ headingText, description, subText, pageName, section })
                         ? 'lg:grid-cols-2'
                         : 'lg:grid-cols-3'
                 } ${!!pageName && pageName === 'CSPMPage' ? 'gap-4 lg:gap-x-52' : 'gap-4'} ${
-                    !!pageName && (pageName === 'RemoteWork' || pageName === 'PCIDSS') ? 'items-center' : null
+                    !!pageName && pageName === 'RemoteWork' ? 'items-center' : null
                 }`}
             >
                 <div>
@@ -23,7 +23,7 @@ const Sectionheader = ({ headingText, description, subText, pageName, section })
                                     : 'lg:max-w-sm'
                         } ${
                             !!section && section === 'complianceAutoUpdates' ? 'lg:pr-32' : null
-                        } sectionTitle new-line ${pageName === 'PCIDSS' ? 'max-w-xl mx-auto' : null}`}
+                        } sectionTitle new-line`}
                     >
                         {headingText}
                     </h2>
@@ -46,8 +46,7 @@ const Sectionheader = ({ headingText, description, subText, pageName, section })
                     }`}
                 ></div>
                 {!!description && (
-                    <div
-                        className={`${!!pageName && pageName === 'CSPMPage' ? 'lg:col-span-2' : ''} ${!!pageName && pageName === 'PCIDSS' ? 'max-w-xl mx-auto mb-12' : ''}`}>
+                    <div className={`${!!pageName && pageName === 'CSPMPage' ? 'lg:col-span-2' : ''}`}>
                         <p className='text-block text-16px leading-normal new-line mt-8'>{description}</p>
                         {headingText === 'Reveal & curb hidden costs' && (
                             <ul className='text-16px list-disc ml-30px'>
