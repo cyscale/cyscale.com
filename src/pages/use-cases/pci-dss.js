@@ -76,7 +76,7 @@ const PciDss = ({location}) => {
                         </div>
                         <div className='col-span-12 lg:col-span-6'>
                             <div className='mx-auto max-w-xl ml-auto'>
-                                <GatsbyImage image={data.graph.childImageSharp.gatsbyImageData} alt=''/>
+                                <GatsbyImage image={data.graph.childImageSharp.gatsbyImageData} alt='Inventory Graph'/>
                             </div>
                         </div>
                     </Row>
@@ -150,7 +150,7 @@ const PciDss = ({location}) => {
                         </div>
                     </div>
                     <div className='max-w-xl lg:max-w-5xl mx-auto pt-12'>
-                        <GatsbyImage image={data.automateCompliance.childImageSharp.gatsbyImageData} alt=''/>
+                        <GatsbyImage image={data.automateCompliance.childImageSharp.gatsbyImageData} alt='Connectors'/>
                     </div>
                 </Section>
             </Container>
