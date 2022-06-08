@@ -19,8 +19,8 @@ const Sectionheader = ({ headingText, description, subText, pageName, section })
                             pageName === 'dataSecurity'
                                 ? 'lg:max-w-md'
                                 : pageName === 'cloudCompliance'
-                                ? null
-                                : 'lg:max-w-sm'
+                                    ? null
+                                    : 'lg:max-w-sm'
                         } ${
                             !!section && section === 'complianceAutoUpdates' ? 'lg:pr-32' : null
                         } sectionTitle new-line`}
@@ -41,8 +41,8 @@ const Sectionheader = ({ headingText, description, subText, pageName, section })
                         pageName === 'CSPMPage' || pageName === 'cloudCompliance'
                             ? 'hidden'
                             : pageName === 'aboutUs' || pageName === 'dataSecurity'
-                            ? 'hidden'
-                            : 'hidden lg:block'
+                                ? 'hidden'
+                                : 'hidden lg:block'
                     }`}
                 ></div>
                 {!!description && (
