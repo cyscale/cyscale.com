@@ -45,6 +45,10 @@
         {
             "link": "/use-cases/azure-cloud-security/",
             "text": "Azure Cloud Security"
+        },
+        {
+            "link": "/use-cases/pci-dss/",
+            "text": "PCI DSS"
         }
     ],
     "pricing": [
