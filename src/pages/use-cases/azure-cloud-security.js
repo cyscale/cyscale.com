@@ -131,7 +131,7 @@ const AzureCloudSecurity = ({ location }) => {
             </Container>
             <Container>
                 <Section>
-                    <Row className='gap-12'>
+                    <div className='sm:grid sm:grid-cols-12 sm:gap-12'>
                         <div className='col-span-12 lg:col-span-6'>
                             <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-sm'>
                                 <h2 className='text-4xl font-semibold text-primary leading-normal border-title'>
@@ -139,7 +139,7 @@ const AzureCloudSecurity = ({ location }) => {
                                 </h2>
                             </div>
                         </div>
-                        <div className='col-span-12 lg:col-span-6'>
+                        <div className='col-span-12 lg:col-span-6 mt-8 sm:mt-0'>
                             <div className='mx-auto lg:mx-0 max-w-xl'>
                                 <p className='leading-normal text-base text-gray mb-6'>
                                     Use Cyscale for governance automation across cloud providers and internal teams to
@@ -160,7 +160,7 @@ const AzureCloudSecurity = ({ location }) => {
                                 <GatsbyImage image={data.automateCompliance.childImageSharp.gatsbyImageData} />
                             </div>
                         </div>
-                    </Row>
+                    </div>
                 </Section>
             </Container>
             <div className='bg-semicircle'>
