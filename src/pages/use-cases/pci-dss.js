@@ -86,16 +86,15 @@ const PciDss = ({location}) => {
                 <Container className='pt-0 sm:pt-10 md:pt-24 lg:pt-0'>
                     <div className="pt-12 sm:pt-24 pb-24 lg:pt-32 lg:pb-32 lg:grid lg:grid-cols-12" id="start">
 
-                        <div className='col-span-12 lg:col-start-1 col-end-5'>
+                        <div className='col-span-12 lg:col-start-1 col-end-6'>
                             <div className='mx-auto lg:mx-0  max-w-xl lg:max-w-none'>
                                 <ul className='list-disc ml-4 text-gray mt-8'>
                                     <li className='mb-4'>
                                         <strong>Protect Cardholder Data: </strong>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                        tempor
+                                        Securing the storage and transmission of cardholder data, while always be prepared for security audits.
                                     </li>
                                     <li className='mb-4'>
-                                        <strong>Policy-based security: </strong> out-of-the-box assurance and
+                                        <strong>Policy-based security: </strong> Out-of-the-box assurance and
                                         enforcement policies that you can configure across the build, workload, and
                                         infrastructure.
                                     </li>
