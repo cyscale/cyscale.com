@@ -300,7 +300,7 @@ h5 {
     background-image: url(../images/f-slider-right-arrow.svg) !important;
 }
 .featuredProducts {
-    background-image: url(../images/featured-product-bg.svg);
+    background-image: linear-gradient(#fff, #eeeeee);
     background-size: 100% 899px;
     background-position: top left;
     background-repeat: no-repeat;
@@ -384,7 +384,7 @@ h5 {
 
 @media screen and (max-width: 1025px) {
     .featuredProducts {
-        background-size: 100% 1003px;
+        background-size: 100% 700px;
     }
     .featureTabs .react-tabs ul.react-tabs__tab-list .react-tabs__tab {
         line-height: 24px;
@@ -394,7 +394,7 @@ h5 {
 }
 @media screen and (max-width: 1023px) {
     .featuredProducts {
-        background-size: 100% 1288px;
+        background-size: 100% 900px;
     }
 }
 @media screen and (max-width: 767px) {
@@ -406,7 +406,7 @@ h5 {
         flex-basis: auto;
     }
     .featuredProducts {
-        background-size: 100% 1768px;
+        background-size: 100% 925px;
     }
 }
 .additionalBenefits .featureSlider {

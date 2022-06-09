@@ -114,7 +114,7 @@ const Careers = ({ location }) => {
                                     </ScrollLink>
                                 </div>
                                 <div className='col-span-12 mb-10 lg:mb-0 lg:col-span-6 lg:pl-8 order-1 lg:order-2'>
-                                    <Hire alt='We are hiring' className='mx-auto w-auto h-auto max-w-xl' />
+                                    <Hire alt='We are hiring' className='mx-auto w-auto h-auto  max-w-xs sm:max-w-sm md:max-w-md xl:max-w-lg 2xl:max-w-xl' />
                                 </div>
                             </Row>
                         </Section>
@@ -283,10 +283,11 @@ const Careers = ({ location }) => {
                                 <div className='w-2/12 pr-2 hidden md:block'>Department</div>
                                 <div className='w-1/12 hidden md:block '></div>
                             </div>
-                            {jobs.map(({ title, experience, location, department, permalink }) => (
+                            {jobs.map(({ title, experience, location, department, permalink }, index) => (
                                 <Link
                                     to={`/careers/${permalink}/`}
                                     className='flex items-center text-sm text-gray bg-white shadow-md rounded-md mb-4 leading-relaxed  px-4 py-3 hover:bg-lightGreyEEE transition-colors'
+                                    key={index}
                                 >
                                     <span className='w-12/12 md:w-5/12 pr-2 overflow-ellipsis'>
                                         <strong>{title}</strong>

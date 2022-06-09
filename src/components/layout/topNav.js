@@ -97,7 +97,7 @@ const TopNav = ({ pageName }) => {
         <div
             ref={root}
             style={{ maxWidth: '100vw' }}
-            className={`fixed top-0 left-0 block w-full mx-auto z-10 transition duration-300 transform ${rootClasses}`}
+            className={`fixed top-0 left-0 block w-full mx-auto z-20 transition duration-300 transform ${rootClasses}`}
         >
             <div className={`topNav ${menu.toggleBg} container max-w-7xl m-auto px-8 pt-2.5`}>
                 <nav className='relative '>
