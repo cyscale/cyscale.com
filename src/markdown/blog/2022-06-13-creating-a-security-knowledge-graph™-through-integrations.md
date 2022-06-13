@@ -3,7 +3,7 @@ templateKey: blog-post
 title: Creating a Security Knowledge Graph™ Through Integrations
 seoTitle: Creating a Security Knowledge Graph™ Through Integrations
 authors: Sabrina Lupșan
-permalink: knowledge-graph-integrations
+permalink: security-knowledge-graph-integrations
 categories:
   - CSPM
   - Product
