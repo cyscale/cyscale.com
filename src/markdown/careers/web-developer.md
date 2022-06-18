@@ -1,7 +1,7 @@
 ---
 templateKey: career-page
 title: Web Developer
-disabled: false
+disabled: true
 location: Romania
 date: 2022-04-01T09:09:55.900Z
 permalink: web-developer
