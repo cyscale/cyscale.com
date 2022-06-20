@@ -55,18 +55,20 @@ const qas = [
                 <p className='mb-4'>
                     <strong className='text-base'>Evidence.</strong>
                     <br />
-                    Violations in your cloud infrastructure are mapped to regulatory standards, security frameworks, 
-                    as well as internal policies, resulting in evidence collection that enables audits.            
+                    Violations in your cloud infrastructure are mapped to regulatory standards, security frameworks,
+                    as well as internal policies, resulting in evidence collection that enables audits.
                 </p>
                 <p className='mb-4'>
                     <strong className='text-base'>Reporting and alerting.</strong>
-                    Insights on your cloud's risk posture, as well as alerts and notifications bring risk to your attention,
+                    Insights on your cloud's risk posture, as well as alerts and notifications bring risk to your
+                    attention,
                     enabling investigation and in-time remediation.
                 </p>
                 <p className='mb-4'>
                     <strong className='text-base'>Automation.</strong>
                     One of the most important features of a CSPM tool. Automated remediation, helps security teams
-                    reduce the time and effort required by manual remediation, at the same time enabling evidence collection.
+                    reduce the time and effort required by manual remediation, at the same time enabling evidence
+                    collection.
                 </p>
                 <Link className='underline' to='/blog/cloud-security-posture-management-cspm-guide/'>
                     Read more in our guide
@@ -89,7 +91,8 @@ export default function Faqs() {
                         className='col-span-12 lg:col-span-8 mb-0 bg-white bg-opacity-40 p-4  rounded-md relative'
                         key={key}
                     >
-                        <h3 className='font-semibold  text-base sm:text-lg text-white mb-0 pl-8 leading-snug'>
+                        <h3 className='font-semibold  text-base sm:text-lg text-white mb-0 pl-8 leading-snug cursor-pointer select-none'
+                            onClick={() => setActive((s) => (s === key ? null : key))}>
                             {q.question}
                         </h3>
                         <p className={classNames('text-white mt-4', { block: active === key, hidden: active !== key })}>
