@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Seo from '../Seo';
 import Footer from './footer';
@@ -6,6 +6,7 @@ import Header from './header';
 import Consent from '../consent';
 import GlobalContext from '../../context/GlobalContext';
 import useHubspotEvents from '../../common/hbspotEvents';
+import CookiesBanner from '../cookies-banner/CookiesBanner';
 const Layout = ({
     children,
     title,
@@ -23,6 +24,12 @@ const Layout = ({
     blogDataTitle
 }) => {
     useHubspotEvents({ location, pageName });
+    const [cookiesBanner, setCookiesBanner] = useState(false);
+
+    useEffect(() => {
+        setCookiesBanner(true);
+    }, []);
+
     return (
         <div>
             <GlobalContext.Provider value={{ location }}>
@@ -56,6 +63,7 @@ const Layout = ({
                 </main>
                 <Footer />
                 <Consent />
+                {location.pathname !=='/policies/privacy-policy/' && <CookiesBanner cookiesBanner={cookiesBanner} setCookiesBanner={setCookiesBanner} />}
             </GlobalContext.Provider>
         </div>
     );
