@@ -1,7 +1,23 @@
 import React from 'react';
-import { AndreiM, AndreiP, AndreiS, Gabriel, Levi, Manuela, MihaiB, MihaiM, Ovidiu, Sabrina, George, Virginia } from '../about/images';
+import { AndreiM, AndreiP, AndreiS, Gabriel, Levi, Manuela, MihaiB, MihaiM, Ovidiu, Sabrina, George, Virginia, Petru, Elena } from '../about/images';
 
 const data = [
+    {
+        order: 14,
+        photo: <Elena />,
+        name: 'Elena Boldor',
+        position: 'Technical Recruiter',
+        linkedin: 'https://www.linkedin.com/in/elena-boldor/',
+        quote: false
+    },
+    {
+        order: 13,
+        photo: <Petru />,
+        name: 'Petru Giurgiu',
+        position: 'Web Developer',
+        linkedin: 'https://www.linkedin.com/in/petru-g-b5421068/',
+        quote: false
+    },
     {
         order: 12,
         photo: <George />,
