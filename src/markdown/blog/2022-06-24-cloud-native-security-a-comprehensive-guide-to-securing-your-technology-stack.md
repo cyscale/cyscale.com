@@ -33,9 +33,9 @@ tags:
 
 ## Table of contents 
 
-<toc class="text-black block mb-1" target="self" href="#what-is-cloud-native">What does cloud-native mean?</toc>
-<toc class="text-black block mb-1" target="self" href="#advantages">Advantages of going cloud-native</toc>
-<toc class="text-black block mb-1" target="self" href="#guide-to-secure-cloud">How to secure your cloud-native application</toc>
+<toc class="text-black block mb-1" target="self" href="what-is-cloud-native">What does cloud-native mean?</toc>
+<toc class="text-black block mb-1" target="self" href="advantages">Advantages of going cloud-native</toc>
+<toc class="text-black block mb-1" target="self" href="guide-to-secure-cloud">How to secure your cloud-native application</toc>
 
 <div id="what-is-cloud-native">
 
@@ -158,8 +158,6 @@ The outer layer of a cloud-native application refers to cloud infrastructure and
 * **Restrict inbound and outbound traffic.** Make sure to close or restrict ports that are not necessary. Use access lists to blacklist ranges of IPs and ports.  
 * **Ensure compliance with the Least Privilege Principle.** Make sure no user has more privileges than required to carry out their tasks and eliminate all administrator/root accounts that are not strictly necessary. 
 * **Implement strong encryption and use industry-recommended cryptographic algorithms with strong keys.** Ensure that no one can read databases, files, and other resources if they gain access to your company's cloud. 
-
-  
 
 You can identify misconfigurations in the cloud and remediate them effectively using Cyscale. 
 
