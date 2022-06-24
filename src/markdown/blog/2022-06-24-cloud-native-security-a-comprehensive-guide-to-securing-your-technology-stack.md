@@ -33,11 +33,11 @@ tags:
 
 ## Table of contents 
 
-<toc class="text-black block mb-1" target="self" href="what-is-cloud-native">What does cloud-native mean?</toc>
-<toc class="text-black block mb-1" target="self" href="advantages">Advantages of going cloud-native</toc>
-<toc class="text-black block mb-1" target="self" href="guide-to-secure-cloud">How to secure your cloud-native application</toc>
+[What does cloud-native mean?](https://cyscale.com/blog/cloud-native-security-guide/#what-does-cloud-native-mean)<br/>
+[Advantages of going cloud-native](https://cyscale.com/blog/cloud-native-security-guide/#advantages)<br/>
+[How to secure your cloud-native application](https://cyscale.com/blog/cloud-native-security-guide/#guide-to-secure-cloud)
 
-<div id="what-is-cloud-native">
+<div id="what-does-cloud-native-mean">
 
 ## What does cloud-native mean?
 
