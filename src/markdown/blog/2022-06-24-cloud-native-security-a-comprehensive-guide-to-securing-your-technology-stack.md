@@ -7,7 +7,7 @@ seoTitle: "Cloud-Native Security: A Comprehensive Guide to Securing Your
 authors: Sabrina Lupșan
 permalink: cloud-native-security-guide
 categories:
-  - News
+  - CSPM
 date: 2022-06-24T10:33:17.619Z
 description: An article about cloud native security. We understand the
   advantages of cloud-native applications based on on-premises applications, as
@@ -33,9 +33,9 @@ tags:
 
 ## Table of contents 
 
-[What does cloud-native mean?](https://cyscale.com/blog/cloud-native-security-guide/#what-does-cloud-native-mean)<br/>
-[Advantages of going cloud-native](https://cyscale.com/blog/cloud-native-security-guide/#advantages)<br/>
-[How to secure your cloud-native application](https://cyscale.com/blog/cloud-native-security-guide/#guide-to-secure-cloud)
+<a href="#what-does-cloud-native-mean">What does cloud-native mean?</a> <br/>
+<a href="#advantages">Advantages of going cloud-native</a><br/>
+<a href="#guide-to-secure-cloud">How to secure your cloud-native application</a>
 
 <div id="what-does-cloud-native-mean">
 
