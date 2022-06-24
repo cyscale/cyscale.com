@@ -31,12 +31,6 @@ tags:
 ---
 <!--StartFragment-->
 
-## Table of contents 
-
-<a href="#what-does-cloud-native-mean">What does cloud-native mean?</a> <br/>
-<a href="#advantages">Advantages of going cloud-native</a><br/>
-<a href="#guide-to-secure-cloud">How to secure your cloud-native application</a>
-
 <div id="what-does-cloud-native-mean">
 
 ## What does cloud-native mean?
