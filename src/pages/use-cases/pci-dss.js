@@ -121,7 +121,7 @@ const PciDss = ({location}) => {
                     </div>
                 </Container>
             </div>
-            <Container>
+            <Container id="automate-compliance">
                 <Section>
                     <div className="sm:grid sm:grid-cols-12 sm:gap-12">
                         <div className='col-span-12 sm:px-3 lg:col-span-4'>
@@ -153,7 +153,7 @@ const PciDss = ({location}) => {
                     </div>
                 </Section>
             </Container>
-            <Container>
+            <Container id="align-entities">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 items-center">
                     <div>
                         <h2 className="font-semibold text-blue text-34px leading-normal lg:max-w-sm null sectionTitle new-line max-w-xl mx-auto">
@@ -195,7 +195,7 @@ const PciDss = ({location}) => {
                     </div>
                 </div>
             </Container>
-            <div className='bg-semicircle'>
+            <div className='bg-semicircle' id="confidence">
                 <Container>
                     <Section>
                         <div className='max-w-xl mx-auto lg:mx-0 lg:max-w-sm mb-20'>

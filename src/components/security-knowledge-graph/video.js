@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactPlayer from 'react-player';
 import graphVideoThumbnail from '../../assets/images/graph-video-thumbnail.png'
-const Video = () => {
+const Video = ({ id }) => {
     return (
-        <div className='relative' style={{ paddingTop: '56.25%' }}>
+        <div className='relative' style={{ paddingTop: '56.25%' }} id={id}>
             <ReactPlayer
                 width='80%'
                 height='80%'

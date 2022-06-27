@@ -3,7 +3,7 @@ import { Link, graphql, useStaticQuery } from 'gatsby';
 import { Row, Container } from '../atoms/Containers';
 import { formatDate } from '../../common/utils';
 
-const CategoryPostsPreview = ({ category }) => {
+const CategoryPostsPreview = ({ category, id }) => {
     const data = useStaticQuery(graphql`
         query CategoryPostsPreviewQuery {
             allMarkdownRemark(
@@ -26,7 +26,7 @@ const CategoryPostsPreview = ({ category }) => {
         allMarkdownRemark: { nodes }
     } = data;
     return (
-        <div className='bg-lightGrey py-12'>
+        <div className='bg-lightGrey py-12' id={id}>
             <Container>
                 <Row>
                     <div className='col-span-12 md:col-span-6'>

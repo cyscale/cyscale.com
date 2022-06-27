@@ -1,10 +1,10 @@
 import { Link } from 'gatsby';
 import React from 'react';
 
-export default function ComplianceCode() {
+export default function ComplianceCode({ id }) {
     return (
         <div className='bg-lightGrey gradientWingBg'>
-            <div className='max-w-1366px m-auto py-12 lg:py-20 pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px'>
+            <div className='max-w-1366px m-auto py-12 lg:py-20 pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px' id={id}>
                 <div className='w-full xl:w-1/3 mx-auto'>
                     <h2 className='font-semibold  text-blue text-34px leading-normal sectionTitle new-line'>
                         Use Compliance as Code to automate GRC tasks

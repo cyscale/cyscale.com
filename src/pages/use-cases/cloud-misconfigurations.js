@@ -74,8 +74,8 @@ const CloudMissConfiguration = ({ location }) => {
             bannerDescription='Improve your security posture in the cloud, a centralized view of all your assets and servers in one place. Detect and eliminate critical misconfigurations, policy violations, and mistakes.'
             description='Improve your security posture in the cloud, a centralized view of all your assets and servers in one place. Detect and eliminate critical misconfigurations, policy violations, and mistakes.'
         >
-            <Fproducts sectionTitle='Cyscale has you covered' data={dataFeaturedProducts} />
-            <MisconfigCoverage />
+            <Fproducts sectionTitle='Cyscale has you covered' data={dataFeaturedProducts} id="start"/>
+            <MisconfigCoverage id="misconfiguration-coverage"/>
 
             <div className='gradientBG'>
                 <GetStarted

@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import Sectionheader from "../layout/sectionheader";
 
-const Performance = ({ data }) => {
+const Performance = ({ data, id }) => {
   const settings = {
     dots: false,
     infinite: true,
@@ -12,7 +12,7 @@ const Performance = ({ data }) => {
     initialSlide: 0,
   };
   return (
-    <div className="performance">
+    <div className="performance" id={id}>
       <div className="max-w-1366px mx-auto pt-40px pb-67px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px">
         <Slider {...settings}>
           {data.map((content, index) => (
