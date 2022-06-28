@@ -1,12 +1,13 @@
 import React from 'react';
 import { ISO27001, AicpaSoc2, CisBenchmarks, EuEuropeanGdpr, USHipaa, PciDss, Nist } from './images';
-const Cloud = ({ title, sectionName, f_image, data }) => {
+const Cloud = ({ title, sectionName, f_image, data, id }) => {
     return (
         <>
             <div
                 className={`block w-full ${
                     sectionName === 'topRisks' ? 'pt-100px lg:pt-0 pb-172px' : 'pt-71px pb-71px'
                 }`}
+                id={id}
             >
                 <div className='max-w-1366px m-auto pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px'>
                     <div className='grid grid-cols-1 lg:grid-cols-3 gap-4 pt-40 sm:pt-0'>

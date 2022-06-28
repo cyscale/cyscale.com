@@ -96,7 +96,7 @@ const AboutUs = ({ location }) => {
                     className='bg-gray absolute bottom-0 mb-20 lg:mb-24 left-0 w-full hidden sm:block'
                     style={{ height: 115, zIndex: -1 }}
                 ></div>
-                <Container>
+                <Container id="leadership">
                     <Section>
                         <div className='mb-10'>
                             <h2 className='font-semibold  text-blue sm:text-3xl text-4xl leading-normal mb-6 text-center'>
@@ -160,7 +160,7 @@ const AboutUs = ({ location }) => {
                 </Container>
             </div>
 
-            <Container className='relative'>
+            <Container className='relative' id="backed-by">
                 <Section>
                     <h2 className='font-semibold  text-blue sm:text-3xl text-4xl leading-normal mb-6 text-center'>Backed by</h2>
                     <div className='flex justify-center flex-wrap'>
@@ -189,7 +189,7 @@ const AboutUs = ({ location }) => {
                     </div>
                 </Section>
             </Container>
-            <Container className='relative'>
+            <Container className='relative' id="team">
                 <Section>
                     <Row className='md:gap-8'>
                         <div className='col-span-12'>

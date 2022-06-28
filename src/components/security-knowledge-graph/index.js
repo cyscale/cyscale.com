@@ -153,8 +153,8 @@ const Index = () => {
                         </Container>
                     </Section>
                 </div>
-                <Video />
-                <Section className='block w-full bg-white'>
+                <Video id="video"/>
+                <Section className='block w-full bg-white' id="nutshell">
                     <Container>
                         <p className='text-black text-base my-16'>
                             <strong>The Cyscale Security Knowledge Graph in a nutshell</strong>
@@ -198,10 +198,10 @@ const Index = () => {
                     icon={getStartedICon}
                 />
             </div>
-            <div className='automation'>
+            <div className='automation' id="automation">
                 <Automation />
             </div>
-            <div className='identifIssues'>
+            <div className='identifIssues' id="identify-issues">
                 <IdentifyIssues />
             </div>
             <div className='gradientBGCSPM-2'>
@@ -225,7 +225,7 @@ const Index = () => {
                     sectionName='dataSecFoot'
                 />
             </div>
-            <FAQs />
+            <FAQs id="faqs"/>
         </>
     );
 };

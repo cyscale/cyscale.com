@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container, Section, Row } from '../atoms/Containers';
 
-const MisconfigCoverage = () => (
-    <div className='bg-lightGreyEEE MisconfigurationsPage'>
+const MisconfigCoverage = ({ id }) => (
+    <div className='bg-lightGreyEEE MisconfigurationsPage' id={id}>
         <Container>
             <Section>
                 <h2 className='font-semibold  text-blue text-34px leading-normal lg:max-w-md sectionTitle new-line mb-12'>

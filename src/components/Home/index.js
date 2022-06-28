@@ -177,6 +177,7 @@ const Home = () => {
                 headingText='Cyscale Cloud Platform - supercharged cloud security'
                 description={`Only the best tools fade into the background and help you focus on getting your best work done. \n\nThat's why we've built all of this and more into the platform.`}
                 data={dataOffer}
+                id="offer"
             />
             <div className='gradientBG'>
                 <GetStarted
@@ -190,15 +191,17 @@ const Home = () => {
                 title='Visibility, governance & compliance for all your cloud assets'
                 sectionName='compliance'
                 data={dataCloud}
+                id="compliance"
             />
             <div className='cloudBenifits bg-lightGrey pb-71px'>
                 <Cloud
                     sectionName='cloudBenefits'
                     title='A Cloud Security Posture Management platform the entire organization benefits from'
                     data={dataCloudBenefits}
+                    id="cloud-benefits"
                 />
             </div>
-            <div className='max-w-1366px m-auto pt-67px pb-67px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px'>
+            <div className='max-w-1366px m-auto pt-67px pb-67px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px' id="integrations">
                 <Sectionheader
                     headingText='Cyscale Cloud Platform integrates with'
                     description={`We support all major cloud providers from Amazon Web Services to Microsoft Azure, Google Cloud, Oracle Cloud, and IBM Cloud. \n\nYou can also use Cyscale for your cloud-native security needs (VMs, network, serverless, databases, apps) for vulnerability and threat management, cloud inventory, secure cloud extension, and as a compliance and cost-reduction solution.`}
@@ -206,10 +209,10 @@ const Home = () => {
                 />
             </div>
             <Partners />
-            <div className='max-w-1366px m-auto pt-67px pb-67px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px'>
+            <div className='max-w-1366px m-auto pt-67px pb-67px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px' id="latest-blogs">
                 <Sectionheader headingText={`What we're up to`} />
             </div>
-            <PostsPreview />
+            <PostsPreview  />
             <div className='gradientBG'>
                 <GetStarted
                     description='When did you last scan your cloud for misconfigurations?'

@@ -70,7 +70,7 @@ export default function CloudComplianceContent() {
                     />
                 </div>
             </div>
-            <div className='max-w-1366px m-auto pt-6 pb-12 lg:pb-14 pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px'>
+            <div className='max-w-1366px m-auto pt-6 pb-12 lg:pb-14 pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px' id="automate-updates">
                 <Sectionheader
                     headingText='Automate updates to Data Security & Privacy Policies'
                     description={[
@@ -89,7 +89,7 @@ export default function CloudComplianceContent() {
                     section='complianceAutoUpdates'
                 />
             </div>
-            <div className='max-w-1366px m-auto pt-12 lg:pt-32 pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px'>
+            <div className='max-w-1366px m-auto pt-12 lg:pt-32 pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px' id="minimize-overlap">
                 <Sectionheader
                     headingText='Minimize overlap between cloud compliance and security'
                     description={`Avoid duplicate work and solve two issues at the same time with the Cyscale Cloud Platform.\n\nOnboard teams in 30 minutes and coordinate efforts to apply 500+ out-of-the-box security controls and policies. Baked into the platform, they underpin key areas where you need to prove cloud compliance: `}
@@ -106,7 +106,7 @@ export default function CloudComplianceContent() {
                     sectionName='RemoteWork'
                 />
             </div>
-            <div className='max-w-1366px m-auto pt-12 lg:pt-32 pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px'>
+            <div className='max-w-1366px m-auto pt-12 lg:pt-32 pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px' id="compliance-govern">
                 <Sectionheader
                     headingText={[
                         'Align teams & tasks',
@@ -129,8 +129,8 @@ export default function CloudComplianceContent() {
                     section='complianceGovern'
                 />
             </div>
-            <ComplianceCode />
-            <div className='max-w-1366px m-auto py-12 lg:py-24 pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px'>
+            <ComplianceCode id="compliance-code" />
+            <div className='max-w-1366px m-auto py-12 lg:py-24 pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px' id="maintain-third-party">
                 <Sectionheader headingText='Maintain a 3rd-party, fully auditable data trail' />
                 <MaintainThirdPartyData />
             </div>
