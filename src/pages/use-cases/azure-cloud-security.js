@@ -163,7 +163,7 @@ const AzureCloudSecurity = ({ location }) => {
                     </div>
                 </Section>
             </Container>
-            <div className='bg-semicircle'>
+            <div className='bg-semicircle' id="confidence">
                 <Container>
                     <Section>
                         <div className='max-w-xl mx-auto lg:mx-0 lg:max-w-sm mb-20'>

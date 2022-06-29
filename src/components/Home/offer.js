@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import Sectionheader from '../layout/sectionheader'
 
 
-const Offer = ({ headingText, description, data, poster }) => {
+const Offer = ({ headingText, description, data, poster, id }) => {
     const [tabActive, setTabActive] = useState(0);
     return (
         <>
 
-            <div className="max-w-1366px m-auto pt-67px pb-67px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px">
+            <div className="max-w-1366px m-auto pt-67px pb-67px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px"
+             id={id}
+            >
 
                 < Sectionheader
                     headingText={headingText}

@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import TabsArrow from '../../assets/images/arrow-Down-red.svg';
 import f_image from '../../assets/images/faqs.png';
 
-const FAQs = () => {
+const FAQs = ({ id }) => {
     const [tabActive, setTabActive] = useState(0);
     const dataFAQs = [
         {
@@ -40,7 +40,7 @@ const FAQs = () => {
     ];
     return (
         <>
-            <div className='FAQs pt-75px pb-75px'>
+            <div className='FAQs pt-75px pb-75px' id={id}>
                 <div className='block w-full'>
                     <div className='max-w-1366px mx-auto pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px'>
                         <div className='grid grid-cols-1'>

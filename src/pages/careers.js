@@ -180,7 +180,7 @@ const Careers = ({ location }) => {
                     </div>
                 </Section>
             </Container>
-            <Section>
+            <Section id="benefits">
                 <Container>
                     <h2 className='font-semibold  text-blue text-4xl text-center mx-auto  mb-4 leading-normal md:max-w-lg'>
                         Not your average benefits
@@ -306,7 +306,7 @@ const Careers = ({ location }) => {
                     </div>
                 </Container>
             </Section>
-            <Section>
+            <Section id="join-us">
                 <Container>
                     <h6 className='font-semibold  text-blue text-4xl mx-auto mb-8 w-full max-w-md leading-normal new-line'>
                         Join us

@@ -98,7 +98,7 @@ const CloudCompliance = ({ location }) => {
                     </div>
                 </Section>
                 <Section>
-                    <div className='max-w-lg mx-auto lg:mx-0 lg:max-w-none'>
+                    <div className='max-w-lg mx-auto lg:mx-0 lg:max-w-none' id="iso-compliant">
                         <h2 className='font-semibold  text-primary text-2xl lg:text-4xl mb-8 text-center'>
                             Becoming ISO 27001 Compliant
                         </h2>

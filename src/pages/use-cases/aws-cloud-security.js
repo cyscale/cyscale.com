@@ -93,7 +93,7 @@ const AWSCloudSecurity = ({ location }) => {
                     </Row>
                 </Section>
             </Container>
-            <Container>
+            <Container id="automate-compliance">
                 <Section>
                     <div className='sm:grid sm:grid-cols-12 sm:gap-12'>
                         <div className='col-span-12 lg:col-span-6'>
@@ -127,7 +127,7 @@ const AWSCloudSecurity = ({ location }) => {
                     </div>
                 </Section>
             </Container>
-            <div className='bg-semicircle'>
+            <div className='bg-semicircle' id="confidence">
                 <Container>
                     <Section>
                         <div className='max-w-xl mx-auto lg:mx-0 lg:max-w-sm mb-20'>
