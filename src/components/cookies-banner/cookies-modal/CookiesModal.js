@@ -119,7 +119,7 @@ const CookiesModal = ({ setCookiesModal, cookiesModal, setCookiesBanner }) => {
             </div>
 
 
-            <div className='overflow-x-auto content-modal-container mt-8 mb-24'>
+            <div className='overflow-x-auto content-modal-container mt-4 sm:mt-8 mb-24'>
                 {dataModal.map((item, index) => {
                     return (<div key={index}
                                  className='col-span-12 mb-0 p-4 relative border-element-modal rounded-lg m-4'

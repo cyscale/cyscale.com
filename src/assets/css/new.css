@@ -159,7 +159,7 @@ input:checked ~ .dot {
 }
 
 .content-modal-container {
-    height: calc(100vh - 14rem);
+    height: calc(100vh - 13rem);
 }
 
 
