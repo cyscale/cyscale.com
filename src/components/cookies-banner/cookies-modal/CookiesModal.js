@@ -5,6 +5,7 @@ import menuCloseCookiesModal from '../../../assets/images/menuCloseCookiesModal.
 import collapse from '../../../assets/images/collapse.svg';
 import expand from '../../../assets/images/expand.svg';
 import FocusLock from 'react-focus-lock';
+import { useCookies } from 'react-cookie';
 
 const dataModal = [{
     title: 'Strictly Necessary',
@@ -60,13 +61,18 @@ const PerformanceSwitch = ({ setPerformance, performance }) => {
     </label>);
 };
 
-const ConfirmButtons = ({ paddingY, marginRight, justify, setCookiesModal, setCookiesBanner }) => {
+const ConfirmButtons = ({ paddingY, marginRight, justify, setCookiesModal, setCookiesBanner, performance, functionality }) => {
+    const [cookies, setCookie] = useCookies();
+
     const confirmMyChoices = () => {
+        setCookie('PersonalChoices', {functionality, performance})
+        setCookie('CookiesConsent', 'true');
         setCookiesModal(false);
         setCookiesBanner(false);
     };
 
     const acceptAllCookies = () => {
+        setCookie('CookiesConsent', 'true');
         setCookiesModal(false);
         setCookiesBanner(false);
     };
@@ -89,8 +95,8 @@ const ConfirmButtons = ({ paddingY, marginRight, justify, setCookiesModal, setCo
 
 const CookiesModal = ({ setCookiesModal, cookiesModal, setCookiesBanner }) => {
     const [active, setActive] = useState(0);
-    const [functionality, setFunctionality] = useState(false);
-    const [performance, setPerformance] = useState(false);
+    const [functionality, setFunctionality] = useState(true);
+    const [performance, setPerformance] = useState(true);
 
     return (<div className='bg-white relative w-full sm:max-w-xl md:max-w-2xl lg:max-w-3xl sm:rounded-lg cookies-modal'
                  role='dialog'
@@ -124,6 +130,10 @@ const CookiesModal = ({ setCookiesModal, cookiesModal, setCookiesBanner }) => {
                                 className='bg-white rounded-full w-6 h-6 pt-px flex items-center justify-center absolute top-4 left-4 hover:opacity-80 transition-opacity'
                             >
                                 <img
+                                    className={classNames('transform transition-all', {
+                                        '-rotate-90': active !== index,
+                                        'rotate-270': active === index
+                                    })}
                                     src={active === index ? collapse : expand}
                                     alt='decoration'
                                     width={18}
@@ -154,12 +164,14 @@ const CookiesModal = ({ setCookiesModal, cookiesModal, setCookiesBanner }) => {
                 <div
                     className='hidden sm:block bottom-0 absolute h-24 w-full bg-white border-t-confirm-buttons rounded-b-lg'>
                     <ConfirmButtons paddingY={6} marginRight={6} justify={'end'} setCookiesModal={setCookiesModal}
-                                    setCookiesBanner={setCookiesBanner} />
+                                    setCookiesBanner={setCookiesBanner} functionality={functionality}
+                                    performance={performance} />
                 </div>
             </div>
             <div className='sm:hidden bottom-0 fixed h-24 w-full bg-white border-t-confirm-buttons'>
                 <ConfirmButtons paddingY={2} marginRight={0} justify={'center'} setCookiesModal={setCookiesModal}
-                                setCookiesBanner={setCookiesBanner} />
+                                setCookiesBanner={setCookiesBanner} functionality={functionality}
+                                performance={performance} />
             </div>
         </FocusLock>
     </div>);
