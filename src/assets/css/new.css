@@ -48,6 +48,45 @@
     }
 }
 
+@media screen and (min-width: 1024px) {
+    .bg-pouring {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 35%;
+        background-image: url('../images/hero-startups-bg.png');
+    }
+    .h-advantages  {
+        height: 32rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .bg-pouring {
+        background-image: linear-gradient(#EEEEEE, #E4EDFC);
+    }
+    .h-advantages  {
+        height: 32rem;
+    }
+}
+
+@media screen and (min-width: 440px) and (max-width: 1023px) {
+    .h-asset-inventory  {
+        height: 40rem !important;
+    }
+}
+
+@media screen and (min-width: 540px) and (max-width: 1023px) {
+    .h-misconfiguration {
+        height: 22rem !important;
+    }
+}
+
+@media screen and (min-width: 440px) and (max-width: 539px) {
+    .h-misconfiguration {
+        height: 20rem !important;
+    }
+}
+
 .bg-semicircle {
     background-color: #eeeeee;
     background-size: 25%;

@@ -228,12 +228,12 @@ const TopNav = ({ pageName }) => {
                                             />
                                             <p className='text-center mt-5'>
                                                 <Link
-                                                    to='/use-cases/cloud-data-security/'
+                                                    to='/startups/'
                                                     activeStyle={{ color: '#0F26AA' }}
                                                     activeClassName='active'
                                                     className='text-blue font-semibold text-base no-underline hover:underline flex flex-row justify-center'
                                                 >
-                                                    Explore Data Security&nbsp;
+                                                    Cyscale for Startups Program&nbsp;
                                                     <img
                                                         src={ArrowRight}
                                                         className='w-5 h-auto'
