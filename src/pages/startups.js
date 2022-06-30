@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Layout from '../components/layout/CleanLayout';
 import { useAppLink } from '../common/links';
-import { Container, Row, Section } from '../components/atoms/Containers';
+import { Container, Row } from '../components/atoms/Containers';
 import { Helmet } from 'react-helmet';
 import classNames from 'classnames';
 import { graphql, Link, useStaticQuery } from 'gatsby';
@@ -10,6 +10,7 @@ import expand from '../assets/images/expand-startups.svg';
 import collapse from '../assets/images/collapse-startups.svg';
 import cloudIcon from '../assets/images/cloud-icon.svg';
 import ScrollButtonStartups from '../components/ScrollButton/ScrollButtonStartups';
+import { animateScroll } from 'react-scroll';
 
 const q1 = [
     {
@@ -93,17 +94,17 @@ const Startups = ({ location }) => {
         query StartupsQuery {
             dashboard: file(relativePath: { eq: "dashboard-startups.png" }) {
                 childImageSharp {
-                    gatsbyImageData(width: 1080, layout: CONSTRAINED)
+                    gatsbyImageData(width: 720, layout: CONSTRAINED)
                 }
             }
             assetInventory: file(relativePath: { eq: "asset-inventory.png" }) {
                 childImageSharp {
-                    gatsbyImageData(width: 1080, layout: CONSTRAINED)
+                    gatsbyImageData(width: 720, layout: CONSTRAINED)
                 }
             }
             cardIntegrations: file(relativePath: { eq: "card-integrations.png" }) {
                 childImageSharp {
-                    gatsbyImageData(width: 1080, layout: CONSTRAINED)
+                    gatsbyImageData(width: 720, layout: CONSTRAINED)
                 }
             }
             cardMisconfiguration: file(relativePath: { eq: "card-misconfiguration.png" }) {
@@ -143,15 +144,14 @@ const Startups = ({ location }) => {
             </Helmet>
             <div className='bg-pouring pt-8'>
                 <Container>
-                    <div className='pt-24 pb-24 lg:pt-32 lg:pb-16'>
+                    <div className='py-24 lg:pt-32 lg:pb-16'>
                         <Row>
                             <div className='col-span-12 lg:col-span-6 '>
                                 <div className='lg:mt-16 pt-4 max-w-lg mx-auto lg:mx-0'>
-                                    <h1 className='text-center sm:text-left text-4xl lg:text-5xl leading-normal mb-16'
-                                        style={{ color: '#171FAA' }}>
+                                    <h1 className='text-center sm:text-left text-blue text-4xl lg:text-5xl leading-normal mb-16'>
                                         <strong>Cyscale for Startups</strong> <br className='hidden lg:block' /> Program
                                     </h1>
-                                    <h1 className='text-center sm:text-left text-3xl lg:text-3xl leading-normal mb-8'>
+                                    <h1 className='text-center sm:text-left text-2xl sm:text-3xl leading-normal mb-8'>
                                         <strong>Build and maintain a strong<br />
                                             Security Program from the start </strong>
                                     </h1>
@@ -227,7 +227,7 @@ const Startups = ({ location }) => {
                     <div className='grid grid-cols-12'>
                         <div className='col-span-12'>
                             <div className='mx-auto lg:mx-0 max-w-lg '>
-                                <h1 className='text-center sm:text-left text-3xl lg:text-2xl leading-normal mb-16'>
+                                <h1 className='text-center sm:text-left text-3xl lg:text-2xl leading-normal mb-2 sm:mb-16'>
                                     Advantages
                                 </h1>
                             </div>
@@ -248,7 +248,8 @@ const Startups = ({ location }) => {
                             <div
                                 className='mt-6 lg:mt-0 rounded-xl pt-12 px-8 lg:px-2 max-w-lg lg:max-w-2xl mx-auto lg:mr-0 lg:ml-auto relative h-advantages h-asset-inventory sm:mb-6 md:mb-6 lg:mb-0'
                                 style={{ backgroundImage: 'linear-gradient(#E4EDFC,#fff)' }}>
-                                <h1 className='text-2xl font-medium px-4 lg:px-12'>Asset inventory</h1>
+                                <h1 className='text-2xl font-medium px-4 lg:px-12 text-center sm:text-left'>Asset
+                                    inventory</h1>
                                 <GatsbyImage image={data.assetInventory.childImageSharp.gatsbyImageData}
                                              alt='Asset inventory' className='mt-4 lg:mt-16' />
                             </div>
@@ -310,8 +311,8 @@ const Startups = ({ location }) => {
                             <div className='col-span-12 lg:col-span-6 lg:mx-0'>
                                 {q1.map((q, key) => (
                                     <div
-                                        className='mx-auto mb-0 p-4 max-w-lg lg:max-w-2xl mb-4 rounded-xl relative'
-                                        key={key} style={{ backgroundColor: '#fff' }}>
+                                        className='mx-auto mb-0 p-4 max-w-lg lg:max-w-2xl mb-4 rounded-xl relative bg-white'
+                                        key={key}>
                                         <div className='flex'>
                                             <h3 className='font-medium  text-base sm:text-lg mb-0 pl-2 leading-snug cursor-pointer select-none'
                                                 onClick={() => setActive((s) => (s === key ? null : key))}>
@@ -347,8 +348,8 @@ const Startups = ({ location }) => {
                             <div className='col-span-12 lg:col-span-6 lg:mx-0'>
                                 {q2.map((q, key) => (
                                     <div
-                                        className='mx-auto mb-0 p-4 max-w-lg lg:max-w-2xl mb-4 rounded-xl relative'
-                                        key={key} style={{ backgroundColor: '#fff' }}>
+                                        className='mx-auto mb-0 p-4 max-w-lg lg:max-w-2xl mb-4 rounded-xl relative bg-white'
+                                        key={key}>
                                         <div className='flex'>
                                             <h3 className='font-medium  text-base sm:text-lg mb-0 pl-2 leading-snug cursor-pointer select-none'
                                                 onClick={() => setActive((s) => (s === key + 3 ? null : key + 3))}>
@@ -389,16 +390,17 @@ const Startups = ({ location }) => {
                 <div className='pt-12 pb-24 lg:pt-32 lg:pb-32'>
                     <div className='flex h-48 flex-col items-center'>
                         <img src={cloudIcon} alt='Cloud Icon' />
-                        <h1 className='text-center'>Do not postpone the implementation of your Security Program.</h1>
-                        <h1 className='text-center'><strong>Let us help you now so that you can reach your
+                        <h1 className='text-center px-2 mb-2'>Do not postpone the implementation of your Security
+                            Program.</h1>
+                        <h1 className='text-center px-1'><strong>Let us help you now so that you can reach your
                             potential!</strong></h1>
                         <div className='mt-6 w-auto inline-block'>
-                            <a
-                                href='#apply-now'
+                            <button
                                 className='gradientBgBtn w-full block text-base font-medium rounded text-white uppercase text-center py-5 px-24 hover:no-underline no-underline'
+                                onClick={() => animateScroll.scrollToTop()}
                             >
                                 Apply Now
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>

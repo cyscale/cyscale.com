@@ -12,8 +12,8 @@ export default function ScrollButtonStartups({ to, pageName, btnText }) {
                 duration={500}
             >
           <span>
-            <img src={upsideDownTriangle} alt='down arrow icon' className='mx-auto' height={15} width={15}
-                 style={{ marginRight: '0.375rem', marginTop: '0.563rem' }} />
+            <img src={upsideDownTriangle} alt='down arrow icon' className='mx-auto' height={20} width={20}
+                 style={{ marginRight: '0.8rem', marginTop: '1.1rem' }} />
           </span>
             </ScrollLink>
         </>
