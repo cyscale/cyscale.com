@@ -136,8 +136,8 @@ const Startups = ({ location }) => {
         <Layout
             location={location}
             pageName='Startups'
-            title='Startups'
-            description='Startups'
+            title='Startups Program'
+            description='Startups Program'
         >
             <Helmet>
                 <script charset='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js'></script>
