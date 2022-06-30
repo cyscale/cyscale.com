@@ -223,7 +223,7 @@ const Startups = ({ location }) => {
                 </div>
             </Container>
             <Container>
-                <div className='pt-2 pb-24'>
+                <div className='pt-2 pb-0 sm:pb-24'>
                     <div className='grid grid-cols-12'>
                         <div className='col-span-12'>
                             <div className='mx-auto lg:mx-0 max-w-lg '>
