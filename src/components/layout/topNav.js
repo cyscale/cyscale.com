@@ -228,7 +228,7 @@ const TopNav = ({ pageName }) => {
                                             />
                                             <p className='text-center mt-5'>
                                                 <Link
-                                                    to='/startups/'
+                                                    to='/security-for-startups-program/'
                                                     activeStyle={{ color: '#0F26AA' }}
                                                     activeClassName='active'
                                                     className='text-blue font-semibold text-base no-underline hover:underline flex flex-row justify-center'

@@ -86,7 +86,7 @@ const q2 = [
     }
 ];
 
-const Startups = ({ location }) => {
+const SecurityForStartupsProgram = ({ location }) => {
     const appLink = useAppLink({ location });
     const [active, setActive] = useState(-1);
 
@@ -409,4 +409,4 @@ const Startups = ({ location }) => {
     </>);
 };
 
-export default Startups;
+export default SecurityForStartupsProgram;
