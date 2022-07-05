@@ -45,8 +45,6 @@ Examples of Personally Identifiable Information are: 
 * unique personal document numbers such as passport or driver’s license number, 
 * medical, educational, financial history, and many others. 
 
-  
-
 PII information can be categorized into two parts: 
 
 1. Linked information. This type of data can on its own single out an individual. 
@@ -56,8 +54,6 @@ PII information can be categorized into two parts: 
 * gender, 
 * age range, 
 * race. 
-
-
 
 ## What data is considered non-PII? 
 
@@ -101,7 +97,7 @@ A few safety guidelines regarding PII have been established by these standards, 
 
 ## How do you safely handle PII in the Cloud? 
 
-According to [IBM](https://newsroom.ibm.com/2021-07-28-IBM-Report-Cost-of-a-Data-Breach-Hits-Record-High-During-Pandemic), PII was the most costly type of data lost in data breaches in 2021, averaging around 180USD/record lost. 
+According to [IBM](https://newsroom.ibm.com/2021-07-28-IBM-Report-Cost-of-a-Data-Breach-Hits-Record-High-During-Pandemic), PII was the most costly type of data lost in data breaches in 2021, averaging at around 180USD/record lost. 
 
 There are a few safety precautions that can be taken to increase the safety of private data in the cloud. 
 
