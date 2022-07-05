@@ -8,6 +8,10 @@ const redirects = [
     {
         fromPath: '/blog/cloud-native-application-protection-platform-cnapp-cspm-cwpp',
         toPath: '/blog/cnapp-a-mix-of-cspm-cwpp/'
+    },
+    {
+        fromPath: '/startups',
+        toPath: '/security-for-startups-program'
     }
 ];
 
