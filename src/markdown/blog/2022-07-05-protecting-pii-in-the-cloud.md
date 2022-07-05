@@ -111,7 +111,7 @@ Encryption is an essential step to securing the PII. Use industry-recommended en
 
 This reduces the risk of a data breach in case an attacker gains access to the data stored in the cloud. 
 
-### 3. Tokenize PII 
+#### 3. Tokenize PII 
 
 Alongside encryption, tokenizing personally identifiable information is another measure to keep it secure.  
 
