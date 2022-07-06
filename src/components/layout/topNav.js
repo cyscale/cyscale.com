@@ -30,6 +30,7 @@ const TopNav = ({ pageName }) => {
     const root = useRef();
     const trigger = useScrollTrigger();
     const [menu, setMenu] = useState(initMenu);
+    const [showBurgerButton, setShowBurgerButton] = useState(pageName !== 'HomePage');
     const appLink = useAppLink();
 
     useEffect(() => {
@@ -91,6 +92,13 @@ const TopNav = ({ pageName }) => {
         }
     `);
 
+    useEffect(() => {
+        if(pageName === 'HomePage') {
+            const timer = setTimeout(() => setShowBurgerButton(true), 500);
+            return () => clearTimeout(timer);
+        }
+    }, [])
+
     let jobs = data.allMarkdownRemark.nodes;
     const rootClasses = !trigger ? 'translate-y-0' : '-translate-y-full';
     return (
@@ -108,7 +116,7 @@ const TopNav = ({ pageName }) => {
                             </Link>
                             <button
                                 type='button'
-                                className='absolute right-0 top-6 inline-block xl:hidden'
+                                className={`absolute right-0 top-6 inline-block xl:hidden ${showBurgerButton ? 'visible' : 'hidden'}`}
                                 onClick={toggleMenuIcon}
                             >
                                 <img src={menu.Icon} alt='toggle menu' />

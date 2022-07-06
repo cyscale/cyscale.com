@@ -238,14 +238,6 @@ h5 {
     .config-items {
         border-top: thin solid #b5b5b5;
     }
-    .heroBg.HomePage {
-        background-image: none !important;
-    }
-    .heroBg.HomePage {
-        background: url('../images/mobile-banner.svg') no-repeat center !important;
-        background-position: top center !important;
-        background-size: cover !important;
-    }
     .header-padding {
         padding-top: 222px !important;
         padding-bottom: 35px;
@@ -264,6 +256,30 @@ h5 {
         padding-bottom: 60px;
     }
 }
+
+@media screen and (max-width: 639px) {
+    .heroBg.HomePage {
+        background-color: rgba(238, 238, 238, 1);
+    }
+}
+
+@media screen and (min-width: 639px) and (max-width: 1279px) {
+    .heroBg.HomePage {
+        background: url("../images/hero-home-bg.jpg");
+        background-position: right center !important;
+        background-size: cover !important;
+    }
+    .gradientBG {
+        background-position: bottom !important;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .heroBgHome {
+        background-image: url("../images/hero-home-bg.jpg");
+    }
+}
+
 .slick-prev:before,
 .slick-next:before {
     display: none;
