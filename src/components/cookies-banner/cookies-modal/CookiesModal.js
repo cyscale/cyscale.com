@@ -65,7 +65,7 @@ const ConfirmButtons = ({ paddingY, marginRight, justify, setCookiesModal, setCo
     const [cookies, setCookie] = useCookies();
 
     const confirmMyChoices = () => {
-        setCookie('PersonalChoices', {functionality, performance})
+        setCookie('PersonalChoices', { functionality, performance });
         setCookie('CookiesConsent', 'true');
         setCookiesModal(false);
         setCookiesBanner(false);
@@ -85,7 +85,7 @@ const ConfirmButtons = ({ paddingY, marginRight, justify, setCookiesModal, setCo
             Confirm My Choices
         </button>
         <button
-            className={`rounded bg-red text-white text-center py-3 px-${paddingY} w-42 ml-4 mr-${marginRight}`}
+            className={`rounded bg-red text-white text-center py-3 px-${paddingY} w-42 ml-4 ${marginRight === 6 ? 'mr-6' : ''}`}
             onClick={acceptAllCookies}
         >
             Accept All Cookies
@@ -169,7 +169,7 @@ const CookiesModal = ({ setCookiesModal, cookiesModal, setCookiesBanner }) => {
                 </div>
             </div>
             <div className='sm:hidden bottom-0 fixed h-24 w-full bg-white border-t-confirm-buttons'>
-                <ConfirmButtons paddingY={2} marginRight={0} justify={'center'} setCookiesModal={setCookiesModal}
+                <ConfirmButtons paddingY={2} justify={'center'} setCookiesModal={setCookiesModal}
                                 setCookiesBanner={setCookiesBanner} functionality={functionality}
                                 performance={performance} />
             </div>
