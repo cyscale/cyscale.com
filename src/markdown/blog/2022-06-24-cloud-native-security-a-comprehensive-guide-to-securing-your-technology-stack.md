@@ -59,23 +59,23 @@ This type of application is containerized, for example in Docker or Kubernetes, 
 
 To better understand the differences between cloud-native and on-premises applications that do not use cloud, we will look at the former’s advantages and disadvantages over the latter’s.
 
-### Speed 
+##### Speed 
 
 Native applications are easier and faster to build and deploy than on-premises ones because no sophisticated software or hardware requirements need to be fulfilled. Moreover, updates are also implemented faster and require no downtime. 
 
-### Cost 
+##### Cost 
 
 The cost of using cloud-native technology depends on the application but is generally lower since it does not require the purchase of expensive hardware. Typically, cloud-native applications only require software licenses or subscriptions. 
 
-### Scalability 
+##### Scalability 
 
 Since native applications do not require hardware upgrades, they are scalable and adaptable to business requirements. 
 
-### Resiliency 
+##### Resiliency 
 
 The cloud is known for its resiliency against natural disasters, power outages and other incidents that may disrupt a cloud-enabled application. Native cloud workloads are therefore more resilient. 
 
-### A serverless model 
+##### A serverless model 
 
 Cloud-native applications may work on a serverless model by leaving the provisioning and maintaining tasks to the cloud provider. This model simplifies the deployment steps and eases the developer's work, increasing productivity. 
 
