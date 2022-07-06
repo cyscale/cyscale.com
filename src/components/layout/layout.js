@@ -1,11 +1,13 @@
 import React from 'react';
 
 import Seo from '../Seo';
-import Footer from './footer';
 import Header from './header';
 import Consent from '../consent';
 import GlobalContext from '../../context/GlobalContext';
 import useHubspotEvents from '../../common/hbspotEvents';
+import loadable from '@loadable/component';
+const Footer = loadable(() => import('./footer'))
+
 const Layout = ({
     children,
     title,

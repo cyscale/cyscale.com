@@ -43,8 +43,9 @@ const Header = ({
         pageName === 'ComplianceAuditing'
             ? 'bg-lightGreyEEE'
             : 'bg-cover'
-    }`;
-    const rootStyle = heroBG ? { backgroundImage: `url(${heroBG})` } : null;
+    }
+    ${pageName === 'HomePage' ? 'heroBgHome' : ''}`;
+    const rootStyle = heroBG  ? { backgroundImage: `url(${heroBG})` } : null;
 
     return (
         <HeaderContext.Provider value={{ sticker, setSticker }}>
