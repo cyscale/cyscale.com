@@ -161,7 +161,7 @@ const Header = ({
                                             <p
                                                 className={`text-14px text-black opacity-50 text-center pt-15px sm:text-left`}
                                             >
-                                                Unlimited free trial for 14 days
+                                                Playground account populated with data
                                             </p>
                                         ) : null}
                                     </div>
