@@ -49,7 +49,7 @@ export default function CloudComplianceContent() {
                             </span>
                         ]}
                         description={[
-                            'Get all the help you need to run regular tests on security systems, policies, and processes.\n\nMake better use of your time while the cloud compliance checks continue to run in the background. Act on alerts when',
+                            'Get all the help you need to run regular tests on security systems, policies, and processes.\n\nMake better use of your time while the cloud compliance checks continue to run in the background. Act on alerts when ',
                             <a
                                 href='/use-cases/cloud-data-security/'
                                 key='ds123'

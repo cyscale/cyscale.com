@@ -112,7 +112,7 @@ const PciDss = ({location}) => {
                                         <strong>
                                             Real-time visibility with detection and response:
                                         </strong>
-                                        Comprehensive visibility across the entire cloud native lifecycle from
+                                        &nbsp;Comprehensive visibility across the entire cloud native lifecycle from
                                         build, to infrastructure, to run time
                                     </li>
                                 </ul>
