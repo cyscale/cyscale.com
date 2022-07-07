@@ -331,6 +331,21 @@ const TopNav = ({ pageName }) => {
                                                     />
                                                 </a>
                                             </p>
+                                            <p className='text-center mt-5'>
+                                                <Link
+                                                    to='/whitepaper/cloud-storage-misconfigurations/'
+                                                    activeClassName='active'
+                                                    activeStyle={{ color: '#0F26AA' }}
+                                                    className='text-blue font-semibold text-base no-underline hover:underline flex flex-row justify-center'
+                                                >
+                                                    Cloud Storage Misconfigurations Whitepaper&nbsp;
+                                                    <img
+                                                        src={ArrowRight}
+                                                        className='w-5 h-auto'
+                                                        alt='arrow right icon'
+                                                    />
+                                                </Link>
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
