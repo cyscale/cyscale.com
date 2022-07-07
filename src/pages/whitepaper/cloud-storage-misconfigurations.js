@@ -47,12 +47,12 @@ const CloudStorageMisconfigurations = ({ location }) => {
                                     <div>
                                         <p className='text-left text-xl sm:text-2xl leading-normal mb-2 text-gray'>
                                             <strong>Download the whitepaper and learn more about:</strong></p>
-                                        <ul className='text-lg sm:text-xl ml-2'>
-                                            <li className='font-medium sm:font-bold'>&bull; Cloud data storage breaches</li>
-                                            <li className='font-medium sm:font-bold'>&bull; Assets at risk</li>
-                                            <li className='font-medium sm:font-bold'>&bull; Cloud storage misconfigurations</li>
-                                            <li className='font-medium sm:font-bold'>&bull; How to fix misconfigurations</li>
-                                            <li className='font-medium sm:font-bold'>&bull; Go beyond, with compliance</li>
+                                        <ul className='text-lg sm:text-xl ml-8 list-disc'>
+                                            <li className='font-medium sm:font-bold'>Cloud data storage breaches</li>
+                                            <li className='font-medium sm:font-bold'>Assets at risk</li>
+                                            <li className='font-medium sm:font-bold'>Cloud storage misconfigurations</li>
+                                            <li className='font-medium sm:font-bold'>How to fix misconfigurations</li>
+                                            <li className='font-medium sm:font-bold'>Go beyond, with compliance</li>
                                         </ul>
                                     </div>
                                 </div>
