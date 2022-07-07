@@ -39,20 +39,20 @@ const CloudStorageMisconfigurations = ({ location }) => {
                                         <strong>The Complete Guide</strong> to Cloud <br
                                         className='hidden lg:block' /> Storage Misconfigurations
                                     </h1>
-                                    <p className='text-center sm:text-left text-xl leading-normal mb-8 text-gray'>
+                                    <p className='text-center sm:text-left text-xl leading-normal mb-14 sm:mb-8 text-gray'>
                                         This guide helps CIOS, CIS and security staff to understand the risk & dangers
                                         of data security breaches and importance of a secure cloud storage
                                         infrastructure.
                                     </p>
                                     <div>
-                                        <p className='text-center sm:text-left text-2xl leading-normal mb-2 text-gray'>
+                                        <p className='text-left text-xl sm:text-2xl leading-normal mb-2 text-gray'>
                                             <strong>Download the whitepaper and learn more about:</strong></p>
-                                        <ul className='text-xl ml-2'>
-                                            <li className=''><strong>&bull; Cloud data storage breaches</strong></li>
-                                            <li><strong>&bull; Assets at risk</strong></li>
-                                            <li><strong>&bull; Cloud storage misconfigurations</strong></li>
-                                            <li><strong>&bull; How to fix misconfigurations</strong></li>
-                                            <li><strong>&bull; Go beyond, with compliance</strong></li>
+                                        <ul className='text-lg sm:text-xl ml-2'>
+                                            <li className='font-medium sm:font-bold'>&bull; Cloud data storage breaches</li>
+                                            <li className='font-medium sm:font-bold'>&bull; Assets at risk</li>
+                                            <li className='font-medium sm:font-bold'>&bull; Cloud storage misconfigurations</li>
+                                            <li className='font-medium sm:font-bold'>&bull; How to fix misconfigurations</li>
+                                            <li className='font-medium sm:font-bold'>&bull; Go beyond, with compliance</li>
                                         </ul>
                                     </div>
                                 </div>
