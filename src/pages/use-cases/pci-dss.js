@@ -45,7 +45,7 @@ const PciDss = ({location}) => {
                                 enables prevention, detection, and response to security incidents.
                             </p>
                             <p className='text-center sm:text-left text-base lg:text-lg mb-2 leading-relaxed'>
-                                <strong>A robost compliance toolbox for cloud-native and cloud-first
+                                <strong>A robust compliance toolbox for cloud-native and cloud-first
                                     organizations.</strong>
                             </p>
                             <a
@@ -90,12 +90,12 @@ const PciDss = ({location}) => {
                             <div className='mx-auto lg:mx-0  max-w-xl lg:max-w-none'>
                                 <ul className='list-disc ml-4 text-gray mt-8'>
                                     <li className='mb-4'>
-                                        <strong>Protect Cardholder Data: </strong>
-                                        Securing the storage and transmission of cardholder data, while always be prepared for security audits.
+                                        <strong>Protect cardholder data: </strong>
+                                        Securing the storage and transmission of cardholder data, while always being prepared for security audits.
                                     </li>
                                     <li className='mb-4'>
                                         <strong>Policy-based security: </strong> Out-of-the-box assurance and
-                                        enforcement policies that you can configure across the build, workload, and
+                                        enforcement policies that you can configure across workloads and
                                         infrastructure.
                                     </li>
                                 </ul>
@@ -105,15 +105,15 @@ const PciDss = ({location}) => {
                             <div className='mx-auto lg:mx-0  max-w-xl lg:max-w-none'>
                                 <ul className='list-disc ml-4 text-gray mt-8'>
                                     <li className='mb-4'>
-                                        <strong>Strong access control: </strong> Restrict access to cardholder data
-                                        and identify, authenticate access to system components
+                                        <strong>Strong access control: </strong> Restrict and monitor access to cardholder data
+                                        
                                     </li>
                                     <li className='mb-4'>
                                         <strong>
                                             Real-time visibility with detection and response:
                                         </strong>
                                         &nbsp;Comprehensive visibility across the entire cloud native lifecycle from
-                                        build, to infrastructure, to run time
+                                        build, to infrastructure, to runtime
                                     </li>
                                 </ul>
                             </div>
@@ -209,7 +209,7 @@ const PciDss = ({location}) => {
                                     <p className='leading-normal text-base text-gray mb-6'>
                                         <strong>Meet industry regulations</strong>
                                         <br/>
-                                        Protect sensitive data and comply with strict industry in your Financial
+                                        Protect sensitive data and comply with strict industry standards in your financial
                                         organization. Cyscale automatically runs all critical compliance checks and
                                         finds data at-risk.
                                     </p>
