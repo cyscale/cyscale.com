@@ -40,19 +40,19 @@ const CloudStorageMisconfigurations = ({ location }) => {
                                         className='hidden lg:block' /> Storage Misconfigurations
                                     </h1>
                                     <p className='text-center sm:text-left text-xl leading-normal mb-14 sm:mb-8 text-gray'>
-                                        This guide helps CIOS, CIS and security staff to understand the risk & dangers
-                                        of data security breaches and importance of a secure cloud storage
+                                        This guide helps CIOs, CISOs and security staff to understand the risk & dangers
+                                        of data security breaches and the importance of a secure cloud storage
                                         infrastructure.
                                     </p>
                                     <div>
                                         <p className='text-left text-xl sm:text-2xl leading-normal mb-2 text-gray'>
                                             <strong>Download the whitepaper and learn more about:</strong></p>
-                                        <ul className='text-lg sm:text-xl ml-8 list-disc'>
-                                            <li className='font-medium sm:font-bold'>Cloud data storage breaches</li>
-                                            <li className='font-medium sm:font-bold'>Assets at risk</li>
-                                            <li className='font-medium sm:font-bold'>Cloud storage misconfigurations</li>
-                                            <li className='font-medium sm:font-bold'>How to fix misconfigurations</li>
-                                            <li className='font-medium sm:font-bold'>Go beyond, with compliance</li>
+                                        <ul className='text-lg sm:text-xl ml-8 list-disc text-gray'>
+                                            <li>Cloud data storage breaches</li>
+                                            <li>Assets at risk</li>
+                                            <li>Cloud storage misconfigurations</li>
+                                            <li>How to fix misconfigurations</li>
+                                            <li>Go beyond, with compliance</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -63,7 +63,7 @@ const CloudStorageMisconfigurations = ({ location }) => {
                                     style={{ backgroundColor: 'rgba(255, 255, 255, 0.6)', backdropFilter: 'blur(5px)' }}
                                 >
                                     <h2 className='font-semibold text-2xl sm:text-3xl lg:text-2xl leading-normal mb-8 mt-8 lg:mt-0'>
-                                        Get the White Paper
+                                        Get the Whitepaper
                                     </h2>
                                     <div style={{ minHeight: 365 }} id='storage-misconfigurations-form'
                                          className='pb-4' />
