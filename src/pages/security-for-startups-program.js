@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Layout from '../components/layout/CleanLayout';
-import { useAppLink } from '../common/links';
 import { Container, Row } from '../components/atoms/Containers';
 import { Helmet } from 'react-helmet';
 import classNames from 'classnames';
@@ -87,7 +86,6 @@ const q2 = [
 ];
 
 const SecurityForStartupsProgram = ({ location }) => {
-    const appLink = useAppLink({ location });
     const [active, setActive] = useState(-1);
 
     const data = useStaticQuery(graphql`
@@ -140,7 +138,60 @@ const SecurityForStartupsProgram = ({ location }) => {
             description='Startups Program'
         >
             <Helmet>
-                <script charset='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js'></script>
+                <script type='application/ld+json' data-rh='true'>{`{
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": [
+                {
+                    "@type": "Question",
+                    "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "It is a program designed for fast-growing startups. The purpose is to raise awareness about the importance of cloud security and support early-stage companies that cannot afford the purchase of security tools."
+                },
+                    "name": "What is Cyscale for Startups?"
+                },
+                {
+                    "@type": "Question",
+                    "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "\n                    <p>If the startup has raised under $2 million in funding, it is eligible for the 6 months free + 6\n                    months at a discounted price (75% discount) program.</p>\n                    <p>In addition, the startup should not be older than five years.</p>\n                "
+                },
+                    "name": "What are the eligibility requirements?"
+                },
+                {
+                    "@type": "Question",
+                    "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "In this case, you will be eligible for a contract of 3 months free + 9 months at a discounted price (75% discount)."
+                },
+                    "name": "What if you raised more than $2 million in funding?"
+                },
+                {
+                    "@type": "Question",
+                    "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "You can submit your application directly on our webpage."
+                },
+                    "name": "How do I apply?"
+                },
+                {
+                    "@type": "Question",
+                    "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "\n                    The <a href='https://cyscale.com/security-for-startups-program/'> Cyscale for Startups </a> Program contract has an annual duration. (6 months free + 6 months at a discounted price)\n                "
+                },
+                    "name": "What is the duration of the contract?"
+                },
+                {
+                    "@type": "Question",
+                    "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, you can. You need to contact our team about this."
+                },
+                    "name": "Can I terminate the contract earlier than one year?"
+                }
+                    ]
+                }`}</script>
             </Helmet>
             <div className='bg-pouring pt-8'>
                 <Container>
