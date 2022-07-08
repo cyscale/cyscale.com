@@ -9,24 +9,24 @@ import CookiesBanner from '../cookies-banner/CookiesBanner';
 import { CookiesProvider, useCookies } from 'react-cookie';
 
 const Layout = ({
-                    children,
-                    title,
-                    location,
-                    description,
-                    heroBG,
-                    bannerTitle,
-                    bannerDescription,
-                    bannerBtn1Text,
-                    bannerBtn1Link,
-                    bannerBtn2Text,
-                    bannerBtn2Link,
-                    pageName,
-                    banner,
-                    blogDataTitle
-                }) => {
+    children,
+    title,
+    location,
+    description,
+    heroBG,
+    bannerTitle,
+    bannerDescription,
+    bannerBtn1Text,
+    bannerBtn1Link,
+    bannerBtn2Text,
+    bannerBtn2Link,
+    pageName,
+    banner,
+    blogDataTitle
+}) => {
     useHubspotEvents({ location, pageName });
     const [cookiesBanner, setCookiesBanner] = useState(false);
-    const [cookies, setCookie] = useCookies();
+    const [cookies] = useCookies();
 
     useEffect(() => {
         setCookiesBanner(true);
@@ -36,17 +36,22 @@ const Layout = ({
         <div>
             <CookiesProvider>
                 <GlobalContext.Provider value={{ location }}>
-                    <Seo title={title} description={description} pageName={pageName} banner={banner}
-                         location={location} />
+                    <Seo
+                        title={title}
+                        description={description}
+                        pageName={pageName}
+                        banner={banner}
+                        location={location}
+                    />
                     {!!pageName && pageName === 'ContactUs' ? (
                         <></>
                     ) : pageName === 'Pricing' ||
-                    pageName === 'aboutUs' ||
-                    pageName === 'termsOfUse' ||
-                    pageName === 'privacyPolicy' ||
-                    pageName === 'SecurityPolicy' ||
-                    pageName === 'dataSecurity' ||
-                    pageName === 'blog' ? (
+                      pageName === 'aboutUs' ||
+                      pageName === 'termsOfUse' ||
+                      pageName === 'privacyPolicy' ||
+                      pageName === 'SecurityPolicy' ||
+                      pageName === 'dataSecurity' ||
+                      pageName === 'blog' ? (
                         <></>
                     ) : (
                         <Header
@@ -66,8 +71,9 @@ const Layout = ({
                         <div>{children}</div>
                     </main>
                     <Footer />
-                    {Boolean(cookies?.CookiesConsent) !== true && location.pathname !== '/policies/privacy-policy/' &&
-                        <CookiesBanner cookiesBanner={cookiesBanner} setCookiesBanner={setCookiesBanner} />}
+                    {Boolean(cookies?.CookiesConsent) !== true && location.pathname !== '/policies/privacy-policy/' && (
+                        <CookiesBanner cookiesBanner={cookiesBanner} setCookiesBanner={setCookiesBanner} />
+                    )}
                 </GlobalContext.Provider>
             </CookiesProvider>
         </div>

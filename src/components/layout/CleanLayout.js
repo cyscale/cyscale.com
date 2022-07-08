@@ -13,7 +13,7 @@ const Layout = ({ children, title, description, pageName, location, banner }) =>
     useHubspotEvents({ location, pageName });
     const [sticker, setSticker] = useState(false);
     const [cookiesBanner, setCookiesBanner] = useState(false);
-    const [cookies, setCookie] = useCookies();
+    const [cookies] = useCookies();
 
     useEffect(() => {
         setCookiesBanner(true);
@@ -28,8 +28,9 @@ const Layout = ({ children, title, description, pageName, location, banner }) =>
                 </HeaderContext.Provider>
                 <main>{children}</main>
                 <Footer />
-                {Boolean(cookies?.CookiesConsent) !== true && location.pathname !== '/policies/privacy-policy/' &&
-                    <CookiesBanner cookiesBanner={cookiesBanner} setCookiesBanner={setCookiesBanner} />}
+                {Boolean(cookies?.CookiesConsent) !== true && location.pathname !== '/policies/privacy-policy/' && (
+                    <CookiesBanner cookiesBanner={cookiesBanner} setCookiesBanner={setCookiesBanner} />
+                )}
             </GlobalContext.Provider>
         </CookiesProvider>
     );

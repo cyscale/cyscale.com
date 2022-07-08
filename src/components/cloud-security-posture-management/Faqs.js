@@ -29,12 +29,10 @@ const qas = [
                     areas such as storage, encryption, and permissions
                 </li>
                 <li className='mb-4'>
-                    Technical security controls and visibility over access configuration, to help reduce risk
-                    and ensure that compliance standards are met
+                    Technical security controls and visibility over access configuration, to help reduce risk and ensure
+                    that compliance standards are met
                 </li>
-                <li className='mb-4'>
-                    Easily identify risks that could compromise your cloud network
-                </li>
+                <li className='mb-4'>Easily identify risks that could compromise your cloud network</li>
 
                 <li>Remediation guidance, to quickly solve misconfigurations leading to compliance violations</li>
             </ul>
@@ -49,20 +47,19 @@ const qas = [
                         Visibility into your company's cloud infrastructure and security configurations.
                     </strong>
                     <br />
-                    Security teams can assess posture across multiple cloud environments and accounts through
-                    a centralized dashboard that can give actionable metrics.
+                    Security teams can assess posture across multiple cloud environments and accounts through a
+                    centralized dashboard that can give actionable metrics.
                 </p>
                 <p className='mb-4'>
                     <strong className='text-base'>Evidence.</strong>
                     <br />
-                    Violations in your cloud infrastructure are mapped to regulatory standards, security frameworks,
-                    as well as internal policies, resulting in evidence collection that enables audits.
+                    Violations in your cloud infrastructure are mapped to regulatory standards, security frameworks, as
+                    well as internal policies, resulting in evidence collection that enables audits.
                 </p>
                 <p className='mb-4'>
                     <strong className='text-base'>Reporting and alerting.</strong>
                     Insights on your cloud's risk posture, as well as alerts and notifications bring risk to your
-                    attention,
-                    enabling investigation and in-time remediation.
+                    attention, enabling investigation and in-time remediation.
                 </p>
                 <p className='mb-4'>
                     <strong className='text-base'>Automation.</strong>
@@ -91,9 +88,8 @@ export default function Faqs() {
                         className='col-span-12 lg:col-span-8 mb-0 bg-white bg-opacity-40 p-4  rounded-md relative'
                         key={key}
                     >
-                        <h3 className='font-semibold  text-base sm:text-lg text-white mb-0 pl-8 leading-snug cursor-pointer select-none'
-                            onClick={() => setActive((s) => (s === key ? null : key))}>
-                            {q.question}
+                        <h3 className='font-semibold  text-base sm:text-lg text-white mb-0 pl-8 leading-snug cursor-pointer select-none'>
+                            <button onClick={() => setActive((s) => (s === key ? null : key))}>{q.question}</button>
                         </h3>
                         <p className={classNames('text-white mt-4', { block: active === key, hidden: active !== key })}>
                             {q.answer}
