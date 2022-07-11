@@ -15,12 +15,6 @@ const dataModal = [
             'These cookies are required to enable basic website functionality and cannot be switched off. Cyscale processes any personal data collected through these cookies on the basis of legitimate interest.'
     },
     {
-        title: 'Functionality',
-
-        content:
-            'These cookies are used to enable non-essential website functionality that improves your website experience. For example, they are used to enable the chat function on the website. Some of the services will not function correctly if you switch off these cookies. Cyscale processes any personal data collected through these cookies on the basis of consent.'
-    },
-    {
         title: 'Performance & Analytics',
 
         content:
@@ -28,51 +22,25 @@ const dataModal = [
     }
 ];
 
-const FunctionalitySwitch = ({ setFunctionality, functionality }) => {
+const PerformanceAndAnalyticsSwitch = ({ setPerformanceAndAnalytics, performanceAndAnalytics }) => {
     return (
         <label className='flex items-center cursor-pointer ml-auto'>
             <div className='relative'>
                 <input
                     type='checkbox'
                     className='sr-only'
-                    onChange={() => setFunctionality(!functionality)}
-                    defaultChecked={functionality}
+                    onChange={() => setPerformanceAndAnalytics(!performanceAndAnalytics)}
+                    defaultChecked={performanceAndAnalytics}
                     role='switch'
                 />
                 <div
                     className={`w-10 h-4 block ${
-                        functionality ? 'bg-switch-selected' : 'bg-switch-unselected'
+                        performanceAndAnalytics ? 'bg-switch-selected' : 'bg-switch-unselected'
                     } rounded-full shadow-inner`}
                 ></div>
                 <div
                     className={`dot absolute w-6 h-6 ${
-                        functionality ? 'bg-dot-switch-selected' : 'bg-aboutBorder'
-                    } rounded-full shadow -left-1 -top-1 transition`}
-                ></div>
-            </div>
-        </label>
-    );
-};
-
-const PerformanceSwitch = ({ setPerformance, performance }) => {
-    return (
-        <label className='flex items-center cursor-pointer ml-auto'>
-            <div className='relative'>
-                <input
-                    type='checkbox'
-                    className='sr-only'
-                    onChange={() => setPerformance(!performance)}
-                    defaultChecked={performance}
-                    role='switch'
-                />
-                <div
-                    className={`w-10 h-4 block ${
-                        performance ? 'bg-switch-selected' : 'bg-switch-unselected'
-                    } rounded-full shadow-inner`}
-                ></div>
-                <div
-                    className={`dot absolute w-6 h-6 ${
-                        performance ? 'bg-dot-switch-selected' : 'bg-aboutBorder'
+                        performanceAndAnalytics ? 'bg-dot-switch-selected' : 'bg-aboutBorder'
                     } rounded-full shadow -left-1 -top-1 transition`}
                 ></div>
             </div>
@@ -86,22 +54,22 @@ const ConfirmButtons = ({
     justify,
     setCookiesModal,
     setCookiesBanner,
-    performance,
-    functionality
+    performanceAndAnalytics
 }) => {
     const [, setCookie] = useCookies();
 
     const confirmMyChoices = () => {
-        setCookie('PersonalChoices', { functionality, performance });
-        setCookie('CookiesConsent', 'true');
+        setCookie('CookiesConsent', { performanceAndAnalytics });
         setCookiesModal(false);
         setCookiesBanner(false);
+        window.location.reload(false);
     };
 
     const acceptAllCookies = () => {
-        setCookie('CookiesConsent', 'true');
+        setCookie('CookiesConsent', { performanceAndAnalytics: true });
         setCookiesModal(false);
         setCookiesBanner(false);
+        window.location.reload(false);
     };
 
     return (
@@ -124,10 +92,14 @@ const ConfirmButtons = ({
     );
 };
 
-const CookiesModal = ({ setCookiesModal, cookiesModal, setCookiesBanner }) => {
+const CookiesModal = ({
+    setCookiesModal,
+    cookiesModal,
+    setCookiesBanner,
+    performanceAndAnalytics,
+    setPerformanceAndAnalytics
+}) => {
     const [active, setActive] = useState(0);
-    const [functionality, setFunctionality] = useState(true);
-    const [performance, setPerformance] = useState(true);
 
     return (
         <div
@@ -185,13 +157,11 @@ const CookiesModal = ({ setCookiesModal, cookiesModal, setCookiesBanner }) => {
                                         <p className='text-sm my-auto ml-auto text-blue'>
                                             <strong>Always Active</strong>
                                         </p>
-                                    ) : index === 1 ? (
-                                        <FunctionalitySwitch
-                                            setFunctionality={setFunctionality}
-                                            functionality={functionality}
-                                        />
                                     ) : (
-                                        <PerformanceSwitch setPerformance={setPerformance} performance={performance} />
+                                        <PerformanceAndAnalyticsSwitch
+                                            setPerformanceAndAnalytics={setPerformanceAndAnalytics}
+                                            performanceAndAnalytics={performanceAndAnalytics}
+                                        />
                                     )}
                                 </div>
                                 <p
@@ -212,8 +182,7 @@ const CookiesModal = ({ setCookiesModal, cookiesModal, setCookiesBanner }) => {
                             justify={'end'}
                             setCookiesModal={setCookiesModal}
                             setCookiesBanner={setCookiesBanner}
-                            functionality={functionality}
-                            performance={performance}
+                            performanceAndAnalytics={performanceAndAnalytics}
                         />
                     </div>
                 </div>
@@ -223,8 +192,7 @@ const CookiesModal = ({ setCookiesModal, cookiesModal, setCookiesBanner }) => {
                         justify={'center'}
                         setCookiesModal={setCookiesModal}
                         setCookiesBanner={setCookiesBanner}
-                        functionality={functionality}
-                        performance={performance}
+                        performanceAndAnalytics={performanceAndAnalytics}
                     />
                 </div>
             </FocusLock>

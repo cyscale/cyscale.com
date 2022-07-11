@@ -7,6 +7,7 @@ import { useCookies } from 'react-cookie';
 
 const CookiesBanner = ({ cookiesBanner, setCookiesBanner }) => {
     const [cookiesModal, setCookiesModal] = useState(false);
+    const [performanceAndAnalytics, setPerformanceAndAnalytics] = useState(true);
     const [, setCookie] = useCookies();
 
     const openModalOnKeyUp = (e) => {
@@ -54,7 +55,7 @@ const CookiesBanner = ({ cookiesBanner, setCookiesBanner }) => {
                                     aria-label='Accept cookies'
                                     id='confirm-button'
                                     onClick={() => {
-                                        setCookie('CookiesConsent', 'true');
+                                        setCookie('CookiesConsent', { performanceAndAnalytics: true });
                                         setCookiesBanner(!cookiesBanner);
                                         window.location.reload(false);
                                     }}
@@ -74,6 +75,8 @@ const CookiesBanner = ({ cookiesBanner, setCookiesBanner }) => {
                                         setCookiesModal={setCookiesModal}
                                         cookiesModal={cookiesModal}
                                         setCookiesBanner={setCookiesBanner}
+                                        performanceAndAnalytics={performanceAndAnalytics}
+                                        setPerformanceAndAnalytics={setPerformanceAndAnalytics}
                                     />
                                 </div>
                             </div>
