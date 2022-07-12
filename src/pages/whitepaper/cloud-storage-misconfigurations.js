@@ -2,11 +2,8 @@ import React, { useEffect } from 'react';
 import Layout from '../../components/layout/CleanLayout';
 import { Helmet } from 'react-helmet';
 import { Container, Row } from '../../components/atoms/Containers';
-import { useAppLink } from '../../common/links';
 
 const CloudStorageMisconfigurations = ({ location }) => {
-    const appLink = useAppLink({ location });
-
     useEffect(() => {
         setTimeout(() => {
             if (window && window.hbspt) {

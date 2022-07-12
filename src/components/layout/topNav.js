@@ -116,7 +116,7 @@ const TopNav = ({ pageName }) => {
                             </Link>
                             <button
                                 type='button'
-                                className={`absolute right-0 top-6 inline-block xl:hidden ${showBurgerButton ? 'visible' : 'hidden'}`}
+                                className={`absolute right-0 top-6 xl:hidden ${showBurgerButton ? 'inline-block' : 'hidden'}`}
                                 onClick={toggleMenuIcon}
                             >
                                 <img src={menu.Icon} alt='toggle menu' />
