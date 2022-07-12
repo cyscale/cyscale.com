@@ -48,6 +48,11 @@
     }
 }
 
+.title-cs-misconfiguration {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+}
+
 @media screen and (min-width: 1024px) {
     .bg-pouring {
         background-size: cover;
@@ -55,13 +60,23 @@
         background-position: 50% 35%;
         background-image: url('../images/hero-startups-bg.png');
     }
+    .bg-storage-misconfigurations {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 35%;
+        background-image: url('../images/hero-storage-misconfigurations-bg.png');
+    }
+    .title-cs-misconfiguration {
+        font-size: 2.7rem;
+        line-height: 3.5rem;
+    }
     .h-advantages  {
         height: 32rem;
     }
 }
 
 @media screen and (max-width: 1024px) {
-    .bg-pouring {
+    .bg-pouring, .bg-storage-misconfigurations {
         background-image: linear-gradient(#EEEEEE, #E4EDFC);
     }
     .h-advantages  {

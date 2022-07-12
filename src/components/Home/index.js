@@ -1,11 +1,5 @@
 import React from 'react';
-import Services from './services';
-import GetStarted from './getstarted';
-import Offer from './offer';
-import Cloud from './cloud';
-import Partners from './partners';
-import PostsPreview from '../new-blog/PostsPreview';
-import Sectionheader from '../layout/sectionheader';
+import loadable from '@loadable/component'
 import messageIcon from '../../assets/images/chat_icon.png';
 import searchIcon from '../../assets/images/search.png';
 import cloudIcon from '../../assets/images/cloud.png';
@@ -13,6 +7,14 @@ import iconTwo from '../../assets/images/elemente-vectoriale-07.png';
 import iconThree from '../../assets/images/elemente-vectoriale-08.png';
 import { SecurityKnowledgeGraph, CloudNative, RemoteWorkWft, DataGathering } from './images';
 import { useAppLink } from '../../common/links';
+
+const Services = loadable(() => import('./services'))
+const GetStarted = loadable(() => import('./getstarted'))
+const Offer = loadable(() => import('./offer'))
+const Cloud = loadable(() => import('./cloud'))
+const Partners = loadable(() => import('./partners'))
+const PostsPreview = loadable(() => import('../new-blog/PostsPreview'))
+const Sectionheader = loadable(() => import('../layout/sectionheader'))
 
 const Home = () => {
     const appLink = useAppLink();

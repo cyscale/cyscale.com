@@ -39,7 +39,7 @@ const PricingPage = ({ location }) => {
                                         We don't want Cyscale to be just another expense on your balance sheet. Let's
                                         talk about your team, about your products, and about your challenges and come up
                                         with a pricing scheme that ultimately brings a positive ROI and helps you move
-                                        faster
+                                        faster.
                                     </p>
                                 </div>
                             </div>

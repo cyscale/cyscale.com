@@ -30,6 +30,7 @@ const TopNav = ({ pageName }) => {
     const root = useRef();
     const trigger = useScrollTrigger();
     const [menu, setMenu] = useState(initMenu);
+    const [showBurgerButton, setShowBurgerButton] = useState(pageName !== 'HomePage');
     const appLink = useAppLink();
 
     useEffect(() => {
@@ -91,6 +92,13 @@ const TopNav = ({ pageName }) => {
         }
     `);
 
+    useEffect(() => {
+        if(pageName === 'HomePage') {
+            const timer = setTimeout(() => setShowBurgerButton(true), 500);
+            return () => clearTimeout(timer);
+        }
+    }, [])
+
     let jobs = data.allMarkdownRemark.nodes;
     const rootClasses = !trigger ? 'translate-y-0' : '-translate-y-full';
     return (
@@ -108,7 +116,7 @@ const TopNav = ({ pageName }) => {
                             </Link>
                             <button
                                 type='button'
-                                className='absolute right-0 top-6 inline-block xl:hidden'
+                                className={`absolute right-0 top-6 inline-block xl:hidden ${showBurgerButton ? 'visible' : 'hidden'}`}
                                 onClick={toggleMenuIcon}
                             >
                                 <img src={menu.Icon} alt='toggle menu' />
@@ -322,6 +330,21 @@ const TopNav = ({ pageName }) => {
                                                         alt='arrow right icon'
                                                     />
                                                 </a>
+                                            </p>
+                                            <p className='text-center mt-5'>
+                                                <Link
+                                                    to='/whitepaper/cloud-storage-misconfigurations/'
+                                                    activeClassName='active'
+                                                    activeStyle={{ color: '#0F26AA' }}
+                                                    className='text-blue font-semibold text-base no-underline hover:underline flex flex-row justify-center'
+                                                >
+                                                    Cloud Storage Misconfigurations Whitepaper&nbsp;
+                                                    <img
+                                                        src={ArrowRight}
+                                                        className='w-5 h-auto'
+                                                        alt='arrow right icon'
+                                                    />
+                                                </Link>
                                             </p>
                                         </div>
                                     </div>

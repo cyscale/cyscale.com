@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react';
 
 import Seo from '../Seo';
-import Footer from './footer';
 import Header from './header';
 import GlobalContext from '../../context/GlobalContext';
 import useHubspotEvents from '../../common/hbspotEvents';
 import CookiesBanner from '../cookies-banner/CookiesBanner';
 import { CookiesProvider, useCookies } from 'react-cookie';
+import loadable from '@loadable/component';
+const Footer = loadable(() => import('./footer'))
+
+
 
 const Layout = ({
     children,
