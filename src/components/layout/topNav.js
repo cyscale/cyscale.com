@@ -93,11 +93,11 @@ const TopNav = ({ pageName }) => {
     `);
 
     useEffect(() => {
-        if(pageName === 'HomePage') {
+        if (pageName === 'HomePage') {
             const timer = setTimeout(() => setShowBurgerButton(true), 500);
             return () => clearTimeout(timer);
         }
-    }, [])
+    }, [pageName]);
 
     let jobs = data.allMarkdownRemark.nodes;
     const rootClasses = !trigger ? 'translate-y-0' : '-translate-y-full';
@@ -116,7 +116,9 @@ const TopNav = ({ pageName }) => {
                             </Link>
                             <button
                                 type='button'
-                                className={`absolute right-0 top-6 xl:hidden ${showBurgerButton ? 'inline-block' : 'hidden'}`}
+                                className={`absolute right-0 top-6 xl:hidden ${
+                                    showBurgerButton ? 'inline-block' : 'hidden'
+                                }`}
                                 onClick={toggleMenuIcon}
                             >
                                 <img src={menu.Icon} alt='toggle menu' />
