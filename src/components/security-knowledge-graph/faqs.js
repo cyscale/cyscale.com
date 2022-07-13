@@ -25,7 +25,7 @@ const FAQs = ({ id }) => {
                                 free trial
                             </Link>
                         ) : (
-                            <a href="https://cyscale.com/pricing/">free trial</a>
+                            <a href='https://cyscale.com/pricing/'>free trial</a>
                         )}
                     </>,
                     ' - it speaks for itself!'
@@ -60,7 +60,9 @@ const FAQs = ({ id }) => {
                                 "@type": "Question",
                                 "acceptedAnswer": {
                                     "@type": "Answer",
-                                    "text": ${JSON.stringify(ReactDOMServer.renderToStaticMarkup(dataFAQs(false)[0].answer))}
+                                    "text": ${JSON.stringify(
+                                        ReactDOMServer.renderToStaticMarkup(dataFAQs(false)[0].answer)
+                                    )}
                                 },
                                 "name": "${dataFAQs(false)[0].question}"
                             },
@@ -68,7 +70,9 @@ const FAQs = ({ id }) => {
                                 "@type": "Question",
                                 "acceptedAnswer": {
                                     "@type": "Answer",
-                                    "text": ${JSON.stringify(ReactDOMServer.renderToStaticMarkup(dataFAQs(false)[1].answer))}
+                                    "text": ${JSON.stringify(
+                                        ReactDOMServer.renderToStaticMarkup(dataFAQs(false)[1].answer)
+                                    )}
                                 },
                                 "name": "${dataFAQs(false)[1].question}"
                             },
@@ -76,7 +80,9 @@ const FAQs = ({ id }) => {
                                 "@type": "Question",
                                 "acceptedAnswer": {
                                     "@type": "Answer",
-                                    "text": ${JSON.stringify(ReactDOMServer.renderToStaticMarkup(dataFAQs(false)[2].answer))}
+                                    "text": ${JSON.stringify(
+                                        ReactDOMServer.renderToStaticMarkup(dataFAQs(false)[2].answer)
+                                    )}
                                 },
                                 "name": "${dataFAQs(false)[2].question}"
                             },
@@ -84,7 +90,9 @@ const FAQs = ({ id }) => {
                                 "@type": "Question",
                                 "acceptedAnswer": {
                                     "@type": "Answer",
-                                    "text": ${JSON.stringify(ReactDOMServer.renderToStaticMarkup(dataFAQs(false)[3].answer))}
+                                    "text": ${JSON.stringify(
+                                        ReactDOMServer.renderToStaticMarkup(dataFAQs(false)[3].answer)
+                                    )}
                                 },
                                 "name": "${dataFAQs(false)[3].question}"
                             }
