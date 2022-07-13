@@ -131,3 +131,134 @@
     background-size: contain;
     background-image: url(../images/white-symbol.svg);
 }
+
+.banner {
+    -webkit-box-shadow: 7px -7px 7px 0px rgba(50, 50, 50, 0.36);
+    -moz-box-shadow:    7px -7px 7px 0px rgba(50, 50, 50, 0.36);
+    box-shadow:         7px -7px 7px 0px rgba(50, 50, 50, 0.36);
+    z-index: 100;
+    background: white;;
+    height: 120px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    color: white;
+}
+
+.banner-enter {
+    z-index: 100;
+    transform: translateY(100%);
+    background: white;
+    height: 0;
+    width: 100%;
+}
+
+.banner-enter-active {
+    z-index: 100;
+    transform: translateY(0);
+    transition: transform 0.3s linear;
+    height: 120px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+.banner-exit {
+    z-index: 100;
+    transform: translateY(0);
+    background: white;
+    height: 120px;
+    width: 100%;
+    bottom: 0;
+}
+
+.banner-exit-active {
+    z-index: 100;
+    width: 100%;
+    transform: translateY(100%);
+    transition: transform 0.3s linear;
+    background: white;
+    position: fixed;
+    height: 120px;
+}
+
+.overlay {
+    z-index: 100;
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+input:checked ~ .dot {
+    transform: translateX(100%);
+    background-color: #0f26aa;
+}
+
+.bg-switch-selected {
+    background-color: #717bba;
+}
+
+.bg-switch-unselected {
+    background-color: #BFBFBF;
+}
+
+.bg-dot-switch-selected {
+    background-color: #0f26aa;
+}
+
+.content-modal-container {
+    height: calc(100vh - 13rem);
+}
+
+
+.border-t-confirm-buttons {
+    border-top: 1px solid #E6E6E6;
+}
+
+.border-element-modal {
+    border: 1px solid #b7b7b7;
+}
+
+.modal-overlay {
+    z-index: 101;
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (min-width: 639px) {
+    .cookies-modal {
+        height: 40rem;
+        z-index: 102;
+    }
+}
+
+.modal-enter {
+    opacity: 0;
+    transform: scale(0.9);
+}
+.modal-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 300ms, transform 300ms;
+}
+.modal-exit {
+    opacity: 1;
+}
+.modal-exit-active {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 300ms, transform 300ms;
+}
