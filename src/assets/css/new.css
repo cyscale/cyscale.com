@@ -132,7 +132,7 @@
     background-image: url(../images/white-symbol.svg);
 }
 
-.visible {
+.banner {
     -webkit-box-shadow: 7px -7px 7px 0px rgba(50, 50, 50, 0.36);
     -moz-box-shadow:    7px -7px 7px 0px rgba(50, 50, 50, 0.36);
     box-shadow:         7px -7px 7px 0px rgba(50, 50, 50, 0.36);
@@ -145,7 +145,7 @@
     color: white;
 }
 
-.visible-enter {
+.banner-enter {
     z-index: 100;
     transform: translateY(100%);
     background: white;
@@ -153,7 +153,7 @@
     width: 100%;
 }
 
-.visible-enter-active {
+.banner-enter-active {
     z-index: 100;
     transform: translateY(0);
     transition: transform 0.3s linear;
@@ -163,7 +163,7 @@
     bottom: 0;
 }
 
-.visible-exit {
+.banner-exit {
     z-index: 100;
     transform: translateY(0);
     background: white;
@@ -172,7 +172,7 @@
     bottom: 0;
 }
 
-.visible-exit-active {
+.banner-exit-active {
     z-index: 100;
     width: 100%;
     transform: translateY(100%);

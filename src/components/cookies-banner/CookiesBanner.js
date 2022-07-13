@@ -22,8 +22,8 @@ const CookiesBanner = ({ cookiesBanner, setCookiesBanner }) => {
         <div className='CookieConsent'>
             {cookiesBanner && <div className='overlay'></div>}
             <FocusLock>
-                <CSSTransition in={cookiesBanner} timeout={300} classNames='visible' unmountOnExit>
-                    <div className='visible h-96 sm:h-56 md:h-44 lg:h-36'>
+                <CSSTransition in={cookiesBanner} timeout={300} classNames='banner' unmountOnExit>
+                    <div className='banner h-96 sm:h-56 md:h-44 lg:h-36'>
                         <div className='grid grid-rows-12 h-full'>
                             <div className='col-span-12 md:col-start-1 md:col-end-6 lg:max-w-2xl xl:max-w-4xl 2xl:max-w-7xl flex items-center px-3'>
                                 <div>
