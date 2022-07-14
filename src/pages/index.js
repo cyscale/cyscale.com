@@ -1,12 +1,9 @@
 import React from 'react';
 
-import { useAppLink } from '../common/links';
 import Home from '../components/Home';
 import Layout from '../components/layout/layout.js';
 
 const HomePage = ({ location }) => {
-    const appLink = useAppLink({location});
-
     return (
         <Layout
             location={location}

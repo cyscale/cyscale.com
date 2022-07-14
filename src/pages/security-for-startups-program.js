@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Layout from '../components/layout/CleanLayout';
+import { useAppLink } from '../common/links';
 import { Container, Row } from '../components/atoms/Containers';
 import { Helmet } from 'react-helmet';
 import classNames from 'classnames';
@@ -84,6 +85,7 @@ const q2 = (component) => {
 };
 
 const SecurityForStartupsProgram = ({ location }) => {
+    const appLink = useAppLink({ location });
     const [active, setActive] = useState(-1);
 
     const data = useStaticQuery(graphql`
@@ -405,22 +407,22 @@ const SecurityForStartupsProgram = ({ location }) => {
                                                     {q.question}
                                                 </h3>
 
-                                                <button
-                                                    onClick={() => setActive((s) => (s === key ? null : key))}
-                                                    className='rounded-full w-6 h-6 pt-px flex items-center justify-center hover:opacity-80 transition-opacity ml-auto'
-                                                >
-                                                    <img
-                                                        className={classNames('transform transition-all', {
-                                                            '-rotate-90': active !== key,
-                                                            'rotate-270': active === key
-                                                        })}
-                                                        src={active === key ? collapse : expand}
-                                                        alt='decoration'
-                                                        width={12}
-                                                        height={12}
-                                                    />
-                                                </button>
-                                            </div>
+                                            <button
+                                                onClick={() => setActive((s) => (s === key ? null : key))}
+                                                className='rounded-full w-6 h-6 pt-px flex items-center justify-center hover:opacity-80 transition-opacity ml-auto'
+                                            >
+                                                <img
+                                                    className={classNames('transform transition-all', {
+                                                        '-rotate-90': active !== key,
+                                                        'rotate-270': active === key
+                                                    })}
+                                                    src={active === key ? collapse : expand}
+                                                    alt='decoration'
+                                                    width={12}
+                                                    height={12}
+                                                />
+                                            </button>
+                                        </div>
 
                                             <p
                                                 className={classNames('mt-4 pl-2', {
@@ -447,62 +449,57 @@ const SecurityForStartupsProgram = ({ location }) => {
                                                     {q.question}
                                                 </h3>
 
-                                                <button
-                                                    onClick={() => setActive((s) => (s === key + 3 ? null : key + 3))}
-                                                    className='rounded-full w-6 h-6 pt-px flex items-center justify-center hover:opacity-80 transition-opacity ml-auto'
-                                                >
-                                                    <img
-                                                        className={classNames('transform transition-all', {
-                                                            '-rotate-90': active !== key + 3,
-                                                            'rotate-270': active === key + 3
-                                                        })}
-                                                        src={active === key + 3 ? collapse : expand}
-                                                        alt='decoration'
-                                                        width={12}
-                                                        height={12}
-                                                    />
-                                                </button>
-                                            </div>
-
-                                            <p
-                                                className={classNames('mt-4 pl-2', {
-                                                    block: active === key + 3,
-                                                    hidden: active !== key + 3
-                                                })}
+                                            <button
+                                                onClick={() => setActive((s) => (s === key + 3 ? null : key + 3))}
+                                                className='rounded-full w-6 h-6 pt-px flex items-center justify-center hover:opacity-80 transition-opacity ml-auto'
                                             >
-                                                {q.answer}
-                                            </p>
+                                                <img
+                                                    className={classNames('transform transition-all', {
+                                                        '-rotate-90': active !== key + 3,
+                                                        'rotate-270': active === key + 3
+                                                    })}
+                                                    src={active === key + 3 ? collapse : expand}
+                                                    alt='decoration'
+                                                    width={12}
+                                                    height={12}
+                                                />
+                                            </button>
                                         </div>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-                    </Container>
-                </div>
-                <Container>
-                    <div className='pt-12 pb-24 lg:pt-32 lg:pb-32'>
-                        <div className='flex h-48 flex-col items-center'>
-                            <img src={cloudIcon} alt='Cloud Icon' />
-                            <h1 className='text-center px-2 mb-2'>
-                                Do not postpone the implementation of your Security Program.
-                            </h1>
-                            <h1 className='text-center px-1'>
-                                <strong>Let us help you now so that you can reach your potential!</strong>
-                            </h1>
-                            <div className='mt-6 w-auto inline-block'>
-                                <button
-                                    className='gradientBgBtn w-full block text-base font-medium rounded text-white uppercase text-center py-5 px-24 hover:no-underline no-underline'
-                                    onClick={() => animateScroll.scrollToTop()}
-                                >
-                                    Apply Now
-                                </button>
+
+                                        <p className={classNames('mt-4 pl-2', {
+                                            block: active === key + 3,
+                                            hidden: active !== key + 3
+                                        })}>
+                                            {q.answer}
+                                        </p>
+                                    </div>
+                                ))}
                             </div>
                         </div>
                     </div>
                 </Container>
-            </Layout>
-        </>
-    );
+            </div>
+            <Container>
+                <div className='pt-12 pb-24 lg:pt-32 lg:pb-32'>
+                    <div className='flex h-48 flex-col items-center'>
+                        <img src={cloudIcon} alt='Cloud Icon' />
+                        <h1 className='text-center px-2 mb-2'>Do not postpone the implementation of your Security
+                            Program.</h1>
+                        <h1 className='text-center px-1'><strong>Let us help you now so that you can reach your
+                            potential!</strong></h1>
+                        <div className='mt-6 w-auto inline-block'>
+                            <button
+                                className='gradientBgBtn w-full block text-base font-medium rounded text-white uppercase text-center py-5 px-24 hover:no-underline no-underline'
+                                onClick={() => animateScroll.scrollToTop()}
+                            >
+                                Apply Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </Container>
+        </Layout>
+    </>);
 };
 
 export default SecurityForStartupsProgram;
