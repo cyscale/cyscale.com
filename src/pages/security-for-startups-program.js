@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Layout from '../components/layout/CleanLayout';
-import { useAppLink } from '../common/links';
 import { Container, Row } from '../components/atoms/Containers';
 import { Helmet } from 'react-helmet';
 import classNames from 'classnames';
@@ -51,7 +50,7 @@ const q1 = () => {
     ];
 };
 
-const q2 = (component) => {
+const q2 = (useReactComponent) => {
     return [
         {
             question: 'How do I apply?',
@@ -66,7 +65,7 @@ const q2 = (component) => {
             answer: (
                 <p className='mb-4'>
                     The{' '}
-                    {component ? (
+                    {useReactComponent ? (
                         <Link className='underline' to='/security-for-startups-program'>
                             Cyscale for Startups{' '}
                         </Link>
@@ -85,7 +84,6 @@ const q2 = (component) => {
 };
 
 const SecurityForStartupsProgram = ({ location }) => {
-    const appLink = useAppLink({ location });
     const [active, setActive] = useState(-1);
 
     const data = useStaticQuery(graphql`
@@ -134,6 +132,7 @@ const SecurityForStartupsProgram = ({ location }) => {
         <>
             <Layout location={location} pageName='Startups' title='Startups Program' description='Startups Program'>
                 <Helmet>
+                    <script charSet='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js'></script>
                     <script type='application/ld+json' data-rh='true'>{`{
                         "@context": "https://schema.org",
                         "@type": "FAQPage",

@@ -9,14 +9,14 @@ import { Helmet } from 'react-helmet';
 const FAQs = ({ id }) => {
     const [tabActive, setTabActive] = useState(0);
 
-    const dataFAQs = (component) => {
+    const dataFAQs = (useReactComponent) => {
         return [
             {
                 question: ['01. Do you use AI for your Knowledge Graph?'],
                 answer: [
                     "Cyscale Security Knowledge Graph™ infers each digital asset's category based on a classification engine. While it is not a fully-fledged AI, we're building towards it.\n\nSince the knowledge graph is a data model extremely rich in applications and possibilities, we're constantly tapping into its potential to build features that deliver immense value for your organization. See how it works during the ",
                     <>
-                        {component ? (
+                        {useReactComponent ? (
                             <Link
                                 to='/pricing/'
                                 className=' text-blue underline text-16px hover:no-underline hover:text-red'

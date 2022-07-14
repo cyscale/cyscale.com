@@ -6,7 +6,7 @@ import arrow from '../../assets/images/arrow-left.svg';
 import classNames from 'classnames';
 import { Helmet } from 'react-helmet';
 
-const qas = (component) => {
+const qas = (useReactComponent) => {
     return [
         {
             question: 'What is a Cloud Security Posture Management (CSPM) tool?',
@@ -16,7 +16,7 @@ const qas = (component) => {
                         CSPM is a group of security tools and technologies that empower security users to identify and
                         remediate risk and misconfigurations in their cloud environments.
                     </p>
-                    {component ? (
+                    {useReactComponent ? (
                         <Link className='underline' to='/blog/cloud-security-posture-management-cspm-guide/'>
                             Read more in our guide
                         </Link>
@@ -76,7 +76,7 @@ const qas = (component) => {
                         reduce the time and effort required by manual remediation, at the same time enabling evidence
                         collection.
                     </p>
-                    {component ? (
+                    {useReactComponent ? (
                         <Link className='underline' to='/blog/cloud-security-posture-management-cspm-guide/'>
                             Read more in our guide
                         </Link>
