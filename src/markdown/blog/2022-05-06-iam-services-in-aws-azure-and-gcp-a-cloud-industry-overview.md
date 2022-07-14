@@ -117,7 +117,7 @@ In GCP, permissions cannot be applied to principals directly. Instead, principal
 
 Below, you can see a diagram of the IAM components found in Google Cloud. 
 
-![GCP IAM Components](/img/gcp-iam.png "GCP IAM Components")
+![GCP IAM Components](/img/gcp-iam.png#shadow "GCP IAM Components")
 
 Image source – [Google Cloud Platform](https://cloud.google.com/iam/docs/overview) 
 
