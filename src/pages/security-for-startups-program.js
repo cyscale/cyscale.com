@@ -10,69 +10,78 @@ import collapse from '../assets/images/collapse-startups.svg';
 import cloudIcon from '../assets/images/cloud-icon.svg';
 import ScrollButtonStartups from '../components/ScrollButton/ScrollButtonStartups';
 import { animateScroll } from 'react-scroll';
+import ReactDOMServer from 'react-dom/server';
 
-const q1 = [
-    {
-        question: 'What is Cyscale for Startups?',
-        answer: (
-            <p className='mb-4'>
-                It is a program designed for fast-growing startups. The purpose is to raise awareness about the
-                importance of cloud security and support early-stage companies that cannot afford the purchase of
-                security tools.
-            </p>
-        )
-    },
-    {
-        question: 'What are the eligibility requirements?',
-        answer: (
-            <>
-                <p>
-                    If the startup has raised under $2 million in funding, it is eligible for the 6 months free + 6
-                    months at a discounted price (75% discount) program.
-                </p>
-                <p className='mb-4'>In addition, the startup should not be older than five years.</p>
-            </>
-        )
-    },
-    {
-        question: 'What if you raised more than $2 million in funding?',
-        answer: (
-            <>
+const q1 = () => {
+    return [
+        {
+            question: 'What is Cyscale for Startups?',
+            answer: (
                 <p className='mb-4'>
-                    In this case, you will be eligible for a contract of 3 months free + 9 months at a discounted price
-                    (75% discount).
+                    It is a program designed for fast-growing startups. The purpose is to raise awareness about the
+                    importance of cloud security and support early-stage companies that cannot afford the purchase of
+                    security tools.
                 </p>
-            </>
-        )
-    }
-];
+            )
+        },
+        {
+            question: 'What are the eligibility requirements?',
+            answer: (
+                <>
+                    <p>
+                        If the startup has raised under $2 million in funding, it is eligible for the 6 months free + 6
+                        months at a discounted price (75% discount) program.
+                    </p>
+                    <p className='mb-4'>In addition, the startup should not be older than five years.</p>
+                </>
+            )
+        },
+        {
+            question: 'What if you raised more than $2 million in funding?',
+            answer: (
+                <>
+                    <p className='mb-4'>
+                        In this case, you will be eligible for a contract of 3 months free + 9 months at a discounted
+                        price (75% discount).
+                    </p>
+                </>
+            )
+        }
+    ];
+};
 
-const q2 = [
-    {
-        question: 'How do I apply?',
-        answer: (
-            <>
-                <p className='mb-4'>You can submit your application directly on our webpage.</p>
-            </>
-        )
-    },
-    {
-        question: 'What is the duration of the contract?',
-        answer: (
-            <p className='mb-4'>
-                The{' '}
-                <Link className='underline' to='/security-for-startups-program'>
-                    Cyscale for Startups{' '}
-                </Link>
-                Program contract has an annual duration. (6 months free + 6 months at a discounted price)
-            </p>
-        )
-    },
-    {
-        question: 'Can I terminate the contract earlier than one year?',
-        answer: <p className='mb-4'>Yes, you can. You need to contact our team about this.</p>
-    }
-];
+const q2 = (useReactComponent) => {
+    return [
+        {
+            question: 'How do I apply?',
+            answer: (
+                <>
+                    <p className='mb-4'>You can submit your application directly on our webpage.</p>
+                </>
+            )
+        },
+        {
+            question: 'What is the duration of the contract?',
+            answer: (
+                <p className='mb-4'>
+                    The{' '}
+                    {useReactComponent ? (
+                        <Link className='underline' to='/security-for-startups-program'>
+                            Cyscale for Startups{' '}
+                        </Link>
+                    ) : (
+                        <a href='https://cyscale.com/security-for-startups-program'>Cyscale for Startups</a>
+                    )}
+                    Program contract has an annual duration. (6 months free + 6 months at a discounted price)
+                </p>
+            )
+        },
+        {
+            question: 'Can I terminate the contract earlier than one year?',
+            answer: <p className='mb-4'>Yes, you can. You need to contact our team about this.</p>
+        }
+    ];
+};
 
 const SecurityForStartupsProgram = ({ location }) => {
     const [active, setActive] = useState(-1);
@@ -123,7 +132,61 @@ const SecurityForStartupsProgram = ({ location }) => {
         <>
             <Layout location={location} pageName='Startups' title='Startups Program' description='Startups Program'>
                 <Helmet>
-                    <script charset='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js'></script>
+                    <script charSet='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js'></script>
+                    <script type='application/ld+json' data-rh='true'>{`{
+                        "@context": "https://schema.org",
+                        "@type": "FAQPage",
+                        "mainEntity": [
+                            {
+                                "@type": "Question",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": ${JSON.stringify(ReactDOMServer.renderToStaticMarkup(q1()[0].answer))}
+                                },
+                                "name": "${q1()[0].question}"
+                            },
+                            {
+                                "@type": "Question",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": ${JSON.stringify(ReactDOMServer.renderToStaticMarkup(q1()[1].answer))}
+                                },
+                                "name": "${q1()[1].question}"
+                            },
+                            {
+                                "@type": "Question",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": ${JSON.stringify(ReactDOMServer.renderToStaticMarkup(q1()[2].answer))}
+                                },
+                                "name": "${q1()[2].question}"
+                            },
+                            {
+                                "@type": "Question",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": ${JSON.stringify(ReactDOMServer.renderToStaticMarkup(q2(false)[0].answer))}
+                                },
+                                "name": "${q2(false)[0].question}"
+                            },
+                            {
+                                "@type": "Question",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": ${JSON.stringify(ReactDOMServer.renderToStaticMarkup(q2(false)[1].answer))}
+                                },
+                                "name": "${q2(false)[1].question}"
+                            },
+                            {
+                                "@type": "Question",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": ${JSON.stringify(ReactDOMServer.renderToStaticMarkup(q2(false)[2].answer))}
+                                },
+                                "name": "${q2(false)[2].question}"
+                            }
+                        ]
+                    }`}</script>
                 </Helmet>
                 <div className='bg-pouring pt-8'>
                     <Container>
@@ -330,34 +393,35 @@ const SecurityForStartupsProgram = ({ location }) => {
                             </div>
                             <div className='grid grid-cols-12 gap-x-5'>
                                 <div className='col-span-12 lg:col-span-6 lg:mx-0'>
-                                    {q1.map((q, key) => (
+                                    {q1().map((q, key) => (
                                         <div
                                             className='mx-auto mb-0 p-4 max-w-lg lg:max-w-2xl mb-4 rounded-xl relative bg-white'
                                             key={key}
                                         >
                                             <div className='flex'>
-                                                <h3 className='font-medium  text-base sm:text-lg mb-0 pl-2 leading-snug cursor-pointer select-none'>
-                                                    <button onClick={() => setActive((s) => (s === key ? null : key))}>
-                                                        {q.question}
-                                                    </button>
+                                                <h3
+                                                    className='font-medium  text-base sm:text-lg mb-0 pl-2 leading-snug cursor-pointer select-none'
+                                                    onClick={() => setActive((s) => (s === key ? null : key))}
+                                                >
+                                                    {q.question}
                                                 </h3>
 
-                                                <button
-                                                    onClick={() => setActive((s) => (s === key ? null : key))}
-                                                    className='rounded-full w-6 h-6 pt-px flex items-center justify-center hover:opacity-80 transition-opacity ml-auto'
-                                                >
-                                                    <img
-                                                        className={classNames('transform transition-all', {
-                                                            '-rotate-90': active !== key,
-                                                            'rotate-270': active === key
-                                                        })}
-                                                        src={active === key ? collapse : expand}
-                                                        alt='decoration'
-                                                        width={12}
-                                                        height={12}
-                                                    />
-                                                </button>
-                                            </div>
+                                            <button
+                                                onClick={() => setActive((s) => (s === key ? null : key))}
+                                                className='rounded-full w-6 h-6 pt-px flex items-center justify-center hover:opacity-80 transition-opacity ml-auto'
+                                            >
+                                                <img
+                                                    className={classNames('transform transition-all', {
+                                                        '-rotate-90': active !== key,
+                                                        'rotate-270': active === key
+                                                    })}
+                                                    src={active === key ? collapse : expand}
+                                                    alt='decoration'
+                                                    width={12}
+                                                    height={12}
+                                                />
+                                            </button>
+                                        </div>
 
                                             <p
                                                 className={classNames('mt-4 pl-2', {
@@ -371,78 +435,70 @@ const SecurityForStartupsProgram = ({ location }) => {
                                     ))}
                                 </div>
                                 <div className='col-span-12 lg:col-span-6 lg:mx-0'>
-                                    {q2.map((q, key) => (
+                                    {q2(true).map((q, key) => (
                                         <div
                                             className='mx-auto mb-0 p-4 max-w-lg lg:max-w-2xl mb-4 rounded-xl relative bg-white'
                                             key={key}
                                         >
                                             <div className='flex'>
-                                                <h3 className='font-medium  text-base sm:text-lg mb-0 pl-2 leading-snug cursor-pointer select-none'>
-                                                    <button
-                                                        onClick={() =>
-                                                            setActive((s) => (s === key + 3 ? null : key + 3))
-                                                        }
-                                                    >
-                                                        {q.question}
-                                                    </button>
+                                                <h3
+                                                    className='font-medium  text-base sm:text-lg mb-0 pl-2 leading-snug cursor-pointer select-none'
+                                                    onClick={() => setActive((s) => (s === key + 3 ? null : key + 3))}
+                                                >
+                                                    {q.question}
                                                 </h3>
 
-                                                <button
-                                                    onClick={() => setActive((s) => (s === key + 3 ? null : key + 3))}
-                                                    className='rounded-full w-6 h-6 pt-px flex items-center justify-center hover:opacity-80 transition-opacity ml-auto'
-                                                >
-                                                    <img
-                                                        className={classNames('transform transition-all', {
-                                                            '-rotate-90': active !== key + 3,
-                                                            'rotate-270': active === key + 3
-                                                        })}
-                                                        src={active === key + 3 ? collapse : expand}
-                                                        alt='decoration'
-                                                        width={12}
-                                                        height={12}
-                                                    />
-                                                </button>
-                                            </div>
-
-                                            <p
-                                                className={classNames('mt-4 pl-2', {
-                                                    block: active === key + 3,
-                                                    hidden: active !== key + 3
-                                                })}
+                                            <button
+                                                onClick={() => setActive((s) => (s === key + 3 ? null : key + 3))}
+                                                className='rounded-full w-6 h-6 pt-px flex items-center justify-center hover:opacity-80 transition-opacity ml-auto'
                                             >
-                                                {q.answer}
-                                            </p>
+                                                <img
+                                                    className={classNames('transform transition-all', {
+                                                        '-rotate-90': active !== key + 3,
+                                                        'rotate-270': active === key + 3
+                                                    })}
+                                                    src={active === key + 3 ? collapse : expand}
+                                                    alt='decoration'
+                                                    width={12}
+                                                    height={12}
+                                                />
+                                            </button>
                                         </div>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-                    </Container>
-                </div>
-                <Container>
-                    <div className='pt-12 pb-24 lg:pt-32 lg:pb-32'>
-                        <div className='flex h-48 flex-col items-center'>
-                            <img src={cloudIcon} alt='Cloud Icon' />
-                            <h1 className='text-center px-2 mb-2'>
-                                Do not postpone the implementation of your Security Program.
-                            </h1>
-                            <h1 className='text-center px-1'>
-                                <strong>Let us help you now so that you can reach your potential!</strong>
-                            </h1>
-                            <div className='mt-6 w-auto inline-block'>
-                                <button
-                                    className='gradientBgBtn w-full block text-base font-medium rounded text-white uppercase text-center py-5 px-24 hover:no-underline no-underline'
-                                    onClick={() => animateScroll.scrollToTop()}
-                                >
-                                    Apply Now
-                                </button>
+
+                                        <p className={classNames('mt-4 pl-2', {
+                                            block: active === key + 3,
+                                            hidden: active !== key + 3
+                                        })}>
+                                            {q.answer}
+                                        </p>
+                                    </div>
+                                ))}
                             </div>
                         </div>
                     </div>
                 </Container>
-            </Layout>
-        </>
-    );
+            </div>
+            <Container>
+                <div className='pt-12 pb-24 lg:pt-32 lg:pb-32'>
+                    <div className='flex h-48 flex-col items-center'>
+                        <img src={cloudIcon} alt='Cloud Icon' />
+                        <h1 className='text-center px-2 mb-2'>Do not postpone the implementation of your Security
+                            Program.</h1>
+                        <h1 className='text-center px-1'><strong>Let us help you now so that you can reach your
+                            potential!</strong></h1>
+                        <div className='mt-6 w-auto inline-block'>
+                            <button
+                                className='gradientBgBtn w-full block text-base font-medium rounded text-white uppercase text-center py-5 px-24 hover:no-underline no-underline'
+                                onClick={() => animateScroll.scrollToTop()}
+                            >
+                                Apply Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </Container>
+        </Layout>
+    </>);
 };
 
 export default SecurityForStartupsProgram;
