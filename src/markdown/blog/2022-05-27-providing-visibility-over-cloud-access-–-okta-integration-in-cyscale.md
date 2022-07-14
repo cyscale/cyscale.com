@@ -129,7 +129,7 @@ Cyscale offers a powerful Identity Dashboard where you can see in one combined v
 
 You can check out a preview of the Identity Dashboard in the image below: 
 
-![The identity page in Cyscale](/img/1_blurred.png "The identity page in Cyscale")
+![The identity page in Cyscale](/img/1_blurred.png#shadow "The identity page in Cyscale")
 
 After expanding any of the identity rows from the illustration, we can now see the accounts an entity has access to, along with their level of privilege and other important information that you should not miss. 
 
@@ -137,7 +137,7 @@ By integrating with an identity provider, Cyscale offers more context and a bet
 
 For example, in the view below, it is easy to take note of identities in your organization that present the most risk. 
 
-![The identity page in Cyscale](/img/2_blurred.png "The identity page in Cyscale")
+![The identity page in Cyscale](/img/2_blurred.png#shadow "The identity page in Cyscale")
 
 The Okta integration is very well rounded for AWS, and more support will be available soon for other providers as well.  
 

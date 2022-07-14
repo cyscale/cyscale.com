@@ -66,7 +66,7 @@ Discovery and visibility in cloud imply being able to visualize cloud assets in 
 
 Even more useful is when visibility for each asset is enriched by additional context that may be provided in a graph view.
 
-![A graph from the Cyscale application.](/img/graph_image.png "The Cyscale Security Knowledge Graph™")
+![A graph from the Cyscale application.](/img/graph_image.png#shadow "The Cyscale Security Knowledge Graph™")
 
 Looking at: 
 

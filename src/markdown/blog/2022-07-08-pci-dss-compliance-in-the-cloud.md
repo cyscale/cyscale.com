@@ -155,11 +155,11 @@ These requirements can be implemented in no time using Cyscale controls and the 
 
 Below, you can see a small part of the PCI-DSS standard page from the Cyscale platform, along with the first two requirements from the list we’ve discussed. 
 
-![The PCI-DSS page in Cyscale](/img/1.png "The PCI-DSS page in Cyscale")
+![The PCI-DSS page in Cyscale](/img/1.png#shadow "The PCI-DSS page in Cyscale")
 
 We see a description and the controls necessary to ensure compliance by expanding the first requirement. The controls also contain steps on how to implement them. 
 
-![The first requirement in PCI-DSS in Cyscale](/img/2.png "The first requirement in PCI-DSS in Cyscale")
+![The first requirement in PCI-DSS in Cyscale](/img/2.png#shadow "The first requirement in PCI-DSS in Cyscale")
 
 ## Compliance levels 
 

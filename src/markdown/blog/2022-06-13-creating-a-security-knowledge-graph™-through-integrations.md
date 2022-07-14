@@ -66,7 +66,7 @@ Below, you can see an example of a Security Knowledge Graph™.  
 
 Notice how a very complex system with intricate relationships and hidden vulnerabilities is so much easier to understand and observe when looking at it in a graph. 
 
-![The Cyscale Security Knowledge Graph™](/img/2-general.png "The Cyscale Security Knowledge Graph™")
+![The Cyscale Security Knowledge Graph™](/img/2-general.png#shadow "The Cyscale Security Knowledge Graph™")
 
 ## Are you unsure if you need the Security Knowledge Graph™? 
 
@@ -84,7 +84,7 @@ When the employee leaves the company, they are offboarded from the HR portal, an
 
 However, since the Okta administrator did not correctly deprovision his account, the former employee **still has access to production code**. 
 
-![HR and identity providers scenario in a graph](/img/3-scenariu-1.png "The Cyscale Security Knowledge Graph™")
+![HR and identity providers scenario in a graph](/img/3-scenariu-1.png#shadow "The Cyscale Security Knowledge Graph™")
 
 ### Scenario 2: Misconfigured permissions 
 
@@ -94,7 +94,7 @@ They are mistaken for one another and instead of John, the software developer, i
 
 While trying to understand the reasoning behind this, Jonathan explores the account and accidentally **deletes a resource from the cloud**. 
 
-![Misconfigured permissions in graph](/img/4-scenariu-2.png "The Cyscale Security Knowledge Graph™")
+![Misconfigured permissions in graph](/img/4-scenariu-2.png#shadow "The Cyscale Security Knowledge Graph™")
 
 ### Scenario 3: False positives in vulnerability scans 
 
@@ -106,7 +106,7 @@ However, Log4J is only running in a private network, not accessible from the Int
 
 **Instead of securing Internet-facing applications and devices, engineers are distracted by less essential tasks** due to contextless alerts. 
 
-![False positives in vulnerability scans](/img/5-scenariu-3.png "The Cyscale Security Knowledge Graph™")
+![False positives in vulnerability scans](/img/5-scenariu-3.png#shadow "The Cyscale Security Knowledge Graph™")
 
 Keep in mind that these are some examples. There are plenty of other situations where contextual awareness is the best way to notice existing vulnerabilities before they become breaches. 
 
@@ -124,6 +124,6 @@ We currently integrate with: 
 
 There are many more integrations to come soon: AWS SSO, GitHub, Azure AD, Kubernetes, GSuite. 
 
-![Integrations in Cyscale](/img/6-tabel.png "Integrations in Cyscale")
+![Integrations in Cyscale](/img/6-tabel.png#shadow "Integrations in Cyscale")
 
 <!--EndFragment-->
