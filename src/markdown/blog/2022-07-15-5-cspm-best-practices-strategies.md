@@ -59,7 +59,7 @@ Below, you can see a section of Cyscale’s powerful dashboard, where you can al
 
 This inventory helps you keep track of assets and be aware of the different components in your cloud environment. 
 
-![Dashboard inventory in Cyscale](/img/inventory-dashboard.png#shadow "Dashboard inventory in Cyscale")
+![Dashboard inventory in Cyscale](/img/dashboard.png#shadow "Dashboard inventory in Cyscale")
 
 #### 2. Classify assets and prioritize the most important ones
 
