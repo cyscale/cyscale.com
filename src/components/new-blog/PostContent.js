@@ -16,7 +16,6 @@ import { Link } from 'gatsby';
 import axios from 'axios';
 import Swal from 'sweetalert2';
 import { useCookies } from 'react-cookie';
-import { useAppLink } from '../../common/links';
 
 export default function PostContent({ data, suggestions, preview = false, pageUri, pageName }) {
     const [emailInput, setEmailInput] = React.useState('');
