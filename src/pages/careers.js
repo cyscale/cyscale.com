@@ -312,7 +312,7 @@ const Careers = ({ location }) => {
                         Join us
                     </h6>
                     <div className='max-w-md mx-auto'>
-                        <Apply dispaly='column' jobs={jobs.map(({ title }) => title)} />
+                        <Apply dispaly='column' jobs={jobs.map(({ title }) => title)} jobTitle={jobs[0].title} />
                     </div>
                 </Container>
             </Section>
