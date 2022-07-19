@@ -177,7 +177,6 @@ const Apply = ({ jobTitle, jobs, dispaly = 'row' }) => {
                                                 onBlur={handleBlur}
                                                 placeholder='Job Title'
                                                 onChange={handleChange}
-                                                disabled={Boolean(jobTitle)}
                                                 className='block w-full  bg-white text-base'
                                             >
                                                 {jobs.map((v, key) => (
