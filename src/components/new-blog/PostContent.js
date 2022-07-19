@@ -16,6 +16,7 @@ import { Link } from 'gatsby';
 import axios from 'axios';
 import Swal from 'sweetalert2';
 import { useCookies } from 'react-cookie';
+import { useAppLink } from '../../common/links';
 
 export default function PostContent({ data, suggestions, preview = false, pageUri, pageName }) {
     const [emailInput, setEmailInput] = React.useState('');
@@ -27,10 +28,37 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
     };
 
     const isValidEmail = (email) => {
-        return /\S+@\S+\.\S+/.test(email);
+        const tester =
+            /^[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/;
+
+        if (!email) return false;
+
+        const emailParts = email.split('@');
+
+        if (emailParts.length !== 2) return false;
+
+        const account = emailParts[0];
+        const address = emailParts[1];
+
+        if (account.length > 64) return false;
+        else if (address.length > 255) return false;
+
+        const domainParts = address.split('.');
+        if (
+            domainParts.some(function (part) {
+                return part.length > 63;
+            })
+        )
+            return false;
+
+        if (!tester.test(email)) return false;
+
+        return true;
     };
 
-    const onSubmit = async () => {
+    const onSubmit = async (e) => {
+        e.preventDefault();
+
         if (emailInput === '') {
             return null;
         }
@@ -42,7 +70,7 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
 
         let context;
 
-        if (cookies.hubspotutk) {
+        if (cookies.hubspotutk || cookies.hubspotutk === '') {
             context = {
                 utk: cookies.hubspotutk,
                 pageName,
@@ -196,14 +224,18 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
                                     </div>
                                 </div>
                                 <div className='col-span-12 lg:col-span-6 lg:mx-0'>
-                                    <div className='mt-2 mb-8 lg:mt-0 lg:mb-0  max-w-lg lg:max-w-2xl mx-auto relative h:20 lg:h-16 flex flex-col lg:flex-row lg:items-end lg:px-0'>
+                                    <form
+                                        className='mt-2 mb-8 lg:mt-0 lg:mb-0  max-w-lg lg:max-w-2xl mx-auto relative h:20 lg:h-16 flex flex-col lg:flex-row lg:items-end lg:px-0'
+                                        onSubmit={onSubmit}
+                                        noValidate
+                                    >
                                         <input
                                             type='email'
                                             id='email'
                                             className={`bg-gray-50 border-element-modal text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ${
                                                 error ? 'mb-0' : 'mb-2'
                                             } lg:mb-0`}
-                                            placeholder='Your e-mail'
+                                            placeholder='Your email'
                                             onChange={onChange}
                                             value={emailInput}
                                         />
@@ -213,15 +245,15 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
                                             </p>
                                         )}
                                         <button
-                                            onClick={onSubmit}
+                                            type='submit'
                                             className='text-white gradientBgBtn hover:bg-blue-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded text-sm w-full lg:w-20 lg:ml-3 py-2.5'
                                         >
                                             <img src={arrowRight} className='mx-auto w-5 h-auto' />
                                         </button>
-                                    </div>
+                                    </form>
                                     {error && (
                                         <div className='hidden lg:block py-2'>
-                                            <p className='text-red text-xs'>Please enter a correct mail.</p>
+                                            <p className='text-red text-xs'> Please enter a valid email address.</p>
                                         </div>
                                     )}
                                 </div>
@@ -243,7 +275,7 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
                                 </div>
                             </div>
                         </div>
-                        <div className='mx_auto mt-24'>
+                        <div className='mx-auto mt-24'>
                             <div className='grid grid-cols-12 gap-x-5'>
                                 <div className='col-span-12 lg:col-span-8 lg:mx-0'>
                                     <div className='mt-6 lg:mt-0 rounded-xl  max-w-lg lg:max-w-2xl mx-auto relative bg-cta-playground h-64 sm:h-56 flex flex-col justify-center px-7'>
@@ -253,13 +285,14 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
                                             features and alerts - no setupt, no commitment.
                                         </p>
                                         <div className='mt-6 w-60 inline-block'>
-                                            <Link
-                                                to='https://app.cyscale.com/playground'
+                                            <a
+                                                href={`https://app.cyscale.com/playground?source=${pageUri}`}
                                                 className='w-full block font-medium rounded bg-white text-center py-3'
                                                 target='_blank'
+                                                rel='noopener noreferrer nofollow'
                                             >
                                                 Access Playground
-                                            </Link>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
