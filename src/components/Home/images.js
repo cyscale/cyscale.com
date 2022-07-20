@@ -58,7 +58,7 @@ function withImageData(WrappedComponent) {
                             gatsbyImageData(height: 75, layout: CONSTRAINED)
                         }
                     }
-                    pciDssCompliance: file(relativePath: { eq: "pci-dss-compliance.png" }) {
+                    pciDssComplianceHome: file(relativePath: { eq: "pci-dss-compliance-home.png" }) {
                         childImageSharp {
                             gatsbyImageData(height: 75, layout: CONSTRAINED)
                         }
@@ -269,8 +269,9 @@ export const USHipaa = withImageData(props => (
     />
 ));
 export const PciDss = withImageData(props => (
+
     <Img
-        image={props.imageData.pciDssCompliance.childImageSharp.gatsbyImageData}
+        image={props.imageData.pciDssComplianceHome.childImageSharp.gatsbyImageData}
         alt='PCI DSS Payment Card Industry Data Security Standard'
     />
 ));

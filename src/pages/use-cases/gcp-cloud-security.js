@@ -11,7 +11,7 @@ const GCPCloudSecurity = ({ location }) => {
 
     const data = useStaticQuery(graphql`
         query GCPCloudSecurityQuery {
-            dashboard: file(relativePath: { eq: "dashboard.png" }) {
+            dashboard: file(relativePath: { eq: "dashboard-gcp.png" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1080, layout: CONSTRAINED)
                 }
