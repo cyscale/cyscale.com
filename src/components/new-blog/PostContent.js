@@ -71,7 +71,7 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
 
         if (cookies.hubspotutk || cookies.hubspotutk === '') {
             context = {
-                utk: cookies.hubspotutk,
+                hutk: cookies.hubspotutk,
                 pageName,
                 pageUri
             };
