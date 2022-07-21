@@ -218,7 +218,7 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
                                     <div className='mt-2 lg:mt-0  max-w-lg lg:max-w-2xl mx-auto relative h-20 flex flex-col justify-center'>
                                         <p className='text-lg font-semibold'>Stay connected</p>
                                         <p className='text-sm'>
-                                            Receive new blog posts and product updates from Cyscale.
+                                            Receive new blog posts and product updates from Cyscale
                                         </p>
                                     </div>
                                 </div>
@@ -281,7 +281,7 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
                                         <h1 className='text-white text-2xl mb-4 font-semibold'>Product Playground</h1>
                                         <p className='text-white text-md'>
                                             View a fully-populated product demo. All <br className='hidden sm:block' />{' '}
-                                            features and alerts - no setupt, no commitment.
+                                            features - no setup, no commitment.
                                         </p>
                                         <div className='mt-6 w-60 inline-block'>
                                             <a
@@ -302,7 +302,7 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
                                         </div>
                                         <p className='text-lg font-semibold mb-2'>Schedule a Demo</p>
                                         <p className='text-md mb-2'>
-                                            Sign upema for a custom demo to see how we close security gaps and help you
+                                            Sign up for a custom demo to see how we close security gaps and help you
                                             move to the cloud.
                                         </p>
                                         <Link to='/request-demo' className='text-lg text-blue font-semibold'>
