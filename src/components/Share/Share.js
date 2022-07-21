@@ -4,24 +4,24 @@ const baseUrl = 'https://cyscale.com/blog/';
 
 export default function Share({ title, permalink }) {
     const platforms = {
-        twitter: {
-            name: 'Twitter',
-            shareUrl: `https://twitter.com/share?text=${title}: &url=${baseUrl + permalink}&via=cyscale`,
-            icon: <FaTwitter />
-        },
         linkedin: {
             name: 'LinkedIn',
             shareUrl: `https://www.linkedin.com/sharing/share-offsite/?url=${baseUrl + permalink}`,
             icon: <FaLinkedin />
+        },
+        twitter: {
+            name: 'Twitter',
+            shareUrl: `https://twitter.com/share?text=${title}: &url=${baseUrl + permalink}&via=cyscale`,
+            icon: <FaTwitter />
         }
     };
 
     return (
-        <div className='flex justify-between' >
+        <div className='flex justify-between ml-2' >
             {Object.values(platforms).map(({ name, shareUrl, icon }) => (
                 <a
                     href={shareUrl}
-                    className='p-3'
+                    className='py-3 px-2'
                     title={`Share on ${name}`}
                     onClick={(e) => {
                         e.preventDefault();
