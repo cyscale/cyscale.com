@@ -138,6 +138,12 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
         setEmailInput('');
     };
 
+    const onKeyDown = (e) => {
+        if (e.key === 'Enter') {
+            onSubmit(e);
+        }
+    };
+
     useEffect(() => {
         if (error) {
             const errorTimer = setTimeout(() => setError(null), 3000);
@@ -223,11 +229,7 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
                                     </div>
                                 </div>
                                 <div className='col-span-12 lg:col-span-6 lg:mx-0'>
-                                    <form
-                                        className='mt-2 mb-8 lg:mt-0 lg:mb-0  max-w-lg lg:max-w-2xl mx-auto relative h:20 lg:h-16 flex flex-col lg:flex-row lg:items-end lg:px-0'
-                                        onSubmit={onSubmit}
-                                        noValidate
-                                    >
+                                    <div className='mt-2 mb-8 lg:mt-0 lg:mb-0  max-w-lg lg:max-w-2xl mx-auto relative h:20 lg:h-16 flex flex-col lg:flex-row lg:items-end lg:px-0'>
                                         <input
                                             type='email'
                                             id='email'
@@ -237,6 +239,7 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
                                             placeholder='Your email'
                                             onChange={onChange}
                                             value={emailInput}
+                                            onKeyDown={onKeyDown}
                                         />
                                         {error && (
                                             <p className='text-red text-left text-xs inline-block lg:hidden py-2'>
@@ -246,10 +249,11 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
                                         <button
                                             type='submit'
                                             className='text-white gradientBgBtn hover:bg-blue-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded text-sm w-full lg:w-20 lg:ml-3 py-2.5'
+                                            onClick={onSubmit}
                                         >
                                             <img src={arrowRight} className='mx-auto w-5 h-auto' />
                                         </button>
-                                    </form>
+                                    </div>
                                     {error && (
                                         <div className='hidden lg:block py-2'>
                                             <p className='text-red text-xs'> Please enter a valid email address.</p>
