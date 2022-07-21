@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
-title: What is data classification and why it is important
-seoTitle: What is data classification and why it is important
+title: What Is Data Classification And Why Is It Important?
+seoTitle: What Is Data Classification And Why Is It Important?
 authors: Sabrina Lupșan
 permalink: data-classification
 categories:
