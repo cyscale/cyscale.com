@@ -70,22 +70,30 @@
         font-size: 2.7rem;
         line-height: 3.5rem;
     }
-    .h-advantages  {
+    .h-advantages {
         height: 32rem;
+    }
+    .bg-hero-campaigns-iam-security {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 35%;
+        background-image: url('../images/hero-campaigns-iam-security.png');
     }
 }
 
 @media screen and (max-width: 1024px) {
-    .bg-pouring, .bg-storage-misconfigurations {
-        background-image: linear-gradient(#EEEEEE, #E4EDFC);
+    .bg-pouring,
+    .bg-storage-misconfigurations,
+    .bg-hero-campaigns-iam-security {
+        background-image: linear-gradient(#eeeeee, #e4edfc);
     }
-    .h-advantages  {
+    .h-advantages {
         height: 32rem;
     }
 }
 
 @media screen and (min-width: 440px) and (max-width: 1023px) {
-    .h-asset-inventory  {
+    .h-asset-inventory {
         height: 40rem !important;
     }
 }
@@ -134,10 +142,10 @@
 
 .banner {
     -webkit-box-shadow: 7px -7px 7px 0px rgba(50, 50, 50, 0.36);
-    -moz-box-shadow:    7px -7px 7px 0px rgba(50, 50, 50, 0.36);
-    box-shadow:         7px -7px 7px 0px rgba(50, 50, 50, 0.36);
+    -moz-box-shadow: 7px -7px 7px 0px rgba(50, 50, 50, 0.36);
+    box-shadow: 7px -7px 7px 0px rgba(50, 50, 50, 0.36);
     z-index: 100;
-    background: white;;
+    background: white;
     height: 120px;
     width: 100%;
     position: fixed;
@@ -205,7 +213,7 @@ input:checked ~ .dot {
 }
 
 .bg-switch-unselected {
-    background-color: #BFBFBF;
+    background-color: #bfbfbf;
 }
 
 .bg-dot-switch-selected {
@@ -216,9 +224,8 @@ input:checked ~ .dot {
     height: calc(100vh - 13rem);
 }
 
-
 .border-t-confirm-buttons {
-    border-top: 1px solid #E6E6E6;
+    border-top: 1px solid #e6e6e6;
 }
 
 .border-element-modal {
@@ -263,6 +270,42 @@ input:checked ~ .dot {
     transition: opacity 300ms, transform 300ms;
 }
 
-img[src*="#shadow"] {
+img[src*='#shadow'] {
     box-shadow: 0 4px 15px 3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.bg-blue-gradient {
+    background-repeat: no-repeat;
+    background-image: linear-gradient(#e4edfc, #ffffff);
+}
+
+
+.navigation {
+    z-index: 100;
+    top: 36px;
+    position: absolute;
+    background-color: #eeeeee;
+    margin-left: calc(((100vw - 80rem) / 2) + 18rem);
+}
+
+.navigation-enter {
+    z-index: 100;
+    transform: translateX(100%);
+}
+
+.navigation-enter-active {
+    z-index: 100;
+    transform: translateX(0);
+    transition: transform 0.3s linear;
+}
+
+.navigation-exit {
+    z-index: 100;
+    transform: translateX(0);
+}
+
+.navigation-exit-active {
+    z-index: 100;
+    transform: translateX(100%);
+    transition: transform 0.3s linear;
 }
