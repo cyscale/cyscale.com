@@ -15,7 +15,12 @@ const BlodDetail = ({ pageContext, location }) => {
                 banner={data.featuredimage.publicURL}
                 description={data.seoDescription || data.description}
             >
-                <PostContent data={{ ...data, rawMarkdownBody }} suggestions={suggestions} />
+                <PostContent
+                    data={{ ...data, rawMarkdownBody }}
+                    suggestions={suggestions}
+                    pageUri={location?.pathname}
+                    pageName={data?.title}
+                />
             </Layout>
         </div>
     );

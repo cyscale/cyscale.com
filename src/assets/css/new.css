@@ -274,6 +274,12 @@ img[src*='#shadow'] {
     box-shadow: 0 4px 15px 3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
+.bg-cta-playground {
+    background-image: url(../images/cta-playground.png);
+    background-repeat: no-repeat;
+    background-position: 100% 0%;
+}
+
 .bg-blue-gradient {
     background-repeat: no-repeat;
     background-image: linear-gradient(#e4edfc, #ffffff);

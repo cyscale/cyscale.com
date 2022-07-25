@@ -3,7 +3,7 @@
     font-size: 1.1875rem;
 }
 .blog-reset p {
-    font-size: 1.1875rem;
+    font-size: 1rem;
     margin-top: 1.5rem;
 }
 
@@ -32,27 +32,27 @@
 }
 
 .blog-reset h1 {
-    font-size: 2.25rem;
+    font-size: 2rem;
 }
 
 .blog-reset h2 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
 }
 
 .blog-reset h3 {
-    font-size: 1.6rem;
+    font-size: 1.17rem;
 }
 
 .blog-reset h4 {
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 
 .blog-reset h5 {
-    font-size: 1.1875rem;
+    font-size: 0.83rem;
 }
 
 .blog-reset h6 {
-    font-size: 1rem;
+    font-size: 0.67rem;
 }
 
 .blog-reset small {
@@ -65,7 +65,7 @@
 
 .blog-reset ol,
 .blog-reset ul {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     list-style: initial;
     padding-left: 3rem;
 }
@@ -78,6 +78,7 @@
     line-height: 1.5;
     margin-top: 0rem;
     padding-left: 0.5rem;
+    font-size: 1rem;
 }
 
 .blog-reset code {

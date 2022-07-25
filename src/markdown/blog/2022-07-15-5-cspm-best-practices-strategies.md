@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: 5 CSPM Best Practices & Strategies
-seoTitle: 5 CSPM Best Practices & Strategies
+seoTitle: 5 CSPM Best Practices & Strategies - Cyscale
 authors: Sabrina Lupșan
 permalink: 5-cspm-best-practices-and-strategies
 categories:
@@ -32,7 +32,7 @@ tags:
 ---
 In the context of a constantly growing trend of worldwide cyberattacks and breaches, every company needs to secure its cloud environment and make sure they have a robust cloud security posture.  
 
-This article will look at best practices and strategies to mitigate cybersecurity risks and understand the importance of a CSPM tool. 
+This article will look at best practices and strategies to mitigate cybersecurity risks and understand the importance of a [CSPM tool](https://cyscale.com/products/cloud-security-posture-management/). 
 
 A CSPM (Cloud Security Posture Management) product is a component of cloud security that: 
 
