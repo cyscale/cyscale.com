@@ -14,13 +14,12 @@ import cyscaleMan from '../../assets/images/cyscale-man.svg';
 import arrowRight from '../../assets/images/arrow-right-1-white.svg';
 import { Link } from 'gatsby';
 import axios from 'axios';
-import Swal from 'sweetalert2';
 import { useCookies } from 'react-cookie';
 
 export default function PostContent({ data, suggestions, preview = false, pageUri, pageName }) {
     const [emailInput, setEmailInput] = React.useState('');
     const [cookies] = useCookies();
-    const [error, setError] = React.useState(null);
+    const [alert, setAlert] = React.useState(null);
 
     const onChange = (e) => {
         setEmailInput(e.target.value);
@@ -63,7 +62,7 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
         }
 
         if (!isValidEmail(emailInput)) {
-            setError(true);
+            setAlert({ message: 'Please enter a valid email address.', alertClass: 'text-red' });
             return null;
         }
 
@@ -119,20 +118,11 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
             )
             .then((res) => {
                 if (res.status === 200) {
-                    Swal.fire({
-                        title: "You're all set up!",
-                        icon: 'success',
-                        confirmButtonText: 'OK'
-                    });
+                    setAlert({ message: "You're all set up!", alertClass: 'text-blue' });
                 }
             })
             .catch((err) => {
-                Swal.fire({
-                    title: 'Error!',
-                    text: 'Something went wrong!',
-                    icon: 'error',
-                    confirmButtonText: 'OK'
-                });
+                setAlert({ message: 'Something went wrong!', alertClass: 'text-red' });
             });
 
         setEmailInput('');
@@ -145,11 +135,11 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
     };
 
     useEffect(() => {
-        if (error) {
-            const errorTimer = setTimeout(() => setError(null), 3000);
-            return () => clearTimeout(errorTimer);
+        if (alert) {
+            const alertTimer = setTimeout(() => setAlert(null), 3000);
+            return () => clearTimeout(alertTimer);
         }
-    }, [error]);
+    }, [alert]);
 
     return (
         <div>
@@ -234,16 +224,18 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
                                             type='email'
                                             id='email'
                                             className={`bg-gray-50 border-element-modal text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ${
-                                                error ? 'mb-0' : 'mb-2'
+                                                alert ? 'mb-0' : 'mb-2'
                                             } lg:mb-0`}
                                             placeholder='Your email'
                                             onChange={onChange}
                                             value={emailInput}
                                             onKeyDown={onKeyDown}
                                         />
-                                        {error && (
-                                            <p className='text-red text-left text-xs inline-block lg:hidden py-2'>
-                                                Please enter a valid email address.
+                                        {alert && (
+                                            <p
+                                                className={`${alert.alertClass} text-left text-xs inline-block lg:hidden py-2`}
+                                            >
+                                                {alert.message}
                                             </p>
                                         )}
                                         <button
@@ -254,9 +246,9 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
                                             <img src={arrowRight} className='mx-auto w-5 h-auto' />
                                         </button>
                                     </div>
-                                    {error && (
+                                    {alert && (
                                         <div className='hidden lg:block py-2'>
-                                            <p className='text-red text-xs'> Please enter a valid email address.</p>
+                                            <p className={`${alert.alertClass} text-xs`}> {alert.message}</p>
                                         </div>
                                     )}
                                 </div>
