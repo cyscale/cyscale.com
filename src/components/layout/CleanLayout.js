@@ -28,8 +28,8 @@ const Layout = ({ children, title, description, pageName, location, banner }) =>
                 </HeaderContext.Provider>
                 <main>{children}</main>
                 <Footer />
-                {Boolean(cookies?.CookiesConsent) !== true && location.pathname !== '/policies/privacy-policy/' && (
-                    <CookiesBanner cookiesBanner={cookiesBanner} setCookiesBanner={setCookiesBanner} />
+                {Boolean(cookies?.CookiesConsent) !== true && (
+                    <CookiesBanner cookiesBanner={cookiesBanner} setCookiesBanner={setCookiesBanner} pageName={pageName}/>
                 )}
             </GlobalContext.Provider>
         </CookiesProvider>

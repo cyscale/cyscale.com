@@ -5,7 +5,7 @@ import { Link } from 'gatsby';
 import CookiesModal from './cookies-modal/CookiesModal';
 import { useCookies } from 'react-cookie';
 
-const CookiesBanner = ({ cookiesBanner, setCookiesBanner }) => {
+const CookiesBanner = ({ cookiesBanner, setCookiesBanner, pageName }) => {
     const [cookiesModal, setCookiesModal] = useState(false);
     const [performanceAndAnalytics, setPerformanceAndAnalytics] = useState(true);
     const [, setCookie] = useCookies();
@@ -20,8 +20,8 @@ const CookiesBanner = ({ cookiesBanner, setCookiesBanner }) => {
 
     return (
         <div className='CookieConsent'>
-            {cookiesBanner && <div className='overlay'></div>}
-            <FocusLock>
+            {cookiesBanner && pageName !== 'privacyPolicy' && <div className='overlay'></div>}
+            <FocusLock disabled={pageName === 'privacyPolicy'}>
                 <CSSTransition in={cookiesBanner} timeout={300} classNames='banner' unmountOnExit>
                     <div className='banner h-96 sm:h-56 md:h-44 lg:h-36'>
                         <div className='grid grid-rows-12 h-full'>
