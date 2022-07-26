@@ -7,9 +7,7 @@ import useHubspotEvents from '../../common/hbspotEvents';
 import CookiesBanner from '../cookies-banner/CookiesBanner';
 import { CookiesProvider, useCookies } from 'react-cookie';
 import loadable from '@loadable/component';
-const Footer = loadable(() => import('./footer'))
-
-
+const Footer = loadable(() => import('./footer'));
 
 const Layout = ({
     children,
@@ -74,8 +72,8 @@ const Layout = ({
                         <div>{children}</div>
                     </main>
                     <Footer />
-                    {Boolean(cookies?.CookiesConsent) !== true && location.pathname !== '/policies/privacy-policy/' && (
-                        <CookiesBanner cookiesBanner={cookiesBanner} setCookiesBanner={setCookiesBanner} />
+                    {Boolean(cookies?.CookiesConsent) !== true && (
+                        <CookiesBanner cookiesBanner={cookiesBanner} setCookiesBanner={setCookiesBanner} pageName={pageName} />
                     )}
                 </GlobalContext.Provider>
             </CookiesProvider>
