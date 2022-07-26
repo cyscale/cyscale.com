@@ -1,16 +1,10 @@
-import { Link } from 'gatsby';
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import { Link as ScrollLink } from 'react-scroll';
 import arrow from '../../assets/images/arrow.svg';
 import cloudIcon from '../../assets/images/cloud-icon-for-cspm.svg';
-import logo from '../../assets/images/logo.svg';
 import { Container, Row } from '../../components/atoms/Containers';
-import Footer from '../../components/campaigns/footer';
 import useHubSpot from '../../components/campaigns/useHubSpot';
 import MisconfigurationTabs from '../../components/cloud-security-posture-management/MisconfigurationTabs';
-import Seo from '../../components/Seo';
-import GlobalContext from '../../context/GlobalContext';
 import CookiesCampaignsLayout from '../../components/campaigns/CookiesCampaignsLayout';
 
 const AWSCloudSecurity = ({ location }) => {
