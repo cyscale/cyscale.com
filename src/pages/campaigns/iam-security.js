@@ -146,14 +146,14 @@ const IamSecurity = ({ location }) => {
             <div className='block xl:hidden m-auto px-8 '>
                 <TopNav pageName={'IamSecurity Campaign'} />
             </div>
-            <div className='bg-hero-campaigns-iam-security pb-8 pt-12'>
+            <div className='bg-hero-campaigns-iam-security pb-8 pt-16 lg:pt-20 xl:pt-12'>
                 <Container>
                     <div>
                         <Row>
                             <div className='col-span-12 lg:col-span-6 '>
                                 <div className='lg:mt-16 pt-4 max-w-lg mx-auto lg:mx-0'>
                                     <h1 className='text-center sm:text-left text-blue text-4xl lg:text-5xl leading-normal mb-16'>
-                                        <strong>IAM SECURITY TOOL </strong> <br className='hidden lg:block' /> for Cloud
+                                        <strong>IAM Security Tool </strong> <br className='hidden lg:block' /> for Cloud
                                     </h1>
                                     <p className='text-center sm:text-left text-base lg:text-lg mb-8 leading-relaxed text-gray'>
                                         Continuous multi-cloud monitoring for identity and access management (IAM)
