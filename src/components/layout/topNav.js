@@ -9,7 +9,7 @@ import navBars from '../../assets/images/navbars-campaigns.svg';
 
 const initMenu = (pageName) => {
     return {
-        Icon: pageName !== 'IamSecurity Campaign' ? menuIcon : navBars,
+        Icon: pageName !== 'Identity and Access Management Security for Cloud' ? menuIcon : navBars,
         menuToggle: 'hidden',
         toggleLogo: '',
         toggleBg: ''
@@ -54,7 +54,7 @@ const TopNav = ({ pageName, showLogo = true }) => {
             });
         } else {
             setMenu({
-                Icon: pageName !== 'IamSecurity Campaign' ? menuIcon : navBars,
+                Icon: pageName !== 'Identity and Access Management Security for Cloud' ? menuIcon : navBars,
                 menuToggle: 'hidden',
                 toggleLogo: '',
                 toggleBg: ''
