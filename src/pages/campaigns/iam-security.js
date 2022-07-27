@@ -21,6 +21,8 @@ import { useAppLink } from '../../common/links';
 import menuClsoe from '../../assets/images/menuClose.svg';
 import Navigation from '../../components/layout/Navigation';
 import { animateScroll } from 'react-scroll';
+import { CookiesProvider, useCookies } from 'react-cookie';
+import CookiesBanner from '../../components/cookies-banner/CookiesBanner';
 
 const initMenu = {
     Icon: navBars,
@@ -30,6 +32,8 @@ const initMenu = {
 };
 
 const IamSecurity = ({ location }) => {
+    const [cookiesBanner, setCookiesBanner] = useState(false);
+    const [cookies] = useCookies();
     const [menu, setMenu] = useState(initMenu);
     const [navOpen, setNavOpen] = useState(false);
     const appLink = useAppLink();
@@ -83,6 +87,7 @@ const IamSecurity = ({ location }) => {
     `);
 
     useEffect(() => {
+        setCookiesBanner(true);
         setTimeout(() => {
             if (window && window.hbspt) {
                 window.hbspt.forms.create({
@@ -99,249 +104,264 @@ const IamSecurity = ({ location }) => {
     const navigationClasses = `relative topNav container ${menu.toggleBg}`;
 
     return (
-        <GlobalContext.Provider value={{ location }}>
-            <Seo title='IAM Security' description='IAM Security' pageName='IAM Security' location={location} />
-            <Helmet>
-                <script charset='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js' />
-                <meta name='robots' content='noindex' />
-                <meta name='robots' content='nofollow' />
-            </Helmet>
-            <Container className='hidden xl:block'>
-                <Row>
-                    <div className='col-span-12 flex justify-end'>
-                        <p className='text-sm py-2'>
-                            <strong>Call:</strong>
-                            <span style={{ color: '#5E5E5E' }}> + 44 757 379 376</span> &nbsp;&nbsp;&nbsp;
-                            <strong>Email:</strong> <span style={{ color: '#5E5E5E' }}>sales@cyscale.com</span>
-                        </p>
-                    </div>
-                </Row>
-            </Container>
-            <header id='head' className='bg-lightGrey pt-8 pb-2 hidden xl:block'>
-                <div className='container max-w-7xl m-auto px-4 lg:px-8 flex items-center'>
-                    <Link to='/' className={`inline-flex z-40`}>
-                        <img className='block h-10' src={logo} alt='Cyscale' />
-                    </Link>
-                    <img
-                        className={`block h-5 ml-auto cursor-pointer ${!navOpen ? 'visible' : 'invisible'}`}
-                        src={navBars}
-                        onClick={() => setNavOpen(!navOpen)}
-                    />
-                </div>
-                <CSSTransition in={navOpen} timeout={300} classNames='navigation' unmountOnExit>
-                    <div className='navigation'>
-                        <Navigation
-                            pageName={'test'}
-                            showLogo={false}
-                            showBurgerButton={true}
-                            toggleMenuIcon={toggleMenuIcon}
-                            jobs={jobs}
-                            appLink={appLink}
-                            menu={menu}
-                            classes={navigationClasses}
+        <CookiesProvider>
+            <GlobalContext.Provider value={{ location }}>
+                <Seo title='IAM Security' description='IAM Security' pageName='IAM Security' location={location} />
+                <Helmet>
+                    <script charset='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js' />
+                    <meta name='robots' content='noindex' />
+                    <meta name='robots' content='nofollow' />
+                </Helmet>
+                <Container className='hidden xl:block'>
+                    <Row>
+                        <div className='col-span-12 flex justify-end'>
+                            <p className='text-sm py-2'>
+                                <strong>Call:</strong>
+                                <span style={{ color: '#5E5E5E' }}> + 44 757 379 376</span> &nbsp;&nbsp;&nbsp;
+                                <strong>Email:</strong> <span style={{ color: '#5E5E5E' }}>sales@cyscale.com</span>
+                            </p>
+                        </div>
+                    </Row>
+                </Container>
+                <header id='head' className='bg-lightGrey pt-8 pb-2 hidden xl:block'>
+                    <div className='container max-w-7xl m-auto px-4 lg:px-8 flex items-center'>
+                        <Link to='/' className={`inline-flex z-40`}>
+                            <img className='block h-10' src={logo} alt='Cyscale' />
+                        </Link>
+                        <img
+                            className={`block h-5 ml-auto cursor-pointer ${!navOpen ? 'visible' : 'invisible'}`}
+                            src={navBars}
+                            onClick={() => setNavOpen(!navOpen)}
                         />
                     </div>
-                </CSSTransition>
-            </header>
-            <div className='block xl:hidden m-auto px-8 '>
-                <TopNav pageName={'IamSecurity Campaign'} />
-            </div>
-            <div className='bg-hero-campaigns-iam-security pb-8 pt-16 lg:pt-20 xl:pt-12'>
-                <Container>
-                    <div>
-                        <Row>
-                            <div className='col-span-12 lg:col-span-6 '>
-                                <div className='lg:mt-16 pt-4 max-w-lg mx-auto lg:mx-0'>
-                                    <h1 className='text-center sm:text-left text-blue text-4xl lg:text-5xl leading-normal mb-16'>
-                                        <strong>IAM Security Tool </strong> <br className='hidden lg:block' /> for Cloud
-                                    </h1>
-                                    <p className='text-center sm:text-left text-base lg:text-lg mb-8 leading-relaxed text-gray'>
-                                        Continuous multi-cloud monitoring for identity and access management (IAM)
-                                        misconfigurations across all your cloud assets to meet strict IAM compliance
-                                        directives and improve your cloud security posture.
-                                    </p>
-                                    <div className='flex flex-row justify-between flex-wrap space-y-6 lg:space-y-0 lg:space-x-6'>
-                                        <img src={gcpLogo} />
-                                        <img style={{ marginTop: '0' }} src={awsLogo} />
-                                        <img style={{ marginTop: '0' }} src={azureLogo} />
-                                        <img src={alibabaLogo} />
+                    <CSSTransition in={navOpen} timeout={300} classNames='navigation' unmountOnExit>
+                        <div className='navigation'>
+                            <Navigation
+                                pageName={'test'}
+                                showLogo={false}
+                                showBurgerButton={true}
+                                toggleMenuIcon={toggleMenuIcon}
+                                jobs={jobs}
+                                appLink={appLink}
+                                menu={menu}
+                                classes={navigationClasses}
+                            />
+                        </div>
+                    </CSSTransition>
+                </header>
+                <div className='block xl:hidden m-auto px-8 '>
+                    <TopNav pageName={'IamSecurity Campaign'} />
+                </div>
+                <div className='bg-hero-campaigns-iam-security pb-8 pt-16 lg:pt-20 xl:pt-12'>
+                    <Container>
+                        <div>
+                            <Row>
+                                <div className='col-span-12 lg:col-span-6 '>
+                                    <div className='lg:mt-16 pt-4 max-w-lg mx-auto lg:mx-0'>
+                                        <h1 className='text-center sm:text-left text-blue text-4xl lg:text-5xl leading-normal mb-16'>
+                                            <strong>IAM Security Tool </strong> <br className='hidden lg:block' /> for
+                                            Cloud
+                                        </h1>
+                                        <p className='text-center sm:text-left text-base lg:text-lg mb-8 leading-relaxed text-gray'>
+                                            Continuous multi-cloud monitoring for identity and access management (IAM)
+                                            misconfigurations across all your cloud assets to meet strict IAM compliance
+                                            directives and improve your cloud security posture.
+                                        </p>
+                                        <div className='flex flex-row justify-between flex-wrap space-y-6 lg:space-y-0 lg:space-x-6'>
+                                            <img src={gcpLogo} />
+                                            <img style={{ marginTop: '0' }} src={awsLogo} />
+                                            <img style={{ marginTop: '0' }} src={azureLogo} />
+                                            <img src={alibabaLogo} />
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className='col-span-12 lg:col-span-6' id='apply-now'>
-                                <div
-                                    className='rounded-xl shadow-lg mt-6 lg:mt-0 py-4 lg:pt-12 pb-0 px-8 md:px-12 max-w-lg mx-auto lg:mr-0 lg:ml-auto relative'
-                                    style={{
-                                        backgroundColor: 'rgba(255, 255, 255, 0.6)',
-                                        backdropFilter: 'blur(5px)'
-                                    }}
-                                >
-                                    <h2 className='font-semibold text-2xl sm:text-3xl lg:text-2xl leading-normal mb-8 mt-8 lg:mt-0'>
-                                        Request a live demo
-                                    </h2>
-                                    <div style={{ minHeight: 390 }} id='iamsecurity-campaign-form' className='pb-4' />
-                                </div>
-                            </div>
-                        </Row>
-                    </div>
-                    <div className='py-16 hidden sm:block '>
-                        <ScrollButtonStartups to='start' />
-                    </div>
-                </Container>
-            </div>
-            <Container>
-                <Section id='start'>
-                    <div className='sm:grid sm:grid-cols-12 sm:gap-12'>
-                        <div className='col-span-12 lg:col-span-6 mt-8 sm:mt-0'>
-                            <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-2xl'>
-                                <GatsbyImage
-                                    image={data.usersList.childImageSharp.gatsbyImageData}
-                                    className='shadow-2xl'
-                                />
-                            </div>
-                        </div>
-                        <div className='col-span-12 lg:col-span-6 mt-12 md:mt-0'>
-                            <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-sm lg:pl-16'>
-                                <h2 className='text-4xl font-semibold text-primary leading-normal border-title'>
-                                    Understand access
-                                    <br /> configuration
-                                </h2>
-                            </div>
-                            <div className='mx-auto lg:mx-0 max-w-xl lg:pl-16'>
-                                <p className='text-base leading-normal my-12 text-gray'>
-                                    <strong>
-                                        Effectively manage user permissions and enforce privilege access for a robust
-                                        cloud security posture.
-                                    </strong>
-                                </p>
-                                <ul className='list-disc ml-4 text-gray'>
-                                    <li className='mb-4'>
-                                        A powerful Identity Dashboard helping you understand how access is provisioned
-                                        in your organization on a per-person basis
-                                    </li>
-                                    <li className='mb-4'>
-                                        Identity provider integration: Onboard your Okta account into Cyscale and get
-                                        full visibility on cloud SSO users and provisioning
-                                    </li>
-                                    <li className='mb-4'>
-                                        User access misconfigurations are highlighted so that you can detect and
-                                        mitigate risk
-                                    </li>
-                                    <li className='mb-4'>
-                                        Easy filtering for: inactive users, highly privileged or high-risk users, and
-                                        others
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </Section>
-            </Container>
-            <Container>
-                <Section>
-                    <div className='sm:grid sm:grid-cols-12 sm:gap-12'>
-                        <div className='col-span-12 lg:col-span-6'>
-                            <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-sm'>
-                                <h2 className='text-4xl font-semibold text-primary leading-normal border-title'>
-                                    Deep dive into
-                                    <br /> User assets
-                                </h2>
-                            </div>
-                            <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-lg'>
-                                <p className='leading-normal text-base text-gray my-12'>
-                                    <strong>
-                                        An optimized page for user assets helps you visualize and understand:
-                                    </strong>
-                                </p>
-                                <ul className='list-disc ml-4 text-gray'>
-                                    <li className='mb-2'>Access (groups and permissions)</li>
-                                    <li className='mb-2'>Risk</li>
-                                    <li className='mb-2'>Policy violations</li>
-                                    <li className='mb-2'>User-related alerts</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className='col-span-12 lg:col-span-6 mt-8 sm:mt-0'>
-                            <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-2xl'>
-                                <GatsbyImage
-                                    image={data.identityCampaigns.childImageSharp.gatsbyImageData}
-                                    className='shadow-2xl'
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </Section>
-            </Container>
-            <div className='bg-blue-gradient' id='confidence' style={{ position: 'relative', zIndex: 1 }}>
-                <img
-                    src={corner}
-                    style={{ position: 'absolute', top: 0, right: 0, margin: 0, zIndex: -1 }}
-                    width={300}
-                    className="hidden md:block"
-                />
-                <Container>
-                    <Section>
-                        <div className='max-w-xl mx-auto lg:mx-0 lg:max-w-sm mb-20'>
-                            <h2 className='text-4xl font-semibold text-primary leading-normal border-title'>
-                                100% Confidence with your IAM Compliance
-                            </h2>
-                        </div>
-                        <div className='max-w-xl mx-auto lg:mx-0 lg:max-w-3xl'>
-                            <Row className='lg:gap-20'>
-                                <div className='col-span-12 lg:col-span-6'>
-                                    <p className='leading-normal text-base text-gray mb-6'>
-                                        <strong>Meet industry regulations</strong>
-                                        <br />
-                                        Protect sensitive data and comply with strict industry in your Financial
-                                        organisation. Cyscale automatically runs all critical compliance checks and
-                                        finds data at-risk.
-                                    </p>
-                                </div>
-                                <div className='col-span-12 lg:col-span-6'>
-                                    <p className='leading-normal text-base text-gray mb-6'>
-                                        <strong>PCI-DSS, SOC 2, GDPR, and more</strong>
-                                        <br />
-                                        Cyscale supports a wide range of CIS control benchmarks, including: CIS,
-                                        ISO27001, PCI-DSS, NIST, SOC2, GDPR.
-                                    </p>
-                                </div>
-                                <div className='col-span-12 lg:col-span-6'>
-                                    <p className='leading-normal text-base text-gray mb-6'>
-                                        <strong>500+ out-of-the-box security controls</strong>
-                                        <br />
-                                        Onboard teams in 30 minutes and coordinate efforts to apply 500+ out-of-the-box
-                                        security controls and policies.
-                                    </p>
-                                </div>
-                                <div className='col-span-12 lg:col-span-6'>
-                                    <p className='leading-normal text-base text-gray mb-6'>
-                                        <strong>Prioritize misconfiguration risk</strong>
-                                        <br />
-                                        With our Security Knowledge Graph™, we surface crucial issues based on deep
-                                        understanding of all your interlinked assets - rather than a mishmash of
-                                        unrelated assets.
-                                    </p>
+                                <div className='col-span-12 lg:col-span-6' id='apply-now'>
+                                    <div
+                                        className='rounded-xl shadow-lg mt-6 lg:mt-0 py-4 lg:pt-12 pb-0 px-8 md:px-12 max-w-lg mx-auto lg:mr-0 lg:ml-auto relative'
+                                        style={{
+                                            backgroundColor: 'rgba(255, 255, 255, 0.6)',
+                                            backdropFilter: 'blur(5px)'
+                                        }}
+                                    >
+                                        <h2 className='font-semibold text-2xl sm:text-3xl lg:text-2xl leading-normal mb-8 mt-8 lg:mt-0'>
+                                            Request a live demo
+                                        </h2>
+                                        <div
+                                            style={{ minHeight: 390 }}
+                                            id='iamsecurity-campaign-form'
+                                            className='pb-4'
+                                        />
+                                    </div>
                                 </div>
                             </Row>
                         </div>
+                        <div className='py-16 hidden sm:block '>
+                            <ScrollButtonStartups to='start' />
+                        </div>
+                    </Container>
+                </div>
+                <Container>
+                    <Section id='start'>
+                        <div className='sm:grid sm:grid-cols-12 sm:gap-12'>
+                            <div className='col-span-12 lg:col-span-6 mt-8 sm:mt-0'>
+                                <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-2xl'>
+                                    <GatsbyImage
+                                        image={data.usersList.childImageSharp.gatsbyImageData}
+                                        className='shadow-2xl'
+                                    />
+                                </div>
+                            </div>
+                            <div className='col-span-12 lg:col-span-6 mt-12 md:mt-0'>
+                                <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-sm lg:pl-16'>
+                                    <h2 className='text-4xl font-semibold text-primary leading-normal border-title'>
+                                        Understand access
+                                        <br /> configuration
+                                    </h2>
+                                </div>
+                                <div className='mx-auto lg:mx-0 max-w-xl lg:pl-16'>
+                                    <p className='text-base leading-normal my-12 text-gray'>
+                                        <strong>
+                                            Effectively manage user permissions and enforce privilege access for a
+                                            robust cloud security posture.
+                                        </strong>
+                                    </p>
+                                    <ul className='list-disc ml-4 text-gray'>
+                                        <li className='mb-4'>
+                                            A powerful Identity Dashboard helping you understand how access is
+                                            provisioned in your organization on a per-person basis
+                                        </li>
+                                        <li className='mb-4'>
+                                            Identity provider integration: Onboard your Okta account into Cyscale and
+                                            get full visibility on cloud SSO users and provisioning
+                                        </li>
+                                        <li className='mb-4'>
+                                            User access misconfigurations are highlighted so that you can detect and
+                                            mitigate risk
+                                        </li>
+                                        <li className='mb-4'>
+                                            Easy filtering for: inactive users, highly privileged or high-risk users,
+                                            and others
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </Section>
                 </Container>
-            </div>
-            <Container>
-                <div className='pt-12 pb-24 lg:pt-32 lg:pb-32'>
-                    <div className='flex h-48 flex-col items-center'>
-                        <img src={cloudIcon} alt='Cloud Icon' />
-                        <h1 className='text-center px-2 mb-2'>Scan, monitor and prioritize cloud IAM risk. .</h1>
-                        <div className='mt-6 w-auto inline-block'>
-                            <button className='gradientBgBtn w-full block text-base font-medium rounded text-white uppercase text-center py-5 px-24 hover:no-underline no-underline' onClick={() => animateScroll.scrollToTop()}>
-                                Request Live Demo
-                            </button>
+                <Container>
+                    <Section>
+                        <div className='sm:grid sm:grid-cols-12 sm:gap-12'>
+                            <div className='col-span-12 lg:col-span-6'>
+                                <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-sm'>
+                                    <h2 className='text-4xl font-semibold text-primary leading-normal border-title'>
+                                        Deep dive into
+                                        <br /> User assets
+                                    </h2>
+                                </div>
+                                <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-lg'>
+                                    <p className='leading-normal text-base text-gray my-12'>
+                                        <strong>
+                                            An optimized page for user assets helps you visualize and understand:
+                                        </strong>
+                                    </p>
+                                    <ul className='list-disc ml-4 text-gray'>
+                                        <li className='mb-2'>Access (groups and permissions)</li>
+                                        <li className='mb-2'>Risk</li>
+                                        <li className='mb-2'>Policy violations</li>
+                                        <li className='mb-2'>User-related alerts</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div className='col-span-12 lg:col-span-6 mt-8 sm:mt-0'>
+                                <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-2xl'>
+                                    <GatsbyImage
+                                        image={data.identityCampaigns.childImageSharp.gatsbyImageData}
+                                        className='shadow-2xl'
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </Section>
+                </Container>
+                <div className='bg-blue-gradient' id='confidence' style={{ position: 'relative', zIndex: 1 }}>
+                    <img
+                        src={corner}
+                        style={{ position: 'absolute', top: 0, right: 0, margin: 0, zIndex: -1 }}
+                        width={300}
+                        className='hidden md:block'
+                    />
+                    <Container>
+                        <Section>
+                            <div className='max-w-xl mx-auto lg:mx-0 lg:max-w-sm mb-20'>
+                                <h2 className='text-4xl font-semibold text-primary leading-normal border-title'>
+                                    100% Confidence with your IAM Compliance
+                                </h2>
+                            </div>
+                            <div className='max-w-xl mx-auto lg:mx-0 lg:max-w-3xl'>
+                                <Row className='lg:gap-20'>
+                                    <div className='col-span-12 lg:col-span-6'>
+                                        <p className='leading-normal text-base text-gray mb-6'>
+                                            <strong>Meet industry regulations</strong>
+                                            <br />
+                                            Protect sensitive data and comply with strict industry in your Financial
+                                            organisation. Cyscale automatically runs all critical compliance checks and
+                                            finds data at-risk.
+                                        </p>
+                                    </div>
+                                    <div className='col-span-12 lg:col-span-6'>
+                                        <p className='leading-normal text-base text-gray mb-6'>
+                                            <strong>PCI-DSS, SOC 2, GDPR, and more</strong>
+                                            <br />
+                                            Cyscale supports a wide range of CIS control benchmarks, including: CIS,
+                                            ISO27001, PCI-DSS, NIST, SOC2, GDPR.
+                                        </p>
+                                    </div>
+                                    <div className='col-span-12 lg:col-span-6'>
+                                        <p className='leading-normal text-base text-gray mb-6'>
+                                            <strong>500+ out-of-the-box security controls</strong>
+                                            <br />
+                                            Onboard teams in 30 minutes and coordinate efforts to apply 500+
+                                            out-of-the-box security controls and policies.
+                                        </p>
+                                    </div>
+                                    <div className='col-span-12 lg:col-span-6'>
+                                        <p className='leading-normal text-base text-gray mb-6'>
+                                            <strong>Prioritize misconfiguration risk</strong>
+                                            <br />
+                                            With our Security Knowledge Graph™, we surface crucial issues based on deep
+                                            understanding of all your interlinked assets - rather than a mishmash of
+                                            unrelated assets.
+                                        </p>
+                                    </div>
+                                </Row>
+                            </div>
+                        </Section>
+                    </Container>
+                </div>
+                <Container>
+                    <div className='pt-12 pb-24 lg:pt-32 lg:pb-32'>
+                        <div className='flex h-48 flex-col items-center'>
+                            <img src={cloudIcon} alt='Cloud Icon' />
+                            <h1 className='text-center px-2 mt-4 mb-2'>
+                                Scan, monitor and prioritize cloud IAM risk. .
+                            </h1>
+                            <div className='mt-10 w-auto inline-block'>
+                                <button
+                                    className='gradientBgBtn w-full block text-base font-medium rounded text-white uppercase text-center py-4 px-12 hover:no-underline no-underline'
+                                    onClick={() => animateScroll.scrollToTop()}
+                                >
+                                    Request Live Demo
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </Container>
-            <Footer />
-        </GlobalContext.Provider>
+                </Container>
+                <Footer />
+                {Boolean(cookies?.CookiesConsent) !== true && (
+                    <CookiesBanner cookiesBanner={cookiesBanner} setCookiesBanner={setCookiesBanner} />
+                )}
+            </GlobalContext.Provider>
+        </CookiesProvider>
     );
 };
 

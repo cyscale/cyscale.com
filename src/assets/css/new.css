@@ -288,7 +288,7 @@ img[src*='#shadow'] {
 
 .navigation {
     z-index: 100;
-    top: 36px;
+    top: 2.688rem;
     position: absolute;
     background-color: #eeeeee;
     margin-left: calc(((100vw - 80rem) / 2) + 18rem);
