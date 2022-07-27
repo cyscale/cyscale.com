@@ -315,3 +315,7 @@ img[src*='#shadow'] {
     transform: translateX(100%);
     transition: transform 0.3s linear;
 }
+
+.montserrat-font {
+    font-family: 'Montserrat', sans-serif;
+}

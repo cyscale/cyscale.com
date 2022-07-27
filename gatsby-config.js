@@ -126,6 +126,15 @@ module.exports = {
             options: {
                 modulePath: `${__dirname}/src/common/netlify.js`
             }
+        },
+        {
+            resolve: `gatsby-plugin-google-fonts`,
+            options: {
+                fonts: [
+                    `Montserrat:400,500,600,700`,
+                ],
+                display: 'swap'
+            }
         }
     ]
 };
