@@ -137,7 +137,7 @@ const IamSecurity = ({ location }) => {
                     <CSSTransition in={navOpen} timeout={300} classNames='navigation' unmountOnExit>
                         <div className='navigation'>
                             <Navigation
-                                pageName={'test'}
+                                pageName={'IAM Security'}
                                 showLogo={false}
                                 showBurgerButton={true}
                                 toggleMenuIcon={toggleMenuIcon}
