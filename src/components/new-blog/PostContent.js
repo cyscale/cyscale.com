@@ -106,25 +106,25 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
             }
         };
 
-        // await axios
-        //     .post(
-        //         'https://api.hsforms.com/submissions/v3/integration/submit/5413427/428b1f63-f8fc-4bb0-bdd2-7243a829205a',
-        //         data,
-        //         {
-        //             headers: {
-        //                 contentType: 'application/json'
-        //             }
-        //         }
-        //     )
-        //     .then((res) => {
-        //         if (res.status === 200) {
-        //             setAlert({ message: "You're all set up!", alertClass: 'text-blue' });
-        //         }
-        //     })
-        //     .catch((err) => {
-        //         setAlert({ message: 'Something went wrong!', alertClass: 'text-red' });
-        //     });
-        setAlert({ message: "You're all set up!", alertClass: 'text-blue' });
+        await axios
+            .post(
+                'https://api.hsforms.com/submissions/v3/integration/submit/5413427/428b1f63-f8fc-4bb0-bdd2-7243a829205a',
+                data,
+                {
+                    headers: {
+                        contentType: 'application/json'
+                    }
+                }
+            )
+            .then((res) => {
+                if (res.status === 200) {
+                    setAlert({ message: "You're all set up!", alertClass: 'text-blue' });
+                }
+            })
+            .catch((err) => {
+                setAlert({ message: 'Something went wrong!', alertClass: 'text-red' });
+            });
+
         setEmailInput('');
     };
 
