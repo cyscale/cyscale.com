@@ -244,7 +244,7 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
                                         )}
                                         <button
                                             type='submit'
-                                            className='text-white gradientBgBtn hover:bg-blue-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded text-sm w-full lg:w-20 lg:ml-3 py-2.5'
+                                            className='text-white gradientBgBtn hover:bg-blue-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded text-sm w-full lg:w-20 lg:ml-3 pb-2.5 pt-3'
                                             onClick={onSubmit}
                                         >
                                             <img src={arrowRight} className='mx-auto w-5 h-auto' />
