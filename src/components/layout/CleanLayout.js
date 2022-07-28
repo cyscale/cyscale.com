@@ -8,6 +8,7 @@ import GlobalContext from '../../context/GlobalContext';
 import useHubspotEvents from '../../common/hbspotEvents';
 import CookiesBanner from '../cookies-banner/CookiesBanner';
 import { CookiesProvider, useCookies } from 'react-cookie';
+import ScrollToTopButton from '../ScrollToTopButton/ScrollToTopButton';
 
 const Layout = ({ children, title, description, pageName, location, banner }) => {
     useHubspotEvents({ location, pageName });
@@ -31,6 +32,7 @@ const Layout = ({ children, title, description, pageName, location, banner }) =>
                 {Boolean(cookies?.CookiesConsent) !== true && (
                     <CookiesBanner cookiesBanner={cookiesBanner} setCookiesBanner={setCookiesBanner} pageName={pageName}/>
                 )}
+                <ScrollToTopButton />
             </GlobalContext.Provider>
         </CookiesProvider>
     );
