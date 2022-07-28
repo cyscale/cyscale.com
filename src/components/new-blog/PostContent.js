@@ -106,25 +106,25 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
             }
         };
 
-        await axios
-            .post(
-                'https://api.hsforms.com/submissions/v3/integration/submit/5413427/428b1f63-f8fc-4bb0-bdd2-7243a829205a',
-                data,
-                {
-                    headers: {
-                        contentType: 'application/json'
-                    }
-                }
-            )
-            .then((res) => {
-                if (res.status === 200) {
-                    setAlert({ message: "You're all set up!", alertClass: 'text-blue' });
-                }
-            })
-            .catch((err) => {
-                setAlert({ message: 'Something went wrong!', alertClass: 'text-red' });
-            });
-
+        // await axios
+        //     .post(
+        //         'https://api.hsforms.com/submissions/v3/integration/submit/5413427/428b1f63-f8fc-4bb0-bdd2-7243a829205a',
+        //         data,
+        //         {
+        //             headers: {
+        //                 contentType: 'application/json'
+        //             }
+        //         }
+        //     )
+        //     .then((res) => {
+        //         if (res.status === 200) {
+        //             setAlert({ message: "You're all set up!", alertClass: 'text-blue' });
+        //         }
+        //     })
+        //     .catch((err) => {
+        //         setAlert({ message: 'Something went wrong!', alertClass: 'text-red' });
+        //     });
+        setAlert({ message: "You're all set up!", alertClass: 'text-blue' });
         setEmailInput('');
     };
 
@@ -219,7 +219,11 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
                                     </div>
                                 </div>
                                 <div className='col-span-12 lg:col-span-6 lg:mx-0'>
-                                    <div className='mt-2 mb-8 lg:mt-0 lg:mb-0  max-w-lg lg:max-w-2xl mx-auto relative h:20 lg:h-16 flex flex-col lg:flex-row lg:items-end lg:px-0'>
+                                    <div
+                                        className={`mt-2 mb-8 lg:mt-0 max-w-lg ${
+                                            alert ? 'lg:mb-0' : 'lg:mb-5'
+                                        } lg:max-w-2xl mx-auto relative lg:h-16 flex flex-col lg:flex-row lg:items-end lg:px-0`}
+                                    >
                                         <input
                                             type='email'
                                             id='email'
