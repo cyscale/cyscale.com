@@ -23,7 +23,7 @@ const ScrollToTopButton = () => {
     }, []);
 
     return (
-        <div className='bg-red'>
+        <div>
             {showBtnTop && (
                 <img
                     src={upArrow}
