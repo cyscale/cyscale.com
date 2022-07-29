@@ -7,6 +7,7 @@ import useHubspotEvents from '../../common/hbspotEvents';
 import CookiesBanner from '../cookies-banner/CookiesBanner';
 import { CookiesProvider, useCookies } from 'react-cookie';
 import loadable from '@loadable/component';
+import ScrollToTopButton from '../ScrollToTopButton/ScrollToTopButton';
 const Footer = loadable(() => import('./footer'));
 
 const Layout = ({
@@ -75,6 +76,7 @@ const Layout = ({
                     {Boolean(cookies?.CookiesConsent) !== true && (
                         <CookiesBanner cookiesBanner={cookiesBanner} setCookiesBanner={setCookiesBanner} pageName={pageName} />
                     )}
+                    <ScrollToTopButton />
                 </GlobalContext.Provider>
             </CookiesProvider>
         </div>

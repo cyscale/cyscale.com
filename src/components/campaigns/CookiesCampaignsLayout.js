@@ -8,6 +8,7 @@ import { Helmet } from 'react-helmet';
 import { Container } from '../atoms/Containers';
 import { Link } from 'gatsby';
 import logo from '../../assets/images/logo.svg';
+import ScrollToTopButton from '../ScrollToTopButton/ScrollToTopButton';
 
 const CookiesCampaignsLayout = ({ location, title, description, pageName, children }) => {
     const [cookiesBanner, setCookiesBanner] = useState(false);
@@ -38,6 +39,7 @@ const CookiesCampaignsLayout = ({ location, title, description, pageName, childr
                 {Boolean(cookies?.CookiesConsent) !== true && (
                     <CookiesBanner cookiesBanner={cookiesBanner} setCookiesBanner={setCookiesBanner} />
                 )}
+                <ScrollToTopButton />
             </GlobalContext.Provider>
         </CookiesProvider>
     );
