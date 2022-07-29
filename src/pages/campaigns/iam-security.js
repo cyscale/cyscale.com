@@ -130,7 +130,7 @@ const IamSecurity = ({ location }) => {
                 </Container>
                 <header id='head' className='bg-lightGrey pt-8 pb-2 hidden xl:block'>
                     <div className='container max-w-7xl m-auto px-4 lg:px-8 flex items-center'>
-                        <Link to='/' className={`inline-flex z-40`}>
+                        <Link to='/' className='inline-flex z-40'>
                             <img className='block h-10' src={logo} alt='Cyscale' />
                         </Link>
                         <img
@@ -154,7 +154,7 @@ const IamSecurity = ({ location }) => {
                         </div>
                     </CSSTransition>
                 </header>
-                <div className='block xl:hidden m-auto px-8 '>
+                <div className='block xl:hidden m-auto px-8'>
                     <TopNav pageName={'Identity and Access Management Security for Cloud'} />
                 </div>
                 <div className='bg-hero-campaigns-iam-security pb-8 pt-16 lg:pt-20 xl:pt-12'>
@@ -162,8 +162,8 @@ const IamSecurity = ({ location }) => {
                         <div>
                             <Row>
                                 <div className='col-span-12 lg:col-span-6 '>
-                                    <div className='lg:mt-16 pt-4 max-w-lg mx-auto lg:mx-0'>
-                                        <h1 className='text-center sm:text-left text-blue text-4xl lg:text-5xl leading-normal mb-16 montserrat-font font-semibold'>
+                                    <div className='lg:mt-16 pt-12 md:pt-8 lg:pt-4 max-w-lg mx-auto lg:mx-0'>
+                                        <h1 className='text-center sm:text-left text-blue text-3xl md:text-4xl lg:text-5xl leading-normal mb-16 montserrat-font font-semibold'>
                                             Identity and Access Management Security for Cloud
                                         </h1>
                                         <p className='text-center sm:text-left text-base lg:text-lg mb-8 leading-relaxed text-gray'>
