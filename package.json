@@ -15,6 +15,7 @@
         "gatsby-background-image": "^1.6.0",
         "gatsby-plugin-canonical-urls": "^4.11.0",
         "gatsby-plugin-gdpr-cookies": "^2.0.8",
+        "gatsby-plugin-google-fonts": "^1.0.1",
         "gatsby-plugin-google-tagmanager": "^4.11.1",
         "gatsby-plugin-image": "^2.0.0",
         "gatsby-plugin-meta-redirect": "^1.1.1",

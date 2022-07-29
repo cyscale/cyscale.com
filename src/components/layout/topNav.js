@@ -1,35 +1,25 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Link } from 'gatsby';
-import featureImage from '../../assets/images/about-us-f-image-yellow-pot.png';
-import ArrowRight from '../../assets/images/arrow-right.svg';
-import image2 from '../../assets/images/integration-oracle-cloud-infrastructure-oci-security-logo.png';
-import heroBG from '../../assets/images/knowledge-graph-hero-image.png';
-import image5 from '../../assets/images/integration-kubernetes-cluster-k8s-security-logo.png';
-import logo from '../../assets/images/logo.svg';
-import usescasesImage from '../../assets/images/menu-f-image.svg';
-import CloudDataImage from '../../assets/images/resources-icon.png';
-import image7 from '../../assets/images/integration-amazon-web-services-aws-logo.png';
-import image8 from '../../assets/images/integration-microsoft-azure-cloud-logo.png';
-import image9 from '../../assets/images/integration-google-cloud-platform-gcp-logo.png';
 import menuIcon from '../../assets/images/menuIcon.svg';
 import menuClsoe from '../../assets/images/menuClose.svg';
 import { useStaticQuery, graphql } from 'gatsby';
 import useScrollTrigger from '../scrollTrigger';
 import { useAppLink } from '../../common/links';
-import navigation from './navigation.json';
-import { Row } from '../atoms/Containers';
+import Navigation from './Navigation';
+import navBars from '../../assets/images/navbars-campaigns.svg';
 
-const initMenu = {
-    Icon: menuIcon,
-    menuToggle: 'hidden',
-    toggleLogo: '',
-    toggleBg: ''
+const initMenu = (pageName) => {
+    return {
+        Icon: pageName !== 'Identity and Access Management Security for Cloud' ? menuIcon : navBars,
+        menuToggle: 'hidden',
+        toggleLogo: '',
+        toggleBg: ''
+    };
 };
 
-const TopNav = ({ pageName }) => {
+const TopNav = ({ pageName, showLogo = true }) => {
     const root = useRef();
     const trigger = useScrollTrigger();
-    const [menu, setMenu] = useState(initMenu);
+    const [menu, setMenu] = useState(initMenu(pageName));
     const [showBurgerButton, setShowBurgerButton] = useState(pageName !== 'HomePage');
     const appLink = useAppLink();
 
@@ -55,7 +45,7 @@ const TopNav = ({ pageName }) => {
     }, []);
 
     const toggleMenuIcon = () => {
-        if (menu.Icon === menuIcon) {
+        if (menu.Icon === menuIcon || menu.Icon === navBars) {
             setMenu({
                 Icon: menuClsoe,
                 menuToggle: '',
@@ -64,7 +54,7 @@ const TopNav = ({ pageName }) => {
             });
         } else {
             setMenu({
-                Icon: menuIcon,
+                Icon: pageName !== 'Identity and Access Management Security for Cloud' ? menuIcon : navBars,
                 menuToggle: 'hidden',
                 toggleLogo: '',
                 toggleBg: ''
@@ -108,360 +98,15 @@ const TopNav = ({ pageName }) => {
             className={`fixed top-0 left-0 block w-full mx-auto z-20 transition duration-300 transform ${rootClasses}`}
         >
             <div className={`topNav ${menu.toggleBg} container max-w-7xl m-auto px-8 pt-2.5`}>
-                <nav className='relative '>
-                    <div className='mx-auto flex flex-col xl:flex-row justify-between'>
-                        <div className='relative flex xl:block pt-4 pb-4 lg:pt-6 lg:pb-6 justify-start'>
-                            <Link to='/' className={`${menu.toggleLogo} xl:inline-flex`}>
-                                <img className='block headerLogo' src={logo} alt='Cyscale' />
-                            </Link>
-                            <button
-                                type='button'
-                                className={`absolute right-0 top-6 xl:hidden ${
-                                    showBurgerButton ? 'inline-block' : 'hidden'
-                                }`}
-                                onClick={toggleMenuIcon}
-                            >
-                                <img src={menu.Icon} alt='toggle menu' />
-                            </button>
-                        </div>
-                        <ul className={`flex-col xl:flex-row ${menu.menuToggle} xl:flex`}>
-                            <li className='hoverable '>
-                                <button
-                                    type='button'
-                                    className={`${
-                                        pageName === 'SKGPage' || pageName === 'CSPMPage' ? 'active' : ''
-                                    }  relative parentItem block my-6 mx-4 lg:m-8 text-base hover:no-underline leading-normal`}
-                                >
-                                    <span>Platform</span>
-                                </button>
-                                <div className='p-9 mega-menu mb-16 sm:mb-0 shadow-2xl bg-white'>
-                                    <div className='mx-auto w-full grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 justify-between'>
-                                        <div>
-                                            <div className='flex flex-col'>
-                                                {navigation.platform.map(({ link, text }, key) => (
-                                                    <Link
-                                                        to={link}
-                                                        key={key}
-                                                        activeClassName='active'
-                                                        activeStyle={{ color: '#0F26AA' }}
-                                                        className='text-base text-black hover:text-blue hover:no-underline mb-7 last:mb-0'
-                                                    >
-                                                        {text}
-                                                    </Link>
-                                                ))}
-                                            </div>
-                                        </div>
-                                        <div className='hidden lg:inline-block'>
-                                            <p className='text-base font-semibold text-black leading-normal'>
-                                                Our Partners
-                                            </p>
-                                            <div className='flex flex-row flex-wrap space-x-4 mt-7'>
-                                                <img src={image7} className='w-auto h-8' alt='svg_aws' />
-                                                <img src={image8} className='w-auto h-8' alt='svg_azure' />
-                                                <img src={image9} className='w-auto h-8' alt='svg_gcp' />
-                                                <img src={image2} className='w-auto h-8' alt='big_oracle' />
-                                                <img
-                                                    src={image5}
-                                                    className='w-auto h-8'
-                                                    alt='Kubernetes_logo_without_wordmark'
-                                                />
-                                            </div>
-                                            <p className='text-base leading-normal text-black mt-36'>
-                                                <strong className='leading-normal text-sm'>
-                                                    Built-in Compliance Standards & Security Frameworks
-                                                </strong>
-                                                <br /> CIS, ISO 27001:2013, SOC 2, NIST 800, NIST CSF, PCIDSS,
-                                                <br /> CCPA, GDPR, HITRUST, HIPAA.
-                                            </p>
-                                        </div>
-                                        <div className='hidden lg:inline-block'>
-                                            <img
-                                                src={heroBG}
-                                                className='w-full h-auto'
-                                                alt='Explore the Knowledge Graph'
-                                            />
-                                            <p className='text-center mt-5'>
-                                                <Link
-                                                    to='/products/security-knowledge-graph/'
-                                                    activeStyle={{ color: '#0F26AA' }}
-                                                    activeClassName='active'
-                                                    className='text-blue font-semibold text-base no-underline hover:underline flex flex-row justify-center'
-                                                >
-                                                    Explore the Knowledge Graph&nbsp;
-                                                    <img
-                                                        src={ArrowRight}
-                                                        className='w-5 h-auto'
-                                                        alt='arrow right icon'
-                                                    />
-                                                </Link>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li className='hoverable'>
-                                <button
-                                    type='button'
-                                    className={`${
-                                        pageName === 'Data_Security' ||
-                                        pageName === 'RemoteWork' ||
-                                        pageName === 'ComplianceAuditing'
-                                            ? 'active'
-                                            : ''
-                                    } relative parentItem block my-6 mx-4 lg:m-8 text-base no-underline leading-normal`}
-                                >
-                                    <span>Use Cases</span>
-                                </button>
-                                <div className='mega-menu'>
-                                    <div className=' max-w-4xl grid grid-cols-1 lg:grid-cols-2  gap-6 ml-auto justify-end p-6 mb-16 sm:mb-0 shadow-2xl bg-teal-700 bg-white'>
-                                        <div>
-                                            <Row>
-                                                <div className='col-span-12 md:col-span-6 block mb-4 sm:mb-0 lg:hidden'>
-                                                    <Link
-                                                        to='/security-for-startups-program/'
-                                                        activeClassName='active'
-                                                        activeStyle={{ color: '#0F26AA' }}
-                                                        className='text-base text-blue hover:text-blue hover:no-underline leading-normal mb-7 last:mb-0'
-                                                    >
-                                                        Cyscale for Startups Program
-                                                    </Link>
-                                                </div>
-                                                {navigation.usecases.map(({ link, text }, key) => (
-                                                    <div className='col-span-6' key={key}>
-                                                        <Link
-                                                            to={link}
-                                                            activeClassName='active'
-                                                            activeStyle={{ color: '#0F26AA' }}
-                                                            className='text-base text-black hover:text-blue hover:no-underline leading-normal mb-7 last:mb-0'
-                                                        >
-                                                            {text}
-                                                        </Link>
-                                                    </div>
-                                                ))}
-                                            </Row>
-                                        </div>
-                                        <div className='hidden lg:inline-block'>
-                                            <img
-                                                src={usescasesImage}
-                                                className='w-44 mx-auto'
-                                                alt='Explore Data Security'
-                                            />
-                                            <p className='text-center mt-5'>
-                                                <Link
-                                                    to='/security-for-startups-program/'
-                                                    activeStyle={{ color: '#0F26AA' }}
-                                                    activeClassName='active'
-                                                    className='text-blue font-semibold text-base no-underline hover:underline flex flex-row justify-center'
-                                                >
-                                                    Cyscale for Startups Program&nbsp;
-                                                    <img
-                                                        src={ArrowRight}
-                                                        className='w-5 h-auto'
-                                                        alt='arrow right icon'
-                                                    />
-                                                </Link>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li className='hover:bg-teal-700 hover:text-white'>
-                                <Link
-                                    to={navigation.pricing[0].link}
-                                    activeClassName='active'
-                                    className='relative parentItem block my-6 mx-4 lg:m-8 text-base hover:no-underline leading-normal'
-                                >
-                                    <span>{navigation.pricing[0].text}</span>
-                                </Link>
-                            </li>
-                            <li className='hoverable hover:bg-teal-700 hover:text-white'>
-                                <button
-                                    type='button'
-                                    className={`relative parentItem block my-6 mx-4 lg:m-8 text-base leading-normal ${
-                                        pageName === 'blogs' || pageName === 'blog-detail' ? 'active' : null
-                                    }`}
-                                >
-                                    <span>Resources</span>
-                                </button>
-                                <div className='mega-menu'>
-                                    <div className='max-w-4xl grid grid-cols-1 lg:grid-cols-2  gap-6 ml-auto justify-end p-6 mb-16 sm:mb-0 shadow-2xl bg-teal-700 bg-white'>
-                                        <div>
-                                            <div className='flex flex-col'>
-                                                {navigation.resources.map(({ link, text, blank }, key) =>
-                                                    blank ? (
-                                                        <a
-                                                            href={link}
-                                                            key={key}
-                                                            target='_blank'
-                                                            rel='noopener noreferrer'
-                                                            className='text-base text-black hover:text-blue hover:no-underline leading-normal mb-7 last:mb-0'
-                                                        >
-                                                            {text}
-                                                        </a>
-                                                    ) : (
-                                                        <Link
-                                                            to={link}
-                                                            key={key}
-                                                            activeClassName='active'
-                                                            activeStyle={{ color: '#0F26AA' }}
-                                                            className='text-base text-black hover:text-blue hover:no-underline leading-normal mb-7 last:mb-0'
-                                                        >
-                                                            {text}
-                                                        </Link>
-                                                    )
-                                                )}
-                                            </div>
-                                        </div>
-                                        <div className='hidden lg:inline-block'>
-                                            <img
-                                                src={CloudDataImage}
-                                                className='w-44 mx-auto'
-                                                height='128px'
-                                                alt='Download Data Sheet'
-                                            />
-                                            <p className='text-center mt-5'>
-                                                <a
-                                                    href='/resources/cyscale-cloud-data-security-datasheet.pdf'
-                                                    download
-                                                    className='text-blue font-semibold text-base no-underline hover:underline flex flex-row justify-center'
-                                                >
-                                                    Download Data Sheet&nbsp;
-                                                    <img
-                                                        src={ArrowRight}
-                                                        className='w-5 h-auto'
-                                                        alt='arrow right icon'
-                                                    />
-                                                </a>
-                                            </p>
-                                            <p className='text-center mt-5'>
-                                                <Link
-                                                    to='/whitepaper/cloud-storage-misconfigurations/'
-                                                    activeClassName='active'
-                                                    activeStyle={{ color: '#0F26AA' }}
-                                                    className='text-blue font-semibold text-base no-underline hover:underline flex flex-row justify-center'
-                                                >
-                                                    Cloud Storage Misconfigurations Whitepaper&nbsp;
-                                                    <img
-                                                        src={ArrowRight}
-                                                        className='w-5 h-auto'
-                                                        alt='arrow right icon'
-                                                    />
-                                                </Link>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li className={`hoverable hover:bg-teal-700 hover:text-white`}>
-                                <button
-                                    type='button'
-                                    className={`${
-                                        pageName === 'aboutUs' ||
-                                        pageName === 'aboutUs' ||
-                                        pageName === 'careers' ||
-                                        pageName === 'jobDetails' ||
-                                        pageName === 'contact_us'
-                                            ? 'active'
-                                            : ''
-                                    } relative parentItem block my-6 mx-4 lg:m-8 text-base leading-normal`}
-                                >
-                                    <span>Company</span>
-                                </button>
-                                <div className='mega-menu'>
-                                    <div className='max-w-4xl grid grid-cols-1 lg:grid-cols-3  gap-6 ml-auto justify-end p-6 mb-16 sm:mb-0 shadow-2xl bg-teal-700 bg-white'>
-                                        <div>
-                                            <div className='flex flex-col'>
-                                                {navigation.company.map(({ link, text }, key) => (
-                                                    <Link
-                                                        to={link}
-                                                        key={key}
-                                                        activeClassName='active'
-                                                        activeStyle={{ color: '#0F26AA' }}
-                                                        className='text-base text-black hover:text-blue hover:no-underline leading-normal mb-7 last:mb-0'
-                                                    >
-                                                        {text}
-                                                    </Link>
-                                                ))}
-                                            </div>
-                                        </div>
-                                        <div className='hidden lg:inline-block'>
-                                            <Link
-                                                to='/careers/'
-                                                className='text-base font-medium text-black leading-normal'
-                                            >
-                                                Open positions
-                                            </Link>
-                                            <div className='flex flex-col mt-2'>
-                                                {jobs.map(({ frontmatter }, index) => {
-                                                    const { permalink, title, experience } = frontmatter;
-                                                    return (
-                                                        <Link
-                                                            key={index}
-                                                            to={`/careers/${permalink}/`}
-                                                            activeStyle={{ color: '#0F26AA' }}
-                                                            activeClassName='active'
-                                                            className='text-sm text-black hover:text-blue hover:no-underline leading-normal mb-1'
-                                                        >
-                                                            <span
-                                                                title={title}
-                                                                style={{ maxWidth: 250 }}
-                                                                className='max-w-xs block font-normal whitespace-nowrap overflow-ellipsis overflow-hidden'
-                                                            >
-                                                                {title} ({experience})
-                                                            </span>
-                                                        </Link>
-                                                    );
-                                                })}
-                                            </div>
-                                        </div>
-                                        <div className='hidden lg:inline-block'>
-                                            <img
-                                                src={featureImage}
-                                                className='w-28 mx-auto'
-                                                alt='Join the Cyscale Team'
-                                            />
-                                            <p className='text-center mt-5'>
-                                                <Link
-                                                    to='/careers/'
-                                                    activeStyle={{ color: '#0F26AA' }}
-                                                    activeClassName='active'
-                                                    className='text-blue font-semibold text-base no-underline hover:underline flex flex-row justify-center'
-                                                >
-                                                    Join the Cyscale Team&nbsp;
-                                                    <img
-                                                        src={ArrowRight}
-                                                        className='w-5 h-auto'
-                                                        alt='arrow right icon'
-                                                    />
-                                                </Link>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li className='py-6 px-4 lg:py-6 lg:pr-0 lg:pl-26px'>
-                                <a
-                                    className='bg-gradient-to-r from-blue to-red hover:from-red hover:to-blue w-153px text-14px border-transparent box-border rounded-31px  h-10 hidden xl:flex justify-center items-center uppercase leading-none text-white transition duration-500  hover:no-underline'
-                                    href={appLink}
-                                    target='_blank'
-                                    rel='noopener noreferrer'
-                                >
-                                    Start Free Trial
-                                </a>
-                            </li>
-                            <li className='py-6 px-4 lg:py-6 lg:pr-6'>
-                                <a
-                                    className='loginBtn text-black hover:text-black mt-0px lg:mt-0 text-14px  uppercase w-84px rounded-31px greyBorder flex h-10 justify-center items-center leading-none transition-all duration-500 hover:bg-grey3 hover:no-underline'
-                                    href='https://app.cyscale.com'
-                                    target='_blank'
-                                    rel='noopener noreferrer'
-                                >
-                                    Log in
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
+                <Navigation
+                    pageName={pageName}
+                    menu={menu}
+                    showLogo={showLogo}
+                    showBurgerButton={showBurgerButton}
+                    toggleMenuIcon={toggleMenuIcon}
+                    jobs={jobs}
+                    appLink={appLink}
+                />
             </div>
         </div>
     );
