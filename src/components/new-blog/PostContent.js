@@ -219,7 +219,11 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
                                     </div>
                                 </div>
                                 <div className='col-span-12 lg:col-span-6 lg:mx-0'>
-                                    <div className='mt-2 mb-8 lg:mt-0 lg:mb-0  max-w-lg lg:max-w-2xl mx-auto relative h:20 lg:h-16 flex flex-col lg:flex-row lg:items-end lg:px-0'>
+                                    <div
+                                        className={`mt-2 mb-8 lg:mt-0 max-w-lg ${
+                                            alert ? 'lg:mb-0' : 'lg:mb-5'
+                                        } lg:max-w-2xl mx-auto relative lg:h-16 flex flex-col lg:flex-row lg:items-end lg:px-0`}
+                                    >
                                         <input
                                             type='email'
                                             id='email'
@@ -240,7 +244,7 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
                                         )}
                                         <button
                                             type='submit'
-                                            className='text-white gradientBgBtn hover:bg-blue-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded text-sm w-full lg:w-20 lg:ml-3 py-2.5'
+                                            className='text-white gradientBgBtn hover:bg-blue-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded text-sm w-full lg:w-20 lg:ml-3 pb-2.5 pt-3'
                                             onClick={onSubmit}
                                         >
                                             <img src={arrowRight} className='mx-auto w-5 h-auto' />
