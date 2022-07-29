@@ -23,6 +23,7 @@ import Navigation from '../../components/layout/Navigation';
 import { animateScroll } from 'react-scroll';
 import { CookiesProvider, useCookies } from 'react-cookie';
 import CookiesBanner from '../../components/cookies-banner/CookiesBanner';
+import ScrollToTopButton from '../../components/ScrollToTopButton/ScrollToTopButton';
 
 const initMenu = {
     Icon: navBars,
@@ -374,6 +375,7 @@ const IamSecurity = ({ location }) => {
                 {Boolean(cookies?.CookiesConsent) !== true && (
                     <CookiesBanner cookiesBanner={cookiesBanner} setCookiesBanner={setCookiesBanner} />
                 )}
+                <ScrollToTopButton />
             </GlobalContext.Provider>
         </CookiesProvider>
     );
