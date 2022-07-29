@@ -55,7 +55,7 @@ const CookiesBanner = ({ cookiesBanner, setCookiesBanner, pageName }) => {
                                     aria-label='Accept cookies'
                                     id='confirm-button'
                                     onClick={() => {
-                                        setCookie('CookiesConsent', { performanceAndAnalytics: true });
+                                        setCookie('CookiesConsent', { performanceAndAnalytics: true }, { path: '/' });
                                         setCookiesBanner(!cookiesBanner);
                                         window.location.reload(false);
                                     }}

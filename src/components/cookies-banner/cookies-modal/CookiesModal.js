@@ -59,14 +59,14 @@ const ConfirmButtons = ({
     const [, setCookie] = useCookies();
 
     const confirmMyChoices = () => {
-        setCookie('CookiesConsent', { performanceAndAnalytics });
+        setCookie('CookiesConsent', { performanceAndAnalytics }, { path: '/' });
         setCookiesModal(false);
         setCookiesBanner(false);
         window.location.reload(false);
     };
 
     const acceptAllCookies = () => {
-        setCookie('CookiesConsent', { performanceAndAnalytics: true });
+        setCookie('CookiesConsent', { performanceAndAnalytics: true }, { path: '/' });
         setCookiesModal(false);
         setCookiesBanner(false);
         window.location.reload(false);
