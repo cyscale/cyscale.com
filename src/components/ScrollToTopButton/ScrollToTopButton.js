@@ -10,8 +10,9 @@ const ScrollToTopButton = () => {
         const winScroll = document.body.scrollTop || scrollTop;
         const winHeight = scrollHeight - clientHeight;
         const scrolled = (winScroll / winHeight) * 100;
+        const firstFold = (clientHeight * 100) / scrollHeight;
 
-        if (scrolled >= 25) {
+        if (scrolled >= firstFold) {
             setShowBtnTop(true);
         } else {
             setShowBtnTop(false);
@@ -29,7 +30,7 @@ const ScrollToTopButton = () => {
                     src={upArrow}
                     onClick={() => animateScroll.scrollToTop()}
                     className='top-40 right-0 fixed sm:hidden z-40'
-                    alt="scroll to top"
+                    alt='scroll to top'
                 />
             )}
         </div>
