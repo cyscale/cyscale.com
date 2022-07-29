@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-import HomeOg from '../../assets/images/homepage-og.jpg';
+import HomeOg from '../../assets/images/homepage-og.png';
 import CspmOg from '../../assets/images/cspm-og.jpg';
 import SkgOG from '../../assets/images/graph-og.jpg';
 import DataOg from '../../assets/images/data-security-og.jpg';
