@@ -19,7 +19,7 @@ const CookiesBanner = ({ cookiesBanner, setCookiesBanner, pageName }) => {
     };
 
     return (
-        <div className='CookieConsent'>
+        <div>
             {cookiesBanner && pageName !== 'privacyPolicy' && <div className='overlay'></div>}
             <FocusLock disabled={pageName === 'privacyPolicy'}>
                 <CSSTransition in={cookiesBanner} timeout={300} classNames='banner' unmountOnExit>
