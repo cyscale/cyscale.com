@@ -13,6 +13,7 @@ import gcpLogo from '../../assets/images/google-cloud-campaigns-iam-security.svg
 import awsLogo from '../../assets/images/aws-campaigns-iam-security.svg';
 import azureLogo from '../../assets/images/azure-campaigns-iam-security.svg';
 import alibabaLogo from '../../assets/images/alibaba-campaigns-iam-security.svg';
+import oktaLogo from '../../assets/images/okta-campaigns-iam-security.svg';
 import navBars from '../../assets/images/navbars-campaigns.svg';
 import Footer from '../../components/campaigns/footer';
 import TopNav from '../../components/layout/topNav';
@@ -172,7 +173,7 @@ const IamSecurity = ({ location }) => {
                                             misconfigurations across all your cloud assets to meet strict IAM compliance
                                             directives and improve your cloud security posture.
                                         </p>
-                                        <div className='flex flex-row max-w-md sm:max-w-lg justify-between flex-wrap space-y-6 lg:space-y-0 lg:space-x-6 px-18 sm:px-0 mx-auto'>
+                                        <div className='flex flex-row max-w-md sm:max-w-lg justify-between flex-wrap space-y-6 lg:space-y-0 lg:space-x-1 px-18 sm:px-0 mx-auto'>
                                             <img style={{ marginTop: '0' }} className='mx-auto sm:mx-0' src={gcpLogo} />
                                             <img style={{ marginTop: '0' }} className='mx-auto sm:mx-0' src={awsLogo} />
                                             <img
@@ -182,7 +183,24 @@ const IamSecurity = ({ location }) => {
                                             />
                                             <img
                                                 style={{ marginTop: '0' }}
-                                                className='mx-auto sm:mx-0'
+                                                className='mx-auto sm:mx-0 hidden sm:block'
+                                                src={oktaLogo}
+                                            />
+                                            <img
+                                                style={{ marginTop: '0' }}
+                                                className='mx-auto sm:mx-0 hidden sm:block'
+                                                src={alibabaLogo}
+                                            />
+                                        </div>
+                                        <div className='flex flex-row max-w-md sm:max-w-lg justify-between flex-wrap space-y-6 lg:space-y-0 lg:space-x-1 px-18 sm:px-0 mx-auto'>
+                                            <img
+                                                style={{ marginTop: '0' }}
+                                                className='mx-auto sm:mx-0 block sm:hidden'
+                                                src={oktaLogo}
+                                            />
+                                            <img
+                                                style={{ marginTop: '0' }}
+                                                className='mx-auto sm:mx-0 block sm:hidden'
                                                 src={alibabaLogo}
                                             />
                                         </div>
