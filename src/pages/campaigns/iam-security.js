@@ -184,24 +184,24 @@ const IamSecurity = ({ location }) => {
                                             <img
                                                 style={{ marginTop: '0' }}
                                                 className='mx-auto sm:mx-0 hidden sm:block'
-                                                src={oktaLogo}
+                                                src={alibabaLogo}
                                             />
                                             <img
                                                 style={{ marginTop: '0' }}
                                                 className='mx-auto sm:mx-0 hidden sm:block'
-                                                src={alibabaLogo}
-                                            />
-                                        </div>
-                                        <div className='flex flex-row max-w-md sm:max-w-lg justify-between flex-wrap space-y-6 lg:space-y-0 lg:space-x-1 px-18 sm:px-0 mx-auto'>
-                                            <img
-                                                style={{ marginTop: '0' }}
-                                                className='mx-auto sm:mx-0 block sm:hidden'
                                                 src={oktaLogo}
                                             />
+                                        </div>
+                                        <div className='flex flex-row max-w-xs justify-evenly flex-wrap space-y-6 px-18 sm:px-0 mx-auto  block sm:hidden'>
                                             <img
                                                 style={{ marginTop: '0' }}
-                                                className='mx-auto sm:mx-0 block sm:hidden'
+                                                className=''
                                                 src={alibabaLogo}
+                                            />
+                                            <img
+                                                style={{ marginTop: '0' }}
+                                                className=''
+                                                src={oktaLogo}
                                             />
                                         </div>
                                     </div>
