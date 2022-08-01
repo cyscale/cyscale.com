@@ -2,12 +2,12 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 
 import HomeOg from '../../assets/images/homepage-og.png';
-import CspmOg from '../../assets/images/cspm-og.jpg';
-import SkgOG from '../../assets/images/graph-og.jpg';
-import DataOg from '../../assets/images/data-security-og.jpg';
-import RemoteOg from '../../assets/images/remote-work-og.jpg';
-import ComplianceOg from '../../assets/images/compliance-auditing-og.jpg';
-import MisconfigurationsOg from '../../assets/images/Misconfigurations-og.jpg';
+import CspmOg from '../../assets/images/cspm-og.png';
+import SkgOG from '../../assets/images/graph-og.png';
+import DataOg from '../../assets/images/data-security-og.png';
+import RemoteOg from '../../assets/images/remote-work-og.png';
+import ComplianceOg from '../../assets/images/compliance-auditing-og.png';
+import MisconfigurationsOg from '../../assets/images/Misconfigurations-og.png';
 import { useStaticQuery, graphql } from 'gatsby';
 
 const defaultOg = {
