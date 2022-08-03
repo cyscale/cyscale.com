@@ -45,7 +45,7 @@ const Header = ({
             : 'bg-cover'
     }
     ${pageName === 'HomePage' ? 'heroBgHome' : ''}`;
-    const rootStyle = heroBG  ? { backgroundImage: `url(${heroBG})` } : null;
+    const rootStyle = heroBG ? { backgroundImage: `url(${heroBG})` } : null;
 
     return (
         <HeaderContext.Provider value={{ sticker, setSticker }}>
@@ -71,6 +71,8 @@ const Header = ({
                                             ? 'order-2 lg:order-1'
                                             : pageName === 'ComplianceAuditing'
                                             ? null
+                                            : pageName === 'HomePage'
+                                            ? null
                                             : 'header-padding'
                                     }`}
                                 >
@@ -89,6 +91,8 @@ const Header = ({
                                             className={`text-black text-16px new-line ${
                                                 pageName === 'RemoteWork' || pageName === 'ComplianceAuditing'
                                                     ? null
+                                                    : pageName === 'HomePage'
+                                                    ? 'block'
                                                     : 'hidden sm:block'
                                             }`}
                                         >
@@ -159,9 +163,7 @@ const Header = ({
                                     </div>
                                     <div>
                                         {pageName === 'HomePage' ? (
-                                            <p
-                                                className={`text-14px text-black opacity-50 text-center pt-15px sm:text-left`}
-                                            >
+                                            <p className={`text-14px text-black opacity-50 pt-15px text-left`}>
                                                 Playground account populated with data
                                             </p>
                                         ) : null}
@@ -203,7 +205,11 @@ const Header = ({
                     pageName === 'jobDetails' ||
                     pageName === 'blogs' ||
                     pageName === 'author-page' ? null : (
-                        <div className='w-full text-center hidden sm:inline-block relative py-2'>
+                        <div
+                            className={`w-full text-center ${pageName === 'HomePage' ? 'mt-10 sm:mt-0' : ''} ${
+                                pageName !== 'HomePage' ? 'hidden sm:' : ''
+                            }inline-block relative py-2`}
+                        >
                             <ScrollButton to='start' />
                         </div>
                     )}
