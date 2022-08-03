@@ -19,7 +19,7 @@ const CloudStorageMisconfigurations = ({ location }) => {
     return <>
         <Layout
             location={location}
-            pageName='Cloud Storage Misconfiguration'
+            pageName='CloudStorageMisconfigurations'
             title='[White Paper] The Complete Guide to Cloud Storage Misconfigurations - Cyscale'
             description='This guide helps CIOs, CISOs and security staff to understand the risk & dangers of data security breaches and the importance of a secure cloud storage infrastructure.'
         >

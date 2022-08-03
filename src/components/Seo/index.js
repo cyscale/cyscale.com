@@ -8,6 +8,10 @@ import DataOg from '../../assets/images/data-security-og.png';
 import RemoteOg from '../../assets/images/remote-work-og.png';
 import ComplianceOg from '../../assets/images/compliance-auditing-og.png';
 import MisconfigurationsOg from '../../assets/images/Misconfigurations-og.png';
+import CareersOg from '../../assets/images/careers-og.png';
+import AboutUsOg from '../../assets/images/about-us-og.png';
+import StartupsOg from '../../assets/images/startups-og.png';
+import MisconfigurationsWhitepaperOg from '../../assets/images/misconfigurations-whitepaper-og.png';
 import { useStaticQuery, graphql } from 'gatsby';
 
 const defaultOg = {
@@ -17,7 +21,11 @@ const defaultOg = {
     dataSecurity: DataOg,
     RemoteWork: RemoteOg,
     ComplianceAuditing: ComplianceOg,
-    MisconfigurationsPage: MisconfigurationsOg
+    MisconfigurationsPage: MisconfigurationsOg,
+    careers: CareersOg,
+    aboutUs: AboutUsOg,
+    Startups: StartupsOg,
+    CloudStorageMisconfigurations: MisconfigurationsWhitepaperOg
 };
 
 const Seo = ({ title, description, pageName, banner, location }) => {
