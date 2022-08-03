@@ -1,7 +1,40 @@
 import React from 'react';
-import { AndreiM, AndreiP, AndreiS, Gabriel, Levi, Manuela, MihaiB, MihaiM, Ovidiu, Sabrina, George, Virginia, Petru, Elena } from '../about/images';
+import {
+    AndreiM,
+    AndreiP,
+    AndreiS,
+    Gabriel,
+    Levi,
+    Manuela,
+    MihaiB,
+    MihaiM,
+    Ovidiu,
+    Sabrina,
+    George,
+    Virginia,
+    Petru,
+    Elena,
+    Mihnea,
+    Norbert
+} from '../about/images';
 
 const data = [
+    {
+        order: 16,
+        photo: <Norbert />,
+        name: 'Norbert Hambuer',
+        position: 'Backend Engineer',
+        linkedin: 'https://www.linkedin.com/in/norbert-hambuer-14b05a168',
+        quote: false
+    },
+    {
+        order: 15,
+        photo: <Mihnea />,
+        name: 'Mihnea Stoian',
+        position: 'Backend Engineer',
+        linkedin: 'https://www.linkedin.com/in/mihnea-stoian-82382822b',
+        quote: false
+    },
     {
         order: 14,
         photo: <Elena />,
