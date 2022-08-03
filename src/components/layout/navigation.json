@@ -49,6 +49,10 @@
         {
             "link": "/use-cases/pci-dss/",
             "text": "PCI DSS"
+        },
+        {
+            "link": "/use-cases/soc-2/",
+            "text": "SOC 2"
         }
     ],
     "pricing": [
