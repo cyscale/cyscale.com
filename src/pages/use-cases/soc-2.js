@@ -31,7 +31,7 @@ const Soc2 = ({ location }) => {
     `);
 
     return (
-        <Layout location={location} pageName='SOC2' title='SOC2' description='SOC2'>
+        <Layout location={location} pageName='SOC2' title='SOC 2' description='SOC 2'>
             <div className='bg-hero-soc2 pt-8'>
                 <Container>
                     <div className='py-24 lg:pt-24 lg:pb-16'>
@@ -39,11 +39,12 @@ const Soc2 = ({ location }) => {
                             <div className='col-span-12 lg:col-span-6 order-last lg:order-first'>
                                 <div className='lg:mt-16 pt-4 max-w-xl mx-auto lg:mx-0'>
                                     <h1 className='text-center lg:text-left text-blue text-4xl lg:text-5xl leading-normal mb-16 montserrat-font'>
-                                        <strong>SOC2 Compliance</strong> <br className='hidden lg:block' /> for Cloud
+                                        <strong>SOC 2 Compliance</strong> <br className='block md:hidden lg:block' />{' '}
+                                        for Cloud
                                     </h1>
                                     <p className='text-center lg:text-left text-base lg:text-lg mb-8 leading-relaxed text-gray'>
                                         Cyscale offers a powerful set of technical controls helping you prepare for a
-                                        SOC2 audit in areas such as security, availability, processing integrity,
+                                        SOC 2 audit in areas such as security, availability, processing integrity,
                                         confidentiality and privacy
                                     </p>
                                     <p className='text-center lg:text-left text-base lg:text-lg mb-2 leading-relaxed text-gray'>
@@ -74,7 +75,7 @@ const Soc2 = ({ location }) => {
                         <div className='col-span-12 lg:col-span-6'>
                             <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-md'>
                                 <h2 className='text-3xl font-bold text-primary leading-normal border-title-partly montserrat-font'>
-                                    Automate cloud security <br /> and SOC2 compliance
+                                    Automate cloud security <br /> and SOC 2 compliance
                                 </h2>
                             </div>
                             <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-md'>
@@ -183,7 +184,7 @@ const Soc2 = ({ location }) => {
                                         <strong className='montserrat-font'>PCI-DSS, SOC 2, GDPR, and more</strong>
                                         <br />
                                         Cyscale offers a wide range of benchmarks and frameworks, including: CIS,
-                                        ISO27001, PCI-DSS, NIST, SOC2, GDPR.
+                                        ISO27001, PCI-DSS, NIST, SOC 2, GDPR.
                                     </p>
                                 </div>
                                 <div className='col-span-12 lg:col-span-6'>
