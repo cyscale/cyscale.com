@@ -6,6 +6,7 @@ import cloudIcon from '../../assets/images/cloud-icon.svg';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import { useAppLink } from '../../common/links';
+import GradientButton from '../../components/buttons/GradientButton';
 
 const Soc2 = ({ location }) => {
     const appLink = useAppLink({ location });
@@ -31,38 +32,41 @@ const Soc2 = ({ location }) => {
     `);
 
     return (
-        <Layout location={location} pageName='SOC2' title='SOC 2' description='SOC 2'>
+        <Layout
+            location={location}
+            pageName='SOC2'
+            title='SOC 2 Compliance for Cloud - Cyscale'
+            description='Out-of-the-box policies for a solid security program'
+        >
             <div className='bg-hero-soc2 pt-8'>
                 <Container>
                     <div className='py-24 lg:pt-24 lg:pb-16'>
                         <Row>
                             <div className='col-span-12 lg:col-span-6 order-last lg:order-first'>
                                 <div className='lg:mt-16 pt-4 max-w-xl mx-auto lg:mx-0'>
-                                    <h1 className='text-center lg:text-left text-blue text-4xl lg:text-5xl leading-normal mb-16 montserrat-font'>
+                                    <h1 className='text-center md:text-left text-blue text-4xl lg:text-5xl leading-normal mb-16 montserrat-font'>
                                         <strong>SOC 2 Compliance</strong> <br className='block md:hidden lg:block' />{' '}
                                         for Cloud
                                     </h1>
-                                    <p className='text-center lg:text-left text-base lg:text-lg mb-8 leading-relaxed text-gray'>
+                                    <p className='text-center md:text-left text-base lg:text-lg mb-8 leading-relaxed text-gray'>
                                         Cyscale offers a powerful set of technical controls helping you prepare for a
                                         SOC 2 audit in areas such as security, availability, processing integrity,
                                         confidentiality and privacy
                                     </p>
-                                    <p className='text-center lg:text-left text-base lg:text-lg mb-2 leading-relaxed text-gray'>
+                                    <p className='text-center md:text-left text-base lg:text-lg mb-2 leading-relaxed text-gray'>
                                         Out-of-the-box policies that you can use for a solid security program.
                                     </p>
-                                    <a
-                                        href={appLink}
-                                        target='_blank'
-                                        rel='noopener noreferrer'
-                                        className='bg-gradient-to-r mx-auto lg:mx-0 from-blue to-red block font-medium rounded text-white uppercase text-center py-4 px-8 mt-8 no-underline hover:no-underline max-w-sm lg:inline-block'
-                                    >
-                                        Try Cyscale for Free
+                                    <a href={appLink} target='_blank' rel='noopener noreferrer'>
+                                        <GradientButton text='Try Cyscale for Free' />
                                     </a>
                                 </div>
                             </div>
                             <div className='col-span-12 lg:col-span-6'>
                                 <div className='lg:mt-16 pt-4 max-w-lg lg:max-w-2xl mx-auto lg:mx-0'>
-                                    <GatsbyImage image={data.inventory.childImageSharp.gatsbyImageData} />
+                                    <GatsbyImage
+                                        image={data.inventory.childImageSharp.gatsbyImageData}
+                                        alt='Inventory graph-view with violated standards and policies'
+                                    />
                                 </div>
                             </div>
                         </Row>
@@ -111,7 +115,10 @@ const Soc2 = ({ location }) => {
                         </div>
                         <div className='col-span-12 lg:col-span-6 mt-8 sm:mt-0'>
                             <div className='mx-auto max-w-xl lg:mt-8 lg:mx-0 lg:max-w-2xl'>
-                                <GatsbyImage image={data.standards.childImageSharp.gatsbyImageData} />
+                                <GatsbyImage
+                                    image={data.standards.childImageSharp.gatsbyImageData}
+                                    alt='SOC 2 Standard detailed view'
+                                />
                             </div>
                         </div>
                     </div>
@@ -122,7 +129,10 @@ const Soc2 = ({ location }) => {
                     <div className='sm:grid sm:grid-cols-12 sm:gap-12'>
                         <div className='col-span-12 lg:col-span-6 mt-8 sm:mt-0  hidden lg:block'>
                             <div className='mx-auto max-w-xl lg:mt-8 lg:mx-0 lg:max-w-2xl'>
-                                <GatsbyImage image={data.standardsChecks.childImageSharp.gatsbyImageData} />
+                                <GatsbyImage
+                                    image={data.standardsChecks.childImageSharp.gatsbyImageData}
+                                    alt='Standards inventory view with focus on SOC 2'
+                                />
                             </div>
                         </div>
                         <div className='col-span-12 lg:col-span-6'>
@@ -148,19 +158,17 @@ const Soc2 = ({ location }) => {
                         </div>
                         <div className='col-span-12 lg:col-span-6 mt-8 sm:mt-0 block lg:hidden'>
                             <div className='mx-auto max-w-xl lg:mt-8 lg:mx-0 lg:max-w-2xl'>
-                                <GatsbyImage image={data.standardsChecks.childImageSharp.gatsbyImageData} />
+                                <GatsbyImage
+                                    image={data.standardsChecks.childImageSharp.gatsbyImageData}
+                                    alt='Standards inventory view with focus on SOC 2'
+                                />
                             </div>
                         </div>
                     </div>
                 </div>
             </Container>
-            <div className='bg-blue-gradient' id='confidence' style={{ position: 'relative', zIndex: 1 }}>
-                <img
-                    src={corner}
-                    style={{ position: 'absolute', top: 0, right: 0, margin: 0, zIndex: -1 }}
-                    width={300}
-                    className='hidden md:block'
-                />
+            <div className='bg-gradient-to-b from-selago to-white relative z-10' id='confidence'>
+                <img src={corner} width={300} className='hidden md:block absolute top-0 right-0 m-0 z-20' alt='' />
                 <Container>
                     <Section>
                         <div className='max-w-xl mx-auto lg:mx-0 lg:max-w-sm mb-20'>
@@ -213,7 +221,7 @@ const Soc2 = ({ location }) => {
             <Container>
                 <div className='pt-12 pb-24 lg:pt-32 lg:pb-32'>
                     <div className='flex h-48 flex-col items-center'>
-                        <img src={cloudIcon} alt='Cloud Icon' />
+                        <img src={cloudIcon} alt='' />
                         <h1 className='text-center px-2 mt-4 mb-2 montserrat-font font-semibold'>
                             SOC COMPLIANCE AND CLOUD SECURITY
                         </h1>

@@ -19,14 +19,6 @@
     min-height: 150px;
 }
 
-@media screen and (min-width: 1024px) {
-    .bg-image-jobs {
-        background-repeat: no-repeat;
-        background-position: left center, right center;
-        background-image: url('../images/elemente-vectoriale-04.png'), url('../images/elemente-vectoriale-04.png');
-    }
-}
-
 .hide-scrollbar::-webkit-scrollbar {
     width: 0;
     background: transparent;
@@ -38,7 +30,22 @@
     background-image: url('../images/blog-post-bg.png');
 }
 
+.bg-pouring,
+.bg-storage-misconfigurations,
+.bg-hero-campaigns-iam-security,
+.bg-hero-soc2 {
+    background-image: linear-gradient(#eeeeee, #e4edfc);
+}
+.h-advantages {
+    height: 32rem;
+}
+
 @media screen and (min-width: 1024px) {
+    .bg-image-jobs {
+        background-repeat: no-repeat;
+        background-position: left center, right center;
+        background-image: url('../images/elemente-vectoriale-04.png'), url('../images/elemente-vectoriale-04.png');
+    }
     .bg-cloud {
         background-size: cover;
         background-repeat: no-repeat;
@@ -46,14 +53,6 @@
         background-position: 50% 35%;
         background-image: url('../images/hero-CSPM-bg.jpg');
     }
-}
-
-.title-cs-misconfiguration {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-}
-
-@media screen and (min-width: 1024px) {
     .bg-pouring {
         background-size: cover;
         background-repeat: no-repeat;
@@ -87,16 +86,9 @@
     }
 }
 
-@media screen and (max-width: 1024px) {
-    .bg-pouring,
-    .bg-storage-misconfigurations,
-    .bg-hero-campaigns-iam-security,
-    .bg-hero-soc2{
-        background-image: linear-gradient(#eeeeee, #e4edfc);
-    }
-    .h-advantages {
-        height: 32rem;
-    }
+.title-cs-misconfiguration {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
 }
 
 @media screen and (min-width: 440px) and (max-width: 1023px) {
