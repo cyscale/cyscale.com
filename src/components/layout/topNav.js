@@ -9,7 +9,12 @@ import navBars from '../../assets/images/navbars-campaigns.svg';
 
 const initMenu = (pageName) => {
     return {
-        Icon: pageName !== 'Identity and Access Management Security for Cloud' ? menuIcon : navBars,
+        Icon:
+            pageName === 'Identity and Access Management Security for Cloud' ||
+            pageName === 'AWSCloudSecurityCampaign' ||
+            pageName === 'CSPMSolutionCampaign'
+                ? navBars
+                : menuIcon,
         menuToggle: 'hidden',
         toggleLogo: '',
         toggleBg: ''
@@ -54,7 +59,12 @@ const TopNav = ({ pageName, showLogo = true }) => {
             });
         } else {
             setMenu({
-                Icon: pageName !== 'Identity and Access Management Security for Cloud' ? menuIcon : navBars,
+                Icon:
+                    pageName === 'Identity and Access Management Security for Cloud' ||
+                    pageName === 'AWSCloudSecurityCampaign' ||
+                    pageName === 'CSPMSolutionCampaign'
+                        ? navBars
+                        : menuIcon,
                 menuToggle: 'hidden',
                 toggleLogo: '',
                 toggleBg: ''
