@@ -1,13 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 import Seo from '../Seo';
 import Header from './header';
 import GlobalContext from '../../context/GlobalContext';
 import useHubspotEvents from '../../common/hbspotEvents';
 import CookiesBanner from '../cookies-banner/CookiesBanner';
-import { CookiesProvider, useCookies } from 'react-cookie';
+import { CookiesProvider } from 'react-cookie';
 import loadable from '@loadable/component';
 import ScrollToTopButton from '../ScrollToTopButton/ScrollToTopButton';
+import useSetCookieBanner from '../cookies-banner/useSetCookieBanner';
 const Footer = loadable(() => import('./footer'));
 
 const Layout = ({
@@ -27,12 +28,7 @@ const Layout = ({
     blogDataTitle
 }) => {
     useHubspotEvents({ location, pageName });
-    const [cookiesBanner, setCookiesBanner] = useState(false);
-    const [cookies] = useCookies();
-
-    useEffect(() => {
-        setCookiesBanner(true);
-    }, []);
+    const { cookies, cookiesBanner, setCookiesBanner } = useSetCookieBanner();
 
     return (
         <div>
@@ -74,7 +70,11 @@ const Layout = ({
                     </main>
                     <Footer />
                     {Boolean(cookies?.CookiesConsent) !== true && (
-                        <CookiesBanner cookiesBanner={cookiesBanner} setCookiesBanner={setCookiesBanner} pageName={pageName} />
+                        <CookiesBanner
+                            cookiesBanner={cookiesBanner}
+                            setCookiesBanner={setCookiesBanner}
+                            pageName={pageName}
+                        />
                     )}
                     <ScrollToTopButton />
                 </GlobalContext.Provider>

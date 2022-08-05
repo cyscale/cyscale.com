@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import navBars from '../../assets/images/navbars-campaigns.svg';
-import { CookiesProvider, useCookies } from 'react-cookie';
+import { CookiesProvider } from 'react-cookie';
 import { useAppLink } from '../../common/links';
 import menuClsoe from '../../assets/images/menuClose.svg';
 import GlobalContext from '../../context/GlobalContext';
 import Seo from '../Seo';
 import { Helmet } from 'react-helmet';
-import { Container, Row } from '../atoms/Containers';
-import { Link } from 'gatsby';
+import { Container } from '../atoms/Containers';
+import { graphql, Link, useStaticQuery } from 'gatsby';
 import logo from '../../assets/images/logo.svg';
 import { CSSTransition } from 'react-transition-group';
 import Navigation from '../layout/Navigation';
@@ -15,6 +15,7 @@ import TopNav from '../layout/topNav';
 import Footer from './footer';
 import CookiesBanner from '../cookies-banner/CookiesBanner';
 import ScrollToTopButton from '../ScrollToTopButton/ScrollToTopButton';
+import useSetCookieBanner from '../cookies-banner/useSetCookieBanner';
 
 const initMenu = {
     Icon: navBars,
@@ -23,9 +24,9 @@ const initMenu = {
     toggleBg: ''
 };
 
-const NewCookiesCampaignsLayout = ({ children, formId, target, location, title, description, pageName, jobs }) => {
-    const [cookiesBanner, setCookiesBanner] = useState(false);
-    const [cookies] = useCookies();
+const NewCookiesCampaignsLayout = ({ children, formId, formTargetId, location, title, description, pageName }) => {
+    const { cookies, cookiesBanner, setCookiesBanner } = useSetCookieBanner();
+
     const [menu, setMenu] = useState(initMenu);
     const [navOpen, setNavOpen] = useState(false);
     const appLink = useAppLink();
@@ -48,14 +49,35 @@ const NewCookiesCampaignsLayout = ({ children, formId, target, location, title, 
         }
     };
 
+    const data = useStaticQuery(graphql`
+        query NewCookiesCampaignsLayoutQuery {
+            allMarkdownRemark(
+                limit: 5
+                sort: { fields: frontmatter___date, order: DESC }
+                filter: { frontmatter: { templateKey: { eq: "career-page" }, disabled: { eq: false } } }
+            ) {
+                nodes {
+                    frontmatter {
+                        date
+                        description
+                        permalink
+                        title
+                        experience
+                    }
+                }
+            }
+        }
+    `);
+
+    let jobs = data.allMarkdownRemark.nodes;
+
     useEffect(() => {
-        setCookiesBanner(true);
         setTimeout(() => {
             if (window && window.hbspt) {
                 window.hbspt.forms.create({
                     portalId: '5413427',
                     formId,
-                    target
+                    target: formTargetId
                 });
             }
         }, 600);
@@ -73,15 +95,13 @@ const NewCookiesCampaignsLayout = ({ children, formId, target, location, title, 
                     <meta name='robots' content='nofollow' />
                 </Helmet>
                 <Container className='hidden xl:block'>
-                    <Row>
-                        <div className='col-span-12 flex justify-end'>
-                            <p className='text-sm py-2'>
-                                <strong>Call:</strong>
-                                <span style={{ color: '#5E5E5E' }}> +44 7401 208466</span> &nbsp;&nbsp;&nbsp;
-                                <strong>Email:</strong> <span style={{ color: '#5E5E5E' }}>sales@cyscale.com</span>
-                            </p>
-                        </div>
-                    </Row>
+                    <div className='flex justify-end'>
+                        <p className='text-sm py-2'>
+                            <strong>Call:</strong>
+                            <span style={{ color: '#5E5E5E' }}> +44 7401 208466</span> &nbsp;&nbsp;&nbsp;
+                            <strong>Email:</strong> <span style={{ color: '#5E5E5E' }}>sales@cyscale.com</span>
+                        </p>
+                    </div>
                 </Container>
                 <header id='head' className='bg-lightGrey pt-8 pb-2 hidden xl:block'>
                     <div className='container max-w-7xl m-auto px-4 lg:px-8 flex items-center'>

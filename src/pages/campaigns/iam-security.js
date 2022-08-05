@@ -26,35 +26,17 @@ const IamSecurity = ({ location }) => {
                     gatsbyImageData(width: 1080, layout: CONSTRAINED)
                 }
             }
-            allMarkdownRemark(
-                limit: 5
-                sort: { fields: frontmatter___date, order: DESC }
-                filter: { frontmatter: { templateKey: { eq: "career-page" }, disabled: { eq: false } } }
-            ) {
-                nodes {
-                    frontmatter {
-                        date
-                        description
-                        permalink
-                        title
-                        experience
-                    }
-                }
-            }
         }
     `);
-
-    let jobs = data.allMarkdownRemark.nodes;
 
     return (
         <NewCookiesCampaignsLayout
             formId={'0f6ac136-20fa-4420-95a4-da1ff837f635'}
-            target={'#iamsecurity-campaign-form'}
+            formTargetId={'#iamsecurity-campaign-form'}
             location={location}
             title={'Identity and Access Management Security for Cloud'}
             description={'Identity and Access Management Security for Cloud'}
             pageName={'Identity and Access Management Security for Cloud'}
-            jobs={jobs}
         >
             <div className='bg-hero-campaigns-iam-security pb-8 pt-16 lg:pt-20 xl:pt-12'>
                 <Container>

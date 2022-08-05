@@ -26,35 +26,17 @@ const AWSCloudSolution = ({ location }) => {
                     gatsbyImageData(width: 1080, layout: CONSTRAINED)
                 }
             }
-            allMarkdownRemark(
-                limit: 5
-                sort: { fields: frontmatter___date, order: DESC }
-                filter: { frontmatter: { templateKey: { eq: "career-page" }, disabled: { eq: false } } }
-            ) {
-                nodes {
-                    frontmatter {
-                        date
-                        description
-                        permalink
-                        title
-                        experience
-                    }
-                }
-            }
         }
     `);
-
-    let jobs = data.allMarkdownRemark.nodes;
 
     return (
         <NewCookiesCampaignsLayout
             formId={'e2610c67-1db7-4443-b551-784a12a3da64'}
-            target={'#request-aws-demo'}
+            formTargetId={'#request-aws-demo'}
             location={location}
             title={'AWS Cloud Security and compliance'}
             description={'Map, secure, and monitor your AWS assets in minutes.'}
             pageName='AWSCloudSecurityCampaign'
-            jobs={jobs}
         >
             <div className='bg-hero-campaigns-iam-security pb-8 pt-32 lg:pt-20 xl:pt-12'>
                 <Container>

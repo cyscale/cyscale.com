@@ -30,37 +30,19 @@ const CSPMSolution = ({ location }) => {
                     gatsbyImageData(width: 1080, layout: CONSTRAINED)
                 }
             }
-            allMarkdownRemark(
-                limit: 5
-                sort: { fields: frontmatter___date, order: DESC }
-                filter: { frontmatter: { templateKey: { eq: "career-page" }, disabled: { eq: false } } }
-            ) {
-                nodes {
-                    frontmatter {
-                        date
-                        description
-                        permalink
-                        title
-                        experience
-                    }
-                }
-            }
         }
     `);
-
-    let jobs = data.allMarkdownRemark.nodes;
 
     return (
         <NewCookiesCampaignsLayout
             formId={'81943e73-3b0a-4e69-8c8d-92c747a10796'}
-            target={'#request-cspm-demo'}
+            formTargetId={'#request-cspm-demo'}
             location={location}
             title={'Comprehensive CSPM solution'}
             description={
                 'Streamline posture management for multi-cloud environments, enable teams to continuously detect, prevent misconfigurations and control threats and ensure compliance for your cloud assets.'
             }
             pageName={'CSPMSolutionCampaign'}
-            jobs={jobs}
         >
             <div className='bg-hero-campaigns-iam-security pb-8 pt-32 lg:pt-20 xl:pt-12'>
                 <Container>

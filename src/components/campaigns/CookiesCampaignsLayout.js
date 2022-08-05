@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { CookiesProvider, useCookies } from 'react-cookie';
+import React from 'react';
+import { CookiesProvider } from 'react-cookie';
 import GlobalContext from '../../context/GlobalContext';
 import Seo from '../Seo';
 import Footer from './footer';
@@ -9,14 +9,10 @@ import { Container } from '../atoms/Containers';
 import { Link } from 'gatsby';
 import logo from '../../assets/images/logo.svg';
 import ScrollToTopButton from '../ScrollToTopButton/ScrollToTopButton';
+import useSetCookieBanner from '../cookies-banner/useSetCookieBanner';
 
 const CookiesCampaignsLayout = ({ location, title, description, pageName, children }) => {
-    const [cookiesBanner, setCookiesBanner] = useState(false);
-    const [cookies] = useCookies();
-
-    useEffect(() => {
-        setCookiesBanner(true);
-    }, []);
+    const { cookies, cookiesBanner, setCookiesBanner } = useSetCookieBanner();
 
     return (
         <CookiesProvider>
