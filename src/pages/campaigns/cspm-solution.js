@@ -128,7 +128,7 @@ const CSPMSolution = ({ location }) => {
                         <div className='col-span-12 flex justify-end'>
                             <p className='text-sm py-2'>
                                 <strong>Call:</strong>
-                                <span style={{ color: '#5E5E5E' }}> + 44 757 379 376</span> &nbsp;&nbsp;&nbsp;
+                                <span style={{ color: '#5E5E5E' }}> +44 740 120 8466</span> &nbsp;&nbsp;&nbsp;
                                 <strong>Email:</strong> <span style={{ color: '#5E5E5E' }}>sales@cyscale.com</span>
                             </p>
                         </div>
