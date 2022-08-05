@@ -7,14 +7,15 @@ import { useAppLink } from '../../common/links';
 import Navigation from './Navigation';
 import navBars from '../../assets/images/navbars-campaigns.svg';
 
+const dynamicNavPages = [
+    'Identity and Access Management Security for Cloud',
+    'AWSCloudSecurityCampaign',
+    'CSPMSolutionCampaign'
+];
+
 const initMenu = (pageName) => {
     return {
-        Icon:
-            pageName === 'Identity and Access Management Security for Cloud' ||
-            pageName === 'AWSCloudSecurityCampaign' ||
-            pageName === 'CSPMSolutionCampaign'
-                ? navBars
-                : menuIcon,
+        Icon: dynamicNavPages.includes(pageName) ? navBars : menuIcon,
         menuToggle: 'hidden',
         toggleLogo: '',
         toggleBg: ''
@@ -59,12 +60,7 @@ const TopNav = ({ pageName, showLogo = true }) => {
             });
         } else {
             setMenu({
-                Icon:
-                    pageName === 'Identity and Access Management Security for Cloud' ||
-                    pageName === 'AWSCloudSecurityCampaign' ||
-                    pageName === 'CSPMSolutionCampaign'
-                        ? navBars
-                        : menuIcon,
+                Icon: dynamicNavPages.includes(pageName) ? navBars : menuIcon,
                 menuToggle: 'hidden',
                 toggleLogo: '',
                 toggleBg: ''
