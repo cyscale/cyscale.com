@@ -71,23 +71,40 @@ const IamSecurity = ({ location }) => {
                                         directives and improve your cloud security posture.
                                     </p>
                                     <div className='flex flex-row max-w-md sm:max-w-lg justify-between flex-wrap space-y-6 lg:space-y-0 lg:space-x-1 px-18 sm:px-0 mx-auto'>
-                                        <img style={{ marginTop: '0' }} className='mx-auto sm:mx-0' src={gcpLogo} />
-                                        <img style={{ marginTop: '0' }} className='mx-auto sm:mx-0' src={awsLogo} />
-                                        <img style={{ marginTop: '0' }} className='mx-auto sm:mx-0' src={azureLogo} />
+                                        <img
+                                            style={{ marginTop: '0' }}
+                                            className='mx-auto sm:mx-0'
+                                            src={gcpLogo}
+                                            alt=''
+                                        />
+                                        <img
+                                            style={{ marginTop: '0' }}
+                                            className='mx-auto sm:mx-0'
+                                            src={awsLogo}
+                                            alt=''
+                                        />
+                                        <img
+                                            style={{ marginTop: '0' }}
+                                            className='mx-auto sm:mx-0'
+                                            src={azureLogo}
+                                            alt=''
+                                        />
                                         <img
                                             style={{ marginTop: '0' }}
                                             className='mx-auto sm:mx-0 hidden sm:block'
                                             src={alibabaLogo}
+                                            alt=''
                                         />
                                         <img
                                             style={{ marginTop: '0' }}
                                             className='mx-auto sm:mx-0 hidden sm:block'
                                             src={oktaLogo}
+                                            alt=''
                                         />
                                     </div>
                                     <div className='flex flex-row max-w-xs justify-evenly flex-wrap space-y-6 px-18 sm:px-0 mx-auto  block sm:hidden'>
-                                        <img style={{ marginTop: '0' }} className='' src={alibabaLogo} />
-                                        <img style={{ marginTop: '0' }} className='' src={oktaLogo} />
+                                        <img style={{ marginTop: '0' }} className='' src={alibabaLogo} alt='' />
+                                        <img style={{ marginTop: '0' }} className='' src={oktaLogo} alt='' />
                                     </div>
                                 </div>
                             </div>

@@ -82,7 +82,12 @@ const AWSCloudSolution = ({ location }) => {
                                         </li>
                                     </ul>
                                     <div className='flex flex-row max-w-md sm:max-w-xl justify-between flex-wrap px-18 sm:px-0 mx-auto'>
-                                        <img style={{ marginTop: '0' }} className='mx-auto lg:mx-0' src={awsLogo} />
+                                        <img
+                                            style={{ marginTop: '0' }}
+                                            className='mx-auto lg:mx-0'
+                                            src={awsLogo}
+                                            alt=''
+                                        />
                                     </div>
                                 </div>
                             </div>
