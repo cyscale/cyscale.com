@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 import Seo from '../Seo';
 import Footer from './footer';
@@ -7,18 +7,14 @@ import HeaderContext from './HeaderContext';
 import GlobalContext from '../../context/GlobalContext';
 import useHubspotEvents from '../../common/hbspotEvents';
 import CookiesBanner from '../cookies-banner/CookiesBanner';
-import { CookiesProvider, useCookies } from 'react-cookie';
+import { CookiesProvider } from 'react-cookie';
 import ScrollToTopButton from '../ScrollToTopButton/ScrollToTopButton';
+import useSetCookieBanner from '../cookies-banner/useSetCookieBanner';
 
 const Layout = ({ children, title, description, pageName, location, banner }) => {
     useHubspotEvents({ location, pageName });
     const [sticker, setSticker] = useState(false);
-    const [cookiesBanner, setCookiesBanner] = useState(false);
-    const [cookies] = useCookies();
-
-    useEffect(() => {
-        setCookiesBanner(true);
-    }, []);
+    const { cookies, cookiesBanner, setCookiesBanner } = useSetCookieBanner();
 
     return (
         <CookiesProvider>
@@ -30,7 +26,11 @@ const Layout = ({ children, title, description, pageName, location, banner }) =>
                 <main>{children}</main>
                 <Footer />
                 {Boolean(cookies?.CookiesConsent) !== true && (
-                    <CookiesBanner cookiesBanner={cookiesBanner} setCookiesBanner={setCookiesBanner} pageName={pageName}/>
+                    <CookiesBanner
+                        cookiesBanner={cookiesBanner}
+                        setCookiesBanner={setCookiesBanner}
+                        pageName={pageName}
+                    />
                 )}
                 <ScrollToTopButton />
             </GlobalContext.Provider>
