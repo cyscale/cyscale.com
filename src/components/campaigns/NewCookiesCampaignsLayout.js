@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import navBars from '../../assets/images/navbars-campaigns.svg';
 import { CookiesProvider } from 'react-cookie';
 import { useAppLink } from '../../common/links';
-import menuClsoe from '../../assets/images/menuClose.svg';
 import GlobalContext from '../../context/GlobalContext';
 import Seo from '../Seo';
 import { Helmet } from 'react-helmet';
@@ -16,38 +15,13 @@ import Footer from './footer';
 import CookiesBanner from '../cookies-banner/CookiesBanner';
 import ScrollToTopButton from '../ScrollToTopButton/ScrollToTopButton';
 import useSetCookieBanner from '../cookies-banner/useSetCookieBanner';
-
-const initMenu = {
-    Icon: navBars,
-    menuToggle: 'hidden',
-    toggleLogo: '',
-    toggleBg: ''
-};
+import useToggleMenu from '../layout/useToggleMenu';
 
 const NewCookiesCampaignsLayout = ({ children, formId, formTargetId, location, title, description, pageName }) => {
     const { cookies, cookiesBanner, setCookiesBanner } = useSetCookieBanner();
-
-    const [menu, setMenu] = useState(initMenu);
     const [navOpen, setNavOpen] = useState(false);
     const appLink = useAppLink();
-
-    const toggleMenuIcon = () => {
-        if (menu.Icon === navBars) {
-            setMenu({
-                Icon: menuClsoe,
-                menuToggle: '',
-                toggleLogo: 'hidden',
-                toggleBg: 'menuBgMobile'
-            });
-        } else {
-            setMenu({
-                Icon: navBars,
-                menuToggle: 'hidden',
-                toggleLogo: '',
-                toggleBg: ''
-            });
-        }
-    };
+    const { menu, toggleMenuIcon } = useToggleMenu(pageName);
 
     const data = useStaticQuery(graphql`
         query NewCookiesCampaignsLayoutQuery {
