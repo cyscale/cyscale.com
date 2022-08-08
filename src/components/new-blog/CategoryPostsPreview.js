@@ -94,6 +94,7 @@ const CategoryPostsPreview = ({ category, id }) => {
                                 <div className='col-span-6 hidden lg:flex lg:justify-end'>
                                     <GatsbyImage
                                         alt='White paper Cover'
+                                        className="rounded-md"
                                         image={data.whitepaperCover.childImageSharp.gatsbyImageData}
                                     />
                                 </div>
