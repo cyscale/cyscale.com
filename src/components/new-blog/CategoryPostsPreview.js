@@ -36,7 +36,7 @@ const CategoryPostsPreview = ({ category, id }) => {
         <div className='bg-lightGrey py-12' id={id}>
             <Container>
                 <Row>
-                    <div className='col-span-12 lg:col-span-6 mx-auto max-w-lg'>
+                    <div className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 max-w-lg'>
                         <h2 className='font-semibold text-2xl md:max-w-xs mb-8'>
                             Get your latest dose of News and Insights about
                             <strong> {category}</strong>
