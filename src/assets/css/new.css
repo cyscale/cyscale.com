@@ -326,3 +326,7 @@ img[src*='#shadow'] {
 .montserrat-font {
     font-family: 'Montserrat', sans-serif;
 }
+
+.latest-dose:hover .latest-dose:before {
+    background-image: url(../images/arrow-right-blue.svg);
+}
