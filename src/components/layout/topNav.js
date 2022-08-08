@@ -1,33 +1,16 @@
 import React, { useEffect, useRef, useState } from 'react';
-import menuIcon from '../../assets/images/menuIcon.svg';
-import menuClsoe from '../../assets/images/menuClose.svg';
 import { useStaticQuery, graphql } from 'gatsby';
 import useScrollTrigger from '../scrollTrigger';
 import { useAppLink } from '../../common/links';
 import Navigation from './Navigation';
-import navBars from '../../assets/images/navbars-campaigns.svg';
-
-const dynamicNavPages = [
-    'Identity and Access Management Security for Cloud',
-    'AWSCloudSecurityCampaign',
-    'CSPMSolutionCampaign'
-];
-
-const initMenu = (pageName) => {
-    return {
-        Icon: dynamicNavPages.includes(pageName) ? navBars : menuIcon,
-        menuToggle: 'hidden',
-        toggleLogo: '',
-        toggleBg: ''
-    };
-};
+import useToggleMenu from './useToggleMenu';
 
 const TopNav = ({ pageName, showLogo = true }) => {
     const root = useRef();
     const trigger = useScrollTrigger();
-    const [menu, setMenu] = useState(initMenu(pageName));
     const [showBurgerButton, setShowBurgerButton] = useState(pageName !== 'HomePage');
     const appLink = useAppLink();
+    const { menu, toggleMenuIcon } = useToggleMenu(pageName);
 
     useEffect(() => {
         const onScroll = () => {
@@ -49,24 +32,6 @@ const TopNav = ({ pageName, showLogo = true }) => {
             }
         };
     }, []);
-
-    const toggleMenuIcon = () => {
-        if (menu.Icon === menuIcon || menu.Icon === navBars) {
-            setMenu({
-                Icon: menuClsoe,
-                menuToggle: '',
-                toggleLogo: 'hidden',
-                toggleBg: 'menuBgMobile'
-            });
-        } else {
-            setMenu({
-                Icon: dynamicNavPages.includes(pageName) ? navBars : menuIcon,
-                menuToggle: 'hidden',
-                toggleLogo: '',
-                toggleBg: ''
-            });
-        }
-    };
 
     const data = useStaticQuery(graphql`
         query CareersQueryForMenu {

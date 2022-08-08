@@ -4,7 +4,6 @@ import { graphql, useStaticQuery } from 'gatsby';
 import cloudIcon from '../../assets/images/cloud-icon.svg';
 import ScrollButtonStartups from '../../components/ScrollButton/ScrollButtonStartups';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import awsLogo from '../../assets/images/aws-campaigns-iam-security.svg';
 import { animateScroll } from 'react-scroll';
 import NewCookiesCampaignsLayout from '../../components/campaigns/NewCookiesCampaignsLayout';
 
@@ -63,14 +62,6 @@ const AWSCloudSolution = ({ location }) => {
                                             policies{' '}
                                         </li>
                                     </ul>
-                                    <div className='flex flex-row max-w-md sm:max-w-xl justify-between flex-wrap px-18 sm:px-0 mx-auto'>
-                                        <img
-                                            style={{ marginTop: '0' }}
-                                            className='mx-auto lg:mx-0'
-                                            src={awsLogo}
-                                            alt=''
-                                        />
-                                    </div>
                                 </div>
                             </div>
                             <div className='col-span-12 lg:col-span-6' id='apply-now'>
