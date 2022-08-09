@@ -49,7 +49,7 @@ Examples of symmetric algorithms are: 
 
 The latter one is, in 2022, the industry standard and is recommended to be used with 128 bits keys. 
 
-![Symmetric encryption](/img/blog_17-cisco-encryption.png#shadow "Symmetric encryption")
+![Symmetric encryption](/img/blog_17-cisco_encryption.png#shadow "Symmetric encryption")
 
 Image source – cisco.com 
 
