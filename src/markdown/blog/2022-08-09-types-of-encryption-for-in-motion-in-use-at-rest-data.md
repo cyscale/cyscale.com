@@ -49,7 +49,7 @@ Examples of symmetric algorithms are: 
 
 The latter one is, in 2022, the industry standard and is recommended to be used with 128 bits keys. 
 
-![Symmetric encryption](/img/blog_17-cisco-encryption.png#shadow "Symmetric encryption")
+![Symmetric encryption](/img/blog_17-cisco-encryption.png "Symmetric encryption")
 
 Image source – cisco.com 
 
@@ -158,8 +158,6 @@ For the examples of data given above, you can have the following encryption sche
 * database encryption, 
 * file system encryption, 
 * cloud assets encryption. 
-
-
 
 One important aspect of encryption is cryptographic keys management. You must store your keys safely to ensure confidentiality of your data. 
 
