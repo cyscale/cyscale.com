@@ -73,7 +73,7 @@ const CategoryPostsPreview = ({ category, id }) => {
                                 <div className='col-span-12 lg:col-span-6'>
                                     <div className='flex flex-col justify-between h-full'>
                                         <div>
-                                            <p className='text-white'>White Paper</p>
+                                            <p className='text-white mb-2'>Whitepaper</p>
                                             <h1 className='text-white text-xl mb-2'>
                                                 The Complete Guide to Cloud Storage Misconfigurations
                                             </h1>
@@ -87,7 +87,7 @@ const CategoryPostsPreview = ({ category, id }) => {
                                             className='text-white text-lg underline'
                                             to={'/whitepaper/cloud-storage-misconfigurations/'}
                                         >
-                                            Download White Paper
+                                            Download Whitepaper
                                         </Link>
                                     </div>
                                 </div>
