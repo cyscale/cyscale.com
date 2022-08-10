@@ -182,9 +182,9 @@ Use Cyscale to ensure that you’re protecting data by taking advantage of over 
 
 Here are just a few examples of controls that ensure data security through encryption across different cloud vendors: 
 
-* Ensure all S3 buckets employ encryption-at-rest for AWS 
-* Ensure web app is using the latest version of TLS encryption for Azure 
-* Ensure VM disks for critical VMs are encrypted with Customer-Supplied Encryption Keys (CSEK) for GCP 
-* Ensure server-side encryption is set to 'Encrypt with Service Key' for Alibaba 
+* *Ensure all S3 buckets employ encryption-at-rest* for AWS 
+* *Ensure web app is using the latest version of TLS encryption* for Azure 
+* *Ensure VM disks for critical VMs are encrypted with Customer-Supplied Encryption Keys (CSEK)* for GCP 
+* *Ensure server-side encryption is set to 'Encrypt with Service Key'* for Alibaba 
 
 <!--EndFragment-->
