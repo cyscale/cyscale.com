@@ -39,6 +39,8 @@ This article will explain these misconfigurations and help you work them out. �
 
 We will also give you some examples of the controls Cyscale implements to ensure foolproof configurations for your company’s cloud. 
 
+<div id="storage">
+
 ## **1. Poor storage access configuration**
 
 Storage access misconfigurations usually make cloud assets open to the public view. 
@@ -69,6 +71,8 @@ Let’s look at some examples of controls offered by Cyscale that check if you h
 
 * *Ensure that S3 Buckets are configured with 'Block public access (bucket settings)'* for AWS Cloud 
 * *Ensure network access rule for storage bucket is not set to publicly accessible* for Alibaba Cloud
+
+</div>
 
 ## **2. Broken access control**
 
