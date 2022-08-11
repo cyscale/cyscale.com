@@ -39,7 +39,7 @@ This article will explain these misconfigurations and help you work them out. �
 
 We will also give you some examples of the controls Cyscale implements to ensure foolproof configurations for your company’s cloud. 
 
-<div id="storage">
+<div id="storage-access">
 
 ## **1. Poor storage access configuration**
 
