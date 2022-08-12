@@ -54,19 +54,20 @@ const ConfirmButtons = ({
     justify,
     setCookiesModal,
     setCookiesBanner,
-    performanceAndAnalytics
+    performanceAndAnalytics,
+    cookiesOptions
 }) => {
     const [, setCookie] = useCookies();
 
     const confirmMyChoices = () => {
-        setCookie('CookiesConsent', { performanceAndAnalytics }, { path: '/' });
+        setCookie('CookiesConsent', { performanceAndAnalytics }, { ...cookiesOptions });
         setCookiesModal(false);
         setCookiesBanner(false);
         window.location.reload(false);
     };
 
     const acceptAllCookies = () => {
-        setCookie('CookiesConsent', { performanceAndAnalytics: true }, { path: '/' });
+        setCookie('CookiesConsent', { performanceAndAnalytics: true }, { ...cookiesOptions });
         setCookiesModal(false);
         setCookiesBanner(false);
         window.location.reload(false);
@@ -97,7 +98,8 @@ const CookiesModal = ({
     cookiesModal,
     setCookiesBanner,
     performanceAndAnalytics,
-    setPerformanceAndAnalytics
+    setPerformanceAndAnalytics,
+    cookiesOptions
 }) => {
     const [active, setActive] = useState(0);
 
@@ -183,6 +185,7 @@ const CookiesModal = ({
                             setCookiesModal={setCookiesModal}
                             setCookiesBanner={setCookiesBanner}
                             performanceAndAnalytics={performanceAndAnalytics}
+                            cookiesOptions={cookiesOptions}
                         />
                     </div>
                 </div>
@@ -193,6 +196,7 @@ const CookiesModal = ({
                         setCookiesModal={setCookiesModal}
                         setCookiesBanner={setCookiesBanner}
                         performanceAndAnalytics={performanceAndAnalytics}
+                        cookiesOptions={cookiesOptions}
                     />
                 </div>
             </FocusLock>

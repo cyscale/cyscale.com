@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import FocusLock from 'react-focus-lock';
 import { Link } from 'gatsby';
@@ -8,6 +8,7 @@ import { useCookies } from 'react-cookie';
 const CookiesBanner = ({ cookiesBanner, setCookiesBanner, pageName }) => {
     const [cookiesModal, setCookiesModal] = useState(false);
     const [performanceAndAnalytics, setPerformanceAndAnalytics] = useState(true);
+    const [cookiesOptions, setCookiesOptions] = useState({ path: '/' });
     const [, setCookie] = useCookies();
 
     const openModalOnKeyUp = (e) => {
@@ -17,6 +18,12 @@ const CookiesBanner = ({ cookiesBanner, setCookiesBanner, pageName }) => {
         }
         return null;
     };
+
+    useEffect(() => {
+        if (typeof window !== `undefined` && window.location.hostname !== 'localhost') {
+            setCookiesOptions({ ...cookiesOptions, domain: window.location.hostname });
+        }
+    }, []);
 
     return (
         <div>
@@ -55,7 +62,11 @@ const CookiesBanner = ({ cookiesBanner, setCookiesBanner, pageName }) => {
                                     aria-label='Accept cookies'
                                     id='confirm-button'
                                     onClick={() => {
-                                        setCookie('CookiesConsent', { performanceAndAnalytics: true }, { path: '/' });
+                                        setCookie(
+                                            'CookiesConsent',
+                                            { performanceAndAnalytics: true },
+                                            { ...cookiesOptions }
+                                        );
                                         setCookiesBanner(!cookiesBanner);
                                         window.location.reload(false);
                                     }}
@@ -77,6 +88,7 @@ const CookiesBanner = ({ cookiesBanner, setCookiesBanner, pageName }) => {
                                         setCookiesBanner={setCookiesBanner}
                                         performanceAndAnalytics={performanceAndAnalytics}
                                         setPerformanceAndAnalytics={setPerformanceAndAnalytics}
+                                        cookiesOptions={cookiesOptions}
                                     />
                                 </div>
                             </div>
