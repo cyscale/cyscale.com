@@ -6,6 +6,7 @@ authors: Sabrina Lupșan
 permalink: check-for-least-privilege
 categories:
   - CSPM
+  - Product
 date: 2022-08-15T05:45:35.102Z
 description: "The Least Privilege Principle states that no user should be given
   more permissions and for more time than they require for their day-to-day
