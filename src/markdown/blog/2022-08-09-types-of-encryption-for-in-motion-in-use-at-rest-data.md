@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
-title: "Types of Encryption for In-Motion, In-Use, At-Rest Data "
-seoTitle: "Types of Encryption for In-Motion, In-Use, At-Rest Data "
+title: "Types of Encryption for In Motion, In Use, At Rest Data "
+seoTitle: "Types of Encryption for In Motion, In Use, At Rest Data "
 authors: Sabrina Lupșan
 permalink: types-of-encryption
 categories:
@@ -12,13 +12,13 @@ description: "Encryption is the process of altering data in order to hide its
   key in their possession cannot decrypt the data and, therefore, read its
   content. Encryption algorithms can be symmetric and asymmetric. When
   protecting data, you need to ensure you're taking in consideration all three
-  states: in-motion, in-use, and at-rest data."
+  states: in motion, in use, and at rest data."
 seoDescription: "Encryption is the process of altering data in order to hide its
   content and ensure confidentiality. Entities that do not have the decryption
   key in their possession cannot decrypt the data and, therefore, read its
   content. Encryption algorithms can be symmetric and asymmetric. When
   protecting data, you need to ensure you're taking in consideration all three
-  states: in-motion, in-use, and at-rest data."
+  states: in motion, in use, and at rest data."
 featuredpost: true
 featuredimage: /img/blog_17-cover-image.png
 tags:
@@ -72,15 +72,15 @@ Encryption ensures confidentiality of data. The unreadable ciphertext keeps the 
 
 Data has three states: 
 
-* In-motion, 
-* In-use, 
-* At-rest. 
+* In motion, 
+* In use, 
+* At rest. 
 
 It is essential to understand these states and ensure that the data is always encrypted. It is not enough to encrypt data only when it is stored if, when in transit, a malicious party can still read it.  
 
 Therefore, we will look at encryption mechanisms for all three data states. 
 
-### In-Motion Encryption 
+### In Motion Encryption 
 
 Data in motion, or in transit, is data that is moved from one location to another, for example, between: 
 
@@ -90,7 +90,7 @@ Data in motion, or in transit, is data that is moved from one location to anothe
 * applications, 
 * networks.  
 
-Examples of data in-motion are: 
+Examples of data in motion are: 
 
 * emails, 
 * files, 
@@ -104,39 +104,39 @@ Using one of the mentioned protocols prevents attackers from reading the data in
 
 Websites should use HTTPS (Hypertext Transfer Protocol Secure) instead of HTTP to ensure encryption between websites and browsers. HTTPS uses SSL/TLS. 
 
-**What is in-motion data vulnerable to?** 
+**What is in motion data vulnerable to?** 
 
 **Eavesdropping attacks.** In this situation, malicious entities can analyze traffic sent over the internet and read unencrypted data.   
 
-### In-Use Encryption 
+### In Use Encryption 
 
-Data currently accessed and used is considered in-use.   
+Data currently accessed and used is considered in use.   
 
-Examples of in-use data are: 
+Examples of in use data are: 
 
 * files that are currently open, 
 * databases, 
 * RAM data. 
 
-Because data needs to be decrypted to become in-use, it is essential that data security is taken care of before the actual use of data begins. 
+Because data needs to be decrypted to become in use, it is essential that data security is taken care of before the actual use of data begins. 
 
 To do this, you need to ensure a good authentication mechanism. Technologies like Single Sign-On (SSO) and Multi-Factor Authentication (MFA) can be implemented to increase security. 
 
 Moreover, after a user authenticates, access management is necessary. Users should not be allowed to access any available resources, only the ones they need to, in order to perform their job.  
 
-A method of encryption for data in-use is Secure Encrypted Virtualization (SEV). It requires specialized hardware, and it encrypts RAM memory using an AES-128 encryption engine and an [AMD EPYC processor](https://developer.amd.com/sev/). Other hardware vendors are also offering memory encryption for data in-use, but this area is still relatively new. 
+A method of encryption for data in use is Secure Encrypted Virtualization (SEV). It requires specialized hardware, and it encrypts RAM memory using an AES-128 encryption engine and an [AMD EPYC processor](https://developer.amd.com/sev/). Other hardware vendors are also offering memory encryption for data in use, but this area is still relatively new. 
 
-**What is in-use data vulnerable to?**  
+**What is in use data vulnerable to?**  
 
-In-use data is vulnerable to **authentication attacks**. These types of attacks are used to gain access to the data by bypassing authentication, brute-forcing or obtaining credentials, and others. 
+In use data is vulnerable to **authentication attacks**. These types of attacks are used to gain access to the data by bypassing authentication, brute-forcing or obtaining credentials, and others. 
 
-Another type of attack for data in-use is a **cold boot attack**. Even though the RAM memory is considered volatile, after a computer is turned off, it takes a few minutes for that memory to be erased. If kept at low temperatures, RAM memory can be extracted, and, therefore, the last data loaded in the RAM memory can be read. 
+Another type of attack for data in use is a **cold boot attack**. Even though the RAM memory is considered volatile, after a computer is turned off, it takes a few minutes for that memory to be erased. If kept at low temperatures, RAM memory can be extracted, and, therefore, the last data loaded in the RAM memory can be read. 
 
-### At-Rest Encryption 
+### At Rest Encryption 
 
-Once data arrives at the destination and is not used, it becomes at-rest.  
+Once data arrives at the destination and is not used, it becomes at rest.  
 
-Examples of data at-rest are: 
+Examples of data at rest are: 
 
 * databases, 
 * cloud storage assets such as buckets, 
@@ -145,7 +145,7 @@ Examples of data at-rest are: 
 
 This data state is usually most targeted by attackers who attempt to read databases, steal files stored on the computer, obtain USB drives, and others. 
 
-Encryption of data at-rest is fairly simple and is usually done using symmetric algorithms. When you perform at-rest data encryption, you need to ensure you’re following these best practices: 
+Encryption of data at rest is fairly simple and is usually done using symmetric algorithms. When you perform at rest data encryption, you need to ensure you’re following these best practices: 
 
 * you're using an industry-standard algorithm such as AES, 
 * you’re using the recommended key size, 
@@ -169,11 +169,11 @@ Another secure solution is storing keys in the cloud, using services such as: 
 * AWS Key Management Service (AWS KMS),  
 * Cloud Key Management Service in GCP. 
 
-**What is at-rest data vulnerable to?** 
+**What is at rest data vulnerable to?** 
 
-Although data at-rest is the easiest to secure out of all three states, it is usually the point of focus for attackers. There are a few types of attacks data in-transit is vulnerable to: 
+Although data at rest is the easiest to secure out of all three states, it is usually the point of focus for attackers. There are a few types of attacks data in transit is vulnerable to: 
 
-* **Exfiltration attacks.** The most common way at-rest data is compromised is through exfiltration attacks, which means that hackers try to steal that data. For this reason, implementing a very robust encryption scheme is important.  <br>Another essential thing to note is that, when data is exfiltrated, even if it is encrypted, attackers can try to brute-force cryptographic keys offline for a long period of time. Therefore a long, random encryption key should be used (and rotated regularly). 
+* **Exfiltration attacks.** The most common way at rest data is compromised is through exfiltration attacks, which means that hackers try to steal that data. For this reason, implementing a very robust encryption scheme is important.  <br>Another essential thing to note is that, when data is exfiltrated, even if it is encrypted, attackers can try to brute-force cryptographic keys offline for a long period of time. Therefore a long, random encryption key should be used (and rotated regularly). 
 * **Hardware attacks.** If a person loses their laptop, phone, or USB drive and the data stored on them is not encrypted (and the devices are not protected by passwords or have weak passwords), the individual who found the device can read its contents. 
 
 ## Are you protecting data in all states? 
