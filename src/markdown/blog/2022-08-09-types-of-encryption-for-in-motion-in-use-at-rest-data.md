@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: "Types of Encryption for in Motion, in Use, at Rest Data "
-seoTitle: "Types of Encryption for In Motion, In Use, At Rest Data "
+seoTitle: "Types of Encryption for in Motion, in Use, at Rest Data "
 authors: Sabrina Lupșan
 permalink: types-of-encryption
 categories:
