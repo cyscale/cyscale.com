@@ -1,5 +1,4 @@
 import React from 'react';
-import TopNav from '../layout/topNav';
 import Banner from './banner';
 import Services from './cloudDataServices';
 import Support from './support';
@@ -14,6 +13,7 @@ import Icon3 from '../../assets/images/Group-412.inline.svg';
 import Icon4 from '../../assets/images/Path-270.inline.svg';
 import F_Image from '../../assets/images/fImage1.svg';
 import { useAppLink } from '../../common/links';
+import NewTopNav from '../layout/NewNavigation/newTopNav';
 
 const Index = () => {
     const appLink = useAppLink();
@@ -135,7 +135,7 @@ const Index = () => {
     return (
         <div>
             <div className='dataSecurity w-full pb-80px bg-lightGrey2 bg-left-bottom bg-no-repeat'>
-                <TopNav pageName='Data_Security' />
+                <NewTopNav pageName='Data_Security' />
                 <Banner
                     title={`Data security for resilient cloud environments`}
                     description={`Stuck playing catch-up with data security, with no breathing space for projects that move the needle? It's time for a change of pace.\n\n Give your engineers clarity and accuracy - use the Cyscale Cloud Platform to turn cloud data security into a manageable routine.\n\nKeep tabs on your fast-growing cloud inventory with automated data discovery and classification, compliance scans on autopilot and a fully auditable evidence trail. And that's just a taste!`}

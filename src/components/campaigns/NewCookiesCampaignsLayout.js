@@ -6,44 +6,20 @@ import GlobalContext from '../../context/GlobalContext';
 import Seo from '../Seo';
 import { Helmet } from 'react-helmet';
 import { Container } from '../atoms/Containers';
-import { graphql, Link, useStaticQuery } from 'gatsby';
+import { Link } from 'gatsby';
 import logo from '../../assets/images/logo.svg';
 import { CSSTransition } from 'react-transition-group';
-import Navigation from '../layout/Navigation';
-import TopNav from '../layout/topNav';
 import Footer from './footer';
 import CookiesBanner from '../cookies-banner/CookiesBanner';
 import ScrollToTopButton from '../ScrollToTopButton/ScrollToTopButton';
 import useSetCookieBanner from '../cookies-banner/useSetCookieBanner';
-import useToggleMenu from '../layout/useToggleMenu';
+import NewNavigation from '../layout/NewNavigation/NewNavigation';
+import NewTopNav from '../layout/NewNavigation/newTopNav';
 
 const NewCookiesCampaignsLayout = ({ children, formId, formTargetId, location, title, description, pageName }) => {
     const { cookies, cookiesBanner, setCookiesBanner } = useSetCookieBanner();
     const [navOpen, setNavOpen] = useState(false);
     const appLink = useAppLink();
-    const { menu, toggleMenuIcon } = useToggleMenu(pageName);
-
-    const data = useStaticQuery(graphql`
-        query NewCookiesCampaignsLayoutQuery {
-            allMarkdownRemark(
-                limit: 5
-                sort: { fields: frontmatter___date, order: DESC }
-                filter: { frontmatter: { templateKey: { eq: "career-page" }, disabled: { eq: false } } }
-            ) {
-                nodes {
-                    frontmatter {
-                        date
-                        description
-                        permalink
-                        title
-                        experience
-                    }
-                }
-            }
-        }
-    `);
-
-    let jobs = data.allMarkdownRemark.nodes;
 
     useEffect(() => {
         setTimeout(() => {
@@ -56,8 +32,6 @@ const NewCookiesCampaignsLayout = ({ children, formId, formTargetId, location, t
             }
         }, 600);
     }, []);
-
-    const navigationClasses = `relative topNav container ${menu.toggleBg}`;
 
     return (
         <CookiesProvider>
@@ -90,21 +64,12 @@ const NewCookiesCampaignsLayout = ({ children, formId, formTargetId, location, t
                     </div>
                     <CSSTransition in={navOpen} timeout={300} classNames='navigation' unmountOnExit>
                         <div className='navigation'>
-                            <Navigation
-                                pageName={pageName}
-                                showLogo={false}
-                                showBurgerButton={true}
-                                toggleMenuIcon={toggleMenuIcon}
-                                jobs={jobs}
-                                appLink={appLink}
-                                menu={menu}
-                                classes={navigationClasses}
-                            />
+                            <NewNavigation pageName={pageName} showLogo={false} appLink={appLink} classes={true} />
                         </div>
                     </CSSTransition>
                 </header>
                 <div className='block xl:hidden m-auto px-8'>
-                    <TopNav pageName={pageName} />
+                    <NewTopNav pageName={pageName} />
                 </div>
                 {children}
                 <Footer />

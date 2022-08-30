@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import TopNav from './topNav';
 import HeaderContext from './HeaderContext';
 import ScrollButton from '../ScrollButton/ScrollButton';
 import remoteWorkBannerImage from '../../assets/images/remote-work-banner-image.png';
@@ -13,6 +12,7 @@ import {
     PciDssSmall,
     NistSmall
 } from '../Home/images';
+import NewTopNav from './NewNavigation/newTopNav';
 const Header = ({
     heroBG,
     bannerTitle,
@@ -50,7 +50,7 @@ const Header = ({
     return (
         <HeaderContext.Provider value={{ sticker, setSticker }}>
             <div className={rootClasses} style={rootStyle}>
-                <TopNav pageName={pageName} />
+                <NewTopNav pageName={pageName} />
                 <div className='max-w-1366px mx-auto pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px '>
                     {pageName === 'blog-detail' || pageName === 'blogs' ? (
                         <div className='flex mt-44'>
