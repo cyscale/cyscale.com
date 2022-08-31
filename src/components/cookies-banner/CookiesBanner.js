@@ -9,7 +9,8 @@ import { cookieConsentKey } from '../../common/constants';
 const CookiesBanner = ({ cookiesBanner, setCookiesBanner, pageName }) => {
     const [cookiesModal, setCookiesModal] = useState(false);
     const [performanceAndAnalytics, setPerformanceAndAnalytics] = useState(true);
-    const [cookiesOptions, setCookiesOptions] = useState({ path: '/' });
+    // The consent cookie should expire in 1 year - https://gdpr.eu/cookies/
+    const [cookiesOptions, setCookiesOptions] = useState({ path: '/', maxAge: 31536000 });
     const [, setCookie] = useCookies();
 
     const openModalOnKeyUp = (e) => {
