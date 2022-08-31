@@ -1,15 +1,17 @@
 ---
 templateKey: career-page
 title: Account Executive (Mid-Market, SMB)
-seoTitle: ""
-disabled: false
+seoTitle: Account Executive (Mid-Market, SMB)
+disabled: true
 location: Global
 date: 2021-12-01T12:54:22.847Z
 permalink: account-executive
 description: Cyscale is a startup with offices in London (UK) and Cluj-Napoca
   (RO), activating in the cloud cybersecurity industry. We are looking for an
   experienced Account Executive.
-seoDescription: ""
+seoDescription: Cyscale is a startup with offices in London (UK) and Cluj-Napoca
+  (RO), activating in the cloud cybersecurity industry. We are looking for an
+  experienced Account Executive.
 skills: Sales, SaaS Sales, Cybersecurity Sales, Account Executive
 experience: mid/senior
 department: Sales
