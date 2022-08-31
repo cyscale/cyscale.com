@@ -4,6 +4,7 @@ import FocusLock from 'react-focus-lock';
 import { Link } from 'gatsby';
 import CookiesModal from './cookies-modal/CookiesModal';
 import { useCookies } from 'react-cookie';
+import { cookieConsentKey } from '../../common/constants';
 
 const CookiesBanner = ({ cookiesBanner, setCookiesBanner, pageName }) => {
     const [cookiesModal, setCookiesModal] = useState(false);
@@ -63,7 +64,7 @@ const CookiesBanner = ({ cookiesBanner, setCookiesBanner, pageName }) => {
                                     id='confirm-button'
                                     onClick={() => {
                                         setCookie(
-                                            'CookiesConsent',
+                                            cookieConsentKey,
                                             { performanceAndAnalytics: true },
                                             { ...cookiesOptions }
                                         );

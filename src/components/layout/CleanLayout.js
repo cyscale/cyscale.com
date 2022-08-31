@@ -10,6 +10,7 @@ import CookiesBanner from '../cookies-banner/CookiesBanner';
 import { CookiesProvider } from 'react-cookie';
 import ScrollToTopButton from '../ScrollToTopButton/ScrollToTopButton';
 import useSetCookieBanner from '../cookies-banner/useSetCookieBanner';
+import { cookieConsentKey } from '../../common/constants';
 
 const Layout = ({ children, title, description, pageName, location, banner }) => {
     useHubspotEvents({ location, pageName });
@@ -25,7 +26,7 @@ const Layout = ({ children, title, description, pageName, location, banner }) =>
                 </HeaderContext.Provider>
                 <main>{children}</main>
                 <Footer />
-                {Boolean(cookies?.CookiesConsent) !== true && (
+                {Boolean(cookies[cookieConsentKey]) !== true && (
                     <CookiesBanner
                         cookiesBanner={cookiesBanner}
                         setCookiesBanner={setCookiesBanner}
