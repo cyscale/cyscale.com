@@ -9,6 +9,7 @@ import { CookiesProvider } from 'react-cookie';
 import loadable from '@loadable/component';
 import ScrollToTopButton from '../ScrollToTopButton/ScrollToTopButton';
 import useSetCookieBanner from '../cookies-banner/useSetCookieBanner';
+import { cookieConsentKey } from '../../common/constants';
 const Footer = loadable(() => import('./footer'));
 
 const Layout = ({
@@ -69,7 +70,7 @@ const Layout = ({
                         <div>{children}</div>
                     </main>
                     <Footer />
-                    {Boolean(cookies?.CookiesConsent) !== true && (
+                    {Boolean(cookies[cookieConsentKey]) !== true && (
                         <CookiesBanner
                             cookiesBanner={cookiesBanner}
                             setCookiesBanner={setCookiesBanner}

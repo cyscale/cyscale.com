@@ -6,6 +6,7 @@ import collapse from '../../../assets/images/collapse.svg';
 import expand from '../../../assets/images/expand.svg';
 import FocusLock from 'react-focus-lock';
 import { useCookies } from 'react-cookie';
+import { cookieConsentKey } from '../../../common/constants';
 
 const dataModal = [
     {
@@ -60,14 +61,14 @@ const ConfirmButtons = ({
     const [, setCookie] = useCookies();
 
     const confirmMyChoices = () => {
-        setCookie('CookiesConsent', { performanceAndAnalytics }, { ...cookiesOptions });
+        setCookie(cookieConsentKey, { performanceAndAnalytics }, { ...cookiesOptions });
         setCookiesModal(false);
         setCookiesBanner(false);
         window.location.reload(false);
     };
 
     const acceptAllCookies = () => {
-        setCookie('CookiesConsent', { performanceAndAnalytics: true }, { ...cookiesOptions });
+        setCookie(cookieConsentKey, { performanceAndAnalytics: true }, { ...cookiesOptions });
         setCookiesModal(false);
         setCookiesBanner(false);
         window.location.reload(false);

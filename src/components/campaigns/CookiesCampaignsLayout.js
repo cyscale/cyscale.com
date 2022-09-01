@@ -10,6 +10,7 @@ import { Link } from 'gatsby';
 import logo from '../../assets/images/logo.svg';
 import ScrollToTopButton from '../ScrollToTopButton/ScrollToTopButton';
 import useSetCookieBanner from '../cookies-banner/useSetCookieBanner';
+import { cookieConsentKey } from '../../common/constants';
 
 const CookiesCampaignsLayout = ({ location, title, description, pageName, children }) => {
     const { cookies, cookiesBanner, setCookiesBanner } = useSetCookieBanner();
@@ -32,7 +33,7 @@ const CookiesCampaignsLayout = ({ location, title, description, pageName, childr
                 </header>
                 <main>{children}</main>
                 <Footer />
-                {Boolean(cookies?.CookiesConsent) !== true && (
+                {Boolean(cookies[cookieConsentKey]) !== true && (
                     <CookiesBanner cookiesBanner={cookiesBanner} setCookiesBanner={setCookiesBanner} />
                 )}
                 <ScrollToTopButton />
