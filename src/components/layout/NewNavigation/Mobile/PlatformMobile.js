@@ -1,6 +1,6 @@
 import React from 'react';
 import { borderBottomItemNav } from './HomeMobile';
-import navigation from '../NewNavigation/NavItems/navigation.json';
+import navigation from '../NavItems/navigation.json';
 import { Link } from 'gatsby';
 import { css } from 'twin.macro';
 

@@ -8,7 +8,7 @@ import Platform from './NavItems/Platform';
 import Solutions from './NavItems/Solutions';
 import Resources from './NavItems/Resources';
 import Company from './NavItems/Company';
-import { logoStyle } from '../Mobile/HomeMobile';
+import { logoStyle } from './Mobile/HomeMobile';
 
 const MegaMenu = styled.div`
     left: ${({ campaignsPages }) => (campaignsPages ? '-17rem' : '0')};

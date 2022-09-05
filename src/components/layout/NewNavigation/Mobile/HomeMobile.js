@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
-import logo from '../../../assets/images/logo.svg';
-import menuClose from '../../../assets/images/menuCloseBlack.svg';
-import IconUser from '../../../assets/images/icon-user.svg';
-import IconTag from '../../../assets/images/icon-tag.svg';
+import logo from '../../../../assets/images/logo.svg';
+import menuClose from '../../../../assets/images/menuCloseBlack.svg';
+import IconUser from '../../../../assets/images/icon-user.svg';
+import IconTag from '../../../../assets/images/icon-tag.svg';
 import { css } from 'twin.macro';
 import PlatformMobile from './PlatformMobile';
 import SolutionsMobile from './SolutionsMobile';
 import ResourcesMobile from './ResourcesMobile';
 import CompanyMobile from './CompanyMobile';
-import backArrow from '../../../assets/images/backArrow.svg';
-import downArrow from '../../../assets/images/downArrowIcon.svg';
+import backArrow from '../../../../assets/images/backArrow.svg';
+import downArrow from '../../../../assets/images/downArrowIcon.svg';
 import styled from '@emotion/styled';
-import navigation from '../NewNavigation/NavItems/navigation.json';
+import navigation from '../NavItems/navigation.json';
 
 export const logoStyle = css`
     width: 11rem;

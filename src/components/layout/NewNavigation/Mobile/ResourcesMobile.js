@@ -1,5 +1,5 @@
 import React from 'react';
-import navigation from '../NewNavigation/NavItems/navigation.json';
+import navigation from '../NavItems/navigation.json';
 import { Link } from 'gatsby';
 
 const ResourcesMobile = () => {

@@ -1,10 +1,10 @@
 import React from 'react';
 import { borderBottomItemNav } from './HomeMobile';
-import navigation from '../NewNavigation/NavItems/navigation.json';
+import navigation from '../NavItems/navigation.json';
 import { Link } from 'gatsby';
 
-import { sectionTitleColor } from '../NewNavigation/NewNavigation';
-import useMediaQuery from '../NewNavigation/useMediaQuery';
+import { sectionTitleColor } from '../NewNavigation';
+import useMediaQuery from '../useMediaQuery';
 
 const SolutionsMobile = () => {
     const isTablet = useMediaQuery('(min-width: 640px)');
