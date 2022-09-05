@@ -128,8 +128,16 @@ const NewNavigation = ({ pageName, showLogo, appLink, classes }) => {
                         <NavItemButton
                             type='button'
                             className={`${
+                                pageName === 'MisconfigurationsPage' ||
+                                pageName === 'IAMSecurity' ||
                                 pageName === 'Data_Security' ||
                                 pageName === 'RemoteWork' ||
+                                pageName === 'ISO27001Compliance' ||
+                                pageName === 'PCIDSS' ||
+                                pageName === 'SOC2' ||
+                                pageName === 'AWSCloudSecurity' ||
+                                pageName === 'AzureCloudSecurity' ||
+                                pageName === 'GCPCloudSecurity' ||
                                 pageName === 'ComplianceAuditing'
                                     ? 'active'
                                     : ''
@@ -159,7 +167,7 @@ const NewNavigation = ({ pageName, showLogo, appLink, classes }) => {
                     <NavItem>
                         <NavItemButton
                             type='button'
-                            className={`${pageName === 'blogs' || pageName === 'blog-detail' ? 'active' : ''}`}
+                            className={`${pageName === 'blog' || pageName === 'blog-detail' ? 'active' : ''}`}
                         >
                             <span>Resources</span>
                         </NavItemButton>
@@ -174,7 +182,7 @@ const NewNavigation = ({ pageName, showLogo, appLink, classes }) => {
                                 pageName === 'aboutUs' ||
                                 pageName === 'careers' ||
                                 pageName === 'jobDetails' ||
-                                pageName === 'contact_us'
+                                pageName === 'ContactUs'
                                     ? 'active'
                                     : ''
                             }`}
