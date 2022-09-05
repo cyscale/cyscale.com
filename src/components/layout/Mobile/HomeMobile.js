@@ -12,6 +12,7 @@ import CompanyMobile from './CompanyMobile';
 import backArrow from '../../../assets/images/backArrow.svg';
 import downArrow from '../../../assets/images/downArrowIcon.svg';
 import styled from '@emotion/styled';
+import navigation from '../NewNavigation/NavItems/navigation.json';
 
 export const logoStyle = css`
     width: 11rem;
@@ -30,6 +31,15 @@ export const HeaderLogo = styled.img`
 export const borderBottomItemNav = css`
     border-bottom: 1px solid #e2e2e2;
 `;
+
+const MobileItemNav = ({ item, setActiveMenu }) => {
+    return (
+        <div className='py-4 px-8 flex justify-between' css={borderBottomItemNav} onClick={() => setActiveMenu(item)}>
+            <span className='sm:text-2xl capitalize'>{item}</span>
+            <img src={downArrow} alt='' />
+        </div>
+    );
+};
 
 const HomeMobile = ({ showMenu, setShowMenu, appLink }) => {
     const [activeMenu, setActiveMenu] = useState('main');
@@ -60,38 +70,9 @@ const HomeMobile = ({ showMenu, setShowMenu, appLink }) => {
                 </div>
                 {activeMenu === 'main' && (
                     <div className='bg-white'>
-                        <div
-                            className='py-4 px-8 flex justify-between'
-                            css={borderBottomItemNav}
-                            onClick={() => setActiveMenu('platform')}
-                        >
-                            <span className='sm:text-2xl'>Platform</span>
-                            <img src={downArrow} alt='' />
-                        </div>
-                        <div
-                            className='py-4 px-8 flex justify-between'
-                            css={borderBottomItemNav}
-                            onClick={() => setActiveMenu('solutions')}
-                        >
-                            <span className='sm:text-2xl'>Solutions</span>
-                            <img src={downArrow} alt='' />
-                        </div>
-                        <div
-                            className='py-4 px-8 flex justify-between'
-                            css={borderBottomItemNav}
-                            onClick={() => setActiveMenu('resources')}
-                        >
-                            <span className='sm:text-2xl'>Resources</span>
-                            <img src={downArrow} alt='' />
-                        </div>
-                        <div
-                            className='py-4 px-8 flex justify-between'
-                            css={borderBottomItemNav}
-                            onClick={() => setActiveMenu('company')}
-                        >
-                            <span className='sm:text-2xl'>Company</span>
-                            <img src={downArrow} alt='' />
-                        </div>
+                        {Object.keys(navigation).map((item, key) => {
+                            return <MobileItemNav item={item} key={key} setActiveMenu={setActiveMenu} />;
+                        })}
                         <div className='flex px-8 mt-4'>
                             <img src={IconUser} alt='' />
                             <a className='ml-2 sm:text-2xl' href={appLink} target='_blank' rel='noopener noreferrer'>
@@ -123,7 +104,7 @@ const HomeMobile = ({ showMenu, setShowMenu, appLink }) => {
                     <Link className='block my-3 sm:text-2xl' to='/contact-us/'>
                         Contact
                     </Link>
-                    <div className="sm:text-2xl">
+                    <div className='sm:text-2xl'>
                         <a
                             className='sm:text-2xl'
                             href='https://app.cyscale.com'
