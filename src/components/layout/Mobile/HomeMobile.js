@@ -32,7 +32,6 @@ export const borderBottomItemNav = css`
 `;
 
 const HomeMobile = ({ showMenu, setShowMenu, appLink }) => {
-    console.log(appLink);
     const [activeMenu, setActiveMenu] = useState('main');
 
     return (
@@ -50,7 +49,7 @@ const HomeMobile = ({ showMenu, setShowMenu, appLink }) => {
                     {activeMenu !== 'main' && (
                         <div className='inline-block flex' onClick={() => setActiveMenu('main')}>
                             <img src={backArrow} alt='' />{' '}
-                            <span css={logoStyle} className={'flex items-center text-lg pt-0.5'}>
+                            <span css={logoStyle} className={'flex items-center text-lg pt-0.5 sm:text-2xl'}>
                                 Back
                             </span>
                         </div>
@@ -66,7 +65,7 @@ const HomeMobile = ({ showMenu, setShowMenu, appLink }) => {
                             css={borderBottomItemNav}
                             onClick={() => setActiveMenu('platform')}
                         >
-                            <span> Platform </span>
+                            <span className='sm:text-2xl'>Platform</span>
                             <img src={downArrow} alt='' />
                         </div>
                         <div
@@ -74,7 +73,7 @@ const HomeMobile = ({ showMenu, setShowMenu, appLink }) => {
                             css={borderBottomItemNav}
                             onClick={() => setActiveMenu('solutions')}
                         >
-                            Solutions
+                            <span className='sm:text-2xl'>Solutions</span>
                             <img src={downArrow} alt='' />
                         </div>
                         <div
@@ -82,7 +81,7 @@ const HomeMobile = ({ showMenu, setShowMenu, appLink }) => {
                             css={borderBottomItemNav}
                             onClick={() => setActiveMenu('resources')}
                         >
-                            Resources
+                            <span className='sm:text-2xl'>Resources</span>
                             <img src={downArrow} alt='' />
                         </div>
                         <div
@@ -90,18 +89,18 @@ const HomeMobile = ({ showMenu, setShowMenu, appLink }) => {
                             css={borderBottomItemNav}
                             onClick={() => setActiveMenu('company')}
                         >
-                            Company
+                            <span className='sm:text-2xl'>Company</span>
                             <img src={downArrow} alt='' />
                         </div>
                         <div className='flex px-8 mt-4'>
                             <img src={IconUser} alt='' />
-                            <a className='ml-2' href={appLink} target='_blank' rel='noopener noreferrer'>
+                            <a className='ml-2 sm:text-2xl' href={appLink} target='_blank' rel='noopener noreferrer'>
                                 Start Free Trial
                             </a>
                         </div>
                         <div className='flex mt-3 px-8'>
                             <img src={IconTag} alt='' />
-                            <Link className='ml-2' to='/pricing/'>
+                            <Link className='ml-2 sm:text-2xl' to='/pricing/'>
                                 Pricing
                             </Link>
                         </div>
@@ -114,22 +113,27 @@ const HomeMobile = ({ showMenu, setShowMenu, appLink }) => {
                 <div className='px-8 mb-3 w-full bg-white absolute bottom-0'>
                     <Link
                         to='/request-demo'
-                        className='gradientBgBtn block font-medium rounded text-white text-center py-4 hover:no-underline no-underline max-w-md'
+                        className='gradientBgBtn block font-medium rounded text-white text-center py-4 hover:no-underline no-underline max-w-md sm:text-2xl'
                     >
                         Request Demo
                     </Link>
-                    <Link className='block mt-3' to='/blog/'>
+                    <Link className='block mt-3 sm:text-2xl' to='/blog/'>
                         Cloud Security Blog
                     </Link>
-                    <Link className='block my-3' to='/contact-us/'>
+                    <Link className='block my-3 sm:text-2xl' to='/contact-us/'>
                         Contact
                     </Link>
-                    <div>
-                        <a className='' href='https://app.cyscale.com' target='_blank' rel='noopener noreferrer'>
+                    <div className="sm:text-2xl">
+                        <a
+                            className='sm:text-2xl'
+                            href='https://app.cyscale.com'
+                            target='_blank'
+                            rel='noopener noreferrer'
+                        >
                             Login
                         </a>{' '}
                         |{' '}
-                        <a className='' href={appLink} target='_blank' rel='noopener noreferrer'>
+                        <a className='sm:text-2xl' href={appLink} target='_blank' rel='noopener noreferrer'>
                             Sign Up
                         </a>{' '}
                     </div>

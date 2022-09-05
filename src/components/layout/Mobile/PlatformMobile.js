@@ -17,9 +17,9 @@ const PlatformMobile = () => {
                         <Link to={item.link}>
                             <div className='flex'>
                                 <img src={item.icon} alt="" />
-                                <span className='text-black text-base font-medium ml-2'>{item.title}</span>
+                                <span className='text-black text-base sm:text-2xl font-medium ml-2'>{item.title}</span>
                             </div>
-                            <p css={descriptionColor} className='text-sm ml-7'>
+                            <p css={descriptionColor} className='text-sm sm:text-base ml-7'>
                                 {item.mobileDescription}
                             </p>
                         </Link>
