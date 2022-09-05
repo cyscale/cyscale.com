@@ -2,13 +2,13 @@ import React from 'react';
 import tw, { css } from 'twin.macro';
 import { Link } from 'gatsby';
 import logo from '../../../assets/images/logo.svg';
-import navigation from '../navigation.json';
 
 import styled from '@emotion/styled';
 import Platform from './NavItems/Platform';
 import Solutions from './NavItems/Solutions';
 import Resources from './NavItems/Resources';
 import Company from './NavItems/Company';
+import { logoStyle } from '../Mobile/HomeMobile';
 
 const MegaMenu = styled.div`
     left: ${({ campaignsPages }) => (campaignsPages ? '-17rem' : '0')};
@@ -18,8 +18,8 @@ const MegaMenu = styled.div`
     z-index: -99;
     -ms-transition: all 0.5s;
     transition: all 0.5s;
-    -ms-transform: translateY(-20px);
-    transform: translateY(-20px);
+    -ms-transform: translateY(-1.25rem);
+    transform: translateY(-1.25rem);
     opacity: 0;
     visibility: hidden;
 `;
@@ -48,14 +48,14 @@ const NavItemButton = styled.button`
 
     & > span {
         position: relative;
-        padding-bottom: 4px;
+        padding-bottom: 0.25rem;
     }
 
     & > span::before {
         content: '';
         position: absolute;
         width: 0;
-        height: 2px;
+        height: 0.125rem;
         bottom: 0;
         left: 0;
         background-color: #0f26aa;
@@ -76,18 +76,8 @@ const NavItemButton = styled.button`
 `;
 
 const HeaderLogo = styled.img`
-    width: 176px;
-    height: 40.5375px;
+    ${logoStyle}
     ${tw`block`};
-
-    @media (max-width: 480px) {
-        width: 125px;
-        height: 'auto';
-    }
-`;
-
-const pricingStyle = css`
-    font-weight: 500;
 `;
 
 export const montserratFont = css`
@@ -158,10 +148,10 @@ const NewNavigation = ({ pageName, showLogo, appLink, classes }) => {
                         </MegaMenu>
                     </NavItem>
                     <NavItem>
-                        <NavItemButton>
+                        <NavItemButton className={`${pageName === 'Pricing' ? 'active' : ''}`}>
                             <span>
-                                <Link to={navigation.pricing[0].link} activeClassName='active' css={[pricingStyle]}>
-                                    {navigation.pricing[0].text}
+                                <Link to='/pricing/' activeClassName='active' className='font-medium'>
+                                    Pricing
                                 </Link>
                             </span>
                         </NavItemButton>
@@ -182,7 +172,6 @@ const NewNavigation = ({ pageName, showLogo, appLink, classes }) => {
                             type='button'
                             className={`${
                                 pageName === 'aboutUs' ||
-                                pageName === 'aboutUs' ||
                                 pageName === 'careers' ||
                                 pageName === 'jobDetails' ||
                                 pageName === 'contact_us'
@@ -198,22 +187,20 @@ const NewNavigation = ({ pageName, showLogo, appLink, classes }) => {
                     </NavItem>
                     <li className='py-6 pr-0 pl-7'>
                         <a
-                            className='bg-gradient-to-r from-blue to-red hover:from-red hover:to-blue w-153px text-14px border-transparent box-border rounded-md h-10 hidden xl:flex justify-center items-center uppercase leading-none text-white transition duration-500  hover:no-underline'
+                            className='bg-gradient-to-r from-blue to-red hover:from-red hover:to-blue w-153px text-14px border-transparent box-border rounded-md h-10 hidden xl:flex justify-center items-center uppercase leading-none text-white transition duration-500  hover:no-underline font-medium'
                             href={appLink}
                             target='_blank'
                             rel='noopener noreferrer'
-                            css={pricingStyle}
                         >
                             Start Free Trial
                         </a>
                     </li>
                     <li className='py-6 px-4'>
                         <a
-                            className='loginBtn text-black hover:text-black mt-0px lg:mt-0 text-14px uppercase w-84px greyBorder flex h-10 justify-center items-center rounded-md leading-none transition-all duration-500 hover:bg-grey3 hover:no-underline'
+                            className='loginBtn text-black hover:text-black mt-0px lg:mt-0 text-14px uppercase w-84px greyBorder flex h-10 justify-center items-center rounded-md leading-none transition-all duration-500 hover:bg-grey3 hover:no-underline font-medium'
                             href='https://app.cyscale.com'
                             target='_blank'
                             rel='noopener noreferrer'
-                            css={pricingStyle}
                         >
                             Log in
                         </a>

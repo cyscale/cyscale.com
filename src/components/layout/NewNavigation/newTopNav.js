@@ -5,6 +5,8 @@ import { css } from 'twin.macro';
 
 import NewNavigation from './NewNavigation';
 import useMediaQuery from './useMediaQuery';
+import MobileNavbar from '../Mobile/MobileNavbar';
+import HomeMobile from '../Mobile/HomeMobile';
 
 const paddingNav = css`
     padding-left: 2rem;
@@ -20,6 +22,7 @@ const NewTopNav = ({ pageName, showLogo = true }) => {
     const trigger = useScrollTrigger();
     const isDesktop = useMediaQuery('(min-width: 1280px)');
     const [showBurgerButton, setShowBurgerButton] = useState(pageName !== 'HomePage');
+    const [showMenu, setShowMenu] = useState(false);
     const appLink = useAppLink();
 
     useEffect(() => {
@@ -53,17 +56,32 @@ const NewTopNav = ({ pageName, showLogo = true }) => {
     const rootClasses = !trigger ? 'translate-y-0' : '-translate-y-full';
 
     return (
-        <div
-            ref={root}
-            style={{ maxWidth: '100vw' }}
-            className={`fixed top-0 left-0 block w-full mx-auto z-20 transition duration-300 transform ${rootClasses}`}
-        >
-            {isDesktop && (
-                <div tw='container max-w-7xl mx-auto pt-2.5' css={paddingNav} id='mariko'>
-                    <NewNavigation pageName={pageName} showLogo={showLogo} appLink={appLink} classes={false} />
-                </div>
-            )}
-        </div>
+        <>
+            <div
+                ref={root}
+                style={{ maxWidth: '100vw' }}
+                className={`fixed top-0 left-0 block w-full mx-auto z-20 transition duration-300 transform ${rootClasses}`}
+            >
+                {isDesktop && (
+                    <div tw='container max-w-7xl mx-auto pt-2.5' css={paddingNav}>
+                        <NewNavigation pageName={pageName} showLogo={showLogo} appLink={appLink} classes={false} />
+                    </div>
+                )}
+                {!isDesktop && (
+                    <div tw='pt-2.5 px-8' id='pepe'>
+                        <MobileNavbar
+                            pageName={pageName}
+                            showLogo={showLogo}
+                            appLink={appLink}
+                            showBurgerButton={showBurgerButton}
+                            showMenu={showMenu}
+                            setShowMenu={setShowMenu}
+                        />
+                    </div>
+                )}
+            </div>
+            {showMenu && <HomeMobile showMenu={showMenu} setShowMenu={setShowMenu} appLink={appLink} />}
+        </>
     );
 };
 

@@ -3,6 +3,11 @@ import { Link } from 'gatsby';
 import IconCyscaleShield from '../../../../assets/images/icon-cyscale-shield.svg';
 import { fontNavLink, sectionTitleColor, montserratFont } from '../NewNavigation';
 import navigation from './navigation.json';
+import { css } from 'twin.macro';
+
+const descriptionMaxWidth = css`
+    max-width: 13.25rem;
+`;
 
 const Solutions = () => {
     return (
@@ -19,7 +24,7 @@ const Solutions = () => {
                     <span className='text-xl'>></span>
                     <span className='text-md ml-2'>Submit Your Application</span>
                 </Link>
-                <div className="mt-32">
+                <div className='mt-32'>
                     <img src={IconCyscaleShield} alt='' />
                 </div>
             </div>
@@ -27,10 +32,13 @@ const Solutions = () => {
                 <div className='p-6 grid grid-cols-12 gap-1'>
                     {navigation.solutions.map((solution, key) => {
                         return (
-                            <div className='col-span-3' key={key}>
+                            <div className='col-span-4' key={key}>
                                 <img src={solution.icon} className='mb-1 pl-2' alt='' />
-                                <p className='mb-4 pl-2 text-base font-light uppercase' css={sectionTitleColor}>
+                                <p className='mb-2 pl-2 text-base font-light uppercase' css={sectionTitleColor}>
                                     {solution.title}
+                                </p>
+                                <p className='text-sm pl-2 mb-4 text-grey2 max-w-xs' css={descriptionMaxWidth}>
+                                    {solution.description}
                                 </p>
                                 {solution.links.map((link, key) => {
                                     return (
