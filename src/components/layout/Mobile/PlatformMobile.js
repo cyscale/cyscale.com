@@ -16,7 +16,7 @@ const PlatformMobile = () => {
                     <div className='py-4 px-8' key={key} css={borderBottomItemNav}>
                         <Link to={item.link}>
                             <div className='flex'>
-                                <img src={item.icon} />
+                                <img src={item.icon} alt="" />
                                 <span className='text-black text-base font-medium ml-2'>{item.title}</span>
                             </div>
                             <p css={descriptionColor} className='text-sm ml-7'>

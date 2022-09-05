@@ -61,6 +61,7 @@ const NewCookiesCampaignsLayout = ({ children, formId, formTargetId, location, t
                             className={`block h-5 ml-auto cursor-pointer ${!navOpen ? 'visible' : 'invisible'}`}
                             src={navBars}
                             onClick={() => setNavOpen(!navOpen)}
+                            alt=''
                         />
                     </div>
                     <CSSTransition in={navOpen} timeout={300} classNames='navigation' unmountOnExit>
