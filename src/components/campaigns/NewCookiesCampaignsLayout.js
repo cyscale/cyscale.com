@@ -13,6 +13,7 @@ import Footer from './footer';
 import CookiesBanner from '../cookies-banner/CookiesBanner';
 import ScrollToTopButton from '../ScrollToTopButton/ScrollToTopButton';
 import useSetCookieBanner from '../cookies-banner/useSetCookieBanner';
+import { cookieConsentKey } from '../../common/constants';
 import NewNavigation from '../layout/NewNavigation/NewNavigation';
 import NewTopNav from '../layout/NewNavigation/newTopNav';
 
@@ -73,7 +74,7 @@ const NewCookiesCampaignsLayout = ({ children, formId, formTargetId, location, t
                 </div>
                 {children}
                 <Footer />
-                {Boolean(cookies?.CookiesConsent) !== true && (
+                {Boolean(cookies[cookieConsentKey]) !== true && (
                     <CookiesBanner cookiesBanner={cookiesBanner} setCookiesBanner={setCookiesBanner} />
                 )}
                 <ScrollToTopButton />

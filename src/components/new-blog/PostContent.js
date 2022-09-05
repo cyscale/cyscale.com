@@ -306,7 +306,7 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
                                             move to the cloud.
                                         </p>
                                         <Link to='/request-demo' className='text-lg text-blue font-semibold'>
-                                            Request a Demo >
+                                            Request a Demo &gt;
                                         </Link>
                                     </div>
                                 </div>
