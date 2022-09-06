@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import IconCyscaleShield from '../../../../assets/images/icon-cyscale-shield.svg';
-import { fontNavLink, sectionTitleColor, montserratFont } from '../NewNavigation';
-import navigation from './navigation.json';
+import { fontNavLink, sectionTitleColor, montserratFont } from '../../NewNavigation';
+import { solutions } from '../../nav';
 import { css } from 'twin.macro';
 
 const descriptionMaxWidth = css`
@@ -30,7 +30,7 @@ const Solutions = () => {
             </div>
             <div className='col-span-9'>
                 <div className='p-6 grid grid-cols-12 gap-1'>
-                    {navigation.solutions.map((solution, key) => {
+                    {solutions.map((solution, key) => {
                         return (
                             <div className='col-span-4' key={key}>
                                 <img src={solution.icon} className='mb-1 pl-2' alt='' />

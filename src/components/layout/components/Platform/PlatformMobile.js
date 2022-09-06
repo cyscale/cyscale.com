@@ -1,6 +1,6 @@
 import React from 'react';
-import { borderBottomItemNav } from './HomeMobile';
-import navigation from '../NavItems/navigation.json';
+import { borderBottomItemNav } from '../MobileNavigation';
+import { platform } from '../../nav';
 import { Link } from 'gatsby';
 import { css } from 'twin.macro';
 
@@ -11,12 +11,12 @@ const descriptionColor = css`
 const PlatformMobile = () => {
     return (
         <div className='bg-white'>
-            {navigation.platform.map((item, key) => {
+            {platform.map((item, key) => {
                 return (
                     <div className='py-4 px-8' key={key} css={borderBottomItemNav}>
                         <Link to={item.link}>
                             <div className='flex'>
-                                <img src={item.icon} alt="" />
+                                <img src={item.icon} alt='' />
                                 <span className='text-black text-base sm:text-2xl font-medium ml-2'>{item.title}</span>
                             </div>
                             <p css={descriptionColor} className='text-sm sm:text-base ml-7'>

@@ -10,7 +10,7 @@ import { CookiesProvider } from 'react-cookie';
 import ScrollToTopButton from '../ScrollToTopButton/ScrollToTopButton';
 import useSetCookieBanner from '../cookies-banner/useSetCookieBanner';
 import { cookieConsentKey } from '../../common/constants';
-import NewTopNav from './NewNavigation/newTopNav';
+import NewTopNav from './NewTopNav';
 
 const Layout = ({ children, title, description, pageName, location, banner }) => {
     useHubspotEvents({ location, pageName });

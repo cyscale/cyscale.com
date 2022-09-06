@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
-import useScrollTrigger from '../../scrollTrigger';
-import { useAppLink } from '../../../common/links';
+import useScrollTrigger from '../scrollTrigger';
+import { useAppLink } from '../../common/links';
 import { css } from 'twin.macro';
 
 import NewNavigation from './NewNavigation';
-import useMediaQuery from './useMediaQuery';
-import MobileNavbar from './Mobile/MobileNavbar';
-import HomeMobile from './Mobile/HomeMobile';
+import useMediaQuery from '../../hooks/useMediaQuery';
+import MobileNavbar from './components/MobileNavbar';
+import MobileNavigation from './components/MobileNavigation';
 
 const paddingNav = css`
     padding-left: 2rem;
@@ -80,7 +80,7 @@ const NewTopNav = ({ pageName, showLogo = true }) => {
                     </div>
                 )}
             </div>
-            {showMenu && <HomeMobile showMenu={showMenu} setShowMenu={setShowMenu} appLink={appLink} />}
+            {showMenu && <MobileNavigation showMenu={showMenu} setShowMenu={setShowMenu} appLink={appLink} />}
         </>
     );
 };

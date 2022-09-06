@@ -13,7 +13,7 @@ import Icon3 from '../../assets/images/Group-412.inline.svg';
 import Icon4 from '../../assets/images/Path-270.inline.svg';
 import F_Image from '../../assets/images/fImage1.svg';
 import { useAppLink } from '../../common/links';
-import NewTopNav from '../layout/NewNavigation/newTopNav';
+import NewTopNav from '../layout/NewTopNav';
 
 const Index = () => {
     const appLink = useAppLink();

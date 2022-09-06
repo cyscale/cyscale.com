@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import IconDownload from '../../../../assets/images/icon-download-cloud.svg';
-import { fontNavLink, montserratFont } from '../NewNavigation';
-import navigation from './navigation.json';
+import { fontNavLink, montserratFont } from '../../NewNavigation';
+import { resources } from '../../nav';
 
 const Resources = () => {
     return (
@@ -27,7 +27,7 @@ const Resources = () => {
                 </div>
             </div>
             <div className='p-6'>
-                {navigation.resources.map((resource, key) => {
+                {resources.map((resource, key) => {
                     return resource.external ? (
                         <div className='mb-2' key={key}>
                             <a className='p-2 hover:font-medium block' href={resource.link} css={fontNavLink}>

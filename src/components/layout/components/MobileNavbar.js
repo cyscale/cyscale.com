@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import logo from '../../../../assets/images/logo.svg';
-import navBars from '../../../../assets/images/navbars-campaigns.svg';
-import { HeaderLogo } from './HomeMobile';
+import logo from '../../../assets/images/logo.svg';
+import navBars from '../../../assets/images/navbars-campaigns.svg';
+import { HeaderLogo } from './MobileNavigation';
 import { css } from 'twin.macro';
 
 const MobileNavbar = ({ showBurgerButton, showMenu, setShowMenu }) => {

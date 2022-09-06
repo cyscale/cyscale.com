@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
-import logo from '../../../../assets/images/logo.svg';
-import menuClose from '../../../../assets/images/menuCloseBlack.svg';
-import IconUser from '../../../../assets/images/icon-user.svg';
-import IconTag from '../../../../assets/images/icon-tag.svg';
+import logo from '../../../assets/images/logo.svg';
+import menuClose from '../../../assets/images/menuCloseBlack.svg';
+import IconUser from '../../../assets/images/icon-user.svg';
+import IconTag from '../../../assets/images/icon-tag.svg';
 import { css } from 'twin.macro';
-import PlatformMobile from './PlatformMobile';
-import SolutionsMobile from './SolutionsMobile';
-import ResourcesMobile from './ResourcesMobile';
-import CompanyMobile from './CompanyMobile';
-import backArrow from '../../../../assets/images/backArrow.svg';
-import downArrow from '../../../../assets/images/downArrowIcon.svg';
+import PlatformMobile from './Platform/PlatformMobile';
+import SolutionsMobile from './Solutions/SolutionsMobile';
+import ResourcesMobile from './Resources/ResourcesMobile';
+import CompanyMobile from './Company/CompanyMobile';
+import backArrow from '../../../assets/images/backArrow.svg';
+import downArrow from '../../../assets/images/downArrowIcon.svg';
 import styled from '@emotion/styled';
-import navigation from '../NavItems/navigation.json';
+import { navigation } from '../nav';
 
 export const logoStyle = css`
     width: 11rem;
@@ -41,7 +41,7 @@ const MobileItemNav = ({ item, setActiveMenu }) => {
     );
 };
 
-const HomeMobile = ({ showMenu, setShowMenu, appLink }) => {
+const MobileNavigation = ({ showMenu, setShowMenu, appLink }) => {
     const [activeMenu, setActiveMenu] = useState('main');
 
     return (
@@ -124,4 +124,4 @@ const HomeMobile = ({ showMenu, setShowMenu, appLink }) => {
     );
 };
 
-export default HomeMobile;
+export default MobileNavigation;

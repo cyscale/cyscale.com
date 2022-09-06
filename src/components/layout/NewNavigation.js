@@ -1,14 +1,14 @@
 import React from 'react';
 import tw, { css } from 'twin.macro';
 import { Link } from 'gatsby';
-import logo from '../../../assets/images/logo.svg';
+import logo from '../../assets/images/logo.svg';
 
 import styled from '@emotion/styled';
-import Platform from './NavItems/Platform';
-import Solutions from './NavItems/Solutions';
-import Resources from './NavItems/Resources';
-import Company from './NavItems/Company';
-import { logoStyle } from './Mobile/HomeMobile';
+import Platform from './components/Platform/Platform';
+import Solutions from './components/Solutions/Solutions';
+import Resources from './components/Resources/Resources';
+import Company from './components/Company/Company';
+import { logoStyle } from './components/MobileNavigation';
 
 const MegaMenu = styled.div`
     left: ${({ campaignsPages }) => (campaignsPages ? '-17rem' : '0')};

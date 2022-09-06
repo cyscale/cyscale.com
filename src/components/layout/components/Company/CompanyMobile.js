@@ -1,13 +1,13 @@
 import React from 'react';
-import navigation from '../NavItems/navigation.json';
+import { company } from '../../nav';
 import { Link } from 'gatsby';
 
-const ResourcesMobile = () => {
+const CompanyMobile = () => {
     return (
         <div className='bg-white'>
-            {navigation.resources.map((item, key) => {
+            {company.map((item, key) => {
                 return (
-                    <div className='py-2 px-8' key={key} >
+                    <div className='py-2 px-8' key={key}>
                         <Link to={item.link} className='text-base sm:text-2xl pt-4 block' key={key}>
                             {item.text}
                         </Link>
@@ -18,4 +18,4 @@ const ResourcesMobile = () => {
     );
 };
 
-export default ResourcesMobile;
+export default CompanyMobile;

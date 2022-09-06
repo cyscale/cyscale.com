@@ -1,8 +1,8 @@
 import React from 'react';
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import IconCyscaleUser from '../../../../assets/images/icon-cyscale-user.svg';
-import { fontNavLink, sectionTitleColor, montserratFont } from '../NewNavigation';
-import navigation from './navigation.json';
+import { fontNavLink, sectionTitleColor, montserratFont } from '../../NewNavigation';
+import { company } from '../../nav';
 
 const Company = () => {
     const data = useStaticQuery(graphql`
@@ -46,10 +46,10 @@ const Company = () => {
                 </div>
             </div>
             <div className='col-span-2 p-6'>
-                <p className='pl-2 text-base font-light' css={sectionTitleColor}>
+                <p className='pl-2 text-base font-light mb-6' css={sectionTitleColor}>
                     OVERVIEW
                 </p>
-                {navigation.company.map((item, key) => {
+                {company.map((item, key) => {
                     return (
                         <div className='mb-2' key={key}>
                             <Link className='p-2 hover:font-medium block' to={item.link} css={fontNavLink}>
@@ -60,7 +60,7 @@ const Company = () => {
                 })}
             </div>
             <div className='col-span-5 p-6'>
-                <p className='pl-2 text-base font-light' css={sectionTitleColor}>
+                <p className='pl-2 text-base font-light mb-6' css={sectionTitleColor}>
                     OPEN POSITIONS
                 </p>
                 {jobs.map(({ frontmatter }, key) => {

@@ -4,8 +4,9 @@ import tw, { css } from 'twin.macro';
 import IconUser from '../../../../assets/images/icon-user.svg';
 import { Link } from 'gatsby';
 import IconTag from '../../../../assets/images/icon-tag.svg';
-import navigation from './navigation.json';
-import { montserratFont } from '../NewNavigation';
+import { platform } from '../../nav';
+
+import { montserratFont } from '../../NewNavigation';
 
 const PlatformLinkTitle = styled.h1`
     ${tw`ml-4 text-lg`}
@@ -64,7 +65,7 @@ const Platform = () => {
                 </div>
             </div>
             <div className='col-span-7 p-6'>
-                {navigation.platform.map((item, key) => {
+                {platform.map((item, key) => {
                     return (
                         <PlatformLink key={key}>
                             <Link className='mb-4' to={item.link}>

@@ -14,8 +14,8 @@ import CookiesBanner from '../cookies-banner/CookiesBanner';
 import ScrollToTopButton from '../ScrollToTopButton/ScrollToTopButton';
 import useSetCookieBanner from '../cookies-banner/useSetCookieBanner';
 import { cookieConsentKey } from '../../common/constants';
-import NewNavigation from '../layout/NewNavigation/NewNavigation';
-import NewTopNav from '../layout/NewNavigation/newTopNav';
+import NewNavigation from '../layout/NewNavigation';
+import NewTopNav from '../layout/NewTopNav';
 
 const NewCookiesCampaignsLayout = ({ children, formId, formTargetId, location, title, description, pageName }) => {
     const { cookies, cookiesBanner, setCookiesBanner } = useSetCookieBanner();

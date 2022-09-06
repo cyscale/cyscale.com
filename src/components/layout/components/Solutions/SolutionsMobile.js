@@ -1,20 +1,20 @@
 import React from 'react';
-import { borderBottomItemNav } from './HomeMobile';
-import navigation from '../NavItems/navigation.json';
+import { borderBottomItemNav } from '../MobileNavigation';
+import { solutions } from '../../nav';
 import { Link } from 'gatsby';
 
-import { sectionTitleColor } from '../NewNavigation';
-import useMediaQuery from '../useMediaQuery';
+import { sectionTitleColor } from '../../NewNavigation';
+import useMediaQuery from '../../../../hooks/useMediaQuery';
 
 const SolutionsMobile = () => {
     const isTablet = useMediaQuery('(min-width: 640px)');
 
     return (
         <div className='bg-white'>
-            {navigation.solutions.map((solution, key) => {
+            {solutions.map((solution, key) => {
                 return (
                     <div
-                        className={`py-4 px-8 ${key === navigation.solutions.length - 1 && !isTablet ? 'pb-60' : ''} `}
+                        className={`py-4 px-8 ${key === solutions.length - 1 && !isTablet ? 'pb-60' : ''} `}
                         key={key}
                         css={borderBottomItemNav}
                     >

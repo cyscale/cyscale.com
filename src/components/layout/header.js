@@ -12,7 +12,8 @@ import {
     PciDssSmall,
     NistSmall
 } from '../Home/images';
-import NewTopNav from './NewNavigation/newTopNav';
+import NewTopNav from './NewTopNav';
+
 const Header = ({
     heroBG,
     bannerTitle,
