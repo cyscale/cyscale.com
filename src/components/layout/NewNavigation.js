@@ -182,7 +182,7 @@ const NewNavigation = ({ pageName, showLogo, appLink }) => {
                     </NavItem>
                     <li className='py-6 pr-0 pl-7'>
                         <a
-                            className='bg-gradient-to-r from-blue to-red hover:from-red hover:to-blue w-153px text-14px border-transparent box-border rounded-md h-10 hidden xl:flex justify-center items-center uppercase leading-none text-white transition duration-500  hover:no-underline font-medium'
+                            className='bg-gradient-to-r from-blue to-red hover:from-red hover:to-blue w-auto text-sm px-4 border-transparent box-border rounded-md h-10 hidden xl:flex justify-center items-center uppercase leading-none text-white transition duration-500  hover:no-underline font-medium'
                             href={appLink}
                             target='_blank'
                             rel='noopener noreferrer'
@@ -192,7 +192,7 @@ const NewNavigation = ({ pageName, showLogo, appLink }) => {
                     </li>
                     <li className='py-6 px-4'>
                         <a
-                            className='loginBtn text-black hover:text-black mt-0px lg:mt-0 text-14px uppercase w-84px greyBorder flex h-10 justify-center items-center rounded-md leading-none transition-all duration-500 hover:bg-grey3 hover:no-underline font-medium'
+                            className='text-black hover:text-black mt-0 text-sm px-4 uppercase w-84px greyBorder flex h-10 justify-center items-center rounded-md leading-none transition-all duration-500 hover:bg-grey3 hover:no-underline font-medium'
                             href='https://app.cyscale.com'
                             target='_blank'
                             rel='noopener noreferrer'
