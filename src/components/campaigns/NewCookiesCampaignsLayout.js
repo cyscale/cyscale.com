@@ -66,7 +66,7 @@ const NewCookiesCampaignsLayout = ({ children, formId, formTargetId, location, t
                     </div>
                     <CSSTransition in={navOpen} timeout={300} classNames='navigation' unmountOnExit>
                         <div className='navigation'>
-                            <NewNavigation pageName={pageName} showLogo={false} appLink={appLink} classes={true} />
+                            <NewNavigation pageName={pageName} showLogo={false} appLink={appLink} />
                         </div>
                     </CSSTransition>
                 </header>

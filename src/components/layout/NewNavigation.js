@@ -80,9 +80,17 @@ const HeaderLogo = styled.img`
     ${tw`block`};
 `;
 
-const NewNavigation = ({ pageName, showLogo, appLink, classes }) => {
+const NewNavigation = ({ pageName, showLogo, appLink }) => {
     return (
-        <nav css={[tw`relative block`, classes && tw`container`]}>
+        <nav
+            css={[
+                tw`relative block`,
+                (pageName === 'Identity and Access Management Security for Cloud' ||
+                    pageName === 'AWSCloudSecurityCampaign' ||
+                    pageName === 'CSPMSolutionCampaign') &&
+                    tw`container`
+            ]}
+        >
             <div tw='mx-auto flex flex-row justify-between'>
                 <div tw='relative flex block py-6 justify-start'>
                     {showLogo && (
@@ -137,7 +145,7 @@ const NewNavigation = ({ pageName, showLogo, appLink, classes }) => {
                     <NavItem>
                         <NavItemButton className={`${pageName === 'Pricing' ? 'active' : ''}`}>
                             <span>
-                                <Link to='/pricing/' activeClassName='active' className='font-semibold'>
+                                <Link to='/pricing/' activeClassName='active' className='font-medium'>
                                     Pricing
                                 </Link>
                             </span>

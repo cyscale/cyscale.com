@@ -64,7 +64,7 @@ const NewTopNav = ({ pageName, showLogo = true }) => {
             >
                 {isDesktop && (
                     <div tw='container max-w-7xl mx-auto pt-2.5' css={paddingNav}>
-                        <NewNavigation pageName={pageName} showLogo={showLogo} appLink={appLink} classes={false} />
+                        <NewNavigation pageName={pageName} showLogo={showLogo} appLink={appLink} />
                     </div>
                 )}
                 {!isDesktop && (
