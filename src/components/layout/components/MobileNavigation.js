@@ -20,7 +20,7 @@ const MobileItemNav = ({ item, setActiveMenu }) => {
             css={borderBottomItemNavStyle}
             onClick={() => setActiveMenu(item)}
         >
-            <span className='sm:text-2xl capitalize'>{item}</span>
+            <span className='capitalize'>{item}</span>
             <img src={downArrow} alt='' />
         </div>
     );
@@ -44,7 +44,7 @@ const MobileNavigation = ({ showMenu, setShowMenu, appLink }) => {
                     {activeMenu !== 'main' && (
                         <div className='inline-block flex' onClick={() => setActiveMenu('main')}>
                             <img src={backArrow} alt='' />{' '}
-                            <span css={logoStyle} className={'flex items-center text-lg pt-0.5 sm:text-2xl'}>
+                            <span css={logoStyle} className={'flex items-center text-lg pt-0.5'}>
                                 Back
                             </span>
                         </div>
@@ -60,13 +60,13 @@ const MobileNavigation = ({ showMenu, setShowMenu, appLink }) => {
                         })}
                         <div className='flex px-8 mt-4'>
                             <img src={IconUser} alt='' />
-                            <a className='ml-2 sm:text-2xl' href={appLink} target='_blank' rel='noopener noreferrer'>
+                            <a className='ml-2' href={appLink} target='_blank' rel='noopener noreferrer'>
                                 Start Free Trial
                             </a>
                         </div>
                         <div className='flex mt-3 px-8'>
                             <img src={IconTag} alt='' />
-                            <Link className='ml-2 sm:text-2xl' to='/pricing/'>
+                            <Link className='ml-2' to='/pricing/'>
                                 Pricing
                             </Link>
                         </div>
@@ -79,27 +79,22 @@ const MobileNavigation = ({ showMenu, setShowMenu, appLink }) => {
                 <div className='px-8 mb-3 w-full bg-white absolute bottom-0'>
                     <Link
                         to='/request-demo'
-                        className='gradientBgBtn block font-medium rounded text-white text-center py-4 hover:no-underline no-underline max-w-md sm:text-2xl'
+                        className='gradientBgBtn block font-medium rounded text-white text-center py-4 hover:no-underline no-underline max-w-sm'
                     >
                         Request Demo
                     </Link>
-                    <Link className='block mt-3 sm:text-2xl' to='/blog/'>
+                    <Link className='block mt-3' to='/blog/'>
                         Cloud Security Blog
                     </Link>
-                    <Link className='block my-3 sm:text-2xl' to='/contact-us/'>
+                    <Link className='block my-3' to='/contact-us/'>
                         Contact
                     </Link>
-                    <div className='sm:text-2xl'>
-                        <a
-                            className='sm:text-2xl'
-                            href='https://app.cyscale.com'
-                            target='_blank'
-                            rel='noopener noreferrer'
-                        >
+                    <div>
+                        <a href='https://app.cyscale.com' target='_blank' rel='noopener noreferrer'>
                             Login
                         </a>{' '}
                         |{' '}
-                        <a className='sm:text-2xl' href={appLink} target='_blank' rel='noopener noreferrer'>
+                        <a href={appLink} target='_blank' rel='noopener noreferrer'>
                             Sign Up
                         </a>{' '}
                     </div>

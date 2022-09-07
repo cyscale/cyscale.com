@@ -8,13 +8,13 @@ const ResourcesMobile = () => {
             {resources.map((item, key) => {
                 return item.external ? (
                     <div className='py-2 px-8' key={key}>
-                        <a href={item.link} className='text-base sm:text-2xl pt-4 block' key={key}>
+                        <a href={item.link} className='text-base pt-4 block' key={key}>
                             {item.text}
                         </a>
                     </div>
                 ) : (
                     <div className='py-2 px-8' key={key}>
-                        <Link to={item.link} className='text-base sm:text-2xl pt-4 block' key={key}>
+                        <Link to={item.link} className='text-base pt-4 block' key={key}>
                             {item.text}
                         </Link>
                     </div>

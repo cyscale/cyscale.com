@@ -38,7 +38,7 @@ export const paddingLeftStyle = css`
 
 export const hoverButtonColorStyle = css`
     &:hover {
-        background-color: rgba(30, 64, 175, 1);
+        background-color: #0b175a;
     }
 `;
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { borderBottomItemNav } from '../MobileNavigation';
+import { borderBottomItemNavStyle } from '../../style/index';
 import { solutions } from '../../nav';
 import { Link } from 'gatsby';
 
@@ -16,17 +16,17 @@ const SolutionsMobile = () => {
                     <div
                         className={`py-4 px-8 ${key === solutions.length - 1 && !isTablet ? 'pb-60' : ''} `}
                         key={key}
-                        css={borderBottomItemNav}
+                        css={borderBottomItemNavStyle}
                     >
                         <div className='flex mb-1'>
                             <img src={solution.icon} alt='' />
-                            <h1 className='text-base sm:text-2xl pl-2 uppercase' css={sectionTitleColorStyle}>
+                            <h1 className='text-base pl-2 uppercase' css={sectionTitleColorStyle}>
                                 {solution.title}
                             </h1>
                         </div>
                         {solution.links.map((item, key) => {
                             return (
-                                <Link to={item.link} className='text-base sm:text-2xl pt-4 block' key={key}>
+                                <Link to={item.link} className='text-base pt-4 block' key={key}>
                                     {item.text}
                                 </Link>
                             );
