@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import IconCyscaleShield from '../../../../assets/images/icon-cyscale-shield.svg';
+import IconCyscaleShield from '../../icons/icon-cyscale-shield.svg';
 import {
     fontNavLinkStyle,
     hoverButtonColorStyle,
@@ -11,7 +11,7 @@ import {
 } from '../../style';
 import { solutions } from '../../nav';
 import { css } from 'twin.macro';
-import arrowRight from '../../../../assets/images/icon-right-navigation.svg';
+import arrowRight from '../../icons/icon-right-navigation.svg';
 
 const descriptionMaxWidth = css`
     max-width: 13.25rem;

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import navBars from '../../assets/images/navbars-campaigns.svg';
+import navBars from '../layout/icons/navbars-campaigns.svg';
 import { CookiesProvider } from 'react-cookie';
 import { useAppLink } from '../../common/links';
 import GlobalContext from '../../context/GlobalContext';

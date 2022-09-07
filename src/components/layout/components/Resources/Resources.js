@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import IconDownload from '../../../../assets/images/icon-download-cloud.svg';
+import IconDownload from '../../icons/icon-download-cloud.svg';
 import { fontNavLinkStyle, hoverButtonColorStyle, montserratFontStyle, widthFitStyle } from '../../style';
 import { resources } from '../../nav';
-import arrowRight from '../../../../assets/images/icon-right-navigation.svg';
+import arrowRight from '../../icons/icon-right-navigation.svg';
 
 const Resources = () => {
     return (

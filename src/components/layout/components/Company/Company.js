@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql, Link, useStaticQuery } from 'gatsby';
-import IconCyscaleUser from '../../../../assets/images/icon-cyscale-user.svg';
+import IconCyscaleUser from '../../icons/icon-cyscale-user.svg';
 import {
     fontNavLinkStyle,
     hoverButtonColorStyle,
@@ -10,7 +10,7 @@ import {
     widthFitStyle
 } from '../../style';
 import { company } from '../../nav';
-import arrowRight from '../../../../assets/images/icon-right-navigation.svg';
+import arrowRight from '../../icons/icon-right-navigation.svg';
 
 const Company = () => {
     const data = useStaticQuery(graphql`

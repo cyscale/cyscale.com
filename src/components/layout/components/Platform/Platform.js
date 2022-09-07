@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import tw, { css } from 'twin.macro';
-import IconUser from '../../../../assets/images/icon-user.svg';
+import IconUser from '../../icons/icon-user.svg';
 import { Link } from 'gatsby';
-import IconTag from '../../../../assets/images/icon-tag.svg';
+import IconTag from '../../icons/icon-tag.svg';
 import { platform } from '../../nav';
 import { montserratFontStyle, descriptionColorStyle, hoverButtonColorStyle, widthFitStyle } from '../../style';
-import arrowRight from '../../../../assets/images/icon-right-navigation.svg';
+import arrowRight from '../../icons/icon-right-navigation.svg';
 
 const PlatformLinkTitle = styled.h1`
     ${tw`ml-4 text-lg`}

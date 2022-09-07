@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import logo from '../../../assets/images/logo.svg';
-import menuClose from '../../../assets/images/menuCloseBlack.svg';
-import IconUser from '../../../assets/images/icon-user.svg';
-import IconTag from '../../../assets/images/icon-tag.svg';
+import menuClose from '../icons/menuCloseBlack.svg';
+import IconUser from '../icons/icon-user.svg';
+import IconTag from '../icons/icon-tag.svg';
 import PlatformMobile from './Platform/PlatformMobile';
 import SolutionsMobile from './Solutions/SolutionsMobile';
 import ResourcesMobile from './Resources/ResourcesMobile';
 import CompanyMobile from './Company/CompanyMobile';
-import backArrow from '../../../assets/images/backArrow.svg';
-import downArrow from '../../../assets/images/downArrowIcon.svg';
+import backArrow from '../icons/backArrow.svg';
+import downArrow from '../icons/downArrowIcon.svg';
 import { navigation } from '../nav';
 import { borderBottomItemNavStyle, logoStyle, HeaderLogo } from '../style';
 

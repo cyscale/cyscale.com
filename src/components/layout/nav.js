@@ -1,7 +1,7 @@
-import UseCases from '../../assets/images/icon-usecases.svg';
-import Cloud from '../../assets/images/icon-cloud.svg';
-import Graph from '../../assets/images/icon-graph.svg';
-import Shield from '../../assets/images/icon-shield.svg';
+import UseCases from './icons/icon-usecases.svg';
+import Cloud from './icons/icon-cloud.svg';
+import Graph from './icons/icon-graph.svg';
+import Shield from './icons/icon-shield.svg';
 
 const platform = [
     {
