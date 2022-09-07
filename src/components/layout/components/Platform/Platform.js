@@ -5,7 +5,7 @@ import IconUser from '../../../../assets/images/icon-user.svg';
 import { Link } from 'gatsby';
 import IconTag from '../../../../assets/images/icon-tag.svg';
 import { platform } from '../../nav';
-import { montserratFontStyle, descriptionColorStyle } from '../../style';
+import { montserratFontStyle, descriptionColorStyle, hoverButtonColorStyle } from '../../style';
 
 const PlatformLinkTitle = styled.h1`
     ${tw`ml-4 text-lg`}
@@ -13,8 +13,9 @@ const PlatformLinkTitle = styled.h1`
 `;
 
 const PlatformLink = styled.div`
-    ${tw`mb-4 px-1`}
-    transition: 0.2s;
+    ${tw`mb-4 pr-1 pl-1.5`}
+    transition: 0.16s;
+    border-left: 0.188rem solid transparent;
 
     &:hover ${PlatformLinkTitle} {
         font-weight: 500;
@@ -42,6 +43,7 @@ const Platform = () => {
                 <a
                     className='bg-blue text-white py-2 px-4 rounded cursor-pointer font-medium'
                     href='https://app.cyscale.com/playground'
+                    css={hoverButtonColorStyle}
                 >
                     <span className='text-xl'>></span>
                     <span className='text-md ml-2'>Try Cyscale Platform</span>

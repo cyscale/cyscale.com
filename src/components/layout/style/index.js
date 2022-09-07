@@ -7,6 +7,7 @@ export const fontNavLinkStyle = css`
     line-height: 1.25rem;
     font-weight: 400;
     transition: 0.16s;
+    border-left: 0.188rem solid transparent;
     &:hover {
         font-weight: 500;
         color: #0f26aa;
@@ -29,6 +30,16 @@ export const descriptionColorStyle = css`
 
 export const borderBottomItemNavStyle = css`
     border-bottom: 1px solid #e2e2e2;
+`;
+
+export const paddingLeftStyle = css`
+    padding-left: 0.688rem;
+`;
+
+export const hoverButtonColorStyle = css`
+    &:hover {
+        background-color: rgba(30, 64, 175, 1);
+    }
 `;
 
 export const logoStyle = css`

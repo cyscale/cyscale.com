@@ -1,7 +1,13 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import IconCyscaleShield from '../../../../assets/images/icon-cyscale-shield.svg';
-import { fontNavLinkStyle, montserratFontStyle, sectionTitleColorStyle } from '../../style';
+import {
+    fontNavLinkStyle,
+    hoverButtonColorStyle,
+    montserratFontStyle,
+    paddingLeftStyle,
+    sectionTitleColorStyle
+} from '../../style';
 import { solutions } from '../../nav';
 import { css } from 'twin.macro';
 
@@ -20,6 +26,7 @@ const Solutions = () => {
                 <Link
                     className='bg-blue text-white py-2 px-4 rounded cursor-pointer mb-22 font-medium'
                     to='/security-for-startups-program/'
+                    css={hoverButtonColorStyle}
                 >
                     <span className='text-xl'>></span>
                     <span className='text-md ml-2'>Submit Your Application</span>
@@ -33,11 +40,17 @@ const Solutions = () => {
                     {solutions.map((solution, key) => {
                         return (
                             <div className='col-span-4' key={key}>
-                                <img src={solution.icon} className='mb-1 pl-2' alt='' />
-                                <p className='mb-2 pl-2 text-base font-light uppercase' css={sectionTitleColorStyle}>
+                                <img src={solution.icon} className='mb-1' alt='' css={paddingLeftStyle} />
+                                <p
+                                    className='mb-2 text-base font-light uppercase'
+                                    css={[sectionTitleColorStyle, paddingLeftStyle]}
+                                >
                                     {solution.title}
                                 </p>
-                                <p className='text-sm pl-2 mb-4 text-grey2 max-w-xs' css={descriptionMaxWidth}>
+                                <p
+                                    className='text-sm mb-4 text-grey2 max-w-xs'
+                                    css={[descriptionMaxWidth, paddingLeftStyle]}
+                                >
                                     {solution.description}
                                 </p>
                                 {solution.links.map((link, key) => {

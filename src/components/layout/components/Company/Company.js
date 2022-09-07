@@ -1,7 +1,13 @@
 import React from 'react';
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import IconCyscaleUser from '../../../../assets/images/icon-cyscale-user.svg';
-import { fontNavLinkStyle, montserratFontStyle, sectionTitleColorStyle } from '../../style';
+import {
+    fontNavLinkStyle,
+    hoverButtonColorStyle,
+    montserratFontStyle,
+    paddingLeftStyle,
+    sectionTitleColorStyle
+} from '../../style';
 import { company } from '../../nav';
 
 const Company = () => {
@@ -37,7 +43,11 @@ const Company = () => {
                     To help companies of all sizes to start, improve and maintain their{' '}
                     <strong>Cloud Security Program</strong> based on the industry best practices.
                 </p>
-                <Link className='bg-blue text-white py-2 px-4 rounded cursor-pointer mb-22 font-medium' to='/careers/'>
+                <Link
+                    className='bg-blue text-white py-2 px-4 rounded cursor-pointer mb-22 font-medium'
+                    to='/careers/'
+                    css={hoverButtonColorStyle}
+                >
                     <span className='text-xl'>></span>
                     <span className='text-md ml-2'>Join the Cyscale Team</span>
                 </Link>
@@ -46,7 +56,7 @@ const Company = () => {
                 </div>
             </div>
             <div className='col-span-2 p-6'>
-                <p className='pl-2 text-base font-light mb-6' css={sectionTitleColorStyle}>
+                <p className='text-base font-light mb-6' css={[sectionTitleColorStyle, paddingLeftStyle]}>
                     OVERVIEW
                 </p>
                 {company.map((item, key) => {
