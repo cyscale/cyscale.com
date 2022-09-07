@@ -1,4 +1,3 @@
-import React from 'react';
 import UseCases from '../../assets/images/icon-usecases.svg';
 import Cloud from '../../assets/images/icon-cloud.svg';
 import Graph from '../../assets/images/icon-graph.svg';

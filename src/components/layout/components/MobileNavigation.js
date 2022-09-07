@@ -4,37 +4,22 @@ import logo from '../../../assets/images/logo.svg';
 import menuClose from '../../../assets/images/menuCloseBlack.svg';
 import IconUser from '../../../assets/images/icon-user.svg';
 import IconTag from '../../../assets/images/icon-tag.svg';
-import { css } from 'twin.macro';
 import PlatformMobile from './Platform/PlatformMobile';
 import SolutionsMobile from './Solutions/SolutionsMobile';
 import ResourcesMobile from './Resources/ResourcesMobile';
 import CompanyMobile from './Company/CompanyMobile';
 import backArrow from '../../../assets/images/backArrow.svg';
 import downArrow from '../../../assets/images/downArrowIcon.svg';
-import styled from '@emotion/styled';
 import { navigation } from '../nav';
-
-export const logoStyle = css`
-    width: 11rem;
-    height: 2.534rem;
-
-    @media (max-width: 480px) {
-        width: 7.813rem;
-        height: 'auto';
-    }
-`;
-
-export const HeaderLogo = styled.img`
-    ${logoStyle}
-`;
-
-export const borderBottomItemNav = css`
-    border-bottom: 1px solid #e2e2e2;
-`;
+import { borderBottomItemNavStyle, logoStyle, HeaderLogo } from '../style';
 
 const MobileItemNav = ({ item, setActiveMenu }) => {
     return (
-        <div className='py-4 px-8 flex justify-between' css={borderBottomItemNav} onClick={() => setActiveMenu(item)}>
+        <div
+            className='py-4 px-8 flex justify-between'
+            css={borderBottomItemNavStyle}
+            onClick={() => setActiveMenu(item)}
+        >
             <span className='sm:text-2xl capitalize'>{item}</span>
             <img src={downArrow} alt='' />
         </div>
@@ -50,7 +35,7 @@ const MobileNavigation = ({ showMenu, setShowMenu, appLink }) => {
             style={{ zIndex: 10000 }}
         >
             <div className='relative min-h-screen pt-4'>
-                <div className='flex justify-between pt-2.5 pb-6 px-8 bg-white' css={borderBottomItemNav}>
+                <div className='flex justify-between pt-2.5 pb-6 px-8 bg-white' css={borderBottomItemNavStyle}>
                     {activeMenu === 'main' && (
                         <Link to='/' className='inline-block'>
                             <HeaderLogo src={logo} alt='Cyscale' />

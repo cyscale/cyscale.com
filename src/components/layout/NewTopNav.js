@@ -68,7 +68,7 @@ const NewTopNav = ({ pageName, showLogo = true }) => {
                     </div>
                 )}
                 {!isDesktop && (
-                    <div tw='pt-2.5 px-8' id='pepe'>
+                    <div tw='pt-2.5 px-8'>
                         <MobileNavbar
                             pageName={pageName}
                             showLogo={showLogo}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import IconCyscaleShield from '../../../../assets/images/icon-cyscale-shield.svg';
-import { fontNavLink, sectionTitleColor, montserratFont } from '../../NewNavigation';
+import { fontNavLinkStyle, montserratFontStyle, sectionTitleColorStyle } from '../../style';
 import { solutions } from '../../nav';
 import { css } from 'twin.macro';
 
@@ -13,7 +13,7 @@ const Solutions = () => {
     return (
         <div className='w-full grid grid-cols-12 gap-2 ml-auto mb-16 shadow-2xl bg-white' style={{ width: '76rem' }}>
             <div className='col-span-3 bg-selago p-6'>
-                <h1 css={montserratFont} className='text-2xl font-semibold mb-6'>
+                <h1 css={montserratFontStyle} className='text-2xl font-semibold mb-6'>
                     Startups Program
                 </h1>
                 <p className='mb-4'>Build and maintain a strong Security Program from the start.</p>
@@ -34,7 +34,7 @@ const Solutions = () => {
                         return (
                             <div className='col-span-4' key={key}>
                                 <img src={solution.icon} className='mb-1 pl-2' alt='' />
-                                <p className='mb-2 pl-2 text-base font-light uppercase' css={sectionTitleColor}>
+                                <p className='mb-2 pl-2 text-base font-light uppercase' css={sectionTitleColorStyle}>
                                     {solution.title}
                                 </p>
                                 <p className='text-sm pl-2 mb-4 text-grey2 max-w-xs' css={descriptionMaxWidth}>
@@ -46,7 +46,7 @@ const Solutions = () => {
                                             <Link
                                                 className='p-2 hover:font-medium block'
                                                 to={link.link}
-                                                css={fontNavLink}
+                                                css={fontNavLinkStyle}
                                             >
                                                 {link.text}
                                             </Link>

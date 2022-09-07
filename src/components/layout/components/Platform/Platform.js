@@ -1,12 +1,11 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import tw, { css } from 'twin.macro';
+import tw from 'twin.macro';
 import IconUser from '../../../../assets/images/icon-user.svg';
 import { Link } from 'gatsby';
 import IconTag from '../../../../assets/images/icon-tag.svg';
 import { platform } from '../../nav';
-
-import { montserratFont } from '../../NewNavigation';
+import { montserratFontStyle, descriptionColorStyle } from '../../style';
 
 const PlatformLinkTitle = styled.h1`
     ${tw`ml-4 text-lg`}
@@ -28,15 +27,11 @@ const PlatformLink = styled.div`
     }
 `;
 
-const descriptionColor = css`
-    color: #606060;
-`;
-
 const Platform = () => {
     return (
         <div className='max-w-5xl grid grid-cols-12 gap-2 ml-auto justify-end shadow-2xl bg-white'>
             <div className='col-span-5 bg-selago p-6'>
-                <h1 css={montserratFont} className='text-2xl font-semibold mb-6'>
+                <h1 css={montserratFontStyle} className='text-2xl font-semibold mb-6'>
                     Platform Overview
                 </h1>
                 <p className='mb-6'>
@@ -73,7 +68,7 @@ const Platform = () => {
                                     <img src={item.icon} alt='' />
                                     <PlatformLinkTitle>{item.title}</PlatformLinkTitle>
                                 </div>
-                                <p className='ml-9 text-base font-light' css={descriptionColor}>
+                                <p className='ml-9 text-base font-light' css={descriptionColorStyle}>
                                     {item.description}
                                 </p>
                             </Link>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import IconCyscaleUser from '../../../../assets/images/icon-cyscale-user.svg';
-import { fontNavLink, sectionTitleColor, montserratFont } from '../../NewNavigation';
+import { fontNavLinkStyle, montserratFontStyle, sectionTitleColorStyle } from '../../style';
 import { company } from '../../nav';
 
 const Company = () => {
@@ -30,7 +30,7 @@ const Company = () => {
     return (
         <div className='max-w-5xl grid grid-cols-12 gap-2 ml-auto justify-end mb-16 shadow-2xl bg-white'>
             <div className='col-span-5 bg-selago p-6'>
-                <h1 css={montserratFont} className='text-2xl font-semibold mb-6'>
+                <h1 css={montserratFontStyle} className='text-2xl font-semibold mb-6'>
                     Our Mission
                 </h1>
                 <p className='mb-4'>
@@ -46,13 +46,13 @@ const Company = () => {
                 </div>
             </div>
             <div className='col-span-2 p-6'>
-                <p className='pl-2 text-base font-light mb-6' css={sectionTitleColor}>
+                <p className='pl-2 text-base font-light mb-6' css={sectionTitleColorStyle}>
                     OVERVIEW
                 </p>
                 {company.map((item, key) => {
                     return (
                         <div className='mb-2' key={key}>
-                            <Link className='p-2 hover:font-medium block' to={item.link} css={fontNavLink}>
+                            <Link className='p-2 hover:font-medium block' to={item.link} css={fontNavLinkStyle}>
                                 {item.text}
                             </Link>
                         </div>
@@ -60,7 +60,7 @@ const Company = () => {
                 })}
             </div>
             <div className='col-span-5 p-6'>
-                <p className='pl-2 text-base font-light mb-6' css={sectionTitleColor}>
+                <p className='pl-2 text-base font-light mb-6' css={sectionTitleColorStyle}>
                     OPEN POSITIONS
                 </p>
                 {jobs.map(({ frontmatter }, key) => {
@@ -70,7 +70,7 @@ const Company = () => {
                             <Link
                                 className='p-2 hover:font-medium block'
                                 to={`/careers/${permalink}/`}
-                                css={fontNavLink}
+                                css={fontNavLinkStyle}
                                 activeClassName='active'
                             >
                                 {title} ({experience})

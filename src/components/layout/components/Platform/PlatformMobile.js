@@ -2,11 +2,7 @@ import React from 'react';
 import { borderBottomItemNav } from '../MobileNavigation';
 import { platform } from '../../nav';
 import { Link } from 'gatsby';
-import { css } from 'twin.macro';
-
-const descriptionColor = css`
-    color: #606060;
-`;
+import { descriptionColorStyle } from '../../style';
 
 const PlatformMobile = () => {
     return (
@@ -19,7 +15,7 @@ const PlatformMobile = () => {
                                 <img src={item.icon} alt='' />
                                 <span className='text-black text-base sm:text-2xl font-medium ml-2'>{item.title}</span>
                             </div>
-                            <p css={descriptionColor} className='text-sm sm:text-base ml-7'>
+                            <p css={descriptionColorStyle} className='text-sm sm:text-base ml-7'>
                                 {item.mobileDescription}
                             </p>
                         </Link>

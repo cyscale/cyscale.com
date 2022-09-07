@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import IconDownload from '../../../../assets/images/icon-download-cloud.svg';
-import { fontNavLink, montserratFont } from '../../NewNavigation';
+import { fontNavLinkStyle, montserratFontStyle } from '../../style';
 import { resources } from '../../nav';
 
 const Resources = () => {
     return (
         <div className='max-w-3xl grid grid-cols-2 gap-6 ml-auto justify-end mb-16 shadow-2xl bg-white'>
             <div className='bg-selago p-6'>
-                <h1 css={montserratFont} className='text-2xl font-semibold mb-6'>
+                <h1 css={montserratFontStyle} className='text-2xl font-semibold mb-6'>
                     Cloud Storage Misconfigurations
                 </h1>
                 <p className='mb-4'>Build and maintain a strong Security Program from the start.</p>
@@ -30,13 +30,13 @@ const Resources = () => {
                 {resources.map((resource, key) => {
                     return resource.external ? (
                         <div className='mb-2' key={key}>
-                            <a className='p-2 hover:font-medium block' href={resource.link} css={fontNavLink}>
+                            <a className='p-2 hover:font-medium block' href={resource.link} css={fontNavLinkStyle}>
                                 {resource.text}
                             </a>
                         </div>
                     ) : (
                         <div className='mb-2' key={key}>
-                            <Link className='p-2 hover:font-medium block' to={resource.link} css={fontNavLink}>
+                            <Link className='p-2 hover:font-medium block' to={resource.link} css={fontNavLinkStyle}>
                                 {resource.text}
                             </Link>
                         </div>

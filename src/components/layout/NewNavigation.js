@@ -1,5 +1,5 @@
 import React from 'react';
-import tw, { css } from 'twin.macro';
+import tw from 'twin.macro';
 import { Link } from 'gatsby';
 import logo from '../../assets/images/logo.svg';
 
@@ -8,7 +8,7 @@ import Platform from './components/Platform/Platform';
 import Solutions from './components/Solutions/Solutions';
 import Resources from './components/Resources/Resources';
 import Company from './components/Company/Company';
-import { logoStyle } from './components/MobileNavigation';
+import { logoStyle } from './style';
 
 const MegaMenu = styled.div`
     left: ${({ campaignsPages }) => (campaignsPages ? '-17rem' : '0')};
@@ -80,27 +80,6 @@ const HeaderLogo = styled.img`
     ${tw`block`};
 `;
 
-export const montserratFont = css`
-    font-family: 'Montserrat', sans-serif;
-`;
-
-export const sectionTitleColor = css`
-    color: #079bee;
-`;
-
-export const fontNavLink = css`
-    font-size: 1rem;
-    line-height: 1.25rem;
-    font-weight: 400;
-    transition: 0.2s;
-    &:hover {
-        font-weight: 500;
-        color: #0f26aa;
-        background-color: rgb(232, 238, 248, 0.3);
-        border-left: 0.188rem solid #0f26aa;
-    }
-`;
-
 const NewNavigation = ({ pageName, showLogo, appLink, classes }) => {
     return (
         <nav css={[tw`relative block`, classes && tw`container`]}>
@@ -158,7 +137,7 @@ const NewNavigation = ({ pageName, showLogo, appLink, classes }) => {
                     <NavItem>
                         <NavItemButton className={`${pageName === 'Pricing' ? 'active' : ''}`}>
                             <span>
-                                <Link to='/pricing/' activeClassName='active' className='font-medium'>
+                                <Link to='/pricing/' activeClassName='active' className='font-semibold'>
                                     Pricing
                                 </Link>
                             </span>

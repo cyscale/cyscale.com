@@ -3,7 +3,7 @@ import { borderBottomItemNav } from '../MobileNavigation';
 import { solutions } from '../../nav';
 import { Link } from 'gatsby';
 
-import { sectionTitleColor } from '../../NewNavigation';
+import { sectionTitleColorStyle } from '../../style';
 import useMediaQuery from '../../../../hooks/useMediaQuery';
 
 const SolutionsMobile = () => {
@@ -20,7 +20,7 @@ const SolutionsMobile = () => {
                     >
                         <div className='flex mb-1'>
                             <img src={solution.icon} alt='' />
-                            <h1 className='text-base sm:text-2xl pl-2 uppercase' css={sectionTitleColor}>
+                            <h1 className='text-base sm:text-2xl pl-2 uppercase' css={sectionTitleColorStyle}>
                                 {solution.title}
                             </h1>
                         </div>
