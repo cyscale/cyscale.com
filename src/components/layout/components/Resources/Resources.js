@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import IconDownload from '../../../../assets/images/icon-download-cloud.svg';
-import { fontNavLinkStyle, hoverButtonColorStyle, montserratFontStyle } from '../../style';
+import { fontNavLinkStyle, hoverButtonColorStyle, montserratFontStyle, widthFitStyle } from '../../style';
 import { resources } from '../../nav';
+import arrowRight from '../../../../assets/images/icon-right-navigation.svg';
 
 const Resources = () => {
     return (
@@ -13,11 +14,11 @@ const Resources = () => {
                 </h1>
                 <p className='mb-4'>Build and maintain a strong Security Program from the start.</p>
                 <Link
-                    className='bg-blue text-white py-2 px-4 rounded cursor-pointer mb-22 font-medium'
+                    className='bg-blue text-white py-2 px-4 rounded cursor-pointer mb-22 font-medium flex'
                     to='/whitepaper/cloud-storage-misconfigurations/'
-                    css={hoverButtonColorStyle}
+                    css={[hoverButtonColorStyle, widthFitStyle]}
                 >
-                    <span className='text-xl'>></span>
+                    <img src={arrowRight} className='w-5 inline-block' />
                     <span className='text-md ml-2'>Get the Whitepaper</span>
                 </Link>
                 <div className='flex mt-12'>

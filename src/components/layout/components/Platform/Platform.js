@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import tw from 'twin.macro';
+import tw, { css } from 'twin.macro';
 import IconUser from '../../../../assets/images/icon-user.svg';
 import { Link } from 'gatsby';
 import IconTag from '../../../../assets/images/icon-tag.svg';
 import { platform } from '../../nav';
-import { montserratFontStyle, descriptionColorStyle, hoverButtonColorStyle } from '../../style';
+import { montserratFontStyle, descriptionColorStyle, hoverButtonColorStyle, widthFitStyle } from '../../style';
+import arrowRight from '../../../../assets/images/icon-right-navigation.svg';
 
 const PlatformLinkTitle = styled.h1`
     ${tw`ml-4 text-lg`}
@@ -41,11 +42,11 @@ const Platform = () => {
                 </p>
                 <p className='mb-4'>Explore the knowledge graph in our playground account populated with data.</p>
                 <a
-                    className='bg-blue text-white py-2 px-4 rounded cursor-pointer font-medium'
+                    className='bg-blue text-white py-2 px-4 rounded cursor-pointer font-medium flex'
                     href='https://app.cyscale.com/playground'
-                    css={hoverButtonColorStyle}
+                    css={[hoverButtonColorStyle, widthFitStyle]}
                 >
-                    <span className='text-xl'>></span>
+                    <img src={arrowRight} className='w-5 inline-block' />
                     <span className='text-md ml-2'>Try Cyscale Platform</span>
                 </a>
                 <div className='flex mt-12'>

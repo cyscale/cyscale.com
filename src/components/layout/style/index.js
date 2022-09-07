@@ -42,6 +42,10 @@ export const hoverButtonColorStyle = css`
     }
 `;
 
+export const widthFitStyle = css`
+    width: fit-content;
+`;
+
 export const logoStyle = css`
     width: 11rem;
     height: 2.534rem;

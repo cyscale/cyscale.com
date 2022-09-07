@@ -6,10 +6,12 @@ import {
     hoverButtonColorStyle,
     montserratFontStyle,
     paddingLeftStyle,
-    sectionTitleColorStyle
+    sectionTitleColorStyle,
+    widthFitStyle
 } from '../../style';
 import { solutions } from '../../nav';
 import { css } from 'twin.macro';
+import arrowRight from '../../../../assets/images/icon-right-navigation.svg';
 
 const descriptionMaxWidth = css`
     max-width: 13.25rem;
@@ -24,11 +26,11 @@ const Solutions = () => {
                 </h1>
                 <p className='mb-4'>Build and maintain a strong Security Program from the start.</p>
                 <Link
-                    className='bg-blue text-white py-2 px-4 rounded cursor-pointer mb-22 font-medium'
+                    className='bg-blue text-white py-2 px-4 rounded cursor-pointer mb-22 font-medium flex'
                     to='/security-for-startups-program/'
-                    css={hoverButtonColorStyle}
+                    css={[hoverButtonColorStyle, widthFitStyle]}
                 >
-                    <span className='text-xl'>></span>
+                    <img src={arrowRight} className='w-5 inline-block' />
                     <span className='text-md ml-2'>Submit Your Application</span>
                 </Link>
                 <div className='mt-32'>
