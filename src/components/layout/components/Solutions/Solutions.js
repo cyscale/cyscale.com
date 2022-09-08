@@ -30,7 +30,7 @@ const Solutions = () => {
                     to='/security-for-startups-program/'
                     css={[hoverButtonColorStyle, widthFitStyle]}
                 >
-                    <img src={arrowRight} className='w-5 inline-block' />
+                    <img src={arrowRight} className='w-5 inline-block' alt='' />
                     <span className='text-md ml-2'>Submit Your Application</span>
                 </Link>
                 <div className='mt-32'>

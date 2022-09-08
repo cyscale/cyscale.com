@@ -1,4 +1,3 @@
-import React from 'react';
 import { css } from 'twin.macro';
 import styled from '@emotion/styled';
 

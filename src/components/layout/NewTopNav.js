@@ -53,6 +53,13 @@ const NewTopNav = ({ pageName, showLogo = true }) => {
         }
     }, [pageName]);
 
+    useEffect(() => {
+        if (showMenu) {
+            document.body.style.overflow = 'hidden';
+            return () => (document.body.style.overflow = 'unset');
+        }
+    }, [showMenu]);
+
     const rootClasses = !trigger ? 'translate-y-0' : '-translate-y-full';
 
     return (

@@ -18,7 +18,7 @@ const Resources = () => {
                     to='/whitepaper/cloud-storage-misconfigurations/'
                     css={[hoverButtonColorStyle, widthFitStyle]}
                 >
-                    <img src={arrowRight} className='w-5 inline-block' />
+                    <img src={arrowRight} className='w-5 inline-block' alt='' />
                     <span className='text-md ml-2'>Get the Whitepaper</span>
                 </Link>
                 <div className='flex mt-12'>
@@ -38,7 +38,12 @@ const Resources = () => {
                         </div>
                     ) : (
                         <div className='mb-2' key={key}>
-                            <Link className='p-2 hover:font-medium block' to={resource.link} css={fontNavLinkStyle} activeClassName='active'>
+                            <Link
+                                className='p-2 hover:font-medium block'
+                                to={resource.link}
+                                css={fontNavLinkStyle}
+                                activeClassName='active'
+                            >
                                 {resource.text}
                             </Link>
                         </div>

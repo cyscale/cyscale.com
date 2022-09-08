@@ -1,15 +1,14 @@
 import React from 'react';
-import { borderBottomItemNav } from '../MobileNavigation';
 import { platform } from '../../nav';
 import { Link } from 'gatsby';
-import { descriptionColorStyle } from '../../style';
+import { descriptionColorStyle, borderBottomItemNavStyle } from '../../style';
 
 const PlatformMobile = () => {
     return (
         <div className='bg-white'>
             {platform.map((item, key) => {
                 return (
-                    <div className='py-4 px-8' key={key} css={borderBottomItemNav}>
+                    <div className='py-4 px-8' key={key} css={borderBottomItemNavStyle}>
                         <Link to={item.link}>
                             <div className='flex'>
                                 <img src={item.icon} alt='' />

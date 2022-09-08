@@ -13,6 +13,11 @@ const PlatformLinkTitle = styled.h1`
     font-weight: 500;
 `;
 
+const activePlatformLink = css`
+    background-color: rgb(232, 238, 248, 0.3);
+    border-left: 0.188rem solid #0f26aa;
+`;
+
 const PlatformLink = styled.div`
     ${tw`mb-4 pr-1 pl-1.5`}
     transition: 0.16s;
@@ -24,12 +29,14 @@ const PlatformLink = styled.div`
     }
 
     &:hover {
-        background-color: rgb(232, 238, 248, 0.3);
-        border-left: 0.188rem solid #0f26aa;
+        ${activePlatformLink}
     }
 `;
 
 const Platform = () => {
+    const url = typeof window !== 'undefined' ? window.location.href : '';
+    const { pathname } = new URL(url);
+
     return (
         <div className='max-w-5xl grid grid-cols-12 gap-2 ml-auto justify-end shadow-2xl bg-white'>
             <div className='col-span-5 bg-selago p-6'>
@@ -46,7 +53,7 @@ const Platform = () => {
                     href='https://app.cyscale.com/playground'
                     css={[hoverButtonColorStyle, widthFitStyle]}
                 >
-                    <img src={arrowRight} className='w-5 inline-block' />
+                    <img src={arrowRight} className='w-5 inline-block' alt='' />
                     <span className='text-md ml-2'>Try Cyscale Platform</span>
                 </a>
                 <div className='flex mt-12'>
@@ -65,7 +72,7 @@ const Platform = () => {
             <div className='col-span-7 p-6'>
                 {platform.map((item, key) => {
                     return (
-                        <PlatformLink key={key}>
+                        <PlatformLink key={key} css={pathname === item.link ? activePlatformLink : null}>
                             <Link className='mb-4' to={item.link}>
                                 <div className='flex mb-1'>
                                     <img src={item.icon} alt='' />

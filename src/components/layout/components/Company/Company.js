@@ -50,7 +50,7 @@ const Company = () => {
                     to='/careers/'
                     css={[hoverButtonColorStyle, widthFitStyle]}
                 >
-                    <img src={arrowRight} className='w-5 inline-block' />
+                    <img src={arrowRight} className='w-5 inline-block' alt='' />
                     <span className='text-md ml-2'>Join the Cyscale Team</span>
                 </Link>
                 <div style={{ marginTop: '4rem' }}>

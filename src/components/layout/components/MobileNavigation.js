@@ -54,7 +54,7 @@ const MobileNavigation = ({ showMenu, setShowMenu, appLink }) => {
                     </button>
                 </div>
                 {activeMenu === 'main' && (
-                    <div className='bg-white'>
+                    <div className='bg-white pb-48'>
                         {Object.keys(navigation).map((item, key) => {
                             return <MobileItemNav item={item} key={key} setActiveMenu={setActiveMenu} />;
                         })}
