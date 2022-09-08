@@ -38,7 +38,7 @@ const Resources = () => {
                         </div>
                     ) : (
                         <div className='mb-2' key={key}>
-                            <Link className='p-2 hover:font-medium block' to={resource.link} css={fontNavLinkStyle}>
+                            <Link className='p-2 hover:font-medium block' to={resource.link} css={fontNavLinkStyle} activeClassName='active'>
                                 {resource.text}
                             </Link>
                         </div>

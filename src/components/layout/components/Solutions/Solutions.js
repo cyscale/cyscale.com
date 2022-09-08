@@ -38,7 +38,7 @@ const Solutions = () => {
                 </div>
             </div>
             <div className='col-span-9'>
-                <div className='p-6 grid grid-cols-12 gap-1'>
+                <div className='p-6 grid grid-cols-12 gap-2'>
                     {solutions.map((solution, key) => {
                         return (
                             <div className='col-span-4' key={key}>
@@ -62,6 +62,7 @@ const Solutions = () => {
                                                 className='p-2 hover:font-medium block'
                                                 to={link.link}
                                                 css={fontNavLinkStyle}
+                                                activeClassName='active'
                                             >
                                                 {link.text}
                                             </Link>

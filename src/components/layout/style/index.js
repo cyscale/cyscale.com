@@ -8,7 +8,8 @@ export const fontNavLinkStyle = css`
     font-weight: 400;
     transition: 0.16s;
     border-left: 0.188rem solid transparent;
-    &:hover {
+    &:hover,
+    &.active {
         font-weight: 500;
         color: #0f26aa;
         background-color: rgb(232, 238, 248, 0.3);

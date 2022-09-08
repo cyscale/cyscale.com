@@ -64,7 +64,12 @@ const Company = () => {
                 {company.map((item, key) => {
                     return (
                         <div className='mb-2' key={key}>
-                            <Link className='p-2 hover:font-medium block' to={item.link} css={fontNavLinkStyle}>
+                            <Link
+                                className='p-2 hover:font-medium block'
+                                to={item.link}
+                                css={fontNavLinkStyle}
+                                activeClassName='active'
+                            >
                                 {item.text}
                             </Link>
                         </div>
