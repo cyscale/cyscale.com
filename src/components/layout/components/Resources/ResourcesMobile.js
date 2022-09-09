@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 
 const ResourcesMobile = () => {
     return (
-        <div className='bg-white'>
+        <div className='bg-white pb-48'>
             {resources.map((item, key) => {
                 return item.external ? (
                     <div className='py-2 px-8' key={key}>

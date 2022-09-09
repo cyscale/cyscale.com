@@ -5,7 +5,7 @@ import { descriptionColorStyle, borderBottomItemNavStyle } from '../../style';
 
 const PlatformMobile = () => {
     return (
-        <div className='bg-white'>
+        <div className='bg-white pb-48'>
             {platform.map((item, key) => {
                 return (
                     <div className='py-4 px-8' key={key} css={borderBottomItemNavStyle}>

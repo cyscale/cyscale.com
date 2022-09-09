@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 
 const CompanyMobile = () => {
     return (
-        <div className='bg-white'>
+        <div className='bg-white pb-48'>
             {company.map((item, key) => {
                 return (
                     <div className='py-2 px-8' key={key}>
