@@ -18,7 +18,7 @@ import { isCampaignsPage } from '../../../../common/utils';
 const caretCompany = (isCampaignsPage) => css`
     :before {
         ${caretMenuWhiteStyle};
-        left: ${isCampaignsPage ? '36rem' : '53rem'};
+        left: ${isCampaignsPage ? '36.3rem' : '54.5rem'};
     }
 `;
 

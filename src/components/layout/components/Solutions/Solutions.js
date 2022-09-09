@@ -22,7 +22,7 @@ const descriptionMaxWidth = css`
 const caretSolutions = (isCampaignsPage) => css`
     :before {
         ${caretMenuWhiteStyle};
-        left: ${isCampaignsPage ? '29rem' : '29.5rem'};
+        left: ${isCampaignsPage ? '29rem' : '30.5rem'};
     }
 `;
 

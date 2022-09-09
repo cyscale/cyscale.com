@@ -43,7 +43,7 @@ const PlatformLink = styled.div`
 const caretPlatform = (isCampaignsPage) => css`
     :before {
         ${caretMenuSelegoStyle};
-        left: ${isCampaignsPage ? '4rem' : '21.5rem'};
+        left: ${isCampaignsPage ? '4rem' : '22.5rem'};
     }
 `;
 const Platform = ({ pathname, activeLinks, setActiveLinks }) => {
