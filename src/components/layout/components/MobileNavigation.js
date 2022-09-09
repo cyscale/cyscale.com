@@ -9,7 +9,7 @@ import SolutionsMobile from './Solutions/SolutionsMobile';
 import ResourcesMobile from './Resources/ResourcesMobile';
 import CompanyMobile from './Company/CompanyMobile';
 import backArrow from '../icons/backArrow.svg';
-import downArrow from '../icons/downArrowIcon.svg';
+import downArrow from '../icons/icon-down-carret.svg';
 import { navigation } from '../nav';
 import { borderBottomItemNavStyle, logoStyle, HeaderLogo } from '../style';
 
