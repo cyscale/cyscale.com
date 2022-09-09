@@ -21,6 +21,7 @@ const NewTopNav = ({ pageName, showLogo = true }) => {
     const root = useRef();
     const trigger = useScrollTrigger();
     const isDesktop = useMediaQuery('(min-width: 1280px)');
+    const isNotDesktop = useMediaQuery('(max-width: 1280px)');
     const [showBurgerButton, setShowBurgerButton] = useState(pageName !== 'HomePage');
     const [showMenu, setShowMenu] = useState(false);
     const appLink = useAppLink();
@@ -74,7 +75,7 @@ const NewTopNav = ({ pageName, showLogo = true }) => {
                         <NewNavigation pageName={pageName} showLogo={showLogo} appLink={appLink} />
                     </div>
                 )}
-                {!isDesktop && (
+                {isNotDesktop && (
                     <div tw='pt-2.5 px-8'>
                         <MobileNavbar
                             pageName={pageName}
