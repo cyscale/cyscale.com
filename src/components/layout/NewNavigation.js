@@ -208,7 +208,7 @@ const NewNavigation = ({ pageName, showLogo, appLink, location }) => {
                             Start Free Trial
                         </a>
                     </li>
-                    <li className='py-6 px-4'>
+                    <li className='py-6 pl-4'>
                         <a
                             className='text-black hover:text-black mt-0 text-sm px-4 uppercase w-84px greyBorder flex h-10 justify-center items-center rounded-md leading-none transition-all duration-500 hover:bg-grey3 hover:no-underline font-medium'
                             href='https://app.cyscale.com'
