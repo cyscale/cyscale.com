@@ -10,7 +10,7 @@ const SolutionsMobile = () => {
     const isTablet = useMediaQuery('(min-width: 640px)');
 
     return (
-        <div className='bg-white pb-48'>
+        <div className='bg-white'>
             {solutions.map((solution, key) => {
                 return (
                     <div
