@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import tw from 'twin.macro';
 import { Link } from 'gatsby';
 import logo from '../../assets/images/logo.svg';
@@ -82,6 +82,12 @@ const HeaderLogo = styled.img`
 
 const NewNavigation = ({ pageName, showLogo, appLink, location }) => {
     const { pathname } = location;
+    const [activeLinks, setActiveLinks] = useState({
+        platform: false,
+        solutions: false,
+        resources: false,
+        company: false
+    });
 
     return (
         <nav
@@ -105,12 +111,16 @@ const NewNavigation = ({ pageName, showLogo, appLink, location }) => {
                     <NavItem>
                         <NavItemButton
                             type='button'
-                            className={`${pageName === 'SKGPage' || pageName === 'CSPMPage' ? 'active' : ''}`}
+                            className={`${
+                                pageName === 'SKGPage' || pageName === 'CSPMPage ' || activeLinks.platform
+                                    ? 'active'
+                                    : ''
+                            }`}
                         >
                             <span>Platform</span>
                         </NavItemButton>
                         <MegaMenu>
-                            <Platform pathname={pathname} />
+                            <Platform pathname={pathname} activeLinks={activeLinks} setActiveLinks={setActiveLinks} />
                         </MegaMenu>
                     </NavItem>
                     <NavItem>
@@ -127,7 +137,8 @@ const NewNavigation = ({ pageName, showLogo, appLink, location }) => {
                                 pageName === 'AWSCloudSecurity' ||
                                 pageName === 'AzureCloudSecurity' ||
                                 pageName === 'GCPCloudSecurity' ||
-                                pageName === 'ComplianceAuditing'
+                                pageName === 'ComplianceAuditing' ||
+                                activeLinks.solutions
                                     ? 'active'
                                     : ''
                             }`}
@@ -141,7 +152,7 @@ const NewNavigation = ({ pageName, showLogo, appLink, location }) => {
                                 pageName === 'CSPMSolutionCampaign'
                             }
                         >
-                            <Solutions pathname={pathname} />
+                            <Solutions pathname={pathname} activeLinks={activeLinks} setActiveLinks={setActiveLinks} />
                         </MegaMenu>
                     </NavItem>
                     <NavItem>
@@ -156,12 +167,16 @@ const NewNavigation = ({ pageName, showLogo, appLink, location }) => {
                     <NavItem>
                         <NavItemButton
                             type='button'
-                            className={`${pageName === 'blog' || pageName === 'blog-detail' ? 'active' : ''}`}
+                            className={`${
+                                pageName === 'blog' || pageName === 'blog-detail' || activeLinks.resources
+                                    ? 'active'
+                                    : ''
+                            }`}
                         >
                             <span>Resources</span>
                         </NavItemButton>
                         <MegaMenu>
-                            <Resources pathname={pathname} />
+                            <Resources pathname={pathname} activeLinks={activeLinks} setActiveLinks={setActiveLinks} />
                         </MegaMenu>
                     </NavItem>
                     <NavItem>
@@ -171,7 +186,8 @@ const NewNavigation = ({ pageName, showLogo, appLink, location }) => {
                                 pageName === 'aboutUs' ||
                                 pageName === 'careers' ||
                                 pageName === 'jobDetails' ||
-                                pageName === 'ContactUs'
+                                pageName === 'ContactUs' ||
+                                activeLinks.company
                                     ? 'active'
                                     : ''
                             }`}
@@ -179,7 +195,7 @@ const NewNavigation = ({ pageName, showLogo, appLink, location }) => {
                             <span>Company</span>
                         </NavItemButton>
                         <MegaMenu>
-                            <Company pathname={pathname} />
+                            <Company pathname={pathname} activeLinks={activeLinks} setActiveLinks={setActiveLinks} />
                         </MegaMenu>
                     </NavItem>
                     <li className='py-6 pr-0 pl-7'>

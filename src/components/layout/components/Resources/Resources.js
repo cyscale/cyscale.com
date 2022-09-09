@@ -20,11 +20,13 @@ const caretResources = (isCampaignsPage) => css`
     }
 `;
 
-const Resources = ({ pathname }) => {
+const Resources = ({ pathname, activeLinks, setActiveLinks }) => {
     return (
         <div
             className='max-w-3xl grid grid-cols-2 gap-6 ml-auto justify-end mb-16 shadow-2xl bg-white'
             css={caretResources(isCampaignsPage(pathname))}
+            onMouseEnter={() => setActiveLinks({ ...activeLinks, resources: true })}
+            onMouseLeave={() => setActiveLinks({ ...activeLinks, resources: false })}
         >
             <div className='bg-selago p-6'>
                 <h1 css={montserratFontStyle} className='text-2xl font-semibold mb-6'>

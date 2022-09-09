@@ -22,7 +22,7 @@ const caretCompany = (isCampaignsPage) => css`
     }
 `;
 
-const Company = ({ pathname }) => {
+const Company = ({ pathname, activeLinks, setActiveLinks }) => {
     const data = useStaticQuery(graphql`
         query CareersQueryForNewMenu {
             allMarkdownRemark(
@@ -49,6 +49,8 @@ const Company = ({ pathname }) => {
         <div
             className='max-w-5xl grid grid-cols-12 gap-2 ml-auto justify-end mb-16 shadow-2xl bg-white'
             css={caretCompany(isCampaignsPage(pathname))}
+            onMouseEnter={() => setActiveLinks({ ...activeLinks, company: true })}
+            onMouseLeave={() => setActiveLinks({ ...activeLinks, company: false })}
         >
             <div className='col-span-5 bg-selago p-6'>
                 <h1 css={montserratFontStyle} className='text-2xl font-semibold mb-6'>

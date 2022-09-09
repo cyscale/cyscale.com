@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import tw, { css } from 'twin.macro';
 import IconUser from '../../icons/icon-user.svg';
@@ -46,11 +46,13 @@ const caretPlatform = (isCampaignsPage) => css`
         left: ${isCampaignsPage ? '4rem' : '21.5rem'};
     }
 `;
-const Platform = ({ pathname }) => {
+const Platform = ({ pathname, activeLinks, setActiveLinks }) => {
     return (
         <div
             className='max-w-5xl grid grid-cols-12 gap-2 ml-auto justify-end shadow-2xl bg-white'
             css={caretPlatform(isCampaignsPage(pathname))}
+            onMouseEnter={() => setActiveLinks({ ...activeLinks, platform: true })}
+            onMouseLeave={() => setActiveLinks({ ...activeLinks, platform: false })}
         >
             <div className='col-span-5 bg-selago p-6'>
                 <h1 css={montserratFontStyle} className='text-2xl font-semibold mb-6'>

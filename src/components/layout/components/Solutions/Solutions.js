@@ -26,12 +26,14 @@ const caretSolutions = (isCampaignsPage) => css`
     }
 `;
 
-const Solutions = ({ pathname }) => {
+const Solutions = ({ pathname, activeLinks, setActiveLinks }) => {
     return (
         <div
             className='w-full grid grid-cols-12 gap-2 ml-auto mb-16 shadow-2xl bg-white'
             style={{ width: '76rem' }}
             css={caretSolutions(isCampaignsPage(pathname))}
+            onMouseEnter={() => setActiveLinks({ ...activeLinks, solutions: true })}
+            onMouseLeave={() => setActiveLinks({ ...activeLinks, solutions: false })}
         >
             <div className='col-span-3 bg-selago p-6'>
                 <h1 css={montserratFontStyle} className='text-2xl font-semibold mb-6'>
