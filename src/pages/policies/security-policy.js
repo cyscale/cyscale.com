@@ -10,7 +10,7 @@ const SecurityPolicyPage = ({ location }) => (
         title='Security Policy - Cyscale Cloud Platform'
         description='Security Policy for the Cyscale Cloud Platform for securing cloud-native apps and data in a cloud-first era. Avoid data loss.'
     >
-        <SecurityPolicy />
+        <SecurityPolicy location={location} pageName='SecurityPolicy' />
     </Layout>
 );
 

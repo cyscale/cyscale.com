@@ -9,6 +9,7 @@ module.exports = {
         `gatsby-plugin-image`,
         'gatsby-plugin-sass',
         'gatsby-plugin-postcss',
+        'gatsby-plugin-emotion',
         'gatsby-plugin-react-helmet',
         `gatsby-plugin-meta-redirect`,
         'gatsby-plugin-remove-serviceworker',

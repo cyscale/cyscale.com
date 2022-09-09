@@ -298,7 +298,7 @@ img[src*='#shadow'] {
     top: 2.688rem;
     position: absolute;
     background-color: #eeeeee;
-    margin-left: calc(((100vw - 80rem) / 2) + 18rem);
+    margin-left: calc(((100vw - 80rem) / 2) + 18.5rem);
 }
 
 .navigation-enter {
@@ -329,4 +329,9 @@ img[src*='#shadow'] {
 
 .latest-dose:hover .latest-dose:before {
     background-image: url(../images/arrow-right-blue.svg);
+}
+
+.transparent-bg {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 2px 0 20px rgba(0, 0, 0, 0.2);
 }

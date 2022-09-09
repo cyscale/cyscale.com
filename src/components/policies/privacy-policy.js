@@ -1,8 +1,8 @@
 import React from 'react';
-import TopNav from '../layout/topNav';
 import heroBG from '../../assets/images/privacy&blog-bg.svg';
+import NewTopNav from '../layout/NewTopNav';
 
-const Index = () => {
+const Index = ({ location, pageName }) => {
     return (
         <>
             <div>
@@ -10,7 +10,7 @@ const Index = () => {
                     className={`w-full ContactUs bg-lightGreyEEE bg-cover bg-no-repeat`}
                     style={{ backgroundImage: `url(${heroBG})` }}
                 >
-                    <TopNav />
+                    <NewTopNav location={location} pageName={pageName} />
                     <div className='max-w-1366px mx-auto pt-72 pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px'>
                         <div className='flex'>
                             <div className='mx-auto w-full xl:w-2/4'>
@@ -241,7 +241,9 @@ const Index = () => {
                                 notify those individuals whose information may have been compromised and take other
                                 steps, in accordance with any applicable laws and regulations.
                             </p>
-                            <h2 className='font-semibold mb-36px text-24px'>6. Links to other web sites and services</h2>
+                            <h2 className='font-semibold mb-36px text-24px'>
+                                6. Links to other web sites and services
+                            </h2>
                             <p className='mb-36px'>
                                 Our Service may integrate with or contain links to other third party sites and services.
                                 We are not responsible for the practices employed by third party websites or services

@@ -63,6 +63,7 @@ const Layout = ({
                             bannerBtn2Link={bannerBtn2Link}
                             pageName={pageName}
                             blogDataTitle={blogDataTitle}
+                            location={location}
                         />
                     )}
 

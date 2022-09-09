@@ -3,10 +3,10 @@ import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import road from '../assets/images/hit-the-road.svg';
 import Footer from '../components/layout/footer';
-import TopNav from '../components/layout/topNav';
 import Seo from '../components/Seo';
+import NewTopNav from '../components/layout/NewTopNav';
 
-const NotFoundPage = ({location}) => {
+const NotFoundPage = ({ location }) => {
     useEffect(() => {
         if (window) {
             window.history.pushState({}, null, '/404');
@@ -15,7 +15,7 @@ const NotFoundPage = ({location}) => {
 
     return (
         <>
-            <TopNav pageName='404' scrollable={false} />
+            <NewTopNav pageName='404' scrollable={false} location={location} />
             <Seo title='Cyscale | Not found' description='Not found page' pageName='404' location={location} />
             <Helmet>
                 <meta name='robots' content='noindex' />
