@@ -1,13 +1,41 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import IconDownload from '../../icons/icon-download-cloud.svg';
-import { fontNavLinkStyle, hoverButtonColorStyle, montserratFontStyle, widthFitStyle } from '../../style';
+import {
+    caretMenuSelegoStyle,
+    fontNavLinkStyle,
+    hoverButtonColorStyle,
+    montserratFontStyle,
+    widthFitStyle
+} from '../../style';
 import { resources } from '../../nav';
 import arrowRight from '../../icons/icon-right-navigation.svg';
+import { css } from 'twin.macro';
+import { isCampaignsPage } from '../../../../common/utils';
 
-const Resources = () => {
+const caretResourcesRegular = css`
+    :before {
+        ${caretMenuSelegoStyle};
+        left: 45rem;
+    }
+`;
+
+const caretResourcesCampaigns = css`
+    :before {
+        ${caretMenuSelegoStyle};
+        left: 28rem;
+    }
+`;
+
+const Resources = ({ pathname }) => {
     return (
-        <div className='max-w-3xl grid grid-cols-2 gap-6 ml-auto justify-end mb-16 shadow-2xl bg-white'>
+        <div
+            className='max-w-3xl grid grid-cols-2 gap-6 ml-auto justify-end mb-16 shadow-2xl bg-white'
+            css={[
+                !isCampaignsPage(pathname) && caretResourcesRegular,
+                isCampaignsPage(pathname) && caretResourcesCampaigns
+            ]}
+        >
             <div className='bg-selago p-6'>
                 <h1 css={montserratFontStyle} className='text-2xl font-semibold mb-6'>
                     Cloud Storage Misconfigurations

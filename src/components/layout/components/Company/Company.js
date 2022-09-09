@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import IconCyscaleUser from '../../icons/icon-cyscale-user.svg';
 import {
+    caretMenuWhiteStyle,
     fontNavLinkStyle,
     hoverButtonColorStyle,
     montserratFontStyle,
@@ -11,8 +12,24 @@ import {
 } from '../../style';
 import { company } from '../../nav';
 import arrowRight from '../../icons/icon-right-navigation.svg';
+import { css } from 'twin.macro';
+import { isCampaignsPage } from '../../../../common/utils';
 
-const Company = () => {
+const caretResourcesRegular = css`
+    :before {
+        ${caretMenuWhiteStyle};
+        left: 53.5rem;
+    }
+`;
+
+const caretResourcesCampaigns = css`
+    :before {
+        ${caretMenuWhiteStyle};
+        left: 36rem;
+    }
+`;
+
+const Company = ({ pathname }) => {
     const data = useStaticQuery(graphql`
         query CareersQueryForNewMenu {
             allMarkdownRemark(
@@ -36,7 +53,13 @@ const Company = () => {
     let jobs = data.allMarkdownRemark.nodes;
 
     return (
-        <div className='max-w-5xl grid grid-cols-12 gap-2 ml-auto justify-end mb-16 shadow-2xl bg-white'>
+        <div
+            className='max-w-5xl grid grid-cols-12 gap-2 ml-auto justify-end mb-16 shadow-2xl bg-white'
+            css={[
+                !isCampaignsPage(pathname) && caretResourcesRegular,
+                isCampaignsPage(pathname) && caretResourcesCampaigns
+            ]}
+        >
             <div className='col-span-5 bg-selago p-6'>
                 <h1 css={montserratFontStyle} className='text-2xl font-semibold mb-6'>
                     Our Mission

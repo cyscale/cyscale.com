@@ -17,7 +17,7 @@ const paddingNav = css`
     }
 `;
 
-const NewTopNav = ({ pageName, showLogo = true }) => {
+const NewTopNav = ({ pageName, showLogo = true, location }) => {
     const root = useRef();
     const trigger = useScrollTrigger();
     const isDesktop = useMediaQuery('(min-width: 1280px)');
@@ -72,7 +72,7 @@ const NewTopNav = ({ pageName, showLogo = true }) => {
             >
                 {isDesktop && (
                     <div tw='container max-w-7xl mx-auto pt-2.5' css={paddingNav}>
-                        <NewNavigation pageName={pageName} showLogo={showLogo} appLink={appLink} />
+                        <NewNavigation pageName={pageName} showLogo={showLogo} appLink={appLink} location={location} />
                     </div>
                 )}
                 {isMobileOrTable && (

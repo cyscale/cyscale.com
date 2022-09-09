@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import IconCyscaleShield from '../../icons/icon-cyscale-shield.svg';
 import {
+    caretMenuWhiteStyle,
     fontNavLinkStyle,
     hoverButtonColorStyle,
     montserratFontStyle,
@@ -12,14 +13,36 @@ import {
 import { solutions } from '../../nav';
 import { css } from 'twin.macro';
 import arrowRight from '../../icons/icon-right-navigation.svg';
+import { isCampaignsPage } from '../../../../common/utils';
 
 const descriptionMaxWidth = css`
     max-width: 13.25rem;
 `;
 
-const Solutions = () => {
+const caretSolutionsRegular = css`
+    :before {
+        ${caretMenuWhiteStyle};
+        left: 29.5rem;
+    }
+`;
+
+const caretSolutionsCampaigns = css`
+    :before {
+        ${caretMenuWhiteStyle};
+        left: 29rem;
+    }
+`;
+
+const Solutions = ({ pathname }) => {
     return (
-        <div className='w-full grid grid-cols-12 gap-2 ml-auto mb-16 shadow-2xl bg-white' style={{ width: '76rem' }}>
+        <div
+            className='w-full grid grid-cols-12 gap-2 ml-auto mb-16 shadow-2xl bg-white'
+            style={{ width: '76rem' }}
+            css={[
+                !isCampaignsPage(pathname) && caretSolutionsRegular,
+                isCampaignsPage(pathname) && caretSolutionsCampaigns
+            ]}
+        >
             <div className='col-span-3 bg-selago p-6'>
                 <h1 css={montserratFontStyle} className='text-2xl font-semibold mb-6'>
                     Startups Program

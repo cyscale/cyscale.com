@@ -80,7 +80,9 @@ const HeaderLogo = styled.img`
     ${tw`block`};
 `;
 
-const NewNavigation = ({ pageName, showLogo, appLink }) => {
+const NewNavigation = ({ pageName, showLogo, appLink, location }) => {
+    const { pathname } = location;
+
     return (
         <nav
             css={[
@@ -108,7 +110,7 @@ const NewNavigation = ({ pageName, showLogo, appLink }) => {
                             <span>Platform</span>
                         </NavItemButton>
                         <MegaMenu>
-                            <Platform />
+                            <Platform pathname={pathname} />
                         </MegaMenu>
                     </NavItem>
                     <NavItem>
@@ -139,7 +141,7 @@ const NewNavigation = ({ pageName, showLogo, appLink }) => {
                                 pageName === 'CSPMSolutionCampaign'
                             }
                         >
-                            <Solutions />
+                            <Solutions pathname={pathname} />
                         </MegaMenu>
                     </NavItem>
                     <NavItem>
@@ -159,7 +161,7 @@ const NewNavigation = ({ pageName, showLogo, appLink }) => {
                             <span>Resources</span>
                         </NavItemButton>
                         <MegaMenu>
-                            <Resources />
+                            <Resources pathname={pathname} />
                         </MegaMenu>
                     </NavItem>
                     <NavItem>
@@ -177,7 +179,7 @@ const NewNavigation = ({ pageName, showLogo, appLink }) => {
                             <span>Company</span>
                         </NavItemButton>
                         <MegaMenu>
-                            <Company />
+                            <Company pathname={pathname} />
                         </MegaMenu>
                     </NavItem>
                     <li className='py-6 pr-0 pl-7'>

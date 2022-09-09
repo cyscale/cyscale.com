@@ -59,3 +59,24 @@ export const logoStyle = css`
 export const HeaderLogo = styled.img`
     ${logoStyle}
 `;
+
+const caretMenuStyle = css`
+    position: absolute;
+    margin-left: -1.25rem;
+    top: -1.25rem;
+    width: 0;
+    height: 0;
+    content: '';
+    border-left: 1.25rem solid transparent;
+    border-right: 1.25rem solid transparent;
+`;
+
+export const caretMenuWhiteStyle = css`
+    ${caretMenuStyle};
+    border-bottom: 1.25rem solid #fff;
+`;
+
+export const caretMenuSelegoStyle = css`
+    ${caretMenuStyle};
+    border-bottom: 1.25rem solid #e4edfc;
+`;

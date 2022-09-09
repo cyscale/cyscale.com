@@ -5,8 +5,15 @@ import IconUser from '../../icons/icon-user.svg';
 import { Link } from 'gatsby';
 import IconTag from '../../icons/icon-tag.svg';
 import { platform } from '../../nav';
-import { montserratFontStyle, descriptionColorStyle, hoverButtonColorStyle, widthFitStyle } from '../../style';
+import {
+    montserratFontStyle,
+    descriptionColorStyle,
+    hoverButtonColorStyle,
+    widthFitStyle,
+    caretMenuSelegoStyle
+} from '../../style';
 import arrowRight from '../../icons/icon-right-navigation.svg';
+import { isCampaignsPage } from '../../../../common/utils';
 
 const PlatformLinkTitle = styled.h1`
     ${tw`ml-4 text-lg`}
@@ -33,12 +40,29 @@ const PlatformLink = styled.div`
     }
 `;
 
-const Platform = () => {
-    const url = typeof window !== 'undefined' ? window.location.href : '';
-    const { pathname } = new URL(url);
+const caretPlatformRegular = css`
+    :before {
+        ${caretMenuSelegoStyle};
+        left: 21.5rem;
+    }
+`;
 
+const caretPlatformCampaigns = css`
+    :before {
+        ${caretMenuSelegoStyle};
+        left: 4rem;
+    }
+`;
+
+const Platform = ({ pathname }) => {
     return (
-        <div className='max-w-5xl grid grid-cols-12 gap-2 ml-auto justify-end shadow-2xl bg-white'>
+        <div
+            className='max-w-5xl grid grid-cols-12 gap-2 ml-auto justify-end shadow-2xl bg-white'
+            css={[
+                !isCampaignsPage(pathname) && caretPlatformRegular,
+                isCampaignsPage(pathname) && caretPlatformCampaigns
+            ]}
+        >
             <div className='col-span-5 bg-selago p-6'>
                 <h1 css={montserratFontStyle} className='text-2xl font-semibold mb-6'>
                     Platform Overview

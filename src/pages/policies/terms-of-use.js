@@ -10,7 +10,7 @@ const TermsOfUsePage = ({ location }) => (
         title='Term of use Policy - Cyscale Cloud Platform'
         description='Terms of use Policy for the Cyscale Cloud Platform for protecting cloud-native apps and data in the cloud. Avoid cloud misconfigurations.'
     >
-        <TermsofUse />
+        <TermsofUse location={location} pageName='termsOfUse' />
     </Layout>
 );
 
