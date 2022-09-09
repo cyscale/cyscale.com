@@ -15,7 +15,7 @@ import F_Image from '../../assets/images/fImage1.svg';
 import { useAppLink } from '../../common/links';
 import NewTopNav from '../layout/NewTopNav';
 
-const Index = () => {
+const Index = ({ location }) => {
     const appLink = useAppLink();
 
     const dataServices = [
@@ -135,21 +135,24 @@ const Index = () => {
     return (
         <div>
             <div className='dataSecurity w-full pb-80px bg-lightGrey2 bg-left-bottom bg-no-repeat'>
-                <NewTopNav pageName='Data_Security' />
+                <NewTopNav pageName='Data_Security' location={location} />
                 <Banner
                     title={`Data security for resilient cloud environments`}
                     description={`Stuck playing catch-up with data security, with no breathing space for projects that move the needle? It's time for a change of pace.\n\n Give your engineers clarity and accuracy - use the Cyscale Cloud Platform to turn cloud data security into a manageable routine.\n\nKeep tabs on your fast-growing cloud inventory with automated data discovery and classification, compliance scans on autopilot and a fully auditable evidence trail. And that's just a taste!`}
                 />
             </div>
             <Services bannerBtn1Text='Try Cyscale for free' bannerBtn1Link={appLink} data={dataServices} />
-            <div className='max-w-1366px mx-auto pt-70px pb-70px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px' id="discover">
+            <div
+                className='max-w-1366px mx-auto pt-70px pb-70px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px'
+                id='discover'
+            >
                 <Sectionheader
                     headingText='Discover & map data repositories across multi-cloud environments'
                     description={`When you're growing fast, it's easy to lose track of your cloud assets. But that comes at a cost, both in terms of $$$ and compliance issues. \n\nLiquidate your data security debt with the Cyscale Cloud Platform. Bring all your entities under one roof with comprehensive asset inventory and management - as soon as you log in.\n\nExpand visibility to cover your entire cloud infrastructure, across providers and services. It's much easier to meet data security requirements when you know exactly where all your cloud assets are.`}
                     pageName='aboutUs'
                 />
             </div>
-            <div className='bg-lightGrey2' id="support">
+            <div className='bg-lightGrey2' id='support'>
                 <Support title='We support' data={dataSupport} sectionName='supportSection' />
             </div>
             <div className='max-w-1366px mx-auto pt-70px pb-70px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px'>
@@ -168,14 +171,20 @@ const Index = () => {
                     icon={getStartedICon}
                 />
             </div>
-            <div className='max-w-1366px mx-auto pt-70px pb-70px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px' id="visualize">
+            <div
+                className='max-w-1366px mx-auto pt-70px pb-70px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px'
+                id='visualize'
+            >
                 <Sectionheader
                     headingText='Visualize access, permissions & relationships between your data and other digital assets'
                     pageName='dataSecurity'
                 />
             </div>
             <Relationship />
-            <div className='max-w-1366px mx-auto pt-70px pb-70px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px' id="security-gaps">
+            <div
+                className='max-w-1366px mx-auto pt-70px pb-70px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px'
+                id='security-gaps'
+            >
                 <Sectionheader
                     headingText={`Comprehensive, blazing-fast classification that closes security gaps`}
                     description={`\n\nOur Cloud Platform gives you the visibility that goes deep into every layer of your cloud infrastructures.`}
@@ -185,7 +194,7 @@ const Index = () => {
             <div className='bg-white'>
                 <Support data={dataSecurityGaps} sectionName='securityGaps' />
             </div>
-            <Performance data={dataPerformance} id="performance"/>
+            <Performance data={dataPerformance} id='performance' />
             <div className='gradientBGCSPM pt-65px pb-65px'>
                 <GetStarted
                     description='Discover the most flexible pricing in the cloud security industry'

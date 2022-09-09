@@ -40,28 +40,17 @@ const PlatformLink = styled.div`
     }
 `;
 
-const caretPlatformRegular = css`
+const caretPlatform = (isCampaignsPage) => css`
     :before {
         ${caretMenuSelegoStyle};
-        left: 21.5rem;
+        left: ${isCampaignsPage ? '4rem' : '21.5rem'};
     }
 `;
-
-const caretPlatformCampaigns = css`
-    :before {
-        ${caretMenuSelegoStyle};
-        left: 4rem;
-    }
-`;
-
 const Platform = ({ pathname }) => {
     return (
         <div
             className='max-w-5xl grid grid-cols-12 gap-2 ml-auto justify-end shadow-2xl bg-white'
-            css={[
-                !isCampaignsPage(pathname) && caretPlatformRegular,
-                isCampaignsPage(pathname) && caretPlatformCampaigns
-            ]}
+            css={caretPlatform(isCampaignsPage(pathname))}
         >
             <div className='col-span-5 bg-selago p-6'>
                 <h1 css={montserratFontStyle} className='text-2xl font-semibold mb-6'>

@@ -19,17 +19,10 @@ const descriptionMaxWidth = css`
     max-width: 13.25rem;
 `;
 
-const caretSolutionsRegular = css`
+const caretSolutions = (isCampaignsPage) => css`
     :before {
         ${caretMenuWhiteStyle};
-        left: 29.5rem;
-    }
-`;
-
-const caretSolutionsCampaigns = css`
-    :before {
-        ${caretMenuWhiteStyle};
-        left: 29rem;
+        left: ${isCampaignsPage ? '29rem' : '29.5rem'};
     }
 `;
 
@@ -38,10 +31,7 @@ const Solutions = ({ pathname }) => {
         <div
             className='w-full grid grid-cols-12 gap-2 ml-auto mb-16 shadow-2xl bg-white'
             style={{ width: '76rem' }}
-            css={[
-                !isCampaignsPage(pathname) && caretSolutionsRegular,
-                isCampaignsPage(pathname) && caretSolutionsCampaigns
-            ]}
+            css={caretSolutions(isCampaignsPage(pathname))}
         >
             <div className='col-span-3 bg-selago p-6'>
                 <h1 css={montserratFontStyle} className='text-2xl font-semibold mb-6'>

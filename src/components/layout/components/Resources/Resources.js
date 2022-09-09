@@ -13,17 +13,10 @@ import arrowRight from '../../icons/icon-right-navigation.svg';
 import { css } from 'twin.macro';
 import { isCampaignsPage } from '../../../../common/utils';
 
-const caretResourcesRegular = css`
+const caretResources = (isCampaignsPage) => css`
     :before {
         ${caretMenuSelegoStyle};
-        left: 45rem;
-    }
-`;
-
-const caretResourcesCampaigns = css`
-    :before {
-        ${caretMenuSelegoStyle};
-        left: 28rem;
+        left: ${isCampaignsPage ? '28rem' : '45rem'};
     }
 `;
 
@@ -31,10 +24,7 @@ const Resources = ({ pathname }) => {
     return (
         <div
             className='max-w-3xl grid grid-cols-2 gap-6 ml-auto justify-end mb-16 shadow-2xl bg-white'
-            css={[
-                !isCampaignsPage(pathname) && caretResourcesRegular,
-                isCampaignsPage(pathname) && caretResourcesCampaigns
-            ]}
+            css={caretResources(isCampaignsPage(pathname))}
         >
             <div className='bg-selago p-6'>
                 <h1 css={montserratFontStyle} className='text-2xl font-semibold mb-6'>
