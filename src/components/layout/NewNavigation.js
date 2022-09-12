@@ -112,9 +112,7 @@ const NewNavigation = ({ pageName, showLogo, appLink, location }) => {
                         <NavItemButton
                             type='button'
                             className={`${
-                                pageName === 'SKGPage' || pageName === 'CSPMPage ' || activeLinks.platform
-                                    ? 'active'
-                                    : ''
+                                ['SKGPage', 'CSPMPage'].includes(pageName) || activeLinks.platform ? 'active' : ''
                             }`}
                         >
                             <span>Platform</span>
@@ -127,18 +125,19 @@ const NewNavigation = ({ pageName, showLogo, appLink, location }) => {
                         <NavItemButton
                             type='button'
                             className={`${
-                                pageName === 'MisconfigurationsPage' ||
-                                pageName === 'IAMSecurity' ||
-                                pageName === 'Data_Security' ||
-                                pageName === 'RemoteWork' ||
-                                pageName === 'ISO27001Compliance' ||
-                                pageName === 'PCIDSS' ||
-                                pageName === 'SOC2' ||
-                                pageName === 'AWSCloudSecurity' ||
-                                pageName === 'AzureCloudSecurity' ||
-                                pageName === 'GCPCloudSecurity' ||
-                                pageName === 'ComplianceAuditing' ||
-                                activeLinks.solutions
+                                [
+                                    'MisconfigurationsPage',
+                                    'IAMSecurity',
+                                    'Data_Security',
+                                    'RemoteWork',
+                                    'ISO27001Compliance',
+                                    'PCIDSS',
+                                    'SOC2',
+                                    'AWSCloudSecurity',
+                                    'AzureCloudSecurity',
+                                    'GCPCloudSecurity',
+                                    'ComplianceAuditing'
+                                ].includes(pageName) || activeLinks.solutions
                                     ? 'active'
                                     : ''
                             }`}
@@ -146,11 +145,11 @@ const NewNavigation = ({ pageName, showLogo, appLink, location }) => {
                             <span>Solutions</span>
                         </NavItemButton>
                         <MegaMenu
-                            campaignsPages={
-                                pageName === 'Identity and Access Management Security for Cloud' ||
-                                pageName === 'AWSCloudSecurityCampaign' ||
-                                pageName === 'CSPMSolutionCampaign'
-                            }
+                            campaignsPages={[
+                                'Identity and Access Management Security for Cloud',
+                                'AWSCloudSecurityCampaign',
+                                'CSPMSolutionCampaign'
+                            ].includes(pageName)}
                         >
                             <Solutions pathname={pathname} activeLinks={activeLinks} setActiveLinks={setActiveLinks} />
                         </MegaMenu>
@@ -183,10 +182,7 @@ const NewNavigation = ({ pageName, showLogo, appLink, location }) => {
                         <NavItemButton
                             type='button'
                             className={`${
-                                pageName === 'aboutUs' ||
-                                pageName === 'careers' ||
-                                pageName === 'jobDetails' ||
-                                pageName === 'ContactUs' ||
+                                ['aboutUs', 'careers', 'jobDetails', 'ContactUs'].includes(pageName) ||
                                 activeLinks.company
                                     ? 'active'
                                     : ''
