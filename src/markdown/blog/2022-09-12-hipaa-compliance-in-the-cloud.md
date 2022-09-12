@@ -3,7 +3,7 @@ templateKey: blog-post
 title: "HIPAA Compliance in the Cloud "
 seoTitle: "HIPAA Compliance in the Cloud "
 authors: Sabrina Lupșan
-permalink: hipaa-compliance-in-coud
+permalink: hipaa-compliance-in-cloud
 categories:
   - Compliance
   - CSPM
