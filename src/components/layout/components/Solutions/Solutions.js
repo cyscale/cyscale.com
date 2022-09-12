@@ -29,7 +29,7 @@ const caretSolutions = (isCampaignsPage) => css`
 const Solutions = ({ pathname, activeLinks, setActiveLinks }) => {
     return (
         <div
-            className='w-full grid grid-cols-12 gap-2 ml-auto mb-16 shadow-2xl bg-white'
+            className='w-full grid grid-cols-12 gap-2 ml-auto shadow-2xl bg-white'
             style={{ width: '76rem' }}
             css={caretSolutions(isCampaignsPage(pathname))}
             onMouseEnter={() => setActiveLinks({ ...activeLinks, solutions: true })}
