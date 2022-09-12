@@ -111,7 +111,7 @@ The **financial penalties** are also split into four categories: 
 * For obtaining PHI under false pretenses: up to five years in jail, 
 * For obtaining PHI for personal gain or malicious attempt: up to ten years in jail. 
 
-## HIPAA Compliance In the Cloud: A Checklist 
+## HIPAA Compliance in the Cloud: A Checklist 
 
 After we've understood the importance of compliance with HIPAA, let's see the requirements that need to be fulfilled. They are grouped into three categories: 
 
@@ -154,10 +154,6 @@ Two examples of controls for the “Information Access Management” Safeguard a
 * **Facility Access and Control** – access to a covered entity's facilities should be limited to authorized personnel, 
 * **Workstation and Device Security** – policies and procedures should be implemented to regulate the usage and access to workstations and devices.  
 
- 
-
 Use Cyscale to achieve compliance with HIPAA and other international standards. 
-
- 
 
 <!--EndFragment-->
