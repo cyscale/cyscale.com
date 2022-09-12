@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import tw from 'twin.macro';
+import tw, { css } from 'twin.macro';
 import { Link } from 'gatsby';
 import logo from '../../assets/images/logo.svg';
 
@@ -9,6 +9,7 @@ import Solutions from './components/Solutions/Solutions';
 import Resources from './components/Resources/Resources';
 import Company from './components/Company/Company';
 import { logoStyle } from './style';
+import useScrollTrigger from '../scrollTrigger';
 
 const MegaMenu = styled.div`
     left: ${({ campaignsPages }) => (campaignsPages ? '-17rem' : '0')};
@@ -16,8 +17,6 @@ const MegaMenu = styled.div`
     text-align: left;
     width: 100%;
     z-index: -99;
-    -ms-transition: all 0.5s;
-    transition: all 0.5s;
     -ms-transform: translateY(-1.25rem);
     transform: translateY(-1.25rem);
     opacity: 0;
@@ -31,7 +30,13 @@ const NavItem = styled.li`
         visibility: visible;
         opacity: 1;
         transform: translateY(0);
+        -ms-transition: all 0.5s;
+        transition: all 0.5s;
     }
+`;
+
+const hiddenMegaMenuOnScroll = css`
+    display: none;
 `;
 
 const NavItemButton = styled.button`
@@ -88,6 +93,7 @@ const NewNavigation = ({ pageName, showLogo, appLink, location }) => {
         resources: false,
         company: false
     });
+    const hideMegaMenu = useScrollTrigger();
 
     return (
         <nav
@@ -117,7 +123,7 @@ const NewNavigation = ({ pageName, showLogo, appLink, location }) => {
                         >
                             <span>Platform</span>
                         </NavItemButton>
-                        <MegaMenu>
+                        <MegaMenu css={[hideMegaMenu ? hiddenMegaMenuOnScroll : null]}>
                             <Platform pathname={pathname} activeLinks={activeLinks} setActiveLinks={setActiveLinks} />
                         </MegaMenu>
                     </NavItem>
@@ -145,6 +151,7 @@ const NewNavigation = ({ pageName, showLogo, appLink, location }) => {
                             <span>Solutions</span>
                         </NavItemButton>
                         <MegaMenu
+                            css={[hideMegaMenu ? hiddenMegaMenuOnScroll : null]}
                             campaignsPages={[
                                 'Identity and Access Management Security for Cloud',
                                 'AWSCloudSecurityCampaign',
@@ -174,7 +181,7 @@ const NewNavigation = ({ pageName, showLogo, appLink, location }) => {
                         >
                             <span>Resources</span>
                         </NavItemButton>
-                        <MegaMenu>
+                        <MegaMenu css={[hideMegaMenu ? hiddenMegaMenuOnScroll : null]}>
                             <Resources pathname={pathname} activeLinks={activeLinks} setActiveLinks={setActiveLinks} />
                         </MegaMenu>
                     </NavItem>
@@ -190,7 +197,7 @@ const NewNavigation = ({ pageName, showLogo, appLink, location }) => {
                         >
                             <span>Company</span>
                         </NavItemButton>
-                        <MegaMenu>
+                        <MegaMenu css={[hideMegaMenu ? hiddenMegaMenuOnScroll : null]}>
                             <Company pathname={pathname} activeLinks={activeLinks} setActiveLinks={setActiveLinks} />
                         </MegaMenu>
                     </NavItem>

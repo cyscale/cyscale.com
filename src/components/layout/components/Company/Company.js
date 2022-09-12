@@ -47,7 +47,7 @@ const Company = ({ pathname, activeLinks, setActiveLinks }) => {
 
     return (
         <div
-            className='max-w-5xl grid grid-cols-12 gap-2 ml-auto justify-end mb-16 shadow-2xl bg-white'
+            className='max-w-5xl grid grid-cols-12 gap-2 ml-auto justify-end shadow-2xl bg-white'
             css={caretCompany(isCampaignsPage(pathname))}
             onMouseEnter={() => setActiveLinks({ ...activeLinks, company: true })}
             onMouseLeave={() => setActiveLinks({ ...activeLinks, company: false })}
