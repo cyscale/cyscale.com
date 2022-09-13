@@ -6,6 +6,15 @@ import { Row } from '../atoms/Containers';
 import footerNavigation from './footer-navigation.json';
 import arrowRight from '../../assets/images/arrow-right-1-white.svg';
 import useSubscribe from '../../hooks/useSubscribe';
+import { css } from 'twin.macro';
+
+const subscribeButtonGradient = css`
+    background-image: linear-gradient(to right, #883980, #ff4a56);
+
+    &:hover {
+        background-image: linear-gradient(to left, #883980, #ff4a56);
+    }
+`;
 
 const Footer = ({ pageUri, pageName }) => {
     const { emailInput, alert, onChange, onSubmit, onKeyDown } = useSubscribe(pageUri, pageName, true);
@@ -47,7 +56,8 @@ const Footer = ({ pageUri, pageName }) => {
                                         />
                                         <button
                                             type='submit'
-                                            className='text-white gradientBgBtn hover:bg-blue-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded text-sm w-full lg:w-20 ml-0 md:ml-3 pb-2.5 pt-3 w-auto md:w-20 lg:w-20'
+                                            className='text-white hover:bg-blue-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded text-sm w-full lg:w-20 ml-0 md:ml-3 pb-2.5 pt-3 w-auto md:w-20 lg:w-20'
+                                            css={subscribeButtonGradient}
                                             onClick={onSubmit}
                                         >
                                             <span className='block uppercase md:hidden'>Subscribe</span>
