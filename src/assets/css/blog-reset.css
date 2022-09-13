@@ -65,9 +65,8 @@
 
 .blog-reset ol,
 .blog-reset ul {
-    margin-top: 1rem;
     list-style: initial;
-    padding-left: 3rem;
+    padding-left: 2rem;
 }
 
 .blog-reset ol {
