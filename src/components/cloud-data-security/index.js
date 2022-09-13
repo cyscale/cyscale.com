@@ -137,7 +137,7 @@ const Index = ({ location }) => {
             <div className='dataSecurity w-full pb-80px bg-lightGrey2 bg-left-bottom bg-no-repeat'>
                 <NewTopNav pageName='Data_Security' location={location} />
                 <Banner
-                    title={`Data security for resilient cloud environments`}
+                    title={`Multi-cloud Data Security for resilient cloud environments`}
                     description={`Stuck playing catch-up with data security, with no breathing space for projects that move the needle? It's time for a change of pace.\n\n Give your engineers clarity and accuracy - use the Cyscale Cloud Platform to turn cloud data security into a manageable routine.\n\nKeep tabs on your fast-growing cloud inventory with automated data discovery and classification, compliance scans on autopilot and a fully auditable evidence trail. And that's just a taste!`}
                 />
             </div>
