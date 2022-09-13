@@ -33,7 +33,7 @@ const NotFoundPage = ({ location }) => {
                 <div className='border-t border-grey3 mt-10 mb-10' />
                 <img className='max-w-md lg:max-w-xl mx-auto mt-6' src={road} alt='' />
             </div>
-            <Footer />
+            <Footer pageUri={location?.pathname} pageName={'404'} />
         </>
     );
 };

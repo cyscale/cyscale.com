@@ -1,0 +1,109 @@
+{
+    "platform": [
+        {
+            "text": "Cloud Security Posture Management",
+            "link": "/products/cloud-security-posture-management/"
+        },
+        {
+            "text": "Security Knowledge Graph™",
+            "link": "/products/security-knowledge-graph/"
+        },
+        {
+            "text": "Compliance and Auditing™",
+            "link": "/use-cases/cloud-compliance-and-auditing/"
+        },
+        {
+            "text": "Playground Account",
+            "link": "https://app.cyscale.com/playground",
+            "external": true
+        },
+        {
+            "text": "Free Trial",
+            "link": "https://app.cyscale.com/register",
+            "external": true
+        }
+    ],
+    "resources": [
+        {
+            "text": "Blog",
+            "link": "/blog/"
+        },
+        {
+            "text": "Documentation",
+            "link": "https://docs.cyscale.com/",
+            "external": true
+        },
+        {
+            "text": "Data Sheet",
+            "link": "/resources/cyscale-cloud-data-security-datasheet.pdf"
+        },
+        {
+            "text": "FAQ + Support",
+            "link": "/"
+        },
+        {
+            "text": "Pricing",
+            "link": "/pricing/"
+        }
+    ],
+    "company": [
+        {
+            "text": "About Us",
+            "link": "/about-us/"
+        },
+        {
+            "text": "Careers",
+            "link": "/careers/"
+        },
+        {
+            "text": "Contact Us",
+            "link": "/contact-us/"
+        }
+    ],
+    "terms": [
+        {
+            "link": "/policies/terms-of-use/",
+            "text": "Terms of use"
+        },
+        {
+            "link": "/policies/security-policy/",
+            "text": "Security Policy"
+        },
+        {
+            "link": "/policies/privacy-policy/",
+            "text": "Privacy Policy"
+        },
+        {
+            "external": true,
+            "link": "https://status.cyscale.com",
+            "text": "Status"
+        }
+    ],
+    "social": [
+        {
+            "external": true,
+            "text": "linkedin",
+            "link": "https://www.linkedin.com/company/cyscale"
+        },
+        {
+            "external": true,
+            "text": "twitter",
+            "link": "https://www.twitter.com/cyscale"
+        },
+        {
+            "external": true,
+            "text": "facebook",
+            "link": "https://www.facebook.com/cyscale"
+        },
+        {
+            "external": true,
+            "text": "crunchbase",
+            "link": "https://www.crunchbase.com/organization/cyscale"
+        },
+        {
+            "external": true,
+            "text": "angel",
+            "link": "https://angel.co/company/cyscale"
+        }
+    ]
+}

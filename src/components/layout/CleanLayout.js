@@ -25,7 +25,7 @@ const Layout = ({ children, title, description, pageName, location, banner }) =>
                     <NewTopNav pageName={pageName} location={location} />
                 </HeaderContext.Provider>
                 <main>{children}</main>
-                <Footer />
+                <Footer pageUri={location?.pathname} pageName={pageName} />
                 {Boolean(cookies[cookieConsentKey]) !== true && (
                     <CookiesBanner
                         cookiesBanner={cookiesBanner}
