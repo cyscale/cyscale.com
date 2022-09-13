@@ -247,7 +247,7 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
                                             className='text-white gradientBgBtn hover:bg-blue-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded text-sm w-full lg:w-20 lg:ml-3 pb-2.5 pt-3'
                                             onClick={onSubmit}
                                         >
-                                            <img src={arrowRight} className='mx-auto w-5 h-auto' />
+                                            <img src={arrowRight} className='mx-auto w-5 h-auto' alt='' />
                                         </button>
                                     </div>
                                     {alert && (
@@ -298,7 +298,7 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
                                 <div className='col-span-12 lg:col-span-4 lg:mx-0'>
                                     <div className='mt-6 lg:mt-0 rounded-xl  max-w-lg lg:max-w-2xl mx-auto relative h-56 flex flex-col justify-center items-start px-7'>
                                         <div className='w-10 h-10 mb-2'>
-                                            <img src={cyscaleMan} className='w-full h-full' />
+                                            <img src={cyscaleMan} className='w-full h-full' alt='' />
                                         </div>
                                         <p className='text-lg font-semibold mb-2'>Schedule a Demo</p>
                                         <p className='text-md mb-2'>

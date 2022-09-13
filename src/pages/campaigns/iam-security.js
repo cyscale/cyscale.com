@@ -200,6 +200,7 @@ const IamSecurity = ({ location }) => {
                     style={{ position: 'absolute', top: 0, right: 0, margin: 0, zIndex: -1 }}
                     width={300}
                     className='hidden md:block'
+                    alt=''
                 />
                 <Container>
                     <Section>

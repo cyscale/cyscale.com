@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from '@emotion/styled';
 import tw, { css } from 'twin.macro';
 import IconUser from '../../icons/icon-user.svg';
