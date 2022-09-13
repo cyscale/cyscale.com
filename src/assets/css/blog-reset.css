@@ -66,6 +66,7 @@
 .blog-reset ol,
 .blog-reset ul {
     list-style: initial;
+    margin-top: 1rem;
     padding-left: 2rem;
 }
 
@@ -78,6 +79,10 @@
     margin-top: 0rem;
     padding-left: 0.5rem;
     font-size: 1rem;
+}
+
+.blog-reset li > ul {
+    margin-top: 0;
 }
 
 .blog-reset code {
