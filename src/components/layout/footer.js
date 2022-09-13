@@ -8,7 +8,7 @@ import arrowRight from '../../assets/images/arrow-right-1-white.svg';
 import useSubscribe from '../../hooks/useSubscribe';
 
 const Footer = ({ pageUri, pageName }) => {
-    const { emailInput, alert, onChange, onSubmit, onKeyDown } = useSubscribe(pageUri, pageName);
+    const { emailInput, alert, onChange, onSubmit, onKeyDown } = useSubscribe(pageUri, pageName, true);
 
     return (
         <div className='bg-gray'>

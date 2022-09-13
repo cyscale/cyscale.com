@@ -711,7 +711,8 @@ module.exports = {
                 formInputColor: '#707070 !important',
                 aboutBorder: '#E6E6E6 !important',
                 black1: '#292929 !important',
-                selago: '#e4edfc'
+                selago: '#e4edfc',
+                pictonBlue: '#42B1F0'
             },
             fontFamily: {
                 sans: [

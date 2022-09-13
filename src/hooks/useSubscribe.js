@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import axios from 'axios';
 import { useCookies } from 'react-cookie';
 
-const useSubscribe = (pageUri, pageName) => {
+const useSubscribe = (pageUri, pageName, footer) => {
     const [emailInput, setEmailInput] = React.useState('');
     const [alert, setAlert] = React.useState(null);
     const [cookies] = useCookies();
@@ -104,7 +104,7 @@ const useSubscribe = (pageUri, pageName) => {
             )
             .then((res) => {
                 if (res.status === 200) {
-                    setAlert({ message: "You're all set up!", alertClass: 'text-blue' });
+                    setAlert({ message: "You're all set up!", alertClass: footer ? 'text-pictonBlue' : 'text-blue' });
                 }
             })
             .catch((err) => {
