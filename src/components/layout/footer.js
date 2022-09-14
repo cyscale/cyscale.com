@@ -103,7 +103,7 @@ const Footer = ({ pageUri, pageName }) => {
                                             <Link
                                                 key={key}
                                                 to={link}
-                                                className='font-light text-white no-underline hover:underline block text-xs pb-2'
+                                                className='font-light text-white no-underline hover:underline block text-xs pb-3'
                                             >
                                                 {text}
                                             </Link>
@@ -117,7 +117,7 @@ const Footer = ({ pageUri, pageName }) => {
                                             <Link
                                                 key={key}
                                                 to={link}
-                                                className='font-light text-white no-underline hover:underline block text-xs pb-2'
+                                                className='font-light text-white no-underline hover:underline block text-xs pb-3'
                                             >
                                                 {text}
                                             </Link>
@@ -131,7 +131,7 @@ const Footer = ({ pageUri, pageName }) => {
                                             <Link
                                                 key={key}
                                                 to={link}
-                                                className='font-light text-white no-underline hover:underline block text-xs pb-2'
+                                                className='font-light text-white no-underline hover:underline block text-xs pb-3'
                                             >
                                                 {text}
                                             </Link>
