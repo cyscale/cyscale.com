@@ -18,6 +18,13 @@ const platform = [
         description: 'Cross-cloud context-aware automation for your security and compliance program.',
         mobileDescription: 'Cross-cloud context-aware automation for your security and compliance program.',
         link: '/products/security-knowledge-graph/'
+    },
+    {
+        icon: Shield,
+        title: 'Compliance & Auditing',
+        description: 'CIS, ISO 27001:2013, SOC 2, NIST 800, NIST CSF, PCIDSS, CCPA, GDPR, HITRUST, HIPAA.',
+        mobileDescription: 'CIS, ISO 27001:2013, SOC 2, NIST 800, NIST CSF, PCIDSS, CCPA, GDPR, HITRUST, HIPAA.',
+        link: '/use-cases/cloud-compliance-and-auditing/'
     }
 ];
 const solutions = [

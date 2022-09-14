@@ -132,7 +132,7 @@ const Header = ({
                                             ) : (
                                                 <div className='mt-24px w-full sm:w-auto'>
                                                     {pageName === 'ComplianceAuditing' && (
-                                                        <div className='flex flex-row mb-4 items-center justify-between lg:hidden flex-wrap space-y-4 lg:space-y-0 lg:space-x-2'>
+                                                        <div className='flex flex-row mb-4 items-center justify-between lg:hidden flex-wrap lg:space-x-2 mb-8 lg:mb-0'>
                                                             <ISO27001Small />
                                                             <AicpaSoc2Small />
                                                             <CisBenchmarksSmall />

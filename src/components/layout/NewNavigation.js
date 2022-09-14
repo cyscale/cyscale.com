@@ -118,7 +118,9 @@ const NewNavigation = ({ pageName, showLogo, appLink, location }) => {
                         <NavItemButton
                             type='button'
                             className={`${
-                                ['SKGPage', 'CSPMPage'].includes(pageName) || activeLinks.platform ? 'active' : ''
+                                ['SKGPage', 'CSPMPage', 'ComplianceAuditing'].includes(pageName) || activeLinks.platform
+                                    ? 'active'
+                                    : ''
                             }`}
                         >
                             <span>Platform</span>
@@ -141,8 +143,7 @@ const NewNavigation = ({ pageName, showLogo, appLink, location }) => {
                                     'SOC2',
                                     'AWSCloudSecurity',
                                     'AzureCloudSecurity',
-                                    'GCPCloudSecurity',
-                                    'ComplianceAuditing'
+                                    'GCPCloudSecurity'
                                 ].includes(pageName) || activeLinks.solutions
                                     ? 'active'
                                     : ''
