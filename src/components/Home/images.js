@@ -97,7 +97,7 @@ function withImageData(WrappedComponent) {
                             gatsbyImageData(height: 45, layout: CONSTRAINED)
                         }
                     }
-                    pciDssComplianceSmall: file(relativePath: { eq: "pci-dss-compliance.png" }) {
+                    pciDssComplianceSmall: file(relativePath: { eq: "pci-dss-compliance-home.png" }) {
                         childImageSharp {
                             gatsbyImageData(height: 45, layout: CONSTRAINED)
                         }
