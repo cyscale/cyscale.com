@@ -104,7 +104,7 @@ const useSubscribe = (pageUri, pageName, footer) => {
             )
             .then((res) => {
                 if (res.status === 200) {
-                    setAlert({ message: "You're all set up!", alertClass: footer ? 'text-pictonBlue' : 'text-blue' });
+                    setAlert({ message: "You're all set up!", alertClass: footer ? 'text-white' : 'text-blue' });
                 }
             })
             .catch((err) => {

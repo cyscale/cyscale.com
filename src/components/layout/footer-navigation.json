@@ -39,7 +39,8 @@
         },
         {
             "text": "FAQ + Support",
-            "link": "/"
+            "link": "https://docs.cyscale.com/",
+            "external": true
         },
         {
             "text": "Pricing",

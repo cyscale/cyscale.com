@@ -16,6 +16,10 @@ const subscribeButtonGradient = css`
     }
 `;
 
+const disclaimerTextColor = css`
+    color: #a1a3a1;
+`;
+
 const Footer = ({ pageUri, pageName }) => {
     const { emailInput, alert, onChange, onSubmit, onKeyDown } = useSubscribe(pageUri, pageName, true);
 
@@ -64,7 +68,7 @@ const Footer = ({ pageUri, pageName }) => {
                                             <img src={arrowRight} className='mx-auto w-5 h-auto hidden md:block' />
                                         </button>
                                         {!alert && (
-                                            <p className='text-xs mt-4 text-grey2 block sm:hidden'>
+                                            <p className='text-xs mt-4 block sm:hidden' css={disclaimerTextColor}>
                                                 By clicking Subscribe, I agree to Cyscale’s{' '}
                                                 <Link to='/policies/privacy-policy/' className='underline'>
                                                     Privacy Policy
@@ -78,7 +82,7 @@ const Footer = ({ pageUri, pageName }) => {
                                         )}
                                     </div>
                                     {!alert && (
-                                        <p className='text-xs mt-4 text-grey2 hidden sm:block'>
+                                        <p className='text-xs mt-4 hidden sm:block' css={disclaimerTextColor}>
                                             By clicking Subscribe, I agree to Cyscale’s{' '}
                                             <Link to='/policies/privacy-policy/' className='underline'>
                                                 Privacy Policy
@@ -98,30 +102,58 @@ const Footer = ({ pageUri, pageName }) => {
                             <div className='grid grid-cols-12 gap-2'>
                                 <div className='col-span-12 md:col-span-4'>
                                     <h3 className='font-semibold text-sm leading-normal text-white pb-10'>Platform</h3>
-                                    {footerNavigation.platform.map(({ text, link }, key) => {
-                                        return (
-                                            <Link
-                                                key={key}
-                                                to={link}
-                                                className='font-light text-white no-underline hover:underline block text-xs pb-3'
-                                            >
-                                                {text}
-                                            </Link>
-                                        );
+                                    {footerNavigation.platform.map((item, key) => {
+                                        if (item.external) {
+                                            return (
+                                                <a
+                                                    href={item.link}
+                                                    className='font-light text-white no-underline hover:underline block text-xs pb-3'
+                                                    key={key}
+                                                    target='_blank'
+                                                    rel='noopener noreferrer'
+                                                >
+                                                    {item.text}
+                                                </a>
+                                            );
+                                        } else {
+                                            return (
+                                                <Link
+                                                    key={key}
+                                                    to={item.link}
+                                                    className='font-light text-white no-underline hover:underline block text-xs pb-3'
+                                                >
+                                                    {item.text}
+                                                </Link>
+                                            );
+                                        }
                                     })}
                                 </div>
                                 <div className='col-span-12 md:col-span-4'>
                                     <h3 className='font-semibold text-sm leading-normal text-white pb-10'>Resources</h3>
-                                    {footerNavigation.resources.map(({ text, link }, key) => {
-                                        return (
-                                            <Link
-                                                key={key}
-                                                to={link}
-                                                className='font-light text-white no-underline hover:underline block text-xs pb-3'
-                                            >
-                                                {text}
-                                            </Link>
-                                        );
+                                    {footerNavigation.resources.map((item, key) => {
+                                        if (item.external) {
+                                            return (
+                                                <a
+                                                    href={item.link}
+                                                    className='font-light text-white no-underline hover:underline block text-xs pb-3'
+                                                    key={key}
+                                                    target='_blank'
+                                                    rel='noopener noreferrer'
+                                                >
+                                                    {item.text}
+                                                </a>
+                                            );
+                                        } else {
+                                            return (
+                                                <Link
+                                                    key={key}
+                                                    to={item.link}
+                                                    className='font-light text-white no-underline hover:underline block text-xs pb-3'
+                                                >
+                                                    {item.text}
+                                                </Link>
+                                            );
+                                        }
                                     })}
                                 </div>
                                 <div className='col-span-12 md:col-span-4'>
@@ -155,13 +187,19 @@ const Footer = ({ pageUri, pageName }) => {
                                 {footerNavigation.terms.map((item, key) => {
                                     if (item.external) {
                                         return (
-                                            <a href={item.link} key={key} className='hover:underline text-xs'>
+                                            <a
+                                                href={item.link}
+                                                key={key}
+                                                className='hover:underline text-xs'
+                                                target='_blank'
+                                                rel='noopener noreferrer'
+                                            >
                                                 {item.text}
                                             </a>
                                         );
                                     } else {
                                         return (
-                                            <Link to={item.link} className='hover:underline text-xs'>
+                                            <Link to={item.link} key={key} className='hover:underline text-xs'>
                                                 {item.text}
                                             </Link>
                                         );
