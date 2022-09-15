@@ -70,7 +70,7 @@ const Layout = ({
                     <main>
                         <div>{children}</div>
                     </main>
-                    <Footer />
+                    <Footer pageUri={location?.pathname} pageName={pageName} />
                     {Boolean(cookies[cookieConsentKey]) !== true && (
                         <CookiesBanner
                             cookiesBanner={cookiesBanner}
