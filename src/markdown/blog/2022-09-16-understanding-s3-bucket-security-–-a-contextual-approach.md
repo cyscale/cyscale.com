@@ -117,7 +117,7 @@ Using a new feature in Cyscale, the bucket graph, you can put in context all of 
 
 Below, you can see an example of a bucket graph. 
 
-![Bucket Graph in Cyscale](/img/23_blog-graph-bucket.png "Bucket Graph in Cyscale")
+![Bucket Graph in Cyscale](/img/23_blog-graph-bucket.png#shadow "Bucket Graph in Cyscale")
 
 Although the bucket (shown on the right) has only two IAM policies attached, we can see that these have a significant impact on the infrastructure: the AmazonS3FullAccess policy gives full access rights to a specific user and to a VM that can assume an associated IAMRole.  
 
