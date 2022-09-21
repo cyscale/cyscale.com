@@ -8,7 +8,7 @@ import Categories from './Categories';
 import Post from './Post';
 import { map, filter, slice } from 'lodash';
 import Share from '../Share/Share';
-import { Link as ScrollLink } from 'react-scroll';
+import { Link as ScrollLink, Element } from 'react-scroll';
 import { GatsbyImage as Img } from 'gatsby-plugin-image';
 import cyscaleMan from '../../assets/images/cyscale-man.svg';
 import arrowRight from '../../assets/images/arrow-right-1-white.svg';
@@ -50,11 +50,26 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
                         rehypePlugins={[rehypeRaw]}
                         linkTarget='_blank'
                         components={{
-                            toc({ node, className, children, ...props }) {
+                            toc({ node, className, href, target, children, ...props }) {
                                 return (
-                                    <ScrollLink className={className} {...props} smooth={true} duration={500}>
+                                    <ScrollLink
+                                        className={`${className} cursor-pointer`}
+                                        {...props}
+                                        smooth={true}
+                                        duration={500}
+                                        target={target}
+                                        onClick={() => console.log(href)}
+                                        to={href}
+                                    >
                                         {children}
                                     </ScrollLink>
+                                );
+                            },
+                            el({ node, name, children, ...props }) {
+                                return (
+                                    <Element name={name} {...props}>
+                                        {children}
+                                    </Element>
                                 );
                             },
                             code({ node, inline, className, children, ...props }) {

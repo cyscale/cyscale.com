@@ -21,18 +21,18 @@ tags: []
 
 #### Table of content
 
-<toc class="text-black block mb-1" target="self" href="#short-history">CSPM - short history & definition</toc>
-<toc class="text-black block mb-1" target="self" href="#when-cspm">When to choose a CSPM and when not to</toc>
-<toc class="text-black block mb-1" target="self" href="#missconfigurations">Misconfigurations - cause and effect</toc>
-<toc class="text-black block mb-1" target="self" href="#extra-visibility">Take advantage of the extra visibility</toc>
-<toc class="text-black block mb-1" target="self" href="#better-security">Better security for your cloud environment</toc>
-<toc class="text-black block mb-1" target="self" href="#compliance">Compliance controls across your environment in the cloud<toc>
+<toc class="text-black block mb-1" target="_self" href="short-history">CSPM - short history & definition</toc>
+<toc class="text-black block mb-1" target="_self" href="when-cspm">When to choose a CSPM and when not to</toc>
+<toc class="text-black block mb-1" target="_self" href="missconfigurations">Misconfigurations - cause and effect</toc>
+<toc class="text-black block mb-1" target="_self" href="extra-visibility">Take advantage of the extra visibility</toc>
+<toc class="text-black block mb-1" target="_self" href="better-security">Better security for your cloud environment</toc>
+<toc class="text-black block mb-1" target="_self" href="compliance">Compliance controls across your environment in the cloud</toc>
 
-<div id="short-history">
+<el name="short-history">
 
 ### **CSPM - short history & definition**
 
-</div>
+</el>
 
 The increasing rate of cloud adoption encountered in the last few years has brought new security challenges along, the main one being the need to correctly configure cloud infrastructures.
 
@@ -48,21 +48,21 @@ As the products quickly evolved and gained in complexity, the initial name was c
 
 Included in Gartner's “Top 10 Security Projects for 2019”, the CSPM represents one of the most important technologies that leaders should invest in when using cloud or multi-cloud infrastructures.
 
-<div id="when-cspm">
+<el name="when-cspm">
 
 ### **When to choose a CSPM and when not to**
 
-</div>
+</el>
 
 A Cloud Security Posture Management solution is a critical part of a Cloud Security Program because it covers the **unintentional risks** that can expose your data.
 
 These unintentional configuration mistakes are likely to occur because of the complexity of the environment or because of poor visibility. Regardless of the reason, it is important to understand that even one misconfiguration can lead to data breaches and possibly data leakage.
 
-<div id="missconfigurations">
+<el name="missconfigurations">
 
 #### **_Misconfigurations - cause and effect_**
 
-</div>
+</el>
 
 We've all heard about major breaches that happened because of AWS S3 buckets being publicly accessible. (This exact [misconfiguration happened to Romania's largest real estate portal](https://cyscale.com/blog/realestate-data-breach/ 'https://cyscale.com/blog/realestate-data-breach') ).
 
@@ -82,11 +82,11 @@ Unlike other security software which takes a lot of time to set up, requiring mu
 
 The scan of your cloud account infrastructure will start immediately after onboarding and the results, meaning the identified issues and security risks will be displayed, usually ranked by severity or risk score.
 
-<div id="extra-visibility">
+<el name="extra-visibility">
 
 ### **_Take advantage of the extra visibility_**
 
-</div>
+</el>
 
 A CSPM will provide you with a comprehensive overview of the vulnerabilities in your cloud infrastructure, making it easy to prioritize the order and urgency of solving these issues.
 
@@ -100,11 +100,11 @@ Managing your cloud assets from a single dashboard is an important and useful fe
 
 Your Security team is responsible for monitoring the cloud against threats, possible attacks, or malicious behavior. Your DevOps team is rapidly building and deploying applications in the cloud (and therefore adding new cloud assets), while your Compliance and Auditing team needs to make sure the company and its cloud infrastructure stay compliant with regulations and standards. What a dedicated solution such as a CSPM does for you, is to make sure that the relevant information is available to each of these teams in an easily comprehensible manner.
 
-<div id="better-security">
+<el name="better-security">
 
 ### **_Better security for your cloud environments with the CSPM_** **_solution_**
 
-</div>
+</el>
 
 Some cloud providers like AWS, Azure, or Google Cloud Platform have security recommendations in place, however, you need to understand that they apply only to that specific cloud provider and in many cases, they turn out to be false positives, since the context is not taken into consideration.
 
@@ -124,11 +124,11 @@ CWPP comprises agent-based solutions that offer visibility and security manageme
 
 Even if CASB, CWPP, and CSPM may sound similar at first, their scope and coverage are different, as they represent different categories. You will need to decide which tool or tools are the right ones for your organization.
 
-<div id="compliance">
+<el name="compliance">
 
 ### **_Compliance controls across your environment in the cloud_**
 
-</div>
+</el>
 
 Companies that closely follow regulatory compliance are using Cloud Security Posture Management tools to avoid breaches that usually ruin the brand reputation and bring monetary fines to the company.
 
