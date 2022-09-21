@@ -58,7 +58,6 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
                                         smooth={true}
                                         duration={500}
                                         target={target}
-                                        onClick={() => console.log(href)}
                                         to={href}
                                     >
                                         {children}
