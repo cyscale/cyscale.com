@@ -47,7 +47,7 @@ const solutions = [
             },
             {
                 link: '/use-cases/cloud-data-security/',
-                text: 'Data security'
+                text: 'Multi-Cloud Data Security'
             }
         ]
     },
