@@ -54,16 +54,19 @@ CMS.registerEditorComponent({
             name: 'classes',
             widget: 'select',
             multiple: true,
-            default: [' shadows '],
+            default: [' blog-image-shadow '],
             options: [
-                ' shadows ',
+                ' blog-image-shadow ',
                 ' rounded-sm ',
                 ' rounded ',
                 ' rounded-md ',
                 ' rounded-lg ',
                 ' rounded-2xl ',
                 ' rounded-3xl ',
-                ' rounded-full '
+                ' rounded-full ',
+                ' shadow-lg ',
+                ' shadow-xl ',
+                ' shadow-2xl '
             ]
         },
         {
