@@ -1,17 +1,22 @@
 ---
 templateKey: career-page
 title: TypeScript / JavaScript Developer
-seoTitle: ""
-disabled: false
+seoTitle: Experienced TypeScript or JavaScript Developer
+disabled: true
 location: Romania
 date: 2021-12-14T13:54:06.308Z
 permalink: javascript-developer
-description: Cyscale is a startup with offices in London (UK) and Cluj-Napoca (RO),
-    activating in the cloud cybersecurity industry.
-    We are looking for an experienced JavaScript developer.
-seoDescription: ""
+description: Cyscale is a startup with offices in London (UK) and Cluj-Napoca
+  (RO), activating in the cloud cybersecurity industry. We are looking for an
+  experienced JavaScript developer.
+seoDescription: Part of a dedicated and autonomous product team, committed to
+  solving real problems for our customers. You will improve our application
+  architecture, improve and expand our API, build new features for microservices
+  and the frontend app, iterate on and fix bugs in existing features. You will
+  participate in all phases of the product (discovery, delivery, iteration), and
+  your performance will be measured on the satisfaction of our users.
 skills: JavaScript; TypeScript; GraphQL; Node.js; React.js; Cloud Computing.
-experience: senior
+experience: mid/senior
 department: Engineering
 workType: hybrid
 employmentType: full-time
