@@ -1,18 +1,22 @@
 ---
 templateKey: career-page
-title: Cloud Security Analyst / Architect
-seoTitle: ""
+title: Cloud Security Researcher / Analyst
+seoTitle: Experienced Cloud Security Researcher or Analyst
 disabled: false
 location: Romania
-date: 2021-12-16T10:05:59.202Z
+date: 2022-09-22T11:26:55.510Z
 permalink: cloud-security-analyst
-description: Cyscale is a startup with offices in London (UK) and Cluj-Napoca (RO), 
-  activating in the cloud cybersecurity industry. 
-  We are looking for an experienced Cloud Security Analyst.
-seoDescription: ""
-skills: Cloud Architect, Cybersecurity, Cloud, Threat Analysis, Research, AWS,
-  GCP, Azure
-experience: senior
+description: Cyscale is a startup with offices in London (UK) and Cluj-Napoca
+  (RO), activating in the cloud cybersecurity industry. We are looking for an
+  experienced Cloud Security Analyst.
+seoDescription: "Experienced Cloud Security Researcher or Analyst - responsible
+  for researching and identifying new threats, vulnerabilities, and risks for
+  Cloud-native environments. Working closely with our customers and the product
+  team to offer accurate and up-to-date security controls and rules in the
+  Cyscale Platform. "
+skills: Cloud Researcher, Cloud Architect, Cybersecurity, Cloud, Threat
+  Analysis, Research, AWS, GCP, Azure, GRC
+experience: mid/senior
 department: Engineering
 workType: hybrid
 employmentType: full-time
