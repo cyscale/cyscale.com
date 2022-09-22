@@ -278,7 +278,8 @@ input:checked ~ .dot {
     transition: opacity 300ms, transform 300ms;
 }
 
-img[src*='#shadow'] {
+img[src*='#shadow'],
+.blog-image-shadow {
     box-shadow: 0 4px 15px 3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
