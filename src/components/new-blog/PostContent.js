@@ -9,91 +9,166 @@ import Post from './Post';
 import { map, filter, slice } from 'lodash';
 import Share from '../Share/Share';
 import { Link as ScrollLink, Element } from 'react-scroll';
-import { GatsbyImage as Img } from 'gatsby-plugin-image';
+import { GatsbyImage, GatsbyImage as Img } from 'gatsby-plugin-image';
 import cyscaleMan from '../../assets/images/cyscale-man.svg';
 import arrowRight from '../../assets/images/arrow-right-1-white.svg';
-import { Link } from 'gatsby';
+import { graphql, Link, useStaticQuery } from 'gatsby';
 import useSubscribe from '../../hooks/useSubscribe';
+import useScrollTrigger from '../scrollTrigger';
+import { css } from 'twin.macro';
+
+const montserratFontStyle = css`
+    font-family: 'Montserrat', sans-serif;
+`;
+
+const transition = css`
+    transition: all 0.25s ease-in-out 0s;
+`;
+
+const color = css`
+    color: #474747;
+`;
+
+const downloadWhitepaperLinkColor = css`
+    color: #0f26aa;
+`;
+
+const ctaHeight = css`
+    height: 31rem;
+`;
 
 export default function PostContent({ data, suggestions, preview = false, pageUri, pageName }) {
+    const dataWhitepapar = useStaticQuery(graphql`
+        query WhitepaperCover {
+            whitepaperCover: file(relativePath: { eq: "whitepaper-cover-cspm.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 160, height: 227, layout: FIXED)
+                }
+            }
+        }
+    `);
+
     const { emailInput, alert, onChange, onSubmit, onKeyDown } = useSubscribe(pageUri, pageName);
+    const trigger = useScrollTrigger();
 
     return (
         <div>
-            <div className='container max-w-4xl m-auto px-8 '>
-                <div className='py-10  border-b border-lightGrey2 lg:border-0'>
-                    <Row>
-                        <div className='col-span-12 lg:col-span-6 flex flex-col justify-between'>
-                            {data.categories && (
-                                <div>
-                                    <Categories categories={data.categories} />
-                                </div>
-                            )}
-                            <h1 className='text-2xl my-4 font-medium'>{data.title}</h1>
-                            {data.authors && <PostAuthor preview={preview} date={data.date} author={data.authors} />}
-                        </div>
-                        <div className='mt-8 lg:mt-0 col-span-12 lg:col-span-6'>
-                            {!preview ? (
-                                <Img
-                                    image={data.featuredimage.childImageSharp.gatsbyImageData}
-                                    className='rounded-lg overflow-hidden shadow-md'
-                                    alt={data.title}
-                                />
-                            ) : (
-                                <img src={data.featuredimage.publicURL} className='rounded-lg' alt={data.title} />
-                            )}
-                        </div>
-                    </Row>
-                </div>
-                <div className='blog-reset'>
-                    <ReactMarkdown
-                        rehypePlugins={[rehypeRaw]}
-                        linkTarget='_blank'
-                        components={{
-                            toc({ node, className, href, target, children, ...props }) {
-                                return (
-                                    <ScrollLink
-                                        className={`${className} cursor-pointer`}
-                                        {...props}
-                                        smooth={true}
-                                        duration={500}
-                                        target={target}
-                                        to={href}
-                                    >
-                                        {children}
-                                    </ScrollLink>
-                                );
-                            },
-                            el({ node, name, children, ...props }) {
-                                return (
-                                    <Element name={name} {...props}>
-                                        {children}
-                                    </Element>
-                                );
-                            },
-                            code({ node, inline, className, children, ...props }) {
-                                const match = /language-(\w+)/.exec(className || '');
-                                return !inline && match ? (
-                                    <div style={{ fontSize: '0.875rem' }}>
-                                        <SyntaxHighlighter
-                                            children={String(children).replace(/\n$/, '')}
-                                            language={match[1]}
-                                            PreTag='div'
-                                            {...props}
-                                        />
+            <div className='container max-w-7xl mx-auto xl:flex xl:pl-12 xl:pr-16'>
+                <div className='max-w-4xl my-auto mx-auto xl:mx-0 px-8'>
+                    <div className='py-10  border-b border-lightGrey2 lg:border-0'>
+                        <Row>
+                            <div className='col-span-12 lg:col-span-6 flex flex-col justify-between'>
+                                {data.categories && (
+                                    <div>
+                                        <Categories categories={data.categories} />
                                     </div>
+                                )}
+                                <h1 className='text-2xl my-4 font-medium'>{data.title}</h1>
+                                {data.authors && (
+                                    <PostAuthor preview={preview} date={data.date} author={data.authors} />
+                                )}
+                            </div>
+                            <div className='mt-8 lg:mt-0 col-span-12 lg:col-span-6'>
+                                {!preview ? (
+                                    <Img
+                                        image={data.featuredimage.childImageSharp.gatsbyImageData}
+                                        className='rounded-lg overflow-hidden shadow-md'
+                                        alt={data.title}
+                                    />
                                 ) : (
-                                    <code className={className} {...props}>
-                                        {children}
-                                    </code>
-                                );
-                            }
-                        }}
-                    >
-                        {data.rawMarkdownBody}
-                    </ReactMarkdown>
+                                    <img src={data.featuredimage.publicURL} className='rounded-lg' alt={data.title} />
+                                )}
+                            </div>
+                        </Row>
+                    </div>
+                    <div className='blog-reset'>
+                        <ReactMarkdown
+                            rehypePlugins={[rehypeRaw]}
+                            linkTarget='_blank'
+                            components={{
+                                toc({ node, className, href, target, children, ...props }) {
+                                    return (
+                                        <ScrollLink
+                                            className={`${className} cursor-pointer`}
+                                            {...props}
+                                            smooth={true}
+                                            duration={500}
+                                            target={target}
+                                            to={href}
+                                        >
+                                            {children}
+                                        </ScrollLink>
+                                    );
+                                },
+                                el({ node, name, children, ...props }) {
+                                    return (
+                                        <Element name={name} {...props}>
+                                            {children}
+                                        </Element>
+                                    );
+                                },
+                                code({ node, inline, className, children, ...props }) {
+                                    const match = /language-(\w+)/.exec(className || '');
+                                    return !inline && match ? (
+                                        <div style={{ fontSize: '0.875rem' }}>
+                                            <SyntaxHighlighter
+                                                children={String(children).replace(/\n$/, '')}
+                                                language={match[1]}
+                                                PreTag='div'
+                                                {...props}
+                                            />
+                                        </div>
+                                    ) : (
+                                        <code className={className} {...props}>
+                                            {children}
+                                        </code>
+                                    );
+                                }
+                            }}
+                        >
+                            {data.rawMarkdownBody}
+                        </ReactMarkdown>
+                    </div>
                 </div>
-
+                <div
+                    className={`hidden xl:block w-72 sticky pl-10 ${trigger ? 'top-0' : 'top-28'}`}
+                    css={[transition, ctaHeight]}
+                >
+                    <p className='text-sm font-semibold uppercase mt-4' css={[color, montserratFontStyle]}>
+                        Further reading
+                    </p>
+                    <p className='text-xl font-bold mt-2' css={montserratFontStyle}>
+                        Cloud Storage <br /> Misconfigurations
+                    </p>
+                    <GatsbyImage
+                        alt='White paper Cover'
+                        className='rounded-md mt-4 shadow-lg'
+                        image={dataWhitepapar.whitepaperCover.childImageSharp.gatsbyImageData}
+                    />
+                    <p className='text-xs mt-2' css={[color, montserratFontStyle]}>
+                        Build and maintain a strong <br /> Security Program from the start.
+                    </p>
+                    <Link
+                        className='text-xs underline'
+                        css={[downloadWhitepaperLinkColor, montserratFontStyle]}
+                        to={'/whitepaper/cloud-storage-misconfigurations/'}
+                    >
+                        Download Whitepaper
+                    </Link>
+                    <p className='text-sm font-semibold uppercase mt-10' css={[color, montserratFontStyle]}>
+                        Share this article
+                    </p>
+                    <div className='w-12'>
+                        <Share
+                            title={data?.title}
+                            permalink={data?.permalink}
+                            description={data?.description}
+                            blog={true}
+                        />
+                    </div>
+                </div>
+            </div>
+            <div className='container max-w-4xl m-auto px-8'>
                 {!preview && (
                     <>
                         <div className='mx_auto mt-16'>
@@ -149,7 +224,7 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
                                 </div>
                             </div>
                         </div>
-                        <div className='mx-auto'>
+                        <div className='mx-auto xl:hidden'>
                             <div className='grid grid-cols-12 gap-x-1 px-7 md:px-0 max-w-lg lg:max-w-full mx-auto'>
                                 <div className='col-span-12 lg:col-span-6 lg:mx-0'>
                                     <div className='flex items-center '>
