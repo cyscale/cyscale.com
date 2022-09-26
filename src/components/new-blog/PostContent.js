@@ -21,11 +21,11 @@ const montserratFontStyle = css`
     font-family: 'Montserrat', sans-serif;
 `;
 
-const transition = css`
+const ctaTransition = css`
     transition: all 0.25s ease-in-out 0s;
 `;
 
-const color = css`
+const ctaWhitepaperTextColor = css`
     color: #474747;
 `;
 
@@ -42,7 +42,7 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
         query WhitepaperCover {
             whitepaperCover: file(relativePath: { eq: "whitepaper-cover-cspm.png" }) {
                 childImageSharp {
-                    gatsbyImageData(width: 160, height: 227, layout: FIXED)
+                    gatsbyImageData(width: 111, height: 162, layout: FIXED)
                 }
             }
         }
@@ -131,21 +131,25 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
                     </div>
                 </div>
                 <div
-                    className={`hidden xl:block w-72 sticky pl-10 ${trigger ? 'top-0' : 'top-28'}`}
-                    css={[transition, ctaHeight]}
+                    className={`hidden xl:block w-72 sticky pl-10 mt-6 ${trigger ? 'top-0' : 'top-28'}`}
+                    css={[ctaTransition, ctaHeight]}
                 >
-                    <p className='text-sm font-semibold uppercase mt-4' css={[color, montserratFontStyle]}>
+                    <p
+                        className='text-xs font-semibold uppercase mt-4'
+                        css={[ctaWhitepaperTextColor, montserratFontStyle]}
+                    >
                         Further reading
                     </p>
-                    <p className='text-xl font-bold mt-2' css={montserratFontStyle}>
+                    <p className='text-lg font-bold mt-2' css={montserratFontStyle}>
                         Cloud Storage <br /> Misconfigurations
                     </p>
                     <GatsbyImage
                         alt='White paper Cover'
-                        className='rounded-md mt-4 shadow-lg'
+                        className='rounded-md mt-4 shadow-2xl'
                         image={dataWhitepapar.whitepaperCover.childImageSharp.gatsbyImageData}
                     />
-                    <p className='text-xs mt-2' css={[color, montserratFontStyle]}>
+
+                    <p className='text-xs mt-2' css={[ctaWhitepaperTextColor, montserratFontStyle]}>
                         Build and maintain a strong <br /> Security Program from the start.
                     </p>
                     <Link
@@ -155,7 +159,10 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
                     >
                         Download Whitepaper
                     </Link>
-                    <p className='text-sm font-semibold uppercase mt-10' css={[color, montserratFontStyle]}>
+                    <p
+                        className='text-xs font-semibold uppercase mt-10'
+                        css={[ctaWhitepaperTextColor, montserratFontStyle]}
+                    >
                         Share this article
                     </p>
                     <div className='w-12'>
@@ -165,6 +172,14 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
                             description={data?.description}
                             blog={true}
                         />
+                    </div>
+                </div>
+                <div className='max-w-4xl my-auto mx-auto xl:hidden px-8'>
+                    <div className='flex items-center '>
+                        <p className='text-sm mt-2'>Interesting? Share it</p>
+                        <div className='mt-2'>
+                            <Share title={data?.title} permalink={data?.permalink} description={data?.description} />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -221,22 +236,6 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
                                             <p className={`${alert.alertClass} text-xs`}> {alert.message}</p>
                                         </div>
                                     )}
-                                </div>
-                            </div>
-                        </div>
-                        <div className='mx-auto xl:hidden'>
-                            <div className='grid grid-cols-12 gap-x-1 px-7 md:px-0 max-w-lg lg:max-w-full mx-auto'>
-                                <div className='col-span-12 lg:col-span-6 lg:mx-0'>
-                                    <div className='flex items-center '>
-                                        <p className='text-sm mt-2'>Interesting? Share it</p>
-                                        <div className='mt-2'>
-                                            <Share
-                                                title={data?.title}
-                                                permalink={data?.permalink}
-                                                description={data?.description}
-                                            />
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
