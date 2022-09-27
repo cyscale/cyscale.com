@@ -30,7 +30,7 @@ const PerformanceAndAnalyticsSwitch = ({ setPerformanceAndAnalytics, performance
                 <input
                     type='checkbox'
                     className='sr-only'
-                    onChange={() => setPerformanceAndAnalytics(!performanceAndAnalytics)}
+                    onChange={() => setPerformanceAndAnalytics(true)}
                     defaultChecked={performanceAndAnalytics}
                     role='switch'
                 />
