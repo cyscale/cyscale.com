@@ -24,13 +24,14 @@ const dataModal = [
 ];
 
 const PerformanceAndAnalyticsSwitch = ({ setPerformanceAndAnalytics, performanceAndAnalytics }) => {
+    console.log(performanceAndAnalytics)
     return (
         <label className='flex items-center cursor-pointer ml-auto'>
             <div className='relative'>
                 <input
                     type='checkbox'
                     className='sr-only'
-                    onChange={() => setPerformanceAndAnalytics(!performanceAndAnalytics)}
+                    onChange={() => setPerformanceAndAnalytics(true)}
                     defaultChecked={performanceAndAnalytics}
                     role='switch'
                 />
