@@ -24,7 +24,6 @@ const dataModal = [
 ];
 
 const PerformanceAndAnalyticsSwitch = ({ setPerformanceAndAnalytics, performanceAndAnalytics }) => {
-    console.log(performanceAndAnalytics)
     return (
         <label className='flex items-center cursor-pointer ml-auto'>
             <div className='relative'>
