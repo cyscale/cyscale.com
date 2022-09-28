@@ -40,7 +40,7 @@ const ctaHeight = css`
 export default function PostContent({ data, suggestions, preview = false, pageUri, pageName }) {
     const dataWhitepapar = useStaticQuery(graphql`
         query WhitepaperCover {
-            whitepaperCover: file(relativePath: { eq: "whitepaper-cover-cspm.png" }) {
+            whitepaperCover: file(relativePath: { eq: "whitepaper-cover-blog.png" }) {
                 childImageSharp {
                     gatsbyImageData(width: 111, height: 162, layout: FIXED)
                 }
