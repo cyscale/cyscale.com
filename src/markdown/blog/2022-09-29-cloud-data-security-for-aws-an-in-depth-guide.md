@@ -184,7 +184,7 @@ After identifying sensitive data, Amazon Macie can: 
 * encrypt and decrypt data,  
 * perform logging and monitoring through AWS CloudTrail integration, and others.  
 
-### 4. Availability 
+### 5. Availability 
 
 Availability means that users should be able to access their data without disruptions at any point. 
 
