@@ -140,7 +140,7 @@ An AWS S3 bucket is a type of asset used to store object-like data such as files
 
 A bucket policy contains rules based on which access is allowed or denied and is written in JSON.  
 
-```
+```json
 {
     "Version": "2012-10-17",
     "Id": "S3PolicyId1",
