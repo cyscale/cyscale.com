@@ -84,6 +84,16 @@ exports.createPages = async ({ graphql, actions }) => {
         });
     });
 
+    const whitepaperCover = await graphql(`
+        query WhitepaperCover {
+            whitepaperCover: file(relativePath: { eq: "whitepaper-cover-blog.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 111, height: 162, layout: FIXED)
+                }
+            }
+        }
+    `);
+
     await graphql(
         `
             query loadPostsQuery {
@@ -141,7 +151,8 @@ exports.createPages = async ({ graphql, actions }) => {
                 component: blogTemplate,
                 context: {
                     alldata: node,
-                    suggestions: [posts[0], posts[1], posts[2], posts[3]]
+                    suggestions: [posts[0], posts[1], posts[2], posts[3]],
+                    whitepaperCover: whitepaperCover
                 }
             });
         });
