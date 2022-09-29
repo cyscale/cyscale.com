@@ -1,8 +1,9 @@
 import React from 'react';
 import { FaLinkedin, FaTwitter } from 'react-icons/fa';
+import classnames from 'classnames';
 const baseUrl = 'https://cyscale.com/blog/';
 
-export default function Share({ title, permalink }) {
+export default function Share({ title, permalink, blog }) {
     const platforms = {
         linkedin: {
             name: 'LinkedIn',
@@ -17,11 +18,16 @@ export default function Share({ title, permalink }) {
     };
 
     return (
-        <div className='flex justify-between ml-2' >
+        <div
+            className={classnames('flex justify-between', {
+                'ml-0': blog,
+                'ml-2': !blog
+            })}
+        >
             {Object.values(platforms).map(({ name, shareUrl, icon }) => (
                 <a
                     href={shareUrl}
-                    className='py-3 px-2'
+                    className={`py-3 ${blog ? 'px-0' : 'px-2'}`}
                     title={`Share on ${name}`}
                     onClick={(e) => {
                         e.preventDefault();
@@ -30,7 +36,7 @@ export default function Share({ title, permalink }) {
                     }}
                     key={name}
                 >
-                    {React.cloneElement(icon, {className:'hover:text-primary  transition-all'})}
+                    {React.cloneElement(icon, { className: 'hover:text-primary  transition-all' })}
                 </a>
             ))}
         </div>

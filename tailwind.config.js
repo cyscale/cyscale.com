@@ -729,7 +729,8 @@ module.exports = {
                     '"Segoe UI Emoji"',
                     '"Segoe UI Symbol"',
                     '"Noto Color Emoji"'
-                ]
+                ],
+                montserrat: ['Montserrat', 'sans-serif']
             },
             backgroundColor: (theme) => ({
                 ...theme('colors'),
