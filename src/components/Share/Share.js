@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaLinkedin, FaTwitter } from 'react-icons/fa';
+import classnames from 'classnames';
 const baseUrl = 'https://cyscale.com/blog/';
 
 export default function Share({ title, permalink, blog }) {
@@ -17,7 +18,12 @@ export default function Share({ title, permalink, blog }) {
     };
 
     return (
-        <div className={`flex justify-between ${blog ? 'ml-0' : 'ml-2'}`}>
+        <div
+            className={classnames('flex justify-between', {
+                'ml-0': blog,
+                'ml-2': !blog
+            })}
+        >
             {Object.values(platforms).map(({ name, shareUrl, icon }) => (
                 <a
                     href={shareUrl}

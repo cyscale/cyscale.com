@@ -17,10 +17,6 @@ import useSubscribe from '../../hooks/useSubscribe';
 import useScrollTrigger from '../scrollTrigger';
 import { css } from 'twin.macro';
 
-const montserratFontStyle = css`
-    font-family: 'Montserrat', sans-serif;
-`;
-
 const ctaTransition = css`
     transition: all 0.25s ease-in-out 0s;
 `;
@@ -131,16 +127,13 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
                     </div>
                 </div>
                 <div
-                    className={`hidden xl:block w-72 sticky pl-10 mt-6 ${trigger ? 'top-0' : 'top-28'}`}
+                    className={`hidden xl:block w-72 sticky pl-10 mt-6 font-montserrat ${trigger ? 'top-0' : 'top-28'}`}
                     css={[ctaTransition, ctaHeight]}
                 >
-                    <p
-                        className='text-xs font-semibold uppercase mt-4'
-                        css={[ctaWhitepaperTextColor, montserratFontStyle]}
-                    >
+                    <p className='text-xs font-semibold uppercase mt-4' css={ctaWhitepaperTextColor}>
                         Further reading
                     </p>
-                    <p className='text-lg font-bold mt-2' css={montserratFontStyle}>
+                    <p className='text-lg font-bold mt-2'>
                         Cloud Storage <br /> Misconfigurations
                     </p>
                     <GatsbyImage
@@ -149,20 +142,17 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
                         image={dataWhitepapar.whitepaperCover.childImageSharp.gatsbyImageData}
                     />
 
-                    <p className='text-xs mt-2' css={[ctaWhitepaperTextColor, montserratFontStyle]}>
+                    <p className='text-xs mt-2 font-montserrat' css={ctaWhitepaperTextColor}>
                         Build and maintain a strong <br /> Security Program from the start.
                     </p>
                     <Link
                         className='text-xs underline'
-                        css={[downloadWhitepaperLinkColor, montserratFontStyle]}
+                        css={downloadWhitepaperLinkColor}
                         to={'/whitepaper/cloud-storage-misconfigurations/'}
                     >
                         Download Whitepaper
                     </Link>
-                    <p
-                        className='text-xs font-semibold uppercase mt-10'
-                        css={[ctaWhitepaperTextColor, montserratFontStyle]}
-                    >
+                    <p className='text-xs font-semibold uppercase mt-10' css={ctaWhitepaperTextColor}>
                         Share this article
                     </p>
                     <div className='w-12'>
