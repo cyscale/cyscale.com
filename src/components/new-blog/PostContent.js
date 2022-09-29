@@ -9,7 +9,7 @@ import Post from './Post';
 import { map, filter, slice } from 'lodash';
 import Share from '../Share/Share';
 import { Link as ScrollLink, Element } from 'react-scroll';
-import { GatsbyImage, GatsbyImage as Img } from 'gatsby-plugin-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import cyscaleMan from '../../assets/images/cyscale-man.svg';
 import arrowRight from '../../assets/images/arrow-right-1-white.svg';
 import { graphql, Link, useStaticQuery } from 'gatsby';
@@ -70,7 +70,7 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
                             </div>
                             <div className='mt-8 lg:mt-0 col-span-12 lg:col-span-6'>
                                 {!preview ? (
-                                    <Img
+                                    <GatsbyImage
                                         image={data.featuredimage.childImageSharp.gatsbyImageData}
                                         className='rounded-lg overflow-hidden shadow-md'
                                         alt={data.title}
