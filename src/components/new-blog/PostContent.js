@@ -30,7 +30,7 @@ const downloadWhitepaperLinkColor = css`
 `;
 
 const ctaHeight = css`
-    height: 31rem;
+    height: 26rem;
 `;
 
 export default function PostContent({ data, suggestions, preview = false, pageUri, pageName }) {
