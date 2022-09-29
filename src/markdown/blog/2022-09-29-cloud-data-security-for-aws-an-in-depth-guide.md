@@ -140,7 +140,29 @@ An AWS S3 bucket is a type of asset used to store object-like data such as files
 
 A bucket policy contains rules based on which access is allowed or denied and is written in JSON.  
 
-<img src="/img/24_blog-bucket-policy-for-ips.png" alt="Bucket Policy" title="Bucket Policy" class=" blog-image-shadow "/>
+```
+{
+    "Version": "2012-10-17",
+    "Id": "S3PolicyId1",
+    "Statement": [
+        {
+            "Sid": "IPAllow",
+            "Effect": "Deny",
+            "Principal": "*",
+            "Action": "s3:*",
+            "Resource": [
+                "arn:aws:s3:::DOC-EXAMPLE-BUCKET",
+                "arn:aws:s3:::DOC-EXAMPLE-BUCKET/*"
+            ],
+            "Condition": {
+                "NotIpAddress": {
+                    "aws:SourceIp": "54.240.143.0/24"
+                }
+            }
+        }
+    ]
+}
+```
 
 *Policy source – docs.aws.amazon.com* 
 
@@ -202,7 +224,5 @@ Besides the features that come with the Standard plan, which are at network and 
 After understanding the security demands required for the cloud, implementing them seems like a daunting task. However, using Cyscale, you can easily check if you’re lacking any of the mentioned implementations and remediate any findings. 
 
 Cyscale has over 400 controls that cover a large variety of misconfigurations and vulnerabilities and offer support not only for AWS, but for Azure, GCP Cloud, Alibaba Cloud as well. 
-
- 
 
 <!--EndFragment-->
