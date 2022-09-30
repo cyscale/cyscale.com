@@ -27,15 +27,21 @@ CMS.registerEditorComponent({
             image: match[1],
             alt: match[2],
             title: match[3],
-            classes: match[4]
+            classes: match[4],
+            width: match[5],
+            height: match[6]
         },
-    toBlock: function ({ image, alt, title, classes }, getAsset, fields) {
-        return `<img src="${image || ''}" alt="${alt || ''}" title="${title || ''}" class="${classes || ''}"/>`;
+    toBlock: function ({ image, alt, title, classes, width, height }, getAsset, fields) {
+        return `<img src="${image || ''}" alt="${alt || ''}" title="${title || ''}" class="${
+            classes || ''
+        }" style="width:${width / 16 || 'auto'}${width ? 'rem' : ''};height:${height / 16 || 'auto'}${
+            height ? 'rem' : ''
+        };"/>`;
     },
-    toPreview: ({ image, alt, title, classes }, getAsset, fields) => {
-        return `<img src="${image}" alt="${alt}" title="${title}" class="${classes}"/>`;
+    toPreview: ({ image, alt, title, classes, width, height }, getAsset, fields) => {
+        return `<img src="${image}" alt="${alt}" title="${title}" class="${classes}" style="width:${width};height:${height};"/>`;
     },
-    pattern: /^<img src="(.*?)" alt="(.*?)" title="(.*?)" class="(.*?)"\/>$/s,
+    pattern: /^<img src="(.*?)" alt="(.*?)" title="(.*?)" class="(.*?)" style="width:(.*?);height:(.*?);"\/>$/s,
     fields: [
         {
             label: 'Picture',
@@ -72,6 +78,20 @@ CMS.registerEditorComponent({
         {
             label: 'Title',
             name: 'title'
+        },
+        {
+            label: 'Width (px)',
+            name: 'width',
+            widget: 'number',
+            value_type: 'int',
+            min: 1
+        },
+        {
+            label: 'Height (px)',
+            name: 'height',
+            widget: 'number',
+            value_type: 'int',
+            min: 1
         }
     ]
 });
