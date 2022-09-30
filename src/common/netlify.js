@@ -34,7 +34,9 @@ CMS.registerEditorComponent({
     toBlock: function ({ image, alt, title, classes, width, height }, getAsset, fields) {
         return `<img src="${image || ''}" alt="${alt || ''}" title="${title || ''}" class="${
             classes || ''
-        }" style="width:${width || 'auto'}${width ? 'rem' : ''};height:${height || 'auto'}${height ? 'rem' : ''};"/>`;
+        }" style="width:${width / 16 || 'auto'}${width ? 'rem' : ''};height:${height / 16 || 'auto'}${
+            height ? 'rem' : ''
+        };"/>`;
     },
     toPreview: ({ image, alt, title, classes, width, height }, getAsset, fields) => {
         return `<img src="${image}" alt="${alt}" title="${title}" class="${classes}" style="width:${width};height:${height};"/>`;
@@ -78,16 +80,18 @@ CMS.registerEditorComponent({
             name: 'title'
         },
         {
-            label: 'Width',
+            label: 'Width (px)',
             name: 'width',
             widget: 'number',
-            value_type: 'float'
+            value_type: 'int',
+            min: 1
         },
         {
-            label: 'Height',
+            label: 'Height (px)',
             name: 'height',
             widget: 'number',
-            value_type: 'float'
+            value_type: 'int',
+            min: 1
         }
     ]
 });
