@@ -6,6 +6,7 @@ import { map, takeRight } from 'lodash';
 import FeaturedPost from './FeaturedPost';
 import Post from './Post';
 import { Link } from 'gatsby';
+import { usePagination, DOTS } from '../../hooks/usePagination';
 
 const getFeaturedAndPosts = (nodes, isFirst) => {
     const posts = [];
@@ -42,15 +43,28 @@ const PostsPagination = ({
     nextPagePath,
     currentPage,
     getPageNumberPath,
-    numPages
+    numPages,
+    limit
 }) => {
     const isFirst = currentPage === 1;
     const isLast = currentPage === numPages;
+    const totalCount = numPages * limit;
+    const siblingCount = 1;
+    const pageSize = limit;
 
     const { posts, featuredPost } = getFeaturedAndPosts(
         data.allMarkdownRemark.edges.map((edge) => edge.node),
         isFirst
     );
+
+    const paginationRange = usePagination({
+        currentPage,
+        totalCount,
+        siblingCount,
+        pageSize
+    });
+
+    console.log(paginationRange);
 
     return (
         <div className='bg-lightGrey2'>
@@ -104,7 +118,7 @@ const PostsPagination = ({
                 </Container>
                 {numPages >= 2 && (
                     <div className='flex justify-center mb-20'>
-                        <div>
+                        <div className="flex justify-between">
                             {!isFirst && (
                                 <Link
                                     to={prevPagePath}
@@ -114,16 +128,20 @@ const PostsPagination = ({
                                     &larr;
                                 </Link>
                             )}
-                            {Array.from({ length: numPages }, (_, i) => {
+                            {paginationRange.map((pageNumber) => {
+                                if (pageNumber === DOTS) {
+                                    return <p>&#8230;</p>;
+                                }
+
                                 return (
                                     <Link
-                                        key={i + 1}
-                                        to={getPageNumberPath(i)}
+                                        key={pageNumber + 1}
+                                        to={getPageNumberPath(pageNumber - 1)}
                                         className={`${
-                                            currentPage === i + 1 ? 'bg-selago' : 'bg-white'
+                                            currentPage === pageNumber ? 'bg-selago' : 'bg-white'
                                         } mx-2 p-3 rounded-md shadow-md`}
                                     >
-                                        {i + 1}
+                                        {pageNumber}
                                     </Link>
                                 );
                             })}

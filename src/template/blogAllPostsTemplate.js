@@ -4,7 +4,7 @@ import PostsPagination from '../components/new-blog/PostsPagination';
 
 const BlogAllPostsTemplate = ({ pageContext, location, data }) => {
     const { category, categoriesList, seoTitle, seoDescription } = pageContext;
-    const { currentPage, numPages } = pageContext;
+    const { currentPage, numPages, limit } = pageContext;
 
     const prevPagePath =
         currentPage - 1 === 1 || currentPage - 1 === 0 ? '/blog/' : '/blog/' + (currentPage - 1).toString();
@@ -31,6 +31,7 @@ const BlogAllPostsTemplate = ({ pageContext, location, data }) => {
             nextPagePath={nextPagePath}
             getPageNumberPath={getPageNumberPath}
             numPages={numPages}
+            limit={limit}
         />
     );
 };

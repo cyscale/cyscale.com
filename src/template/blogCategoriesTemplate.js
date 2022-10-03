@@ -4,7 +4,7 @@ import PostsPagination from '../components/new-blog/PostsPagination';
 
 const BlogCategoriesTemplate = ({ pageContext, location, data }) => {
     const { category, categoriesList, seoTitle, seoDescription } = pageContext;
-    const { currentPage, numPages } = pageContext;
+    const { currentPage, numPages, limit } = pageContext;
 
     const prevPagePath =
         currentPage - 1 === 1 || currentPage - 1 === 0
@@ -20,7 +20,7 @@ const BlogCategoriesTemplate = ({ pageContext, location, data }) => {
         return `/blog/${category.toLowerCase()}/` + (currentIndex + 1);
     };
 
-    console.log(numPages)
+    console.log(numPages);
 
     return (
         <PostsPagination
@@ -35,6 +35,7 @@ const BlogCategoriesTemplate = ({ pageContext, location, data }) => {
             nextPagePath={nextPagePath}
             getPageNumberPath={getPageNumberPath}
             numPages={numPages}
+            limit={limit}
         />
     );
 };

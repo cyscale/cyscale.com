@@ -31,7 +31,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 };
 
 const postsByCategory = {};
-const postsPerPage = 9;
+const postsPerPage = 3;
 
 exports.createPages = async ({ graphql, actions }) => {
     const { createPage, createRedirect } = actions;
