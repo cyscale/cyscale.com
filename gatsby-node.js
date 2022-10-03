@@ -1,4 +1,5 @@
 const path = require(`path`);
+const { createFilePath } = require(`gatsby-source-filesystem`);
 
 const redirects = [
     {
@@ -14,6 +15,20 @@ const redirects = [
         toPath: '/security-for-startups-program'
     }
 ];
+
+exports.onCreateNode = ({ node, getNode, actions }) => {
+    const { createNodeField } = actions;
+
+    if (node.internal.type === `MarkdownRemark`) {
+        const slug = createFilePath({ node, getNode, basePath: `pages` });
+
+        createNodeField({
+            node,
+            name: `slug`,
+            value: slug
+        });
+    }
+};
 
 exports.createPages = async ({ graphql, actions }) => {
     const { createPage, createRedirect } = actions;
@@ -159,57 +174,45 @@ exports.createPages = async ({ graphql, actions }) => {
 
         await graphql(
             `
-                query loadCategoriesQuery {
-                    allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "category" } } }) {
+                query loadPostsQuery {
+                    allMarkdownRemark(
+                        sort: { order: DESC, fields: frontmatter___date }
+                        filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+                    ) {
                         edges {
                             node {
-                                frontmatter {
-                                    name
-                                    slug
-                                    seoTitle
-                                    seoDescription
-                                    disabled
-                                }
+                               id
                             }
                         }
                     }
                 }
             `
-        ).then((result) => {
+        ).then(async (result) => {
             if (result.errors) throw result.errors;
 
-            const categoriesWithPosts = Object.keys(postsByCategory);
-            const categories = result.data.allMarkdownRemark.edges;
+            const allPosts = [];
+            const posts = result.data.allMarkdownRemark.edges;
 
-            categories.forEach((edge) => {
-                const node = edge.node;
-
-                if (!node.frontmatter.disabled) {
-                    // Create category pages
-                    createPage({
-                        path: '/blog/' + node.frontmatter.name.toLowerCase() + '/',
-                        component: blogCategoryTemplate,
-                        context: {
-                            category: node.frontmatter.name,
-                            seoTitle: node.frontmatter.seoTitle,
-                            posts: postsByCategory[node.frontmatter.name],
-                            seoDescription: node.frontmatter.seoDescription,
-                            categoriesList: categoriesWithPosts
-                        }
-                    });
-                }
+            posts.forEach((edge) => {
+                allPosts.push(edge.node);
             });
 
-            createPage({
-                path: '/blog/',
-                component: blogCategoryTemplate,
-                context: {
-                    posts: allPosts,
-                    category: 'All',
-                    seoTitle: 'Blog - Cyscale',
-                    seoDescription: 'Cloud and Data Security Blog',
-                    categoriesList: categoriesWithPosts
-                }
+            const postsPerPage = 9;
+            const numPages = Math.ceil(allPosts.length / postsPerPage);
+            Array.from({ length: numPages }).forEach((_, i) => {
+                createPage({
+                    path: i === 0 ? `/blog` : `/blog/${i + 1}`,
+                    component: path.resolve(`src/template/blogCategoryTemplate.js`),
+                    context: {
+                        limit: postsPerPage,
+                        skip: i * postsPerPage,
+                        numPages,
+                        currentPage: i + 1,
+                        category: 'All',
+                        seoTitle: 'Blog - Cyscale',
+                        seoDescription: 'Cloud and Data Security Blog'
+                    }
+                });
             });
         });
     });
