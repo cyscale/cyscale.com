@@ -1,11 +1,11 @@
 import React from 'react';
-import Layout from '../components/layout/CleanLayout';
-import { Section, Container, Row } from '../components/atoms/Containers';
+import Layout from '../layout/CleanLayout';
+import { Container, Row, Section } from '../atoms/Containers';
+import Chip from '../atoms/Chip';
 import { map, takeRight } from 'lodash';
-import Chip from '../components/atoms/Chip';
-import FeaturedPost from '../components/new-blog/FeaturedPost';
-import Post from '../components/new-blog/Post';
-import { graphql, Link } from 'gatsby';
+import FeaturedPost from './FeaturedPost';
+import Post from './Post';
+import { Link } from 'gatsby';
 
 const getFeaturedAndPosts = (nodes, isFirst) => {
     const posts = [];
@@ -31,24 +31,23 @@ const getFeaturedAndPosts = (nodes, isFirst) => {
     return { posts: nodes };
 };
 
-const BlogList = ({ pageContext, location, data }) => {
-    const { category, categoriesList, seoTitle, seoDescription } = pageContext;
-    console.log(data)
-    const { currentPage, numPages } = pageContext;
+const PostsPagination = ({
+    data,
+    seoTitle,
+    seoDescription,
+    location,
+    categoriesList,
+    category,
+    prevPagePath,
+    nextPagePath,
+    currentPage,
+    getPageNumberPath,
+    numPages
+}) => {
     const isFirst = currentPage === 1;
     const isLast = currentPage === numPages;
-    const prevPagePath =
-        currentPage - 1 === 1 || currentPage - 1 === 0 ? '/blog/' : '/blog/' + (currentPage - 1).toString();
-    const nextPagePath = '/blog/' + (currentPage + 1).toString();
-    const getPageNumberPath = (currentIndex) => {
-        if (currentIndex === 0) {
-            return '/blog';
-        }
 
-        return '/blog/' + (currentIndex + 1);
-    };
-
-    let { posts, featuredPost } = getFeaturedAndPosts(
+    const { posts, featuredPost } = getFeaturedAndPosts(
         data.allMarkdownRemark.edges.map((edge) => edge.node),
         isFirst
     );
@@ -103,73 +102,42 @@ const BlogList = ({ pageContext, location, data }) => {
                         </Row>
                     </Section>
                 </Container>
-                <div className='flex justify-center mb-20'>
-                    <div>
-                        {!isFirst && (
-                            <Link
-                                to={prevPagePath}
-                                rel='prev'
-                                className='bg-white mx-2 p-3 rounded-md text-grey2 shadow-md'
-                            >
-                                &larr;
-                            </Link>
-                        )}
-                        {Array.from({ length: numPages }, (_, i) => {
-                            return (
+                {numPages >= 2 && (
+                    <div className='flex justify-center mb-20'>
+                        <div>
+                            {!isFirst && (
                                 <Link
-                                    key={i + 1}
-                                    to={getPageNumberPath(i)}
-                                    className={`${
-                                        currentPage === i + 1 ? 'bg-selago' : 'bg-white'
-                                    } mx-2 p-3 rounded-md shadow-md`}
+                                    to={prevPagePath}
+                                    rel='prev'
+                                    className='bg-white mx-2 p-3 rounded-md text-grey2 shadow-md'
                                 >
-                                    {i + 1}
+                                    &larr;
                                 </Link>
-                            );
-                        })}
-                        {!isLast && (
-                            <Link to={nextPagePath} rel='next' className='bg-white mx-2 p-3 rounded-md shadow-md'>
-                                &rarr;
-                            </Link>
-                        )}
+                            )}
+                            {Array.from({ length: numPages }, (_, i) => {
+                                return (
+                                    <Link
+                                        key={i + 1}
+                                        to={getPageNumberPath(i)}
+                                        className={`${
+                                            currentPage === i + 1 ? 'bg-selago' : 'bg-white'
+                                        } mx-2 p-3 rounded-md shadow-md`}
+                                    >
+                                        {i + 1}
+                                    </Link>
+                                );
+                            })}
+                            {!isLast && (
+                                <Link to={nextPagePath} rel='next' className='bg-white mx-2 p-3 rounded-md shadow-md'>
+                                    &rarr;
+                                </Link>
+                            )}
+                        </div>
                     </div>
-                </div>
+                )}
             </Layout>
         </div>
     );
 };
-export default BlogList;
 
-export const query = graphql`
-    query BlogsQuery($skip: Int!, $limit: Int!) {
-        allMarkdownRemark(
-            sort: { order: DESC, fields: frontmatter___date }
-            filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
-            limit: $limit
-            skip: $skip
-        ) {
-            edges {
-                node {
-                    frontmatter {
-                        authors
-                        categories
-                        title
-                        seoTitle
-                        description
-                        seoDescription
-                        date
-                        featuredpost
-                        permalink
-                        featuredimage {
-                            publicURL
-                            childImageSharp {
-                                gatsbyImageData(width: 820, layout: CONSTRAINED)
-                            }
-                        }
-                    }
-                    rawMarkdownBody
-                }
-            }
-        }
-    }
-`;
+export default PostsPagination;
