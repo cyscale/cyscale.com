@@ -20,8 +20,6 @@ const BlogCategoriesTemplate = ({ pageContext, location, data }) => {
         return `/blog/${category.toLowerCase()}/` + (currentIndex + 1);
     };
 
-    console.log(numPages);
-
     return (
         <PostsPagination
             data={data}
