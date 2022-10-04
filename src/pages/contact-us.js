@@ -55,6 +55,15 @@ const ContactUs = ({ location }) => {
                                     <h1 className='font-semibold text-4xl lg:text-6xl text-blue mb-12 lg:mb-32 hidden lg:block'>
                                         Contact
                                     </h1>
+                                    <p className='leading-normal text-gray font-bold mb-8'>
+                                        For support, email us at{' '}
+                                        <a
+                                            href='mailto:support@cyscale.com'
+                                            className='text-blue underline hover:no-underline hover:text-red font-medium'
+                                        >
+                                            support@cyscale.com
+                                        </a>
+                                    </p>
                                     <Address />
                                 </div>
                             </div>
