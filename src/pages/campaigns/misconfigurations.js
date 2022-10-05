@@ -16,8 +16,13 @@ import {
 import MisconfigCoverage from '../../components/cloud-security-posture-management/misconfigCoverage';
 import GetStarted from '../../components/Home/getstarted';
 import CookiesCampaignsLayout from '../../components/campaigns/CookiesCampaignsLayout';
+import useHSFormLoaded from '../../hooks/useHSFormLoaded';
+import loading from '../../assets/images/loading-spinner.svg';
+import classnames from 'classnames';
 
 export default function Misconfigurations({ location }) {
+    const { loadingForm } = useHSFormLoaded();
+
     useHubSpot({ formId: '8543c2b4-5f8e-4df7-9305-aa991806e01f', target: '#request-demo' });
 
     return (
@@ -57,7 +62,16 @@ export default function Misconfigurations({ location }) {
                                     <h2 className='font-semibold  text-2xl leading-normal text-primary mb-1'>
                                         Request a live demo
                                     </h2>
-                                    <div id='request-demo' style={{ minHeight: 510 }}></div>
+                                    {loadingForm && (
+                                        <div className='flex justify-center items-center' style={{ minHeight: 510 }}>
+                                            <img src={loading} alt='' />
+                                        </div>
+                                    )}
+                                    <div
+                                        id='request-demo'
+                                        style={{ minHeight: 510 }}
+                                        className={classnames({ hidden: loadingForm })}
+                                    ></div>
                                 </div>
                             </div>
                         </Row>

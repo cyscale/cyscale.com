@@ -12,8 +12,13 @@ import alibabaLogo from '../../assets/images/alibaba-campaigns-iam-security.svg'
 import oktaLogo from '../../assets/images/okta-campaigns-iam-security.svg';
 import { animateScroll } from 'react-scroll';
 import NewCookiesCampaignsLayout from '../../components/campaigns/NewCookiesCampaignsLayout';
+import useHSFormLoaded from '../../hooks/useHSFormLoaded';
+import loading from '../../assets/images/loading-spinner.svg';
+import classnames from 'classnames';
 
 const IamSecurity = ({ location }) => {
+    const { loadingForm } = useHSFormLoaded();
+
     const data = useStaticQuery(graphql`
         query IAMSecurityCampaignQuery {
             usersList: file(relativePath: { eq: "identity-campaigns-users-list-iam-security.png" }) {
@@ -101,7 +106,16 @@ const IamSecurity = ({ location }) => {
                                     <h2 className='font-semibold text-2xl sm:text-3xl lg:text-2xl leading-normal mb-8 mt-8 lg:mt-0 montserrat-font'>
                                         Request a live demo
                                     </h2>
-                                    <div style={{ minHeight: 390 }} id='iamsecurity-campaign-form' className='pb-4' />
+                                    {loadingForm && (
+                                        <div className='flex justify-center items-center' style={{ minHeight: 390 }}>
+                                            <img src={loading} alt='' />
+                                        </div>
+                                    )}
+                                    <div
+                                        style={{ minHeight: 390 }}
+                                        id='iamsecurity-campaign-form'
+                                        className={classnames('pb-4', { hidden: loadingForm })}
+                                    />
                                 </div>
                             </div>
                         </Row>

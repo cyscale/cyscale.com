@@ -6,8 +6,13 @@ import ScrollButtonStartups from '../../components/ScrollButton/ScrollButtonStar
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { animateScroll } from 'react-scroll';
 import NewCookiesCampaignsLayout from '../../components/campaigns/NewCookiesCampaignsLayout';
+import useHSFormLoaded from '../../hooks/useHSFormLoaded';
+import loading from '../../assets/images/loading-spinner.svg';
+import classnames from 'classnames';
 
 const AWSCloudSolution = ({ location }) => {
+    const { loadingForm } = useHSFormLoaded();
+
     const data = useStaticQuery(graphql`
         query AWSCloudSolutionCampaignQuery {
             dashboard: file(relativePath: { eq: "dashboard-aws-campaigns.png" }) {
@@ -75,7 +80,16 @@ const AWSCloudSolution = ({ location }) => {
                                     <h2 className='font-semibold text-2xl sm:text-3xl lg:text-2xl leading-normal mb-8 mt-8 lg:mt-0 montserrat-font'>
                                         Request a live demo
                                     </h2>
-                                    <div style={{ minHeight: 390 }} id='request-aws-demo' className='pb-4' />
+                                    {loadingForm && (
+                                        <div className='flex justify-center items-center' style={{ minHeight: 450 }}>
+                                            <img src={loading} alt='' />
+                                        </div>
+                                    )}
+                                    <div
+                                        style={{ minHeight: 450 }}
+                                        id='request-aws-demo'
+                                        className={classnames('pb-4', { hidden: loadingForm })}
+                                    />
                                 </div>
                             </div>
                         </Row>
