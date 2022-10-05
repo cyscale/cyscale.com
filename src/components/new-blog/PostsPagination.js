@@ -7,6 +7,12 @@ import FeaturedPost from './FeaturedPost';
 import Post from './Post';
 import { Link } from 'gatsby';
 import { usePagination, DOTS } from '../../hooks/usePagination';
+import { css } from 'twin.macro';
+
+const activePage = css`
+    height: 2.5rem;
+    width: 2.5rem;
+`;
 
 const getFeaturedAndPosts = (nodes, isFirst) => {
     const posts = [];
@@ -64,8 +70,6 @@ const PostsPagination = ({
         pageSize
     });
 
-    console.log(paginationRange);
-
     return (
         <div className='bg-lightGrey2'>
             <Layout title={seoTitle} description={seoDescription} pageName='blog' location={location}>
@@ -118,19 +122,24 @@ const PostsPagination = ({
                 </Container>
                 {numPages >= 2 && (
                     <div className='flex justify-center mb-20'>
-                        <div className="flex justify-between">
+                        <div className='flex justify-between'>
                             {!isFirst && (
                                 <Link
                                     to={prevPagePath}
                                     rel='prev'
-                                    className='bg-white mx-2 p-3 rounded-md text-grey2 shadow-md'
+                                    className='bg-transparent text-grey2 flex justify-center items-center'
+                                    css={activePage}
                                 >
-                                    &larr;
+                                    <span> &larr;</span>
                                 </Link>
                             )}
                             {paginationRange.map((pageNumber) => {
                                 if (pageNumber === DOTS) {
-                                    return <p>&#8230;</p>;
+                                    return (
+                                        <a className='flex items-center mx-1'>
+                                            <span>•••</span>
+                                        </a>
+                                    );
                                 }
 
                                 return (
@@ -138,16 +147,24 @@ const PostsPagination = ({
                                         key={pageNumber + 1}
                                         to={getPageNumberPath(pageNumber - 1)}
                                         className={`${
-                                            currentPage === pageNumber ? 'bg-selago' : 'bg-white'
-                                        } mx-2 p-3 rounded-md shadow-md`}
+                                            currentPage === pageNumber
+                                                ? 'bg-white rounded-md'
+                                                : 'bg-transparent rounded-md hover:bg-grey3'
+                                        } flex justify-center items-center mx-1`}
+                                        css={activePage}
                                     >
-                                        {pageNumber}
+                                        <span>{pageNumber}</span>
                                     </Link>
                                 );
                             })}
                             {!isLast && (
-                                <Link to={nextPagePath} rel='next' className='bg-white mx-2 p-3 rounded-md shadow-md'>
-                                    &rarr;
+                                <Link
+                                    to={nextPagePath}
+                                    rel='next'
+                                    className='bg-transparent flex justify-center items-center'
+                                    css={activePage}
+                                >
+                                    <span>&rarr;</span>
                                 </Link>
                             )}
                         </div>
