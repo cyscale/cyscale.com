@@ -10,6 +10,7 @@ import { usePagination, DOTS } from '../../hooks/usePagination';
 import { css } from 'twin.macro';
 import Back from '../../assets/images/back-pagination.svg';
 import Forward from '../../assets/images/forward-pagination.svg';
+import classnames from 'classnames';
 
 const activePage = css`
     height: 2.5rem;
@@ -148,11 +149,10 @@ const PostsPagination = ({
                                     <Link
                                         key={pageNumber + 1}
                                         to={getPageNumberPath(pageNumber - 1)}
-                                        className={`${
-                                            currentPage === pageNumber
-                                                ? 'bg-white rounded-md'
-                                                : 'bg-transparent rounded-md hover:bg-grey3'
-                                        } flex justify-center items-center mx-0.5 sm:mx-2`}
+                                        className={classnames('flex justify-center items-center mx-0.5 sm:mx-2', {
+                                            'bg-white rounded-md': currentPage === pageNumber,
+                                            'bg-transparent rounded-md hover:bg-grey3': currentPage !== pageNumber
+                                        })}
                                         css={activePage}
                                     >
                                         <span>{pageNumber}</span>
