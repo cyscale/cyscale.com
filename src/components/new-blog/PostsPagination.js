@@ -8,6 +8,8 @@ import Post from './Post';
 import { Link } from 'gatsby';
 import { usePagination, DOTS } from '../../hooks/usePagination';
 import { css } from 'twin.macro';
+import Back from '../../assets/images/back-pagination.svg';
+import Forward from '../../assets/images/forward-pagination.svg';
 
 const activePage = css`
     height: 2.5rem;
@@ -127,16 +129,16 @@ const PostsPagination = ({
                                 <Link
                                     to={prevPagePath}
                                     rel='prev'
-                                    className='bg-transparent text-grey2 flex justify-center items-center'
+                                    className='bg-transparent text-grey2 flex justify-center items-center bg-transparent rounded-md hover:bg-grey3'
                                     css={activePage}
                                 >
-                                    <span> &larr;</span>
+                                    <img src={Back} alt='' />
                                 </Link>
                             )}
                             {paginationRange.map((pageNumber) => {
                                 if (pageNumber === DOTS) {
                                     return (
-                                        <a className='flex items-center mx-1'>
+                                        <a className='flex items-center mx-0.5 sm:mx-2' key={pageNumber + 1}>
                                             <span>•••</span>
                                         </a>
                                     );
@@ -150,7 +152,7 @@ const PostsPagination = ({
                                             currentPage === pageNumber
                                                 ? 'bg-white rounded-md'
                                                 : 'bg-transparent rounded-md hover:bg-grey3'
-                                        } flex justify-center items-center mx-1`}
+                                        } flex justify-center items-center mx-0.5 sm:mx-2`}
                                         css={activePage}
                                     >
                                         <span>{pageNumber}</span>
@@ -161,10 +163,10 @@ const PostsPagination = ({
                                 <Link
                                     to={nextPagePath}
                                     rel='next'
-                                    className='bg-transparent flex justify-center items-center'
+                                    className='bg-transparent flex justify-center items-center bg-transparent rounded-md hover:bg-grey3'
                                     css={activePage}
                                 >
-                                    <span>&rarr;</span>
+                                    <img src={Forward} alt='' />
                                 </Link>
                             )}
                         </div>
