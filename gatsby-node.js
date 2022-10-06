@@ -174,48 +174,22 @@ exports.createPages = async ({ graphql, actions }) => {
             });
         });
 
-        await graphql(
-            `
-                query loadPostsQuery {
-                    allMarkdownRemark(
-                        sort: { order: DESC, fields: frontmatter___date }
-                        filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
-                    ) {
-                        edges {
-                            node {
-                                id
-                            }
-                        }
-                    }
+        const categoriesWithPosts = Object.keys(postsByCategory);
+        const numPages = Math.ceil(allPosts.length / postsPerPage);
+        Array.from({ length: numPages }).forEach((_, i) => {
+            createPage({
+                path: i === 0 ? `/blog` : `/blog/${i + 1}`,
+                component: blogAllPostsTemplate,
+                context: {
+                    limit: postsPerPage,
+                    skip: i * postsPerPage,
+                    numPages,
+                    currentPage: i + 1,
+                    category: 'All',
+                    seoTitle: 'Blog - Cyscale',
+                    seoDescription: 'Cloud and Data Security Blog',
+                    categoriesList: categoriesWithPosts
                 }
-            `
-        ).then(async (result) => {
-            if (result.errors) throw result.errors;
-
-            const allPosts = [];
-            const posts = result.data.allMarkdownRemark.edges;
-
-            posts.forEach((edge) => {
-                allPosts.push(edge.node);
-            });
-
-            const categoriesWithPosts = Object.keys(postsByCategory);
-            const numPages = Math.ceil(allPosts.length / postsPerPage);
-            Array.from({ length: numPages }).forEach((_, i) => {
-                createPage({
-                    path: i === 0 ? `/blog` : `/blog/${i + 1}`,
-                    component: blogAllPostsTemplate,
-                    context: {
-                        limit: postsPerPage,
-                        skip: i * postsPerPage,
-                        numPages,
-                        currentPage: i + 1,
-                        category: 'All',
-                        seoTitle: 'Blog - Cyscale',
-                        seoDescription: 'Cloud and Data Security Blog',
-                        categoriesList: categoriesWithPosts
-                    }
-                });
             });
         });
     });
