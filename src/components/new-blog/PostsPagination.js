@@ -139,7 +139,7 @@ const PostsPagination = ({
                                 if (pageNumber === DOTS) {
                                     return (
                                         <a className='flex items-center mx-0.5 sm:mx-2' key={pageNumber + 1}>
-                                            <span>•••</span>
+                                            <span>&bull;&bull;&bull;</span>
                                         </a>
                                     );
                                 }
