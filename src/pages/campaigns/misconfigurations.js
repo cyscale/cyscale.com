@@ -17,8 +17,8 @@ import MisconfigCoverage from '../../components/cloud-security-posture-managemen
 import GetStarted from '../../components/Home/getstarted';
 import CookiesCampaignsLayout from '../../components/campaigns/CookiesCampaignsLayout';
 import useHSFormLoaded from '../../hooks/useHSFormLoaded';
-import loading from '../../assets/images/loading-spinner.svg';
 import classnames from 'classnames';
+import Loader from '../../components/Loader/Loader';
 
 export default function Misconfigurations({ location }) {
     const { loadingForm } = useHSFormLoaded();
@@ -64,7 +64,7 @@ export default function Misconfigurations({ location }) {
                                     </h2>
                                     {loadingForm && (
                                         <div className='flex justify-center items-center' style={{ minHeight: 510 }}>
-                                            <img src={loading} alt='' />
+                                            <Loader />
                                         </div>
                                     )}
                                     <div

@@ -4,8 +4,8 @@ import { Helmet } from 'react-helmet';
 
 import { Container, Row, Section } from '../components/atoms/Containers';
 import useHSFormLoaded from '../hooks/useHSFormLoaded';
-import loading from '../assets/images/loading-spinner.svg';
 import classnames from 'classnames';
+import Loader from '../components/Loader/Loader';
 
 const ContactUs = ({ location }) => {
     const { loadingForm } = useHSFormLoaded();
@@ -48,7 +48,7 @@ const ContactUs = ({ location }) => {
                                 <div className='lg:bg-white rounded-lg mt-6 lg:mt-0 lg:rounded-xl lg:shadow-lg  lg:pt-12 pb-0 px-0 lg:px-12 max-w-lg mx-auto lg:mr-0 lg:ml-auto relative'>
                                     {loadingForm && (
                                         <div className='flex justify-center items-center' style={{ minHeight: 465 }}>
-                                            <img src={loading} alt='' />
+                                            <Loader />
                                         </div>
                                     )}
                                     <div

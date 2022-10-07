@@ -12,8 +12,8 @@ import ScrollButtonStartups from '../components/ScrollButton/ScrollButtonStartup
 import { animateScroll } from 'react-scroll';
 import ReactDOMServer from 'react-dom/server';
 import useHSFormLoaded from '../hooks/useHSFormLoaded';
-import loading from '../assets/images/loading-spinner.svg';
 import classnames from 'classnames';
+import Loader from '../components/Loader/Loader';
 
 const q1 = () => {
     return [
@@ -237,7 +237,7 @@ const SecurityForStartupsProgram = ({ location }) => {
                                                 className='flex justify-center items-center'
                                                 style={{ minHeight: 515 }}
                                             >
-                                                <img src={loading} alt='' />
+                                                <Loader />
                                             </div>
                                         )}
                                         <div style={{ minHeight: 515 }} id='startups-form' className={classnames('pb-4', { hidden: loadingForm })} />

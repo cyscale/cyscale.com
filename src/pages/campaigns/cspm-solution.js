@@ -12,8 +12,8 @@ import oktaLogo from '../../assets/images/okta-campaigns-iam-security.svg';
 import { animateScroll } from 'react-scroll';
 import NewCookiesCampaignsLayout from '../../components/campaigns/NewCookiesCampaignsLayout';
 import useHSFormLoaded from '../../hooks/useHSFormLoaded';
-import loading from '../../assets/images/loading-spinner.svg';
 import classnames from 'classnames';
+import Loader from '../../components/Loader/Loader';
 
 const CSPMSolution = ({ location }) => {
     const { loadingForm } = useHSFormLoaded();
@@ -128,7 +128,7 @@ const CSPMSolution = ({ location }) => {
                                     </h2>
                                     {loadingForm && (
                                         <div className='flex justify-center items-center' style={{ minHeight: 450 }}>
-                                            <img src={loading} alt='' />
+                                            <Loader />
                                         </div>
                                     )}
                                     <div

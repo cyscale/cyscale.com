@@ -3,8 +3,8 @@ import { Helmet } from 'react-helmet';
 import { Container, Row, Section } from '../components/atoms/Containers';
 import Layout from '../components/layout/CleanLayout';
 import useHSFormLoaded from '../hooks/useHSFormLoaded';
-import loading from '../assets/images/loading-spinner.svg';
 import classnames from 'classnames';
+import Loader from '../components/Loader/Loader';
 
 const PricingPage = ({ location }) => {
     const { loadingForm } = useHSFormLoaded();
@@ -55,7 +55,7 @@ const PricingPage = ({ location }) => {
                                     </h2>
                                     {loadingForm && (
                                         <div className='flex justify-center items-center' style={{ minHeight: 510 }}>
-                                            <img src={loading} alt='' />
+                                            <Loader />
                                         </div>
                                     )}
                                     <div

@@ -3,8 +3,8 @@ import Layout from '../../components/layout/CleanLayout';
 import { Helmet } from 'react-helmet';
 import { Container, Row } from '../../components/atoms/Containers';
 import useHSFormLoaded from '../../hooks/useHSFormLoaded';
-import loading from '../../assets/images/loading-spinner.svg';
 import classnames from 'classnames';
+import Loader from '../../components/Loader/Loader';
 
 const CloudStorageMisconfigurations = ({ location }) => {
     const { loadingForm } = useHSFormLoaded();
@@ -77,7 +77,7 @@ const CloudStorageMisconfigurations = ({ location }) => {
                                                 className='flex justify-center items-center'
                                                 style={{ minHeight: 365 }}
                                             >
-                                                <img src={loading} alt='' />
+                                                <Loader />
                                             </div>
                                         )}
                                         <div

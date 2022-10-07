@@ -15,8 +15,8 @@ import useHubSpot from '../../components/campaigns/useHubSpot';
 import GetStarted from '../../components/Home/getstarted';
 import CookiesCampaignsLayout from '../../components/campaigns/CookiesCampaignsLayout';
 import useHSFormLoaded from '../../hooks/useHSFormLoaded';
-import loading from '../../assets/images/loading-spinner.svg';
 import classnames from 'classnames';
+import Loader from '../../components/Loader/Loader';
 
 const Iso27001 = ({ location }) => {
     const { loadingForm } = useHSFormLoaded();
@@ -75,7 +75,7 @@ const Iso27001 = ({ location }) => {
                                     </h2>
                                     {loadingForm && (
                                         <div className='flex justify-center items-center' style={{ minHeight: 510 }}>
-                                            <img src={loading} alt='' />
+                                            <Loader />
                                         </div>
                                     )}
                                     <div

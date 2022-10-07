@@ -7,8 +7,8 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import { animateScroll } from 'react-scroll';
 import NewCookiesCampaignsLayout from '../../components/campaigns/NewCookiesCampaignsLayout';
 import useHSFormLoaded from '../../hooks/useHSFormLoaded';
-import loading from '../../assets/images/loading-spinner.svg';
 import classnames from 'classnames';
+import Loader from '../../components/Loader/Loader';
 
 const AWSCloudSolution = ({ location }) => {
     const { loadingForm } = useHSFormLoaded();
@@ -82,7 +82,7 @@ const AWSCloudSolution = ({ location }) => {
                                     </h2>
                                     {loadingForm && (
                                         <div className='flex justify-center items-center' style={{ minHeight: 450 }}>
-                                            <img src={loading} alt='' />
+                                            <Loader />
                                         </div>
                                     )}
                                     <div
