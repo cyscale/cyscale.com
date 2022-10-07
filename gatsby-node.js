@@ -1,4 +1,5 @@
 const path = require(`path`);
+const { createFilePath } = require(`gatsby-source-filesystem`);
 
 const redirects = [
     {
@@ -14,6 +15,23 @@ const redirects = [
         toPath: '/security-for-startups-program'
     }
 ];
+
+exports.onCreateNode = ({ node, getNode, actions }) => {
+    const { createNodeField } = actions;
+
+    if (node.internal.type === `MarkdownRemark`) {
+        const slug = createFilePath({ node, getNode, basePath: `pages` });
+
+        createNodeField({
+            node,
+            name: `slug`,
+            value: slug
+        });
+    }
+};
+
+const postsByCategory = {};
+const postsPerPage = 9;
 
 exports.createPages = async ({ graphql, actions }) => {
     const { createPage, createRedirect } = actions;
@@ -35,7 +53,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
     const blogTemplate = path.resolve(`src/template/blogTemplate.js`);
     const careerTemplate = path.resolve(`src/template/careerTemplate.js`);
-    const blogCategoryTemplate = path.resolve(`src/template/blogCategoryTemplate.js`);
+    const blogAllPostsTemplate = path.resolve(`src/template/blogAllPostsTemplate.js`);
 
     await graphql(`
         query loadCareersQuery {
@@ -130,7 +148,6 @@ exports.createPages = async ({ graphql, actions }) => {
         if (result.errors) throw result.errors;
 
         const allPosts = [];
-        const postsByCategory = {};
         const posts = result.data.allMarkdownRemark.edges;
 
         posts.forEach((edge) => {
@@ -157,60 +174,75 @@ exports.createPages = async ({ graphql, actions }) => {
             });
         });
 
-        await graphql(
-            `
-                query loadCategoriesQuery {
-                    allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "category" } } }) {
-                        edges {
-                            node {
-                                frontmatter {
-                                    name
-                                    slug
-                                    seoTitle
-                                    seoDescription
-                                    disabled
-                                }
-                            }
-                        }
-                    }
-                }
-            `
-        ).then((result) => {
-            if (result.errors) throw result.errors;
-
-            const categoriesWithPosts = Object.keys(postsByCategory);
-            const categories = result.data.allMarkdownRemark.edges;
-
-            categories.forEach((edge) => {
-                const node = edge.node;
-
-                if (!node.frontmatter.disabled) {
-                    // Create category pages
-                    createPage({
-                        path: '/blog/' + node.frontmatter.name.toLowerCase() + '/',
-                        component: blogCategoryTemplate,
-                        context: {
-                            category: node.frontmatter.name,
-                            seoTitle: node.frontmatter.seoTitle,
-                            posts: postsByCategory[node.frontmatter.name],
-                            seoDescription: node.frontmatter.seoDescription,
-                            categoriesList: categoriesWithPosts
-                        }
-                    });
-                }
-            });
-
+        const categoriesWithPosts = Object.keys(postsByCategory);
+        const numPages = Math.ceil(allPosts.length / postsPerPage);
+        Array.from({ length: numPages }).forEach((_, i) => {
             createPage({
-                path: '/blog/',
-                component: blogCategoryTemplate,
+                path: i === 0 ? `/blog` : `/blog/${i + 1}`,
+                component: blogAllPostsTemplate,
                 context: {
-                    posts: allPosts,
+                    limit: postsPerPage,
+                    skip: i * postsPerPage,
+                    numPages,
+                    currentPage: i + 1,
                     category: 'All',
-                    seoTitle: 'Blog - Cyscale',
+                    seoTitle: i === 0 ? 'Blog - Cyscale' : `Page ${i + 1}`,
                     seoDescription: 'Cloud and Data Security Blog',
                     categoriesList: categoriesWithPosts
                 }
             });
+        });
+    });
+
+    await graphql(
+        `
+            query loadCategoriesQuery {
+                allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "category" } } }) {
+                    edges {
+                        node {
+                            frontmatter {
+                                name
+                                slug
+                                seoTitle
+                                seoDescription
+                                disabled
+                            }
+                        }
+                    }
+                }
+            }
+        `
+    ).then((result) => {
+        if (result.errors) throw result.errors;
+
+        const categories = result.data.allMarkdownRemark.edges;
+        const categoriesWithPosts = Object.keys(postsByCategory);
+        categories.forEach((edge) => {
+            const node = edge.node;
+
+            if (!node.frontmatter.disabled) {
+                // Create category pages
+                const numPages = Math.ceil(postsByCategory[node.frontmatter.name].length / postsPerPage);
+                Array.from({ length: numPages }).forEach((_, i) => {
+                    createPage({
+                        path:
+                            i === 0
+                                ? `/blog/${node.frontmatter.name.toLowerCase()}`
+                                : `/blog/${node.frontmatter.name.toLowerCase()}/${i + 1}`,
+                        component: path.resolve(`src/template/blogCategoriesTemplate.js`),
+                        context: {
+                            limit: postsPerPage,
+                            skip: i * postsPerPage,
+                            numPages,
+                            currentPage: i + 1,
+                            category: node.frontmatter.name,
+                            seoTitle: node.frontmatter.seoTitle,
+                            seoDescription: node.frontmatter.seoDescription,
+                            categoriesList: categoriesWithPosts
+                        }
+                    });
+                });
+            }
         });
     });
 };
