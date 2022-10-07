@@ -1,9 +1,9 @@
 ---
 templateKey: blog-post
-title: Queues Security Best Practices
-seoTitle: Queues Security Best Practices
+title: Cloud Queues Security Best Practices
+seoTitle: Cloud Queues Security Best Practices
 authors: Sabrina Lupșan
-permalink: queues-security-best-practices
+permalink: cloud-queues-security-best-practices
 categories:
   - CSPM
 date: 2022-10-07T06:51:22.269Z
