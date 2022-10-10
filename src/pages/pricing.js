@@ -2,8 +2,13 @@ import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { Container, Row, Section } from '../components/atoms/Containers';
 import Layout from '../components/layout/CleanLayout';
+import useHSFormLoaded from '../hooks/useHSFormLoaded';
+import classnames from 'classnames';
+import LoaderContainer from '../components/Loader/LoaderContainer/LoaderContainer';
 
 const PricingPage = ({ location }) => {
+    const { loadingForm } = useHSFormLoaded();
+
     useEffect(() => {
         setTimeout(() => {
             if (window && window.hbspt) {
@@ -48,7 +53,14 @@ const PricingPage = ({ location }) => {
                                     <h2 className='font-semibold text-xl lg:text-2xl leading-normal text-primary mb-1'>
                                         Contact Sales
                                     </h2>
-                                    <div style={{ minHeight: 510 }} id='contact-form' />
+                                    {loadingForm && (
+                                        <LoaderContainer minHeight={510} />
+                                    )}
+                                    <div
+                                        style={{ minHeight: 510 }}
+                                        id='contact-form'
+                                        className={classnames({ hidden: loadingForm })}
+                                    />
                                 </div>
                             </div>
                         </Row>

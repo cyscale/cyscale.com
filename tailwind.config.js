@@ -742,7 +742,22 @@ module.exports = {
                 blue: '#0F26AA',
                 red: '#FF4A56',
                 lightGreyEEE: '#EEEEEE'
-            })
+            }),
+            keyframes: {
+                spin: {
+                    '0%': { transform: 'rotate(0deg)' },
+                    '100%': { transform: 'rotate(360deg)' }
+                },
+                'spin-reverse': {
+                    '0%': { transform: 'rotate(0deg)' },
+                    '100%': { transform: 'rotate(-360deg)' }
+                }
+            },
+            animation: {
+                'spin-loader': 'spin 1.5s linear infinite',
+                'spin-loader-after': 'spin 2.5s linear infinite',
+                'spin-reverse': 'spin-reverse 0.8s linear infinite'
+            }
         },
         container: {
             center: true

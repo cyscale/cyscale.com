@@ -11,8 +11,13 @@ import alibabaLogo from '../../assets/images/alibaba-campaigns-iam-security.svg'
 import oktaLogo from '../../assets/images/okta-campaigns-iam-security.svg';
 import { animateScroll } from 'react-scroll';
 import NewCookiesCampaignsLayout from '../../components/campaigns/NewCookiesCampaignsLayout';
+import useHSFormLoaded from '../../hooks/useHSFormLoaded';
+import classnames from 'classnames';
+import LoaderContainer from '../../components/Loader/LoaderContainer/LoaderContainer';
 
 const CSPMSolution = ({ location }) => {
+    const { loadingForm } = useHSFormLoaded();
+
     const data = useStaticQuery(graphql`
         query CSPMSolutionCampaignQuery {
             dashboard: file(relativePath: { eq: "dashboard-cspm-solution.png" }) {
@@ -121,7 +126,12 @@ const CSPMSolution = ({ location }) => {
                                     <h2 className='font-semibold text-2xl sm:text-3xl lg:text-2xl leading-normal mb-8 mt-8 lg:mt-0 montserrat-font'>
                                         Request a live demo
                                     </h2>
-                                    <div style={{ minHeight: 390 }} id='request-cspm-demo' className='pb-4' />
+                                    {loadingForm && <LoaderContainer minHeight={450} />}
+                                    <div
+                                        style={{ minHeight: 450 }}
+                                        id='request-cspm-demo'
+                                        className={classnames('pb-4', { hidden: loadingForm })}
+                                    />
                                 </div>
                             </div>
                         </Row>

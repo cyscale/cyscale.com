@@ -4,9 +4,14 @@ import { Helmet } from 'react-helmet';
 
 import { Container, Row, Section } from '../components/atoms/Containers';
 import { Address } from '../components/contact/Address';
+import useHSFormLoaded from '../hooks/useHSFormLoaded';
+import classnames from 'classnames';
+import LoaderContainer from '../components/Loader/LoaderContainer/LoaderContainer';
 
 const ContactUs = ({ location }) => {
     const [showFormMessage, setShowFormMessage] = useState(true);
+
+    const { loadingForm } = useHSFormLoaded();
 
     const hubspotHandler = (event) => {
         if (
@@ -81,7 +86,14 @@ const ContactUs = ({ location }) => {
                                             </p>
                                         </div>
                                     )}
-                                    <div style={{ minHeight: 510 }} id='contact-form' />
+                                    {loadingForm && (
+                                        <LoaderContainer minHeight={510} />
+                                    )}
+                                    <div
+                                        style={{ minHeight: 510 }}
+                                        id='contact-form'
+                                        className={classnames({ hidden: loadingForm })}
+                                    />
                                 </div>
                             </div>
                         </Row>

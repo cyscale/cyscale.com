@@ -11,6 +11,9 @@ import cloudIcon from '../assets/images/cloud-icon.svg';
 import ScrollButtonStartups from '../components/ScrollButton/ScrollButtonStartups';
 import { animateScroll } from 'react-scroll';
 import ReactDOMServer from 'react-dom/server';
+import useHSFormLoaded from '../hooks/useHSFormLoaded';
+import classnames from 'classnames';
+import LoaderContainer from '../components/Loader/LoaderContainer/LoaderContainer';
 
 const q1 = () => {
     return [
@@ -85,6 +88,8 @@ const q2 = (useReactComponent) => {
 
 const SecurityForStartupsProgram = ({ location }) => {
     const [active, setActive] = useState(-1);
+
+    const { loadingForm } = useHSFormLoaded();
 
     const data = useStaticQuery(graphql`
         query StartupsQuery {
@@ -227,7 +232,12 @@ const SecurityForStartupsProgram = ({ location }) => {
                                         <h2 className='font-semibold text-2xl sm:text-3xl lg:text-2xl leading-normal mb-8 mt-8 lg:mt-0'>
                                             Apply now
                                         </h2>
-                                        <div style={{ minHeight: 465 }} id='startups-form' className='pb-4' />
+                                        {loadingForm && <LoaderContainer minHeight={515} />}
+                                        <div
+                                            style={{ minHeight: 515 }}
+                                            id='startups-form'
+                                            className={classnames('pb-4', { hidden: loadingForm })}
+                                        />
                                     </div>
                                 </div>
                             </Row>
