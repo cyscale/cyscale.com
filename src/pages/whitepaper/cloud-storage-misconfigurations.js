@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 import { Container, Row } from '../../components/atoms/Containers';
 import useHSFormLoaded from '../../hooks/useHSFormLoaded';
 import classnames from 'classnames';
-import Loader from '../../components/Loader/Loader';
+import LoaderContainer from '../../components/Loader/LoaderContainer/LoaderContainer';
 
 const CloudStorageMisconfigurations = ({ location }) => {
     const { loadingForm } = useHSFormLoaded();
@@ -72,14 +72,7 @@ const CloudStorageMisconfigurations = ({ location }) => {
                                         <h2 className='font-semibold text-2xl sm:text-3xl lg:text-2xl leading-normal mb-8 mt-8 lg:mt-0'>
                                             Get the Whitepaper
                                         </h2>
-                                        {loadingForm && (
-                                            <div
-                                                className='flex justify-center items-center'
-                                                style={{ minHeight: 365 }}
-                                            >
-                                                <Loader />
-                                            </div>
-                                        )}
+                                        {loadingForm && <LoaderContainer minHeight={365} />}
                                         <div
                                             style={{ minHeight: 365 }}
                                             id='storage-misconfigurations-form'

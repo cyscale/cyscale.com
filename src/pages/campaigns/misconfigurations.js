@@ -18,7 +18,7 @@ import GetStarted from '../../components/Home/getstarted';
 import CookiesCampaignsLayout from '../../components/campaigns/CookiesCampaignsLayout';
 import useHSFormLoaded from '../../hooks/useHSFormLoaded';
 import classnames from 'classnames';
-import Loader from '../../components/Loader/Loader';
+import LoaderContainer from '../../components/Loader/LoaderContainer/LoaderContainer';
 
 export default function Misconfigurations({ location }) {
     const { loadingForm } = useHSFormLoaded();
@@ -62,11 +62,7 @@ export default function Misconfigurations({ location }) {
                                     <h2 className='font-semibold  text-2xl leading-normal text-primary mb-1'>
                                         Request a live demo
                                     </h2>
-                                    {loadingForm && (
-                                        <div className='flex justify-center items-center' style={{ minHeight: 510 }}>
-                                            <Loader />
-                                        </div>
-                                    )}
+                                    {loadingForm && <LoaderContainer minHeight={510} />}
                                     <div
                                         id='request-demo'
                                         style={{ minHeight: 510 }}

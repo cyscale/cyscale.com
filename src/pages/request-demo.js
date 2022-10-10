@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet';
 import { Container, Row, Section } from '../components/atoms/Containers';
 import useHSFormLoaded from '../hooks/useHSFormLoaded';
 import classnames from 'classnames';
-import Loader from '../components/Loader/Loader';
+import LoaderContainer from '../components/Loader/LoaderContainer/LoaderContainer';
 
 const ContactUs = ({ location }) => {
     const { loadingForm } = useHSFormLoaded();
@@ -46,11 +46,7 @@ const ContactUs = ({ location }) => {
                             </div>
                             <div className='col-span-12 lg:col-span-6 '>
                                 <div className='lg:bg-white rounded-lg mt-6 lg:mt-0 lg:rounded-xl lg:shadow-lg  lg:pt-12 pb-0 px-0 lg:px-12 max-w-lg mx-auto lg:mr-0 lg:ml-auto relative'>
-                                    {loadingForm && (
-                                        <div className='flex justify-center items-center' style={{ minHeight: 465 }}>
-                                            <Loader />
-                                        </div>
-                                    )}
+                                    {loadingForm && <LoaderContainer minHeight={465} />}
                                     <div
                                         style={{ minHeight: 465 }}
                                         id='demo-form'

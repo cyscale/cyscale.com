@@ -4,7 +4,7 @@ import { Container, Row, Section } from '../components/atoms/Containers';
 import Layout from '../components/layout/CleanLayout';
 import useHSFormLoaded from '../hooks/useHSFormLoaded';
 import classnames from 'classnames';
-import Loader from '../components/Loader/Loader';
+import LoaderContainer from '../components/Loader/LoaderContainer/LoaderContainer';
 
 const PricingPage = ({ location }) => {
     const { loadingForm } = useHSFormLoaded();
@@ -54,9 +54,7 @@ const PricingPage = ({ location }) => {
                                         Contact Sales
                                     </h2>
                                     {loadingForm && (
-                                        <div className='flex justify-center items-center' style={{ minHeight: 510 }}>
-                                            <Loader />
-                                        </div>
+                                        <LoaderContainer minHeight={510} />
                                     )}
                                     <div
                                         style={{ minHeight: 510 }}

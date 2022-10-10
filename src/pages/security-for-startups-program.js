@@ -13,7 +13,7 @@ import { animateScroll } from 'react-scroll';
 import ReactDOMServer from 'react-dom/server';
 import useHSFormLoaded from '../hooks/useHSFormLoaded';
 import classnames from 'classnames';
-import Loader from '../components/Loader/Loader';
+import LoaderContainer from '../components/Loader/LoaderContainer/LoaderContainer';
 
 const q1 = () => {
     return [
@@ -232,15 +232,12 @@ const SecurityForStartupsProgram = ({ location }) => {
                                         <h2 className='font-semibold text-2xl sm:text-3xl lg:text-2xl leading-normal mb-8 mt-8 lg:mt-0'>
                                             Apply now
                                         </h2>
-                                        {loadingForm && (
-                                            <div
-                                                className='flex justify-center items-center'
-                                                style={{ minHeight: 515 }}
-                                            >
-                                                <Loader />
-                                            </div>
-                                        )}
-                                        <div style={{ minHeight: 515 }} id='startups-form' className={classnames('pb-4', { hidden: loadingForm })} />
+                                        {loadingForm && <LoaderContainer minHeight={515} />}
+                                        <div
+                                            style={{ minHeight: 515 }}
+                                            id='startups-form'
+                                            className={classnames('pb-4', { hidden: loadingForm })}
+                                        />
                                     </div>
                                 </div>
                             </Row>

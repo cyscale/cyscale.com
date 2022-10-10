@@ -6,7 +6,7 @@ import { Container, Row, Section } from '../components/atoms/Containers';
 import { Address } from '../components/contact/Address';
 import useHSFormLoaded from '../hooks/useHSFormLoaded';
 import classnames from 'classnames';
-import Loader from '../components/Loader/Loader';
+import LoaderContainer from '../components/Loader/LoaderContainer/LoaderContainer';
 
 const ContactUs = ({ location }) => {
     const [showFormMessage, setShowFormMessage] = useState(true);
@@ -87,9 +87,7 @@ const ContactUs = ({ location }) => {
                                         </div>
                                     )}
                                     {loadingForm && (
-                                        <div className='flex justify-center items-center' style={{ minHeight: 510 }}>
-                                            <Loader />
-                                        </div>
+                                        <LoaderContainer minHeight={510} />
                                     )}
                                     <div
                                         style={{ minHeight: 510 }}

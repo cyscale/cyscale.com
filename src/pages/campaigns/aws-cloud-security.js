@@ -8,7 +8,7 @@ import { animateScroll } from 'react-scroll';
 import NewCookiesCampaignsLayout from '../../components/campaigns/NewCookiesCampaignsLayout';
 import useHSFormLoaded from '../../hooks/useHSFormLoaded';
 import classnames from 'classnames';
-import Loader from '../../components/Loader/Loader';
+import LoaderContainer from '../../components/Loader/LoaderContainer/LoaderContainer';
 
 const AWSCloudSolution = ({ location }) => {
     const { loadingForm } = useHSFormLoaded();
@@ -80,11 +80,7 @@ const AWSCloudSolution = ({ location }) => {
                                     <h2 className='font-semibold text-2xl sm:text-3xl lg:text-2xl leading-normal mb-8 mt-8 lg:mt-0 montserrat-font'>
                                         Request a live demo
                                     </h2>
-                                    {loadingForm && (
-                                        <div className='flex justify-center items-center' style={{ minHeight: 450 }}>
-                                            <Loader />
-                                        </div>
-                                    )}
+                                    {loadingForm && <LoaderContainer minHeight={450} />}
                                     <div
                                         style={{ minHeight: 450 }}
                                         id='request-aws-demo'
