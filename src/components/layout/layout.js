@@ -10,6 +10,7 @@ import loadable from '@loadable/component';
 import ScrollToTopButton from '../ScrollToTopButton/ScrollToTopButton';
 import useSetCookieBanner from '../cookies-banner/useSetCookieBanner';
 import { cookieConsentKey } from '../../common/constants';
+import useOptimizeEvent from '../../hooks/useOptimizeEvent';
 const Footer = loadable(() => import('./footer'));
 
 const Layout = ({
@@ -28,6 +29,7 @@ const Layout = ({
     banner,
     blogDataTitle
 }) => {
+    useOptimizeEvent()
     useHubspotEvents({ location, pageName });
     const { cookies, cookiesBanner, setCookiesBanner } = useSetCookieBanner();
 
