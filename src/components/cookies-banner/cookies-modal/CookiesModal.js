@@ -30,7 +30,7 @@ const PerformanceAndAnalyticsSwitch = ({ setPerformanceAndAnalytics, performance
                 <input
                     type='checkbox'
                     className='sr-only'
-                    onChange={() => setPerformanceAndAnalytics(true)}
+                    onChange={() => setPerformanceAndAnalytics(!performanceAndAnalytics)}
                     defaultChecked={performanceAndAnalytics}
                     role='switch'
                 />
@@ -64,20 +64,18 @@ const ConfirmButtons = ({
         setCookie(cookieConsentKey, { performanceAndAnalytics }, { ...cookiesOptions });
         setCookiesModal(false);
         setCookiesBanner(false);
-        window.location.reload(false);
     };
 
     const acceptAllCookies = () => {
         setCookie(cookieConsentKey, { performanceAndAnalytics: true }, { ...cookiesOptions });
         setCookiesModal(false);
         setCookiesBanner(false);
-        window.location.reload(false);
     };
 
     return (
         <div className={`flex justify-${justify} items-center h-full`}>
             <button
-                className={`rounded border text-black text-center py-3 px-${paddingY} w-42 h-auto`}
+                className={`rounded border text-black text-center py-3 px-${paddingY} w-42 h-auto cookies-button`}
                 onClick={confirmMyChoices}
             >
                 Confirm My Choices
@@ -85,7 +83,7 @@ const ConfirmButtons = ({
             <button
                 className={`rounded bg-red text-white text-center py-3 px-${paddingY} w-42 ml-4 ${
                     marginRight === 6 ? 'mr-6' : ''
-                }`}
+                } cookies-button`}
                 onClick={acceptAllCookies}
             >
                 Accept All Cookies

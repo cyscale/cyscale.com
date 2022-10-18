@@ -60,9 +60,8 @@ const CookiesBanner = ({ cookiesBanner, setCookiesBanner, pageName }) => {
                                     </button>
                                 </p>
                                 <button
-                                    className='inline-block font-medium rounded bg-red text-white text-center py-3 px-6 ml-4'
+                                    className='inline-block font-medium rounded bg-red text-white text-center py-3 px-6 ml-4 cookies-button'
                                     aria-label='Accept cookies'
-                                    id='confirm-button'
                                     onClick={() => {
                                         setCookie(
                                             cookieConsentKey,
@@ -70,7 +69,6 @@ const CookiesBanner = ({ cookiesBanner, setCookiesBanner, pageName }) => {
                                             { ...cookiesOptions }
                                         );
                                         setCookiesBanner(!cookiesBanner);
-                                        window.location.reload(false);
                                     }}
                                 >
                                     Accept All Cookies
