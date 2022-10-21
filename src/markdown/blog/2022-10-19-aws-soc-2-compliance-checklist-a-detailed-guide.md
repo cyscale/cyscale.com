@@ -27,13 +27,11 @@ tags:
 ---
 <!--StartFragment-->
 
-
-
 SOC 2 is a compliance standard that regulates the way data security is handled within B2B (business-to-business) organizations. SOC (Service and Organization Controls) 2 is an international standard developed by AICPA (The American Institute of Certified Public Accountants). 
 
 In this article, we will understand what requirements your company needs to fulfill to obtain the [SOC 2 certifications](https://cyscale.com/blog/soc-2-compliance-in-cloud/) and how to implement them correctly in your AWS environment. 
 
-The requirements 
+### The requirements 
 
 Firstly, the rules within SOC 2 are grouped by 5 TSC (Trust Service Criteria): 
 
@@ -45,9 +43,9 @@ Firstly, the rules within SOC 2 are grouped by 5 TSC (Trust Service Criteria): 
 
 SOC 2 has 64 mandatory controls, grouped by the 5 TSC mentioned above. In this article, we will look at a few of the controls required, how to implement them in your AWS environment and how to check if your implementation is complete. 
 
-A checklist 
+##### A checklist 
 
-Requires Additional Authentication or Credentials 
+### Requires Additional Authentication or Credentials 
 
 MFA (Multi-Factor Authentication) is a mechanism that adds additional steps to the authentication flow and requests supplementary credentials. These credentials can be: 
 
@@ -66,7 +64,7 @@ Steps to enable MFA in your AWS environment, according to the [documentation](ht
 
 If your company is using an external identity provider, you have to ensure that MFA is configured for access to the AWS console. 
 
-Restricts Access 
+### Restricts Access 
 
 This control, in the “Security” TSC refers to restricting traffic to and from any cloud services and assets hosted in the cloud. This includes: 
 
@@ -80,7 +78,7 @@ To close an open port, follow these steps: 
 3. For each security group, click the Inbound Rules tab, and remove the rules that allow access to the ports you want to close. Repeat the same for the Outbound Rules. 
 4. Remember to click save. 
 
-Implements Boundary Protection Systems 
+### Implements Boundary Protection Systems 
 
 The third requirement we will analyze under the "Security" section of SOC refers to the usage of firewalls, DMZs (Demilitarized Zones), IDS, IPS, and others.  
 
@@ -92,7 +90,7 @@ To quickly deploy a firewall: 
 * Open the Amazon VPC console, create a firewall subnet, and update your VPC Route Tables. 
 * Configure the firewall policy by accessing the Amazon VPC console navigation pane under Network Firewall. Choose Firewall policies and add any desired configurations. 
 
-Creates and Maintains Records of System Storage Activities 
+### Creates and Maintains Records of System Storage Activities 
 
 This control, located under the “Processing Integrity” criteria, checks if logging is implemented in your cloud environment.  
 
@@ -106,9 +104,9 @@ To enable logging in your AWS infrastructure, you can use Amazon CloudTrail. Thi
 
 Amazon CloudTrail can be used together with Amazon CloudWatch to extend monitoring to applications and cloud assets and to analyze their health. 
 
-Amazon CloudTrail is enabled by default in your AWS account. 
+**Amazon CloudTrail is enabled by default in your AWS account.** 
 
-Protects Encryption Keys 
+### Protects Encryption Keys 
 
 [Encryption](https://cyscale.com/blog/types-of-encryption/) is essential to ensure confidentiality of data. In the “Confidentiality” section of SOC 2, we have controls for both encryption and key management.  
 
@@ -121,13 +119,11 @@ According to AWS, this service can be used:  
 * Through the AWS Management Console,  
 * Using the AWS KMS APIs. 
 
-Finally, check your implementations 
+### Finally, check your implementations 
 
 Besides the controls presented in this article, there are many more. 
 
 Although so many requirements can quickly become overwhelming, Cyscale can help you easily keep track of what you’ve correctly implemented and what requires your attention on our [SOC 2](https://cyscale.com/blog/soc-2-vs-ISO-27001-SaaS/) compliance page. 
-
-  
 
 Many technical controls in Cyscale can be mapped to SOC 2 controls to provide visibility in your cloud environment and prove compliance. 
 
@@ -136,7 +132,5 @@ A few examples of controls that apply to the presented requirements (and more) a
 * Ensure all users have MFA configured. 
 * Ensure CloudTrail is enabled in all regions. 
 * Ensure no security groups allow ingress from 0.0.0.0/0 to port 22 (SSH). 
-
- 
 
 <!--EndFragment-->
