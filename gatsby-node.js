@@ -59,7 +59,7 @@ exports.createPages = async ({ graphql, actions }) => {
         query loadCareersQuery {
             allMarkdownRemark(
                 sort: { order: DESC, fields: frontmatter___date }
-                filter: { frontmatter: { templateKey: { eq: "career-page" } } }
+                filter: { frontmatter: { templateKey: { eq: "career-page" }, disabled: { eq: false } } }
             ) {
                 edges {
                     node {
