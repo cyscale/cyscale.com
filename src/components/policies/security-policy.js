@@ -68,10 +68,16 @@ const Index = ({ location, pageName }) => {
                             </p>
                             <h2 className='font-semibold mb-36px text-24px'>Cloud Infrastructure Security</h2>
                             <p className='mb-36px'>
-                                <strong>Cyscale Platform’s</strong> cloud infrastructure is hosted in a fully redundant, secure environment, with strictly 
-                                controlled access using role-based access management and restrictions applied following the principle of least
-                                privilege. In addition, we leverage security features from the cloud provider such as firewall protection, 
-                                making sure that only necessary ports are open to the outside network. 
+                                All <strong>Cyscale Platform</strong> services run in an isolated cloud virtual network with rules that 
+                                prevent unauthorized access and firewalls enabled to prevent unauthorized or malicious requests. Several 
+                                procedures and controls are in place to ensure that access and changes to the 
+                                production environments are made only with prior approval and the proper business justification. 
+                                In addition, the services <strong>Cyscale Platform</strong> uses to run on are fully redundant, and communications 
+                                inside the virtual network are encrypted with the highest industry standards. Our Cloud Service Provider is 
+                                accredited for implementing security practices against internationally recognized frameworks such as ISO 27001, 
+                                SOC 2 Type 2, and PCI DSS. Alongside these reports, the production cloud environment that the <strong>Cyscale Platform</strong>
+                                runs on is 100% aligned with the best practices suggested by the CIS (Center for Internet Security) benchmark. 
+                                Please get in touch with us if you’re interested in obtaining a copy of these certifications or audit reports.
                             </p>
                             <h2 className='font-semibold mb-36px text-24px'>Application Security</h2>
                             <p className='mb-36px'>
