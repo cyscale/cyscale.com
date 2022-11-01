@@ -57,13 +57,13 @@ Let's look at the best practices recommended by Okta and how you can make sure y
 
 #### 1. Use multi-factor authentication (MFA) 
 
-##### Scenario 
+### Scenario 
 
 An employee uses a weak password for their accounts. The password was cracked through a brute-force attack by an attacker. 
 
 The employee re-uses their password for Okta SSO, and MFA is not implemented in the company, so the attacker now has full access to all of the employee's accounts. 
 
-##### Best practice 
+### Best practice 
 
 [MFA](https://cyscale.com/blog/iam-best-practices-from-aws-azure-gcp/#MFA) is a type of authentication that requires an entity to provide at least two different types of credentials. 
 
@@ -79,13 +79,13 @@ Okta recommends you use a one-time password or a biometric verification in your 
 
 #### 2. Stop using passwords 
 
-##### Scenario 
+### Scenario 
 
 An employee writes their password on a post-it note and leaves it on their desk. 
 
 An employee from another department finds it and can now login into the employee's account. 
 
-##### Best practice 
+### Best practice 
 
 Passwordless authentication is possible by providing a public identifier (such as a username or an email address) and then using a different way of proving your identity (through a phone or a token, for example), thus eliminating the use of passwords. 
 
@@ -104,13 +104,13 @@ Okta suggests solutions that can help you go passwordless. You can use: 
 
 #### 3. Manage user access by following the Least Privilege Principle 
 
-##### Scenario 
+### Scenario 
 
 Although they do not require such privileges, an employee was assigned administrative rights. 
 
 The employee accidentally deletes an asset—this action results in permanent data loss. 
 
-##### Best practice 
+### Best practice 
 
 The Least Privilege Principle states that users should not have more permissions than they require to perform their tasks. 
 
@@ -124,13 +124,13 @@ Make sure to restrict users as much as possible in accordance with their jobs. 
 
 #### 4. Ensure the Separation of Duties 
 
-##### Scenario 
+### Scenario 
 
 The administrator goes on vacation. They are the only ones with administrator privileges.  
 
 A critical vulnerability appears in the cloud infrastructure, but nobody has the necessary rights to patch it. The administrator cannot be contacted and is out of the office for a few weeks. 
 
-##### Best practice 
+### Best practice 
 
 The Separation of Duties Principle helps eliminate a single point of failure by assuring no entity has the rights to execute a critical task by themselves. 
 
@@ -140,7 +140,7 @@ Configuring at least two administrators eliminates the single point of failure. 
 
 #### 5. Monitor activity 
 
-##### Scenario 
+### Scenario 
 
 An attacker manages to gain control of an employee's account and authenticates from a different device or an unusual location. 
 
@@ -148,7 +148,7 @@ This authentication is logged, but the logs are not carefully monitored, so the 
 
 The hacker can now move laterally and compromise workstations, databases, and other accounts without raising any alarms in the company. 
 
-##### Best practice 
+### Best practice 
 
 Logging and monitoring are two features that should be implemented in your cloud environment. 
 
@@ -163,13 +163,13 @@ Okta recommends that you constantly look for odd activity in your cloud infrastr
 
 #### 6. Automate onboarding and offboarding 
 
-##### Scenario 
+### Scenario 
 
 A software developer leaves the company, but their account is not correctly deprovisioned.  
 
 They can still contribute to GitHub repositories and modify production code. 
 
-##### Best practice 
+### Best practice 
 
 The process of onboarding or offboarding an employee can be tedious. 
 
