@@ -324,6 +324,28 @@ img[src*='#shadow'],
     transition: transform 0.3s linear;
 }
 
+.video-enter {
+    z-index: 100;
+    transform: translateY(100%);
+}
+
+.video-enter-active {
+    z-index: 100;
+    transform: translateY(0);
+    transition: transform 0.3s linear;
+}
+
+.video-exit {
+    z-index: 100;
+    transform: translateY(0);
+}
+
+.video-exit-active {
+    z-index: 100;
+    transform: translateY(100%);
+    transition: transform 0.3s linear;
+}
+
 .montserrat-font {
     font-family: 'Montserrat', sans-serif;
 }
