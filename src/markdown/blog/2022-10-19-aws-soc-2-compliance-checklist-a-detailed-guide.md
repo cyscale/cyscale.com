@@ -3,7 +3,7 @@ templateKey: blog-post
 title: "AWS SOC 2 Compliance Checklist: A Detailed Guide"
 seoTitle: "AWS SOC 2 Compliance Checklist: A Detailed Guide"
 authors: Sabrina Lupșan
-permalink: AWS-SOC 2-Compliance-Checklist-A-Detailed-Guide
+permalink: AWS-SOC-2-Compliance-Checklist-A-Detailed-Guide
 categories:
   - News
   - Compliance
