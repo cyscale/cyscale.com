@@ -14,11 +14,11 @@ const heroHeight = css`
     }
 
     @media (min-height: 1180px) and (width: 820px) {
-        height: calc(100vh + 10rem);
+        height: calc(100vh + 14rem);
     }
 
     @media (min-height: 1368px) and (width: 912px) {
-        height: 100vh;
+        height: calc(100vh + 2.75rem);
     }
 
     @media (min-height: 1366px) and (width: 1024px) {
@@ -62,9 +62,9 @@ const Variant = ({ location, data }) => {
                                 <h2 className='font-semibold text-2xl sm:text-3xl lg:text-2xl leading-normal mb-8 mt-8 lg:mt-0 montserrat-font'>
                                     Request a live demo
                                 </h2>
-                                {loadingForm && <LoaderContainer minHeight={450} />}
+                                {loadingForm && <LoaderContainer minHeight={500} />}
                                 <div
-                                    style={{ minHeight: 450 }}
+                                    style={{ minHeight: 500 }}
                                     id='request-cspm-demo'
                                     className={classnames('pb-4', { hidden: loadingForm })}
                                 />

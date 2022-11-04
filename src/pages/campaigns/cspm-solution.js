@@ -26,7 +26,7 @@ const CSPMSolution = ({ location }) => {
             }
             dash: file(relativePath: { eq: "video-thumbnail.png" }) {
                 childImageSharp {
-                    gatsbyImageData(width: 300, layout: CONSTRAINED)
+                    gatsbyImageData(width: 380, layout: CONSTRAINED)
                 }
             }
         }
@@ -35,18 +35,21 @@ const CSPMSolution = ({ location }) => {
     useEffect(() => {
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({ event: 'optimize.activate' });
-        if (window && window.dataLayer && !isExperimentLoaded) {
-            window.dataLayer.push({
-                event: 'cpsm-solution-as-many-per-session',
-                eventCallback: () => {
-                    const experimentType =
-                        window.google_optimize && window.google_optimize.get('URs5J6UKRtaSq2Adtp2hRQ');
-                    if (experimentType) {
-                        setExperimentType(experimentType);
-                        setIsExperimentLoaded(true);
+        if (window && !isExperimentLoaded) {
+            if (window.google_optimize) {
+                window.dataLayer.push({
+                    event: 'cpsm-solution-as-many-per-session',
+                    eventCallback: () => {
+                        const experimentType = window.google_optimize.get('URs5J6UKRtaSq2Adtp2hRQ');
+                        if (experimentType) {
+                            setExperimentType(experimentType);
+                            setIsExperimentLoaded(true);
+                        }
                     }
-                }
-            });
+                });
+            } else {
+                setIsExperimentLoaded(true);
+            }
         }
     }, []);
 

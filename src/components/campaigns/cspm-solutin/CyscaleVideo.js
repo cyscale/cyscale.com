@@ -51,7 +51,7 @@ const VideoCyscale = ({ setModal }) => {
                             <img src={menuCloseCookiesModal} alt='toggle menu' width={15} height={15} />
                         </button>
                         <video width='auto' height='auto' autoPlay controls tabIndex='2' ref={videoRef}>
-                            <source src='https://d2pcj0a6ul4o14.cloudfront.net/cyscale.mp4' type='video/mp4' />
+                            <source src='https://d3n52qn7viv754.cloudfront.net/videos/cyscale.mp4' type='video/mp4' />
                             Your browser does not support the video tag.
                         </video>
                     </div>

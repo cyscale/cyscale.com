@@ -4,15 +4,17 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import { CSSTransition } from 'react-transition-group';
 import VideoCyscale from './CyscaleVideo';
 import styled from '@emotion/styled';
+import useMediaQuery from '../../../hooks/useMediaQuery';
 
 const PlayIcon = styled.img`
-    top: 4.5rem;
-    left: 8.5rem;
-    transform: ${({ isHover }) => (isHover ? 'scale(2)' : 'scale(1.75)')};
+    top: 6rem;
+    left: 46%;
+    transform: ${({ isHover }) => (isHover ? 'scale(2.5)' : 'scale(2)')};
 `;
 
 const HeroVideo = ({ data, modal, setModal }) => {
     const [isHover, setIsHover] = useState(false);
+    const matches = useMediaQuery('(min-width: 23.438rem) and (max-width: 63.938rem)');
 
     return (
         <>
@@ -30,6 +32,7 @@ const HeroVideo = ({ data, modal, setModal }) => {
                         className='w-10 inline-block absolute cursor-pointer z-10'
                         alt=''
                         isHover={isHover}
+                        matches={matches}
                     />
                     <GatsbyImage
                         image={data.dash.childImageSharp.gatsbyImageData}
