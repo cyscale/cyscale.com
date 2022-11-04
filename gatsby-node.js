@@ -13,6 +13,10 @@ const redirects = [
     {
         fromPath: '/startups',
         toPath: '/security-for-startups-program'
+    },
+    {
+        fromPath: '/blog/AWS-SOC%202-Compliance-Checklist-A-Detailed-Guide/',
+        toPath: '/blog/AWS-SOC-2-Compliance-Checklist-A-Detailed-Guide/'
     }
 ];
 
