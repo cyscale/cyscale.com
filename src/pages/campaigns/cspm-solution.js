@@ -38,9 +38,9 @@ const CSPMSolution = ({ location }) => {
         if (window && !isExperimentLoaded) {
             if (window.google_optimize) {
                 window.dataLayer.push({
-                    event: 'cpsm-solution-as-many-per-session',
+                    event: 'cpsm-solution-campaign',
                     eventCallback: () => {
-                        const experimentType = window.google_optimize.get('URs5J6UKRtaSq2Adtp2hRQ');
+                        const experimentType = window.google_optimize.get('t5RUziexT6yX_516snKa-A');
                         if (experimentType) {
                             setExperimentType(experimentType);
                             setIsExperimentLoaded(true);
