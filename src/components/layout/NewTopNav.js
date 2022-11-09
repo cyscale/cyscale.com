@@ -21,13 +21,16 @@ const NewTopNav = ({ pageName, showLogo = true, location }) => {
     const trigger = useScrollTrigger();
     const [showBurgerButton, setShowBurgerButton] = useState(pageName !== 'HomePage');
     const [showMenu, setShowMenu] = useState(false);
+    const [showBanner, setShowBanner] = useState(true);
     const appLink = useAppLink();
 
     useEffect(() => {
         const onScroll = () => {
             if (window.scrollY === 0) {
+                setShowBanner(true);
                 root.current.classList.remove('transparent-bg');
             } else {
+                setShowBanner(false);
                 root.current.classList.add('transparent-bg');
             }
         };
@@ -70,6 +73,19 @@ const NewTopNav = ({ pageName, showLogo = true, location }) => {
                 <div tw='container max-w-7xl mx-auto pt-2.5 hidden xl:block' css={paddingNav}>
                     <NewNavigation pageName={pageName} showLogo={showLogo} appLink={appLink} location={location} />
                 </div>
+                {showBanner && location.pathname.includes('campaigns') && (
+                    <div className='block bg-white px-8'>
+                        <div className='container max-w-7xl m-auto'>
+                            <div className='flex justify-end'>
+                                <p className='text-xs sm:text-sm py-2'>
+                                    <strong>Call:</strong>
+                                    <span style={{ color: '#5E5E5E' }}> +44 7401 208466</span> &nbsp;&nbsp;&nbsp;
+                                    <strong>Email:</strong> <span style={{ color: '#5E5E5E' }}>sales@cyscale.com</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                )}
                 <div tw='pt-2.5 px-8 block xl:hidden'>
                     <MobileNavbar
                         pageName={pageName}
