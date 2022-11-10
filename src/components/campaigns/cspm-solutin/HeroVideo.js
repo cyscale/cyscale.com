@@ -7,8 +7,8 @@ import styled from '@emotion/styled';
 import useMediaQuery from '../../../hooks/useMediaQuery';
 
 const PlayIcon = styled.img`
-    top: 6rem;
-    left: 46%;
+    top: calc((100% / 2) - 1.25rem);
+    left: calc((100% / 2) - 1.25rem);
     transform: ${({ isHover }) => (isHover ? 'scale(2.5)' : 'scale(2)')};
 `;
 
