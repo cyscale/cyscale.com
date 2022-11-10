@@ -95,12 +95,13 @@ const DataSecurity = ({ location }) => {
                             <div className='col-span-12 lg:col-span-6 '>
                                 <div className='lg:mt-4 pt-2 md:pt-8 lg:pt-4 max-w-xl mx-auto lg:mx-0'>
                                     <h1 className='text-center sm:text-left text-blue text-3xl md:text-4xl lg:text-5xl lg:leading-normal mb-8 montserrat-font font-semibold'>
-                                        Data Security <br className='hidden lg:block' /> Dashboard
+                                        Multi-cloud <br /> Data Security <br className='hidden lg:block' /> for
+                                        resilient cloud environments
                                     </h1>
                                     <p className='text-center sm:text-left text-base lg:text-lg leading-relaxed text-gray mt-16'>
-                                        The Data Security feature consists of a dashboard highlighting important data
-                                        security concerns, so that your organization can keep track of it’s data
-                                        security posture, be prepared for audits and avoid data breaches.
+                                        Keep track of your organization’s data security posture with Cyscale’s inventory
+                                        of cloud data stores and a contextual security analysis. Protect your most
+                                        important data assets, avoid breaches and be prepared for audits.
                                     </p>
                                     <div className='flex flex-row max-w-md sm:max-w-xl justify-between flex-wrap space-y-6 lg:space-y-0 lg:space-x-1 px-18 sm:px-0 mx-auto mt-4 lg:mt-32'>
                                         <img
