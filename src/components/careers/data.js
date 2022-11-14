@@ -13,7 +13,6 @@ import {
     George,
     Virginia,
     Petru,
-    Elena,
     Mihnea,
     Norbert
 } from '../about/images';
@@ -33,14 +32,6 @@ const data = [
         name: 'Mihnea Stoian',
         position: 'Backend Engineer',
         linkedin: 'https://www.linkedin.com/in/mihnea-stoian-82382822b',
-        quote: false
-    },
-    {
-        order: 14,
-        photo: <Elena />,
-        name: 'Elena Boldor',
-        position: 'Technical Recruiter',
-        linkedin: 'https://www.linkedin.com/in/elena-boldor/',
         quote: false
     },
     {
