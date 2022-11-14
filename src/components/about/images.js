@@ -113,11 +113,6 @@ function withImageData(WrappedComponent) {
                             gatsbyImageData(height: 256, layout: CONSTRAINED)
                         }
                     }
-                    elena: file(relativePath: { eq: "elena.jpeg" }) {
-                        childImageSharp {
-                            gatsbyImageData(height: 256, layout: CONSTRAINED)
-                        }
-                    }
                     mihnea: file(relativePath: { eq: "mihnea.png" }) {
                         childImageSharp {
                             gatsbyImageData(height: 256, layout: CONSTRAINED)
@@ -202,9 +197,6 @@ export const Seedblink = withImageData((props) => (
 ));
 export const Petru = withImageData((props) => (
     <Img image={props.imageData.petru.childImageSharp.gatsbyImageData} {...props} />
-));
-export const Elena = withImageData((props) => (
-    <Img image={props.imageData.elena.childImageSharp.gatsbyImageData} {...props} />
 ));
 export const Mihnea = withImageData((props) => (
     <Img image={props.imageData.mihnea.childImageSharp.gatsbyImageData} {...props} />
