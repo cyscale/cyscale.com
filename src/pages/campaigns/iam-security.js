@@ -43,7 +43,7 @@ const IamSecurity = ({ location }) => {
             description={'Identity and Access Management Security for Cloud'}
             pageName={'Identity and Access Management Security for Cloud'}
         >
-            <div className='bg-hero-campaigns-iam-security pb-8 pt-16 lg:pt-20 xl:pt-12'>
+            <div className='bg-hero-campaigns-iam-security pb-8 pt-32 lg:pt-40 xl:pt-12'>
                 <Container>
                     <div>
                         <Row>

@@ -42,7 +42,7 @@ const Variant = ({ location, data }) => {
             }
             pageName={'CSPMSolutionCampaign'}
         >
-            <div className='bg-hero-campaigns-iam-security pb-8 pt-32 lg:pt-20 xl:pt-12' css={heroHeight}>
+            <div className='bg-hero-campaigns-iam-security pb-8 pt-32 lg:pt-40 xl:pt-12' css={heroHeight}>
                 <Container>
                     <Row>
                         <div className='col-span-12 block lg:hidden'>
