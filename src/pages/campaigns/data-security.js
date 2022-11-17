@@ -82,9 +82,9 @@ const DataSecurity = ({ location }) => {
             formId={'5258bbe9-2f49-4225-b803-c83cfce8921c'}
             formTargetId={'#request-data-security-demo'}
             location={location}
-            title={'Comprehensive CSPM solution'}
+            title={'Cloud Data Security - Securing Data Stored in the Cloud | Cyscale'}
             description={
-                'Streamline posture management for multi-cloud environments, enable teams to continuously detect, prevent misconfigurations and control threats and ensure compliance for your cloud assets.'
+                "Keep tabs on your fast-growing cloud inventory with automated data discovery and classification, compliance scans on autopilot and a fully auditable evidence trail. And that's just a taste!"
             }
             pageName={'DataSecurityCampaign'}
         >
@@ -176,7 +176,7 @@ const DataSecurity = ({ location }) => {
                                     Pillars of a healthy <br /> Data Security Program
                                 </h2>
                             </div>
-                            <div className='sm:grid sm:grid-cols-12 sm:gap-6 mt-16 mx-auto lg:mx-0 max-w-md sm:max-w-xl'>
+                            <div className='grid grid-cols-12 gap-6 mt-16 mx-auto lg:mx-0 max-w-md sm:max-w-xl'>
                                 <div className='col-span-12 lg:col-span-6'>
                                     <img src={DataClassificationIcon} alt='' width={30} height={30} />
                                     <h4 className='text-lg font-semibold montserrat-font mt-2'>
@@ -198,7 +198,7 @@ const DataSecurity = ({ location }) => {
                                     </p>
                                 </div>
                             </div>
-                            <div className='sm:grid sm:grid-cols-12 sm:gap-6 mt-8 mx-auto lg:mx-0  max-w-md sm:max-w-xl'>
+                            <div className='grid grid-cols-12 gap-6 mt-6 mx-auto lg:mx-0  max-w-md sm:max-w-xl'>
                                 <div className='col-span-12 lg:col-span-6'>
                                     <img src={DataWhereaboutsIcon} alt='' width={30} height={30} />
                                     <h4 className='text-lg font-semibold montserrat-font mt-2'>Data whereabouts</h4>
@@ -246,14 +246,14 @@ const DataSecurity = ({ location }) => {
                         <Row className='lg:gap-6'>
                             <div className='col-span-12 lg:col-span-4'>
                                 <div
-                                    className='font-semibold text-base my-6 p-2 flex items-center font-montserrat max-w-md sm:max-w-xl lg:max-w-sm mx-auto'
+                                    className='font-semibold text-base mt-6 mb-10 lg:my-6 p-2 flex items-center font-montserrat max-w-md sm:max-w-xl lg:max-w-sm mx-auto'
                                     css={backgroundSection}
                                 >
                                     <img src={WarningIcon} alt='' className='mr-2' />
                                     Unencrypted data stores
                                 </div>
                                 <div
-                                    className='font-semibold text-base my-6 p-2 flex items-center font-montserrat max-w-md sm:max-w-xl lg:max-w-sm mx-auto'
+                                    className='font-semibold text-base mb-10 lg:my-6 p-2 flex items-center font-montserrat max-w-md sm:max-w-xl lg:max-w-sm mx-auto'
                                     css={backgroundSection}
                                 >
                                     <img src={WarningIcon} alt='' className='mr-2' />
@@ -269,14 +269,14 @@ const DataSecurity = ({ location }) => {
                             </div>
                             <div className='col-span-12 lg:col-span-4'>
                                 <div
-                                    className='font-semibold text-base lg:mt-6 mb-6 p-2 flex items-center font-montserrat max-w-md sm:max-w-xl lg:max-w-sm mx-auto'
+                                    className='font-semibold text-base lg:mt-6 mb-10 lg:mb-6 p-2 flex items-center font-montserrat max-w-md sm:max-w-xl lg:max-w-sm mx-auto'
                                     css={backgroundSection}
                                 >
                                     <img src={WarningIcon} alt='' className='mr-2' />
                                     Databases with a public IP address
                                 </div>
                                 <div
-                                    className='font-semibold text-base my-6 p-2 flex items-center font-montserrat max-w-md sm:max-w-xl lg:max-w-sm mx-auto'
+                                    className='font-semibold text-base mb-10 lg:my-6 p-2 flex items-center font-montserrat max-w-md sm:max-w-xl lg:max-w-sm mx-auto'
                                     css={backgroundSection}
                                 >
                                     <img src={WarningIcon} alt='' className='mr-2' />
@@ -292,14 +292,14 @@ const DataSecurity = ({ location }) => {
                             </div>
                             <div className='col-span-12 lg:col-span-4'>
                                 <div
-                                    className='font-semibold text-base lg:mt-6 mb-6 p-2 flex items-center font-montserrat max-w-md sm:max-w-xl lg:max-w-sm mx-auto'
+                                    className='font-semibold text-base lg:mt-6 mb-10 lg:mb-6 p-2 flex items-center font-montserrat max-w-md sm:max-w-xl lg:max-w-sm mx-auto'
                                     css={backgroundSection}
                                 >
                                     <img src={WarningIcon} alt='' className='mr-2' />
                                     Publicly accessible object containers
                                 </div>
                                 <div
-                                    className='font-semibold text-base my-6 p-2 flex items-center font-montserrat max-w-md sm:max-w-xl lg:max-w-sm mx-auto'
+                                    className='font-semibold text-base mb-10 lg:my-6 p-2 flex items-center font-montserrat max-w-md sm:max-w-xl lg:max-w-sm mx-auto'
                                     css={backgroundSection}
                                 >
                                     <img src={WarningIcon} alt='' className='mr-2' />
