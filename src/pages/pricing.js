@@ -104,9 +104,16 @@ const PricingPage = ({ location }) => {
                         <Row className='mt-16 lg:max-w-5xl mx-auto'>
                             <div className='col-span-12 lg:col-span-4'>
                                 <div className='h-40 bg-white rounded-lg flex flex-col justify-between p-4 max-w-lg mx-auto lg:mx-0'>
-                                    <h2 className='text-blue font-montserrat font-bold' css={customFontSize}>
-                                        Pro
-                                    </h2>
+                                    <Link
+                                        to='meetings-calendar'
+                                        smooth={true}
+                                        duration={500}
+                                        className='cursor-pointer'
+                                    >
+                                        <h2 className='text-blue font-montserrat font-bold' css={customFontSize}>
+                                            Pro
+                                        </h2>
+                                    </Link>
                                     <h4 className='text-blue font-montserrat font-semibold text-base lg:text-lg'>
                                         With up to 1000 assets
                                     </h4>
@@ -118,9 +125,16 @@ const PricingPage = ({ location }) => {
                                     css={mostPopularCard}
                                 >
                                     <div className='flex items-center justify-between'>
-                                        <h2 className='text-blue font-montserrat font-bold' css={customFontSize}>
-                                            Pro
-                                        </h2>
+                                        <Link
+                                            to='meetings-calendar'
+                                            smooth={true}
+                                            duration={500}
+                                            className='cursor-pointer'
+                                        >
+                                            <h2 className='text-blue font-montserrat font-bold' css={customFontSize}>
+                                                Scale
+                                            </h2>
+                                        </Link>
                                         <p
                                             className='text-blue py-2 px-4 rounded-md'
                                             css={css`
@@ -137,9 +151,16 @@ const PricingPage = ({ location }) => {
                             </div>
                             <div className='col-span-12 lg:col-span-4'>
                                 <div className='h-40 bg-white rounded-lg flex flex-col justify-between p-4 max-w-lg mx-auto lg:mx-0'>
-                                    <h2 className='text-blue font-montserrat font-bold' css={customFontSize}>
-                                        Enterprise
-                                    </h2>
+                                    <Link
+                                        to='meetings-calendar'
+                                        smooth={true}
+                                        duration={500}
+                                        className='cursor-pointer'
+                                    >
+                                        <h2 className='text-blue font-montserrat font-bold' css={customFontSize}>
+                                            Enterprise
+                                        </h2>
+                                    </Link>
                                     <h4 className='text-blue font-montserrat font-semibold text-base lg:text-lg'>
                                         With up to 10000 assets
                                     </h4>
@@ -205,27 +226,25 @@ const PricingPage = ({ location }) => {
                             </p>
                             <div className='flex mt-8'>
                                 <img src={checkMarkIcon} alt='' />{' '}
-                                <GatsbyLink className='ml-2 text-sm hover:underline' to={'/'}>
+                                <GatsbyLink
+                                    className='ml-2 text-sm hover:underline'
+                                    to={'/use-cases/cloud-data-security/'}
+                                >
                                     Multi-cloud support (AWS, GCP, Azure)
                                 </GatsbyLink>
                             </div>
                             <div className='flex mt-2'>
                                 <img src={checkMarkIcon} alt='' />{' '}
-                                <GatsbyLink className='ml-2 text-sm hover:underline' to={'/'}>
-                                    Integrations (AWS SSO, Okta, Github)
-                                </GatsbyLink>
+                                <p className='ml-2 text-sm'>Integrations (AWS SSO, Okta, Github)</p>
                             </div>
                             <div className='flex mt-2'>
-                                <img src={checkMarkIcon} alt='' />{' '}
-                                <GatsbyLink className='ml-2 text-sm hover:underline' to={'/'}>
-                                    Asset Inventory
-                                </GatsbyLink>
+                                <img src={checkMarkIcon} alt='' /> <p className='ml-2 text-sm'>Asset Inventory</p>
                             </div>
                             <div className='flex mt-2 items-start'>
                                 <img src={checkMarkIcon} alt='' />{' '}
-                                <GatsbyLink className='ml-2 text-sm hover:underline' to={'/'}>
+                                <p className='ml-2 text-sm'>
                                     Powerful dashboards (Global dashboard, Identity, Data Security)
-                                </GatsbyLink>
+                                </p>
                             </div>
                         </div>
                         <div className='col-span-12 lg:col-span-4 mx-auto max-w-lg lg:mx-0 mt-8 lg:mt-0'>
@@ -239,31 +258,31 @@ const PricingPage = ({ location }) => {
                             </p>
                             <div className='flex mt-8 items-start'>
                                 <img src={checkMarkIcon} alt='' />{' '}
-                                <GatsbyLink className='ml-2 text-sm hover:underline' to={'/'}>
+                                <GatsbyLink
+                                    className='ml-2 text-sm hover:underline'
+                                    to={'/use-cases/cloud-misconfigurations/'}
+                                >
                                     Misconfigurations (Detection & Remediation)
                                 </GatsbyLink>
                             </div>
                             <div className='flex mt-2 items-start'>
                                 <img src={checkMarkIcon} alt='' />{' '}
-                                <GatsbyLink className='ml-2 text-sm hover:underline' to={'/'}>
-                                    400+ security controls (including contextual analysis)
-                                </GatsbyLink>
+                                <p className='ml-2 text-sm'>400+ security controls (including contextual analysis)</p>
                             </div>
                             <div className='flex mt-2'>
                                 <img src={checkMarkIcon} alt='' />{' '}
-                                <GatsbyLink className='ml-2 text-sm hover:underline' to={'/'}>
-                                    Custom controls (not available yet)
-                                </GatsbyLink>
+                                <p className='ml-2 text-sm'>Custom controls (not available yet)</p>
                             </div>
                             <div className='flex mt-2'>
                                 <img src={checkMarkIcon} alt='' />{' '}
-                                <GatsbyLink className='ml-2 text-sm hover:underline' to={'/'}>
-                                    Alerts & Notifications
-                                </GatsbyLink>
+                                <p className='ml-2 text-sm'>Alerts & Notifications</p>
                             </div>{' '}
                             <div className='flex mt-2'>
                                 <img src={checkMarkIcon} alt='' />{' '}
-                                <GatsbyLink className='ml-2 text-sm hover:underline' to={'/'}>
+                                <GatsbyLink
+                                    className='ml-2 text-sm hover:underline'
+                                    to={'/products/security-knowledge-graph/'}
+                                >
                                     Security Knowledge Graphs
                                 </GatsbyLink>
                             </div>
@@ -279,25 +298,37 @@ const PricingPage = ({ location }) => {
                             </p>
                             <div className='flex mt-8'>
                                 <img src={checkMarkIcon} alt='' />{' '}
-                                <GatsbyLink className='ml-2 text-sm hover:underline' to={'/'}>
+                                <GatsbyLink
+                                    className='ml-2 text-sm hover:underline'
+                                    to={'/use-cases/cloud-compliance-and-auditing/'}
+                                >
                                     Policies
                                 </GatsbyLink>
                             </div>
                             <div className='flex mt-2'>
                                 <img src={checkMarkIcon} alt='' />{' '}
-                                <GatsbyLink className='ml-2 text-sm hover:underline' to={'/'}>
+                                <GatsbyLink
+                                    className='ml-2 text-sm hover:underline'
+                                    to={'/use-cases/cloud-compliance-and-auditing/'}
+                                >
                                     Policy Editor
                                 </GatsbyLink>
                             </div>
                             <div className='flex mt-2'>
                                 <img src={checkMarkIcon} alt='' />{' '}
-                                <GatsbyLink className='ml-2 text-sm hover:underline' to={'/'}>
+                                <GatsbyLink
+                                    className='ml-2 text-sm hover:underline'
+                                    to={'/use-cases/cloud-compliance-and-auditing/'}
+                                >
                                     Standards
                                 </GatsbyLink>
                             </div>
                             <div className='flex mt-2 items-start'>
                                 <img src={checkMarkIcon} alt='' />{' '}
-                                <GatsbyLink className='ml-2 text-sm hover:underline' to={'/'}>
+                                <GatsbyLink
+                                    className='ml-2 text-sm hover:underline'
+                                    to={'/use-cases/cloud-compliance-and-auditing/'}
+                                >
                                     Inline evidence collection (based on security controls)
                                 </GatsbyLink>
                             </div>
@@ -306,7 +337,7 @@ const PricingPage = ({ location }) => {
                     <h4 className='text-center lg:text-lg mt-24 font-montserrat font-semibold' css={linkFontSize}>
                         Full technical specifications{' '}
                         <a
-                            href={appLink}
+                            href='https://docs.cyscale.com/'
                             target='_blank'
                             rel='noopener noreferrer'
                             className='text-blue hover:underline font-montserrat font-semibold'
@@ -379,16 +410,15 @@ const PricingPage = ({ location }) => {
             </div>
             <div className='pt-12' css={heroBackground}>
                 <Container>
-                    <h1 className='text-blue text-center text-3xl lg:text-5xl font-bold font-montserrat'>
+                    <Element name='meetings-calendar' />
+                    <h1 className='text-blue text-center text-3xl lg:text-5xl font-bold font-montserrat mt-8'>
                         Let’s make it a win-win!
                     </h1>
-                    <p className='mt-8 text-center font-medium text-sm lg:text-base font-montserrat'>
+                    <p className='my-8 text-center font-medium text-sm lg:text-base font-montserrat'>
                         For custom plans let's talk about your team, about your products, and about your challenges and
                         come <br /> up with a pricing scheme that ultimately brings a positive ROI and helps you move
                         faster.
                     </p>
-                    <Element name='meetings-calendar'>
-                    </Element>
                 </Container>
             </div>
         </Layout>
