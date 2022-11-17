@@ -14,10 +14,19 @@ import {
     Virginia,
     Petru,
     Mihnea,
-    Norbert
+    Norbert,
+    Auras
 } from '../about/images';
 
 const data = [
+    {
+        order: 17,
+        photo: <Auras />,
+        name: 'Auras Popescu',
+        position: 'Backend Engineer',
+        linkedin: 'https://www.linkedin.com/in/auras-popescu-29408bb9',
+        quote: false
+    },
     {
         order: 16,
         photo: <Norbert />,

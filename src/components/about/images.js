@@ -123,6 +123,11 @@ function withImageData(WrappedComponent) {
                             gatsbyImageData(height: 256, layout: CONSTRAINED)
                         }
                     }
+                    auras: file(relativePath: { eq: "auras.png" }) {
+                        childImageSharp {
+                            gatsbyImageData(height: 256, layout: CONSTRAINED)
+                        }
+                    }
                 }
             `}
             render={(data) => <WrappedComponent {...props} imageData={data} />}
@@ -203,6 +208,10 @@ export const Mihnea = withImageData((props) => (
 ));
 export const Norbert = withImageData((props) => (
     <Img image={props.imageData.norbert.childImageSharp.gatsbyImageData} {...props} />
+));
+
+export const Auras = withImageData((props) => (
+    <Img image={props.imageData.auras.childImageSharp.gatsbyImageData} {...props} />
 ));
 
 export const OvidiuAndManuelaBackground = withImageData((props) => (
