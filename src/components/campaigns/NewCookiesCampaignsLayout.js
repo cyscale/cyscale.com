@@ -32,7 +32,8 @@ const NewCookiesCampaignsLayout = ({ children, formId, formTargetId, location, t
                 });
             }
         }, 600);
-    }, []);
+
+    }, [formId, formTargetId]);
 
     return (
         <CookiesProvider>
@@ -61,6 +62,9 @@ const NewCookiesCampaignsLayout = ({ children, formId, formTargetId, location, t
                             className={`block h-5 ml-auto cursor-pointer ${!navOpen ? 'visible' : 'invisible'}`}
                             src={navBars}
                             onClick={() => setNavOpen(!navOpen)}
+                            role='presentation'
+                            tabIndex='-1'
+                            onKeyDown={() => {}}
                             alt=''
                         />
                     </div>

@@ -24,6 +24,9 @@ const HeroVideo = ({ data, modal, setModal }) => {
                     onMouseEnter={() => setIsHover(true)}
                     onMouseLeave={() => setIsHover(false)}
                     onClick={() => setModal(!modal)}
+                    onKeyPress={() => {}}
+                    tabIndex="-1"
+                    role="presentation"
                 >
                     <PlayIcon
                         src={PlayButton}

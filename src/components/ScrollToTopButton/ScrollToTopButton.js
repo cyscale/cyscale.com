@@ -28,6 +28,9 @@ const ScrollToTopButton = () => {
             {showBtnTop && (
                 <img
                     src={upArrow}
+                    role='presentation'
+                    tabIndex='-1'
+                    onKeyDown={() => {}}
                     onClick={() => animateScroll.scrollToTop()}
                     className='top-40 right-0 fixed sm:hidden z-40'
                     alt='scroll to top'
