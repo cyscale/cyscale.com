@@ -15,10 +15,19 @@ import {
     Petru,
     Mihnea,
     Norbert,
-    Auras
+    Auras,
+    Darius
 } from '../about/images';
 
 const data = [
+    {
+        order: 18,
+        photo: <Darius />,
+        name: 'Darius Ungurean',
+        position: 'Frontend Engineer',
+        linkedin: 'https://www.linkedin.com/in/dariusu',
+        quote: false
+    },
     {
         order: 17,
         photo: <Auras />,
