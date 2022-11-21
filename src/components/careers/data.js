@@ -16,12 +16,21 @@ import {
     Mihnea,
     Norbert,
     Auras,
-    Darius
+    Darius,
+    Barry
 } from '../about/images';
 
 const data = [
     {
         order: 18,
+        photo: <Barry />,
+        name: 'Barry Lyne',
+        position: 'VP of Sales',
+        linkedin: 'https://www.linkedin.com/in/barrylyne',
+        quote: false
+    },
+    {
+        order: 17,
         photo: <Darius />,
         name: 'Darius Ungurean',
         position: 'Frontend Engineer',
@@ -29,7 +38,7 @@ const data = [
         quote: false
     },
     {
-        order: 17,
+        order: 16,
         photo: <Auras />,
         name: 'Auras Popescu',
         position: 'Backend Engineer',
@@ -37,7 +46,7 @@ const data = [
         quote: false
     },
     {
-        order: 16,
+        order: 15,
         photo: <Norbert />,
         name: 'Norbert Hambuer',
         position: 'Backend Engineer',
@@ -45,7 +54,7 @@ const data = [
         quote: false
     },
     {
-        order: 15,
+        order: 14,
         photo: <Mihnea />,
         name: 'Mihnea Stoian',
         position: 'Backend Engineer',
