@@ -1,9 +1,9 @@
 ---
 templateKey: blog-post
 title: The New ISO 27001 Version, Explained for the Cloud
-seoTitle: The New ISO 27001 Version, Explained for the Cloud
+seoTitle: The New ISO 27001 2022 Version, Explained for the Cloud
 authors: Sabrina Lupșan
-permalink: new-iso27001-version
+permalink: new-iso27001-2022-version
 categories:
   - News
   - Compliance
