@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet';
+import React, { useEffect, useState } from 'react';
 import { Container, Row, Section } from '../components/atoms/Containers';
 import Layout from '../components/layout/CleanLayout';
 import HeroPricing from '../assets/images/hero-pricing.png';
@@ -78,6 +77,15 @@ const PricingPage = ({ location }) => {
         }
     `);
 
+    useEffect(() => {
+        const script = document.createElement('script');
+        script.src = 'https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js';
+        script.type = 'text/javascript';
+        document.body.appendChild(script);
+
+        return () => document.body.removeChild(script);
+    }, []);
+
     return (
         <Layout
             location={location}
@@ -85,12 +93,6 @@ const PricingPage = ({ location }) => {
             title='Pricing - Cyscale Cloud Platform'
             description="Pay fair for security experts' advice and guidance. Quantifiable ROI for cloud data security and compliance. Reduce cloud costs and consumption."
         >
-            <Helmet>
-                <script
-                    type='text/javascript'
-                    src='https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js'
-                ></script>
-            </Helmet>
             <div className='pt-16' css={heroBackground}>
                 <Section>
                     <Container>
@@ -420,6 +422,12 @@ const PricingPage = ({ location }) => {
                         faster.
                     </p>
                 </Container>
+                <div className='lg:px-8'>
+                    <div
+                        className='meetings-iframe-container'
+                        data-src='https://meetings.hubspot.com/virginia-mitea/get-new-quote?embed=true'
+                    ></div>
+                </div>
             </div>
         </Layout>
     );
