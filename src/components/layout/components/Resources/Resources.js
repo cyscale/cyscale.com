@@ -27,6 +27,10 @@ const Resources = ({ pathname, activeLinks, setActiveLinks }) => {
             css={caretResources(isCampaignsPage(pathname))}
             onMouseEnter={() => setActiveLinks({ ...activeLinks, resources: true })}
             onMouseLeave={() => setActiveLinks({ ...activeLinks, resources: false })}
+            tabIndex='-1'
+            onClick={() => {}}
+            onKeyPress={() => {}}
+            role='presentation'
         >
             <div className='bg-selago p-6'>
                 <h1 css={montserratFontStyle} className='text-2xl font-semibold mb-6'>

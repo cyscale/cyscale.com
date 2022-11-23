@@ -140,6 +140,9 @@ export default function Faqs() {
                         <h3
                             className='font-semibold  text-base sm:text-lg text-white mb-0 pl-8 leading-snug cursor-pointer select-none'
                             onClick={() => setActive((s) => (s === key ? null : key))}
+                            role='presentation'
+                            tabIndex={-1}
+                            onKeyDown={() => {}}
                         >
                             {q.question}
                         </h3>

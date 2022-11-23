@@ -25,7 +25,7 @@ const CookiesBanner = ({ cookiesBanner, setCookiesBanner, pageName }) => {
         if (typeof window !== `undefined` && window.location.hostname !== 'localhost') {
             setCookiesOptions({ ...cookiesOptions, domain: window.location.hostname });
         }
-    }, []);
+    }, [cookiesOptions]);
 
     return (
         <div>

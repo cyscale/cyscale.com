@@ -51,7 +51,8 @@ const CSPMSolution = ({ location }) => {
                 setIsExperimentLoaded(true);
             }
         }
-    }, []);
+
+    }, [isExperimentLoaded]);
 
     return (
         <>

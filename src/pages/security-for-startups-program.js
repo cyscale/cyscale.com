@@ -411,7 +411,10 @@ const SecurityForStartupsProgram = ({ location }) => {
                                             <div className='flex'>
                                                 <h3
                                                     className='font-medium  text-base sm:text-lg mb-0 pl-2 leading-snug cursor-pointer select-none'
+                                                    role="presentation"
+                                                    tabIndex={-1}
                                                     onClick={() => setActive((s) => (s === key ? null : key))}
+                                                    onKeyDown={() => {}}
                                                 >
                                                     {q.question}
                                                 </h3>
@@ -419,6 +422,8 @@ const SecurityForStartupsProgram = ({ location }) => {
                                                 <button
                                                     onClick={() => setActive((s) => (s === key ? null : key))}
                                                     className='rounded-full w-6 h-6 pt-px flex items-center justify-center hover:opacity-80 transition-opacity ml-auto'
+                                                    tabIndex='0'
+                                                    onKeyDown={() => {}}
                                                 >
                                                     <img
                                                         className={classNames('transform transition-all', {
@@ -453,7 +458,10 @@ const SecurityForStartupsProgram = ({ location }) => {
                                             <div className='flex'>
                                                 <h3
                                                     className='font-medium  text-base sm:text-lg mb-0 pl-2 leading-snug cursor-pointer select-none'
+                                                    role="presentation"
+                                                    tabIndex={-1}
                                                     onClick={() => setActive((s) => (s === key + 3 ? null : key + 3))}
+                                                    onKeyDown={() => {}}
                                                 >
                                                     {q.question}
                                                 </h3>
@@ -461,6 +469,8 @@ const SecurityForStartupsProgram = ({ location }) => {
                                                 <button
                                                     onClick={() => setActive((s) => (s === key + 3 ? null : key + 3))}
                                                     className='rounded-full w-6 h-6 pt-px flex items-center justify-center hover:opacity-80 transition-opacity ml-auto'
+                                                    tabIndex='0'
+                                                    onKeyDown={() => {}}
                                                 >
                                                     <img
                                                         className={classNames('transform transition-all', {
@@ -504,6 +514,8 @@ const SecurityForStartupsProgram = ({ location }) => {
                                 <button
                                     className='gradientBgBtn w-full block text-base font-medium rounded text-white uppercase text-center py-5 px-24 hover:no-underline no-underline'
                                     onClick={() => animateScroll.scrollToTop()}
+                                    tabIndex='0'
+                                    onKeyDown={() => {}}
                                 >
                                     Apply Now
                                 </button>
