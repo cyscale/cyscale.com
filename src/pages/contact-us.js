@@ -39,6 +39,7 @@ const ContactUs = ({ location }) => {
         return () => {
             window.removeEventListener('message', hubspotHandler);
         };
+        // eslint-disable-next-line
     }, []);
 
     return (

@@ -51,6 +51,10 @@ const Company = ({ pathname, activeLinks, setActiveLinks }) => {
             css={caretCompany(isCampaignsPage(pathname))}
             onMouseEnter={() => setActiveLinks({ ...activeLinks, company: true })}
             onMouseLeave={() => setActiveLinks({ ...activeLinks, company: false })}
+            tabIndex='-1'
+            onClick={() => {}}
+            onKeyPress={() => {}}
+            role='presentation'
         >
             <div className='col-span-5 bg-selago p-6'>
                 <h1 css={montserratFontStyle} className='text-2xl font-semibold mb-6'>

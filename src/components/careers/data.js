@@ -13,14 +13,40 @@ import {
     George,
     Virginia,
     Petru,
-    Elena,
     Mihnea,
-    Norbert
+    Norbert,
+    Auras,
+    Darius,
+    Barry
 } from '../about/images';
 
 const data = [
     {
+        order: 18,
+        photo: <Barry />,
+        name: 'Barry Lyne',
+        position: 'VP of Sales',
+        linkedin: 'https://www.linkedin.com/in/barrylyne',
+        quote: false
+    },
+    {
+        order: 17,
+        photo: <Darius />,
+        name: 'Darius Ungurean',
+        position: 'Frontend Engineer',
+        linkedin: 'https://www.linkedin.com/in/dariusu',
+        quote: false
+    },
+    {
         order: 16,
+        photo: <Auras />,
+        name: 'Auras Popescu',
+        position: 'Backend Engineer',
+        linkedin: 'https://www.linkedin.com/in/auras-popescu-29408bb9',
+        quote: false
+    },
+    {
+        order: 15,
         photo: <Norbert />,
         name: 'Norbert Hambuer',
         position: 'Backend Engineer',
@@ -28,19 +54,11 @@ const data = [
         quote: false
     },
     {
-        order: 15,
+        order: 14,
         photo: <Mihnea />,
         name: 'Mihnea Stoian',
         position: 'Backend Engineer',
         linkedin: 'https://www.linkedin.com/in/mihnea-stoian-82382822b',
-        quote: false
-    },
-    {
-        order: 14,
-        photo: <Elena />,
-        name: 'Elena Boldor',
-        position: 'Technical Recruiter',
-        linkedin: 'https://www.linkedin.com/in/elena-boldor/',
         quote: false
     },
     {

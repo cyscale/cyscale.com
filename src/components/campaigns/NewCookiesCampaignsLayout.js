@@ -9,13 +9,15 @@ import { Container } from '../atoms/Containers';
 import { Link } from 'gatsby';
 import logo from '../../assets/images/logo.svg';
 import { CSSTransition } from 'react-transition-group';
-import Footer from './footer';
 import CookiesBanner from '../cookies-banner/CookiesBanner';
 import ScrollToTopButton from '../ScrollToTopButton/ScrollToTopButton';
 import useSetCookieBanner from '../cookies-banner/useSetCookieBanner';
 import { cookieConsentKey } from '../../common/constants';
 import NewNavigation from '../layout/NewNavigation';
 import NewTopNav from '../layout/NewTopNav';
+
+import loadable from '@loadable/component';
+const Footer = loadable(()=> import('./footer'))
 
 const NewCookiesCampaignsLayout = ({ children, formId, formTargetId, location, title, description, pageName }) => {
     const { cookies, cookiesBanner, setCookiesBanner } = useSetCookieBanner();
@@ -32,7 +34,8 @@ const NewCookiesCampaignsLayout = ({ children, formId, formTargetId, location, t
                 });
             }
         }, 600);
-    }, []);
+
+    }, [formId, formTargetId]);
 
     return (
         <CookiesProvider>
@@ -61,6 +64,9 @@ const NewCookiesCampaignsLayout = ({ children, formId, formTargetId, location, t
                             className={`block h-5 ml-auto cursor-pointer ${!navOpen ? 'visible' : 'invisible'}`}
                             src={navBars}
                             onClick={() => setNavOpen(!navOpen)}
+                            role='presentation'
+                            tabIndex='-1'
+                            onKeyDown={() => {}}
                             alt=''
                         />
                     </div>

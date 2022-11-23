@@ -24,7 +24,7 @@ const Original = ({ location, data }) => {
             }
             pageName={'CSPMSolutionCampaign'}
         >
-            <div className='bg-hero-campaigns-iam-security pb-8 pt-32 lg:pt-20 xl:pt-12'>
+            <div className='bg-hero-campaigns-iam-security pb-8 pt-32 lg:pt-40 xl:pt-12'>
                 <Container>
                     <div>
                         <Row>

@@ -53,6 +53,10 @@ const Platform = ({ pathname, activeLinks, setActiveLinks }) => {
             css={caretPlatform(isCampaignsPage(pathname))}
             onMouseEnter={() => setActiveLinks({ ...activeLinks, platform: true })}
             onMouseLeave={() => setActiveLinks({ ...activeLinks, platform: false })}
+            tabIndex='-1'
+            onClick={() => {}}
+            onKeyPress={() => {}}
+            role='presentation'
         >
             <div className='col-span-5 bg-selago p-6'>
                 <h1 css={montserratFontStyle} className='text-2xl font-semibold mb-6'>

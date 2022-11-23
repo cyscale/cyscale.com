@@ -34,6 +34,10 @@ const Solutions = ({ pathname, activeLinks, setActiveLinks }) => {
             css={caretSolutions(isCampaignsPage(pathname))}
             onMouseEnter={() => setActiveLinks({ ...activeLinks, solutions: true })}
             onMouseLeave={() => setActiveLinks({ ...activeLinks, solutions: false })}
+            tabIndex='-1'
+            onClick={() => {}}
+            onKeyPress={() => {}}
+            role='presentation'
         >
             <div className='col-span-3 bg-selago p-6'>
                 <h1 css={montserratFontStyle} className='text-2xl font-semibold mb-6'>

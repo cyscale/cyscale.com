@@ -65,7 +65,7 @@ const Footer = ({ pageUri, pageName }) => {
                                             onClick={onSubmit}
                                         >
                                             <span className='block uppercase md:hidden'>Subscribe</span>
-                                            <img src={arrowRight} className='mx-auto w-5 h-auto hidden md:block' />
+                                            <img src={arrowRight} className='mx-auto w-5 h-auto hidden md:block' alt="" />
                                         </button>
                                         {!alert && (
                                             <p className='text-xs mt-4 block sm:hidden' css={disclaimerTextColor}>

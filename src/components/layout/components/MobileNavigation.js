@@ -19,6 +19,9 @@ const MobileItemNav = ({ item, setActiveMenu }) => {
             className='py-4 px-8 flex justify-between'
             css={borderBottomItemNavStyle}
             onClick={() => setActiveMenu(item)}
+            tabIndex='-1'
+            onKeyPress={() => {}}
+            role='presentation'
         >
             <span className='capitalize'>{item}</span>
             <img src={downArrow} alt='' />
@@ -42,7 +45,13 @@ const MobileNavigation = ({ showMenu, setShowMenu, appLink }) => {
                         </Link>
                     )}
                     {activeMenu !== 'main' && (
-                        <div className='inline-block flex' onClick={() => setActiveMenu('main')}>
+                        <div
+                            className='inline-block flex'
+                            onClick={() => setActiveMenu('main')}
+                            tabIndex='-1'
+                            onKeyPress={() => {}}
+                            role='presentation'
+                        >
                             <img src={backArrow} alt='' />{' '}
                             <span css={logoStyle} className={'flex items-center text-lg pt-0.5'}>
                                 Back
