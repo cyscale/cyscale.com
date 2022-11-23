@@ -31,7 +31,6 @@ const ContactUs = ({ location }) => {
                 <div className='lg:px-8 pb-8 lg:pb-12'>
                     <div
                         className='meetings-iframe-container'
-                        style={{ overflowY: 'hidden' }}
                         data-src='https://meetings.hubspot.com/virginia-mitea/demo-for-cyscale-cloud-platform?embed=true'
                     ></div>
                 </div>
