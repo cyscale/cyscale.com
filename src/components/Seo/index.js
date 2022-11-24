@@ -50,7 +50,7 @@ const Seo = ({ title, description, pageName, banner, location }) => {
     return (
         <Helmet>
             <html lang='en' />
-            <title>{title}</title>
+            <title>{pageName === 'blog-detail' ? `${title} - Cyscale` : title}</title>
             <meta name='theme-color' content='#fff' />
             <meta property='image' content={siteUrl + ogImage} />
             <meta property='og:title' content={title} />
