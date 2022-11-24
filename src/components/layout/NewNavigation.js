@@ -12,7 +12,7 @@ import { logoStyle } from './style';
 import useScrollTrigger from '../scrollTrigger';
 
 const MegaMenu = styled.div`
-    left: ${({ campaignsPages }) => (campaignsPages ? '-17rem' : '0')};
+    left: ${({ animatedNavbarPages }) => (animatedNavbarPages ? '-17rem' : '0')};
     position: absolute;
     text-align: left;
     width: 100%;
@@ -153,10 +153,11 @@ const NewNavigation = ({ pageName, showLogo, appLink, location }) => {
                         </NavItemButton>
                         <MegaMenu
                             css={[hideMegaMenu ? hiddenMegaMenuOnScroll : null]}
-                            campaignsPages={[
+                            animatedNavbarPages={[
                                 'Identity and Access Management Security for Cloud',
                                 'AWSCloudSecurityCampaign',
-                                'CSPMSolutionCampaign'
+                                'CSPMSolutionCampaign',
+                                'RequestDemo'
                             ].includes(pageName)}
                         >
                             <Solutions pathname={pathname} activeLinks={activeLinks} setActiveLinks={setActiveLinks} />

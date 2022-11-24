@@ -24,8 +24,8 @@ const ContactUs = ({ location }) => {
                         Request Demo
                     </h1>
                     <p className='my-8 text-center font-medium text-sm lg:text-base font-montserrat'>
-                        We are happy to schedule a product demo with you. <br /> Just fill out the form{' '}
-                        <span className='inline lg:hidden'>below</span> and we will be in touch shortly.
+                        We are happy to schedule a product demo with you.
+                        <br /> Use the calendar below to select an appropriate time slot.
                     </p>
                 </div>
                 <div className='lg:px-8 pb-8 lg:pb-12'>

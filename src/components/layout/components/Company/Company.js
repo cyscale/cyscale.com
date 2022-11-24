@@ -13,7 +13,7 @@ import {
 import { company } from '../../nav';
 import arrowRight from '../../icons/icon-right-navigation.svg';
 import { css } from 'twin.macro';
-import { isCampaignsPage } from '../../../../common/utils';
+import { isAnimatedNavbarPage } from '../../../../common/utils';
 
 const caretCompany = (isCampaignsPage) => css`
     :before {
@@ -48,7 +48,7 @@ const Company = ({ pathname, activeLinks, setActiveLinks }) => {
     return (
         <div
             className='max-w-5xl grid grid-cols-12 gap-2 ml-auto justify-end shadow-2xl bg-white'
-            css={caretCompany(isCampaignsPage(pathname))}
+            css={caretCompany(isAnimatedNavbarPage(pathname))}
             onMouseEnter={() => setActiveLinks({ ...activeLinks, company: true })}
             onMouseLeave={() => setActiveLinks({ ...activeLinks, company: false })}
             tabIndex='-1'

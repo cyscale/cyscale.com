@@ -11,7 +11,7 @@ import {
 import { resources } from '../../nav';
 import arrowRight from '../../icons/icon-right-navigation.svg';
 import { css } from 'twin.macro';
-import { isCampaignsPage } from '../../../../common/utils';
+import { isAnimatedNavbarPage } from '../../../../common/utils';
 
 const caretResources = (isCampaignsPage) => css`
     :before {
@@ -24,7 +24,7 @@ const Resources = ({ pathname, activeLinks, setActiveLinks }) => {
     return (
         <div
             className='max-w-3xl grid grid-cols-2 gap-6 ml-auto justify-end shadow-2xl bg-white'
-            css={caretResources(isCampaignsPage(pathname))}
+            css={caretResources(isAnimatedNavbarPage(pathname))}
             onMouseEnter={() => setActiveLinks({ ...activeLinks, resources: true })}
             onMouseLeave={() => setActiveLinks({ ...activeLinks, resources: false })}
             tabIndex='-1'
