@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import NewCookiesCampaignsLayout from '../components/campaigns/NewCookiesCampaignsLayout';
 import { css } from 'twin.macro';
+import useHSMeetingsLoaded from '../hooks/useHSMeetingsLoaded';
+import classnames from 'classnames';
 
 const heroHeigt = css`
     @media (min-height: 68.125rem) {
@@ -25,6 +27,8 @@ const heroHeigt = css`
 `;
 
 const ContactUs = ({ location }) => {
+    const { loadingMeetings } = useHSMeetingsLoaded();
+
     useEffect(() => {
         const script = document.createElement('script');
         script.src = 'https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js';
@@ -58,7 +62,7 @@ const ContactUs = ({ location }) => {
                     `}
                 >
                     <div
-                        className='meetings-iframe-container'
+                        className={classnames({ hidden: loadingMeetings, 'meetings-iframe-container': true })}
                         data-src='https://meetings.hubspot.com/virginia-mitea/demo-for-cyscale-cloud-platform?embed=true'
                     ></div>
                 </div>
