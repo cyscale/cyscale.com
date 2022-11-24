@@ -36,7 +36,7 @@ const mostPopularCard = css`
 
 const heroBackground = css`
     background-image: url(${HeroPricing});
-    background-size: cover;
+    background-size: 100% 100%;
 `;
 
 const featuresTitleFontSize = css`
@@ -372,7 +372,10 @@ const PricingPage = ({ location }) => {
                     Sign up for a custom demo to see how we close
                     <br /> security gaps and help you move to the cloud.
                 </p>
-                <GatsbyLink to={'/request-demo/'} className='bg-white text-blue rounded-lg py-2 px-8 mt-8 hover:bg-grey3'>
+                <GatsbyLink
+                    to={'/request-demo/'}
+                    className='bg-white text-blue rounded-lg py-2 px-8 mt-8 hover:bg-grey3'
+                >
                     Request Demo
                 </GatsbyLink>
             </div>
