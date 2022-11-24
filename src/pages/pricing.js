@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Container, Row, Section } from '../components/atoms/Containers';
 import Layout from '../components/layout/CleanLayout';
 import HeroPricing from '../assets/images/hero-pricing.png';
@@ -16,6 +16,9 @@ import SecurityIcon from '../assets/images/security-icon-pricing.svg';
 import ComplianceIcon from '../assets/images/compliance-icon-pricing.svg';
 import { useAppLink } from '../common/links';
 import { Link, Element } from 'react-scroll';
+import classnames from 'classnames';
+import useHSMeetingsLoaded from '../hooks/useHSMeetingsLoaded';
+import useLoadHSMeetingsScript from '../hooks/useLoadHSMeetingsScript';
 
 const customFontSize = css`
     font-size: 1.75rem;
@@ -66,6 +69,7 @@ const PricingPage = ({ location }) => {
     const [modal, setModal] = useState(false);
     const [isHover, setIsHover] = useState(false);
     const matches = useMediaQuery('(min-width: 23.438rem) and (max-width: 63.938rem)');
+    const { loadingMeetings } = useHSMeetingsLoaded();
 
     const data = useStaticQuery(graphql`
         query PricingQuery {
@@ -77,14 +81,7 @@ const PricingPage = ({ location }) => {
         }
     `);
 
-    useEffect(() => {
-        const script = document.createElement('script');
-        script.src = 'https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js';
-        script.type = 'text/javascript';
-        document.body.appendChild(script);
-
-        return () => document.body.removeChild(script);
-    }, []);
+    useLoadHSMeetingsScript();
 
     return (
         <Layout
@@ -389,8 +386,8 @@ const PricingPage = ({ location }) => {
                             onMouseLeave={() => setIsHover(false)}
                             onClick={() => setModal(!modal)}
                             onKeyPress={() => {}}
-                            tabIndex="-1"
-                            role="presentation"
+                            tabIndex='-1'
+                            role='presentation'
                         >
                             <PlayIcon
                                 src={PlayButton}
@@ -425,9 +422,14 @@ const PricingPage = ({ location }) => {
                         faster.
                     </p>
                 </Container>
-                <div className='lg:px-8'>
+                <div
+                    className='lg:px-8'
+                    css={css`
+                        height: 43rem;
+                    `}
+                >
                     <div
-                        className='meetings-iframe-container'
+                        className={classnames({ hidden: loadingMeetings, 'meetings-iframe-container': true })}
                         data-src='https://meetings.hubspot.com/virginia-mitea/get-new-quote?embed=true'
                     ></div>
                 </div>
