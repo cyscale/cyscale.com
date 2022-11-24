@@ -19,6 +19,7 @@ import { Link, Element } from 'react-scroll';
 import classnames from 'classnames';
 import useHSMeetingsLoaded from '../hooks/useHSMeetingsLoaded';
 import useLoadHSMeetingsScript from '../hooks/useLoadHSMeetingsScript';
+import { hoverButtonColorStyle } from '../components/layout/style';
 
 const customFontSize = css`
     font-size: 1.75rem;
@@ -182,6 +183,7 @@ const PricingPage = ({ location }) => {
                                 smooth={true}
                                 duration={500}
                                 className='bg-blue text-white font-bold font-montserrat text-base py-2 px-8 rounded-lg cursor-pointer'
+                                css={hoverButtonColorStyle}
                             >
                                 Get Quote
                             </Link>
@@ -370,7 +372,7 @@ const PricingPage = ({ location }) => {
                     Sign up for a custom demo to see how we close
                     <br /> security gaps and help you move to the cloud.
                 </p>
-                <GatsbyLink to={'/request-demo/'} className='bg-white text-blue rounded-lg py-2 px-8 mt-8'>
+                <GatsbyLink to={'/request-demo/'} className='bg-white text-blue rounded-lg py-2 px-8 mt-8 hover:bg-grey3'>
                     Request Demo
                 </GatsbyLink>
             </div>
