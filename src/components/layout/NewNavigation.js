@@ -156,7 +156,8 @@ const NewNavigation = ({ pageName, showLogo, appLink, location }) => {
                             campaignsPages={[
                                 'Identity and Access Management Security for Cloud',
                                 'AWSCloudSecurityCampaign',
-                                'CSPMSolutionCampaign'
+                                'CSPMSolutionCampaign',
+                                'DataSecurityCampaign'
                             ].includes(pageName)}
                         >
                             <Solutions pathname={pathname} activeLinks={activeLinks} setActiveLinks={setActiveLinks} />
