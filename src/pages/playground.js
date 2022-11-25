@@ -6,9 +6,6 @@ import classnames from 'classnames';
 import LoaderContainer from '../components/Loader/LoaderContainer/LoaderContainer';
 import { css } from 'twin.macro';
 import AnimatedNavbarLayout from '../components/campaigns/AnimatedNavbarLayout';
-import ManFreeTrial from '../assets/images/man-free-trial.svg';
-import CloudFreeTrail from '../assets/images/cloud-free-trial.svg';
-import TimerFreeTrial from '../assets/images/timer-free-trial.svg';
 
 const heroHeigt = css`
     @media (min-width: 45rem) and (max-width: 80rem) {
