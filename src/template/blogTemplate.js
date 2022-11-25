@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '../components/layout/CleanLayout';
 import PostContent from '../components/new-blog/PostContent';
 
-const BlodDetail = ({ pageContext, location }) => {
+const BlogDetail = ({ pageContext, location }) => {
     const { alldata, suggestions, whitepaperCover } = pageContext;
     const { frontmatter: data, rawMarkdownBody } = alldata;
     console.log(data);
@@ -26,4 +26,4 @@ const BlodDetail = ({ pageContext, location }) => {
         </div>
     );
 };
-export default BlodDetail;
+export default BlogDetail;

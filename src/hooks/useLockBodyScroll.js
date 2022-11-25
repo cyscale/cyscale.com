@@ -2,13 +2,11 @@ import { useLayoutEffect } from 'react';
 
 const useLockBodyScroll = () => {
     useLayoutEffect(() => {
-        const originalStyle = window.getComputedStyle(document.body);
+        const originalStyle = window.getComputedStyle(document.body).overflow;
 
-        document.body.style.position = 'fixed';
-        document.body.style.overflowY = 'scroll';
-        document.body.style.width = '100%';
+        document.body.style.overflow = 'hidden';
 
-        return () => (document.body.style = originalStyle);
+        return () => (document.body.style.overflow = originalStyle);
     }, []);
 };
 
