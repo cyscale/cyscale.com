@@ -13,7 +13,7 @@ import {
     caretMenuSelegoStyle
 } from '../../style';
 import arrowRight from '../../icons/icon-right-navigation.svg';
-import { isCampaignsPage } from '../../../../common/utils';
+import { isAnimatedNavbarPage } from '../../../../common/utils';
 
 const PlatformLinkTitle = styled.h1`
     ${tw`ml-4 text-lg`}
@@ -40,17 +40,17 @@ const PlatformLink = styled.div`
     }
 `;
 
-const caretPlatform = (isCampaignsPage) => css`
+const caretPlatform = (isAnimatedNavbarPage) => css`
     :before {
         ${caretMenuSelegoStyle};
-        left: ${isCampaignsPage ? '4rem' : '22.5rem'};
+        left: ${isAnimatedNavbarPage ? '4rem' : '22.5rem'};
     }
 `;
 const Platform = ({ pathname, activeLinks, setActiveLinks }) => {
     return (
         <div
             className='max-w-5xl grid grid-cols-12 gap-2 ml-auto justify-end shadow-2xl bg-white'
-            css={caretPlatform(isCampaignsPage(pathname))}
+            css={caretPlatform(isAnimatedNavbarPage(pathname))}
             onMouseEnter={() => setActiveLinks({ ...activeLinks, platform: true })}
             onMouseLeave={() => setActiveLinks({ ...activeLinks, platform: false })}
             tabIndex='-1'

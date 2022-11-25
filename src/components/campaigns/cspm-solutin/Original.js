@@ -6,7 +6,7 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import { animateScroll, Link as ScrollLink } from 'react-scroll';
 import upsideDownTriangle from '../../../assets/images/upside-down-triangle.svg';
 import cloudIcon from '../../../assets/images/cloud-icon.svg';
-import NewCookiesCampaignsLayout from '../NewCookiesCampaignsLayout';
+import AnimatedNavbarLayout from '../AnimatedNavbarLayout';
 import useHSFormLoaded from '../../../hooks/useHSFormLoaded';
 import HeroContent from './HeroContent';
 
@@ -14,7 +14,7 @@ const Original = ({ location, data }) => {
     const { loadingForm } = useHSFormLoaded();
 
     return (
-        <NewCookiesCampaignsLayout
+        <AnimatedNavbarLayout
             formId={'81943e73-3b0a-4e69-8c8d-92c747a10796'}
             formTargetId={'#request-cspm-demo'}
             location={location}
@@ -222,7 +222,7 @@ const Original = ({ location, data }) => {
                     </div>
                 </Container>
             </div>
-        </NewCookiesCampaignsLayout>
+        </AnimatedNavbarLayout>
     );
 };
 

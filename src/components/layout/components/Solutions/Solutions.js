@@ -13,16 +13,16 @@ import {
 import { solutions } from '../../nav';
 import { css } from 'twin.macro';
 import arrowRight from '../../icons/icon-right-navigation.svg';
-import { isCampaignsPage } from '../../../../common/utils';
+import { isAnimatedNavbarPage } from '../../../../common/utils';
 
 const descriptionMaxWidth = css`
     max-width: 13.25rem;
 `;
 
-const caretSolutions = (isCampaignsPage) => css`
+const caretSolutions = (isAnimatedNavbarPage) => css`
     :before {
         ${caretMenuWhiteStyle};
-        left: ${isCampaignsPage ? '29rem' : '30.5rem'};
+        left: ${isAnimatedNavbarPage ? '29rem' : '30.5rem'};
     }
 `;
 
@@ -31,7 +31,7 @@ const Solutions = ({ pathname, activeLinks, setActiveLinks }) => {
         <div
             className='w-full grid grid-cols-12 gap-2 ml-auto shadow-2xl bg-white'
             style={{ width: '76rem' }}
-            css={caretSolutions(isCampaignsPage(pathname))}
+            css={caretSolutions(isAnimatedNavbarPage(pathname))}
             onMouseEnter={() => setActiveLinks({ ...activeLinks, solutions: true })}
             onMouseLeave={() => setActiveLinks({ ...activeLinks, solutions: false })}
             tabIndex='-1'

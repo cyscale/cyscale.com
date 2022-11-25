@@ -5,7 +5,7 @@ import cloudIcon from '../../assets/images/cloud-icon.svg';
 import ScrollButtonStartups from '../../components/ScrollButton/ScrollButtonStartups';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { animateScroll } from 'react-scroll';
-import NewCookiesCampaignsLayout from '../../components/campaigns/NewCookiesCampaignsLayout';
+import AnimatedNavbarLayout from '../../components/campaigns/AnimatedNavbarLayout';
 import useHSFormLoaded from '../../hooks/useHSFormLoaded';
 import classnames from 'classnames';
 import LoaderContainer from '../../components/Loader/LoaderContainer/LoaderContainer';
@@ -34,7 +34,7 @@ const AWSCloudSolution = ({ location }) => {
     `);
 
     return (
-        <NewCookiesCampaignsLayout
+        <AnimatedNavbarLayout
             formId={'e2610c67-1db7-4443-b551-784a12a3da64'}
             formTargetId={'#request-aws-demo'}
             location={location}
@@ -238,7 +238,7 @@ const AWSCloudSolution = ({ location }) => {
                     </div>
                 </Container>
             </div>
-        </NewCookiesCampaignsLayout>
+        </AnimatedNavbarLayout>
     );
 };
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import NewCookiesCampaignsLayout from '../NewCookiesCampaignsLayout';
+import AnimatedNavbarLayout from '../AnimatedNavbarLayout';
 import { Container, Row } from '../../atoms/Containers';
 import LoaderContainer from '../../Loader/LoaderContainer/LoaderContainer';
 import classnames from 'classnames';
@@ -32,7 +32,7 @@ const Variant = ({ location, data }) => {
     const [modal, setModal] = useState(false);
 
     return (
-        <NewCookiesCampaignsLayout
+        <AnimatedNavbarLayout
             formId={'81943e73-3b0a-4e69-8c8d-92c747a10796'}
             formTargetId={'#request-cspm-demo'}
             location={location}
@@ -84,7 +84,7 @@ const Variant = ({ location, data }) => {
                     </div>
                 </Container>
             </div>
-        </NewCookiesCampaignsLayout>
+        </AnimatedNavbarLayout>
     );
 };
 

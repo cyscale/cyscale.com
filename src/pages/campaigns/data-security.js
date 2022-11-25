@@ -1,7 +1,7 @@
 import React from 'react';
 import useHSFormLoaded from '../../hooks/useHSFormLoaded';
 import { graphql, useStaticQuery } from 'gatsby';
-import NewCookiesCampaignsLayout from '../../components/campaigns/NewCookiesCampaignsLayout';
+import AnimatedNavbarLayout from '../../components/campaigns/AnimatedNavbarLayout';
 import { Container, Row } from '../../components/atoms/Containers';
 import gcpLogo from '../../assets/images/google-cloud-campaigns-iam-security.svg';
 import awsLogo from '../../assets/images/aws-campaigns-iam-security.svg';
@@ -56,7 +56,7 @@ const DataSecurity = ({ location }) => {
     `);
 
     return (
-        <NewCookiesCampaignsLayout
+        <AnimatedNavbarLayout
             formId={'5258bbe9-2f49-4225-b803-c83cfce8921c'}
             formTargetId={'#request-data-security-demo'}
             location={location}
@@ -215,7 +215,7 @@ const DataSecurity = ({ location }) => {
             <DataManagementSection data={data} />
             <DataProtectionSection data={data} />
             <Cta />
-        </NewCookiesCampaignsLayout>
+        </AnimatedNavbarLayout>
     );
 };
 

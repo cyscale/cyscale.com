@@ -11,7 +11,7 @@ import azureLogo from '../../assets/images/azure-campaigns-iam-security.svg';
 import alibabaLogo from '../../assets/images/alibaba-campaigns-iam-security.svg';
 import oktaLogo from '../../assets/images/okta-campaigns-iam-security.svg';
 import { animateScroll } from 'react-scroll';
-import NewCookiesCampaignsLayout from '../../components/campaigns/NewCookiesCampaignsLayout';
+import AnimatedNavbarLayout from '../../components/campaigns/AnimatedNavbarLayout';
 import useHSFormLoaded from '../../hooks/useHSFormLoaded';
 import classnames from 'classnames';
 import LoaderContainer from '../../components/Loader/LoaderContainer/LoaderContainer';
@@ -35,7 +35,7 @@ const IamSecurity = ({ location }) => {
     `);
 
     return (
-        <NewCookiesCampaignsLayout
+        <AnimatedNavbarLayout
             formId={'0f6ac136-20fa-4420-95a4-da1ff837f635'}
             formTargetId={'#iamsecurity-campaign-form'}
             location={location}
@@ -278,7 +278,7 @@ const IamSecurity = ({ location }) => {
                     </div>
                 </div>
             </Container>
-        </NewCookiesCampaignsLayout>
+        </AnimatedNavbarLayout>
     );
 };
 

@@ -17,32 +17,35 @@ import NewNavigation from '../layout/NewNavigation';
 import NewTopNav from '../layout/NewTopNav';
 
 import loadable from '@loadable/component';
-const Footer = loadable(()=> import('./footer'))
+const Footer = loadable(() => import('./footer'));
 
-const NewCookiesCampaignsLayout = ({ children, formId, formTargetId, location, title, description, pageName }) => {
+const AnimatedNavbarLayout = ({ children, formId, formTargetId, location, title, description, pageName }) => {
     const { cookies, cookiesBanner, setCookiesBanner } = useSetCookieBanner();
     const [navOpen, setNavOpen] = useState(false);
     const appLink = useAppLink();
 
     useEffect(() => {
-        setTimeout(() => {
-            if (window && window.hbspt) {
-                window.hbspt.forms.create({
-                    portalId: '5413427',
-                    formId,
-                    target: formTargetId
-                });
-            }
-        }, 600);
-
-    }, [formId, formTargetId]);
+        if (pageName !== 'RequestDemo') {
+            setTimeout(() => {
+                if (window && window.hbspt) {
+                    window.hbspt.forms.create({
+                        portalId: '5413427',
+                        formId,
+                        target: formTargetId
+                    });
+                }
+            }, 600);
+        }
+    }, [formId, formTargetId, pageName]);
 
     return (
         <CookiesProvider>
             <GlobalContext.Provider value={{ location }}>
                 <Seo title={title} description={description} pageName={pageName} location={location} />
                 <Helmet>
-                    <script charset='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js' />
+                    {pageName !== 'RequestDemo' && (
+                        <script charSet='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js' />
+                    )}
                     <meta name='robots' content='noindex' />
                     <meta name='robots' content='nofollow' />
                 </Helmet>
@@ -90,4 +93,4 @@ const NewCookiesCampaignsLayout = ({ children, formId, formTargetId, location, t
     );
 };
 
-export default NewCookiesCampaignsLayout;
+export default AnimatedNavbarLayout;

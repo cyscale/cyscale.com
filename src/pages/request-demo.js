@@ -1,64 +1,73 @@
 import React, { useEffect } from 'react';
-import Layout from '../components/layout/CleanLayout';
-import { Helmet } from 'react-helmet';
-
-import { Container, Row, Section } from '../components/atoms/Containers';
-import useHSFormLoaded from '../hooks/useHSFormLoaded';
+import AnimatedNavbarLayout from '../components/campaigns/AnimatedNavbarLayout';
+import { css } from 'twin.macro';
+import useHSMeetingsLoaded from '../hooks/useHSMeetingsLoaded';
 import classnames from 'classnames';
-import LoaderContainer from '../components/Loader/LoaderContainer/LoaderContainer';
+
+const heroHeigt = css`
+    @media (min-height: 68.125rem) {
+        height: calc(100vh - 18.75rem);
+    }
+
+    @media (min-height: 64rem) and (width: 48rem) {
+        height: calc(100vh + 2rem);
+    }
+
+    @media (min-height: 73.75rem) and (width: 51.25rem) {
+        height: calc(100vh - 8rem);
+    }
+
+    @media (min-height: 85.5rem) and (width: 57rem) {
+        height: calc(100vh + 4.75rem);
+    }
+
+    @media (min-height: 85.375rem) and (width: 64rem) {
+        height: calc(100vh - 11.5rem);
+    }
+`;
 
 const ContactUs = ({ location }) => {
-    const { loadingForm } = useHSFormLoaded();
+    const { loadingMeetings } = useHSMeetingsLoaded();
 
     useEffect(() => {
-        setTimeout(() => {
-            if (window && window.hbspt) {
-                window.hbspt.forms.create({
-                    portalId: '5413427',
-                    formId: 'dfe719f8-2cc3-4731-8add-f23036fa2c9f',
-                    target: '#demo-form'
-                });
-            }
-        }, 600);
+        const script = document.createElement('script');
+        script.src = 'https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js';
+        script.type = 'text/javascript';
+        document.body.appendChild(script);
+
+        return () => script.remove();
     }, []);
+
     return (
-        <Layout
+        <AnimatedNavbarLayout
             location={location}
             pageName='RequestDemo'
             title='Request Demo - Cyscale Cloud Platform'
             description='We are happy to schedule a product demo with you.'
         >
-            <Helmet>
-                <script charset='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js'></script>
-            </Helmet>
-            <div className='bg-lightGreyEEE lg:py-24'>
-                <Container>
-                    <Section>
-                        <Row>
-                            <div className='col-span-12 lg:col-span-6 '>
-                                <div className='mt-16 pt-12 lg:pt-24 max-w-lg mx-auto lg:mx-0 bg-pricing'>
-                                    <h1 className='font-semibold text-4xl lg:text-6xl mb-6 text-blue'> Request Demo</h1>
-                                    <p className='text-lg lg:text-2xl mb-12'>
-                                        We are happy to schedule a product demo with you. Just fill out the form{' '}
-                                        <span className='inline lg:hidden'>below</span> and we will be in touch shortly.
-                                    </p>
-                                </div>
-                            </div>
-                            <div className='col-span-12 lg:col-span-6 '>
-                                <div className='lg:bg-white rounded-lg mt-6 lg:mt-0 lg:rounded-xl lg:shadow-lg  lg:pt-12 pb-0 px-0 lg:px-12 max-w-lg mx-auto lg:mr-0 lg:ml-auto relative'>
-                                    {loadingForm && <LoaderContainer minHeight={465} />}
-                                    <div
-                                        style={{ minHeight: 465 }}
-                                        id='demo-form'
-                                        className={classnames({ hidden: loadingForm })}
-                                    />
-                                </div>
-                            </div>
-                        </Row>
-                    </Section>
-                </Container>
+            <div className='bg-hero-campaigns-iam-security pb-8' css={heroHeigt}>
+                <div className='container max-w-7xl m-auto px-4 lg:px-8 pt-24 lg:pt-32 xl:pt-16'>
+                    <h1 className='text-blue text-center text-3xl lg:text-5xl font-bold font-montserrat mt-12 sm:mt-20 lg:mt-0'>
+                        Request Demo
+                    </h1>
+                    <p className='my-4 text-center font-medium text-sm lg:text-base font-montserrat'>
+                        We are happy to schedule a product demo with you.
+                        <br /> Use the calendar below to select an appropriate time slot.
+                    </p>
+                </div>
+                <div
+                    className='lg:px-8'
+                    css={css`
+                        height: 43rem;
+                    `}
+                >
+                    <div
+                        className={classnames({ hidden: loadingMeetings, 'meetings-iframe-container': true })}
+                        data-src='https://meetings.hubspot.com/virginia-mitea/demo-for-cyscale-cloud-platform?embed=true'
+                    ></div>
+                </div>
             </div>
-        </Layout>
+        </AnimatedNavbarLayout>
     );
 };
 
