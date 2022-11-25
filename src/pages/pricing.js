@@ -431,6 +431,9 @@ const PricingPage = ({ location }) => {
                     className='lg:px-8'
                     css={css`
                         height: 43rem;
+                        @media (min-width: 48rem) {
+                            padding-bottom: 50rem;
+                        }
                     `}
                 >
                     <div
