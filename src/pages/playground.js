@@ -20,16 +20,16 @@ const heroHeigt = css`
     }
 `;
 
-const FreeTrial = ({ location }) => {
+const Playground = ({ location }) => {
     const { loadingForm } = useHSFormLoaded();
-    const [showSectionForm, setShowSectionForm] = useState(true);
+    const [showSectionForm, setShowSection] = useState(true);
     const hubspotHandler = (event) => {
         if (
             event.data.type === 'hsFormCallback' &&
             event.data.eventName === 'onFormSubmitted' &&
-            event.data.id === 'abd54fce-98b1-41ca-b21a-c375b100edb4'
+            event.data.id === '7a731caa-e393-44a1-a205-4080e4e3ab6f'
         ) {
-            setShowSectionForm(!showSectionForm);
+            setShowSection(!showSectionForm);
         }
     };
 
@@ -38,8 +38,8 @@ const FreeTrial = ({ location }) => {
             if (window && window.hbspt) {
                 window.hbspt.forms.create({
                     portalId: '5413427',
-                    formId: 'abd54fce-98b1-41ca-b21a-c375b100edb4',
-                    target: '#free-trial-form'
+                    formId: '7a731caa-e393-44a1-a205-4080e4e3ab6f',
+                    target: '#playground-form'
                 });
             }
         }, 600);
@@ -55,9 +55,9 @@ const FreeTrial = ({ location }) => {
     return (
         <AnimatedNavbarLayout
             location={location}
-            pageName='FreeTrial'
-            title='Free Trial - Cyscale Cloud Platform'
-            description='Free Trial - Cyscale Cloud Platform'
+            pageName='Playground'
+            title='Playground - Cyscale Cloud Platform'
+            description='Playground - Cyscale Cloud Platform'
         >
             <Helmet>
                 <script charset='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js'></script>
@@ -70,29 +70,12 @@ const FreeTrial = ({ location }) => {
                                 <div className='col-span-12 lg:col-span-6 '>
                                     {
                                         <div className='max-w-lg mx-auto lg:mx-0'>
-                                            <h1 className='font-semibold text-5xl text-blue mb-12'>Start Free Trial</h1>
+                                            <h1 className='font-semibold text-5xl text-blue mb-12'>Playground</h1>
                                             <p className='text-base leading-relaxed max-w-md'>
-                                                Cyscale is an agentless CSPM solution that helps your organization map,
-                                                secure and monitor cloud assets across multiple providers.
+                                                We are happy to send you the connection details for the Cyscale
+                                                Playground Account. Just fill out the form and we will be in touch
+                                                shortly.
                                             </p>
-                                            <div className='flex mt-6 items-center'>
-                                                <img src={ManFreeTrial} alt='' />{' '}
-                                                <h4 className='ml-2 text-xl font-montserrat font-semibold'>
-                                                    1x1 with Cloud Security expert
-                                                </h4>
-                                            </div>
-                                            <div className='flex mt-2 items-center'>
-                                                <img src={TimerFreeTrial} alt='' />{' '}
-                                                <h4 className='ml-2 text-xl font-montserrat font-semibold'>
-                                                    Deploy and onboard in 15 minutes
-                                                </h4>
-                                            </div>
-                                            <div className='flex mt-2 items-center'>
-                                                <img src={CloudFreeTrail} alt='' />{' '}
-                                                <h4 className='ml-2 text-xl font-montserrat font-semibold'>
-                                                    Get immediate visibility & reporting
-                                                </h4>
-                                            </div>
                                         </div>
                                     }
                                 </div>
@@ -104,16 +87,13 @@ const FreeTrial = ({ location }) => {
                                             backdropFilter: 'blur(5px)'
                                         }}
                                     >
-                                        <h2 className='font-bold text-xl lg:text-2xl leading-normal mb-1 font-montserrat'>
-                                            Start Your Cyscale Free Trial
+                                        <h2 className='font-bold text-xl lg:text-2xl leading-normal mb-2 font-montserrat'>
+                                            Try it out
                                         </h2>
-                                        <p className='font-montserrat font-medium mb-2'>
-                                            Get started today, no credit card required.
-                                        </p>
                                         {loadingForm && <LoaderContainer minHeight={355} />}
                                         <div
                                             style={{ minHeight: 355 }}
-                                            id='free-trial-form'
+                                            id='playground-form'
                                             className={classnames({ hidden: loadingForm })}
                                         />
                                     </div>
@@ -127,4 +107,4 @@ const FreeTrial = ({ location }) => {
     );
 };
 
-export default FreeTrial;
+export default Playground;
