@@ -1,42 +1,24 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import AnimatedNavbarLayout from '../components/campaigns/AnimatedNavbarLayout';
 import { css } from 'twin.macro';
 import useHSMeetingsLoaded from '../hooks/useHSMeetingsLoaded';
 import classnames from 'classnames';
+import useLoadHSMeetingsScript from '../hooks/useLoadHSMeetingsScript';
 
 const heroHeigt = css`
-    @media (min-height: 68.125rem) {
-        height: calc(100vh - 18.75rem);
+    @media (min-width: 45rem) and (max-width: 80rem) {
+        min-height: calc(100vh - 11.5rem);
     }
 
-    @media (min-height: 64rem) and (width: 48rem) {
-        height: calc(100vh + 2rem);
-    }
-
-    @media (min-height: 73.75rem) and (width: 51.25rem) {
-        height: calc(100vh - 8rem);
-    }
-
-    @media (min-height: 85.5rem) and (width: 57rem) {
-        height: calc(100vh + 4.75rem);
-    }
-
-    @media (min-height: 85.375rem) and (width: 64rem) {
-        height: calc(100vh - 11.5rem);
+    @media (min-width: 80rem) {
+        min-height: calc(100vh - 18.75rem);
     }
 `;
 
 const ContactUs = ({ location }) => {
     const { loadingMeetings } = useHSMeetingsLoaded();
 
-    useEffect(() => {
-        const script = document.createElement('script');
-        script.src = 'https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js';
-        script.type = 'text/javascript';
-        document.body.appendChild(script);
-
-        return () => script.remove();
-    }, []);
+    useLoadHSMeetingsScript();
 
     return (
         <AnimatedNavbarLayout
