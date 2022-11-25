@@ -19,10 +19,10 @@ const descriptionMaxWidth = css`
     max-width: 13.25rem;
 `;
 
-const caretSolutions = (isCampaignsPage) => css`
+const caretSolutions = (isAnimatedNavbarPage) => css`
     :before {
         ${caretMenuWhiteStyle};
-        left: ${isCampaignsPage ? '29rem' : '30.5rem'};
+        left: ${isAnimatedNavbarPage ? '29rem' : '30.5rem'};
     }
 `;
 

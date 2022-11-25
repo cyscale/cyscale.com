@@ -157,6 +157,7 @@ const NewNavigation = ({ pageName, showLogo, appLink, location }) => {
                                 'Identity and Access Management Security for Cloud',
                                 'AWSCloudSecurityCampaign',
                                 'CSPMSolutionCampaign',
+                                'DataSecurityCampaign',
                                 'RequestDemo'
                             ].includes(pageName)}
                         >

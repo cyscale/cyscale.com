@@ -40,10 +40,10 @@ const PlatformLink = styled.div`
     }
 `;
 
-const caretPlatform = (isCampaignsPage) => css`
+const caretPlatform = (isAnimatedNavbarPage) => css`
     :before {
         ${caretMenuSelegoStyle};
-        left: ${isCampaignsPage ? '4rem' : '22.5rem'};
+        left: ${isAnimatedNavbarPage ? '4rem' : '22.5rem'};
     }
 `;
 const Platform = ({ pathname, activeLinks, setActiveLinks }) => {

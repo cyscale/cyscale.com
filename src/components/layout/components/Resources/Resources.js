@@ -13,10 +13,10 @@ import arrowRight from '../../icons/icon-right-navigation.svg';
 import { css } from 'twin.macro';
 import { isAnimatedNavbarPage } from '../../../../common/utils';
 
-const caretResources = (isCampaignsPage) => css`
+const caretResources = (isAnimatedNavbarPage) => css`
     :before {
         ${caretMenuSelegoStyle};
-        left: ${isCampaignsPage ? '27.5rem' : '46rem'};
+        left: ${isAnimatedNavbarPage ? '27.5rem' : '46rem'};
     }
 `;
 

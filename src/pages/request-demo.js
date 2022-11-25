@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import NewCookiesCampaignsLayout from '../components/campaigns/NewCookiesCampaignsLayout';
+import AnimatedNavbarLayout from '../components/campaigns/AnimatedNavbarLayout';
 import { css } from 'twin.macro';
 import useHSMeetingsLoaded from '../hooks/useHSMeetingsLoaded';
 import classnames from 'classnames';
@@ -39,7 +39,7 @@ const ContactUs = ({ location }) => {
     }, []);
 
     return (
-        <NewCookiesCampaignsLayout
+        <AnimatedNavbarLayout
             location={location}
             pageName='RequestDemo'
             title='Request Demo - Cyscale Cloud Platform'
@@ -67,7 +67,7 @@ const ContactUs = ({ location }) => {
                     ></div>
                 </div>
             </div>
-        </NewCookiesCampaignsLayout>
+        </AnimatedNavbarLayout>
     );
 };
 

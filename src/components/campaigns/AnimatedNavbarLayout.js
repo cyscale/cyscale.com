@@ -19,7 +19,7 @@ import NewTopNav from '../layout/NewTopNav';
 import loadable from '@loadable/component';
 const Footer = loadable(() => import('./footer'));
 
-const NewCookiesCampaignsLayout = ({ children, formId, formTargetId, location, title, description, pageName }) => {
+const AnimatedNavbarLayout = ({ children, formId, formTargetId, location, title, description, pageName }) => {
     const { cookies, cookiesBanner, setCookiesBanner } = useSetCookieBanner();
     const [navOpen, setNavOpen] = useState(false);
     const appLink = useAppLink();
@@ -93,4 +93,4 @@ const NewCookiesCampaignsLayout = ({ children, formId, formTargetId, location, t
     );
 };
 
-export default NewCookiesCampaignsLayout;
+export default AnimatedNavbarLayout;

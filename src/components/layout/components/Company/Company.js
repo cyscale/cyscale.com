@@ -15,10 +15,10 @@ import arrowRight from '../../icons/icon-right-navigation.svg';
 import { css } from 'twin.macro';
 import { isAnimatedNavbarPage } from '../../../../common/utils';
 
-const caretCompany = (isCampaignsPage) => css`
+const caretCompany = (isAnimatedNavbarPage) => css`
     :before {
         ${caretMenuWhiteStyle};
-        left: ${isCampaignsPage ? '36.3rem' : '54.5rem'};
+        left: ${isAnimatedNavbarPage ? '36.3rem' : '54.5rem'};
     }
 `;
 
