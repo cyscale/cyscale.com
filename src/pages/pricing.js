@@ -98,7 +98,7 @@ const PricingPage = ({ location }) => {
                             Get the Cyscale Platform
                         </h1>
                         <h4 className='text-center font-semibold font-montserrat text-base lg:text-lg mt-8'>
-                            Whether you’re at a Fortune 500 company or a startup,
+                            Whether you’re a Fortune 500 company or a startup,
                             <br /> Cyscale can help you with Cloud Visibility, Security and Compliance.
                         </h4>
                         <Row className='mt-16 lg:max-w-5xl mx-auto'>
@@ -200,10 +200,7 @@ const PricingPage = ({ location }) => {
                                 }
                             `}
                         >
-                            Every resource counts as an asset. The entire knowledge base contributes to the security
-                            posture including IAM entities (users, groups, policies, etc.), compute instances, storage
-                            disks and buckets, VPCs, etc. The billed number of assets is the average of assets across
-                            syncs within the billing period
+                            Every cloud resource in your environment counts as an asset and is factored into the Security Knowlege Graph. The entire data is used as a basis for security analysis, including IAM entities (users, groups, policies, etc.), compute instances, disks, VPCs, storage, etc.
                         </p>
                     </Container>
                 </Section>
@@ -222,8 +219,7 @@ const PricingPage = ({ location }) => {
                                 Visibility
                             </h2>
                             <p className='text-base font-mediun font-montserrat mt-4'>
-                                Continuous visibility of multi-cloud environments to identify cloud misconfiguration
-                                vulnerabilities. Scan, monitor, and remediate across your cloud...
+                                Continuous visibility over multi-cloud environments to identify vulnerable areas. Scan, monitor, and remediate across your cloud infrastructure.
                             </p>
                             <div className='flex mt-8'>
                                 <img src={checkMarkIcon} alt='' />{' '}
@@ -244,7 +240,7 @@ const PricingPage = ({ location }) => {
                             <div className='flex mt-2 items-start'>
                                 <img src={checkMarkIcon} alt='' />{' '}
                                 <p className='ml-2 text-sm'>
-                                    Powerful dashboards (Global dashboard, Identity, Data Security)
+                                    Powerful dashboards
                                 </p>
                             </div>
                         </div>
@@ -272,7 +268,7 @@ const PricingPage = ({ location }) => {
                             </div>
                             <div className='flex mt-2'>
                                 <img src={checkMarkIcon} alt='' />{' '}
-                                <p className='ml-2 text-sm'>Custom controls (not available yet)</p>
+                                <p className='ml-2 text-sm'>Custom controls</p>
                             </div>
                             <div className='flex mt-2'>
                                 <img src={checkMarkIcon} alt='' />{' '}
@@ -284,7 +280,7 @@ const PricingPage = ({ location }) => {
                                     className='ml-2 text-sm hover:underline'
                                     to={'/products/security-knowledge-graph/'}
                                 >
-                                    Security Knowledge Graphs
+                                    Security Knowledge Graph
                                 </GatsbyLink>
                             </div>
                         </div>
@@ -422,8 +418,8 @@ const PricingPage = ({ location }) => {
                         Let’s make it a win-win!
                     </h1>
                     <p className='my-8 text-center font-medium text-sm lg:text-base font-montserrat'>
-                        For custom plans let's talk about your team, about your products, and about your challenges and
-                        come <br /> up with a pricing scheme that ultimately brings a positive ROI and helps you move
+                        Let's talk about your team, your products, and your challenges and
+                        come <br /> up with a pricing scheme that ultimately brings you a positive ROI and helps you move
                         faster.
                     </p>
                 </Container>
