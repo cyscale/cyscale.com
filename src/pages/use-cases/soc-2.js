@@ -35,8 +35,8 @@ const Soc2 = ({ location }) => {
         <Layout
             location={location}
             pageName='SOC2'
-            title='SOC 2 Compliance for Cloud - Cyscale'
-            description='Out-of-the-box policies for a solid security program'
+            title='SOC 2 Cloud Security and Compliance Automation - Cyscale'
+            description='A powerful set of technical controls helping you prepare for a SOC 2 audit in areas such as security, availability, processing integrity, confidentiality and privacy'
         >
             <div className='bg-hero-soc2 pt-8'>
                 <Container>
