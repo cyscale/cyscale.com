@@ -70,28 +70,47 @@ const FreeTrial = ({ location }) => {
                                 <div className='col-span-12 lg:col-span-6 '>
                                     {
                                         <div className='max-w-lg mx-auto lg:mx-0'>
-                                            <h1 className='font-semibold text-5xl text-blue mb-12'>Start Free Trial</h1>
+                                            <h1 className='font-semibold text-5xl text-blue mb-10'>Start Free Trial</h1>
                                             <p className='text-base leading-relaxed max-w-md'>
-                                                Cyscale is an agentless CSPM solution that helps your organization map,
-                                                secure and monitor cloud assets across multiple providers.
+                                                Cyscale is an agentless platform that helps your organization map,
+                                                secure and monitor cloud assets across multiple providers. The Start
+                                                Free Trial process is easy and effective:
                                             </p>
                                             <div className='flex mt-6 items-center'>
                                                 <img src={ManFreeTrial} alt='' />{' '}
-                                                <h4 className='ml-2 text-xl font-montserrat font-semibold'>
-                                                    1x1 with Cloud Security expert
+                                                <h4 className='ml-2 text-lg font-montserrat font-semibold'>
+                                                    1x1 with a Cloud Security expert{' '}
                                                 </h4>
+                                            </div>
+                                            <div className='pl-12 max-w-md'>
+                                                <p className='text-sm font-montserrat font-medium'>
+                                                    An initial call with us to understand your goals and set you up with
+                                                    access to the platform
+                                                </p>
                                             </div>
                                             <div className='flex mt-2 items-center'>
                                                 <img src={TimerFreeTrial} alt='' />{' '}
-                                                <h4 className='ml-2 text-xl font-montserrat font-semibold'>
-                                                    Deploy and onboard in 15 minutes
+                                                <h4 className='ml-2 text-lg font-montserrat font-semibold'>
+                                                    Deploy and onboard in under 15 minutes{' '}
                                                 </h4>
+                                            </div>
+                                            <div className='pl-12 max-w-md'>
+                                                <p className='text-sm font-montserrat font-medium'>
+                                                    Onboarding a connector in the Cyscale platform is quick and easy
+                                                </p>
                                             </div>
                                             <div className='flex mt-2 items-center'>
                                                 <img src={CloudFreeTrail} alt='' />{' '}
-                                                <h4 className='ml-2 text-xl font-montserrat font-semibold'>
+                                                <h4 className='ml-2 text-lg font-montserrat font-semibold'>
                                                     Get immediate visibility & reporting
                                                 </h4>
+                                            </div>
+                                            <div className='pl-12 max-w-md'>
+                                                <p className='text-sm font-montserrat font-medium'>
+                                                    As soon as you onboard connectors, the platform starts the security
+                                                    analysis providing you with results in no time. Enjoy full access to
+                                                    the platform for 14 days.
+                                                </p>
                                             </div>
                                         </div>
                                     }
@@ -105,11 +124,9 @@ const FreeTrial = ({ location }) => {
                                         }}
                                     >
                                         <h2 className='font-bold text-xl lg:text-2xl leading-normal mb-1 font-montserrat'>
-                                            Start Your Cyscale Free Trial
+                                            Request Access
                                         </h2>
-                                        <p className='font-montserrat font-medium mb-2'>
-                                            Get started today, no credit card required.
-                                        </p>
+                                        <p className='font-montserrat font-medium mb-2'>Start your free trial today.</p>
                                         {loadingForm && <LoaderContainer minHeight={355} />}
                                         <div
                                             style={{ minHeight: 355 }}
