@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Row, Section } from '../components/atoms/Containers';
+import { Container, Row } from '../components/atoms/Containers';
 import Layout from '../components/layout/CleanLayout';
 import HeroPricing from '../assets/images/hero-pricing.png';
 import checkMarkIcon from '../assets/images/check-mark-icon.svg';
@@ -92,7 +92,7 @@ const PricingPage = ({ location }) => {
             description="Pay fair for security experts' advice and guidance. Quantifiable ROI for cloud data security and compliance. Reduce cloud costs and consumption."
         >
             <div className='md:pt-16' css={heroBackground}>
-                <div className="pt-24 pb-24 lg:pt-32 lg:pb-32 ">
+                <div className="pt-24 pb-12 sm:pb-24 lg:py-32">
                     <Container>
                         <h1 className='text-center text-blue text-4xl lg:text-5xl font-montserrat font-bold'>
                             Get the Cyscale Platform
