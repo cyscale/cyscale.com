@@ -91,8 +91,8 @@ const PricingPage = ({ location }) => {
             title='Pricing - Cyscale Cloud Platform'
             description="Pay fair for security experts' advice and guidance. Quantifiable ROI for cloud data security and compliance. Reduce cloud costs and consumption."
         >
-            <div className='pt-16' css={heroBackground}>
-                <Section>
+            <div className='md:pt-16' css={heroBackground}>
+                <div className="pt-24 pb-24 lg:pt-32 lg:pb-32 ">
                     <Container>
                         <h1 className='text-center text-blue text-4xl lg:text-5xl font-montserrat font-bold'>
                             Get the Cyscale Platform
@@ -101,9 +101,9 @@ const PricingPage = ({ location }) => {
                             Whether you’re a Fortune 500 company or a startup,
                             <br /> Cyscale can help you with Cloud Visibility, Security and Compliance.
                         </h4>
-                        <Row className='mt-16 lg:max-w-5xl mx-auto'>
+                        <Row className='mt-8 md:mt-16 lg:max-w-5xl mx-auto'>
                             <div className='col-span-12 lg:col-span-4'>
-                                <div className='h-40 bg-white rounded-lg flex flex-col justify-between p-4 max-w-lg mx-auto lg:mx-0'>
+                                <div className='h-28 sm:h-40 w-64 sm:w-auto bg-white rounded-lg flex flex-col justify-between p-4 max-w-lg mx-auto lg:mx-0'>
                                     <Link
                                         to='meetings-calendar'
                                         smooth={true}
@@ -121,7 +121,7 @@ const PricingPage = ({ location }) => {
                             </div>
                             <div className='col-span-12 lg:col-span-4'>
                                 <div
-                                    className='h-40 bg-white rounded-lg flex flex-col justify-between p-4 max-w-lg mx-auto lg:mx-0'
+                                    className='h-28 sm:h-40 w-64 sm:w-auto bg-white rounded-lg flex flex-col justify-between p-4 max-w-lg mx-auto lg:mx-0'
                                     css={mostPopularCard}
                                 >
                                     <div className='flex items-center justify-between'>
@@ -150,7 +150,7 @@ const PricingPage = ({ location }) => {
                                 </div>
                             </div>
                             <div className='col-span-12 lg:col-span-4'>
-                                <div className='h-40 bg-white rounded-lg flex flex-col justify-between p-4 max-w-lg mx-auto lg:mx-0'>
+                                <div className='h-28 sm:h-40 w-64 sm:w-auto bg-white rounded-lg flex flex-col justify-between p-4 max-w-lg mx-auto lg:mx-0'>
                                     <Link
                                         to='meetings-calendar'
                                         smooth={true}
@@ -167,7 +167,7 @@ const PricingPage = ({ location }) => {
                                 </div>
                             </div>
                         </Row>
-                        <div className='mt-16'>
+                        <div className='mt-8 md:mt-16'>
                             <p className='text-base font-montserrat font-medium text-center'>
                                 Not sure how many assets you want to protect?
                             </p>
@@ -189,7 +189,7 @@ const PricingPage = ({ location }) => {
                             </Link>
                         </div>
                         <p
-                            className='text-center font-medium font-montserrat mt-16 max-w-5xl mx-auto'
+                            className='text-center font-medium font-montserrat mt-8 md:mt-16 max-w-5xl mx-auto'
                             css={css`
                                 font-size: 13px;
                                 line-height: 25px;
@@ -203,7 +203,7 @@ const PricingPage = ({ location }) => {
                             Every cloud resource in your environment counts as an asset and is factored into the Security Knowlege Graph. The entire data is used as a basis for security analysis, including IAM entities (users, groups, policies, etc.), compute instances, disks, VPCs, storage, etc.
                         </p>
                     </Container>
-                </Section>
+                </div>
             </div>
             <div className='py-24'>
                 <h1 className='text-center text-blue font-montserrat' css={featuresTitleFontSize}>
