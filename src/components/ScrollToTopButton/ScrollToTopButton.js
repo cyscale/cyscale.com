@@ -21,6 +21,8 @@ const ScrollToTopButton = () => {
 
     useEffect(() => {
         window.addEventListener('scroll', watchScrolling);
+
+        return () => window.removeEventListener('scroll', watchScrolling);
     }, []);
 
     return (
