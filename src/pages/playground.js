@@ -118,7 +118,7 @@ const Playground = ({ location }) => {
                             )}
                             {!showSectionForm && (
                                 <div className='col-span-12'>
-                                    <h1 className='text-center text-xl lg:text-2xl text-blue font-montserrat font-bold'>
+                                    <h1 className='text-center text-xl lg:text-4xl text-blue font-montserrat font-bold'>
                                         Thanks for contacting us, we will be in touch soon!
                                     </h1>
                                     <h2 className='text-center text-base lg:text-lg font-montserrat font-bold my-4'>
