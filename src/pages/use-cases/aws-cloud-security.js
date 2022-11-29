@@ -28,7 +28,7 @@ const AWSCloudSecurity = ({ location }) => {
         <Layout
             location={location}
             pageName='AWSCloudSecurity'
-            title='AWS Cloud Security and Compliance'
+            title='AWS Cloud Security and Compliance - Cyscale'
             description='Protect AWS environments with a complete Cloud Security Posture Management (CSPM) solution'
         >
             <div className='bg-cloud' style={{ backgroundColor: '#eeeeee' }}>
