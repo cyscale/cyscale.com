@@ -9,6 +9,8 @@ import AnimatedNavbarLayout from '../components/campaigns/AnimatedNavbarLayout';
 import ManFreeTrial from '../assets/images/man-free-trial.svg';
 import CloudFreeTrail from '../assets/images/cloud-free-trial.svg';
 import TimerFreeTrial from '../assets/images/timer-free-trial.svg';
+import { Link } from 'gatsby';
+import PostsPreview from '../components/new-blog/PostsPreview';
 
 const heroHeigt = css`
     @media (min-width: 45rem) and (max-width: 80rem) {
@@ -65,12 +67,14 @@ const FreeTrial = ({ location }) => {
             <div className='bg-hero-campaigns-iam-security' css={heroHeigt}>
                 <Section>
                     <Container>
-                        {showSectionForm && (
-                            <Row>
+                        <Row>
+                            {showSectionForm && (
                                 <div className='col-span-12 lg:col-span-6 '>
                                     {
                                         <div className='max-w-lg mx-auto lg:mx-0'>
-                                            <h1 className='font-semibold text-5xl text-blue mb-10'>Start Free Trial</h1>
+                                            <h1 className='font-semibold text-3xl lg:text-5xl text-center sm:text-left text-blue mb-10'>
+                                                Start Free Trial
+                                            </h1>
                                             <p className='text-base leading-relaxed max-w-md'>
                                                 Cyscale is an agentless platform that helps your organization map,
                                                 secure and monitor cloud assets across multiple providers. The Start
@@ -115,6 +119,8 @@ const FreeTrial = ({ location }) => {
                                         </div>
                                     }
                                 </div>
+                            )}
+                            {showSectionForm && (
                                 <div className='col-span-12 lg:col-span-6'>
                                     <div
                                         className='bg-white rounded-lg mt-6 lg:mt-0 lg:rounded-xl shadow-lg  pt-6 pb-0 px-4 md:px-12 max-w-lg mx-auto lg:mr-0 lg:ml-auto relative'
@@ -135,8 +141,49 @@ const FreeTrial = ({ location }) => {
                                         />
                                     </div>
                                 </div>
-                            </Row>
-                        )}
+                            )}
+                            {!showSectionForm && (
+                                <div className='col-span-12'>
+                                    <h1 className='text-center text-xl lg:text-4xl text-blue font-montserrat font-bold'>
+                                        Thanks for contacting us, we will be in touch soon!
+                                    </h1>
+                                    <h2 className='text-center text-base lg:text-lg font-montserrat font-bold my-4'>
+                                        Discover more about our product:
+                                    </h2>
+                                    <p className='text-center'>
+                                        {' '}
+                                        <Link
+                                            className='text-base lg:text-lg underline'
+                                            to={'/products/cloud-security-posture-management/'}
+                                        >
+                                            Cloud Security Posture Management
+                                        </Link>
+                                    </p>{' '}
+                                    <p className='text-center mt-1'>
+                                        {' '}
+                                        <Link
+                                            className='text-base lg:text-lg underline'
+                                            to={'/products/cloud-security-posture-management/'}
+                                        >
+                                            Security Knowledge Graph
+                                        </Link>
+                                    </p>{' '}
+                                    <p className='text-center pb-12 mt-1'>
+                                        {' '}
+                                        <Link
+                                            className='text-base lg:text-lg underline'
+                                            to={'/products/cloud-security-posture-management/'}
+                                        >
+                                            Compliance & Auditing{' '}
+                                        </Link>
+                                    </p>
+                                    <h2 className='text-center text-base lg:text-lg font-montserrat font-bold'>
+                                        Visit our blog for the latest articles on cloud security and compliance:
+                                    </h2>
+                                    <PostsPreview pageName={'Playground'} />
+                                </div>
+                            )}
+                        </Row>
                     </Container>
                 </Section>
             </div>
