@@ -73,11 +73,11 @@ const Playground = ({ location }) => {
                                             <h2 className='text-3xl lg:text-5xl text-center sm:text-left text-blue font-bold'>
                                                 Get access to the Playground Account
                                             </h2>
-                                            <p className='text-lg text-center sm:text-left text-base font-medium max-w-md mt-8 font-montserrat'>
+                                            <p className='text-lg  text-left text-base font-medium max-w-md mt-8 font-montserrat'>
                                                 We are happy to send you the connection details for the Cyscale
                                                 Playground Account.
                                             </p>
-                                            <p className='text-lg text-center sm:text-left text-base font-medium max-w-md font-montserrat'>
+                                            <p className='text-lg text-left text-base font-medium max-w-md font-montserrat'>
                                                 Fill out the form and we will be in touch shortly.
                                             </p>{' '}
                                             <div>
@@ -88,7 +88,7 @@ const Playground = ({ location }) => {
                                                     <li>Asset inventory</li>
                                                     <li>Security assessment</li>
                                                     <li>Compliance score</li>
-                                                    <li>And many others</li>
+                                                    <li>and many more...</li>
                                                 </ul>
                                             </div>
                                         </div>
