@@ -42,7 +42,7 @@ const CloudCompliance = ({ location }) => {
         <Layout
             location={location}
             pageName='ISO27001Compliance'
-            title='ISO 27001 Compliance & Security for Cloud Environment - Cyscale'
+            title='ISO Cloud Security | Compliance & Security - Cyscale'
             description='Easy & continuous compliance for ISO 27001, with a set of battle-tested policies to jumpstart your ISMS. Secure your assets with cutting-edge controls & policies.'
         >
             <div className='bg-lightGrey'>
