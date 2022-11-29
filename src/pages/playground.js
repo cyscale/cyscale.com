@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
-import { Container, Row } from '../components/atoms/Containers';
+import { Row } from '../components/atoms/Containers';
 import useHSFormLoaded from '../hooks/useHSFormLoaded';
 import classnames from 'classnames';
 import LoaderContainer from '../components/Loader/LoaderContainer/LoaderContainer';
@@ -8,6 +8,7 @@ import { css } from 'twin.macro';
 import AnimatedNavbarLayout from '../components/campaigns/AnimatedNavbarLayout';
 import PostsPreview from '../components/new-blog/PostsPreview';
 import { Link } from 'gatsby';
+import { animateScroll } from 'react-scroll';
 
 const heroHeigt = css`
     @media (min-width: 45rem) and (max-width: 80rem) {
@@ -30,6 +31,7 @@ const Playground = ({ location }) => {
             event.data.id === '7a731caa-e393-44a1-a205-4080e4e3ab6f'
         ) {
             setShowSection(!showSectionForm);
+            animateScroll.scrollToTop()
         }
     };
 
@@ -64,13 +66,13 @@ const Playground = ({ location }) => {
             </Helmet>
             <div className='bg-hero-campaigns-iam-security' css={heroHeigt}>
                 <div className='py-28 lg:py-32'>
-                    <Container>
+                    <div className='container max-w-7xl m-auto px-8'>
                         <Row>
                             {showSectionForm && (
                                 <div className='col-span-12 lg:col-span-6 '>
                                     {
                                         <div className='max-w-lg lg:max-w-xl mx-auto lg:mx-0'>
-                                            <h2 className='text-3xl lg:text-5xl text-center sm:text-left text-blue font-bold'>
+                                            <h2 className='text-3xl lg:text-5xl text-left text-blue font-bold mt-8 lg:mt-0 font-montserrat'>
                                                 Get access to the Playground Account
                                             </h2>
                                             <p className='text-lg  text-left text-base font-medium max-w-md mt-8 font-montserrat'>
@@ -118,7 +120,7 @@ const Playground = ({ location }) => {
                             )}
                             {!showSectionForm && (
                                 <div className='col-span-12'>
-                                    <h1 className='text-center text-xl lg:text-4xl text-blue font-montserrat font-bold'>
+                                    <h1 className='text-center text-xl lg:text-4xl text-blue font-montserrat font-bold py-8 lg:py-10'>
                                         Thanks for contacting us, we will be in touch soon!
                                     </h1>
                                     <h2 className='text-center text-base lg:text-lg font-montserrat font-bold my-4'>
@@ -158,7 +160,7 @@ const Playground = ({ location }) => {
                                 </div>
                             )}
                         </Row>
-                    </Container>
+                    </div>
                 </div>
             </div>
         </AnimatedNavbarLayout>
