@@ -33,9 +33,8 @@ const AzureCloudSecurity = ({ location }) => {
         <Layout
             location={location}
             pageName='AzureCloudSecurity'
-            title='Azure Cloud Security and Compliance'
-            description='Secure your Azure accounts, continuously scan for risks and monitor events for
-            misconfigurations.'
+            title='Azure Cloud Security and Compliance Automation - Cyscale'
+            description='Secure your Azure accounts, continuously scan for risks and monitor events for misconfigurations.'
         >
             <div className='bg-cloud' style={{ backgroundColor: '#eeeeee' }}>
                 <Container>
