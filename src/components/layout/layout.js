@@ -23,13 +23,14 @@ const Layout = ({
     bannerDescription,
     bannerBtn1Text,
     bannerBtn1Link,
+    bannerBtn1LinkInternal,
     bannerBtn2Text,
     bannerBtn2Link,
     pageName,
     banner,
     blogDataTitle
 }) => {
-    useOptimizeEvent()
+    useOptimizeEvent();
     useHubspotEvents({ location, pageName });
     const { cookies, cookiesBanner, setCookiesBanner } = useSetCookieBanner();
 
@@ -61,6 +62,7 @@ const Layout = ({
                             bannerDescription={bannerDescription}
                             bannerBtn1Text={bannerBtn1Text}
                             bannerBtn1Link={bannerBtn1Link}
+                            bannerBtn1LinkInternal={bannerBtn1LinkInternal}
                             bannerBtn2Text={bannerBtn2Text}
                             bannerBtn2Link={bannerBtn2Link}
                             pageName={pageName}
