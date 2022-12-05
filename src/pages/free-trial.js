@@ -24,7 +24,7 @@ const heroHeigt = css`
 
 const FreeTrial = ({ location }) => {
     const { loadingForm } = useHSFormLoaded();
-    const [showSectionForm, setShowSectionForm] = useState(!true);
+    const [showSectionForm, setShowSectionForm] = useState(true);
     const hubspotHandler = (event) => {
         if (
             event.data.type === 'hsFormCallback' &&

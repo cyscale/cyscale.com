@@ -172,9 +172,9 @@ const PricingPage = ({ location }) => {
                                 Not sure how many assets you want to protect?
                             </p>
                             <p className='text-base font-montserrat text-blue font-medium text-center'>
-                                <a href={appLink} target='_blank' rel='noopener noreferrer' className='hover:underline'>
+                                <GatsbyLink to='/free-trial' className='hover:underline'>
                                     Find out with the Free Trial
-                                </a>
+                                </GatsbyLink>
                             </p>
                         </div>
                         <div className='flex justify-center mt-8'>

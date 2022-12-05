@@ -19,8 +19,7 @@
         },
         {
             "text": "Free Trial",
-            "link": "https://app.cyscale.com/register",
-            "external": true
+            "link": "/free-trial/"
         }
     ],
     "resources": [

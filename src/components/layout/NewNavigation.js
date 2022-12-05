@@ -206,14 +206,13 @@ const NewNavigation = ({ pageName, showLogo, appLink, location }) => {
                         </MegaMenu>
                     </NavItem>
                     <li className='py-6 pr-0 pl-7'>
-                        <a
+                        <Link
                             className='bg-gradient-to-r from-blue to-red hover:from-red hover:to-blue w-auto text-sm px-4 border-transparent box-border rounded-md h-10 hidden xl:flex justify-center items-center uppercase leading-none text-white transition duration-500 hover:no-underline font-medium'
                             href={appLink}
-                            target='_blank'
-                            rel='noopener noreferrer'
+                           to="/free-trial"
                         >
                             Start Free Trial
-                        </a>
+                        </Link>
                     </li>
                     <li className='py-6 pl-4'>
                         <a
