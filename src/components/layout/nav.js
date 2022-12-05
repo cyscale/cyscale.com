@@ -101,6 +101,11 @@ const resources = [
         external: true
     },
     {
+        text: 'Changelog',
+        link: 'https://headwayapp.co/cyscale-changelog/',
+        external: true
+    },
+    {
         text: 'Support',
         link: 'https://docs.cyscale.com/',
         external: true
