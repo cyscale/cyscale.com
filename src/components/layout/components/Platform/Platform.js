@@ -67,14 +67,14 @@ const Platform = ({ pathname, activeLinks, setActiveLinks }) => {
                     providers.{' '}
                 </p>
                 <p className='mb-4'>Explore the knowledge graph in our playground account populated with data.</p>
-                <a
+                <Link
                     className='bg-blue text-white py-2 px-4 rounded cursor-pointer font-medium flex'
-                    href='https://app.cyscale.com/playground'
+                    to='/playground'
                     css={[hoverButtonColorStyle, widthFitStyle]}
                 >
                     <img src={arrowRight} className='w-5 inline-block' alt='' />
                     <span className='text-md ml-2'>Try Cyscale Platform</span>
-                </a>
+                </Link>
                 <div className='flex mt-12'>
                     <img src={IconUser} alt='' />
                     <Link className='ml-2 font-medium' to='/request-demo/'>
