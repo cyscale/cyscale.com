@@ -80,7 +80,7 @@ const AnimatedNavbarLayout = ({ children, formId, formTargetId, location, title,
                     </CSSTransition>
                 </header>
                 <div className='block xl:hidden m-auto px-8'>
-                    <NewTopNav pageName={pageName} location={location} />
+                    <NewTopNav pageName={pageName} location={location} animatedNavbar={true} />
                 </div>
                 {children}
                 <Footer />

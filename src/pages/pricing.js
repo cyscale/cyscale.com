@@ -344,14 +344,12 @@ const PricingPage = ({ location }) => {
                     </h4>
                     <h4 className='text-center lg:text-lg font-montserrat font-semibold mt-2' css={linkFontSize}>
                         View Cyscale in action{' '}
-                        <a
-                            href='https://app.cyscale.com/playground'
-                            target='_blank'
-                            rel='noopener noreferrer'
+                        <GatsbyLink
+                            to='/playground'
                             className='text-blue hover:underline font-montserrat font-semibold'
                         >
                             on the Playground account
-                        </a>
+                        </GatsbyLink>
                     </h4>
                 </Container>
             </div>

@@ -14,8 +14,7 @@
         },
         {
             "text": "Playground Account",
-            "link": "https://app.cyscale.com/playground",
-            "external": true
+            "link": "/playground"
         },
         {
             "text": "Free Trial",

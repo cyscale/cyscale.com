@@ -239,14 +239,12 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
                                             features - no setup, no commitment.
                                         </p>
                                         <div className='mt-6 w-60 inline-block'>
-                                            <a
-                                                href={`https://app.cyscale.com/playground?source=${pageUri}`}
+                                            <Link
+                                                to={'/playground'}
                                                 className='w-full block font-medium rounded bg-white text-center py-3'
-                                                target='_blank'
-                                                rel='noopener noreferrer nofollow'
                                             >
                                                 Access Playground
-                                            </a>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>
