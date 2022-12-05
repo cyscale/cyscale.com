@@ -162,7 +162,7 @@ const Index = () => {
             </div>
             <div className='block w-full CSPMServices' id="cspm-services">
                 <Services
-                    headingText='The Cyscale Cloud Platform packs all the CSPM features you need'
+                    headingText='The Cyscale CSPM Solution packs all the features you need'
                     sectionName='CSPMServices'
                     data={dataService}
                 />
