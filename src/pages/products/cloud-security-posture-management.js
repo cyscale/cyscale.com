@@ -13,7 +13,7 @@ const SecurityPosture = ({ location }) => {
                 location={location}
                 heroBG={heroBG}
                 bannerTitle={`Cloud Security Posture\n Management Tool`}
-                bannerDescription={`Continuous visibility of multi-cloud environments to identify cloud misconfiguration vulnerabilities. Scan, monitor, and remediate across AWS, Azure, Google Cloud, Alibaba Cloud.`}
+                bannerDescription={`Continuous visibility of multi-cloud environments to identify cloud misconfiguration vulnerabilities, ultimately securing your cloud from data breaches and leaks. Scan, monitor, and remediate across AWS, Azure, Google Cloud, Alibaba Cloud.`}
                 bannerBtn1Text='Try Cyscale for free'
                 bannerBtn1Link={appLink}
                 pageName='CSPMPage'
