@@ -98,7 +98,7 @@ const Index = () => {
     const dataService = [
         {
             title: 'Data discovery',
-            description1: 'Keep an accurate and up-to-date map of your entire cloud inventory across multiple providers'
+            description1: 'Keep an accurate and up-to-date map of your entire cloud inventory across multiple providers, enabling better communication between your Security team, DevOps, and the Compliance team.'
         },
         {
             title: 'Real-time contextual analysis',
@@ -126,9 +126,9 @@ const Index = () => {
                 'Easily import or create your own set of policies, procedures and controls and deploy them for your entire cloud infrastructure'
         },
         {
-            title: 'Security & compliance telemetry',
+            title: 'Cloud Compliance Platform',
             description1:
-                'Track every change in security and compliance setup automatically, with zero cross-cloud manual work'
+                'Trim complexity from your workflow with automated evaluations for CIS Cloud Benchmarks, ISO 27001, SOC 2, GDPR, HIPAA, PCI DSS, NIST, and many more security frameworks.'
         },
         {
             title: 'Downloadable CSV & PDF reports',
@@ -143,7 +143,13 @@ const Index = () => {
             title: 'Zero maintenance platform',
             description1:
                 'The Cyscale Cloud Platform is fully managed and agentless, so all you have to do is put it to work'
+        },
+        {
+            title: 'Cloud-Native Security',
+            description1:
+                'You can also use Cyscale for your cloud-native security needs (VMs, network, serverless, databases, apps) for vulnerability and threat detection, cloud inventory, secure cloud extension, and as a compliance and cost-reduction solution.'
         }
+        
     ];
     return (
         <>
