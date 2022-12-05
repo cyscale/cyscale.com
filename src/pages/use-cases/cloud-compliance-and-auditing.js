@@ -10,7 +10,7 @@ const CloudCompliance = ({ location }) => {
         <Layout
             location={location}
             pageName='ComplianceAuditing'
-            bannerTitle={`Compliance toolbox for cloud-native and cloud-first organizations`}
+            bannerTitle={`Cloud Compliance Platform`}
             bannerDescription={`Compliance toolbox for cloud-native and cloud-first organizations\n\nThe Cyscale Cloud Platform gives you full visibility across cloud and data repos, from app-level to your overall compliance posture. `}
             bannerBtn1Text='Try Cyscale for free'
             bannerBtn1Link={appLink}
