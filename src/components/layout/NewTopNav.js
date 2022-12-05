@@ -16,7 +16,7 @@ const paddingNav = css`
     }
 `;
 
-const NewTopNav = ({ pageName, showLogo = true, location }) => {
+const NewTopNav = ({ pageName, showLogo = true, location, animatedNavbar }) => {
     const root = useRef();
     const trigger = useScrollTrigger();
     const [showBurgerButton, setShowBurgerButton] = useState(pageName !== 'HomePage');
@@ -73,7 +73,7 @@ const NewTopNav = ({ pageName, showLogo = true, location }) => {
                 <div tw='container max-w-7xl mx-auto pt-2.5 hidden xl:block' css={paddingNav}>
                     <NewNavigation pageName={pageName} showLogo={showLogo} appLink={appLink} location={location} />
                 </div>
-                {showBanner && (location.pathname.includes('campaigns') || pageName === 'RequestDemo' || pageName === 'Playground') && (
+                {showBanner && animatedNavbar && (
                     <div className='block bg-white px-8'>
                         <div className='container max-w-7xl m-auto'>
                             <div className='flex justify-end'>

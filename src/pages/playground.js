@@ -22,7 +22,7 @@ const heroHeigt = css`
 
 const Playground = ({ location }) => {
     const { loadingForm } = useHSFormLoaded();
-    const [showSectionForm, setShowSection] = useState(true);
+    const [showSectionForm, setShowSection] = useState(!true);
 
     const hubspotHandler = (event) => {
         if (
@@ -31,7 +31,7 @@ const Playground = ({ location }) => {
             event.data.id === '7a731caa-e393-44a1-a205-4080e4e3ab6f'
         ) {
             setShowSection(!showSectionForm);
-            animateScroll.scrollToTop()
+            animateScroll.scrollToTop();
         }
     };
 
@@ -97,7 +97,7 @@ const Playground = ({ location }) => {
                                     }
                                 </div>
                             )}
-                            {showSectionForm && (
+                            {showSectionForm ? (
                                 <div className='col-span-12 lg:col-span-6'>
                                     <div
                                         className='bg-white rounded-lg mt-6 lg:mt-0 lg:rounded-xl shadow-lg  pt-6 pb-0 px-4 md:px-12 max-w-lg mx-auto lg:mr-0 lg:ml-auto relative'
@@ -117,8 +117,7 @@ const Playground = ({ location }) => {
                                         />
                                     </div>
                                 </div>
-                            )}
-                            {!showSectionForm && (
+                            ) : (
                                 <div className='col-span-12'>
                                     <h1 className='text-center text-xl lg:text-4xl text-blue font-montserrat font-bold py-8 lg:py-10'>
                                         Thanks for contacting us, we will be in touch soon!
@@ -156,7 +155,7 @@ const Playground = ({ location }) => {
                                     <h2 className='text-center text-base lg:text-lg font-montserrat font-bold'>
                                         Visit our blog for the latest articles on cloud security and compliance:
                                     </h2>
-                                    <PostsPreview pageName={'Playground'} />
+                                    <PostsPreview bg={'transparent'} />
                                 </div>
                             )}
                         </Row>
