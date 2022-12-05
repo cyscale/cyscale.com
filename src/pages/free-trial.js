@@ -24,7 +24,7 @@ const heroHeigt = css`
 
 const FreeTrial = ({ location }) => {
     const { loadingForm } = useHSFormLoaded();
-    const [showSectionForm, setShowSectionForm] = useState(true);
+    const [showSectionForm, setShowSectionForm] = useState(!true);
     const hubspotHandler = (event) => {
         if (
             event.data.type === 'hsFormCallback' &&
@@ -144,7 +144,7 @@ const FreeTrial = ({ location }) => {
                             )}
                             {!showSectionForm && (
                                 <div className='col-span-12'>
-                                    <h1 className='text-center text-xl lg:text-4xl text-blue font-montserrat font-bold'>
+                                    <h1 className='text-center text-xl lg:text-4xl text-blue font-montserrat font-bold py-8 lg:py-10'>
                                         Thanks for contacting us, we will be in touch soon!
                                     </h1>
                                     <h2 className='text-center text-base lg:text-lg font-montserrat font-bold my-4'>
@@ -177,10 +177,7 @@ const FreeTrial = ({ location }) => {
                                             Compliance & Auditing{' '}
                                         </Link>
                                     </p>
-                                    <h2 className='text-center text-base lg:text-lg font-montserrat font-bold'>
-                                        Visit our blog for the latest articles on cloud security and compliance:
-                                    </h2>
-                                    <PostsPreview pageName={'Playground'} />
+                                    <PostsPreview pageName={'FreeTrial'} />
                                 </div>
                             )}
                         </Row>

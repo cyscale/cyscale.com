@@ -3,8 +3,9 @@ import { Link, graphql, useStaticQuery } from 'gatsby';
 import Post from './Post';
 import { Row, Container } from '../atoms/Containers';
 import { map } from 'lodash';
+import classNames from 'classnames';
 
-const PostsPreview = () => {
+const PostsPreview = ({ pageName }) => {
     const data = useStaticQuery(graphql`
         query PostsPreviewQuery {
             allMarkdownRemark(
@@ -37,7 +38,13 @@ const PostsPreview = () => {
     const posts = data?.allMarkdownRemark?.edges;
 
     return (
-        <div className='bg-lightGrey mt-0 py-12'>
+        <div
+            className={classNames({
+                'mt-0 py-12': true,
+                'bg-lightGrey ': pageName !== 'FreeTrial',
+                'bg-transparent': pageName === 'FreeTrial'
+            })}
+        >
             <Container>
                 <Row className='gap-4 lg:gap-8'>
                     {map(posts, ({ node }, index) => {
