@@ -10,7 +10,7 @@ import PostsPreview from '../components/new-blog/PostsPreview';
 import { Link } from 'gatsby';
 import { animateScroll } from 'react-scroll';
 
-const heroHeigt = css`
+const heroHeight = css`
     @media (min-width: 45rem) and (max-width: 80rem) {
         min-height: calc(100vh - 11.5rem);
     }
@@ -64,7 +64,7 @@ const Playground = ({ location }) => {
             <Helmet>
                 <script charset='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js'></script>
             </Helmet>
-            <div className='bg-hero-campaigns-iam-security' css={heroHeigt}>
+            <div className='bg-hero-campaigns-iam-security' css={heroHeight}>
                 <div className='py-28 lg:py-32'>
                     <div className='container max-w-7xl m-auto px-8'>
                         <Row>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
-import { Container, Row, Section } from '../components/atoms/Containers';
+import { Row } from '../components/atoms/Containers';
 import useHSFormLoaded from '../hooks/useHSFormLoaded';
 import classnames from 'classnames';
 import LoaderContainer from '../components/Loader/LoaderContainer/LoaderContainer';
@@ -12,7 +12,7 @@ import TimerFreeTrial from '../assets/images/timer-free-trial.svg';
 import { Link } from 'gatsby';
 import PostsPreview from '../components/new-blog/PostsPreview';
 
-const heroHeigt = css`
+const heroHeight = css`
     @media (min-width: 45rem) and (max-width: 80rem) {
         min-height: calc(100vh - 11.5rem);
     }
@@ -64,18 +64,18 @@ const FreeTrial = ({ location }) => {
             <Helmet>
                 <script charset='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js'></script>
             </Helmet>
-            <div className='bg-hero-campaigns-iam-security' css={heroHeigt}>
-                <Section>
-                    <Container>
+            <div className='bg-hero-campaigns-iam-security' css={heroHeight}>
+                <div className='py-28 lg:py-32'>
+                    <div className='container max-w-7xl m-auto px-8'>
                         <Row>
                             {showSectionForm && (
                                 <div className='col-span-12 lg:col-span-6 '>
                                     {
                                         <div className='max-w-lg mx-auto lg:mx-0'>
-                                            <h1 className='font-semibold text-3xl lg:text-5xl text-center sm:text-left text-blue mb-10'>
+                                            <h2 className='text-3xl lg:text-5xl text-left text-blue font-bold mt-8 lg:mt-0 font-montserrat'>
                                                 Start Free Trial
-                                            </h1>
-                                            <p className='text-base leading-relaxed max-w-md'>
+                                            </h2>
+                                            <p className='text-lg text-left text-base font-medium max-w-md mt-8 font-montserrat'>
                                                 Cyscale is an agentless platform that helps your organization map,
                                                 secure and monitor cloud assets across multiple providers. The Start
                                                 Free Trial process is easy and effective:
@@ -120,7 +120,7 @@ const FreeTrial = ({ location }) => {
                                     }
                                 </div>
                             )}
-                            {showSectionForm && (
+                            {showSectionForm ? (
                                 <div className='col-span-12 lg:col-span-6'>
                                     <div
                                         className='bg-white rounded-lg mt-6 lg:mt-0 lg:rounded-xl shadow-lg  pt-6 pb-0 px-4 md:px-12 max-w-lg mx-auto lg:mr-0 lg:ml-auto relative'
@@ -141,8 +141,7 @@ const FreeTrial = ({ location }) => {
                                         />
                                     </div>
                                 </div>
-                            )}
-                            {!showSectionForm && (
+                            ) : (
                                 <div className='col-span-12'>
                                     <h1 className='text-center text-xl lg:text-4xl text-blue font-montserrat font-bold py-8 lg:py-10'>
                                         Thanks for contacting us, we will be in touch soon!
@@ -177,12 +176,12 @@ const FreeTrial = ({ location }) => {
                                             Compliance & Auditing{' '}
                                         </Link>
                                     </p>
-                                    <PostsPreview pageName={'FreeTrial'} />
+                                    <PostsPreview bg='transparent' />
                                 </div>
                             )}
                         </Row>
-                    </Container>
-                </Section>
+                    </div>
+                </div>
             </div>
         </AnimatedNavbarLayout>
     );
