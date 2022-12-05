@@ -9,13 +9,12 @@
             "link": "/products/security-knowledge-graph/"
         },
         {
-            "text": "Compliance and Auditing™",
+            "text": "Cloud Compliance Platform™",
             "link": "/use-cases/cloud-compliance-and-auditing/"
         },
         {
             "text": "Playground Account",
-            "link": "https://app.cyscale.com/playground",
-            "external": true
+            "link": "/playground"
         },
         {
             "text": "Free Trial",

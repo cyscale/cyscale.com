@@ -159,6 +159,7 @@ const NewNavigation = ({ pageName, showLogo, appLink, location }) => {
                                 'CSPMSolutionCampaign',
                                 'DataSecurityCampaign',
                                 'RequestDemo',
+                                'Playground',
                                 'FreeTrial'
                             ].includes(pageName)}
                         >

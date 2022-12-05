@@ -25,7 +25,7 @@ const GCPCloudSecurity = ({ location }) => {
         <Layout
             location={location}
             pageName='GCPCloudSecurity'
-            title='Google Cloud Security and Compliance'
+            title='GCP Cloud Security | Google Cloud Security and Compliance - Cyscale'
             description='Protect Google  environments with a complete Cloud Security Posture Management (CSPM) solution'
         >
             <div className='bg-cloud' style={{ backgroundColor: '#eeeeee' }}>

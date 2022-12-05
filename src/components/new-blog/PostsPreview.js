@@ -5,7 +5,7 @@ import { Row, Container } from '../atoms/Containers';
 import { map } from 'lodash';
 import classNames from 'classnames';
 
-const PostsPreview = ({ pageName }) => {
+const PostsPreview = ({ bg }) => {
     const data = useStaticQuery(graphql`
         query PostsPreviewQuery {
             allMarkdownRemark(
@@ -41,8 +41,8 @@ const PostsPreview = ({ pageName }) => {
         <div
             className={classNames({
                 'mt-0 py-12': true,
-                'bg-lightGrey ': pageName !== 'FreeTrial',
-                'bg-transparent': pageName === 'FreeTrial'
+                'bg-lightGrey ': bg !== 'transparent',
+                'bg-transparent': bg === 'transparent'
             })}
         >
             <Container>

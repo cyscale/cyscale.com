@@ -28,8 +28,8 @@ const PciDss = ({ location }) => {
         <Layout
             location={location}
             pageName='PCIDSS'
-            title='PCI DSS Compliance for Cloud'
-            description='Scan, monitor and prioritize cloud IAM risk'
+            title='PCI Cloud Security & Compliance | Automate PCI DSS Compliance - Cyscale'
+            description='Develop a strong cloud security process for payment card data that enables prevention, detection, and response to security incidents.'
         >
             <div className='bg-cloud bg-lightGrey'>
                 <Container>

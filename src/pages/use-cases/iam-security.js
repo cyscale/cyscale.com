@@ -25,8 +25,8 @@ const IAMSecurity = ({ location }) => {
         <Layout
             location={location}
             pageName='IAMSecurity'
-            title='IAM Security for Cloud'
-            description='Scan, monitor and prioritize cloud IAM risk'
+            title='IAM Cloud Security | Detect and Mitigate Risk - Cyscale'
+            description='Continuous multi-cloud monitoring for identity and access management (IAM) misconfigurations across all your cloud assets to meet strict IAM compliance directives and improve your cloud security posture.'
         >
             <div className='bg-cloud' style={{ backgroundColor: '#eeeeee' }}>
                 <Container>

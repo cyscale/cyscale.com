@@ -17,7 +17,8 @@ export default function Author({ author, permalink, title }) {
                         <div className='h-7 w-7 mr-2 rounded-full border-digital border'>
                             {React.cloneElement(_author.photo, {
                                 ..._author.photo.props,
-                                className: 'rounded-full overflow-hidden relative z-10'
+                                className: 'rounded-full overflow-hidden relative z-10',
+                                alt: 'Author image'
                             })}
                         </div>
                         <span className='text-xs text-black'>

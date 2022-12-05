@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Row, Section } from '../components/atoms/Containers';
+import { Container, Row } from '../components/atoms/Containers';
 import Layout from '../components/layout/CleanLayout';
 import HeroPricing from '../assets/images/hero-pricing.png';
 import checkMarkIcon from '../assets/images/check-mark-icon.svg';
@@ -89,19 +89,20 @@ const PricingPage = ({ location }) => {
             title='Pricing - Cyscale Cloud Platform'
             description="Pay fair for security experts' advice and guidance. Quantifiable ROI for cloud data security and compliance. Reduce cloud costs and consumption."
         >
-            <div className='pt-16' css={heroBackground}>
-                <Section>
+            <div className='md:pt-16' css={heroBackground}>
+                <div className='pt-24 pb-12 sm:pb-24 lg:py-32'>
                     <Container>
                         <h1 className='text-center text-blue text-4xl lg:text-5xl font-montserrat font-bold'>
                             Get the Cyscale Platform
                         </h1>
                         <h4 className='text-center font-semibold font-montserrat text-base lg:text-lg mt-8'>
-                            Whether you’re at a Fortune 500 company or a startup,
-                            <br /> Cyscale can help you with Cloud Visibility, Security and Compliance.
+                            Whether you’re a Fortune 500 company or a startup,
+                            <br className='hidden sm:block' /> Cyscale can help you with Cloud Visibility, Security and
+                            Compliance.
                         </h4>
-                        <Row className='mt-16 lg:max-w-5xl mx-auto'>
+                        <Row className='mt-8 md:mt-16 lg:max-w-5xl mx-auto'>
                             <div className='col-span-12 lg:col-span-4'>
-                                <div className='h-40 bg-white rounded-lg flex flex-col justify-between p-4 max-w-lg mx-auto lg:mx-0'>
+                                <div className='h-28 sm:h-40 w-64 sm:w-auto bg-white rounded-lg flex flex-col justify-between p-4 max-w-lg mx-auto lg:mx-0'>
                                     <Link
                                         to='meetings-calendar'
                                         smooth={true}
@@ -119,7 +120,7 @@ const PricingPage = ({ location }) => {
                             </div>
                             <div className='col-span-12 lg:col-span-4'>
                                 <div
-                                    className='h-40 bg-white rounded-lg flex flex-col justify-between p-4 max-w-lg mx-auto lg:mx-0'
+                                    className='h-28 sm:h-40 w-64 sm:w-auto bg-white rounded-lg flex flex-col justify-between p-4 max-w-lg mx-auto lg:mx-0'
                                     css={mostPopularCard}
                                 >
                                     <div className='flex items-center justify-between'>
@@ -148,7 +149,7 @@ const PricingPage = ({ location }) => {
                                 </div>
                             </div>
                             <div className='col-span-12 lg:col-span-4'>
-                                <div className='h-40 bg-white rounded-lg flex flex-col justify-between p-4 max-w-lg mx-auto lg:mx-0'>
+                                <div className='h-28 sm:h-40 w-64 sm:w-auto bg-white rounded-lg flex flex-col justify-between p-4 max-w-lg mx-auto lg:mx-0'>
                                     <Link
                                         to='meetings-calendar'
                                         smooth={true}
@@ -165,7 +166,7 @@ const PricingPage = ({ location }) => {
                                 </div>
                             </div>
                         </Row>
-                        <div className='mt-16'>
+                        <div className='mt-8 md:mt-16'>
                             <p className='text-base font-montserrat font-medium text-center'>
                                 Not sure how many assets you want to protect?
                             </p>
@@ -187,7 +188,7 @@ const PricingPage = ({ location }) => {
                             </Link>
                         </div>
                         <p
-                            className='text-center font-medium font-montserrat mt-16 max-w-5xl mx-auto'
+                            className='text-center font-medium font-montserrat mt-8 md:mt-16 max-w-5xl mx-auto'
                             css={css`
                                 font-size: 13px;
                                 line-height: 25px;
@@ -198,13 +199,12 @@ const PricingPage = ({ location }) => {
                                 }
                             `}
                         >
-                            Every resource counts as an asset. The entire knowledge base contributes to the security
-                            posture including IAM entities (users, groups, policies, etc.), compute instances, storage
-                            disks and buckets, VPCs, etc. The billed number of assets is the average of assets across
-                            syncs within the billing period
+                            Every cloud resource in your environment counts as an asset and is factored into the
+                            Security Knowlege Graph. The entire data is used as a basis for security analysis, including
+                            IAM entities (users, groups, policies, etc.), compute instances, disks, VPCs, storage, etc.
                         </p>
                     </Container>
-                </Section>
+                </div>
             </div>
             <div className='py-24'>
                 <h1 className='text-center text-blue font-montserrat' css={featuresTitleFontSize}>
@@ -220,8 +220,8 @@ const PricingPage = ({ location }) => {
                                 Visibility
                             </h2>
                             <p className='text-base font-mediun font-montserrat mt-4'>
-                                Continuous visibility of multi-cloud environments to identify cloud misconfiguration
-                                vulnerabilities. Scan, monitor, and remediate across your cloud...
+                                Continuous visibility over multi-cloud environments to identify vulnerable areas. Scan,
+                                monitor, and remediate across your cloud infrastructure.
                             </p>
                             <div className='flex mt-8'>
                                 <img src={checkMarkIcon} alt='' />{' '}
@@ -240,10 +240,7 @@ const PricingPage = ({ location }) => {
                                 <img src={checkMarkIcon} alt='' /> <p className='ml-2 text-sm'>Asset Inventory</p>
                             </div>
                             <div className='flex mt-2 items-start'>
-                                <img src={checkMarkIcon} alt='' />{' '}
-                                <p className='ml-2 text-sm'>
-                                    Powerful dashboards (Global dashboard, Identity, Data Security)
-                                </p>
+                                <img src={checkMarkIcon} alt='' /> <p className='ml-2 text-sm'>Powerful dashboards</p>
                             </div>
                         </div>
                         <div className='col-span-12 lg:col-span-4 mx-auto max-w-lg lg:mx-0 mt-8 lg:mt-0'>
@@ -269,8 +266,7 @@ const PricingPage = ({ location }) => {
                                 <p className='ml-2 text-sm'>400+ security controls (including contextual analysis)</p>
                             </div>
                             <div className='flex mt-2'>
-                                <img src={checkMarkIcon} alt='' />{' '}
-                                <p className='ml-2 text-sm'>Custom controls (not available yet)</p>
+                                <img src={checkMarkIcon} alt='' /> <p className='ml-2 text-sm'>Custom controls</p>
                             </div>
                             <div className='flex mt-2'>
                                 <img src={checkMarkIcon} alt='' />{' '}
@@ -282,7 +278,7 @@ const PricingPage = ({ location }) => {
                                     className='ml-2 text-sm hover:underline'
                                     to={'/products/security-knowledge-graph/'}
                                 >
-                                    Security Knowledge Graphs
+                                    Security Knowledge Graph
                                 </GatsbyLink>
                             </div>
                         </div>
@@ -346,14 +342,12 @@ const PricingPage = ({ location }) => {
                     </h4>
                     <h4 className='text-center lg:text-lg font-montserrat font-semibold mt-2' css={linkFontSize}>
                         View Cyscale in action{' '}
-                        <a
-                            href='https://app.cyscale.com/playground'
-                            target='_blank'
-                            rel='noopener noreferrer'
+                        <GatsbyLink
+                            to='/playground'
                             className='text-blue hover:underline font-montserrat font-semibold'
                         >
                             on the Playground account
-                        </a>
+                        </GatsbyLink>
                     </h4>
                 </Container>
             </div>
@@ -420,9 +414,8 @@ const PricingPage = ({ location }) => {
                         Let’s make it a win-win!
                     </h1>
                     <p className='my-8 text-center font-medium text-sm lg:text-base font-montserrat'>
-                        For custom plans let's talk about your team, about your products, and about your challenges and
-                        come <br /> up with a pricing scheme that ultimately brings a positive ROI and helps you move
-                        faster.
+                        Let's talk about your team, your products, and your challenges and come <br /> up with a pricing
+                        scheme that ultimately brings you a positive ROI and helps you move faster.
                     </p>
                 </Container>
                 <div
