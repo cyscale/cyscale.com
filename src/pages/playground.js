@@ -22,7 +22,7 @@ const heroHeigt = css`
 
 const Playground = ({ location }) => {
     const { loadingForm } = useHSFormLoaded();
-    const [showSectionForm, setShowSection] = useState(!true);
+    const [showSectionForm, setShowSection] = useState(true);
 
     const hubspotHandler = (event) => {
         if (
