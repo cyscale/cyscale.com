@@ -14,7 +14,6 @@ import VideoCyscale from '../components/campaigns/cspm-solutin/CyscaleVideo';
 import VisibilityIcon from '../assets/images/visibility-icon-pricing.svg';
 import SecurityIcon from '../assets/images/security-icon-pricing.svg';
 import ComplianceIcon from '../assets/images/compliance-icon-pricing.svg';
-import { useAppLink } from '../common/links';
 import { Link, Element } from 'react-scroll';
 import classnames from 'classnames';
 import useHSMeetingsLoaded from '../hooks/useHSMeetingsLoaded';
@@ -66,7 +65,6 @@ const linkFontSize = css`
 `;
 
 const PricingPage = ({ location }) => {
-    const appLink = useAppLink({ location });
     const [modal, setModal] = useState(false);
     const [isHover, setIsHover] = useState(false);
     const matches = useMediaQuery('(min-width: 23.438rem) and (max-width: 63.938rem)');

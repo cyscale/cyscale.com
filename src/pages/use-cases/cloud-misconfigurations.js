@@ -1,7 +1,6 @@
 import React from 'react';
 
 import heroBG from '../../assets/images/hero-CSPM-bg.svg';
-import { useAppLink } from '../../common/links';
 import Layout from '../../components/layout/layout.js';
 import iconTwo from '../../assets/images/elemente-vectoriale-07.png';
 import iconThree from '../../assets/images/elemente-vectoriale-08.png';
@@ -61,12 +60,12 @@ const dataFeaturedProducts = [
 ];
 
 const CloudMissConfiguration = ({ location }) => {
-    const appLink = useAppLink({ location });
     return (
         <Layout
             heroBG={heroBG}
             location={location}
-            bannerBtn1Link={appLink}
+            bannerBtn1Link={"/free-trial"}
+            bannerBtn1LinkInternal={true}
             pageName='MisconfigurationsPage'
             bannerBtn1Text='Try Cyscale for free'
             title='Detect and Eliminate Cloud Misconfigurations - Cyscale'
@@ -81,8 +80,7 @@ const CloudMissConfiguration = ({ location }) => {
                 <GetStarted
                     description='When did you last scan your cloud for misconfigurations?'
                     btnText='Start scanning for free'
-                    btnLink={appLink}
-                    ExternalLink
+                    btnLink={'/free-trial'}
                     icon={iconTwo}
                     icon2={iconThree}
                     sectionName='getStartedFooter'

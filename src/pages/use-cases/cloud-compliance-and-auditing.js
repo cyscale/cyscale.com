@@ -1,11 +1,8 @@
 import React from 'react';
-import { useAppLink } from '../../common/links';
 import CloudComplianceContent from '../../components/cloud-compliance';
 import Layout from '../../components/layout/layout.js';
 
 const CloudCompliance = ({ location }) => {
-    const appLink = useAppLink({ location });
-
     return (
         <Layout
             location={location}
@@ -13,7 +10,8 @@ const CloudCompliance = ({ location }) => {
             bannerTitle={`Compliance toolbox for cloud-native and cloud-first organizations`}
             bannerDescription={`Compliance toolbox for cloud-native and cloud-first organizations\n\nThe Cyscale Cloud Platform gives you full visibility across cloud and data repos, from app-level to your overall compliance posture. `}
             bannerBtn1Text='Try Cyscale for free'
-            bannerBtn1Link={appLink}
+            bannerBtn1Link={'/free-trial'}
+            bannerBtn1LinkInternal={true}
             title='Cloud Security Compliance. Security & Compliance Checks - Cyscale'
             description='Manage, monitor, and prove cloud compliance with Cyscale. Automate checks for 500+ cloud controls & policies to comply with ISO 27001, PCI, SOC 2 & more.'
         >
@@ -22,4 +20,4 @@ const CloudCompliance = ({ location }) => {
     );
 };
 
-export default CloudCompliance
+export default CloudCompliance;

@@ -10,15 +10,12 @@ import icon3 from '../../assets/images/management.svg';
 import icon4 from '../../assets/images/message.svg';
 import getStartedICon from '../../assets/images/getStartedIconCPSM.svg';
 import { OptimizeCosts, EliminateSecurityGaps } from './images';
-import { useAppLink } from '../../common/links';
 import MisconfigurationTabs from './MisconfigurationTabs';
 import CategoryPostsPreview from '../new-blog/CategoryPostsPreview';
 import { Container, Section } from '../atoms/Containers';
 import Faqs from './Faqs';
 
 const Index = () => {
-    const appLink = useAppLink();
-
     const dataOnboarding = [
         {
             icon: icon1,
@@ -148,7 +145,7 @@ const Index = () => {
     return (
         <>
             <Onboarding data={dataOnboarding} />
-            <MisconfigurationTabs id="misconfiguration-tabs"/>
+            <MisconfigurationTabs id='misconfiguration-tabs' />
             <div className='gradientBGCSPM'>
                 <GetStarted
                     description='Discover the most flexible pricing in the cloud security industry'
@@ -157,31 +154,30 @@ const Index = () => {
                     icon={getStartedICon}
                 />
             </div>
-            <div className='additionalBenefits' id="additional-benefits">
+            <div className='additionalBenefits' id='additional-benefits'>
                 <Fproducts sectionTitle='Optimize your operations' data={dataAdditionalBenefits} />
             </div>
-            <div className='block w-full CSPMServices' id="cspm-services">
+            <div className='block w-full CSPMServices' id='cspm-services'>
                 <Services
                     headingText='The Cyscale Cloud Platform packs all the CSPM features you need'
                     sectionName='CSPMServices'
                     data={dataService}
                 />
             </div>
-            <div className='bg-gray ' id="faqs">
+            <div className='bg-gray ' id='faqs'>
                 <Section>
                     <Container>
                         <Faqs />
                     </Container>
                 </Section>
             </div>
-            <CategoryPostsPreview category={'CSPM'} id="cspm-news"/>
+            <CategoryPostsPreview category={'CSPM'} id='cspm-news' />
             <div className='gradientBGCSPM-2'>
                 <CSPMgetStarted
                     title={`AGENTLESS, MULTI-CLOUD, PAINLESS CSPM`}
                     description='Start seeing value & saving money in minutes'
                     btnText='TRY CYSCALE FOR FREE'
-                    btnLink={appLink}
-                    ExternalLink
+                    btnLink={'/free-trial'}
                 />
             </div>
         </>

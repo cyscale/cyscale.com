@@ -9,7 +9,7 @@ import whyIso from '../../assets/images/components-iso.svg';
 import ScrollButton from '../../components/ScrollButton/ScrollButton';
 import getStartedICon from '../../assets/images/getStartedIconCPSM.svg';
 import GetStarted from '../../components/Home/getstarted';
-import { useAppLink } from '../../common/links';
+import { Link } from 'gatsby';
 
 const StepCard = ({ groups, list, order }) => {
     return (
@@ -36,8 +36,6 @@ const StepCard = ({ groups, list, order }) => {
 };
 
 const CloudCompliance = ({ location }) => {
-    const appLink = useAppLink({ location });
-
     return (
         <Layout
             location={location}
@@ -60,14 +58,12 @@ const CloudCompliance = ({ location }) => {
                                         policies.
                                     </p>
 
-                                    <a
-                                        href={appLink}
-                                        target='_blank'
-                                        rel='noopener noreferrer'
+                                    <Link
+                                        to='/free-trial'
                                         className='bg-gradient-to-r from-blue to-red lg:max-w-xs block font-medium rounded text-white uppercase text-center py-5 px-12 mt-8 no-underline hover:no-underline '
                                     >
                                         Start Free Trial
-                                    </a>
+                                    </Link>
                                 </div>
                                 <div className='col-span-12 mb-10 lg:mb-0 lg:col-span-6 lg:pl-8 order-1 lg:order-2'>
                                     <img src={whyIso} alt='Why is ISO 27001' className='mx-auto w-auto h-auto' />
@@ -85,7 +81,9 @@ const CloudCompliance = ({ location }) => {
                     <div className='max-w-lg mx-auto lg:mx-0 lg:max-w-none'>
                         <Row>
                             <div className='col-span-12 text-center py-16'>
-                                <h2 className='font-semibold  text-primary text-3xl lg:text-5xl'>Why is ISO 27001 important?</h2>
+                                <h2 className='font-semibold  text-primary text-3xl lg:text-5xl'>
+                                    Why is ISO 27001 important?
+                                </h2>
                                 <p className='text-base lg:text-xl leading-relaxed max-w-5xl mx-auto mt-8'>
                                     <strong>ISO/IEC 27001:2013</strong> is the golden standard when it comes to
                                     information security. Part of the <strong>ISO 27000 family</strong>, it helps
@@ -98,7 +96,7 @@ const CloudCompliance = ({ location }) => {
                     </div>
                 </Section>
                 <Section>
-                    <div className='max-w-lg mx-auto lg:mx-0 lg:max-w-none' id="iso-compliant">
+                    <div className='max-w-lg mx-auto lg:mx-0 lg:max-w-none' id='iso-compliant'>
                         <h2 className='font-semibold  text-primary text-2xl lg:text-4xl mb-8 text-center'>
                             Becoming ISO 27001 Compliant
                         </h2>
@@ -241,7 +239,9 @@ const CloudCompliance = ({ location }) => {
                                 />
                             </div>
                             <div className='col-span-12 lg:col-span-6 lg:pl-8'>
-                                <h2 className='font-semibold  text-primary text-2xl lg:text-4xl'>Annex A Controls and beyond</h2>
+                                <h2 className='font-semibold  text-primary text-2xl lg:text-4xl'>
+                                    Annex A Controls and beyond
+                                </h2>
                                 <p className='text-base lg:text-lg leading-relaxed  mt-4 lg:mt-8'>
                                     Continuously keep your systems and your data secure by following industry best
                                     practices such as CIS benchmarks and well-architected frameworks, all neatly mapped
@@ -256,7 +256,9 @@ const CloudCompliance = ({ location }) => {
                     <div className='max-w-lg mx-auto lg:mx-0 lg:max-w-none'>
                         <Row style={{ alignItems: 'center' }}>
                             <div className='col-span-12 lg:col-span-6 order-2 lg:order-1 lg:pr-8'>
-                                <h2 className='font-semibold  text-primary text-2xl lg:text-4xl'>Out of the box Policies</h2>
+                                <h2 className='font-semibold  text-primary text-2xl lg:text-4xl'>
+                                    Out of the box Policies
+                                </h2>
                                 <p className='text-base lg:text-lg leading-relaxed  mt-4 lg:mt-8'>
                                     Cyscale provides you with a set of battle-tested policies to jumpstart your ISMS.
                                     They are applicable to all your assets such as employee information, intelectual
@@ -284,7 +286,9 @@ const CloudCompliance = ({ location }) => {
                                 />
                             </div>
                             <div className='col-span-12 lg:col-span-6 lg:pl-8'>
-                                <h2 className='font-semibold  text-primary text-2xl lg:text-4xl'>Actionable Policies</h2>
+                                <h2 className='font-semibold  text-primary text-2xl lg:text-4xl'>
+                                    Actionable Policies
+                                </h2>
                                 <p className='text-base lg:text-lg leading-relaxed  mt-4 lg:mt-8'>
                                     Cyscale enables you to link procedures to actual technical verifications and
                                     controls. You know at any moment the exact compliance status of your assets right
@@ -298,10 +302,9 @@ const CloudCompliance = ({ location }) => {
             </Container>
             <div className='gradientBGCSPM pt-60px pb-60px'>
                 <GetStarted
-                    ExternalLink
                     icon={getStartedICon}
                     btnText='Start your free trial'
-                    btnLink={appLink}
+                    btnLink={'/free-trial'}
                     description='Achieve true continuous compliance for ISO 27001'
                 />
             </div>
@@ -309,4 +312,4 @@ const CloudCompliance = ({ location }) => {
     );
 };
 
-export default CloudCompliance
+export default CloudCompliance;

@@ -69,9 +69,9 @@ const MobileNavigation = ({ showMenu, setShowMenu, appLink }) => {
                         })}
                         <div className='flex px-8 mt-4'>
                             <img src={IconUser} alt='' />
-                            <a className='ml-2' href={appLink} target='_blank' rel='noopener noreferrer'>
+                            <Link className='ml-2' to='/free-trial'>
                                 Start Free Trial
-                            </a>
+                            </Link>
                         </div>
                         <div className='flex mt-3 px-8'>
                             <img src={IconTag} alt='' />
