@@ -25,6 +25,7 @@ const MegaMenu = styled.div`
 
 const NavItem = styled.li`
     position: static;
+    pointer-events: ${({ disabled }) => (disabled ? 'none' : 'all')};
     &:hover ${MegaMenu} {
         z-index: 99;
         visibility: visible;
@@ -85,7 +86,7 @@ const HeaderLogo = styled.img`
     ${tw`block`};
 `;
 
-const NewNavigation = ({ pageName, showLogo, appLink, location }) => {
+const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation }) => {
     const { pathname } = location;
     const [activeLinks, setActiveLinks] = useState({
         platform: false,
@@ -114,7 +115,7 @@ const NewNavigation = ({ pageName, showLogo, appLink, location }) => {
                     )}
                 </div>
                 <ul className='flex flex-row'>
-                    <NavItem>
+                    <NavItem disabled={isAnimation}>
                         <NavItemButton
                             type='button'
                             className={`${
@@ -129,7 +130,7 @@ const NewNavigation = ({ pageName, showLogo, appLink, location }) => {
                             <Platform pathname={pathname} activeLinks={activeLinks} setActiveLinks={setActiveLinks} />
                         </MegaMenu>
                     </NavItem>
-                    <NavItem>
+                    <NavItem disabled={isAnimation}>
                         <NavItemButton
                             type='button'
                             className={`${
@@ -175,7 +176,7 @@ const NewNavigation = ({ pageName, showLogo, appLink, location }) => {
                             </span>
                         </NavItemButton>
                     </NavItem>
-                    <NavItem>
+                    <NavItem disabled={isAnimation}>
                         <NavItemButton
                             type='button'
                             className={`${
@@ -190,7 +191,7 @@ const NewNavigation = ({ pageName, showLogo, appLink, location }) => {
                             <Resources pathname={pathname} activeLinks={activeLinks} setActiveLinks={setActiveLinks} />
                         </MegaMenu>
                     </NavItem>
-                    <NavItem>
+                    <NavItem disabled={isAnimation}>
                         <NavItemButton
                             type='button'
                             className={`${
