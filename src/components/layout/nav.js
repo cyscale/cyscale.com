@@ -22,8 +22,8 @@ const platform = [
     {
         icon: Shield,
         title: 'Cloud Compliance Platform',
-        description: 'CIS, ISO 27001:2013, SOC 2, NIST 800, NIST CSF, PCIDSS, CCPA, GDPR, HITRUST, HIPAA.',
-        mobileDescription: 'CIS, ISO 27001:2013, SOC 2, NIST 800, NIST CSF, PCIDSS, CCPA, GDPR, HITRUST, HIPAA.',
+        description: 'CIS, ISO 27001:2013, SOC 2, NIST 800, NIST CSF, PCI DSS, CCPA, GDPR, HITRUST, HIPAA.',
+        mobileDescription: 'CIS, ISO 27001:2013, SOC 2, NIST 800, NIST CSF, PCI DSS, CCPA, GDPR, HITRUST, HIPAA.',
         link: '/use-cases/cloud-compliance-and-auditing/'
     }
 ];
