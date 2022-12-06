@@ -23,8 +23,8 @@ const FreeTrial = ({ location }) => {
         <AnimatedNavbarLayout
             location={location}
             pageName='FreeTrial'
-            title='Free Trial - Cyscale'
-            description='Free Trial - Cyscale'
+            title='Start Free Trial - Cyscale'
+            description='Cyscale is an agentless CSPM solution that helps your organization map, secure and monitor cloud assets across multiple providers.'
         >
             <Helmet>
                 <script charset='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js'></script>
