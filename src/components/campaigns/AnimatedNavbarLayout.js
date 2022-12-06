@@ -22,6 +22,7 @@ const Footer = loadable(() => import('./footer'));
 const AnimatedNavbarLayout = ({ children, formId, formTargetId, location, title, description, pageName }) => {
     const { cookies, cookiesBanner, setCookiesBanner } = useSetCookieBanner();
     const [navOpen, setNavOpen] = useState(false);
+    const [isAnimation, setIsAnimation] = useState(true);
     const appLink = useAppLink();
 
     useEffect(() => {
@@ -37,6 +38,13 @@ const AnimatedNavbarLayout = ({ children, formId, formTargetId, location, title,
             }, 600);
         }
     }, [formId, formTargetId, pageName]);
+
+    useEffect(() => {
+        if (isAnimation) {
+            document.body.style.overflowX = 'hidden';
+            return () => (document.body.style.overflow = 'unset');
+        }
+    }, [isAnimation]);
 
     return (
         <CookiesProvider>
@@ -73,9 +81,21 @@ const AnimatedNavbarLayout = ({ children, formId, formTargetId, location, title,
                             alt=''
                         />
                     </div>
-                    <CSSTransition in={navOpen} timeout={300} classNames='navigation' unmountOnExit>
+                    <CSSTransition
+                        in={navOpen}
+                        timeout={300}
+                        classNames='navigation'
+                        unmountOnExit
+                        onEntered={() => setIsAnimation(false)}
+                    >
                         <div className='navigation'>
-                            <NewNavigation pageName={pageName} showLogo={false} appLink={appLink} location={location} />
+                            <NewNavigation
+                                pageName={pageName}
+                                showLogo={false}
+                                appLink={appLink}
+                                location={location}
+                                isAnimation={isAnimation}
+                            />
                         </div>
                     </CSSTransition>
                 </header>
