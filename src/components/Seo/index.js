@@ -23,6 +23,7 @@ const defaultOg = {
     ComplianceAuditing: ComplianceOg,
     MisconfigurationsPage: MisconfigurationsOg,
     careers: CareersOg,
+    jobDetails: CareersOg,
     aboutUs: AboutUsOg,
     Startups: StartupsOg,
     CloudStorageMisconfigurations: MisconfigurationsWhitepaperOg
