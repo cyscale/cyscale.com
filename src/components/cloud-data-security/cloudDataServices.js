@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 
 const Services = ({ data, bannerBtn1Text, bannerBtn1Link }) => {
     return (
@@ -17,14 +18,13 @@ const Services = ({ data, bannerBtn1Text, bannerBtn1Link }) => {
                 </div>
             </div>
             <div className='mt-55px pb-41px w-full flex justify-center'>
-                <a
-                    target='_self'
-                    rel='noopener noreferrer'
-                    href={bannerBtn1Link}
-                    className='gradientBgBtn md:min-w-232px sm:min-w-232px lg:min-w-232px xl:min-w-232px 2xl:min-w-232px text-16px rounded text-white uppercase text-center pt-21px pb-21px pl-49px pr-49px no-underline'
+                <Link
+                    to={bannerBtn1Link}
+                    className='gradientBgBtn md:min-w-232px sm:min-w-232px lg:min-w-232px xl:min-w-232px 2xl:min-w-232px
+                    text-16px rounded text-white uppercase text-center pt-21px pb-21px pl-49px pr-49px no-underline'
                 >
                     {bannerBtn1Text}
-                </a>
+                </Link>
             </div>
         </div>
     );

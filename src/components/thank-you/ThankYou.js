@@ -24,7 +24,7 @@ const ThankYou = () => {
                 {' '}
                 <Link
                     className='text-base lg:text-lg underline font-montserrat'
-                    to={'/products/cloud-security-posture-management/'}
+                    to={'/products/security-knowledge-graph/'}
                 >
                     Security Knowledge Graph
                 </Link>
@@ -33,7 +33,7 @@ const ThankYou = () => {
                 {' '}
                 <Link
                     className='text-base lg:text-lg underline font-montserrat'
-                    to={'/products/cloud-security-posture-management/'}
+                    to={'/use-cases/cloud-compliance-and-auditing/'}
                 >
                     Compliance & Auditing{' '}
                 </Link>

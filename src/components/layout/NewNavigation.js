@@ -210,8 +210,7 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation }) =
                     <li className='py-6 pr-0 pl-7'>
                         <Link
                             className='bg-gradient-to-r from-blue to-red hover:from-red hover:to-blue w-auto text-sm px-4 border-transparent box-border rounded-md h-10 hidden xl:flex justify-center items-center uppercase leading-none text-white transition duration-500 hover:no-underline font-medium'
-                            href={appLink}
-                           to="/free-trial"
+                            to='/free-trial'
                         >
                             Start Free Trial
                         </Link>
