@@ -1,14 +1,11 @@
 import React from 'react';
 import { Container, Row, Section } from '../../components/atoms/Containers';
 import Layout from '../../components/layout/CleanLayout';
-import { useAppLink } from '../../common/links';
-import { useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql, Link } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import ScrollButton from '../../components/ScrollButton/ScrollButton';
 
 const IAMSecurity = ({ location }) => {
-    const appLink = useAppLink({ location });
-
     const data = useStaticQuery(graphql`
         query IAMSecurityQuery {
             identityDashboard: file(relativePath: { eq: "identity_dashboard.png" }) {
@@ -47,14 +44,12 @@ const IAMSecurity = ({ location }) => {
                                 misconfigurations across all your cloud assets to meet strict IAM compliance directives
                                 and improve your cloud security posture.
                             </p>
-                            <a
-                                href={appLink}
-                                target='_blank'
-                                rel='noopener noreferrer'
+                            <Link
+                                to='/free-trial'
                                 className='bg-gradient-to-r mx-auto sm:mx-0 from-blue to-red max-w-xs block font-medium rounded text-white uppercase text-center py-5 px-12 mt-8 no-underline hover:no-underline '
                             >
                                 Try Cyscale for Free
-                            </a>
+                            </Link>
                         </div>
                     </Section>
                     <div className='pb-8'>
@@ -102,14 +97,14 @@ const IAMSecurity = ({ location }) => {
                     </Row>
                 </Section>
             </Container>
-            <Container id="user-assets">
+            <Container id='user-assets'>
                 <Section>
                     <div className='sm:grid sm:grid-cols-12 sm:gap-12'>
                         <div className='col-span-12 lg:col-span-6'>
                             <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-sm'>
                                 <h2 className='text-4xl font-semibold text-primary leading-normal border-title'>
                                     Deep dive into
-                                <br /> User assets
+                                    <br /> User assets
                                 </h2>
                             </div>
                         </div>
@@ -134,7 +129,7 @@ const IAMSecurity = ({ location }) => {
                     </div>
                 </Section>
             </Container>
-            <div className='bg-semicircle' id="confidence">
+            <div className='bg-semicircle' id='confidence'>
                 <Container>
                     <Section>
                         <div className='max-w-xl mx-auto lg:mx-0 lg:max-w-sm mb-20'>
@@ -192,12 +187,12 @@ const IAMSecurity = ({ location }) => {
                             <p className='text-white text-lg md:text-2xl mb-20'>
                                 Start seeing value & saving money in minutes
                             </p>
-                            <a
-                                href={appLink}
+                            <Link
+                                to='/free-trial'
                                 className='bg-white text-black font-medium transition-all cursor-pointer duration-300 border uppercase border-black py-5 px-16 rounded inline-block hover:bg-black hover:text-white'
                             >
                                 Try Cyscale for Free
-                            </a>
+                            </Link>
                         </div>
                     </Container>
                 </Section>

@@ -15,13 +15,10 @@ import Icon3 from '../../assets/images/feature_icon_3.inline.svg';
 import Icon4 from '../../assets/images/feature_icon_4.inline.svg';
 import Icon5 from '../../assets/images/feature_icon_5.inline.svg';
 import Icon6 from '../../assets/images/feature_icon_6.inline.svg';
-import { useAppLink } from '../../common/links';
 import { Link } from 'gatsby';
 import { Container, Row, Section } from '../atoms/Containers';
 
 const Index = () => {
-    const appLink = useAppLink();
-
     const dataFeatures = [
         {
             icon: <Icon1 />,
@@ -193,8 +190,7 @@ const Index = () => {
                 <GetStarted
                     description='Ready to give it a try and see how it works?'
                     btnText='START YOUR FREE TRIAL'
-                    btnLink={appLink}
-                    ExternalLink
+                    btnLink={"/free-trial"}
                     icon={getStartedICon}
                 />
             </div>
@@ -220,8 +216,7 @@ const Index = () => {
                 <GetStarted
                     description={`Accurate. Real-time. Context-aware.`}
                     btnText='TRY CYSCALE FOR FREE'
-                    btnLink={appLink}
-                    ExternalLink
+                    btnLink={"/free-trial"}
                     sectionName='dataSecFoot'
                 />
             </div>

@@ -5,12 +5,9 @@ import corner from '../../assets/images/corner-campaigns-iam-security.svg';
 import cloudIcon from '../../assets/images/cloud-icon.svg';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { graphql, Link, useStaticQuery } from 'gatsby';
-import { useAppLink } from '../../common/links';
 import GradientButton from '../../components/buttons/GradientButton';
 
 const Soc2 = ({ location }) => {
-    const appLink = useAppLink({ location });
-
     const data = useStaticQuery(graphql`
         query Soc2Query {
             inventory: file(relativePath: { eq: "inventory-soc-2.png" }) {
@@ -56,9 +53,9 @@ const Soc2 = ({ location }) => {
                                     <p className='text-center md:text-left text-base lg:text-lg mb-2 leading-relaxed text-gray'>
                                         Out-of-the-box policies that you can use for a solid security program.
                                     </p>
-                                    <a href={appLink} target='_blank' rel='noopener noreferrer'>
+                                    <Link to='/free-trial'>
                                         <GradientButton text='Try Cyscale for Free' />
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                             <div className='col-span-12 lg:col-span-6'>

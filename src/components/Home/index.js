@@ -6,7 +6,6 @@ import cloudIcon from '../../assets/images/cloud.png';
 import iconTwo from '../../assets/images/elemente-vectoriale-07.png';
 import iconThree from '../../assets/images/elemente-vectoriale-08.png';
 import { SecurityKnowledgeGraph, CloudNative, RemoteWorkWft, DataGathering } from './images';
-import { useAppLink } from '../../common/links';
 
 const Services = loadable(() => import('./services'))
 const GetStarted = loadable(() => import('./getstarted'))
@@ -17,8 +16,6 @@ const PostsPreview = loadable(() => import('../new-blog/PostsPreview'))
 const Sectionheader = loadable(() => import('../layout/sectionheader'))
 
 const Home = () => {
-    const appLink = useAppLink();
-
     const dataService = [
         {
             title: 'Compliance Officers optimize their effort and results',
@@ -185,8 +182,7 @@ const Home = () => {
                 <GetStarted
                     description='Start seeing value & saving money in minutes'
                     btnText=' Try Cyscale for free'
-                    btnLink={appLink}
-                    ExternalLink
+                    btnLink="/free-trial"
                 />
             </div>
             <Cloud
@@ -219,8 +215,7 @@ const Home = () => {
                 <GetStarted
                     description='When did you last scan your cloud for misconfigurations?'
                     btnText='Start scanning for free'
-                    btnLink={appLink}
-                    ExternalLink
+                    btnLink="/free-trial"
                     icon={iconTwo}
                     icon2={iconThree}
                     sectionName='getStartedFooter'

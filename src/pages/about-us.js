@@ -15,12 +15,10 @@ import Layout from '../components/layout/CleanLayout';
 import History from '../components/about/history';
 import GetStarted from '../components/Home/getstarted';
 import getStartedIcon from '../assets/images/elemente-vectoriale-07.png';
-import { useAppLink } from '../common/links';
 import data from '../components/careers/data';
 import { Link } from 'gatsby';
-const AboutUs = ({ location }) => {
-    const appLink = useAppLink({ location });
 
+const AboutUs = ({ location }) => {
     return (
         <Layout
             location={location}
@@ -85,8 +83,7 @@ const AboutUs = ({ location }) => {
                 <GetStarted
                     description='Start improving your Cloud Security Posture'
                     btnText='TRY CYSCALE FOR FREE'
-                    btnLink={appLink}
-                    ExternalLink
+                    btnLink={"/free-trial"}
                     icon={getStartedIcon}
                     sectionName='aboutUsGetStarted'
                 />

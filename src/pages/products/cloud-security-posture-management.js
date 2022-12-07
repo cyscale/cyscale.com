@@ -1,12 +1,10 @@
 import React from 'react';
 
 import heroBG from '../../assets/images/hero-CSPM-bg.svg';
-import { useAppLink } from '../../common/links';
 import Cspm from '../../components/cloud-security-posture-management';
 import Layout from '../../components/layout/layout.js';
 
 const SecurityPosture = ({ location }) => {
-    const appLink = useAppLink({ location });
     return (
         <>
             <Layout
@@ -15,7 +13,8 @@ const SecurityPosture = ({ location }) => {
                 bannerTitle={`Cloud Security Posture\n Management Tool`}
                 bannerDescription={`Continuous visibility of multi-cloud environments to identify cloud misconfiguration vulnerabilities, ultimately securing your cloud from data breaches and leaks. Scan, monitor, and remediate across AWS, Azure, Google Cloud, Alibaba Cloud.`}
                 bannerBtn1Text='Try Cyscale for free'
-                bannerBtn1Link={appLink}
+                bannerBtn1Link={'/free-trial'}
+                bannerBtn1LinkInternal={true}
                 pageName='CSPMPage'
                 title='Cloud Security Posture Management - CSPM Tool - Cyscale'
                 description='Continuous visibility of multi-cloud environments to identify cloud misconfiguration vulnerabilities. Scan, monitor, and remediate across AWS, Azure, Google Cloud, Alibaba Cloud'

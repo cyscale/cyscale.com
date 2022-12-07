@@ -12,12 +12,9 @@ import Icon2 from '../../assets/images/Group-411.inline.svg';
 import Icon3 from '../../assets/images/Group-412.inline.svg';
 import Icon4 from '../../assets/images/Path-270.inline.svg';
 import F_Image from '../../assets/images/fImage1.svg';
-import { useAppLink } from '../../common/links';
 import NewTopNav from '../layout/NewTopNav';
 
 const Index = ({ location }) => {
-    const appLink = useAppLink();
-
     const dataServices = [
         {
             icon: <Icon1 />,
@@ -141,7 +138,7 @@ const Index = ({ location }) => {
                     description={`Stuck playing catch-up with data security, with no breathing space for projects that move the needle? It's time for a change of pace.\n\n Give your engineers clarity and accuracy - use the Cyscale Cloud Platform to turn cloud data security into a manageable routine.\n\nKeep tabs on your fast-growing cloud inventory with automated data discovery and classification, compliance scans on autopilot and a fully auditable evidence trail. And that's just a taste!`}
                 />
             </div>
-            <Services bannerBtn1Text='Try Cyscale for free' bannerBtn1Link={appLink} data={dataServices} />
+            <Services bannerBtn1Text='Try Cyscale for free' bannerBtn1Link='/free-trial' data={dataServices} />
             <div
                 className='max-w-1366px mx-auto pt-70px pb-70px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px'
                 id='discover'
@@ -165,8 +162,7 @@ const Index = ({ location }) => {
                 <GetStarted
                     description={`Automate key data security tasks & keep your head above water`}
                     btnText='START YOUR FREE TRIAL'
-                    btnLink={appLink}
-                    ExternalLink
+                    btnLink={'/free-trial'}
                     sectionName='cloudDataSecurity'
                     icon={getStartedICon}
                 />

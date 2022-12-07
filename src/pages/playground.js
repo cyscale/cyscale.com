@@ -1,58 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Row } from '../components/atoms/Containers';
 import useHSFormLoaded from '../hooks/useHSFormLoaded';
 import classnames from 'classnames';
 import LoaderContainer from '../components/Loader/LoaderContainer/LoaderContainer';
-import { css } from 'twin.macro';
 import AnimatedNavbarLayout from '../components/campaigns/AnimatedNavbarLayout';
-import PostsPreview from '../components/new-blog/PostsPreview';
-import { Link } from 'gatsby';
-import { animateScroll } from 'react-scroll';
-
-const heroHeigt = css`
-    @media (min-width: 45rem) and (max-width: 80rem) {
-        min-height: calc(100vh - 11.5rem);
-    }
-
-    @media (min-width: 80rem) {
-        min-height: calc(100vh - 18.75rem);
-    }
-`;
+import useHSFormDisplayAndSubmit from '../hooks/useHSFormDisplayAndSubmit';
+import ThankYou from '../components/thank-you/ThankYou';
+import { heroHeight } from '../assets/css/styles';
 
 const Playground = ({ location }) => {
     const { loadingForm } = useHSFormLoaded();
-    const [showSectionForm, setShowSection] = useState(true);
-
-    const hubspotHandler = (event) => {
-        if (
-            event.data.type === 'hsFormCallback' &&
-            event.data.eventName === 'onFormSubmitted' &&
-            event.data.id === '7a731caa-e393-44a1-a205-4080e4e3ab6f'
-        ) {
-            setShowSection(!showSectionForm);
-            animateScroll.scrollToTop();
-        }
-    };
-
-    useEffect(() => {
-        setTimeout(() => {
-            if (window && window.hbspt) {
-                window.hbspt.forms.create({
-                    portalId: '5413427',
-                    formId: '7a731caa-e393-44a1-a205-4080e4e3ab6f',
-                    target: '#playground-form'
-                });
-            }
-        }, 600);
-
-        window.addEventListener('message', hubspotHandler);
-
-        return () => {
-            window.removeEventListener('message', hubspotHandler);
-        };
-        // eslint-disable-next-line
-    }, []);
+    const { formSubmitted } = useHSFormDisplayAndSubmit({
+        formId: '7a731caa-e393-44a1-a205-4080e4e3ab6f',
+        target: '#playground-form'
+    });
 
     return (
         <AnimatedNavbarLayout
@@ -64,11 +26,11 @@ const Playground = ({ location }) => {
             <Helmet>
                 <script charset='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js'></script>
             </Helmet>
-            <div className='bg-hero-campaigns-iam-security' css={heroHeigt}>
+            <div className='bg-hero-campaigns-iam-security' css={heroHeight}>
                 <div className='py-28 lg:py-32'>
                     <div className='container max-w-7xl m-auto px-8'>
                         <Row>
-                            {showSectionForm && (
+                            {!formSubmitted && (
                                 <div className='col-span-12 lg:col-span-6 '>
                                     {
                                         <div className='max-w-lg lg:max-w-xl mx-auto lg:mx-0'>
@@ -97,7 +59,7 @@ const Playground = ({ location }) => {
                                     }
                                 </div>
                             )}
-                            {showSectionForm ? (
+                            {!formSubmitted ? (
                                 <div className='col-span-12 lg:col-span-6'>
                                     <div
                                         className='bg-white rounded-lg mt-6 lg:mt-0 lg:rounded-xl shadow-lg  pt-6 pb-0 px-4 md:px-12 max-w-lg mx-auto lg:mr-0 lg:ml-auto relative'
@@ -118,45 +80,7 @@ const Playground = ({ location }) => {
                                     </div>
                                 </div>
                             ) : (
-                                <div className='col-span-12'>
-                                    <h1 className='text-center text-xl lg:text-4xl text-blue font-montserrat font-bold py-8 lg:py-10'>
-                                        Thanks for contacting us, we will be in touch soon!
-                                    </h1>
-                                    <h2 className='text-center text-base lg:text-lg font-montserrat font-bold my-4'>
-                                        Discover more about our product:
-                                    </h2>
-                                    <p className='text-center'>
-                                        {' '}
-                                        <Link
-                                            className='text-base lg:text-lg underline'
-                                            to={'/products/cloud-security-posture-management/'}
-                                        >
-                                            Cloud Security Posture Management
-                                        </Link>
-                                    </p>{' '}
-                                    <p className='text-center mt-1'>
-                                        {' '}
-                                        <Link
-                                            className='text-base lg:text-lg underline'
-                                            to={'/products/cloud-security-posture-management/'}
-                                        >
-                                            Security Knowledge Graph
-                                        </Link>
-                                    </p>{' '}
-                                    <p className='text-center pb-12 mt-1'>
-                                        {' '}
-                                        <Link
-                                            className='text-base lg:text-lg underline'
-                                            to={'/products/cloud-security-posture-management/'}
-                                        >
-                                            Compliance & Auditing{' '}
-                                        </Link>
-                                    </p>
-                                    <h2 className='text-center text-base lg:text-lg font-montserrat font-bold'>
-                                        Visit our blog for the latest articles on cloud security and compliance:
-                                    </h2>
-                                    <PostsPreview bg={'transparent'} />
-                                </div>
+                                <ThankYou />
                             )}
                         </Row>
                     </div>

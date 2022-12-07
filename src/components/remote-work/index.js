@@ -9,12 +9,9 @@ import EmployeeAccessFootprint from '../../assets/images/employee-access-footpri
 import getStartedICon from '../../assets/images/getStartedIconCPSM.svg';
 import SuperChargeCloudSecurityImage from '../../assets/images/supercharge-cloud-security.png';
 import CloudSecuirtyConfigurationImage from '../../assets/images/cloud-secuity-configuration.svg';
-import { useAppLink } from '../../common/links';
 import { Link } from 'gatsby';
 
 export default function RemoteWorkContent() {
-    const appLink = useAppLink();
-
     const dataWFHServices = [
         {
             icon: <Shield />,
@@ -101,8 +98,7 @@ export default function RemoteWorkContent() {
                 <GetStarted
                     description='Support productive, secure & compliant remote workflows'
                     btnText='START YOUR FREE TRIAL'
-                    btnLink={appLink}
-                    ExternalLink
+                    btnLink={"/free-trial"}
                     icon={getStartedICon}
                     sectionName='RemoteWork'
                 />
@@ -187,8 +183,7 @@ export default function RemoteWorkContent() {
                     icon={getStartedICon}
                     description={`Prevent cloud data spills and keep remote work incident-free`}
                     btnText='Start your free trial'
-                    btnLink={appLink}
-                    ExternalLink
+                    btnLink={"/free-trial"}
                 />
             </div>
         </>

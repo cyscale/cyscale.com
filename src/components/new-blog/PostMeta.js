@@ -4,11 +4,11 @@ import Categories from './Categories';
 
 export default function PostMeta({ categories, date }) {
     return (
-        <div className='flex justify-between'>
+        <div className='flex justify-between items-start'>
             <span>
                 <Categories categories={categories} />
             </span>
-            <span className='text-xs text-black text-opacity-70'>{formatDate(date)}</span>
+            <span className='text-xs text-black text-opacity-70 pt-1'>{formatDate(date)}</span>
         </div>
     );
 }
