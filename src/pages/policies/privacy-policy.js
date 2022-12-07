@@ -8,7 +8,7 @@ const PrivacyPolicyPage = ({ location }) => {
         <Layout
             location={location}
             pageName='privacyPolicy'
-            title='Privacy Policy - Cyscale Cloud Platform'
+            title='Privacy Policy - Cyscale'
             description='Privacy Policy for the Cyscale Cloud Platform for securing cloud-native apps and data in a cloud-first world. Prevent cloud data leakage.'
         >
             <PrivacyPolicy location={location} pageName='privacyPolicy' />

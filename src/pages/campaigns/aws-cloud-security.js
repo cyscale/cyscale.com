@@ -38,7 +38,7 @@ const AWSCloudSolution = ({ location }) => {
             formId={'e2610c67-1db7-4443-b551-784a12a3da64'}
             formTargetId={'#request-aws-demo'}
             location={location}
-            title={'AWS Cloud Security and compliance'}
+            title={'AWS Cloud Security and compliance - Cyscale'}
             description={'Map, secure, and monitor your AWS assets in minutes.'}
             pageName='AWSCloudSecurityCampaign'
         >

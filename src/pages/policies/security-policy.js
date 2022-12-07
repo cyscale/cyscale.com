@@ -7,7 +7,7 @@ const SecurityPolicyPage = ({ location }) => (
     <Layout
         location={location}
         pageName='SecurityPolicy'
-        title='Security Policy - Cyscale Cloud Platform'
+        title='Security Policy - Cyscale'
         description='Security Policy for the Cyscale Cloud Platform for securing cloud-native apps and data in a cloud-first era. Avoid data loss.'
     >
         <SecurityPolicy location={location} pageName='SecurityPolicy' />

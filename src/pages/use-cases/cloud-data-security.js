@@ -7,7 +7,7 @@ const CloudDataSecurity = ({ location }) => (
     <Layout
         location={location}
         pageName='dataSecurity'
-        title='Multi-Cloud Data Security - Cyscale Cloud Platform'
+        title='Multi-Cloud Data Security - Cyscale'
         description='Get efficient data security for your multi-cloud environment and DBaaS. Explore rich, flexible features and automation: asset mapping, data classification and more.'
     >
         <DataSecurity location={location} pageName={'dataSecurity'} />

@@ -20,7 +20,7 @@ const Playground = ({ location }) => {
         <AnimatedNavbarLayout
             location={location}
             pageName='Playground'
-            title='Playground Account Access'
+            title='Playground Account Access - Cyscale'
             description='Get access to a playground account, fully featured and populated with data.'
         >
             <Helmet>

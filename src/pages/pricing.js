@@ -86,7 +86,7 @@ const PricingPage = ({ location }) => {
         <Layout
             location={location}
             pageName='Pricing'
-            title='Pricing - Cyscale Cloud Platform'
+            title='Pricing - Cyscale'
             description="Pay fair for security experts' advice and guidance. Quantifiable ROI for cloud data security and compliance. Reduce cloud costs and consumption."
         >
             <div className='md:pt-16' css={heroBackground}>

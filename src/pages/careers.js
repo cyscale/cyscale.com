@@ -91,7 +91,7 @@ const Careers = ({ location }) => {
         <Layout
             location={location}
             pageName='careers'
-            title='Careers - Cyscale Cloud Platform'
+            title='Careers - Cyscale'
             description='Together, we can make the world a safer place!'
         >
             <div className='bg-lightGrey'>

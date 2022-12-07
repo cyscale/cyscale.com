@@ -9,7 +9,7 @@ const CareerTemplate = ({ pageContext, location }) => {
         <Layout
             location={location}
             pageName='jobDetails'
-            title={data.seoTitle || data.title}
+            title={`${ data.seoTitle || data.title} - Cyscale`}
             description={data.seoDescription || data.description}
         >
             <Details data={alldata} jobs={jobs} />

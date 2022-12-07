@@ -12,7 +12,7 @@ const RemoteWorkSecurity = ({ location }) => {
             bannerBtn1Text='Try Cyscale for free'
             bannerBtn1Link={'/free-trial'}
             bannerBtn1LinkInternal={true}
-            title='Remote Work Cloud Security - Cyscale Cloud Platform'
+            title='Remote Work Cloud Security - Cyscale'
             description='Keep cloud-dependent remote work setups secure and compliant. Simplify cloud configurations for all your cloud accounts, SaaS platforms, and cloud assets.'
         >
             <RemoteWorkContent />
