@@ -190,7 +190,7 @@ exports.createPages = async ({ graphql, actions }) => {
                     numPages,
                     currentPage: i + 1,
                     category: 'All',
-                    seoTitle: i === 0 ? 'Blog - Cyscale Cloud Platform' : `Blog Page ${i + 1} - Cyscale Cloud Platform`,
+                    seoTitle: i === 0 ? 'Blog - Cyscale' : `Blog Page ${i + 1} - Cyscale`,
                     seoDescription: 'Cloud and Data Security Blog',
                     categoriesList: categoriesWithPosts
                 }

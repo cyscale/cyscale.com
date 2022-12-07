@@ -135,7 +135,7 @@ const SecurityForStartupsProgram = ({ location }) => {
 
     return (
         <>
-            <Layout location={location} pageName='Startups' title='Startups Program' description='Startups Program'>
+            <Layout location={location} pageName='Startups' title='Startups Program - Cyscale' description='Startups Program'>
                 <Helmet>
                     <script charSet='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js'></script>
                     <script type='application/ld+json' data-rh='true'>{`{

@@ -16,7 +16,7 @@ const SecurityKnowledge = ({ location }) => {
                 bannerBtn1Link={'/free-trial'}
                 bannerBtn1LinkInternal={true}
                 pageName='SKGPage'
-                title='Security Knowledge Graph™ - Cyscale Cloud Platform'
+                title='Security Knowledge Graph™ - Cyscale'
                 description='Pinpoint cloud security issues created by cross-cloud interactions with the Cyscale Security Knowledge Graph™. Strengthen GRC with context-aware automation for digital assets.'
             >
                 <Skg />

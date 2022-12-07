@@ -28,7 +28,7 @@ export default function Misconfigurations({ location }) {
     return (
         <CookiesCampaignsLayout
             location={location}
-            title={'Detect and Elimitate Cloud Misconfigurations'}
+            title={'Detect and Elimitate Cloud Misconfigurations - Cyscale'}
             description={
                 'Improve your security posture in the cloud, a centralized view of all your assets and servers in one place. Detect and eliminate critical misconfigurations, policy violations, and mistakes.'
             }

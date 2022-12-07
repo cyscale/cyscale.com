@@ -40,7 +40,7 @@ const ContactUs = ({ location }) => {
         <AnimatedNavbarLayout
             location={location}
             pageName='RequestDemo'
-            title='Request Demo - Cyscale Cloud Platform'
+            title='Request Demo - Cyscale'
             description='We are happy to schedule a product demo with you.'
         >
             <div className='bg-hero-campaigns-iam-security pb-8' css={heroHeigt}>

@@ -26,7 +26,7 @@ const Iso27001 = ({ location }) => {
     return (
         <CookiesCampaignsLayout
             location={location}
-            title={'ISO 27001 Compliance for cloud'}
+            title={'ISO 27001 Compliance for cloud - Cyscale'}
             description={
                 "'ISO/IEC 27001:2013 is the golden standard when it comes to information security. Part of the ISO 27000 family, it helps organizations protect their assets such as employee information, user data, and intellectual property."
             }

@@ -36,7 +36,7 @@ const Variant = ({ location, data }) => {
             formId={'81943e73-3b0a-4e69-8c8d-92c747a10796'}
             formTargetId={'#request-cspm-demo'}
             location={location}
-            title={'Comprehensive CSPM solution'}
+            title={'Comprehensive CSPM solution - Cyscale'}
             description={
                 'Streamline posture management for multi-cloud environments, enable teams to continuously detect, prevent misconfigurations and control threats and ensure compliance for your cloud assets.'
             }
