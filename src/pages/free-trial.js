@@ -36,11 +36,11 @@ const FreeTrial = ({ location }) => {
                             {!formSubmitted && (
                                 <div className='col-span-12 lg:col-span-6 '>
                                     {
-                                        <div className='max-w-lg mx-auto lg:mx-0'>
+                                        <div className='max-w-lg lg:max-w-xl mx-auto lg:mx-0'>
                                             <h2 className='text-3xl lg:text-5xl text-left text-blue font-bold mt-8 lg:mt-0 font-montserrat'>
                                                 Start Free Trial
                                             </h2>
-                                            <p className='text-lg text-left text-base font-medium max-w-md mt-8 font-montserrat'>
+                                            <p className='text-lg text-left text-base font-medium max-w-md lg:max-w-xl mt-8 font-montserrat'>
                                                 Cyscale is an agentless platform that helps your organization map,
                                                 secure and monitor cloud assets across multiple providers. The Start
                                                 Free Trial process is easy and effective:
