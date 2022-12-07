@@ -2,6 +2,7 @@ import React from 'react';
 import {
     Gapminder,
     LeaderAndy,
+    LeaderBarry,
     LeaderManuela,
     LeaderOvidiu,
     Notion,
@@ -43,8 +44,8 @@ const AboutUs = ({ location }) => {
                             </div>
                         </div>
                         <div className='col-span-12 md:col-span-6'>
-                            <div className="max-w-xs sm:max-w-none">
-                            <OvidiuAndManuela />
+                            <div className='max-w-xs sm:max-w-none'>
+                                <OvidiuAndManuela />
                             </div>
                         </div>
                     </Row>
@@ -54,23 +55,26 @@ const AboutUs = ({ location }) => {
                 <Section>
                     <Row>
                         <div className='col-span-12'>
-                            <h2 id='start' className='text-blue sm:text-3xl text-4xl font-bold leading-normal mb-6 sectionTitle'>
+                            <h2
+                                id='start'
+                                className='text-blue sm:text-3xl text-4xl font-bold leading-normal mb-6 sectionTitle'
+                            >
                                 How this story started
                             </h2>
                         </div>
                         <div className='col-span-12 md:col-span-6'>
                             <p className='max-w-lg  leading-loose'>
-                                As more companies moved their business applications and data to the cloud, many
-                                lacked the knowledge or human resources required to mitigate security risks associated
-                                with this accelerated cloud adoption.
+                                As more companies moved their business applications and data to the cloud, many lacked
+                                the knowledge or human resources required to mitigate security risks associated with
+                                this accelerated cloud adoption.
                             </p>
                         </div>
                         <div className='col-span-12 md:col-span-6'>
                             <p className='max-w-lg  leading-loose'>
                                 Being on the front line as cybersecurity experts, the founders (Ovidiu, Manuela, and
-                                Andrei) have realized the struggle these companies face and started working on a solution
-                                to help them handle their Cloud Security better and more efficiently. And so... Cyscale
-                                was born.
+                                Andrei) have realized the struggle these companies face and started working on a
+                                solution to help them handle their Cloud Security better and more efficiently. And so...
+                                Cyscale was born.
                             </p>
                         </div>
                     </Row>
@@ -83,7 +87,7 @@ const AboutUs = ({ location }) => {
                 <GetStarted
                     description='Start improving your Cloud Security Posture'
                     btnText='TRY CYSCALE FOR FREE'
-                    btnLink={"/free-trial"}
+                    btnLink={'/free-trial'}
                     icon={getStartedIcon}
                     sectionName='aboutUsGetStarted'
                 />
@@ -93,7 +97,7 @@ const AboutUs = ({ location }) => {
                     className='bg-gray absolute bottom-0 mb-20 lg:mb-24 left-0 w-full hidden sm:block'
                     style={{ height: 115, zIndex: -1 }}
                 ></div>
-                <Container id="leadership">
+                <Container id='leadership'>
                     <Section>
                         <div className='mb-10'>
                             <h2 className='font-semibold  text-blue sm:text-3xl text-4xl leading-normal mb-6 text-center'>
@@ -101,7 +105,7 @@ const AboutUs = ({ location }) => {
                             </h2>
                         </div>
                         <Row className='max-w-4xl mx-auto md:gap-8'>
-                            <div className='col-span-6 sm:col-span-4 lg:col-span-4'>
+                            <div className='col-span-6 sm:col-span-3'>
                                 <LeaderOvidiu
                                     className='rounded-md shadow-md mb-4'
                                     alt='Ovidiu Cical - Founder & CEO'
@@ -118,7 +122,7 @@ const AboutUs = ({ location }) => {
                                     <span className='ml-1 sm:ml-2'>Founder & CEO</span>
                                 </a>
                             </div>
-                            <div className='col-span-6 sm:col-span-4 lg:col-span-4'>
+                            <div className='col-span-6 sm:col-span-3'>
                                 <LeaderManuela
                                     className='rounded-md shadow-md mb-4'
                                     alt='Manuela Țicudean - Founder & COO'
@@ -135,7 +139,7 @@ const AboutUs = ({ location }) => {
                                     <span className='ml-1 sm:ml-2'>Founder & COO</span>
                                 </a>
                             </div>
-                            <div className='col-span-6 sm:col-span-4 lg:col-span-4'>
+                            <div className='col-span-6 sm:col-span-3'>
                                 <LeaderAndy
                                     className='rounded-md shadow-md mb-4'
                                     alt='Andy Leaver - VP Ops in Residence'
@@ -152,14 +156,33 @@ const AboutUs = ({ location }) => {
                                     <span className='ml-1 sm:ml-2'>VP Ops in Residence</span>
                                 </a>
                             </div>
+                            <div className='col-span-6 sm:col-span-3'>
+                                <LeaderBarry
+                                    className='rounded-md shadow-md mb-4'
+                                    alt='Andy Leaver - VP Ops in Residence'
+                                />
+                                <strong className='text-black sm:text-white'>Barry Lyne</strong>
+                                <br />
+                                <a
+                                    href='https://www.linkedin.com/in/barrylyne'
+                                    className='flex text-sm text-black sm:text-white hover:underline'
+                                    rel='noopener noreferrer'
+                                    target='_blank'
+                                >
+                                    <FaLinkedin className='text-sm sm:text-lg mt-1 sm:mt-0' />
+                                    <span className='ml-1 sm:ml-2'>VP of Sales</span>
+                                </a>
+                            </div>
                         </Row>
                     </Section>
                 </Container>
             </div>
 
-            <Container className='relative' id="backed-by">
+            <Container className='relative' id='backed-by'>
                 <Section>
-                    <h2 className='font-semibold  text-blue sm:text-3xl text-4xl leading-normal mb-6 text-center'>Backed by</h2>
+                    <h2 className='font-semibold  text-blue sm:text-3xl text-4xl leading-normal mb-6 text-center'>
+                        Backed by
+                    </h2>
                     <div className='flex justify-center flex-wrap'>
                         <a
                             className='text-blue'
@@ -186,11 +209,13 @@ const AboutUs = ({ location }) => {
                     </div>
                 </Section>
             </Container>
-            <Container className='relative' id="team">
+            <Container className='relative' id='team'>
                 <Section>
                     <Row className='md:gap-8'>
                         <div className='col-span-12'>
-                            <h2 className='font-semibold  text-blue sm:text-3xl text-4xl leading-normal mb-6 text-center'>Our Team</h2>
+                            <h2 className='font-semibold  text-blue sm:text-3xl text-4xl leading-normal mb-6 text-center'>
+                                Our Team
+                            </h2>
                         </div>
                         {data
                             .filter(({ leader, photo }) => !leader && photo)

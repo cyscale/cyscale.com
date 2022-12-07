@@ -16,19 +16,10 @@ import {
     Mihnea,
     Norbert,
     Auras,
-    Darius,
-    Barry
+    Darius
 } from '../about/images';
 
 const data = [
-    {
-        order: 18,
-        photo: <Barry />,
-        name: 'Barry Lyne',
-        position: 'VP of Sales',
-        linkedin: 'https://www.linkedin.com/in/barrylyne',
-        quote: false
-    },
     {
         order: 17,
         photo: <Darius />,
