@@ -48,7 +48,7 @@ const Soc2 = ({ location }) => {
                                     <p className='text-center md:text-left text-base lg:text-lg mb-8 leading-relaxed text-gray'>
                                         Cyscale offers a powerful set of technical controls helping you prepare for a
                                         SOC 2 audit in areas such as security, availability, processing integrity,
-                                        confidentiality and privacy
+                                        confidentiality and privacy.
                                     </p>
                                     <p className='text-center md:text-left text-base lg:text-lg mb-2 leading-relaxed text-gray'>
                                         Out-of-the-box policies that you can use for a solid security program.
