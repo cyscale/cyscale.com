@@ -161,7 +161,7 @@ const PricingPage = ({ location }) => {
                                         </h2>
                                     </Link>
                                     <h4 className='text-blue font-montserrat font-semibold text-base lg:text-lg'>
-                                        With up to 10000 assets
+                                        Custom plan
                                     </h4>
                                 </div>
                             </div>
