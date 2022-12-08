@@ -1,0 +1,110 @@
+backend:
+    name: github
+    branch: main
+    repo: cyscale/cyscale.com
+    commit_messages:
+        create: 'Create {{collection}} “{{slug}}”'
+        update: 'Update {{collection}} “{{slug}}”'
+        delete: 'Delete {{collection}} “{{slug}}”'
+        uploadMedia: '[skip ci] Upload “{{path}}”'
+        deleteMedia: '[skip ci] Delete “{{path}}”'
+
+media_folder: static/img
+public_folder: /img
+collections:
+    - name: 'blog'
+      label: 'Blog'
+      folder: 'src/markdown/blog'
+      create: true
+      slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+      fields:
+          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'blog-post' }
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'SEO Title', name: 'seoTitle', widget: 'string' }
+          - {
+                label: 'Author',
+                name: 'authors',
+                widget: 'select',
+                options: ['Sabrina Lupșan', 'Andrei Ștefănie', 'Virginia Mitea', 'Manuela Țicudean', 'Ovidiu Cical']
+            }
+          - { label: 'Permalink', name: 'permalink', widget: 'string' }
+          - {
+                label: 'Categories',
+                name: 'categories',
+                widget: 'select',
+                multiple: true,
+                min: 1,
+                max: 3,
+                default: ['News'],
+                options: ['News', 'Product', 'CSPM', 'Compliance', 'CNAPP', 'Engineering']
+            }
+          - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+          - { label: 'Description', name: 'description', widget: 'text' }
+          - { label: 'SEO Description', name: 'seoDescription', widget: 'string' }
+          - { label: 'Featured Post', name: 'featuredpost', widget: 'boolean' }
+          - { label: 'Featured Image', name: 'featuredimage', widget: image }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+          - { label: 'Tags', name: 'tags', widget: 'list' }
+    - name: 'category'
+      label: 'Category'
+      folder: 'src/markdown/categories'
+      create: true
+      slug: '{{slug}}'
+      editor:
+          preview: false
+      fields:
+          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'category' }
+          - { label: 'SEO Title', name: 'seoTitle', widget: 'string' }
+          - { label: 'Slug', name: 'slug', widget: 'string' }
+          - { label: 'Name', name: 'name', widget: 'string' }
+          - { label: 'SEO Description', name: 'seoDescription', widget: 'string' }
+          - { label: 'Disabled', name: 'disabled', widget: 'boolean', default: false }
+    - name: 'career'
+      label: 'Careers'
+      folder: 'src/markdown/careers'
+      create: true
+      slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+      fields:
+          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'career-page' }
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'SEO Title', name: 'seoTitle', widget: 'string' }
+          - { label: 'Disabled', name: 'disabled', widget: 'boolean', default: false }
+          - { label: 'Location', name: 'location', widget: 'string', default: 'Remote' }
+          - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+          - { label: 'Permalink', name: 'permalink', widget: 'string' }
+          - { label: 'Description', name: 'description', widget: 'text' }
+          - { label: 'SEO Description', name: 'seoDescription', widget: 'text' }
+          - { label: 'Skills', name: 'skills', widget: 'text' }
+          - {
+                label: 'Experience',
+                name: 'experience',
+                widget: 'select',
+                options: ['intern', 'junior', 'junior/mid', 'mid', 'mid/senior', 'senior', ''],
+                default: 'mid/senior'
+            }
+          - {
+                label: 'Department',
+                name: 'department',
+                widget: 'select',
+                options:
+                    [
+                        'Sales',
+                        'Product',
+                        'Marketing',
+                        'Management',
+                        'Engineering',
+                        'Customer Success',
+                        'HR & Recruiting',
+                        ''
+                    ],
+                default: 'mid/senior'
+            }
+          - { label: 'Work Type', name: 'workType', widget: 'select', options: ['hybrid', 'remote', 'in-office', ''] }
+          - {
+                label: 'Employment Type',
+                name: 'employmentType',
+                widget: 'select',
+                options: ['full-time', 'part-time', 'contract', ''],
+                default: 'hybrid'
+            }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
