@@ -54,7 +54,7 @@ const FreeTrial = ({ location }) => {
                                             <div className='pl-12 max-w-md'>
                                                 <p className='text-sm font-montserrat font-medium'>
                                                     An initial call with us to understand your goals and set you up with
-                                                    access to the platform
+                                                    access to the platform.
                                                 </p>
                                             </div>
                                             <div className='flex mt-2 items-center'>
@@ -65,7 +65,7 @@ const FreeTrial = ({ location }) => {
                                             </div>
                                             <div className='pl-12 max-w-md'>
                                                 <p className='text-sm font-montserrat font-medium'>
-                                                    Onboarding a connector in the Cyscale platform is quick and easy
+                                                    Onboarding a connector in the Cyscale platform is quick and easy.
                                                 </p>
                                             </div>
                                             <div className='flex mt-2 items-center'>
