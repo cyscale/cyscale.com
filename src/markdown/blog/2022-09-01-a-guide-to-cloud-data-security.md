@@ -115,7 +115,7 @@ Ensuring data security in the cloud is not an easy task. There are many aspects 
 
 Cyscale provides powerful dashboards to ensure visibility of your assets, the identities in your cloud, and an overview of your data security.
 
-Moreover, 400+ controls ensure you have implemented the cybersecurity principles and best practices. Here are some examples of controls that can be used to ensure data security:
+Moreover, 400+ controls ensure you have implemented the cybersecurity principles and [best practices](https://cyscale.com/blog/5-cspm-best-practices-and-strategies/). Here are some examples of controls that can be used to ensure data security:
 
 * **In motion data encryption**: *Ensure web app is using the latest version of TLS encryption* for Microsoft Azure
 * **At rest data encryption**: *Ensure VM disks for critical VMs are encrypted with Customer*-Supplied Encryption Keys (CSEK) for GCP
