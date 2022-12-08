@@ -8,6 +8,8 @@ import AnimatedNavbarLayout from '../components/campaigns/AnimatedNavbarLayout';
 import useHSFormDisplayAndSubmit from '../hooks/useHSFormDisplayAndSubmit';
 import ThankYou from '../components/thank-you/ThankYou';
 import { heroHeight } from '../assets/css/styles';
+import arrowRight from '../assets/images/right-arrow-blue.svg';
+import { css } from 'twin.macro';
 
 const Playground = ({ location }) => {
     const { loadingForm } = useHSFormLoaded();
@@ -37,23 +39,37 @@ const Playground = ({ location }) => {
                                             <h2 className='text-3xl lg:text-5xl text-left text-blue font-bold mt-8 lg:mt-0 font-montserrat'>
                                                 Get access to the Playground Account
                                             </h2>
-                                            <p className='text-lg  text-left text-base font-medium max-w-md mt-8 font-montserrat'>
+                                            <p className='text-left text-base font-medium max-w-md lg:max-w-xl mt-8 font-montserrat'>
                                                 We are happy to send you the connection details for the Cyscale
-                                                Playground Account.
+                                                Playground Account. Fill out the form and we will be in touch shortly.
                                             </p>
-                                            <p className='text-lg text-left text-base font-medium max-w-md font-montserrat'>
-                                                Fill out the form and we will be in touch shortly.
-                                            </p>{' '}
+                                            <p className='text-left text-base font-medium max-w-md font-montserrat'></p>{' '}
                                             <div>
-                                                <p className='text-lg text-base font-medium max-w-md font-montserrat mt-8'>
+                                                <p className='text-base font-bold max-w-md font-montserrat mt-8'>
                                                     The Playground Account is fully featured:{' '}
                                                 </p>
-                                                <ul className='list-disc text-base font-medium font-montserrat ml-8'>
-                                                    <li>Asset inventory</li>
-                                                    <li>Security assessment</li>
-                                                    <li>Compliance score</li>
-                                                    <li>and many more...</li>
-                                                </ul>
+                                                <div className='flex mt-2'>
+                                                    <img src={arrowRight} alt='' />{' '}
+                                                    <p className='ml-2 text-sm'>Asset inventory</p>
+                                                </div>
+                                                <div className='flex mt-2'>
+                                                    <img src={arrowRight} alt='' />{' '}
+                                                    <p className='ml-2 text-sm'>Security assessment</p>
+                                                </div>
+                                                <div className='flex mt-2'>
+                                                    <img src={arrowRight} alt='' />{' '}
+                                                    <p className='ml-2 text-sm'>Compliance score</p>
+                                                </div>
+                                                <div className='flex mt-2'>
+                                                    <p
+                                                        className='text-sm'
+                                                        css={css`
+                                                            margin-left: 1.6rem;
+                                                        `}
+                                                    >
+                                                        and many more...
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
                                     }
