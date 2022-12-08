@@ -146,7 +146,7 @@ Spotting threats immediately or within a short period of time may save your clou
 
 Making sure that your company is compliant with international standards such as [ISO 27001](https://cyscale.com/blog/ISO-27001-certification-standard-policies-procedures/) not only consolidates your data protection services but also shows your clients that you acknowledge the importance of cybersecurity. 
 
-Following best practices recommended by standards can greatly improve your cloud security posture. 
+Following [best practices](https://cyscale.com/blog/5-cspm-best-practices-and-strategies/) recommended by standards can greatly improve your cloud security posture. 
 
 However, fulfilling all of the requirements consistently to become compliant with an international standard is a very tedious and time-consuming job. 
 
