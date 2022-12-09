@@ -4,16 +4,7 @@ import { css } from 'twin.macro';
 import useHSMeetingsLoaded from '../hooks/useHSMeetingsLoaded';
 import classnames from 'classnames';
 import useLoadHSMeetingsScript from '../hooks/useLoadHSMeetingsScript';
-
-const heroHeigt = css`
-    @media (min-width: 45rem) and (max-width: 80rem) {
-        min-height: calc(100vh - 11.5rem);
-    }
-
-    @media (min-width: 80rem) {
-        min-height: calc(100vh - 18.75rem);
-    }
-`;
+import { heroHeight } from '../assets/css/styles';
 
 const ContactUs = ({ location }) => {
     const { loadingMeetings } = useHSMeetingsLoaded();
@@ -43,7 +34,7 @@ const ContactUs = ({ location }) => {
             title='Request Demo - Cyscale'
             description='We are happy to schedule a product demo with you.'
         >
-            <div className='bg-hero-campaigns-iam-security pb-8' css={heroHeigt}>
+            <div className='bg-hero-campaigns-iam-security pb-8' css={heroHeight}>
                 <div className='container max-w-7xl m-auto px-4 lg:px-8 pt-24 lg:pt-32 xl:pt-16'>
                     <h1
                         className={classnames({
