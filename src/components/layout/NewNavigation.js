@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import tw, { css } from 'twin.macro';
 import { Link } from 'gatsby';
 import logo from '../../assets/images/logo.svg';
+import loginIcon from '../../assets/images/login.svg';
 
 import styled from '@emotion/styled';
 import Platform from './components/Platform/Platform';
@@ -207,6 +208,11 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation }) =
                             <Company pathname={pathname} activeLinks={activeLinks} setActiveLinks={setActiveLinks} />
                         </MegaMenu>
                     </NavItem>
+                    <li className='py-6 pl-4'>
+                        <a href='https://app.cyscale.com' target='_blank' rel='noopener noreferrer'>
+                            <img src={loginIcon} className='py-2' alt='' />
+                        </a>
+                    </li>
                     <li className='py-6 pr-0 pl-7'>
                         <Link
                             className='bg-gradient-to-r from-blue to-red hover:from-red hover:to-blue w-auto text-sm px-4 border-transparent box-border rounded-md h-10 hidden xl:flex justify-center items-center uppercase leading-none text-white transition duration-500 hover:no-underline font-medium'
@@ -214,16 +220,6 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation }) =
                         >
                             Start Free Trial
                         </Link>
-                    </li>
-                    <li className='py-6 pl-4'>
-                        <a
-                            className='text-black hover:text-black mt-0 text-sm px-4 uppercase w-84px greyBorder flex h-10 justify-center items-center rounded-md leading-none transition-all duration-500 hover:bg-grey3 hover:no-underline font-medium'
-                            href='https://app.cyscale.com'
-                            target='_blank'
-                            rel='noopener noreferrer'
-                        >
-                            Log in
-                        </a>
                     </li>
                 </ul>
             </div>
