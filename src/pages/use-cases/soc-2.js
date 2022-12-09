@@ -170,7 +170,7 @@ const Soc2 = ({ location }) => {
                     <Section>
                         <div className='max-w-xl mx-auto lg:mx-0 lg:max-w-sm mb-20'>
                             <h2 className='text-3xl font-bold text-primary leading-normal border-title-partly montserrat-font'>
-                                100% Confidence with <br /> your IAM Compliance
+                                100% Confidence with <br /> your Cloud Compliance
                             </h2>
                         </div>
                         <div className='max-w-xl mx-auto lg:mx-0 lg:max-w-3xl'>
@@ -179,7 +179,7 @@ const Soc2 = ({ location }) => {
                                     <p className='leading-normal text-base text-gray mb-6'>
                                         <strong className='montserrat-font'>Meet industry regulations</strong>
                                         <br />
-                                        Protect sensitive data and comply with strict industry in your Financial
+                                        Protect sensitive data and comply with strict industry regulations in your
                                         organisation. Cyscale automatically runs all critical compliance checks and
                                         finds data at-risk.
                                     </p>
@@ -207,7 +207,7 @@ const Soc2 = ({ location }) => {
                                         </strong>
                                         <br />
                                         Onboard teams in 30 minutes and coordinate efforts to apply 500+ out-of-the-box
-                                        security controls and policies.
+                                        security controls.
                                     </p>
                                 </div>
                             </Row>
