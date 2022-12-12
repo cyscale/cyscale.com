@@ -9,8 +9,8 @@ const HomePage = ({ location }) => {
             location={location}
             bannerTitle={`Complete cloud visibility \n& control platform`}
             bannerDescription={`Map, secure, and monitor your cloud assets across platforms in under 5 minutes.\n\nOptimize operations and costs with an agentless CSPM solution that uses our Security Knowledge Graph™ to ensure scalable, consistent protection and governance.`}
-            bannerBtn1Text='Try it out'
-            bannerBtn1Link='/playground'
+            bannerBtn1Text='Start Free Trial'
+            bannerBtn1Link='/free-trial'
             bannerBtn1LinkInternal={true}
             bannerBtn2Text='Request demo'
             bannerBtn2Link='/request-demo'
