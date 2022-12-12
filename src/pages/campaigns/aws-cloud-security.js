@@ -41,6 +41,7 @@ const AWSCloudSolution = ({ location }) => {
             title={'AWS Cloud Security and compliance - Cyscale'}
             description={'Map, secure, and monitor your AWS assets in minutes.'}
             pageName='AWSCloudSecurityCampaign'
+            noIndex={true}
         >
             <div className='bg-hero-campaigns-iam-security pb-8 pt-32 lg:pt-40 xl:pt-12'>
                 <Container>
