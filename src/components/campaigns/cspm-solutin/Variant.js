@@ -27,7 +27,6 @@ const heroHeight = css`
 `;
 
 const Variant = ({ location, data }) => {
-    const { pathname } = location;
     const { loadingForm } = useHSFormLoaded();
     const [mobileModal, setMobileModal] = useState(false);
     const [modal, setModal] = useState(false);
@@ -42,7 +41,7 @@ const Variant = ({ location, data }) => {
                 'Streamline posture management for multi-cloud environments, enable teams to continuously detect, prevent misconfigurations and control threats and ensure compliance for your cloud assets.'
             }
             pageName={'CSPMSolutionCampaign'}
-            pathname={pathname}
+            noIndex={true}
         >
             <div className='bg-hero-campaigns-iam-security pb-8 pt-32 lg:pt-40 xl:pt-12' css={heroHeight}>
                 <Container>

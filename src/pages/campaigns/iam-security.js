@@ -17,7 +17,6 @@ import classnames from 'classnames';
 import LoaderContainer from '../../components/Loader/LoaderContainer/LoaderContainer';
 
 const IamSecurity = ({ location }) => {
-    const { pathname } = location;
     const { loadingForm } = useHSFormLoaded();
 
     const data = useStaticQuery(graphql`
@@ -43,7 +42,7 @@ const IamSecurity = ({ location }) => {
             title={'Identity and Access Management Security for Cloud - Cyscale'}
             description={'Identity and Access Management Security for Cloud'}
             pageName={'Identity and Access Management Security for Cloud'}
-            pathname={pathname}
+            noIndex={true}
         >
             <div className='bg-hero-campaigns-iam-security pb-8 pt-32 lg:pt-40 xl:pt-12'>
                 <Container>

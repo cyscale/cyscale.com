@@ -8,7 +8,3 @@ export const isAnimatedNavbarPage = (pathname) => {
         pathname.includes('free-trial')
     );
 };
-
-export const noIndexPage = (pathname) => {
-    return pathname.includes('campaigns');
-};

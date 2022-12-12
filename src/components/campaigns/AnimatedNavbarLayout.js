@@ -20,7 +20,7 @@ import { noIndexPage } from '../../common/utils';
 import loadable from '@loadable/component';
 const Footer = loadable(() => import('./footer'));
 
-const AnimatedNavbarLayout = ({ children, formId, formTargetId, location, title, description, pageName, pathname }) => {
+const AnimatedNavbarLayout = ({ children, formId, formTargetId, location, title, description, pageName, noIndex }) => {
     const { cookies, cookiesBanner, setCookiesBanner } = useSetCookieBanner();
     const [navOpen, setNavOpen] = useState(false);
     const [isAnimation, setIsAnimation] = useState(true);
@@ -55,8 +55,8 @@ const AnimatedNavbarLayout = ({ children, formId, formTargetId, location, title,
                     {pageName !== 'RequestDemo' && (
                         <script charSet='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js' />
                     )}
-                    {noIndexPage(pathname) && <meta name='robots' content='noindex' />}
-                    {noIndexPage(pathname) && <meta name='robots' content='nofollow' />}
+                    {noIndex && <meta name='robots' content='noindex' />}
+                    {noIndex && <meta name='robots' content='nofollow' />}
                 </Helmet>
                 <Container className='hidden xl:block'>
                     <div className='flex justify-end'>
