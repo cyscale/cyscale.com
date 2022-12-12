@@ -174,13 +174,6 @@ const Header = ({
                                             </div>
                                         )}
                                     </div>
-                                    <div>
-                                        {pageName === 'HomePage' ? (
-                                            <p className={`text-14px text-black opacity-50 pt-15px text-left`}>
-                                                Playground account populated with data
-                                            </p>
-                                        ) : null}
-                                    </div>
                                 </div>
 
                                 {pageName === 'ComplianceAuditing' && (

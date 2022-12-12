@@ -15,7 +15,6 @@ import useSetCookieBanner from '../cookies-banner/useSetCookieBanner';
 import { cookieConsentKey } from '../../common/constants';
 import NewNavigation from '../layout/NewNavigation';
 import NewTopNav from '../layout/NewTopNav';
-import { noIndexPage } from '../../common/utils';
 
 import loadable from '@loadable/component';
 const Footer = loadable(() => import('./footer'));
