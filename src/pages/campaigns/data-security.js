@@ -33,6 +33,7 @@ const dashboardMarginTop = css`
 `;
 
 const DataSecurity = ({ location }) => {
+    const { pathname } = location;
     const { loadingForm } = useHSFormLoaded();
 
     const data = useStaticQuery(graphql`
@@ -65,6 +66,7 @@ const DataSecurity = ({ location }) => {
                 "Keep tabs on your fast-growing cloud inventory with automated data discovery and classification, compliance scans on autopilot and a fully auditable evidence trail. And that's just a taste!"
             }
             pageName={'DataSecurityCampaign'}
+            pathname={pathname}
         >
             <div className='bg-hero-campaigns-iam-security pb-8 pt-32 lg:pt-40 xl:pt-12'>
                 <Container>

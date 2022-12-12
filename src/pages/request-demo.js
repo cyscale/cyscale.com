@@ -7,6 +7,7 @@ import useLoadHSMeetingsScript from '../hooks/useLoadHSMeetingsScript';
 import { heroHeight } from '../assets/css/styles';
 
 const ContactUs = ({ location }) => {
+    const { pathname } = location;
     const { loadingMeetings } = useHSMeetingsLoaded();
     const [meetingBookSucceeded, setMeetingBookSucceeded] = useState(false);
 
@@ -33,6 +34,7 @@ const ContactUs = ({ location }) => {
             pageName='RequestDemo'
             title='Request Demo - Cyscale'
             description='We are happy to schedule a product demo with you.'
+            pathname={pathname}
         >
             <div className='bg-hero-campaigns-iam-security pb-8' css={heroHeight}>
                 <div className='container max-w-7xl m-auto px-4 lg:px-8 pt-24 lg:pt-32 xl:pt-16'>

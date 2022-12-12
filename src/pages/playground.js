@@ -12,6 +12,7 @@ import arrowRight from '../assets/images/right-arrow-blue.svg';
 import { css } from 'twin.macro';
 
 const Playground = ({ location }) => {
+    const { pathname } = location;
     const { loadingForm } = useHSFormLoaded();
     const { formSubmitted } = useHSFormDisplayAndSubmit({
         formId: '7a731caa-e393-44a1-a205-4080e4e3ab6f',
@@ -24,6 +25,7 @@ const Playground = ({ location }) => {
             pageName='Playground'
             title='Playground Account Access - Cyscale'
             description='Get access to a playground account, fully featured and populated with data.'
+            pathname={pathname}
         >
             <Helmet>
                 <script charset='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js'></script>

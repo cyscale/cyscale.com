@@ -13,6 +13,7 @@ import ThankYou from '../components/thank-you/ThankYou';
 import { heroHeight } from '../assets/css/styles';
 
 const FreeTrial = ({ location }) => {
+    const { pathname } = location;
     const { loadingForm } = useHSFormLoaded();
     const { formSubmitted } = useHSFormDisplayAndSubmit({
         formId: 'abd54fce-98b1-41ca-b21a-c375b100edb4',
@@ -25,6 +26,7 @@ const FreeTrial = ({ location }) => {
             pageName='FreeTrial'
             title='Start Free Trial - Cyscale'
             description='Cyscale is an agentless CSPM solution that helps your organization map, secure and monitor cloud assets across multiple providers.'
+            pathname={pathname}
         >
             <Helmet>
                 <script charset='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js'></script>
