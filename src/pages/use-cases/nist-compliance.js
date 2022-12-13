@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../../components/layout/CleanLayout';
-import { Container, Row, Section } from '../../components/atoms/Containers';
+import { Container, Row } from '../../components/atoms/Containers';
 import corner from '../../assets/images/corner-campaigns-iam-security.svg';
 import cloudIcon from '../../assets/images/cloud-icon.svg';
 import { GatsbyImage } from 'gatsby-plugin-image';
