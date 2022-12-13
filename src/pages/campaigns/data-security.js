@@ -65,6 +65,7 @@ const DataSecurity = ({ location }) => {
                 "Keep tabs on your fast-growing cloud inventory with automated data discovery and classification, compliance scans on autopilot and a fully auditable evidence trail. And that's just a taste!"
             }
             pageName={'DataSecurityCampaign'}
+            noIndex={true}
         >
             <div className='bg-hero-campaigns-iam-security pb-8 pt-32 lg:pt-40 xl:pt-12'>
                 <Container>

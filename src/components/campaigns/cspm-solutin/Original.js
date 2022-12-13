@@ -23,6 +23,7 @@ const Original = ({ location, data }) => {
                 'Streamline posture management for multi-cloud environments, enable teams to continuously detect, prevent misconfigurations and control threats and ensure compliance for your cloud assets.'
             }
             pageName={'CSPMSolutionCampaign'}
+            noIndex={true}
         >
             <div className='bg-hero-campaigns-iam-security pb-8 pt-32 lg:pt-40 xl:pt-12'>
                 <Container>
