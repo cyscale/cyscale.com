@@ -39,11 +39,11 @@ const NISTCompliance = ({ location }) => {
             location={location}
             pageName='NIST'
             title='NIST Compliance - Cyscale'
-            description='NIST Compliance - Cyscale'
+            description='A powerful set of technical controls helping you with NIST compliance in areas such as security, availability, processing integrity, confidentiality and privacy'
         >
             <div className='bg-hero-nist pt-8'>
                 <Container>
-                    <div className='py-24 lg:pt-24 lg:pb-16'>
+                    <div className='py-16 md:py-24 lg:pt-24 lg:pb-16'>
                         <Row>
                             <div className='col-span-12 lg:col-span-6 order-last lg:order-first'>
                                 <div className='lg:mt-16 pt-4 max-w-xl mx-auto lg:mx-0'>
@@ -76,7 +76,7 @@ const NISTCompliance = ({ location }) => {
                 </Container>
             </div>
             <Container>
-                <div className='py-16 md:py-24 lg:py-32'>
+                <div className='py-8 md:py-12 lg:py-20'>
                     <div className='sm:grid sm:grid-cols-12 sm:gap-12'>
                         <div className='col-span-12 lg:col-span-6'>
                             <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-md'>
@@ -89,11 +89,6 @@ const NISTCompliance = ({ location }) => {
                                 </h2>
                             </div>
                             <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-lg'>
-                                <p className='text-base text-gray mt-12'>
-                                    Implementing the NIST Cybersecurity Framework enables your organization to improve
-                                    security and resilience by addressing and managing cybersecurity risk in a flexible
-                                    and customizable manner.
-                                </p>
                                 <p className='text-base mt-4'>
                                     The 800-53 catalog of controls is a significant companion of the framework and
                                     Cyscale Platforms has a large set of technical controls to help your organization
@@ -107,7 +102,6 @@ const NISTCompliance = ({ location }) => {
                                     <li className='ml-6'>Access Control</li>
                                     <li className='ml-6'> Audit and Accountability</li>{' '}
                                     <li className='ml-6'> Identity and Authentication</li>
-                                    <li className='ml-6'> System and Information Integrity</li>
                                     <li className='ml-6'> System and Information Integrity</li>
                                     <li className='ml-6'> … and many others</li>
                                 </ul>
@@ -125,7 +119,7 @@ const NISTCompliance = ({ location }) => {
                 </div>
             </Container>
             <Container>
-                <div className='py-16 md:py-24 lg:py-32'>
+                <div className='py-8 md:py-12 lg:py-20'>
                     <div className='sm:grid sm:grid-cols-12 sm:gap-12'>
                         <div className='col-span-12 lg:col-span-6 mt-8 sm:mt-0  hidden lg:block'>
                             <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-2xl'>
@@ -173,7 +167,7 @@ const NISTCompliance = ({ location }) => {
             <div className='bg-gradient-to-b from-selago to-white relative z-10' id='confidence'>
                 <img src={corner} width={300} className='hidden md:block absolute top-0 right-0 m-0 z-20' alt='' />
                 <Container>
-                    <Section>
+                    <div className='py-8 md:py-12 lg:py-20'>
                         <div className='max-w-xl mx-auto lg:mx-0 lg:max-w-sm mb-20'>
                             <h2 className='text-3xl font-bold text-primary leading-normal border-title-partly font-montserrat'>
                                 100% Confidence with <br /> your Cloud Compliance
@@ -218,11 +212,11 @@ const NISTCompliance = ({ location }) => {
                                 </div>
                             </Row>
                         </div>
-                    </Section>
+                    </div>
                 </Container>
             </div>
             <Container>
-                <div className='pt-12 pb-24 lg:pt-32 lg:pb-32'>
+                <div className='md:pt-12 pb-24'>
                     <div className='flex h-48 flex-col items-center'>
                         <img src={cloudIcon} alt='' />
                         <h1 className='text-center px-2 mt-4 mb-2 font-montserrat font-semibold'>
