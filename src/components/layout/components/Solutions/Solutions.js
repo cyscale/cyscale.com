@@ -22,7 +22,7 @@ const descriptionMaxWidth = css`
 const caretSolutions = (isAnimatedNavbarPage) => css`
     :before {
         ${caretMenuWhiteStyle};
-        left: ${isAnimatedNavbarPage ? '29rem' : '30.5rem'};
+        left: ${isAnimatedNavbarPage ? '29rem' : '34rem'};
     }
 `;
 

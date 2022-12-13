@@ -16,7 +16,7 @@ import { isAnimatedNavbarPage } from '../../../../common/utils';
 const caretResources = (isAnimatedNavbarPage) => css`
     :before {
         ${caretMenuSelegoStyle};
-        left: ${isAnimatedNavbarPage ? '27.5rem' : '46rem'};
+        left: ${isAnimatedNavbarPage ? '27.5rem' : '49.5rem'};
     }
 `;
 

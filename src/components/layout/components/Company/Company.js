@@ -18,7 +18,7 @@ import { isAnimatedNavbarPage } from '../../../../common/utils';
 const caretCompany = (isAnimatedNavbarPage) => css`
     :before {
         ${caretMenuWhiteStyle};
-        left: ${isAnimatedNavbarPage ? '36.3rem' : '54.5rem'};
+        left: ${isAnimatedNavbarPage ? '36.3rem' : '58rem'};
     }
 `;
 
