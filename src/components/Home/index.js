@@ -5,9 +5,9 @@ import searchIcon from '../../assets/images/search.png';
 import cloudIcon from '../../assets/images/cloud.png';
 import iconTwo from '../../assets/images/elemente-vectoriale-07.png';
 import iconThree from '../../assets/images/elemente-vectoriale-08.png';
+import Services from './services';
 import { SecurityKnowledgeGraph, CloudNative, RemoteWorkWft, DataGathering } from './images';
 
-const Services = loadable(() => import('./services'))
 const GetStarted = loadable(() => import('./getstarted'))
 const Offer = loadable(() => import('./offer'))
 const Cloud = loadable(() => import('./cloud'))
