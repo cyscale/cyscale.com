@@ -113,6 +113,13 @@ const Header = ({
                                                     <br />
                                                     Go far beyond the limits of list-based inventories.
                                                 </span>
+                                            ) : pageName === 'HomePage' ? (
+                                                <span>
+                                                    Map, secure, and monitor your cloud assets across platforms in under
+                                                    5 minutes. <br /> <br /> Optimize operations and costs with an
+                                                    agentless CSPM solution that uses our Security Knowledge Graph™ to
+                                                    ensure scalable, consistent protection and governance.
+                                                </span>
                                             ) : (
                                                 bannerDescription
                                             )}
