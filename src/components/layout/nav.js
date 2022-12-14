@@ -67,6 +67,10 @@ const solutions = [
             {
                 link: '/use-cases/soc-2/',
                 text: 'SOC 2'
+            },
+            {
+                link: '/use-cases/nist-compliance/',
+                text: 'NIST'
             }
         ]
     },
