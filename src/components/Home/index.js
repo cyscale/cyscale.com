@@ -162,8 +162,8 @@ const Home = () => {
         <>
             <Services
                 headingText='How Cyscale makes your job easier & more effective'
-                description={`Specialists across industries rely on Cyscale to apply their expertise where it makes the biggest difference. \n\n We help you see through infrastructure layers and scale your efforts to organization-wide impact.`}
                 data={dataService}
+                homePage={true}
             />
             <div className='gradientBG'>
                 <GetStarted
