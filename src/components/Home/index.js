@@ -1,5 +1,5 @@
 import React from 'react';
-import loadable from '@loadable/component'
+import loadable from '@loadable/component';
 import messageIcon from '../../assets/images/chat_icon.png';
 import searchIcon from '../../assets/images/search.png';
 import cloudIcon from '../../assets/images/cloud.png';
@@ -8,12 +8,12 @@ import iconThree from '../../assets/images/elemente-vectoriale-08.png';
 import Services from './services';
 import { SecurityKnowledgeGraph, CloudNative, RemoteWorkWft, DataGathering } from './images';
 
-const GetStarted = loadable(() => import('./getstarted'))
-const Offer = loadable(() => import('./offer'))
-const Cloud = loadable(() => import('./cloud'))
-const Partners = loadable(() => import('./partners'))
-const PostsPreview = loadable(() => import('../new-blog/PostsPreview'))
-const Sectionheader = loadable(() => import('../layout/sectionheader'))
+const GetStarted = loadable(() => import('./getstarted'));
+const Offer = loadable(() => import('./offer'));
+const Cloud = loadable(() => import('./cloud'));
+const Partners = loadable(() => import('./partners'));
+const PostsPreview = loadable(() => import('../new-blog/PostsPreview'));
+const Sectionheader = loadable(() => import('../layout/sectionheader'));
 
 const Home = () => {
     const dataService = [
@@ -162,8 +162,8 @@ const Home = () => {
         <>
             <Services
                 headingText='How Cyscale makes your job easier & more effective'
-                description={`Specialists across industries rely on Cyscale to apply their expertise where it makes the biggest difference. \n\n We help you see through infrastructure layers and scale your efforts to organization-wide impact.`}
                 data={dataService}
+                homePage={true}
             />
             <div className='gradientBG'>
                 <GetStarted
@@ -176,30 +176,33 @@ const Home = () => {
                 headingText='Cyscale Cloud Platform - supercharged cloud security'
                 description={`Only the best tools fade into the background and help you focus on getting your best work done. \n\nThat's why we've built all of this and more into the platform.`}
                 data={dataOffer}
-                id="offer"
+                id='offer'
             />
             <div className='gradientBG'>
                 <GetStarted
                     description='Start seeing value & saving money in minutes'
                     btnText=' Try Cyscale for free'
-                    btnLink="/free-trial"
+                    btnLink='/free-trial'
                 />
             </div>
             <Cloud
                 title='Visibility, governance & compliance for all your cloud assets'
                 sectionName='compliance'
                 data={dataCloud}
-                id="compliance"
+                id='compliance'
             />
             <div className='cloudBenifits bg-lightGrey pb-71px'>
                 <Cloud
                     sectionName='cloudBenefits'
                     title='A Cloud Security Posture Management platform the entire organization benefits from'
                     data={dataCloudBenefits}
-                    id="cloud-benefits"
+                    id='cloud-benefits'
                 />
             </div>
-            <div className='max-w-1366px m-auto pt-67px pb-67px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px' id="integrations">
+            <div
+                className='max-w-1366px m-auto pt-67px pb-67px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px'
+                id='integrations'
+            >
                 <Sectionheader
                     headingText='Cyscale Cloud Platform integrates with'
                     description={`We support all major cloud providers from Amazon Web Services to Microsoft Azure, Google Cloud, Oracle Cloud, and IBM Cloud. \n\nYou can also use Cyscale for your cloud-native security needs (VMs, network, serverless, databases, apps) for vulnerability and threat management, cloud inventory, secure cloud extension, and as a compliance and cost-reduction solution.`}
@@ -207,15 +210,18 @@ const Home = () => {
                 />
             </div>
             <Partners />
-            <div className='max-w-1366px m-auto pt-67px pb-67px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px' id="latest-blogs">
+            <div
+                className='max-w-1366px m-auto pt-67px pb-67px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px'
+                id='latest-blogs'
+            >
                 <Sectionheader headingText={`What we're up to`} />
             </div>
-            <PostsPreview  />
+            <PostsPreview />
             <div className='gradientBG'>
                 <GetStarted
                     description='When did you last scan your cloud for misconfigurations?'
                     btnText='Start scanning for free'
-                    btnLink="/free-trial"
+                    btnLink='/free-trial'
                     icon={iconTwo}
                     icon2={iconThree}
                     sectionName='getStartedFooter'
