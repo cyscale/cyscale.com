@@ -74,7 +74,12 @@ const ContactUs = ({ location }) => {
                                 </div>
                             </div>
                             <div className='col-span-12 lg:col-span-6 order-1 lg:order-2'>
-                                <div className='lg:bg-white rounded-lg mt-6 lg:mt-0 lg:rounded-xl lg:shadow-lg  lg:pt-6 pb-0 px-0 lg:px-12 max-w-lg mx-auto lg:mr-0 lg:ml-auto relative'>
+                                <div
+                                    className={classnames({
+                                        'rounded-lg mt-6 lg:mt-0 lg:rounded-xl lg:pt-6 pb-0 px-0 lg:px-12 max-w-lg mx-auto lg:mr-0 lg:ml-auto relative': true,
+                                        'lg:bg-white lg:shadow-lg': showFormMessage
+                                    })}
+                                >
                                     {showFormMessage && (
                                         <div>
                                             {' '}
@@ -87,14 +92,22 @@ const ContactUs = ({ location }) => {
                                             </p>
                                         </div>
                                     )}
-                                    {loadingForm && (
-                                        <LoaderContainer minHeight={510} />
+                                    {loadingForm && <LoaderContainer minHeight={510} />}
+                                    {showFormMessage && (
+                                        <div
+                                            style={{ minHeight: 510 }}
+                                            id='contact-form'
+                                            className={classnames({ hidden: loadingForm })}
+                                        />
                                     )}
-                                    <div
-                                        style={{ minHeight: 510 }}
-                                        id='contact-form'
-                                        className={classnames({ hidden: loadingForm })}
-                                    />
+                                    {!showFormMessage && (
+                                        <div style={{ minHeight: 645 }} className='flex justify-center items-center'>
+                                            <h1 className='text-blue text-2xl sm:text-4xl font-semibold text-center pb-40'>
+                                                Thanks for contacting us, <br className='block sm:hidden' /> we will be
+                                                in touch soon!
+                                            </h1>
+                                        </div>
+                                    )}
                                 </div>
                             </div>
                         </Row>
