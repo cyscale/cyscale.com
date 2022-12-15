@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../../components/layout/CleanLayout';
-import { Container, Row, Section } from '../../components/atoms/Containers';
+import { Container, Row } from '../../components/atoms/Containers';
 import corner from '../../assets/images/corner-campaigns-iam-security.svg';
 import cloudIcon from '../../assets/images/cloud-icon.svg';
 import { GatsbyImage } from 'gatsby-plugin-image';
@@ -37,7 +37,7 @@ const Soc2 = ({ location }) => {
         >
             <div className='bg-hero-soc2 pt-8'>
                 <Container>
-                    <div className='py-24 lg:pt-24 lg:pb-16'>
+                    <div className='py-16 md:py-24 lg:pt-24 lg:pb-16'>
                         <Row>
                             <div className='col-span-12 lg:col-span-6 order-last lg:order-first'>
                                 <div className='lg:mt-16 pt-4 max-w-xl mx-auto lg:mx-0'>
@@ -71,7 +71,7 @@ const Soc2 = ({ location }) => {
                 </Container>
             </div>
             <Container>
-                <div className='py-16 md:py-24 lg:py-32'>
+                <div className='py-8 md:py-12 lg:py-20'>
                     <div className='sm:grid sm:grid-cols-12 sm:gap-12'>
                         <div className='col-span-12 lg:col-span-6'>
                             <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-md'>
@@ -122,7 +122,7 @@ const Soc2 = ({ location }) => {
                 </div>
             </Container>
             <Container>
-                <div className='py-16 md:py-24 lg:py-32'>
+                <div className='py-8 md:py-12 lg:py-20'>
                     <div className='sm:grid sm:grid-cols-12 sm:gap-12'>
                         <div className='col-span-12 lg:col-span-6 mt-8 sm:mt-0  hidden lg:block'>
                             <div className='mx-auto max-w-xl lg:mt-8 lg:mx-0 lg:max-w-2xl'>
@@ -167,7 +167,7 @@ const Soc2 = ({ location }) => {
             <div className='bg-gradient-to-b from-selago to-white relative z-10' id='confidence'>
                 <img src={corner} width={300} className='hidden md:block absolute top-0 right-0 m-0 z-20' alt='' />
                 <Container>
-                    <Section>
+                    <div className="py-8 md:py-12 lg:py-20">
                         <div className='max-w-xl mx-auto lg:mx-0 lg:max-w-sm mb-20'>
                             <h2 className='text-3xl font-bold text-primary leading-normal border-title-partly montserrat-font'>
                                 100% Confidence with <br /> your Cloud Compliance
@@ -212,11 +212,11 @@ const Soc2 = ({ location }) => {
                                 </div>
                             </Row>
                         </div>
-                    </Section>
+                    </div>
                 </Container>
             </div>
             <Container>
-                <div className='pt-12 pb-24 lg:pt-32 lg:pb-32'>
+                <div className='md:pt-12 pb-24'>
                     <div className='flex h-48 flex-col items-center'>
                         <img src={cloudIcon} alt='' />
                         <h1 className='text-center px-2 mt-4 mb-2 montserrat-font font-semibold'>
