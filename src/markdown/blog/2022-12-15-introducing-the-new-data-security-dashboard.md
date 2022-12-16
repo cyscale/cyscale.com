@@ -89,7 +89,7 @@ For example, a common attack is exploiting VMs that have open management ports. 
 
 Using the [Cyscale Knowledge Graph](https://cyscale.com/blog/security-knowledge-graph-integrations/), you can see that the VM named "sql-instance" has an instance profile that gives it full access to the bucket on the far right, and the VM also has port 22 (SSH) open. The VM is thus connected to the internet and therefore puts the data stored in the bucket at risk. 
 
-<img src="/img/30_blog-bucket.png" alt="Cyscale Knowledge Graph highlighting an attack path" title="Cyscale Knowledge Graph" class=" blog-image-shadow " style="width:48.875rem;height:autorem;"/>
+<img src="/img/30_blog-bucket.png" alt="Cyscale Knowledge Graph highlighting an attack path" title="Cyscale Knowledge Graph" class=" blog-image-shadow " style="width:autorem;height:autorem;"/>
 
 Other critical issues highlighted for object containers include: 
 
@@ -115,6 +115,6 @@ Moving on to the databases card, using controls, Cyscale checks for the followin
 
 <img src="/img/30_blog-databases.png" alt="Databases with issues in Cyscale" title="Databases with issues in Cyscale" class=" blog-image-shadow " style="width:autorem;height:autorem;"/>
 
-Use the multitude of features present in the Cyscale Data Security Dashboard to eliminate data exposure through data storage misconfigurations. Check out our product in the [playground](https://cyscale.com/playground/) or [schedule a demo with us](https://cyscale.com/request-demo) to start your cloud security journey! 
+Use the multitude of features present in the Cyscale Data Security Dashboard to eliminate data exposure through [data storage misconfigurations](https://cyscale.com/whitepaper/cloud-storage-misconfigurations/). Check out our product in the [playground](https://cyscale.com/playground/) or [schedule a demo with us](https://cyscale.com/request-demo) to start your cloud security journey! 
 
 <!--EndFragment-->
