@@ -69,7 +69,7 @@ The last items in this list are publicly accessible: 
 
 The next card on the Data Security Dashboard provides an overview of the [encryption keys](https://cyscale.com/blog/protecting-data-at-rest/) used in your cloud infrastructure. Cryptographic key management is a very important but sometimes overlooked aspect of the encryption process.  
 
-<img src="/img/30_blog-encryption-keys.png" alt="Cryptographic key management in Cyscale" title="Cryptographic key management in Cyscale" class=" blog-image-shadow " style="width:autorem;height:autorem;"/>
+<img src="/img/30_blog-encryption-keys.png" alt="Cryptographic key management in Cyscale" title="Cryptographic key management in Cyscale" class=" blog-image-shadow " style="width:21.875rem;height:autorem;"/>
 
 Cyscale checks if the encryption keys are stored on a vulnerable VM or if they have a permissive access policy to identify possible attack paths. Moreover, important information is highlighted, such as: 
 
