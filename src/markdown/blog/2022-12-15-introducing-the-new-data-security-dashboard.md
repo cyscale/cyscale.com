@@ -69,7 +69,7 @@ The last items in this list are publicly accessible: 
 
 The next card on the Data Security Dashboard provides an overview of the [encryption keys](https://cyscale.com/blog/protecting-data-at-rest/) used in your cloud infrastructure. Cryptographic key management is a very important but sometimes overlooked aspect of the encryption process.  
 
-<img src="/img/30_blog-encryption-keys.png" alt="Cryptographic key management in Cyscale" title="Cryptographic key management in Cyscale" class=" blog-image-shadow " style="width:autorem;height:autorem;"/>
+<img src="/img/30_blog-encryption-keys.png" alt="Cryptographic key management in Cyscale" title="Cryptographic key management in Cyscale" class=" blog-image-shadow " style="width:21.875rem;height:autorem;"/>
 
 Cyscale checks if the encryption keys are stored on a vulnerable VM or if they have a permissive access policy to identify possible attack paths. Moreover, important information is highlighted, such as: 
 
@@ -81,7 +81,7 @@ The next two sections in this dashboard focus on object containers, such as buck
 
 The first card presents the state of your object containers. 
 
-<img src="/img/30_blog-object-containers.png" alt="Object containers with issues" title="Object containers with issues" class=" blog-image-shadow " style="width:31.3125rem;height:autorem;"/>
+<img src="/img/30_blog-object-containers.png" alt="Object containers with issues" title="Object containers with issues" class=" blog-image-shadow " style="width:autorem;height:autorem;"/>
 
 Using this feature, we identify attack paths that may compromise your cloud assets and help you solve them. 
 
