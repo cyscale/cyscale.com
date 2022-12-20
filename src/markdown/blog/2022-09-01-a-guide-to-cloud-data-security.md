@@ -111,7 +111,7 @@ A few examples of available DDOS services are:
 
 **Implementing our recommendations**
 
-Ensuring data security in the cloud is not an easy task. There are many aspects to be considered, and a small mistake can leave a vulnerability in your environment.
+Ensuring [multi-cloud data security](https://cyscale.com/use-cases/cloud-data-security/) is not an easy task. There are many aspects to be considered, and a small mistake can leave a vulnerability in your environment.
 
 Cyscale provides powerful dashboards to ensure visibility of your assets, the identities in your cloud, and an overview of your data security.
 
