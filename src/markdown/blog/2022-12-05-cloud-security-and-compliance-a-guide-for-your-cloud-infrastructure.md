@@ -53,7 +53,7 @@ A knowledge graph is the perfect data model to support a contextual security ana
 
 [This all-inclusive graph](https://euc-word-edit.officeapps.live.com/we/The%20Cyscale%20Security%20Knowledge%20Graph%E2%84%A2%20is%20an%20all-inclusive%20graph%20that%20provides%20correlations%20between%20all%20of%20your%20cloud%20assets,%20as%20well%20as%20other%20apps%20and%20systems%20that%20may%20affect%20cloud%20security%20posture,%20and%20automatically%20pinpoints%20security%20issues.) highlights risk contextually and helps you make better sense of your cloud security posture. 
 
-<img src="/img/29_blog-knowledge-graph.png" alt="The Cyscale Security Knowledge Graph™" title="The Cyscale Security Knowledge Graph™" class=" blog-image-shadow " style="width:auto;height:auto;"/>
+<img src="/img/29_blog-knowledge-graph.png" alt="The Cyscale Security Knowledge Graph™" title="The Cyscale Security Knowledge Graph™" class=" blog-image-shadow " style="width:autorem;height:autorem;"/>
 
 ### 2. IAM  
 
@@ -153,11 +153,9 @@ Some of the protection principles dictated by [GDPR](https://gdpr.eu/what-is-gdp
 * Data minimization,  
 * Integrity and confidentiality, and others. 
 
-  
-
 All of these compliance standards have rigorous requirements, and the consequences of not implementing those rules can lead to financial and criminal repercussions, as well as a damaged reputation. 
 
-Cyscale can help you secure your cloud environment and become compliant with respected accreditations through: 
+Our [cloud compliance platform](https://cyscale.com/products/cloud-security-posture-management/)  can help you secure your cloud environment and become compliant with respected accreditations through: 
 
 * Over 400 controls that help you stay on top of your security program, 
 * Both pre-configured and editable policies that can be associated to controls, 
