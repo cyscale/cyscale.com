@@ -25,7 +25,7 @@ seoDescription: "We have released a new, powerful Data Security Dashboard to
   capabilities enable users to detect attack paths for data storage assets and
   quickly mitigate them.   "
 featuredpost: true
-featuredimage: /img/cyscale-blog-min.jpg
+featuredimage: /img/blog_30-cover.png
 ---
 <!--StartFragment-->
 
