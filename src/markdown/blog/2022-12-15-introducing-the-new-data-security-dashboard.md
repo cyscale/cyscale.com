@@ -25,7 +25,7 @@ seoDescription: "We have released a new, powerful Data Security Dashboard to
   capabilities enable users to detect attack paths for data storage assets and
   quickly mitigate them.   "
 featuredpost: true
-featuredimage: /img/30_blog-cover-image.png
+featuredimage: /img/cyscale-blog-min.jpg
 ---
 <!--StartFragment-->
 
@@ -51,7 +51,7 @@ This card is a good indicator of progress, and, by clicking on each section of t
 
 The next section contains the Publicly Accessible card, which provides visibility over a multitude of assets, as you can see in the image below. When you click on each element, you see a list of affected assets, along with the associated risk. 
 
-<img src="/img/cyscale-article-image-1.jpg" alt="Publicly accessible cloud assets" title="Publicly accessible cloud assets" class=" blog-image-shadow " style="width:autorem;height:autorem;"/>
+<img src="/img/cyscale-article-image-2.jpg" alt="Publicly accessible cloud assets" title="Publicly accessible cloud assets" class="" style="width:autorem;height:autorem;"/>
 
 Let’s look at this feature in more detail to understand how this helps secure your cloud infrastructure. 
 
