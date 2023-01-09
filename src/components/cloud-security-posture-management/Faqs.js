@@ -130,7 +130,7 @@ export default function Faqs() {
                     }`}</script>
             </Helmet>
 
-            <h2 className='font-semibold  text-3xl leading-normal text-white mb-6'>Frequently asked questions</h2>
+            <h2 className='font-semibold  text-3xl leading-normal text-white mb-6 font-montserrat'>Frequently asked questions</h2>
             <Row>
                 {qas(true).map((q, key) => (
                     <div
@@ -138,7 +138,7 @@ export default function Faqs() {
                         key={key}
                     >
                         <h3
-                            className='font-semibold  text-base sm:text-lg text-white mb-0 pl-8 leading-snug cursor-pointer select-none'
+                            className='font-semibold  text-base sm:text-lg text-white mb-0 pl-8 leading-snug cursor-pointer select-none font-montserrat'
                             onClick={() => setActive((s) => (s === key ? null : key))}
                             role='presentation'
                             tabIndex={-1}

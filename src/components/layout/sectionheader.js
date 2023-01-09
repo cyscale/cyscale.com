@@ -23,7 +23,7 @@ const Sectionheader = ({ headingText, description, subText, pageName, section })
                                     : 'lg:max-w-sm'
                         } ${
                             !!section && section === 'complianceAutoUpdates' ? 'lg:pr-32' : null
-                        } sectionTitle new-line`}
+                        } font-montserrat sectionTitle new-line`}
                     >
                         {headingText}
                     </h2>

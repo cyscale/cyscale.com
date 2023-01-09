@@ -30,16 +30,18 @@ const Fproducts = ({ sectionTitle, data, id }) => {
         <>
             <div className='block w-full bg-white pt-12' id={id}>
                 <div className='max-w-1366px m-auto pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px'>
-                    <h2 className='font-semibold  text-blue text-30px md:text-60px mt-25px mb-25px md:mt-50px md:mb-50px'>
+                    <h2 className='font-semibold  text-blue text-30px md:text-60px mt-25px mb-25px md:mt-50px md:mb-50px font-montserrat'>
                         {sectionTitle}
                     </h2>
                 </div>
             </div>
             <div className='block featuredProducts overflow-hidden w-full pb-12 bg-white featureTabs'>
-                <Tabs selectedIndex={tabIndex} onSelect={index => setTabIndex(index)}>
+                <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
                     <TabList>
                         {data.map((content, index) => (
-                            <Tab key={index}>{content.tabTitle}</Tab>
+                            <Tab key={index}>
+                                <span className="font-montserrat">{content.tabTitle}</span>
+                            </Tab>
                         ))}
                     </TabList>
                     {data.map((content, index) => (
@@ -65,7 +67,7 @@ const Fproducts = ({ sectionTitle, data, id }) => {
                                             <img src={left} className='m-auto cursor-pointer' alt='left icon' />
                                         </button>
                                     </div>
-                                    <div style={{width: '100%', maxWidth: 960}}>
+                                    <div style={{ width: '100%', maxWidth: 960 }}>
                                         <div className='max-w-5xl m-auto'>
                                             {React.cloneElement(content.featureImage)}
                                         </div>

@@ -11,7 +11,7 @@ const services = ({ headingText, description, data, sectionName, homePage }) => 
                     <>
                         <div className='hidden md:block'></div>
                         <div>
-                            <h2 className='font-semibold  text-blue text-34px leading-normal md:max-w-xs sectionTitle'>
+                            <h2 className='font-semibold  text-blue text-34px leading-normal md:max-w-xs sectionTitle font-montserrat'>
                                 {headingText}
                             </h2>
                         </div>
