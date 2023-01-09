@@ -37,7 +37,7 @@ const CategoryPostsPreview = ({ category, id }) => {
             <Container>
                 <Row>
                     <div className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 max-w-lg'>
-                        <h2 className='font-semibold text-2xl md:max-w-xs mb-8'>
+                        <h2 className='font-bold text-xl md:max-w-xs mb-8 font-montserrat'>
                             Get your latest dose of News and Insights about
                             <strong> {category}</strong>
                         </h2>
@@ -53,7 +53,7 @@ const CategoryPostsPreview = ({ category, id }) => {
                                         >
                                             <div className='flex m-'>
                                                 <img src={arrowRightBLue} alt='' height={20} width={20} />
-                                                <strong className='ml-1'>{title}</strong>
+                                                <strong className='ml-1 font-montserrat'>{title}</strong>
                                             </div>
                                             <span className='opacity-60 ml-6'>{formatDate(date)}</span>
                                         </Link>

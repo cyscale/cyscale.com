@@ -36,7 +36,7 @@ const getstarted = ({ description, btnText, btnLink, sectionName, icon, icon2, E
                                         : sectionName === 'cloudDataSecurity'
                                         ? 'font-bold'
                                         : ''
-                                } mb-54px mt-30px sm:pr-0 sm:pl-0 new-line `}
+                                } mb-54px mt-30px sm:pr-0 sm:pl-0 font-montserrat new-line `}
                             >
                                 {description}
                             </p>

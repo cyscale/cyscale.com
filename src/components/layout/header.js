@@ -80,7 +80,7 @@ const Header = ({
                                             : 'header-padding'
                                     }`}
                                 >
-                                    <h1 className='font-semibold text-blue text-38px sm:text-30px md:text-60px leading-normal sm:leading-normal sm:mt-20 new-line'>
+                                    <h1 className='font-semibold text-blue text-38px sm:text-30px md:text-60px leading-normal sm:leading-normal sm:mt-20 new-line font-montserrat'>
                                         {pageName === 'SKGPage' ? (
                                             <span>
                                                 Security <br />
