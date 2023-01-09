@@ -14,6 +14,7 @@ import {
 } from '../Home/images';
 import NewTopNav from './NewTopNav';
 import { Link } from 'gatsby';
+import classNames from 'classnames';
 
 const Header = ({
     heroBG,
@@ -80,7 +81,12 @@ const Header = ({
                                             : 'header-padding'
                                     }`}
                                 >
-                                    <h1 className='font-semibold text-blue text-38px sm:text-30px md:text-60px leading-normal sm:leading-normal sm:mt-20 new-line font-montserrat'>
+                                    <h1
+                                        className={classNames({
+                                            'font-semibold text-blue text-38px sm:text-30px md:text-60px leading-normal sm:leading-normal sm:mt-20 new-line': true,
+                                            'font-montserrat': pageName !== 'HomePage'
+                                        })}
+                                    >
                                         {pageName === 'SKGPage' ? (
                                             <span>
                                                 Security <br />
