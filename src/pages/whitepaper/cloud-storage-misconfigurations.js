@@ -38,7 +38,7 @@ const CloudStorageMisconfigurations = ({ location }) => {
                             <Row>
                                 <div className='col-span-12 lg:col-span-6 '>
                                     <div className='pt-1 max-w-lg lg:max-w-xl mx-auto lg:mx-0'>
-                                        <h1 className='text-center sm:text-left text-blue title-cs-misconfiguration mb-8 sm:mb-10 md:mb-12 lg:mb-16'>
+                                        <h1 className='text-center sm:text-left text-blue title-cs-misconfiguration mb-8 sm:mb-10 md:mb-12 lg:mb-16 font-montserrat'>
                                             <strong>The Complete Guide</strong> to Cloud{' '}
                                             <br className='hidden lg:block' /> Storage Misconfigurations
                                         </h1>
@@ -48,9 +48,9 @@ const CloudStorageMisconfigurations = ({ location }) => {
                                             storage infrastructure.
                                         </p>
                                         <div>
-                                            <p className='text-left text-xl sm:text-2xl leading-normal mb-2 text-gray'>
+                                            <h2 className='text-left text-xl sm:text-2xl leading-normal mb-2 text-gray'>
                                                 <strong>Download the whitepaper and learn more about:</strong>
-                                            </p>
+                                            </h2>
                                             <ul className='text-lg sm:text-xl ml-8 list-disc text-gray'>
                                                 <li>Cloud data storage breaches</li>
                                                 <li>Assets at risk</li>

@@ -100,7 +100,7 @@ const Careers = ({ location }) => {
                         <Section>
                             <Row>
                                 <div className='col-span-12 lg:col-span-6 order-2 lg:order-1'>
-                                    <h1 className='font-semibold text-4xl lg:text-6xl leading-relaxed text-primary'>
+                                    <h1 className='font-semibold font-montserrat lg:max-w-md text-3xl lg:text-4xl leading-relaxed text-primary'>
                                         Building a new product is fun.
                                         <br /> Creating a new category? Stunning.
                                     </h1>
@@ -126,7 +126,7 @@ const Careers = ({ location }) => {
                     <div className='max-w-lg mx-auto lg:mx-0 lg:max-w-none'>
                         <Row>
                             <div className='lg:col-span-5 col-span-12'>
-                                <h2 className='font-semibold  text-blue text-4xl leading-normal md:max-w-xs sectionTitle'>
+                                <h2 className='font-semibold font-montserrat text-blue text-4xl leading-normal md:max-w-xs sectionTitle'>
                                     Our Mission
                                 </h2>
                                 <p className='max-w-lg lg:max-w-md mt-8 leading-relaxed'>
@@ -146,7 +146,7 @@ const Careers = ({ location }) => {
                                 </ScrollLink>
                             </div>
                             <div className='mt-12 lg:mt-0 lg:col-span-7 col-span-12 leading-relaxed'>
-                                <h2 className='font-semibold  text-blue text-4xl leading-normal md:max-w-xs sectionTitle'>
+                                <h2 className='font-semibold font-montserrat text-blue text-4xl leading-normal md:max-w-xs sectionTitle'>
                                     Our Values
                                 </h2>
                                 <p className='max-w-lg lg:max-w-xl mt-8'>
@@ -182,7 +182,7 @@ const Careers = ({ location }) => {
             </Container>
             <Section id="benefits">
                 <Container>
-                    <h2 className='font-semibold  text-blue text-4xl text-center mx-auto  mb-4 leading-normal md:max-w-lg'>
+                    <h2 className='font-semibold font-montserrat text-blue text-4xl text-center mx-auto  mb-4 leading-normal md:max-w-lg'>
                         Not your average benefits
                     </h2>
                 </Container>
@@ -213,7 +213,7 @@ const Careers = ({ location }) => {
             </Section>
             <Section>
                 <Container>
-                    <h2 className='font-semibold  text-blue text-center mx-auto mb-12 max-w-sm text-4xl leading-normal sectionTitle'>
+                    <h2 className='font-semibold font-montserrat text-blue text-center mx-auto mb-12 max-w-sm text-3xl leading-normal sectionTitle'>
                         Words from the inside
                     </h2>
                 </Container>
@@ -272,7 +272,7 @@ const Careers = ({ location }) => {
             <Section id='open-positions'>
                 <Container>
                     <div className='bg-image-jobs'>
-                        <h2 className='font-semibold  text-blue text-center mx-auto mb-12 max-w-sm text-5xl leading-normal'>
+                        <h2 className='font-semibold font-montserrat text-blue text-center mx-auto mb-12 max-w-sm text-4xl leading-normal'>
                             Open positions
                         </h2>
                         <div className='max-w-3xl mx-auto'>
@@ -308,7 +308,7 @@ const Careers = ({ location }) => {
             </Section>
             <Section id="join-us">
                 <Container>
-                    <h6 className='font-semibold  text-blue text-4xl mx-auto mb-8 w-full max-w-md leading-normal new-line'>
+                    <h6 className='font-semibold font-montserrat text-blue text-4xl mx-auto mb-8 w-full max-w-md leading-normal new-line'>
                         Join us
                     </h6>
                     <div className='max-w-md mx-auto'>

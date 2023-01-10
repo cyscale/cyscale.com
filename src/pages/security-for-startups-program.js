@@ -199,7 +199,7 @@ const SecurityForStartupsProgram = ({ location }) => {
                             <Row>
                                 <div className='col-span-12 lg:col-span-6 '>
                                     <div className='lg:mt-16 pt-4 max-w-lg mx-auto lg:mx-0'>
-                                        <h1 className='text-center sm:text-left text-blue text-4xl lg:text-5xl leading-normal mb-16'>
+                                        <h1 className='text-center sm:text-left text-blue text-4xl lg:text-5xl leading-normal mb-16 font-montserrat'>
                                             <strong>Cyscale for Startups</strong> <br className='hidden lg:block' />{' '}
                                             Program
                                         </h1>
@@ -252,9 +252,9 @@ const SecurityForStartupsProgram = ({ location }) => {
                         <div className='grid grid-cols-12' id='start'>
                             <div className='col-span-12'>
                                 <div className='mx-auto lg:mx-0 max-w-lg '>
-                                    <h1 className='text-center sm:text-left text-2xl leading-normal mb-4'>
+                                    <h2 className='text-center sm:text-left text-2xl leading-normal mb-4 font-montserrat'>
                                         <strong>Qualification</strong> criteria
-                                    </h1>
+                                    </h2>
                                     <h1 className='text-center sm:text-left text-base leading-normal text-grey2 mb-8'>
                                         Your startup was founded less than five years ago and has raised:
                                     </h1>
@@ -264,9 +264,9 @@ const SecurityForStartupsProgram = ({ location }) => {
                         <div className='grid grid-cols-12 gap-x-5'>
                             <div className='col-span-12 lg:col-span-6 lg:mx-0'>
                                 <div className='mt-6 lg:mt-0 rounded-xl  max-w-lg lg:max-w-2xl mx-auto relative gradientBG h-64 flex flex-col justify-center items-center'>
-                                    <h1 className='text-white text-3xl sm:text-4xl mb-6 font-semibold'>
+                                    <h3 className='text-white text-3xl sm:text-4xl mb-6 font-semibold'>
                                         Up to $2M in funding
-                                    </h1>
+                                    </h3>
                                     <p className='text-white text-xl sm:text-2xl mb-1 font-semibold'>6 months FREE</p>
                                     <p className='text-white mb-1 text-7xl font-semibold'>+</p>
                                     <p className='text-white text-xl sm:text-2xl font-semibold'>
@@ -279,7 +279,7 @@ const SecurityForStartupsProgram = ({ location }) => {
                                     className='mt-6 lg:mt-0 rounded-xl  max-w-lg lg:max-w-2xl mx-auto relative h-64 flex flex-col justify-center items-center'
                                     style={{ backgroundImage: 'linear-gradient(#E4EDFC,#f9f9f9)' }}
                                 >
-                                    <h1 className='text-3xl sm:text-4xl mb-6 font-semibold'>Over $2M in funding</h1>
+                                    <h3 className='text-3xl sm:text-4xl mb-6 font-semibold'>Over $2M in funding</h3>
                                     <p className='text-xl sm:text-2xl mb-1 font-semibold'>3 months FREE</p>
                                     <p className='mb-1 text-7xl font-semibold'>+</p>
                                     <p className='text-xl sm:text-2xl font-semibold'>75% off for the next 9 months</p>
@@ -293,9 +293,9 @@ const SecurityForStartupsProgram = ({ location }) => {
                         <div className='grid grid-cols-12'>
                             <div className='col-span-12'>
                                 <div className='mx-auto lg:mx-0 max-w-lg '>
-                                    <h1 className='text-center sm:text-left text-3xl lg:text-2xl leading-normal mb-2 sm:mb-16'>
+                                    <h2 className='text-center sm:text-left text-3xl lg:text-2xl leading-normal mb-2 sm:mb-16 font-montserrat'>
                                         Advantages
-                                    </h1>
+                                    </h2>
                                 </div>
                             </div>
                         </div>
@@ -397,7 +397,7 @@ const SecurityForStartupsProgram = ({ location }) => {
                             <div className='grid grid-cols-12'>
                                 <div className='col-span-12'>
                                     <div className='mx-auto lg:mx-0 max-w-lg '>
-                                        <h1 className='text-center sm:text-left text-2xl leading-normal mb-4'>FAQ</h1>
+                                        <h2 className='text-center sm:text-left text-2xl leading-normal mb-4 font-montserrat'>FAQ</h2>
                                     </div>
                                 </div>
                             </div>
