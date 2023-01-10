@@ -67,7 +67,7 @@ const getstarted = ({ description, btnText, btnLink, sectionName, icon, icon2, E
                                         !!sectionName && sectionName === 'getStartedFooter' ? 'h-28' : 'mx-auto'
                                     }`}
                                 />
-                                <p className='hidden sm:block mb-54px'>
+                                <p className='hidden sm:block mb-19px font-montserrat'>
                                     Learn all the ways Cyscale can help you keep security risks in check
                                 </p>
                                 <a
