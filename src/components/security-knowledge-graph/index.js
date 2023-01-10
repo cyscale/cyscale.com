@@ -112,7 +112,7 @@ const Index = () => {
                 <div id='start'>
                     <Section>
                         <Container>
-                            <h2 className='font-semibold  text-blue text-2xl md:text-4xl max-w-sm leading-normal sectionTitle mb-10'>
+                            <h2 className='font-semibold  text-blue text-2xl md:text-4xl max-w-sm leading-normal sectionTitle mb-10 font-montserrat'>
                                 What is a Security
                                 <br /> Knowledge Graph™
                             </h2>

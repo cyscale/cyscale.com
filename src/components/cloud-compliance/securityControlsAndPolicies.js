@@ -6,7 +6,7 @@ export default function SecurityControlsandPolicies() {
     <div className="max-w-1366px m-auto py-12 lg:py-16 pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
             <div className="md:-mt-16">
-                <ul className="list-none text-base text-black">
+                <ul className="list-none text-base text-black mt-7">
                     <li className="mb-7 font-bold">Asset Management (Inventory)</li>
                     <li className="mb-7 font-bold">Data Management</li>
                     <li className="mb-7 font-bold">Breach Investigation and Notification</li>

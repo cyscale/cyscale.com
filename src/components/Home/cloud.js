@@ -13,7 +13,7 @@ const Cloud = ({ title, sectionName, f_image, data, id }) => {
                     <div className='grid grid-cols-1 lg:grid-cols-3 gap-4 pt-40 sm:pt-0'>
                         {!!title && (
                             <div>
-                                <h2 className='font-semibold   text-blue text-24px sm:text-34px leading-normal lg:max-w-sm sectionTitle'>
+                                <h2 className='font-semibold   text-blue text-24px sm:text-34px leading-normal lg:max-w-sm sectionTitle font-montserrat'>
                                     {title}
                                 </h2>
                             </div>
