@@ -32,7 +32,7 @@ const IAMSecurity = ({ location }) => {
                 <Container>
                     <Section>
                         <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-xl pt-16 pb-4'>
-                            <h1 className='font-semibold text-center sm:text-left text-4xl lg:text-5xl leading-normal text-primary mb-16'>
+                            <h1 className='font-semibold text-center sm:text-left text-4xl lg:text-5xl leading-normal text-primary mb-16 font-montserrat'>
                                 Identity and Access Management Security
                                 <br /> for Cloud
                             </h1>
@@ -102,7 +102,7 @@ const IAMSecurity = ({ location }) => {
                     <div className='sm:grid sm:grid-cols-12 sm:gap-12'>
                         <div className='col-span-12 lg:col-span-6'>
                             <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-sm'>
-                                <h2 className='text-4xl font-semibold text-primary leading-normal border-title'>
+                                <h2 className='text-4xl font-semibold text-primary leading-normal border-title font-montserrat'>
                                     Deep dive into
                                     <br /> User assets
                                 </h2>
@@ -132,8 +132,8 @@ const IAMSecurity = ({ location }) => {
             <div className='bg-semicircle' id='confidence'>
                 <Container>
                     <Section>
-                        <div className='max-w-xl mx-auto lg:mx-0 lg:max-w-sm mb-20'>
-                            <h2 className='text-4xl font-semibold text-primary leading-normal border-title'>
+                        <div className='max-w-xl mx-auto lg:mx-0 lg:max-w-md mb-20'>
+                            <h2 className='text-4xl font-semibold text-primary leading-normal border-title font-montserrat'>
                                 100% Confidence in your Cloud Compliance
                             </h2>
                         </div>
@@ -181,10 +181,10 @@ const IAMSecurity = ({ location }) => {
                 <Section>
                     <Container>
                         <div className='mx-auto text-center lg:text-left lg:mx-0 max-w-sm lg:max-w-none'>
-                            <h2 className='text-white text-xl md:text-2xl font-semibold uppercase'>
+                            <h2 className='text-white text-xl md:text-2xl font-semibold uppercase font-montserrat'>
                                 IAM Cloud Security
                             </h2>
-                            <p className='text-white text-lg md:text-2xl mb-20'>
+                            <p className='text-white text-lg md:text-2xl mb-20 font-montserrat'>
                                 Start seeing value & saving money in minutes
                             </p>
                             <Link
