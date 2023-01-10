@@ -35,7 +35,7 @@ const PciDss = ({ location }) => {
                 <Container>
                     <Section className='pb-3'>
                         <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-xl pt-16 pb-4'>
-                            <h1 className='font-semibold text-center sm:text-left text-4xl lg:text-5xl leading-normal text-primary mb-16'>
+                            <h1 className='font-semibold font-montserrat text-center sm:text-left text-4xl lg:text-5xl leading-normal text-primary mb-16'>
                                 PCI DSS
                                 <br /> Compliance for Cloud
                             </h1>
@@ -66,7 +66,7 @@ const PciDss = ({ location }) => {
                     <Row>
                         <div className='col-span-12 lg:col-span-6'>
                             <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-lg'>
-                                <h2 className='text-2xl mb-4 lg:mb-0 lg:text-4xl font-normal leading-normal mt-8'>
+                                <h2 className='text-2xl mb-4 lg:mb-0 lg:text-4xl font-normal font-montserrat leading-normal mt-8'>
                                     <strong>Automate cloud security</strong>
                                     <br /> <strong>and PCI DSS compliance</strong>
                                 </h2>
@@ -121,7 +121,7 @@ const PciDss = ({ location }) => {
                     <div className='sm:grid sm:grid-cols-12 sm:gap-12'>
                         <div className='col-span-12 sm:px-3 lg:col-span-4'>
                             <div className='mx-auto lg:mx-0 max-w-xl'>
-                                <h2 className='text-4xl font-semibold text-primary leading-normal border-title'>
+                                <h2 className='text-4xl font-semibold font-montserrat text-primary leading-normal border-title'>
                                     Automate compliance checks & security control audits
                                 </h2>
                             </div>
@@ -151,7 +151,7 @@ const PciDss = ({ location }) => {
             <Container id='align-entities'>
                 <div className='grid grid-cols-1 lg:grid-cols-3 gap-4 items-center'>
                     <div>
-                        <h2 className='font-semibold text-blue text-34px leading-normal lg:max-w-sm null sectionTitle new-line max-w-xl mx-auto'>
+                        <h2 className='font-semibold font-montserrat text-blue text-34px leading-normal lg:max-w-sm null sectionTitle new-line max-w-xl mx-auto'>
                             Align teams & tasks
                             <span key='ali123' className='block w-full font-normal'>
                                 Govern all cloud entities from a single dashboard
@@ -191,8 +191,8 @@ const PciDss = ({ location }) => {
             <div className='bg-semicircle' id='confidence'>
                 <Container>
                     <Section>
-                        <div className='max-w-xl mx-auto lg:mx-0 lg:max-w-sm mb-20'>
-                            <h2 className='text-4xl font-semibold text-primary leading-normal border-title'>
+                        <div className='max-w-xl mx-auto lg:mx-0 lg:max-w-md mb-20'>
+                            <h2 className='text-4xl font-semibold font-montserrat text-primary leading-normal border-title'>
                                 100% Confidence in your Cloud Compliance
                             </h2>
                         </div>
@@ -240,10 +240,10 @@ const PciDss = ({ location }) => {
                 <Section>
                     <Container>
                         <div className='mx-auto text-center lg:text-left lg:mx-0 max-w-sm lg:max-w-none'>
-                            <h2 className='text-white text-xl md:text-2xl font-semibold uppercase'>
+                            <h2 className='text-white text-xl md:text-2xl font-semibold font-montserrat uppercase'>
                                 PCI DSS COMPLIANCE AND CLOUD SECURITY
                             </h2>
-                            <p className='text-white text-lg md:text-2xl mb-20'>
+                            <p className='text-white font-montserrat text-lg md:text-2xl mb-20'>
                                 Start seeing value & saving money in minutes
                             </p>
                             <Link
