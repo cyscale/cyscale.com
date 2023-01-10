@@ -36,11 +36,13 @@ const AzureCloudSecurity = ({ location }) => {
             <div className='bg-cloud' style={{ backgroundColor: '#eeeeee' }}>
                 <Container>
                     <Section>
-                        <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-lg pt-16 pb-4'>
-                            <h1 className='font-semibold text-center sm:text-left text-4xl lg:text-5xl leading-normal text-primary mb-10'>
+                        <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-xl pt-16'>
+                            <h1 className='font-semibold font-montserrat text-center sm:text-left text-4xl lg:text-5xl leading-normal text-primary mb-10'>
                                 Azure Cloud Security
                                 <br /> and Compliance
                             </h1>
+                        </div>
+                        <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-lg pb-4'>
                             <p className='text-center sm:text-left text-base lg:text-lg mb-6 leading-relaxed'>
                                 Secure your Azure cloud subscriptions by continuously scanning for misconfigurations and
                                 surfacing risk.
@@ -65,8 +67,8 @@ const AzureCloudSecurity = ({ location }) => {
                 <Section id='start'>
                     <Row>
                         <div className='col-span-12 lg:col-span-6'>
-                            <div className='mx-auto max-w-xl lg:max-w-lg'>
-                                <h2 className='text-2xl mb-4 lg:mb-0 lg:text-4xl font-normal leading-normal mt-8'>
+                            <div className='mx-auto max-w-xl'>
+                                <h2 className='text-2xl mb-4 lg:mb-0 lg:text-4xl font-normal leading-normal mt-8 font-montserrat'>
                                     <strong>Streamline posture management for Azure cloud</strong>
                                     <br /> or for your multi-cloud environments
                                 </h2>
@@ -127,8 +129,8 @@ const AzureCloudSecurity = ({ location }) => {
                 <Section>
                     <div className='sm:grid sm:grid-cols-12 sm:gap-12'>
                         <div className='col-span-12 lg:col-span-6'>
-                            <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-sm'>
-                                <h2 className='text-4xl font-semibold text-primary leading-normal border-title'>
+                            <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-md'>
+                                <h2 className='text-4xl font-semibold font-montserrat text-primary leading-normal border-title'>
                                     Automate compliance checks & security control audits
                                 </h2>
                             </div>
@@ -160,8 +162,8 @@ const AzureCloudSecurity = ({ location }) => {
             <div className='bg-semicircle' id='confidence'>
                 <Container>
                     <Section>
-                        <div className='max-w-xl mx-auto lg:mx-0 lg:max-w-sm mb-20'>
-                            <h2 className='text-4xl font-semibold text-primary leading-normal border-title'>
+                        <div className='max-w-xl mx-auto lg:mx-0 lg:max-w-md mb-20'>
+                            <h2 className='text-4xl font-semibold font-montserrat text-primary leading-normal border-title'>
                                 100% Confidence in your Cloud Compliance
                             </h2>
                         </div>
@@ -214,10 +216,10 @@ const AzureCloudSecurity = ({ location }) => {
                 <Section>
                     <Container>
                         <div className='mx-auto text-center lg:text-left lg:mx-0 max-w-sm lg:max-w-none'>
-                            <h2 className='text-white text-xl md:text-2xl font-semibold uppercase'>
+                            <h2 className='text-white text-xl md:text-2xl font-semibold font-montserrat uppercase'>
                                 Secure your Azure Assets
                             </h2>
-                            <p className='text-white text-lg md:text-2xl mb-20'>
+                            <p className='text-white font-montserrat text-lg md:text-2xl mb-20'>
                                 Start seeing value & saving money in minutes
                             </p>
                             <Link
