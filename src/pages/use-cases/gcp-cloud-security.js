@@ -31,11 +31,13 @@ const GCPCloudSecurity = ({ location }) => {
             <div className='bg-cloud' style={{ backgroundColor: '#eeeeee' }}>
                 <Container>
                     <Section>
-                        <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-lg pt-16 pb-4'>
-                            <h1 className='font-semibold text-center sm:text-left text-4xl lg:text-5xl leading-normal text-primary mb-10'>
+                        <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-xl pt-16'>
+                            <h1 className='font-semibold font-montserrat text-center sm:text-left text-4xl lg:text-5xl leading-normal text-primary mb-10'>
                                 Google Cloud Security
                                 <br /> and Compliance
                             </h1>
+                        </div>
+                        <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-lg pb-4'>
                             <p className='text-center sm:text-left text-base lg:text-lg mb-6 leading-relaxed'>
                                 Protect Google Cloud environments with a complete Cloud Security Posture Management
                                 (CSPM) solution - including support for the CIS GCP Foundations Benchmark.
@@ -100,8 +102,8 @@ const GCPCloudSecurity = ({ location }) => {
                 <Section>
                     <div className='sm:grid sm:grid-cols-12 sm:gap-12'>
                         <div className='col-span-12 lg:col-span-6'>
-                            <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-sm'>
-                                <h2 className='text-4xl font-semibold text-primary leading-normal border-title'>
+                            <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-md'>
+                                <h2 className='text-4xl font-semibold font-montserrat text-primary leading-normal border-title'>
                                     Automate compliance checks & security control audits
                                 </h2>
                             </div>
@@ -133,8 +135,8 @@ const GCPCloudSecurity = ({ location }) => {
             <div className='bg-semicircle' id='confidence'>
                 <Container>
                     <Section>
-                        <div className='max-w-xl mx-auto lg:mx-0 lg:max-w-sm mb-20'>
-                            <h2 className='text-4xl font-semibold text-primary leading-normal border-title'>
+                        <div className='max-w-xl mx-auto lg:mx-0 lg:max-w-md mb-20'>
+                            <h2 className='text-4xl font-semibold font-montserrat text-primary leading-normal border-title'>
                                 100% Confidence in your Cloud Compliance
                             </h2>
                         </div>
@@ -182,10 +184,10 @@ const GCPCloudSecurity = ({ location }) => {
                 <Section>
                     <Container>
                         <div className='mx-auto text-center lg:text-left lg:mx-0 max-w-sm lg:max-w-none'>
-                            <h2 className='text-white text-xl md:text-2xl font-semibold uppercase'>
+                            <h2 className='text-white text-xl md:text-2xl font-semibold font-montserrat uppercase'>
                                 Secure your GCP Assets
                             </h2>
-                            <p className='text-white text-lg md:text-2xl mb-20'>
+                            <p className='text-white font-montserrat text-lg md:text-2xl mb-20'>
                                 Start seeing value & saving money in minutes
                             </p>
                             <Link

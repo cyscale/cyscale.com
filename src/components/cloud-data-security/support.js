@@ -7,7 +7,7 @@ const Support = ({ title, data, sectionName }) => {
     <div className="pt-65px pb-65px">
       <div className="max-w-1366px mx-auto pt-50px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px">
         {!!title && (
-          <h2 className="font-semibold  text-blue font-proximaBold text-34px mb-69px">
+          <h2 className="font-semibold  text-blue font-proximaBold text-34px mb-69px font-montserrat">
             {title}
           </h2>
         )}
