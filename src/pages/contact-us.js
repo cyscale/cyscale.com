@@ -58,7 +58,7 @@ const ContactUs = ({ location }) => {
                         <Row>
                             <div className='col-span-12 lg:col-span-6 order-2 lg:order-1'>
                                 <div className='mt-16 pt-12 lg:pt-24 max-w-lg mx-auto lg:mx-0 bg-pricing'>
-                                    <h1 className='font-semibold text-4xl lg:text-6xl text-blue mb-12 lg:mb-32 hidden lg:block'>
+                                    <h1 className='font-semibold font-montserrat text-4xl lg:text-6xl text-blue mb-12 lg:mb-32 hidden lg:block'>
                                         Contact
                                     </h1>
                                     <p className='leading-normal text-gray font-bold mb-8'>
