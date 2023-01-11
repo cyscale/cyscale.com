@@ -13,7 +13,7 @@ import { cookieConsentKey } from '../../common/constants';
 import NewTopNav from './NewTopNav';
 
 const Layout = ({ children, title, description, pageName, location, banner }) => {
-    useHubspotEvents({ location, pageName });
+    useHubspotEvents({ pageName });
     const [sticker, setSticker] = useState(false);
     const { cookies, cookiesBanner, setCookiesBanner } = useSetCookieBanner();
 
