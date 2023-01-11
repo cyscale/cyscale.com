@@ -31,7 +31,7 @@ const Layout = ({
     blogDataTitle
 }) => {
     useOptimizeEvent();
-    useHubspotEvents({ location, pageName });
+    useHubspotEvents({ pageName });
     const { cookies, cookiesBanner, setCookiesBanner } = useSetCookieBanner();
 
     return (
