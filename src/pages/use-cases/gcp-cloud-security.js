@@ -32,7 +32,7 @@ const GCPCloudSecurity = ({ location }) => {
                 <Container>
                     <Section>
                         <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-xl pt-16'>
-                            <h1 className='font-semibold font-montserrat text-center sm:text-left text-4xl lg:text-5xl leading-normal text-primary mb-10'>
+                            <h1 className='font-semibold font-montserrat text-center sm:text-left text-4xl lg:text-5xl leading-normal lg:leading-normal text-primary mb-10'>
                                 Google Cloud Security
                                 <br /> and Compliance
                             </h1>

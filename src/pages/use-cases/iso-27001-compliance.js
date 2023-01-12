@@ -49,7 +49,7 @@ const CloudCompliance = ({ location }) => {
                         <Section>
                             <Row>
                                 <div className='col-span-12 lg:col-span-6 order-2 lg:order-1'>
-                                    <h1 className='font-semibold font-montserrat text-3xl lg:text-5xl leading-normal text-primary'>
+                                    <h1 className='font-semibold font-montserrat text-3xl lg:text-5xl leading-normal lg:leading-normal text-primary'>
                                         ISO 27001 Compliance & Security for Cloud Environment
                                     </h1>
                                     <p className='text-base lg:text-lg mt-8 leading-relaxed'>

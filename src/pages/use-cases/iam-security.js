@@ -32,7 +32,7 @@ const IAMSecurity = ({ location }) => {
                 <Container>
                     <Section>
                         <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-xl pt-16 pb-4'>
-                            <h1 className='font-semibold text-center sm:text-left text-4xl lg:text-5xl leading-normal text-primary mb-16 font-montserrat'>
+                            <h1 className='font-semibold text-center sm:text-left text-4xl lg:text-5xl leading-normal lg:leading-normal text-primary mb-16 font-montserrat'>
                                 Identity and Access Management Security
                                 <br /> for Cloud
                             </h1>

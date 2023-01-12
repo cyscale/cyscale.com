@@ -41,7 +41,7 @@ const Soc2 = ({ location }) => {
                         <Row>
                             <div className='col-span-12 lg:col-span-6 order-last lg:order-first'>
                                 <div className='lg:mt-16 pt-4 max-w-xl mx-auto lg:mx-0'>
-                                    <h1 className='text-center md:text-left text-blue text-4xl lg:text-5xl leading-normal mb-16 montserrat-font'>
+                                    <h1 className='text-center md:text-left text-blue text-4xl lg:text-5xl leading-normal lg:leading-normal mb-16 montserrat-font'>
                                         <strong>SOC 2 Compliance</strong> <br className='block md:hidden lg:block' />{' '}
                                         for Cloud
                                     </h1>
