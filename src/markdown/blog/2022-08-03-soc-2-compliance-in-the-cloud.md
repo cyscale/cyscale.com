@@ -46,7 +46,7 @@ It regulates data security management based on the following five cybersecurity 
 
 ## SOC 2 requirements, explained for cloud 
 
-In order to become [SOC 2 compliant](https://cyscale.com/blog/soc-2-vs-ISO-27001-SaaS/), you must fulfill 64 controls across the 5 TSCs mentioned above.   
+In order to become [SOC 2 compliant](https://cyscale.com/blog/soc-2-vs-ISO-27001-SaaS/), you must fulfill 64 trust service criteria across the 5 TSCs mentioned above.. Based on them, the organization establishes corresponding controls to demonstrate compliance. 
 
 In this section, we will look at some of the points of focus necessary to obtain the accreditation. They should be taken into account by companies that use cloud services.  
 
