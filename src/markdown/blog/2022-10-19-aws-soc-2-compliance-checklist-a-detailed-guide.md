@@ -41,7 +41,7 @@ Firstly, the rules within SOC 2 are grouped by 5 TSC (Trust Service Criteria): 
 4. Confidentiality 
 5. Privacy 
 
-SOC 2 has 64 mandatory controls, grouped by the 5 TSC mentioned above. In this article, we will look at a few of the controls required, how to implement them in your AWS environment and how to check if your implementation is complete. 
+SOC 2 has 64 mandatory trust service criteria, based on these which the company creates controls to achieve compliance. In this article, we will look at a few of the criteria required, how to implement them in your AWS environment and how to check if your implementation is complete. 
 
 ##### A checklist 
 
@@ -53,7 +53,7 @@ MFA (Multi-Factor Authentication) is a mechanism that adds additional steps to t
 * What you have (for example: a smart card) 
 * What you are (for example: a fingerprint) 
 
-To fulfill this control, introduced under the “Security” section, you need to enable MFA when accessing the AWS Management Console. As a result, users will be prompted to enter their username and password (which is the first step, or the first factor of the authentication), and then an authentication code that is sent to their device. A biometrics-enabled device can be used instead as well. 
+To fulfill this criteria, introduced under the “Security” section, you need to enable MFA when accessing the AWS Management Console. As a result, users will be prompted to enter their username and password (which is the first step, or the first factor of the authentication), and then an authentication code that is sent to their device. A biometrics-enabled device can be used instead as well. 
 
 You can configure MFA for IAM users or the AWS account root user. 
 
@@ -66,7 +66,7 @@ If your company is using an external identity provider, you have to ensure that 
 
 ### Restricts Access 
 
-This control, in the “Security” TSC refers to restricting traffic to and from any cloud services and assets hosted in the cloud. This includes: 
+This criteria, in the “Security” TSC refers to restricting traffic to and from any cloud services and assets hosted in the cloud. This includes: 
 
 * Closing unnecessarily open ports, 
 * Requiring authenticated access to services such as FTP, SMB, and others. 
@@ -92,7 +92,7 @@ To quickly deploy a firewall: 
 
 ### Creates and Maintains Records of System Storage Activities 
 
-This control, located under the “Processing Integrity” criteria, checks if logging is implemented in your cloud environment.  
+This criteria, located under the “Processing Integrity” criteria, checks if logging is implemented in your cloud environment.  
 
 By logging all user activities, you can: 
 
@@ -108,7 +108,7 @@ Amazon CloudTrail can be used together with Amazon CloudWatch to extend monitori
 
 ### Protects Encryption Keys 
 
-[Encryption](https://cyscale.com/blog/types-of-encryption/) is essential to ensure confidentiality of data. In the “Confidentiality” section of SOC 2, we have controls for both encryption and key management.  
+[Encryption](https://cyscale.com/blog/types-of-encryption/) is essential to ensure confidentiality of data. In the “Confidentiality” section of SOC 2, we have criteria for both encryption and key management.  
 
 If key management is neglected, then encryption becomes useless. Keys must be generated, stored, used and destroyed safely to protect your data. 
 
@@ -121,11 +121,11 @@ According to AWS, this service can be used:  
 
 ### Finally, check your implementations 
 
-Besides the controls presented in this article, there are many more. 
+Besides the criteria presented in this article, there are many more. 
 
 Although so many requirements can quickly become overwhelming, Cyscale can help you easily keep track of what you’ve correctly implemented and what requires your attention on our [SOC 2](https://cyscale.com/blog/soc-2-vs-ISO-27001-SaaS/) compliance page. 
 
-Many technical controls in Cyscale can be mapped to SOC 2 controls to provide visibility in your cloud environment and prove compliance. 
+Many technical controls in Cyscale can be mapped to SOC 2 criteria to provide visibility in your cloud environment and prove compliance. 
 
 A few examples of controls that apply to the presented requirements (and more) are: 
 
