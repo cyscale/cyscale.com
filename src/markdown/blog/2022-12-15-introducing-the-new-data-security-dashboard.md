@@ -51,7 +51,7 @@ This card is a good indicator of progress, and, by clicking on each section of t
 
 The next section contains the Publicly Accessible card, which provides visibility over a multitude of assets, as you can see in the image below. When you click on each element, you see a list of affected assets, along with the associated risk. 
 
-<img src="/img/32_blog-publicly-accessible-assets.png" alt="Publicly accessible cloud assets" title="Publicly accessible cloud assets" class="" style="width:autorem;height:autorem;"/>
+<img src="/img/32_blog-second-image.png" alt="Publicly accessible cloud assets" title="Publicly accessible cloud assets" class="" style="width:autorem;height:autorem;"/>
 
 Let’s look at this feature in more detail to understand how this helps secure your cloud infrastructure. 
 
