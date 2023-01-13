@@ -16,10 +16,19 @@ import {
     Norbert,
     Auras,
     Darius,
-    Barry
+    Barry,
+    Simona
 } from '../about/images';
 
 const data = [
+    {
+        order: 18,
+        photo: <Simona />,
+        name: 'Simona Lar',
+        position: 'Head of People, Culture & Growth',
+        linkedin: 'https://www.linkedin.com/in/simona-mihaela-lar-7288081b/',
+        quote: false
+    },
     {
         order: 17,
         photo: <Barry />,
