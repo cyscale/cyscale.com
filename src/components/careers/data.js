@@ -10,18 +10,26 @@ import {
     MihaiM,
     Ovidiu,
     Sabrina,
-    George,
     Virginia,
     Petru,
     Mihnea,
     Norbert,
     Auras,
-    Darius
+    Darius,
+    Barry
 } from '../about/images';
 
 const data = [
     {
         order: 17,
+        photo: <Barry />,
+        name: 'Barry Lyne',
+        position: 'VP of Sales',
+        linkedin: 'https://www.linkedin.com/in/barrylyne',
+        quote: false
+    },
+    {
+        order: 16,
         photo: <Darius />,
         name: 'Darius Ungurean',
         position: 'Frontend Engineer',
@@ -29,7 +37,7 @@ const data = [
         quote: false
     },
     {
-        order: 16,
+        order: 15,
         photo: <Auras />,
         name: 'Auras Popescu',
         position: 'Backend Engineer',
@@ -37,7 +45,7 @@ const data = [
         quote: false
     },
     {
-        order: 15,
+        order: 14,
         photo: <Norbert />,
         name: 'Norbert Hambuer',
         position: 'Backend Engineer',
@@ -45,7 +53,7 @@ const data = [
         quote: false
     },
     {
-        order: 14,
+        order: 13,
         photo: <Mihnea />,
         name: 'Mihnea Stoian',
         position: 'Backend Engineer',
@@ -53,19 +61,11 @@ const data = [
         quote: false
     },
     {
-        order: 13,
+        order: 12,
         photo: <Petru />,
         name: 'Petru Giurgiu',
         position: 'Web Developer',
         linkedin: 'https://www.linkedin.com/in/petru-g-b5421068/',
-        quote: false
-    },
-    {
-        order: 12,
-        photo: <George />,
-        name: 'George Gaina',
-        position: 'Head of People, Culture & Growth',
-        linkedin: 'https://www.linkedin.com/in/georgegaina/',
         quote: false
     },
     {
