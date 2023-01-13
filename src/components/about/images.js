@@ -28,11 +28,6 @@ function withImageData(WrappedComponent) {
                             gatsbyImageData(width: 500, layout: CONSTRAINED)
                         }
                     }
-                    leaderBarry: file(relativePath: { eq: "leader-barry.png" }) {
-                        childImageSharp {
-                            gatsbyImageData(width: 500, layout: CONSTRAINED)
-                        }
-                    }
                     ovidiuAndManuela: file(relativePath: { eq: "ovidiu-and-manuela.jpg" }) {
                         childImageSharp {
                             gatsbyImageData(width: 720, layout: CONSTRAINED)
@@ -69,11 +64,6 @@ function withImageData(WrappedComponent) {
                         }
                     }
                     sabrina: file(relativePath: { eq: "sabrina.png" }) {
-                        childImageSharp {
-                            gatsbyImageData(width: 256, layout: CONSTRAINED)
-                        }
-                    }
-                    george: file(relativePath: { eq: "george.jpeg" }) {
                         childImageSharp {
                             gatsbyImageData(width: 256, layout: CONSTRAINED)
                         }
@@ -138,6 +128,11 @@ function withImageData(WrappedComponent) {
                             gatsbyImageData(height: 256, layout: CONSTRAINED)
                         }
                     }
+                    barry: file(relativePath: { eq: "barry.jpeg" }) {
+                        childImageSharp {
+                            gatsbyImageData(height: 256, layout: CONSTRAINED)
+                        }
+                    }
                 }
             `}
             render={(data) => <WrappedComponent {...props} imageData={data} />}
@@ -157,9 +152,6 @@ export const LeaderAndy = withImageData((props) => (
 ));
 export const LeaderManuela = withImageData((props) => (
     <Img image={props.imageData.leaderManuela.childImageSharp.gatsbyImageData} {...props} />
-));
-export const LeaderBarry = withImageData((props) => (
-    <Img image={props.imageData.leaderBarry.childImageSharp.gatsbyImageData} {...props} />
 ));
 export const OvidiuAndManuela = withImageData((props) => (
     <Img
@@ -185,9 +177,6 @@ export const AndreiP = withImageData((props) => (
 ));
 export const Sabrina = withImageData((props) => (
     <Img image={props.imageData.sabrina.childImageSharp.gatsbyImageData} {...props} />
-));
-export const George = withImageData((props) => (
-    <Img image={props.imageData.george.childImageSharp.gatsbyImageData} {...props} />
 ));
 export const MihaiM = withImageData((props) => (
     <Img image={props.imageData.mihaiM.childImageSharp.gatsbyImageData} {...props} />
@@ -229,6 +218,10 @@ export const Auras = withImageData((props) => (
 
 export const Darius = withImageData((props) => (
     <Img image={props.imageData.darius.childImageSharp.gatsbyImageData} {...props} />
+));
+
+export const Barry = withImageData((props) => (
+    <Img image={props.imageData.barry.childImageSharp.gatsbyImageData} {...props} />
 ));
 
 export const OvidiuAndManuelaBackground = withImageData((props) => (
