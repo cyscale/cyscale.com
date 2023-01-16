@@ -55,7 +55,7 @@ const Soc2 = ({ location }) => {
                                     <p className='text-center md:text-left text-base lg:text-lg mb-2 leading-relaxed text-gray'>
                                         Out-of-the-box policies that you can use for a solid security program.
                                     </p>
-                                    <div className='flex mt-8 sm:justify-around md:justify-start'>
+                                    <div className='flex mt-8 sm:justify-center md:justify-start'>
                                         <Link to='/free-trial' css={heroButtonWidth}>
                                             <GradientButton text='Start Free Trial' />
                                         </Link>

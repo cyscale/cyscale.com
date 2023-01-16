@@ -60,7 +60,7 @@ const NISTCompliance = ({ location }) => {
                                         Cyscale continuously evaluates your multi-cloud environments for compliance
                                         violations with predefined rules mapped to NIST 800-53 compliance controls.
                                     </p>
-                                    <div className='flex mt-8 sm:justify-around md:justify-start'>
+                                    <div className='flex mt-8 sm:justify-center md:justify-start'>
                                         <Link to='/free-trial' css={heroButtonWidth}>
                                             <GradientButton text='Start Free Trial' />
                                         </Link>
