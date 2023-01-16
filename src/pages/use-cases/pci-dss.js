@@ -5,6 +5,9 @@ import { useStaticQuery, graphql, Link } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import ScrollButton from '../../components/ScrollButton/ScrollButton';
 import headerImage from '../../assets/images/remote-work-heading-image.png';
+import GradientButton from '../../components/buttons/GradientButton';
+import LightDarkButton from '../../components/buttons/LightDarkButton';
+import { heroButtonWidth } from '../../assets/css/styles';
 
 const PciDss = ({ location }) => {
     const data = useStaticQuery(graphql`
@@ -48,12 +51,14 @@ const PciDss = ({ location }) => {
                                     A robust compliance toolbox for cloud-native and cloud-first organizations.
                                 </strong>
                             </p>
-                            <Link
-                                to='/free-trial'
-                                className='bg-gradient-to-r mx-auto sm:mx-0 from-blue to-red max-w-xs block font-medium rounded text-white uppercase text-center py-5 px-12 mt-8 no-underline hover:no-underline '
-                            >
-                                Try Cyscale for Free
-                            </Link>
+                            <div className='flex mt-8'>
+                                <Link to='/free-trial' css={heroButtonWidth}>
+                                    <GradientButton text='Start Free Trial' />
+                                </Link>
+                                <Link to='/request-demo' className='ml-4'>
+                                    <LightDarkButton text={'Request Demo'} />
+                                </Link>
+                            </div>
                         </div>
                     </Section>
                     <div className='pb-8'>

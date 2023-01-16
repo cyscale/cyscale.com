@@ -15,6 +15,16 @@ import {
 import NewTopNav from './NewTopNav';
 import { Link } from 'gatsby';
 import classNames from 'classnames';
+import GradientButton from '../buttons/GradientButton';
+import LightDarkButton from '../buttons/LightDarkButton';
+import { css } from 'twin.macro';
+import { requestDemoButtonPage } from '../../common/utils';
+
+const complianceAuditingRequestDemoButton = css`
+    @media (min-width: 641px) and (max-width: 1024px) {
+        display: none;
+    }
+`;
 
 const Header = ({
     heroBG,
@@ -167,23 +177,23 @@ const Header = ({
                                                             {bannerBtn1Text}
                                                         </a>
                                                     ) : (
-                                                        <Link
-                                                            to={bannerBtn1Link}
-                                                            className='gradientBgBtn w-full sm:min-w-232px block text-16px font-medium rounded text-white uppercase text-center pt-21px pb-21px pl-49px pr-49px hover:no-underline no-underline'
-                                                        >
-                                                            {bannerBtn1Text}
+                                                        <Link to={bannerBtn1Link}>
+                                                            <GradientButton text={bannerBtn1Text} />
                                                         </Link>
                                                     )}
                                                 </div>
                                             ))}
-                                        {!!pageName && pageName === 'HomePage' && (
-                                            <div className='mt-24px w-full sm:w-auto hidden sm:inline-block'>
-                                                <a
-                                                    href={bannerBtn2Link}
-                                                    className='blackBorder w-full sm:min-w-232px block text-16px font-medium rounded text-black uppercase text-center pt-20px pb-20px pl-49px pr-49px no-underline transition-all duration-300 hover:border-black hover:bg-black hover:text-white blackBorder hover:no-underline'
-                                                >
-                                                    {bannerBtn2Text}
-                                                </a>
+                                        {!!pageName && requestDemoButtonPage(pageName) && (
+                                            <div
+                                                className='mt-24px mb-4  w-full sm:w-auto hidden sm:inline-block'
+                                                css={[
+                                                    pageName === 'ComplianceAuditing' &&
+                                                        complianceAuditingRequestDemoButton
+                                                ]}
+                                            >
+                                                <Link to={bannerBtn2Link} className='sm:ml-4 md:ml-0'>
+                                                    <LightDarkButton text={bannerBtn2Text} />
+                                                </Link>
                                             </div>
                                         )}
                                     </div>

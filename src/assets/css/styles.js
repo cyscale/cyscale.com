@@ -9,3 +9,9 @@ export const heroHeight = css`
         min-height: calc(100vh - 18.75rem);
     }
 `;
+
+export const heroButtonWidth = css`
+    @media (max-width: 640px) {
+        width: 100%;
+    }
+`;
