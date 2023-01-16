@@ -64,10 +64,12 @@ const CloudMissConfiguration = ({ location }) => {
         <Layout
             heroBG={heroBG}
             location={location}
-            bannerBtn1Link={"/free-trial"}
+            bannerBtn1Text='Start Free Trial'
+            bannerBtn1Link={'/free-trial'}
             bannerBtn1LinkInternal={true}
+            bannerBtn2Text='Request demo'
+            bannerBtn2Link='/request-demo'
             pageName='MisconfigurationsPage'
-            bannerBtn1Text='Try Cyscale for free'
             title='Cloud Misconfiguration Security - Cyscale'
             bannerTitle='Cloud Misconfiguration Security'
             bannerDescription='Improve your security posture in the cloud, a centralized view of all your assets and servers in one place. Detect and eliminate critical misconfigurations, policy violations, and mistakes.'

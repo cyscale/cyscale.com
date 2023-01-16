@@ -8,3 +8,9 @@ export const isAnimatedNavbarPage = (pathname) => {
         pathname.includes('free-trial')
     );
 };
+
+export const requestDemoButtonPage = (pageName) => {
+    return ['HomePage', 'CSPMPage', 'SKGPage', 'ComplianceAuditing', 'MisconfigurationsPage', 'RemoteWork', ].includes(
+        pageName
+    );
+};

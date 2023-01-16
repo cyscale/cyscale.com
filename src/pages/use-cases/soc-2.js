@@ -6,6 +6,8 @@ import cloudIcon from '../../assets/images/cloud-icon.svg';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import GradientButton from '../../components/buttons/GradientButton';
+import LightDarkButton from '../../components/buttons/LightDarkButton';
+import { heroButtonWidth } from '../../assets/css/styles';
 
 const Soc2 = ({ location }) => {
     const data = useStaticQuery(graphql`
@@ -53,9 +55,14 @@ const Soc2 = ({ location }) => {
                                     <p className='text-center md:text-left text-base lg:text-lg mb-2 leading-relaxed text-gray'>
                                         Out-of-the-box policies that you can use for a solid security program.
                                     </p>
-                                    <Link to='/free-trial'>
-                                        <GradientButton text='Try Cyscale for Free' />
-                                    </Link>
+                                    <div className='flex mt-8 sm:justify-around md:justify-start'>
+                                        <Link to='/free-trial' css={heroButtonWidth}>
+                                            <GradientButton text='Start Free Trial' />
+                                        </Link>
+                                        <Link to='/request-demo' className='ml-4'>
+                                            <LightDarkButton text={'Request Demo'} />
+                                        </Link>
+                                    </div>
                                 </div>
                             </div>
                             <div className='col-span-12 lg:col-span-6'>
@@ -167,7 +174,7 @@ const Soc2 = ({ location }) => {
             <div className='bg-gradient-to-b from-selago to-white relative z-10' id='confidence'>
                 <img src={corner} width={300} className='hidden md:block absolute top-0 right-0 m-0 z-20' alt='' />
                 <Container>
-                    <div className="py-8 md:py-12 lg:py-20">
+                    <div className='py-8 md:py-12 lg:py-20'>
                         <div className='max-w-xl mx-auto lg:mx-0 lg:max-w-sm mb-20'>
                             <h2 className='text-3xl font-bold text-primary leading-normal border-title-partly montserrat-font'>
                                 100% Confidence with <br /> your Cloud Compliance

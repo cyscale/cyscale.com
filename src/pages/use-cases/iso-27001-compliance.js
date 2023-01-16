@@ -10,6 +10,9 @@ import ScrollButton from '../../components/ScrollButton/ScrollButton';
 import getStartedICon from '../../assets/images/getStartedIconCPSM.svg';
 import GetStarted from '../../components/Home/getstarted';
 import { Link } from 'gatsby';
+import GradientButton from '../../components/buttons/GradientButton';
+import LightDarkButton from '../../components/buttons/LightDarkButton';
+import { heroButtonWidth } from '../../assets/css/styles';
 
 const StepCard = ({ groups, list, order }) => {
     return (
@@ -57,13 +60,14 @@ const CloudCompliance = ({ location }) => {
                                         to jumpstart your ISMS. Secure your assets with cutting-edge controls &
                                         policies.
                                     </p>
-
-                                    <Link
-                                        to='/free-trial'
-                                        className='bg-gradient-to-r from-blue to-red lg:max-w-xs block font-medium rounded text-white uppercase text-center py-5 px-12 mt-8 no-underline hover:no-underline '
-                                    >
-                                        Start Free Trial
-                                    </Link>
+                                    <div className='flex mt-8'>
+                                        <Link to='/free-trial' css={heroButtonWidth}>
+                                            <GradientButton text='Start Free Trial' />
+                                        </Link>
+                                        <Link to='/request-demo' className='ml-4'>
+                                            <LightDarkButton text={'Request Demo'} />
+                                        </Link>
+                                    </div>
                                 </div>
                                 <div className='col-span-12 mb-10 lg:mb-0 lg:col-span-6 lg:pl-8 order-1 lg:order-2'>
                                     <img src={whyIso} alt='Why is ISO 27001' className='mx-auto w-auto h-auto' />
@@ -215,7 +219,9 @@ const CloudCompliance = ({ location }) => {
                     <div className='max-w-lg mx-auto lg:mx-0 lg:max-w-none'>
                         <Row style={{ alignItems: 'center' }}>
                             <div className='col-span-12 lg:col-span-6 order-2 lg:order-1 lg:pr-8'>
-                                <h2 className='font-semibold font-montserrat text-primary text-2xl lg:text-4xl'>Asset Inventory</h2>
+                                <h2 className='font-semibold font-montserrat text-primary text-2xl lg:text-4xl'>
+                                    Asset Inventory
+                                </h2>
                                 <p className='text-base lg:text-lg leading-relaxed mt-4 lg:mt-8'>
                                     Keep track of all your cloud assets such as virtual machines, storage buckets, and
                                     IAM users. Cyscale allows you to connect all your cloud accounts from AWS, GCP,

@@ -4,6 +4,9 @@ import Layout from '../../components/layout/CleanLayout';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import ScrollButton from '../../components/ScrollButton/ScrollButton';
+import GradientButton from '../../components/buttons/GradientButton';
+import LightDarkButton from '../../components/buttons/LightDarkButton';
+import { heroButtonWidth } from '../../assets/css/styles';
 
 const AWSCloudSecurity = ({ location }) => {
     const data = useStaticQuery(graphql`
@@ -43,12 +46,14 @@ const AWSCloudSecurity = ({ location }) => {
                             <p className='text-center sm:text-left text-base lg:text-lg mb-20 leading-relaxed'>
                                 Map, secure, and monitor your AWS assets in minutes.
                             </p>
-                            <Link
-                                to='/free-trial'
-                                className='bg-gradient-to-r mx-auto sm:mx-0 from-blue to-red max-w-xs block font-medium rounded text-white uppercase text-center py-5 px-12 mt-8 no-underline hover:no-underline '
-                            >
-                                Try Cyscale for Free
-                            </Link>
+                            <div className='flex'>
+                                <Link to='/free-trial' css={heroButtonWidth}>
+                                    <GradientButton text='Start Free Trial' />
+                                </Link>
+                                <Link to='/request-demo' className='ml-4'>
+                                    <LightDarkButton text={'Request Demo'} />
+                                </Link>
+                            </div>
                         </div>
                     </Section>
                     <div className='pb-8'>
