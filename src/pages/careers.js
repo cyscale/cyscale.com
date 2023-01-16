@@ -108,7 +108,7 @@ const Careers = ({ location }) => {
                                         smooth={true}
                                         duration={500}
                                         to='open-positions'
-                                        className='bg-gradient-to-r from-blue to-red hover:from-red hover:to-blue cursor-pointer lg:max-w-xs block font-medium rounded text-white uppercase text-center py-5 px-12 mt-16 no-underline hover:no-underline '
+                                        className='bg-gradient-to-r from-blue to-red hover:from-red hover:to-blue cursor-pointer lg:max-w-xs inline-block lg:block font-medium rounded text-white uppercase text-center py-5 px-8 mt-16 no-underline hover:no-underline'
                                     >
                                         See open positions
                                     </ScrollLink>

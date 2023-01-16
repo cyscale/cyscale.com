@@ -62,7 +62,7 @@ const CloudCompliance = ({ location }) => {
                                     </p>
                                     <div className='flex mt-8'>
                                         <Link to='/free-trial' css={heroButtonWidth}>
-                                            <GradientButton text='Start Free Trial' />
+                                            <GradientButton text='Start Free Trial' alignLeft={true} />
                                         </Link>
                                         <Link to='/request-demo' className='ml-4'>
                                             <LightDarkButton text={'Request Demo'} />

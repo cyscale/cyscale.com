@@ -178,7 +178,7 @@ const Header = ({
                                                         </a>
                                                     ) : (
                                                         <Link to={bannerBtn1Link}>
-                                                            <GradientButton text={bannerBtn1Text} />
+                                                            <GradientButton text={bannerBtn1Text} alignLeft={true} />
                                                         </Link>
                                                     )}
                                                 </div>
