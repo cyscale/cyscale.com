@@ -12,13 +12,7 @@ const onRouteUpdate = ({ location }) => {
         _hsq.push(['trackPageView']);
     };
 
-    if (typeof window.requestAnimationFrame === 'function') {
-        window.requestAnimationFrame(() => {
-            window.requestAnimationFrame(trackPageView);
-        });
-    } else {
-        setTimeout(trackPageView, 32);
-    }
+    setTimeout(trackPageView, 32);
 
     return null;
 };
