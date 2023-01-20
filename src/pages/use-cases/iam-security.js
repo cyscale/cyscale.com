@@ -6,7 +6,6 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import ScrollButton from '../../components/ScrollButton/ScrollButton';
 import GradientButton from '../../components/buttons/GradientButton';
 import LightDarkButton from '../../components/buttons/LightDarkButton';
-import { heroButtonWidth } from '../../assets/css/styles';
 
 const IAMSecurity = ({ location }) => {
     const data = useStaticQuery(graphql`
@@ -35,20 +34,20 @@ const IAMSecurity = ({ location }) => {
                 <Container>
                     <Section>
                         <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-xl pt-16 pb-4'>
-                            <h1 className='font-semibold text-center sm:text-left text-4xl lg:text-5xl leading-normal lg:leading-normal text-primary mb-16 font-montserrat'>
+                            <h1 className='font-semibold text-left text-4xl lg:text-5xl leading-normal lg:leading-normal text-primary mb-16 font-montserrat'>
                                 Identity and Access Management Security
                                 <br /> for Cloud
                             </h1>
-                            <p className='text-center sm:text-left text-base lg:text-lg mb-2 leading-relaxed'>
+                            <p className='text-left text-base lg:text-lg mb-2 leading-relaxed'>
                                 <strong>Scan, monitor and prioritize cloud IAM risk.</strong>
                             </p>
-                            <p className='text-center sm:text-left text-base lg:text-lg mb-24 leading-relaxed'>
+                            <p className='text-left text-base lg:text-lg mb-24 leading-relaxed'>
                                 Continuous multi-cloud monitoring for identity and access management (IAM)
                                 misconfigurations across all your cloud assets to meet strict IAM compliance directives
                                 and improve your cloud security posture.
                             </p>
                             <div className='flex mt-8'>
-                                <Link to='/free-trial' css={heroButtonWidth}>
+                                <Link to='/free-trial'>
                                     <GradientButton text='Start Free Trial' />
                                 </Link>
                                 <Link to='/request-demo' className='ml-4'>

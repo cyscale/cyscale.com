@@ -8,7 +8,6 @@ import { graphql, Link, useStaticQuery } from 'gatsby';
 import GradientButton from '../../components/buttons/GradientButton';
 import { css } from 'twin.macro';
 import LightDarkButton from '../../components/buttons/LightDarkButton';
-import { heroButtonWidth } from '../../assets/css/styles';
 
 const titleSection = css`
     font-size: 1.75rem;
@@ -49,19 +48,19 @@ const NISTCompliance = ({ location }) => {
                         <Row>
                             <div className='col-span-12 lg:col-span-6 order-last lg:order-first'>
                                 <div className='lg:mt-16 pt-4 max-w-xl mx-auto lg:mx-0'>
-                                    <h1 className='text-center md:text-left text-blue text-4xl lg:text-5xl leading-normal lg:leading-normal mb-16 font-montserrat'>
+                                    <h1 className='text-left text-blue text-4xl lg:text-5xl leading-normal lg:leading-normal mb-16 font-montserrat'>
                                         <strong>NIST Compliance</strong> <br className='block md:hidden lg:block' /> for
                                         Cloud
                                     </h1>
-                                    <p className='text-center md:text-left text-base lg:text-lg mb-8 leading-relaxed text-gray'>
+                                    <p className='text-left text-base lg:text-lg mb-8 leading-relaxed text-gray'>
                                         Enforce regulatory compliance controls for NIST and beyond.
                                     </p>
-                                    <p className='text-center md:text-left text-base lg:text-lg mb-2 leading-relaxed text-gray'>
+                                    <p className='text-left text-base lg:text-lg mb-2 leading-relaxed text-gray'>
                                         Cyscale continuously evaluates your multi-cloud environments for compliance
                                         violations with predefined rules mapped to NIST 800-53 compliance controls.
                                     </p>
-                                    <div className='flex mt-8 sm:justify-center md:justify-start'>
-                                        <Link to='/free-trial' css={heroButtonWidth}>
+                                    <div className='flex mt-8 justify-start'>
+                                        <Link to='/free-trial'>
                                             <GradientButton text='Start Free Trial' />
                                         </Link>
                                         <Link to='/request-demo' className='ml-4'>

@@ -7,7 +7,6 @@ import ScrollButton from '../../components/ScrollButton/ScrollButton';
 import headerImage from '../../assets/images/remote-work-heading-image.png';
 import GradientButton from '../../components/buttons/GradientButton';
 import LightDarkButton from '../../components/buttons/LightDarkButton';
-import { heroButtonWidth } from '../../assets/css/styles';
 
 const PciDss = ({ location }) => {
     const data = useStaticQuery(graphql`
@@ -38,21 +37,21 @@ const PciDss = ({ location }) => {
                 <Container>
                     <Section className='pb-3'>
                         <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-xl pt-16 pb-4'>
-                            <h1 className='font-semibold font-montserrat text-center sm:text-left text-4xl lg:text-5xl leading-normal lg:leading-normal text-primary mb-16'>
+                            <h1 className='font-semibold font-montserrat text-left text-4xl lg:text-5xl leading-normal lg:leading-normal text-primary mb-16'>
                                 PCI DSS
                                 <br /> Compliance for Cloud
                             </h1>
-                            <p className='text-center sm:text-left text-base lg:text-lg mb-6 leading-relaxed'>
+                            <p className='text-left text-base lg:text-lg mb-6 leading-relaxed'>
                                 Cyscale helps you develop a strong cloud security process for payment card data that
                                 enables prevention, detection, and response to security incidents.
                             </p>
-                            <p className='text-center sm:text-left text-base lg:text-lg mb-2 leading-relaxed'>
+                            <p className='text-left text-base lg:text-lg mb-2 leading-relaxed'>
                                 <strong>
                                     A robust compliance toolbox for cloud-native and cloud-first organizations.
                                 </strong>
                             </p>
                             <div className='flex mt-8'>
-                                <Link to='/free-trial' css={heroButtonWidth}>
+                                <Link to='/free-trial'>
                                     <GradientButton text='Start Free Trial' />
                                 </Link>
                                 <Link to='/request-demo' className='ml-4'>
