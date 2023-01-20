@@ -23,7 +23,7 @@ const caretResources = (isAnimatedNavbarPage) => css`
 
 const hrStyle = css`
     border-top: 1px solid #c4d6f2;
-    width: 153px;
+    width: 9.625rem;
 `;
 
 const Resources = ({ pathname, activeLinks, setActiveLinks }) => {
@@ -90,7 +90,7 @@ const Resources = ({ pathname, activeLinks, setActiveLinks }) => {
                     </div>
                 </div>
             </div>
-            <div className='p-6 col-span-4'>
+            <div className='px-6 pb-6 pt-14 col-span-4'>
                 {resources.map((resource, key) => {
                     return resource.external ? (
                         <div className='mb-2' key={key}>
@@ -111,7 +111,7 @@ const Resources = ({ pathname, activeLinks, setActiveLinks }) => {
                         </div>
                     );
                 })}
-                <div className='pl-3 mt-16'>
+                <div className='pl-3 mt-8'>
                     <hr css={hrStyle} />
                 </div>
                 <div className='py-2 mt-4'>

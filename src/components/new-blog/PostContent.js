@@ -30,7 +30,12 @@ const downloadWhitepaperLinkColor = css`
 `;
 
 const ctaHeight = css`
-    height: 26rem;
+    height: 36rem;
+`;
+
+const hrStyle = css`
+    color: #e3e3e3;
+    width: 13.5rem;
 `;
 
 export default function PostContent({ data, suggestions, preview = false, pageUri, pageName, dataWhitepaper }) {
@@ -127,15 +132,30 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
                             Further reading
                         </p>
                         <p className='text-lg font-bold mt-2'>
-                            Cloud Storage <br /> Misconfigurations
+                            Cloud Compliance in
+                            <br /> 2023: An In-Depth Guide
                         </p>
                         <GatsbyImage
                             alt='White paper Cover'
-                            className='rounded-md mt-4 shadow-2xl'
+                            className='rounded-md mt-2 shadow-2xl'
                             image={dataWhitepaper.whitepaperCover.childImageSharp.gatsbyImageData}
                         />
 
                         <p className='text-xs mt-2 font-montserrat' css={ctaWhitepaperTextColor}>
+                            The whitepaper talks about ISO 27001, SOC 2, PCI-DSS, GDPR, HIPAA.
+                        </p>
+                        <Link
+                            className='text-xs underline'
+                            css={downloadWhitepaperLinkColor}
+                            to={'/whitepaper/cloud-compliance/'}
+                        >
+                            Download Whitepaper
+                        </Link>
+                        <hr className='mt-4' css={hrStyle} />
+                        <p className='text-lg font-bold mt-4'>
+                            Cloud Storage <br /> Misconfigurations
+                        </p>
+                        <p className='text-xs mt-4 font-montserrat' css={ctaWhitepaperTextColor}>
                             Build and maintain a strong <br /> Security Program from the start.
                         </p>
                         <Link
@@ -145,7 +165,8 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
                         >
                             Download Whitepaper
                         </Link>
-                        <p className='text-xs font-semibold uppercase mt-10' css={ctaWhitepaperTextColor}>
+                        <hr className='mt-4' css={hrStyle} />
+                        <p className='text-xs font-semibold uppercase mt-4' css={ctaWhitepaperTextColor}>
                             Share this article
                         </p>
                         <div className='w-12'>
