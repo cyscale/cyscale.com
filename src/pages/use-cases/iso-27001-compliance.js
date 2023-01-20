@@ -12,7 +12,6 @@ import GetStarted from '../../components/Home/getstarted';
 import { Link } from 'gatsby';
 import GradientButton from '../../components/buttons/GradientButton';
 import LightDarkButton from '../../components/buttons/LightDarkButton';
-import { heroButtonWidth } from '../../assets/css/styles';
 
 const StepCard = ({ groups, list, order }) => {
     return (
@@ -61,8 +60,8 @@ const CloudCompliance = ({ location }) => {
                                         policies.
                                     </p>
                                     <div className='flex mt-8'>
-                                        <Link to='/free-trial' css={heroButtonWidth}>
-                                            <GradientButton text='Start Free Trial' alignLeft={true} />
+                                        <Link to='/free-trial'>
+                                            <GradientButton text='Start Free Trial' />
                                         </Link>
                                         <Link to='/request-demo' className='ml-4'>
                                             <LightDarkButton text={'Request Demo'} />

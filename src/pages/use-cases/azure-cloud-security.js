@@ -6,7 +6,6 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import ScrollButton from '../../components/ScrollButton/ScrollButton';
 import GradientButton from '../../components/buttons/GradientButton';
 import LightDarkButton from '../../components/buttons/LightDarkButton';
-import { heroButtonWidth } from '../../assets/css/styles';
 
 const AzureCloudSecurity = ({ location }) => {
     const data = useStaticQuery(graphql`
@@ -40,21 +39,21 @@ const AzureCloudSecurity = ({ location }) => {
                 <Container>
                     <Section>
                         <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-xl pt-16'>
-                            <h1 className='font-semibold font-montserrat text-center sm:text-left text-4xl lg:text-5xl leading-normal lg:leading-normal text-primary mb-10'>
+                            <h1 className='font-semibold font-montserrat text-left text-4xl lg:text-5xl leading-normal lg:leading-normal text-primary mb-10'>
                                 Azure Cloud Security
                                 <br /> and Compliance
                             </h1>
                         </div>
                         <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-lg pb-4'>
-                            <p className='text-center sm:text-left text-base lg:text-lg mb-6 leading-relaxed'>
+                            <p className='text-left text-base lg:text-lg mb-6 leading-relaxed'>
                                 Secure your Azure cloud subscriptions by continuously scanning for misconfigurations and
                                 surfacing risk.
                             </p>
-                            <p className='text-center sm:text-left text-base lg:text-lg mb-20 leading-relaxed'>
+                            <p className='text-left text-base lg:text-lg mb-20 leading-relaxed'>
                                 Automatically create and maintain compliance reports for PCI, HIPAA and more.
                             </p>
                             <div className='flex'>
-                                <Link to='/free-trial' css={heroButtonWidth}>
+                                <Link to='/free-trial'>
                                     <GradientButton text='Start Free Trial' />
                                 </Link>
                                 <Link to='/request-demo' className='ml-4'>
