@@ -61,7 +61,7 @@ const Resources = ({ pathname, activeLinks, setActiveLinks }) => {
                         </p>
                         <Link
                             className='bg-blue text-white py-2 px-4 rounded cursor-pointer mb-22 font-medium flex'
-                            to='/whitepaper/cloud-storage-misconfigurations/'
+                            to='/whitepaper/cloud-compliance/'
                             css={[hoverButtonColorStyle, widthFitStyle]}
                         >
                             <img src={arrowRight} className='w-5 inline-block' alt='' />
