@@ -38,20 +38,20 @@ const CloudStorageMisconfigurations = ({ location }) => {
                             <Row>
                                 <div className='col-span-12 lg:col-span-6 '>
                                     <div className='pt-1 max-w-lg lg:max-w-xl mx-auto lg:mx-0'>
-                                        <h1 className='text-center sm:text-left text-blue title-cs-misconfiguration mb-8 sm:mb-10 md:mb-12 lg:mb-16 font-montserrat'>
+                                        <h1 className='text-left text-blue text-2xl sm:text-4xl leading-normal sm:leading-normal mb-8 sm:mb-10 md:mb-12 lg:mb-16 font-montserrat'>
                                             <strong>The Complete Guide</strong> to Cloud{' '}
                                             <br className='hidden lg:block' /> Storage Misconfigurations
                                         </h1>
-                                        <p className='text-center sm:text-left text-xl leading-normal mb-14 sm:mb-8 text-gray'>
+                                        <p className='text-left text-base leading-normal mb-14 sm:mb-8 text-gray'>
                                             This guide helps CIOs, CISOs and security staff to understand the risk &
                                             dangers of data security breaches and the importance of a secure cloud
                                             storage infrastructure.
                                         </p>
                                         <div>
-                                            <h2 className='text-left text-xl sm:text-2xl leading-normal mb-2 text-gray'>
+                                            <h2 className='text-left text-base leading-normal mb-2 text-gray'>
                                                 <strong>Download the whitepaper and learn more about:</strong>
                                             </h2>
-                                            <ul className='text-lg sm:text-xl ml-8 list-disc text-gray'>
+                                            <ul className='text-base ml-8 list-disc text-gray'>
                                                 <li>Cloud data storage breaches</li>
                                                 <li>Assets at risk</li>
                                                 <li>Cloud storage misconfigurations</li>

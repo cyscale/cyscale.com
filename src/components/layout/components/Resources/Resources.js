@@ -17,7 +17,7 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 const caretResources = (isAnimatedNavbarPage) => css`
     :before {
         ${caretMenuSelegoStyle};
-        left: ${isAnimatedNavbarPage ? '27.5rem' : '49.5rem'};
+        left: ${isAnimatedNavbarPage ? '36.5rem' : '49.5rem'};
     }
 `;
 

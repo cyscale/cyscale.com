@@ -5,9 +5,21 @@ import { Container, Row } from '../../components/atoms/Containers';
 import useHSFormLoaded from '../../hooks/useHSFormLoaded';
 import classnames from 'classnames';
 import LoaderContainer from '../../components/Loader/LoaderContainer/LoaderContainer';
+import { graphql, useStaticQuery } from 'gatsby';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 const CloudCompliance = ({ location }) => {
     const { loadingForm } = useHSFormLoaded();
+
+    const data = useStaticQuery(graphql`
+        query CloudCompliace {
+            standards: file(relativePath: { eq: "cloud-compliance-standards.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 1080, layout: CONSTRAINED)
+                }
+            }
+        }
+    `);
 
     useEffect(() => {
         setTimeout(() => {
@@ -27,7 +39,7 @@ const CloudCompliance = ({ location }) => {
                 location={location}
                 pageName='CloudComplianceWhitepaper'
                 title='[White Paper] The Complete Guide to Cloud Compliance in 2023 - Cyscale'
-                description='This guide helps CIOs, CISOs and security staff to understand the risk & dangers of data security breaches and the importance of a secure cloud storage infrastructure.'
+                description='This whitepaper presents cloud trends for 2023 along with popular compliance frameworks such as ISO27001, GDPR, HIPAA, PCI-DSS and SOC2.'
             >
                 <Helmet>
                     <script charset='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js'></script>
@@ -38,28 +50,33 @@ const CloudCompliance = ({ location }) => {
                             <Row>
                                 <div className='col-span-12 lg:col-span-6 '>
                                     <div className='pt-1 max-w-lg lg:max-w-xl mx-auto lg:mx-0'>
-                                        <h1 className='text-center sm:text-left text-blue title-cs-misconfiguration mb-8 sm:mb-10 md:mb-12 lg:mb-16 font-montserrat'>
-                                            <strong>The In-Depth Guide</strong> to Cloud{' '}
-                                            <br className='hidden lg:block' /> Compliance in 2023
+                                        <h1 className='text-left text-blue text-2xl sm:text-4xl leading-normal sm:leading-normal mb-8 sm:mb-10 md:mb-12 lg:mb-16 font-montserrat'>
+                                            <strong>The In-Depth Guide</strong>
+                                            <br className='hidden lg:block' /> to Cloud Compliance in 2023
                                         </h1>
                                         <div>
-                                            <h2 className='text-left text-xl sm:text-2xl leading-normal mb-2 text-gray'>
+                                            <h2 className='text-left text-base leading-normal mb-2 text-gray'>
                                                 <strong>
                                                     This whitepaper helps you answer the following questions:
                                                 </strong>
                                             </h2>
-                                            <ul className='text-lg sm:text-xl ml-8 list-disc text-gray'>
+                                            <ul className='text-base  ml-8 list-disc text-gray'>
                                                 <li>Why is compliance important?</li>
                                                 <li>
                                                     What standards exist on the market, and who are they destined for?
                                                 </li>
-                                                <li>How do you achieve compliance?</li>
+                                                <li>How do you achieve compliance in cloud?</li>
                                             </ul>
                                         </div>
-                                        <p className='text-left text-xl leading-normal mt-14 sm:mb-8 text-gray'>
+                                        <p className='text-left text-base leading-normal mt-7 sm:mb-8 text-gray'>
                                             Download the whitepaper to read about ISO 27001, SOC 2, PCI-DSS, GDPR,
                                             HIPAA.
                                         </p>
+                                        <GatsbyImage
+                                            image={data.standards.childImageSharp.gatsbyImageData}
+                                            alt='Standards'
+                                            className='max-w-sm mt-4 sm:mt-0'
+                                        />
                                     </div>
                                 </div>
                                 <div className='col-span-12 lg:col-span-6' id='apply-now'>

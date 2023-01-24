@@ -11,9 +11,10 @@ import Resources from './components/Resources/Resources';
 import Company from './components/Company/Company';
 import { logoStyle } from './style';
 import useScrollTrigger from '../scrollTrigger';
+import { isAnimatedNavbarPage } from '../../common/utils';
 
 const MegaMenu = styled.div`
-    left: ${({ animatedNavbarPages }) => (animatedNavbarPages ? '-17rem' : '0')};
+    left: ${({ animatedNavbarPages, left }) => (animatedNavbarPages ? left : '0')};
     position: absolute;
     text-align: left;
     width: 100%;
@@ -104,7 +105,8 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation }) =
                 (pageName === 'Identity and Access Management Security for Cloud' ||
                     pageName === 'AWSCloudSecurityCampaign' ||
                     pageName === 'CSPMSolutionCampaign') &&
-                    tw`container`
+                    tw`container`,
+                isAnimatedNavbarPage(pathname) && tw`pl-20`
             ]}
         >
             <div tw='mx-auto flex flex-row justify-between'>
@@ -155,15 +157,8 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation }) =
                         </NavItemButton>
                         <MegaMenu
                             css={[hideMegaMenu ? hiddenMegaMenuOnScroll : null]}
-                            animatedNavbarPages={[
-                                'Identity and Access Management Security for Cloud',
-                                'AWSCloudSecurityCampaign',
-                                'CSPMSolutionCampaign',
-                                'DataSecurityCampaign',
-                                'RequestDemo',
-                                'Playground',
-                                'FreeTrial'
-                            ].includes(pageName)}
+                            animatedNavbarPages={isAnimatedNavbarPage(pathname)}
+                            left='-17rem'
                         >
                             <Solutions pathname={pathname} activeLinks={activeLinks} setActiveLinks={setActiveLinks} />
                         </MegaMenu>
@@ -188,7 +183,11 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation }) =
                         >
                             <span>Resources</span>
                         </NavItemButton>
-                        <MegaMenu css={[hideMegaMenu ? hiddenMegaMenuOnScroll : null]}>
+                        <MegaMenu
+                            css={[hideMegaMenu ? hiddenMegaMenuOnScroll : null]}
+                            animatedNavbarPages={isAnimatedNavbarPage(pathname)}
+                            left='-4rem'
+                        >
                             <Resources pathname={pathname} activeLinks={activeLinks} setActiveLinks={setActiveLinks} />
                         </MegaMenu>
                     </NavItem>

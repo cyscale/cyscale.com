@@ -13,25 +13,24 @@ import {
 import { solutions } from '../../nav';
 import { css } from 'twin.macro';
 import arrowRight from '../../icons/icon-right-navigation.svg';
-import { isAnimatedNavbarPage } from '../../../../common/utils';
 
 const descriptionMaxWidth = css`
     max-width: 13.25rem;
 `;
 
-const caretSolutions = (isAnimatedNavbarPage) => css`
+const caretSolutions = () => css`
     :before {
         ${caretMenuWhiteStyle};
-        left: ${isAnimatedNavbarPage ? '29rem' : '34rem'};
+        left: 34rem;
     }
 `;
 
-const Solutions = ({ pathname, activeLinks, setActiveLinks }) => {
+const Solutions = ({ activeLinks, setActiveLinks }) => {
     return (
         <div
             className='w-full grid grid-cols-12 gap-2 ml-auto shadow-2xl bg-white'
             style={{ width: '76rem' }}
-            css={caretSolutions(isAnimatedNavbarPage(pathname))}
+            css={caretSolutions()}
             onMouseEnter={() => setActiveLinks({ ...activeLinks, solutions: true })}
             onMouseLeave={() => setActiveLinks({ ...activeLinks, solutions: false })}
             tabIndex='-1'
