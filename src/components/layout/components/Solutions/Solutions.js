@@ -12,7 +12,7 @@ import {
 } from '../../style';
 import { solutions } from '../../nav';
 import { css } from 'twin.macro';
-import arrowRight from '../../icons/icon-right-navigation.svg';
+import RightArrow from '../Resources/RightArrow';
 
 const descriptionMaxWidth = css`
     max-width: 13.25rem;
@@ -48,7 +48,7 @@ const Solutions = ({ activeLinks, setActiveLinks }) => {
                     to='/security-for-startups-program/'
                     css={[hoverButtonColorStyle, widthFitStyle]}
                 >
-                    <img src={arrowRight} className='w-5 inline-block' alt='' />
+                    <RightArrow fillColor={'white'} marginTop='0.2rem' />
                     <span className='text-md ml-2'>Submit Your Application</span>
                 </Link>
                 <div className='mt-32'>

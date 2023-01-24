@@ -12,8 +12,8 @@ import {
     widthFitStyle,
     caretMenuSelegoStyle
 } from '../../style';
-import arrowRight from '../../icons/icon-right-navigation.svg';
 import { isAnimatedNavbarPage } from '../../../../common/utils';
+import RightArrow from '../Resources/RightArrow';
 
 const PlatformLinkTitle = styled.h1`
     ${tw`ml-4 text-lg`}
@@ -72,7 +72,7 @@ const Platform = ({ pathname, activeLinks, setActiveLinks }) => {
                     to='/playground'
                     css={[hoverButtonColorStyle, widthFitStyle]}
                 >
-                    <img src={arrowRight} className='w-5 inline-block' alt='' />
+                    <RightArrow fillColor={'white'} marginTop='0.2rem' />
                     <span className='text-md ml-2'>Try Cyscale Platform</span>
                 </Link>
                 <div className='flex mt-12'>

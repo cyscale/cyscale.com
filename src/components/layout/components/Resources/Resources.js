@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import {
     caretMenuSelegoStyle,
@@ -8,11 +8,10 @@ import {
     widthFitStyle
 } from '../../style';
 import { resources } from '../../nav';
-import arrowRight from '../../icons/icon-right-navigation.svg';
-import arrowRightBlue from '../../icons/icon-right-navigation-blue.svg';
 import { css } from 'twin.macro';
 import { isAnimatedNavbarPage } from '../../../../common/utils';
 import { GatsbyImage } from 'gatsby-plugin-image';
+import RightArrow from './RightArrow';
 
 const caretResources = (isAnimatedNavbarPage) => css`
     :before {
@@ -27,6 +26,7 @@ const hrStyle = css`
 `;
 
 const Resources = ({ pathname, activeLinks, setActiveLinks }) => {
+    const [isHover, setIsHover] = useState(false);
     const data = useStaticQuery(graphql`
         query ResourcesQuery {
             whitepapers: file(relativePath: { eq: "compliance-whitepaper.png" }) {
@@ -64,7 +64,8 @@ const Resources = ({ pathname, activeLinks, setActiveLinks }) => {
                             to='/whitepaper/cloud-compliance/'
                             css={[hoverButtonColorStyle, widthFitStyle]}
                         >
-                            <img src={arrowRight} className='w-5 inline-block' alt='' />
+                            <RightArrow fillColor={'white'} marginTop='0.2rem' />
+
                             <span className='text-md ml-2'>Cloud Compliance 2023</span>
                         </Link>
                         <Link
@@ -80,8 +81,11 @@ const Resources = ({ pathname, activeLinks, setActiveLinks }) => {
                                     }
                                 `
                             ]}
+                            onMouseEnter={() => setIsHover(true)}
+                            onMouseLeave={() => setIsHover(false)}
                         >
-                            <img src={arrowRightBlue} className='w-5 inline-block' alt='' />
+                            {' '}
+                            <RightArrow fillColor={isHover ? 'white' : '#0F26AA'} marginTop='0.2rem' />
                             <span className='text-md ml-2'>Cloud Storage Misconfiguration</span>
                         </Link>
                     </div>
