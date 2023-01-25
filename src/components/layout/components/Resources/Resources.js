@@ -61,12 +61,12 @@ const Resources = ({ pathname, activeLinks, setActiveLinks }) => {
                         </p>
                         <Link
                             className='bg-blue text-white py-2 px-4 rounded cursor-pointer mb-22 font-medium flex'
-                            to='/whitepaper/cloud-compliance/'
+                            to='/whitepaper/the-complete-guide-to-cloud-compliance/'
                             css={[hoverButtonColorStyle, widthFitStyle]}
                         >
                             <RightArrow fillColor={'white'} marginTop='0.2rem' />
 
-                            <span className='text-md ml-2'>Cloud Compliance 2023</span>
+                            <span className='text-md ml-2'>Cloud Compliance in 2023</span>
                         </Link>
                         <Link
                             className='bg-white py-2 px-4 rounded cursor-pointer mb-22 font-medium flex mt-4'

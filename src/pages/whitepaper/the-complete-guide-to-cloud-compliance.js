@@ -8,7 +8,7 @@ import LoaderContainer from '../../components/Loader/LoaderContainer/LoaderConta
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 
-const CloudCompliance = ({ location }) => {
+const TheCompleteGuideToCloudCompliance = ({ location }) => {
     const { loadingForm } = useHSFormLoaded();
 
     const data = useStaticQuery(graphql`
@@ -65,7 +65,7 @@ const CloudCompliance = ({ location }) => {
                                                 <li>
                                                     What standards exist on the market, and who are they destined for?
                                                 </li>
-                                                <li>How do you achieve compliance in cloud?</li>
+                                                <li>How do you achieve compliance in the cloud?</li>
                                             </ul>
                                         </div>
                                         <p className='text-left text-base leading-normal mt-7 sm:mb-8 text-gray'>
@@ -107,4 +107,4 @@ const CloudCompliance = ({ location }) => {
     );
 };
 
-export default CloudCompliance;
+export default TheCompleteGuideToCloudCompliance;

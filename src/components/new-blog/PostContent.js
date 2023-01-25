@@ -141,13 +141,13 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
                             image={dataWhitepaper.whitepaperCover.childImageSharp.gatsbyImageData}
                         />
 
-                        <p className='text-xs mt-2 font-montserrat' css={ctaWhitepaperTextColor}>
+                        <p className='text-xs mt-4 font-montserrat' css={ctaWhitepaperTextColor}>
                             The whitepaper talks about ISO 27001, SOC 2, PCI-DSS, GDPR, HIPAA.
                         </p>
                         <Link
                             className='text-xs underline'
                             css={downloadWhitepaperLinkColor}
-                            to={'/whitepaper/cloud-compliance/'}
+                            to={'/whitepaper/the-complete-guide-to-cloud-compliance/'}
                         >
                             Download Whitepaper
                         </Link>
