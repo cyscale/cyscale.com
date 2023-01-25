@@ -13,7 +13,7 @@ import {
 import { company } from '../../nav';
 import { css } from 'twin.macro';
 import { isAnimatedNavbarPage } from '../../../../common/utils';
-import RightArrow from '../Resources/RightArrow';
+import RightArrow from '../../../sharedComponent/RightArrow';
 
 const caretCompany = (isAnimatedNavbarPage) => css`
     :before {
@@ -69,7 +69,7 @@ const Company = ({ pathname, activeLinks, setActiveLinks }) => {
                     to='/careers/'
                     css={[hoverButtonColorStyle, widthFitStyle]}
                 >
-                    <RightArrow fillColor={'white'} marginTop='0rem' />
+                    <RightArrow fillColor={'white'} marginTop='-0.1rem' />
                     <span className='text-md ml-2'>Join the Cyscale Team</span>
                 </Link>
                 <div style={{ marginTop: '4rem' }}>

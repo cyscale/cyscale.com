@@ -12,7 +12,7 @@ import {
 } from '../../style';
 import { solutions } from '../../nav';
 import { css } from 'twin.macro';
-import RightArrow from '../Resources/RightArrow';
+import RightArrow from '../../../sharedComponent/RightArrow';
 
 const descriptionMaxWidth = css`
     max-width: 13.25rem;

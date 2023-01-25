@@ -11,7 +11,7 @@ import { resources } from '../../nav';
 import { css } from 'twin.macro';
 import { isAnimatedNavbarPage } from '../../../../common/utils';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import RightArrow from './RightArrow';
+import RightArrow from '../../../sharedComponent/RightArrow';
 
 const caretResources = (isAnimatedNavbarPage) => css`
     :before {

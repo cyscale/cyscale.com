@@ -13,7 +13,7 @@ import {
     caretMenuSelegoStyle
 } from '../../style';
 import { isAnimatedNavbarPage } from '../../../../common/utils';
-import RightArrow from '../Resources/RightArrow';
+import RightArrow from '../../../sharedComponent/RightArrow';
 
 const PlatformLinkTitle = styled.h1`
     ${tw`ml-4 text-lg`}
