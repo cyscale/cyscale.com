@@ -11,14 +11,14 @@ import {
     widthFitStyle
 } from '../../style';
 import { company } from '../../nav';
-import arrowRight from '../../icons/icon-right-navigation.svg';
 import { css } from 'twin.macro';
 import { isAnimatedNavbarPage } from '../../../../common/utils';
+import RightArrow from '../../../sharedComponent/RightArrow';
 
 const caretCompany = (isAnimatedNavbarPage) => css`
     :before {
         ${caretMenuWhiteStyle};
-        left: ${isAnimatedNavbarPage ? '36.3rem' : '58rem'};
+        left: ${isAnimatedNavbarPage ? '41.3rem' : '58rem'};
     }
 `;
 
@@ -69,7 +69,7 @@ const Company = ({ pathname, activeLinks, setActiveLinks }) => {
                     to='/careers/'
                     css={[hoverButtonColorStyle, widthFitStyle]}
                 >
-                    <img src={arrowRight} className='w-5 inline-block' alt='' />
+                    <RightArrow fillColor={'white'} marginTop='-0.1rem' />
                     <span className='text-md ml-2'>Join the Cyscale Team</span>
                 </Link>
                 <div style={{ marginTop: '4rem' }}>

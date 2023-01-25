@@ -12,26 +12,25 @@ import {
 } from '../../style';
 import { solutions } from '../../nav';
 import { css } from 'twin.macro';
-import arrowRight from '../../icons/icon-right-navigation.svg';
-import { isAnimatedNavbarPage } from '../../../../common/utils';
+import RightArrow from '../../../sharedComponent/RightArrow';
 
 const descriptionMaxWidth = css`
     max-width: 13.25rem;
 `;
 
-const caretSolutions = (isAnimatedNavbarPage) => css`
+const caretSolutions = () => css`
     :before {
         ${caretMenuWhiteStyle};
-        left: ${isAnimatedNavbarPage ? '29rem' : '34rem'};
+        left: 34rem;
     }
 `;
 
-const Solutions = ({ pathname, activeLinks, setActiveLinks }) => {
+const Solutions = ({ activeLinks, setActiveLinks }) => {
     return (
         <div
             className='w-full grid grid-cols-12 gap-2 ml-auto shadow-2xl bg-white'
             style={{ width: '76rem' }}
-            css={caretSolutions(isAnimatedNavbarPage(pathname))}
+            css={caretSolutions()}
             onMouseEnter={() => setActiveLinks({ ...activeLinks, solutions: true })}
             onMouseLeave={() => setActiveLinks({ ...activeLinks, solutions: false })}
             tabIndex='-1'
@@ -49,7 +48,7 @@ const Solutions = ({ pathname, activeLinks, setActiveLinks }) => {
                     to='/security-for-startups-program/'
                     css={[hoverButtonColorStyle, widthFitStyle]}
                 >
-                    <img src={arrowRight} className='w-5 inline-block' alt='' />
+                    <RightArrow fillColor={'white'} marginTop='0.2rem' />
                     <span className='text-md ml-2'>Submit Your Application</span>
                 </Link>
                 <div className='mt-32'>

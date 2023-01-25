@@ -10,7 +10,7 @@ export const isAnimatedNavbarPage = (pathname) => {
 };
 
 export const requestDemoButtonPage = (pageName) => {
-    return ['HomePage', 'CSPMPage', 'SKGPage', 'ComplianceAuditing', 'MisconfigurationsPage', 'RemoteWork', ].includes(
+    return ['HomePage', 'CSPMPage', 'SKGPage', 'ComplianceAuditing', 'MisconfigurationsPage', 'RemoteWork'].includes(
         pageName
     );
 };

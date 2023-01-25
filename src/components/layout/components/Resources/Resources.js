@@ -1,6 +1,5 @@
-import React from 'react';
-import { Link } from 'gatsby';
-import IconDownload from '../../icons/icon-download-cloud.svg';
+import React, { useState } from 'react';
+import { graphql, Link, useStaticQuery } from 'gatsby';
 import {
     caretMenuSelegoStyle,
     fontNavLinkStyle,
@@ -9,21 +8,39 @@ import {
     widthFitStyle
 } from '../../style';
 import { resources } from '../../nav';
-import arrowRight from '../../icons/icon-right-navigation.svg';
 import { css } from 'twin.macro';
 import { isAnimatedNavbarPage } from '../../../../common/utils';
+import { GatsbyImage } from 'gatsby-plugin-image';
+import RightArrow from '../../../sharedComponent/RightArrow';
 
 const caretResources = (isAnimatedNavbarPage) => css`
     :before {
         ${caretMenuSelegoStyle};
-        left: ${isAnimatedNavbarPage ? '27.5rem' : '49.5rem'};
+        left: ${isAnimatedNavbarPage ? '36.5rem' : '49.5rem'};
     }
 `;
 
+const hrStyle = css`
+    border-top: 1px solid #c4d6f2;
+    width: 9.625rem;
+`;
+
 const Resources = ({ pathname, activeLinks, setActiveLinks }) => {
+    const [isHover, setIsHover] = useState(false);
+    const data = useStaticQuery(graphql`
+        query ResourcesQuery {
+            whitepapers: file(relativePath: { eq: "compliance-whitepaper.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 1080, layout: CONSTRAINED)
+                }
+            }
+        }
+    `);
+
     return (
         <div
-            className='max-w-3xl grid grid-cols-2 gap-6 ml-auto justify-end shadow-2xl bg-white'
+            className='w-full grid grid-cols-12 gap-6 ml-auto justify-end shadow-2xl bg-white'
+            style={{ width: '63rem' }}
             css={caretResources(isAnimatedNavbarPage(pathname))}
             onMouseEnter={() => setActiveLinks({ ...activeLinks, resources: true })}
             onMouseLeave={() => setActiveLinks({ ...activeLinks, resources: false })}
@@ -32,27 +49,52 @@ const Resources = ({ pathname, activeLinks, setActiveLinks }) => {
             onKeyPress={() => {}}
             role='presentation'
         >
-            <div className='bg-selago p-6'>
-                <h1 css={montserratFontStyle} className='text-2xl font-semibold mb-6'>
-                    Cloud Storage Misconfigurations
-                </h1>
-                <p className='mb-4'>Build and maintain a strong Security Program from the start.</p>
-                <Link
-                    className='bg-blue text-white py-2 px-4 rounded cursor-pointer mb-22 font-medium flex'
-                    to='/whitepaper/cloud-storage-misconfigurations/'
-                    css={[hoverButtonColorStyle, widthFitStyle]}
-                >
-                    <img src={arrowRight} className='w-5 inline-block' alt='' />
-                    <span className='text-md ml-2'>Get the Whitepaper</span>
-                </Link>
-                <div className='flex mt-12'>
-                    <img src={IconDownload} alt='' />
-                    <Link className='ml-2 font-medium' to='/resources/cyscale-cloud-data-security-datasheet.pdf'>
-                        Download Data Sheet
-                    </Link>
+            <div className='bg-selago py-6 pl-6 pr-12 col-span-8'>
+                <div className='grid grid-cols-12'>
+                    <div className='col-span-6'>
+                        <h1 css={montserratFontStyle} className='text-2xl font-semibold mb-6'>
+                            Get our latest <br /> Whitepapers
+                        </h1>
+                        <p className='mb-6'>
+                            Understand the risk & dangers of data security breaches and the importance <br /> of a
+                            secure cloud storage infrastructure.
+                        </p>
+                        <Link
+                            className='bg-blue text-white py-2 px-4 rounded cursor-pointer mb-22 font-medium flex'
+                            to='/whitepaper/the-complete-guide-to-cloud-compliance/'
+                            css={[hoverButtonColorStyle, widthFitStyle]}
+                        >
+                            <RightArrow fillColor={'white'} marginTop='0.2rem' />
+
+                            <span className='text-md ml-2'>Cloud Compliance in 2023</span>
+                        </Link>
+                        <Link
+                            className='bg-white py-2 px-4 rounded cursor-pointer mb-22 font-medium flex mt-4'
+                            to='/whitepaper/cloud-storage-misconfigurations/'
+                            css={[
+                                hoverButtonColorStyle,
+                                widthFitStyle,
+                                css`
+                                    color: #0f26aa;
+                                    &:hover {
+                                        color: white;
+                                    }
+                                `
+                            ]}
+                            onMouseEnter={() => setIsHover(true)}
+                            onMouseLeave={() => setIsHover(false)}
+                        >
+                            {' '}
+                            <RightArrow fillColor={isHover ? 'white' : '#0F26AA'} marginTop='0.2rem' />
+                            <span className='text-md ml-2'>Cloud Storage Misconfiguration</span>
+                        </Link>
+                    </div>
+                    <div className='col-start-8 col-end-13 pt-9 pb-4'>
+                        <GatsbyImage image={data.whitepapers.childImageSharp.gatsbyImageData} alt='Whitepapers' />
+                    </div>
                 </div>
             </div>
-            <div className='p-6'>
+            <div className='px-6 pb-6 pt-14 col-span-4'>
                 {resources.map((resource, key) => {
                     return resource.external ? (
                         <div className='mb-2' key={key}>
@@ -73,6 +115,18 @@ const Resources = ({ pathname, activeLinks, setActiveLinks }) => {
                         </div>
                     );
                 })}
+                <div className='pl-3 mt-8'>
+                    <hr css={hrStyle} />
+                </div>
+                <div className='py-2 mt-4'>
+                    <Link
+                        className='p-2 hover:font-medium block'
+                        to='/resources/cyscale-cloud-data-security-datasheet.pdf'
+                        css={fontNavLinkStyle}
+                    >
+                        <span>Download Data Sheet</span>
+                    </Link>
+                </div>
             </div>
         </div>
     );
