@@ -71,7 +71,7 @@ const CloudMissConfiguration = ({ location }) => {
             bannerBtn2Link='/request-demo'
             pageName='MisconfigurationsPage'
             title='Cloud Misconfiguration Security - Cyscale'
-            bannerTitle='Cloud Misconfiguration Security'
+            bannerTitle='Eliminate Cloud Misconfigurations with Security Automation'
             bannerDescription='Improve your security posture in the cloud, a centralized view of all your assets and servers in one place. Detect and eliminate critical misconfigurations, policy violations, and mistakes.'
             description='Improve your security posture in the cloud, a centralized view of all your assets and servers in one place. Detect and eliminate critical misconfigurations, policy violations, and mistakes.'
         >
