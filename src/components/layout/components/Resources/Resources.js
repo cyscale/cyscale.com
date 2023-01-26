@@ -86,7 +86,7 @@ const Resources = ({ pathname, activeLinks, setActiveLinks }) => {
                         >
                             {' '}
                             <RightArrow fillColor={isHover ? 'white' : '#0F26AA'} marginTop='0.2rem' />
-                            <span className='text-md ml-2'>Cloud Storage Misconfiguration</span>
+                            <span className='text-md ml-2'>Cloud Storage Misconfigurations</span>
                         </Link>
                     </div>
                     <div className='col-start-8 col-end-13 pt-9 pb-4'>
