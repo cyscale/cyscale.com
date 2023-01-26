@@ -22,7 +22,7 @@ seoDescription: Along with the new year come new resolutions. Do you want to
   are destined for, and how to achieve compliance in the cloud. In our in-depth
   guide, you will read about ISO 27001, SOC 2, PCI-DSS, GDPR, and HIPAA.
 featuredpost: true
-featuredimage: /img/31_blog-cover-image.png
+featuredimage: /img/31_blog-cover-image-02.png
 tags:
   - whitepaper
   - compliance
