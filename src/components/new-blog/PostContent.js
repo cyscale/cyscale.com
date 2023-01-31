@@ -61,11 +61,22 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
                             </div>
                             <div className='mt-8 lg:mt-0 col-span-12 lg:col-span-6'>
                                 {!preview ? (
-                                    <GatsbyImage
-                                        image={data.featuredimage.childImageSharp.gatsbyImageData}
-                                        className='rounded-lg overflow-hidden shadow-md'
-                                        alt={data.title}
-                                    />
+                                    data.permalink === 'whitepaper-cloud-compliance-in-2023' ? (
+                                        <Link to='/whitepaper/the-complete-guide-to-cloud-compliance/'>
+                                            {' '}
+                                            <GatsbyImage
+                                                image={data.featuredimage.childImageSharp.gatsbyImageData}
+                                                className='rounded-lg overflow-hidden shadow-md'
+                                                alt={data.title}
+                                            />
+                                        </Link>
+                                    ) : (
+                                        <GatsbyImage
+                                            image={data.featuredimage.childImageSharp.gatsbyImageData}
+                                            className='rounded-lg overflow-hidden shadow-md'
+                                            alt={data.title}
+                                        />
+                                    )
                                 ) : (
                                     <img src={data.featuredimage.publicURL} className='rounded-lg' alt={data.title} />
                                 )}
