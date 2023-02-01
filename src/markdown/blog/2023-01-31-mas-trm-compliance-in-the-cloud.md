@@ -22,7 +22,7 @@ seoDescription: The Monetary Authority of Singapore (MAS) Technology Risk
   as IT resilience, access control, cryptography, data and infrastructure
   security, cyber security operations, and cyber security assessment.
 featuredpost: true
-featuredimage: /img/33_blog-cover-image-mas-trm.png
+featuredimage: /img/blog-cover-image-mas-trm.png
 tags:
   - mas
   - compliance
