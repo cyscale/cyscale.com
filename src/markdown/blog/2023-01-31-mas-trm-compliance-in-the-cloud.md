@@ -173,7 +173,7 @@ Let’s look at examples of controls for some of the key components we've descri
 * Data security: *Ensure databases are encrypted.* 
 * Network security: *Ensure firewall rule does not allow all traffic on port 80.* 
 * System Security: *Ensure Kubernetes Engine uses HTTP load balancing ID.* 
-* Virtualization security: *Ensure AMIs Are Private. This control limits data exposure by disabling public access to AMIs (Amazon Machine Images).* 
+* Virtualization security: *Ensure AMIs Are Private.* This control limits data exposure by disabling public access to AMIs (Amazon Machine Images). 
 
 ### Cyber Security Operations 
 
