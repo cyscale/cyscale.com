@@ -274,7 +274,6 @@ const CNAPP = ({ location }) => {
                                 <br className='hidden lg:block' />
                                 <a
                                     href='/products/cloud-security-posture-management/'
-                                    key='csp123'
                                     className='text-base text-blue underline hover:no-underline hover:text-red'
                                 >
                                     cloud security posture
