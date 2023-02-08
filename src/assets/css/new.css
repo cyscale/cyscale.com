@@ -34,7 +34,8 @@
 .bg-storage-misconfigurations,
 .bg-hero-campaigns-iam-security,
 .bg-hero-soc2,
-.bg-hero-nist {
+.bg-hero-nist,
+.bg-cnapp {
     background-image: linear-gradient(#eeeeee, #e4edfc);
 }
 .h-advantages {
@@ -65,6 +66,12 @@
         background-repeat: no-repeat;
         background-position: 50% 35%;
         background-image: url('../images/hero-storage-misconfigurations-bg.png');
+    }
+    .bg-cnapp {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 35%;
+        background-image: url('../images/hero-cnapp.png');
     }
     .bg-hero-soc2 {
         background-size: cover;

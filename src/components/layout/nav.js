@@ -2,8 +2,16 @@ import UseCases from './icons/icon-usecases.svg';
 import Cloud from './icons/icon-cloud.svg';
 import Graph from './icons/icon-graph.svg';
 import Shield from './icons/icon-shield.svg';
+import CNAPPIcon from './icons/cnapp-icon.svg';
 
 const platform = [
+    {
+        icon: CNAPPIcon,
+        title: 'CNAPP',
+        description: 'Ensure security and compliance with our all-in-one solution for multi-cloud environments.',
+        mobileDescription: 'Ensure security and compliance with our all-in-one solution for multi-cloud environments.',
+        link: '/products/cnapp/'
+    },
     {
         icon: Cloud,
         title: 'Cloud Security Posture Management',
