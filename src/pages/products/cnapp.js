@@ -34,12 +34,12 @@ const CNAPP = ({ location }) => {
         query CNAPPQuery {
             dashboard: file(relativePath: { eq: "dashboard-cnapp.png" }) {
                 childImageSharp {
-                    gatsbyImageData(width: 1080, layout: CONSTRAINED)
+                    gatsbyImageData(width: 1920, layout: CONSTRAINED)
                 }
             }
             inventory: file(relativePath: { eq: "inventory-cnapp.png" }) {
                 childImageSharp {
-                    gatsbyImageData(width: 1080, layout: CONSTRAINED)
+                    gatsbyImageData(width: 1920, layout: CONSTRAINED)
                 }
             }
         }
