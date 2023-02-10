@@ -115,59 +115,77 @@ const CNAPP = ({ location }) => {
                     <div className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0'>
                         <img src={DataSecurityIcon} alt='' />
                         <h2 className='font-montserrat text-base font-bold text-blue mt-3'>
-                            Cloud-native application security
+                            CSPM
                         </h2>
                         <p className='text-sm mt-4 text-gray'>
-                            Ensures maximum security and compliance for your cloud-native transformation by guarding
-                            your entire app stack on any cloud environment, covering VMs, containers, and serverless.
+                            Continuous visibility over multi-cloud environments to identify misconfigurations, 
+                            ultimately securing your cloud from data breaches and leaks. Scan, monitor, and remediate across AWS, Azure, Google Cloud, Alibaba Cloud.
                         </p>
                     </div>
                     <div className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg  lg:mx-0'>
-                        <img src={ContainerSecurityIcon} alt='' />
-                        <h2 className='font-montserrat text-base font-bold text-blue mt-3'>Container security</h2>
+                        <img src={VisibilityIcon} alt='' />
+                        <h2 className='font-montserrat text-base font-bold text-blue mt-3'>Contextual Analysis</h2>
                         <p className='text-sm mt-4 text-gray'>
-                            Consolidate your containers by using runtime security, network segmentation and
-                            vulnerability management, ensuring the integrity and confidentiality of your containerized
-                            apps.
+                            Cloud asset misconfigurations are analyzed in context, automatically correlating issues 
+                            that affect compute, data storage and identity assets, determining their real impact on 
+                            data security and helping you prioritize remediation efforts in the most effective way.
+
                         </p>
                     </div>
                     <div className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg  lg:mx-0 mt-8 lg:mt-0'>
-                        <img src={KubernetesIcon} alt='' height={40} width={40} />
-                        <h2 className='font-montserrat text-base font-bold text-blue mt-3'>Kubernetes security</h2>
+                        <img src={ComplianceIcon} alt='' height={40} width={40} />
+                        <h2 className='font-montserrat text-base font-bold text-blue mt-3'>Compliance and Governance</h2>
                         <p className='text-sm mt-4 text-gray'>
-                            Keep your orchestration platform secure by implementing network segmentation, role-based
-                            access control, and runtime security, ensuring the integrity and confidentiality of your
-                            Kubernetes environment.
+                            Enable your organization to adhere to industry and regulatory standards, such as PCI-DSS, HIPAA, SOC 2 and many others. 
+                            Auditing and reporting capabilities will help with internal and external audits.
                         </p>
                     </div>
                     <div className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg  lg:mx-0 mt-8 lg:mt-0'>
                         <img src={ComplianceIcon} alt='' />
                         <h2 className='font-montserrat text-base font-bold text-blue mt-3'>
-                            Compliance and governance
+                            Data Security
                         </h2>
                         <p className='text-sm mt-4 text-gray'>
-                            Enable your organization to adhere to industry and regulatory standards, such as PCI-DSS,
-                            HIPAA, SOC 2 and providing auditing and reporting capabilities
+                            Keep track of your organization’s data security posture with Cyscale’s inventory of cloud data stores and their contextual security analysis. 
+                            Protect your most important data assets, avoid breaches and be prepared for audits.
                         </p>
                     </div>
                 </Row>
                 <Row className='my-16 gap-0 lg:gap-8'>
                     <div className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg  lg:mx-0'>
-                        <img src={AutomationIcon} alt='' />
+                        <img src={DataSecurityIcon} alt='' />
                         <h2 className='font-montserrat text-base font-bold text-blue mt-3'>
-                            Automation and orchestration
+                            CIEM
                         </h2>
                         <p className='text-sm mt-4 text-gray'>
-                            Streamline your cloud security tasks and integrate with other tools, such as DevOps and
-                            incident response platforms, making security a seamless part of your cloud infrastructure.
+                            Easily perform access reviews and keep track of users, access levels, effective permissions, as well as IAM asset misconfigurations. 
+                            Understand identities and permissions even in the most complex multi-cloud environments.
                         </p>
                     </div>
                     <div className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg  lg:mx-0'>
                         <img src={VisibilityIcon} alt='' />
-                        <h2 className='font-montserrat text-base font-bold text-blue mt-3'>Visibility and Analytics</h2>
+                        <h2 className='font-montserrat text-base font-bold text-blue mt-3'>CWPP</h2>
                         <p className='text-sm mt-4 text-gray'>
-                            Deep insights into the application stack and its security posture, helping to identify and
-                            prioritize threats, enabling proactive security measures and continuous improvement.
+                            A contextual analysis of cloud misconfigurations and vulnerabilities in instances, images, 
+                            containers and functions helps security teams guard your entire application stack on any cloud environment.
+                        </p>
+                    </div>
+                    <div className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg  lg:mx-0 mt-8 lg:mt-0'>
+                        <img src={ContainerSecurityIcon} alt='' height={40} width={40} />
+                        <h2 className='font-montserrat text-base font-bold text-blue mt-3'>Container Security</h2>
+                        <p className='text-sm mt-4 text-gray'>
+                            Get visibility over container-based applications and corresponding cloud infrastructure. Know where containers are running in the cloud, 
+                            complete with a contextual analysis of vulnerabilities, misconfigurations, networking and access.
+                        </p>
+                    </div>
+                    <div className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg  lg:mx-0 mt-8 lg:mt-0'>
+                        <img src={KubernetesIcon} alt='' />
+                        <h2 className='font-montserrat text-base font-bold text-blue mt-3'>
+                            Kubernetes Security
+                        </h2>
+                        <p className='text-sm mt-4 text-gray'>
+                            A complete inventory for your Kubernetes clusters, either managed or unmanaged, and continuous scanning 
+                            for vulnerabilities in the cluster components and container images that are used.
                         </p>
                     </div>
                 </Row>
@@ -253,7 +271,7 @@ const CNAPP = ({ location }) => {
                                 .
                             </p>
                             <p className='max-w-xl text-base mx-auto leading-normal mb-12 block lg:hidden'>
-                                Implement, manage, and monitor security policies and controls for single cloud, gh
+                                Implement, manage, and monitor security policies and controls for single cloud,
                                 multi-cloud, and hybrid environments through reliable automation.
                             </p>
                             <p className='leading-normal text-base max-w-xl mx-auto block lg:hidden'>
