@@ -1,6 +1,10 @@
 {
     "platform": [
         {
+            "text": "CNAPP",
+            "link": "/products/cnapp/"
+        },
+        {
             "text": "Cloud Security Posture Management",
             "link": "/products/cloud-security-posture-management/"
         },
