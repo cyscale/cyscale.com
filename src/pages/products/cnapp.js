@@ -179,7 +179,7 @@ const CNAPP = ({ location }) => {
                         </p>
                     </div>
                     <div className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg  lg:mx-0 mt-8 lg:mt-0'>
-                        <img src={KubernetesIcon} alt='' />
+                        <img src={KubernetesIcon} alt='' height={40} width={40} />
                         <h2 className='font-montserrat text-base font-bold text-blue mt-3'>
                             Kubernetes Security
                         </h2>
@@ -271,8 +271,8 @@ const CNAPP = ({ location }) => {
                                 .
                             </p>
                             <p className='max-w-xl text-base mx-auto leading-normal mb-12 block lg:hidden'>
-                                Implement, manage, and monitor security policies and controls for single cloud,
-                                multi-cloud, and hybrid environments through reliable automation.
+                                Implement, manage, and monitor security policies and controls for single cloud and 
+                                multi-cloud environments through reliable automation.
                             </p>
                             <p className='leading-normal text-base max-w-xl mx-auto block lg:hidden'>
                                 Demonstrate compliance for multiple projects with read-only dashboard access or reports
@@ -299,9 +299,9 @@ const CNAPP = ({ location }) => {
                                 .
                             </p>
                             <p className='max-w-xl lg:max-w-2xl text-base mx-auto leading-normal mb-24'>
-                                Implement, manage, and monitor security policies and controls for single cloud,
+                                Implement, manage, and monitor security policies and controls for single cloud
                                 <br className='hidden lg:block' />
-                                gh multi-cloud, and hybrid environments through reliable automation.
+                                and multi-cloud environments through reliable automation.
                             </p>
                             <p className='max-w-xl lg:max-w-2xl text-base mx-auto leading-normal'>
                                 Demonstrate compliance for multiple projects with read-only dashboard access or
