@@ -97,7 +97,8 @@ const PciDss = ({ location }) => {
                                     </li>
                                     <li className='mb-4'>
                                         <strong>Policy-based security: </strong> Out-of-the-box assurance and
-                                        enforcement policies that you can configure across workloads and infrastructure.
+                                        enforcement policies that you can configure across workloads and cloud
+                                        infrastructure.
                                     </li>
                                 </ul>
                             </div>
@@ -106,7 +107,7 @@ const PciDss = ({ location }) => {
                             <div className='mx-auto lg:mx-0  max-w-xl lg:max-w-none'>
                                 <ul className='list-disc ml-4 text-gray mt-8'>
                                     <li className='mb-4'>
-                                        <strong>Strong access control: </strong> Restrict and monitor access to
+                                        <strong>Strong access control: </strong> Restrict and monitor access to stored
                                         cardholder data
                                     </li>
                                     <li className='mb-4'>
@@ -133,16 +134,18 @@ const PciDss = ({ location }) => {
                         <div className='col-span-12  mt-8 sm:mt-0 sm:px-3 lg:col-span-8'>
                             <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-full'>
                                 <p className='leading-normal text-base text-gray mb-6'>
-                                    Use Cyscale for governance automation across cloud providers and internal teams to
-                                    ensure consistent security and compliance.
+                                    Use Cyscale for governance automation across cloud service providers and internal
+                                    teams to ensure consistent data security and compliance in cloud computing.
                                 </p>
                                 <p className='leading-normal text-base text-gray mb-6'>
                                     We keep your cloud environments under continuous assessment and provide in-app
-                                    security consultancy so that you make the most of your time and effort.
+                                    security consultancy for your security systems so that you make the most of your
+                                    time and effort and secure cloud resources.
                                 </p>
                                 <p className='leading-normal text-base text-gray'>
                                     Coming soon: create custom Controls that tap into our Security Knowledge Graph™ and
-                                    automate the security and compliance checks that matter most for your organization.
+                                    automate the cybersecurity and compliance checks that matter most for your
+                                    organization.
                                 </p>
                             </div>
                         </div>
@@ -187,7 +190,11 @@ const PciDss = ({ location }) => {
                         </p>
                         <p className='text-block text-16px leading-normal new-line mt-8'>
                             Demonstrate compliance for multiple projects with read-only dashboard access or reports
-                            (CSV, PDF) you can share with internal stakeholders, prospects, or customers.
+                            (CSV, PDF) you can share with internal stakeholders, prospects, or customers, and assessors.
+                        </p>
+                        <p className='text-block text-16px leading-normal new-line mt-8'>
+                            Meet compliance requirements for credit cards and ensure information security in the public
+                            cloud. Become PCI-DSS compliant with Cyscale.
                         </p>
                     </div>
                 </div>
@@ -208,7 +215,8 @@ const PciDss = ({ location }) => {
                                         <br />
                                         Protect sensitive data and comply with strict industry standards in your
                                         financial organization. Cyscale automatically runs all critical compliance
-                                        checks and finds data at-risk.
+                                        checks and finds data at-risk and generates compliance reports to help you
+                                        prevent data breaches.
                                     </p>
                                 </div>
                                 <div className='col-span-12 lg:col-span-6'>
@@ -224,7 +232,7 @@ const PciDss = ({ location }) => {
                                         <strong>Built-in compliance templates</strong>
                                         <br />
                                         You can either use policy templates as a basis for your custom policies, or
-                                        create them from scratch.
+                                        create them from scratch to meet PCI-DSS standard requirements.
                                     </p>
                                 </div>
                                 <div className='col-span-12 lg:col-span-6'>
@@ -232,7 +240,9 @@ const PciDss = ({ location }) => {
                                         <strong>500+ out-of-the-box security controls</strong>
                                         <br />
                                         Onboard teams in 30 minutes and coordinate efforts to apply 500+ out-of-the-box
-                                        security controls and policies.
+                                        security controls and policies to meet business needs and ensure data
+                                        protection. From firewalls to authentication, we help you meet security
+                                        requirements and become compliant with the PCI-DSS standard.
                                     </p>
                                 </div>
                             </Row>
