@@ -14,7 +14,7 @@ skills: Product, SaaS Software, Cybersecurity, User Interface, User Experience,
   User Interaction, Usability Testing
 experience: senior
 department: Product
-workType: hybrid
+workType: remote
 employmentType: full-time
 ---
 # Job description

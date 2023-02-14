@@ -3,7 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import { Link } from 'gatsby';
 const workTypes = {
     hybrid: 'Hybrid (Remote or in Office)',
-    remote: 'Only Remote',
+    remote: 'Remote',
     'in-office': 'Only in Office'
 };
 const employmentTypes = {
