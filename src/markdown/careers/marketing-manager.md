@@ -13,7 +13,7 @@ seoDescription: ""
 skills: Marketing, SaaS, Cybersecurity, Cloud, PLG
 experience: mid/senior
 department: Marketing
-workType: hybrid
+workType: remote
 employmentType: full-time
 ---
 # Job description

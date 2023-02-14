@@ -14,7 +14,7 @@ skills: Go (Programming Language), Amazon Web Services (AWS), GraphQL, Google
   Architecture, Cryptography.
 experience: mid/senior
 department: Engineering
-workType: hybrid
+workType: remote
 employmentType: full-time
 ---
 # Job description
