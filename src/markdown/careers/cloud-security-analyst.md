@@ -18,7 +18,7 @@ skills: Cloud Researcher, Cloud Architect, Cybersecurity, Cloud, Threat
   Analysis, Research, AWS, GCP, Azure, GRC
 experience: mid/senior
 department: Engineering
-workType: hybrid
+workType: remote
 employmentType: full-time
 ---
 # Job description
