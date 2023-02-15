@@ -46,15 +46,15 @@ export default function CloudComplianceContent() {
                             </span>
                         ]}
                         description={[
-                            'Get all the help you need to run regular tests on security systems, policies, and processes.\n\nMake better use of your time while the cloud compliance checks continue to run in the background. Act on alerts when ',
+                            'Get all the help you need to run regular tests on cybersecurity systems, policies, and processes.\n\nMake better use of your time while the cloud compliance checks continue to run in the background. Act on alerts when ',
                             <a
                                 href='/use-cases/cloud-data-security/'
                                 key='ds123'
                                 className=' text-blue underline text-16px hover:no-underline hover:text-red'
                             >
-                                data security
+                                information security
                             </a>,
-                            ' risks emerge along and follow ready-to-use recommendations to avoid breaches.\n\nTrim complexity from your workflow with automated evaluations for CIS Cloud Benchmarks, ISO 27001, SOC 2, GDPR, HIPAA, PCI DSS, NIST, and many more security frameworks.'
+                            ' risks emerge along and follow ready-to-use recommendations to avoid data breaches.\n\nTrim complexity from your workflow with automated evaluations for CIS Cloud Benchmarks, ISO 27001, SOC 2, GDPR (General Data Protection Regulation), HIPAA, PCI DSS (Payment Card Industry Data Security Standard), NIST, and many more security frameworks.'
                         ]}
                         pageName='cloudCompliance'
                     />
@@ -67,11 +67,14 @@ export default function CloudComplianceContent() {
                     />
                 </div>
             </div>
-            <div className='max-w-1366px m-auto pt-6 pb-12 lg:pb-14 pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px' id="automate-updates">
+            <div
+                className='max-w-1366px m-auto pt-6 pb-12 lg:pb-14 pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px'
+                id='automate-updates'
+            >
                 <Sectionheader
                     headingText='Automate updates to Data Security & Privacy Policies'
                     description={[
-                        'Keep website pages dedicated to',
+                        'Keep website pages dedicated to cloud',
                         ' ',
                         <a
                             href='/use-cases/cloud-data-security/'
@@ -80,13 +83,16 @@ export default function CloudComplianceContent() {
                         >
                             data security
                         </a>,
-                        ' and privacy policies up to date with zero manual work. Use the real-time data gathering built into the Cyscale Governance, Risk Management, and Compliance system and push cloud compliance information straight to them.\n\nConsolidate your reputation as a transparent, data-focused organization that proves to customers, auditors, and regulatory compliance bodies how robustly it protects Personally Identifiable information.'
+                        ' and data privacy policies up to date with zero manual work. Use the real-time data gathering built into the Cyscale Cloud Governance, Risk Management, and Compliance system and push cloud compliance information straight to them.\n\nConsolidate your reputation as a transparent, data-focused organization that proves to customers, auditors, and regulatory compliance bodies how robustly it protects Personally Identifiable information.'
                     ]}
                     pageName='cloudCompliance'
                     section='complianceAutoUpdates'
                 />
             </div>
-            <div className='max-w-1366px m-auto pt-12 lg:pt-32 pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px' id="minimize-overlap">
+            <div
+                className='max-w-1366px m-auto pt-12 lg:pt-32 pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px'
+                id='minimize-overlap'
+            >
                 <Sectionheader
                     headingText='Minimize overlap between cloud compliance and security'
                     description={`Avoid duplicate work and solve two issues at the same time with the Cyscale Cloud Platform.\n\nOnboard teams in 30 minutes and coordinate efforts to apply 500+ out-of-the-box security controls and policies. Baked into the platform, they underpin key areas where you need to prove cloud compliance: `}
@@ -97,12 +103,15 @@ export default function CloudComplianceContent() {
                 <GetStarted
                     description='Easier compliance is just a login away! Leave the heavy lifting to us'
                     btnText='START YOUR FREE TRIAL'
-                    btnLink={"/free-trial"}
+                    btnLink={'/free-trial'}
                     icon={getStartedICon}
                     sectionName='RemoteWork'
                 />
             </div>
-            <div className='max-w-1366px m-auto pt-12 lg:pt-32 pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px' id="compliance-govern">
+            <div
+                className='max-w-1366px m-auto pt-12 lg:pt-32 pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px'
+                id='compliance-govern'
+            >
                 <Sectionheader
                     headingText={[
                         'Align teams & tasks',
@@ -125,8 +134,11 @@ export default function CloudComplianceContent() {
                     section='complianceGovern'
                 />
             </div>
-            <ComplianceCode id="compliance-code" />
-            <div className='max-w-1366px m-auto py-12 lg:py-24 pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px' id="maintain-third-party">
+            <ComplianceCode id='compliance-code' />
+            <div
+                className='max-w-1366px m-auto py-12 lg:py-24 pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px'
+                id='maintain-third-party'
+            >
                 <Sectionheader headingText='Maintain a 3rd-party, fully auditable data trail' />
                 <MaintainThirdPartyData />
             </div>
@@ -134,7 +146,7 @@ export default function CloudComplianceContent() {
                 <GetStarted
                     description='Explore the full toolbox for your GRC system'
                     btnText='START YOUR FREE TRIAL'
-                    btnLink={"/free-trial"}
+                    btnLink={'/free-trial'}
                     icon={getStartedICon}
                     sectionName='RemoteWork'
                 />
