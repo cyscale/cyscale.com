@@ -91,9 +91,9 @@ const Index = ({ location }) => {
                 ['Gitlab'],
                 ['BitBucket (soon)'],
                 ['Atlassian Jira & Confluence'],
-                ['AWS Code Repository'],
+                ['Amazon AWS Code Repository'],
                 ['Google Cloud Source'],
-                ['Azure Repos'],
+                ['Microsoft Azure Repos'],
                 ['-'],
                 ['-']
             ]
@@ -101,7 +101,7 @@ const Index = ({ location }) => {
     ];
     const dataSecurityGaps = [
         {
-            title: 'Financial data',
+            title: 'Financial customer data',
             subItems: [['Credit card numbers'], ['IBANs'], ['Balance sheets'], ['Cash flow statements ']]
         },
         {
@@ -115,7 +115,7 @@ const Index = ({ location }) => {
         },
         {
             title: 'Intelectual property',
-            subItems: [['Patents'], ['Trademarks'], ['Copyright-protected data'], ['Trade secrets']]
+            subItems: [['Patents'], ['Trademarks'], ['Copyright-protected data access'], ['Trade secrets']]
         },
         {
             title: 'Personally Identifiable Information',
@@ -126,7 +126,7 @@ const Index = ({ location }) => {
         {
             image: F_Image,
             title: `Do it all with zero performance degradation for your workloads`,
-            description: `Because we use serverless technologies to categorize and inspect data repositories, we never interrupt or overload your systems. \nThe Cyscale Cloud Platform reduces your attack surface through continuous risk assessments with zero negative impact on performance. \n\nRun an efficient data security program that covers your entire range of cloud entities. Improve your flexibility, compliance and increase job satisfaction for your engineers.`
+            description: `Because we use serverless technologies to categorize and inspect data repositories, we never interrupt or overload your systems. \nThe Cyscale Cloud Platform reduces your attack surface through continuous risk assessments with zero negative impact on performance. \n\nRun an efficient data security program that covers your entire range of cloud entities. Improve your flexibility, compliance security posture and increase job satisfaction for your engineers without compromising on the benefits of cloud.`
         }
     ];
     return (
@@ -135,7 +135,7 @@ const Index = ({ location }) => {
                 <NewTopNav pageName='Data_Security' location={location} />
                 <Banner
                     title={`Multi-cloud Data Security for resilient cloud environments`}
-                    description={`Stuck playing catch-up with data security, with no breathing space for projects that move the needle? It's time for a change of pace.\n\n Give your engineers clarity and accuracy - use the Cyscale Cloud Platform to turn cloud data security into a manageable routine.\n\nKeep tabs on your fast-growing cloud inventory with automated data discovery and classification, compliance scans on autopilot and a fully auditable evidence trail. And that's just a taste!`}
+                    description={`Stuck playing catch-up with data security, with no breathing space for projects that move the needle? It's time for a change of pace.\n\n Give your engineers clarity and accuracy - use the Cyscale Cloud Platform to turn cloud data security into a manageable routine.\n\nKeep tabs on your fast-growing cloud inventory with real-time automated data discovery and classification, compliance scans on autopilot and a fully auditable evidence trail. And that's just a taste!`}
                 />
             </div>
             <Services bannerBtn1Text='Start Free Trial' bannerBtn1Link='/free-trial' data={dataServices} />
@@ -145,7 +145,7 @@ const Index = ({ location }) => {
             >
                 <Sectionheader
                     headingText='Discover & map data repositories across multi-cloud environments'
-                    description={`When you're growing fast, it's easy to lose track of your cloud assets. But that comes at a cost, both in terms of $$$ and compliance issues. \n\nLiquidate your data security debt with the Cyscale Cloud Platform. Bring all your entities under one roof with comprehensive asset inventory and management - as soon as you log in.\n\nExpand visibility to cover your entire cloud infrastructure, across providers and services. It's much easier to meet data security requirements when you know exactly where all your cloud assets are.`}
+                    description={`When you're growing fast, it's easy to lose track of your cloud assets. But that comes at a cost, both in terms of $$$ and compliance issues. \n\nLiquidate your data security debt with the Cyscale Cloud Platform. Bring all your entities under one roof with comprehensive asset inventory and management - as soon as you log in.\n\nExpand visibility to cover your entire cloud infrastructure, across cloud service providers. It's much easier to meet data security requirements when you know exactly where all your cloud assets are.`}
                     pageName='aboutUs'
                 />
             </div>
@@ -155,7 +155,7 @@ const Index = ({ location }) => {
             <div className='max-w-1366px mx-auto pt-70px pb-70px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px'>
                 <Sectionheader
                     headingText='Prioritize security-critical data repos to avoid exposure & breaches'
-                    description={`With all cloud assets mapped out, IT and security teams can build a clear roadmap to protect data from external threats (unauthorized access, cyber threats, etc.) and internal risks (insider threats and human error).\n\nWe make it even easier to triage security tasks by automatically identifying which cloud assets hold critical data, who uses it and how. \n\nThe Cyscale Cloud Platform also automates the detection of policy violations and risky behavior. Avoid losing trade secrets and intellectual property that future innovation and profitability depend on.`}
+                    description={`With all cloud assets mapped out, IT and security teams can build a clear roadmap to ensure data protection against external threats (unauthorized access, cyber threats, etc.) and internal security risks (insider threats, vulnerabilities and human error).\n\nWe make it even easier to triage security tasks by automatically identifying which cloud assets hold critical data, who uses it and how. \n\nThe Cyscale Cloud Platform also automates the detection of security policy violations and risky behavior that open up your cloud computing environment to the risk of data loss. Avoid losing trade secrets and intellectual property that future innovation and profitability depend on with robust data privacy security solutions.`}
                 />
             </div>
             <div className='gradientBGCSPM pt-60px pb-60px'>

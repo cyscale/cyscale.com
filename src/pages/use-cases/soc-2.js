@@ -47,12 +47,17 @@ const Soc2 = ({ location }) => {
                                         for Cloud
                                     </h1>
                                     <p className='text-left text-base lg:text-lg mb-8 leading-relaxed text-gray'>
+                                        SOC 2 (Service and Organization Controls 2) is a security standard developed by
+                                        AICPA (The American Institute of Certified Public Accountants). The standard has
+                                        5 Trust Service Criteria (TSC) categories and 64 Trust Service Criteria.
+                                    </p>
+                                    <p className='text-left text-base lg:text-lg mb-8 leading-relaxed text-gray'>
                                         Cyscale offers a powerful set of technical controls helping you prepare for a
                                         SOC 2 audit in areas such as security, availability, processing integrity,
                                         confidentiality and privacy.
                                     </p>
                                     <p className='text-left text-base lg:text-lg mb-2 leading-relaxed text-gray'>
-                                        Out-of-the-box policies that you can use for a solid security program.
+                                        Out-of-the-box policies that you can use for a solid data security program.
                                     </p>
                                     <div className='flex mt-8 justify-start'>
                                         <Link to='/free-trial'>
@@ -97,22 +102,23 @@ const Soc2 = ({ location }) => {
                                     Identity and access management
                                 </p>
                                 <p className='leading-normal text-base text-gray'>
-                                    Detect misconfigurations related to identities and access and ensure the
-                                    implementation of Least Privilege and Separation of Duties. Get alerts on new
-                                    findings.
+                                    Detect misconfigurations and vulnerabilities related to identities and access and
+                                    ensure the implementation of Least Privilege and Separation of Duties. Get alerts on
+                                    new findings in your cloud environments.
                                 </p>
                                 <p className='leading-normal text-base mt-4 mb-2 montserrat-font font-semibold'>
                                     Encryption
                                 </p>
                                 <p className='leading-normal text-base text-gray'>
-                                    Ensure encryption with strong algorithms is used for data in-transit and at-rest.
+                                    Ensure encryption with strong algorithms is used for data in-transit and at-rest to
+                                    provide data protection from cyberattacks.
                                 </p>
                                 <p className='leading-normal text-base mt-4 mb-2 montserrat-font font-semibold'>
                                     Logging and monitoring
                                 </p>
                                 <p className='leading-normal text-base text-gray'>
                                     Make sure that your systems have logs activated and in place, to allow for the
-                                    detection of anomalies.
+                                    detection of anomalies and security incidents in real-time.
                                 </p>
                             </div>
                         </div>
@@ -146,16 +152,21 @@ const Soc2 = ({ location }) => {
                             </div>
                             <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-lg'>
                                 <p className='leading-normal text-base text-gray pt-12 pb-2'>
-                                    Use Cyscale for governance automation across cloud providers and internal teams to
-                                    ensure consistent security and compliance.
+                                    Use Cyscale for governance automation across cloud service providers and internal
+                                    security teams to ensure consistent information security and compliance.
                                 </p>
                                 <p className='leading-normal text-base text-gray py-2'>
-                                    We keep your cloud environments under continuous assessment and provide in-app
+                                    We keep your cloud infrastructure under continuous assessment and provide in-app
                                     security consultancy so that you make the most of your time and effort.
                                 </p>
                                 <p className='leading-normal text-base text-gray py-2'>
-                                    Coming soon: create custom Controls that tap into our Security Knowledge Graph™ and
-                                    automate the security and compliance checks that matter most for your organization.
+                                    Ensure SOC 2 compliance in your cloud computing environment across multiple cloud
+                                    service providers such as AWS, Azure, GCP (Google Cloud Platform).
+                                </p>
+                                <p className='leading-normal text-base text-gray py-2'>
+                                    Coming soon: create custom Controls that tap into our Security Knowledge Graph™ to
+                                    automate and optimize the cybersecurity and compliance checks that matter most for
+                                    your organization.
                                 </p>
                             </div>
                         </div>
@@ -187,7 +198,7 @@ const Soc2 = ({ location }) => {
                                         <br />
                                         Protect sensitive data and comply with strict industry regulations in your
                                         organisation. Cyscale automatically runs all critical compliance checks and
-                                        finds data at-risk.
+                                        finds data at-risk to help you avoid data breaches.
                                     </p>
                                 </div>
                                 <div className='col-span-12 lg:col-span-6'>
