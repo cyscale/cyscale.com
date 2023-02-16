@@ -68,7 +68,7 @@ const CNAPP = ({ location }) => {
                                         Achieve true cloud-native transformation with Cyscale.
                                     </p>
                                     <p className='text-left text-base lg:text-lg mb-2 leading-relaxed'>
-                                        Get maximum cloud native security with our ultimate solution. 
+                                        Get maximum cloud native security with our ultimate CNAPP solution. 
                                         Protect your entire stack, VMs, containers, and serverless, on 
                                         any cloud environment and confidently accelerate innovation.
 
