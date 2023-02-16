@@ -118,8 +118,7 @@ const CNAPP = ({ location }) => {
                             CSPM
                         </h2>
                         <p className='text-sm mt-4 text-gray'>
-                            Continuous visibility over multi-cloud environments to identify misconfigurations, 
-                            ultimately securing your cloud from data breaches and leaks. Scan, monitor, and remediate across AWS, Azure, Google Cloud, Alibaba Cloud.
+                            Gain continuous visibility and comprehensive Cloud Security Posture Management over multi-cloud environments to identify misconfigurations, ultimately securing your cloud from data breaches and leaks. Scan, monitor, and remediate across AWS, Azure, Google Cloud, Alibaba Cloud to ensure the best security for your cloud infrastructure.
                         </p>
                     </div>
                     <div className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg  lg:mx-0'>
