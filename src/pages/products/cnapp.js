@@ -145,8 +145,7 @@ const CNAPP = ({ location }) => {
                             Data Security
                         </h2>
                         <p className='text-sm mt-4 text-gray'>
-                            Keep track of your organization’s data security posture with Cyscale’s inventory of cloud data stores and their contextual security analysis. 
-                            Protect your most important data assets, avoid breaches and be prepared for audits.
+                            Keep track of your organization's security posture with Cyscale's inventory of cloud data stores and their contextual security analysis tools. Using these security tools, you can protect your most important data assets, avoid breaches, and be prepared for audits.
                         </p>
                     </div>
                 </Row>
