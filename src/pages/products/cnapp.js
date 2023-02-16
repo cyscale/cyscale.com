@@ -62,7 +62,7 @@ const CNAPP = ({ location }) => {
                                         className='text-left text-blue leading-normal lg:leading-normal mb-16 font-montserrat font-bold'
                                         css={heroTitleFontSize}
                                     >
-                                        CNAPP: The Ultimate <br /> Solution for Cloud-Native Application Protection
+                                        CNAPP: Robust <br /> Cloud-Native Application Protection Platform
                                     </h1>
                                     <p className='text-left text-base lg:text-lg mb-8 leading-relaxed font-bold'>
                                         Achieve true cloud-native transformation with Cyscale.
