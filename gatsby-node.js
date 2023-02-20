@@ -58,6 +58,7 @@ exports.createPages = async ({ graphql, actions }) => {
     const blogTemplate = path.resolve(`src/template/blogTemplate.js`);
     const careerTemplate = path.resolve(`src/template/careerTemplate.js`);
     const blogAllPostsTemplate = path.resolve(`src/template/blogAllPostsTemplate.js`);
+    const pagesTemplate = path.resolve(`src/template/pagesTemplate.js`);
 
     await graphql(`
         query loadCareersQuery {
@@ -249,4 +250,130 @@ exports.createPages = async ({ graphql, actions }) => {
             }
         });
     });
+
+    await graphql(`
+        query Pages {
+            allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "pages" } } }) {
+                edges {
+                    node {
+                        frontmatter {
+                            pageName
+                            path
+                            title
+                            description
+                            categoryPath
+                            sections
+                            hero {
+                                heroBackground
+                                heroImage {
+                                    publicURL
+                                    childImageSharp {
+                                        gatsbyImageData(width: 1920, layout: CONSTRAINED)
+                                    }
+                                }
+                                heroImageAlt
+                                heroMarkdown
+                            }
+                            rightSection {
+                                rightSectionImage {
+                                    publicURL
+                                    childImageSharp {
+                                        gatsbyImageData(width: 1920, layout: CONSTRAINED)
+                                    }
+                                }
+                                rightSectionImageAlt
+                                rightSectionSubtitle
+                                rightMarkdown
+                            }
+                            leftSection {
+                                leftSectionImage {
+                                    publicURL
+                                    childImageSharp {
+                                        gatsbyImageData(width: 1920, layout: CONSTRAINED)
+                                    }
+                                }
+                                leftSectionImageAlt
+                                leftMarkdown
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    `).then((result) => {
+        if (result.errors) {
+            reporter.panicOnBuild(`There was an error loading your blog posts`, result.errors);
+            return;
+        }
+
+        const pages = result.data.allMarkdownRemark.edges;
+
+        if (pages.length > 0) {
+            pages.forEach((edge) => {
+                const node = edge.node;
+
+                createPage({
+                    path: `/${node.frontmatter.categoryPath}/${node.frontmatter.path}/`,
+                    component: pagesTemplate,
+                    context: {
+                        alldata: node
+                    }
+                });
+            });
+        }
+    });
+};
+
+exports.createSchemaCustomization = ({ actions }) => {
+    const { createTypes } = actions;
+
+    createTypes(`
+    type MarkdownRemark implements Node {
+        frontmatter: Frontmatter
+        rawMarkdownBody: String
+    }
+    
+    type Frontmatter {
+        templateKey: String
+        pageName: String   
+        path: String
+        title: String
+        description: String
+        categoryPath: String
+        sections: [String]
+        hero: Hero
+        rightSection: RightSection
+        leftSection: LeftSection
+        authors: String
+        categories: [String]
+        title: String
+        description: String
+        seoDescription: String
+        date: Date @dateformat
+        permalink: String
+        featuredimage: File @fileByRelativePath
+        featuredpost: Boolean
+    }
+    
+    type Hero {
+        heroBackground: String
+        heroImage: File @fileByRelativePath
+        heroImageAlt: String
+        heroMarkdown: String
+    }
+    
+    type RightSection {
+        rightSectionImage: File @fileByRelativePath
+        rightSectionImageAlt: String
+        rightSectionSubtitle: String
+        rightMarkdown: String
+    }
+    
+    type LeftSection {
+        leftSectionSubtitle: String
+        leftSectionImage: File @fileByRelativePath
+        leftSectionImageAlt: String
+        leftMarkdown: String
+    }
+  `);
 };

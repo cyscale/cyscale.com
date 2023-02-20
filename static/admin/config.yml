@@ -109,3 +109,52 @@ collections:
                 default: 'hybrid'
             }
           - { label: 'Body', name: 'body', widget: 'markdown' }
+    - name: 'pages'
+      label: 'Pages'
+      folder: 'src/markdown/pages'
+      create: true
+      slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+      fields:
+          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'pages' }
+          - { label: 'Page Name', name: 'pageName', widget: 'string' }
+          - { label: 'Path', name: 'path', widget: 'string' }
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Description', name: 'description', widget: 'string' }
+          - {
+            label: 'Category Path',
+            name: 'categoryPath',
+            widget: 'select',
+            options: [ 'use-cases', 'products' ],
+          }
+          - {
+            label: 'Sections',
+            name: 'sections',
+            widget: 'select',
+            options: [ 'hero', 'rightSection', 'leftSection' ],
+            default: [ 'hero' ],
+            multiple: true
+          }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: 'Hero Background', name: 'heroBackground', widget: image }
+              - { label: 'Hero Image', name: 'heroImage', widget: image }
+              - { label: 'Hero Image Alt', name: 'heroImageAlt', widget: 'string' }
+              - { label: 'Hero Markdown', name: 'heroMarkdown', widget: 'markdown' }
+          - label: "Right Section"
+            name: "rightSection"
+            widget: "object"
+            fields:
+              - { label: 'Right Section Image', name: 'rightSectionImage', widget: image, required: false }
+              - { label: 'Right Section Image Alt', name: 'rightSectionImageAlt', widget: 'string', required: false }
+              - { label: 'Right Section Subtitle', name: 'rightSectionSubtitle', widget: 'markdown', required: false }
+              - { label: 'Right Markdown', name: 'rightMarkdown', widget: 'markdown', required: false }
+          - label: "Left Section"
+            name: "leftSection"
+            widget: "object"
+            fields:
+              - { label: 'Left Section Image', name: 'leftSectionImage', widget: image, required: false }
+              - { label: 'Left Section Image Alt', name: 'leftSectionImageAlt', widget: 'string', required: false }
+              - { label: 'Left Section Subtitle', name: 'leftSectionSubtitle', widget: 'markdown', required: false }
+              - { label: 'Left Markdown', name: 'leftMarkdown', widget: 'markdown', required: false }
