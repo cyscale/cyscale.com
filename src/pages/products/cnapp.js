@@ -7,11 +7,12 @@ import LightDarkButton from '../../components/buttons/LightDarkButton';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { css } from 'twin.macro';
 
+import CSPMIcon from "../../assets/images/cspm-cnapp-icon.svg"
+import CIEMIcon from "../../assets/images/ciem-cnapp-icon.svg"
 import DataSecurityIcon from '../../assets/images/data-security-cnapp-icon.svg';
 import ContainerSecurityIcon from '../../assets/images/container-security-cnapp-icon.svg';
 import KubernetesIcon from '../../assets/images/kubernetes-cnapp-icon.svg';
 import ComplianceIcon from '../../assets/images/compliance-cnapp-icon.svg';
-import AutomationIcon from '../../assets/images/automation-cnapp-icon.svg';
 import VisibilityIcon from '../../assets/images/visibility-cnapp-icon.svg';
 import headerImage from '../../assets/images/remote-work-heading-image.png';
 import corner from '../../assets/images/corner-campaigns-iam-security.svg';
@@ -114,7 +115,7 @@ const CNAPP = ({ location }) => {
             <Container>
                 <Row className='mt-16 gap-0 lg:gap-8'>
                     <div className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0'>
-                        <img src={DataSecurityIcon} alt='' />
+                        <img src={CSPMIcon} alt='' />
                         <h2 className='font-montserrat text-base font-bold text-blue mt-3'>
                             CSPM
                         </h2>
@@ -141,7 +142,7 @@ const CNAPP = ({ location }) => {
                         </p>
                     </div>
                     <div className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg  lg:mx-0 mt-8 lg:mt-0'>
-                        <img src={ComplianceIcon} alt='' />
+                        <img src={DataSecurityIcon} alt='' />
                         <h2 className='font-montserrat text-base font-bold text-blue mt-3'>
                             Data Security
                         </h2>
@@ -152,7 +153,7 @@ const CNAPP = ({ location }) => {
                 </Row>
                 <Row className='my-16 gap-0 lg:gap-8'>
                     <div className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg  lg:mx-0'>
-                        <img src={DataSecurityIcon} alt='' />
+                        <img src={CIEMIcon} alt='' />
                         <h2 className='font-montserrat text-base font-bold text-blue mt-3'>
                             CIEM
                         </h2>
