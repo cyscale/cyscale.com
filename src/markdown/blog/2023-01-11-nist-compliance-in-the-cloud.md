@@ -13,7 +13,7 @@ description: "NIST (The National Institute of Standards and Technology) is a
   available: NIST Cybersecurity Framework, NIST 800-53, NIST 800-171. Cyscale
   can help you ease the process of becoming NIST compliant. Using our Standards
   page, you can track your progress and speed up the process in terms of your
-  cloud-specific needs. "
+  cloud-specific needs.."
 seoDescription: "NIST (The National Institute of Standards and Technology) is a
   compliance standard that develops best practices and security standards for
   government organizations or contractors. There are three NIST frameworks
