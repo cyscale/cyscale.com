@@ -6,7 +6,7 @@ authors: Sabrina Lupșan
 permalink: cnapp-secure-native-applications
 categories:
   - CNAPP
-date: 2023-02-21T07:40:55.228Z
+date: 2023-02-21T08:00:33.696Z
 description: "CNAPP is a security solution designed to protect cloud-native
   applications. A cloud-native application is an application that is intended
   for cloud, ran and hosted in the cloud. It has the following functionalities:
