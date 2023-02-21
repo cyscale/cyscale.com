@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Layout from '../../components/layout/CleanLayout';
 import { Container, Row } from '../../components/atoms/Containers';
 import { graphql, Link, useStaticQuery } from 'gatsby';
@@ -18,6 +18,17 @@ import VisibilityIcon from '../../assets/images/visibility-cnapp-icon.svg';
 import headerImage from '../../assets/images/remote-work-heading-image.png';
 import corner from '../../assets/images/corner-campaigns-iam-security.svg';
 import cloudIcon from '../../assets/images/cloud-icon.svg';
+import RightArrow from '../../components/sharedComponent/RightArrow';
+import classNames from 'classnames';
+
+const LearnMoreLink = ({ hoverState, link }) => {
+    return (
+        <Link to={link} className={classNames({ 'mt-4': true, block: hoverState, hidden: !hoverState })}>
+            <RightArrow fillColor={'#0F26AA'} marginTop={'-0.25rem'} />
+            <span className='text-md ml-2 text-blue inline-block font-bold text-base'>Learn more</span>
+        </Link>
+    );
+};
 
 const titleSection = css`
     font-size: 1.75rem;
@@ -32,6 +43,17 @@ const heroTitleFontSize = css`
 `;
 
 const CNAPP = ({ location }) => {
+    const [isHover, setIsHover] = useState({
+        cspm: false,
+        ca: false,
+        cg: false,
+        ds: false,
+        ciem: false,
+        cwpp: false,
+        cs: false,
+        ks: false
+    });
+
     const data = useStaticQuery(graphql`
         query CNAPPQuery {
             dashboard: file(relativePath: { eq: "dashboard-cnapp.png" }) {
@@ -114,7 +136,11 @@ const CNAPP = ({ location }) => {
             </Container>
             <Container>
                 <Row className='mt-16 gap-0 lg:gap-8'>
-                    <div className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0'>
+                    <div
+                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 lg:h-72'
+                        onMouseEnter={() => setIsHover({ ...isHover, cspm: true })}
+                        onMouseLeave={() => setIsHover({ ...isHover, cspm: false })}
+                    >
                         <img src={CSPMIcon} alt='' />
                         <h2 className='font-montserrat text-base font-bold text-blue mt-3'>CSPM</h2>
                         <p className='text-sm mt-4 text-gray'>
@@ -123,8 +149,13 @@ const CNAPP = ({ location }) => {
                             data breaches and leaks. Scan, monitor, and remediate across AWS, Azure, Google Cloud,
                             Alibaba Cloud to ensure the best security for your cloud infrastructure.
                         </p>
+                        <LearnMoreLink hoverState={isHover.cspm} link={'/'} />
                     </div>
-                    <div className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-8 lg:mt-0'>
+                    <div
+                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-8 lg:mt-0 lg:h-72'
+                        onMouseEnter={() => setIsHover({ ...isHover, ca: true })}
+                        onMouseLeave={() => setIsHover({ ...isHover, ca: false })}
+                    >
                         <img src={VisibilityIcon} alt='' />
                         <h2 className='font-montserrat text-base font-bold text-blue mt-3'>Contextual Analysis</h2>
                         <p className='text-sm mt-4 text-gray'>
@@ -132,8 +163,13 @@ const CNAPP = ({ location }) => {
                             affect compute, data storage and identity assets, determining their real impact on data
                             security and helping you prioritize remediation efforts in the most effective way.
                         </p>
+                        <LearnMoreLink hoverState={isHover.ca} link={'/'} />
                     </div>
-                    <div className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-8 lg:mt-0'>
+                    <div
+                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-8 lg:mt-0 lg:h-72'
+                        onMouseEnter={() => setIsHover({ ...isHover, cg: true })}
+                        onMouseLeave={() => setIsHover({ ...isHover, cg: false })}
+                    >
                         <img src={ComplianceIcon} alt='' height={40} width={40} />
                         <h2 className='font-montserrat text-base font-bold text-blue mt-3'>
                             Compliance and Governance
@@ -143,8 +179,13 @@ const CNAPP = ({ location }) => {
                             HIPAA, SOC 2 and many others. Auditing and reporting capabilities will help with internal
                             and external audits.
                         </p>
+                        <LearnMoreLink hoverState={isHover.cg} link={'/'} />
                     </div>
-                    <div className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-8 lg:mt-0'>
+                    <div
+                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-8 lg:mt-0 lg:h-72'
+                        onMouseEnter={() => setIsHover({ ...isHover, ds: true })}
+                        onMouseLeave={() => setIsHover({ ...isHover, ds: false })}
+                    >
                         <img src={DataSecurityIcon} alt='' />
                         <h2 className='font-montserrat text-base font-bold text-blue mt-3'>Data Security</h2>
                         <p className='text-sm mt-4 text-gray'>
@@ -152,10 +193,15 @@ const CNAPP = ({ location }) => {
                             stores and their contextual security analysis tools. Using these security tools, you can
                             protect your most important data assets, avoid breaches, and be prepared for audits.
                         </p>
+                        <LearnMoreLink hoverState={isHover.ds} link={'/'} />
                     </div>
                 </Row>
                 <Row className='my-16 gap-0 lg:gap-8'>
-                    <div className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0'>
+                    <div
+                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 lg:h-72'
+                        onMouseEnter={() => setIsHover({ ...isHover, ciem: true })}
+                        onMouseLeave={() => setIsHover({ ...isHover, ciem: false })}
+                    >
                         <img src={CIEMIcon} alt='' />
                         <h2 className='font-montserrat text-base font-bold text-blue mt-3'>CIEM</h2>
                         <p className='text-sm mt-4 text-gray'>
@@ -163,8 +209,13 @@ const CNAPP = ({ location }) => {
                             as well as IAM asset misconfigurations. Understand identities and permissions even in the
                             most complex multi-cloud environments.
                         </p>
+                        <LearnMoreLink hoverState={isHover.ciem} link={'/'} />
                     </div>
-                    <div className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-8 lg:mt-0'>
+                    <div
+                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-8 lg:mt-0 lg:h-72'
+                        onMouseEnter={() => setIsHover({ ...isHover, cwpp: true })}
+                        onMouseLeave={() => setIsHover({ ...isHover, cwpp: false })}
+                    >
                         <img src={CWPPIcon} alt='' />
                         <h2 className='font-montserrat text-base font-bold text-blue mt-3'>CWPP</h2>
                         <p className='text-sm mt-4 text-gray'>
@@ -172,8 +223,13 @@ const CNAPP = ({ location }) => {
                             containers and functions helps security teams guard your entire application stack on any
                             cloud environment.
                         </p>
+                        <LearnMoreLink hoverState={isHover.cwpp} link={'/'} />
                     </div>
-                    <div className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg  lg:mx-0 mt-8 lg:mt-0'>
+                    <div
+                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg  lg:mx-0 mt-8 lg:mt-0 lg:h-72'
+                        onMouseEnter={() => setIsHover({ ...isHover, cs: true })}
+                        onMouseLeave={() => setIsHover({ ...isHover, cs: false })}
+                    >
                         <img src={ContainerSecurityIcon} alt='' height={40} width={40} />
                         <h2 className='font-montserrat text-base font-bold text-blue mt-3'>Container Security</h2>
                         <p className='text-sm mt-4 text-gray'>
@@ -181,8 +237,13 @@ const CNAPP = ({ location }) => {
                             Know where containers are running in the cloud, complete with a contextual analysis of
                             vulnerabilities, misconfigurations, networking and access.
                         </p>
+                        <LearnMoreLink hoverState={isHover.cs} link={'/'} />
                     </div>
-                    <div className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg  lg:mx-0 mt-8 lg:mt-0'>
+                    <div
+                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg  lg:mx-0 mt-8 lg:mt-0 lg:h-72'
+                        onMouseEnter={() => setIsHover({ ...isHover, ks: true })}
+                        onMouseLeave={() => setIsHover({ ...isHover, ks: false })}
+                    >
                         <img src={KubernetesIcon} alt='' height={40} width={40} />
                         <h2 className='font-montserrat text-base font-bold text-blue mt-3'>Kubernetes Security</h2>
                         <p className='text-sm mt-4 text-gray'>
@@ -190,6 +251,7 @@ const CNAPP = ({ location }) => {
                             continuous scanning for vulnerabilities in the cluster components and container images that
                             are used.
                         </p>
+                        <LearnMoreLink hoverState={isHover.ks} link={'/'} />
                     </div>
                 </Row>
             </Container>
