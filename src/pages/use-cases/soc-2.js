@@ -47,11 +47,6 @@ const Soc2 = ({ location }) => {
                                         for Cloud
                                     </h1>
                                     <p className='text-left text-base lg:text-lg mb-8 leading-relaxed text-gray'>
-                                        SOC 2 (Service and Organization Controls 2) is a security standard developed by
-                                        AICPA (The American Institute of Certified Public Accountants). The standard has
-                                        5 Trust Service Criteria (TSC) categories and 64 Trust Service Criteria.
-                                    </p>
-                                    <p className='text-left text-base lg:text-lg mb-8 leading-relaxed text-gray'>
                                         Cyscale offers a powerful set of technical controls helping you prepare for a
                                         SOC 2 audit in areas such as security, availability, processing integrity,
                                         confidentiality and privacy.
@@ -90,7 +85,7 @@ const Soc2 = ({ location }) => {
                                     Automate cloud security <br /> and SOC 2 compliance
                                 </h2>
                             </div>
-                            <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-md'>
+                            <div className='mx-auto lg:mx-0 max-w-xl'>
                                 <p className='leading-normal text-base mt-8 mb-2 montserrat-font font-semibold'>
                                     Asset inventory
                                 </p>
@@ -128,6 +123,11 @@ const Soc2 = ({ location }) => {
                                     image={data.standards.childImageSharp.gatsbyImageData}
                                     alt='SOC 2 Standard detailed view'
                                 />
+                                <p className='leading-normal text-xs text-grey2 mx-auto max-w-xl lg:max-w-lg'>
+                                    SOC 2 (Service and Organization Controls 2) is a security standard developed by
+                                    AICPA (The American Institute of Certified Public Accountants). The standard has 5
+                                    Trust Service Criteria (TSC) categories and 64 Trust Service Criteria.
+                                </p>
                             </div>
                         </div>
                     </div>
