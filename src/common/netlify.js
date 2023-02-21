@@ -260,15 +260,15 @@ CMS.registerEditorComponent({
     fromBlock: (match) =>
         match && {
             classes: match[1],
-            texth1: match[2]
+            texth2: match[2]
         },
-    toBlock: function ({ classes, texth1 }, getAsset, fields) {
+    toBlock: function ({ classes, texth2 }, getAsset, fields) {
         return `<h2 class="titleSection font-bold text-primary leading-normal border-title-partly font-montserrat lg:mt-3 ${
             classes || ''
-        }">${texth1 || ''}</h2>`;
+        }">${texth2 || ''}</h2>`;
     },
-    toPreview: ({ classes, texth1 }, getAsset, fields) => {
-        return `<h2 class="titleSection font-bold text-primary leading-normal border-title-partly font-montserrat lg:mt-3 ${classes}">${texth1}</h2>`;
+    toPreview: ({ classes, texth2 }, getAsset, fields) => {
+        return `<h2 class="titleSection font-bold text-primary leading-normal border-title-partly font-montserrat lg:mt-3 ${classes}">${texth2}</h2>`;
     },
     pattern:
         /^<h2 class="titleSection font-bold text-primary leading-normal border-title-partly font-montserrat lg:mt-3 (.*?)">(.*?)<\/h2>$/s,
