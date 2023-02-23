@@ -43,15 +43,32 @@ const heroTitleFontSize = css`
 `;
 
 const LearnMoreSection = styled.div`
-    display: none;
+    display: block;
+
+    @media (min-width: 1024px) {
+        display: none;
+    }
 `;
 
 const cardBackgroundColor = css`
-    &:hover {
+    @media (max-width: 1024px) {
         background-color: #f3f8ff;
-        ${LearnMoreSection} {
-            display: block;
+    }
+    background-color: #ffffff;
+
+    &:hover {
+        @media (min-width: 1024px) {
+            background-color: #f3f8ff;
+            ${LearnMoreSection} {
+                display: block;
+            }
         }
+    }
+`;
+
+const firstRowCardHeight = css`
+    @media (min-width: 1024px) {
+        height: 23rem;
     }
 `;
 
@@ -139,8 +156,8 @@ const CNAPP = ({ location }) => {
             <Container>
                 <Row className='mt-16 gap-0 lg:gap-8'>
                     <div
-                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 h-80 sm:h-72 lg:h-96 flex flex-col justify-between p-4 rounded-md'
-                        css={cardBackgroundColor}
+                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 h-80 sm:h-64 flex flex-col justify-between p-4 rounded-md'
+                        css={[cardBackgroundColor, firstRowCardHeight]}
                     >
                         <div>
                             <img src={CSPMIcon} alt='' />
@@ -157,8 +174,8 @@ const CNAPP = ({ location }) => {
                         </LearnMoreSection>
                     </div>
                     <div
-                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-8 lg:mt-0 h-80 sm:h-72 lg:h-96 flex flex-col justify-between p-4 rounded-md'
-                        css={cardBackgroundColor}
+                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-8 lg:mt-0 h-80 sm:h-64 flex flex-col justify-between p-4 rounded-md'
+                        css={[cardBackgroundColor, firstRowCardHeight]}
                     >
                         <div>
                             <img src={VisibilityIcon} alt='' />
@@ -174,8 +191,8 @@ const CNAPP = ({ location }) => {
                         </LearnMoreSection>
                     </div>
                     <div
-                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-8 lg:mt-0 h-80 sm:h-72 lg:h-96 flex flex-col justify-between p-4 rounded-md'
-                        css={cardBackgroundColor}
+                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-8 lg:mt-0 h-80 sm:h-64 flex flex-col justify-between p-4 rounded-md'
+                        css={[cardBackgroundColor, firstRowCardHeight]}
                     >
                         <div>
                             <img src={ComplianceIcon} alt='' height={40} width={40} />
@@ -193,8 +210,8 @@ const CNAPP = ({ location }) => {
                         </LearnMoreSection>
                     </div>
                     <div
-                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-8 lg:mt-0 h-80 sm:h-72 lg:h-96 flex flex-col justify-between p-4 rounded-md'
-                        css={cardBackgroundColor}
+                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-8 lg:mt-0 h-80 sm:h-64 flex flex-col justify-between p-4 rounded-md'
+                        css={[cardBackgroundColor, firstRowCardHeight]}
                     >
                         <div>
                             {' '}
@@ -214,7 +231,7 @@ const CNAPP = ({ location }) => {
                 </Row>
                 <Row className='my-16 gap-0 lg:gap-8'>
                     <div
-                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 h-80 sm:h-72 lg:h-92 flex flex-col justify-between p-4 rounded-md'
+                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 h-80 sm:h-64 lg:h-80 flex flex-col justify-between p-4 rounded-md'
                         css={cardBackgroundColor}
                     >
                         <div>
@@ -232,7 +249,7 @@ const CNAPP = ({ location }) => {
                         </LearnMoreSection>
                     </div>
                     <div
-                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-8 lg:mt-0 h-80 sm:h-72 lg:h-96 flex flex-col justify-between p-4 rounded-md'
+                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-8 lg:mt-0 h-80 sm:h-64 lg:h-80 flex flex-col justify-between p-4 rounded-md'
                         css={cardBackgroundColor}
                     >
                         <div>
@@ -249,7 +266,7 @@ const CNAPP = ({ location }) => {
                         </LearnMoreSection>
                     </div>
                     <div
-                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg  lg:mx-0 mt-8 lg:mt-0 h-80 sm:h-72 lg:h-96 flex flex-col justify-between p-4 rounded-md'
+                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg  lg:mx-0 mt-8 lg:mt-0 h-80 sm:h-64 lg:h-80 flex flex-col justify-between p-4 rounded-md'
                         css={cardBackgroundColor}
                     >
                         <div>
@@ -266,7 +283,7 @@ const CNAPP = ({ location }) => {
                         </LearnMoreSection>
                     </div>
                     <div
-                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg  lg:mx-0 mt-8 lg:mt-0 h-80 sm:h-72 lg:h-96 flex flex-col justify-between p-4 rounded-md'
+                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg  lg:mx-0 mt-8 lg:mt-0 h-80 sm:h-64 lg:h-80 flex flex-col justify-between p-4 rounded-md'
                         css={cardBackgroundColor}
                     >
                         <div>
