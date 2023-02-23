@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Layout from '../../components/layout/CleanLayout';
 import { Container, Row } from '../../components/atoms/Containers';
 import { graphql, Link, useStaticQuery } from 'gatsby';
@@ -6,6 +6,7 @@ import GradientButton from '../../components/buttons/GradientButton';
 import LightDarkButton from '../../components/buttons/LightDarkButton';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { css } from 'twin.macro';
+import styled from '@emotion/styled';
 
 import CSPMIcon from '../../assets/images/cspm-cnapp-icon.svg';
 import CIEMIcon from '../../assets/images/ciem-cnapp-icon.svg';
@@ -19,11 +20,10 @@ import headerImage from '../../assets/images/remote-work-heading-image.png';
 import corner from '../../assets/images/corner-campaigns-iam-security.svg';
 import cloudIcon from '../../assets/images/cloud-icon.svg';
 import RightArrow from '../../components/sharedComponent/RightArrow';
-import classNames from 'classnames';
 
-const LearnMoreLink = ({ hoverState, link }) => {
+const LearnMoreLink = ({ link }) => {
     return (
-        <Link to={link} className={classNames({ 'mt-4': true, block: hoverState, hidden: !hoverState })}>
+        <Link to={link} className='lg:mt-4'>
             <RightArrow fillColor={'#0F26AA'} marginTop={'-0.25rem'} />
             <span className='text-md ml-2 text-blue inline-block font-bold text-base'>Learn more</span>
         </Link>
@@ -42,18 +42,20 @@ const heroTitleFontSize = css`
     font-size: 2rem;
 `;
 
-const CNAPP = ({ location }) => {
-    const [isHover, setIsHover] = useState({
-        cspm: false,
-        ca: false,
-        cg: false,
-        ds: false,
-        ciem: false,
-        cwpp: false,
-        cs: false,
-        ks: false
-    });
+const LearnMoreSection = styled.div`
+    display: none;
+`;
 
+const cardBackgroundColor = css`
+    &:hover {
+        background-color: #f3f8ff;
+        ${LearnMoreSection} {
+            display: block;
+        }
+    }
+`;
+
+const CNAPP = ({ location }) => {
     const data = useStaticQuery(graphql`
         query CNAPPQuery {
             dashboard: file(relativePath: { eq: "dashboard-cnapp.png" }) {
@@ -137,9 +139,8 @@ const CNAPP = ({ location }) => {
             <Container>
                 <Row className='mt-16 gap-0 lg:gap-8'>
                     <div
-                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 lg:h-72 flex flex-col justify-between'
-                        onMouseEnter={() => setIsHover({ ...isHover, cspm: true })}
-                        onMouseLeave={() => setIsHover({ ...isHover, cspm: false })}
+                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 h-80 sm:h-72 lg:h-96 flex flex-col justify-between p-4 rounded-md'
+                        css={cardBackgroundColor}
                     >
                         <div>
                             <img src={CSPMIcon} alt='' />
@@ -151,12 +152,13 @@ const CNAPP = ({ location }) => {
                                 Cloud, Alibaba Cloud to ensure the best security for your cloud infrastructure.
                             </p>
                         </div>
-                        <LearnMoreLink hoverState={isHover.cspm} link={'/'} />
+                        <LearnMoreSection>
+                            <LearnMoreLink link='/' />
+                        </LearnMoreSection>
                     </div>
                     <div
-                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-8 lg:mt-0 lg:h-72 flex flex-col justify-between'
-                        onMouseEnter={() => setIsHover({ ...isHover, ca: true })}
-                        onMouseLeave={() => setIsHover({ ...isHover, ca: false })}
+                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-8 lg:mt-0 h-80 sm:h-72 lg:h-96 flex flex-col justify-between p-4 rounded-md'
+                        css={cardBackgroundColor}
                     >
                         <div>
                             <img src={VisibilityIcon} alt='' />
@@ -167,12 +169,13 @@ const CNAPP = ({ location }) => {
                                 data security and helping you prioritize remediation efforts in the most effective way.
                             </p>
                         </div>
-                        <LearnMoreLink hoverState={isHover.ca} link={'/'} />
+                        <LearnMoreSection>
+                            <LearnMoreLink link='/' />
+                        </LearnMoreSection>
                     </div>
                     <div
-                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-8 lg:mt-0 lg:h-72 flex flex-col justify-between'
-                        onMouseEnter={() => setIsHover({ ...isHover, cg: true })}
-                        onMouseLeave={() => setIsHover({ ...isHover, cg: false })}
+                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-8 lg:mt-0 h-80 sm:h-72 lg:h-96 flex flex-col justify-between p-4 rounded-md'
+                        css={cardBackgroundColor}
                     >
                         <div>
                             <img src={ComplianceIcon} alt='' height={40} width={40} />
@@ -185,12 +188,13 @@ const CNAPP = ({ location }) => {
                                 with internal and external audits.
                             </p>
                         </div>
-                        <LearnMoreLink hoverState={isHover.cg} link={'/'} />
+                        <LearnMoreSection>
+                            <LearnMoreLink link='/' />
+                        </LearnMoreSection>
                     </div>
                     <div
-                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-8 lg:mt-0 lg:h-72 flex flex-col justify-between'
-                        onMouseEnter={() => setIsHover({ ...isHover, ds: true })}
-                        onMouseLeave={() => setIsHover({ ...isHover, ds: false })}
+                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-8 lg:mt-0 h-80 sm:h-72 lg:h-96 flex flex-col justify-between p-4 rounded-md'
+                        css={cardBackgroundColor}
                     >
                         <div>
                             {' '}
@@ -203,14 +207,15 @@ const CNAPP = ({ location }) => {
                                 audits.
                             </p>
                         </div>
-                        <LearnMoreLink hoverState={isHover.ds} link={'/'} />
+                        <LearnMoreSection>
+                            <LearnMoreLink link='/' />
+                        </LearnMoreSection>
                     </div>
                 </Row>
                 <Row className='my-16 gap-0 lg:gap-8'>
                     <div
-                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 lg:h-72 flex flex-col justify-between'
-                        onMouseEnter={() => setIsHover({ ...isHover, ciem: true })}
-                        onMouseLeave={() => setIsHover({ ...isHover, ciem: false })}
+                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 h-80 sm:h-72 lg:h-92 flex flex-col justify-between p-4 rounded-md'
+                        css={cardBackgroundColor}
                     >
                         <div>
                             {' '}
@@ -222,12 +227,13 @@ const CNAPP = ({ location }) => {
                                 permissions even in the most complex multi-cloud environments.
                             </p>
                         </div>
-                        <LearnMoreLink hoverState={isHover.ciem} link={'/'} />
+                        <LearnMoreSection>
+                            <LearnMoreLink link='/' />
+                        </LearnMoreSection>
                     </div>
                     <div
-                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-8 lg:mt-0 lg:h-72 flex flex-col justify-between'
-                        onMouseEnter={() => setIsHover({ ...isHover, cwpp: true })}
-                        onMouseLeave={() => setIsHover({ ...isHover, cwpp: false })}
+                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-8 lg:mt-0 h-80 sm:h-72 lg:h-96 flex flex-col justify-between p-4 rounded-md'
+                        css={cardBackgroundColor}
                     >
                         <div>
                             <img src={CWPPIcon} alt='' />
@@ -238,12 +244,13 @@ const CNAPP = ({ location }) => {
                                 stack on any cloud environment.
                             </p>
                         </div>
-                        <LearnMoreLink hoverState={isHover.cwpp} link={'/'} />
+                        <LearnMoreSection>
+                            <LearnMoreLink link='/' />
+                        </LearnMoreSection>
                     </div>
                     <div
-                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg  lg:mx-0 mt-8 lg:mt-0 lg:h-72 flex flex-col justify-between'
-                        onMouseEnter={() => setIsHover({ ...isHover, cs: true })}
-                        onMouseLeave={() => setIsHover({ ...isHover, cs: false })}
+                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg  lg:mx-0 mt-8 lg:mt-0 h-80 sm:h-72 lg:h-96 flex flex-col justify-between p-4 rounded-md'
+                        css={cardBackgroundColor}
                     >
                         <div>
                             <img src={ContainerSecurityIcon} alt='' height={40} width={40} />
@@ -254,12 +261,13 @@ const CNAPP = ({ location }) => {
                                 vulnerabilities, misconfigurations, networking and access.
                             </p>
                         </div>
-                        <LearnMoreLink hoverState={isHover.cs} link={'/'} />
+                        <LearnMoreSection>
+                            <LearnMoreLink link='/' />
+                        </LearnMoreSection>
                     </div>
                     <div
-                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg  lg:mx-0 mt-8 lg:mt-0 lg:h-72 flex flex-col justify-between'
-                        onMouseEnter={() => setIsHover({ ...isHover, ks: true })}
-                        onMouseLeave={() => setIsHover({ ...isHover, ks: false })}
+                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg  lg:mx-0 mt-8 lg:mt-0 h-80 sm:h-72 lg:h-96 flex flex-col justify-between p-4 rounded-md'
+                        css={cardBackgroundColor}
                     >
                         <div>
                             <img src={KubernetesIcon} alt='' height={40} width={40} />
@@ -270,7 +278,9 @@ const CNAPP = ({ location }) => {
                                 that are used.
                             </p>
                         </div>
-                        <LearnMoreLink hoverState={isHover.ks} link={'/'} />
+                        <LearnMoreSection>
+                            <LearnMoreLink link='/' />
+                        </LearnMoreSection>
                     </div>
                 </Row>
             </Container>
