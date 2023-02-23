@@ -45,7 +45,7 @@ const GCPCloudSecurity = ({ location }) => {
                                 (CSPM) solution - including support for the CIS GCP Foundations Benchmark.
                             </p>
                             <p className='text-left text-base lg:text-lg mb-20 leading-relaxed'>
-                                Map, secure, and monitor your GCP assets in minutes.
+                                Map, secure, and monitor your GCP environment in minutes.
                             </p>
                             <div className='flex'>
                                 <Link to='/free-trial'>
@@ -73,30 +73,40 @@ const GCPCloudSecurity = ({ location }) => {
                         <div className='col-span-12 lg:col-span-5'>
                             <div className='mx-auto lg:mx-0  max-w-xl lg:max-w-none'>
                                 <p className='text-base leading-normal my-12 text-gray'>
-                                    <strong>Streamline posture management for GCP</strong> or your multi-cloud
+                                    <strong>Streamline posture management for GCP</strong> services and your multi-cloud
                                     environments. Get visibility into your cloud security and achieve continuous
                                     compliance.
                                 </p>
                                 <ul className='list-disc ml-4 text-gray'>
                                     <li className='mb-4'>
-                                        Security controls for Storage, Compute, Containers, IAM, Cloud SQL and many
-                                        other services to ensure misconfiguration coverage
+                                        Security controls for Storage, Compute, Containers, cloud IAM (Identity and
+                                        Access Management), Cloud SQL and many other cloud services to ensure
+                                        misconfiguration coverage
                                     </li>
                                     <li className='mb-4'>
                                         CIS Google Cloud Platform benchmark available in-app to get guidance on and to
-                                        ensure best practices
+                                        help you follow security best practices
                                     </li>
                                     <li className='mb-4'>
                                         Alerts to help you stay in control of dynamic cloud infrastructures and avoid
-                                        breaches
+                                        cyber threats
                                     </li>
                                     <li className='mb-4'>
-                                        Improve team workflows by configuring prefered notification channels
+                                        Improve team workflows by configuring prefered notification channels and audit
+                                        logging
                                     </li>
                                     <li className='mb-4'>
                                         Audit-ready PDF report with Asset Inventory across multiple Google Projects
+                                    </li>{' '}
+                                    <li className='mb-4'>
+                                        Cloud-native cybersecurity across workloads with Google Kubernetes Engine
+                                        Service (GKE) management and monitoring
                                     </li>
                                 </ul>
+                                <p className='text-base leading-normal mt-4 text-gray'>
+                                    Moreover, secure your multi-cloud infrastructure that comprises AWS and Azure cloud
+                                    computing, as well as single and public cloud environments.{' '}
+                                </p>
                             </div>
                         </div>
                     </Row>
@@ -124,7 +134,8 @@ const GCPCloudSecurity = ({ location }) => {
                                 </p>
                                 <p className='leading-normal text-base text-gray'>
                                     Coming soon: create custom Controls that tap into our Security Knowledge Graph™ and
-                                    automate the security and compliance checks that matter most for your organization.
+                                    automate the GCP security and compliance checks that matter most for your
+                                    organization.
                                 </p>
                             </div>
                         </div>
@@ -159,7 +170,7 @@ const GCPCloudSecurity = ({ location }) => {
                                     <p className='leading-normal text-base text-gray mb-6'>
                                         <strong>Built-in compliance templates</strong>
                                         <br />
-                                        You can either use policy templates as a basis for your custom policies, or
+                                        You can either use policy templates as a basis to configure custom policies, or
                                         create them from scratch using a smart text editor.
                                     </p>
                                 </div>
@@ -168,7 +179,7 @@ const GCPCloudSecurity = ({ location }) => {
                                         <strong>PCI-DSS, SOC 2, GDPR, and more.</strong>
                                         <br />
                                         Cyscale offers a wide range of benchmarks and frameworks, including: CIS,
-                                        ISO27001, PCI-DSS, NIST, SOC2, GDPR.
+                                        ISO27001, PCI-DSS, NIST, SOC2, GDPR, to help you obtain certifications.
                                     </p>
                                 </div>
                                 <div className='col-span-12 lg:col-span-6'>
@@ -176,7 +187,9 @@ const GCPCloudSecurity = ({ location }) => {
                                         <strong>500+ out-of-the-box security controls</strong>
                                         <br />
                                         Onboard teams in 30 minutes and coordinate efforts to apply 500+ out-of-the-box
-                                        security controls and a large set of policies and standards.
+                                        security controls and a large set of policies and standards covering VMs
+                                        (virtual machines), access control, authentication, firewall configuration,
+                                        permissions, network security, cloud identity and others.
                                     </p>
                                 </div>
                             </Row>
@@ -189,7 +202,7 @@ const GCPCloudSecurity = ({ location }) => {
                     <Container>
                         <div className='mx-auto text-center lg:text-left lg:mx-0 max-w-sm lg:max-w-none'>
                             <h2 className='text-white text-xl md:text-2xl font-semibold font-montserrat uppercase'>
-                                Secure your GCP Assets
+                                Secure your GCP Cloud Resources
                             </h2>
                             <p className='text-white font-montserrat text-lg md:text-2xl mb-20'>
                                 Start seeing value & saving money in minutes
