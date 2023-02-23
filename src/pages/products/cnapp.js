@@ -66,12 +66,6 @@ const cardBackgroundColor = css`
     }
 `;
 
-const firstRowCardHeight = css`
-    @media (min-width: 1024px) {
-        height: 23rem;
-    }
-`;
-
 const CNAPP = ({ location }) => {
     const data = useStaticQuery(graphql`
         query CNAPPQuery {
@@ -112,8 +106,8 @@ const CNAPP = ({ location }) => {
                                     </p>
                                     <p className='text-left text-base lg:text-lg mb-2 leading-relaxed'>
                                         Get maximum cloud native security with our ultimate CNAPP solution. Protect your
-                                        entire stack, VMs, containers, and serverless, on any cloud environment and
-                                        confidently accelerate innovation.
+                                        entire stack, VMs (virtual machines), containers, and serverless, on any cloud
+                                        environment and confidently accelerate innovation.
                                     </p>
                                     <div className='flex mt-8 justify-start'>
                                         <Link to='/free-trial'>
@@ -156,8 +150,8 @@ const CNAPP = ({ location }) => {
             <Container>
                 <Row className='mt-16 gap-0 lg:gap-8'>
                     <div
-                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 h-80 sm:h-64 flex flex-col justify-between p-4 rounded-md'
-                        css={[cardBackgroundColor, firstRowCardHeight]}
+                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 h-80 sm:h-64 lg:h-96 flex flex-col justify-between p-4 rounded-md'
+                        css={cardBackgroundColor}
                     >
                         <div>
                             <img src={CSPMIcon} alt='' />
@@ -166,7 +160,7 @@ const CNAPP = ({ location }) => {
                                 Gain continuous visibility and comprehensive Cloud Security Posture Management over
                                 multi-cloud environments to identify misconfigurations, ultimately securing your cloud
                                 from data breaches and leaks. Scan, monitor, and remediate across AWS, Azure, Google
-                                Cloud, Alibaba Cloud to ensure the best security for your cloud infrastructure.
+                                Cloud, Alibaba Cloud to ensure the best cybersecurity for your cloud infrastructure.
                             </p>
                         </div>
                         <LearnMoreSection>
@@ -174,8 +168,8 @@ const CNAPP = ({ location }) => {
                         </LearnMoreSection>
                     </div>
                     <div
-                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-8 lg:mt-0 h-80 sm:h-64 flex flex-col justify-between p-4 rounded-md'
-                        css={[cardBackgroundColor, firstRowCardHeight]}
+                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-4 lg:mt-0 h-80 sm:h-64 lg:h-96 flex flex-col justify-between p-4 rounded-md'
+                        css={cardBackgroundColor}
                     >
                         <div>
                             <img src={VisibilityIcon} alt='' />
@@ -191,8 +185,8 @@ const CNAPP = ({ location }) => {
                         </LearnMoreSection>
                     </div>
                     <div
-                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-8 lg:mt-0 h-80 sm:h-64 flex flex-col justify-between p-4 rounded-md'
-                        css={[cardBackgroundColor, firstRowCardHeight]}
+                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-4 lg:mt-0 h-80 sm:h-64 lg:h-96 flex flex-col justify-between p-4 rounded-md'
+                        css={cardBackgroundColor}
                     >
                         <div>
                             <img src={ComplianceIcon} alt='' height={40} width={40} />
@@ -210,8 +204,8 @@ const CNAPP = ({ location }) => {
                         </LearnMoreSection>
                     </div>
                     <div
-                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-8 lg:mt-0 h-80 sm:h-64 flex flex-col justify-between p-4 rounded-md'
-                        css={[cardBackgroundColor, firstRowCardHeight]}
+                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-4 lg:mt-0 h-80 sm:h-64 lg:h-96 flex flex-col justify-between p-4 rounded-md'
+                        css={cardBackgroundColor}
                     >
                         <div>
                             {' '}
@@ -220,7 +214,7 @@ const CNAPP = ({ location }) => {
                             <p className='text-sm mt-4 text-gray'>
                                 Keep track of your organization's security posture with Cyscale's inventory of cloud
                                 data stores and their contextual security analysis tools. Using these security tools,
-                                you can protect your most important data assets, avoid breaches, and be prepared for
+                                you can protect your most important data assets, avoid breaches and be prepared for
                                 audits.
                             </p>
                         </div>
@@ -229,9 +223,9 @@ const CNAPP = ({ location }) => {
                         </LearnMoreSection>
                     </div>
                 </Row>
-                <Row className='my-16 gap-0 lg:gap-8'>
+                <Row className='mt-8 lg:mt-16 mb-16 gap-0 lg:gap-8'>
                     <div
-                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 h-80 sm:h-64 lg:h-80 flex flex-col justify-between p-4 rounded-md'
+                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 h-80 sm:h-64 lg:h-80  flex flex-col justify-between p-4 rounded-md'
                         css={cardBackgroundColor}
                     >
                         <div>
@@ -241,7 +235,8 @@ const CNAPP = ({ location }) => {
                             <p className='text-sm mt-4 text-gray'>
                                 Easily perform access reviews and keep track of users, access levels, effective
                                 permissions, as well as IAM asset misconfigurations. Understand identities and
-                                permissions even in the most complex multi-cloud environments.
+                                permissions even in the most complex multi-cloud environments with Cloud Infrastructure
+                                Entitlement Management.
                             </p>
                         </div>
                         <LearnMoreSection>
@@ -249,41 +244,36 @@ const CNAPP = ({ location }) => {
                         </LearnMoreSection>
                     </div>
                     <div
-                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-8 lg:mt-0 h-80 sm:h-64 lg:h-80 flex flex-col justify-between p-4 rounded-md'
+                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-4 lg:mt-0 h-80 sm:h-64 lg:h-80 flex flex-col justify-between p-4 rounded-md'
                         css={cardBackgroundColor}
                     >
                         <div>
                             <img src={CWPPIcon} alt='' />
                             <h2 className='font-montserrat text-base font-bold text-blue mt-3'>CWPP</h2>
                             <p className='text-sm mt-4 text-gray'>
-                                A contextual analysis of cloud misconfigurations and vulnerabilities in instances,
-                                images, containers and functions helps security teams guard your entire application
-                                stack on any cloud environment.
+                                Cloud Workload Protection Platforms perform a contextual analysis of cloud
+                                misconfigurations and vulnerabilities in instances, images, containers and serverless
+                                functions and help security teams guard your entire application stack on any cloud
+                                environment.
                             </p>
                         </div>
-                        <LearnMoreSection>
-                            <LearnMoreLink link='/' />
-                        </LearnMoreSection>
                     </div>
                     <div
-                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg  lg:mx-0 mt-8 lg:mt-0 h-80 sm:h-64 lg:h-80 flex flex-col justify-between p-4 rounded-md'
+                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-4 lg:mt-0 h-80 sm:h-64 lg:h-80 flex flex-col justify-between p-4 rounded-md'
                         css={cardBackgroundColor}
                     >
                         <div>
                             <img src={ContainerSecurityIcon} alt='' height={40} width={40} />
                             <h2 className='font-montserrat text-base font-bold text-blue mt-3'>Container Security</h2>
                             <p className='text-sm mt-4 text-gray'>
-                                Get visibility over container-based applications and corresponding cloud infrastructure.
-                                Know where containers are running in the cloud, complete with a contextual analysis of
+                                Get visibility over container-based apps and corresponding cloud infrastructure. Know
+                                where containers are running in the cloud, complete with a contextual analysis of
                                 vulnerabilities, misconfigurations, networking and access.
                             </p>
                         </div>
-                        <LearnMoreSection>
-                            <LearnMoreLink link='/' />
-                        </LearnMoreSection>
                     </div>
                     <div
-                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg  lg:mx-0 mt-8 lg:mt-0 h-80 sm:h-64 lg:h-80 flex flex-col justify-between p-4 rounded-md'
+                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-4 lg:mt-0 h-80 sm:h-64 lg:h-80 flex flex-col justify-between p-4 rounded-md'
                         css={cardBackgroundColor}
                     >
                         <div>
@@ -295,9 +285,6 @@ const CNAPP = ({ location }) => {
                                 that are used.
                             </p>
                         </div>
-                        <LearnMoreSection>
-                            <LearnMoreLink link='/' />
-                        </LearnMoreSection>
                     </div>
                 </Row>
             </Container>
@@ -330,16 +317,17 @@ const CNAPP = ({ location }) => {
                                 </div>
                                 <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-lg'>
                                     <p className='text-base text-gray pt-12 pb-2'>
-                                        Our CNAPP platform is designed to give you complete visibility and control over
-                                        your cloud environment. By analyzing cloud configuration, workload, and
-                                        identity, it identifies the most critical attack vectors that pose a threat to
-                                        your business, rather than overwhelming you with numerous alerts for
-                                        vulnerabilities, permissions, and exposed services.
+                                        Our CNAPP (Cloud-Native Application Protection Platform) security solution is
+                                        designed to give you complete visibility and control over your cloud
+                                        environment. By analyzing cloud configuration, workload, and identity, it
+                                        identifies the most critical attack vectors that pose a threat to your business,
+                                        rather than overwhelming you with numerous alerts for vulnerabilities,
+                                        permissions, and exposed services.
                                     </p>
                                     <p className='text-base text-gray py-2'>
-                                        With our platform, you can prioritize and address the most significant risks,
-                                        ensuring the security and integrity of your cloud infrastructure and
-                                        applications.
+                                        With our security platform, you can prioritize and address the most significant
+                                        security risks, ensuring application security and the integrity of your cloud
+                                        infrastructure.
                                     </p>
                                 </div>
                             </div>
@@ -440,7 +428,7 @@ const CNAPP = ({ location }) => {
                                         <br />
                                         Protect sensitive data and comply with strict industry regulations in your
                                         organisation. Cyscale automatically runs all critical compliance checks and
-                                        finds data at-risk.
+                                        finds data at-risk across multiple cloud service providers.
                                     </p>
                                 </div>
                                 <div className='col-span-12 lg:col-span-6'>
