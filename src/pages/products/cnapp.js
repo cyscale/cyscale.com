@@ -170,7 +170,7 @@ const CNAPP = ({ location }) => {
                             </p>
                         </div>
                         <LearnMoreSection>
-                            <LearnMoreLink link='/' />
+                            <LearnMoreLink link='/products/cloud-security-posture-management/' />
                         </LearnMoreSection>
                     </div>
                     <div
@@ -187,7 +187,7 @@ const CNAPP = ({ location }) => {
                             </p>
                         </div>
                         <LearnMoreSection>
-                            <LearnMoreLink link='/' />
+                            <LearnMoreLink link='/products/security-knowledge-graph/' />
                         </LearnMoreSection>
                     </div>
                     <div
@@ -206,7 +206,7 @@ const CNAPP = ({ location }) => {
                             </p>
                         </div>
                         <LearnMoreSection>
-                            <LearnMoreLink link='/' />
+                            <LearnMoreLink link='/use-cases/cloud-compliance-and-auditing/' />
                         </LearnMoreSection>
                     </div>
                     <div
@@ -225,7 +225,7 @@ const CNAPP = ({ location }) => {
                             </p>
                         </div>
                         <LearnMoreSection>
-                            <LearnMoreLink link='/' />
+                            <LearnMoreLink link='/use-cases/cloud-data-security/' />
                         </LearnMoreSection>
                     </div>
                 </Row>
@@ -245,7 +245,7 @@ const CNAPP = ({ location }) => {
                             </p>
                         </div>
                         <LearnMoreSection>
-                            <LearnMoreLink link='/' />
+                            <LearnMoreLink link='/use-cases/iam-security/' />
                         </LearnMoreSection>
                     </div>
                     <div
