@@ -13,8 +13,8 @@ const qas = (useReactComponent) => {
             answer: (
                 <>
                     <p className='mb-4'>
-                        CSPM is a group of security tools and technologies that empower security users to identify and
-                        remediate risk and misconfigurations in their cloud environments.
+                        CSPM is a group of security solutions and technologies that empower security users to identify
+                        and remediate risk and misconfigurations in their cloud environments.
                     </p>
                     {useReactComponent ? (
                         <Link className='underline' to='/blog/cloud-security-posture-management-cspm-guide/'>
@@ -38,12 +38,19 @@ const qas = (useReactComponent) => {
                         in areas such as storage, encryption, and permissions
                     </li>
                     <li className='mb-4'>
-                        Technical security controls and visibility over access configuration, to help reduce risk and
-                        ensure that compliance standards are met
+                        Technical security controls and visibility over IAM (Identity and Access Management)
+                        configuration, to help provide risk assessment and ensure that compliance standards are met
                     </li>
-                    <li className='mb-4'>Easily identify risks that could compromise your cloud network</li>
+                    <li className='mb-4'>
+                        Easily identify risks that could compromise your cloud network across cloud providers, such as
+                        GCP (Google Cloud), AWS and Microsoft Azure
+                    </li>
 
-                    <li>Remediation guidance, to quickly solve misconfigurations leading to compliance violations</li>
+                    <li>
+                        Remediation guidance, to quickly solve misconfigurations leading to compliance violations for
+                        Saas (Software as a Service), Iaas (Infrastructure as a Service) and Paas (Platform as a
+                        Service)
+                    </li>
                 </ul>
             )
         },
@@ -63,7 +70,7 @@ const qas = (useReactComponent) => {
                         <strong className='text-base'>Evidence.</strong>
                         <br />
                         Violations in your cloud infrastructure are mapped to regulatory standards, security frameworks,
-                        as well as internal policies, resulting in evidence collection that enables audits.
+                        as well as internal security policies, resulting in evidence collection that enables audits.
                     </p>
                     <p className='mb-4'>
                         <strong className='text-base'>Reporting and alerting.</strong>
@@ -130,7 +137,9 @@ export default function Faqs() {
                     }`}</script>
             </Helmet>
 
-            <h2 className='font-semibold  text-3xl leading-normal text-white mb-6 font-montserrat'>Frequently asked questions</h2>
+            <h2 className='font-semibold  text-3xl leading-normal text-white mb-6 font-montserrat'>
+                Frequently asked questions
+            </h2>
             <Row>
                 {qas(true).map((q, key) => (
                     <div

@@ -9,10 +9,10 @@ const dataFeaturedProducts = [
         featureImage: <DetectPreventMisconfigurations />
     },
     {
-        tabTitle: 'Cut through the noise with targeted alerts',
+        tabTitle: 'Cut through the noise with targeted alerts and continuous monitoring',
         sectionTitle: 'Cut through the noise',
         sectionDescription: [
-            "Get relevant alerts when your cloud assets drift away from established secure configuration, compliance standards and other security issues. \n\nMake Cyscale your single source of truth for Cloud Security Posture Management (CSPM) and never miss an important security event. \n\nMove beyond bulky, list-based management. Cyscale's",
+            "Get relevant alerts when your cloud assets drift away from established secure cloud configuration, compliance standards and other security issues. \n\nMake Cyscale your single source of truth for Cloud Security Posture Management (CSPM) and never miss an important security event. \n\nMove beyond bulky, list-based management. Cyscale's",
             ' ',
             <a
                 href='/products/security-knowledge-graph/'
@@ -48,5 +48,5 @@ const dataFeaturedProducts = [
 ];
 
 export default function MisconfigurationTabs({ sectionTitle = 'Unpack The Platform', id }) {
-    return <Fproducts sectionTitle={sectionTitle} data={dataFeaturedProducts} id={id}/>;
+    return <Fproducts sectionTitle={sectionTitle} data={dataFeaturedProducts} id={id} />;
 }
