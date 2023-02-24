@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Container } from '../atoms/Containers';
+import { Row } from '../atoms/Containers';
 import PostAuthor from './PostAuthor';
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
@@ -338,9 +338,11 @@ export default function PostContent({
                     </>
                 )}
             </div>
-            {!preview && firstCategory === 'Compliance' && <ComplianceLinks dataBlueBird={dataBlueBird} />}
-            {!preview && firstCategory === 'CSPM' && <CSPMLinks dataBlueBird={dataBlueBird} />}
-            {!preview && firstCategory !== 'Compliance' && firstCategory !== 'CSPM' && (
+            {!preview && suggestions && firstCategory === 'Compliance' && (
+                <ComplianceLinks dataBlueBird={dataBlueBird} />
+            )}
+            {!preview && suggestions && firstCategory === 'CSPM' && <CSPMLinks dataBlueBird={dataBlueBird} />}
+            {!preview && suggestions && firstCategory !== 'Compliance' && firstCategory !== 'CSPM' && (
                 <OtherLinks dataBlueBird={dataBlueBird} />
             )}
         </div>
