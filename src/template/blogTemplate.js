@@ -3,9 +3,10 @@ import Layout from '../components/layout/CleanLayout';
 import PostContent from '../components/new-blog/PostContent';
 
 const BlogDetail = ({ pageContext, location }) => {
-    const { alldata, suggestions, whitepaperCover } = pageContext;
+    const { alldata, suggestions, whitepaperCover, blueBird } = pageContext;
     const { frontmatter: data, rawMarkdownBody } = alldata;
     console.log(data);
+    console.log(blueBird);
     return (
         <div className='bg-blog-post pt-28'>
             <Layout
@@ -21,6 +22,7 @@ const BlogDetail = ({ pageContext, location }) => {
                     pageUri={location?.pathname}
                     pageName={data?.title}
                     dataWhitepaper={whitepaperCover?.data}
+                    dataBlueBird={blueBird?.data}
                 />
             </Layout>
         </div>

@@ -116,6 +116,16 @@ exports.createPages = async ({ graphql, actions }) => {
         }
     `);
 
+    const cyscaleBlueBird = await graphql(`
+        query WhitepaperCover {
+            blueBird: file(relativePath: { eq: "cyscale-blue-bird.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 386, layout: FIXED)
+                }
+            }
+        }
+    `);
+
     await graphql(
         `
             query loadPostsQuery {
@@ -173,7 +183,8 @@ exports.createPages = async ({ graphql, actions }) => {
                 context: {
                     alldata: node,
                     suggestions: [posts[0], posts[1], posts[2], posts[3]],
-                    whitepaperCover: whitepaperCover
+                    whitepaperCover: whitepaperCover,
+                    blueBird: cyscaleBlueBird
                 }
             });
         });
