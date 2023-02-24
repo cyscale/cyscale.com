@@ -45,6 +45,8 @@ export default function PostContent({
 }) {
     const { emailInput, alert, onChange, onSubmit, onKeyDown } = useSubscribe(pageUri, pageName);
     const trigger = useScrollTrigger();
+    const { categories } = data;
+    const firstCategory = categories[0];
 
     return (
         <div>
@@ -336,9 +338,11 @@ export default function PostContent({
                     </>
                 )}
             </div>
-            {!preview && <ComplianceLinks dataBlueBird={dataBlueBird} />}
-            {!preview && <CSPMLinks dataBlueBird={dataBlueBird} />}
-            {!preview && <OtherLinks dataBlueBird={dataBlueBird} />}
+            {!preview && firstCategory === 'Compliance' && <ComplianceLinks dataBlueBird={dataBlueBird} />}
+            {!preview && firstCategory === 'CSPM' && <CSPMLinks dataBlueBird={dataBlueBird} />}
+            {!preview && firstCategory !== 'Compliance' && firstCategory !== 'CSPM' && (
+                <OtherLinks dataBlueBird={dataBlueBird} />
+            )}
         </div>
     );
 }

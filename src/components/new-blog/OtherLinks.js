@@ -36,7 +36,7 @@ const OtherLinks = ({ dataBlueBird }) => {
                             font-size: 2rem;
                         `}
                     >
-                        Other
+                        News, Product, Engineering, CNAPP
                     </h2>
                     <div className='flex flex-col'>
                         {topArticles.map(({ text, link }) => (
