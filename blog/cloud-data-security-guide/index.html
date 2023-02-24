@@ -17,9 +17,9 @@
 <p>This mission may seem daunting. Let’s break it down and understand every step of the process of securing data. In this article, you will find out:</p>
 <ul>
 <li>The type of attacks that threaten your data,</li>
-<li>Best practices for securing data,</li>
-<li>Solutions on the market from cloud providers,</li>
-<li>How to identify any gaps in your security implementations.</li>
+<li>Cloud security best practices,</li>
+<li>Security solutions on the market from cloud service providers,</li>
+<li>How to identify any gaps in your security policies.</li>
 </ul>
 <h2><strong>How do you ensure confidentiality?</strong></h2>
 <p>Confidentiality is a security principle that states that only authorized users should be able to access the data. It should not be visible to unauthorized entities.</p>
@@ -29,8 +29,9 @@
 <ul>
 <li>For in motion data: SSL/TLS. They are transport protocols that encrypt data in transit. </li>
 <li>For in use data: memory encryption, called Secure Encrypted Virtualization (SEV). It requires specialized hardware, and it encrypts RAM memory. </li>
-<li><a href="https://cyscale.com/blog/protecting-data-at-rest/" target="_blank">For at rest data:</a> industry-recommended symmetric algorithms such as AES-256 are used to perform full disk, database, file system, and cloud assets encryption. </li>
+<li><a href="https://cyscale.com/blog/protecting-data-at-rest/" target="_blank">For at rest data:</a> industry-recommended symmetric algorithms such as AES-256 are used to perform full disk, database, file system, and cloud assets encryption and to safely store data. </li>
 </ul>
+<p>Using these best practices, you can improve your cloud security posture and prevent data breaches or other security incidents.</p>
 <h3><strong>Access control</strong> </h3>
 <p>A layered approach should be used when securing data in the cloud. This means that encryption of data at rest should only be considered as the last measure of protection if access control rules are bypassed. </p>
 <p>You must secure access to databases, buckets, and other storage assets by restricting it as much as possible. In doing this, you become compliant with the <a href="https://cyscale.com/blog/check-for-least-privilege/" target="_blank">Least Privilege Principle</a>. </p>
@@ -41,9 +42,11 @@
 <li>Keep your connection details secret.</li>
 </ul>
 <p>For <a href="https://cyscale.com/blog/common-cloud-misconfigurations-how-to-avoid-them/#storage-access" target="_blank">buckets that contain sensitive information</a>, do not allow public read/write access and use access control lists to define granular rules.</p>
+<p>Besides access control, to ensure robust data protection, strong authentication mechanisms should be put in place. Multi-factor authentication (MFA) is a must-have security measure for cloud computing environments.</p>
+<p>By implementing these IAM (Identity and Access Management) best practices, attack surface is reduced and your cloud infrastructure is secured.</p>
 <h3><strong>Data classification</strong></h3>
 <p>Classifying data does not protect it on its own. However, this process can help you understand which is the most sensitive data in order to better focus your efforts to secure it.</p>
-<p>AWS, Azure, and GCP provide labels or tags for users to implement <a href="https://cyscale.com/blog/data-classification/" target="_blank">data classification</a>. Labels/tags can be predefined by the public cloud vendor or can be user-defined according to the user’s specific needs.</p>
+<p>AWS (Amazon Web Services), Azure, and GCP provide labels or tags for users to implement <a href="https://cyscale.com/blog/data-classification/" target="_blank">data classification</a>. Labels/tags can be predefined by the public cloud vendor or can be user-defined according to the user’s specific needs.</p>
 <h2><strong>How do you ensure integrity?</strong></h2>
 <p>Ensuring integrity means that data must not be altered in transit or at rest. Integrity is usually accomplished using hashes and checksums.</p>
 <p>They are computed before the data is used or transferred and then again after. If the two values of hashes/checksums match, then the data was not altered in transit or at rest. Otherwise, that data was tampered with.</p>
@@ -56,20 +59,20 @@
 <p>Data availability means that any user should be able at any point to access their data without disruptions.</p>
 <p>For data in the public cloud, vendors provide solutions to replicate and backup it in different data centers and regions.</p>
 <p>We need to look at <strong>availability zones</strong> to understand availability in the cloud.</p>
-<p>Availability zones are groups of data centers in the same region containing replicated data. If a data center fails, the other data center in the availability zone takes the responsibility, providing fault tolerance and increased availability.</p>
+<p>Availability zones are groups of data centers in the same region containing replicated data. If a data center fails, the other data center in the availability zone takes the responsibility, providing fault tolerance and increased availability and preventing data loss.</p>
 <p>Moreover, public cloud vendors support region pairs. A region is paired with another region at a great distance (for example, at least 300km away for Azure). If a natural disaster, civil unrest, or any other unforeseen events occur, the secondary region becomes the main source of cloud service.</p>
 <p>Another service available in the public cloud that helps ensure availability is <strong>DDOS protection</strong>.</p>
 <p>DDOS (Distributed Denial of Service) is an attack designed to crash an application or a service by sending substantial amounts of traffic to it.</p>
-<p>A few examples of available DDOS services are:</p>
+<p>A few examples of available DDOS services to secure cloud infrastructure are:</p>
 <ul>
 <li>AWS Shield,</li>
 <li>Azure DDOS Protection,</li>
 <li>Google Cloud Armor.</li>
 </ul>
 <p><strong>Implementing our recommendations</strong></p>
-<p>Ensuring <a href="https://cyscale.com/use-cases/cloud-data-security/" target="_blank">multi-cloud data security</a> is not an easy task. There are many aspects to be considered, and a small mistake can leave a vulnerability in your environment.</p>
+<p>Ensuring <a href="https://cyscale.com/use-cases/cloud-data-security/" target="_blank">multi-cloud data security</a> is not an easy task. There are many aspects to be considered, and a small mistake can leave a vulnerability in your cloud environment.</p>
 <p>Cyscale provides powerful dashboards to ensure visibility of your assets, the identities in your cloud, and an overview of your data security.</p>
-<p>Moreover, 400+ controls ensure you have implemented the cybersecurity principles and <a href="https://cyscale.com/blog/5-cspm-best-practices-and-strategies/" target="_blank">best practices</a>. Here are some examples of controls that can be used to ensure data security:</p>
+<p>Moreover, 400+ security controls ensure that your security teams have implemented the cybersecurity principles and <a href="https://cyscale.com/blog/5-cspm-best-practices-and-strategies/" target="_blank">best practices</a>. Here are some examples of controls that can be used to ensure data security:</p>
 <ul>
 <li><strong>In motion data encryption</strong>: <em>Ensure web app is using the latest version of TLS encryption</em> for Microsoft Azure</li>
 <li><strong>At rest data encryption</strong>: <em>Ensure VM disks for critical VMs are encrypted with Customer</em>-Supplied Encryption Keys (CSEK) for GCP</li>
