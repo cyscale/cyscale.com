@@ -141,7 +141,7 @@ export default function PostContent({
                 {!preview && (
                     <div className='flex flex-col self-stretch justify-between'>
                         <div
-                            className={`hidden xl:block w-72 sticky pl-10 mt-6 font-montserrat mb-52 ${
+                            className={`hidden xl:block w-72 sticky pl-10 mt-6 font-montserrat mb-60 ${
                                 trigger ? 'top-0' : 'top-28'
                             }`}
                             css={ctaTransition}
