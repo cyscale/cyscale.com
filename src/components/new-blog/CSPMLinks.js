@@ -66,7 +66,7 @@ const CSPMLinks = ({ dataBlueBird }) => {
                             font-size: 2rem;
                         `}
                     >
-                        Compliance
+                        CSPM
                     </h2>
                     <div className='flex flex-col'>
                         {' '}
