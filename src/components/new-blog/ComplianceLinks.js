@@ -30,7 +30,7 @@ const compliancePages = [
         link: '/use-cases/soc-2/'
     },
     {
-        text: 'ISO 27001 Cloud Securitv',
+        text: 'ISO 27001 Cloud Security',
         link: '/use-cases/iso-27001-compliance/'
     },
     {
@@ -94,7 +94,7 @@ const ComplianceLinks = ({ dataBlueBird }) => {
                             to='/blog/cloud-security-and-compliance/'
                             className='text-base font-medium font-montserrat inline-block mt-4'
                         >
-                            Cloud Security and Compliance: A <br className='hidden lg:block' /> guide for Your Cloud
+                            Cloud Security and Compliance: A <br className='hidden lg:block' /> Guide for Your Cloud
                             Infrastructure
                         </Link>{' '}
                         {topArticles.map(({ text, link }) => (
