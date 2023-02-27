@@ -60,7 +60,7 @@ export const PageLink = ({ text, link }) => {
     );
 };
 
-const ComplianceLinks = ({ dataBlueBird }) => {
+const ComplianceLinks = ({ dataCompliceToolbox }) => {
     return (
         <Container>
             <div className='my-24 grid grid-cols-12  md:gap-10'>
@@ -129,7 +129,7 @@ const ComplianceLinks = ({ dataBlueBird }) => {
                         <div className='hidden lg:block'>
                             <GatsbyImage
                                 alt=''
-                                image={dataBlueBird.blueBird.childImageSharp.gatsbyImageData}
+                                image={dataCompliceToolbox.blueBird.childImageSharp.gatsbyImageData}
                                 className='absolute bottom-0 right-0'
                             />
                         </div>

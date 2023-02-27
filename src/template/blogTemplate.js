@@ -3,7 +3,7 @@ import Layout from '../components/layout/CleanLayout';
 import PostContent from '../components/new-blog/PostContent';
 
 const BlogDetail = ({ pageContext, location }) => {
-    const { alldata, suggestions, whitepaperCover, blueBird } = pageContext;
+    const { alldata, suggestions, whitepaperCover, blueBird, compliceToolbox } = pageContext;
     const { frontmatter: data, rawMarkdownBody } = alldata;
     console.log(data);
     console.log(blueBird);
@@ -23,6 +23,7 @@ const BlogDetail = ({ pageContext, location }) => {
                     pageName={data?.title}
                     dataWhitepaper={whitepaperCover?.data}
                     dataBlueBird={blueBird?.data}
+                    dataCompliceToolbox={compliceToolbox?.data}
                 />
             </Layout>
         </div>

@@ -41,7 +41,8 @@ export default function PostContent({
     pageUri,
     pageName,
     dataWhitepaper,
-    dataBlueBird
+    dataBlueBird,
+    dataCompliceToolbox
 }) {
     const { emailInput, alert, onChange, onSubmit, onKeyDown } = useSubscribe(pageUri, pageName);
     const trigger = useScrollTrigger();
@@ -339,7 +340,7 @@ export default function PostContent({
                 )}
             </div>
             {!preview && suggestions && firstCategory === 'Compliance' && (
-                <ComplianceLinks dataBlueBird={dataBlueBird} />
+                <ComplianceLinks dataCompliceToolbox={dataCompliceToolbox} />
             )}
             {!preview && suggestions && firstCategory === 'CSPM' && <CSPMLinks dataBlueBird={dataBlueBird} />}
             {!preview && suggestions && firstCategory !== 'Compliance' && firstCategory !== 'CSPM' && (
