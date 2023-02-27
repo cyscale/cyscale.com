@@ -126,6 +126,16 @@ exports.createPages = async ({ graphql, actions }) => {
         }
     `);
 
+    const compliceToolbox = await graphql(`
+        query WhitepaperCover {
+            blueBird: file(relativePath: { eq: "compliance-toolbox-blog.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 366, layout: FIXED)
+                }
+            }
+        }
+    `);
+
     await graphql(
         `
             query loadPostsQuery {
@@ -184,7 +194,8 @@ exports.createPages = async ({ graphql, actions }) => {
                     alldata: node,
                     suggestions: [posts[0], posts[1], posts[2], posts[3]],
                     whitepaperCover: whitepaperCover,
-                    blueBird: cyscaleBlueBird
+                    blueBird: cyscaleBlueBird,
+                    compliceToolbox
                 }
             });
         });
