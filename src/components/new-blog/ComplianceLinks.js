@@ -104,12 +104,12 @@ const ComplianceLinks = ({ dataCompliceToolbox }) => {
                 </div>
                 <div className='col-span-12 lg:col-span-8 sm:max-w-lg md:max-w-lg lg:max-w-4xl mx-auto lg:mx-0'>
                     <div
-                        className='mt-6 lg:mt-0 rounded-xl py-6 relative flex'
+                        className='mt-6 lg:mt-0 rounded-xl flex'
                         style={{
                             backgroundImage: 'linear-gradient(to bottom, #4a85eb, #326fe3, #1b58d8, #073fcc, #0623be)'
                         }}
                     >
-                        <div className='pl-8 pr-8 xl:pr-0 lg:max-w-md'>
+                        <div className='pl-8 pr-8 xl:pr-0 py-6 lg:max-w-md'>
                             <h2
                                 className='text-white font-bold font-montserrat'
                                 css={css`
@@ -125,13 +125,18 @@ const ComplianceLinks = ({ dataCompliceToolbox }) => {
                                 <PageLink text={text} link={link} />
                             ))}
                         </div>
-
-                        <div className='hidden lg:block'>
-                            <GatsbyImage
-                                alt=''
-                                image={dataCompliceToolbox.blueBird.childImageSharp.gatsbyImageData}
-                                className='absolute bottom-0 right-0'
-                            />
+                        <div
+                            className='hidden lg:block relative'
+                            css={css`
+                                width: 22.875rem;
+                            `}
+                        >
+                            <div className='absolute bottom-0 right-0'>
+                                <GatsbyImage
+                                    alt=''
+                                    image={dataCompliceToolbox.blueBird.childImageSharp.gatsbyImageData}
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
