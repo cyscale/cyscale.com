@@ -86,7 +86,7 @@ const Index = () => {
                     Security Knowledge Graph™
                 </a>,
                 ' ',
-                'provides based on deep contextual correlations between all your cloud assets to keep data security issues under control.'
+                'provides based on deep contextual correlations between all your cloud assets to keep data security issues under control for public cloud, and multi-cloud environments.'
             ],
             featureImage: <EliminateSecurityGaps />
         }
@@ -95,11 +95,12 @@ const Index = () => {
     const dataService = [
         {
             title: 'Data discovery',
-            description1: 'Keep an accurate and up-to-date map of your entire cloud inventory across multiple providers, enabling better communication between your Security team, DevOps, and the Compliance team.'
+            description1:
+                'Keep an accurate and up-to-date map of your entire cloud inventory across multiple providers, enabling better communication between your Security team, DevOps, and the Compliance team.'
         },
         {
             title: 'Real-time contextual analysis',
-            description1: 'Use the Security Knowledge Graph™ to enrich visibility with risk-related information'
+            description1: 'Use the Security Knowledge Graph™ to enrich visualization with risk-related information'
         },
         {
             title: 'API ready for CI/CD flows',
@@ -146,7 +147,6 @@ const Index = () => {
             description1:
                 'You can also use Cyscale for your cloud-native security needs (VMs, network, serverless, databases, apps) for vulnerability and threat detection, cloud inventory, secure cloud extension, and as a compliance and cost-reduction solution.'
         }
-        
     ];
     return (
         <>

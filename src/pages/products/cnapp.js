@@ -6,16 +6,29 @@ import GradientButton from '../../components/buttons/GradientButton';
 import LightDarkButton from '../../components/buttons/LightDarkButton';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { css } from 'twin.macro';
+import styled from '@emotion/styled';
 
+import CSPMIcon from '../../assets/images/cspm-cnapp-icon.svg';
+import CIEMIcon from '../../assets/images/ciem-cnapp-icon.svg';
+import CWPPIcon from '../../assets/images/cwpp-cnapp-icon.svg';
 import DataSecurityIcon from '../../assets/images/data-security-cnapp-icon.svg';
 import ContainerSecurityIcon from '../../assets/images/container-security-cnapp-icon.svg';
 import KubernetesIcon from '../../assets/images/kubernetes-cnapp-icon.svg';
 import ComplianceIcon from '../../assets/images/compliance-cnapp-icon.svg';
-import AutomationIcon from '../../assets/images/automation-cnapp-icon.svg';
 import VisibilityIcon from '../../assets/images/visibility-cnapp-icon.svg';
 import headerImage from '../../assets/images/remote-work-heading-image.png';
 import corner from '../../assets/images/corner-campaigns-iam-security.svg';
 import cloudIcon from '../../assets/images/cloud-icon.svg';
+import RightArrow from '../../components/sharedComponent/RightArrow';
+
+const LearnMoreLink = ({ link }) => {
+    return (
+        <Link to={link} className='lg:mt-4'>
+            <RightArrow fillColor={'#0F26AA'} marginTop={'-0.25rem'} />
+            <span className='text-md ml-2 text-blue inline-block font-bold text-base'>Learn more</span>
+        </Link>
+    );
+};
 
 const titleSection = css`
     font-size: 1.75rem;
@@ -27,6 +40,30 @@ const heroTitleFontSize = css`
         font-size: 1.75rem;
     }
     font-size: 2rem;
+`;
+
+const LearnMoreSection = styled.div`
+    display: block;
+
+    @media (min-width: 1024px) {
+        display: none;
+    }
+`;
+
+const cardBackgroundColor = css`
+    @media (max-width: 1024px) {
+        background-color: #f3f8ff;
+    }
+    background-color: #ffffff;
+
+    &:hover {
+        @media (min-width: 1024px) {
+            background-color: #f3f8ff;
+            ${LearnMoreSection} {
+                display: block;
+            }
+        }
+    }
 `;
 
 const CNAPP = ({ location }) => {
@@ -68,10 +105,9 @@ const CNAPP = ({ location }) => {
                                         Achieve true cloud-native transformation with Cyscale.
                                     </p>
                                     <p className='text-left text-base lg:text-lg mb-2 leading-relaxed'>
-                                        Get maximum cloud native security with our ultimate CNAPP solution. 
-                                        Protect your entire stack, VMs, containers, and serverless, on 
-                                        any cloud environment and confidently accelerate innovation.
-
+                                        Get maximum cloud native security with our ultimate CNAPP solution. Protect your
+                                        entire stack, VMs (virtual machines), containers, and serverless, on any cloud
+                                        environment and confidently accelerate innovation.
                                     </p>
                                     <div className='flex mt-8 justify-start'>
                                         <Link to='/free-trial'>
@@ -88,7 +124,7 @@ const CNAPP = ({ location }) => {
                 </Container>
             </div>
             <Container>
-                <div className='py-8 md:py-12 lg:py-20'>
+                <div className='pt-8 pb-8 md:pt-12 md:pb-12 lg:pt-20 pb-12'>
                     <div className='sm:grid sm:grid-cols-12 sm:gap-12'>
                         <div className='col-span-12 lg:col-span-6'>
                             <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-md'>
@@ -112,80 +148,143 @@ const CNAPP = ({ location }) => {
                 </div>
             </Container>
             <Container>
-                <Row className='mt-16 gap-0 lg:gap-8'>
-                    <div className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0'>
-                        <img src={DataSecurityIcon} alt='' />
-                        <h2 className='font-montserrat text-base font-bold text-blue mt-3'>
-                            CSPM
-                        </h2>
-                        <p className='text-sm mt-4 text-gray'>
-                            Gain continuous visibility and comprehensive Cloud Security Posture Management over multi-cloud environments to identify misconfigurations, ultimately securing your cloud from data breaches and leaks. Scan, monitor, and remediate across AWS, Azure, Google Cloud, Alibaba Cloud to ensure the best security for your cloud infrastructure.
-                        </p>
+                <Row className='mt-12 gap-0 lg:gap-8'>
+                    <div
+                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 h-80 sm:h-64 lg:h-96 flex flex-col justify-between p-4 rounded-md'
+                        css={cardBackgroundColor}
+                    >
+                        <div>
+                            <img src={CSPMIcon} alt='' />
+                            <h2 className='font-montserrat text-base font-bold text-blue mt-3'>CSPM</h2>
+                            <p className='text-sm mt-4 text-gray'>
+                                Gain continuous visibility and comprehensive Cloud Security Posture Management over
+                                multi-cloud environments to identify misconfigurations, ultimately securing your cloud
+                                from data breaches and leaks. Scan, monitor, and remediate across AWS, Azure, Google
+                                Cloud, Alibaba Cloud to ensure the best cybersecurity for your cloud infrastructure.
+                            </p>
+                        </div>
+                        <LearnMoreSection>
+                            <LearnMoreLink link='/products/cloud-security-posture-management/' />
+                        </LearnMoreSection>
                     </div>
-                    <div className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg  lg:mx-0'>
-                        <img src={VisibilityIcon} alt='' />
-                        <h2 className='font-montserrat text-base font-bold text-blue mt-3'>Contextual Analysis</h2>
-                        <p className='text-sm mt-4 text-gray'>
-                            Cloud asset misconfigurations are analyzed in context, automatically correlating issues 
-                            that affect compute, data storage and identity assets, determining their real impact on 
-                            data security and helping you prioritize remediation efforts in the most effective way.
-
-                        </p>
+                    <div
+                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-4 lg:mt-0 h-80 sm:h-64 lg:h-96 flex flex-col justify-between p-4 rounded-md'
+                        css={cardBackgroundColor}
+                    >
+                        <div>
+                            <img src={VisibilityIcon} alt='' />
+                            <h2 className='font-montserrat text-base font-bold text-blue mt-3'>Contextual Analysis</h2>
+                            <p className='text-sm mt-4 text-gray'>
+                                Cloud asset misconfigurations are analyzed in context, automatically correlating issues
+                                that affect compute, data storage and identity assets, determining their real impact on
+                                data security and helping you prioritize remediation efforts in the most effective way.
+                            </p>
+                        </div>
+                        <LearnMoreSection>
+                            <LearnMoreLink link='/products/security-knowledge-graph/' />
+                        </LearnMoreSection>
                     </div>
-                    <div className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg  lg:mx-0 mt-8 lg:mt-0'>
-                        <img src={ComplianceIcon} alt='' height={40} width={40} />
-                        <h2 className='font-montserrat text-base font-bold text-blue mt-3'>Compliance and Governance</h2>
-                        <p className='text-sm mt-4 text-gray'>
-                            Enable your organization to adhere to industry and regulatory standards, such as PCI-DSS, HIPAA, SOC 2 and many others. 
-                            Auditing and reporting capabilities will help with internal and external audits.
-                        </p>
+                    <div
+                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-4 lg:mt-0 h-80 sm:h-64 lg:h-96 flex flex-col justify-between p-4 rounded-md'
+                        css={cardBackgroundColor}
+                    >
+                        <div>
+                            <img src={ComplianceIcon} alt='' height={40} width={40} />
+                            <h2 className='font-montserrat text-base font-bold text-blue mt-3'>
+                                Compliance and Governance
+                            </h2>
+                            <p className='text-sm mt-4 text-gray'>
+                                Enable your organization to adhere to industry and regulatory standards, such as
+                                PCI-DSS, HIPAA, SOC 2 and many others. Auditing and reporting capabilities will help
+                                with internal and external audits.
+                            </p>
+                        </div>
+                        <LearnMoreSection>
+                            <LearnMoreLink link='/use-cases/cloud-compliance-and-auditing/' />
+                        </LearnMoreSection>
                     </div>
-                    <div className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg  lg:mx-0 mt-8 lg:mt-0'>
-                        <img src={ComplianceIcon} alt='' />
-                        <h2 className='font-montserrat text-base font-bold text-blue mt-3'>
-                            Data Security
-                        </h2>
-                        <p className='text-sm mt-4 text-gray'>
-                            Keep track of your organization's security posture with Cyscale's inventory of cloud data stores and their contextual security analysis tools. Using these security tools, you can protect your most important data assets, avoid breaches, and be prepared for audits.
-                        </p>
+                    <div
+                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-4 lg:mt-0 h-80 sm:h-64 lg:h-96 flex flex-col justify-between p-4 rounded-md'
+                        css={cardBackgroundColor}
+                    >
+                        <div>
+                            {' '}
+                            <img src={DataSecurityIcon} alt='' />
+                            <h2 className='font-montserrat text-base font-bold text-blue mt-3'>Data Security</h2>
+                            <p className='text-sm mt-4 text-gray'>
+                                Keep track of your organization's security posture with Cyscale's inventory of cloud
+                                data stores and their contextual security analysis tools. Using these security tools,
+                                you can protect your most important data assets, avoid breaches and be prepared for
+                                audits.
+                            </p>
+                        </div>
+                        <LearnMoreSection>
+                            <LearnMoreLink link='/use-cases/cloud-data-security/' />
+                        </LearnMoreSection>
                     </div>
                 </Row>
-                <Row className='my-16 gap-0 lg:gap-8'>
-                    <div className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg  lg:mx-0'>
-                        <img src={DataSecurityIcon} alt='' />
-                        <h2 className='font-montserrat text-base font-bold text-blue mt-3'>
-                            CIEM
-                        </h2>
-                        <p className='text-sm mt-4 text-gray'>
-                            Easily perform access reviews and keep track of users, access levels, effective permissions, as well as IAM asset misconfigurations. 
-                            Understand identities and permissions even in the most complex multi-cloud environments.
-                        </p>
+                <Row className='mt-8 lg:mt-16 mb-16 gap-0 lg:gap-8'>
+                    <div
+                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 h-80 sm:h-64 lg:h-80  flex flex-col justify-between p-4 rounded-md'
+                        css={cardBackgroundColor}
+                    >
+                        <div>
+                            {' '}
+                            <img src={CIEMIcon} alt='' />
+                            <h2 className='font-montserrat text-base font-bold text-blue mt-3'>CIEM</h2>
+                            <p className='text-sm mt-4 text-gray'>
+                                Easily perform access reviews and keep track of users, access levels, effective
+                                permissions, as well as IAM asset misconfigurations. Understand identities and
+                                permissions even in the most complex multi-cloud environments with Cloud Infrastructure
+                                Entitlement Management.
+                            </p>
+                        </div>
+                        <LearnMoreSection>
+                            <LearnMoreLink link='/use-cases/iam-security/' />
+                        </LearnMoreSection>
                     </div>
-                    <div className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg  lg:mx-0'>
-                        <img src={VisibilityIcon} alt='' />
-                        <h2 className='font-montserrat text-base font-bold text-blue mt-3'>CWPP</h2>
-                        <p className='text-sm mt-4 text-gray'>
-                            A contextual analysis of cloud misconfigurations and vulnerabilities in instances, images, 
-                            containers and functions helps security teams guard your entire application stack on any cloud environment.
-                        </p>
+                    <div
+                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-4 lg:mt-0 h-80 sm:h-64 lg:h-80 flex flex-col justify-between p-4 rounded-md'
+                        css={cardBackgroundColor}
+                    >
+                        <div>
+                            <img src={CWPPIcon} alt='' />
+                            <h2 className='font-montserrat text-base font-bold text-blue mt-3'>CWPP</h2>
+                            <p className='text-sm mt-4 text-gray'>
+                                Cloud Workload Protection Platforms perform a contextual analysis of cloud
+                                misconfigurations and vulnerabilities in instances, images, containers and serverless
+                                functions and help security teams guard your entire application stack on any cloud
+                                environment.
+                            </p>
+                        </div>
                     </div>
-                    <div className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg  lg:mx-0 mt-8 lg:mt-0'>
-                        <img src={ContainerSecurityIcon} alt='' height={40} width={40} />
-                        <h2 className='font-montserrat text-base font-bold text-blue mt-3'>Container Security</h2>
-                        <p className='text-sm mt-4 text-gray'>
-                            Get visibility over container-based applications and corresponding cloud infrastructure. Know where containers are running in the cloud, 
-                            complete with a contextual analysis of vulnerabilities, misconfigurations, networking and access.
-                        </p>
+                    <div
+                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-4 lg:mt-0 h-80 sm:h-64 lg:h-80 flex flex-col justify-between p-4 rounded-md'
+                        css={cardBackgroundColor}
+                    >
+                        <div>
+                            <img src={ContainerSecurityIcon} alt='' height={40} width={40} />
+                            <h2 className='font-montserrat text-base font-bold text-blue mt-3'>Container Security</h2>
+                            <p className='text-sm mt-4 text-gray'>
+                                Get visibility over container-based apps and corresponding cloud infrastructure. Know
+                                where containers are running in the cloud, complete with a contextual analysis of
+                                vulnerabilities, misconfigurations, networking and access.
+                            </p>
+                        </div>
                     </div>
-                    <div className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg  lg:mx-0 mt-8 lg:mt-0'>
-                        <img src={KubernetesIcon} alt='' height={40} width={40} />
-                        <h2 className='font-montserrat text-base font-bold text-blue mt-3'>
-                            Kubernetes Security
-                        </h2>
-                        <p className='text-sm mt-4 text-gray'>
-                            A complete inventory for your Kubernetes clusters, either managed or unmanaged, and continuous scanning 
-                            for vulnerabilities in the cluster components and container images that are used.
-                        </p>
+                    <div
+                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-4 lg:mt-0 h-80 sm:h-64 lg:h-80 flex flex-col justify-between p-4 rounded-md'
+                        css={cardBackgroundColor}
+                    >
+                        <div>
+                            <img src={KubernetesIcon} alt='' height={40} width={40} />
+                            <h2 className='font-montserrat text-base font-bold text-blue mt-3'>Kubernetes Security</h2>
+                            <p className='text-sm mt-4 text-gray'>
+                                A complete inventory for your Kubernetes clusters, either managed or unmanaged, and
+                                continuous scanning for vulnerabilities in the cluster components and container images
+                                that are used.
+                            </p>
+                        </div>
                     </div>
                 </Row>
             </Container>
@@ -218,16 +317,17 @@ const CNAPP = ({ location }) => {
                                 </div>
                                 <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-lg'>
                                     <p className='text-base text-gray pt-12 pb-2'>
-                                        Our CNAPP platform is designed to give you complete visibility and control over
-                                        your cloud environment. By analyzing cloud configuration, workload, and
-                                        identity, it identifies the most critical attack vectors that pose a threat to
-                                        your business, rather than overwhelming you with numerous alerts for
-                                        vulnerabilities, permissions, and exposed services.
+                                        Our CNAPP (Cloud-Native Application Protection Platform) security solution is
+                                        designed to give you complete visibility and control over your cloud
+                                        environment. By analyzing cloud configuration, workload, and identity, it
+                                        identifies the most critical attack vectors that pose a threat to your business,
+                                        rather than overwhelming you with numerous alerts for vulnerabilities,
+                                        permissions, and exposed services.
                                     </p>
                                     <p className='text-base text-gray py-2'>
-                                        With our platform, you can prioritize and address the most significant risks,
-                                        ensuring the security and integrity of your cloud infrastructure and
-                                        applications.
+                                        With our security platform, you can prioritize and address the most significant
+                                        security risks, ensuring application security and the integrity of your cloud
+                                        infrastructure.
                                     </p>
                                 </div>
                             </div>
@@ -270,7 +370,7 @@ const CNAPP = ({ location }) => {
                                 .
                             </p>
                             <p className='max-w-xl text-base mx-auto leading-normal mb-12 block lg:hidden'>
-                                Implement, manage, and monitor security policies and controls for single cloud and 
+                                Implement, manage, and monitor security policies and controls for single cloud and
                                 multi-cloud environments through reliable automation.
                             </p>
                             <p className='leading-normal text-base max-w-xl mx-auto block lg:hidden'>
@@ -328,7 +428,7 @@ const CNAPP = ({ location }) => {
                                         <br />
                                         Protect sensitive data and comply with strict industry regulations in your
                                         organisation. Cyscale automatically runs all critical compliance checks and
-                                        finds data at-risk.
+                                        finds data at-risk across multiple cloud service providers.
                                     </p>
                                 </div>
                                 <div className='col-span-12 lg:col-span-6'>

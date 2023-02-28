@@ -38,9 +38,9 @@ Moreover, these three security principles need to be implemented for all three s
 This mission may seem daunting. Let’s break it down and understand every step of the process of securing data. In this article, you will find out:
 
 * The type of attacks that threaten your data,
-* Best practices for securing data,
-* Solutions on the market from cloud providers,
-* How to identify any gaps in your security implementations.
+* Cloud security best practices,
+* Security solutions on the market from cloud service providers,
+* How to identify any gaps in your security policies.
 
 ## **How do you ensure confidentiality?**
 
@@ -54,7 +54,9 @@ Encryption solutions for the three states of data are: 
 
 * For in motion data: SSL/TLS. They are transport protocols that encrypt data in transit. 
 * For in use data: memory encryption, called Secure Encrypted Virtualization (SEV). It requires specialized hardware, and it encrypts RAM memory. 
-* [For at rest data:](https://cyscale.com/blog/protecting-data-at-rest/) industry-recommended symmetric algorithms such as AES-256 are used to perform full disk, database, file system, and cloud assets encryption. 
+* [For at rest data:](https://cyscale.com/blog/protecting-data-at-rest/) industry-recommended symmetric algorithms such as AES-256 are used to perform full disk, database, file system, and cloud assets encryption and to safely store data. 
+
+Using these best practices, you can improve your cloud security posture and prevent data breaches or other security incidents.
 
 ### **Access control** 
 
@@ -70,11 +72,15 @@ A few access control best practices for [database protection](https://cyscale.co
 
 For [buckets that contain sensitive information](https://cyscale.com/blog/common-cloud-misconfigurations-how-to-avoid-them/#storage-access), do not allow public read/write access and use access control lists to define granular rules.
 
+Besides access control, to ensure robust data protection, strong authentication mechanisms should be put in place. Multi-factor authentication (MFA) is a must-have security measure for cloud computing environments.
+
+By implementing these IAM (Identity and Access Management) best practices, attack surface is reduced and your cloud infrastructure is secured.
+
 ### **Data classification**
 
 Classifying data does not protect it on its own. However, this process can help you understand which is the most sensitive data in order to better focus your efforts to secure it.
 
-AWS, Azure, and GCP provide labels or tags for users to implement [data classification](https://cyscale.com/blog/data-classification/). Labels/tags can be predefined by the public cloud vendor or can be user-defined according to the user’s specific needs.
+AWS (Amazon Web Services), Azure, and GCP provide labels or tags for users to implement [data classification](https://cyscale.com/blog/data-classification/). Labels/tags can be predefined by the public cloud vendor or can be user-defined according to the user’s specific needs.
 
 ## **How do you ensure integrity?**
 
@@ -95,7 +101,7 @@ For data in the public cloud, vendors provide solutions to replicate and backup 
 
 We need to look at **availability zones** to understand availability in the cloud.
 
-Availability zones are groups of data centers in the same region containing replicated data. If a data center fails, the other data center in the availability zone takes the responsibility, providing fault tolerance and increased availability.
+Availability zones are groups of data centers in the same region containing replicated data. If a data center fails, the other data center in the availability zone takes the responsibility, providing fault tolerance and increased availability and preventing data loss.
 
 Moreover, public cloud vendors support region pairs. A region is paired with another region at a great distance (for example, at least 300km away for Azure). If a natural disaster, civil unrest, or any other unforeseen events occur, the secondary region becomes the main source of cloud service.
 
@@ -103,7 +109,7 @@ Another service available in the public cloud that helps ensure availability is 
 
 DDOS (Distributed Denial of Service) is an attack designed to crash an application or a service by sending substantial amounts of traffic to it.
 
-A few examples of available DDOS services are:
+A few examples of available DDOS services to secure cloud infrastructure are:
 
 * AWS Shield,
 * Azure DDOS Protection,
@@ -111,11 +117,11 @@ A few examples of available DDOS services are:
 
 **Implementing our recommendations**
 
-Ensuring [multi-cloud data security](https://cyscale.com/use-cases/cloud-data-security/) is not an easy task. There are many aspects to be considered, and a small mistake can leave a vulnerability in your environment.
+Ensuring [multi-cloud data security](https://cyscale.com/use-cases/cloud-data-security/) is not an easy task. There are many aspects to be considered, and a small mistake can leave a vulnerability in your cloud environment.
 
 Cyscale provides powerful dashboards to ensure visibility of your assets, the identities in your cloud, and an overview of your data security.
 
-Moreover, 400+ controls ensure you have implemented the cybersecurity principles and [best practices](https://cyscale.com/blog/5-cspm-best-practices-and-strategies/). Here are some examples of controls that can be used to ensure data security:
+Moreover, 400+ security controls ensure that your security teams have implemented the cybersecurity principles and [best practices](https://cyscale.com/blog/5-cspm-best-practices-and-strategies/). Here are some examples of controls that can be used to ensure data security:
 
 * **In motion data encryption**: *Ensure web app is using the latest version of TLS encryption* for Microsoft Azure
 * **At rest data encryption**: *Ensure VM disks for critical VMs are encrypted with Customer*-Supplied Encryption Keys (CSEK) for GCP
