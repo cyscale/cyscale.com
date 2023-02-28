@@ -8,38 +8,39 @@ import cloudIcon from '../../assets/images/cloud-icon.svg';
 import corner from '../../assets/images/corner-campaigns-iam-security.svg';
 
 const Page = ({ data }) => {
-    const sections = data.sections.reduce(
-        // eslint-disable-next-line
-        (acc, curr) => ((acc[curr] = true), acc),
-        {}
-    );
-
     return (
         <div>
-            {sections['hero'] && (
-                <Hero
-                    heroBackground={data.hero.heroBackground}
-                    heroImage={data.hero.heroImage.childImageSharp.gatsbyImageData}
-                    heroImageAlt={data.hero.heroImageAlt}
-                    markdown={data.hero.heroMarkdown}
-                />
-            )}
-            {sections['rightSection'] && (
-                <RightSection
-                    subtitle={data.rightSection.rightSectionSubtitle}
-                    image={data.rightSection.rightSectionImage.childImageSharp.gatsbyImageData}
-                    alt={data.rightSection.rightSectionImageAlt}
-                    markdown={data.rightSection.rightMarkdown}
-                />
-            )}
-            {sections['leftSection'] && (
-                <LeftSection
-                    subtitle={data.leftSection.leftSectionSubtitle}
-                    image={data.leftSection.leftSectionImage.childImageSharp.gatsbyImageData}
-                    alt={data.leftSection.leftSectionImageAlt}
-                    markdown={data.leftSection.leftMarkdown}
-                />
-            )}
+            <Hero
+                heroBackground={data.hero.heroBackground}
+                heroImage={data.hero.heroImage.childImageSharp.gatsbyImageData}
+                heroImageAlt={data.hero.heroImageAlt}
+                markdown={data.hero.heroMarkdown}
+            />
+            {data?.sectionsList?.map((section, index) => {
+                if (section.imagePosition === 'left') {
+                    return (
+                        <LeftSection
+                            key={index}
+                            subtitle={section.listSectionSubtitle}
+                            image={section.listSectionImage.childImageSharp.gatsbyImageData}
+                            alt={section.listSectionAlt}
+                            markdown={section.listSectionMarkdown}
+                        />
+                    );
+                }
+                if (section.imagePosition === 'right') {
+                    return (
+                        <RightSection
+                            key={index}
+                            subtitle={section.listSectionSubtitle}
+                            image={section.listSectionImage.childImageSharp.gatsbyImageData}
+                            alt={section.listSectionAlt}
+                            markdown={section.listSectionMarkdown}
+                        />
+                    );
+                }
+                return null;
+            })}
             <div className='bg-gradient-to-b from-selago to-white relative z-10' id='confidence'>
                 <img src={corner} width={300} className='hidden md:block absolute top-0 right-0 m-0 z-20' alt='' />
                 <Container>

@@ -284,7 +284,6 @@ exports.createPages = async ({ graphql, actions }) => {
                             title
                             description
                             categoryPath
-                            sections
                             hero {
                                 heroBackground
                                 heroImage {
@@ -296,26 +295,17 @@ exports.createPages = async ({ graphql, actions }) => {
                                 heroImageAlt
                                 heroMarkdown
                             }
-                            rightSection {
-                                rightSectionImage {
+                            sectionsList {
+                                imagePosition
+                                listSectionImage {
                                     publicURL
                                     childImageSharp {
                                         gatsbyImageData(width: 1920, layout: CONSTRAINED)
                                     }
                                 }
-                                rightSectionImageAlt
-                                rightSectionSubtitle
-                                rightMarkdown
-                            }
-                            leftSection {
-                                leftSectionImage {
-                                    publicURL
-                                    childImageSharp {
-                                        gatsbyImageData(width: 1920, layout: CONSTRAINED)
-                                    }
-                                }
-                                leftSectionImageAlt
-                                leftMarkdown
+                                listSectionAlt
+                                listSectionSubtitle
+                                listSectionMarkdown
                             }
                         }
                     }
@@ -362,10 +352,8 @@ exports.createSchemaCustomization = ({ actions }) => {
         title: String
         description: String
         categoryPath: String
-        sections: [String]
         hero: Hero
-        rightSection: RightSection
-        leftSection: LeftSection
+        sectionsList: [SectionsList]
         authors: String
         categories: [String]
         title: String
@@ -384,18 +372,12 @@ exports.createSchemaCustomization = ({ actions }) => {
         heroMarkdown: String
     }
     
-    type RightSection {
-        rightSectionImage: File @fileByRelativePath
-        rightSectionImageAlt: String
-        rightSectionSubtitle: String
-        rightMarkdown: String
-    }
-    
-    type LeftSection {
-        leftSectionSubtitle: String
-        leftSectionImage: File @fileByRelativePath
-        leftSectionImageAlt: String
-        leftMarkdown: String
+     type SectionsList {
+        imagePosition: String
+        listSectionImage: File @fileByRelativePath
+        listSectionAlt: String
+        listSectionSubtitle: String
+        listSectionMarkdown: String
     }
   `);
 };

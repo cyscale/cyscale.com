@@ -101,44 +101,45 @@ CMS.registerEditorComponent({
 });
 
 const PagesPreview = ({ entry }) => {
-    const sections = entry
-        .getIn(['data', 'sections'])
-        ?.toJS()
-        .reduce(
-            // eslint-disable-next-line
-            (acc, curr) => ((acc[curr] = true), acc),
-            {}
-        );
-
     return (
         <CSSInjector>
-            {sections['hero'] && (
-                <Hero
-                    heroBackground={entry.getIn(['data', 'hero'])?.toJS()?.heroBackground}
-                    heroImage={entry.getIn(['data', 'hero'])?.toJS()?.heroImage}
-                    heroImageAlt={entry.getIn(['data', 'hero'])?.toJS()?.heroImageAlt}
-                    markdown={entry.getIn(['data', 'hero'])?.toJS()?.heroMarkdown}
-                    preview={true}
-                />
-            )}
-            {sections['rightSection'] && (
-                <RightSection
-                    subtitle={entry.getIn(['data', 'rightSection'])?.toJS()?.rightSectionSubtitle}
-                    image={entry.getIn(['data', 'rightSection'])?.toJS()?.rightSectionImage}
-                    alt={entry.getIn(['data', 'rightSection'])?.toJS()?.rightSectionImageAlt}
-                    markdown={entry.getIn(['data', 'rightSection'])?.toJS()?.rightMarkdown}
-                    preview={true}
-                />
-            )}
-            {sections['leftSection'] && (
-                <LeftSection
-                    image={entry.getIn(['data', 'leftSection'])?.toJS()?.leftSectionImage}
-                    alt={entry.getIn(['data', 'leftSection'])?.toJS()?.leftSectionImageAlt}
-                    subtitle={entry.getIn(['data', 'leftSection'])?.toJS()?.leftSectionSubtitle}
-                    markdown={entry.getIn(['data', 'leftSection'])?.toJS()?.leftMarkdown}
-                    preview={true}
-                ></LeftSection>
-            )}
+            <Hero
+                heroBackground={entry.getIn(['data', 'hero'])?.toJS()?.heroBackground}
+                heroImage={entry.getIn(['data', 'hero'])?.toJS()?.heroImage}
+                heroImageAlt={entry.getIn(['data', 'hero'])?.toJS()?.heroImageAlt}
+                markdown={entry.getIn(['data', 'hero'])?.toJS()?.heroMarkdown}
+                preview={true}
+            />
+            {entry
+                .getIn(['data', 'sectionsList'])
+                ?.toJS()
+                .map((section, index) => {
+                    if (section.imagePosition === 'left') {
+                        return (
+                            <LeftSection
+                                key={index}
+                                subtitle={section.listSectionSubtitle}
+                                image={section.listSectionImage}
+                                alt={section.listSectionAlt}
+                                markdown={section.listSectionMarkdown}
+                                preview={true}
+                            />
+                        );
+                    }
+                    if (section.imagePosition === 'right') {
+                        return (
+                            <RightSection
+                                key={index}
+                                subtitle={section.listSectionSubtitle}
+                                image={section.listSectionImage}
+                                alt={section.listSectionAlt}
+                                markdown={section.listSectionMarkdown}
+                                preview={true}
+                            />
+                        );
+                    }
+                    return null;
+                })}
         </CSSInjector>
     );
 };
