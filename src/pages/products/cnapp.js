@@ -124,7 +124,7 @@ const CNAPP = ({ location }) => {
                 </Container>
             </div>
             <Container>
-                <div className='py-8 md:py-12 lg:py-20'>
+                <div className='pt-8 pb-8 md:pt-12 md:pb-12 lg:pt-20 pb-12'>
                     <div className='sm:grid sm:grid-cols-12 sm:gap-12'>
                         <div className='col-span-12 lg:col-span-6'>
                             <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-md'>
@@ -148,7 +148,7 @@ const CNAPP = ({ location }) => {
                 </div>
             </Container>
             <Container>
-                <Row className='mt-16 gap-0 lg:gap-8'>
+                <Row className='mt-12 gap-0 lg:gap-8'>
                     <div
                         className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 h-80 sm:h-64 lg:h-96 flex flex-col justify-between p-4 rounded-md'
                         css={cardBackgroundColor}

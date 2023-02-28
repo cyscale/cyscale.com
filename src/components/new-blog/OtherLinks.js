@@ -36,7 +36,7 @@ const OtherLinks = ({ dataBlueBird }) => {
                             font-size: 2rem;
                         `}
                     >
-                        News, Product, Engineering, CNAPP
+                        Cloud-Native Security
                     </h2>
                     <div className='flex flex-col'>
                         {topArticles.map(({ text, link }) => (
