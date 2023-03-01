@@ -70,8 +70,8 @@ const CSPMLinks = ({ dataBlueBird }) => {
                     </h2>
                     <div className='flex flex-col'>
                         {' '}
-                        {topArticles.map(({ text, link }) => (
-                            <ArticleLink text={text} link={link} />
+                        {topArticles.map(({ text, link }, index) => (
+                            <ArticleLink text={text} link={link} key={index} />
                         ))}
                         <Link
                             to='/blog/cspm-visibility-compliance-security/'
@@ -101,8 +101,8 @@ const CSPMLinks = ({ dataBlueBird }) => {
                                 Ensure security and compliance with our all-in-one solution for multi-cloud
                                 environments.
                             </p>
-                            {cspmPages.map(({ text, link }) => (
-                                <PageLink text={text} link={link} />
+                            {cspmPages.map(({ text, link }, index) => (
+                                <PageLink text={text} link={link} key={index} />
                             ))}
                         </div>
 
