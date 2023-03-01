@@ -39,8 +39,8 @@ const OtherLinks = ({ dataBlueBird }) => {
                         Cloud-Native Security
                     </h2>
                     <div className='flex flex-col'>
-                        {topArticles.map(({ text, link }) => (
-                            <ArticleLink text={text} link={link} />
+                        {topArticles.map(({ text, link }, index) => (
+                            <ArticleLink text={text} link={link} key={index} />
                         ))}
                         <Link
                             to='/blog/iam-services-in-aws-azure-gcp/'
@@ -74,7 +74,7 @@ const OtherLinks = ({ dataBlueBird }) => {
                 </div>
                 <div className='col-span-12 lg:col-span-8 sm:max-w-lg md:max-w-lg lg:max-w-4xl mx-auto lg:mx-0'>
                     <div
-                        className='mt-6 lg:mt-4 rounded-xl py-6 relative flex'
+                        className='mt-6 lg:mt-0 rounded-xl py-6 relative flex'
                         style={{
                             backgroundImage: 'linear-gradient(to bottom, #4a85eb, #326fe3, #1b58d8, #073fcc, #0623be)'
                         }}
@@ -92,8 +92,9 @@ const OtherLinks = ({ dataBlueBird }) => {
                                 Ensure security and compliance with our all-in-one solution for multi-cloud
                                 environments.
                             </p>
-                            {cspmPages.map(({ text, link }) => (
-                                <PageLink text={text} link={link} />
+                            <PageLink text='CNAPP Security' link='/products/cnapp/' />
+                            {cspmPages.map(({ text, link }, index) => (
+                                <PageLink text={text} link={link} key={index} />
                             ))}
                         </div>
 

@@ -97,8 +97,8 @@ const ComplianceLinks = ({ dataCompliceToolbox }) => {
                             Cloud Security and Compliance: A <br className='hidden lg:block' /> Guide for Your Cloud
                             Infrastructure
                         </Link>{' '}
-                        {topArticles.map(({ text, link }) => (
-                            <ArticleLink text={text} link={link} />
+                        {topArticles.map(({ text, link }, index) => (
+                            <ArticleLink text={text} link={link} key={index} />
                         ))}
                     </div>
                 </div>
@@ -121,8 +121,8 @@ const ComplianceLinks = ({ dataCompliceToolbox }) => {
                             <p className='text-base text-white'>
                                 Check out our compliance platform for cloud-native and cloud-first organizations:
                             </p>
-                            {compliancePages.map(({ text, link }) => (
-                                <PageLink text={text} link={link} />
+                            {compliancePages.map(({ text, link }, index) => (
+                                <PageLink text={text} link={link} key={index} />
                             ))}
                         </div>
                         <div

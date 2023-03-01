@@ -6,7 +6,6 @@ const BlogDetail = ({ pageContext, location }) => {
     const { alldata, suggestions, whitepaperCover, blueBird, compliceToolbox } = pageContext;
     const { frontmatter: data, rawMarkdownBody } = alldata;
     console.log(data);
-    console.log(blueBird);
     return (
         <div className='bg-blog-post pt-28'>
             <Layout
