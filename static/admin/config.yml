@@ -144,7 +144,6 @@ collections:
                   name: 'imagePosition',
                   widget: 'select',
                   options: [ 'left', 'right' ],
-                  default: [ 'left' ],
                   multiple: false
                 }
               - { label: 'List Section Image', name: 'listSectionImage', widget: image, required: false }
