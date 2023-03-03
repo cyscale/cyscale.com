@@ -151,7 +151,7 @@ Cyscale provides a dedicated page for standards and compliance laws, that can be
 
 In the image below, you can see that, for the standard, there have been 268 controls checked, which are available across four cloud vendors (Microsoft Azure, AWS, GCP Cloud, Alibaba Cloud). 
 
-<img src="/img/33_blog-mas-standard.png" alt="MAS TRM in the Cyscale platform" title="MAS TRM in the Cyscale platform" class=" blog-image-shadow " style="width:autorem;height:autorem;"/>
+<img src="/img/33_blog-mas-standard.png" alt="MAS TRM in the Cyscale platform" title="MAS TRM in the Cyscale platform" class=" blog-image-shadow " style="width:auto;height:autorem;"/>
 
 Let’s look at examples of controls for some of the key components we've described in this article to see how Cyscale checks cloud configurations and helps you understand which requirements you’re fulfilling and which not. 
 
