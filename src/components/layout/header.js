@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import HeaderContext from './HeaderContext';
 import ScrollButton from '../ScrollButton/ScrollButton';
 import remoteWorkBannerImage from '../../assets/images/remote-work-banner-image.png';
-import complianceBannerImage from '../../assets/images/compliance-banner-image2.png';
 import {
     ISO27001Small,
     AicpaSoc2Small,
@@ -13,12 +12,13 @@ import {
     NistSmall
 } from '../Home/images';
 import NewTopNav from './NewTopNav';
-import { Link } from 'gatsby';
+import { graphql, Link, useStaticQuery } from 'gatsby';
 import classNames from 'classnames';
 import GradientButton from '../buttons/GradientButton';
 import LightDarkButton from '../buttons/LightDarkButton';
 import { css } from 'twin.macro';
 import { requestDemoButtonPage } from '../../common/utils';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 const complianceAuditingRequestDemoButton = css`
     @media (min-width: 641px) and (max-width: 1024px) {
@@ -61,6 +61,16 @@ const Header = ({
     }
     ${pageName === 'HomePage' ? 'heroBgHome' : ''}`;
     const rootStyle = heroBG ? { backgroundImage: `url(${heroBG})` } : null;
+
+    const data = useStaticQuery(graphql`
+        query ComplianceBanner {
+            image: file(relativePath: { eq: "compliance-banner-image2.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 1080, layout: CONSTRAINED)
+                }
+            }
+        }
+    `);
 
     return (
         <HeaderContext.Provider value={{ sticker, setSticker }}>
@@ -136,6 +146,23 @@ const Header = ({
                                                     agentless CSPM solution that uses our Security Knowledge Graph™ to
                                                     ensure scalable, consistent protection and governance.
                                                 </span>
+                                            ) : pageName === 'ComplianceAuditing' ? (
+                                                <span>
+                                                    Compliance toolbox for cloud-native and cloud-first organizations.
+                                                    <br />
+                                                    <br />
+                                                    The Cyscale Cloud Platform gives you full visibility across cloud
+                                                    and data repos,{' '}
+                                                    <br
+                                                        css={css`
+                                                            display: none;
+                                                            @media (min-width: 1302px) {
+                                                                display: block;
+                                                            }
+                                                        `}
+                                                    />
+                                                    from app-level to your overall compliance posture.{' '}
+                                                </span>
                                             ) : (
                                                 bannerDescription
                                             )}
@@ -201,20 +228,11 @@ const Header = ({
 
                                 {pageName === 'ComplianceAuditing' && (
                                     <div className={`lg:pt-14`}>
-                                        <img
-                                            src={complianceBannerImage}
+                                        <GatsbyImage
+                                            image={data.image.childImageSharp.gatsbyImageData}
                                             alt='Cloud security and visibility for remote work setups'
-                                            className='lg:mx-auto w-36 lg:w-auto h-auto hidden lg:block'
+                                            className='lg:mx-auto max-w-md xl:max-w-2xl  h-auto hidden lg:block'
                                         />
-                                        <div className='hidden lg:flex flex-row items-center justify-between mt-28 flex-wrap space-y-4 lg:space-y-0 lg:space-x-2'>
-                                            <ISO27001Small />
-                                            <AicpaSoc2Small />
-                                            <CisBenchmarksSmall />
-                                            <EuEuropeanGdprSmall />
-                                            <USHipaaSmall />
-                                            <PciDssSmall />
-                                            <NistSmall />
-                                        </div>
                                     </div>
                                 )}
                                 {pageName === 'RemoteWork' && (

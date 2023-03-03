@@ -1,5 +1,6 @@
 import React from 'react';
 import headerImage from '../../assets/images/remote-work-heading-image.png';
+import classNames from 'classnames';
 
 const Sectionheader = ({ headingText, description, subText, pageName, section }) => {
     return (
@@ -19,8 +20,8 @@ const Sectionheader = ({ headingText, description, subText, pageName, section })
                             pageName === 'dataSecurity'
                                 ? 'lg:max-w-md'
                                 : pageName === 'cloudCompliance'
-                                    ? null
-                                    : 'lg:max-w-sm'
+                                ? null
+                                : 'lg:max-w-sm'
                         } ${
                             !!section && section === 'complianceAutoUpdates' ? 'lg:pr-32' : null
                         } font-montserrat sectionTitle new-line`}
@@ -41,13 +42,20 @@ const Sectionheader = ({ headingText, description, subText, pageName, section })
                         pageName === 'CSPMPage' || pageName === 'cloudCompliance'
                             ? 'hidden'
                             : pageName === 'aboutUs' || pageName === 'dataSecurity'
-                                ? 'hidden'
-                                : 'hidden lg:block'
+                            ? 'hidden'
+                            : 'hidden lg:block'
                     }`}
                 ></div>
                 {!!description && (
                     <div className={`${!!pageName && pageName === 'CSPMPage' ? 'lg:col-span-2' : ''}`}>
-                        <p className='text-block text-16px leading-normal new-line mt-8'>{description}</p>
+                        <p
+                            className={classNames({
+                                'text-block text-16px leading-normal new-line mt-8': true,
+                                'pb-6 sm:pb-0': section === 'complianceGovern'
+                            })}
+                        >
+                            {description}
+                        </p>
                         {headingText === 'Reveal & curb hidden costs' && (
                             <ul className='text-16px list-disc ml-30px'>
                                 <li className='mt-30px'>

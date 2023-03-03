@@ -6,10 +6,21 @@ import GetStarted from '../Home/getstarted';
 import ComplianceCode from './complianceCode';
 import MaintainThirdPartyData from './maintainThirdPartyData';
 import CheckSquareIcon from '../../assets/images/check-square.svg';
-import AchieveClarityConsistencyImage from '../../assets/images/Achieve-clarity-consistency-image.svg';
 import getStartedICon from '../../assets/images/getStartedICon.svg';
+import { graphql, useStaticQuery } from 'gatsby';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 export default function CloudComplianceContent() {
+    const data = useStaticQuery(graphql`
+        query CloudCompliance {
+            consistency: file(relativePath: { eq: "Achieve-clarity-consistency-image.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 1080, layout: CONSTRAINED)
+                }
+            }
+        }
+    `);
+
     const dataServices = [
         {
             icon: CheckSquareIcon,
@@ -37,7 +48,7 @@ export default function CloudComplianceContent() {
                 />
             </div>
             <div className='complianceGetStartedGreyBg pt-12 lg:pt-28 pb-12 lg:pb-28'>
-                <div className='max-w-1366px m-auto pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px'>
+                <div className='max-w-1366px m-auto pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px pb-20 sm:pb-0'>
                     <Sectionheader
                         headingText={[
                             'Achieve clarity & consistency',
@@ -59,11 +70,10 @@ export default function CloudComplianceContent() {
                         pageName='cloudCompliance'
                     />
                 </div>
-                <div className='max-w-1366px mt-16 m-auto pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px'>
-                    <img
-                        src={AchieveClarityConsistencyImage}
+                <div className='max-w-1366px mt-16 m-auto pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px flex justify-center'>
+                    <GatsbyImage
+                        image={data.consistency.childImageSharp.gatsbyImageData}
                         alt='Achieve clarity & consistency'
-                        className='mx-auto w-auto h-auto'
                     />
                 </div>
             </div>
