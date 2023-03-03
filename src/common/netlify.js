@@ -34,8 +34,8 @@ CMS.registerEditorComponent({
     toBlock: function ({ image, alt, title, classes, width, height }, getAsset, fields) {
         return `<img src="${image || ''}" alt="${alt || ''}" title="${title || ''}" class="${
             classes || ''
-        }" style="width:${width / 16 || 'auto'}${width ? 'rem' : ''};height:${height / 16 || 'auto'}${
-            height ? 'rem' : ''
+        }" style="width:${width / 16 || 'auto'}${width >= 1 ? 'rem' : ''};height:${height / 16 || 'auto'}${
+            height >= 1 ? 'rem' : ''
         };"/>`;
     },
     toPreview: ({ image, alt, title, classes, width, height }, getAsset, fields) => {
