@@ -74,7 +74,7 @@ To solve this problem, automatic security controls are used to check for misconf
 
 For example, you can see a control from the Cyscale platform in the image below. 
 
-<img src="/img/34_blog-1-control.png" alt="Control in the Cyscale platform" title="Control in the Cyscale platform" class=" blog-image-shadow " style="width:autorem;height:autorem;"/>
+<img src="/img/34_blog-1-control.png" alt="Control in the Cyscale platform" title="Control in the Cyscale platform" class=" blog-image-shadow " style="width:auto;height:autorem;"/>
 
 In Cyscale, you can find a collection of over 300 controls that check services across multiple cloud vendors and provide remediation steps for findings. 
 
