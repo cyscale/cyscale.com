@@ -74,7 +74,7 @@ To solve this problem, automatic security controls are used to check for misconf
 
 For example, you can see a control from the Cyscale platform in the image below. 
 
-<img src="/img/34_blog-1-control.png" alt="Control in the Cyscale platform" title="Control in the Cyscale platform" class=" blog-image-shadow " style="width:autorem;height:autorem;"/>
+<img src="/img/34_blog-1-control.png" alt="Control in the Cyscale platform" title="Control in the Cyscale platform" class=" blog-image-shadow " style="width:auto;height:auto;"/>
 
 In Cyscale, you can find a collection of over 300 controls that check services across multiple cloud vendors and provide remediation steps for findings. 
 
@@ -86,7 +86,7 @@ However, alert fatigue is a real problem that security teams deal with; receivin
 
 For example, in the image below, you can see an alert that has been triggered. Alerts can be Open or Resolved, to indicate if the issue that generated the alert has been fixed. 
 
-<img src="/img/34_blog-2-alert.png" alt="Alert in the Cyscale platform" title="Alert in the Cyscale platform" class=" blog-image-shadow " style="width:autorem;height:autorem;"/>
+<img src="/img/34_blog-2-alert.png" alt="Alert in the Cyscale platform" title="Alert in the Cyscale platform" class=" blog-image-shadow " style="width:auto;height:auto;"/>
 
 ### 3. Data security 
 
@@ -123,7 +123,7 @@ To become compliant, companies use CNAPP tools to prepare for audits. Some of th
 
 Cyscale supports all of them and more. You can view all supported standards on the Standards page, enable or disable frameworks, track progress with your compliance process, and view the cloud-focused requirements and associated controls for each of the standards.  
 
-<img src="/img/34_blog-3-compliance.png" alt="Compliance standards in the Cyscale platform" title="Compliance standards in the Cyscale platform" class=" blog-image-shadow " style="width:autorem;height:autorem;"/>
+<img src="/img/34_blog-3-compliance.png" alt="Compliance standards in the Cyscale platform" title="Compliance standards in the Cyscale platform" class=" blog-image-shadow " style="width:0.0625rem;height:auto;"/>
 
 ### 5. Container image scanning  
 
@@ -176,7 +176,7 @@ You can read more about securing IAM in the cloud [here](https://cyscale.com/blo
 
 To ensure a deep understanding of user permissions and their impact, Cyscale provides an [Identity Dashboard](https://cyscale.com/blog/check-for-least-privilege/). 
 
-<img src="/img/34_blog-4-iam.png" alt="The Identity Dashboard in the Cyscale platform" title="The Identity Dashboard in the Cyscale platform" class=" blog-image-shadow " style="width:autorem;height:autorem;"/>
+<img src="/img/34_blog-4-iam.png" alt="The Identity Dashboard in the Cyscale platform" title="The Identity Dashboard in the Cyscale platform" class=" blog-image-shadow " style="width:auto;height:auto;"/>
 
 ## Conclusion 
 
