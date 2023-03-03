@@ -132,6 +132,6 @@ Choosing which framework is suitable for you and becoming compliant is not an ea
 
 Cyscale can help you ease the process of becoming NIST compliant. Using our Standards page, you can track your progress and speed up the process in terms of your cloud-specific needs. 
 
-<img src="/img/32_blog-standards.png" alt="The NIST Standard in Cyscale" title="The NIST Standard in Cyscale" class="" style="width:auto;height:auto;"/>
+<img src="/img/32_blog-standards.png" alt="The NIST Standard in Cyscale" title="The NIST Standard in Cyscale" class=" blog-image-shadow " style="width:auto;height:autorem;"/>
 
 <!--EndFragment-->
