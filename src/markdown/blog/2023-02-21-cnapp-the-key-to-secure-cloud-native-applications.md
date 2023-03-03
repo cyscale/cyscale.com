@@ -123,7 +123,7 @@ To become compliant, companies use CNAPP tools to prepare for audits. Some of th
 
 Cyscale supports all of them and more. You can view all supported standards on the Standards page, enable or disable frameworks, track progress with your compliance process, and view the cloud-focused requirements and associated controls for each of the standards.  
 
-<img src="/img/34_blog-3-compliance.png" alt="Compliance standards in the Cyscale platform" title="Compliance standards in the Cyscale platform" class=" blog-image-shadow " style="width:auto;height:auto;"/>
+<img src="/img/34_blog-3-compliance.png" alt="Compliance standards in the Cyscale platform" title="Compliance standards in the Cyscale platform" class=" blog-image-shadow " style="width:0.0625rem;height:auto;"/>
 
 ### 5. Container image scanning  
 
@@ -180,7 +180,7 @@ To ensure a deep understanding of user permissions and their impact, Cyscale pro
 
 ## Conclusion 
 
-In conclusion, CNAPP (Cloud-Native Application Protection Platform) solutions are a critical security component for cloud-native applications. Due to their dynamic nature, their high scalability, and different architecture, traditional security measures may not be sufficient. 
+In conclusion, [CNAPP (Cloud-Native Application Protection Platform) solutions](https://cyscale.com/products/cnapp/) are a critical security component for cloud-native applications. Due to their dynamic nature, their high scalability, and different architecture, traditional security measures may not be sufficient. 
 
 CNAPP solutions offer: 
 

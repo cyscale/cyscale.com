@@ -1,7 +1,18 @@
 import React from 'react';
-import SecurityControlsandPolicies_image from '../../assets/images/Security-Controls-and-Policies.png';
+import { graphql, useStaticQuery } from 'gatsby';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 export default function SecurityControlsandPolicies() {
+    const data = useStaticQuery(graphql`
+        query SecurityControlsandPoliciesQuery {
+            security: file(relativePath: { eq: "Security-Controls-and-Policies.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 1080, layout: CONSTRAINED)
+                }
+            }
+        }
+    `);
+
     return (
         <div className='max-w-1366px m-auto py-12 lg:py-16 pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px'>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12'>
@@ -22,10 +33,10 @@ export default function SecurityControlsandPolicies() {
                     </ul>
                 </div>
                 <div>
-                    <img
-                        src={SecurityControlsandPolicies_image}
+                    <GatsbyImage
+                        image={data.security.childImageSharp.gatsbyImageData}
+                        alt='Minimize overlap between cloud compliance and security'
                         className='w-full max-w-full'
-                        alt='Minimize overlap between cloud compliance and security '
                     />
                     <p className='text-lg leading-normal text-black mt-7'>
                         Pool your expertise and take advantage of the full control and transparency Cyscale gives you
