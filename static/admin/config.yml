@@ -134,8 +134,8 @@ collections:
               - { label: 'Hero Image', name: 'heroImage', widget: image }
               - { label: 'Hero Image Alt', name: 'heroImageAlt', widget: 'string' }
               - { label: 'Hero Markdown', name: 'heroMarkdown', widget: 'markdown' }
-          - label: 'Sections List'
-            name: 'sectionsList'
+          - label: 'Section List'
+            name: 'sectionList'
             widget: 'list'
             allow_add: true
             fields:

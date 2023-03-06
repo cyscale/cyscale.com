@@ -295,7 +295,7 @@ exports.createPages = async ({ graphql, actions }) => {
                                 heroImageAlt
                                 heroMarkdown
                             }
-                            sectionsList {
+                            sectionList {
                                 imagePosition
                                 listSectionImage {
                                     publicURL
@@ -353,7 +353,7 @@ exports.createSchemaCustomization = ({ actions }) => {
         description: String
         categoryPath: String
         hero: Hero
-        sectionsList: [SectionsList]
+        sectionList: [SectionList]
         authors: String
         categories: [String]
         title: String
@@ -372,7 +372,7 @@ exports.createSchemaCustomization = ({ actions }) => {
         heroMarkdown: String
     }
     
-     type SectionsList {
+     type SectionList {
         imagePosition: String
         listSectionImage: File @fileByRelativePath
         listSectionAlt: String

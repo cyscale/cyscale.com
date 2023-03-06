@@ -16,7 +16,7 @@ const Page = ({ data }) => {
                 heroImageAlt={data.hero.heroImageAlt}
                 markdown={data.hero.heroMarkdown}
             />
-            {data?.sectionsList?.map((section, index) => {
+            {data?.sectionList?.map((section, index) => {
                 if (section.imagePosition === 'left') {
                     return (
                         <LeftSection
