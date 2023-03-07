@@ -30,6 +30,7 @@ const Page = ({ data }) => {
                                     image={section.listSectionImage.childImageSharp.gatsbyImageData}
                                     alt={section.listSectionAlt}
                                     markdown={section.listSectionMarkdown}
+                                    backgroundColor={section.listSectionBackground}
                                 />
                             );
                         }
@@ -41,6 +42,7 @@ const Page = ({ data }) => {
                                     image={section.listSectionImage.childImageSharp.gatsbyImageData}
                                     alt={section.listSectionAlt}
                                     markdown={section.listSectionMarkdown}
+                                    backgroundColor={section.listSectionBackground}
                                 />
                             );
                         }

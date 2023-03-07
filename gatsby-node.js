@@ -307,6 +307,7 @@ exports.createPages = async ({ graphql, actions }) => {
                                 listSectionAlt
                                 listSectionSubtitle
                                 listSectionMarkdown
+                                listSectionBackground
                             }
                             cta {
                                 ctaMarkdown
@@ -318,7 +319,7 @@ exports.createPages = async ({ graphql, actions }) => {
         }
     `).then((result) => {
         if (result.errors) {
-            reporter.panicOnBuild(`There was an error loading your blog posts`, result.errors);
+            reporter.panicOnBuild(`There was an error loading your pages`, result.errors);
             return;
         }
 
@@ -384,6 +385,7 @@ exports.createSchemaCustomization = ({ actions }) => {
         listSectionAlt: String
         listSectionSubtitle: String
         listSectionMarkdown: String
+        listSectionBackground: String
     }
     
     type CTA {

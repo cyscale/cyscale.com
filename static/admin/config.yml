@@ -158,6 +158,13 @@ collections:
               - { label: 'List Section Alt', name: 'listSectionAlt', widget: 'string', required: false }
               - { label: 'List Section Subtitle', name: 'listSectionSubtitle', widget: 'markdown', required: false, hint: 'For subtitle use just H2 Subtitle and nothing more ' }
               - { label: 'List Section Markdown', name: 'listSectionMarkdown', widget: 'markdown', required: false }
+              - {
+                label: 'List Section Background',
+                name: 'listSectionBackground',
+                widget: 'select',
+                options: [ 'white', '#F3F8FF' ],
+                multiple: false
+              }
           - label: 'CTA'
             name: 'cta'
             widget: 'object'

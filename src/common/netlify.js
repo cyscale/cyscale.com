@@ -133,6 +133,7 @@ const PagesPreview = ({ entry }) => {
                                             image={section.listSectionImage}
                                             alt={section.listSectionAlt}
                                             markdown={section.listSectionMarkdown}
+                                            backgroundColor={section.listSectionBackground}
                                             preview={true}
                                         />
                                     );
@@ -145,6 +146,7 @@ const PagesPreview = ({ entry }) => {
                                             image={section.listSectionImage}
                                             alt={section.listSectionAlt}
                                             markdown={section.listSectionMarkdown}
+                                            backgroundColor={section.listSectionBackground}
                                             preview={true}
                                         />
                                     );
