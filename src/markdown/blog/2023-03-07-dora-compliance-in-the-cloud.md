@@ -5,8 +5,8 @@ seoTitle: DORA Compliance in the Cloud
 authors: Sabrina Lupșan
 permalink: dora-compliance-in-the-cloud
 categories:
-  - News
   - Compliance
+  - News
 date: 2023-03-07T10:12:38.643Z
 description: >-
   DORA (Digital Operational Resilience Act) is a compliance standard destined
