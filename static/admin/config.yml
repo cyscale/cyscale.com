@@ -126,6 +126,14 @@ collections:
             widget: 'select',
             options: [ 'use-cases', 'products' ],
           }
+          - {
+            label: 'Sections',
+            name: 'sections',
+            widget: 'select',
+            options: [ 'hero', 'sectionList', 'cloudComplianceSection', 'cta' ],
+            default: [ 'hero' ],
+            multiple: true
+          }
           - label: "Hero"
             name: "hero"
             widget: "object"
@@ -150,3 +158,8 @@ collections:
               - { label: 'List Section Alt', name: 'listSectionAlt', widget: 'string', required: false }
               - { label: 'List Section Subtitle', name: 'listSectionSubtitle', widget: 'markdown', required: false, hint: 'For subtitle use just H2 Subtitle and nothing more ' }
               - { label: 'List Section Markdown', name: 'listSectionMarkdown', widget: 'markdown', required: false }
+          - label: 'CTA'
+            name: 'cta'
+            widget: 'object'
+            fields:
+                - { label: 'CTA Markdown', name: 'ctaMarkdown', widget: 'markdown', required: false, hint: 'Use H1 CTA and nothing more' }

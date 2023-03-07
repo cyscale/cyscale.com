@@ -284,6 +284,7 @@ exports.createPages = async ({ graphql, actions }) => {
                             title
                             description
                             categoryPath
+                            sections
                             hero {
                                 heroBackground
                                 heroImage {
@@ -306,6 +307,9 @@ exports.createPages = async ({ graphql, actions }) => {
                                 listSectionAlt
                                 listSectionSubtitle
                                 listSectionMarkdown
+                            }
+                            cta {
+                                ctaMarkdown
                             }
                         }
                     }
@@ -352,8 +356,10 @@ exports.createSchemaCustomization = ({ actions }) => {
         title: String
         description: String
         categoryPath: String
+        sections: [String]
         hero: Hero
         sectionList: [SectionList]
+        cta: CTA
         authors: String
         categories: [String]
         title: String
@@ -378,6 +384,10 @@ exports.createSchemaCustomization = ({ actions }) => {
         listSectionAlt: String
         listSectionSubtitle: String
         listSectionMarkdown: String
+    }
+    
+    type CTA {
+        ctaMarkdown: String
     }
   `);
 };

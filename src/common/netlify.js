@@ -6,6 +6,8 @@ import CSSInjector from './CSSInjector';
 import Hero from '../components/pages/Hero';
 import RightSection from '../components/pages/RightSection';
 import LeftSection from '../components/pages/LeftSection';
+import CloudComplianceSection from '../components/pages/CloudComplianceSection';
+import Cta from '../components/pages/Cta';
 
 const BlogPreview = ({ entry }) => (
     <PostContent
@@ -103,40 +105,58 @@ CMS.registerEditorComponent({
 const PagesPreview = ({ entry }) => {
     return (
         <CSSInjector>
-            <Hero
-                heroBackground={entry.getIn(['data', 'hero'])?.toJS()?.heroBackground}
-                heroImage={entry.getIn(['data', 'hero'])?.toJS()?.heroImage}
-                heroImageAlt={entry.getIn(['data', 'hero'])?.toJS()?.heroImageAlt}
-                markdown={entry.getIn(['data', 'hero'])?.toJS()?.heroMarkdown}
-                preview={true}
-            />
             {entry
-                .getIn(['data', 'sectionList'])
+                .getIn(['data', 'sections'])
                 ?.toJS()
-                .map((section, index) => {
-                    if (section.imagePosition === 'left') {
+                .map((item) => {
+                    if (item === 'hero') {
                         return (
-                            <LeftSection
-                                key={index}
-                                subtitle={section.listSectionSubtitle}
-                                image={section.listSectionImage}
-                                alt={section.listSectionAlt}
-                                markdown={section.listSectionMarkdown}
+                            <Hero
+                                heroBackground={entry.getIn(['data', 'hero'])?.toJS()?.heroBackground}
+                                heroImage={entry.getIn(['data', 'hero'])?.toJS()?.heroImage}
+                                heroImageAlt={entry.getIn(['data', 'hero'])?.toJS()?.heroImageAlt}
+                                markdown={entry.getIn(['data', 'hero'])?.toJS()?.heroMarkdown}
                                 preview={true}
                             />
                         );
                     }
-                    if (section.imagePosition === 'right') {
-                        return (
-                            <RightSection
-                                key={index}
-                                subtitle={section.listSectionSubtitle}
-                                image={section.listSectionImage}
-                                alt={section.listSectionAlt}
-                                markdown={section.listSectionMarkdown}
-                                preview={true}
-                            />
-                        );
+                    if (item === 'sectionList') {
+                        return entry
+                            .getIn(['data', 'sectionList'])
+                            ?.toJS()
+                            ?.map((section, index) => {
+                                if (section?.imagePosition === 'left') {
+                                    return (
+                                        <LeftSection
+                                            key={index}
+                                            subtitle={section.listSectionSubtitle}
+                                            image={section.listSectionImage}
+                                            alt={section.listSectionAlt}
+                                            markdown={section.listSectionMarkdown}
+                                            preview={true}
+                                        />
+                                    );
+                                }
+                                if (section?.imagePosition === 'right') {
+                                    return (
+                                        <RightSection
+                                            key={index}
+                                            subtitle={section.listSectionSubtitle}
+                                            image={section.listSectionImage}
+                                            alt={section.listSectionAlt}
+                                            markdown={section.listSectionMarkdown}
+                                            preview={true}
+                                        />
+                                    );
+                                }
+                                return null;
+                            });
+                    }
+                    if (item === 'cloudComplianceSection') {
+                        return <CloudComplianceSection />;
+                    }
+                    if (item === 'cta') {
+                        return <Cta markdown={entry.getIn(['data', 'cta'])?.toJS()?.ctaMarkdown} />;
                     }
                     return null;
                 })}
@@ -284,6 +304,39 @@ CMS.registerEditorComponent({
         {
             label: 'Text H2',
             name: 'texth2',
+            widget: 'string'
+        }
+    ]
+});
+
+CMS.registerEditorComponent({
+    label: 'H1 CTA',
+    id: 'headingOneCta',
+    fromBlock: (match) =>
+        match && {
+            classes: match[1],
+            texth1: match[2]
+        },
+    toBlock: function ({ classes, texth1 }, getAsset, fields) {
+        return `<h1 class="text-center px-2 mt-4 mb-2 font-montserrat font-semibold ${classes || ''}">${
+            texth1 || ''
+        }</h1>`;
+    },
+    toPreview: ({ classes, texth1 }, getAsset, fields) => {
+        return `<h1 class="text-center px-2 mt-4 mb-2 font-montserrat font-semibold ${classes}">${texth1}</h1>`;
+    },
+    pattern: /^<h1 class="(.*?)">(.*?)<\/h1>$/s,
+    fields: [
+        {
+            label: 'CSS Classes',
+            name: 'classes',
+            widget: 'select',
+            multiple: true,
+            options: [' text-blue ', ' text-red ', ' text-xl ', ' text-2xl ', ' text-3xl ', ' text-4xl ', ' text-5xl ']
+        },
+        {
+            label: 'Text H1',
+            name: 'texth1',
             widget: 'string'
         }
     ]

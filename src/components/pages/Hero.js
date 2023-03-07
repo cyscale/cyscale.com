@@ -29,10 +29,10 @@ const Hero = ({ heroImage, heroImageAlt, heroBackground, markdown, preview }) =>
                                     {markdown}
                                 </ReactMarkdown>
                                 <div className='flex mt-8 justify-start'>
-                                    <a href='/'>
+                                    <a href='/free-trial/'>
                                         <GradientButton text='Start Free Trial' />
                                     </a>
-                                    <a href='/' className='ml-4'>
+                                    <a href='/request-demo/' className='ml-4'>
                                         <LightDarkButton text={'Request Demo'} />
                                     </a>
                                 </div>
