@@ -309,7 +309,7 @@ exports.createPages = async ({ graphql, actions }) => {
                                 rowMarkdown
                                 rowBackground
                             }
-                            cta {
+                            ctaSection {
                                 ctaMarkdown
                             }
                         }
@@ -360,7 +360,7 @@ exports.createSchemaCustomization = ({ actions }) => {
         sections: [String]
         hero: Hero
         textImageRow: [TextImageRow]
-        cta: CTA
+        ctaSection: CTA
         authors: String
         categories: [String]
         title: String

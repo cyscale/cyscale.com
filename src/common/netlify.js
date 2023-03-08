@@ -8,6 +8,7 @@ import RightSection from '../components/pages/RightSection';
 import LeftSection from '../components/pages/LeftSection';
 import CloudComplianceSection from '../components/pages/CloudComplianceSection';
 import Cta from '../components/pages/Cta';
+import AlignTeams from '../components/pages/AlignTeams';
 
 const BlogPreview = ({ entry }) => (
     <PostContent
@@ -154,11 +155,14 @@ const PagesPreview = ({ entry }) => {
                                 return null;
                             });
                     }
+                    if (item === 'alignTeamsSection') {
+                        return <AlignTeams />;
+                    }
                     if (item === 'cloudComplianceSection') {
                         return <CloudComplianceSection />;
                     }
-                    if (item === 'cta') {
-                        return <Cta markdown={entry.getIn(['data', 'cta'])?.toJS()?.ctaMarkdown} />;
+                    if (item === 'ctaSection') {
+                        return <Cta markdown={entry.getIn(['data', 'ctaSection'])?.toJS()?.ctaMarkdown} />;
                     }
                     return null;
                 })}

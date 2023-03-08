@@ -130,7 +130,7 @@ collections:
             label: 'Sections',
             name: 'sections',
             widget: 'select',
-            options: [ 'hero', 'textImageRow', 'cloudComplianceSection', 'cta' ],
+            options: [ 'hero', 'textImageRow', 'alignTeamsSection', 'cloudComplianceSection', 'ctaSection' ],
             default: [ 'hero' ],
             multiple: true
           }
@@ -166,7 +166,7 @@ collections:
                 multiple: false
               }
           - label: 'CTA'
-            name: 'cta'
+            name: 'ctaSection'
             widget: 'object'
             fields:
                 - { label: 'CTA Markdown', name: 'ctaMarkdown', widget: 'markdown', required: false, hint: 'Use H1 CTA and nothing more' }
