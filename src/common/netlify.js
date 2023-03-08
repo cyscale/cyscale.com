@@ -122,31 +122,31 @@ const PagesPreview = ({ entry }) => {
                     }
                     if (item === 'sectionList') {
                         return entry
-                            .getIn(['data', 'sectionList'])
+                            .getIn(['data', 'textImageRow'])
                             ?.toJS()
                             ?.map((section, index) => {
-                                if (section?.imagePosition === 'left') {
+                                if (section?.rowImagePosition === 'left') {
                                     return (
                                         <LeftSection
                                             key={index}
-                                            subtitle={section.listSectionSubtitle}
-                                            image={section.listSectionImage}
-                                            alt={section.listSectionAlt}
-                                            markdown={section.listSectionMarkdown}
-                                            backgroundColor={section.listSectionBackground}
+                                            subtitle={section.rowSubtitle}
+                                            image={section.rowImage}
+                                            alt={section.rowAlt}
+                                            markdown={section.rowMarkdown}
+                                            backgroundColor={section.rowBackground}
                                             preview={true}
                                         />
                                     );
                                 }
-                                if (section?.imagePosition === 'right') {
+                                if (section?.rowImagePosition === 'right') {
                                     return (
                                         <RightSection
                                             key={index}
-                                            subtitle={section.listSectionSubtitle}
-                                            image={section.listSectionImage}
-                                            alt={section.listSectionAlt}
-                                            markdown={section.listSectionMarkdown}
-                                            backgroundColor={section.listSectionBackground}
+                                            subtitle={section.rowSubtitle}
+                                            image={section.rowImage}
+                                            alt={section.rowAlt}
+                                            markdown={section.rowMarkdown}
+                                            backgroundColor={section.rowBackground}
                                             preview={true}
                                         />
                                     );

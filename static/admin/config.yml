@@ -130,7 +130,7 @@ collections:
             label: 'Sections',
             name: 'sections',
             widget: 'select',
-            options: [ 'hero', 'sectionList', 'cloudComplianceSection', 'cta' ],
+            options: [ 'hero', 'textImageRow', 'cloudComplianceSection', 'cta' ],
             default: [ 'hero' ],
             multiple: true
           }
@@ -142,27 +142,27 @@ collections:
               - { label: 'Hero Image', name: 'heroImage', widget: image }
               - { label: 'Hero Image Alt', name: 'heroImageAlt', widget: 'string' }
               - { label: 'Hero Markdown', name: 'heroMarkdown', widget: 'markdown' }
-          - label: 'Section List'
-            name: 'sectionList'
+          - label: 'Text Image Row'
+            name: 'textImageRow'
             widget: 'list'
             allow_add: true
             fields:
               - {
-                  label: 'Image Position',
-                  name: 'imagePosition',
+                  label: 'Row Image Position',
+                  name: 'rowImagePosition',
                   widget: 'select',
                   options: [ 'left', 'right' ],
                   multiple: false
                 }
-              - { label: 'List Section Image', name: 'listSectionImage', widget: image, required: false }
-              - { label: 'List Section Alt', name: 'listSectionAlt', widget: 'string', required: false }
-              - { label: 'List Section Subtitle', name: 'listSectionSubtitle', widget: 'markdown', required: false, hint: 'For subtitle use just H2 Subtitle and nothing more ' }
-              - { label: 'List Section Markdown', name: 'listSectionMarkdown', widget: 'markdown', required: false }
+              - { label: 'Row Image', name: 'rowImage', widget: image, required: false }
+              - { label: 'Row Alt', name: 'rowAlt', widget: 'string', required: false }
+              - { label: 'Row Subtitle', name: 'rowSubtitle', widget: 'markdown', required: false, hint: 'For subtitle use just H2 Subtitle and nothing more ' }
+              - { label: 'Row Markdown', name: 'rowMarkdown', widget: 'markdown', required: false }
               - {
-                label: 'List Section Background',
-                name: 'listSectionBackground',
+                label: 'Row Background',
+                name: 'rowBackground',
                 widget: 'select',
-                options: [ 'white', '#F3F8FF' ],
+                options: [ '#FFFFFF', '#F3F8FF' ],
                 multiple: false
               }
           - label: 'CTA'

@@ -20,29 +20,29 @@ const Page = ({ data }) => {
                         />
                     );
                 }
-                if (item === 'sectionList') {
-                    return data?.sectionList?.map((section, index) => {
-                        if (section?.imagePosition === 'left') {
+                if (item === 'textImageRow') {
+                    return data?.textImageRow?.map((section, index) => {
+                        if (section?.rowImagePosition === 'left') {
                             return (
                                 <LeftSection
                                     key={index}
-                                    subtitle={section.listSectionSubtitle}
-                                    image={section.listSectionImage.childImageSharp.gatsbyImageData}
-                                    alt={section.listSectionAlt}
-                                    markdown={section.listSectionMarkdown}
-                                    backgroundColor={section.listSectionBackground}
+                                    subtitle={section.rowSubtitle}
+                                    image={section.rowImage.childImageSharp.gatsbyImageData}
+                                    alt={section.rowAlt}
+                                    markdown={section.rowMarkdown}
+                                    backgroundColor={section.rowBackground}
                                 />
                             );
                         }
-                        if (section?.imagePosition === 'right') {
+                        if (section?.rowImagePosition === 'right') {
                             return (
                                 <RightSection
                                     key={index}
-                                    subtitle={section.listSectionSubtitle}
-                                    image={section.listSectionImage.childImageSharp.gatsbyImageData}
-                                    alt={section.listSectionAlt}
-                                    markdown={section.listSectionMarkdown}
-                                    backgroundColor={section.listSectionBackground}
+                                    subtitle={section.rowSubtitle}
+                                    image={section.rowImage.childImageSharp.gatsbyImageData}
+                                    alt={section.rowAlt}
+                                    markdown={section.rowMarkdown}
+                                    backgroundColor={section.rowBackground}
                                 />
                             );
                         }
