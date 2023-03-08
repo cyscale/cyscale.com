@@ -120,7 +120,7 @@ const PagesPreview = ({ entry }) => {
                             />
                         );
                     }
-                    if (item === 'sectionList') {
+                    if (item === 'textImageRow') {
                         return entry
                             .getIn(['data', 'textImageRow'])
                             ?.toJS()
