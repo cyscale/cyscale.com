@@ -4,8 +4,9 @@ import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { Container } from '../atoms/Containers';
+import classNames from 'classnames';
 
-const LeftSection = ({ image, alt, subtitle, markdown, preview, backgroundColor }) => {
+const LeftSection = ({ image, alt, subtitle, customComponents, markdown, preview, backgroundColor }) => {
     return (
         <div
             css={css`
@@ -29,7 +30,7 @@ const LeftSection = ({ image, alt, subtitle, markdown, preview, backgroundColor 
                                 </ReactMarkdown>
                             </div>
                             <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-lg'>
-                                <div className='blog-reset'>
+                                <div className={classNames({ 'blog-reset': !customComponents })}>
                                     <ReactMarkdown rehypePlugins={[rehypeRaw]} linkTarget='_blank'>
                                         {markdown}
                                     </ReactMarkdown>

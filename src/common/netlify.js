@@ -118,6 +118,7 @@ const PagesPreview = ({ entry }) => {
                                 heroImage={entry.getIn(['data', 'hero'])?.toJS()?.heroImage}
                                 heroImageAlt={entry.getIn(['data', 'hero'])?.toJS()?.heroImageAlt}
                                 title={entry.getIn(['data', 'hero'])?.toJS()?.heroTitle}
+                                customComponents={entry.getIn(['data', 'hero'])?.toJS()?.customComponents}
                                 markdown={entry.getIn(['data', 'hero'])?.toJS()?.heroMarkdown}
                                 preview={true}
                             />
@@ -135,6 +136,7 @@ const PagesPreview = ({ entry }) => {
                                             subtitle={section.rowSubtitle}
                                             image={section.rowImage}
                                             alt={section.rowAlt}
+                                            customComponents={section.customComponents}
                                             markdown={section.rowMarkdown}
                                             backgroundColor={section.rowBackground}
                                             preview={true}
@@ -148,6 +150,7 @@ const PagesPreview = ({ entry }) => {
                                             subtitle={section.rowSubtitle}
                                             image={section.rowImage}
                                             alt={section.rowAlt}
+                                            customComponents={section.customComponents}
                                             markdown={section.rowMarkdown}
                                             backgroundColor={section.rowBackground}
                                             preview={true}

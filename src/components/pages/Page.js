@@ -18,6 +18,7 @@ const Page = ({ data }) => {
                             heroImage={data.hero.heroImage.childImageSharp.gatsbyImageData}
                             heroImageAlt={data.hero.heroImageAlt}
                             title={data.hero.heroTitle}
+                            customComponents={data.hero.customComponents}
                             markdown={data.hero.heroMarkdown}
                             key={index}
                         />
@@ -32,6 +33,7 @@ const Page = ({ data }) => {
                                     subtitle={section.rowSubtitle}
                                     image={section.rowImage.childImageSharp.gatsbyImageData}
                                     alt={section.rowAlt}
+                                    customComponents={section.customComponents}
                                     markdown={section.rowMarkdown}
                                     backgroundColor={section.rowBackground}
                                 />
@@ -44,6 +46,7 @@ const Page = ({ data }) => {
                                     subtitle={section.rowSubtitle}
                                     image={section.rowImage.childImageSharp.gatsbyImageData}
                                     alt={section.rowAlt}
+                                    customComponents={section.customComponents}
                                     markdown={section.rowMarkdown}
                                     backgroundColor={section.rowBackground}
                                 />

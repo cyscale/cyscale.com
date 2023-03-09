@@ -142,6 +142,7 @@ collections:
               - { label: 'Hero Image', name: 'heroImage', widget: image }
               - { label: 'Hero Image Alt', name: 'heroImageAlt', widget: 'string' }
               - { label: 'Hero Title', name: 'heroTitle', widget: 'markdown',  hint: 'For title use H1 Hero and nothing more'  }
+              - { label: "Custom Components", name: "customComponents", widget: "boolean", default: false}
               - { label: 'Hero Markdown', name: 'heroMarkdown', widget: 'markdown' }
           - label: 'Text Image Row'
             name: 'textImageRow'
@@ -158,6 +159,7 @@ collections:
               - { label: 'Row Image', name: 'rowImage', widget: image, required: false }
               - { label: 'Row Alt', name: 'rowAlt', widget: 'string', required: false }
               - { label: 'Row Subtitle', name: 'rowSubtitle', widget: 'markdown', required: false, hint: 'For subtitle use just H2 Subtitle and nothing more' }
+              - { label: "Custom Components", name: "customComponents", widget: "boolean", default: false, required: false }
               - { label: 'Row Markdown', name: 'rowMarkdown', widget: 'markdown', required: false }
               - {
                 label: 'Row Background',

@@ -6,6 +6,7 @@ import LightDarkButton from '../buttons/LightDarkButton';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import rehypeRaw from 'rehype-raw';
 import { css } from 'twin.macro';
+import classNames from 'classnames';
 
 const heroBg = (url) => css`
     background-image: linear-gradient(#eeeeee, #e4edfc);
@@ -17,7 +18,7 @@ const heroBg = (url) => css`
     }
 `;
 
-const Hero = ({ heroImage, heroImageAlt, heroBackground, title, markdown, preview }) => {
+const Hero = ({ heroImage, heroImageAlt, heroBackground, title, customComponents, markdown, preview }) => {
     return (
         <div className='pt-8' css={heroBg(heroBackground)}>
             <Container>
@@ -28,7 +29,7 @@ const Hero = ({ heroImage, heroImageAlt, heroBackground, title, markdown, previe
                                 <ReactMarkdown rehypePlugins={[rehypeRaw]} linkTarget='_blank'>
                                     {title}
                                 </ReactMarkdown>
-                                <div className='blog-reset'>
+                                <div className={classNames({ 'blog-reset': !customComponents })}>
                                     <ReactMarkdown rehypePlugins={[rehypeRaw]} linkTarget='_blank'>
                                         {markdown}
                                     </ReactMarkdown>

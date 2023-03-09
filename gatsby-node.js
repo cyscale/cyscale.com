@@ -295,6 +295,7 @@ exports.createPages = async ({ graphql, actions }) => {
                                 }
                                 heroImageAlt
                                 heroTitle
+                                customComponents
                                 heroMarkdown
                             }
                             textImageRow {
@@ -307,6 +308,7 @@ exports.createPages = async ({ graphql, actions }) => {
                                 }
                                 rowAlt
                                 rowSubtitle
+                                customComponents
                                 rowMarkdown
                                 rowBackground
                             }
@@ -383,6 +385,7 @@ exports.createSchemaCustomization = ({ actions }) => {
         heroImage: File @fileByRelativePath
         heroImageAlt: String
         heroTitle: String
+        customComponents: Boolean
         heroMarkdown: String
     }
     
@@ -391,6 +394,7 @@ exports.createSchemaCustomization = ({ actions }) => {
         rowImage: File @fileByRelativePath
         rowAlt: String
         rowSubtitle: String
+        customComponents: Boolean
         rowMarkdown: String
         rowBackground: String
     }
