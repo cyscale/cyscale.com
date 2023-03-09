@@ -9,6 +9,7 @@ import LeftSection from '../components/pages/LeftSection';
 import CloudComplianceSection from '../components/pages/CloudComplianceSection';
 import Cta from '../components/pages/Cta';
 import AlignTeams from '../components/pages/AlignTeams';
+import Features from '../components/pages/Features';
 
 const BlogPreview = ({ entry }) => (
     <PostContent
@@ -116,6 +117,7 @@ const PagesPreview = ({ entry }) => {
                                 heroBackground={entry.getIn(['data', 'hero'])?.toJS()?.heroBackground}
                                 heroImage={entry.getIn(['data', 'hero'])?.toJS()?.heroImage}
                                 heroImageAlt={entry.getIn(['data', 'hero'])?.toJS()?.heroImageAlt}
+                                title={entry.getIn(['data', 'hero'])?.toJS()?.heroTitle}
                                 markdown={entry.getIn(['data', 'hero'])?.toJS()?.heroMarkdown}
                                 preview={true}
                             />
@@ -154,6 +156,9 @@ const PagesPreview = ({ entry }) => {
                                 }
                                 return null;
                             });
+                    }
+                    if (item === 'featuresSection') {
+                        return <Features features={entry.getIn(['data', 'featuresSection'])?.toJS()} />;
                     }
                     if (item === 'alignTeamsSection') {
                         return <AlignTeams />;
@@ -344,6 +349,31 @@ CMS.registerEditorComponent({
             label: 'Text H1',
             name: 'texth1',
             widget: 'string'
+        }
+    ]
+});
+
+CMS.registerEditorComponent({
+    label: 'Break line',
+    id: 'breakline',
+    fromBlock: (match) =>
+        match && {
+            classes: match[1]
+        },
+    toBlock: function ({ classes }, getAsset, fields) {
+        return `<br class="${classes || ''}" />`;
+    },
+    toPreview: ({ classes }, getAsset, fields) => {
+        return `<br class="${classes}" />`;
+    },
+    pattern: /^<brclass="(.*?)"\/>$/s,
+    fields: [
+        {
+            label: 'CSS Classes',
+            name: 'classes',
+            widget: 'select',
+            multiple: true,
+            options: [' text-blue ', ' text-red ', ' text-xl ', ' text-2xl ', ' text-3xl ', ' text-4xl ', ' text-5xl ']
         }
     ]
 });

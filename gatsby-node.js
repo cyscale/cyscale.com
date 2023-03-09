@@ -294,6 +294,7 @@ exports.createPages = async ({ graphql, actions }) => {
                                     }
                                 }
                                 heroImageAlt
+                                heroTitle
                                 heroMarkdown
                             }
                             textImageRow {
@@ -308,6 +309,10 @@ exports.createPages = async ({ graphql, actions }) => {
                                 rowSubtitle
                                 rowMarkdown
                                 rowBackground
+                            }
+                            featuresSection {
+                                featureTitle
+                                featureText
                             }
                             ctaSection {
                                 ctaMarkdown
@@ -360,6 +365,7 @@ exports.createSchemaCustomization = ({ actions }) => {
         sections: [String]
         hero: Hero
         textImageRow: [TextImageRow]
+        featuresSection: [FeaturesSection]
         ctaSection: CTA
         authors: String
         categories: [String]
@@ -376,6 +382,7 @@ exports.createSchemaCustomization = ({ actions }) => {
         heroBackground: String
         heroImage: File @fileByRelativePath
         heroImageAlt: String
+        heroTitle: String
         heroMarkdown: String
     }
     
@@ -386,6 +393,11 @@ exports.createSchemaCustomization = ({ actions }) => {
         rowSubtitle: String
         rowMarkdown: String
         rowBackground: String
+    }
+    
+    type FeaturesSection {
+        featureTitle: String
+        featureText: String
     }
     
     type CTA {

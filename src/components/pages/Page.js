@@ -5,6 +5,7 @@ import LeftSection from './LeftSection';
 import CloudComplianceSection from './CloudComplianceSection';
 import Cta from './Cta';
 import AlignTeams from './AlignTeams';
+import Features from './Features';
 
 const Page = ({ data }) => {
     return (
@@ -16,6 +17,7 @@ const Page = ({ data }) => {
                             heroBackground={data.hero.heroBackground}
                             heroImage={data.hero.heroImage.childImageSharp.gatsbyImageData}
                             heroImageAlt={data.hero.heroImageAlt}
+                            title={data.hero.heroTitle}
                             markdown={data.hero.heroMarkdown}
                             key={index}
                         />
@@ -49,6 +51,9 @@ const Page = ({ data }) => {
                         }
                         return null;
                     });
+                }
+                if (item === 'featuresSection') {
+                    return <Features features={data?.featuresSection} />;
                 }
                 if (item === 'alignTeamsSection') {
                     return <AlignTeams />;

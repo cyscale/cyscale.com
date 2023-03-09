@@ -17,7 +17,7 @@ const heroBg = (url) => css`
     }
 `;
 
-const Hero = ({ heroImage, heroImageAlt, heroBackground, markdown, preview }) => {
+const Hero = ({ heroImage, heroImageAlt, heroBackground, title, markdown, preview }) => {
     return (
         <div className='pt-8' css={heroBg(heroBackground)}>
             <Container>
@@ -26,8 +26,13 @@ const Hero = ({ heroImage, heroImageAlt, heroBackground, markdown, preview }) =>
                         <div className='col-span-12 lg:col-span-6 order-last lg:order-first'>
                             <div className='lg:mt-16 pt-4 max-w-xl mx-auto lg:mx-0'>
                                 <ReactMarkdown rehypePlugins={[rehypeRaw]} linkTarget='_blank'>
-                                    {markdown}
+                                    {title}
                                 </ReactMarkdown>
+                                <div className='blog-reset'>
+                                    <ReactMarkdown rehypePlugins={[rehypeRaw]} linkTarget='_blank'>
+                                        {markdown}
+                                    </ReactMarkdown>
+                                </div>
                                 <div className='flex mt-8 justify-start'>
                                     <a href='/free-trial/'>
                                         <GradientButton text='Start Free Trial' />

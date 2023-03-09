@@ -22,9 +22,11 @@ const RightSection = ({ subtitle, image, alt, markdown, preview, backgroundColor
                                 </ReactMarkdown>
                             </div>
                             <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-lg'>
-                                <ReactMarkdown rehypePlugins={[rehypeRaw]} linkTarget='_blank'>
-                                    {markdown}
-                                </ReactMarkdown>
+                                <div className='blog-reset'>
+                                    <ReactMarkdown rehypePlugins={[rehypeRaw]} linkTarget='_blank'>
+                                        {markdown}
+                                    </ReactMarkdown>
+                                </div>
                             </div>
                         </div>
                         <div className='col-span-12 lg:col-span-6 mt-8 lg:mt-0 sm:mt-0'>
