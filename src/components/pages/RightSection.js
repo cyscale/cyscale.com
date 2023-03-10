@@ -10,7 +10,7 @@ const RightSection = ({ subtitle, image, alt, customComponents, markdown, previe
     return (
         <div
             css={css`
-                background-color: ${backgroundColor ? backgroundColor : ''};
+                background-color: ${backgroundColor};
             `}
         >
             <Container>

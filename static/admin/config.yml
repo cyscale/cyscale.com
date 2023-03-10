@@ -116,8 +116,7 @@ collections:
       slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
       fields:
           - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'pages' }
-          - { label: 'Page Name', name: 'pageName', widget: 'string' }
-          - { label: 'Path', name: 'path', widget: 'string' }
+          - { label: 'Page Name', name: 'pageName', widget: 'string', hint: 'Should not contain any spaces, ex: SKGPage for SecurityKnowledge Graph' }
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Description', name: 'description', widget: 'string' }
           - {
@@ -126,6 +125,7 @@ collections:
             widget: 'select',
             options: [ 'use-cases', 'products' ],
           }
+          - { label: 'Path', name: 'path', widget: 'string', hint: 'Should not contain any spaces' }
           - {
             label: 'Sections',
             name: 'sections',
@@ -142,7 +142,7 @@ collections:
               - { label: 'Hero Image', name: 'heroImage', widget: image }
               - { label: 'Hero Image Alt', name: 'heroImageAlt', widget: 'string' }
               - { label: 'Hero Title', name: 'heroTitle', widget: 'markdown',  hint: 'For title use H1 Hero and nothing more'  }
-              - { label: "Custom Components", name: "customComponents", widget: "boolean", default: false}
+              - { label: "Custom Components", name: "customComponents", widget: "boolean", default: false, hint: 'For using Netlify custom components in the markdown or Rich Text'}
               - { label: 'Hero Markdown', name: 'heroMarkdown', widget: 'markdown' }
           - label: 'Text Image Row'
             name: 'textImageRow'
@@ -159,7 +159,7 @@ collections:
               - { label: 'Row Image', name: 'rowImage', widget: image, required: false }
               - { label: 'Row Alt', name: 'rowAlt', widget: 'string', required: false }
               - { label: 'Row Subtitle', name: 'rowSubtitle', widget: 'markdown', required: false, hint: 'For subtitle use just H2 Subtitle and nothing more' }
-              - { label: "Custom Components", name: "customComponents", widget: "boolean", default: false, required: false }
+              - { label: "Custom Components", name: "customComponents", widget: "boolean", default: false, required: false, hint: 'For using Netlify custom components in the markdown or Rich Text' }
               - { label: 'Row Markdown', name: 'rowMarkdown', widget: 'markdown', required: false }
               - {
                 label: 'Row Background',

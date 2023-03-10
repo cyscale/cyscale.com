@@ -10,7 +10,7 @@ const LeftSection = ({ image, alt, subtitle, customComponents, markdown, preview
     return (
         <div
             css={css`
-                background-color: ${backgroundColor ? backgroundColor : ''};
+                background-color: ${backgroundColor};
             `}
             v
         >
