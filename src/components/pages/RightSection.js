@@ -23,7 +23,7 @@ const RightSection = ({ subtitle, image, alt, customComponents, markdown, previe
                                 </ReactMarkdown>
                             </div>
                             <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-lg'>
-                                <div className={classNames({ 'blog-reset': !customComponents })}>
+                                <div className={classNames({ 'pages-reset': !customComponents })}>
                                     <ReactMarkdown rehypePlugins={[rehypeRaw]} linkTarget='_blank'>
                                         {markdown}
                                     </ReactMarkdown>

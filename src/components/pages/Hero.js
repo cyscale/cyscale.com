@@ -29,7 +29,7 @@ const Hero = ({ heroImage, heroImageAlt, heroBackground, title, customComponents
                                 <ReactMarkdown rehypePlugins={[rehypeRaw]} linkTarget='_blank'>
                                     {title}
                                 </ReactMarkdown>
-                                <div className={classNames({ 'blog-reset': !customComponents })}>
+                                <div className={classNames({ 'pages-reset': !customComponents })}>
                                     <ReactMarkdown rehypePlugins={[rehypeRaw]} linkTarget='_blank'>
                                         {markdown}
                                     </ReactMarkdown>
