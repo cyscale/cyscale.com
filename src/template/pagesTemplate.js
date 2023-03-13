@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../components/layout/CleanLayout';
 import Page from '../components/pages/Page';
+import CustomPagesStyles from '../components/pages/CustomPagesStyles';
 
 const PagesTemplate = ({ pageContext, location }) => {
     const { alldata } = pageContext;
@@ -12,6 +13,7 @@ const PagesTemplate = ({ pageContext, location }) => {
             title={alldata.frontmatter.title}
             description={alldata.frontmatter.description}
         >
+            <CustomPagesStyles />
             <Page data={alldata.frontmatter} />
         </Layout>
     );

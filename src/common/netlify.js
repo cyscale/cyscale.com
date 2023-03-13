@@ -10,6 +10,7 @@ import CloudComplianceSection from '../components/pages/CloudComplianceSection';
 import Cta from '../components/pages/Cta';
 import AlignTeams from '../components/pages/AlignTeams';
 import Features from '../components/pages/Features';
+import CustomPagesStyles from '../components/pages/CustomPagesStyles';
 
 const BlogPreview = ({ entry }) => (
     <PostContent
@@ -107,6 +108,7 @@ CMS.registerEditorComponent({
 const PagesPreview = ({ entry }) => {
     return (
         <CSSInjector>
+            <CustomPagesStyles />
             {entry
                 .getIn(['data', 'sections'])
                 ?.toJS()
@@ -181,6 +183,36 @@ const PagesPreview = ({ entry }) => {
 CMS.registerPreviewTemplate('pages', PagesPreview);
 
 CMS.registerEditorComponent({
+    label: 'H1 Hero',
+    id: 'headingOneHero',
+    fromBlock: (match) =>
+        match && {
+            classes: match[1],
+            texth1: match[2]
+        },
+    toBlock: function ({ classes, texth1 }, getAsset, fields) {
+        return `<h1 data-cms='heading-one' class="${classes || ''}">${texth1 || ''}</h1>`;
+    },
+    toPreview: ({ classes, texth1 }, getAsset, fields) => {
+        return `<h1 data-cms='heading-one' class="${classes}">${texth1}</h1>`;
+    },
+    pattern: /^<h1 data-cms='heading-one' class="(.*?)">(.*?)<\/h1>$/s,
+    fields: [
+        {
+            label: 'CSS Classes',
+            name: 'classes',
+            widget: 'string',
+            hint: 'text-blue, text-red, text-xl, text-2xl, text-3xl, text-4xl, text-5xl'
+        },
+        {
+            label: 'Text H1',
+            name: 'texth1',
+            widget: 'string'
+        }
+    ]
+});
+
+CMS.registerEditorComponent({
     label: 'H1',
     id: 'headingOne',
     fromBlock: (match) =>
@@ -199,9 +231,8 @@ CMS.registerEditorComponent({
         {
             label: 'CSS Classes',
             name: 'classes',
-            widget: 'select',
-            multiple: true,
-            options: [' text-blue ', ' text-red ', ' text-xl ', ' text-2xl ', ' text-3xl ', ' text-4xl ', ' text-5xl ']
+            widget: 'string',
+            hint: 'text-blue, text-red, text-xl, text-2xl, text-3xl, text-4xl, text-5xl'
         },
         {
             label: 'Text H1',
@@ -212,34 +243,32 @@ CMS.registerEditorComponent({
 });
 
 CMS.registerEditorComponent({
-    label: 'H1 Hero',
-    id: 'headingOneHero',
+    label: 'H2 Subtitle',
+    id: 'headingTwoSubtitle',
     fromBlock: (match) =>
         match && {
             classes: match[1],
-            texth1: match[2]
+            texth2: match[2]
         },
-    toBlock: function ({ classes, texth1 }, getAsset, fields) {
-        return `<h1 class="text-left text-blue text-4xl lg:text-5xl leading-normal lg:leading-normal mb-16 font-montserrat ${
-            classes || ''
-        }">${texth1 || ''}</h1>`;
+    toBlock: function ({ classes, texth2 }, getAsset, fields) {
+        return `<h2 data-cms='heading-two-subtitle' class="titleSection border-title-partly ${classes || ''}">${
+            texth2 || ''
+        }</h2>`;
     },
-    toPreview: ({ classes, texth1 }, getAsset, fields) => {
-        return `<h1 class="text-left text-blue text-4xl lg:text-5xl leading-normal lg:leading-normal mb-16 font-montserrat ${classes}">${texth1}</h1>`;
+    toPreview: ({ classes, texth2 }, getAsset, fields) => {
+        return `<h2 data-cms='heading-two-subtitle' data-cms='heading-two-subtitle' class="titleSection border-title-partly ${classes}">${texth2}</h2>`;
     },
-    pattern:
-        /^<h1 class="text-left text-blue text-4xl lg:text-5xl leading-normal lg:leading-normal mb-16 font-montserrat (.*?)">(.*?)<\/h1>$/s,
+    pattern: /^<h2 data-cms='heading-two-subtitle' class="titleSection border-title-partly (.*?)">(.*?)<\/h2>$/s,
     fields: [
         {
             label: 'CSS Classes',
             name: 'classes',
-            widget: 'select',
-            multiple: true,
-            options: [' text-blue ', ' text-red ', ' text-xl ', ' text-2xl ', ' text-3xl ', ' text-4xl ', ' text-5xl ']
+            widget: 'string',
+            hint: 'text-blue, text-red, text-xl, text-2xl, text-3xl, text-4xl, text-5xl'
         },
         {
-            label: 'Text H1',
-            name: 'texth1',
+            label: 'Text H2',
+            name: 'texth2',
             widget: 'string'
         }
     ]
@@ -264,60 +293,12 @@ CMS.registerEditorComponent({
         {
             label: 'CSS Classes',
             name: 'classes',
-            widget: 'select',
-            multiple: true,
-            options: [
-                ' text-left ',
-                ' text-base ',
-                ' lg:text-lg ',
-                ' leading-relaxed ',
-                ' leading-normal ',
-                ' font-montserrat ',
-                ' mt-8 ',
-                ' mt-4 ',
-                ' text-gray ',
-                ' font-semibold ',
-                ' mb-8 ',
-                ' mb-2 '
-            ]
+            widget: 'string',
+            hint: 'text-blue, text-red, text-xl, text-2xl, text-3xl, text-4xl, text-5xl'
         },
         {
             label: 'Text p',
             name: 'textp',
-            widget: 'string'
-        }
-    ]
-});
-
-CMS.registerEditorComponent({
-    label: 'H2 Subtitle',
-    id: 'headingTwoSubtitle',
-    fromBlock: (match) =>
-        match && {
-            classes: match[1],
-            texth2: match[2]
-        },
-    toBlock: function ({ classes, texth2 }, getAsset, fields) {
-        return `<h2 class="titleSection font-bold text-primary leading-normal border-title-partly font-montserrat lg:mt-3 ${
-            classes || ''
-        }">${texth2 || ''}</h2>`;
-    },
-    toPreview: ({ classes, texth2 }, getAsset, fields) => {
-        return `<h2 class="titleSection font-bold text-primary leading-normal border-title-partly font-montserrat lg:mt-3 ${classes}">${texth2}</h2>`;
-    },
-    pattern:
-        /^<h2 class="titleSection font-bold text-primary leading-normal border-title-partly font-montserrat lg:mt-3 (.*?)">(.*?)<\/h2>$/s,
-    fields: [
-        {
-            label: 'CSS Classes',
-            name: 'classes',
-            widget: 'select',
-            multiple: true,
-            options: [' text-blue ', ' text-red ', ' text-xl ', ' text-2xl ', ' text-3xl ', ' text-4xl ', ' text-5xl ']
-        },
-        {
-            label: 'Text H2',
-            name: 'texth2',
             widget: 'string'
         }
     ]
@@ -332,21 +313,18 @@ CMS.registerEditorComponent({
             texth1: match[2]
         },
     toBlock: function ({ classes, texth1 }, getAsset, fields) {
-        return `<h1 class="text-center px-2 mt-4 mb-2 font-montserrat font-semibold ${classes || ''}">${
-            texth1 || ''
-        }</h1>`;
+        return `<h1 data-cms='heading-one-cta' class="${classes || ''}">${texth1 || ''}</h1>`;
     },
     toPreview: ({ classes, texth1 }, getAsset, fields) => {
-        return `<h1 class="text-center px-2 mt-4 mb-2 font-montserrat font-semibold ${classes}">${texth1}</h1>`;
+        return `<h1 data-cms='heading-one-cta' class="${classes}">${texth1}</h1>`;
     },
-    pattern: /^<h1 class="(.*?)">(.*?)<\/h1>$/s,
+    pattern: /^<h1 data-cms='heading-one-cta' class="(.*?)">(.*?)<\/h1>$/s,
     fields: [
         {
             label: 'CSS Classes',
             name: 'classes',
-            widget: 'select',
-            multiple: true,
-            options: [' text-blue ', ' text-red ', ' text-xl ', ' text-2xl ', ' text-3xl ', ' text-4xl ', ' text-5xl ']
+            widget: 'string',
+            hint: 'text-blue, text-red, text-xl, text-2xl, text-3xl, text-4xl, text-5xl'
         },
         {
             label: 'Text H1',
@@ -369,14 +347,13 @@ CMS.registerEditorComponent({
     toPreview: ({ classes }, getAsset, fields) => {
         return `<br class="${classes}" />`;
     },
-    pattern: /^<brclass="(.*?)"\/>$/s,
+    pattern: /^<br class="(.*?)"\/>$/s,
     fields: [
         {
             label: 'CSS Classes',
             name: 'classes',
-            widget: 'select',
-            multiple: true,
-            options: [' text-blue ', ' text-red ', ' text-xl ', ' text-2xl ', ' text-3xl ', ' text-4xl ', ' text-5xl ']
+            widget: 'string',
+            hint: 'text-blue, text-red, text-xl, text-2xl, text-3xl, text-4xl, text-5xl'
         }
     ]
 });
