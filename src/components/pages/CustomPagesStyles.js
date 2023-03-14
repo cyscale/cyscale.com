@@ -15,6 +15,9 @@ const CustomPagesStyles = () => {
                 [data-cms='heading-two-subtitle'] {
                     ${tw`font-bold text-primary leading-normal font-montserrat lg:mt-3`}
                 }
+                [data-cms='paragraph'] {
+                    ${tw`text-base`}
+                }
             `}
         />
     );

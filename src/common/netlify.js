@@ -256,7 +256,7 @@ CMS.registerEditorComponent({
         }</h2>`;
     },
     toPreview: ({ classes, texth2 }, getAsset, fields) => {
-        return `<h2 data-cms='heading-two-subtitle' data-cms='heading-two-subtitle' class="titleSection border-title-partly ${classes}">${texth2}</h2>`;
+        return `<h2 data-cms='heading-two-subtitle' class="titleSection border-title-partly ${classes}">${texth2}</h2>`;
     },
     pattern: /^<h2 data-cms='heading-two-subtitle' class="titleSection border-title-partly (.*?)">(.*?)<\/h2>$/s,
     fields: [
@@ -283,12 +283,12 @@ CMS.registerEditorComponent({
             textp: match[2]
         },
     toBlock: function ({ classes, textp }, getAsset, fields) {
-        return `<p class="text-base ${classes || ''}">${textp || ''}</p>`;
+        return `<p data-cms='paragraph' class="${classes || ''}">${textp || ''}</p>`;
     },
     toPreview: ({ classes, textp }, getAsset, fields) => {
-        return `<p class="text-base ${classes}">${textp}</p>`;
+        return `<p data-cms='paragraph' class="${classes}">${textp}</p>`;
     },
-    pattern: /^<p class="text-base (.*?)">(.*?)<\/p>$/s,
+    pattern: /^<p data-cms='paragraph' class="(.*?)">(.*?)<\/p>$/s,
     fields: [
         {
             label: 'CSS Classes',
