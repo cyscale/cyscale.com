@@ -109,3 +109,74 @@ collections:
                 default: 'hybrid'
             }
           - { label: 'Body', name: 'body', widget: 'markdown' }
+    - name: 'pages'
+      label: 'Pages'
+      folder: 'src/markdown/pages'
+      create: true
+      slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+      fields:
+          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'pages' }
+          - { label: 'Page Name', name: 'pageName', widget: 'string', hint: 'Should not contain any spaces, ex: SKGPage for SecurityKnowledge Graph' }
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Description', name: 'description', widget: 'string' }
+          - {
+            label: 'Category Path',
+            name: 'categoryPath',
+            widget: 'select',
+            options: [ 'use-cases', 'products' ],
+          }
+          - { label: 'Path', name: 'path', widget: 'string', hint: 'Should not contain any spaces' }
+          - {
+            label: 'Sections',
+            name: 'sections',
+            widget: 'select',
+            options: [ 'hero', 'textImageRow', 'alignTeamsSection', 'featuresSection', 'cloudComplianceSection', 'ctaSection' ],
+            default: [ 'hero' ],
+            multiple: true
+          }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: 'Hero Background', name: 'heroBackground', widget: image }
+              - { label: 'Hero Image', name: 'heroImage', widget: image }
+              - { label: 'Hero Image Alt', name: 'heroImageAlt', widget: 'string' }
+              - { label: 'Hero Title', name: 'heroTitle', widget: 'markdown',  hint: 'For title use H1 Hero and nothing more'  }
+              - { label: "Custom Components", name: "customComponents", widget: "boolean", default: false, hint: 'For using Netlify custom components in the markdown or Rich Text'}
+              - { label: 'Hero Markdown', name: 'heroMarkdown', widget: 'markdown' }
+          - label: 'Text Image Row'
+            name: 'textImageRow'
+            widget: 'list'
+            allow_add: true
+            fields:
+              - {
+                  label: 'Row Image Position',
+                  name: 'rowImagePosition',
+                  widget: 'select',
+                  options: [ 'left', 'right' ],
+                  multiple: false
+                }
+              - { label: 'Row Image', name: 'rowImage', widget: image, required: false }
+              - { label: 'Row Alt', name: 'rowAlt', widget: 'string', required: false }
+              - { label: 'Row Subtitle', name: 'rowSubtitle', widget: 'markdown', required: false, hint: 'For subtitle use just H2 Subtitle and nothing more' }
+              - { label: "Custom Components", name: "customComponents", widget: "boolean", default: false, required: false, hint: 'For using Netlify custom components in the markdown or Rich Text' }
+              - { label: 'Row Markdown', name: 'rowMarkdown', widget: 'markdown', required: false }
+              - {
+                label: 'Row Background',
+                name: 'rowBackground',
+                widget: 'select',
+                options: [ '#FFFFFF', '#F3F8FF' ],
+                multiple: false
+              }
+          - label: 'Features'
+            name: 'featuresSection'
+            widget: 'list'
+            allow_add: true
+            fields:
+              - { label: 'Feature Title', name: 'featureTitle', widget: 'string', required: false }
+              - { label: 'Feature Text', name: 'featureText', widget: 'string', required: false }
+          - label: 'CTA'
+            name: 'ctaSection'
+            widget: 'object'
+            fields:
+                - { label: 'CTA Markdown', name: 'ctaMarkdown', widget: 'markdown', required: false, hint: 'Use H1 CTA and nothing more' }
