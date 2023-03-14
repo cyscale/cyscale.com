@@ -110,7 +110,7 @@ module.exports = {
                         resolve: `gatsby-remark-relative-images`,
                         options: {
                             staticFolderName: 'static',
-                            include: ['featuredimage']
+                            include: ['featuredimage', 'hero.heroImage', 'textImageRow']
                         }
                     },
                     {
@@ -131,9 +131,7 @@ module.exports = {
         {
             resolve: `gatsby-plugin-google-fonts`,
             options: {
-                fonts: [
-                    `Montserrat:400,500,600,700`,
-                ],
+                fonts: [`Montserrat:400,500,600,700`],
                 display: 'swap'
             }
         }

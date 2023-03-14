@@ -1,4 +1,4 @@
-.blog-reset {
+.blog-reset .pages-reset {
     line-height: 1.5;
     font-size: 1.1875rem;
 }
@@ -12,7 +12,13 @@
 .blog-reset h3,
 .blog-reset h4,
 .blog-reset h5,
-.blog-reset h6 {
+.blog-reset h6,
+.pages-reset h1,
+.pages-reset h2,
+.pages-reset h3,
+.pages-reset h4,
+.pages-reset h5,
+.pages-reset h6 {
     margin: 0;
     font-weight: 600;
 }
@@ -31,27 +37,33 @@
     margin-bottom: -1rem;
 }
 
-.blog-reset h1 {
+.blog-reset h1,
+.pages-reset h1 {
     font-size: 2rem;
 }
 
-.blog-reset h2 {
+.blog-reset h2,
+.pages-reset h2 {
     font-size: 1.5rem;
 }
 
-.blog-reset h3 {
+.blog-reset h3,
+.pages-reset h3 {
     font-size: 1.17rem;
 }
 
-.blog-reset h4 {
+.blog-reset h4,
+.pages-reset h4 {
     font-size: 1rem;
 }
 
-.blog-reset h5 {
+.blog-reset h5,
+.pages-reset h5 {
     font-size: 0.83rem;
 }
 
-.blog-reset h6 {
+.blog-reset h6,
+.pages-reset h6 {
     font-size: 0.67rem;
 }
 
@@ -64,17 +76,21 @@
 }
 
 .blog-reset ol,
-.blog-reset ul {
+.blog-reset ul,
+.pages-reset ol,
+.pages-reset ul {
     list-style: initial;
     margin-top: 1rem;
     padding-left: 2rem;
 }
 
-.blog-reset ol {
+.blog-reset ol,
+.pages-reset ol {
     list-style: number;
 }
 
-.blog-reset li {
+.blog-reset li,
+.pages-reset li {
     line-height: 1.5;
     margin-top: 0rem;
     padding-left: 0.5rem;
