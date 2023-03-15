@@ -14,7 +14,7 @@ const heroBg = (url) => css`
         background-size: cover;
         background-repeat: no-repeat;
         background-position: 50% 35%;
-        background-image: url(${url});
+        background-image: ${url ? 'url(' + url + ')' : 'linear-gradient(#eeeeee, #e4edfc)'};
     }
 `;
 
