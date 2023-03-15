@@ -2,7 +2,9 @@
 templateKey: pages
 pageName: ContainerSecurityPage
 title: Container Security - Cyscale
-description: Container Security
+description: Cyscale Platform tracks and secures containers throughout the
+  lifecycle while providing advanced inventory capabilities to ensure the
+  security of all container assets.
 categoryPath: use-cases
 path: container-security
 sections:
