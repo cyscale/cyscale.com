@@ -138,7 +138,7 @@ collections:
             name: "hero"
             widget: "object"
             fields:
-              - { label: 'Hero Background', name: 'heroBackground', widget: image }
+              - { label: 'Hero Background', name: 'heroBackground', widget: image, required: false }
               - { label: 'Hero Image', name: 'heroImage', widget: image }
               - { label: 'Hero Image Alt', name: 'heroImageAlt', widget: 'string' }
               - { label: 'Hero Title', name: 'heroTitle', widget: 'markdown',  hint: 'For title use H1 Hero and nothing more'  }
