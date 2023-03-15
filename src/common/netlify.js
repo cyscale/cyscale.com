@@ -1,7 +1,7 @@
 import CMS from 'netlify-cms-app';
 import React from 'react';
 import PostContent from '../components/new-blog/PostContent';
-import '../styles/global.css';
+import '../styles/netify-preview.css';
 import CSSInjector from './CSSInjector';
 import Hero from '../components/pages/Hero';
 import RightSection from '../components/pages/RightSection';
