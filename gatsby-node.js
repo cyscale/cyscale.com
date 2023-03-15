@@ -312,6 +312,20 @@ exports.createPages = async ({ graphql, actions }) => {
                                 rowMarkdown
                                 rowBackground
                             }
+                            secondTextImageRow {
+                                rowImagePosition
+                                rowImage {
+                                    publicURL
+                                    childImageSharp {
+                                        gatsbyImageData(width: 1920, layout: CONSTRAINED)
+                                    }
+                                }
+                                rowAlt
+                                rowSubtitle
+                                customComponents
+                                rowMarkdown
+                                rowBackground
+                            }
                             featuresSection {
                                 featureTitle
                                 featureText
@@ -367,6 +381,7 @@ exports.createSchemaCustomization = ({ actions }) => {
         sections: [String]
         hero: Hero
         textImageRow: [TextImageRow]
+        secondTextImageRow: [TextImageRow]
         featuresSection: [FeaturesSection]
         ctaSection: CTA
         authors: String

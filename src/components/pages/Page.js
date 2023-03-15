@@ -55,6 +55,37 @@ const Page = ({ data }) => {
                         return null;
                     });
                 }
+                if (item === 'secondTextImageRow') {
+                    return data?.secondTextImageRow?.map((section, index) => {
+                        if (section?.rowImagePosition === 'left') {
+                            return (
+                                <LeftSection
+                                    key={index}
+                                    subtitle={section.rowSubtitle}
+                                    image={section.rowImage.childImageSharp.gatsbyImageData}
+                                    alt={section.rowAlt}
+                                    customComponents={section.customComponents}
+                                    markdown={section.rowMarkdown}
+                                    backgroundColor={section.rowBackground}
+                                />
+                            );
+                        }
+                        if (section?.rowImagePosition === 'right') {
+                            return (
+                                <RightSection
+                                    key={index}
+                                    subtitle={section.rowSubtitle}
+                                    image={section.rowImage.childImageSharp.gatsbyImageData}
+                                    alt={section.rowAlt}
+                                    customComponents={section.customComponents}
+                                    markdown={section.rowMarkdown}
+                                    backgroundColor={section.rowBackground}
+                                />
+                            );
+                        }
+                        return null;
+                    });
+                }
                 if (item === 'featuresSection') {
                     return <Features features={data?.featuresSection} />;
                 }

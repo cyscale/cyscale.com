@@ -130,7 +130,7 @@ collections:
             label: 'Sections',
             name: 'sections',
             widget: 'select',
-            options: [ 'hero', 'textImageRow', 'alignTeamsSection', 'featuresSection', 'cloudComplianceSection', 'ctaSection' ],
+            options: [ 'hero', 'textImageRow', 'secondTextImageRow', 'alignTeamsSection', 'featuresSection', 'cloudComplianceSection', 'ctaSection' ],
             default: [ 'hero' ],
             multiple: true
           }
@@ -156,6 +156,30 @@ collections:
                   options: [ 'left', 'right' ],
                   multiple: false
                 }
+              - { label: 'Row Image', name: 'rowImage', widget: image, required: false }
+              - { label: 'Row Alt', name: 'rowAlt', widget: 'string', required: false }
+              - { label: 'Row Subtitle', name: 'rowSubtitle', widget: 'markdown', required: false, hint: 'For subtitle use just H2 Subtitle and nothing more' }
+              - { label: "Custom Components", name: "customComponents", widget: "boolean", default: false, required: false, hint: 'For using Netlify custom components in the markdown or Rich Text' }
+              - { label: 'Row Markdown', name: 'rowMarkdown', widget: 'markdown', required: false }
+              - {
+                label: 'Row Background',
+                name: 'rowBackground',
+                widget: 'select',
+                options: [ '#FFFFFF', '#F3F8FF' ],
+                multiple: false
+              }
+          - label: 'Second Text Image Row'
+            name: 'secondTextImageRow'
+            widget: 'list'
+            allow_add: true
+            fields:
+              - {
+                  label: 'Row Image Position',
+                  name: 'rowImagePosition',
+                  widget: 'select',
+                  options: [ 'left', 'right' ],
+                  multiple: false
+              }
               - { label: 'Row Image', name: 'rowImage', widget: image, required: false }
               - { label: 'Row Alt', name: 'rowAlt', widget: 'string', required: false }
               - { label: 'Row Subtitle', name: 'rowSubtitle', widget: 'markdown', required: false, hint: 'For subtitle use just H2 Subtitle and nothing more' }
