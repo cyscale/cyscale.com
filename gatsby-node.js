@@ -299,6 +299,8 @@ exports.createPages = async ({ graphql, actions }) => {
                                 heroMarkdown
                             }
                             textImageRow {
+                                rowStartGridCols
+                                rowEndGridCols
                                 rowImagePosition
                                 rowImage {
                                     publicURL
@@ -313,6 +315,8 @@ exports.createPages = async ({ graphql, actions }) => {
                                 rowBackground
                             }
                             secondTextImageRow {
+                                rowStartGridCols
+                                rowEndGridCols
                                 rowImagePosition
                                 rowImage {
                                     publicURL
@@ -405,6 +409,8 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
     
      type TextImageRow {
+        rowStartGridCols: String
+        rowEndGridCols: String
         rowImagePosition: String
         rowImage: File @fileByRelativePath
         rowAlt: String

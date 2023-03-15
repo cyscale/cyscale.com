@@ -6,7 +6,17 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import { Container } from '../atoms/Containers';
 import classNames from 'classnames';
 
-const LeftSection = ({ image, alt, subtitle, customComponents, markdown, preview, backgroundColor }) => {
+const LeftSection = ({
+    image,
+    alt,
+    subtitle,
+    customComponents,
+    markdown,
+    preview,
+    backgroundColor,
+    rowStartGridCols,
+    rowEndGridCols
+}) => {
     return (
         <div
             css={css`
@@ -17,13 +27,13 @@ const LeftSection = ({ image, alt, subtitle, customComponents, markdown, preview
             <Container>
                 <div className='py-8 md:py-12 lg:py-20'>
                     <div className='sm:grid sm:grid-cols-12 sm:gap-12'>
-                        <div className='col-span-12 lg:col-span-6 mt-8 sm:mt-0  hidden lg:block'>
+                        <div className={`col-span-12 lg:col-span-${rowStartGridCols} mt-8 sm:mt-0  hidden lg:block`}>
                             <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-2xl'>
                                 {preview && <img src={image} alt={alt} />}
                                 {!preview && <GatsbyImage alt='' image={image} />}
                             </div>
                         </div>
-                        <div className='col-span-12 lg:col-span-6'>
+                        <div className={`col-span-12 lg:col-span-${rowEndGridCols}`}>
                             <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-lg'>
                                 <ReactMarkdown rehypePlugins={[rehypeRaw]} linkTarget='_blank'>
                                     {subtitle}

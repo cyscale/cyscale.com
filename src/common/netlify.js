@@ -135,6 +135,8 @@ const PagesPreview = ({ entry }) => {
                                     return (
                                         <LeftSection
                                             key={index}
+                                            rowStartGridCols={section.rowStartGridCols}
+                                            rowEndGridCols={section.rowEndGridCols}
                                             subtitle={section.rowSubtitle}
                                             image={section.rowImage}
                                             alt={section.rowAlt}
@@ -149,6 +151,8 @@ const PagesPreview = ({ entry }) => {
                                     return (
                                         <RightSection
                                             key={index}
+                                            rowStartGridCols={section.rowStartGridCols}
+                                            rowEndGridCols={section.rowEndGridCols}
                                             subtitle={section.rowSubtitle}
                                             image={section.rowImage}
                                             alt={section.rowAlt}
@@ -171,6 +175,8 @@ const PagesPreview = ({ entry }) => {
                                     return (
                                         <LeftSection
                                             key={index}
+                                            rowStartGridCols={section.rowStartGridCols}
+                                            rowEndGridCols={section.rowEndGridCols}
                                             subtitle={section.rowSubtitle}
                                             image={section.rowImage}
                                             alt={section.rowAlt}
@@ -185,6 +191,8 @@ const PagesPreview = ({ entry }) => {
                                     return (
                                         <RightSection
                                             key={index}
+                                            rowStartGridCols={section.rowStartGridCols}
+                                            rowEndGridCols={section.rowEndGridCols}
                                             subtitle={section.rowSubtitle}
                                             image={section.rowImage}
                                             alt={section.rowAlt}

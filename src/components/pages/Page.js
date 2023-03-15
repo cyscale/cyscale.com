@@ -30,6 +30,8 @@ const Page = ({ data }) => {
                             return (
                                 <LeftSection
                                     key={index}
+                                    rowStartGridCols={section.rowStartGridCols}
+                                    rowEndGridCols={section.rowEndGridCols}
                                     subtitle={section.rowSubtitle}
                                     image={section.rowImage.childImageSharp.gatsbyImageData}
                                     alt={section.rowAlt}
@@ -43,6 +45,8 @@ const Page = ({ data }) => {
                             return (
                                 <RightSection
                                     key={index}
+                                    rowStartGridCols={section.rowStartGridCols}
+                                    rowEndGridCols={section.rowEndGridCols}
                                     subtitle={section.rowSubtitle}
                                     image={section.rowImage.childImageSharp.gatsbyImageData}
                                     alt={section.rowAlt}
@@ -61,6 +65,8 @@ const Page = ({ data }) => {
                             return (
                                 <LeftSection
                                     key={index}
+                                    rowStartGridCols={section.rowStartGridCols}
+                                    rowEndGridCols={section.rowEndGridCols}
                                     subtitle={section.rowSubtitle}
                                     image={section.rowImage.childImageSharp.gatsbyImageData}
                                     alt={section.rowAlt}
@@ -74,6 +80,8 @@ const Page = ({ data }) => {
                             return (
                                 <RightSection
                                     key={index}
+                                    rowStartGridCols={section.rowStartGridCols}
+                                    rowEndGridCols={section.rowEndGridCols}
                                     subtitle={section.rowSubtitle}
                                     image={section.rowImage.childImageSharp.gatsbyImageData}
                                     alt={section.rowAlt}
