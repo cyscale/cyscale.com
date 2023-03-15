@@ -39,9 +39,9 @@ tags:
 ---
 <!--StartFragment-->
 
-Cloud security and compliance go hand-in-hand. Following security best practices automatically improves your compliance scores, while being compliant with international standards demonstrates that your company is preoccupied with data security and makes efforts to secure its environments.  
+Cloud security and compliance go hand-in-hand. Following cybersecurity best practices automatically improves your compliance scores, while being compliant with international standards demonstrates that your company is preoccupied with data security and makes efforts to secure its cloud computing environments.
 
-In this article, we will look at both cloud security best practices and compliance standards to construct a comprehensive view on how to secure cloud environments while addressing the most common industry compliance frameworks. 
+In this article, we will look at both cloud security best practices and compliance standards to construct a comprehensive view on how to secure cloud environments and prevent the occurrence of vulnerabilities while addressing the most common industry compliance frameworks. 
 
 ## Cloud security  
 
@@ -62,7 +62,7 @@ When we think of cloud security, the first thing that comes to our mind is Ident
 Some key configurations you can make to ensure a strong [IAM policy](https://cyscale.com/blog/iam-best-practices-from-aws-azure-gcp/) are: 
 
 * Enable Multi-Factor Authentication (MFA), 
-* Implement The Principle of Least Privilege, 
+* Implement The Principle of Least Privilege for access control, 
 * Ensure continuous logging and monitoring, 
 * Rotate credentials and keys regularly, and others. 
 
@@ -76,7 +76,7 @@ Data encryption is necessary to obtain data confidentiality and protect your ass
 
 In order to perform correct encryption, ensure that you choose the suitable algorithm (for data at rest, AES is an industry-standard), store your cryptographic keys securely and away from data, rotate the keys you use, and follow other best practices described [in this article](https://cyscale.com/blog/protecting-data-at-rest/). 
 
-Moreover, encrypt all data traveling to and from your cloud environment using SSL/TLS to prevent any eavesdropping attacks. 
+Moreover, encrypt all cloud data traveling to and from your cloud environment using SSL/TLS to prevent any eavesdropping attacks and data breaches.. 
 
 ## Compliance 
 
@@ -90,7 +90,7 @@ In this article, we will look at some of the most accredited standards: 
 
 ### ISO 27001  
 
-This standard was developed by ANSI-ASQ National Accreditation Board (ANAB) and defines security best practices for ISMSs (Information Security Management Systems). It contains 93 controls that specify rules in the following areas: 
+This standard was developed by ANSI-ASQ National Accreditation Board (ANAB) and defines security best practices for ISMSs (Information Security Management Systems). It contains 93 security controls that specify rules in the following areas: 
 
 * People (8 controls),  
 * Organizational (37 controls),  
@@ -117,7 +117,7 @@ You can find a comprehensive comparison between SOC 2 and ISO 27001 [here](https
 
 ### PCI-DSS 
 
-Payment Card Industry Data Security Standard (PCI-DSS) is a compliance framework that specifies security requirements regarding credit and debit card transactions performed by a company.  
+Payment Card Industry Data Security Standard (PCI-DSS) is a compliance framework that specifies regulatory compliance requirements regarding credit and debit card transactions performed by a company.  
 
 This standard regulates credit card information processing, storage, and transmission.  
 
@@ -132,7 +132,7 @@ You can see the entire list, along with explanations, [here](https://cyscale.com
 
 ### HIPAA 
 
-[The Health Insurance Portability and Accountability Act of 1996 (HIPAA)](https://cyscale.com/blog/hipaa-compliance-in-cloud/) is the most well-known standard that regulates the management of individuals’ personal health information (PHI). It is a U.S. federal law that contains three rules regarding the storage, the management, and the access rights to PHI. 
+[The Health Insurance Portability and Accountability Act of 1996 (HIPAA)](https://cyscale.com/blog/hipaa-compliance-in-cloud/) is the most well-known standard that regulates the management of individuals’ personal health information (PHI). It is a U.S. healthcare federal law that contains three rules regarding the storage, the management, and the access rights to PHI. 
 
 The three rules are: 
 
@@ -153,12 +153,14 @@ Some of the protection principles dictated by [GDPR](https://gdpr.eu/what-is-gdp
 * Data minimization,  
 * Integrity and confidentiality, and others. 
 
-All of these compliance standards have rigorous requirements, and the consequences of not implementing those rules can lead to financial and criminal repercussions, as well as a damaged reputation. 
+All of these compliance standards have rigorous regulatory requirements, and the consequences of not implementing those rules can lead to financial and criminal repercussions, as well as a damaged reputation.
+
+To read more about these compliance standards, as well as NIST, check out our [whitepaper](https://cyscale.com/whitepaper/the-complete-guide-to-cloud-compliance/). 
 
 Our [cloud compliance platform](https://cyscale.com/products/cloud-security-posture-management/)  can help you secure your cloud environment and become compliant with respected accreditations through: 
 
-* Over 400 controls that help you stay on top of your security program, 
-* Both pre-configured and editable policies that can be associated to controls, 
+* Over 400 controls, across multiple public cloud service providers, such as Microsoft Azure, AWS (Amazon Web Services), and GCP (Google Cloud), that help you stay on top of your security program, 
+* Both pre-configured and editable security policies that can be associated to controls, 
 * Powerful identity and security dashboards for enhanced visibility over your cloud infrastructure, and others. 
 
 <!--EndFragment-->
