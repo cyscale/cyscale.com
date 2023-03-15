@@ -150,6 +150,22 @@ collections:
             allow_add: true
             fields:
               - {
+                  label: 'Row Start Grid Cols',
+                  name: 'rowStartGridCols',
+                  widget: 'select',
+                  options: [ '5', '6', '7' ],
+                  multiple: false,
+                  default: [ '6' ]
+              }
+              - {
+                  label: 'Row End Grid Cols',
+                  name: 'rowEndGridCols',
+                  widget: 'select',
+                  options: [ '5', '6', '7' ],
+                  multiple: false,
+                  default: [ '6' ]
+                }
+              - {
                   label: 'Row Image Position',
                   name: 'rowImagePosition',
                   widget: 'select',
@@ -173,6 +189,22 @@ collections:
             widget: 'list'
             allow_add: true
             fields:
+              - {
+                  label: 'Row Start Grid Cols',
+                  name: 'rowStartGridCols',
+                  widget: 'select',
+                  options: [ '5', '6', '7' ],
+                  multiple: false,
+                  default: [ '6' ]
+              }
+              - {
+                  label: 'Row End Grid Cols',
+                  name: 'rowEndGridCols',
+                  widget: 'select',
+                  options: [ '5', '6', '7' ],
+                  multiple: false,
+                  default: [ '6' ]
+              }
               - {
                   label: 'Row Image Position',
                   name: 'rowImagePosition',
