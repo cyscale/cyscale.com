@@ -162,6 +162,42 @@ const PagesPreview = ({ entry }) => {
                                 return null;
                             });
                     }
+                    if (item === 'secondTextImageRow') {
+                        return entry
+                            .getIn(['data', 'secondTextImageRow'])
+                            ?.toJS()
+                            ?.map((section, index) => {
+                                if (section?.rowImagePosition === 'left') {
+                                    return (
+                                        <LeftSection
+                                            key={index}
+                                            subtitle={section.rowSubtitle}
+                                            image={section.rowImage}
+                                            alt={section.rowAlt}
+                                            customComponents={section.customComponents}
+                                            markdown={section.rowMarkdown}
+                                            backgroundColor={section.rowBackground}
+                                            preview={true}
+                                        />
+                                    );
+                                }
+                                if (section?.rowImagePosition === 'right') {
+                                    return (
+                                        <RightSection
+                                            key={index}
+                                            subtitle={section.rowSubtitle}
+                                            image={section.rowImage}
+                                            alt={section.rowAlt}
+                                            customComponents={section.customComponents}
+                                            markdown={section.rowMarkdown}
+                                            backgroundColor={section.rowBackground}
+                                            preview={true}
+                                        />
+                                    );
+                                }
+                                return null;
+                            });
+                    }
                     if (item === 'featuresSection') {
                         return <Features features={entry.getIn(['data', 'featuresSection'])?.toJS()} />;
                     }
