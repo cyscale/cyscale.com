@@ -19,7 +19,7 @@ hero:
   heroImageAlt: Containers View
   heroTitle: <h1 class="text-center lg:text-left text-blue text-4xl leading-normal
     lg:leading-normal mb-16 font-montserrat"><strong>Robust Container
-    Security<br class="hidden sm:block"> with Our CNAPP Solution</strong></h1>
+    Security<br class="hidden sm:block"> with our CNAPP solution</strong></h1>
   heroMarkdown: >-
     
 
@@ -36,8 +36,8 @@ textImageRow:
     rowImage: /img/graph-container-security.png
     rowAlt: Graph
     rowSubtitle: <h2 data-cms='heading-two-subtitle' class="titleSection
-      border-title-partly ">Empower Your DevOps<br class="hidden lg:block"> Team
-      with Comprehensive Container Security</h2>
+      border-title-partly ">Empower your DevOps<br class="hidden lg:block"> Team
+      with comprehensive container security</h2>
     rowStartGridCols: "5"
     rowEndGridCols: "7"
     rowBackground: "#FFFFFF"
@@ -67,9 +67,9 @@ secondTextImageRow:
     rowImagePosition: left
     rowAlt: Conterners View
     rowSubtitle: <h2 data-cms='heading-two-subtitle' class="titleSection
-      border-title-partly ">Automate Your Container<br class="hidden lg:block">
-      Security<br class="block lg:hidden"> Across the Entire<br class="hidden
-      lg:block"> Application Lifecycle</h2>
+      border-title-partly ">Automate your Container<br class="hidden lg:block">
+      Security<br class="block lg:hidden"> across the entire<br class="hidden
+      lg:block"> application lifecycle</h2>
     rowEndGridCols: "5"
 featuresSection:
   - featureTitle: Vulnerability Scanning
