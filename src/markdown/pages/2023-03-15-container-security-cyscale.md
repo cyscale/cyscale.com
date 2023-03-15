@@ -17,7 +17,7 @@ hero:
   customComponents: true
   heroImage: /img/hero-container-security.png
   heroImageAlt: Containers View
-  heroTitle: <h1 data-cms='heading-one' class="lg:text-4xl text-center
+  heroTitle: <h1 data-cms='heading-one' class="text-center
     lg:text-left"><strong>Robust Container Security<br class="hidden sm:block">
     with Our CNAPP Solution</strong></h1>
   heroMarkdown: >-
