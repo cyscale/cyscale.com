@@ -1,10 +1,10 @@
 ---
 templateKey: pages
 pageName: ContainerSecurityPage
-title: Container Security - Cyscale
-description: Cyscale Platform tracks and secures containers throughout the
-  lifecycle while providing advanced inventory capabilities to ensure the
-  security of all container assets.
+title: Robust Container Security Tool with CNAPP - Cyscale
+description: Protect your cloud-native applications with our advanced CNAPP
+  solution. Our container security offers vulnerability scanning, access
+  control, compliance guidance, and automation tools. Request a demo today.
 categoryPath: use-cases
 path: container-security
 sections:
