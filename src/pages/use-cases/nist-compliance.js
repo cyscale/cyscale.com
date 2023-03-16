@@ -39,7 +39,7 @@ const NISTCompliance = ({ location }) => {
         <Layout
             location={location}
             pageName='NIST'
-            title='NIST Compliance - Cyscale'
+            title='NIST Cloud Compliance & Security - Cyscale'
             description='A powerful set of technical controls helping you with NIST compliance in areas such as security, availability, processing integrity, confidentiality and privacy'
         >
             <div className='bg-hero-nist pt-8'>
