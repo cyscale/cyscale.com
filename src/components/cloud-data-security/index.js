@@ -11,7 +11,6 @@ import Icon1 from '../../assets/images/Group-409.inline.svg';
 import Icon2 from '../../assets/images/Group-411.inline.svg';
 import Icon3 from '../../assets/images/Group-412.inline.svg';
 import Icon4 from '../../assets/images/Path-270.inline.svg';
-import F_Image from '../../assets/images/fImage1.svg';
 import NewTopNav from '../layout/NewTopNav';
 import { graphql, useStaticQuery } from 'gatsby';
 
