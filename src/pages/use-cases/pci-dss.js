@@ -31,7 +31,7 @@ const PciDss = ({ location }) => {
             location={location}
             pageName='PCIDSS'
             title='PCI Cloud Security & Compliance | Automate PCI DSS Compliance - Cyscale'
-            description='Develop a strong cloud security process for payment card data that enables prevention, detection, and response to security incidents.'
+            description='Strong cloud security process for payment card data that enables prevention, detection, and response to security incidents. Automate threat detection & gain advanced security controls. Learn more now!'
         >
             <div className='bg-cloud bg-lightGrey'>
                 <Container>
