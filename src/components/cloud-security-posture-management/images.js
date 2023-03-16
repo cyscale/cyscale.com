@@ -7,18 +7,18 @@ function withImageData(WrappedComponent) {
         <StaticQuery
             query={graphql`
                 query CSPMImagesQuery {
-                    detectMisconfigurations: file(relativePath: { eq: "detect-prevent-misconfigurations.png" }) {
+                    policiesCSPM: file(relativePath: { eq: "policies-cspm.png" }) {
                         childImageSharp {
                             gatsbyImageData(width: 1080, layout: CONSTRAINED)
                         }
                     }
-                    cutNoise: file(relativePath: { eq: "cut-noise-asset-drift-source-of-truth.png" }) {
+                    inventoryCSPM: file(relativePath: { eq: "inventory-cspm.png" }) {
                         childImageSharp {
                             gatsbyImageData(width: 1080, layout: CONSTRAINED)
                         }
                     }
-                    automateCompliance: file(
-                        relativePath: { eq: "automate-compliance-as-code-iac-continuous-assessment.png" }
+                    identityCSPM: file(
+                        relativePath: { eq: "identity-cspm.png" }
                     ) {
                         childImageSharp {
                             gatsbyImageData(width: 1080, layout: CONSTRAINED)
@@ -29,15 +29,15 @@ function withImageData(WrappedComponent) {
                             gatsbyImageData(width: 1080, layout: CONSTRAINED)
                         }
                     }
-                    optimizeCosts: file(
-                        relativePath: { eq: "optimize-costs-reveal-analyze-cloud-budget-spendings.png" }
+                    inventoryGroupedAssets: file(
+                        relativePath: { eq: "inventory-grouped-assets.png" }
                     ) {
                         childImageSharp {
                             gatsbyImageData(width: 1080, layout: CONSTRAINED)
                         }
                     }
-                    eliminateSecurityGaps: file(
-                        relativePath: { eq: "eliminate-security-gaps-compliance-cloud-security.png" }
+                    dataSecurityCSPM: file(
+                        relativePath: { eq: "data-security-cspm.png" }
                     ) {
                         childImageSharp {
                             gatsbyImageData(width: 1080, layout: CONSTRAINED)
@@ -51,16 +51,16 @@ function withImageData(WrappedComponent) {
 }
 export const DetectPreventMisconfigurations = withImageData((props) => (
     <Img
-        image={props.imageData.detectMisconfigurations.childImageSharp.gatsbyImageData}
+        image={props.imageData.policiesCSPM.childImageSharp.gatsbyImageData}
         alt='Detect and Prevent Misconfigurations'
     />
 ));
 export const CutNoise = withImageData((props) => (
-    <Img image={props.imageData.cutNoise.childImageSharp.gatsbyImageData} alt='Cut Noise with Single Source Of Truth' />
+    <Img image={props.imageData.inventoryCSPM.childImageSharp.gatsbyImageData} alt='Cut Noise with Single Source Of Truth' />
 ));
 export const AutomateCompliance = withImageData((props) => (
     <Img
-        image={props.imageData.automateCompliance.childImageSharp.gatsbyImageData}
+        image={props.imageData.identityCSPM.childImageSharp.gatsbyImageData}
         alt='Automate Compliance As Code IAC Continuous Assessment'
     />
 ));
@@ -72,13 +72,13 @@ export const OptimizeWorkflow = withImageData((props) => (
 ));
 export const OptimizeCosts = withImageData((props) => (
     <Img
-        image={props.imageData.optimizeCosts.childImageSharp.gatsbyImageData}
+        image={props.imageData.inventoryGroupedAssets.childImageSharp.gatsbyImageData}
         alt='Optimize Costs Reveal and Analyze Cloud Budget and Spendings'
     />
 ));
 export const EliminateSecurityGaps = withImageData((props) => (
     <Img
-        image={props.imageData.eliminateSecurityGaps.childImageSharp.gatsbyImageData}
+        image={props.imageData.dataSecurityCSPM.childImageSharp.gatsbyImageData}
         alt='Eliminate Security Gaps Compliance Cloud Security'
     />
 ));

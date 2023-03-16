@@ -7,7 +7,7 @@ import iconThree from '../../assets/images/elemente-vectoriale-08.png';
 import {
     DetectPreventMisconfigurations,
     CutNoise,
-    AutomateCompliance
+    AutomateCompliance, EliminateSecurityGaps
 } from '../../components/cloud-security-posture-management/images';
 import Fproducts from '../../components/cloud-security-posture-management/featuredProducts';
 import GetStarted from '../../components/Home/getstarted';
@@ -55,7 +55,7 @@ const dataFeaturedProducts = [
             <strong>Coming soon: </strong>,
             'create custom Controls that tap into our Security Knowledge Graph™ and automate the security and compliance checks that matter the most for your organization.'
         ],
-        featureImage: <AutomateCompliance />
+        featureImage: <EliminateSecurityGaps />
     }
 ];
 

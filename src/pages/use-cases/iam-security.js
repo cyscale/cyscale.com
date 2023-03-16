@@ -66,7 +66,7 @@ const IAMSecurity = ({ location }) => {
                     <Row>
                         <div className='col-span-12 lg:col-span-6'>
                             <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-xl'>
-                                <GatsbyImage image={data.identityDashboard.childImageSharp.gatsbyImageData} />
+                                <GatsbyImage image={data.identityDashboard.childImageSharp.gatsbyImageData} className="shadow-xl" />
                             </div>
                         </div>
                         <div className='col-span-12 lg:col-span-5'>
@@ -127,7 +127,7 @@ const IAMSecurity = ({ location }) => {
                         </div>
                         <div className='col-span-12'>
                             <div className='max-w-xl lg:max-w-5xl mx-auto pt-12'>
-                                <GatsbyImage image={data.identityPage.childImageSharp.gatsbyImageData} />
+                                <GatsbyImage image={data.identityPage.childImageSharp.gatsbyImageData} className="shadow-xl" />
                             </div>
                         </div>
                     </div>
