@@ -11,10 +11,20 @@ import Icon1 from '../../assets/images/Group-409.inline.svg';
 import Icon2 from '../../assets/images/Group-411.inline.svg';
 import Icon3 from '../../assets/images/Group-412.inline.svg';
 import Icon4 from '../../assets/images/Path-270.inline.svg';
-import F_Image from '../../assets/images/fImage1.svg';
 import NewTopNav from '../layout/NewTopNav';
+import { graphql, useStaticQuery } from 'gatsby';
 
 const Index = ({ location }) => {
+    const data = useStaticQuery(graphql`
+        query CloudDataSecurityQuery {
+            dashboard: file(relativePath: { eq: "dashboard-cloud-data-security.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 1920, layout: CONSTRAINED)
+                }
+            }
+        }
+    `);
+
     const dataServices = [
         {
             icon: <Icon1 />,
@@ -124,7 +134,7 @@ const Index = ({ location }) => {
     ];
     const dataPerformance = [
         {
-            image: F_Image,
+            image: data.dashboard.childImageSharp.gatsbyImageData,
             title: `Do it all with zero performance degradation for your workloads`,
             description: `Because we use serverless technologies to categorize and inspect data repositories, we never interrupt or overload your systems. \nThe Cyscale Cloud Platform reduces your attack surface through continuous risk assessments with zero negative impact on performance. \n\nRun an efficient data security program that covers your entire range of cloud entities. Improve your flexibility, compliance security posture and increase job satisfaction for your engineers without compromising on the benefits of cloud.`
         }
