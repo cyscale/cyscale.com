@@ -88,11 +88,11 @@ const CloudCompliance = ({ location }) => {
                                     Why is ISO 27001 important?
                                 </h2>
                                 <p className='text-base lg:text-xl leading-relaxed max-w-5xl mx-auto mt-8'>
-                                    <strong>ISO/IEC 27001:2013</strong> is the golden standard when it comes to
-                                    information security. Part of the <strong>ISO 27000 family</strong>, it helps
-                                    organizations protect their assets such as employee information, user data, and
-                                    intellectual property. Being <strong>ISO 27001 compliant</strong> gives you and your
-                                    customers the confidence to run and expand your business.
+                                    <strong>ISO/IEC 27001:2013</strong> is the golden international standard when it
+                                    comes to information security. Part of the <strong>ISO/IEC 27000 family</strong>, it
+                                    helps organizations protect their assets such as employee information, user data,
+                                    and intellectual property. Being <strong>ISO 27001 compliant</strong> gives you and
+                                    your customers the confidence to run and expand your business.
                                 </p>
                             </div>
                         </Row>
@@ -108,7 +108,7 @@ const CloudCompliance = ({ location }) => {
                                 order={1}
                                 groups={[
                                     {
-                                        main: 'Either you decide to start/improve your security program or a client requires compliant vendors'
+                                        main: 'Either you decide to start/improve your cloud security program or a client requires compliant vendors'
                                     }
                                 ]}
                             />
@@ -136,7 +136,8 @@ const CloudCompliance = ({ location }) => {
                                             </>,
                                             <>
                                                 <strong>Annex A</strong> - a comprehensive list of control objectives
-                                                and controls intended to help you reduce the risk as much as possible.
+                                                and information security controls intended to help you reduce the risk
+                                                as much as possible.
                                             </>
                                         ]
                                     }
@@ -148,7 +149,7 @@ const CloudCompliance = ({ location }) => {
                                     {
                                         main: 'Identify the scope of the ISMS taking into consideration',
                                         list: [
-                                            "the organization's objectives regarding managing the risk",
+                                            "the organization's objectives regarding risk management",
                                             'the requirements of the involved parties',
                                             'the asset inventory - might include legal documents, user data, cloud resources, and physical equipment.'
                                         ]
@@ -159,7 +160,7 @@ const CloudCompliance = ({ location }) => {
                                 order={5}
                                 groups={[
                                     {
-                                        main: 'Define and apply the information security risk treatment',
+                                        main: 'Define and apply the information security risk mitigation treatment',
                                         list: [
                                             'Annex A controls provide a holistic but general approach. You are still responsible for researching and implementing actual procedures to secure your assets',
                                             'This is a critical point for organizations running in the cloud',
@@ -203,10 +204,10 @@ const CloudCompliance = ({ location }) => {
                                 order={8}
                                 groups={[
                                     {
-                                        main: 'Continuous compliance - the point of the standard is not to pass the audit but to improve the security of your information assets',
+                                        main: 'Continuous compliance - the point of the security standard is not to pass the audit but to improve the cybersecurity of your information assets',
                                         list: [
                                             'Periodically review your policies (designated owners and management)',
-                                            'Keep your asset inventory up to date'
+                                            'Keep your asset inventory up to date and ensure business continuity'
                                         ]
                                     }
                                 ]}
@@ -222,9 +223,10 @@ const CloudCompliance = ({ location }) => {
                                     Asset Inventory
                                 </h2>
                                 <p className='text-base lg:text-lg leading-relaxed mt-4 lg:mt-8'>
-                                    Keep track of all your cloud assets such as virtual machines, storage buckets, and
-                                    IAM users. Cyscale allows you to connect all your cloud accounts from AWS, GCP,
-                                    Azure, and Alibaba, in a read-only mode.
+                                    Keep track of all your cloud computing assets such as virtual machines, cloud
+                                    storage buckets, and IAM users. Cyscale allows you to connect all your cloud
+                                    accounts from cloud service providers (AWS, GCP, Azure, and Alibaba), in a read-only
+                                    mode.
                                 </p>
                             </div>
                             <div className='col-span-12 lg:col-span-6 order-1 lg:order-2 pb-4 lg:pb-0'>
@@ -248,10 +250,10 @@ const CloudCompliance = ({ location }) => {
                                     Annex A Controls and beyond
                                 </h2>
                                 <p className='text-base lg:text-lg leading-relaxed  mt-4 lg:mt-8'>
-                                    Continuously keep your systems and your data secure by following industry best
-                                    practices such as CIS benchmarks and well-architected frameworks, all neatly mapped
-                                    to ISO 27001. You can establish the statement of applicability for your cloud assets
-                                    in minutes instead of weeks.
+                                    Continuously keep your cloud infrastructure and your sensitive data secure by
+                                    following industry best practices to prevent vulnerabilities, such as CIS benchmarks
+                                    and well-architected frameworks, all neatly mapped to ISO 27001. You can establish
+                                    the statement of applicability for your cloud assets in minutes instead of weeks.
                                 </p>
                             </div>
                         </Row>
@@ -265,9 +267,10 @@ const CloudCompliance = ({ location }) => {
                                     Out of the box Policies
                                 </h2>
                                 <p className='text-base lg:text-lg leading-relaxed  mt-4 lg:mt-8'>
-                                    Cyscale provides you with a set of battle-tested policies to jumpstart your ISMS.
-                                    They are applicable to all your assets such as employee information, intelectual
-                                    property, and physical equipment, besides cloud assets.
+                                    Cyscale provides you with a set of battle-tested security policies to jumpstart your
+                                    ISMS. They are applicable to all your assets such as employee information,
+                                    intelectual property, and physical equipment, besides cloud assets. They help you
+                                    improve your security posture and prevent security incidents.
                                 </p>
                             </div>
                             <div className='col-span-12 lg:col-span-6 order-1 lg:order-2 pb-4 lg:pb-0'>
@@ -296,9 +299,11 @@ const CloudCompliance = ({ location }) => {
                                 </h2>
                                 <p className='text-base lg:text-lg leading-relaxed  mt-4 lg:mt-8'>
                                     Cyscale enables you to link procedures to actual technical verifications and
-                                    controls. You know at any moment the exact compliance status of your assets right
-                                    inside the policy that describes how they are secured. In other words, inline
-                                    evidence collection.
+                                    security controls. You know at any moment the exact compliance status of your assets
+                                    right inside the policy that describes how they are secured. In other words, inline
+                                    evidence collection. Moreover, you can automate compliance checks to streamline the
+                                    process of obtaining the ISO 27001 certification. We also support GDPR, HIPAA, and
+                                    other regulatory frameworks.
                                 </p>
                             </div>
                         </Row>
