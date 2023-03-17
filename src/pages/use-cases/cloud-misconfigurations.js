@@ -4,7 +4,7 @@ import heroBG from '../../assets/images/hero-CSPM-bg.svg';
 import Layout from '../../components/layout/layout.js';
 import iconTwo from '../../assets/images/elemente-vectoriale-07.png';
 import iconThree from '../../assets/images/elemente-vectoriale-08.png';
-import { Policies, Inventory, Identity } from '../../components/cloud-security-posture-management/images';
+import { Policies, Inventory, DataSecurity } from '../../components/cloud-security-posture-management/images';
 import Fproducts from '../../components/cloud-security-posture-management/featuredProducts';
 import GetStarted from '../../components/Home/getstarted';
 import MisconfigCoverage from '../../components/cloud-security-posture-management/misconfigCoverage';
@@ -51,7 +51,7 @@ const dataFeaturedProducts = [
             <strong>Coming soon: </strong>,
             'create custom Controls that tap into our Security Knowledge Graph™ and automate the security and compliance checks that matter the most for your organization.'
         ],
-        featureImage: <Identity />
+        featureImage: <DataSecurity />
     }
 ];
 

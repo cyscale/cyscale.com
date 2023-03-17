@@ -9,7 +9,7 @@ import icon2 from '../../assets/images/gear.svg';
 import icon3 from '../../assets/images/management.svg';
 import icon4 from '../../assets/images/message.svg';
 import getStartedICon from '../../assets/images/getStartedIconCPSM.svg';
-import { InventoryGroupedAssets, DataSecurity } from './images';
+import { InventoryGroupedAssets, InventoryGraph, DataSecurity } from './images';
 import MisconfigurationTabs from './MisconfigurationTabs';
 import CategoryPostsPreview from '../new-blog/CategoryPostsPreview';
 import { Container, Section } from '../atoms/Containers';
@@ -62,7 +62,7 @@ const Index = () => {
                 </a>,
                 ' and a deep understanding of your cloud attack surface, you can reduce overhead in multiple areas:\n'
             ],
-            featureImage: <InventoryGroupedAssets />
+            featureImage: <InventoryGraph />
         },
         {
             tabTitle: 'Fill in the security gaps left by cloud service providers',
