@@ -9,9 +9,9 @@ import gcp from '../../assets/images/svg_gcp.svg';
 import { Container, Row, Section } from '../../components/atoms/Containers';
 import useHubSpot from '../../components/campaigns/useHubSpot';
 import {
-    AutomateCompliance,
-    CutNoise,
-    DetectPreventMisconfigurations
+    Identity,
+    Inventory,
+    Policies
 } from '../../components/cloud-security-posture-management/images';
 import MisconfigCoverage from '../../components/cloud-security-posture-management/misconfigCoverage';
 import GetStarted from '../../components/Home/getstarted';
@@ -116,7 +116,7 @@ export default function Misconfigurations({ location }) {
                                 </p>
                             </div>
                             <div className='col-span-12 lg:col-span-6 order-1 lg:order-2 pb-4 lg:pb-0'>
-                                <DetectPreventMisconfigurations />
+                                <Policies />
                             </div>
                         </Row>
                     </div>
@@ -125,7 +125,7 @@ export default function Misconfigurations({ location }) {
                     <div className='max-w-lg mx-auto lg:mx-0 lg:max-w-none'>
                         <Row style={{ alignItems: 'center' }}>
                             <div className='col-span-12 lg:col-span-6 pb-4 lg:pb-0'>
-                                <CutNoise />
+                                <Inventory />
                             </div>
                             <div className='col-span-12 lg:col-span-6 lg:pl-8'>
                                 <h2 className='font-semibold  text-primary text-2xl lg:text-4xl'>
@@ -170,7 +170,7 @@ export default function Misconfigurations({ location }) {
                                 </p>
                             </div>
                             <div className='col-span-12 lg:col-span-6 order-1 lg:order-2 pb-4 lg:pb-0'>
-                                <AutomateCompliance />
+                                <Identity />
                             </div>
                         </Row>
                     </div>
