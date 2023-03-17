@@ -7,7 +7,6 @@ import WorkFromHome from '../../assets/images/work-from-home.inline.svg';
 import CodeAnalysis from '../../assets/images/graph-viewer-code-analysis.svg';
 import EmployeeAccessFootprint from '../../assets/images/employee-access-footprint.svg';
 import getStartedICon from '../../assets/images/getStartedIconCPSM.svg';
-import SuperChargeCloudSecurityImage from '../../assets/images/supercharge-cloud-security.png';
 import CloudSecuirtyConfigurationImage from '../../assets/images/cloud-secuity-configuration.svg';
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
