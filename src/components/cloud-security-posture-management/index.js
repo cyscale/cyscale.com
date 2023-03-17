@@ -9,7 +9,7 @@ import icon2 from '../../assets/images/gear.svg';
 import icon3 from '../../assets/images/management.svg';
 import icon4 from '../../assets/images/message.svg';
 import getStartedICon from '../../assets/images/getStartedIconCPSM.svg';
-import { OptimizeCosts, EliminateSecurityGaps } from './images';
+import { InventoryGroupedAssets, DataSecurity } from './images';
 import MisconfigurationTabs from './MisconfigurationTabs';
 import CategoryPostsPreview from '../new-blog/CategoryPostsPreview';
 import { Container, Section } from '../atoms/Containers';
@@ -46,7 +46,7 @@ const Index = () => {
             sectionDescription: `Forget the hassle of multiple logins into various cloud accounts, with different dashboards and
       features. Get all your cloud assets under one roof and group them in just a few clicks. \n\nWith Cyscale you get comprehensive, agentless Cloud Security Posture Management (CSPM), compliance and sensitive data protection
       capabilities for your entire cloud inventory - serverless, databases and apps included.`,
-            featureImage: <OptimizeCosts />
+            featureImage: <InventoryGroupedAssets />
         },
         {
             tabTitle: 'Reveal and reduce hidden costs',
@@ -62,7 +62,7 @@ const Index = () => {
                 </a>,
                 ' and a deep understanding of your cloud attack surface, you can reduce overhead in multiple areas:\n'
             ],
-            featureImage: <OptimizeCosts />
+            featureImage: <InventoryGroupedAssets />
         },
         {
             tabTitle: 'Fill in the security gaps left by cloud service providers',
@@ -88,7 +88,7 @@ const Index = () => {
                 ' ',
                 'provides based on deep contextual correlations between all your cloud assets to keep data security issues under control for public cloud, and multi-cloud environments.'
             ],
-            featureImage: <EliminateSecurityGaps />
+            featureImage: <DataSecurity />
         }
     ];
 
