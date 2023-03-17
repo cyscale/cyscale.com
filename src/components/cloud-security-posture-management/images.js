@@ -7,38 +7,32 @@ function withImageData(WrappedComponent) {
         <StaticQuery
             query={graphql`
                 query CSPMImagesQuery {
-                    detectMisconfigurations: file(relativePath: { eq: "detect-prevent-misconfigurations.png" }) {
+                    policiesCSPM: file(relativePath: { eq: "policies-cspm.png" }) {
                         childImageSharp {
                             gatsbyImageData(width: 1080, layout: CONSTRAINED)
                         }
                     }
-                    cutNoise: file(relativePath: { eq: "cut-noise-asset-drift-source-of-truth.png" }) {
+                    inventoryCSPM: file(relativePath: { eq: "inventory-cspm.png" }) {
                         childImageSharp {
                             gatsbyImageData(width: 1080, layout: CONSTRAINED)
                         }
                     }
-                    automateCompliance: file(
-                        relativePath: { eq: "automate-compliance-as-code-iac-continuous-assessment.png" }
-                    ) {
+                    identityCSPM: file(relativePath: { eq: "identity-cspm.png" }) {
                         childImageSharp {
                             gatsbyImageData(width: 1080, layout: CONSTRAINED)
                         }
                     }
-                    optimizeWorkflow: file(relativePath: { eq: "optimize-workflow-operations-single-dashboard.png" }) {
+                    inventoryGroupedAssets: file(relativePath: { eq: "inventory-grouped-assets.png" }) {
                         childImageSharp {
                             gatsbyImageData(width: 1080, layout: CONSTRAINED)
                         }
                     }
-                    optimizeCosts: file(
-                        relativePath: { eq: "optimize-costs-reveal-analyze-cloud-budget-spendings.png" }
-                    ) {
+                    inventoryGraph: file(relativePath: { eq: "inventory-graph-cspm.png" }) {
                         childImageSharp {
                             gatsbyImageData(width: 1080, layout: CONSTRAINED)
                         }
                     }
-                    eliminateSecurityGaps: file(
-                        relativePath: { eq: "eliminate-security-gaps-compliance-cloud-security.png" }
-                    ) {
+                    dataSecurityCSPM: file(relativePath: { eq: "data-security-cspm.png" }) {
                         childImageSharp {
                             gatsbyImageData(width: 1080, layout: CONSTRAINED)
                         }
@@ -49,36 +43,21 @@ function withImageData(WrappedComponent) {
         />
     );
 }
-export const DetectPreventMisconfigurations = withImageData((props) => (
-    <Img
-        image={props.imageData.detectMisconfigurations.childImageSharp.gatsbyImageData}
-        alt='Detect and Prevent Misconfigurations'
-    />
+export const Policies = withImageData((props) => (
+    <Img image={props.imageData.policiesCSPM.childImageSharp.gatsbyImageData} alt='' />
 ));
-export const CutNoise = withImageData((props) => (
-    <Img image={props.imageData.cutNoise.childImageSharp.gatsbyImageData} alt='Cut Noise with Single Source Of Truth' />
+export const Inventory = withImageData((props) => (
+    <Img image={props.imageData.inventoryCSPM.childImageSharp.gatsbyImageData} alt='' />
 ));
-export const AutomateCompliance = withImageData((props) => (
-    <Img
-        image={props.imageData.automateCompliance.childImageSharp.gatsbyImageData}
-        alt='Automate Compliance As Code IAC Continuous Assessment'
-    />
+export const Identity = withImageData((props) => (
+    <Img image={props.imageData.identityCSPM.childImageSharp.gatsbyImageData} alt='' />
 ));
-export const OptimizeWorkflow = withImageData((props) => (
-    <Img
-        image={props.imageData.optimizeWorkflow.childImageSharp.gatsbyImageData}
-        alt='Optimize Workflow Operations Single Dashboard'
-    />
+export const InventoryGraph = withImageData((props) => (
+    <Img image={props.imageData.inventoryGraph.childImageSharp.gatsbyImageData} alt='' />
 ));
-export const OptimizeCosts = withImageData((props) => (
-    <Img
-        image={props.imageData.optimizeCosts.childImageSharp.gatsbyImageData}
-        alt='Optimize Costs Reveal and Analyze Cloud Budget and Spendings'
-    />
+export const InventoryGroupedAssets = withImageData((props) => (
+    <Img image={props.imageData.inventoryGroupedAssets.childImageSharp.gatsbyImageData} alt='' />
 ));
-export const EliminateSecurityGaps = withImageData((props) => (
-    <Img
-        image={props.imageData.eliminateSecurityGaps.childImageSharp.gatsbyImageData}
-        alt='Eliminate Security Gaps Compliance Cloud Security'
-    />
+export const DataSecurity = withImageData((props) => (
+    <Img image={props.imageData.dataSecurityCSPM.childImageSharp.gatsbyImageData} alt='' />
 ));
