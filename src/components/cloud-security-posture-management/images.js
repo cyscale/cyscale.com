@@ -17,7 +17,7 @@ function withImageData(WrappedComponent) {
                             gatsbyImageData(width: 1080, layout: CONSTRAINED)
                         }
                     }
-                    identityCSPM: file(relativePath: { eq: "identity-cspm.png" }) {
+                    alertsCSPM: file(relativePath: { eq: "alerts-cspm.png" }) {
                         childImageSharp {
                             gatsbyImageData(width: 1080, layout: CONSTRAINED)
                         }
@@ -32,7 +32,7 @@ function withImageData(WrappedComponent) {
                             gatsbyImageData(width: 1080, layout: CONSTRAINED)
                         }
                     }
-                    dataSecurityCSPM: file(relativePath: { eq: "data-security-cspm.png" }) {
+                    dashboardCSPM: file(relativePath: { eq: "dashboard-cspm.png" }) {
                         childImageSharp {
                             gatsbyImageData(width: 1080, layout: CONSTRAINED)
                         }
@@ -44,20 +44,32 @@ function withImageData(WrappedComponent) {
     );
 }
 export const Policies = withImageData((props) => (
-    <Img image={props.imageData.policiesCSPM.childImageSharp.gatsbyImageData} alt='' />
+    <Img
+        image={props.imageData.policiesCSPM.childImageSharp.gatsbyImageData}
+        alt=' Policies view with compliance score'
+    />
 ));
 export const Inventory = withImageData((props) => (
-    <Img image={props.imageData.inventoryCSPM.childImageSharp.gatsbyImageData} alt='' />
+    <Img
+        image={props.imageData.inventoryCSPM.childImageSharp.gatsbyImageData}
+        alt='Inventory view with assets and risk information'
+    />
 ));
-export const Identity = withImageData((props) => (
-    <Img image={props.imageData.identityCSPM.childImageSharp.gatsbyImageData} alt='' />
+export const Alerts = withImageData((props) => (
+    <Img image={props.imageData.alertsCSPM.childImageSharp.gatsbyImageData} alt='Alerts view' />
 ));
 export const InventoryGraph = withImageData((props) => (
-    <Img image={props.imageData.inventoryGraph.childImageSharp.gatsbyImageData} alt='' />
+    <Img image={props.imageData.inventoryGraph.childImageSharp.gatsbyImageData} alt='Graph view' />
 ));
 export const InventoryGroupedAssets = withImageData((props) => (
-    <Img image={props.imageData.inventoryGroupedAssets.childImageSharp.gatsbyImageData} alt='' />
+    <Img
+        image={props.imageData.inventoryGroupedAssets.childImageSharp.gatsbyImageData}
+        alt='Inventory view with assets and risk information'
+    />
 ));
-export const DataSecurity = withImageData((props) => (
-    <Img image={props.imageData.dataSecurityCSPM.childImageSharp.gatsbyImageData} alt='' />
+export const Dashboard = withImageData((props) => (
+    <Img
+        image={props.imageData.dashboardCSPM.childImageSharp.gatsbyImageData}
+        alt='Dashboard view with multi-cloud environments'
+    />
 ));
