@@ -8,7 +8,7 @@ categories:
   - News
   - Product
   - CSPM
-date: 2023-03-20T04:35:53.952Z
+date: 2023-03-20T04:55:49.633Z
 description: Alert fatigue is a phenomenon in which individuals receive an
   overwhelming amount of alerts and become desensitized to them. To avoid alert
   fatigue, a sound alert system with no noise is necessary. Knowing how to group
