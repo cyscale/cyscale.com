@@ -9,32 +9,32 @@ function withImageData(WrappedComponent) {
                 query CSPMImagesQuery {
                     policiesCSPM: file(relativePath: { eq: "policies-cspm.png" }) {
                         childImageSharp {
-                            gatsbyImageData(width: 1080, layout: CONSTRAINED)
+                            gatsbyImageData(width: 1920, layout: CONSTRAINED)
                         }
                     }
                     inventoryCSPM: file(relativePath: { eq: "inventory-cspm.png" }) {
                         childImageSharp {
-                            gatsbyImageData(width: 1080, layout: CONSTRAINED)
+                            gatsbyImageData(width: 1920, layout: CONSTRAINED)
                         }
                     }
                     alertsCSPM: file(relativePath: { eq: "alerts-cspm.png" }) {
                         childImageSharp {
-                            gatsbyImageData(width: 1080, layout: CONSTRAINED)
+                            gatsbyImageData(width: 1920, layout: CONSTRAINED)
                         }
                     }
                     inventoryGroupedAssets: file(relativePath: { eq: "inventory-grouped-assets.png" }) {
                         childImageSharp {
-                            gatsbyImageData(width: 1080, layout: CONSTRAINED)
+                            gatsbyImageData(width: 1920, layout: CONSTRAINED)
                         }
                     }
                     inventoryGraph: file(relativePath: { eq: "inventory-graph-cspm.png" }) {
                         childImageSharp {
-                            gatsbyImageData(width: 1080, layout: CONSTRAINED)
+                            gatsbyImageData(width: 1920, layout: CONSTRAINED)
                         }
                     }
                     dashboardCSPM: file(relativePath: { eq: "dashboard-cspm.png" }) {
                         childImageSharp {
-                            gatsbyImageData(width: 1080, layout: CONSTRAINED)
+                            gatsbyImageData(width: 1920, layout: CONSTRAINED)
                         }
                     }
                 }
