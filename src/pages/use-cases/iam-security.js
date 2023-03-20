@@ -69,7 +69,7 @@ const IAMSecurity = ({ location }) => {
                                 <GatsbyImage
                                     image={data.identityDashboard.childImageSharp.gatsbyImageData}
                                     className='shadow-xl'
-                                    alt=''
+                                    alt='Identity dashboard'
                                 />
                             </div>
                         </div>
@@ -134,7 +134,7 @@ const IAMSecurity = ({ location }) => {
                                 <GatsbyImage
                                     image={data.identityPage.childImageSharp.gatsbyImageData}
                                     className='shadow-xl'
-                                    alt=''
+                                    alt='Identity asset view'
                                 />
                             </div>
                         </div>

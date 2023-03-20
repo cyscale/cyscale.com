@@ -4,7 +4,7 @@ import heroBG from '../../assets/images/hero-CSPM-bg.svg';
 import Layout from '../../components/layout/layout.js';
 import iconTwo from '../../assets/images/elemente-vectoriale-07.png';
 import iconThree from '../../assets/images/elemente-vectoriale-08.png';
-import { Policies, Inventory, DataSecurity } from '../../components/cloud-security-posture-management/images';
+import { Policies, Inventory, Alerts } from '../../components/cloud-security-posture-management/images';
 import Fproducts from '../../components/cloud-security-posture-management/featuredProducts';
 import GetStarted from '../../components/Home/getstarted';
 import MisconfigCoverage from '../../components/cloud-security-posture-management/misconfigCoverage';
@@ -14,7 +14,7 @@ const dataFeaturedProducts = [
         tabTitle: 'Prevent misconfigurations, mismanagement and mistakes',
         sectionTitle: 'Prevent misconfigurations & mistakes',
         sectionDescription: `Cyscale automatically detects and reports violations of security controls and compliance risks. \n\nIt's much easier to keep your cloud assets in check with ongoing change monitoring that bridges cloud providers. \n\nSingle out misconfigured services and see how failed security controls impact compliance from a single, unified view. Plus, you get reliable remediation guidelines in the same place.`,
-        featureImage: <Policies />
+        featureImage: <Inventory />
     },
     {
         tabTitle: 'Cut through the noise with targeted alerts',
@@ -32,7 +32,7 @@ const dataFeaturedProducts = [
             ' ',
             'makes precise correlations between all your cloud assets and data repositories to automatically pinpoint critical security improvements.'
         ],
-        featureImage: <Inventory />
+        featureImage: <Alerts />
     },
     {
         tabTitle: 'Automate compliance checks & security controls audits',
@@ -51,7 +51,7 @@ const dataFeaturedProducts = [
             <strong>Coming soon: </strong>,
             'create custom Controls that tap into our Security Knowledge Graph™ and automate the security and compliance checks that matter the most for your organization.'
         ],
-        featureImage: <DataSecurity />
+        featureImage: <Policies />
     }
 ];
 
