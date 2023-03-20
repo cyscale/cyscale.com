@@ -10,9 +10,9 @@ import LightDarkButton from '../../components/buttons/LightDarkButton';
 const IAMSecurity = ({ location }) => {
     const data = useStaticQuery(graphql`
         query IAMSecurityQuery {
-            identityDashboard: file(relativePath: { eq: "identity_dashboard.png" }) {
+            identityDashboard: file(relativePath: { eq: "identity-dashboard.png" }) {
                 childImageSharp {
-                    gatsbyImageData(width: 1080, layout: CONSTRAINED)
+                    gatsbyImageData(width: 1920, layout: CONSTRAINED)
                 }
             }
             identityPage: file(relativePath: { eq: "identity-page.png" }) {
