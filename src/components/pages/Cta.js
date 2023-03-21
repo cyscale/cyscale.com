@@ -8,7 +8,7 @@ import rehypeRaw from 'rehype-raw';
 const Cta = ({ markdown }) => {
     return (
         <Container>
-            <div className='md:pt-12 pb-24'>
+            <div className='md:pt-12 pb-44'>
                 <div className='flex h-48 flex-col items-center'>
                     <img src={cloudIcon} alt='' />
                     <ReactMarkdown rehypePlugins={[rehypeRaw]} linkTarget='_blank'>
