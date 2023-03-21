@@ -35,7 +35,8 @@
 .bg-hero-campaigns-iam-security,
 .bg-hero-soc2,
 .bg-hero-nist,
-.bg-cnapp {
+.bg-cnapp,
+.bg-cns {
     background-image: linear-gradient(#eeeeee, #e4edfc);
 }
 .h-advantages {
@@ -72,6 +73,12 @@
         background-repeat: no-repeat;
         background-position: 50% 35%;
         background-image: url('../images/hero-cnapp.png');
+    }
+    .bg-cns {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 35%;
+        background-image: url('../images/hero-cns.png');
     }
     .bg-hero-soc2 {
         background-size: cover;
