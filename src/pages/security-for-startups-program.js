@@ -501,7 +501,7 @@ const SecurityForStartupsProgram = ({ location }) => {
                     </Container>
                 </div>
                 <Container>
-                    <div className='pt-12 pb-24 lg:pt-32 lg:pb-32'>
+                    <div className='pt-12 pb-32 lg:pt-32'>
                         <div className='flex h-48 flex-col items-center'>
                             <img src={cloudIcon} alt='Cloud Icon' />
                             <h1 className='text-center px-2 mb-2'>
