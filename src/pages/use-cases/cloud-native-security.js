@@ -16,7 +16,8 @@ import KubernetesIcon from '../../assets/images/kubernetes-cnapp-icon.svg';
 import { css } from 'twin.macro';
 import corner from '../../assets/images/corner-campaigns-iam-security.svg';
 import cloudIcon from '../../assets/images/cloud-icon.svg';
-import { LearnMoreLink, titleSection, LearnMoreSection, cardBackgroundColor } from '../products/cnapp';
+import LearnMoreLink from '../../components/use-cases/LearnMoreLink';
+import { titleSection, LearnMoreSection, cardBackgroundColor } from '../../assets/css/styles';
 
 const heroTitleFontSize = css`
     @media (max-width: 768px) {
