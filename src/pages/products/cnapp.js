@@ -6,7 +6,6 @@ import GradientButton from '../../components/buttons/GradientButton';
 import LightDarkButton from '../../components/buttons/LightDarkButton';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { css } from 'twin.macro';
-import styled from '@emotion/styled';
 
 import CSPMIcon from '../../assets/images/cspm-cnapp-icon.svg';
 import CIEMIcon from '../../assets/images/ciem-cnapp-icon.svg';
@@ -19,52 +18,8 @@ import VisibilityIcon from '../../assets/images/visibility-cnapp-icon.svg';
 import headerImage from '../../assets/images/remote-work-heading-image.png';
 import corner from '../../assets/images/corner-campaigns-iam-security.svg';
 import cloudIcon from '../../assets/images/cloud-icon.svg';
-import RightArrow from '../../components/sharedComponent/RightArrow';
-
-export const LearnMoreLink = ({ link }) => {
-    return (
-        <Link to={link} className='lg:mt-4'>
-            <RightArrow fillColor={'#0F26AA'} marginTop={'-0.25rem'} />
-            <span className='text-md ml-2 text-blue inline-block font-bold text-base'>Learn more</span>
-        </Link>
-    );
-};
-
-export const titleSection = css`
-    font-size: 1.75rem;
-    line-height: 2.188rem;
-`;
-
-const heroTitleFontSize = css`
-    @media (max-width: 768px) {
-        font-size: 1.75rem;
-    }
-    font-size: 2rem;
-`;
-
-export const LearnMoreSection = styled.div`
-    display: block;
-
-    @media (min-width: 1024px) {
-        display: none;
-    }
-`;
-
-export const cardBackgroundColor = css`
-    @media (max-width: 1024px) {
-        background-color: #f3f8ff;
-    }
-    background-color: #ffffff;
-
-    &:hover {
-        @media (min-width: 1024px) {
-            background-color: #f3f8ff;
-            ${LearnMoreSection} {
-                display: block;
-            }
-        }
-    }
-`;
+import LearnMoreLink from '../../components/use-cases/LearnMoreLink';
+import { titleSection, heroTitleFontSize, LearnMoreSection, cardBackgroundColor } from '../../assets/css/styles';
 
 const CNAPP = ({ location }) => {
     const data = useStaticQuery(graphql`
