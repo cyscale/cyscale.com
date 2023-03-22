@@ -122,7 +122,8 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation }) =
                         <NavItemButton
                             type='button'
                             className={`${
-                                ['SKGPage', 'CSPMPage', 'ComplianceAuditing'].includes(pageName) || activeLinks.platform
+                                ['SKGPage', 'CSPMPage', 'ComplianceAuditing', 'CNAPP'].includes(pageName) ||
+                                activeLinks.platform
                                     ? 'active'
                                     : ''
                             }`}
@@ -145,6 +146,7 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation }) =
                                     'ISO27001Compliance',
                                     'PCIDSS',
                                     'SOC2',
+                                    'NIST',
                                     'AWSCloudSecurity',
                                     'AzureCloudSecurity',
                                     'GCPCloudSecurity'
@@ -176,7 +178,10 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation }) =
                         <NavItemButton
                             type='button'
                             className={`${
-                                pageName === 'blog' || pageName === 'blog-detail' || activeLinks.resources
+                                pageName === 'blog' ||
+                                pageName === 'blog-detail' ||
+                                ['CloudComplianceWhitepaper', 'CloudStorageMisconfigurations'].includes(pageName) ||
+                                activeLinks.resources
                                     ? 'active'
                                     : ''
                             }`}
