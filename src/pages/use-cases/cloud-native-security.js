@@ -179,7 +179,7 @@ const CloudNativeSecurity = ({ location }) => {
                             </p>
                         </div>
                         <LearnMoreSection>
-                            <LearnMoreLink link='/use-cases/cloud-compliance-and-auditing/' />
+                            <LearnMoreLink link='/use-cases/iam-security/' />
                         </LearnMoreSection>
                     </div>
                     <div
