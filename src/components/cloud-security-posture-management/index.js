@@ -11,9 +11,9 @@ import icon4 from '../../assets/images/message.svg';
 import getStartedICon from '../../assets/images/getStartedIconCPSM.svg';
 import { InventoryGroupedAssets, InventoryGraph, Dashboard } from './images';
 import MisconfigurationTabs from './MisconfigurationTabs';
-import CategoryPostsPreview from '../new-blog/CategoryPostsPreview';
 import { Container, Section } from '../atoms/Containers';
 import Faqs from './Faqs';
+import CSPMLinksAndWhitepaper from './CSPMLinksAndWhitepaper';
 
 const Index = () => {
     const dataOnboarding = [
@@ -177,7 +177,7 @@ const Index = () => {
                     </Container>
                 </Section>
             </div>
-            <CategoryPostsPreview category={'CSPM'} id='cspm-news' />
+            <CSPMLinksAndWhitepaper />
             <div className='gradientBGCSPM-2'>
                 <CSPMgetStarted
                     title={`AGENTLESS, MULTI-CLOUD, PAINLESS CSPM`}
