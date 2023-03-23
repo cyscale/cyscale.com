@@ -1,17 +1,13 @@
 import React from 'react';
 import { Container, Row, Section } from '../../components/atoms/Containers';
 import Layout from '../../components/layout/CleanLayout';
-import inventoryMock from '../../assets/images/optimize-costs-reveal-analyze-cloud-budget-spendings.png';
-import controlMock from '../../assets/images/maintain-3rd-party-data-image.png';
-import policiesMock from '../../assets/images/Security-Controls-and-Policies.png';
-import richPolicyMock from '../../assets/images/remote-work-wft-compliance.png';
-import whyIso from '../../assets/images/components-iso.svg';
 import ScrollButton from '../../components/ScrollButton/ScrollButton';
 import getStartedICon from '../../assets/images/getStartedIconCPSM.svg';
 import GetStarted from '../../components/Home/getstarted';
-import { Link } from 'gatsby';
+import { graphql, Link, useStaticQuery } from 'gatsby';
 import GradientButton from '../../components/buttons/GradientButton';
 import LightDarkButton from '../../components/buttons/LightDarkButton';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 const StepCard = ({ groups, list, order }) => {
     return (
@@ -38,6 +34,36 @@ const StepCard = ({ groups, list, order }) => {
 };
 
 const CloudCompliance = ({ location }) => {
+    const data = useStaticQuery(graphql`
+        query ISOQuery {
+            isoHero: file(relativePath: { eq: "iso-27001-hero-image.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 1920, layout: CONSTRAINED)
+                }
+            }
+            assetInventory: file(relativePath: { eq: "asset-inventory-iso.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 1920, layout: CONSTRAINED)
+                }
+            }
+            actionablePolicies: file(relativePath: { eq: "actionable-policies-iso.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 1920, layout: CONSTRAINED)
+                }
+            }
+            controls: file(relativePath: { eq: "controls-iso.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 1920, layout: CONSTRAINED)
+                }
+            }
+            policies: file(relativePath: { eq: "policies-iso.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 1920, layout: CONSTRAINED)
+                }
+            }
+        }
+    `);
+
     return (
         <Layout
             location={location}
@@ -69,7 +95,11 @@ const CloudCompliance = ({ location }) => {
                                     </div>
                                 </div>
                                 <div className='col-span-12 mb-10 lg:mb-0 lg:col-span-6 lg:pl-8 order-1 lg:order-2'>
-                                    <img src={whyIso} alt='Why is ISO 27001' className='mx-auto w-auto h-auto' />
+                                    <GatsbyImage
+                                        image={data.isoHero.childImageSharp.gatsbyImageData}
+                                        alt='Why is ISO 27001'
+                                        className='mx-auto'
+                                    />
                                 </div>
                             </Row>
                         </Section>
@@ -230,7 +260,11 @@ const CloudCompliance = ({ location }) => {
                                 </p>
                             </div>
                             <div className='col-span-12 lg:col-span-6 order-1 lg:order-2 pb-4 lg:pb-0'>
-                                <img src={inventoryMock} alt='Asset Inventory' className='mx-auto w-auto h-auto' />
+                                <GatsbyImage
+                                    image={data.assetInventory.childImageSharp.gatsbyImageData}
+                                    alt='Asset Inventory'
+                                    className='shadow-lg mx-auto w-auto h-auto'
+                                />
                             </div>
                         </Row>
                     </div>
@@ -239,10 +273,10 @@ const CloudCompliance = ({ location }) => {
                     <div className='max-w-lg mx-auto lg:mx-0 lg:max-w-none'>
                         <Row style={{ alignItems: 'center' }}>
                             <div className='col-span-12 lg:col-span-6 pb-4 lg:pb-0'>
-                                <img
-                                    src={controlMock}
+                                <GatsbyImage
+                                    image={data.controls.childImageSharp.gatsbyImageData}
                                     alt='A list of Security Controls implemented by Cyscale'
-                                    className='mx-auto w-auto h-auto'
+                                    className='shadow-lg  mx-auto w-auto h-auto'
                                 />
                             </div>
                             <div className='col-span-12 lg:col-span-6 lg:pl-8'>
@@ -274,10 +308,10 @@ const CloudCompliance = ({ location }) => {
                                 </p>
                             </div>
                             <div className='col-span-12 lg:col-span-6 order-1 lg:order-2 pb-4 lg:pb-0'>
-                                <img
-                                    src={policiesMock}
-                                    className='mx-auto w-auto h-auto'
+                                <GatsbyImage
+                                    image={data.policies.childImageSharp.gatsbyImageData}
                                     alt='A list of different out-of-the-box policies and standards'
+                                    className='shadow-lg mx-auto w-auto h-auto'
                                 />
                             </div>
                         </Row>
@@ -287,10 +321,10 @@ const CloudCompliance = ({ location }) => {
                     <div className='max-w-lg mx-auto lg:mx-0 lg:max-w-none'>
                         <Row style={{ alignItems: 'center' }}>
                             <div className='col-span-12 lg:col-span-6 pb-4 lg:pb-0'>
-                                <img
-                                    src={richPolicyMock}
-                                    className='mx-auto w-auto h-auto'
+                                <GatsbyImage
+                                    image={data.actionablePolicies.childImageSharp.gatsbyImageData}
                                     alt='A rich policy content with data gathered inline'
+                                    className='shadow-lg mx-auto w-auto h-auto'
                                 />
                             </div>
                             <div className='col-span-12 lg:col-span-6 lg:pl-8'>
