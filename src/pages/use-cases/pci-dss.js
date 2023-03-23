@@ -17,10 +17,10 @@ const PciDss = ({ location }) => {
                 }
             }
             automateCompliance: file(
-                relativePath: { eq: "automate-compliance-as-code-iac-continuous-assessment-pci.png" }
+                relativePath: { eq: "standards-pci-dss.png" }
             ) {
                 childImageSharp {
-                    gatsbyImageData(width: 1080, layout: CONSTRAINED)
+                    gatsbyImageData(width: 1920, layout: CONSTRAINED)
                 }
             }
         }
@@ -151,7 +151,7 @@ const PciDss = ({ location }) => {
                         </div>
                     </div>
                     <div className='max-w-xl lg:max-w-5xl mx-auto pt-12'>
-                        <GatsbyImage image={data.automateCompliance.childImageSharp.gatsbyImageData} alt='Connectors' />
+                        <GatsbyImage image={data.automateCompliance.childImageSharp.gatsbyImageData} alt='Stadards view' />
                     </div>
                 </Section>
             </Container>
