@@ -10,7 +10,7 @@ import LightDarkButton from '../../components/buttons/LightDarkButton';
 const AWSCloudSecurity = ({ location }) => {
     const data = useStaticQuery(graphql`
         query AWSCloudSecurityQuery {
-            dashboard: file(relativePath: { eq: "dashboard.png" }) {
+            dashboard: file(relativePath: { eq: "dashboard-aws.png" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1080, layout: CONSTRAINED)
                 }
@@ -71,20 +71,25 @@ const AWSCloudSecurity = ({ location }) => {
                         <div className='col-span-12 lg:col-span-5'>
                             <div className='mx-auto lg:mx-0  max-w-xl lg:max-w-none'>
                                 <p className='text-base leading-normal my-12 text-gray'>
-                                    <strong>Streamline posture management for AWS</strong> or your multi-cloud
-                                    environments, enable teams to continuously detect misconfigurations and control
-                                    threats, and ensure compliance for your cloud assets.
+                                    <strong>Streamline posture management for AWS (Amazon Web Services)</strong> or your
+                                    multi-cloud environments, enable teams to continuously detect misconfigurations and
+                                    control threats, and ensure compliance for your cloud assets.
                                 </p>
                                 <ul className='list-disc ml-4 text-gray'>
                                     <li className='mb-4'>
-                                        Have a simple view of all your assets across all regions and accounts
+                                        Have a simple view of all your AWS resources across all regions and accounts
                                     </li>
                                     <li className='mb-4'>
-                                        Detect, understand the impact of, and remediate infrastructure misconfigurations
+                                        Detect, understand the impact of, and remediate cloud infrastructure
+                                        misconfigurations
                                     </li>
                                     <li className='mb-4'>
                                         Stay compliant with CIS benchmarks, industry standards, and your internal
-                                        policies
+                                        policies to ensure data protection
+                                    </li>{' '}
+                                    <li className='mb-4'>
+                                        Check AWS services for misconfigurations and ensure that AWS CloudTrail, AWS
+                                        Config, AWS Security Hub, and other cloud services are correctly configured
                                     </li>
                                 </ul>
                             </div>
@@ -109,12 +114,13 @@ const AWSCloudSecurity = ({ location }) => {
                                     ensure consistent security and compliance.
                                 </p>
                                 <p className='leading-normal text-base text-gray mb-6'>
-                                    We keep your cloud environments under continuous assessment and provide in-app
-                                    security consultancy so you make the most of your time and effort.
+                                    We keep your cloud computing environments under continuous assessment and provide
+                                    in-app cybersecurity consultancy so you make the most of your time and effort.
                                 </p>
                                 <p className='leading-normal text-base text-gray'>
                                     Coming soon: create custom Controls that tap into our Security Knowledge Graph™ and
-                                    automate the security and compliance checks that matter most for your organization.
+                                    automate the security and compliance requirements checks that matter most for your
+                                    organization.
                                 </p>
                             </div>
                         </div>
@@ -141,8 +147,8 @@ const AWSCloudSecurity = ({ location }) => {
                                         <strong>Meet industry regulations</strong>
                                         <br />
                                         Protect sensitive data and comply with strict industry regulations in your
-                                        organization. Cyscale automatically runs all critical compliance checks and
-                                        finds data at-risk.
+                                        organization. Cyscale automatically runs all critical security compliance checks
+                                        and finds data at-risk in your AWS infrastructure.
                                     </p>
                                 </div>
                                 <div className='col-span-12 lg:col-span-6'>
@@ -158,7 +164,8 @@ const AWSCloudSecurity = ({ location }) => {
                                         <strong>PCI-DSS, SOC 2, GDPR, and more.</strong>
                                         <br />
                                         Cyscale offers a wide range of benchmarks and frameworks, including: CIS,
-                                        ISO27001, PCI-DSS, NIST, SOC2, GDPR.
+                                        ISO27001, PCI-DSS, NIST, SOC2, GDPR, HIPAA. Generate compliance reports and
+                                        build compliance programs to secure services and your AWS accounts.
                                     </p>
                                 </div>
                                 <div className='col-span-12 lg:col-span-6'>
@@ -166,7 +173,11 @@ const AWSCloudSecurity = ({ location }) => {
                                         <strong>500+ out-of-the-box security controls</strong>
                                         <br />
                                         Onboard teams in 30 minutes and coordinate efforts to apply 500+ out-of-the-box
-                                        security controls and a large set of policies and standards.
+                                        compliance controls and a large set of policies and standards. From checking IAM
+                                        permissions, related to access control, access management, authentication, to
+                                        verifying your firewall settings, Cyscale helps you become compliant with
+                                        security standards and ensures you don’t introduce security issues in your
+                                        configurations.
                                     </p>
                                 </div>
                             </Row>
