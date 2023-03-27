@@ -9,6 +9,32 @@ import CheckSquareIcon from '../../assets/images/check-square.svg';
 import getStartedICon from '../../assets/images/getStartedICon.svg';
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
+import LinksAndWhitepaper from '../products/LinksAndWhitepaper';
+
+const topArticles = [
+    {
+        text: 'AWS SOC 2 Compliance Checklist:<br class="hidden lg:block"/> A Detailed Guide',
+        link: '/blog/AWS-SOC-2-Compliance-Checklist-A-Detailed-Guide/',
+        children: true
+    },
+    {
+        text: 'Cloud Security and Compliance:<br class="hidden lg:block"/> A Guide for Your Cloud Infrastructure',
+        link: '/blog/cloud-security-and-compliance/',
+        children: true
+    },
+    {
+        text: 'PCI-DSS Compliance in the Cloud',
+        link: '/blog/pci-dss-compliance-in-cloud/'
+    },
+    {
+        text: 'NIST Compliance in the Cloud',
+        link: '/blog/nist-compliance-in-the-cloud/'
+    },
+    {
+        text: 'HIPAA Compliance in the Cloud',
+        link: '/blog/hipaa-compliance-in-cloud/'
+    }
+];
 
 export default function CloudComplianceContent() {
     const data = useStaticQuery(graphql`
@@ -16,6 +42,11 @@ export default function CloudComplianceContent() {
             consistency: file(relativePath: { eq: "Achieve-clarity-consistency-image.png" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1080, layout: CONSTRAINED)
+                }
+            }
+            card: file(relativePath: { eq: "cc-whitepaper-bluebird.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 386, layout: FIXED)
                 }
             }
         }
@@ -161,6 +192,18 @@ export default function CloudComplianceContent() {
                     sectionName='RemoteWork'
                 />
             </div>
+            <LinksAndWhitepaper
+                topArticles={topArticles}
+                data={data}
+                title={'Compliance'}
+                titleCard={
+                    'The In-Depth Guide <br class="hidden lg:block"/>to Cloud Compliance<br class="hidden lg:block" /> in 2023'
+                }
+                textCard={
+                    'What standards exist on the market, and who are they destined for? <br /><br />Download the whitepaper to read about ISO 27001, SOC 2, PCI-DSS, GDPR, HIPAA.'
+                }
+                linkCard={'/whitepaper/the-complete-guide-to-cloud-compliance/'}
+            />
         </>
     );
 }
