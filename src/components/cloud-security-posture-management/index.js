@@ -13,9 +13,40 @@ import { InventoryGroupedAssets, InventoryGraph, Dashboard } from './images';
 import MisconfigurationTabs from './MisconfigurationTabs';
 import { Container, Section } from '../atoms/Containers';
 import Faqs from './Faqs';
-import CSPMLinksAndWhitepaper from './CSPMLinksAndWhitepaper';
+import { graphql, useStaticQuery } from 'gatsby';
+import LinksAndWhitepaper from '../products/LinksAndWhitepaper';
+
+const topArticles = [
+    {
+        text: 'CNAPP: A mix of CSPM & CWPP',
+        link: '/blog/cnapp-a-mix-of-cspm-cwpp/'
+    },
+    {
+        text: 'CSPM: A Comprehensive Guide',
+        link: '/blog/cloud-security-posture-management-cspm-guide/'
+    },
+    {
+        text: 'What to Look for in a CSPM?',
+        link: '/blog/what-to-look-for-in-a-cspm/'
+    },
+    {
+        text: 'What is a CSPM and<br class ="hidden lg:block" /> why should you consider using one?',
+        link: '/blog/cspm-visibility-compliance-security/',
+        children: true
+    }
+];
 
 const Index = () => {
+    const data = useStaticQuery(graphql`
+        query CSPMQuery {
+            card: file(relativePath: { eq: "csm-whitepaper-bluebird.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 386, layout: FIXED)
+                }
+            }
+        }
+    `);
+
     const dataOnboarding = [
         {
             icon: icon1,
@@ -177,7 +208,16 @@ const Index = () => {
                     </Container>
                 </Section>
             </div>
-            <CSPMLinksAndWhitepaper />
+            <LinksAndWhitepaper
+                topArticles={topArticles}
+                data={data}
+                title={'CSPM'}
+                titleCard={'The Complete Guide<br class="hidden lg:block" /> to Cloud Storage Misconfigurations'}
+                textCard={
+                    'This guide helps CIOs, CISOs and security staff to understand the risk & dangers of data security breaches and the importance of a secure cloud storage infrastructure.'
+                }
+                linkCard={'/whitepaper/cloud-storage-misconfigurations/'}
+            />
             <div className='gradientBGCSPM-2'>
                 <CSPMgetStarted
                     title={`AGENTLESS, MULTI-CLOUD, PAINLESS CSPM`}

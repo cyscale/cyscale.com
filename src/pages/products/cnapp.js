@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../../components/layout/CleanLayout';
 import { Container, Row } from '../../components/atoms/Containers';
-import { graphql, Link, useStaticQuery } from 'gatsby';
+import { graphql, Link as GatsbyLink, Link, useStaticQuery } from 'gatsby';
 import GradientButton from '../../components/buttons/GradientButton';
 import LightDarkButton from '../../components/buttons/LightDarkButton';
 import { GatsbyImage } from 'gatsby-plugin-image';
@@ -17,9 +17,30 @@ import ComplianceIcon from '../../assets/images/compliance-cnapp-icon.svg';
 import VisibilityIcon from '../../assets/images/visibility-cnapp-icon.svg';
 import headerImage from '../../assets/images/remote-work-heading-image.png';
 import corner from '../../assets/images/corner-campaigns-iam-security.svg';
-import cloudIcon from '../../assets/images/cloud-icon.svg';
+import cloudIcon from '../../assets/images/cloud-white-icon.svg';
 import LearnMoreLink from '../../components/use-cases/LearnMoreLink';
 import { titleSection, heroTitleFontSize, LearnMoreSection, cardBackgroundColor } from '../../assets/css/styles';
+import LinksAndWhitepaper from '../../components/products/LinksAndWhitepaper';
+
+const topArticles = [
+    {
+        text: 'CNAPP: The Key to Secure Cloud-Native Applications',
+        link: '/blog/cnapp-secure-native-applications/'
+    },
+    {
+        text: 'CNAPP: A mix of CSPM & CWPP',
+        link: '/blog/cnapp-a-mix-of-cspm-cwpp/'
+    },
+    {
+        text: 'Cloud-Native Security: A Comprehensive Guide to Securing Your Technology Stack',
+        link: '/blog/cloud-native-security-guide/'
+    },
+    {
+        text: 'Cloud Security and Compliance:<br class="hidden lg:block"> A Guide for Your Cloud Infrastructure',
+        link: '/blog/cloud-security-and-compliance/',
+        children: true
+    }
+];
 
 const CNAPP = ({ location }) => {
     const data = useStaticQuery(graphql`
@@ -32,6 +53,11 @@ const CNAPP = ({ location }) => {
             inventory: file(relativePath: { eq: "inventory-cnapp.png" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1920, layout: CONSTRAINED)
+                }
+            }
+            card: file(relativePath: { eq: "csm-whitepaper-bluebird.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 386, layout: FIXED)
                 }
             }
         }
@@ -417,25 +443,39 @@ const CNAPP = ({ location }) => {
                     </div>
                 </Container>
             </div>
-            <Container>
-                <div className='md:pt-12 pb-44'>
-                    <div className='flex h-48 flex-col items-center'>
-                        <img src={cloudIcon} alt='' />
-                        <h1 className='text-center px-2 mt-4 mb-2 montserrat-font font-semibold'>
-                            Elevate your cloud security game with CNAPP{' '}
-                        </h1>
-                        <p>Start seeing value & saving money in minutes</p>
-                        <div className='mt-10 w-auto inline-block'>
-                            <Link
-                                className='gradientBgBtn w-full block text-sm font-medium rounded text-white text-center py-4 px-12 hover:no-underline no-underline'
-                                to='/request-demo'
+            <div
+                css={css`
+                    background-image: linear-gradient(90deg, #0f26aa -1.79%, #ff4a56 165.6%);
+                `}
+            >
+                <Container>
+                    <div className='pt-20    md:pt-28 pb-32'>
+                        <div className='flex h-48 flex-col items-center'>
+                            <img src={cloudIcon} alt='' />
+                            <h1 className='text-center px-2 mt-4 mb-2 montserrat-font font-semibold text-white'>
+                                Elevate your cloud security game with CNAPP{' '}
+                            </h1>
+                            <p className='text-white'>Start seeing value & saving money in minutes</p>
+                            <GatsbyLink
+                                to={'/request-demo/'}
+                                className='bg-white text-blue rounded-lg py-2 px-8 mt-8 hover:bg-grey3'
                             >
-                                Request Live Demo
-                            </Link>
+                                Request Demo
+                            </GatsbyLink>
                         </div>
                     </div>
-                </div>
-            </Container>
+                </Container>
+            </div>
+            <LinksAndWhitepaper
+                topArticles={topArticles}
+                data={data}
+                title={'CNAPP'}
+                titleCard={'The Complete Guide<br class="hidden lg:block" /> to Cloud Storage Misconfigurations'}
+                textCard={
+                    'This guide helps CIOs, CISOs and security staff to understand the risk & dangers of data security breaches and the importance of a secure cloud storage infrastructure.'
+                }
+                linkCard={'/whitepaper/cloud-storage-misconfigurations/'}
+            />
         </Layout>
     );
 };
