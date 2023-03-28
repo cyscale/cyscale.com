@@ -10,12 +10,12 @@ import LightDarkButton from '../../components/buttons/LightDarkButton';
 const GCPCloudSecurity = ({ location }) => {
     const data = useStaticQuery(graphql`
         query GCPCloudSecurityQuery {
-            dashboard: file(relativePath: { eq: "dashboard-gcp.png" }) {
+            dashboard: file(relativePath: { eq: "dashboard-environments.png" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1080, layout: CONSTRAINED)
                 }
             }
-            automateCompliance: file(relativePath: { eq: "aws-cloud-overview.png" }) {
+            automateCompliance: file(relativePath: { eq: "gcp-cloud-overview.png" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1920, layout: CONSTRAINED)
                 }
