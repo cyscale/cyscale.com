@@ -10,7 +10,7 @@ import LightDarkButton from '../../components/buttons/LightDarkButton';
 const AWSCloudSecurity = ({ location }) => {
     const data = useStaticQuery(graphql`
         query AWSCloudSecurityQuery {
-            dashboard: file(relativePath: { eq: "dashboard-aws.png" }) {
+            dashboard: file(relativePath: { eq: "dashboard-environments.png" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1080, layout: CONSTRAINED)
                 }

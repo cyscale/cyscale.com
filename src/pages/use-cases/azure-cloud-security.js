@@ -15,7 +15,7 @@ const AzureCloudSecurity = ({ location }) => {
                     gatsbyImageData(width: 1080, layout: CONSTRAINED)
                 }
             }
-            azureGraph: file(relativePath: { eq: "azure-graph.png" }) {
+            azureGraph: file(relativePath: { eq: "graph.png" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1080, layout: CONSTRAINED)
                 }
