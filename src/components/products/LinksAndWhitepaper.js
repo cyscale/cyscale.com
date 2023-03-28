@@ -13,14 +13,7 @@ const cardTitle = css`
     line-height: 2rem;
 `;
 
-const LinksAndWhitepaper = ({
-    topArticles,
-    data,
-    title,
-    titleCard,
-    textCard,
-    linkCard
-}) => {
+const LinksAndWhitepaper = ({ topArticles, data, title, titleCard, textCard, linkCard }) => {
     return (
         <Container>
             <div className='my-24 grid grid-cols-12 md:gap-10'>
@@ -67,11 +60,19 @@ const LinksAndWhitepaper = ({
                     >
                         <div className='pl-8 pr-8 xl:pr-0 lg:max-w-md'>
                             <h2
-                                className='text-white font-bold font-montserrat'
+                                className='text-white font-bold font-montserrat relative z-10'
                                 css={cardTitle}
                                 dangerouslySetInnerHTML={{ __html: titleCard }}
                             />
-                            <p className='text-base text-white mt-4' dangerouslySetInnerHTML={{ __html: textCard }} />
+                            <p
+                                className='text-base text-white mt-4 relative z-10'
+                                dangerouslySetInnerHTML={{ __html: textCard }}
+                                css={css`
+                                    @media screen and (min-width: 1024px) and (max-width: 1080px) {
+                                        max-width: 20rem;
+                                    }
+                                `}
+                            />
 
                             <div className='mt-12'>
                                 <PageLink text='Download Whitepaper' link={linkCard} />
