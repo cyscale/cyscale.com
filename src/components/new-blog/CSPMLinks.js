@@ -106,12 +106,8 @@ const CSPMLinks = ({ dataBlueBird }) => {
                             ))}
                         </div>
 
-                        <div className='hidden lg:block'>
-                            <GatsbyImage
-                                alt=''
-                                image={dataBlueBird.blueBird.childImageSharp.gatsbyImageData}
-                                className='absolute bottom-0 right-0'
-                            />
+                        <div className='hidden lg:block absolute bottom-0 right-0'>
+                            <GatsbyImage alt='' image={dataBlueBird.blueBird.childImageSharp.gatsbyImageData} />
                         </div>
                     </div>
                 </div>

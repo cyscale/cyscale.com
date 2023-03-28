@@ -47,7 +47,6 @@ export default function PostContent({
     const { emailInput, alert, onChange, onSubmit, onKeyDown } = useSubscribe(pageUri, pageName);
     const trigger = useScrollTrigger();
     const { categories } = data;
-    const firstCategory = categories[0];
 
     return (
         <div>
@@ -339,11 +338,25 @@ export default function PostContent({
                     </>
                 )}
             </div>
-            {!preview && suggestions && firstCategory === 'Compliance' && (
+            {!preview &&
+                categories.includes('CSPM') &&
+                categories.includes('Compliance') &&
+                categories.indexOf('Compliance') < categories.indexOf('CSPM') && (
+                    <ComplianceLinks dataCompliceToolbox={dataCompliceToolbox} />
+                )}
+            {!preview &&
+                categories.includes('CSPM') &&
+                categories.includes('Compliance') &&
+                categories.indexOf('CSPM') < categories.indexOf('Compliance') && (
+                    <CSPMLinks dataBlueBird={dataBlueBird} />
+                )}{' '}
+            {!preview && categories.includes('CSPM') && !categories.includes('Compliance') && (
+                <CSPMLinks dataBlueBird={dataBlueBird} />
+            )}
+            {!preview && !categories.includes('CSPM') && categories.includes('Compliance') && (
                 <ComplianceLinks dataCompliceToolbox={dataCompliceToolbox} />
             )}
-            {!preview && suggestions && firstCategory === 'CSPM' && <CSPMLinks dataBlueBird={dataBlueBird} />}
-            {!preview && suggestions && firstCategory !== 'Compliance' && firstCategory !== 'CSPM' && (
+            {!preview && !categories.includes('Compliance') && !categories.includes('CSPM') && (
                 <OtherLinks dataBlueBird={dataBlueBird} />
             )}
         </div>
