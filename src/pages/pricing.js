@@ -181,7 +181,7 @@ const PricingPage = ({ location }) => {
                                 to='meetings-calendar'
                                 smooth={true}
                                 duration={500}
-                                className='bg-blue text-white font-bold font-montserrat text-base py-2 px-8 rounded-lg cursor-pointer'
+                                className='bg-blue text-white font-bold rounded-md font-montserrat text-base py-2 px-8 cursor-pointer'
                                 css={hoverButtonColorStyle}
                             >
                                 Get Quote
@@ -366,7 +366,7 @@ const PricingPage = ({ location }) => {
                 </p>
                 <GatsbyLink
                     to={'/request-demo/'}
-                    className='bg-white text-blue rounded-lg py-2 px-8 mt-8 hover:bg-grey3'
+                    className='bg-white text-blue rounded-md font-bold py-2 px-8 mt-8 hover:bg-grey3'
                 >
                     Request Demo
                 </GatsbyLink>
