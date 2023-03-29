@@ -458,7 +458,7 @@ const CNAPP = ({ location }) => {
                             <p className='text-white'>Start seeing value & saving money in minutes</p>
                             <GatsbyLink
                                 to={'/request-demo/'}
-                                className='bg-white text-blue rounded-lg py-2 px-8 mt-8 hover:bg-grey3'
+                                className='bg-white text-blue text-base font-bold rounded-md py-2 px-8 mt-8 hover:bg-grey3'
                             >
                                 Request Demo
                             </GatsbyLink>
