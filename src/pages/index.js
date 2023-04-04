@@ -14,7 +14,7 @@ const HomePage = ({ location }) => {
             bannerBtn2Text='Request demo'
             bannerBtn2Link='/request-demo'
             pageName='HomePage'
-            title='Cyscale - Complete Cloud Visibility & Control Platform'
+            title='Robust Cloud Security Platform - Cyscale'
             description='Map all your cloud assets across providers in under 5 mins. Optimize costs, ensure cloud security, and prove compliance with the scalable Cyscale CSPM.'
         >
             <Home />
