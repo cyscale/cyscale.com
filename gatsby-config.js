@@ -49,6 +49,12 @@ module.exports = {
                             fontDisplay: 'swap',
                             family: 'Roboto Mono',
                             variants: ['400', '500', '600', '700']
+                        },
+                        {
+                            strategy: 'cdn',
+                            family: 'Hind',
+                            fontDisplay: 'swap',
+                            variants: ['400', '500', '600', '700']
                         }
                     ]
                 },
