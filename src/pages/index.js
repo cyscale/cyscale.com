@@ -7,7 +7,6 @@ import GradientButton from '../components/buttons/GradientButton';
 import LightDarkButton from '../components/buttons/LightDarkButton';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { Link as ScrollLink, Element } from 'react-scroll';
-import LearnMoreLink from '../components/use-cases/LearnMoreLink';
 import CSPMIcon from '../assets/images/cspm-cnapp-icon.svg';
 import VisibilityIcon from '../assets/images/visibility-cnapp-icon.svg';
 import ComplianceIcon from '../assets/images/compliance-cnapp-icon.svg';
@@ -19,7 +18,6 @@ import ShieldSettingsIcon from '../assets/images/shield-settings-icon.svg';
 import ShieldTagsIcon from '../assets/images/shield-tags-icon.svg';
 import ContainerSecurityIcon from '../assets/images/container-security-cnapp-icon.svg';
 import KubernetesIcon from '../assets/images/kubernetes-cnapp-icon.svg';
-import { LearnMoreSection, cardBackgroundColorHome } from '../assets/css/styles';
 import cloudIcon from '../assets/images/cloud-icon.svg';
 import CyscaleBird from '../assets/images/cyscale-bird-homepage.svg';
 import useLoadHSMeetingsScript from '../hooks/useLoadHSMeetingsScript';
@@ -30,6 +28,9 @@ import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import useMediaQuery from '../hooks/useMediaQuery';
 import BgHeroMobile from '../assets/images/bg-homepage-mobile.png';
 import BgHero from '../assets/images/bg-homepage.png';
+import GradientCard from '../components/Home/GradientCard';
+import Card from '../components/Home/Card';
+import BlogLink from '../components/Home/BlogLink';
 
 const heroBackground = css`
     height: 44rem;
@@ -38,7 +39,7 @@ const heroBackground = css`
     background-size: cover;
     background-repeat: no-repeat;
 
-    @media screen and (min-width: 500px) and (max-width: 640px) {
+    @media screen and (min-width: 500px) {
         height: 42rem;
         background-image: url(${BgHeroMobile});
         background-position: right 40% bottom 0%;
@@ -59,6 +60,20 @@ const heroBackground = css`
         background-position: 50% 35%;
         background-image: url(${BgHero});
     }
+    @media screen and (min-width: 1536px) {
+        height: 57rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 35%;
+        background-image: url(${BgHero});
+    }
+    @media screen and (min-width: 2560px) {
+        height: 63rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 25%;
+        background-image: url(${BgHero});
+    }
 `;
 
 const sectionSubtitleColor = css`
@@ -67,10 +82,6 @@ const sectionSubtitleColor = css`
 
 const sectionTextColor = css`
     color: #0d1d3d;
-`;
-
-const imageArticleWidth = css`
-    width: 6.813rem;
 `;
 
 const blogSectionStyle = css`
@@ -94,14 +105,6 @@ const titleSection = css`
     font-size: 2rem;
 `;
 
-const cardBackground = css`
-    background-image: linear-gradient(#e4edfc, #fff);
-`;
-
-const cardTitle = css`
-    font-size: 0.875rem;
-`;
-
 const featureTitle = css`
     font-size: 1.35rem;
 `;
@@ -122,7 +125,7 @@ const HomePage = ({ location }) => {
         query HomeQuery {
             dashboardHomePage: file(relativePath: { eq: "dashboard-homepage.png" }) {
                 childImageSharp {
-                    gatsbyImageData(width: 720, layout: CONSTRAINED)
+                    gatsbyImageData(width: 1920, layout: CONSTRAINED)
                 }
             }
             graphHomePage: file(relativePath: { eq: "graph-homepage.png" }) {
@@ -279,6 +282,7 @@ const HomePage = ({ location }) => {
                         <GatsbyImage
                             image={data.dashboardHomePage.childImageSharp.gatsbyImageData}
                             alt='Dashboard view'
+                            className='w-auto md:max-w-2xl lg:w-auto'
                         />
                     </div>
                 </div>
@@ -286,54 +290,34 @@ const HomePage = ({ location }) => {
             <Container className='mb-16'>
                 <div className='grid grid-cols-12 gap-x-5 mt-12'>
                     <div className='col-span-12 lg:col-span-4'>
-                        <div
-                            className='mt-12 lg:mt-0 rounded-xl pt-4 px-4 max-w-xl lg:max-w-2xl mx-auto lg:mr-0 lg:ml-auto relative'
-                            css={cardBackground}
-                        >
-                            <img src={CISCOIcon} alt='' />
-                            <h2 className='text-base font-semibold font-montserrat text-blue mt-4'>CISO</h2>
-                            <p className='mt-4 font-hind' css={cardTitle}>
-                                Keep technological risk in check for the organization, track cloud security posture and
-                                remediation activities and generate reports for business stakeholders.
-                            </p>
-                            <div className={'mt-4'}>
-                                <LearnMoreLink link={'/products/cloud-security-posture-management/'} />
-                            </div>
-                        </div>
+                        <GradientCard
+                            icon={CISCOIcon}
+                            title={'CISO'}
+                            text={
+                                'Keep technological risk in check for the organization, track cloud security posture and remediation activities and generate reports for business stakeholders.'
+                            }
+                            link={'/products/cloud-security-posture-management/'}
+                        />
                     </div>
                     <div className='col-span-12 lg:col-span-4'>
-                        <div
-                            className='mt-12 lg:mt-0 rounded-xl pt-4 px-4 max-w-xl lg:max-w-2xl mx-auto lg:mr-0 lg:ml-auto relative'
-                            css={cardBackground}
-                        >
-                            <img src={ShieldSettingsIcon} alt='' />
-                            <h2 className='text-base font-semibold font-montserrat text-blue mt-4'>
-                                CLOUD INFRASTRUCTURE
-                            </h2>
-                            <p className='mt-4 font-hind' css={cardTitle}>
-                                Get visibility on the security posture of your multi-cloud environments from high-level
-                                to detail and ensure the productivity of your cloud team.
-                            </p>
-                            <div className={'mt-4'}>
-                                <LearnMoreLink link={'/products/cloud-security-posture-management/'} />
-                            </div>
-                        </div>
+                        <GradientCard
+                            icon={ShieldSettingsIcon}
+                            title={'CLOUD INFRASTRUCTURE'}
+                            text={
+                                'Get visibility on the security posture of your multi-cloud environments from high-level to detail and ensure the productivity of your cloud team.'
+                            }
+                            link={'/products/cloud-security-posture-management/'}
+                        />
                     </div>
                     <div className='col-span-12 lg:col-span-4'>
-                        <div
-                            className='mt-12 lg:mt-0 rounded-xl pt-4 px-4 max-w-xl lg:max-w-2xl mx-auto lg:mr-0 lg:ml-auto relative'
-                            css={cardBackground}
-                        >
-                            <img src={ShieldTagsIcon} alt='' />
-                            <h2 className='text-base font-semibold font-montserrat text-blue mt-4'>CLOUD SECURITY</h2>
-                            <p className='mt-4 font-hind' css={cardTitle}>
-                                Identify the highest risk with the help of our Security Knowledge Graph™ technology,
-                                capturing relationships between cloud assets, identities, and data.
-                            </p>
-                            <div className={'mt-4'}>
-                                <LearnMoreLink link={'/products/security-knowledge-graph/'} />
-                            </div>
-                        </div>
+                        <GradientCard
+                            icon={ShieldTagsIcon}
+                            title={'CLOUD SECURITY'}
+                            text={
+                                'Identify the highest risk with the help of our Security Knowledge Graph™ technology, capturing relationships between cloud assets, identities, and data.'
+                            }
+                            link={'/products/security-knowledge-graph/'}
+                        />
                     </div>
                 </div>
             </Container>
@@ -383,139 +367,69 @@ const HomePage = ({ location }) => {
                 </div>
                 <div className='container max-w-7xl m-auto px-4 lg:px-8'>
                     <Row className='mt-12 gap-0 lg:gap-8'>
-                        <div
-                            className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 h-64 flex flex-col justify-between p-4 rounded-md'
-                            css={cardBackgroundColorHome}
-                        >
-                            <div>
-                                <img src={CSPMIcon} alt='' />
-                                <h2 className='font-montserrat text-base font-bold text-blue mt-3'>CSPM</h2>
-                                <p className='text-sm mt-4 text-gray font-hind'>
-                                    Continuous visibility over multi-cloud environments to identify cloud
-                                    misconfigurations. Scan, monitor, and remediate across AWS, Azure, Google Cloud,
-                                    Alibaba Cloud.
-                                </p>
-                            </div>
-                            <LearnMoreSection>
-                                <LearnMoreLink link='/products/cloud-security-posture-management/' />
-                            </LearnMoreSection>
-                        </div>
-                        <div
-                            className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-4 lg:mt-0 h-64 flex flex-col justify-between p-4 rounded-md'
-                            css={cardBackgroundColorHome}
-                        >
-                            <div>
-                                <img src={VisibilityIcon} alt='' />
-                                <h2 className='font-montserrat text-base font-bold text-blue mt-3'>
-                                    Contextual Analysis
-                                </h2>
-                                <p className='text-sm mt-4 text-gra font-hind'>
-                                    Automated correlations between issues that affect cloud assets, cloud workloads and
-                                    access control help to determine their real impact on data security.
-                                </p>
-                            </div>
-                            <LearnMoreSection>
-                                <LearnMoreLink link='/products/security-knowledge-graph/' />
-                            </LearnMoreSection>
-                        </div>
-                        <div
-                            className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-4 lg:mt-0 h-64 flex flex-col justify-between p-4 rounded-md'
-                            css={cardBackgroundColorHome}
-                        >
-                            <div>
-                                <img src={ComplianceIcon} alt='' height={40} width={40} />
-                                <h2 className='font-montserrat text-base font-bold text-blue mt-3'>
-                                    Compliance and Governance
-                                </h2>
-                                <p className='text-sm mt-4 text-gray font-hind'>
-                                    In-app security standards and organizational policy templates provided by the
-                                    Cyscale platform help your team with internal or external audits.
-                                </p>
-                            </div>
-                            <LearnMoreSection>
-                                <LearnMoreLink link='/use-cases/cloud-compliance-and-auditing/' />
-                            </LearnMoreSection>
-                        </div>
-                        <div
-                            className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-4 lg:mt-0 h-64 flex flex-col justify-between p-4 rounded-md'
-                            css={cardBackgroundColorHome}
-                        >
-                            <div>
-                                {' '}
-                                <img src={CIEMIcon} alt='' />
-                                <h2 className='font-montserrat text-base font-bold text-blue mt-3'>IAM Security</h2>
-                                <p className='text-sm mt-4 text-gray font-hind'>
-                                    A powerful Identity Dashboard to help you understand how effective are your access
-                                    controls. Visualize cloud privileges and permissions and easily perform access
-                                    reviews.
-                                </p>
-                            </div>
-                            <LearnMoreSection>
-                                <LearnMoreLink link='/use-cases/iam-security/' />
-                            </LearnMoreSection>
-                        </div>
+                        <Card
+                            icon={CSPMIcon}
+                            title={'CSPM'}
+                            text={
+                                'Continuous visibility over multi-cloud environments to identify cloud misconfigurations. Scan, monitor, and remediate across AWS, Azure, Google Cloud, Alibaba Cloud.'
+                            }
+                            link={'/products/cloud-security-posture-management/'}
+                        />
+                        <Card
+                            icon={VisibilityIcon}
+                            title={'Contextual Analysis'}
+                            text={
+                                'Automated correlations between issues that affect cloud assets, cloud workloads and access control help to determine their real impact on data security.'
+                            }
+                            link={'/products/security-knowledge-graph/'}
+                        />
+                        <Card
+                            icon={ComplianceIcon}
+                            title={'Compliance and Governance'}
+                            text={
+                                'In-app security standards and organizational policy templates provided by the Cyscale platform help your team with internal or external audits.'
+                            }
+                            link={'/use-cases/cloud-compliance-and-auditing/'}
+                        />
+                        <Card
+                            icon={CIEMIcon}
+                            title={'IAM Security'}
+                            text={
+                                'A powerful Identity Dashboard to help you understand how effective are your access controls. Visualize cloud privileges and permissions and easily perform access reviews.'
+                            }
+                            link={'/use-cases/iam-security/'}
+                        />
                     </Row>
                     <Row className='mt-8 lg:mt-16 pb-16 gap-0 lg:gap-8'>
-                        <div
-                            className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-4 lg:mt-0 h-64 flex flex-col justify-between p-4 rounded-md'
-                            css={cardBackgroundColorHome}
-                        >
-                            <div>
-                                {' '}
-                                <img src={DataSecurityIcon} alt='' />
-                                <h2 className='font-montserrat text-base font-bold text-blue mt-3'>Data Security</h2>
-                                <p className='text-sm mt-4 text-gray font-hind'>
-                                    Protect sensitive data and keep track of your organization’s data security posture
-                                    with an inventory of cloud data stores, complete with their security analysis.
-                                </p>
-                            </div>
-                            <LearnMoreSection>
-                                <LearnMoreLink link='/use-cases/cloud-data-security/' />
-                            </LearnMoreSection>
-                        </div>
-                        <div
-                            className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-4 lg:mt-0 h-56 lg:h-64 flex flex-col justify-between p-4 rounded-md'
-                            css={cardBackgroundColorHome}
-                        >
-                            <div>
-                                <img src={CWPPIcon} alt='' />
-                                <h2 className='font-montserrat text-base font-bold text-blue mt-3'>CWPP</h2>
-                                <p className='text-sm mt-4 text-gray font-hind'>
-                                    A contextual analysis of vulnerabilities in instances, containers and serverless,
-                                    along with cloud misconfigurations helps security teams prioritize remediation.
-                                </p>
-                            </div>
-                        </div>
-                        <div
-                            className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-4 lg:mt-0 h-56 lg:h-64 flex flex-col justify-between p-4 rounded-md'
-                            css={cardBackgroundColorHome}
-                        >
-                            <div>
-                                <img src={ContainerSecurityIcon} alt='' height={40} width={40} />
-                                <h2 className='font-montserrat text-base font-bold text-blue mt-3'>
-                                    Container Security
-                                </h2>
-                                <p className='text-sm mt-4 text-gray font-hind'>
-                                    Know where container images are running, complete with a contextual analysis of
-                                    vulnerabilities, misconfigurations, networking and access.
-                                </p>
-                            </div>
-                        </div>
-                        <div
-                            className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-4 lg:mt-0 h-56 lg:h-64 flex flex-col justify-between p-4 rounded-md'
-                            css={cardBackgroundColorHome}
-                        >
-                            <div>
-                                <img src={KubernetesIcon} alt='' height={40} width={40} />
-                                <h2 className='font-montserrat text-base font-bold text-blue mt-3'>
-                                    Kubernetes Security
-                                </h2>
-                                <p className='text-sm mt-4 text-gray font-hind'>
-                                    A complete inventory for your Kubernetes clusters, either managed or unmanaged, and
-                                    continuous analysis of vulnerabilities in the cluster to ensure data protection.
-                                </p>
-                            </div>
-                        </div>
+                        <Card
+                            icon={DataSecurityIcon}
+                            title={'Data Security'}
+                            text={
+                                'Protect sensitive data and keep track of your organization’s data security posture with an inventory of cloud data stores, complete with their security analysis.'
+                            }
+                            link={'/use-cases/cloud-data-security/'}
+                        />
+                        <Card
+                            icon={CWPPIcon}
+                            title={'CWPP'}
+                            text={
+                                ' A contextual analysis of vulnerabilities in instances, containers and serverless along with cloud misconfigurations helps security teams prioritize remediation.'
+                            }
+                        />
+                        <Card
+                            icon={ContainerSecurityIcon}
+                            title={'Container Security'}
+                            text={
+                                'Know where container images are running, complete with a contextual analysis of vulnerabilities, misconfigurations, networking and access.'
+                            }
+                        />
+                        <Card
+                            icon={KubernetesIcon}
+                            title={'Kubernetes Security'}
+                            text={
+                                'A complete inventory for your Kubernetes clusters, either managed or unmanaged, and continuous analysis of vulnerabilities in the cluster to ensure data protection.'
+                            }
+                        />
                     </Row>
                 </div>
             </div>
@@ -538,7 +452,6 @@ const HomePage = ({ location }) => {
                             css={featureStyle}
                         >
                             <h3 className='font-montserrat font-bold' css={featureTitle}>
-                                {/*Access the entire Cyscale Cloud Platform with <br /> Powerful Analytics & Dashboards*/}
                                 Complete Cloud Security Platform <br /> with Powerful Analytics & Dashboards
                             </h3>
                             <p className='font-hind text-base font-normal mt-4'>Identity and data centric views.</p>
@@ -709,7 +622,7 @@ const HomePage = ({ location }) => {
                             </Link>
                         </div>
                         <div className='col-span-12 lg:col-span-8'>
-                            <Carousel containerRef={containerRef} />
+                            <Carousel ref={containerRef} />
                         </div>
                         <div className='col-span-12 w-full h-72 lg:h-80 relative'>
                             <div className='absolute -bottom-56 lg:-bottom-2 right-0'>
@@ -742,149 +655,54 @@ const HomePage = ({ location }) => {
                         </div>
                     </div>
                     <div className='grid grid-cols-12 gap-x-5 mt-12'>
-                        <div className='col-span-12 md:col-span-6 lg:col-span-4 mx-auto lg:mx-0'>
-                            <div className='flex gap-3 sm:gap-5 w-80 sm:w-96 lg:w-auto'>
-                                <GatsbyImage
-                                    image={data.cloudIcon.childImageSharp.gatsbyImageData}
-                                    alt=''
-                                    css={imageArticleWidth}
-                                    imgStyle={{ borderRadius: '0.75rem' }}
-                                />
-                                <div>
-                                    <div className='flex gap-1 md:gap-5'>
-                                        <p className='text-white font-hind text-xs'>CSPM</p>
-                                        <p className='text-white font-hind text-xs'>COMPLIANCE</p>
-                                    </div>
-                                    <Link
-                                        to={'/blog/cloud-security-and-compliance'}
-                                        className='text-white font-montserrat font-bold text-base lg:text-lg'
-                                    >
-                                        Cloud Security and
-                                        <br /> Compliance: A Guide for
-                                        <br /> Your Cloud Infrastructure
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>{' '}
-                        <div className='col-span-12 md:col-span-6 lg:col-span-4 mx-auto lg:mx-0 mt-10 md:mt-0'>
-                            <div className='flex gap-3 sm:gap-5 w-80 sm:w-96 lg:w-auto'>
-                                <GatsbyImage
-                                    image={data.dataSecurityIcon.childImageSharp.gatsbyImageData}
-                                    alt=''
-                                    css={imageArticleWidth}
-                                    imgStyle={{ borderRadius: '0.75rem' }}
-                                />
-                                <div>
-                                    <div className='flex gap-1 md:gap-5'>
-                                        <p className='text-white font-hind text-xs'>NEWS</p>
-                                        <p className='text-white font-hind text-xs'>PRODUCT</p>
-                                    </div>
-                                    <Link
-                                        to={'/blog/data-security-dashboard'}
-                                        className='text-white font-montserrat font-bold text-base lg:text-lg'
-                                    >
-                                        Introducing the New
-                                        <br /> Data Security Dashboard!
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>{' '}
-                        <div className='col-span-12 md:col-span-6 lg:col-span-4 mx-auto lg:mx-0 mt-10 lg:mt-0'>
-                            <div className='flex gap-3 sm:gap-5 w-80 sm:w-96 lg:w-auto'>
-                                <GatsbyImage
-                                    image={data.isoIcon.childImageSharp.gatsbyImageData}
-                                    alt=''
-                                    css={imageArticleWidth}
-                                    imgStyle={{ borderRadius: '0.75rem' }}
-                                />
-                                <div>
-                                    <div className='flex gap-1 md:gap-5'>
-                                        <p className='text-white font-hind text-xs'>NEWS</p>
-                                        <p className='text-white font-hind text-xs'>COMPLIANCE</p>
-                                        <p className='text-white font-hind text-xs'>CSPM</p>
-                                    </div>
-                                    <Link
-                                        to={'/blog/new-iso27001-2022-version'}
-                                        className='text-white font-montserrat font-bold text-base lg:text-lg'
-                                    >
-                                        The New ISO 27001
-                                        <br />
-                                        2022 Version, Explained
-                                        <br />
-                                        for the Cloud
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>{' '}
-                        <div className='col-span-12 md:col-span-6 lg:col-span-4 mx-auto lg:mx-0 mt-10'>
-                            <div className='flex gap-3 sm:gap-5 w-80 sm:w-96 lg:w-auto'>
-                                <GatsbyImage
-                                    image={data.complianceIcon.childImageSharp.gatsbyImageData}
-                                    alt=''
-                                    css={imageArticleWidth}
-                                    imgStyle={{ borderRadius: '0.75rem' }}
-                                />
-                                <div>
-                                    <div className='flex gap-1 md:gap-5'>
-                                        <p className='text-white font-hind text-xs'>COMPLIANCE</p>
-                                    </div>
-                                    <Link
-                                        to={'/whitepaper/the-complete-guide-to-cloud-compliance/'}
-                                        className='text-white font-montserrat font-bold text-base lg:text-lg'
-                                    >
-                                        Cloud Compliance in 2023:
-                                        <br />
-                                        An In-Depth Guide
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>{' '}
-                        <div className='col-span-12 md:col-span-6 lg:col-span-4 mx-auto lg:mx-0 mt-10 hidden lg:block'>
-                            <div className='flex gap-3 sm:gap-5 w-80 sm:w-96 lg:w-auto'>
-                                <GatsbyImage
-                                    image={data.hybridCloudIcon.childImageSharp.gatsbyImageData}
-                                    alt=''
-                                    css={imageArticleWidth}
-                                    imgStyle={{ borderRadius: '0.75rem' }}
-                                />
-                                <div>
-                                    <div className='flex gap-1 md:gap-5'>
-                                        <p className='text-white font-hind text-xs'>CSPM</p>
-                                    </div>
-                                    <Link
-                                        to={'/blog/hybrid-cloud-best-practices'}
-                                        className='text-white font-montserrat font-bold text-base lg:text-lg'
-                                    >
-                                        5 Hybrid Cloud Best
-                                        <br />
-                                        Practices
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>{' '}
-                        <div className='col-span-12 md:col-span-6 lg:col-span-4 mx-auto lg:mx-0 mt-10 hidden lg:block'>
-                            <div className='flex gap-3 sm:gap-5 w-80 sm:w-96 lg:w-auto'>
-                                <GatsbyImage
-                                    image={data.safeBoxIcon.childImageSharp.gatsbyImageData}
-                                    alt=''
-                                    css={imageArticleWidth}
-                                    imgStyle={{ borderRadius: '0.75rem' }}
-                                />
-                                <div>
-                                    <div className='flex gap-1 md:gap-5'>
-                                        <p className='text-white font-hind text-xs'>CSPM</p>
-                                    </div>
-                                    <Link
-                                        to={'/blog/cloud-data-security-guide'}
-                                        className='text-white font-montserrat font-bold text-base lg:text-lg'
-                                    >
-                                        A Guide to Cloud Data
-                                        <br /> Security
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>{' '}
-                    </div>{' '}
+                        <BlogLink
+                            link={'/blog/cloud-security-and-compliance'}
+                            categories={['cspm', 'compliance']}
+                            text={[
+                                'Cloud Security and',
+                                <br />,
+                                'Compliance: A Guide for',
+                                <br />,
+                                'Your Cloud Infrastructure'
+                            ]}
+                            image={data.cloudIcon.childImageSharp.gatsbyImageData}
+                        />
+                        <BlogLink
+                            link={'/blog/data-security-dashboard'}
+                            categories={['news', 'product']}
+                            text={['Introducing the New', <br />, 'Data Security Dashboard!']}
+                            image={data.dataSecurityIcon.childImageSharp.gatsbyImageData}
+                            classNames={'mt-10 md:mt-0'}
+                        />
+                        <BlogLink
+                            link={'/blog/new-iso27001-2022-version'}
+                            categories={['news', 'compliance', 'cspm']}
+                            text={['The New ISO 27001', <br />, '2022 Version, Explained', <br />, 'for the Cloud']}
+                            image={data.isoIcon.childImageSharp.gatsbyImageData}
+                            classNames={'mt-10 lg:mt-0'}
+                        />
+                        <BlogLink
+                            link={'/whitepaper/the-complete-guide-to-cloud-compliance/'}
+                            categories={['compliance']}
+                            text={['Cloud Compliance in 2023:', <br />, 'An In-Depth Guide']}
+                            image={data.complianceIcon.childImageSharp.gatsbyImageData}
+                            classNames={'mt-10'}
+                        />
+                        <BlogLink
+                            link={'/blog/hybrid-cloud-best-practices'}
+                            categories={['cspm']}
+                            text={['5 Hybrid Cloud Best', <br />, 'Practices']}
+                            image={data.hybridCloudIcon.childImageSharp.gatsbyImageData}
+                            classNames={'mt-10 hidden lg:block'}
+                        />
+                        <BlogLink
+                            link={'/blog/cloud-data-security-guide'}
+                            categories={['cspm']}
+                            text={['A Guide to Cloud Data', <br />, 'Security']}
+                            image={data.safeBoxIcon.childImageSharp.gatsbyImageData}
+                            classNames={'mt-10 hidden lg:block'}
+                        />
+                    </div>
                 </Container>
             </div>
             <Element name='meetings-calendar' />
@@ -929,10 +747,11 @@ const HomePage = ({ location }) => {
                 </Container>
                 <img
                     src={CyscaleBird}
-                    className='absolute left-0 hidden xl:block'
+                    className='absolute hidden xl:block'
                     alt=''
                     css={css`
-                        width: 20.063rem;
+                        width: 25rem;
+                        left: -1rem;
                         bottom: 6.375rem;
                     `}
                 />

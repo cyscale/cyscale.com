@@ -46,19 +46,3 @@ export const cardBackgroundColor = css`
         }
     }
 `;
-
-export const cardBackgroundColorHome = css`
-    @media (max-width: 1024px) {
-        background-color: #ffffff;
-    }
-    background-color: #f3f8ff;
-
-    &:hover {
-        @media (min-width: 1024px) {
-            background-color: #ffffff;
-            ${LearnMoreSection} {
-                display: block;
-            }
-        }
-    }
-`;

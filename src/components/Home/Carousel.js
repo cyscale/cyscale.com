@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { css } from 'twin.macro';
 import Post from '../new-blog/Post';
 import { graphql, useStaticQuery } from 'gatsby';
 import { map } from 'lodash';
 
-const Carousel = ({ containerRef }) => {
+const Carousel = forwardRef((props, ref) => {
     const data = useStaticQuery(graphql`
         query PostsPreviewHomeQuery {
             allMarkdownRemark(
@@ -51,7 +51,7 @@ const Carousel = ({ containerRef }) => {
                 `}
             >
                 <div
-                    ref={containerRef}
+                    ref={ref}
                     className='flex flex-nowrap gap-5 overflow-x-scroll scrollbar-hide z-10'
                     css={css`
                         scroll-behavior: smooth;
@@ -70,6 +70,6 @@ const Carousel = ({ containerRef }) => {
             </div>
         </>
     );
-};
+});
 
 export default Carousel;
