@@ -371,7 +371,7 @@ const HomePage = ({ location }) => {
                             icon={CSPMIcon}
                             title={'CSPM'}
                             text={
-                                'Continuous visibility over multi-cloud environments to identify cloud misconfigurations. Scan, monitor, and remediate across multiple cloud service providers such as AWS , Microsoft Azure, Google Cloud, Alibaba Cloud.'
+                                'Continuous visibility over multi-cloud environments to identify cloud misconfigurations. Scan, monitor, and remediate across multiple cloud service providers such as AWS, Microsoft Azure, Google Cloud, Alibaba Cloud.'
                             }
                             link={'/products/cloud-security-posture-management/'}
                         />
