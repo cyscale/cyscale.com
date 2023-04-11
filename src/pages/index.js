@@ -617,7 +617,15 @@ const HomePage = ({ location }) => {
                                 <br className='hidden lg:block' />
                                 monitor cloud assets across multiple public cloud providers.
                             </p>
-                            <Link to={'/blog/'} className='font-hind text-base font-bold mt-6 underline block'>
+                            <Link
+                                to={'/blog/'}
+                                className='font-hind text-base font-bold mt-6 underline block'
+                                css={css`
+                                    &:hover {
+                                        color: #0f26aa;
+                                    }
+                                `}
+                            >
                                 Read more about cloud security
                             </Link>
                         </div>

@@ -17,14 +17,14 @@ const BlogLink = ({ link, categories, text, image, classNames }) => {
                         {categories.map((category, index) => (
                             <Link
                                 to={`/blog/${category}`}
-                                className='text-white font-hind text-xs uppercase'
+                                className='text-white font-hind text-xs uppercase hover:underline'
                                 key={index}
                             >
                                 {category}
                             </Link>
                         ))}
                     </div>
-                    <p className='text-white font-montserrat font-bold text-base lg:text-lg'>{text}</p>
+                    <p className='text-white font-montserrat font-bold text-base lg:text-lg hover:underline'>{text}</p>
                 </div>
             </Link>
         </div>

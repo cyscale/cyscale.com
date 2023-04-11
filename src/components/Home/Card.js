@@ -2,6 +2,7 @@ import React from 'react';
 import { css } from 'twin.macro';
 import { LearnMoreSection } from '../../assets/css/styles';
 import LearnMoreLink from '../use-cases/LearnMoreLink';
+import { Link } from 'gatsby';
 
 const cardBackgroundColor = css`
     @media (max-width: 1024px) {
@@ -21,7 +22,8 @@ const cardBackgroundColor = css`
 
 const Card = ({ icon, title, text, link }) => {
     return (
-        <div
+        <Link
+            to={link}
             className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-4 lg:mt-0 h-64 flex flex-col justify-between p-4 rounded-md'
             css={cardBackgroundColor}
         >
@@ -35,7 +37,7 @@ const Card = ({ icon, title, text, link }) => {
                     <LearnMoreLink link={link} />
                 </LearnMoreSection>
             )}
-        </div>
+        </Link>
     );
 };
 
