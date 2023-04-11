@@ -273,9 +273,9 @@ const HomePage = ({ location }) => {
                         </h2>
                         <p className='font-hind text-base mt-12' css={sectionTextColor}>
                             Cybersecurity specialists across industries rely on Cyscale to eliminate cloud security
-                            blindspots, understand the attack surface in their cloud environments and prevent data loss. We 
-                            help you see through application and cloud infrastructure layers and scale your efforts to 
-                            organization-wide impact.
+                            blindspots, understand the attack surface in their cloud environments and prevent data loss.
+                            We help you see through application and cloud infrastructure layers and scale your efforts
+                            to organization-wide impact.
                         </p>
                     </div>
                     <div className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 block lg:hidden mt-12'>
@@ -331,9 +331,9 @@ const HomePage = ({ location }) => {
                             </h2>
                             <p className='mt-4 text-white text-base font-hind font-normal'>
                                 An unpatched virtual machine running an app with the devastating Log4j vulnerability is
-                                close to harmless in a private network. However, a server running the same vulnerable cloud 
-                                app while being exposed to the internet, and having read or write access to a production
-                                datastore presents a totally different risk.
+                                close to harmless in a private network. However, a server running the same vulnerable
+                                cloud app while being exposed to the internet, and having read or write access to a
+                                production datastore presents a totally different risk.
                             </p>
                             <p className='mt-4 text-white text-base font-hind font-normal'>
                                 Understanding context allows you to immediately see what needs fixing and what can wait,
@@ -374,6 +374,7 @@ const HomePage = ({ location }) => {
                                 'Continuous visibility over multi-cloud environments to identify cloud misconfigurations. Scan, monitor, and remediate across multiple cloud service providers such as AWS, Microsoft Azure, Google Cloud, Alibaba Cloud.'
                             }
                             link={'/products/cloud-security-posture-management/'}
+                            cardHeight={72}
                         />
                         <Card
                             icon={VisibilityIcon}
@@ -382,6 +383,7 @@ const HomePage = ({ location }) => {
                                 'Automated correlations between issues that affect cloud assets, cloud workloads and access control help to determine their real impact on data security and data protection.'
                             }
                             link={'/products/security-knowledge-graph/'}
+                            cardHeight={72}
                         />
                         <Card
                             icon={ComplianceIcon}
@@ -390,6 +392,7 @@ const HomePage = ({ location }) => {
                                 'In-app security standards and organizational security policy templates provided by the Cyscale platform help your team with internal or external audits.'
                             }
                             link={'/use-cases/cloud-compliance-and-auditing/'}
+                            cardHeight={72}
                         />
                         <Card
                             icon={CIEMIcon}
@@ -398,6 +401,7 @@ const HomePage = ({ location }) => {
                                 'A powerful Identity Dashboard to help you understand how effective are your access controls. Visualize cloud privileges and permissions and easily perform access reviews to prevent data loss.'
                             }
                             link={'/use-cases/iam-security/'}
+                            cardHeight={72}
                         />
                     </Row>
                     <Row className='mt-8 lg:mt-16 pb-16 gap-0 lg:gap-8'>
@@ -408,6 +412,7 @@ const HomePage = ({ location }) => {
                                 'Protect sensitive data and keep track of your organization’s data security posture with an inventory of cloud data stores, complete with their security analysis.'
                             }
                             link={'/use-cases/cloud-data-security/'}
+                            cardHeight={64}
                         />
                         <Card
                             icon={CWPPIcon}
@@ -415,6 +420,7 @@ const HomePage = ({ location }) => {
                             text={
                                 'A contextual analysis of vulnerabilities in instances, containers and serverless, along with cloud misconfigurations helps security teams prioritize remediation.'
                             }
+                            cardHeight={64}
                         />
                         <Card
                             icon={ContainerSecurityIcon}
@@ -422,6 +428,7 @@ const HomePage = ({ location }) => {
                             text={
                                 'Know where container images are running, complete with a contextual security analysis of vulnerabilities, misconfigurations, networking and access.'
                             }
+                            cardHeight={64}
                         />
                         <Card
                             icon={KubernetesIcon}
@@ -429,6 +436,7 @@ const HomePage = ({ location }) => {
                             text={
                                 'A complete inventory for your Kubernetes clusters, either managed or unmanaged, and continuous analysis of vulnerabilities in the cluster to ensure data protection.'
                             }
+                            cardHeight={64}
                         />
                     </Row>
                 </div>
@@ -454,7 +462,9 @@ const HomePage = ({ location }) => {
                             <h3 className='font-montserrat font-bold' css={featureTitle}>
                                 Complete Cloud Security Platform <br /> with Powerful Analytics & Dashboards
                             </h3>
-                            <p className='font-hind text-base font-normal mt-4'>Cloud security posture management with identity and data centric views.</p>
+                            <p className='font-hind text-base font-normal mt-4'>
+                                Cloud security posture management with identity and data centric views.
+                            </p>
                             <GatsbyImage
                                 image={data.dashboard.childImageSharp.gatsbyImageData}
                                 alt='Dashboard'
@@ -499,7 +509,8 @@ const HomePage = ({ location }) => {
                                 Integrations
                             </h3>
                             <p className='font-hind text-base font-normal mt-4'>
-                                Amazon Web Services, Google Cloud, Microsoft Azure, Alibaba Cloud, Okta, Github and more...
+                                Amazon Web Services, Google Cloud, Microsoft Azure, Alibaba Cloud, Okta, Github and
+                                more...
                             </p>
                             <GatsbyImage
                                 image={data.cardIntegrations.childImageSharp.gatsbyImageData}
