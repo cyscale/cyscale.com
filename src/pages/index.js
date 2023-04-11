@@ -273,8 +273,8 @@ const HomePage = ({ location }) => {
                         </h2>
                         <p className='font-hind text-base mt-12' css={sectionTextColor}>
                             Cybersecurity specialists across industries rely on Cyscale to eliminate cloud security
-                            blindspots and understand the attack surface in their cloud environments. We help you see
-                            through application and cloud infrastructure layers and scale your efforts to
+                            blindspots, understand the attack surface in their cloud environments and prevent data loss. We 
+                            help you see through application and cloud infrastructure layers and scale your efforts to 
                             organization-wide impact.
                         </p>
                     </div>
@@ -286,7 +286,7 @@ const HomePage = ({ location }) => {
                         />
                     </div>
                 </div>
-            </Container>
+            </Container
             <Container className='mb-16'>
                 <div className='grid grid-cols-12 gap-x-5 mt-12'>
                     <div className='col-span-12 lg:col-span-4'>
@@ -314,7 +314,7 @@ const HomePage = ({ location }) => {
                             icon={ShieldTagsIcon}
                             title={'CLOUD SECURITY'}
                             text={
-                                'Identify the highest risk with the help of our Security Knowledge Graph™ technology, capturing relationships between cloud assets, identities, and data.'
+                                'Identify the highest security risk with the help of our Security Knowledge Graph™ technology, capturing relationships between cloud resources, identities, and data.'
                             }
                             link={'/products/security-knowledge-graph/'}
                         />
@@ -331,7 +331,7 @@ const HomePage = ({ location }) => {
                             </h2>
                             <p className='mt-4 text-white text-base font-hind font-normal'>
                                 An unpatched virtual machine running an app with the devastating Log4j vulnerability is
-                                close to harmless in a private network. However, a server running the same vulnerable
+                                close to harmless in a private network. However, a server running the same vulnerable cloud 
                                 app while being exposed to the internet, and having read or write access to a production
                                 datastore presents a totally different risk.
                             </p>
@@ -371,7 +371,7 @@ const HomePage = ({ location }) => {
                             icon={CSPMIcon}
                             title={'CSPM'}
                             text={
-                                'Continuous visibility over multi-cloud environments to identify cloud misconfigurations. Scan, monitor, and remediate across AWS, Azure, Google Cloud, Alibaba Cloud.'
+                                'Continuous visibility over multi-cloud environments to identify cloud misconfigurations. Scan, monitor, and remediate across multiple cloud service providers such as AWS , Microsoft Azure, Google Cloud, Alibaba Cloud.'
                             }
                             link={'/products/cloud-security-posture-management/'}
                         />
@@ -379,7 +379,7 @@ const HomePage = ({ location }) => {
                             icon={VisibilityIcon}
                             title={'Contextual Analysis'}
                             text={
-                                'Automated correlations between issues that affect cloud assets, cloud workloads and access control help to determine their real impact on data security.'
+                                'Automated correlations between issues that affect cloud assets, cloud workloads and access control help to determine their real impact on data security and data protection.'
                             }
                             link={'/products/security-knowledge-graph/'}
                         />
@@ -387,7 +387,7 @@ const HomePage = ({ location }) => {
                             icon={ComplianceIcon}
                             title={'Compliance and Governance'}
                             text={
-                                'In-app security standards and organizational policy templates provided by the Cyscale platform help your team with internal or external audits.'
+                                'In-app security standards and organizational security policy templates provided by the Cyscale platform help your team with internal or external audits.'
                             }
                             link={'/use-cases/cloud-compliance-and-auditing/'}
                         />
@@ -395,7 +395,7 @@ const HomePage = ({ location }) => {
                             icon={CIEMIcon}
                             title={'IAM Security'}
                             text={
-                                'A powerful Identity Dashboard to help you understand how effective are your access controls. Visualize cloud privileges and permissions and easily perform access reviews.'
+                                'A powerful Identity Dashboard to help you understand how effective are your access controls. Visualize cloud privileges and permissions and easily perform access reviews to prevent data loss.'
                             }
                             link={'/use-cases/iam-security/'}
                         />
@@ -411,16 +411,16 @@ const HomePage = ({ location }) => {
                         />
                         <Card
                             icon={CWPPIcon}
-                            title={'CWPP'}
+                            title={'Workload Protection'}
                             text={
-                                ' A contextual analysis of vulnerabilities in instances, containers and serverless along with cloud misconfigurations helps security teams prioritize remediation.'
+                                'A contextual analysis of vulnerabilities in instances, containers and serverless, along with cloud misconfigurations helps security teams prioritize remediation.'
                             }
                         />
                         <Card
                             icon={ContainerSecurityIcon}
                             title={'Container Security'}
                             text={
-                                'Know where container images are running, complete with a contextual analysis of vulnerabilities, misconfigurations, networking and access.'
+                                'Know where container images are running, complete with a contextual security analysis of vulnerabilities, misconfigurations, networking and access.'
                             }
                         />
                         <Card
@@ -454,7 +454,7 @@ const HomePage = ({ location }) => {
                             <h3 className='font-montserrat font-bold' css={featureTitle}>
                                 Complete Cloud Security Platform <br /> with Powerful Analytics & Dashboards
                             </h3>
-                            <p className='font-hind text-base font-normal mt-4'>Identity and data centric views.</p>
+                            <p className='font-hind text-base font-normal mt-4'>Cloud security posture management with identity and data centric views.</p>
                             <GatsbyImage
                                 image={data.dashboard.childImageSharp.gatsbyImageData}
                                 alt='Dashboard'
@@ -499,7 +499,7 @@ const HomePage = ({ location }) => {
                                 Integrations
                             </h3>
                             <p className='font-hind text-base font-normal mt-4'>
-                                AWS, Google Cloud, Azure, Alibaba Cloud, Okta, Github and more...
+                                Amazon Web Services, Google Cloud, Microsoft Azure, Alibaba Cloud, Okta, Github and more...
                             </p>
                             <GatsbyImage
                                 image={data.cardIntegrations.childImageSharp.gatsbyImageData}
