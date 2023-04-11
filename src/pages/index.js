@@ -286,7 +286,7 @@ const HomePage = ({ location }) => {
                         />
                     </div>
                 </div>
-            </Container
+            </Container>
             <Container className='mb-16'>
                 <div className='grid grid-cols-12 gap-x-5 mt-12'>
                     <div className='col-span-12 lg:col-span-4'>
