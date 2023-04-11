@@ -7,7 +7,7 @@ module.exports = {
     variants: {
         extend: {}
     },
-    plugins: [],
+    plugins: [require('./src/common/tailwind-plugin.js')],
     theme: {
         extend: {
             minHeight: {
@@ -15,7 +15,7 @@ module.exports = {
                 100: '25rem'
             },
             maxWidth: {
-                'screen': '100vw',
+                screen: '100vw',
                 '1440px': '1440px',
                 '1366px': '1366px',
                 '734px': '734px',
@@ -730,7 +730,8 @@ module.exports = {
                     '"Segoe UI Symbol"',
                     '"Noto Color Emoji"'
                 ],
-                montserrat: ['Montserrat', 'sans-serif']
+                montserrat: ['Montserrat', 'sans-serif'],
+                hind: ['Hind', 'sans-serif']
             },
             backgroundColor: (theme) => ({
                 ...theme('colors'),
