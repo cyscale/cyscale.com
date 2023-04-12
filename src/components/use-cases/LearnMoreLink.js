@@ -15,8 +15,9 @@ const LearnMoreLink = ({ link }) => {
         >
             <RightArrow fillColor={isHover ? '#0b175a' : '#0F26AA'} marginTop={'-0.25rem'} />
             <span
-                className='text-md ml-2 inline-block font-bold text-base'
+                className='text-md ml-2 inline-block font-bold text-base font-hind'
                 css={css`
+                    line-height: 1.625rem;
                     color: #0f26aa;
                     &:hover {
                         color: #0b175a;

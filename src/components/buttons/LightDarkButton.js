@@ -14,7 +14,7 @@ const buttonStyle = css`
 const LightDarkButton = ({ text }) => {
     return (
         <button
-            className='blackBorder mx-auto md:mx-0 font-medium rounded text-black uppercase text-center px-8 no-underline transition-all duration-300 hover:border-black hover:bg-black hover:text-white blackBorder hover:no-underline'
+            className='blackBorder mx-auto md:mx-0 font-medium rounded text-black uppercase text-center px-8 no-underline transition-all duration-300 hover:border-black hover:bg-black hover:text-white blackBorder hover:no-underline font-hind'
             css={buttonStyle}
         >
             {text}
