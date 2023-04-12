@@ -224,7 +224,7 @@ const HomePage = ({ location }) => {
                             <div className='col-span-12 lg:col-span-6 order-last lg:order-first'>
                                 <div className='lg:mt-16 pt-4 max-w-xl mx-auto lg:mx-0'>
                                     <h1 className='text-left text-blue text-4xl lg:text-5xl leading-normal lg:leading-normal mb-8 font-montserrat'>
-                                        <strong>Harness the Cloud with Confidence</strong>
+                                        <strong>Leverage the Cloud with Confidence</strong>
                                     </h1>
                                     <p className='text-left text-base lg:text-lg mb-8 leading-relaxed font-hind'>
                                         Cyscale automates cloud security analysis helping you identify and reduce risk
