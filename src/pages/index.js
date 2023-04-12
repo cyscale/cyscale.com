@@ -61,14 +61,21 @@ const heroBackground = css`
         background-image: url(${BgHero});
     }
     @media screen and (min-width: 1536px) {
-        height: 57rem;
+        height: 48rem;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: 50% 35%;
         background-image: url(${BgHero});
     }
+    @media screen and (min-width: 2000px) {
+        height: 54rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 30%;
+        background-image: url(${BgHero});
+    }
     @media screen and (min-width: 2560px) {
-        height: 63rem;
+        height: 60rem;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: 50% 25%;
@@ -257,11 +264,11 @@ const HomePage = ({ location }) => {
                         />
                     </div>
                     <div className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 max-w-xl lg:max-w-xl'>
-                        <p className='font-montserrat text-base font-bold mt-0' css={sectionSubtitleColor}>
+                        <p className='font-montserrat text-base font-bold mt-0 lg:ml-5' css={sectionSubtitleColor}>
                             EMPOWER YOUR TEAM
                         </p>
                         <h2
-                            className='text-blue font-bold font-montserrat mt-4'
+                            className='text-blue font-bold font-montserrat mt-4 lg:ml-5'
                             css={css`
                                 font-size: 2.375rem;
                                 line-height: 2.895rem;
@@ -271,7 +278,7 @@ const HomePage = ({ location }) => {
                             <br className='hidden lg:block' />
                             <spam className='lg:hidden'>&nbsp;</spam>and ensure compliance with industry regulations
                         </h2>
-                        <p className='font-hind text-base mt-12' css={sectionTextColor}>
+                        <p className='font-hind text-base mt-12 lg:ml-5' css={sectionTextColor}>
                             Cybersecurity specialists across industries rely on Cyscale to eliminate cloud security
                             blindspots, understand the attack surface in their cloud environments and prevent data loss.
                             We help you see through application and cloud infrastructure layers and scale your efforts
@@ -759,7 +766,7 @@ const HomePage = ({ location }) => {
                                     hidden: loadingMeetings,
                                     'meetings-iframe-container': true
                                 })}
-                                data-src='https://meetings.hubspot.com/virginia-mitea/get-new-quote?embed=true'
+                                data-src='https://meetings.hubspot.com/virginia-mitea/demo-for-cyscale-cloud-platform?embed=true'
                             ></div>
                         </div>
                     </div>
