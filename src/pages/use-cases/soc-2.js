@@ -7,6 +7,16 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import GradientButton from '../../components/buttons/GradientButton';
 import LightDarkButton from '../../components/buttons/LightDarkButton';
+import { css } from 'twin.macro';
+
+const titleSection = css`
+    font-size: 1.625rem;
+    line-height: 2rem;
+    @media screen and (min-width: 1024px) {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+`;
 
 const Soc2 = ({ location }) => {
     const data = useStaticQuery(graphql`
@@ -46,12 +56,12 @@ const Soc2 = ({ location }) => {
                                         <strong>SOC 2 Compliance</strong> <br className='block md:hidden lg:block' />{' '}
                                         for Cloud
                                     </h1>
-                                    <p className='text-left text-base lg:text-lg mb-8 leading-relaxed text-gray'>
+                                    <p className='text-left text-base lg:text-lg mb-8 leading-relaxed text-gray font-hind'>
                                         Cyscale offers a powerful set of technical controls helping you prepare for a
                                         SOC 2 audit in areas such as security, availability, processing integrity,
                                         confidentiality and privacy.
                                     </p>
-                                    <p className='text-left text-base lg:text-lg mb-2 leading-relaxed text-gray'>
+                                    <p className='text-left text-base lg:text-lg mb-2 leading-relaxed text-gray font-hind'>
                                         Out-of-the-box policies that you can use for a solid data security program.
                                     </p>
                                     <div className='flex mt-8 justify-start'>
@@ -81,37 +91,40 @@ const Soc2 = ({ location }) => {
                     <div className='sm:grid sm:grid-cols-12 sm:gap-12'>
                         <div className='col-span-12 lg:col-span-6'>
                             <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-md'>
-                                <h2 className='text-3xl font-bold text-primary leading-normal border-title-partly montserrat-font'>
+                                <h2
+                                    className='font-bold text-primary border-title-partly montserrat-font'
+                                    css={titleSection}
+                                >
                                     Automate cloud security <br /> and SOC 2 compliance
                                 </h2>
                             </div>
                             <div className='mx-auto lg:mx-0 max-w-xl'>
-                                <p className='leading-normal text-base mt-8 mb-2 montserrat-font font-semibold'>
+                                <p className='leading-normal text-base mt-8 mb-2 montserrat-font font-semibold font-hind'>
                                     Asset inventory
                                 </p>
-                                <p className='leading-normal text-base text-gray'>
+                                <p className='leading-normal text-base text-gray font-hind'>
                                     A multi-cloud asset inventory enables the management of information assets. Easily
                                     filter the asset table and generate relevant inventory reports.
                                 </p>
-                                <p className='leading-normal text-base mt-4 mb-2 montserrat-font font-semibold'>
+                                <p className='leading-normal text-base mt-4 mb-2 montserrat-font font-semibold font-hind'>
                                     Identity and access management
                                 </p>
-                                <p className='leading-normal text-base text-gray'>
+                                <p className='leading-normal text-base text-gray font-hind'>
                                     Detect misconfigurations and vulnerabilities related to identities and access and
                                     ensure the implementation of Least Privilege and Separation of Duties. Get alerts on
                                     new findings in your cloud environments.
                                 </p>
-                                <p className='leading-normal text-base mt-4 mb-2 montserrat-font font-semibold'>
+                                <p className='leading-normal text-base mt-4 mb-2 montserrat-font font-semibold font-hind'>
                                     Encryption
                                 </p>
-                                <p className='leading-normal text-base text-gray'>
+                                <p className='leading-normal text-base text-gray font-hind'>
                                     Ensure encryption with strong algorithms is used for data in-transit and at-rest to
                                     provide data protection from cyberattacks.
                                 </p>
-                                <p className='leading-normal text-base mt-4 mb-2 montserrat-font font-semibold'>
+                                <p className='leading-normal text-base mt-4 mb-2 montserrat-font font-semibold font-hind'>
                                     Logging and monitoring
                                 </p>
-                                <p className='leading-normal text-base text-gray'>
+                                <p className='leading-normal text-base text-gray font-hind'>
                                     Make sure that your systems have logs activated and in place, to allow for the
                                     detection of anomalies and security incidents in real-time.
                                 </p>
@@ -123,7 +136,7 @@ const Soc2 = ({ location }) => {
                                     image={data.standards.childImageSharp.gatsbyImageData}
                                     alt='SOC 2 Standard detailed view'
                                 />
-                                <p className='leading-normal text-xs text-grey2 mx-auto max-w-xl lg:max-w-lg'>
+                                <p className='leading-normal text-xs text-grey2 mx-auto max-w-xl lg:max-w-lg font-hind'>
                                     SOC 2 (Service and Organization Controls 2) is a security standard developed by
                                     AICPA (The American Institute of Certified Public Accountants). The standard has 5
                                     Trust Service Criteria (TSC) categories and 64 Trust Service Criteria.
@@ -146,24 +159,27 @@ const Soc2 = ({ location }) => {
                         </div>
                         <div className='col-span-12 lg:col-span-6'>
                             <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-lg'>
-                                <h2 className='text-3xl font-bold text-primary leading-normal border-title-partly montserrat-font'>
+                                <h2
+                                    className='text-3xl font-bold text-primary border-title-partly montserrat-font'
+                                    css={titleSection}
+                                >
                                     Automate compliance checks & security control audits
                                 </h2>
                             </div>
                             <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-lg'>
-                                <p className='leading-normal text-base text-gray pt-12 pb-2'>
+                                <p className='leading-normal text-base text-gray pt-12 pb-2 font-hind'>
                                     Use Cyscale for governance automation across cloud service providers and internal
                                     security teams to ensure consistent information security and compliance.
                                 </p>
-                                <p className='leading-normal text-base text-gray py-2'>
+                                <p className='leading-normal text-base text-gray py-2 font-hind'>
                                     We keep your cloud infrastructure under continuous assessment and provide in-app
                                     security consultancy so that you make the most of your time and effort.
                                 </p>
-                                <p className='leading-normal text-base text-gray py-2'>
+                                <p className='leading-normal text-base text-gray py-2 font-hind'>
                                     Ensure SOC 2 compliance in your cloud computing environment across multiple cloud
                                     service providers such as AWS, Azure, GCP (Google Cloud Platform).
                                 </p>
-                                <p className='leading-normal text-base text-gray py-2'>
+                                <p className='leading-normal text-base text-gray py-2 font-hind'>
                                     Coming soon: create custom Controls that tap into our Security Knowledge Graph™ to
                                     automate and optimize the cybersecurity and compliance checks that matter most for
                                     your organization.
@@ -185,15 +201,18 @@ const Soc2 = ({ location }) => {
                 <img src={corner} width={300} className='hidden md:block absolute top-0 right-0 m-0 z-20' alt='' />
                 <Container>
                     <div className='py-8 md:py-12 lg:py-20'>
-                        <div className='max-w-xl mx-auto lg:mx-0 lg:max-w-sm mb-20'>
-                            <h2 className='text-3xl font-bold text-primary leading-normal border-title-partly montserrat-font'>
+                        <div className='max-w-xl mx-auto lg:mx-0 lg:max-w-md mb-20'>
+                            <h2
+                                className='font-bold text-primary border-title-partly montserrat-font'
+                                css={titleSection}
+                            >
                                 100% Confidence with <br /> your Cloud Compliance
                             </h2>
                         </div>
                         <div className='max-w-xl mx-auto lg:mx-0 lg:max-w-3xl'>
                             <Row className='lg:gap-20'>
                                 <div className='col-span-12 lg:col-span-6'>
-                                    <p className='leading-normal text-base text-gray mb-6'>
+                                    <p className='leading-normal text-base text-gray mb-6 font-hind'>
                                         <strong className='montserrat-font'>Meet industry regulations</strong>
                                         <br />
                                         Protect sensitive data and comply with strict industry regulations in your
@@ -202,15 +221,16 @@ const Soc2 = ({ location }) => {
                                     </p>
                                 </div>
                                 <div className='col-span-12 lg:col-span-6'>
-                                    <p className='leading-normal text-base text-gray mb-6'>
+                                    <p className='leading-normal text-base text-gray mb-6 font-hind'>
                                         <strong className='montserrat-font'>PCI-DSS, SOC 2, GDPR, and more</strong>
                                         <br />
                                         Cyscale offers a wide range of benchmarks and frameworks, including: CIS,
-                                        ISO27001, PCI-DSS, NIST, SOC 2, GDPR.
+                                        ISO27001, PCI-DSS, NIST,
+                                        <br className='hidden lg:block' /> SOC 2, GDPR.
                                     </p>
                                 </div>
                                 <div className='col-span-12 lg:col-span-6'>
-                                    <p className='leading-normal text-base text-gray mb-6'>
+                                    <p className='leading-normal text-base text-gray mb-6 font-hind'>
                                         <strong className='montserrat-font'>Built-in compliance templates</strong>
                                         <br />
                                         You can either use policy templates as a basis for your custom policies, or
@@ -218,7 +238,7 @@ const Soc2 = ({ location }) => {
                                     </p>
                                 </div>
                                 <div className='col-span-12 lg:col-span-6'>
-                                    <p className='leading-normal text-base text-gray mb-6'>
+                                    <p className='leading-normal text-base text-gray mb-6 font-hind'>
                                         <strong className='montserrat-font'>
                                             500+ out-of-the-box security controls
                                         </strong>
@@ -236,13 +256,13 @@ const Soc2 = ({ location }) => {
                 <div className='md:pt-12 pb-44'>
                     <div className='flex h-48 flex-col items-center'>
                         <img src={cloudIcon} alt='' />
-                        <h1 className='text-center px-2 mt-4 mb-2 montserrat-font font-semibold'>
+                        <h1 className='text-center px-2 mt-4 mb-2 montserrat-font font-semibold font-hind'>
                             SOC COMPLIANCE AND CLOUD SECURITY
                         </h1>
-                        <p>Start seeing value & saving money in minutes</p>
+                        <p className='font-hind text-base'>Start seeing value & saving money in minutes</p>
                         <div className='mt-10 w-auto inline-block'>
                             <Link
-                                className='gradientBgBtn w-full block text-sm font-medium rounded text-white text-center py-4 px-12 hover:no-underline no-underline'
+                                className='gradientBgBtn w-full block text-sm font-medium rounded text-white text-center py-4 px-12 hover:no-underline no-underline font-hind'
                                 to='/request-demo'
                             >
                                 Request Live Demo

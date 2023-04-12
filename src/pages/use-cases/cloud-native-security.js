@@ -17,13 +17,22 @@ import { css } from 'twin.macro';
 import corner from '../../assets/images/corner-campaigns-iam-security.svg';
 import cloudIcon from '../../assets/images/cloud-icon.svg';
 import LearnMoreLink from '../../components/use-cases/LearnMoreLink';
-import { titleSection, LearnMoreSection, cardBackgroundColor } from '../../assets/css/styles';
+import { LearnMoreSection, cardBackgroundColor } from '../../assets/css/styles';
 
 const heroTitleFontSize = css`
     @media (max-width: 768px) {
         font-size: 1.75rem;
     }
     font-size: 3rem;
+`;
+
+const titleSectionFont = css`
+    font-size: 1.625rem;
+    line-height: 2rem;
+    @media screen and (min-width: 1024px) {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
 `;
 
 const CloudNativeSecurity = ({ location }) => {
@@ -68,10 +77,10 @@ const CloudNativeSecurity = ({ location }) => {
                                         <br /> Cloud Native
                                         <br /> Security Platform
                                     </h1>
-                                    <p className='text-left text-base lg:text-lg mb-8 leading-relaxed font-bold'>
+                                    <p className='text-left text-base lg:text-lg mb-8 leading-relaxed font-bold font-hind'>
                                         Secure Your Cloud Infrastructure with Our Advanced Security Platform
                                     </p>
-                                    <p className='text-left text-base lg:text-lg mb-2 leading-relaxed'>
+                                    <p className='text-left text-base lg:text-lg mb-2 leading-relaxed font-hind'>
                                         Protect your entire stack, from virtual machines to serverless environments, in
                                         any cloud environment. Our powerful platform provides advanced security
                                         features, giving you maximum cloud-native security and peace of mind to
@@ -106,7 +115,7 @@ const CloudNativeSecurity = ({ location }) => {
                             <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-md'>
                                 <h2
                                     className='font-bold text-primary leading-normal border-title-partly font-montserrat'
-                                    css={titleSection}
+                                    css={titleSectionFont}
                                 >
                                     Key Components to
                                     <br className='hidden lg:block' /> Build a Resilient Cloud
@@ -134,7 +143,7 @@ const CloudNativeSecurity = ({ location }) => {
                         <div>
                             <img src={CSPMIcon} alt='' />
                             <h2 className='font-montserrat text-base font-bold text-blue mt-3'>CSPM</h2>
-                            <p className='text-sm mt-4 text-gray'>
+                            <p className='text-sm mt-4 text-gray font-hind'>
                                 Secure multi-cloud environments with Cloud Security Posture Management. Continuous
                                 monitoring and remediation across AWS, Azure, Google Cloud, Alibaba Cloud. Automate and
                                 streamline cloud security management, ensure compliance, and protect sensitive data.
@@ -151,7 +160,7 @@ const CloudNativeSecurity = ({ location }) => {
                         <div>
                             <img src={VisibilityIcon} alt='' />
                             <h2 className='font-montserrat text-base font-bold text-blue mt-3'>Contextual Analysis</h2>
-                            <p className='text-sm mt-4 text-gray'>
+                            <p className='text-sm mt-4 text-gray font-hind'>
                                 Automatically correlate misconfigurations across compute, storage, and identity assets,
                                 determining their real impact on data security. Gain insights to prioritize and
                                 streamline remediation efforts, ultimately reducing your organization's exposure to
@@ -171,7 +180,7 @@ const CloudNativeSecurity = ({ location }) => {
                             <h2 className='font-montserrat text-base font-bold text-blue mt-3'>
                                 Identity and Access Management
                             </h2>
-                            <p className='text-sm mt-4 text-gray'>
+                            <p className='text-sm mt-4 text-gray font-hind'>
                                 Implement strong identity and access management controls to ensure that only authorized
                                 users can access your cloud-native infrastructure and applications. Use multi-factor
                                 authentication and role-based access controls to minimize the risk of unauthorized
@@ -192,7 +201,7 @@ const CloudNativeSecurity = ({ location }) => {
                             <h2 className='font-montserrat text-base font-bold text-blue mt-3'>
                                 Cloud-Native Application Security (CNAPP)
                             </h2>
-                            <p className='text-sm mt-4 text-gray'>
+                            <p className='text-sm mt-4 text-gray font-hind'>
                                 Automate prevention, detection, and response across the entire cloud-native application
                                 lifecycle to enhance security. Ensure secure supply chain, cloud infrastructure, and
                                 running workloads, regardless of deployment location. Provide end-to-end security
@@ -214,7 +223,7 @@ const CloudNativeSecurity = ({ location }) => {
                             {' '}
                             <img src={CIEMIcon} alt='' />
                             <h2 className='font-montserrat text-base font-bold text-blue mt-3'>CIEM</h2>
-                            <p className='text-sm mt-4 text-gray'>
+                            <p className='text-sm mt-4 text-gray font-hind'>
                                 Easily review access and track users, access levels, and permissions, including IAM
                                 asset misconfigurations. Gain insights into identities and permissions in complex
                                 multi-cloud environments, ensuring secure and compliant access management.
@@ -231,7 +240,7 @@ const CloudNativeSecurity = ({ location }) => {
                         <div>
                             <img src={CWPPIcon} alt='' />
                             <h2 className='font-montserrat text-base font-bold text-blue mt-3'>CWPP</h2>
-                            <p className='text-sm mt-4 text-gray'>
+                            <p className='text-sm mt-4 text-gray font-hind'>
                                 Enhance your workload security with Cloud Workload Protection Platform. Perform
                                 contextual analysis of cloud misconfigurations and vulnerabilities across instances,
                                 images, containers, and serverless functions. Ensure complete visibility into your
@@ -246,7 +255,7 @@ const CloudNativeSecurity = ({ location }) => {
                         <div>
                             <img src={ContainerSecurityIcon} alt='' height={40} width={40} />
                             <h2 className='font-montserrat text-base font-bold text-blue mt-3'>Container Security</h2>
-                            <p className='text-sm mt-4 text-gray'>
+                            <p className='text-sm mt-4 text-gray font-hind'>
                                 Ensure the security of your container-based apps and cloud infrastructure with Container
                                 Security solutions. Gain complete visibility over where containers are running in the
                                 cloud and perform a contextual analysis of vulnerabilities, misconfigurations,
@@ -261,7 +270,7 @@ const CloudNativeSecurity = ({ location }) => {
                         <div>
                             <img src={KubernetesIcon} alt='' height={40} width={40} />
                             <h2 className='font-montserrat text-base font-bold text-blue mt-3'>Kubernetes Security</h2>
-                            <p className='text-sm mt-4 text-gray'>
+                            <p className='text-sm mt-4 text-gray font-hind'>
                                 Secure your Kubernetes clusters, managed or unmanaged, with complete inventory and
                                 continuous scanning for vulnerabilities in cluster components and container images.
                                 Detect and remediate potential threats to ensure secure Kubernetes environments for your
@@ -290,13 +299,16 @@ const CloudNativeSecurity = ({ location }) => {
                             </div>
                             <div className='col-span-12 lg:col-span-5'>
                                 <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-lg'>
-                                    <h2 className='text-primary border-title-partly font-montserrat' css={titleSection}>
-                                        <span className='font-bold'>Real-time Cloud Native Security</span>
-                                        <br /> with Contextual Analysis{' '}
+                                    <h2
+                                        className='text-primary border-title-partly font-montserrat'
+                                        css={titleSectionFont}
+                                    >
+                                        <span className='font-bold'>Real-time Cloud Security</span>
+                                        <br className='block lg:hidden xl:block' /> with Contextual Analysis{' '}
                                     </h2>
                                 </div>
                                 <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-lg'>
-                                    <p className='text-base text-gray pt-12 pb-2'>
+                                    <p className='text-base text-gray pt-12 pb-2 font-hind'>
                                         Our Cloud-Native Application Protection Platform provides real-time security
                                         with automated contextual analysis, giving you complete visibility and control
                                         over your cloud environment. By analyzing cloud configuration, workload, and
@@ -304,7 +316,7 @@ const CloudNativeSecurity = ({ location }) => {
                                         your business, rather than overwhelming you with numerous alerts for
                                         vulnerabilities, permissions, and exposed services.
                                     </p>
-                                    <p className='text-base text-gray py-2'>
+                                    <p className='text-base text-gray py-2 font-hind'>
                                         With our security tools, you can prioritize and address the most significant
                                         security risks, ensuring application security and the integrity of your cloud
                                         infrastructure. Automations enable continuous scanning for vulnerabilities,
@@ -329,19 +341,19 @@ const CloudNativeSecurity = ({ location }) => {
                 <Section>
                     <div className='sm:grid sm:grid-cols-12 sm:gap-12'>
                         <div className='col-span-12 lg:col-span-5'>
-                            <div className='mx-auto lg:mx-0 max-w-sm'>
+                            <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-lg'>
                                 <h2
-                                    className='font-semibold font-montserrat text-primary leading-normal border-title'
-                                    css={titleSection}
+                                    className='font-semibold font-montserrat text-primary leading-normal border-title-partly'
+                                    css={titleSectionFont}
                                 >
                                     Integrate with all major
-                                    <br /> Cloud Providers
+                                    <br className='block lg:hidden' /> Cloud Providers
                                 </h2>
                             </div>
                         </div>
                         <div className='col-span-12  mt-8 sm:mt-0 sm:px-3 lg:col-span-7'>
                             <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-full'>
-                                <p className='leading-normal text-base text-gray mb-6'>
+                                <p className='leading-normal text-base text-gray mb-6 font-hind'>
                                     <strong>
                                         We support all major cloud providers from Amazon Web Services to Microsoft
                                         Azure, Google Cloud, Oracle Cloud, and IBM Cloud
@@ -350,7 +362,7 @@ const CloudNativeSecurity = ({ location }) => {
                                     serverless, databases, apps) for vulnerability and threat management, cloud
                                     inventory, secure cloud extension, and as a compliance and cost-reduction solution.
                                 </p>
-                                <p className='leading-normal text-base text-gray mb-6'>
+                                <p className='leading-normal text-base text-gray mb-6 font-hind'>
                                     With our vulnerability and threat management tools, you can identify and mitigate
                                     security risks before they can be exploited. Our cloud inventory feature provides
                                     complete visibility into your cloud environment, while our secure cloud extension
@@ -365,16 +377,19 @@ const CloudNativeSecurity = ({ location }) => {
                 <img src={corner} width={300} className='hidden md:block absolute top-0 right-0 m-0 z-20' alt='' />
                 <Container>
                     <div className='py-8 md:py-12 lg:py-20'>
-                        <div className='max-w-xl mx-auto lg:mx-0 lg:max-w-sm mb-20'>
-                            <h2 className='text-3xl font-bold text-primary leading-normal border-title-partly montserrat-font'>
+                        <div className='max-w-xl mx-auto lg:mx-0 lg:max-w-md mb-20'>
+                            <h2
+                                className='font-bold text-primary leading-normal border-title-partly montserrat-font'
+                                css={titleSectionFont}
+                            >
                                 100% Confidence with <br /> your Cloud Compliance
                             </h2>
                         </div>
                         <div className='max-w-xl mx-auto lg:mx-0 lg:max-w-3xl'>
                             <Row className='lg:gap-20'>
                                 <div className='col-span-12 lg:col-span-6'>
-                                    <p className='leading-normal text-base text-gray mb-6'>
-                                        <strong className='montserrat-font'>Meet industry regulations</strong>
+                                    <p className='leading-normal text-base text-gray mb-6 font-hind'>
+                                        <strong className='font-montserrat'>Meet industry regulations</strong>
                                         <br />
                                         Protect sensitive data and comply with strict industry regulations in your
                                         organisation. Cyscale automatically runs all critical compliance checks and
@@ -382,24 +397,25 @@ const CloudNativeSecurity = ({ location }) => {
                                     </p>
                                 </div>
                                 <div className='col-span-12 lg:col-span-6'>
-                                    <p className='leading-normal text-base text-gray mb-6'>
-                                        <strong className='montserrat-font'>PCI-DSS, SOC 2, GDPR, and more</strong>
+                                    <p className='leading-normal text-base text-gray mb-6 font-hind'>
+                                        <strong className='font-montserrat'>PCI-DSS, SOC 2, GDPR, and more</strong>
                                         <br />
                                         Cyscale offers a wide range of benchmarks and frameworks, including: CIS,
-                                        ISO27001, PCI-DSS, NIST, SOC 2, GDPR.
+                                        ISO27001, PCI-DSS, NIST,
+                                        <br className='hidden lg:block' /> SOC 2, GDPR.
                                     </p>
                                 </div>
                                 <div className='col-span-12 lg:col-span-6'>
-                                    <p className='leading-normal text-base text-gray mb-6'>
-                                        <strong className='montserrat-font'>Built-in compliance templates</strong>
+                                    <p className='leading-normal text-base text-gray mb-6 font-hind'>
+                                        <strong className='font-montserrat'>Built-in compliance templates</strong>
                                         <br />
                                         You can either use policy templates as a basis for your custom policies, or
                                         create them from scratch.
                                     </p>
                                 </div>
-                                <div className='col-span-12 lg:col-span-6'>
+                                <div className='col-span-12 lg:col-span-6 font-hind'>
                                     <p className='leading-normal text-base text-gray mb-6'>
-                                        <strong className='montserrat-font'>
+                                        <strong className='font-montserrat'>
                                             500+ out-of-the-box security controls
                                         </strong>
                                         <br />
@@ -416,13 +432,13 @@ const CloudNativeSecurity = ({ location }) => {
                 <div className='md:pt-12 pb-44'>
                     <div className='flex h-48 flex-col items-center'>
                         <img src={cloudIcon} alt='' />
-                        <h1 className='text-center px-2 mt-4 mb-2 montserrat-font font-semibold'>
+                        <h1 className='text-center px-2 mt-4 mb-2 font-montserrat font-semibold'>
                             Elevate your Cloud Native Security game with CNAPP{' '}
                         </h1>
-                        <p>Strenghten your cloud security practices</p>
+                        <p className='font-hind'>Strenghten your cloud security practices</p>
                         <div className='mt-10 w-auto inline-block'>
                             <Link
-                                className='gradientBgBtn w-full block text-sm font-medium rounded text-white text-center py-4 px-12 hover:no-underline no-underline'
+                                className='gradientBgBtn w-full block text-sm font-medium rounded text-white text-center py-4 px-12 hover:no-underline no-underline font-hind`'
                                 to='/request-demo'
                             >
                                 Request Live Demo

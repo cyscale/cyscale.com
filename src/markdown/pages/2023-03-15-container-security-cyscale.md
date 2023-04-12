@@ -25,7 +25,7 @@ hero:
   heroMarkdown: >-
     
 
-    <p data-cms='paragraph' class="font-montserrat ">Our advanced container security solution protects cloud-native applications from development to production. </p>
+    <p data-cms='paragraph' class="font-montserrat">Our advanced container security solution protects cloud-native applications from development to production. </p>
 
 
     <br class="" />

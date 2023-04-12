@@ -65,7 +65,7 @@ const LinksAndWhitepaper = ({ topArticles, data, title, titleCard, textCard, lin
                                 dangerouslySetInnerHTML={{ __html: titleCard }}
                             />
                             <p
-                                className='text-base text-white mt-4 relative z-10'
+                                className='text-base text-white mt-4 relative z-10 font-hind'
                                 dangerouslySetInnerHTML={{ __html: textCard }}
                                 css={css`
                                     @media screen and (min-width: 1024px) and (max-width: 1080px) {
