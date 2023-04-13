@@ -13,6 +13,31 @@ import Icon3 from '../../assets/images/Group-412.inline.svg';
 import Icon4 from '../../assets/images/Path-270.inline.svg';
 import NewTopNav from '../layout/NewTopNav';
 import { graphql, useStaticQuery } from 'gatsby';
+import LinksAndWhitepaper from '../products/LinksAndWhitepaper';
+
+const topArticles = [
+    {
+        text: 'A Guide to Cloud Data Security',
+        link: '/blog/cloud-data-security-guide/'
+    },
+    {
+        text: 'CNAPP: A mix of CSPM & CWPP',
+        link: '/blog/cnapp-a-mix-of-cspm-cwpp/'
+    },
+    {
+        text: 'CSPM: A Comprehensive Guide',
+        link: '/blog/cloud-security-posture-management-cspm-guide/'
+    },
+    {
+        text: 'What to Look for in a CSPM?',
+        link: '/blog/what-to-look-for-in-a-cspm/'
+    },
+    {
+        text: 'What is a CSPM and<br class="hidden lg:block"> why should you consider using one?',
+        link: '/blog/cspm-visibility-compliance-security/',
+        children: true
+    }
+];
 
 const Index = ({ location }) => {
     const data = useStaticQuery(graphql`
@@ -20,6 +45,11 @@ const Index = ({ location }) => {
             dashboard: file(relativePath: { eq: "dashboard-cloud-data-security.png" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1920, layout: CONSTRAINED)
+                }
+            }
+            card: file(relativePath: { eq: "csm-whitepaper-bluebird.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 386, layout: FIXED)
                 }
             }
         }
@@ -209,6 +239,16 @@ const Index = ({ location }) => {
                     icon={getStartedICon}
                 />
             </div>
+            <LinksAndWhitepaper
+                topArticles={topArticles}
+                data={data}
+                title={'Cloud Data Security'}
+                titleCard={'The Complete Guide<br class="hidden lg:block" /> to Cloud Storage Misconfigurations'}
+                textCard={
+                    'This guide helps CIOs, CISOs and security staff to understand the risk & dangers of data security breaches and the importance of a secure cloud storage infrastructure.'
+                }
+                linkCard={'/whitepaper/cloud-storage-misconfigurations/'}
+            />
         </div>
     );
 };

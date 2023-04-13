@@ -6,6 +6,34 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import ScrollButton from '../../components/ScrollButton/ScrollButton';
 import GradientButton from '../../components/buttons/GradientButton';
 import LightDarkButton from '../../components/buttons/LightDarkButton';
+import LinksAndWhitepaper from '../../components/products/LinksAndWhitepaper';
+
+const topArticles = [
+    {
+        text: 'IAM Services in AWS, Azure, and GCP -<br class="hidden lg:block"/> A Cloud Industry Overview',
+        link: '/blog/iam-services-in-aws-azure-gcp/',
+        children: true
+    },
+    {
+        text: 'Cloud Security and Compliance:<br class="hidden lg:block"/> A Guide for Your Cloud Infrastructure',
+        link: '/blog/cloud-security-and-compliance/',
+        children: true
+    },
+    {
+        text: 'Securing IAM - Best Practices<br class="hidden lg:block"/> Recommended by AWS, Azure, and GCP',
+        link: '/blog/iam-best-practices-from-aws-azure-gcp/',
+        children: true
+    },
+    {
+        text: 'Understanding serverless computing:<br class="hidden lg:block"/> how you can use it and how to secure it',
+        link: '/blog/what-is-serverless-computing/',
+        children: true
+    },
+    {
+        text: 'PCI-DSS Compliance in the Cloud',
+        link: '/blog/pci-dss-compliance-in-cloud/'
+    }
+];
 
 const AzureCloudSecurity = ({ location }) => {
     const data = useStaticQuery(graphql`
@@ -23,6 +51,11 @@ const AzureCloudSecurity = ({ location }) => {
             automateCompliance: file(relativePath: { eq: "azure-cloud-overview.png" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1920, layout: CONSTRAINED)
+                }
+            }
+            card: file(relativePath: { eq: "cc-whitepaper-bluebird.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 386, layout: FIXED)
                 }
             }
         }
@@ -236,6 +269,18 @@ const AzureCloudSecurity = ({ location }) => {
                     </Container>
                 </Section>
             </div>
+            <LinksAndWhitepaper
+                topArticles={topArticles}
+                data={data}
+                title={'Compliance'}
+                titleCard={
+                    'The In-Depth Guide <br class="hidden lg:block"/>to Cloud Compliance<br class="hidden lg:block" /> in 2023'
+                }
+                textCard={
+                    'What standards exist on the market, and who are they destined for? <br /><br />Download the whitepaper to read about ISO 27001, SOC 2, PCI-DSS, GDPR, HIPAA.'
+                }
+                linkCard={'/whitepaper/the-complete-guide-to-cloud-compliance/'}
+            />
         </Layout>
     );
 };
