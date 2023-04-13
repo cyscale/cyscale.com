@@ -6,6 +6,29 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import ScrollButton from '../../components/ScrollButton/ScrollButton';
 import GradientButton from '../../components/buttons/GradientButton';
 import LightDarkButton from '../../components/buttons/LightDarkButton';
+import LinksAndWhitepaper from '../../components/products/LinksAndWhitepaper';
+
+const topArticles = [
+    {
+        text: 'Securing IAM - Best Practices<br class="hidden lg:block" /> Recommended by AWS, Azure, and GCP',
+        link: '/blog/iam-best-practices-from-aws-azure-gcp/',
+        children: true
+    },
+    {
+        text: 'IAM Services in AWS, Azure, and GCP -<br class="hidden lg:block" /> A Cloud Industry Overview',
+        link: '/blog/iam-services-in-aws-azure-gcp/',
+        children: true
+    },
+    {
+        text: 'Okta Security Best Practices',
+        link: '/blog/iam-okta-security-best-practices/'
+    },
+    {
+        text: 'Providing Visibility Over Cloud Access –<br class="hidden lg:block" /> Okta Integration in Cyscale',
+        link: '/blog/provide-visibility-in-cloud-okta-integration/',
+        children: true
+    }
+];
 
 const IAMSecurity = ({ location }) => {
     const data = useStaticQuery(graphql`
@@ -18,6 +41,11 @@ const IAMSecurity = ({ location }) => {
             identityPage: file(relativePath: { eq: "identity-page.png" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1920, layout: CONSTRAINED)
+                }
+            }
+            card: file(relativePath: { eq: "csm-whitepaper-bluebird.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 386, layout: FIXED)
                 }
             }
         }
@@ -215,6 +243,16 @@ const IAMSecurity = ({ location }) => {
                     </Container>
                 </Section>
             </div>
+            <LinksAndWhitepaper
+                topArticles={topArticles}
+                data={data}
+                title={'IAM'}
+                titleCard={'The Complete Guide<br class="hidden lg:block" /> to Cloud Storage Misconfigurations'}
+                textCard={
+                    'This guide helps CIOs, CISOs and security staff to understand the risk & dangers of data security breaches and the importance of a secure cloud storage infrastructure.'
+                }
+                linkCard={'/whitepaper/cloud-storage-misconfigurations/'}
+            />
         </Layout>
     );
 };

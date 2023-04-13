@@ -10,6 +10,8 @@ import getStartedICon from '../../assets/images/getStartedIconCPSM.svg';
 import CloudSecuirtyConfigurationImage from '../../assets/images/cloud-secuity-configuration.svg';
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
+import LinksAndWhitepaper from '../products/LinksAndWhitepaper';
+import { topArticles } from '../../pages/products/cnapp';
 
 export default function RemoteWorkContent() {
     const data = useStaticQuery(graphql`
@@ -17,6 +19,11 @@ export default function RemoteWorkContent() {
             supercharge: file(relativePath: { eq: "supercharge-cloud-security.png" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1920, layout: CONSTRAINED)
+                }
+            }
+            card: file(relativePath: { eq: "csm-whitepaper-bluebird.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 386, layout: FIXED)
                 }
             }
         }
@@ -208,6 +215,16 @@ export default function RemoteWorkContent() {
                     btnLink={'/free-trial'}
                 />
             </div>
+            <LinksAndWhitepaper
+                topArticles={topArticles}
+                data={data}
+                title={'CNAPP'}
+                titleCard={'The Complete Guide<br class="hidden lg:block" /> to Cloud Storage Misconfigurations'}
+                textCard={
+                    'This guide helps CIOs, CISOs and security staff to understand the risk & dangers of data security breaches and the importance of a secure cloud storage infrastructure.'
+                }
+                linkCard={'/whitepaper/cloud-storage-misconfigurations/'}
+            />
         </>
     );
 }

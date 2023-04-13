@@ -8,6 +8,29 @@ import { Policies, Inventory, Alerts } from '../../components/cloud-security-pos
 import Fproducts from '../../components/cloud-security-posture-management/featuredProducts';
 import GetStarted from '../../components/Home/getstarted';
 import MisconfigCoverage from '../../components/cloud-security-posture-management/misconfigCoverage';
+import LinksAndWhitepaper from '../../components/products/LinksAndWhitepaper';
+import { graphql, useStaticQuery } from 'gatsby';
+
+const topArticles = [
+    {
+        text: 'Common Cloud Misconfigurations and <br class="hidden lg:block" /> How to Avoid Them',
+        link: '/blog/common-cloud-misconfigurations-how-to-avoid-them/',
+        children: true
+    },
+    {
+        text: 'Understanding S3 Bucket Security – <br class="hidden lg:block" /> A Contextual Approach',
+        link: '/blog/s3-bucket-security/',
+        children: true
+    },
+    {
+        text: '5 Steps to Improve Your Company’s Cloud Security Posture',
+        link: '/blog/improve-cloud-security-posture/'
+    },
+    {
+        text: 'CSPM: A Comprehensive Guide',
+        link: '/blog/cloud-security-posture-management-cspm-guide/'
+    }
+];
 
 const dataFeaturedProducts = [
     {
@@ -56,6 +79,16 @@ const dataFeaturedProducts = [
 ];
 
 const CloudMissConfiguration = ({ location }) => {
+    const data = useStaticQuery(graphql`
+        query CloudMisconfigurationQuery {
+            card: file(relativePath: { eq: "csm-whitepaper-bluebird.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 386, layout: FIXED)
+                }
+            }
+        }
+    `);
+
     return (
         <Layout
             heroBG={heroBG}
@@ -84,6 +117,16 @@ const CloudMissConfiguration = ({ location }) => {
                     sectionName='getStartedFooter'
                 />
             </div>
+            <LinksAndWhitepaper
+                topArticles={topArticles}
+                data={data}
+                title={'Misconfigurations'}
+                titleCard={'The Complete Guide<br class="hidden lg:block" /> to Cloud Storage Misconfigurations'}
+                textCard={
+                    'This guide helps CIOs, CISOs and security staff to understand the risk & dangers of data security breaches and the importance of a secure cloud storage infrastructure.'
+                }
+                linkCard={'/whitepaper/cloud-storage-misconfigurations/'}
+            />
         </Layout>
     );
 };

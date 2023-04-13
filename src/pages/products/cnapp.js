@@ -22,7 +22,7 @@ import LearnMoreLink from '../../components/use-cases/LearnMoreLink';
 import { heroTitleFontSize, LearnMoreSection, cardBackgroundColor } from '../../assets/css/styles';
 import LinksAndWhitepaper from '../../components/products/LinksAndWhitepaper';
 
-const topArticles = [
+export const topArticles = [
     {
         text: 'CNAPP: The Key to Secure Cloud-Native Applications',
         link: '/blog/cnapp-secure-native-applications/'

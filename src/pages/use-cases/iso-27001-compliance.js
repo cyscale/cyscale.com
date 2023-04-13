@@ -8,6 +8,33 @@ import { graphql, Link, useStaticQuery } from 'gatsby';
 import GradientButton from '../../components/buttons/GradientButton';
 import LightDarkButton from '../../components/buttons/LightDarkButton';
 import { GatsbyImage } from 'gatsby-plugin-image';
+import LinksAndWhitepaper from '../../components/products/LinksAndWhitepaper';
+
+const topArticles = [
+    {
+        text: 'Bridging the Gap Between ISO 27001 and Cloud-Native Systems',
+        link: '/blog/implementing-iso-27001-for-cloud-native-systems/'
+    },
+    {
+        text: 'The ISO 27001 certification, policy by policy',
+        link: '/blog/ISO-27001-certification-standard-policies-procedures/'
+    },
+    {
+        text: 'SOC 2 vs ISO 27001:<br class="hidden lg:block"/> What every SaaS needs to know',
+        link: '/blog/soc-2-vs-ISO-27001-SaaS/',
+        children: true
+    },
+    {
+        text: 'AWS SOC 2 Compliance Checklist:<br class="hidden lg:block"/> A Detailed Guide',
+        link: '/blog/AWS-SOC-2-Compliance-Checklist-A-Detailed-Guide/',
+        children: true
+    },
+    {
+        text: 'Cloud Security and Compliance:<br class="hidden lg:block"/>A Guide for Your Cloud Infrastructure',
+        link: '/blog/cloud-security-and-compliance/',
+        children: true
+    }
+];
 
 const StepCard = ({ groups, list, order }) => {
     return (
@@ -59,6 +86,11 @@ const CloudCompliance = ({ location }) => {
             policies: file(relativePath: { eq: "policies-iso.png" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1920, layout: CONSTRAINED)
+                }
+            }
+            card: file(relativePath: { eq: "cc-whitepaper-bluebird.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 386, layout: FIXED)
                 }
             }
         }
@@ -352,6 +384,18 @@ const CloudCompliance = ({ location }) => {
                     description='Achieve true continuous compliance for ISO 27001'
                 />
             </div>
+            <LinksAndWhitepaper
+                topArticles={topArticles}
+                data={data}
+                title={'Compliance'}
+                titleCard={
+                    'The In-Depth Guide <br class="hidden lg:block"/>to Cloud Compliance<br class="hidden lg:block" /> in 2023'
+                }
+                textCard={
+                    'What standards exist on the market, and who are they destined for? <br /><br />Download the whitepaper to read about ISO 27001, SOC 2, PCI-DSS, GDPR, HIPAA.'
+                }
+                linkCard={'/whitepaper/the-complete-guide-to-cloud-compliance/'}
+            />
         </Layout>
     );
 };
