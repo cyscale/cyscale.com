@@ -1,8 +1,8 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useState } from 'react';
 import { css } from 'twin.macro';
-import Post from '../new-blog/Post';
 import { graphql, useStaticQuery } from 'gatsby';
 import { map } from 'lodash';
+import HomePost from '../new-blog/PostHome';
 
 const Carousel = forwardRef((props, ref) => {
     const data = useStaticQuery(graphql`
@@ -36,6 +36,42 @@ const Carousel = forwardRef((props, ref) => {
     `);
     const posts = data?.allMarkdownRemark?.edges;
 
+    const [isDragging, setIsDragging] = useState(false);
+    const [startX, setStartX] = useState(null);
+    const [scrollLeft, setScrollLeft] = useState(0);
+
+    const [startTime, setStartTime] = useState(null);
+    const [duration, setDuration] = useState(0);
+
+    const handleMouseDown = (e) => {
+        setStartTime(new Date().getTime());
+
+        setIsDragging(true);
+        setStartX(e.pageX - ref.current.offsetLeft);
+        setScrollLeft(ref.current.scrollLeft);
+    };
+
+    const handleMouseMove = (e) => {
+        if (!isDragging) return;
+        const x = e.pageX - ref.current.offsetLeft;
+        const walk = x - startX;
+        ref.current.scrollLeft = scrollLeft - walk;
+    };
+
+    const handleMouseUp = (e) => {
+        setIsDragging(false);
+
+        if (startTime) {
+            const endTime = new Date().getTime();
+            setDuration(endTime - startTime);
+            setStartTime(null);
+        }
+    };
+
+    const handleMouseLeave = () => {
+        setIsDragging(false);
+    };
+
     return (
         <>
             <div
@@ -54,14 +90,20 @@ const Carousel = forwardRef((props, ref) => {
                     ref={ref}
                     className='flex flex-nowrap gap-5 overflow-x-scroll scrollbar-hide z-10'
                     css={css`
-                        scroll-behavior: smooth;
+                        scroll-behavior: ${isDragging ? 'auto' : 'smooth'};
                     `}
+                    onMouseDown={handleMouseDown}
+                    onMouseMove={handleMouseMove}
+                    onMouseUp={handleMouseUp}
+                    onMouseLeave={handleMouseLeave}
+                    onKeyPress={() => {}}
+                    role='presentation'
                 >
                     {map(posts, ({ node }, index) => {
                         return (
                             <div className='py-4' key={index}>
                                 <div className='w-72 lg:w-96 m-2 rounded-lg shadow-lg'>
-                                    <Post {...node.frontmatter} homepage={true} />
+                                    <HomePost {...node.frontmatter} duration={duration} />
                                 </div>
                             </div>
                         );
