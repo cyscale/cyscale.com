@@ -15,7 +15,7 @@ import CIEMIcon from '../assets/images/ciem-cnapp-icon.svg';
 import CWPPIcon from '../assets/images/cwpp-cnapp-icon.svg';
 import CISCOIcon from '../assets/images/ciso-icon.svg';
 import ShieldSettingsIcon from '../assets/images/shield-settings-icon.svg';
-import ShieldTagsIcon from '../assets/images/shield-tags-icon.svg';
+import ShieldCloudIcon from '../assets/images/shield-cloud-icon.svg';
 import ContainerSecurityIcon from '../assets/images/container-security-cnapp-icon.svg';
 import KubernetesIcon from '../assets/images/kubernetes-cnapp-icon.svg';
 import cloudIcon from '../assets/images/cloud-icon.svg';
@@ -231,7 +231,7 @@ const HomePage = ({ location }) => {
                             <div className='col-span-12 lg:col-span-6 order-last lg:order-first'>
                                 <div className='lg:mt-16 pt-4 max-w-xl mx-auto lg:mx-0'>
                                     <h1 className='text-left text-blue text-4xl lg:text-5xl leading-normal lg:leading-normal mb-8 font-montserrat'>
-                                        <strong>Leverage the Cloud with Confidence</strong>
+                                        Leverage the Cloud<strong> with Confidence</strong>
                                     </h1>
                                     <p className='text-left text-base lg:text-lg mb-8 leading-relaxed font-hind'>
                                         Cyscale automates cloud security analysis helping you identify and reduce risk
@@ -270,8 +270,8 @@ const HomePage = ({ location }) => {
                         <h2
                             className='text-blue font-bold font-montserrat mt-4 lg:ml-5'
                             css={css`
-                                font-size: 2.375rem;
-                                line-height: 2.895rem;
+                                font-size: 2rem;
+                                line-height: 2.5rem;
                             `}
                         >
                             Stay ahead of cloud threats, optimize risk analysis,
@@ -318,7 +318,7 @@ const HomePage = ({ location }) => {
                     </div>
                     <div className='col-span-12 lg:col-span-4'>
                         <GradientCard
-                            icon={ShieldTagsIcon}
+                            icon={ShieldCloudIcon}
                             title={'CLOUD SECURITY'}
                             text={
                                 'Identify the highest security risk with the help of our Security Knowledge Graph™ technology, capturing relationships between cloud resources, identities, and data.'
@@ -601,13 +601,15 @@ const HomePage = ({ location }) => {
                 <div className='md:pt-12 pb-44'>
                     <div className='flex h-48 flex-col items-center'>
                         <img src={cloudIcon} alt='' />
-                        <h3 className='text-center text-base px-2 mt-4 mb-2 font-montserrat font-bold'>
+                        <h3 className='text-center text-lg lg:text-2xl px-2 mt-4 mb-2 font-montserrat font-bold'>
                             Contextual security for the cloud-native stack
                         </h3>
-                        <p className='font-hind'>Start seeing value & saving money in minutes</p>
+                        <p className='font-hind text-base sm:text-lg lg:text-xl'>
+                            Start seeing value & saving money in minutes
+                        </p>
                         <div className='mt-10 w-auto inline-block'>
                             <ScrollLink
-                                className='gradientBgBtn w-full block text-sm font-medium rounded text-white text-center py-4 px-12 hover:no-underline no-underline cursor-pointer'
+                                className='gradientBgBtn w-full block text-sm font-medium rounded text-white text-center py-4 px-12 hover:no-underline no-underline cursor-pointer uppercase'
                                 to='meetings-calendar'
                                 smooth={true}
                                 duration={500}
