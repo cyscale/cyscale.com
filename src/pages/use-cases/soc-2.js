@@ -286,19 +286,21 @@ const Soc2 = ({ location }) => {
                 </Container>
             </div>
             <Container>
-                <div className='md:pt-12 md:pb-24'>
+                <div className='md:pt-12 pb-12 md:pb-24'>
                     <div className='flex h-48 flex-col items-center'>
                         <img src={cloudIcon} alt='' />
-                        <h1 className='text-center px-2 mt-4 mb-2 montserrat-font font-semibold font-hind'>
+                        <h2 className='text-center px-2 mt-4 mb-2 montserrat-font font-bold font-hind text-lg lg:text-2xl'>
                             SOC COMPLIANCE AND CLOUD SECURITY
-                        </h1>
-                        <p className='font-hind text-base'>Start seeing value & saving money in minutes</p>
+                        </h2>
+                        <p className='font-hind text-base sm:text-lg lg:text-xl'>
+                            Start seeing value & saving money in minutes
+                        </p>
                         <div className='mt-10 w-auto inline-block'>
                             <Link
                                 className='gradientBgBtn w-full block text-sm font-medium rounded text-white text-center py-4 px-12 hover:no-underline no-underline font-hind'
                                 to='/request-demo'
                             >
-                                Request Live Demo
+                                REQUEST LIVE DEMO
                             </Link>
                         </div>
                     </div>

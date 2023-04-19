@@ -469,15 +469,17 @@ const CNAPP = ({ location }) => {
                     <div className='pt-20    md:pt-28 pb-32'>
                         <div className='flex h-48 flex-col items-center'>
                             <img src={cloudIcon} alt='' />
-                            <h1 className='text-center px-2 mt-4 mb-2 font-montserrat font-semibold text-white'>
+                            <h2 className='text-center px-2 mt-4 mb-2 font-montserrat font-semibold text-white text-lg lg:text-2xl'>
                                 Elevate your cloud security game with CNAPP{' '}
-                            </h1>
-                            <p className='text-white font-hind'>Start seeing value & saving money in minutes</p>
+                            </h2>
+                            <p className='text-white font-hind text-base sm:text-lg lg:text-xl'>
+                                Start seeing value & saving money in minutes
+                            </p>
                             <GatsbyLink
                                 to={'/request-demo/'}
-                                className='bg-white text-blue text-base font-bold rounded-md py-2 px-8 mt-8 hover:bg-grey3 font-hind'
+                                className='bg-white text-blue text-base font-bold rounded-md pt-3 pb-2 px-8 mt-8 hover:bg-grey3 font-hind'
                             >
-                                Request Demo
+                                REQUEST DEMO
                             </GatsbyLink>
                         </div>
                     </div>
