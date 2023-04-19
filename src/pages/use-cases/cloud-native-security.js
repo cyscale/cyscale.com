@@ -432,16 +432,18 @@ const CloudNativeSecurity = ({ location }) => {
                 <div className='md:pt-12 pb-44'>
                     <div className='flex h-48 flex-col items-center'>
                         <img src={cloudIcon} alt='' />
-                        <h1 className='text-center px-2 mt-4 mb-2 font-montserrat font-semibold'>
+                        <h1 className='text-center px-2 mt-4 mb-2 font-montserrat font-bold text-lg lg:text-2xl'>
                             Elevate your Cloud Native Security game with CNAPP{' '}
                         </h1>
-                        <p className='font-hind'>Strenghten your cloud security practices</p>
+                        <p className='font-hind text-base sm:text-lg lg:text-xl'>
+                            Strenghten your cloud security practices
+                        </p>
                         <div className='mt-10 w-auto inline-block'>
                             <Link
                                 className='gradientBgBtn w-full block text-sm font-medium rounded text-white text-center py-4 px-12 hover:no-underline no-underline font-hind`'
                                 to='/request-demo'
                             >
-                                Request Live Demo
+                                REQUEST LIVE DEMO
                             </Link>
                         </div>
                     </div>
