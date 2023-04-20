@@ -105,7 +105,6 @@ const useCasesSectionBackground = css`
 
 const servicesSectionStyle = css`
     background: #f5f9ff;
-    padding: 0;
 `;
 
 const titleSection = css`
@@ -200,6 +199,16 @@ const HomePage = ({ location }) => {
                     gatsbyImageData(width: 100, layout: FIXED)
                 }
             }
+            smartFintech: file(relativePath: { eq: "smart-fintech-home.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 1980, layout: CONSTRAINED)
+                }
+            }
+            alex: file(relativePath: { eq: "alex-cociu.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 70, layout: FIXED)
+                }
+            }
         }
     `);
     const containerRef = useRef(null);
@@ -255,7 +264,7 @@ const HomePage = ({ location }) => {
                     </div>
                 </Container>
             </div>
-            <Container className='my-16'>
+            <Container className='my-16 lg:my-32'>
                 <div className='grid grid-cols-12 gap-x-5 mt-12'>
                     <div className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 hidden lg:block'>
                         <GatsbyImage
@@ -294,7 +303,7 @@ const HomePage = ({ location }) => {
                     </div>
                 </div>
             </Container>
-            <Container className='mb-16'>
+            <Container className='mb-16 lg:mb-24'>
                 <div className='grid grid-cols-12 gap-x-5 mt-12'>
                     <div className='col-span-12 lg:col-span-4'>
                         <GradientCard
@@ -328,6 +337,54 @@ const HomePage = ({ location }) => {
                     </div>
                 </div>
             </Container>
+            <div
+                className='pt-24 pb-24 lg:pt-32 lg:pb-32'
+                css={css`
+                    background-color: #f5f9ff;
+                `}
+            >
+                <Container>
+                    <div className='grid grid-cols-12 gap-x-5'>
+                        <div className='col-span-12 lg:col-span-6 mx-auto lg:mx-0'>
+                            <Link to={'/case-studies/smart-fintech'}>
+                                <GatsbyImage
+                                    image={data.smartFintech.childImageSharp.gatsbyImageData}
+                                    className='max-w-xl'
+                                    alt='Mobile Payment Smart Fintech'
+                                />
+                            </Link>
+                        </div>
+                        <div className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 max-w-xl mt-8 lg:mt-0'>
+                            <p className='font-montserrat text-base font-bold mt-4'>CASE STUDY</p>
+                            <Link to={'/case-studies/smart-fintech'}>
+                                {' '}
+                                <h2
+                                    className='font-montserrat text-blue font-bold mt-2 hover:underline'
+                                    css={titleSection}
+                                >
+                                    Smart Fintech uses Cyscale to gain IAM visibility and ensure cloud security and
+                                    compliance
+                                </h2>
+                            </Link>
+                            <p className='mt-3 text-base font-hind font-normal'>
+                                “The platform helps me with IAM visibility a lot: I can understand who has access and
+                                why. When a person leaves the company, I can detect if their permissions remain hanging.
+                                ”
+                            </p>
+                            <div className='flex mt-3 px-2'>
+                                <GatsbyImage image={data.alex.childImageSharp.gatsbyImageData} alt='Alex Cociu' />
+                                <div className='ml-4 mt-1'>
+                                    <p className='font-hind text-base font-bold'>Alex Cociu</p>
+                                    <p className='font-hind text-base'>
+                                        Risk and Compliance Officer at
+                                        <br className='block md:hidden' /> Smart Fintech
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </Container>
+            </div>
             <div className='pt-24 pb-24 lg:pt-32 lg:pb-32' css={useCasesSectionBackground}>
                 <Container>
                     <div className='grid grid-cols-12 gap-x-5'>
@@ -353,8 +410,8 @@ const HomePage = ({ location }) => {
                     </div>
                 </Container>
             </div>
-            <div css={servicesSectionStyle}>
-                <div className='container max-w-7xl m-auto px-4 lg:px-8 pt-16'>
+            <div css={servicesSectionStyle} className='py-24 lg:py-32'>
+                <div className='container max-w-7xl m-auto px-4 lg:px-8'>
                     <div className='grid grid-cols-12 gap-x-5'>
                         <div className='col-span-12 lg:col-span-8 mx-auto lg:mx-0 max-w-2xl'>
                             <p className='text-left uppercase font-montserrat font-bold' css={sectionSubtitleColor}>
@@ -411,7 +468,7 @@ const HomePage = ({ location }) => {
                             cardHeight={72}
                         />
                     </Row>
-                    <Row className='mt-8 lg:mt-16 pb-16 gap-0 lg:gap-8'>
+                    <Row className='mt-8 lg:mt-16 gap-0 lg:gap-8'>
                         <Card
                             icon={DataSecurityIcon}
                             title={'Data Security'}
@@ -448,7 +505,7 @@ const HomePage = ({ location }) => {
                     </Row>
                 </div>
             </div>
-            <Container className='my-16'>
+            <Container className='my-16 lg:my-32'>
                 <div className='grid grid-cols-12 gap-x-5'>
                     <div className='col-span-12 lg:col-span-8 mx-auto lg:mx-0 max-w-2xl'>
                         <p className='uppercase font-montserrat font-bold' css={sectionSubtitleColor}>
@@ -598,7 +655,7 @@ const HomePage = ({ location }) => {
                 </div>
             </Container>
             <Container>
-                <div className='md:pt-12 pb-44'>
+                <div className='md:pt-12 pb-36 sm:pb-52'>
                     <div className='flex h-48 flex-col items-center'>
                         <img src={cloudIcon} alt='' />
                         <h3 className='text-center text-lg lg:text-2xl px-2 mt-4 mb-2 font-montserrat font-bold'>
@@ -669,7 +726,7 @@ const HomePage = ({ location }) => {
                 css={css`
                     background-color: #0a1a76;
                 `}
-                className='py-16'
+                className='py-16 lg:py-32'
             >
                 <Container>
                     <div className='grid grid-cols-12 gap-x-5'>
@@ -735,10 +792,10 @@ const HomePage = ({ location }) => {
             </div>
             <Element name='meetings-calendar' />
             <div
-                className='relative'
+                className='relative py-0 lg:py-16'
                 css={css`
                     @media (min-width: 1280px) {
-                        height: 47.25rem;
+                        height: 55.25rem;
                     }
                 `}
             >
@@ -780,7 +837,7 @@ const HomePage = ({ location }) => {
                     css={css`
                         width: 25rem;
                         left: -1rem;
-                        bottom: 6.375rem;
+                        bottom: 7.3rem;
                     `}
                 />
             </div>

@@ -180,7 +180,7 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation }) =
                             className={`${
                                 pageName === 'blog' ||
                                 pageName === 'blog-detail' ||
-                                ['CloudComplianceWhitepaper', 'CloudStorageMisconfigurations'].includes(pageName) ||
+                                ['CloudComplianceWhitepaper', 'CloudStorageMisconfigurations', 'SmartFintech'].includes(pageName) ||
                                 activeLinks.resources
                                     ? 'active'
                                     : ''

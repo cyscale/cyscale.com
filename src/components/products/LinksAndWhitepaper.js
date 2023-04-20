@@ -4,6 +4,7 @@ import { css } from 'twin.macro';
 import { ArticleLink, PageLink } from '../new-blog/ComplianceLinks';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { Link } from 'gatsby';
+import classnames from 'classnames';
 
 const cardTitle = css`
     @media (max-width: 768px) {
@@ -13,7 +14,15 @@ const cardTitle = css`
     line-height: 2rem;
 `;
 
-const LinksAndWhitepaper = ({ topArticles, data, title, titleCard, textCard, linkCard }) => {
+const LinksAndWhitepaper = ({
+    topArticles,
+    data,
+    title,
+    titleCard,
+    textCard,
+    linkCard,
+    misconfigurationWhitepaper
+}) => {
     return (
         <Container>
             <div className='my-24 grid grid-cols-12 md:gap-10'>
@@ -53,7 +62,12 @@ const LinksAndWhitepaper = ({ topArticles, data, title, titleCard, textCard, lin
                 </div>
                 <div className='col-span-12 lg:col-span-8 sm:max-w-lg md:max-w-lg lg:max-w-4xl mx-auto lg:mx-0'>
                     <div
-                        className='mt-6 lg:mt-0 rounded-xl py-10 relative flex'
+                        className={classnames({
+                            'mt-6 lg:mt-0 rounded-xl relative flex': true,
+                            'py-10': !misconfigurationWhitepaper,
+                            'pt-14': misconfigurationWhitepaper,
+                            'pb-10': misconfigurationWhitepaper
+                        })}
                         style={{
                             backgroundImage: 'linear-gradient(to bottom, #4a85eb, #326fe3, #1b58d8, #073fcc, #0623be)'
                         }}
