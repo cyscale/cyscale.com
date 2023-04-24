@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../../components/layout/CleanLayout';
-import { css } from 'twin.macro';
+import tw, { css } from 'twin.macro';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { graphql, Link as GatsbyLink, Link, useStaticQuery } from 'gatsby';
 import ChallengesIcon from '../../assets/images/challenges-icon.svg';
@@ -9,7 +9,7 @@ import LinksAndWhitepaper from '../../components/products/LinksAndWhitepaper';
 import { topArticles } from '../products/cnapp';
 import FurtherReadingSection from '../../components/new-blog/FurtherReadingSection';
 
-const Subtitle = ({ text }) => <h2 className='text-xl font-bold font-montserrat mt-12 lg:mt-14'>{text}</h2>;
+const Subtitle = tw.h2`text-xl font-bold font-montserrat mt-12 lg:mt-14`;
 
 const SmartFintech = ({ location }) => {
     const data = useStaticQuery(graphql`
@@ -148,7 +148,7 @@ const SmartFintech = ({ location }) => {
                             security posture and protect their customer’s data.
                         </p>
                     </div>
-                    <Subtitle text='Problem' />
+                    <Subtitle>Problem</Subtitle>
                     <p className='text-base font-hind mt-8'>
                         The company was looking for a solution to help them achieve compliance and ensure their cloud
                         environment is secure. Identity and access management was a focal point for Smart Fintech, since
@@ -177,7 +177,7 @@ const SmartFintech = ({ location }) => {
                             </p>
                         </div>
                     </div>
-                    <Subtitle text='Solution' />
+                    <Subtitle>Solution</Subtitle>
                     <div className='grid grid-cols-12 gap-0 lg:gap-8 mt-8 rounded-md'>
                         <div className='col-span-12 lg:col-span-6'>
                             <p className='font-hind text-base'>
@@ -216,7 +216,7 @@ const SmartFintech = ({ location }) => {
                             </div>
                         </div>
                     </div>
-                    <Subtitle text='Results' />
+                    <Subtitle>Results</Subtitle>
                     <p className='font-hind text-base mt-8'>
                         The company was able to manage identity and access management effectively, which was one of the
                         focus points when onboarding into Cyscale. As a result, Alex Cociu now confirms that they have
@@ -232,7 +232,7 @@ const SmartFintech = ({ location }) => {
                         Moreover, they can adjust the configurations according to acceptable risk by creating exemptions
                         to exclude certain cloud assets.
                     </p>
-                    <Subtitle text='Conclusion' />
+                    <Subtitle>Conclusion</Subtitle>
                     <p className='font-hind text-base mt-8'>
                         The platform’s automation capabilities helped the company reduce the time and resources required
                         to manage its cloud environment, which was particularly beneficial for a constrained team with
