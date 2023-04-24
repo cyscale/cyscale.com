@@ -103,7 +103,7 @@ const SmartFintech = ({ location }) => {
                             <div className='flex items-start mt-2'>
                                 <img src={ChallengesIcon} alt='' className='inline-block mr-2' />
                                 <p className='font-hind text-base'>
-                                    Manual configurations checks, which slow down the development team.
+                                    Manual configurations checks, which slow down the development team
                                 </p>{' '}
                             </div>
                             <div className='flex items-start lg:items-center mt-2'>
