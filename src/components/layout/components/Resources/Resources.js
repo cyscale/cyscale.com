@@ -94,7 +94,7 @@ const Resources = ({ pathname, activeLinks, setActiveLinks }) => {
                     </div>
                 </div>
             </div>
-            <div className='px-6 pb-6 pt-14 col-span-4'>
+            <div className='px-6 pb-6 pt-6 col-span-4'>
                 {resources.map((resource, key) => {
                     return resource.external ? (
                         <div className='mb-2' key={key}>
@@ -115,7 +115,7 @@ const Resources = ({ pathname, activeLinks, setActiveLinks }) => {
                         </div>
                     );
                 })}
-                <div className='pl-3 mt-8'>
+                <div className='pl-3 mt-4'>
                     <hr css={hrStyle} />
                 </div>
                 <div className='py-2 mt-4'>

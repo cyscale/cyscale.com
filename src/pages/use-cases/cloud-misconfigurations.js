@@ -126,6 +126,7 @@ const CloudMissConfiguration = ({ location }) => {
                     'This guide helps CIOs, CISOs and security staff to understand the risk & dangers of data security breaches and the importance of a secure cloud storage infrastructure.'
                 }
                 linkCard={'/whitepaper/cloud-storage-misconfigurations/'}
+                misconfigurationWhitepaper={true}
             />
         </Layout>
     );
