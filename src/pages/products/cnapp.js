@@ -217,7 +217,7 @@ const CNAPP = ({ location }) => {
                 </Row>
                 <Row className='mt-8 lg:mt-16 mb-16 gap-0 lg:gap-8'>
                     <div
-                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 h-80 sm:h-64 lg:h-80  flex flex-col justify-between p-4 rounded-md'
+                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 h-80 sm:h-64 lg:h-96 xl:h-80  flex flex-col justify-between p-4 rounded-md'
                         css={cardBackgroundColor}
                     >
                         <div>
@@ -236,7 +236,7 @@ const CNAPP = ({ location }) => {
                         </LearnMoreSection>
                     </div>
                     <div
-                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-4 lg:mt-0 h-80 sm:h-64 lg:h-80 flex flex-col justify-between p-4 rounded-md'
+                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-4 lg:mt-0 h-80 sm:h-64 lg:h-96 xl:h-80 flex flex-col justify-between p-4 rounded-md'
                         css={cardBackgroundColor}
                     >
                         <div>
@@ -251,7 +251,7 @@ const CNAPP = ({ location }) => {
                         </div>
                     </div>
                     <div
-                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-4 lg:mt-0 h-80 sm:h-64 lg:h-80 flex flex-col justify-between p-4 rounded-md'
+                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-4 lg:mt-0 h-80 sm:h-64 lg:h-96 xl:h-80 flex flex-col justify-between p-4 rounded-md'
                         css={cardBackgroundColor}
                     >
                         <div>
@@ -265,7 +265,7 @@ const CNAPP = ({ location }) => {
                         </div>
                     </div>
                     <div
-                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-4 lg:mt-0 h-80 sm:h-64 lg:h-80 flex flex-col justify-between p-4 rounded-md'
+                        className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-4 lg:mt-0 h-80 sm:h-64 lg:h-96 xl:h-80 flex flex-col justify-between p-4 rounded-md'
                         css={cardBackgroundColor}
                     >
                         <div>

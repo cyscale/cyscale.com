@@ -439,6 +439,7 @@ const HomePage = ({ location }) => {
                             }
                             link={'/products/cloud-security-posture-management/'}
                             cardHeight={72}
+                            cardHeightLg={80}
                         />
                         <Card
                             icon={VisibilityIcon}
@@ -448,6 +449,7 @@ const HomePage = ({ location }) => {
                             }
                             link={'/products/security-knowledge-graph/'}
                             cardHeight={72}
+                            cardHeightLg={80}
                         />
                         <Card
                             icon={ComplianceIcon}
@@ -457,6 +459,7 @@ const HomePage = ({ location }) => {
                             }
                             link={'/use-cases/cloud-compliance-and-auditing/'}
                             cardHeight={72}
+                            cardHeightLg={80}
                         />
                         <Card
                             icon={CIEMIcon}
@@ -466,6 +469,7 @@ const HomePage = ({ location }) => {
                             }
                             link={'/use-cases/iam-security/'}
                             cardHeight={72}
+                            cardHeightLg={80}
                         />
                     </Row>
                     <Row className='mt-8 lg:mt-16 gap-0 lg:gap-8'>
@@ -477,6 +481,7 @@ const HomePage = ({ location }) => {
                             }
                             link={'/use-cases/cloud-data-security/'}
                             cardHeight={64}
+                            cardHeightLg={72}
                         />
                         <Card
                             icon={CWPPIcon}
@@ -485,6 +490,7 @@ const HomePage = ({ location }) => {
                                 'A contextual analysis of vulnerabilities in instances, containers and serverless, along with cloud misconfigurations helps security teams prioritize remediation.'
                             }
                             cardHeight={64}
+                            cardHeightLg={72}
                         />
                         <Card
                             icon={ContainerSecurityIcon}
@@ -493,6 +499,7 @@ const HomePage = ({ location }) => {
                                 'Know where container images are running, complete with a contextual security analysis of vulnerabilities, misconfigurations, networking and access.'
                             }
                             cardHeight={64}
+                            cardHeightLg={72}
                         />
                         <Card
                             icon={KubernetesIcon}
@@ -501,6 +508,7 @@ const HomePage = ({ location }) => {
                                 'A complete inventory for your Kubernetes clusters, either managed or unmanaged, and continuous analysis of vulnerabilities in the cluster to ensure data protection.'
                             }
                             cardHeight={64}
+                            cardHeightLg={72}
                         />
                     </Row>
                 </div>

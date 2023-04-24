@@ -20,11 +20,11 @@ const cardBackgroundColor = css`
     }
 `;
 
-const Card = ({ icon, title, text, link, cardHeight }) => {
+const Card = ({ icon, title, text, link, cardHeight, cardHeightLg }) => {
     return (
         <Link
             to={link}
-            className={`col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-4 lg:mt-0 flex flex-col justify-between p-4 rounded-md h-${cardHeight}`}
+            className={`col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-4 lg:mt-0 flex flex-col justify-between p-4 rounded-md h-${cardHeight} lg:h-${cardHeightLg} xl:h-${cardHeight}`}
             css={cardBackgroundColor}
         >
             <div>
