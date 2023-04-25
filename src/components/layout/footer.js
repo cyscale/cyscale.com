@@ -7,6 +7,7 @@ import footerNavigation from './footer-navigation.json';
 import arrowRight from '../../assets/images/arrow-right-1-white.svg';
 import useSubscribe from '../../hooks/useSubscribe';
 import { css } from 'twin.macro';
+import TermsLinks from './TermsLinks';
 
 const subscribeButtonGradient = css`
     background-image: linear-gradient(to right, #883980, #ff4a56);
@@ -20,6 +21,19 @@ const disclaimerTextColor = css`
     color: #a1a3a1;
 `;
 
+const hiddenLinks = css`
+    display: none;
+    @media screen and (min-width: 530px) {
+        display: block;
+    }
+`;
+
+const linksHidden = css`
+    display: block;
+    @media screen and (min-width: 530px) {
+        display: none;
+    }
+`;
 const Footer = ({ pageUri, pageName }) => {
     const { emailInput, alert, onChange, onSubmit, onKeyDown } = useSubscribe(pageUri, pageName, true);
 
@@ -65,7 +79,11 @@ const Footer = ({ pageUri, pageName }) => {
                                             onClick={onSubmit}
                                         >
                                             <span className='block uppercase md:hidden'>Subscribe</span>
-                                            <img src={arrowRight} className='mx-auto w-5 h-auto hidden md:block' alt="" />
+                                            <img
+                                                src={arrowRight}
+                                                className='mx-auto w-5 h-auto hidden md:block'
+                                                alt=''
+                                            />
                                         </button>
                                         {!alert && (
                                             <p className='text-xs mt-4 block sm:hidden' css={disclaimerTextColor}>
@@ -179,40 +197,32 @@ const Footer = ({ pageUri, pageName }) => {
                     <hr className='mt-24 text-grey2' />
                     <Row className='mt-4'>
                         <div className='col-span-12 lg:col-span-6'>
-                            <p className='text-xs block sm:hidden'>&copy; {new Date().getFullYear()} Cyscale Limited</p>
-                            <div className='text-xs flex items-center justify-between pt-2'>
-                                <p className='hidden sm:block text-xs'>
-                                    &copy; {new Date().getFullYear()} Cyscale Limited
-                                </p>
-                                {footerNavigation.terms.map((item, key) => {
-                                    if (item.external) {
-                                        return (
-                                            <a
-                                                href={item.link}
-                                                key={key}
-                                                className='hover:underline text-xs'
-                                                target='_blank'
-                                                rel='noopener noreferrer'
-                                            >
-                                                {item.text}
-                                            </a>
-                                        );
-                                    } else {
-                                        return (
-                                            <Link to={item.link} key={key} className='hover:underline text-xs'>
-                                                {item.text}
-                                            </Link>
-                                        );
-                                    }
-                                })}
+                            <p className='text-center sm:text-left text-xs' css={linksHidden}>
+                                &copy; {new Date().getFullYear()} Cyscale Limited
+                            </p>
+                            <div css={hiddenLinks}>
+                                <div className='text-xs flex items-center justify-between pt-2'>
+                                    <p className='text-xs'>&copy; {new Date().getFullYear()} Cyscale Limited</p>
+                                    <TermsLinks arrLinks={footerNavigation.terms} />
+                                </div>
+                            </div>
+                            <div className='mt-4' css={linksHidden}>
+                                <div className='text-xs flex items-center justify-between pt-2'>
+                                    <TermsLinks arrLinks={footerNavigation.terms.slice(0, 3)} />
+                                </div>
+                                <div className='text-xs flex items-center justify-around pt-6'>
+                                    <TermsLinks
+                                        arrLinks={footerNavigation.terms.slice(3, footerNavigation.terms.length)}
+                                    />
+                                </div>
                             </div>
                         </div>
                         <div className='col-span-12 lg:col-span-6'>
                             <div className='col-span-6'>
-                                <div className='flex items-center justify-start lg:justify-end mt-4 lg:mt-1'>
+                                <div className='flex items-center justify-center sm:justify-start lg:justify-end mt-4 lg:mt-1 ml-2 sm:ml-0'>
                                     {footerNavigation.social.map((item, key) => {
                                         return (
-                                            <div key={key} className='mr-6'>
+                                            <div key={key} className='pl-3 sm:pl-0 pr-3 sm:pr-6'>
                                                 <a
                                                     href={item.link}
                                                     rel='noopener noreferrer'
