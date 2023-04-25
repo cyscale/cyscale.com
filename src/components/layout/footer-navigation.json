@@ -80,6 +80,10 @@
             "external": true,
             "link": "https://status.cyscale.com",
             "text": "Status"
+        },
+        {
+            "link": "/sitemap/",
+            "text": "Sitemap"
         }
     ],
     "social": [
