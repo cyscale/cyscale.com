@@ -141,7 +141,8 @@ const CNAPP = ({ location }) => {
             </Container>
             <Container>
                 <Row className='mt-12 gap-0 lg:gap-8'>
-                    <div
+                    <Link
+                        to='/products/cloud-security-posture-management/'
                         className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 h-80 sm:h-64 lg:h-96 flex flex-col justify-between p-4 rounded-md'
                         css={cardBackgroundColor}
                     >
@@ -158,8 +159,9 @@ const CNAPP = ({ location }) => {
                         <LearnMoreSection>
                             <LearnMoreLink link='/products/cloud-security-posture-management/' />
                         </LearnMoreSection>
-                    </div>
-                    <div
+                    </Link>
+                    <Link
+                        to='/products/security-knowledge-graph/'
                         className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-4 lg:mt-0 h-80 sm:h-64 lg:h-96 flex flex-col justify-between p-4 rounded-md'
                         css={cardBackgroundColor}
                     >
@@ -175,8 +177,9 @@ const CNAPP = ({ location }) => {
                         <LearnMoreSection>
                             <LearnMoreLink link='/products/security-knowledge-graph/' />
                         </LearnMoreSection>
-                    </div>
-                    <div
+                    </Link>
+                    <Link
+                        to='/use-cases/cloud-compliance-and-auditing/'
                         className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-4 lg:mt-0 h-80 sm:h-64 lg:h-96 flex flex-col justify-between p-4 rounded-md'
                         css={cardBackgroundColor}
                     >
@@ -194,8 +197,9 @@ const CNAPP = ({ location }) => {
                         <LearnMoreSection>
                             <LearnMoreLink link='/use-cases/cloud-compliance-and-auditing/' />
                         </LearnMoreSection>
-                    </div>
-                    <div
+                    </Link>
+                    <Link
+                        to='/use-cases/cloud-data-security/'
                         className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-4 lg:mt-0 h-80 sm:h-64 lg:h-96 flex flex-col justify-between p-4 rounded-md'
                         css={cardBackgroundColor}
                     >
@@ -213,10 +217,11 @@ const CNAPP = ({ location }) => {
                         <LearnMoreSection>
                             <LearnMoreLink link='/use-cases/cloud-data-security/' />
                         </LearnMoreSection>
-                    </div>
+                    </Link>
                 </Row>
                 <Row className='mt-8 lg:mt-16 mb-16 gap-0 lg:gap-8'>
-                    <div
+                    <Link
+                        to='/use-cases/iam-security/'
                         className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 h-80 sm:h-64 lg:h-96 xl:h-80  flex flex-col justify-between p-4 rounded-md'
                         css={cardBackgroundColor}
                     >
@@ -234,7 +239,7 @@ const CNAPP = ({ location }) => {
                         <LearnMoreSection>
                             <LearnMoreLink link='/use-cases/iam-security/' />
                         </LearnMoreSection>
-                    </div>
+                    </Link>
                     <div
                         className='col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-4 lg:mt-0 h-80 sm:h-64 lg:h-96 xl:h-80 flex flex-col justify-between p-4 rounded-md'
                         css={cardBackgroundColor}
