@@ -242,9 +242,8 @@ const SmartFintech = ({ location }) => {
                         As Smart Fintech continues to grow, Cyscale is prepared to assist them. Besides IAM and
                         visibility, the platform also provides data security and alerts dashboards, over 400 controls
                         that verify the entire cloud environment, a compliance module, and many others. To read more
-                        about Cyscale and learn about cloud security, check out the
+                        about Cyscale and learn about cloud security, check out the{' '}
                         <Link to='/blog' className='underline cursor-pointer'>
-                            {' '}
                             blog
                         </Link>
                         .
