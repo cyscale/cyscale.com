@@ -4,7 +4,7 @@ import BgHero from '../assets/images/sitemap-bg.png';
 import { Container, Row } from '../components/atoms/Containers';
 import { css } from 'twin.macro';
 import { Link } from 'gatsby';
-import RightArrow from '../assets/images/arrow-right-black.svg';
+import ArrowRight from '../assets/images/black-arrow-right.svg';
 
 const heroBackground = css`
     @media (max-width: 1024px) {
@@ -39,7 +39,8 @@ const Subtitle = ({ text }) => <h2 className='font-montserrat font-bold text-xl'
 
 const SitemapLink = ({ text, link, flexItemsPosition, marginTop }) => (
     <div className={`flex mt-4 ${flexItemsPosition}`}>
-        <img src={RightArrow} width='15' alt='' />
+        <img src={ArrowRight} alt='' width={15} />
+        {/*<img src={RightArrow} width='15' alt='' />*/}
         <Link to={link} className={`font-montserrat text-base ml-1 hover:underline ${marginTop}`}>
             {text}
         </Link>
@@ -105,7 +106,7 @@ const Sitemap = ({ location }) => {
                             <div className='max-w-lg mx-auto lg:mx-0'>
                                 <Subtitle text='Use cases' />
                                 <SitemapLink
-                                    text='Automated Remediation for Cloud Misconfiguration'
+                                    text='Remediation Instructions for Cloud Misconfigurations'
                                     link='/use-cases/cloud-misconfigurations/'
                                     flexItemsPosition='items-start'
                                     marginTop='-m-1'
@@ -131,7 +132,7 @@ const Sitemap = ({ location }) => {
                                 <SitemapLink text='ISO 27001 Cloud Security' link='/use-cases/iso-27001-compliance/' />
                                 <SitemapLink text='PCI Cloud Compliance' link='/use-cases/pci-dss/' />
                                 <SitemapLink text='SOC 2 Cloud Security' link='/use-cases/soc-2/' />
-                                <SitemapLink text='Nist Cloud Compliance' link='/use-cases/nist-compliance/' />
+                                <SitemapLink text='NIST Cloud Compliance' link='/use-cases/nist-compliance/' />
                             </div>
                         </div>
                         <div className='col-span-12 lg:col-span-5 mt-16 lg:mt-0 mb-10 lg:mb-0'>
