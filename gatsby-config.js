@@ -52,6 +52,12 @@ module.exports = {
                         },
                         {
                             strategy: 'cdn',
+                            fontDisplay: 'swap',
+                            family: 'Montserrat',
+                            variants: ['400', '500', '600', '700']
+                        },
+                        {
+                            strategy: 'cdn',
                             family: 'Hind',
                             fontDisplay: 'swap',
                             variants: ['400', '500', '600', '700']
@@ -132,13 +138,6 @@ module.exports = {
             resolve: 'gatsby-plugin-netlify-cms',
             options: {
                 modulePath: `${__dirname}/src/common/netlify.js`
-            }
-        },
-        {
-            resolve: `gatsby-plugin-google-fonts`,
-            options: {
-                fonts: [`Montserrat:400,500,600,700`],
-                display: 'swap'
             }
         }
     ]
