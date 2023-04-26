@@ -381,6 +381,13 @@ img[src*='#shadow'],
 }
 
 .titleSection {
-    font-size: 1.75rem;
-    line-height: 2.188rem;
+    font-size: 1.625rem;
+    line-height: 2rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .titleSection {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
 }
