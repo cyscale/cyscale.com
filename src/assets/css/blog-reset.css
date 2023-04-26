@@ -84,6 +84,14 @@
     padding-left: 2rem;
 }
 
+.pages-reset ul {
+    list-style: initial;
+    margin-top: 1rem;
+    padding-left: 2rem;
+    font-family: 'Hind', sans-serif;
+}
+
+
 .blog-reset ol,
 .pages-reset ol {
     list-style: number;

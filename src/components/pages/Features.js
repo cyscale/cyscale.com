@@ -12,7 +12,7 @@ const Features = ({ features }) => {
                             <h2 className='font-montserrat text-base font-bold text-blue mt-3'>
                                 {feature.featureTitle}
                             </h2>
-                            <p className='text-sm mt-4 text-gray'>{feature.featureText}</p>
+                            <p className='text-sm mt-4 text-gray font-hind'>{feature.featureText}</p>
                         </div>
                     );
                 })}
@@ -24,7 +24,7 @@ const Features = ({ features }) => {
                             <h2 className='font-montserrat text-base font-bold text-blue mt-3'>
                                 {feature.featureTitle}
                             </h2>
-                            <p className='text-sm mt-4 text-gray'>{feature.featureText}</p>
+                            <p className='text-sm mt-4 text-gray font-hind'>{feature.featureText}</p>
                         </div>
                     );
                 })}

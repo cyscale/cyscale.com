@@ -25,13 +25,13 @@ hero:
   heroMarkdown: >-
     
 
-    <p data-cms='paragraph' class="font-montserrat">Our advanced container security solution protects cloud-native applications from development to production. </p>
+    <p class="font-hind text-base lg:text-lg">Our advanced container security solution protects cloud-native applications from development to production. </p>
 
 
     <br class="" />
 
 
-    <p data-cms='paragraph' class="font-montserrat">It tracks and secures containers throughout the lifecycle while providing advanced inventory capabilities to ensure the security of all container assets.</p>
+    <p class="font-hind text-base lg:text-lg">It tracks and secures containers throughout the lifecycle while providing advanced inventory capabilities to ensure the security of all container assets.</p>
 textImageRow:
   - customComponents: false
     rowImagePosition: right
@@ -52,13 +52,13 @@ secondTextImageRow:
       <br class="" />
 
 
-      <p data-cms='paragraph' class="">Protect your containerized applications from cyber threats and maintain compliance effortlessly with our Container Security solution. Our powerful automation tools streamline the process from build to deploy, ensuring consistent and efficient security measures throughout the entire application lifecycle. This means you can spend less time on manual security checks and more time on developing innovative features for your customers.</p>
+      <p data-cms='paragraph' class="font-hind">Protect your containerized applications from cyber threats and maintain compliance effortlessly with our Container Security solution. Our powerful automation tools streamline the process from build to deploy, ensuring consistent and efficient security measures throughout the entire application lifecycle. This means you can spend less time on manual security checks and more time on developing innovative features for your customers.</p>
 
 
       <br class="" />
 
 
-      <p data-cms='paragraph' class="">Some of the benefits of our Container Security solution include:</p>
+      <p data-cms='paragraph' class="font-hind">Some of the benefits of our Container Security solution include:</p>
 
 
       * Continuous security measures that are always working in the background, keeping your containerized applications secure
@@ -107,6 +107,6 @@ featuresSection:
       vulnerabilities that should never get to runtime.
 ctaSection:
   ctaMarkdown: <h1 data-cms='heading-one-cta' class="">Take control of your
-    container security and protect against vulnerabilities, exposures, and
+    container security and protect against<br class="hidden lg:block" /> vulnerabilities, exposures, and
     threats</h1>
 ---

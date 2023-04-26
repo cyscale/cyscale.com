@@ -14,13 +14,15 @@ const Cta = ({ markdown }) => {
                     <ReactMarkdown rehypePlugins={[rehypeRaw]} linkTarget='_blank'>
                         {markdown}
                     </ReactMarkdown>
-                    <p>Start seeing value & saving money in minutes</p>
+                    <p className='font-hind text-base sm:text-lg lg:text-xl'>
+                        Start seeing value & saving money in minutes
+                    </p>
                     <div className='mt-10 w-auto inline-block'>
                         <Link
-                            className='gradientBgBtn w-full block text-sm font-medium rounded text-white text-center py-4 px-12 hover:no-underline no-underline'
+                            className='gradientBgBtn w-full block text-sm font-medium rounded text-white text-center py-4 px-12 hover:no-underline no-underline font-hind'
                             to='/request-demo'
                         >
-                            Request Live Demo
+                            REQUEST LIVE DEMO
                         </Link>
                     </div>
                 </div>
