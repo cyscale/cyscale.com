@@ -48,7 +48,7 @@ const Footer = ({ pageUri, pageName }) => {
                                     <Link to='/'>
                                         <img src={logo} className='w-40' alt='Cyscale Logo' />
                                     </Link>
-                                    <div className='mt-5 text-sm max-w-auto md:max-w-sm font-light leading-normal text-white'>
+                                    <div className='mt-5 text-sm max-w-auto md:max-w-sm font-light leading-normal text-white font-hind'>
                                         Cyscale helps companies embrace their digital future by protecting apps and data
                                         in the cloud. With the innovative Security Knowledge Graph™ at its core, Cyscale
                                         helps you easily track security and compliance across your multi-cloud
@@ -56,10 +56,10 @@ const Footer = ({ pageUri, pageName }) => {
                                     </div>
                                 </div>
                                 <div className='col-span-12 md:col-span-6 lg:col-span-12'>
-                                    <p className='text-lg font-semibold mt-5 md:mt-0 lg:mt-10 max-w-xs sm:max-w-sm'>
+                                    <p className='text-lg font-semibold mt-5 md:mt-0 lg:mt-10 max-w-xs sm:max-w-sm font-hind'>
                                         Stay connected
                                     </p>
-                                    <p className='text-sm max-w-xs sm:max-w-sm'>
+                                    <p className='text-sm max-w-xs sm:max-w-sm font-hind'>
                                         Receive new blog posts and product updates from Cyscale
                                     </p>
                                     <div className='mx-auto sm:mx-0 max-w-xs sm:max-w-sm flex flex-col md:flex-row mt-6'>
@@ -78,7 +78,7 @@ const Footer = ({ pageUri, pageName }) => {
                                             css={subscribeButtonGradient}
                                             onClick={onSubmit}
                                         >
-                                            <span className='block uppercase md:hidden'>Subscribe</span>
+                                            <span className='block uppercase md:hidden font-hind'>Subscribe</span>
                                             <img
                                                 src={arrowRight}
                                                 className='mx-auto w-5 h-auto hidden md:block'
@@ -86,7 +86,10 @@ const Footer = ({ pageUri, pageName }) => {
                                             />
                                         </button>
                                         {!alert && (
-                                            <p className='text-xs mt-4 block sm:hidden' css={disclaimerTextColor}>
+                                            <p
+                                                className='text-xs mt-4 block sm:hidden font-hind'
+                                                css={disclaimerTextColor}
+                                            >
                                                 By clicking Subscribe, I agree to Cyscale’s{' '}
                                                 <Link to='/policies/privacy-policy/' className='underline'>
                                                     Privacy Policy
@@ -94,21 +97,21 @@ const Footer = ({ pageUri, pageName }) => {
                                             </p>
                                         )}
                                         {alert && (
-                                            <p className={`${alert.alertClass} text-xs mt-4 block sm:hidden`}>
+                                            <p className={`${alert.alertClass} text-xs mt-4 block sm:hidden font-hind`}>
                                                 {alert.message}
                                             </p>
                                         )}
                                     </div>
                                     {!alert && (
-                                        <p className='text-xs mt-4 hidden sm:block' css={disclaimerTextColor}>
+                                        <p className='text-xs mt-4 hidden sm:block font-hind' css={disclaimerTextColor}>
                                             By clicking Subscribe, I agree to Cyscale’s{' '}
-                                            <Link to='/policies/privacy-policy/' className='underline'>
+                                            <Link to='/policies/privacy-policy/' className='underline font-hind'>
                                                 Privacy Policy
                                             </Link>
                                         </p>
                                     )}
                                     {alert && (
-                                        <p className={`${alert.alertClass} text-xs mt-4 hidden sm:block`}>
+                                        <p className={`${alert.alertClass} text-xs mt-4 hidden sm:block font-hind`}>
                                             {alert.message}
                                         </p>
                                     )}
@@ -119,13 +122,15 @@ const Footer = ({ pageUri, pageName }) => {
                         <div className='hidden md:block col-span-12 lg:col-span-6'>
                             <div className='grid grid-cols-12 gap-2'>
                                 <div className='col-span-12 md:col-span-4'>
-                                    <h3 className='font-semibold text-sm leading-normal text-white pb-10'>Platform</h3>
+                                    <h3 className='font-semibold text-sm leading-normal text-white pb-10 font-hind'>
+                                        Platform
+                                    </h3>
                                     {footerNavigation.platform.map((item, key) => {
                                         if (item.external) {
                                             return (
                                                 <a
                                                     href={item.link}
-                                                    className='font-light text-white no-underline hover:underline block text-xs pb-3'
+                                                    className='font-light text-white no-underline hover:underline block text-xs pb-3 font-hind'
                                                     key={key}
                                                     target='_blank'
                                                     rel='noopener noreferrer'
@@ -138,22 +143,23 @@ const Footer = ({ pageUri, pageName }) => {
                                                 <Link
                                                     key={key}
                                                     to={item.link}
-                                                    className='font-light text-white no-underline hover:underline block text-xs pb-3'
-                                                >
-                                                    {item.text}
-                                                </Link>
+                                                    className='font-light text-white no-underline hover:underline block text-xs pb-3 font-hind'
+                                                    dangerouslySetInnerHTML={{ __html: item.text }}
+                                                />
                                             );
                                         }
                                     })}
                                 </div>
                                 <div className='col-span-12 md:col-span-4'>
-                                    <h3 className='font-semibold text-sm leading-normal text-white pb-10'>Resources</h3>
+                                    <h3 className='font-semibold text-sm leading-normal text-white pb-10 font-hind'>
+                                        Resources
+                                    </h3>
                                     {footerNavigation.resources.map((item, key) => {
                                         if (item.external) {
                                             return (
                                                 <a
                                                     href={item.link}
-                                                    className='font-light text-white no-underline hover:underline block text-xs pb-3'
+                                                    className='font-light text-white no-underline hover:underline block text-xs pb-3 font-hind'
                                                     key={key}
                                                     target='_blank'
                                                     rel='noopener noreferrer'
@@ -166,7 +172,7 @@ const Footer = ({ pageUri, pageName }) => {
                                                 <Link
                                                     key={key}
                                                     to={item.link}
-                                                    className='font-light text-white no-underline hover:underline block text-xs pb-3'
+                                                    className='font-light text-white no-underline hover:underline block text-xs pb-3 font-hind'
                                                 >
                                                     {item.text}
                                                 </Link>
@@ -175,20 +181,26 @@ const Footer = ({ pageUri, pageName }) => {
                                     })}
                                 </div>
                                 <div className='col-span-12 md:col-span-4'>
-                                    <h3 className='font-semibold text-sm leading-normal text-white pb-10'>Company</h3>
+                                    <h3 className='font-semibold text-sm leading-normal text-white pb-10 font-hind'>
+                                        Company
+                                    </h3>
                                     {footerNavigation.company.map(({ text, link }, key) => {
                                         return (
                                             <Link
                                                 key={key}
                                                 to={link}
-                                                className='font-light text-white no-underline hover:underline block text-xs pb-3'
+                                                className='font-light text-white no-underline hover:underline block text-xs pb-3 font-hind'
                                             >
                                                 {text}
                                             </Link>
                                         );
                                     })}
-                                    <p className='font-light text-white block text-xs pb-2 mt-6'>+44 7401 208466</p>
-                                    <p className='font-light text-white block text-xs pb-2'>sales@cyscale.com</p>
+                                    <p className='font-light text-white block text-xs pb-2 mt-6 font-hind'>
+                                        +44 7401 208466
+                                    </p>
+                                    <p className='font-light text-white block text-xs pb-2 font-hind'>
+                                        sales@cyscale.com
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -197,12 +209,14 @@ const Footer = ({ pageUri, pageName }) => {
                     <hr className='mt-24 text-grey2' />
                     <Row className='mt-4'>
                         <div className='col-span-12 lg:col-span-6'>
-                            <p className='text-center sm:text-left text-xs' css={linksHidden}>
+                            <p className='text-center sm:text-left text-xs font-hind' css={linksHidden}>
                                 &copy; {new Date().getFullYear()} Cyscale Limited
                             </p>
                             <div css={hiddenLinks}>
                                 <div className='text-xs flex items-center justify-between pt-2'>
-                                    <p className='text-xs'>&copy; {new Date().getFullYear()} Cyscale Limited</p>
+                                    <p className='text-xs font-hind'>
+                                        &copy; {new Date().getFullYear()} Cyscale Limited
+                                    </p>
                                     <TermsLinks arrLinks={footerNavigation.terms} />
                                 </div>
                             </div>

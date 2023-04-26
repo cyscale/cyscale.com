@@ -10,7 +10,7 @@ const TermsLinks = ({ arrLinks }) => {
                         <a
                             href={item.link}
                             key={key}
-                            className='hover:underline text-xs'
+                            className='hover:underline text-xs font-hind'
                             target='_blank'
                             rel='noopener noreferrer'
                         >
@@ -19,7 +19,7 @@ const TermsLinks = ({ arrLinks }) => {
                     );
                 } else {
                     return (
-                        <Link to={item.link} key={key} className='hover:underline text-xs'>
+                        <Link to={item.link} key={key} className='hover:underline text-xs font-hind'>
                             {item.text}
                         </Link>
                     );
