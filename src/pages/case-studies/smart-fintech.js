@@ -54,7 +54,7 @@ const SmartFintech = ({ location }) => {
             title='Smart Fintech Case Study | Cloud Security & Compliance - Cyscale'
             description={`Discover how Smart Fintech, Romania's first authorized open banking TPP, improved cloud security, IAM visibility, and compliance by leveraging Cyscale's powerful platform for monitoring and alerting on cloud misconfigurations.`}
         >
-            <div className='container max-w-7xl pt-28 sm:pt-32 mx-auto xl:flex xl:pl-12 xl:pr-16'>
+            <div className='container max-w-7xl pt-28 sm:pt-44 mx-auto xl:flex xl:pl-12 xl:pr-16'>
                 <div className='max-w-4xl mx-auto xl:mx-0 px-8'>
                     <div className='grid grid-cols-12 gap-4'>
                         <div className='col-span-12 lg:col-span-6'>
@@ -91,7 +91,7 @@ const SmartFintech = ({ location }) => {
                             <GatsbyImage image={data.cover.childImageSharp.gatsbyImageData} alt='Cover' />
                         </div>
                     </div>
-                    <div className='grid grid-cols-12 gap-1 mt-8'>
+                    <div className='grid grid-cols-12 gap-1 mt-12 lg:mt-20'>
                         <div className='col-span-12 lg:col-span-6'>
                             <p className='font-montserrat text-lg font-bold'>Challenges</p>
                             <div className='flex items-center mt-4'>

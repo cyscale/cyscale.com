@@ -345,7 +345,7 @@ const HomePage = ({ location }) => {
             >
                 <Container>
                     <div className='grid grid-cols-12 gap-x-5'>
-                        <div className='col-span-12 lg:col-span-6 mx-auto lg:mx-0'>
+                        <div className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 lg:mt-8'>
                             <Link to={'/case-studies/smart-fintech'}>
                                 <GatsbyImage
                                     image={data.smartFintech.childImageSharp.gatsbyImageData}
@@ -381,6 +381,17 @@ const HomePage = ({ location }) => {
                                     </p>
                                 </div>
                             </div>
+                            <Link
+                                to={'/case-studies/smart-fintech'}
+                                className='font-hind text-base font-bold mt-6 underline block'
+                                css={css`
+                                    &:hover {
+                                        color: #0f26aa;
+                                    }
+                                `}
+                            >
+                                Read the case study
+                            </Link>
                         </div>
                     </div>
                 </Container>

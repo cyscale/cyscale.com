@@ -106,7 +106,7 @@ const Sitemap = ({ location }) => {
                             <div className='max-w-lg mx-auto lg:mx-0'>
                                 <Subtitle text='Use cases' />
                                 <SitemapLink
-                                    text='Remediation Instructions for Cloud Misconfigurations'
+                                    text='Automated Detection of Cloud Misconfigurations'
                                     link='/use-cases/cloud-misconfigurations/'
                                     flexItemsPosition='items-start'
                                     marginTop='-m-1'
@@ -128,7 +128,7 @@ const Sitemap = ({ location }) => {
                     <div className='grid grid-cols-12 gap-x-6'>
                         <div className='col-span-12 lg:col-span-7'>
                             <div className='max-w-lg mx-auto lg:mx-0'>
-                                <Subtitle text='Complaince' />
+                                <Subtitle text='Compliance' />
                                 <SitemapLink text='ISO 27001 Cloud Security' link='/use-cases/iso-27001-compliance/' />
                                 <SitemapLink text='PCI Cloud Compliance' link='/use-cases/pci-dss/' />
                                 <SitemapLink text='SOC 2 Cloud Security' link='/use-cases/soc-2/' />
