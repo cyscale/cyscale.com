@@ -104,7 +104,7 @@ const solutions = [
 ];
 const resources = [
     {
-        text: 'Case Study',
+        text: 'Case Studies',
         link: '/case-studies/smart-fintech/'
     },
     {
