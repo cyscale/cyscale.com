@@ -355,7 +355,9 @@ const HomePage = ({ location }) => {
                             </Link>
                         </div>
                         <div className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 max-w-xl mt-8 lg:mt-0'>
-                            <p className='font-montserrat text-base font-bold mt-4'>CASE STUDY</p>
+                            <p className='font-montserrat text-base font-bold mt-4' css={sectionSubtitleColor}>
+                                CASE STUDY
+                            </p>
                             <Link to={'/case-studies/smart-fintech'}>
                                 {' '}
                                 <h2
