@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import IconCyscaleShield from '../../icons/icon-cyscale-shield.svg';
 import {
+    caretMenuSelegoStyle,
     caretMenuWhiteStyle,
     fontNavLinkStyle,
     hoverButtonColorStyle,
@@ -13,24 +14,25 @@ import {
 import { solutions } from '../../nav';
 import { css } from 'twin.macro';
 import RightArrow from '../../../sharedComponent/RightArrow';
+import { isAnimatedNavbarPage } from '../../../../common/utils';
 
 const descriptionMaxWidth = css`
     max-width: 13.25rem;
 `;
 
-const caretSolutions = () => css`
+const caretSolutions = (isAnimatedNavbarPage) => css`
     :before {
         ${caretMenuWhiteStyle};
-        left: 34rem;
+        left: ${isAnimatedNavbarPage ? '34rem' : '31.7rem'};
     }
 `;
 
-const Solutions = ({ activeLinks, setActiveLinks }) => {
+const Solutions = ({pathname, activeLinks, setActiveLinks }) => {
     return (
         <div
             className='w-full grid grid-cols-12 gap-2 ml-auto shadow-2xl bg-white'
             style={{ width: '76rem' }}
-            css={caretSolutions()}
+            css={caretSolutions(isAnimatedNavbarPage(pathname))}
             onMouseEnter={() => setActiveLinks({ ...activeLinks, solutions: true })}
             onMouseLeave={() => setActiveLinks({ ...activeLinks, solutions: false })}
             tabIndex='-1'

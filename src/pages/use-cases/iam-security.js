@@ -58,18 +58,34 @@ const IAMSecurity = ({ location }) => {
             title='IAM Cloud Security | Detect and Mitigate Risk - Cyscale'
             description='Continuous multi-cloud monitoring for identity and access management (IAM) misconfigurations across all your cloud assets to meet strict IAM compliance directives and improve your cloud security posture.'
         >
+            <div className='hidden' data-template-key>
+                hardcoded-pages
+            </div>
+            <div className='hidden' data-permalink>
+                /use-cases/iam-security
+            </div>
+            <div className='hidden' data-title>
+                IAM Cloud Security | Detect and Mitigate Risk - Cyscale
+            </div>
+            <div className='hidden' data-description>
+                Continuous multi-cloud monitoring for identity and access management (IAM) misconfigurations across all
+                your cloud assets to meet strict IAM compliance directives and improve your cloud security posture.
+            </div>
             <div className='bg-cloud' style={{ backgroundColor: '#eeeeee' }}>
                 <Container>
                     <Section>
                         <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-xl pt-16 pb-4'>
-                            <h1 className='font-semibold text-left text-4xl lg:text-5xl leading-normal lg:leading-normal text-primary mb-16 font-montserrat'>
+                            <h1
+                                className='font-semibold text-left text-4xl lg:text-5xl leading-normal lg:leading-normal text-primary mb-16 font-montserrat'
+                                data-content
+                            >
                                 Identity and Access Management Security
                                 <br /> for Cloud
                             </h1>
-                            <p className='text-left text-base lg:text-lg mb-2 leading-relaxed'>
+                            <p className='text-left text-base lg:text-lg mb-2 leading-relaxed' data-content>
                                 <strong>Scan, monitor and prioritize cloud IAM risk.</strong>
                             </p>
-                            <p className='text-left text-base lg:text-lg mb-24 leading-relaxed'>
+                            <p className='text-left text-base lg:text-lg mb-24 leading-relaxed' data-content>
                                 Continuous multi-cloud monitoring for identity and access management (IAM)
                                 misconfigurations across all your cloud resources to meet strict IAM compliance
                                 directives and improve your cloud security posture.
@@ -103,7 +119,7 @@ const IAMSecurity = ({ location }) => {
                         </div>
                         <div className='col-span-12 lg:col-span-5'>
                             <div className='mx-auto lg:mx-0  max-w-xl lg:max-w-none'>
-                                <p className='text-base leading-normal my-12 text-gray'>
+                                <p className='text-base leading-normal my-12 text-gray' data-content>
                                     <strong>
                                         Effectively manage user permissions and enforce privilege access for a robust
                                         cloud security posture.
@@ -111,19 +127,19 @@ const IAMSecurity = ({ location }) => {
                                 </p>
 
                                 <ul className='list-disc ml-4 text-gray'>
-                                    <li className='mb-4'>
+                                    <li className='mb-4' data-content>
                                         A powerful Identity Dashboard helping you understand how access is provisioned
                                         in your organization on a per-person basis
                                     </li>
-                                    <li className='mb-4'>
+                                    <li className='mb-4' data-content>
                                         Identity provider integration: Onboard your Okta account into Cyscale and get
                                         full visibility on cloud SSO (Single Sign-On) users and provisioning
                                     </li>
-                                    <li className='mb-4'>
+                                    <li className='mb-4' data-content>
                                         User access misconfigurations are highlighted so that you can detect and
                                         mitigate cloud computing risk
                                     </li>
-                                    <li className='mb-4'>
+                                    <li className='mb-4' data-content>
                                         Easy, granular filtering for: inactive users, highly privileged or high-risk
                                         users, and others
                                     </li>
@@ -138,7 +154,10 @@ const IAMSecurity = ({ location }) => {
                     <div className='sm:grid sm:grid-cols-12 sm:gap-12'>
                         <div className='col-span-12 lg:col-span-6'>
                             <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-sm'>
-                                <h2 className='text-4xl font-semibold text-primary leading-normal border-title font-montserrat'>
+                                <h2
+                                    className='text-4xl font-semibold text-primary leading-normal border-title font-montserrat'
+                                    data-content
+                                >
                                     Deep dive into
                                     <br /> User assets
                                 </h2>
@@ -146,14 +165,22 @@ const IAMSecurity = ({ location }) => {
                         </div>
                         <div className='col-span-12 lg:col-span-6 mt-8 sm:mt-0'>
                             <div className='mx-auto lg:mx-0 max-w-xl'>
-                                <p className='leading-normal text-base text-gray mb-8'>
+                                <p className='leading-normal text-base text-gray mb-8' data-content>
                                     An optimized page for cloud-based user assets helps you visualize and understand:
                                 </p>
                                 <ul className='list-disc ml-4 text-gray'>
-                                    <li className='mb-2'>Access (groups and permissions)</li>
-                                    <li className='mb-2'>Risk</li>
-                                    <li className='mb-2'>Policy violations</li>
-                                    <li className='mb-2'>User-related alerts</li>
+                                    <li className='mb-2' data-content>
+                                        Access (groups and permissions)
+                                    </li>
+                                    <li className='mb-2' data-content>
+                                        Risk
+                                    </li>
+                                    <li className='mb-2' data-content>
+                                        Policy violations
+                                    </li>
+                                    <li className='mb-2' data-content>
+                                        User-related alerts
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -173,14 +200,17 @@ const IAMSecurity = ({ location }) => {
                 <Container>
                     <Section>
                         <div className='max-w-xl mx-auto lg:mx-0 lg:max-w-md mb-20'>
-                            <h2 className='text-4xl font-semibold text-primary leading-normal border-title font-montserrat'>
+                            <h2
+                                className='text-4xl font-semibold text-primary leading-normal border-title font-montserrat'
+                                data-content
+                            >
                                 100% Confidence in your Cloud Compliance
                             </h2>
                         </div>
                         <div className='max-w-xl mx-auto lg:mx-0 lg:max-w-3xl'>
                             <Row className='lg:gap-20'>
                                 <div className='col-span-12 lg:col-span-6'>
-                                    <p className='leading-normal text-base text-gray mb-6'>
+                                    <p className='leading-normal text-base text-gray mb-6' data-content>
                                         <strong>Meet industry regulations</strong>
                                         <br />
                                         Protect sensitive data and comply with strict industry regulations in your
@@ -190,7 +220,7 @@ const IAMSecurity = ({ location }) => {
                                     </p>
                                 </div>
                                 <div className='col-span-12 lg:col-span-6'>
-                                    <p className='leading-normal text-base text-gray mb-6'>
+                                    <p className='leading-normal text-base text-gray mb-6' data-content>
                                         <strong>Built-in compliance templates</strong>
                                         <br />
                                         You can either use policy templates as a basis for your custom policies, or
@@ -200,7 +230,7 @@ const IAMSecurity = ({ location }) => {
                                     </p>
                                 </div>
                                 <div className='col-span-12 lg:col-span-6'>
-                                    <p className='leading-normal text-base text-gray mb-6'>
+                                    <p className='leading-normal text-base text-gray mb-6' data-content>
                                         <strong>PCI-DSS, SOC 2, GDPR, and more.</strong>
                                         <br />
                                         Cyscale offers a wide range of benchmarks and frameworks, including: CIS,
@@ -208,7 +238,7 @@ const IAMSecurity = ({ location }) => {
                                     </p>
                                 </div>
                                 <div className='col-span-12 lg:col-span-6'>
-                                    <p className='leading-normal text-base text-gray mb-6'>
+                                    <p className='leading-normal text-base text-gray mb-6' data-content>
                                         <strong>500+ out-of-the-box security controls</strong>
                                         <br />
                                         Onboard teams in 30 minutes and coordinate efforts to apply 500+ out-of-the-box
@@ -227,10 +257,13 @@ const IAMSecurity = ({ location }) => {
                 <Section>
                     <Container>
                         <div className='mx-auto text-center lg:text-left lg:mx-0 max-w-sm lg:max-w-none'>
-                            <h2 className='text-white text-xl md:text-2xl font-semibold uppercase font-montserrat'>
+                            <h2
+                                className='text-white text-xl md:text-2xl font-semibold uppercase font-montserrat'
+                                data-content
+                            >
                                 IAM Cloud Security
                             </h2>
-                            <p className='text-white text-lg md:text-2xl mb-20 font-montserrat'>
+                            <p className='text-white text-lg md:text-2xl mb-20 font-montserrat' data-content>
                                 Start seeing value & saving money in minutes
                             </p>
                             <Link

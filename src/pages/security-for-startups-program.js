@@ -135,7 +135,12 @@ const SecurityForStartupsProgram = ({ location }) => {
 
     return (
         <>
-            <Layout location={location} pageName='Startups' title='Startups Program - Cyscale' description='Startups Program'>
+            <Layout
+                location={location}
+                pageName='Startups'
+                title='Startups Program - Cyscale'
+                description='Startups Program'
+            >
                 <Helmet>
                     <script charSet='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js'></script>
                     <script type='application/ld+json' data-rh='true'>{`{
@@ -193,29 +198,53 @@ const SecurityForStartupsProgram = ({ location }) => {
                         ]
                     }`}</script>
                 </Helmet>
+                <div className='hidden' data-template-key>
+                    hardcoded-pages
+                </div>
+                <div className='hidden' data-permalink>
+                    /security-for-startups-program
+                </div>
+                <div className='hidden' data-title>
+                    Startups Program - Cyscale
+                </div>
+                <div className='hidden' data-description>
+                    Startups Program
+                </div>
                 <div className='bg-pouring pt-8'>
                     <Container>
                         <div className='py-24 lg:pt-32 lg:pb-16'>
                             <Row>
                                 <div className='col-span-12 lg:col-span-6 '>
                                     <div className='lg:mt-16 pt-4 max-w-lg mx-auto lg:mx-0'>
-                                        <h1 className='text-center sm:text-left text-blue text-4xl lg:text-5xl leading-normal mb-16 font-montserrat'>
+                                        <h1
+                                            className='text-center sm:text-left text-blue text-4xl lg:text-5xl leading-normal mb-16 font-montserrat'
+                                            data-content
+                                        >
                                             <strong>Cyscale for Startups</strong> <br className='hidden lg:block' />{' '}
                                             Program
                                         </h1>
-                                        <h1 className='text-center sm:text-left text-2xl sm:text-3xl leading-normal mb-8'>
+                                        <h1
+                                            className='text-center sm:text-left text-2xl sm:text-3xl leading-normal mb-8'
+                                            data-content
+                                        >
                                             <strong>
                                                 Build and maintain a strong
                                                 <br />
                                                 Security Program from the start{' '}
                                             </strong>
                                         </h1>
-                                        <p className='text-center sm:text-left text-base lg:text-lg mb-8 leading-relaxed text-gray'>
+                                        <p
+                                            className='text-center sm:text-left text-base lg:text-lg mb-8 leading-relaxed text-gray'
+                                            data-content
+                                        >
                                             This is a program <strong>designed for fast-growing Startups</strong>. The
                                             purpose is to raise awareness about the importance of security and
                                             compliance in the cloud.
                                         </p>
-                                        <p className='text-center sm:text-left text-base lg:text-lg mb-2 leading-relaxed text-gray'>
+                                        <p
+                                            className='text-center sm:text-left text-base lg:text-lg mb-2 leading-relaxed text-gray'
+                                            data-content
+                                        >
                                             Let us help you grow and enjoy success with a well-implemented security
                                             posture!
                                         </p>
@@ -252,10 +281,16 @@ const SecurityForStartupsProgram = ({ location }) => {
                         <div className='grid grid-cols-12' id='start'>
                             <div className='col-span-12'>
                                 <div className='mx-auto lg:mx-0 max-w-lg '>
-                                    <h2 className='text-center sm:text-left text-2xl leading-normal mb-4 font-montserrat'>
+                                    <h2
+                                        className='text-center sm:text-left text-2xl leading-normal mb-4 font-montserrat'
+                                        data-content
+                                    >
                                         <strong>Qualification</strong> criteria
                                     </h2>
-                                    <h1 className='text-center sm:text-left text-base leading-normal text-grey2 mb-8'>
+                                    <h1
+                                        className='text-center sm:text-left text-base leading-normal text-grey2 mb-8'
+                                        data-content
+                                    >
                                         Your startup was founded less than five years ago and has raised:
                                     </h1>
                                 </div>
@@ -264,12 +299,14 @@ const SecurityForStartupsProgram = ({ location }) => {
                         <div className='grid grid-cols-12 gap-x-5'>
                             <div className='col-span-12 lg:col-span-6 lg:mx-0'>
                                 <div className='mt-6 lg:mt-0 rounded-xl  max-w-lg lg:max-w-2xl mx-auto relative gradientBG h-64 flex flex-col justify-center items-center'>
-                                    <h3 className='text-white text-3xl sm:text-4xl mb-6 font-semibold'>
+                                    <h3 className='text-white text-3xl sm:text-4xl mb-6 font-semibold' data-content>
                                         Up to $2M in funding
                                     </h3>
-                                    <p className='text-white text-xl sm:text-2xl mb-1 font-semibold'>6 months FREE</p>
+                                    <p className='text-white text-xl sm:text-2xl mb-1 font-semibold' data-content>
+                                        6 months FREE
+                                    </p>
                                     <p className='text-white mb-1 text-7xl font-semibold'>+</p>
-                                    <p className='text-white text-xl sm:text-2xl font-semibold'>
+                                    <p className='text-white text-xl sm:text-2xl font-semibold' data-content>
                                         75% off for the next 6 months
                                     </p>
                                 </div>
@@ -279,10 +316,16 @@ const SecurityForStartupsProgram = ({ location }) => {
                                     className='mt-6 lg:mt-0 rounded-xl  max-w-lg lg:max-w-2xl mx-auto relative h-64 flex flex-col justify-center items-center'
                                     style={{ backgroundImage: 'linear-gradient(#E4EDFC,#f9f9f9)' }}
                                 >
-                                    <h3 className='text-3xl sm:text-4xl mb-6 font-semibold'>Over $2M in funding</h3>
-                                    <p className='text-xl sm:text-2xl mb-1 font-semibold'>3 months FREE</p>
+                                    <h3 className='text-3xl sm:text-4xl mb-6 font-semibold' data-content>
+                                        Over $2M in funding
+                                    </h3>
+                                    <p className='text-xl sm:text-2xl mb-1 font-semibold' data-content>
+                                        3 months FREE
+                                    </p>
                                     <p className='mb-1 text-7xl font-semibold'>+</p>
-                                    <p className='text-xl sm:text-2xl font-semibold'>75% off for the next 9 months</p>
+                                    <p className='text-xl sm:text-2xl font-semibold' data-content>
+                                        75% off for the next 9 months
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -293,7 +336,10 @@ const SecurityForStartupsProgram = ({ location }) => {
                         <div className='grid grid-cols-12'>
                             <div className='col-span-12'>
                                 <div className='mx-auto lg:mx-0 max-w-lg '>
-                                    <h2 className='text-center sm:text-left text-3xl lg:text-2xl leading-normal mb-2 sm:mb-16 font-montserrat'>
+                                    <h2
+                                        className='text-center sm:text-left text-3xl lg:text-2xl leading-normal mb-2 sm:mb-16 font-montserrat'
+                                        data-content
+                                    >
                                         Advantages
                                     </h2>
                                 </div>
@@ -305,11 +351,13 @@ const SecurityForStartupsProgram = ({ location }) => {
                                     className='mt-6 lg:mt-0 rounded-xl pt-12 px-12 max-w-lg lg:max-w-2xl mx-auto lg:mr-0 lg:ml-auto relative h-advantages'
                                     style={{ backgroundImage: 'linear-gradient(#E4EDFC,#fff)' }}
                                 >
-                                    <h1 className='text-2xl font-medium'>
+                                    <h1 className='text-2xl font-medium' data-content>
                                         Access the entire Cyscale Cloud Platform with <br /> Powerful Analytics &
                                         Dashboards
                                     </h1>
-                                    <p className='text-xl mt-4'>Up to 1000 protected assets.</p>
+                                    <p className='text-xl mt-4' data-content>
+                                        Up to 1000 protected assets.
+                                    </p>
                                     <GatsbyImage
                                         image={data.dashboard.childImageSharp.gatsbyImageData}
                                         alt='Dashboard'
@@ -321,7 +369,10 @@ const SecurityForStartupsProgram = ({ location }) => {
                                     className='mt-6 lg:mt-0 rounded-xl pt-12 px-8 lg:px-2 max-w-lg lg:max-w-2xl mx-auto lg:mr-0 lg:ml-auto relative h-advantages h-asset-inventory sm:mb-6 md:mb-6 lg:mb-0'
                                     style={{ backgroundImage: 'linear-gradient(#E4EDFC,#fff)' }}
                                 >
-                                    <h1 className='text-2xl font-medium px-4 lg:px-12 text-center sm:text-left'>
+                                    <h1
+                                        className='text-2xl font-medium px-4 lg:px-12 text-center sm:text-left'
+                                        data-content
+                                    >
                                         Asset inventory
                                     </h1>
                                     <GatsbyImage
@@ -336,8 +387,12 @@ const SecurityForStartupsProgram = ({ location }) => {
                                     className='mt-6 lg:mt-0 rounded-xl pt-12 px-12 max-w-lg lg:max-w-2xl mx-auto lg:mr-0 lg:ml-auto relative h-advantages h-asset-inventory'
                                     style={{ backgroundImage: 'linear-gradient(#E4EDFC,#fff)' }}
                                 >
-                                    <h1 className='text-2xl font-medium'>Integrations</h1>
-                                    <p className='text-xl mt-4'>AWS, GCP, Azure and Alibaba Cloud</p>
+                                    <h1 className='text-2xl font-medium' data-content>
+                                        Integrations
+                                    </h1>
+                                    <p className='text-xl mt-4' data-content>
+                                        AWS, GCP, Azure and Alibaba Cloud
+                                    </p>
                                     <GatsbyImage
                                         image={data.cardIntegrations.childImageSharp.gatsbyImageData}
                                         alt='Integrations'
@@ -349,7 +404,9 @@ const SecurityForStartupsProgram = ({ location }) => {
                         <div className='grid grid-cols-12 gap-x-5 mt-24'>
                             <div className='col-span-12 lg:col-span-3'>
                                 <div className='mt-6 lg:mt-0 rounded-xl pt-8 pb-60 sm:pb-0 px-8 max-w-lg lg:max-w-2xl mx-auto lg:mr-0 lg:ml-auto relative h-64 bg-black h-misconfiguration'>
-                                    <h1 className='text-2xl text-white font-medium'>Misconfiguration detection</h1>
+                                    <h1 className='text-2xl text-white font-medium' data-content>
+                                        Misconfiguration detection
+                                    </h1>
                                     <GatsbyImage
                                         image={data.cardMisconfiguration.childImageSharp.gatsbyImageData}
                                         alt='Misconfiguration'
@@ -365,10 +422,12 @@ const SecurityForStartupsProgram = ({ location }) => {
                                             'linear-gradient(to bottom, #e7474b, #ee3d53, #f3305b, #f92065, #fd0070)'
                                     }}
                                 >
-                                    <h1 className='text-2xl text-white font-medium'>
+                                    <h1 className='text-2xl text-white font-medium' data-content>
                                         Alerts and remediation instructions
                                     </h1>
-                                    <p className='text-lg text-white mt-1'>in case of security drifts</p>
+                                    <p className='text-lg text-white mt-1' data-content>
+                                        in case of security drifts
+                                    </p>
                                 </div>
                             </div>
                             <div className='col-span-12 lg:col-span-6'>
@@ -379,7 +438,7 @@ const SecurityForStartupsProgram = ({ location }) => {
                                             'linear-gradient(to bottom, #4a85eb, #326fe3, #1b58d8, #073fcc, #0623be)'
                                     }}
                                 >
-                                    <h1 className='text-2xl text-white font-medium px-8'>
+                                    <h1 className='text-2xl text-white font-medium px-8' data-content>
                                         Built-in frameworks for ISO27001, <br /> PCI-DSS, SOC2, GDPR, and others
                                     </h1>
                                     <GatsbyImage
@@ -397,7 +456,9 @@ const SecurityForStartupsProgram = ({ location }) => {
                             <div className='grid grid-cols-12'>
                                 <div className='col-span-12'>
                                     <div className='mx-auto lg:mx-0 max-w-lg '>
-                                        <h2 className='text-center sm:text-left text-2xl leading-normal mb-4 font-montserrat'>FAQ</h2>
+                                        <h2 className='text-center sm:text-left text-2xl leading-normal mb-4 font-montserrat'>
+                                            FAQ
+                                        </h2>
                                     </div>
                                 </div>
                             </div>
@@ -411,7 +472,7 @@ const SecurityForStartupsProgram = ({ location }) => {
                                             <div className='flex'>
                                                 <h3
                                                     className='font-medium  text-base sm:text-lg mb-0 pl-2 leading-snug cursor-pointer select-none'
-                                                    role="presentation"
+                                                    role='presentation'
                                                     tabIndex={-1}
                                                     onClick={() => setActive((s) => (s === key ? null : key))}
                                                     onKeyDown={() => {}}
@@ -458,7 +519,7 @@ const SecurityForStartupsProgram = ({ location }) => {
                                             <div className='flex'>
                                                 <h3
                                                     className='font-medium  text-base sm:text-lg mb-0 pl-2 leading-snug cursor-pointer select-none'
-                                                    role="presentation"
+                                                    role='presentation'
                                                     tabIndex={-1}
                                                     onClick={() => setActive((s) => (s === key + 3 ? null : key + 3))}
                                                     onKeyDown={() => {}}
@@ -504,10 +565,10 @@ const SecurityForStartupsProgram = ({ location }) => {
                     <div className='pt-12 pb-32 lg:pt-32'>
                         <div className='flex h-48 flex-col items-center'>
                             <img src={cloudIcon} alt='Cloud Icon' />
-                            <h1 className='text-center px-2 mb-2'>
+                            <h1 className='text-center px-2 mb-2' data-content>
                                 Do not postpone the implementation of your Security Program.
                             </h1>
-                            <h1 className='text-center px-1'>
+                            <h1 className='text-center px-1' data-content>
                                 <strong>Let us help you now so that you can reach your potential!</strong>
                             </h1>
                             <div className='mt-6 w-auto inline-block'>

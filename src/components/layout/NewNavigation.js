@@ -3,6 +3,7 @@ import tw, { css } from 'twin.macro';
 import { Link } from 'gatsby';
 import logo from '../../assets/images/logo.svg';
 import loginIcon from '../../assets/images/login.svg';
+import searchIcon from '../../assets/images/search-icon.svg';
 
 import styled from '@emotion/styled';
 import Platform from './components/Platform/Platform';
@@ -88,7 +89,7 @@ const HeaderLogo = styled.img`
     ${tw`block`};
 `;
 
-const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation }) => {
+const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation, searchBar, setSearchBar }) => {
     const { pathname } = location;
     const [activeLinks, setActiveLinks] = useState({
         platform: false,
@@ -180,7 +181,9 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation }) =
                             className={`${
                                 pageName === 'blog' ||
                                 pageName === 'blog-detail' ||
-                                ['CloudComplianceWhitepaper', 'CloudStorageMisconfigurations', 'SmartFintech'].includes(pageName) ||
+                                ['CloudComplianceWhitepaper', 'CloudStorageMisconfigurations', 'SmartFintech'].includes(
+                                    pageName
+                                ) ||
                                 activeLinks.resources
                                     ? 'active'
                                     : ''
@@ -212,6 +215,15 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation }) =
                             <Company pathname={pathname} activeLinks={activeLinks} setActiveLinks={setActiveLinks} />
                         </MegaMenu>
                     </NavItem>
+                    <li className='py-6 pl-4'>
+                        <img
+                            src={searchIcon}
+                            className='py-2 cursor-pointer'
+                            alt=''
+                            width={22}
+                            onClick={() => setSearchBar(!searchBar)}
+                        />
+                    </li>
                     <li className='py-6 pl-4'>
                         <a href='https://app.cyscale.com' target='_blank' rel='noopener noreferrer'>
                             <img src={loginIcon} className='py-2' alt='' />

@@ -83,20 +83,42 @@ const NISTCompliance = ({ location }) => {
             title='NIST Cloud Compliance & Security - Cyscale'
             description='A powerful set of technical controls helping you with NIST compliance in areas such as security, availability, processing integrity, confidentiality and privacy'
         >
+            <div className='hidden' data-template-key>
+                hardcoded-pages
+            </div>
+            <div className='hidden' data-permalink>
+                /use-cases/nist-compliance
+            </div>
+            <div className='hidden' data-title>
+                NIST Cloud Compliance & Security - Cyscale
+            </div>
+            <div className='hidden' data-description>
+                A powerful set of technical controls helping you with NIST compliance in areas such as security,
+                availability, processing integrity, confidentiality and privacy
+            </div>
             <div className='bg-hero-nist pt-8'>
                 <Container>
                     <div className='py-16 md:py-24 lg:pt-24 lg:pb-16'>
                         <Row>
                             <div className='col-span-12 lg:col-span-6 order-last lg:order-first'>
                                 <div className='lg:mt-16 pt-4 max-w-xl mx-auto lg:mx-0'>
-                                    <h1 className='text-left text-blue text-4xl lg:text-5xl leading-normal lg:leading-normal mb-16 font-montserrat'>
+                                    <h1
+                                        className='text-left text-blue text-4xl lg:text-5xl leading-normal lg:leading-normal mb-16 font-montserrat'
+                                        data-content
+                                    >
                                         <strong>NIST Compliance</strong> <br className='block md:hidden lg:block' /> for
                                         Cloud
                                     </h1>
-                                    <p className='text-left text-base lg:text-lg mb-8 leading-relaxed text-gray font-hind'>
+                                    <p
+                                        className='text-left text-base lg:text-lg mb-8 leading-relaxed text-gray font-hind'
+                                        data-content
+                                    >
                                         Enforce regulatory compliance controls for NIST and beyond.
                                     </p>
-                                    <p className='text-left text-base lg:text-lg mb-2 leading-relaxed text-gray font-hind'>
+                                    <p
+                                        className='text-left text-base lg:text-lg mb-2 leading-relaxed text-gray font-hind'
+                                        data-content
+                                    >
                                         Cyscale continuously evaluates your multi-cloud environments for compliance
                                         violations with predefined rules mapped to NIST 800-53 compliance controls.
                                     </p>
@@ -130,27 +152,42 @@ const NISTCompliance = ({ location }) => {
                                 <h2
                                     className='font-bold text-primary border-title-partly font-montserrat lg:mt-3'
                                     css={titleSection}
+                                    data-content
                                 >
                                     Automate cloud security
                                     <br /> and NIST compliance
                                 </h2>
                             </div>
                             <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-lg'>
-                                <p className='text-base mt-4 font-hind'>
+                                <p className='text-base mt-4 font-hind' data-content>
                                     The 800-53 catalog of controls is a significant companion of the framework and
                                     Cyscale Platforms has a large set of technical controls to help your organization
                                     track compliance.
                                 </p>
-                                <p className='text-base text-gray mt-4 font-semibold font-hind'>
+                                <p className='text-base text-gray mt-4 font-semibold font-hind' data-content>
                                     Get notified as soon as your cloud environments drift away from selected 800-53
                                     controls across:
                                 </p>
                                 <ul className='text-base text-gray list-disc font-hind'>
-                                    <li className='ml-6'>Access Control</li>
-                                    <li className='ml-6'> Audit and Accountability</li>{' '}
-                                    <li className='ml-6'> Identity and Authentication</li>
-                                    <li className='ml-6'> System and Information Integrity</li>
-                                    <li className='ml-6'> … and many others</li>
+                                    <li className='ml-6' data-content>
+                                        Access Control
+                                    </li>
+                                    <li className='ml-6' data-content>
+                                        {' '}
+                                        Audit and Accountability
+                                    </li>{' '}
+                                    <li className='ml-6' data-content>
+                                        {' '}
+                                        Identity and Authentication
+                                    </li>
+                                    <li className='ml-6' data-content>
+                                        {' '}
+                                        System and Information Integrity
+                                    </li>
+                                    <li className='ml-6' data-content>
+                                        {' '}
+                                        … and many others
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -181,20 +218,21 @@ const NISTCompliance = ({ location }) => {
                                 <h2
                                     className='font-bold text-primary border-title-partly font-montserrat lg:mt-3'
                                     css={titleSection}
+                                    data-content
                                 >
                                     Automate compliance checks & security control audits
                                 </h2>
                             </div>
                             <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-lg'>
-                                <p className='text-base text-gray pt-12 pb-2 font-hind'>
+                                <p className='text-base text-gray pt-12 pb-2 font-hind' data-content>
                                     Use Cyscale for governance automation across cloud providers and internal teams to
                                     ensure consistent security and compliance.
                                 </p>
-                                <p className='text-base text-gray py-2 font-hind'>
+                                <p className='text-base text-gray py-2 font-hind' data-content>
                                     We keep your cloud environments under continuous assessment and provide in-app
                                     security consultancy so that you make the most of your time and effort.
                                 </p>
-                                <p className='text-base text-gray py-2 font-hind'>
+                                <p className='text-base text-gray py-2 font-hind' data-content>
                                     Coming soon: create custom Controls that tap into our Security Knowledge Graph™ and
                                     automate the security and compliance checks that matter most for your organization.
                                 </p>
@@ -219,6 +257,7 @@ const NISTCompliance = ({ location }) => {
                             <h2
                                 className='font-bold text-primary border-title-partly font-montserrat'
                                 css={titleSection}
+                                data-content
                             >
                                 100% Confidence with
                                 <br className='block lg:hidden' /> your Cloud Compliance
@@ -227,7 +266,7 @@ const NISTCompliance = ({ location }) => {
                         <div className='max-w-xl mx-auto lg:mx-0 lg:max-w-3xl'>
                             <Row className='lg:gap-20'>
                                 <div className='col-span-12 lg:col-span-6'>
-                                    <p className='leading-normal text-base text-gray mb-6 font-hind'>
+                                    <p className='leading-normal text-base text-gray mb-6 font-hind' data-content>
                                         <strong className='montserrat-font'>Meet industry regulations</strong>
                                         <br />
                                         Protect sensitive data and comply with strict industry regulations in your
@@ -236,7 +275,7 @@ const NISTCompliance = ({ location }) => {
                                     </p>
                                 </div>
                                 <div className='col-span-12 lg:col-span-6 font-hind'>
-                                    <p className='leading-normal text-base text-gray mb-6'>
+                                    <p className='leading-normal text-base text-gray mb-6' data-content>
                                         <strong className='montserrat-font'>PCI-DSS, SOC 2, GDPR, and more</strong>
                                         <br />
                                         Cyscale offers a wide range of benchmarks and frameworks, including: CIS,
@@ -245,7 +284,7 @@ const NISTCompliance = ({ location }) => {
                                     </p>
                                 </div>
                                 <div className='col-span-12 lg:col-span-6'>
-                                    <p className='leading-normal text-base text-gray mb-6 font-hind'>
+                                    <p className='leading-normal text-base text-gray mb-6 font-hind' data-content>
                                         <strong className='montserrat-font'>Built-in compliance templates</strong>
                                         <br />
                                         You can either use policy templates as a basis for your custom policies, or
@@ -253,7 +292,7 @@ const NISTCompliance = ({ location }) => {
                                     </p>
                                 </div>
                                 <div className='col-span-12 lg:col-span-6'>
-                                    <p className='leading-normal text-base text-gray mb-6 font-hind'>
+                                    <p className='leading-normal text-base text-gray mb-6 font-hind' data-content>
                                         <strong className='montserrat-font'>
                                             500+ out-of-the-box security controls
                                         </strong>
@@ -271,10 +310,13 @@ const NISTCompliance = ({ location }) => {
                 <div className='md:pt-12 pb-12 md:pb-24'>
                     <div className='flex h-48 flex-col items-center'>
                         <img src={cloudIcon} alt='' />
-                        <h1 className='text-center px-2 mt-4 mb-2 font-montserrat font-bold font-hind text-lg lg:text-2xl'>
+                        <h1
+                            className='text-center px-2 mt-4 mb-2 font-montserrat font-bold font-hind text-lg lg:text-2xl'
+                            data-content
+                        >
                             NIST COMPLIANCE AND CLOUD SECURITY
                         </h1>
-                        <p className='font-hind text-base sm:text-lg lg:text-xl'>
+                        <p className='font-hind text-base sm:text-lg lg:text-xl' data-content>
                             Start seeing value & saving money in minutes
                         </p>
                         <div className='mt-10 w-auto inline-block'>

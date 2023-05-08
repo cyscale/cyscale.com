@@ -52,16 +52,32 @@ const ContactUs = ({ location }) => {
             <Helmet>
                 <script charset='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js'></script>
             </Helmet>
+            <div className='hidden' data-template-key>
+                hardcoded-pages
+            </div>
+            <div className='hidden' data-permalink>
+                /contact-us
+            </div>
+            <div className='hidden' data-title>
+                Contact us - Cyscale
+            </div>
+            <div className='hidden' data-description>
+                We are always happy to assist with more information about us or our product which covers cloud security,
+                kubernetes security and hybrid multi-cloud environments.
+            </div>
             <div className='bg-lightGreyEEE'>
                 <Container>
                     <Section>
                         <Row>
                             <div className='col-span-12 lg:col-span-6 order-2 lg:order-1'>
                                 <div className='mt-16 pt-12 lg:pt-24 max-w-lg mx-auto lg:mx-0 bg-pricing'>
-                                    <h1 className='font-semibold font-montserrat text-4xl lg:text-6xl text-blue mb-12 lg:mb-32 hidden lg:block'>
+                                    <h1
+                                        className='font-semibold font-montserrat text-4xl lg:text-6xl text-blue mb-12 lg:mb-32 hidden lg:block'
+                                        data-content
+                                    >
                                         Contact
                                     </h1>
-                                    <p className='leading-normal text-gray font-bold mb-8'>
+                                    <p className='leading-normal text-gray font-bold mb-8' data-content>
                                         For support, email us at{' '}
                                         <a
                                             href='mailto:support@cyscale.com'
@@ -83,10 +99,13 @@ const ContactUs = ({ location }) => {
                                     {showFormMessage && (
                                         <div>
                                             {' '}
-                                            <h2 className='font-semibold text-4xl lg:text-2xl leading-normal text-primary mb-1'>
+                                            <h2
+                                                className='font-semibold text-4xl lg:text-2xl leading-normal text-primary mb-1'
+                                                data-content
+                                            >
                                                 How can we help you?
                                             </h2>
-                                            <p className='text-base text-gray leading-normal mt-4 mb-4'>
+                                            <p className='text-base text-gray leading-normal mt-4 mb-4' data-content>
                                                 We are always happy to assist with more information about us or our
                                                 product. Just fill out the form below and we will get back to you.{' '}
                                             </p>

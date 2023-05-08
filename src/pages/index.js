@@ -233,16 +233,35 @@ const HomePage = ({ location }) => {
             title='Robust Cloud Security Platform - Cyscale'
             description='Map all your cloud assets across providers in under 5 mins. Optimize costs, ensure cloud security, and prove compliance with the scalable Cyscale CSPM.'
         >
+            <div className='hidden' data-template-key>
+                hardcoded-pages
+            </div>
+            <div className='hidden' data-permalink>
+                /
+            </div>
+            <div className='hidden' data-title>
+                Robust Cloud Security Platform - Cyscale
+            </div>
+            <div className='hidden' data-description>
+                Map all your cloud assets across providers in under 5 mins. Optimize costs, ensure cloud security, and
+                prove compliance with the scalable Cyscale CSPM.
+            </div>
             <div className='pt-8' css={heroBackground}>
                 <Container>
                     <div className='py-16 md:py-24 lg:pt-24 lg:pb-36'>
                         <Row>
                             <div className='col-span-12 lg:col-span-6 order-last lg:order-first'>
                                 <div className='lg:mt-16 pt-4 max-w-xl mx-auto lg:mx-0'>
-                                    <h1 className='text-left text-blue text-4xl lg:text-5xl leading-normal lg:leading-normal mb-8 font-montserrat'>
-                                        Leverage the Cloud<strong> with Confidence</strong>
+                                    <h1
+                                        className='text-left text-blue text-4xl lg:text-5xl leading-normal lg:leading-normal mb-8 font-montserrat'
+                                        data-content
+                                    >
+                                        Leverage the Cloud<strong data-content> with Confidence</strong>
                                     </h1>
-                                    <p className='text-left text-base lg:text-lg mb-8 leading-relaxed font-hind'>
+                                    <p
+                                        className='text-left text-base lg:text-lg mb-8 leading-relaxed font-hind'
+                                        data-content
+                                    >
                                         Cyscale automates cloud security analysis helping you identify and reduce risk
                                         from misconfigurations, vulnerabilities, improper access control, and data
                                         exposure.
@@ -282,12 +301,13 @@ const HomePage = ({ location }) => {
                                 font-size: 2rem;
                                 line-height: 2.5rem;
                             `}
+                            data-content
                         >
                             Stay ahead of cloud threats, optimize risk analysis,
                             <br className='hidden lg:block' />
                             <spam className='lg:hidden'>&nbsp;</spam>and ensure compliance with industry regulations
                         </h2>
-                        <p className='font-hind text-base mt-12 lg:ml-5' css={sectionTextColor}>
+                        <p className='font-hind text-base mt-12 lg:ml-5' css={sectionTextColor} data-content>
                             Cybersecurity specialists across industries rely on Cyscale to eliminate cloud security
                             blindspots, understand the attack surface in their cloud environments and prevent data loss.
                             We help you see through application and cloud infrastructure layers and scale your efforts
@@ -363,12 +383,13 @@ const HomePage = ({ location }) => {
                                 <h2
                                     className='font-montserrat text-blue font-bold mt-2 hover:underline'
                                     css={titleSection}
+                                    data-content
                                 >
                                     Smart Fintech uses Cyscale to gain IAM visibility and ensure cloud security and
                                     compliance
                                 </h2>
                             </Link>
-                            <p className='mt-3 text-base font-hind font-normal'>
+                            <p className='mt-3 text-base font-hind font-normal' data-content>
                                 “The platform helps me with IAM visibility a lot: I can understand who has access and
                                 why. When a person leaves the company, I can detect if their permissions remain hanging.
                                 ”
@@ -402,17 +423,19 @@ const HomePage = ({ location }) => {
                 <Container>
                     <div className='grid grid-cols-12 gap-x-5'>
                         <div className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 max-w-xl lg:max-w-lg'>
-                            <p className='font-montserrat text-base font-bold text-white'>USE CASE</p>
-                            <h2 className='font-montserrat font-bold text-white mt-4' css={titleSection}>
+                            <p className='font-montserrat text-base font-bold text-white' data-content>
+                                USE CASE
+                            </p>
+                            <h2 className='font-montserrat font-bold text-white mt-4' css={titleSection} data-content>
                                 Get contextual insights
                             </h2>
-                            <p className='mt-4 text-white text-base font-hind font-normal'>
+                            <p className='mt-4 text-white text-base font-hind font-normal' data-content>
                                 An unpatched virtual machine running an app with the devastating Log4j vulnerability is
                                 close to harmless in a private network. However, a server running the same vulnerable
                                 cloud app while being exposed to the internet, and having read or write access to a
                                 production datastore presents a totally different risk.
                             </p>
-                            <p className='mt-4 text-white text-base font-hind font-normal'>
+                            <p className='mt-4 text-white text-base font-hind font-normal' data-content>
                                 Understanding context allows you to immediately see what needs fixing and what can wait,
                                 and thus prioritize tasks on your cloud security roadmap.
                             </p>
@@ -427,13 +450,21 @@ const HomePage = ({ location }) => {
                 <div className='container max-w-7xl m-auto px-4 lg:px-8'>
                     <div className='grid grid-cols-12 gap-x-5'>
                         <div className='col-span-12 lg:col-span-8 mx-auto lg:mx-0 max-w-2xl'>
-                            <p className='text-left uppercase font-montserrat font-bold' css={sectionSubtitleColor}>
+                            <p
+                                className='text-left uppercase font-montserrat font-bold'
+                                css={sectionSubtitleColor}
+                                data-content
+                            >
                                 CYSCALE CLOUD SECURITY PLATFORM
                             </p>
-                            <h2 className='font-montserrat text-blue font-bold mt-3' css={titleSection}>
+                            <h2 className='font-montserrat text-blue font-bold mt-3' css={titleSection} data-content>
                                 Your ally for a solid security program
                             </h2>
-                            <p className='text-base font-hind font-normal max-w-2xl mt-3' css={sectionTextColor}>
+                            <p
+                                className='text-base font-hind font-normal max-w-2xl mt-3'
+                                css={sectionTextColor}
+                                data-content
+                            >
                                 Cyscale is an <strong>agentless</strong> cloud-native application protection platform
                                 (CNAPP) that helps
                                 <br className='hidden sm:block' /> your organization protect against data breaches and
@@ -529,10 +560,10 @@ const HomePage = ({ location }) => {
             <Container className='my-16 lg:my-32'>
                 <div className='grid grid-cols-12 gap-x-5'>
                     <div className='col-span-12 lg:col-span-8 mx-auto lg:mx-0 max-w-2xl'>
-                        <p className='uppercase font-montserrat font-bold' css={sectionSubtitleColor}>
+                        <p className='uppercase font-montserrat font-bold' css={sectionSubtitleColor} data-content>
                             CYSCALE KEY FEATURES
                         </p>
-                        <h2 className='font-montserrat text-blue font-bold mt-3' css={titleSection}>
+                        <h2 className='font-montserrat text-blue font-bold mt-3' css={titleSection} data-content>
                             Protect your business with Cyscale
                         </h2>
                     </div>
@@ -544,10 +575,10 @@ const HomePage = ({ location }) => {
                             className='mt-6 lg:mt-0 rounded-xl pt-12 px-9 max-w-xl lg:max-w-2xl mx-auto lg:mr-0 lg:ml-auto relative'
                             css={featureStyle}
                         >
-                            <h3 className='font-montserrat font-bold' css={featureTitle}>
+                            <h3 className='font-montserrat font-bold' css={featureTitle} data-content>
                                 Complete Cloud Security Platform <br /> with Powerful Analytics & Dashboards
                             </h3>
-                            <p className='font-hind text-base font-normal mt-4'>
+                            <p className='font-hind text-base font-normal mt-4' data-content>
                                 Cloud security posture management with identity and data centric views.
                             </p>
                             <GatsbyImage
@@ -562,11 +593,13 @@ const HomePage = ({ location }) => {
                             className='mt-6 lg:mt-0 rounded-xl pt-12 max-w-xl lg:max-w-2xl mx-auto lg:mr-0 lg:ml-auto relative mb-20 lg:mb-0'
                             css={featureStyle}
                         >
-                            <h3 className='font-montserrat font-bold px-10' css={featureTitle}>
+                            <h3 className='font-montserrat font-bold px-10' css={featureTitle} data-content>
                                 Cloud Asset <br />
                                 Inventory
                             </h3>
-                            <p className='font-hind text-base font-normal mt-4 px-10'>Unlimited protected assets.</p>
+                            <p className='font-hind text-base font-normal mt-4 px-10' data-content>
+                                Unlimited protected assets.
+                            </p>
                             <GatsbyImage
                                 image={data.assetInventory.childImageSharp.gatsbyImageData}
                                 alt='Asset inventory'
@@ -590,10 +623,10 @@ const HomePage = ({ location }) => {
                             className='mt-6 lg:mt-0 rounded-xl pt-12 px-12 max-w-xl lg:max-w-2xl mx-auto lg:mr-0 lg:ml-auto relative'
                             css={featureStyle}
                         >
-                            <h3 className='font-montserrat font-bold' css={featureTitle}>
+                            <h3 className='font-montserrat font-bold' css={featureTitle} data-content>
                                 Integrations
                             </h3>
-                            <p className='font-hind text-base font-normal mt-4'>
+                            <p className='font-hind text-base font-normal mt-4' data-content>
                                 Amazon Web Services, Google Cloud, Microsoft Azure, Alibaba Cloud, Okta, Github and
                                 more...
                             </p>
@@ -619,7 +652,7 @@ const HomePage = ({ location }) => {
                                 }
                             `}
                         >
-                            <h3 className='font-montserrat font-bold text-white' css={featureTitle}>
+                            <h3 className='font-montserrat font-bold text-white' css={featureTitle} data-content>
                                 Contextual misconfiguration analysis
                             </h3>
                             <GatsbyImage
@@ -643,10 +676,12 @@ const HomePage = ({ location }) => {
                                 );
                             `}
                         >
-                            <h3 className='font-montserrat font-bold text-white' css={featureTitle}>
+                            <h3 className='font-montserrat font-bold text-white' css={featureTitle} data-content>
                                 Alerts and remediation instructions
                             </h3>
-                            <p className='text-base text-white mt-1 font-hind'>to detect cloud security drifts</p>
+                            <p className='text-base text-white mt-1 font-hind' data-content>
+                                to detect cloud security drifts
+                            </p>
                         </div>
                     </div>
                     <div className='col-span-12 lg:col-span-6'>
@@ -663,7 +698,7 @@ const HomePage = ({ location }) => {
                                 );
                             `}
                         >
-                            <h3 className='font-montserrat font-bold text-white px-8' css={featureTitle}>
+                            <h3 className='font-montserrat font-bold text-white px-8' css={featureTitle} data-content>
                                 Built-in frameworks for ISO27001, <br /> PCI-DSS, SOC2, GDPR, and others
                             </h3>
                             <GatsbyImage
@@ -679,10 +714,13 @@ const HomePage = ({ location }) => {
                 <div className='md:pt-12 pb-36 sm:pb-52'>
                     <div className='flex h-48 flex-col items-center'>
                         <img src={cloudIcon} alt='' />
-                        <h3 className='text-center text-lg lg:text-2xl px-2 mt-4 mb-2 font-montserrat font-bold'>
+                        <h3
+                            className='text-center text-lg lg:text-2xl px-2 mt-4 mb-2 font-montserrat font-bold'
+                            data-content
+                        >
                             Contextual security for the cloud-native stack
                         </h3>
-                        <p className='font-hind text-base sm:text-lg lg:text-xl'>
+                        <p className='font-hind text-base sm:text-lg lg:text-xl' data-content>
                             Start seeing value & saving money in minutes
                         </p>
                         <div className='mt-10 w-auto inline-block'>
@@ -703,13 +741,13 @@ const HomePage = ({ location }) => {
                     <div className='grid grid-cols-12 gap-x-5 mt-12'>
                         <div className='col-span-12 lg:col-span-4  mx-auto lg:mx-0 max-w-xl lg:max-w-lg'>
                             {' '}
-                            <p className='font-montserrat text-base font-bold' css={sectionSubtitleColor}>
+                            <p className='font-montserrat text-base font-bold' css={sectionSubtitleColor} data-content>
                                 LATEST ARTICLES
                             </p>{' '}
-                            <h2 className='font-montserrat text-blue font-bold mt-3' css={titleSection}>
+                            <h2 className='font-montserrat text-blue font-bold mt-3' css={titleSection} data-content>
                                 What we’re up to
                             </h2>
-                            <p className='text-base font-hind mt-5' css={sectionTextColor}>
+                            <p className='text-base font-hind mt-5' css={sectionTextColor} data-content>
                                 Cyscale is an agentless CNAPP solution that
                                 <br className='hidden lg:block' /> helps your organization map, secure and
                                 <br className='hidden lg:block' />
@@ -723,6 +761,7 @@ const HomePage = ({ location }) => {
                                         color: #0f26aa;
                                     }
                                 `}
+                                data-content
                             >
                                 Read more about cloud security
                             </Link>
@@ -752,10 +791,10 @@ const HomePage = ({ location }) => {
                 <Container>
                     <div className='grid grid-cols-12 gap-x-5'>
                         <div className='col-span-12 lg:col-span-8 mx-auto lg:mx-0 max-w-2xl'>
-                            <p className='uppercase font-montserrat font-bold' css={sectionSubtitleColor}>
+                            <p className='uppercase font-montserrat font-bold' css={sectionSubtitleColor} data-content>
                                 OUR BLOG
                             </p>
-                            <h2 className='font-montserrat text-white font-bold mt-3' css={titleSection}>
+                            <h2 className='font-montserrat text-white font-bold mt-3' css={titleSection} data-content>
                                 The most read articles
                             </h2>
                         </div>
@@ -823,13 +862,13 @@ const HomePage = ({ location }) => {
                 <Container className='my-16'>
                     <div className='grid grid-cols-12 lg:gap-x-2 xl:gap-x-0'>
                         <div className='col-span-12 lg:col-span-4 mx-auto lg:mx-0 max-w-xl lg:max-w-lg '>
-                            <p className='font-montserrat text-base font-bold' css={sectionSubtitleColor}>
+                            <p className='font-montserrat text-base font-bold' css={sectionSubtitleColor} data-content>
                                 GET IN TOUCH
                             </p>{' '}
                             <h2 className='font-montserrat text-blue font-bold mt-3' css={titleSection}>
                                 Request Demo
                             </h2>
-                            <p className='text-base font-hind mt-5' css={sectionTextColor}>
+                            <p className='text-base font-hind mt-5' css={sectionTextColor} data-content>
                                 We are happy to schedule a product demo with you.
                                 <br />
                                 Use the calendar to select an appropriate time slot.

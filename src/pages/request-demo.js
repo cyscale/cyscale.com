@@ -34,6 +34,18 @@ const ContactUs = ({ location }) => {
             title='Request Demo - Cyscale'
             description='We are happy to schedule a product demo with you.'
         >
+            <div className='hidden' data-template-key>
+                hardcoded-pages
+            </div>
+            <div className='hidden' data-permalink>
+                /request-demo
+            </div>
+            <div className='hidden' data-title>
+                Request Demo - Cyscale
+            </div>
+            <div className='hidden' data-description>
+                We are happy to schedule a product demo with you.
+            </div>
             <div className='bg-hero-campaigns-iam-security pb-8' css={heroHeight}>
                 <div className='container max-w-7xl m-auto px-4 lg:px-8 pt-24 lg:pt-32 xl:pt-16'>
                     <h1
@@ -41,11 +53,12 @@ const ContactUs = ({ location }) => {
                             'text-blue text-center text-3xl lg:text-5xl font-bold font-montserrat mt-12 sm:mt-20 lg:mt-0': true,
                             'mb-12': meetingBookSucceeded
                         })}
+                        data-content
                     >
                         Request Demo
                     </h1>
                     {!meetingBookSucceeded && (
-                        <p className='my-4 text-center font-medium text-sm lg:text-base font-montserrat'>
+                        <p className='my-4 text-center font-medium text-sm lg:text-base font-montserrat' data-content>
                             We are happy to schedule a product demo with you.
                             <br /> Use the calendar below to select an appropriate time slot.
                         </p>

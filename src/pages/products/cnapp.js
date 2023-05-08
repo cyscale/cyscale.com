@@ -79,6 +79,19 @@ const CNAPP = ({ location }) => {
             title='CNAPP: Cloud-Native Application Security and Compliance Solution - Cyscale'
             description='Protect your cloud-native applications with CNAPP. Ensure security and compliance with our all-in-one solution for multi-cloud environments. Start today!'
         >
+            <div className='hidden' data-template-key>
+                hardcoded-pages
+            </div>
+            <div className='hidden' data-permalink>
+                /products/cnapp
+            </div>
+            <div className='hidden' data-title>
+                CNAPP: Cloud-Native Application Security and Compliance Solution - Cyscale
+            </div>
+            <div className='hidden' data-description>
+                Protect your cloud-native applications with CNAPP. Ensure security and compliance with our all-in-one
+                solution for multi-cloud environments. Start today!
+            </div>
             <div className='bg-cnapp pt-8'>
                 <Container>
                     <div className='py-16 md:py-24 lg:pt-24 lg:pb-16'>
@@ -88,13 +101,20 @@ const CNAPP = ({ location }) => {
                                     <h1
                                         className='text-left text-blue leading-normal lg:leading-normal mb-16 font-montserrat font-bold'
                                         css={heroTitleFontSize}
+                                        data-content
                                     >
                                         CNAPP: Robust <br /> Cloud-Native Application Protection Platform
                                     </h1>
-                                    <p className='text-left text-base lg:text-lg mb-8 leading-relaxed font-bold font-hind'>
+                                    <p
+                                        className='text-left text-base lg:text-lg mb-8 leading-relaxed font-bold font-hind'
+                                        data-content
+                                    >
                                         Achieve true cloud-native transformation with Cyscale.
                                     </p>
-                                    <p className='text-left text-base lg:text-lg mb-2 leading-relaxed font-hind'>
+                                    <p
+                                        className='text-left text-base lg:text-lg mb-2 leading-relaxed font-hind'
+                                        data-content
+                                    >
                                         Get maximum cloud native security with our ultimate CNAPP solution. Protect your
                                         entire stack, VMs (virtual machines), containers, and serverless, on any cloud
                                         environment and confidently accelerate innovation.
@@ -121,6 +141,7 @@ const CNAPP = ({ location }) => {
                                 <h2
                                     className='font-bold text-primary border-title-partly font-montserrat lg:mt-3'
                                     css={titleSectionFont}
+                                    data-content
                                 >
                                     Unlock the power of our CNAPP
                                     <br className='hidden sm:block lg:hidden' /> platform with its{' '}
@@ -148,8 +169,10 @@ const CNAPP = ({ location }) => {
                     >
                         <div>
                             <img src={CSPMIcon} alt='' />
-                            <h2 className='font-montserrat text-base font-bold text-blue mt-3'>CSPM</h2>
-                            <p className='text-sm mt-4 text-gray font-hind'>
+                            <h2 className='font-montserrat text-base font-bold text-blue mt-3' data-content>
+                                CSPM
+                            </h2>
+                            <p className='text-sm mt-4 text-gray font-hind' data-content>
                                 Gain continuous visibility and comprehensive Cloud Security Posture Management over
                                 multi-cloud environments to identify misconfigurations, ultimately securing your cloud
                                 from data breaches and leaks. Scan, monitor, and remediate across AWS, Azure, Google
@@ -167,8 +190,10 @@ const CNAPP = ({ location }) => {
                     >
                         <div>
                             <img src={VisibilityIcon} alt='' />
-                            <h2 className='font-montserrat text-base font-bold text-blue mt-3'>Contextual Analysis</h2>
-                            <p className='text-sm mt-4 text-gray font-hind'>
+                            <h2 className='font-montserrat text-base font-bold text-blue mt-3' data-content>
+                                Contextual Analysis
+                            </h2>
+                            <p className='text-sm mt-4 text-gray font-hind' data-content>
                                 Cloud asset misconfigurations are analyzed in context, automatically correlating issues
                                 that affect compute, data storage and identity assets, determining their real impact on
                                 data security and helping you prioritize remediation efforts in the most effective way.
@@ -185,10 +210,10 @@ const CNAPP = ({ location }) => {
                     >
                         <div>
                             <img src={ComplianceIcon} alt='' height={40} width={40} />
-                            <h2 className='font-montserrat text-base font-bold text-blue mt-3'>
+                            <h2 className='font-montserrat text-base font-bold text-blue mt-3' data-content>
                                 Compliance and Governance
                             </h2>
-                            <p className='text-sm mt-4 text-gray font-hind'>
+                            <p className='text-sm mt-4 text-gray font-hind' data-content>
                                 Enable your organization to adhere to industry and regulatory standards, such as
                                 PCI-DSS, HIPAA, SOC 2 and many others. Auditing and reporting capabilities will help
                                 with internal and external audits.
@@ -206,8 +231,10 @@ const CNAPP = ({ location }) => {
                         <div>
                             {' '}
                             <img src={DataSecurityIcon} alt='' />
-                            <h2 className='font-montserrat text-base font-bold text-blue mt-3'>Data Security</h2>
-                            <p className='text-sm mt-4 text-gray font-hind'>
+                            <h2 className='font-montserrat text-base font-bold text-blue mt-3' data-content>
+                                Data Security
+                            </h2>
+                            <p className='text-sm mt-4 text-gray font-hind' data-content>
                                 Keep track of your organization's security posture with Cyscale's inventory of cloud
                                 data stores and their contextual security analysis tools. Using these security tools,
                                 you can protect your most important data assets, avoid breaches and be prepared for
@@ -228,8 +255,10 @@ const CNAPP = ({ location }) => {
                         <div>
                             {' '}
                             <img src={CIEMIcon} alt='' />
-                            <h2 className='font-montserrat text-base font-bold text-blue mt-3'>CIEM</h2>
-                            <p className='text-sm mt-4 text-gray font-hind'>
+                            <h2 className='font-montserrat text-base font-bold text-blue mt-3' data-content>
+                                CIEM
+                            </h2>
+                            <p className='text-sm mt-4 text-gray font-hind' data-content>
                                 Easily perform access reviews and keep track of users, access levels, effective
                                 permissions, as well as IAM asset misconfigurations. Understand identities and
                                 permissions even in the most complex multi-cloud environments with Cloud Infrastructure
@@ -246,8 +275,10 @@ const CNAPP = ({ location }) => {
                     >
                         <div>
                             <img src={CWPPIcon} alt='' />
-                            <h2 className='font-montserrat text-base font-bold text-blue mt-3'>CWPP</h2>
-                            <p className='text-sm mt-4 text-gray font-hind'>
+                            <h2 className='font-montserrat text-base font-bold text-blue mt-3' data-content>
+                                CWPP
+                            </h2>
+                            <p className='text-sm mt-4 text-gray font-hind' data-content>
                                 Cloud Workload Protection Platforms perform a contextual analysis of cloud
                                 misconfigurations and vulnerabilities in instances, images, containers and serverless
                                 functions and help security teams guard your entire application stack on any cloud
@@ -261,8 +292,10 @@ const CNAPP = ({ location }) => {
                     >
                         <div>
                             <img src={ContainerSecurityIcon} alt='' height={40} width={40} />
-                            <h2 className='font-montserrat text-base font-bold text-blue mt-3'>Container Security</h2>
-                            <p className='text-sm mt-4 text-gray font-hind'>
+                            <h2 className='font-montserrat text-base font-bold text-blue mt-3' data-content>
+                                Container Security
+                            </h2>
+                            <p className='text-sm mt-4 text-gray font-hind' data-content>
                                 Get visibility over container-based apps and corresponding cloud infrastructure. Know
                                 where containers are running in the cloud, complete with a contextual analysis of
                                 vulnerabilities, misconfigurations, networking and access.
@@ -275,8 +308,10 @@ const CNAPP = ({ location }) => {
                     >
                         <div>
                             <img src={KubernetesIcon} alt='' height={40} width={40} />
-                            <h2 className='font-montserrat text-base font-bold text-blue mt-3'>Kubernetes Security</h2>
-                            <p className='text-sm mt-4 text-gray font-hind'>
+                            <h2 className='font-montserrat text-base font-bold text-blue mt-3' data-content>
+                                Kubernetes Security
+                            </h2>
+                            <p className='text-sm mt-4 text-gray font-hind' data-content>
                                 A complete inventory for your Kubernetes clusters, either managed or unmanaged, and
                                 continuous scanning for vulnerabilities in the cluster components and container images
                                 that are used.
@@ -307,13 +342,14 @@ const CNAPP = ({ location }) => {
                                     <h2
                                         className=' text-primary border-title-partly font-montserrat lg:mt-3'
                                         css={titleSectionFont}
+                                        data-content
                                     >
                                         <span className='font-bold'>Real-time Cloud Security</span>
                                         <br className='block lg:hidden xl:block' /> with Contextual Analysis{' '}
                                     </h2>
                                 </div>
                                 <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-lg'>
-                                    <p className='text-base text-gray pt-12 pb-2 font-hind'>
+                                    <p className='text-base text-gray pt-12 pb-2 font-hind' data-content>
                                         Our CNAPP (Cloud-Native Application Protection Platform) security solution is
                                         designed to give you complete visibility and control over your cloud
                                         environment. By analyzing cloud configuration, workload, and identity, it
@@ -321,7 +357,7 @@ const CNAPP = ({ location }) => {
                                         rather than overwhelming you with numerous alerts for vulnerabilities,
                                         permissions, and exposed services.
                                     </p>
-                                    <p className='text-base text-gray py-2 font-hind'>
+                                    <p className='text-base text-gray py-2 font-hind' data-content>
                                         With our security platform, you can prioritize and address the most significant
                                         security risks, ensuring application security and the integrity of your cloud
                                         infrastructure.
@@ -348,6 +384,7 @@ const CNAPP = ({ location }) => {
                             <h2
                                 className='font-semibold font-montserrat text-blue lg:max-w-md null sectionTitle new-line max-w-xl mx-auto lg:mx-0'
                                 css={titleSectionFont}
+                                data-content
                             >
                                 Align teams & tasks
                                 <span className='block w-full font-normal'>
@@ -355,7 +392,10 @@ const CNAPP = ({ location }) => {
                                     <br className='block lg:hidden' /> from a single dashboard
                                 </span>
                             </h2>
-                            <p className='leading-normal text-base max-w-xl mx-auto my-12 block lg:hidden font-hind'>
+                            <p
+                                className='leading-normal text-base max-w-xl mx-auto my-12 block lg:hidden font-hind'
+                                data-content
+                            >
                                 Consolidate all the key elements of cloud compliance in an easy-to-use dashboard.
                                 Replace cloud portals with our Cloud Platform - the hub for a sweeping overview of your{' '}
                                 <br className='hidden lg:block' />
@@ -367,11 +407,17 @@ const CNAPP = ({ location }) => {
                                 </a>
                                 .
                             </p>
-                            <p className='max-w-xl text-base mx-auto leading-normal mb-12 block lg:hidden font-hind'>
+                            <p
+                                className='max-w-xl text-base mx-auto leading-normal mb-12 block lg:hidden font-hind'
+                                data-content
+                            >
                                 Implement, manage, and monitor security policies and controls for single cloud and
                                 multi-cloud environments through reliable automation.
                             </p>
-                            <p className='leading-normal text-base max-w-xl mx-auto block lg:hidden font-hind'>
+                            <p
+                                className='leading-normal text-base max-w-xl mx-auto block lg:hidden font-hind'
+                                data-content
+                            >
                                 Demonstrate compliance for multiple projects with read-only dashboard access or reports
                                 (CSV, PDF) you can share with internal stakeholders, prospects, or customers.
                             </p>
@@ -382,7 +428,10 @@ const CNAPP = ({ location }) => {
                             />
                         </div>
                         <div className='col-span-3 hidden lg:block'>
-                            <p className='leading-normal text-base max-w-xl lg:max-w-2xl mx-auto mb-24 font-hind'>
+                            <p
+                                className='leading-normal text-base max-w-xl lg:max-w-2xl mx-auto mb-24 font-hind'
+                                data-content
+                            >
                                 Consolidate all the key elements of cloud compliance in an easy-to-use dashboard.
                                 <br className='hidden lg:block' />
                                 Replace cloud portals with our Cloud Platform - the hub for a sweeping overview of your{' '}
@@ -395,12 +444,18 @@ const CNAPP = ({ location }) => {
                                 </a>
                                 .
                             </p>
-                            <p className='max-w-xl lg:max-w-2xl text-base mx-auto leading-normal mb-24 font-hind'>
+                            <p
+                                className='max-w-xl lg:max-w-2xl text-base mx-auto leading-normal mb-24 font-hind'
+                                data-content
+                            >
                                 Implement, manage, and monitor security policies and controls for single cloud
                                 <br className='hidden lg:block' />
                                 and multi-cloud environments through reliable automation.
                             </p>
-                            <p className='max-w-xl lg:max-w-2xl text-base mx-auto leading-normal font-hind'>
+                            <p
+                                className='max-w-xl lg:max-w-2xl text-base mx-auto leading-normal font-hind'
+                                data-content
+                            >
                                 Demonstrate compliance for multiple projects with read-only dashboard access or
                                 <br className='hidden lg:block' /> reports (CSV, PDF) you can share with internal
                                 stakeholders, prospects, or customers.
@@ -417,6 +472,7 @@ const CNAPP = ({ location }) => {
                             <h2
                                 className='font-bold text-primary leading-normal border-title-partly montserrat-font'
                                 css={titleSectionFont}
+                                data-content
                             >
                                 100% Confidence with
                                 <br className='block lg:hidden' /> your Cloud Compliance
@@ -425,7 +481,7 @@ const CNAPP = ({ location }) => {
                         <div className='max-w-xl mx-auto lg:mx-0 lg:max-w-3xl'>
                             <Row className='lg:gap-20'>
                                 <div className='col-span-12 lg:col-span-6'>
-                                    <p className='leading-normal text-base text-gray mb-6 font-hind'>
+                                    <p className='leading-normal text-base text-gray mb-6 font-hind' data-content>
                                         <strong className='montserrat-font'>Meet industry regulations</strong>
                                         <br />
                                         Protect sensitive data and comply with strict industry regulations in your
@@ -434,7 +490,7 @@ const CNAPP = ({ location }) => {
                                     </p>
                                 </div>
                                 <div className='col-span-12 lg:col-span-6'>
-                                    <p className='leading-normal text-base text-gray mb-6 font-hind'>
+                                    <p className='leading-normal text-base text-gray mb-6 font-hind' data-content>
                                         <strong className='montserrat-font'>PCI-DSS, SOC 2, GDPR, and more</strong>
                                         <br />
                                         Cyscale offers a wide range of benchmarks and frameworks, including: CIS,
@@ -443,7 +499,7 @@ const CNAPP = ({ location }) => {
                                     </p>
                                 </div>
                                 <div className='col-span-12 lg:col-span-6'>
-                                    <p className='leading-normal text-base text-gray mb-6 font-hind'>
+                                    <p className='leading-normal text-base text-gray mb-6 font-hind' data-content>
                                         <strong className='montserrat-font'>Built-in compliance templates</strong>
                                         <br />
                                         You can either use policy templates as a basis for your custom policies, or
@@ -451,7 +507,7 @@ const CNAPP = ({ location }) => {
                                     </p>
                                 </div>
                                 <div className='col-span-12 lg:col-span-6'>
-                                    <p className='leading-normal text-base text-gray mb-6 font-hind'>
+                                    <p className='leading-normal text-base text-gray mb-6 font-hind' data-content>
                                         <strong className='montserrat-font'>
                                             500+ out-of-the-box security controls
                                         </strong>
@@ -474,10 +530,13 @@ const CNAPP = ({ location }) => {
                     <div className='pt-20    md:pt-28 pb-32'>
                         <div className='flex h-48 flex-col items-center'>
                             <img src={cloudIcon} alt='' />
-                            <h2 className='text-center px-2 mt-4 mb-2 font-montserrat font-semibold text-white text-lg lg:text-2xl'>
+                            <h2
+                                className='text-center px-2 mt-4 mb-2 font-montserrat font-semibold text-white text-lg lg:text-2xl'
+                                data-content
+                            >
                                 Elevate your cloud security game with CNAPP{' '}
                             </h2>
-                            <p className='text-white font-hind text-base sm:text-lg lg:text-xl'>
+                            <p className='text-white font-hind text-base sm:text-lg lg:text-xl' data-content>
                                 Start seeing value & saving money in minutes
                             </p>
                             <GatsbyLink

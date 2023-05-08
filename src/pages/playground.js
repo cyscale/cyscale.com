@@ -28,6 +28,18 @@ const Playground = ({ location }) => {
             <Helmet>
                 <script charset='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js'></script>
             </Helmet>
+            <div className='hidden' data-template-key>
+                hardcoded-pages
+            </div>
+            <div className='hidden' data-permalink>
+                /playground
+            </div>
+            <div className='hidden' data-title>
+                Playground Account Access - Cyscale
+            </div>
+            <div className='hidden' data-description>
+                Get access to a playground account, fully featured and populated with data.
+            </div>
             <div className='bg-hero-campaigns-iam-security' css={heroHeight}>
                 <div className='py-28 lg:py-32'>
                     <div className='container max-w-7xl m-auto px-8'>
@@ -36,29 +48,44 @@ const Playground = ({ location }) => {
                                 <div className='col-span-12 lg:col-span-6 '>
                                     {
                                         <div className='max-w-lg lg:max-w-xl mx-auto lg:mx-0'>
-                                            <h2 className='text-3xl lg:text-5xl text-left text-blue font-bold mt-8 lg:mt-0 font-montserrat'>
+                                            <h2
+                                                className='text-3xl lg:text-5xl text-left text-blue font-bold mt-8 lg:mt-0 font-montserrat'
+                                                data-content
+                                            >
                                                 Get access to the Playground Account
                                             </h2>
-                                            <p className='text-left text-base font-medium max-w-md lg:max-w-xl mt-8 font-montserrat'>
+                                            <p
+                                                className='text-left text-base font-medium max-w-md lg:max-w-xl mt-8 font-montserrat'
+                                                data-content
+                                            >
                                                 We are happy to send you the connection details for the Cyscale
                                                 Playground Account. Fill out the form and we will be in touch shortly.
                                             </p>
                                             <p className='text-left text-base font-medium max-w-md font-montserrat'></p>{' '}
                                             <div>
-                                                <p className='text-base font-bold max-w-md font-montserrat mt-8'>
+                                                <p
+                                                    className='text-base font-bold max-w-md font-montserrat mt-8'
+                                                    data-content
+                                                >
                                                     The Playground Account is fully featured:{' '}
                                                 </p>
                                                 <div className='flex mt-2'>
                                                     <img src={arrowRight} alt='' />{' '}
-                                                    <p className='ml-2 text-sm'>Asset inventory</p>
+                                                    <p className='ml-2 text-sm' data-content>
+                                                        Asset inventory
+                                                    </p>
                                                 </div>
                                                 <div className='flex mt-2'>
                                                     <img src={arrowRight} alt='' />{' '}
-                                                    <p className='ml-2 text-sm'>Security assessment</p>
+                                                    <p className='ml-2 text-sm' data-content>
+                                                        Security assessment
+                                                    </p>
                                                 </div>
                                                 <div className='flex mt-2'>
                                                     <img src={arrowRight} alt='' />{' '}
-                                                    <p className='ml-2 text-sm'>Compliance score</p>
+                                                    <p className='ml-2 text-sm' data-content>
+                                                        Compliance score
+                                                    </p>
                                                 </div>
                                                 <div className='flex mt-2'>
                                                     <p
@@ -66,6 +93,7 @@ const Playground = ({ location }) => {
                                                         css={css`
                                                             margin-left: 1.6rem;
                                                         `}
+                                                        data-content
                                                     >
                                                         and many more...
                                                     </p>

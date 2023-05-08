@@ -55,6 +55,19 @@ const Sitemap = ({ location }) => {
             title='Sitemap - Cyscale'
             description='Our sitemap helps you easily access our diverse range of resources, including product use cases, thought leadership content, and valuable insights on cloud data security.'
         >
+            <div className='hidden' data-template-key>
+                hardcoded-pages
+            </div>
+            <div className='hidden' data-permalink>
+                /sitemap
+            </div>
+            <div className='hidden' data-title>
+                Sitemap - Cyscale
+            </div>
+            <div className='hidden' data-description>
+                Our sitemap helps you easily access our diverse range of resources, including product use cases, thought
+                leadership content, and valuable insights on cloud data security.
+            </div>
             <div css={heroBackground} className='pt-8'>
                 <div className='py-16 lg:pt-24 lg:pb-16'>
                     <Container>
@@ -66,10 +79,14 @@ const Sitemap = ({ location }) => {
                                         css={css`
                                             font-size: 3.25rem;
                                         `}
+                                        data-content
                                     >
                                         Sitemap
                                     </h1>
-                                    <p className='text-left text-base lg:text-lg mb-8 leading-relaxed font-hind'>
+                                    <p
+                                        className='text-left text-base lg:text-lg mb-8 leading-relaxed font-hind'
+                                        data-content
+                                    >
                                         Our sitemap helps you easily access our diverse range of resources, including
                                         product use cases, thought leadership content, and valuable insights on cloud
                                         data security.

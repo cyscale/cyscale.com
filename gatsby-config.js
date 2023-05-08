@@ -1,3 +1,139 @@
+const striptags = require('striptags');
+const MarkdownIt = require('markdown-it');
+
+const myQuery = `
+    query {
+      searches: allMarkdownRemark {
+        edges {
+          node {
+            id
+            frontmatter {
+              templateKey
+              title
+              description
+              permalink
+              categoryPath
+              path
+              sections
+              hero {
+                heroBackground
+                heroImageAlt
+                heroTitle
+                customComponents
+                heroMarkdown
+              }
+              textImageRow {
+                rowStartGridCols
+                rowEndGridCols
+                rowImagePosition
+                rowAlt
+                rowSubtitle
+                customComponents
+                rowMarkdown
+                rowBackground
+              }
+              secondTextImageRow {
+                rowStartGridCols
+                rowEndGridCols
+                rowImagePosition
+                rowAlt
+                rowSubtitle
+                customComponents
+                rowMarkdown
+                rowBackground
+              }
+              featuresSection {
+                featureTitle
+                featureText
+              }
+              ctaSection {
+                ctaMarkdown
+              }
+            }
+            rawMarkdownBody
+          }
+        }
+      }
+    }
+`;
+
+const queries = [
+    {
+        query: myQuery,
+        queryVariables: {},
+        transformer: ({ data }) => {
+            const CMSPages = data.searches.edges
+                .filter(({ node }) => node.frontmatter.templateKey === 'pages')
+                .map(({ node }) => {
+                    let content = '';
+
+                    node.frontmatter.sections.forEach((item) => {
+                        if (item === 'hero') {
+                            content += node.frontmatter.hero.heroTitle;
+                            content += node.frontmatter.hero.heroMarkdown;
+                        }
+
+                        if (item === 'textImageRow') {
+                            node.frontmatter.textImageRow.forEach((textImageRow) => {
+                                content += textImageRow.rowSubtitle;
+                            });
+                        }
+
+                        if (item === 'secondTextImageRow') {
+                            node.frontmatter.secondTextImageRow.forEach((secondTextImageRow) => {
+                                content += secondTextImageRow.rowSubtitle;
+                                content += secondTextImageRow.rowMarkdown;
+                            });
+                        }
+
+                        if (item === 'featuresSection') {
+                            node.frontmatter.featuresSection.forEach((featuresSection) => {
+                                content += featuresSection.featureTitle;
+                                content += featuresSection.featureText;
+                            });
+                        }
+
+                        if (item === 'ctaSection') {
+                            content += node.frontmatter.ctaSection.ctaMarkdown;
+                        }
+                    });
+
+                    return {
+                        objectID: node.id,
+                        title: node.frontmatter.title,
+                        templateKey: node.frontmatter.templateKey,
+                        description: node.frontmatter.description,
+                        permalink: `/${node.frontmatter.categoryPath}/${node.frontmatter.path}`,
+                        content: striptags(new MarkdownIt().render(striptags(content))),
+                        category: 'website'
+                    };
+                });
+
+            const blogs = data.searches.edges
+                .filter(
+                    ({ node }) =>
+                        node.frontmatter.templateKey === 'blog-post' ||
+                        node.frontmatter.templateKey === 'hardcoded-pages'
+                )
+                .map(({ node }) => {
+                    return {
+                        objectID: node.id,
+                        title: node.frontmatter.title,
+                        templateKey: node.frontmatter.templateKey,
+                        description: node.frontmatter.description,
+                        permalink:
+                            node.frontmatter.templateKey === 'blog-post'
+                                ? /blog/ + node.frontmatter.permalink
+                                : node.frontmatter.permalink,
+                        content: striptags(new MarkdownIt().render(striptags(node.rawMarkdownBody))),
+                        category: node.frontmatter.templateKey === 'blog-post' ? 'blog' : 'website'
+                    };
+                });
+            return [...blogs, ...CMSPages];
+        }
+    }
+];
+
 module.exports = {
     siteMetadata: {
         title: 'Cyscale',
@@ -138,6 +274,20 @@ module.exports = {
             resolve: 'gatsby-plugin-netlify-cms',
             options: {
                 modulePath: `${__dirname}/src/common/netlify.js`
+            }
+        },
+        {
+            resolve: `gatsby-plugin-algolia`,
+            options: {
+                appId: `appId`,
+                apiKey: `apiKey`,
+                indexName: `indexName`,
+                queries,
+                chunkSize: 10000,
+                concurrentQueries: true,
+                dryRun: false,
+                continueOnFailure: false,
+                algoliasearchOptions: undefined
             }
         }
     ]

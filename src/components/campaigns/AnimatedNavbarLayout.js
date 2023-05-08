@@ -18,6 +18,7 @@ import NewTopNav from '../layout/NewTopNav';
 import useHubspotEvents from '../../common/hbspotEvents';
 
 import loadable from '@loadable/component';
+import CustomSearch from '../Search/CustomSearch';
 const Footer = loadable(() => import('./footer'));
 
 const AnimatedNavbarLayout = ({ children, formId, formTargetId, location, title, description, pageName, noIndex }) => {
@@ -25,6 +26,7 @@ const AnimatedNavbarLayout = ({ children, formId, formTargetId, location, title,
     useHubspotEvents({ pageName });
     const [navOpen, setNavOpen] = useState(false);
     const [isAnimation, setIsAnimation] = useState(true);
+    const [searchBar, setSearchBar] = useState(false);
     const appLink = useAppLink();
 
     useEffect(() => {
@@ -97,6 +99,8 @@ const AnimatedNavbarLayout = ({ children, formId, formTargetId, location, title,
                                 appLink={appLink}
                                 location={location}
                                 isAnimation={isAnimation}
+                                searchBar={searchBar}
+                                setSearchBar={setSearchBar}
                             />
                         </div>
                     </CSSTransition>
@@ -105,6 +109,7 @@ const AnimatedNavbarLayout = ({ children, formId, formTargetId, location, title,
                     <NewTopNav pageName={pageName} location={location} animatedNavbar={true} />
                 </div>
                 {children}
+                {searchBar && <CustomSearch searchBar={searchBar} setSearchBar={setSearchBar} />}
                 <Footer />
                 {Boolean(cookies[cookieConsentKey]) !== true && (
                     <CookiesBanner cookiesBanner={cookiesBanner} setCookiesBanner={setCookiesBanner} />

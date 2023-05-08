@@ -64,19 +64,35 @@ const PciDss = ({ location }) => {
             title='PCI Cloud Security & Compliance | Automate PCI DSS Compliance - Cyscale'
             description='Strong cloud security process for payment card data that enables prevention, detection, and response to security incidents. Automate threat detection & gain advanced security controls. Learn more now!'
         >
+            <div className='hidden' data-template-key>
+                hardcoded-pages
+            </div>
+            <div className='hidden' data-permalink>
+                /use-cases/pci-dss
+            </div>
+            <div className='hidden' data-title>
+                PCI Cloud Security & Compliance | Automate PCI DSS Compliance - Cyscale
+            </div>
+            <div className='hidden' data-description>
+                Strong cloud security process for payment card data that enables prevention, detection, and response to
+                security incidents. Automate threat detection & gain advanced security controls. Learn more now!
+            </div>
             <div className='bg-cloud bg-lightGrey'>
                 <Container>
                     <Section className='pb-3'>
                         <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-xl pt-16 pb-4'>
-                            <h1 className='font-semibold font-montserrat text-left text-4xl lg:text-5xl leading-normal lg:leading-normal text-primary mb-16'>
+                            <h1
+                                className='font-semibold font-montserrat text-left text-4xl lg:text-5xl leading-normal lg:leading-normal text-primary mb-16'
+                                data-content
+                            >
                                 PCI DSS
                                 <br /> Compliance for Cloud
                             </h1>
-                            <p className='text-left text-base lg:text-lg mb-6 leading-relaxed'>
+                            <p className='text-left text-base lg:text-lg mb-6 leading-relaxed' data-content>
                                 Cyscale helps you develop a strong cloud security process for payment card data that
                                 enables prevention, detection, and response to security incidents.
                             </p>
-                            <p className='text-left text-base lg:text-lg mb-2 leading-relaxed'>
+                            <p className='text-left text-base lg:text-lg mb-2 leading-relaxed' data-content>
                                 <strong>
                                     A robust compliance toolbox for cloud-native and cloud-first organizations.
                                 </strong>
@@ -101,7 +117,10 @@ const PciDss = ({ location }) => {
                     <Row>
                         <div className='col-span-12 lg:col-span-6'>
                             <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-lg'>
-                                <h2 className='text-2xl mb-4 lg:mb-0 lg:text-4xl font-normal font-montserrat leading-normal mt-8'>
+                                <h2
+                                    className='text-2xl mb-4 lg:mb-0 lg:text-4xl font-normal font-montserrat leading-normal mt-8'
+                                    data-content
+                                >
                                     <strong>Automate cloud security</strong>
                                     <br /> <strong>and PCI DSS compliance</strong>
                                 </h2>
@@ -121,12 +140,12 @@ const PciDss = ({ location }) => {
                         <div className='col-span-12 lg:col-start-1 col-end-6'>
                             <div className='mx-auto lg:mx-0  max-w-xl lg:max-w-none'>
                                 <ul className='list-disc ml-4 text-gray mt-8'>
-                                    <li className='mb-4'>
+                                    <li className='mb-4 data-content'>
                                         <strong>Protect cardholder data: </strong>
                                         Securing the storage and transmission of cardholder data, while always being
                                         prepared for security audits.
                                     </li>
-                                    <li className='mb-4'>
+                                    <li className='mb-4' data-content>
                                         <strong>Policy-based security: </strong> Out-of-the-box assurance and
                                         enforcement policies that you can configure across workloads and cloud
                                         infrastructure.
@@ -137,11 +156,11 @@ const PciDss = ({ location }) => {
                         <div className='col-span-12 lg:col-start-8 col-span-4'>
                             <div className='mx-auto lg:mx-0  max-w-xl lg:max-w-none'>
                                 <ul className='list-disc ml-4 text-gray mt-8'>
-                                    <li className='mb-4'>
+                                    <li className='mb-4' data-content>
                                         <strong>Strong access control: </strong> Restrict and monitor access to stored
                                         cardholder data
                                     </li>
-                                    <li className='mb-4'>
+                                    <li className='mb-4' data-content>
                                         <strong>Real-time visibility with detection and response:</strong>
                                         &nbsp;Comprehensive visibility across the entire cloud native lifecycle from
                                         build, to infrastructure, to runtime
@@ -157,23 +176,26 @@ const PciDss = ({ location }) => {
                     <div className='sm:grid sm:grid-cols-12 sm:gap-12'>
                         <div className='col-span-12 sm:px-3 lg:col-span-4'>
                             <div className='mx-auto lg:mx-0 max-w-xl'>
-                                <h2 className='text-4xl font-semibold font-montserrat text-primary leading-normal border-title'>
+                                <h2
+                                    className='text-4xl font-semibold font-montserrat text-primary leading-normal border-title'
+                                    data-content
+                                >
                                     Automate compliance checks & security control audits
                                 </h2>
                             </div>
                         </div>
                         <div className='col-span-12  mt-8 sm:mt-0 sm:px-3 lg:col-span-8'>
                             <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-full'>
-                                <p className='leading-normal text-base text-gray mb-6'>
+                                <p className='leading-normal text-base text-gray mb-6' data-content>
                                     Use Cyscale for governance automation across cloud service providers and internal
                                     teams to ensure consistent data security and compliance in cloud computing.
                                 </p>
-                                <p className='leading-normal text-base text-gray mb-6'>
+                                <p className='leading-normal text-base text-gray mb-6' data-content>
                                     We keep your cloud environments under continuous assessment and provide in-app
                                     security consultancy for your security systems so that you make the most of your
                                     time and effort and secure cloud resources.
                                 </p>
-                                <p className='leading-normal text-base text-gray'>
+                                <p className='leading-normal text-base text-gray' data-content>
                                     Coming soon: create custom Controls that tap into our Security Knowledge Graph™ and
                                     automate the cybersecurity and compliance checks that matter most for your
                                     organization.
@@ -192,7 +214,10 @@ const PciDss = ({ location }) => {
             <Container id='align-entities'>
                 <div className='grid grid-cols-1 lg:grid-cols-3 gap-4 items-center'>
                     <div>
-                        <h2 className='font-semibold font-montserrat text-blue text-34px leading-normal lg:max-w-sm null sectionTitle new-line max-w-xl mx-auto'>
+                        <h2
+                            className='font-semibold font-montserrat text-blue text-34px leading-normal lg:max-w-sm null sectionTitle new-line max-w-xl mx-auto'
+                            data-content
+                        >
                             Align teams & tasks
                             <span key='ali123' className='block w-full font-normal'>
                                 Govern all cloud entities from a single dashboard
@@ -206,7 +231,7 @@ const PciDss = ({ location }) => {
                     </div>
                     <div className='hidden lg:block'></div>
                     <div className=' max-w-xl mx-auto mb-12'>
-                        <p className='text-block text-16px leading-normal new-line mt-8'>
+                        <p className='text-block text-16px leading-normal new-line mt-8' data-content>
                             Consolidate all the key elements of cloud compliance in an easy-to-use dashboard. Replace
                             cloud portals with our Cloud Platform - the hub for a sweeping overview of your{' '}
                             <a
@@ -218,15 +243,15 @@ const PciDss = ({ location }) => {
                             </a>
                             .
                         </p>
-                        <p className='text-block text-16px leading-normal new-line mt-8'>
+                        <p className='text-block text-16px leading-normal new-line mt-8' data-content>
                             Implement, manage, and monitor security policies and controls for single cloud, multi-cloud,
                             and hybrid environments through reliable automation.
                         </p>
-                        <p className='text-block text-16px leading-normal new-line mt-8'>
+                        <p className='text-block text-16px leading-normal new-line mt-8' data-content>
                             Demonstrate compliance for multiple projects with read-only dashboard access or reports
                             (CSV, PDF) you can share with internal stakeholders, prospects, or customers, and assessors.
                         </p>
-                        <p className='text-block text-16px leading-normal new-line mt-8'>
+                        <p className='text-block text-16px leading-normal new-line mt-8' data-content>
                             Meet compliance requirements for credit cards and ensure information security in the public
                             cloud. Become PCI-DSS compliant with Cyscale.
                         </p>
@@ -237,14 +262,17 @@ const PciDss = ({ location }) => {
                 <Container>
                     <Section>
                         <div className='max-w-xl mx-auto lg:mx-0 lg:max-w-md mb-20'>
-                            <h2 className='text-4xl font-semibold font-montserrat text-primary leading-normal border-title'>
+                            <h2
+                                className='text-4xl font-semibold font-montserrat text-primary leading-normal border-title'
+                                data-content
+                            >
                                 100% Confidence in your Cloud Compliance
                             </h2>
                         </div>
                         <div className='max-w-xl mx-auto lg:mx-0 lg:max-w-3xl'>
                             <Row className='lg:gap-20'>
                                 <div className='col-span-12 lg:col-span-6'>
-                                    <p className='leading-normal text-base text-gray mb-6'>
+                                    <p className='leading-normal text-base text-gray mb-6' data-content>
                                         <strong>Meet industry regulations</strong>
                                         <br />
                                         Protect sensitive data and comply with strict industry standards in your
@@ -254,7 +282,7 @@ const PciDss = ({ location }) => {
                                     </p>
                                 </div>
                                 <div className='col-span-12 lg:col-span-6'>
-                                    <p className='leading-normal text-base text-gray mb-6'>
+                                    <p className='leading-normal text-base text-gray mb-6' data-content>
                                         <strong>PCI-DSS, SOC 2, GDPR, and more.</strong>
                                         <br />
                                         Cyscale offers a wide range of benchmarks and frameworks, including: CIS,
@@ -262,7 +290,7 @@ const PciDss = ({ location }) => {
                                     </p>
                                 </div>
                                 <div className='col-span-12 lg:col-span-6'>
-                                    <p className='leading-normal text-base text-gray mb-6'>
+                                    <p className='leading-normal text-base text-gray mb-6' data-content>
                                         <strong>Built-in compliance templates</strong>
                                         <br />
                                         You can either use policy templates as a basis for your custom policies, or
@@ -270,7 +298,7 @@ const PciDss = ({ location }) => {
                                     </p>
                                 </div>
                                 <div className='col-span-12 lg:col-span-6'>
-                                    <p className='leading-normal text-base text-gray mb-6'>
+                                    <p className='leading-normal text-base text-gray mb-6' data-content>
                                         <strong>500+ out-of-the-box security controls</strong>
                                         <br />
                                         Onboard teams in 30 minutes and coordinate efforts to apply 500+ out-of-the-box
@@ -288,10 +316,13 @@ const PciDss = ({ location }) => {
                 <Section>
                     <Container>
                         <div className='mx-auto text-center lg:text-left lg:mx-0 max-w-sm lg:max-w-none'>
-                            <h2 className='text-white text-xl md:text-2xl font-semibold font-montserrat uppercase'>
+                            <h2
+                                className='text-white text-xl md:text-2xl font-semibold font-montserrat uppercase'
+                                data-content
+                            >
                                 PCI DSS COMPLIANCE AND CLOUD SECURITY
                             </h2>
-                            <p className='text-white font-montserrat text-lg md:text-2xl mb-20'>
+                            <p className='text-white font-montserrat text-lg md:text-2xl mb-20' data-content>
                                 Start seeing value & saving money in minutes
                             </p>
                             <Link
