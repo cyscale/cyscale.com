@@ -26,10 +26,14 @@ const NewTopNav = ({ pageName, showLogo = true, location, animatedNavbar }) => {
     const [showMenu, setShowMenu] = useState(false);
     const [showBanner, setShowBanner] = useState(true);
     const [searchBar, setSearchBar] = useState(false);
+    const [isAtTop, setIsAtTop] = useState(true);
     const appLink = useAppLink();
 
     useEffect(() => {
         const onScroll = () => {
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+            setIsAtTop(scrollTop === 0);
+
             if (window.scrollY === 0) {
                 setShowBanner(true);
                 root.current.classList.remove('transparent-bg');
@@ -121,9 +125,22 @@ const NewTopNav = ({ pageName, showLogo = true, location, animatedNavbar }) => {
                 <div
                     style={{ maxWidth: '100vw' }}
                     className={'fixed left-0 block w-full mx-auto bg-white z-10 shadow-2xl'}
-                    css={css`
-                        top: 6.563rem;
-                    `}
+                    css={[
+                        animatedNavbar &&
+                            css`
+                                top: 7.563rem;
+                                @media (max-width: 1280px) {
+                                    top: ${isAtTop ? '7.563rem' : '5.563rem'};
+                                }
+                            `,
+                        !animatedNavbar &&
+                            css`
+                                top: 6.563rem;
+                                @media (max-width: 1280px) {
+                                    top: 5.563rem;
+                                }
+                            `
+                    ]}
                     ref={searchRef}
                 >
                     <div tw='container max-w-7xl mx-auto pt-2.5' css={paddingNav}>
@@ -131,7 +148,14 @@ const NewTopNav = ({ pageName, showLogo = true, location, animatedNavbar }) => {
                     </div>
                 </div>
             )}
-            {showMenu && <MobileNavigation showMenu={showMenu} setShowMenu={setShowMenu} appLink={appLink} setSearchBar={setSearchBar} />}
+            {showMenu && (
+                <MobileNavigation
+                    showMenu={showMenu}
+                    setShowMenu={setShowMenu}
+                    appLink={appLink}
+                    setSearchBar={setSearchBar}
+                />
+            )}
         </>
     );
 };

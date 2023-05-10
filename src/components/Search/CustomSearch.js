@@ -112,7 +112,7 @@ const CustomSearch = ({ searchBar, setSearchBar }) => {
                                 font-size: 1.5rem;
                                 padding: 0.5rem 0;
 
-                                @media (max-width: 1028px) {
+                                @media (max-width: 1280px) {
                                     height: 2rem;
                                     font-size: 1rem;
                                 }
