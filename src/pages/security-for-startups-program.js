@@ -210,6 +210,9 @@ const SecurityForStartupsProgram = ({ location }) => {
                 <div className='hidden' data-description>
                     Startups Program
                 </div>
+                <div className='hidden' data-category>
+                    website
+                </div>
                 <div className='bg-pouring pt-8'>
                     <Container>
                         <div className='py-24 lg:pt-32 lg:pb-16'>

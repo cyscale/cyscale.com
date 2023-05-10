@@ -57,6 +57,9 @@ const TheCompleteGuideToCloudCompliance = ({ location }) => {
                     This whitepaper presents cloud trends for 2023 along with popular compliance frameworks such as
                     ISO27001, GDPR, HIPAA, PCI-DSS and SOC2.
                 </div>
+                <div className='hidden' data-category>
+                    whitepaper
+                </div>
                 <div className='bg-storage-misconfigurations pt-8'>
                     <Container>
                         <div className='pt-16 pb-24 lg:py-40'>

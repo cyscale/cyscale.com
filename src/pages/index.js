@@ -246,6 +246,9 @@ const HomePage = ({ location }) => {
                 Map all your cloud assets across providers in under 5 mins. Optimize costs, ensure cloud security, and
                 prove compliance with the scalable Cyscale CSPM.
             </div>
+            <div className='hidden' data-category>
+                website
+            </div>
             <div className='pt-8' css={heroBackground}>
                 <Container>
                     <div className='py-16 md:py-24 lg:pt-24 lg:pb-36'>

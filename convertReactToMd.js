@@ -40,6 +40,7 @@ reactComponent: ${path.basename(reactComponentPath, '.js')}
 templateKey: "${extractedData['data-template-key'].trim()}"
 permalink: "${extractedData['data-permalink'].trim()}"
 title: "${extractedData['data-title'].trim()}"
+category: "${extractedData['data-category'].trim()}"
 description: |
   ${extractedData['data-description'].trim().split('\n').join('\n  ')}
 ---
@@ -77,7 +78,14 @@ function convertReactFilesToMD(reactFolder, mdFolder, attributeNames, skipFiles,
 
 const reactFolder = './src/pages';
 const mdFolder = './src/markdown/hardcodedPages';
-const attributeNames = ['data-title', 'data-description', 'data-content', 'data-template-key', 'data-permalink'];
+const attributeNames = [
+    'data-title',
+    'data-description',
+    'data-content',
+    'data-template-key',
+    'data-permalink',
+    'data-category'
+];
 const skipFiles = [
     'cloud-security-posture-management.js',
     'security-knowledge-graph.js',

@@ -22,6 +22,7 @@ import LearnMoreLink from '../../components/use-cases/LearnMoreLink';
 import { heroTitleFontSize, LearnMoreSection, cardBackgroundColor } from '../../assets/css/styles';
 import LinksAndWhitepaper from '../../components/products/LinksAndWhitepaper';
 
+//eslint-disable-next-line
 export const topArticles = [
     {
         text: 'CNAPP: The Key to Secure Cloud-Native Applications',
@@ -91,6 +92,9 @@ const CNAPP = ({ location }) => {
             <div className='hidden' data-description>
                 Protect your cloud-native applications with CNAPP. Ensure security and compliance with our all-in-one
                 solution for multi-cloud environments. Start today!
+            </div>
+            <div className='hidden' data-category>
+                products
             </div>
             <div className='bg-cnapp pt-8'>
                 <Container>

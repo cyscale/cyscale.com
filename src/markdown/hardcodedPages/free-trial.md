@@ -3,6 +3,7 @@ reactComponent: free-trial
 templateKey: "hardcoded-pages"
 permalink: "/free-trial"
 title: "Start Free Trial - Cyscale"
+category: "website"
 description: |
   Cyscale is an agentless CSPM solution that helps your organization map, secure and monitor cloud assets
                   across multiple providers.

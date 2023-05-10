@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import algoliasearch from 'algoliasearch';
 import ClearInput from '../../assets/images/close-search.svg';
 import { css } from 'twin.macro';
-import useLockBodyScroll from '../../hooks/useLockBodyScroll';
 import FocusLock from 'react-focus-lock';
 import classnames from 'classnames';
 import { Link } from 'gatsby';
@@ -13,8 +12,8 @@ const index = client.initIndex(`indexName`);
 async function performSearch(query) {
     try {
         const { hits } = await index.search(query, {
-            attributesToSnippet: ['content:5', 'title'],
-            hitsPerPage: 7
+            attributesToSnippet: ['content:21', 'title'],
+            hitsPerPage: 5
         });
         return hits;
     } catch (err) {
@@ -34,11 +33,17 @@ function groupByCategory(hits) {
     }, {});
 }
 
+function sortCategories(categories) {
+    return Object.entries(categories).sort(([categoryA], [categoryB]) => {
+        if (categoryA === 'blog') return 1;
+        if (categoryB === 'blog') return -1;
+        return categoryA.localeCompare(categoryB);
+    });
+}
+
 const CustomSearch = ({ searchBar, setSearchBar }) => {
     const [query, setQuery] = useState('');
     const [results, setResults] = useState([]);
-
-    useLockBodyScroll();
 
     const handleSearch = async (e) => {
         setQuery(e.target.value);
@@ -75,56 +80,50 @@ const CustomSearch = ({ searchBar, setSearchBar }) => {
         return () => {
             window.removeEventListener('keydown', handleKeyDown);
         };
+        //eslint-disable-next-line
     }, [setSearchBar]);
 
     return (
         <div
+            className='w-full'
             css={css`
-                height: 100vh;
-                width: 100vw;
-                background: rgba(235, 235, 235, 0.65);
-                backdrop-filter: blur(6px);
-                display: flex;
-                justify-content: center;
-                position: fixed;
-                top: 0;
-                left: 0;
-                z-index: 100;
+                position: static;
+                background-color: #ffffff;
+                padding: 2rem 0;
             `}
         >
             <FocusLock>
                 <div
-                    className='relative inline-block'
+                    className='relative'
                     css={css`
-                        width: 50rem;
-                        margin-top: 7rem;
+                        width: 100%;
                     `}
                 >
-                    <div className='shadow-2xl rounded-md'>
+                    <div>
                         <input
                             type='text'
                             value={query}
                             onChange={handleSearch}
-                            placeholder='Search...'
-                            className={classnames({
-                                'py-2 px-4 outline-none': true,
-                                'rounded-t-md': query !== '' && Object.keys(results).length >= 1,
-                                'rounded-md': query === '' || Object.keys(results).length === 0
-                            })}
+                            placeholder='Search for cloud security knowledge…'
+                            className='py-2 outline-none font-hind'
                             css={css`
-                                width: 50rem;
+                                width: 70rem;
+                                height: 2rem;
+                                font-size: 1.5rem;
+                                padding: 0.5rem 0;
                             `}
                         />
                         <img
                             src={ClearInput}
                             alt=''
                             width={16}
-                            className='absolute right-4 top-3 cursor-pointer'
+                            className='absolute right-0 top-2 cursor-pointer'
                             onKeyDown={(event) => {
                                 if (event.key === 'Enter' || event.key === ' ') {
                                     setSearchBar(!searchBar);
                                 }
                             }}
+                            //eslint-disable-next-line
                             tabIndex={0}
                             onClick={() => {
                                 if (query === '') {
@@ -137,7 +136,7 @@ const CustomSearch = ({ searchBar, setSearchBar }) => {
                         />
                     </div>
                     {query !== '' && Object.keys(results).length >= 1 && (
-                        <div className='px-4 block bg-white'>
+                        <div className='block bg-white mt-4'>
                             {' '}
                             <hr
                                 css={css`
@@ -145,7 +144,6 @@ const CustomSearch = ({ searchBar, setSearchBar }) => {
                                     height: 1px;
                                     background-color: #e8eef8;
                                     width: 100%;
-                                    padding: 0 1rem;
                                 `}
                             />
                         </div>
@@ -155,15 +153,15 @@ const CustomSearch = ({ searchBar, setSearchBar }) => {
                             background-color: white;
                         `}
                         className={classnames({
-                            'px-4 pb-4 rounded-b-md': query !== '' && Object.keys(results).length !== 0
+                            'pb-4': query !== '' && Object.keys(results).length !== 0
                         })}
                     >
-                        {Object.entries(results).map(([category, hits], index) => (
-                            <div key={category} className='pt-3'>
+                        {sortCategories(results).map(([category, hits], index) => (
+                            <div key={category} className='pt-6'>
                                 <p className='text-xs font-hind text-blue font-bold uppercase'>{category}</p>
                                 <div>
                                     {hits.map((hit) => (
-                                        <Link to={hit.permalink} key={hit.objectID} className='mt-2 block'>
+                                        <Link to={hit.permalink} key={hit.objectID} className='mt-4 block'>
                                             <p className='font-hind font-semibold text-lg'>
                                                 {renderSnippet(hit._snippetResult.title)}
                                             </p>

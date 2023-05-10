@@ -3,6 +3,7 @@ reactComponent: iam-security
 templateKey: "hardcoded-pages"
 permalink: "/use-cases/iam-security"
 title: "IAM Cloud Security | Detect and Mitigate Risk - Cyscale"
+category: "solutions"
 description: |
   Continuous multi-cloud monitoring for identity and access management (IAM) misconfigurations across all
                   your cloud assets to meet strict IAM compliance directives and improve your cloud security posture.

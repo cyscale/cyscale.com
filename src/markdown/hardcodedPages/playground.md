@@ -3,6 +3,7 @@ reactComponent: playground
 templateKey: "hardcoded-pages"
 permalink: "/playground"
 title: "Playground Account Access - Cyscale"
+category: "website"
 description: |
   Get access to a playground account, fully featured and populated with data.
 ---

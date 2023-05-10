@@ -3,6 +3,7 @@ reactComponent: index
 templateKey: "hardcoded-pages"
 permalink: "/"
 title: "Robust Cloud Security Platform - Cyscale"
+category: "website"
 description: |
   Map all your cloud assets across providers in under 5 mins. Optimize costs, ensure cloud security, and
                   prove compliance with the scalable Cyscale CSPM.

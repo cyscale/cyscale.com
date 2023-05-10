@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import navBars from '../layout/icons/navbars-campaigns.svg';
 import { CookiesProvider } from 'react-cookie';
 import { useAppLink } from '../../common/links';
@@ -16,10 +16,20 @@ import { cookieConsentKey } from '../../common/constants';
 import NewNavigation from '../layout/NewNavigation';
 import NewTopNav from '../layout/NewTopNav';
 import useHubspotEvents from '../../common/hbspotEvents';
+import { css } from 'twin.macro';
 
 import loadable from '@loadable/component';
 import CustomSearch from '../Search/CustomSearch';
 const Footer = loadable(() => import('./footer'));
+
+const paddingNav = css`
+    padding-left: 2rem;
+    padding-right: 2rem;
+    @media (min-width: 1536px) {
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
+`;
 
 const AnimatedNavbarLayout = ({ children, formId, formTargetId, location, title, description, pageName, noIndex }) => {
     const { cookies, cookiesBanner, setCookiesBanner } = useSetCookieBanner();
@@ -27,6 +37,7 @@ const AnimatedNavbarLayout = ({ children, formId, formTargetId, location, title,
     const [navOpen, setNavOpen] = useState(false);
     const [isAnimation, setIsAnimation] = useState(true);
     const [searchBar, setSearchBar] = useState(false);
+    const searchRef = useRef(null);
     const appLink = useAppLink();
 
     useEffect(() => {
@@ -50,6 +61,39 @@ const AnimatedNavbarLayout = ({ children, formId, formTargetId, location, title,
         }
     }, [isAnimation]);
 
+    const handleScroll = () => {
+        if (searchBar) {
+            setSearchBar(false);
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+        //eslint-disable-next-line
+    }, [searchBar]);
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (searchRef.current && !searchRef.current.contains(event.target)) {
+                setSearchBar(false);
+            }
+        };
+
+        if (searchBar) {
+            document.addEventListener('mousedown', handleClickOutside);
+        } else {
+            document.removeEventListener('mousedown', handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [searchBar, setSearchBar]);
+
     return (
         <CookiesProvider>
             <GlobalContext.Provider value={{ location }}>
@@ -70,7 +114,7 @@ const AnimatedNavbarLayout = ({ children, formId, formTargetId, location, title,
                         </p>
                     </div>
                 </Container>
-                <header id='head' className='bg-lightGrey pt-8 pb-2 hidden xl:block'>
+                <header id='head' className='bg-lightGrey pt-8 pb-8 hidden xl:block'>
                     <div className='container max-w-7xl m-auto px-4 lg:px-8 flex items-center'>
                         <Link to='/' className='inline-flex z-40'>
                             <img className='block h-10' src={logo} alt='Cyscale' />
@@ -105,11 +149,24 @@ const AnimatedNavbarLayout = ({ children, formId, formTargetId, location, title,
                         </div>
                     </CSSTransition>
                 </header>
+                {searchBar && (
+                    <div
+                        style={{ maxWidth: '100vw' }}
+                        className={'fixed left-0 block w-full mx-auto bg-white z-10 shadow-2xl'}
+                        css={css`
+                            top: 130px;
+                        `}
+                        ref={searchRef}
+                    >
+                        <div tw='container max-w-7xl mx-auto pt-2.5 hidden xl:block' css={paddingNav}>
+                            <CustomSearch searchBar={searchBar} setSearchBar={setSearchBar} />
+                        </div>
+                    </div>
+                )}
                 <div className='block xl:hidden m-auto px-8'>
                     <NewTopNav pageName={pageName} location={location} animatedNavbar={true} />
                 </div>
                 {children}
-                {searchBar && <CustomSearch searchBar={searchBar} setSearchBar={setSearchBar} />}
                 <Footer />
                 {Boolean(cookies[cookieConsentKey]) !== true && (
                     <CookiesBanner cookiesBanner={cookiesBanner} setCookiesBanner={setCookiesBanner} />

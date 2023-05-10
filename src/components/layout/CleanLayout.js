@@ -11,12 +11,10 @@ import ScrollToTopButton from '../ScrollToTopButton/ScrollToTopButton';
 import useSetCookieBanner from '../cookies-banner/useSetCookieBanner';
 import { cookieConsentKey } from '../../common/constants';
 import NewTopNav from './NewTopNav';
-import CustomSearch from '../Search/CustomSearch';
 
 const Layout = ({ children, title, description, pageName, location, banner }) => {
     useHubspotEvents({ pageName });
     const [sticker, setSticker] = useState(false);
-    const [searchBar, setSearchBar] = useState(false);
     const { cookies, cookiesBanner, setCookiesBanner } = useSetCookieBanner();
 
     return (
@@ -27,12 +25,9 @@ const Layout = ({ children, title, description, pageName, location, banner }) =>
                     <NewTopNav
                         pageName={pageName}
                         location={location}
-                        searchBar={searchBar}
-                        setSearchBar={setSearchBar}
                     />
                 </HeaderContext.Provider>
                 <main>{children}</main>
-                {searchBar && <CustomSearch searchBar={searchBar} setSearchBar={setSearchBar} />}
                 <Footer pageUri={location?.pathname} pageName={pageName} />
                 {Boolean(cookies[cookieConsentKey]) !== true && (
                     <CookiesBanner

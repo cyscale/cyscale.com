@@ -3,6 +3,7 @@ reactComponent: azure-cloud-security
 templateKey: "hardcoded-pages"
 permalink: "/use-cases/azure-cloud-security"
 title: "Azure Cloud Security and Compliance Automation - Cyscale"
+category: "solutions"
 description: |
   Secure your Azure accounts, continuously scan for risks and monitor events for misconfigurations.
 ---

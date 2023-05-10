@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'gatsby';
 import IconCyscaleShield from '../../icons/icon-cyscale-shield.svg';
 import {
-    caretMenuSelegoStyle,
     caretMenuWhiteStyle,
     fontNavLinkStyle,
     hoverButtonColorStyle,

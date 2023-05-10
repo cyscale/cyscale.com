@@ -3,6 +3,7 @@ reactComponent: pci-dss
 templateKey: "hardcoded-pages"
 permalink: "/use-cases/pci-dss"
 title: "PCI Cloud Security & Compliance | Automate PCI DSS Compliance - Cyscale"
+category: "solutions"
 description: |
   Strong cloud security process for payment card data that enables prevention, detection, and response to
                   security incidents. Automate threat detection & gain advanced security controls. Learn more now!

@@ -77,6 +77,9 @@ const CloudNativeSecurity = ({ location }) => {
                 Our powerful platform provides advanced security features, giving you maximum cloud-native security and
                 peace of mind to confidently accelerate innovation.
             </div>
+            <div className='hidden' data-category>
+                solutions
+            </div>
             <div className='bg-cns pt-8'>
                 <Container>
                     <div className='py-16 md:py-24 lg:pt-24 lg:pb-16'>

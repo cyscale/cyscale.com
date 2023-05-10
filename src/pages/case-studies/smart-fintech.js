@@ -68,6 +68,9 @@ const SmartFintech = ({ location }) => {
                 visibility, and compliance by leveraging Cyscale's powerful platform for monitoring and alerting on
                 cloud misconfigurations.
             </div>
+            <div className='hidden' data-category>
+                case studies
+            </div>
             <div className='container max-w-7xl pt-28 sm:pt-44 mx-auto xl:flex xl:pl-12 xl:pr-16'>
                 <div className='max-w-4xl mx-auto xl:mx-0 px-8'>
                     <div className='grid grid-cols-12 gap-4'>

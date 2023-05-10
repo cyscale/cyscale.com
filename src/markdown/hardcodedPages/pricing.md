@@ -3,6 +3,7 @@ reactComponent: pricing
 templateKey: "hardcoded-pages"
 permalink: "/pricing"
 title: "Pricing - Cyscale"
+category: "website"
 description: |
   Pay fair for security experts' advice and guidance. Quantifiable ROI for cloud data security and
                   compliance. Reduce cloud costs and consumption.

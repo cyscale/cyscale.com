@@ -3,6 +3,7 @@ reactComponent: iso-27001-compliance
 templateKey: "hardcoded-pages"
 permalink: "/use-cases/iso-27001-compliance"
 title: "ISO 27001 Cloud Security | Compliance & Security - Cyscale"
+category: "solutions"
 description: |
   Easy & continuous compliance for ISO 27001, with a set of battle-tested policies to jumpstart your ISMS.
                   Secure your assets with cutting-edge controls & policies.

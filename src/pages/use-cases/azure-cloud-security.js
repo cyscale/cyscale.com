@@ -80,6 +80,9 @@ const AzureCloudSecurity = ({ location }) => {
             <div className='hidden' data-description>
                 Secure your Azure accounts, continuously scan for risks and monitor events for misconfigurations.
             </div>
+            <div className='hidden' data-category>
+                solutions
+            </div>
             <div className='bg-cloud' style={{ backgroundColor: '#eeeeee' }}>
                 <Container>
                     <Section>

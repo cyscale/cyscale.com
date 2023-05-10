@@ -102,6 +102,9 @@ const PricingPage = ({ location }) => {
                 Pay fair for security experts' advice and guidance. Quantifiable ROI for cloud data security and
                 compliance. Reduce cloud costs and consumption.
             </div>
+            <div className='hidden' data-category>
+                website
+            </div>
             <div className='md:pt-16' css={heroBackground}>
                 <div className='pt-24 pb-12 sm:pb-24 lg:py-32'>
                     <Container>

@@ -6,6 +6,7 @@ import { css } from 'twin.macro';
 import NewNavigation from './NewNavigation';
 import MobileNavbar from './components/MobileNavbar';
 import MobileNavigation from './components/MobileNavigation';
+import CustomSearch from '../Search/CustomSearch';
 
 const paddingNav = css`
     padding-left: 2rem;
@@ -16,12 +17,14 @@ const paddingNav = css`
     }
 `;
 
-const NewTopNav = ({ pageName, showLogo = true, location, animatedNavbar, searchBar, setSearchBar }) => {
+const NewTopNav = ({ pageName, showLogo = true, location, animatedNavbar }) => {
     const root = useRef();
+    const searchRef = useRef(null);
     const trigger = useScrollTrigger();
     const [showBurgerButton, setShowBurgerButton] = useState(pageName !== 'HomePage');
     const [showMenu, setShowMenu] = useState(false);
     const [showBanner, setShowBanner] = useState(true);
+    const [searchBar, setSearchBar] = useState(false);
     const appLink = useAppLink();
 
     useEffect(() => {
@@ -60,6 +63,31 @@ const NewTopNav = ({ pageName, showLogo = true, location, animatedNavbar, search
             return () => (document.body.style.overflow = 'unset');
         }
     }, [showMenu]);
+
+    useEffect(() => {
+        if (searchBar) {
+            setSearchBar(false);
+        }
+        //eslint-disable-next-line
+    }, [trigger]);
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (searchRef.current && !searchRef.current.contains(event.target)) {
+                setSearchBar(false);
+            }
+        };
+
+        if (searchBar) {
+            document.addEventListener('mousedown', handleClickOutside);
+        } else {
+            document.removeEventListener('mousedown', handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [searchBar, setSearchBar]);
 
     const rootClasses = !trigger ? 'translate-y-0' : '-translate-y-full';
 
@@ -104,6 +132,20 @@ const NewTopNav = ({ pageName, showLogo = true, location, animatedNavbar, search
                     />
                 </div>
             </div>
+            {searchBar && (
+                <div
+                    style={{ maxWidth: '100vw' }}
+                    className={'fixed left-0 block w-full mx-auto bg-white z-10 shadow-2xl'}
+                    css={css`
+                        top: 105px;
+                    `}
+                    ref={searchRef}
+                >
+                    <div tw='container max-w-7xl mx-auto pt-2.5 hidden xl:block' css={paddingNav}>
+                        <CustomSearch searchBar={searchBar} setSearchBar={setSearchBar} />
+                    </div>
+                </div>
+            )}
             {showMenu && <MobileNavigation showMenu={showMenu} setShowMenu={setShowMenu} appLink={appLink} />}
         </>
     );

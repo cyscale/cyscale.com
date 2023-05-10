@@ -45,6 +45,9 @@ const CloudStorageMisconfigurations = ({ location }) => {
                     This guide helps CIOs, CISOs and security staff to understand the risk & dangers of data security
                     breaches and the importance of a secure cloud storage infrastructure.
                 </div>
+                <div className='hidden' data-category>
+                    whitepaper
+                </div>
                 <div className='bg-storage-misconfigurations pt-8'>
                     <Container>
                         <div className='pt-16 pb-24 lg:py-40'>

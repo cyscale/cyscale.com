@@ -71,6 +71,9 @@ const AWSCloudSecurity = ({ location }) => {
             <div className='hidden' data-description>
                 Protect AWS environments with a complete Cloud Security Posture Management (CSPM) solution
             </div>
+            <div className='hidden' data-category>
+                solutions
+            </div>
             <div className='bg-cloud' style={{ backgroundColor: '#eeeeee' }}>
                 <Container>
                     <Section>

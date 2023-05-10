@@ -3,6 +3,7 @@ reactComponent: nist-compliance
 templateKey: "hardcoded-pages"
 permalink: "/use-cases/nist-compliance"
 title: "NIST Cloud Compliance & Security - Cyscale"
+category: "solutions"
 description: |
   A powerful set of technical controls helping you with NIST compliance in areas such as security,
                   availability, processing integrity, confidentiality and privacy

@@ -3,6 +3,7 @@ reactComponent: cloud-native-security
 templateKey: "hardcoded-pages"
 permalink: "/use-cases/cloud-native-security"
 title: "Powerful Cloud Native Security Platform - Cyscale"
+category: "solutions"
 description: |
   Protect your entire stack, from virtual machines to serverless environments, in any cloud environment.
                   Our powerful platform provides advanced security features, giving you maximum cloud-native security and

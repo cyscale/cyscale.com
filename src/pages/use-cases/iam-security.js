@@ -71,6 +71,9 @@ const IAMSecurity = ({ location }) => {
                 Continuous multi-cloud monitoring for identity and access management (IAM) misconfigurations across all
                 your cloud assets to meet strict IAM compliance directives and improve your cloud security posture.
             </div>
+            <div className='hidden' data-category>
+                solutions
+            </div>
             <div className='bg-cloud' style={{ backgroundColor: '#eeeeee' }}>
                 <Container>
                     <Section>

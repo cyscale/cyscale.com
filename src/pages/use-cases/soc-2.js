@@ -92,6 +92,9 @@ const Soc2 = ({ location }) => {
                 A powerful set of technical controls helping you prepare for a SOC 2 audit in areas such as security,
                 availability, processing integrity, confidentiality and privacy
             </div>
+            <div className='hidden' data-category>
+                solutions
+            </div>
             <div className='bg-hero-soc2 pt-8'>
                 <Container>
                     <div className='py-16 md:py-24 lg:pt-24 lg:pb-16'>

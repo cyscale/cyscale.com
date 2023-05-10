@@ -107,7 +107,7 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation, sea
                     pageName === 'AWSCloudSecurityCampaign' ||
                     pageName === 'CSPMSolutionCampaign') &&
                     tw`container`,
-                isAnimatedNavbarPage(pathname) && tw`pl-20`
+                isAnimatedNavbarPage(pathname) && tw`pl-12`
             ]}
         >
             <div tw='mx-auto flex flex-row justify-between'>
@@ -220,8 +220,12 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation, sea
                             src={searchIcon}
                             className='py-2 cursor-pointer'
                             alt=''
-                            width={22}
+                            tabIndex='0'
                             onClick={() => setSearchBar(!searchBar)}
+                            role='button'
+                            aria-label='Search'
+                            onKeyPress={() => {}}
+                            width={22}
                         />
                     </li>
                     <li className='py-6 pl-4'>

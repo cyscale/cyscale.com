@@ -3,6 +3,7 @@ reactComponent: soc-2
 templateKey: "hardcoded-pages"
 permalink: "/use-cases/soc-2"
 title: "SOC 2 Cloud Security and Compliance Automation - Cyscale"
+category: "solutions"
 description: |
   A powerful set of technical controls helping you prepare for a SOC 2 audit in areas such as security,
                   availability, processing integrity, confidentiality and privacy

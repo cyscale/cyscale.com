@@ -3,6 +3,7 @@ reactComponent: security-for-startups-program
 templateKey: "hardcoded-pages"
 permalink: "/security-for-startups-program"
 title: "Startups Program - Cyscale"
+category: "website"
 description: |
   Startups Program
 ---

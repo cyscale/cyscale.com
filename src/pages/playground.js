@@ -40,6 +40,9 @@ const Playground = ({ location }) => {
             <div className='hidden' data-description>
                 Get access to a playground account, fully featured and populated with data.
             </div>
+            <div className='hidden' data-category>
+                website
+            </div>
             <div className='bg-hero-campaigns-iam-security' css={heroHeight}>
                 <div className='py-28 lg:py-32'>
                     <div className='container max-w-7xl m-auto px-8'>

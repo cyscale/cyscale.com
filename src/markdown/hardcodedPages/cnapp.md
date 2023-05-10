@@ -3,6 +3,7 @@ reactComponent: cnapp
 templateKey: "hardcoded-pages"
 permalink: "/products/cnapp"
 title: "CNAPP: Cloud-Native Application Security and Compliance Solution - Cyscale"
+category: "products"
 description: |
   Protect your cloud-native applications with CNAPP. Ensure security and compliance with our all-in-one
                   solution for multi-cloud environments. Start today!

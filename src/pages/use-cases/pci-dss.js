@@ -77,6 +77,9 @@ const PciDss = ({ location }) => {
                 Strong cloud security process for payment card data that enables prevention, detection, and response to
                 security incidents. Automate threat detection & gain advanced security controls. Learn more now!
             </div>
+            <div className='hidden' data-category>
+                solutions
+            </div>
             <div className='bg-cloud bg-lightGrey'>
                 <Container>
                     <Section className='pb-3'>

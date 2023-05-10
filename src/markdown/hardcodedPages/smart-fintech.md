@@ -3,6 +3,7 @@ reactComponent: smart-fintech
 templateKey: "hardcoded-pages"
 permalink: "/case-studies/smart-fintech"
 title: "Smart Fintech Case Study | Cloud Security & Compliance - Cyscale"
+category: "case studies"
 description: |
   Discover how Smart Fintech, Romania's first authorized open banking TPP, improved cloud security, IAM
                   visibility, and compliance by leveraging Cyscale's powerful platform for monitoring and alerting on

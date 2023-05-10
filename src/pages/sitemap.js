@@ -68,6 +68,9 @@ const Sitemap = ({ location }) => {
                 Our sitemap helps you easily access our diverse range of resources, including product use cases, thought
                 leadership content, and valuable insights on cloud data security.
             </div>
+            <div className='hidden' data-category>
+                website
+            </div>
             <div css={heroBackground} className='pt-8'>
                 <div className='py-16 lg:pt-24 lg:pb-16'>
                     <Container>

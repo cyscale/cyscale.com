@@ -13,6 +13,7 @@ const myQuery = `
               description
               permalink
               categoryPath
+              category
               path
               sections
               hero {
@@ -105,7 +106,7 @@ const queries = [
                         description: node.frontmatter.description,
                         permalink: `/${node.frontmatter.categoryPath}/${node.frontmatter.path}`,
                         content: striptags(new MarkdownIt().render(striptags(content))),
-                        category: 'website'
+                        category: node.frontmatter.categoryPath === 'use-cases' ? 'solutions' : 'website'
                     };
                 });
 
@@ -126,7 +127,7 @@ const queries = [
                                 ? /blog/ + node.frontmatter.permalink
                                 : node.frontmatter.permalink,
                         content: striptags(new MarkdownIt().render(striptags(node.rawMarkdownBody))),
-                        category: node.frontmatter.templateKey === 'blog-post' ? 'blog' : 'website'
+                        category: node.frontmatter.templateKey === 'blog-post' ? 'blog' : node.frontmatter.category
                     };
                 });
             return [...blogs, ...CMSPages];

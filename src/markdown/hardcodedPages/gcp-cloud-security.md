@@ -3,6 +3,7 @@ reactComponent: gcp-cloud-security
 templateKey: "hardcoded-pages"
 permalink: "/use-cases/gcp-cloud-security"
 title: "GCP Cloud Security | Google Cloud Security and Compliance - Cyscale"
+category: "solutions"
 description: |
   Protect Google environments with a complete Cloud Security Posture Management (CSPM) solution
 ---

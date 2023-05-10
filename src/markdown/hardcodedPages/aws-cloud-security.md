@@ -3,6 +3,7 @@ reactComponent: aws-cloud-security
 templateKey: "hardcoded-pages"
 permalink: "/use-cases/aws-cloud-security"
 title: "AWS Cloud Security and Compliance - Cyscale"
+category: "solutions"
 description: |
   Protect AWS environments with a complete Cloud Security Posture Management (CSPM) solution
 ---

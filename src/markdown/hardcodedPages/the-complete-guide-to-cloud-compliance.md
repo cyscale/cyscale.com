@@ -3,6 +3,7 @@ reactComponent: the-complete-guide-to-cloud-compliance
 templateKey: "hardcoded-pages"
 permalink: "/whitepaper/cloud-storage-misconfigurations"
 title: "[White Paper] The Complete Guide to Cloud Compliance in 2023 - Cyscale"
+category: "whitepaper"
 description: |
   This whitepaper presents cloud trends for 2023 along with popular compliance frameworks such as
                       ISO27001, GDPR, HIPAA, PCI-DSS and SOC2.

@@ -65,6 +65,9 @@ const ContactUs = ({ location }) => {
                 We are always happy to assist with more information about us or our product which covers cloud security,
                 kubernetes security and hybrid multi-cloud environments.
             </div>
+            <div className='hidden' data-category>
+                website
+            </div>
             <div className='bg-lightGreyEEE'>
                 <Container>
                     <Section>

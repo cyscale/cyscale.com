@@ -116,6 +116,9 @@ const CloudCompliance = ({ location }) => {
                 Easy & continuous compliance for ISO 27001, with a set of battle-tested policies to jumpstart your ISMS.
                 Secure your assets with cutting-edge controls & policies.
             </div>
+            <div className='hidden' data-category>
+                solutions
+            </div>
             <div className='bg-lightGrey'>
                 <Container>
                     <div className='pt-20 max-w-lg mx-auto lg:mx-0 lg:max-w-none'>

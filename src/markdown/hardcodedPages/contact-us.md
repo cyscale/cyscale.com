@@ -3,6 +3,7 @@ reactComponent: contact-us
 templateKey: "hardcoded-pages"
 permalink: "/contact-us"
 title: "Contact us - Cyscale"
+category: "website"
 description: |
   We are always happy to assist with more information about us or our product which covers cloud security,
                   kubernetes security and hybrid multi-cloud environments.
