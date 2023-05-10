@@ -5,15 +5,16 @@ import { css } from 'twin.macro';
 import FocusLock from 'react-focus-lock';
 import classnames from 'classnames';
 import { Link } from 'gatsby';
+import useMediaQuery from '../../hooks/useMediaQuery';
 
 const client = algoliasearch(`appId`, `apiKey`);
 const index = client.initIndex(`indexName`);
 
-async function performSearch(query) {
+async function performSearch(query, notDesktop) {
     try {
         const { hits } = await index.search(query, {
-            attributesToSnippet: ['content:21', 'title'],
-            hitsPerPage: 5
+            attributesToSnippet: [`content:${notDesktop ? '10' : '21'}`, 'title'],
+            hitsPerPage: notDesktop ? 3 : 5
         });
         return hits;
     } catch (err) {
@@ -44,11 +45,12 @@ function sortCategories(categories) {
 const CustomSearch = ({ searchBar, setSearchBar }) => {
     const [query, setQuery] = useState('');
     const [results, setResults] = useState([]);
+    const notDesktop = useMediaQuery('(max-width: 1280px)');
 
     const handleSearch = async (e) => {
         setQuery(e.target.value);
         if (e.target.value.trim()) {
-            const hits = await performSearch(e.target.value);
+            const hits = await performSearch(e.target.value, notDesktop);
             const groupedResults = groupByCategory(hits);
             setResults(groupedResults);
         } else {

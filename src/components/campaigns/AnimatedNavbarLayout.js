@@ -20,6 +20,7 @@ import { css } from 'twin.macro';
 
 import loadable from '@loadable/component';
 import CustomSearch from '../Search/CustomSearch';
+import useClickOutsideSearch from '../../hooks/useClickOutsideSearch';
 const Footer = loadable(() => import('./footer'));
 
 const paddingNav = css`
@@ -76,23 +77,7 @@ const AnimatedNavbarLayout = ({ children, formId, formTargetId, location, title,
         //eslint-disable-next-line
     }, [searchBar]);
 
-    useEffect(() => {
-        const handleClickOutside = (event) => {
-            if (searchRef.current && !searchRef.current.contains(event.target)) {
-                setSearchBar(false);
-            }
-        };
-
-        if (searchBar) {
-            document.addEventListener('mousedown', handleClickOutside);
-        } else {
-            document.removeEventListener('mousedown', handleClickOutside);
-        }
-
-        return () => {
-            document.removeEventListener('mousedown', handleClickOutside);
-        };
-    }, [searchBar, setSearchBar]);
+    useClickOutsideSearch(searchRef, searchBar, setSearchBar);
 
     return (
         <CookiesProvider>
