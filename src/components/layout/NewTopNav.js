@@ -7,6 +7,7 @@ import NewNavigation from './NewNavigation';
 import MobileNavbar from './components/MobileNavbar';
 import MobileNavigation from './components/MobileNavigation';
 import CustomSearch from '../Search/CustomSearch';
+import useClickOutsideSearch from '../../hooks/useClickOutsideSearch';
 
 const paddingNav = css`
     padding-left: 2rem;
@@ -71,23 +72,7 @@ const NewTopNav = ({ pageName, showLogo = true, location, animatedNavbar }) => {
         //eslint-disable-next-line
     }, [trigger]);
 
-    useEffect(() => {
-        const handleClickOutside = (event) => {
-            if (searchRef.current && !searchRef.current.contains(event.target)) {
-                setSearchBar(false);
-            }
-        };
-
-        if (searchBar) {
-            document.addEventListener('mousedown', handleClickOutside);
-        } else {
-            document.removeEventListener('mousedown', handleClickOutside);
-        }
-
-        return () => {
-            document.removeEventListener('mousedown', handleClickOutside);
-        };
-    }, [searchBar, setSearchBar]);
+    useClickOutsideSearch(searchRef, searchBar, setSearchBar);
 
     const rootClasses = !trigger ? 'translate-y-0' : '-translate-y-full';
 
@@ -137,7 +122,7 @@ const NewTopNav = ({ pageName, showLogo = true, location, animatedNavbar }) => {
                     style={{ maxWidth: '100vw' }}
                     className={'fixed left-0 block w-full mx-auto bg-white z-10 shadow-2xl'}
                     css={css`
-                        top: 105px;
+                        top: 6.563rem;
                     `}
                     ref={searchRef}
                 >

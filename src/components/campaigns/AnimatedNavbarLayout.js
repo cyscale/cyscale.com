@@ -151,12 +151,12 @@ const AnimatedNavbarLayout = ({ children, formId, formTargetId, location, title,
                 </header>
                 {searchBar && (
                     <div
+                        ref={searchRef}
                         style={{ maxWidth: '100vw' }}
                         className={'fixed left-0 block w-full mx-auto bg-white z-10 shadow-2xl'}
                         css={css`
-                            top: 130px;
+                            top: 8.125rem;
                         `}
-                        ref={searchRef}
                     >
                         <div tw='container max-w-7xl mx-auto pt-2.5 hidden xl:block' css={paddingNav}>
                             <CustomSearch searchBar={searchBar} setSearchBar={setSearchBar} />
