@@ -7,9 +7,8 @@ import classnames from 'classnames';
 import { Link } from 'gatsby';
 import useMediaQuery from '../../hooks/useMediaQuery';
 
-const client = algoliasearch(`appId`, `apiKey`);
-const index = client.initIndex(`indexName`);
-
+const client = algoliasearch(`041PWC8D0P`, `9fd5fa61b586d7219446a40c0650cb46`);
+const index = client.initIndex(`cyscale_website`);
 async function performSearch(query, notDesktop) {
     try {
         const { hits } = await index.search(query, {

@@ -118,6 +118,8 @@ const NewTopNav = ({ pageName, showLogo = true, location, animatedNavbar }) => {
                         showBurgerButton={showBurgerButton}
                         showMenu={showMenu}
                         setShowMenu={setShowMenu}
+                        searchBar={searchBar}
+                        setSearchBar={setSearchBar}
                     />
                 </div>
             </div>
@@ -130,14 +132,14 @@ const NewTopNav = ({ pageName, showLogo = true, location, animatedNavbar }) => {
                             css`
                                 top: 7.563rem;
                                 @media (max-width: 1280px) {
-                                    top: ${isAtTop ? '7.563rem' : '5.563rem'};
+                                    top: ${isAtTop ? '7rem' : '5rem'};
                                 }
                             `,
                         !animatedNavbar &&
                             css`
                                 top: 6.563rem;
                                 @media (max-width: 1280px) {
-                                    top: 5.563rem;
+                                    top: 5rem;
                                 }
                             `
                     ]}
@@ -153,7 +155,6 @@ const NewTopNav = ({ pageName, showLogo = true, location, animatedNavbar }) => {
                     showMenu={showMenu}
                     setShowMenu={setShowMenu}
                     appLink={appLink}
-                    setSearchBar={setSearchBar}
                 />
             )}
         </>

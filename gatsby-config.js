@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const striptags = require('striptags');
 const MarkdownIt = require('markdown-it');
 
@@ -280,9 +282,9 @@ module.exports = {
         {
             resolve: `gatsby-plugin-algolia`,
             options: {
-                appId: `appId`,
-                apiKey: `apiKey`,
-                indexName: `indexName`,
+                appId: `041PWC8D0P`,
+                apiKey: process.env.ALGOLIA_API_KEY,
+                indexName: `cyscale_website`,
                 queries,
                 chunkSize: 10000,
                 concurrentQueries: true,
