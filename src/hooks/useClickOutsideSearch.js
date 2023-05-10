@@ -4,7 +4,6 @@ const useClickOutsideSearch = (ref, state, setState) => {
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (ref.current && !ref.current.contains(event.target)) {
-                console.log('click outside');
                 setState(false);
             }
         };

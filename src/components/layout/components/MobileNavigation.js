@@ -4,6 +4,7 @@ import logo from '../../../assets/images/logo.svg';
 import menuClose from '../icons/menuCloseBlack.svg';
 import IconUser from '../icons/icon-user.svg';
 import IconTag from '../icons/icon-tag.svg';
+import SearchIcon from '../../../assets/images/search-icon.svg';
 import PlatformMobile from './Platform/PlatformMobile';
 import SolutionsMobile from './Solutions/SolutionsMobile';
 import ResourcesMobile from './Resources/ResourcesMobile';
@@ -29,7 +30,7 @@ const MobileItemNav = ({ item, setActiveMenu }) => {
     );
 };
 
-const MobileNavigation = ({ showMenu, setShowMenu, appLink }) => {
+const MobileNavigation = ({ showMenu, setShowMenu, appLink, setSearchBar }) => {
     const [activeMenu, setActiveMenu] = useState('main');
 
     return (
@@ -78,6 +79,18 @@ const MobileNavigation = ({ showMenu, setShowMenu, appLink }) => {
                             <Link className='ml-2' to='/pricing/'>
                                 Pricing
                             </Link>
+                        </div>
+                        <div className='flex mt-3 px-8'>
+                            <img src={SearchIcon} alt='' />
+                            <div
+                                className='ml-2'
+                                onClick={() => {
+                                    setShowMenu(false);
+                                    setSearchBar(true);
+                                }}
+                            >
+                                Search
+                            </div>
                         </div>
                     </div>
                 )}

@@ -126,12 +126,12 @@ const NewTopNav = ({ pageName, showLogo = true, location, animatedNavbar }) => {
                     `}
                     ref={searchRef}
                 >
-                    <div tw='container max-w-7xl mx-auto pt-2.5 hidden xl:block' css={paddingNav}>
+                    <div tw='container max-w-7xl mx-auto pt-2.5' css={paddingNav}>
                         <CustomSearch searchBar={searchBar} setSearchBar={setSearchBar} />
                     </div>
                 </div>
             )}
-            {showMenu && <MobileNavigation showMenu={showMenu} setShowMenu={setShowMenu} appLink={appLink} />}
+            {showMenu && <MobileNavigation showMenu={showMenu} setShowMenu={setShowMenu} appLink={appLink} setSearchBar={setSearchBar} />}
         </>
     );
 };

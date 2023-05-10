@@ -89,7 +89,7 @@ const CustomSearch = ({ searchBar, setSearchBar }) => {
             css={css`
                 position: static;
                 background-color: #ffffff;
-                padding: 2rem 0;
+                padding: 1rem 0;
             `}
         >
             <FocusLock>
@@ -108,16 +108,21 @@ const CustomSearch = ({ searchBar, setSearchBar }) => {
                             className='py-2 outline-none font-hind'
                             css={css`
                                 width: 70rem;
-                                height: 2rem;
+                                height: 3rem;
                                 font-size: 1.5rem;
                                 padding: 0.5rem 0;
+
+                                @media (max-width: 1028px) {
+                                    height: 2rem;
+                                    font-size: 1rem;
+                                }
                             `}
                         />
                         <img
                             src={ClearInput}
                             alt=''
                             width={16}
-                            className='absolute right-0 top-2 cursor-pointer'
+                            className='absolute right-0 top-1 lg:top-3 cursor-pointer'
                             onKeyDown={(event) => {
                                 if (event.key === 'Enter' || event.key === ' ') {
                                     setSearchBar(!searchBar);
@@ -136,7 +141,7 @@ const CustomSearch = ({ searchBar, setSearchBar }) => {
                         />
                     </div>
                     {query !== '' && Object.keys(results).length >= 1 && (
-                        <div className='block bg-white mt-4'>
+                        <div className='block bg-white mt-2'>
                             {' '}
                             <hr
                                 css={css`
