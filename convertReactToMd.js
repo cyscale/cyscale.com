@@ -99,6 +99,10 @@ const skipFiles = [
 ];
 const skipFolders = ['campaigns', 'policies'];
 
-convertReactFilesToMD(reactFolder, mdFolder, attributeNames, skipFiles, skipFolders);
+function convertReactFilesToMDWrapper() {
+    convertReactFilesToMD(reactFolder, mdFolder, attributeNames, skipFiles, skipFolders);
 
-console.log('React Pages converted to MD resources!');
+    console.log('React Pages converted to MD resources!');
+}
+
+module.exports = convertReactFilesToMDWrapper;

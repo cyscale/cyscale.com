@@ -1,5 +1,10 @@
 const path = require(`path`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
+const convertReactFilesToMD = require('./convertReactToMd');
+
+exports.onPreInit = async () => {
+    await convertReactFilesToMD();
+};
 
 const redirects = [
     {

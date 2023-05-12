@@ -6,3 +6,4 @@ static/admin/*.bundle.*
 yarn-error.log
 .idea
 .env
+hardcodedPages/
