@@ -6,9 +6,10 @@ import FocusLock from 'react-focus-lock';
 import classnames from 'classnames';
 import { Link } from 'gatsby';
 import useMediaQuery from '../../hooks/useMediaQuery';
+import { algoiaSearchKey, algoliaAppID, algoliaIndex } from '../../common/constants';
 
-const client = algoliasearch(`041PWC8D0P`, `9fd5fa61b586d7219446a40c0650cb46`);
-const index = client.initIndex(`cyscale_website`);
+const client = algoliasearch(algoliaAppID, algoiaSearchKey);
+const index = client.initIndex(algoliaIndex);
 async function performSearch(query, notDesktop) {
     try {
         const { hits } = await index.search(query, {
