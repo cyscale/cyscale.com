@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Row, Section } from '../../components/atoms/Containers';
 import Layout from '../../components/layout/CleanLayout';
 import { useStaticQuery, graphql, Link } from 'gatsby';
@@ -7,6 +7,9 @@ import ScrollButton from '../../components/ScrollButton/ScrollButton';
 import GradientButton from '../../components/buttons/GradientButton';
 import LightDarkButton from '../../components/buttons/LightDarkButton';
 import LinksAndWhitepaper from '../../components/products/LinksAndWhitepaper';
+import { css } from 'twin.macro';
+import VideoCyscale from '../../components/campaigns/cspm-solutin/CyscaleVideo';
+import { CSSTransition } from 'react-transition-group';
 
 const topArticles = [
     {
@@ -31,6 +34,8 @@ const topArticles = [
 ];
 
 const IAMSecurity = ({ location }) => {
+    const [modal, setModal] = useState(false);
+
     const data = useStaticQuery(graphql`
         query IAMSecurityQuery {
             identityDashboard: file(relativePath: { eq: "identity-dashboard.png" }) {
@@ -48,6 +53,11 @@ const IAMSecurity = ({ location }) => {
                     gatsbyImageData(width: 386, layout: FIXED)
                 }
             }
+            iamVideo: file(relativePath: { eq: "iam-video.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 1920, layout: CONSTRAINED)
+                }
+            }
         }
     `);
 
@@ -58,49 +68,68 @@ const IAMSecurity = ({ location }) => {
             title='IAM Cloud Security | Detect and Mitigate Risk - Cyscale'
             description='Continuous multi-cloud monitoring for identity and access management (IAM) misconfigurations across all your cloud assets to meet strict IAM compliance directives and improve your cloud security posture.'
         >
-            <div className='hidden' data-template-key>
-                hardcoded-pages
-            </div>
-            <div className='hidden' data-permalink>
-                /use-cases/iam-security
-            </div>
-            <div className='hidden' data-title>
-                IAM Cloud Security | Detect and Mitigate Risk - Cyscale
-            </div>
-            <div className='hidden' data-description>
-                Continuous multi-cloud monitoring for identity and access management (IAM) misconfigurations across all
-                your cloud assets to meet strict IAM compliance directives and improve your cloud security posture.
-            </div>
-            <div className='hidden' data-category>
-                solutions
-            </div>
-            <div className='bg-cloud' style={{ backgroundColor: '#eeeeee' }}>
+            <div
+                css={css`
+                    background-image: linear-gradient(#eeeeee, #e4edfc);
+                `}
+            >
                 <Container>
-                    <Section>
-                        <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-xl pt-16 pb-4'>
-                            <h1 className='font-semibold text-left text-4xl lg:text-5xl leading-normal lg:leading-normal text-primary mb-16 font-montserrat'>
-                                Identity and Access Management Security
-                                <br /> for Cloud
-                            </h1>
-                            <p className='text-left text-base lg:text-lg mb-2 leading-relaxed'>
-                                <strong>Scan, monitor and prioritize cloud IAM risk.</strong>
-                            </p>
-                            <p className='text-left text-base lg:text-lg mb-24 leading-relaxed'>
-                                Continuous multi-cloud monitoring for identity and access management (IAM)
-                                misconfigurations across all your cloud resources to meet strict IAM compliance
-                                directives and improve your cloud security posture.
-                            </p>
-                            <div className='flex mt-8'>
-                                <Link to='/free-trial'>
-                                    <GradientButton text='Start Free Trial' />
-                                </Link>
-                                <Link to='/request-demo' className='ml-4'>
-                                    <LightDarkButton text={'Request Demo'} />
-                                </Link>
+                    <Row>
+                        <div className='col-span-12 lg:col-span-6'>
+                            {' '}
+                            <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-xl pt-10 lg:pt-16 pb-4 mt-32'>
+                                <h1 className='font-semibold text-left text-4xl lg:text-5xl leading-normal lg:leading-normal text-primary mb-16 font-montserrat'>
+                                    Identity and Access Management Security
+                                    <br /> for Cloud
+                                </h1>
+                                <p className='text-left text-base lg:text-lg mb-2 leading-relaxed'>
+                                    <strong>Scan, monitor and prioritize cloud IAM risk.</strong>
+                                </p>
+                                <p className='text-left text-base lg:text-lg mb-24 leading-relaxed'>
+                                    Continuous multi-cloud monitoring for identity and access management (IAM)
+                                    misconfigurations across all your cloud resources to meet strict IAM compliance
+                                    directives and improve your cloud security posture.
+                                </p>
+                                <div className='flex mt-8'>
+                                    <Link to='/free-trial'>
+                                        <GradientButton text='Start Free Trial' />
+                                    </Link>
+                                    <Link to='/request-demo' className='ml-4'>
+                                        <LightDarkButton text={'Request Demo'} />
+                                    </Link>
+                                </div>
                             </div>
                         </div>
-                    </Section>
-                    <div className='pb-8'>
+                        <div className='col-span-12 lg:col-span-6 flex justify-center items-center lg:pt-20'>
+                            <div
+                                onClick={() => {
+                                    setModal(!modal);
+                                }}
+                                onKeyPress={() => {}}
+                                tabIndex='0'
+                                role='button'
+                            >
+                                <GatsbyImage
+                                    image={data.iamVideo.childImageSharp.gatsbyImageData}
+                                    alt=''
+                                    className='max-w-xl'
+                                    css={css`
+                                        &:hover {
+                                            scale: 1.1;
+                                        }
+                                    `}
+                                />
+                            </div>
+                            {modal && <div className='modal-overlay'></div>}
+                            <CSSTransition in={modal} timeout={300} classNames='video' unmountOnExit>
+                                <VideoCyscale
+                                    setModal={setModal}
+                                    videoUrl='https://d3n52qn7viv754.cloudfront.net/videos/identity-dashboard.mp4'
+                                />
+                            </CSSTransition>
+                        </div>
+                    </Row>
+                    <div className='pb-8 mt-12 lg:mt-32'>
                         <ScrollButton to='start' />
                     </div>
                 </Container>
@@ -119,7 +148,7 @@ const IAMSecurity = ({ location }) => {
                         </div>
                         <div className='col-span-12 lg:col-span-5'>
                             <div className='mx-auto lg:mx-0  max-w-xl lg:max-w-none'>
-                                <p className='text-base leading-normal my-12 text-gray'>
+                                <p className='text-base leading-normal mt-12 lg:mt-0 mb-12 text-gray'>
                                     <strong>
                                         Effectively manage user permissions and enforce privilege access for a robust
                                         cloud security posture.

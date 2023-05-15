@@ -422,7 +422,10 @@ const PricingPage = ({ location }) => {
                     </div>
                     {modal && <div className='modal-overlay'></div>}
                     <CSSTransition in={modal} timeout={300} classNames='video' unmountOnExit>
-                        <VideoCyscale setModal={setModal} />
+                        <VideoCyscale
+                            setModal={setModal}
+                            videoUrl='https://d3n52qn7viv754.cloudfront.net/videos/cyscale.mp4'
+                        />
                     </CSSTransition>
                 </Container>
             </div>
