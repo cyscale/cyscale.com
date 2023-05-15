@@ -158,13 +158,6 @@ export const LeaderAndy = withImageData((props) => (
 export const LeaderManuela = withImageData((props) => (
     <Img image={props.imageData.leaderManuela.childImageSharp.gatsbyImageData} {...props} />
 ));
-export const OvidiuAndManuela = withImageData((props) => (
-    <Img
-        image={props.imageData.ovidiuAndManuela.childImageSharp.gatsbyImageData}
-        alt='Manuela and Ovidiu leaders of Cyscale'
-        {...props}
-    />
-));
 export const AndreiM = withImageData((props) => (
     <Img image={props.imageData.andreiM.childImageSharp.gatsbyImageData} {...props} />
 ));
