@@ -108,16 +108,10 @@ const PricingPage = ({ location }) => {
             <div className='md:pt-16' css={heroBackground}>
                 <div className='pt-24 pb-12 sm:pb-24 lg:py-32'>
                     <Container>
-                        <h1
-                            className='text-center text-blue text-4xl lg:text-5xl font-montserrat font-bold'
-                            data-content
-                        >
+                        <h1 className='text-center text-blue text-4xl lg:text-5xl font-montserrat font-bold'>
                             Get the Cyscale Platform
                         </h1>
-                        <h4
-                            className='text-center font-semibold font-montserrat text-base lg:text-lg mt-8'
-                            data-content
-                        >
+                        <h4 className='text-center font-semibold font-montserrat text-base lg:text-lg mt-8'>
                             Whether you’re a Fortune 500 company or a startup,
                             <br className='hidden sm:block' /> Cyscale can help you with Cloud Visibility, Security and
                             Compliance.
@@ -131,18 +125,11 @@ const PricingPage = ({ location }) => {
                                         duration={500}
                                         className='cursor-pointer'
                                     >
-                                        <h2
-                                            className='text-blue font-montserrat font-bold'
-                                            css={customFontSize}
-                                            data-content
-                                        >
+                                        <h2 className='text-blue font-montserrat font-bold' css={customFontSize}>
                                             Pro
                                         </h2>
                                     </Link>
-                                    <h4
-                                        className='text-blue font-montserrat font-semibold text-base lg:text-lg'
-                                        data-content
-                                    >
+                                    <h4 className='text-blue font-montserrat font-semibold text-base lg:text-lg'>
                                         With up to 1000 assets
                                     </h4>
                                 </div>
@@ -159,11 +146,7 @@ const PricingPage = ({ location }) => {
                                             duration={500}
                                             className='cursor-pointer'
                                         >
-                                            <h2
-                                                className='text-blue font-montserrat font-bold'
-                                                css={customFontSize}
-                                                data-content
-                                            >
+                                            <h2 className='text-blue font-montserrat font-bold' css={customFontSize}>
                                                 Scale
                                             </h2>
                                         </Link>
@@ -172,15 +155,11 @@ const PricingPage = ({ location }) => {
                                             css={css`
                                                 background-color: #d8deff;
                                             `}
-                                            data-content
                                         >
                                             Most Popular
                                         </p>
                                     </div>
-                                    <h4
-                                        className='text-blue font-montserrat font-semibold text-base lg:text-lg'
-                                        data-content
-                                    >
+                                    <h4 className='text-blue font-montserrat font-semibold text-base lg:text-lg'>
                                         With up to 5000 assets
                                     </h4>
                                 </div>
@@ -193,29 +172,22 @@ const PricingPage = ({ location }) => {
                                         duration={500}
                                         className='cursor-pointer'
                                     >
-                                        <h2
-                                            className='text-blue font-montserrat font-bold'
-                                            css={customFontSize}
-                                            data-content
-                                        >
+                                        <h2 className='text-blue font-montserrat font-bold' css={customFontSize}>
                                             Enterprise
                                         </h2>
                                     </Link>
-                                    <h4
-                                        className='text-blue font-montserrat font-semibold text-base lg:text-lg'
-                                        data-content
-                                    >
+                                    <h4 className='text-blue font-montserrat font-semibold text-base lg:text-lg'>
                                         Custom plan
                                     </h4>
                                 </div>
                             </div>
                         </Row>
                         <div className='mt-8 md:mt-16'>
-                            <p className='text-base font-montserrat font-medium text-center' data-content>
+                            <p className='text-base font-montserrat font-medium text-center'>
                                 Not sure how many assets you want to protect?
                             </p>
                             <p className='text-base font-montserrat text-blue font-medium text-center'>
-                                <GatsbyLink to='/free-trial' className='hover:underline' data-content>
+                                <GatsbyLink to='/free-trial' className='hover:underline'>
                                     Find out with the Free Trial
                                 </GatsbyLink>
                             </p>
@@ -227,7 +199,6 @@ const PricingPage = ({ location }) => {
                                 duration={500}
                                 className='bg-blue text-white font-bold rounded-md font-montserrat text-base py-2 px-8 cursor-pointer'
                                 css={hoverButtonColorStyle}
-                                data-content
                             >
                                 Get Quote
                             </Link>
@@ -243,7 +214,6 @@ const PricingPage = ({ location }) => {
                                     line-height: 1.25rem;
                                 }
                             `}
-                            data-content
                         >
                             Every cloud resource in your environment counts as an asset and is factored into the
                             Security Knowlege Graph. The entire data is used as a basis for security analysis, including
@@ -253,7 +223,7 @@ const PricingPage = ({ location }) => {
                 </div>
             </div>
             <div className='py-24'>
-                <h1 className='text-center text-blue font-montserrat' css={featuresTitleFontSize} data-content>
+                <h1 className='text-center text-blue font-montserrat' css={featuresTitleFontSize}>
                     {' '}
                     <strong> You get all features included,</strong> <br />
                     regardless of which plan you choose.
@@ -262,10 +232,10 @@ const PricingPage = ({ location }) => {
                     <Row className='mt-16 gap-0 lg:gap-10'>
                         <div className='col-span-12 lg:col-span-4 mx-auto max-w-lg lg:mx-0'>
                             <img src={VisibilityIcon} alt='' css={widthFeatureIcon} />
-                            <h2 className='font-montserrat font-bold mt-3' css={customFontSize} data-content>
+                            <h2 className='font-montserrat font-bold mt-3' css={customFontSize}>
                                 Visibility
                             </h2>
-                            <p className='text-base font-mediun font-montserrat mt-4' data-content>
+                            <p className='text-base font-mediun font-montserrat mt-4'>
                                 Continuous visibility over multi-cloud environments to identify vulnerable areas. Scan,
                                 monitor, and remediate across your cloud infrastructure.
                             </p>
@@ -274,36 +244,29 @@ const PricingPage = ({ location }) => {
                                 <GatsbyLink
                                     className='ml-2 text-sm hover:underline'
                                     to={'/use-cases/cloud-data-security/'}
-                                    data-content
                                 >
                                     Multi-cloud support (AWS, GCP, Azure)
                                 </GatsbyLink>
                             </div>
                             <div className='flex mt-2'>
                                 <img src={checkMarkIcon} alt='' />{' '}
-                                <p className='ml-2 text-sm' data-content>
-                                    Integrations (AWS SSO, Okta, Github)
-                                </p>
+                                <p className='ml-2 text-sm'>Integrations (AWS SSO, Okta, Github)</p>
                             </div>
                             <div className='flex mt-2'>
                                 <img src={checkMarkIcon} alt='' />
-                                <p className='ml-2 text-sm' data-content>
-                                    Asset Inventory
-                                </p>
+                                <p className='ml-2 text-sm'>Asset Inventory</p>
                             </div>
                             <div className='flex mt-2 items-start'>
                                 <img src={checkMarkIcon} alt='' />
-                                <p className='ml-2 text-sm' data-content>
-                                    Powerful dashboards
-                                </p>
+                                <p className='ml-2 text-sm'>Powerful dashboards</p>
                             </div>
                         </div>
                         <div className='col-span-12 lg:col-span-4 mx-auto max-w-lg lg:mx-0 mt-8 lg:mt-0'>
                             <img src={SecurityIcon} alt='' css={widthFeatureIcon} />
-                            <h2 className='font-montserrat font-bold mt-3' css={customFontSize} data-content>
+                            <h2 className='font-montserrat font-bold mt-3' css={customFontSize}>
                                 Security
                             </h2>
-                            <p className='text-base font-mediun font-montserrat mt-4' data-content>
+                            <p className='text-base font-mediun font-montserrat mt-4'>
                                 Your company’s security posture is properly analyzed, considering signals from several
                                 sources and leaving no risk or misconfiguration uncovered.
                             </p>
@@ -312,35 +275,27 @@ const PricingPage = ({ location }) => {
                                 <GatsbyLink
                                     className='ml-2 text-sm hover:underline'
                                     to={'/use-cases/cloud-misconfigurations/'}
-                                    data-content
                                 >
                                     Misconfigurations (Detection & Remediation)
                                 </GatsbyLink>
                             </div>
                             <div className='flex mt-2 items-start'>
                                 <img src={checkMarkIcon} alt='' />{' '}
-                                <p className='ml-2 text-sm' data-content>
-                                    400+ security controls (including contextual analysis)
-                                </p>
+                                <p className='ml-2 text-sm'>400+ security controls (including contextual analysis)</p>
                             </div>
                             <div className='flex mt-2'>
                                 <img src={checkMarkIcon} alt='' />
-                                <p className='ml-2 text-sm' data-content>
-                                    Custom controls
-                                </p>
+                                <p className='ml-2 text-sm'>Custom controls</p>
                             </div>
                             <div className='flex mt-2'>
                                 <img src={checkMarkIcon} alt='' />
-                                <p className='ml-2 text-sm' data-content>
-                                    Alerts & Notifications
-                                </p>
+                                <p className='ml-2 text-sm'>Alerts & Notifications</p>
                             </div>{' '}
                             <div className='flex mt-2'>
                                 <img src={checkMarkIcon} alt='' />{' '}
                                 <GatsbyLink
                                     className='ml-2 text-sm hover:underline'
                                     to={'/products/security-knowledge-graph/'}
-                                    data-content
                                 >
                                     Security Knowledge Graph
                                 </GatsbyLink>
@@ -348,10 +303,10 @@ const PricingPage = ({ location }) => {
                         </div>
                         <div className='col-span-12 lg:col-span-4 mx-auto max-w-lg lg:mx-0 mt-8 lg:mt-0'>
                             <img src={ComplianceIcon} alt='' css={widthFeatureIcon} />
-                            <h2 className='font-montserrat font-bold mt-3' css={customFontSize} data-content>
+                            <h2 className='font-montserrat font-bold mt-3' css={customFontSize}>
                                 Compliance
                             </h2>
-                            <p className='text-base font-mediun font-montserrat mt-4' data-content>
+                            <p className='text-base font-mediun font-montserrat mt-4'>
                                 Technical controls are automatically mapped to your organization’s policies and
                                 procedures so that compliance gaps are immediately brought to attention.
                             </p>
@@ -360,7 +315,6 @@ const PricingPage = ({ location }) => {
                                 <GatsbyLink
                                     className='ml-2 text-sm hover:underline'
                                     to={'/use-cases/cloud-compliance-and-auditing/'}
-                                    data-content
                                 >
                                     Policies
                                 </GatsbyLink>
@@ -370,7 +324,6 @@ const PricingPage = ({ location }) => {
                                 <GatsbyLink
                                     className='ml-2 text-sm hover:underline'
                                     to={'/use-cases/cloud-compliance-and-auditing/'}
-                                    data-content
                                 >
                                     Policy Editor
                                 </GatsbyLink>
@@ -380,7 +333,6 @@ const PricingPage = ({ location }) => {
                                 <GatsbyLink
                                     className='ml-2 text-sm hover:underline'
                                     to={'/use-cases/cloud-compliance-and-auditing/'}
-                                    data-content
                                 >
                                     Standards
                                 </GatsbyLink>
@@ -390,18 +342,13 @@ const PricingPage = ({ location }) => {
                                 <GatsbyLink
                                     className='ml-2 text-sm hover:underline'
                                     to={'/use-cases/cloud-compliance-and-auditing/'}
-                                    data-content
                                 >
                                     Inline evidence collection (based on security controls)
                                 </GatsbyLink>
                             </div>
                         </div>
                     </Row>
-                    <h4
-                        className='text-center lg:text-lg mt-24 font-montserrat font-semibold'
-                        css={linkFontSize}
-                        data-content
-                    >
+                    <h4 className='text-center lg:text-lg mt-24 font-montserrat font-semibold' css={linkFontSize}>
                         Full technical specifications{' '}
                         <a
                             href='https://docs.cyscale.com/'
@@ -412,11 +359,7 @@ const PricingPage = ({ location }) => {
                             available here
                         </a>
                     </h4>
-                    <h4
-                        className='text-center lg:text-lg font-montserrat font-semibold mt-2'
-                        css={linkFontSize}
-                        data-content
-                    >
+                    <h4 className='text-center lg:text-lg font-montserrat font-semibold mt-2' css={linkFontSize}>
                         View Cyscale in action{' '}
                         <GatsbyLink
                             to='/playground'
@@ -436,7 +379,7 @@ const PricingPage = ({ location }) => {
                 <h2 className='text-white font-bold font-montserrat' css={customFontSize}>
                     Schedule a Demo
                 </h2>
-                <p className='text-white mt-8' data-content>
+                <p className='text-white mt-8'>
                     Sign up for a custom demo to see how we close
                     <br /> security gaps and help you move to the cloud.
                 </p>
@@ -449,7 +392,7 @@ const PricingPage = ({ location }) => {
             </div>
             <div className='pt-24 pb-32'>
                 <Container>
-                    <h2 className='text-center text-blue font-montserrat font-bold' css={customFontSize} data-content>
+                    <h2 className='text-center text-blue font-montserrat font-bold' css={customFontSize}>
                         See the full power of Cyscale
                     </h2>
                     <div className='max-w-2xl mx-auto mt-8'>
@@ -486,13 +429,10 @@ const PricingPage = ({ location }) => {
             <div className='pt-12' css={heroBackground}>
                 <Container>
                     <Element name='meetings-calendar' />
-                    <h1
-                        className='text-blue text-center text-3xl lg:text-5xl font-bold font-montserrat mt-8'
-                        data-content
-                    >
+                    <h1 className='text-blue text-center text-3xl lg:text-5xl font-bold font-montserrat mt-8'>
                         Let’s make it a win-win!
                     </h1>
-                    <p className='my-8 text-center font-medium text-sm lg:text-base font-montserrat' data-content>
+                    <p className='my-8 text-center font-medium text-sm lg:text-base font-montserrat'>
                         Let's talk about your team, your products, and your challenges and come <br /> up with a pricing
                         scheme that ultimately brings you a positive ROI and helps you move faster.
                     </p>

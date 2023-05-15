@@ -12,7 +12,7 @@ import Resources from './components/Resources/Resources';
 import Company from './components/Company/Company';
 import { logoStyle } from './style';
 import useScrollTrigger from '../scrollTrigger';
-import { isAnimatedNavbarPage } from '../../common/utils';
+import { isAnimatedNavbarPage, isPlaygroundBlogPage } from '../../common/utils';
 
 const MegaMenu = styled.div`
     left: ${({ animatedNavbarPages, left }) => (animatedNavbarPages ? left : '0')};
@@ -160,7 +160,7 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation, sea
                         </NavItemButton>
                         <MegaMenu
                             css={[hideMegaMenu ? hiddenMegaMenuOnScroll : null]}
-                            animatedNavbarPages={isAnimatedNavbarPage(pathname)}
+                            animatedNavbarPages={isAnimatedNavbarPage(pathname) && !isPlaygroundBlogPage(pathname)}
                             left='-17rem'
                         >
                             <Solutions pathname={pathname} activeLinks={activeLinks} setActiveLinks={setActiveLinks} />
@@ -193,7 +193,7 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation, sea
                         </NavItemButton>
                         <MegaMenu
                             css={[hideMegaMenu ? hiddenMegaMenuOnScroll : null]}
-                            animatedNavbarPages={isAnimatedNavbarPage(pathname)}
+                            animatedNavbarPages={isAnimatedNavbarPage(pathname) && !isPlaygroundBlogPage(pathname)}
                             left='-4rem'
                         >
                             <Resources pathname={pathname} activeLinks={activeLinks} setActiveLinks={setActiveLinks} />

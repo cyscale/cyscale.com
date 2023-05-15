@@ -29,12 +29,28 @@ function extractDataFromJSX(fileContent, attributeNames) {
         }
     });
 
-    return extractedData;
+    let allTextContent = '';
+
+    traverse(ast, {
+        JSXText(path) {
+            const textContent = path.node.value.trim();
+            if (textContent) {
+                allTextContent += textContent + '\n\n';
+            }
+        }
+    });
+
+    Object.values(extractedData).forEach((value) => {
+        const regex = new RegExp(value.trim(), 'g');
+        allTextContent = allTextContent.replace(regex, '');
+    });
+
+    return { extractedData, allTextContent };
 }
 
 function extractAndSaveMD(reactComponentPath, mdOutputPath, attributeNames) {
     const fileContent = fs.readFileSync(reactComponentPath, 'utf-8');
-    const extractedData = extractDataFromJSX(fileContent, attributeNames);
+    const { extractedData, allTextContent } = extractDataFromJSX(fileContent, attributeNames);
     const mdContent = `---
 reactComponent: ${path.basename(reactComponentPath, '.js')}
 templateKey: "${extractedData['data-template-key'].trim()}"
@@ -45,7 +61,7 @@ description: |
   ${extractedData['data-description'].trim().split('\n').join('\n  ')}
 ---
 
-${extractedData['data-content']}
+${allTextContent}
 `;
 
     fs.writeFileSync(mdOutputPath, mdContent);

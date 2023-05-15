@@ -125,13 +125,10 @@ const CloudCompliance = ({ location }) => {
                         <Section>
                             <Row>
                                 <div className='col-span-12 lg:col-span-6 order-2 lg:order-1'>
-                                    <h1
-                                        className='font-semibold font-montserrat text-3xl lg:text-5xl leading-normal lg:leading-normal text-primary'
-                                        data-content
-                                    >
+                                    <h1 className='font-semibold font-montserrat text-3xl lg:text-5xl leading-normal lg:leading-normal text-primary'>
                                         ISO 27001 Compliance & Security for Cloud Environment
                                     </h1>
-                                    <p className='text-base lg:text-lg mt-8 leading-relaxed' data-content>
+                                    <p className='text-base lg:text-lg mt-8 leading-relaxed'>
                                         Easy & continuous compliance for ISO 27001, with a set of battle-tested policies
                                         to jumpstart your ISMS. Secure your assets with cutting-edge controls &
                                         policies.
@@ -165,13 +162,10 @@ const CloudCompliance = ({ location }) => {
                     <div className='max-w-lg mx-auto lg:mx-0 lg:max-w-none'>
                         <Row>
                             <div className='col-span-12 text-center py-16'>
-                                <h2
-                                    className='font-semibold font-montserrat text-primary text-3xl lg:text-5xl'
-                                    data-content
-                                >
+                                <h2 className='font-semibold font-montserrat text-primary text-3xl lg:text-5xl'>
                                     Why is ISO 27001 important?
                                 </h2>
-                                <p className='text-base lg:text-xl leading-relaxed max-w-5xl mx-auto mt-8' data-content>
+                                <p className='text-base lg:text-xl leading-relaxed max-w-5xl mx-auto mt-8'>
                                     <strong>ISO/IEC 27001:2013</strong> is the golden international standard when it
                                     comes to information security. Part of the <strong>ISO/IEC 27000 family</strong>, it
                                     helps organizations protect their assets such as employee information, user data,
@@ -184,10 +178,7 @@ const CloudCompliance = ({ location }) => {
                 </Section>
                 <Section>
                     <div className='max-w-lg mx-auto lg:mx-0 lg:max-w-none' id='iso-compliant'>
-                        <h2
-                            className='font-semibold font-montserrat text-primary text-2xl lg:text-4xl mb-8 text-center'
-                            data-content
-                        >
+                        <h2 className='font-semibold font-montserrat text-primary text-2xl lg:text-4xl mb-8 text-center'>
                             Becoming ISO 27001 Compliant
                         </h2>
                         <Row>
@@ -306,13 +297,10 @@ const CloudCompliance = ({ location }) => {
                     <div className='max-w-lg mx-auto lg:mx-0 lg:max-w-none'>
                         <Row style={{ alignItems: 'center' }}>
                             <div className='col-span-12 lg:col-span-6 order-2 lg:order-1 lg:pr-8'>
-                                <h2
-                                    className='font-semibold font-montserrat text-primary text-2xl lg:text-4xl'
-                                    data-content
-                                >
+                                <h2 className='font-semibold font-montserrat text-primary text-2xl lg:text-4xl'>
                                     Asset Inventory
                                 </h2>
-                                <p className='text-base lg:text-lg leading-relaxed mt-4 lg:mt-8' data-content>
+                                <p className='text-base lg:text-lg leading-relaxed mt-4 lg:mt-8'>
                                     Keep track of all your cloud computing assets such as virtual machines, cloud
                                     storage buckets, and IAM users. Cyscale allows you to connect all your cloud
                                     accounts from cloud service providers (AWS, GCP, Azure, and Alibaba), in a read-only
@@ -340,13 +328,10 @@ const CloudCompliance = ({ location }) => {
                                 />
                             </div>
                             <div className='col-span-12 lg:col-span-6 lg:pl-8'>
-                                <h2
-                                    className='font-semibold font-montserrat text-primary text-2xl lg:text-4xl'
-                                    data-content
-                                >
+                                <h2 className='font-semibold font-montserrat text-primary text-2xl lg:text-4xl'>
                                     Annex A Controls and beyond
                                 </h2>
-                                <p className='text-base lg:text-lg leading-relaxed  mt-4 lg:mt-8' data-content>
+                                <p className='text-base lg:text-lg leading-relaxed  mt-4 lg:mt-8'>
                                     Continuously keep your cloud infrastructure and your sensitive data secure by
                                     following industry best practices to prevent vulnerabilities, such as CIS benchmarks
                                     and well-architected frameworks, all neatly mapped to ISO 27001. You can establish
@@ -360,10 +345,10 @@ const CloudCompliance = ({ location }) => {
                     <div className='max-w-lg mx-auto lg:mx-0 lg:max-w-none'>
                         <Row style={{ alignItems: 'center' }}>
                             <div className='col-span-12 lg:col-span-6 order-2 lg:order-1 lg:pr-8'>
-                                <h2 className='font-semibold font-montserrat text-primary text-2xl lg:text-4xl data-content'>
+                                <h2 className='font-semibold font-montserrat text-primary text-2xl lg:text-4xl '>
                                     Out of the box Policies
                                 </h2>
-                                <p className='text-base lg:text-lg leading-relaxed  mt-4 lg:mt-8' data-content>
+                                <p className='text-base lg:text-lg leading-relaxed  mt-4 lg:mt-8'>
                                     Cyscale provides you with a set of battle-tested security policies to jumpstart your
                                     ISMS. They are applicable to all your assets such as employee information,
                                     intelectual property, and physical equipment, besides cloud assets. They help you
@@ -391,13 +376,10 @@ const CloudCompliance = ({ location }) => {
                                 />
                             </div>
                             <div className='col-span-12 lg:col-span-6 lg:pl-8'>
-                                <h2
-                                    className='font-semibold font-montserrat text-primary text-2xl lg:text-4xl'
-                                    data-content
-                                >
+                                <h2 className='font-semibold font-montserrat text-primary text-2xl lg:text-4xl'>
                                     Actionable Policies
                                 </h2>
-                                <p className='text-base lg:text-lg leading-relaxed  mt-4 lg:mt-8' data-content>
+                                <p className='text-base lg:text-lg leading-relaxed  mt-4 lg:mt-8'>
                                     Cyscale enables you to link procedures to actual technical verifications and
                                     security controls. You know at any moment the exact compliance status of your assets
                                     right inside the policy that describes how they are secured. In other words, inline

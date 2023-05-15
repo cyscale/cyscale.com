@@ -85,7 +85,7 @@ const NewTopNav = ({ pageName, showLogo = true, location, animatedNavbar }) => {
             <div
                 ref={root}
                 style={{ maxWidth: '100vw' }}
-                className={`fixed top-0 left-0 block w-full mx-auto z-20 transition duration-300 transform ${rootClasses}`}
+                className={`fixed top-0 left-0 block w-full mx-auto z-30 transition duration-300 transform ${rootClasses}`}
             >
                 <div tw='container max-w-7xl mx-auto pt-2.5 hidden xl:block' css={paddingNav}>
                     <NewNavigation
@@ -126,8 +126,11 @@ const NewTopNav = ({ pageName, showLogo = true, location, animatedNavbar }) => {
             {searchBar && (
                 <div
                     style={{ maxWidth: '100vw' }}
-                    className={'fixed left-0 block w-full mx-auto bg-white z-10 shadow-2xl'}
+                    className={'fixed left-0 block w-full mx-auto bg-white  shadow-2xl'}
                     css={[
+                        css`
+                            z-index: 20;
+                        `,
                         animatedNavbar &&
                             css`
                                 top: 7.563rem;
@@ -150,13 +153,7 @@ const NewTopNav = ({ pageName, showLogo = true, location, animatedNavbar }) => {
                     </div>
                 </div>
             )}
-            {showMenu && (
-                <MobileNavigation
-                    showMenu={showMenu}
-                    setShowMenu={setShowMenu}
-                    appLink={appLink}
-                />
-            )}
+            {showMenu && <MobileNavigation showMenu={showMenu} setShowMenu={setShowMenu} appLink={appLink} />}
         </>
     );
 };

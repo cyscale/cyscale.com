@@ -9,7 +9,7 @@ import {
 } from '../../style';
 import { resources } from '../../nav';
 import { css } from 'twin.macro';
-import { isAnimatedNavbarPage } from '../../../../common/utils';
+import { isAnimatedNavbarPage, isPlaygroundBlogPage } from '../../../../common/utils';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import RightArrow from '../../../sharedComponent/RightArrow';
 
@@ -41,7 +41,7 @@ const Resources = ({ pathname, activeLinks, setActiveLinks }) => {
         <div
             className='w-full grid grid-cols-12 gap-6 ml-auto justify-end shadow-2xl bg-white'
             style={{ width: '63rem' }}
-            css={caretResources(isAnimatedNavbarPage(pathname))}
+            css={caretResources(isAnimatedNavbarPage(pathname) && !isPlaygroundBlogPage(pathname))}
             onMouseEnter={() => setActiveLinks({ ...activeLinks, resources: true })}
             onMouseLeave={() => setActiveLinks({ ...activeLinks, resources: false })}
             tabIndex='-1'

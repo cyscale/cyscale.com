@@ -9,6 +9,8 @@ export const isAnimatedNavbarPage = (pathname) => {
     );
 };
 
+export const isPlaygroundBlogPage = (pathname) => pathname.includes('/blog/playground-announcement');
+
 export const requestDemoButtonPage = (pageName) => {
     return ['HomePage', 'CSPMPage', 'SKGPage', 'ComplianceAuditing', 'MisconfigurationsPage', 'RemoteWork'].includes(
         pageName

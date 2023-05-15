@@ -80,7 +80,6 @@ const SmartFintech = ({ location }) => {
                                 css={css`
                                     color: #818791;
                                 `}
-                                data-content
                             >
                                 CASE STUDY
                             </p>
@@ -90,12 +89,11 @@ const SmartFintech = ({ location }) => {
                                     font-size: 1.375rem;
                                     line-height: 1.688rem;
                                 `}
-                                data-content
                             >
                                 Smart Fintech uses Cyscale to gain IAM visibility and ensure cloud security and
                                 compliance
                             </h1>
-                            <p className='font-hind text-base font-normal mt-4' data-content>
+                            <p className='font-hind text-base font-normal mt-4'>
                                 Smart Fintech, the first authorized open banking third party provider (TPP) in Romania,
                                 seeks to improve its cloud security posture. Cyscale ensures high IAM visibility and a
                                 robust alerting mechanism for cloud misconfigurations.
@@ -112,24 +110,24 @@ const SmartFintech = ({ location }) => {
                     </div>
                     <div className='grid grid-cols-12 gap-1 mt-12 lg:mt-20'>
                         <div className='col-span-12 lg:col-span-6'>
-                            <p className='font-montserrat text-lg font-bold' data-content>
+                            <p className='font-montserrat text-lg font-bold'>
                                 Challenges
                             </p>
                             <div className='flex items-center mt-4'>
                                 <img src={ChallengesIcon} alt='' className='inline-block mr-2' />
-                                <p className='font-hind text-base mt-1' data-content>
+                                <p className='font-hind text-base mt-1'>
                                     Difficulty identifying permission drifts
                                 </p>{' '}
                             </div>
                             <div className='flex items-start mt-2'>
                                 <img src={ChallengesIcon} alt='' className='inline-block mr-2' />
-                                <p className='font-hind text-base' data-content>
+                                <p className='font-hind text-base'>
                                     Manual configurations checks, which slow down the development team
                                 </p>{' '}
                             </div>
                             <div className='flex items-start lg:items-center mt-2'>
                                 <img src={ChallengesIcon} alt='' className='inline-block mr-2' />
-                                <p className='font-hind text-base' data-content>
+                                <p className='font-hind text-base'>
                                     A time-consuming compliance process
                                 </p>
                             </div>
@@ -138,19 +136,19 @@ const SmartFintech = ({ location }) => {
                             <p className='font-montserrat text-lg font-bold'>Results</p>
                             <div className='flex items-start lg:items-center mt-4'>
                                 <img src={ResultsIcon} alt='' className='inline-block mr-2' />
-                                <p className='font-hind text-base mt-0 lg:mt-1' data-content>
+                                <p className='font-hind text-base mt-0 lg:mt-1'>
                                     Enhanced visibility into users’ roles and privileges
                                 </p>{' '}
                             </div>
                             <div className='flex items-start mt-2'>
                                 <img src={ResultsIcon} alt='' className='inline-block mr-2' />
-                                <p className='font-hind text-base' data-content>
+                                <p className='font-hind text-base'>
                                     Implementation of a misconfigurations alert system for cloud security
                                 </p>{' '}
                             </div>
                             <div className='flex items-start mt-2'>
                                 <img src={ResultsIcon} alt='' className='inline-block mr-2' />
-                                <p className='font-hind text-base' data-content>
+                                <p className='font-hind text-base'>
                                     Improved compliance through better IAM visibility and control
                                 </p>
                             </div>
@@ -162,7 +160,7 @@ const SmartFintech = ({ location }) => {
                             background-color: #fafafb;
                         `}
                     >
-                        <p className='text-base font-medium font-hind' data-content>
+                        <p className='text-base font-medium font-hind'>
                             Smart Fintech is the first open banking third party provider (TPP) in Romania, authorized by
                             the country’s national bank (NBR). They make full use of cloud infrastructure for their
                             products, that focus on the future of Account2Account Payments and Account Interrogation
@@ -171,8 +169,8 @@ const SmartFintech = ({ location }) => {
                             security posture and protect their customer’s data.
                         </p>
                     </div>
-                    <Subtitle data-content>Problem</Subtitle>
-                    <p className='text-base font-hind mt-8' data-content>
+                    <Subtitle>Problem</Subtitle>
+                    <p className='text-base font-hind mt-8'>
                         The company was looking for a solution to help them achieve compliance and ensure their cloud
                         environment is secure. Identity and access management was a focal point for Smart Fintech, since
                         they identified it as a significant risk area. In addition, they needed an alert system for
@@ -191,19 +189,19 @@ const SmartFintech = ({ location }) => {
                             </div>
                         </div>
                         <div className='col-span-12 lg:col-span-10 mt-4 lg:mt-0'>
-                            <p className='text-lg font-semibold font-hind' data-content>
+                            <p className='text-lg font-semibold font-hind'>
                                 Cyscale is eliminating the need to ask the team for tedious configuration reports,
                                 greatly improving our visibility and helping us understand things we didn’t know.
                             </p>{' '}
-                            <p className='text-base font-hind mt-4' data-content>
+                            <p className='text-base font-hind mt-4'>
                                 Alex Cociu, Risk and Compliance Officer at Smart Fintech
                             </p>
                         </div>
                     </div>
-                    <Subtitle data-content>Solution</Subtitle>
+                    <Subtitle>Solution</Subtitle>
                     <div className='grid grid-cols-12 gap-0 lg:gap-8 mt-8 rounded-md'>
                         <div className='col-span-12 lg:col-span-6'>
-                            <p className='font-hind text-base' data-content>
+                            <p className='font-hind text-base'>
                                 Cyscale provided Smart Fintech with a comprehensive overview of users’ roles and
                                 privileges across multiple cloud accounts. Moreover, using the Cyscale platform, Smart
                                 Fintech can identify users that have too many privileges.{' '}
@@ -213,7 +211,7 @@ const SmartFintech = ({ location }) => {
                                 </strong>
                                 , adds Alex.
                             </p>
-                            <p className='font-hind text-base' data-content>
+                            <p className='font-hind text-base'>
                                 Cyscale improves the visibility of cloud identities and pinpoints vulnerabilities or
                                 misconfigurations through a powerful Identity Dashboard. The platform detects each
                                 person in the organization and provides valuable information regarding MFA, privileges
@@ -229,41 +227,41 @@ const SmartFintech = ({ location }) => {
                             >
                                 {' '}
                                 <GatsbyImage alt='' image={data.quotes.childImageSharp.gatsbyImageData} />
-                                <p className='text-lg font-hind font-semibold mt-4' data-content>
+                                <p className='text-lg font-hind font-semibold mt-4'>
                                     The platform helps me with IAM visibility a lot: I can understand who has access and
                                     why. When a person leaves the company, I can detect if their permissions remain
                                     hanging. I don’t have to rely on affirmations that access has been removed, I can
                                     easily see it and confirm it in Cyscale.
                                 </p>
-                                <p className='text-base font-hind mt-2' data-content>
+                                <p className='text-base font-hind mt-2'>
                                     Alex Cociu
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <Subtitle data-content>Results</Subtitle>
-                    <p className='font-hind text-base mt-8' data-content>
+                    <Subtitle>Results</Subtitle>
+                    <p className='font-hind text-base mt-8'>
                         The company was able to manage identity and access management effectively, which was one of the
                         focus points when onboarding into Cyscale. As a result, Alex Cociu now confirms that they have
                         the much-needed visibility over users’ permissions.
                     </p>
-                    <p className='font-hind text-base' data-content>
+                    <p className='font-hind text-base'>
                         In addition, after onboarding into Cyscale, the Smart Fintech development team set a goal to
                         achieve zero alerts, which meant ensuring that their cloud environment was always in compliance
                         with their policies. They now know if there are any drifts, and the platform alerts them of
                         deviations from their initial goal.
                     </p>{' '}
-                    <p className='font-hind text-base' data-content>
+                    <p className='font-hind text-base'>
                         Moreover, they can adjust the configurations according to acceptable risk by creating exemptions
                         to exclude certain cloud assets.
                     </p>
-                    <Subtitle data-content>Conclusion</Subtitle>
+                    <Subtitle>Conclusion</Subtitle>
                     <p className='font-hind text-base mt-8'>
                         The platform’s automation capabilities helped the company reduce the time and resources required
                         to manage its cloud environment, which was particularly beneficial for a constrained team with
                         limited resources.
                     </p>
-                    <p className='font-hind text-base mb-24' data-content>
+                    <p className='font-hind text-base mb-24'>
                         As Smart Fintech continues to grow, Cyscale is prepared to assist them. Besides IAM and
                         visibility, the platform also provides data security and alerts dashboards, over 400 controls
                         that verify the entire cloud environment, a compliance module, and many others. To read more
@@ -282,10 +280,10 @@ const SmartFintech = ({ location }) => {
                     background-image: linear-gradient(90deg, #0f26aa -1.79%, #ff4a56 165.6%);
                 `}
             >
-                <h2 className='text-white font-bold font-montserrat text-lg lg:text-2xl' data-content>
+                <h2 className='text-white font-bold font-montserrat text-lg lg:text-2xl'>
                     Close IAM visibility gaps today
                 </h2>
-                <p className='text-white mt-8 text-base sm:text-lg lg:text-xl text-center px-2 sm:px-0' data-content>
+                <p className='text-white mt-8 text-base sm:text-lg lg:text-xl text-center px-2 sm:px-0'>
                     Sign up for a custom demo to see how the
                     <br /> Cyscale Platform helps you secure your cloud data.
                 </p>

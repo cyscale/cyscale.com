@@ -26,7 +26,7 @@ const caretSolutions = (isAnimatedNavbarPage) => css`
     }
 `;
 
-const Solutions = ({pathname, activeLinks, setActiveLinks }) => {
+const Solutions = ({ pathname, activeLinks, setActiveLinks }) => {
     return (
         <div
             className='w-full grid grid-cols-12 gap-2 ml-auto shadow-2xl bg-white'

@@ -56,12 +56,11 @@ const ContactUs = ({ location }) => {
                             'text-blue text-center text-3xl lg:text-5xl font-bold font-montserrat mt-12 sm:mt-20 lg:mt-0': true,
                             'mb-12': meetingBookSucceeded
                         })}
-                        data-content
                     >
                         Request Demo
                     </h1>
                     {!meetingBookSucceeded && (
-                        <p className='my-4 text-center font-medium text-sm lg:text-base font-montserrat' data-content>
+                        <p className='my-4 text-center font-medium text-sm lg:text-base font-montserrat'>
                             We are happy to schedule a product demo with you.
                             <br /> Use the calendar below to select an appropriate time slot.
                         </p>

@@ -82,14 +82,10 @@ const Sitemap = ({ location }) => {
                                         css={css`
                                             font-size: 3.25rem;
                                         `}
-                                        data-content
                                     >
                                         Sitemap
                                     </h1>
-                                    <p
-                                        className='text-left text-base lg:text-lg mb-8 leading-relaxed font-hind'
-                                        data-content
-                                    >
+                                    <p className='text-left text-base lg:text-lg mb-8 leading-relaxed font-hind'>
                                         Our sitemap helps you easily access our diverse range of resources, including
                                         product use cases, thought leadership content, and valuable insights on cloud
                                         data security.

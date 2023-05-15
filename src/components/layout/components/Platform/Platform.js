@@ -12,7 +12,7 @@ import {
     widthFitStyle,
     caretMenuSelegoStyle
 } from '../../style';
-import { isAnimatedNavbarPage } from '../../../../common/utils';
+import { isAnimatedNavbarPage, isPlaygroundBlogPage } from '../../../../common/utils';
 import RightArrow from '../../../sharedComponent/RightArrow';
 
 const PlatformLinkTitle = styled.h1`
@@ -50,7 +50,7 @@ const Platform = ({ pathname, activeLinks, setActiveLinks }) => {
     return (
         <div
             className='max-w-5xl grid grid-cols-12 gap-2 ml-auto justify-end shadow-2xl bg-white'
-            css={caretPlatform(isAnimatedNavbarPage(pathname))}
+            css={caretPlatform(isAnimatedNavbarPage(pathname) && !isPlaygroundBlogPage(pathname))}
             onMouseEnter={() => setActiveLinks({ ...activeLinks, platform: true })}
             onMouseLeave={() => setActiveLinks({ ...activeLinks, platform: false })}
             tabIndex='-1'
