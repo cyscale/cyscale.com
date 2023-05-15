@@ -5,7 +5,6 @@ import {
     LeaderManuela,
     LeaderOvidiu,
     Notion,
-    OvidiuAndManuela,
     Seedblink,
     Seedcamp
 } from '../components/about/images';
@@ -16,9 +15,20 @@ import History from '../components/about/history';
 import GetStarted from '../components/Home/getstarted';
 import getStartedIcon from '../assets/images/elemente-vectoriale-07.png';
 import data from '../components/careers/data';
-import { Link } from 'gatsby';
+import { Link, useStaticQuery, graphql } from 'gatsby';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 const AboutUs = ({ location }) => {
+    const dataAboutUs = useStaticQuery(graphql`
+        query AboutUsQuery {
+            team: file(relativePath: { eq: "team-cyscale.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 1080, layout: CONSTRAINED)
+                }
+            }
+        }
+    `);
+
     return (
         <Layout
             location={location}
@@ -27,7 +37,7 @@ const AboutUs = ({ location }) => {
             description='Together, we draw broad industry expertise to create powerful cybersecurity solutions for our customers that automate and mitigate cloud security issues.'
         >
             <div className='bg-lightGrey'>
-                <div className=' 2xl:max-w-7xl 2xl:m-auto pl-8 2xl:pr-8 pt-28'>
+                <div className='max-w-7xl m-auto pl-8 pr-8 pt-28 pb-4 lg:pb-10'>
                     <Row>
                         <div className='col-span-12 md:col-span-6 '>
                             <div className='pr-12 xl:max-w-lg xl:ml-auto xl:mr-24 2xl:max-w-full 2xl:ml-0 2xl:mr-0'>
@@ -44,7 +54,10 @@ const AboutUs = ({ location }) => {
                         </div>
                         <div className='col-span-12 md:col-span-6'>
                             <div className='max-w-xs sm:max-w-none'>
-                                <OvidiuAndManuela />
+                                <GatsbyImage
+                                    image={dataAboutUs.team.childImageSharp.gatsbyImageData}
+                                    alt='Cyscale Team'
+                                />
                             </div>
                         </div>
                     </Row>
