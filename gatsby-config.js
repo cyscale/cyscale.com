@@ -289,7 +289,7 @@ module.exports = {
                 chunkSize: 10000,
                 concurrentQueries: true,
                 dryRun: false,
-                continueOnFailure: false,
+                continueOnFailure: true,
                 algoliasearchOptions: undefined
             }
         }

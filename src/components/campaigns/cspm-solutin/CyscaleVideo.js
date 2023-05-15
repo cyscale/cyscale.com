@@ -8,7 +8,7 @@ import classNames from 'classnames';
 import useMediaQuery from '../../../hooks/useMediaQuery';
 import useOnClickOutside from '../../../hooks/useOutsideClick';
 
-const VideoCyscale = ({ setModal }) => {
+const VideoCyscale = ({ setModal, videoUrl }) => {
     const videoRef = React.useRef(null);
     const wrapperRef = useRef(null);
     const orientation = useScreenOrientation();
@@ -52,7 +52,7 @@ const VideoCyscale = ({ setModal }) => {
                             <img src={menuCloseCookiesModal} alt='toggle menu' width={15} height={15} />
                         </button>
                         <video width='auto' height='auto' autoPlay controls tabIndex='2' ref={videoRef}>
-                            <source src='https://d3n52qn7viv754.cloudfront.net/videos/cyscale.mp4' type='video/mp4' />
+                            <source src={videoUrl} type='video/mp4' />
                             Your browser does not support the video tag.
                         </video>
                     </div>
