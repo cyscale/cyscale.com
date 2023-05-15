@@ -64,6 +64,22 @@ const PciDss = ({ location }) => {
             title='PCI Cloud Security & Compliance | Automate PCI DSS Compliance - Cyscale'
             description='Strong cloud security process for payment card data that enables prevention, detection, and response to security incidents. Automate threat detection & gain advanced security controls. Learn more now!'
         >
+            <div className='hidden' data-template-key>
+                hardcoded-pages
+            </div>
+            <div className='hidden' data-permalink>
+                /use-cases/pci-dss
+            </div>
+            <div className='hidden' data-title>
+                PCI Cloud Security & Compliance | Automate PCI DSS Compliance - Cyscale
+            </div>
+            <div className='hidden' data-description>
+                Strong cloud security process for payment card data that enables prevention, detection, and response to
+                security incidents. Automate threat detection & gain advanced security controls. Learn more now!
+            </div>
+            <div className='hidden' data-category>
+                solutions
+            </div>
             <div className='bg-cloud bg-lightGrey'>
                 <Container>
                     <Section className='pb-3'>
@@ -121,7 +137,7 @@ const PciDss = ({ location }) => {
                         <div className='col-span-12 lg:col-start-1 col-end-6'>
                             <div className='mx-auto lg:mx-0  max-w-xl lg:max-w-none'>
                                 <ul className='list-disc ml-4 text-gray mt-8'>
-                                    <li className='mb-4'>
+                                    <li className='mb-4 '>
                                         <strong>Protect cardholder data: </strong>
                                         Securing the storage and transmission of cardholder data, while always being
                                         prepared for security audits.

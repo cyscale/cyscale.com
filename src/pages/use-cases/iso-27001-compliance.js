@@ -103,6 +103,22 @@ const CloudCompliance = ({ location }) => {
             title='ISO 27001 Cloud Security | Compliance & Security - Cyscale'
             description='Easy & continuous compliance for ISO 27001, with a set of battle-tested policies to jumpstart your ISMS. Secure your assets with cutting-edge controls & policies.'
         >
+            <div className='hidden' data-template-key>
+                hardcoded-pages
+            </div>
+            <div className='hidden' data-permalink>
+                /use-cases/iso-27001-compliance
+            </div>
+            <div className='hidden' data-title>
+                ISO 27001 Cloud Security | Compliance & Security - Cyscale
+            </div>
+            <div className='hidden' data-description>
+                Easy & continuous compliance for ISO 27001, with a set of battle-tested policies to jumpstart your ISMS.
+                Secure your assets with cutting-edge controls & policies.
+            </div>
+            <div className='hidden' data-category>
+                solutions
+            </div>
             <div className='bg-lightGrey'>
                 <Container>
                     <div className='pt-20 max-w-lg mx-auto lg:mx-0 lg:max-w-none'>
@@ -329,7 +345,7 @@ const CloudCompliance = ({ location }) => {
                     <div className='max-w-lg mx-auto lg:mx-0 lg:max-w-none'>
                         <Row style={{ alignItems: 'center' }}>
                             <div className='col-span-12 lg:col-span-6 order-2 lg:order-1 lg:pr-8'>
-                                <h2 className='font-semibold font-montserrat text-primary text-2xl lg:text-4xl'>
+                                <h2 className='font-semibold font-montserrat text-primary text-2xl lg:text-4xl '>
                                     Out of the box Policies
                                 </h2>
                                 <p className='text-base lg:text-lg leading-relaxed  mt-4 lg:mt-8'>

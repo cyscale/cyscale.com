@@ -52,6 +52,22 @@ const ContactUs = ({ location }) => {
             <Helmet>
                 <script charset='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js'></script>
             </Helmet>
+            <div className='hidden' data-template-key>
+                hardcoded-pages
+            </div>
+            <div className='hidden' data-permalink>
+                /contact-us
+            </div>
+            <div className='hidden' data-title>
+                Contact us - Cyscale
+            </div>
+            <div className='hidden' data-description>
+                We are always happy to assist with more information about us or our product which covers cloud security,
+                kubernetes security and hybrid multi-cloud environments.
+            </div>
+            <div className='hidden' data-category>
+                website
+            </div>
             <div className='bg-lightGreyEEE'>
                 <Container>
                     <Section>

@@ -89,6 +89,22 @@ const PricingPage = ({ location }) => {
             title='Pricing - Cyscale'
             description="Pay fair for security experts' advice and guidance. Quantifiable ROI for cloud data security and compliance. Reduce cloud costs and consumption."
         >
+            <div className='hidden' data-template-key>
+                hardcoded-pages
+            </div>
+            <div className='hidden' data-permalink>
+                /pricing
+            </div>
+            <div className='hidden' data-title>
+                Pricing - Cyscale
+            </div>
+            <div className='hidden' data-description>
+                Pay fair for security experts' advice and guidance. Quantifiable ROI for cloud data security and
+                compliance. Reduce cloud costs and consumption.
+            </div>
+            <div className='hidden' data-category>
+                website
+            </div>
             <div className='md:pt-16' css={heroBackground}>
                 <div className='pt-24 pb-12 sm:pb-24 lg:py-32'>
                     <Container>
@@ -237,10 +253,12 @@ const PricingPage = ({ location }) => {
                                 <p className='ml-2 text-sm'>Integrations (AWS SSO, Okta, Github)</p>
                             </div>
                             <div className='flex mt-2'>
-                                <img src={checkMarkIcon} alt='' /> <p className='ml-2 text-sm'>Asset Inventory</p>
+                                <img src={checkMarkIcon} alt='' />
+                                <p className='ml-2 text-sm'>Asset Inventory</p>
                             </div>
                             <div className='flex mt-2 items-start'>
-                                <img src={checkMarkIcon} alt='' /> <p className='ml-2 text-sm'>Powerful dashboards</p>
+                                <img src={checkMarkIcon} alt='' />
+                                <p className='ml-2 text-sm'>Powerful dashboards</p>
                             </div>
                         </div>
                         <div className='col-span-12 lg:col-span-4 mx-auto max-w-lg lg:mx-0 mt-8 lg:mt-0'>
@@ -266,10 +284,11 @@ const PricingPage = ({ location }) => {
                                 <p className='ml-2 text-sm'>400+ security controls (including contextual analysis)</p>
                             </div>
                             <div className='flex mt-2'>
-                                <img src={checkMarkIcon} alt='' /> <p className='ml-2 text-sm'>Custom controls</p>
+                                <img src={checkMarkIcon} alt='' />
+                                <p className='ml-2 text-sm'>Custom controls</p>
                             </div>
                             <div className='flex mt-2'>
-                                <img src={checkMarkIcon} alt='' />{' '}
+                                <img src={checkMarkIcon} alt='' />
                                 <p className='ml-2 text-sm'>Alerts & Notifications</p>
                             </div>{' '}
                             <div className='flex mt-2'>

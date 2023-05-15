@@ -54,6 +54,23 @@ const SmartFintech = ({ location }) => {
             title='Smart Fintech Case Study | Cloud Security & Compliance - Cyscale'
             description={`Discover how Smart Fintech, Romania's first authorized open banking TPP, improved cloud security, IAM visibility, and compliance by leveraging Cyscale's powerful platform for monitoring and alerting on cloud misconfigurations.`}
         >
+            <div className='hidden' data-template-key>
+                hardcoded-pages
+            </div>
+            <div className='hidden' data-permalink>
+                /case-studies/smart-fintech
+            </div>
+            <div className='hidden' data-title>
+                Smart Fintech Case Study | Cloud Security & Compliance - Cyscale
+            </div>
+            <div className='hidden' data-description>
+                Discover how Smart Fintech, Romania's first authorized open banking TPP, improved cloud security, IAM
+                visibility, and compliance by leveraging Cyscale's powerful platform for monitoring and alerting on
+                cloud misconfigurations.
+            </div>
+            <div className='hidden' data-category>
+                case studies
+            </div>
             <div className='container max-w-7xl pt-28 sm:pt-44 mx-auto xl:flex xl:pl-12 xl:pr-16'>
                 <div className='max-w-4xl mx-auto xl:mx-0 px-8'>
                     <div className='grid grid-cols-12 gap-4'>
@@ -93,7 +110,9 @@ const SmartFintech = ({ location }) => {
                     </div>
                     <div className='grid grid-cols-12 gap-1 mt-12 lg:mt-20'>
                         <div className='col-span-12 lg:col-span-6'>
-                            <p className='font-montserrat text-lg font-bold'>Challenges</p>
+                            <p className='font-montserrat text-lg font-bold'>
+                                Challenges
+                            </p>
                             <div className='flex items-center mt-4'>
                                 <img src={ChallengesIcon} alt='' className='inline-block mr-2' />
                                 <p className='font-hind text-base mt-1'>
@@ -108,7 +127,9 @@ const SmartFintech = ({ location }) => {
                             </div>
                             <div className='flex items-start lg:items-center mt-2'>
                                 <img src={ChallengesIcon} alt='' className='inline-block mr-2' />
-                                <p className='font-hind text-base'>A time-consuming compliance process</p>
+                                <p className='font-hind text-base'>
+                                    A time-consuming compliance process
+                                </p>
                             </div>
                         </div>
                         <div className='col-span-12 lg:col-span-6 mt-4 lg:mt-0'>
@@ -212,7 +233,9 @@ const SmartFintech = ({ location }) => {
                                     hanging. I don’t have to rely on affirmations that access has been removed, I can
                                     easily see it and confirm it in Cyscale.
                                 </p>
-                                <p className='text-base font-hind mt-2'>Alex Cociu</p>
+                                <p className='text-base font-hind mt-2'>
+                                    Alex Cociu
+                                </p>
                             </div>
                         </div>
                     </div>

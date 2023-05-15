@@ -135,7 +135,12 @@ const SecurityForStartupsProgram = ({ location }) => {
 
     return (
         <>
-            <Layout location={location} pageName='Startups' title='Startups Program - Cyscale' description='Startups Program'>
+            <Layout
+                location={location}
+                pageName='Startups'
+                title='Startups Program - Cyscale'
+                description='Startups Program'
+            >
                 <Helmet>
                     <script charSet='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js'></script>
                     <script type='application/ld+json' data-rh='true'>{`{
@@ -193,6 +198,21 @@ const SecurityForStartupsProgram = ({ location }) => {
                         ]
                     }`}</script>
                 </Helmet>
+                <div className='hidden' data-template-key>
+                    hardcoded-pages
+                </div>
+                <div className='hidden' data-permalink>
+                    /security-for-startups-program
+                </div>
+                <div className='hidden' data-title>
+                    Startups Program - Cyscale
+                </div>
+                <div className='hidden' data-description>
+                    Startups Program
+                </div>
+                <div className='hidden' data-category>
+                    website
+                </div>
                 <div className='bg-pouring pt-8'>
                     <Container>
                         <div className='py-24 lg:pt-32 lg:pb-16'>
@@ -397,7 +417,9 @@ const SecurityForStartupsProgram = ({ location }) => {
                             <div className='grid grid-cols-12'>
                                 <div className='col-span-12'>
                                     <div className='mx-auto lg:mx-0 max-w-lg '>
-                                        <h2 className='text-center sm:text-left text-2xl leading-normal mb-4 font-montserrat'>FAQ</h2>
+                                        <h2 className='text-center sm:text-left text-2xl leading-normal mb-4 font-montserrat'>
+                                            FAQ
+                                        </h2>
                                     </div>
                                 </div>
                             </div>
@@ -411,7 +433,7 @@ const SecurityForStartupsProgram = ({ location }) => {
                                             <div className='flex'>
                                                 <h3
                                                     className='font-medium  text-base sm:text-lg mb-0 pl-2 leading-snug cursor-pointer select-none'
-                                                    role="presentation"
+                                                    role='presentation'
                                                     tabIndex={-1}
                                                     onClick={() => setActive((s) => (s === key ? null : key))}
                                                     onKeyDown={() => {}}
@@ -458,7 +480,7 @@ const SecurityForStartupsProgram = ({ location }) => {
                                             <div className='flex'>
                                                 <h3
                                                     className='font-medium  text-base sm:text-lg mb-0 pl-2 leading-snug cursor-pointer select-none'
-                                                    role="presentation"
+                                                    role='presentation'
                                                     tabIndex={-1}
                                                     onClick={() => setActive((s) => (s === key + 3 ? null : key + 3))}
                                                     onKeyDown={() => {}}

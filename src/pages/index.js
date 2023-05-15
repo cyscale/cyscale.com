@@ -233,14 +233,33 @@ const HomePage = ({ location }) => {
             title='Robust Cloud Security Platform - Cyscale'
             description='Map all your cloud assets across providers in under 5 mins. Optimize costs, ensure cloud security, and prove compliance with the scalable Cyscale CSPM.'
         >
+            <div className='hidden' data-template-key>
+                hardcoded-pages
+            </div>
+            <div className='hidden' data-permalink>
+                /
+            </div>
+            <div className='hidden' data-title>
+                Robust Cloud Security Platform - Cyscale
+            </div>
+            <div className='hidden' data-description>
+                Map all your cloud assets across providers in under 5 mins. Optimize costs, ensure cloud security, and
+                prove compliance with the scalable Cyscale CSPM.
+            </div>
+            <div className='hidden' data-category>
+                website
+            </div>
             <div className='pt-8' css={heroBackground}>
                 <Container>
                     <div className='py-16 md:py-24 lg:pt-24 lg:pb-36'>
                         <Row>
                             <div className='col-span-12 lg:col-span-6 order-last lg:order-first'>
                                 <div className='lg:mt-16 pt-4 max-w-xl mx-auto lg:mx-0'>
-                                    <h1 className='text-left text-blue text-4xl lg:text-5xl leading-normal lg:leading-normal mb-8 font-montserrat'>
-                                        Leverage the Cloud<strong> with Confidence</strong>
+                                    <h1
+                                        className='text-left text-blue text-4xl lg:text-5xl leading-normal lg:leading-normal mb-8 font-montserrat'
+                                        data-excluded
+                                    >
+                                        Leverage the Cloud<strong data-content> with Confidence</strong>
                                     </h1>
                                     <p className='text-left text-base lg:text-lg mb-8 leading-relaxed font-hind'>
                                         Cyscale automates cloud security analysis helping you identify and reduce risk

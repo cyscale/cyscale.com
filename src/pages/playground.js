@@ -28,6 +28,21 @@ const Playground = ({ location }) => {
             <Helmet>
                 <script charset='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js'></script>
             </Helmet>
+            <div className='hidden' data-template-key>
+                hardcoded-pages
+            </div>
+            <div className='hidden' data-permalink>
+                /playground
+            </div>
+            <div className='hidden' data-title>
+                Playground Account Access - Cyscale
+            </div>
+            <div className='hidden' data-description>
+                Get access to a playground account, fully featured and populated with data.
+            </div>
+            <div className='hidden' data-category>
+                website
+            </div>
             <div className='bg-hero-campaigns-iam-security' css={heroHeight}>
                 <div className='py-28 lg:py-32'>
                     <div className='container max-w-7xl m-auto px-8'>

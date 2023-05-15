@@ -34,6 +34,21 @@ const ContactUs = ({ location }) => {
             title='Request Demo - Cyscale'
             description='We are happy to schedule a product demo with you.'
         >
+            <div className='hidden' data-template-key>
+                hardcoded-pages
+            </div>
+            <div className='hidden' data-permalink>
+                /request-demo
+            </div>
+            <div className='hidden' data-title>
+                Request Demo - Cyscale
+            </div>
+            <div className='hidden' data-description>
+                We are happy to schedule a product demo with you.
+            </div>
+            <div className='hidden' data-category>
+                website
+            </div>
             <div className='bg-hero-campaigns-iam-security pb-8' css={heroHeight}>
                 <div className='container max-w-7xl m-auto px-4 lg:px-8 pt-24 lg:pt-32 xl:pt-16'>
                     <h1

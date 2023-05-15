@@ -29,6 +29,22 @@ const FreeTrial = ({ location }) => {
             <Helmet>
                 <script charset='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js'></script>
             </Helmet>
+            <div className='hidden' data-template-key>
+                hardcoded-pages
+            </div>
+            <div className='hidden' data-permalink>
+                /free-trial
+            </div>
+            <div className='hidden' data-title>
+                Start Free Trial - Cyscale
+            </div>
+            <div className='hidden' data-description>
+                Cyscale is an agentless CSPM solution that helps your organization map, secure and monitor cloud assets
+                across multiple providers.
+            </div>
+            <div className='hidden' data-category>
+                website
+            </div>
             <div className='bg-hero-campaigns-iam-security' css={heroHeight}>
                 <div className='py-28 lg:py-32'>
                     <div className='container max-w-7xl m-auto px-8'>

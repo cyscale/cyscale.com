@@ -22,7 +22,10 @@ const Layout = ({ children, title, description, pageName, location, banner }) =>
             <GlobalContext.Provider value={{ location }}>
                 <Seo title={title} description={description} pageName={pageName} location={location} banner={banner} />
                 <HeaderContext.Provider value={{ sticker, setSticker }}>
-                    <NewTopNav pageName={pageName} location={location} />
+                    <NewTopNav
+                        pageName={pageName}
+                        location={location}
+                    />
                 </HeaderContext.Provider>
                 <main>{children}</main>
                 <Footer pageUri={location?.pathname} pageName={pageName} />

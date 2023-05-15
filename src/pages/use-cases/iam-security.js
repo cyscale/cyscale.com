@@ -58,6 +58,22 @@ const IAMSecurity = ({ location }) => {
             title='IAM Cloud Security | Detect and Mitigate Risk - Cyscale'
             description='Continuous multi-cloud monitoring for identity and access management (IAM) misconfigurations across all your cloud assets to meet strict IAM compliance directives and improve your cloud security posture.'
         >
+            <div className='hidden' data-template-key>
+                hardcoded-pages
+            </div>
+            <div className='hidden' data-permalink>
+                /use-cases/iam-security
+            </div>
+            <div className='hidden' data-title>
+                IAM Cloud Security | Detect and Mitigate Risk - Cyscale
+            </div>
+            <div className='hidden' data-description>
+                Continuous multi-cloud monitoring for identity and access management (IAM) misconfigurations across all
+                your cloud assets to meet strict IAM compliance directives and improve your cloud security posture.
+            </div>
+            <div className='hidden' data-category>
+                solutions
+            </div>
             <div className='bg-cloud' style={{ backgroundColor: '#eeeeee' }}>
                 <Container>
                     <Section>

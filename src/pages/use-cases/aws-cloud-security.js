@@ -59,6 +59,21 @@ const AWSCloudSecurity = ({ location }) => {
             title='AWS Cloud Security and Compliance - Cyscale'
             description='Protect AWS environments with a complete Cloud Security Posture Management (CSPM) solution'
         >
+            <div className='hidden' data-template-key>
+                hardcoded-pages
+            </div>
+            <div className='hidden' data-permalink>
+                /use-cases/aws-cloud-security
+            </div>
+            <div className='hidden' data-title>
+                AWS Cloud Security and Compliance - Cyscale
+            </div>
+            <div className='hidden' data-description>
+                Protect AWS environments with a complete Cloud Security Posture Management (CSPM) solution
+            </div>
+            <div className='hidden' data-category>
+                solutions
+            </div>
             <div className='bg-cloud' style={{ backgroundColor: '#eeeeee' }}>
                 <Container>
                     <Section>
@@ -99,7 +114,7 @@ const AWSCloudSecurity = ({ location }) => {
                         </div>
                         <div className='col-span-12 lg:col-span-5'>
                             <div className='mx-auto lg:mx-0  max-w-xl lg:max-w-none'>
-                                <p className='text-base leading-normal my-12 text-gray'>
+                                <p className='text-base leading-normal my-12 text-gray '>
                                     <strong>Streamline posture management for AWS (Amazon Web Services)</strong> or your
                                     multi-cloud environments, enable teams to continuously detect misconfigurations and
                                     control threats, and ensure compliance for your cloud assets.

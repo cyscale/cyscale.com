@@ -3,6 +3,7 @@ import tw, { css } from 'twin.macro';
 import { Link } from 'gatsby';
 import logo from '../../assets/images/logo.svg';
 import loginIcon from '../../assets/images/login.svg';
+import searchIcon from '../../assets/images/search-icon.svg';
 
 import styled from '@emotion/styled';
 import Platform from './components/Platform/Platform';
@@ -11,7 +12,7 @@ import Resources from './components/Resources/Resources';
 import Company from './components/Company/Company';
 import { logoStyle } from './style';
 import useScrollTrigger from '../scrollTrigger';
-import { isAnimatedNavbarPage } from '../../common/utils';
+import { isAnimatedNavbarPage, isPlaygroundBlogPage } from '../../common/utils';
 
 const MegaMenu = styled.div`
     left: ${({ animatedNavbarPages, left }) => (animatedNavbarPages ? left : '0')};
@@ -88,7 +89,7 @@ const HeaderLogo = styled.img`
     ${tw`block`};
 `;
 
-const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation }) => {
+const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation, searchBar, setSearchBar }) => {
     const { pathname } = location;
     const [activeLinks, setActiveLinks] = useState({
         platform: false,
@@ -106,7 +107,7 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation }) =
                     pageName === 'AWSCloudSecurityCampaign' ||
                     pageName === 'CSPMSolutionCampaign') &&
                     tw`container`,
-                isAnimatedNavbarPage(pathname) && tw`pl-20`
+                isAnimatedNavbarPage(pathname) && tw`pl-12`
             ]}
         >
             <div tw='mx-auto flex flex-row justify-between'>
@@ -159,7 +160,7 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation }) =
                         </NavItemButton>
                         <MegaMenu
                             css={[hideMegaMenu ? hiddenMegaMenuOnScroll : null]}
-                            animatedNavbarPages={isAnimatedNavbarPage(pathname)}
+                            animatedNavbarPages={isAnimatedNavbarPage(pathname) && !isPlaygroundBlogPage(pathname)}
                             left='-17rem'
                         >
                             <Solutions pathname={pathname} activeLinks={activeLinks} setActiveLinks={setActiveLinks} />
@@ -180,7 +181,9 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation }) =
                             className={`${
                                 pageName === 'blog' ||
                                 pageName === 'blog-detail' ||
-                                ['CloudComplianceWhitepaper', 'CloudStorageMisconfigurations', 'SmartFintech'].includes(pageName) ||
+                                ['CloudComplianceWhitepaper', 'CloudStorageMisconfigurations', 'SmartFintech'].includes(
+                                    pageName
+                                ) ||
                                 activeLinks.resources
                                     ? 'active'
                                     : ''
@@ -190,7 +193,7 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation }) =
                         </NavItemButton>
                         <MegaMenu
                             css={[hideMegaMenu ? hiddenMegaMenuOnScroll : null]}
-                            animatedNavbarPages={isAnimatedNavbarPage(pathname)}
+                            animatedNavbarPages={isAnimatedNavbarPage(pathname) && !isPlaygroundBlogPage(pathname)}
                             left='-4rem'
                         >
                             <Resources pathname={pathname} activeLinks={activeLinks} setActiveLinks={setActiveLinks} />
@@ -212,6 +215,19 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation }) =
                             <Company pathname={pathname} activeLinks={activeLinks} setActiveLinks={setActiveLinks} />
                         </MegaMenu>
                     </NavItem>
+                    <li className='py-6 pl-4'>
+                        <img
+                            src={searchIcon}
+                            className='py-2 cursor-pointer'
+                            alt=''
+                            tabIndex='0'
+                            onClick={() => setSearchBar(!searchBar)}
+                            role='button'
+                            aria-label='Search'
+                            onKeyPress={() => {}}
+                            width={22}
+                        />
+                    </li>
                     <li className='py-6 pl-4'>
                         <a href='https://app.cyscale.com' target='_blank' rel='noopener noreferrer'>
                             <img src={loginIcon} className='py-2' alt='' />

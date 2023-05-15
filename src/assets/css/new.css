@@ -391,3 +391,8 @@ img[src*='#shadow'],
         line-height: 2.5rem;
     }
 }
+
+.highlight {
+    color: #cd0365;
+    font-weight: 600;
+}

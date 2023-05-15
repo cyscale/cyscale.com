@@ -55,6 +55,22 @@ const Sitemap = ({ location }) => {
             title='Sitemap - Cyscale'
             description='Our sitemap helps you easily access our diverse range of resources, including product use cases, thought leadership content, and valuable insights on cloud data security.'
         >
+            <div className='hidden' data-template-key>
+                hardcoded-pages
+            </div>
+            <div className='hidden' data-permalink>
+                /sitemap
+            </div>
+            <div className='hidden' data-title>
+                Sitemap - Cyscale
+            </div>
+            <div className='hidden' data-description>
+                Our sitemap helps you easily access our diverse range of resources, including product use cases, thought
+                leadership content, and valuable insights on cloud data security.
+            </div>
+            <div className='hidden' data-category>
+                website
+            </div>
             <div css={heroBackground} className='pt-8'>
                 <div className='py-16 lg:pt-24 lg:pb-16'>
                     <Container>

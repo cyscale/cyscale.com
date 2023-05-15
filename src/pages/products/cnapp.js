@@ -22,6 +22,7 @@ import LearnMoreLink from '../../components/use-cases/LearnMoreLink';
 import { heroTitleFontSize, LearnMoreSection, cardBackgroundColor } from '../../assets/css/styles';
 import LinksAndWhitepaper from '../../components/products/LinksAndWhitepaper';
 
+//eslint-disable-next-line
 export const topArticles = [
     {
         text: 'CNAPP: The Key to Secure Cloud-Native Applications',
@@ -79,6 +80,22 @@ const CNAPP = ({ location }) => {
             title='CNAPP: Cloud-Native Application Security and Compliance Solution - Cyscale'
             description='Protect your cloud-native applications with CNAPP. Ensure security and compliance with our all-in-one solution for multi-cloud environments. Start today!'
         >
+            <div className='hidden' data-template-key>
+                hardcoded-pages
+            </div>
+            <div className='hidden' data-permalink>
+                /products/cnapp
+            </div>
+            <div className='hidden' data-title>
+                CNAPP: Cloud-Native Application Security and Compliance Solution - Cyscale
+            </div>
+            <div className='hidden' data-description>
+                Protect your cloud-native applications with CNAPP. Ensure security and compliance with our all-in-one
+                solution for multi-cloud environments. Start today!
+            </div>
+            <div className='hidden' data-category>
+                products
+            </div>
             <div className='bg-cnapp pt-8'>
                 <Container>
                     <div className='py-16 md:py-24 lg:pt-24 lg:pb-16'>

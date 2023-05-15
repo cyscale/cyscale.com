@@ -63,6 +63,23 @@ const CloudNativeSecurity = ({ location }) => {
             title='Powerful Cloud Native Security Platform - Cyscale'
             description='Protect your entire stack, from virtual machines to serverless environments, in any cloud environment. Our powerful platform provides advanced security features, giving you maximum cloud-native security and peace of mind to confidently accelerate innovation.'
         >
+            <div className='hidden' data-template-key>
+                hardcoded-pages
+            </div>
+            <div className='hidden' data-permalink>
+                /use-cases/cloud-native-security
+            </div>
+            <div className='hidden' data-title>
+                Powerful Cloud Native Security Platform - Cyscale
+            </div>
+            <div className='hidden' data-description>
+                Protect your entire stack, from virtual machines to serverless environments, in any cloud environment.
+                Our powerful platform provides advanced security features, giving you maximum cloud-native security and
+                peace of mind to confidently accelerate innovation.
+            </div>
+            <div className='hidden' data-category>
+                solutions
+            </div>
             <div className='bg-cns pt-8'>
                 <Container>
                     <div className='py-16 md:py-24 lg:pt-24 lg:pb-16'>

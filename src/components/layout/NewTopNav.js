@@ -6,6 +6,8 @@ import { css } from 'twin.macro';
 import NewNavigation from './NewNavigation';
 import MobileNavbar from './components/MobileNavbar';
 import MobileNavigation from './components/MobileNavigation';
+import CustomSearch from '../Search/CustomSearch';
+import useClickOutsideSearch from '../../hooks/useClickOutsideSearch';
 
 const paddingNav = css`
     padding-left: 2rem;
@@ -18,14 +20,20 @@ const paddingNav = css`
 
 const NewTopNav = ({ pageName, showLogo = true, location, animatedNavbar }) => {
     const root = useRef();
+    const searchRef = useRef(null);
     const trigger = useScrollTrigger();
     const [showBurgerButton, setShowBurgerButton] = useState(pageName !== 'HomePage');
     const [showMenu, setShowMenu] = useState(false);
     const [showBanner, setShowBanner] = useState(true);
+    const [searchBar, setSearchBar] = useState(false);
+    const [isAtTop, setIsAtTop] = useState(true);
     const appLink = useAppLink();
 
     useEffect(() => {
         const onScroll = () => {
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+            setIsAtTop(scrollTop === 0);
+
             if (window.scrollY === 0) {
                 setShowBanner(true);
                 root.current.classList.remove('transparent-bg');
@@ -61,6 +69,15 @@ const NewTopNav = ({ pageName, showLogo = true, location, animatedNavbar }) => {
         }
     }, [showMenu]);
 
+    useEffect(() => {
+        if (searchBar) {
+            setSearchBar(false);
+        }
+        //eslint-disable-next-line
+    }, [trigger]);
+
+    useClickOutsideSearch(searchRef, searchBar, setSearchBar);
+
     const rootClasses = !trigger ? 'translate-y-0' : '-translate-y-full';
 
     return (
@@ -68,10 +85,17 @@ const NewTopNav = ({ pageName, showLogo = true, location, animatedNavbar }) => {
             <div
                 ref={root}
                 style={{ maxWidth: '100vw' }}
-                className={`fixed top-0 left-0 block w-full mx-auto z-20 transition duration-300 transform ${rootClasses}`}
+                className={`fixed top-0 left-0 block w-full mx-auto z-30 transition duration-300 transform ${rootClasses}`}
             >
                 <div tw='container max-w-7xl mx-auto pt-2.5 hidden xl:block' css={paddingNav}>
-                    <NewNavigation pageName={pageName} showLogo={showLogo} appLink={appLink} location={location} />
+                    <NewNavigation
+                        pageName={pageName}
+                        showLogo={showLogo}
+                        appLink={appLink}
+                        location={location}
+                        searchBar={searchBar}
+                        setSearchBar={setSearchBar}
+                    />
                 </div>
                 {showBanner && animatedNavbar && (
                     <div className='block bg-white px-8'>
@@ -94,9 +118,41 @@ const NewTopNav = ({ pageName, showLogo = true, location, animatedNavbar }) => {
                         showBurgerButton={showBurgerButton}
                         showMenu={showMenu}
                         setShowMenu={setShowMenu}
+                        searchBar={searchBar}
+                        setSearchBar={setSearchBar}
                     />
                 </div>
             </div>
+            {searchBar && (
+                <div
+                    style={{ maxWidth: '100vw' }}
+                    className={'fixed left-0 block w-full mx-auto bg-white  shadow-2xl'}
+                    css={[
+                        css`
+                            z-index: 20;
+                        `,
+                        animatedNavbar &&
+                            css`
+                                top: 7.563rem;
+                                @media (max-width: 1280px) {
+                                    top: ${isAtTop ? '7rem' : '5rem'};
+                                }
+                            `,
+                        !animatedNavbar &&
+                            css`
+                                top: 6.563rem;
+                                @media (max-width: 1280px) {
+                                    top: 5rem;
+                                }
+                            `
+                    ]}
+                    ref={searchRef}
+                >
+                    <div tw='container max-w-7xl mx-auto pt-2.5' css={paddingNav}>
+                        <CustomSearch searchBar={searchBar} setSearchBar={setSearchBar} />
+                    </div>
+                </div>
+            )}
             {showMenu && <MobileNavigation showMenu={showMenu} setShowMenu={setShowMenu} appLink={appLink} />}
         </>
     );

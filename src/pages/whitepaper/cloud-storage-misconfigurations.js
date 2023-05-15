@@ -32,6 +32,22 @@ const CloudStorageMisconfigurations = ({ location }) => {
                 <Helmet>
                     <script charset='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js'></script>
                 </Helmet>
+                <div className='hidden' data-template-key>
+                    hardcoded-pages
+                </div>
+                <div className='hidden' data-permalink>
+                    /whitepaper/cloud-storage-misconfigurations
+                </div>
+                <div className='hidden' data-title>
+                    [White Paper] The Complete Guide to Cloud Storage Misconfigurations - Cyscale
+                </div>
+                <div className='hidden' data-description>
+                    This guide helps CIOs, CISOs and security staff to understand the risk & dangers of data security
+                    breaches and the importance of a secure cloud storage infrastructure.
+                </div>
+                <div className='hidden' data-category>
+                    whitepaper
+                </div>
                 <div className='bg-storage-misconfigurations pt-8'>
                     <Container>
                         <div className='pt-16 pb-24 lg:py-40'>

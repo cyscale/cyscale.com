@@ -5,3 +5,5 @@ static/admin/*.bundle.*
 .DS_Store
 yarn-error.log
 .idea
+.env
+hardcodedPages/

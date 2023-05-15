@@ -83,6 +83,22 @@ const NISTCompliance = ({ location }) => {
             title='NIST Cloud Compliance & Security - Cyscale'
             description='A powerful set of technical controls helping you with NIST compliance in areas such as security, availability, processing integrity, confidentiality and privacy'
         >
+            <div className='hidden' data-template-key>
+                hardcoded-pages
+            </div>
+            <div className='hidden' data-permalink>
+                /use-cases/nist-compliance
+            </div>
+            <div className='hidden' data-title>
+                NIST Cloud Compliance & Security - Cyscale
+            </div>
+            <div className='hidden' data-description>
+                A powerful set of technical controls helping you with NIST compliance in areas such as security,
+                availability, processing integrity, confidentiality and privacy
+            </div>
+            <div className='hidden' data-category>
+                solutions
+            </div>
             <div className='bg-hero-nist pt-8'>
                 <Container>
                     <div className='py-16 md:py-24 lg:pt-24 lg:pb-16'>

@@ -12,13 +12,13 @@ import {
 } from '../../style';
 import { company } from '../../nav';
 import { css } from 'twin.macro';
-import { isAnimatedNavbarPage } from '../../../../common/utils';
+import { isAnimatedNavbarPage, isPlaygroundBlogPage } from '../../../../common/utils';
 import RightArrow from '../../../sharedComponent/RightArrow';
 
 const caretCompany = (isAnimatedNavbarPage) => css`
     :before {
         ${caretMenuWhiteStyle};
-        left: ${isAnimatedNavbarPage ? '41.3rem' : '58.3rem'};
+        left: ${isAnimatedNavbarPage ? '39.3rem' : '56rem'};
     }
 `;
 
@@ -48,7 +48,7 @@ const Company = ({ pathname, activeLinks, setActiveLinks }) => {
     return (
         <div
             className='max-w-5xl grid grid-cols-12 gap-2 ml-auto justify-end shadow-2xl bg-white'
-            css={caretCompany(isAnimatedNavbarPage(pathname))}
+            css={caretCompany(isAnimatedNavbarPage(pathname) && !isPlaygroundBlogPage(pathname))}
             onMouseEnter={() => setActiveLinks({ ...activeLinks, company: true })}
             onMouseLeave={() => setActiveLinks({ ...activeLinks, company: false })}
             tabIndex='-1'

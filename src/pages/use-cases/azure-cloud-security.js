@@ -68,6 +68,21 @@ const AzureCloudSecurity = ({ location }) => {
             title='Azure Cloud Security and Compliance Automation - Cyscale'
             description='Secure your Azure accounts, continuously scan for risks and monitor events for misconfigurations.'
         >
+            <div className='hidden' data-template-key>
+                hardcoded-pages
+            </div>
+            <div className='hidden' data-permalink>
+                /use-cases/azure-cloud-security
+            </div>
+            <div className='hidden' data-title>
+                Azure Cloud Security and Compliance Automation - Cyscale
+            </div>
+            <div className='hidden' data-description>
+                Secure your Azure accounts, continuously scan for risks and monitor events for misconfigurations.
+            </div>
+            <div className='hidden' data-category>
+                solutions
+            </div>
             <div className='bg-cloud' style={{ backgroundColor: '#eeeeee' }}>
                 <Container>
                     <Section>

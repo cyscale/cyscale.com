@@ -64,6 +64,21 @@ const GCPCloudSecurity = ({ location }) => {
             title='GCP Cloud Security | Google Cloud Security and Compliance - Cyscale'
             description='Protect Google  environments with a complete Cloud Security Posture Management (CSPM) solution'
         >
+            <div className='hidden' data-template-key>
+                hardcoded-pages
+            </div>
+            <div className='hidden' data-permalink>
+                /use-cases/gcp-cloud-security
+            </div>
+            <div className='hidden' data-title>
+                GCP Cloud Security | Google Cloud Security and Compliance - Cyscale
+            </div>
+            <div className='hidden' data-description>
+                Protect Google environments with a complete Cloud Security Posture Management (CSPM) solution
+            </div>
+            <div className='hidden' data-category>
+                solutions
+            </div>
             <div className='bg-cloud' style={{ backgroundColor: '#eeeeee' }}>
                 <Container>
                     <Section>
