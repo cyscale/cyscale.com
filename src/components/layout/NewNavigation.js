@@ -30,10 +30,11 @@ const NavItem = styled.li`
     position: static;
     pointer-events: ${({ disabled }) => (disabled ? 'none' : 'all')};
     &:hover ${MegaMenu} {
-        z-index: 99;
-        visibility: visible;
-        opacity: 1;
-        transform: translateY(0);
+        z-index: ${({ searchBar }) => (searchBar ? 0 : 99)};
+        visibility: ${({ searchBar }) => (searchBar ? 'hidden' : 'visible')};
+        opacity: ${({ searchBar }) => (searchBar ? 0 : 1)};
+        transform: ${({ searchBar }) => (searchBar ? 'translateY(-1.25rem)' : 'translateY(0)')};
+        -ms-transform: ${({ searchBar }) => (searchBar ? 'translateY(-1.25rem)' : 'translateY(0)')};
         -ms-transition: all 0.5s;
         transition: all 0.5s;
     }
@@ -119,7 +120,7 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation, sea
                     )}
                 </div>
                 <ul className='flex flex-row'>
-                    <NavItem disabled={isAnimation}>
+                    <NavItem disabled={isAnimation} searchBar={searchBar}>
                         <NavItemButton
                             type='button'
                             className={`${
@@ -135,7 +136,7 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation, sea
                             <Platform pathname={pathname} activeLinks={activeLinks} setActiveLinks={setActiveLinks} />
                         </MegaMenu>
                     </NavItem>
-                    <NavItem disabled={isAnimation}>
+                    <NavItem disabled={isAnimation} searchBar={searchBar}>
                         <NavItemButton
                             type='button'
                             className={`${
@@ -175,7 +176,7 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation, sea
                             </span>
                         </NavItemButton>
                     </NavItem>
-                    <NavItem disabled={isAnimation}>
+                    <NavItem disabled={isAnimation} searchBar={searchBar}>
                         <NavItemButton
                             type='button'
                             className={`${
@@ -199,7 +200,7 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation, sea
                             <Resources pathname={pathname} activeLinks={activeLinks} setActiveLinks={setActiveLinks} />
                         </MegaMenu>
                     </NavItem>
-                    <NavItem disabled={isAnimation}>
+                    <NavItem disabled={isAnimation} searchBar={searchBar}>
                         <NavItemButton
                             type='button'
                             className={`${
