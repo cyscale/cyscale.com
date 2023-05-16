@@ -1,9 +1,7 @@
 ---
 templateKey: blog-post
-title: "Protecting Your Cloud-Native Infrastructure: How to Build a
-  Comprehensive Security Plan "
-seoTitle: "Protecting Your Cloud-Native Infrastructure: How to Build a
-  Comprehensive Security Plan "
+title: "Cloud-Native Infrastructure: How to Build a Comprehensive Security Plan"
+seoTitle: "Cloud-Native Infrastructure: How to Build a Comprehensive Security Plan"
 authors: Sabrina Lupșan
 permalink: cloud-native-security
 categories:
