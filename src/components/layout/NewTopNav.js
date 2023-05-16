@@ -85,7 +85,7 @@ const NewTopNav = ({ pageName, showLogo = true, location, animatedNavbar }) => {
             <div
                 ref={root}
                 style={{ maxWidth: '100vw' }}
-                className={`fixed top-0 left-0 block w-full mx-auto z-30 transition duration-300 transform ${rootClasses}`}
+                className={`fixed top-0 left-0 block w-full mx-auto z-50 transition duration-300 transform ${rootClasses}`}
             >
                 <div tw='container max-w-7xl mx-auto pt-2.5 hidden xl:block' css={paddingNav}>
                     <NewNavigation
@@ -129,7 +129,7 @@ const NewTopNav = ({ pageName, showLogo = true, location, animatedNavbar }) => {
                     className={'fixed left-0 block w-full mx-auto bg-white  shadow-2xl'}
                     css={[
                         css`
-                            z-index: 20;
+                            z-index: 40;
                         `,
                         animatedNavbar &&
                             css`

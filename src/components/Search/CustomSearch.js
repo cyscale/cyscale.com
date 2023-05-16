@@ -14,7 +14,7 @@ async function performSearch(query, notDesktop) {
     try {
         const { hits } = await index.search(query, {
             attributesToSnippet: [`content:${notDesktop ? '10' : '21'}`, 'title'],
-            hitsPerPage: notDesktop ? 3 : 5
+            hitsPerPage: 20
         });
         return hits;
     } catch (err) {
@@ -158,6 +158,8 @@ const CustomSearch = ({ searchBar, setSearchBar }) => {
                     <div
                         css={css`
                             background-color: white;
+                            max-height: ${notDesktop ? '18.75rem' : '25rem'};
+                            overflow-y: scroll;
                         `}
                         className={classnames({
                             'pb-4': query !== '' && Object.keys(results).length !== 0

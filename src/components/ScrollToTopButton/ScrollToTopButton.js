@@ -34,7 +34,7 @@ const ScrollToTopButton = () => {
                     tabIndex='-1'
                     onKeyDown={() => {}}
                     onClick={() => animateScroll.scrollToTop()}
-                    className='top-52 right-0 fixed sm:hidden z-40'
+                    className='top-52 right-0 fixed sm:hidden z-20'
                     alt='scroll to top'
                 />
             )}
