@@ -2,9 +2,10 @@ import { Link } from 'gatsby';
 import React, { useState } from 'react';
 import ReactDOMServer from 'react-dom/server';
 import { Row } from '../atoms/Containers';
-import arrow from '../../assets/images/arrow-left.svg';
+import arrow from '../../assets/images/arrow-left-white.svg';
 import classNames from 'classnames';
 import { Helmet } from 'react-helmet';
+import { css } from 'twin.macro';
 
 const qas = (useReactComponent) => {
     return [
@@ -13,8 +14,8 @@ const qas = (useReactComponent) => {
             answer: (
                 <>
                     <p className='mb-4'>
-                        CSPM is a group of security solutions and technologies that empower security users to identify
-                        and remediate risk and misconfigurations in their cloud environments.
+                        CSPM is a group of security tools and technologies that empower security users to identify and
+                        remediate risk and misconfigurations in their cloud environments.
                     </p>
                     {useReactComponent ? (
                         <Link className='underline' to='/blog/cloud-security-posture-management-cspm-guide/'>
@@ -103,7 +104,7 @@ export default function Faqs() {
     const [active, setActive] = useState(0);
 
     return (
-        <div>
+        <div className='max-w-xl lg:max-w-full mx-auto lg:mx-0'>
             <Helmet>
                 <script type='application/ld+json' data-rh='true'>{`{
                         "@context": "https://schema.org",
@@ -137,17 +138,14 @@ export default function Faqs() {
                     }`}</script>
             </Helmet>
 
-            <h2 className='font-semibold  text-3xl leading-normal text-white mb-6 font-montserrat'>
+            <h2 className='font-semibold text-3xl leading-normal mb-6 font-montserrat text-blue'>
                 Frequently asked questions
             </h2>
             <Row>
                 {qas(true).map((q, key) => (
-                    <div
-                        className='col-span-12 lg:col-span-8 mb-0 bg-white bg-opacity-40 p-4  rounded-md relative'
-                        key={key}
-                    >
+                    <div className='col-span-12 lg:col-span-8 mb-0 p-4 rounded-md relative' key={key}>
                         <h3
-                            className='font-semibold  text-base sm:text-lg text-white mb-0 pl-8 leading-snug cursor-pointer select-none font-montserrat'
+                            className='font-semibold  text-base sm:text-lg mb-0 pl-8 leading-snug cursor-pointer select-none font-montserrat'
                             onClick={() => setActive((s) => (s === key ? null : key))}
                             role='presentation'
                             tabIndex={-1}
@@ -155,12 +153,15 @@ export default function Faqs() {
                         >
                             {q.question}
                         </h3>
-                        <p className={classNames('text-white mt-4', { block: active === key, hidden: active !== key })}>
+                        <p className={classNames('mt-4', { block: active === key, hidden: active !== key })}>
                             {q.answer}
                         </p>
                         <button
                             onClick={() => setActive((s) => (s === key ? null : key))}
-                            className='bg-white rounded-full w-6 h-6 pt-px flex items-center justify-center absolute top-4 left-4 hover:opacity-80 transition-opacity'
+                            className='rounded-full w-6 h-6 pt-px flex items-center justify-center absolute top-4 left-4 hover:opacity-80 transition-opacity'
+                            css={css`
+                                background-color: #b4b7bd;
+                            `}
                         >
                             <img
                                 className={classNames('transform transition-all', {

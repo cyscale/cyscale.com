@@ -5,7 +5,9 @@ module.exports = {
         keyframes: true
     },
     variants: {
-        extend: {}
+        extend: {
+            display: ['group-hover']
+        }
     },
     plugins: [require('./src/common/tailwind-plugin.js')],
     theme: {
