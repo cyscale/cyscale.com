@@ -3,7 +3,12 @@ import rightArrow from '../../assets/images/right-arrow-cspm.svg';
 import leftArrow from '../../assets/images/left-arrow-cspm.svg';
 import { css } from 'twin.macro';
 
-const Carousel = ({ children: slides, autoSlide = true, autoSlideInterval = 2500 }) => {
+const hoverEffect = css`
+    &:hover {
+        transform: scale(1.2);
+    }
+`;
+const Carousel = ({ children: slides, autoSlide = true, autoSlideInterval = 2500, setAutoSlide }) => {
     const [curr, setCurr] = useState(0);
 
     const prev = () => setCurr((curr) => (curr === 0 ? slides.length - 1 : curr - 1));
@@ -37,11 +42,16 @@ const Carousel = ({ children: slides, autoSlide = true, autoSlideInterval = 2500
                 ))}
             </div>
             <div className='absolute -bottom-2 right-0'>
-                <button onClick={prev} className=''>
-                    <img src={leftArrow} alt='' />
+                <button onClick={prev} onMouseEnter={() => setAutoSlide(false)} onMouseLeave={() => setAutoSlide(true)}>
+                    <img src={leftArrow} alt='' css={hoverEffect} />
                 </button>
-                <button onClick={next} className='ml-2'>
-                    <img src={rightArrow} alt='' />
+                <button
+                    onClick={next}
+                    className='ml-2'
+                    onMouseEnter={() => setAutoSlide(false)}
+                    onMouseLeave={() => setAutoSlide(true)}
+                >
+                    <img src={rightArrow} alt='' css={hoverEffect} />
                 </button>
             </div>
         </div>

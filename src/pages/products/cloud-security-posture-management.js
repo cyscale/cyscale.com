@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Layout from '../../components/layout/CleanLayout';
 import { css } from 'twin.macro';
 import { Container, Row, Section } from '../../components/atoms/Containers';
@@ -38,6 +38,99 @@ const topArticles = [
         children: true
     }
 ];
+
+const qas = (useReactComponent) => {
+    return [
+        {
+            question: 'What is a Cloud Security Posture Management (CSPM) tool?',
+            answer: (
+                <>
+                    <p className='mb-4'>
+                        CSPM is a group of security tools and technologies that empower security users to identify and
+                        remediate risk and misconfigurations in their cloud environments.
+                    </p>
+                    {useReactComponent ? (
+                        <Link className='underline' to='/blog/cloud-security-posture-management-cspm-guide/'>
+                            Read more in our guide
+                        </Link>
+                    ) : (
+                        <a href='https://cyscale.com/blog/cloud-security-posture-management-cspm-guide/'>
+                            Read more in our guide
+                        </a>
+                    )}
+                    .
+                </>
+            )
+        },
+        {
+            question: 'What are some key capabilities of a CSPM solution?',
+            answer: (
+                <ul className='list-disc ml-3 pl-3'>
+                    <li className='mb-4'>
+                        Continuous compliance monitoring of your cloud resources, so you can identify and remediate risk
+                        in areas such as storage, encryption, and permissions
+                    </li>
+                    <li className='mb-4'>
+                        Technical security controls and visibility over IAM (Identity and Access Management)
+                        configuration, to help provide risk assessment and ensure that compliance standards are met
+                    </li>
+                    <li className='mb-4'>
+                        Easily identify risks that could compromise your cloud network across cloud providers, such as
+                        GCP (Google Cloud), AWS and Microsoft Azure
+                    </li>
+
+                    <li>
+                        Remediation guidance, to quickly solve misconfigurations leading to compliance violations for
+                        Saas (Software as a Service), Iaas (Infrastructure as a Service) and Paas (Platform as a
+                        Service)
+                    </li>
+                </ul>
+            )
+        },
+        {
+            question: 'What are some benefits of utilizing a CSPM tool?',
+            answer: (
+                <>
+                    <p className='mb-4'>
+                        <strong className='text-base'>
+                            Visibility into your company's cloud infrastructure and security configurations.
+                        </strong>
+                        <br />
+                        Security teams can assess posture across multiple cloud environments and accounts through a
+                        centralized dashboard that can give actionable metrics.
+                    </p>
+                    <p className='mb-4'>
+                        <strong className='text-base'>Evidence.</strong>
+                        <br />
+                        Violations in your cloud infrastructure are mapped to regulatory standards, security frameworks,
+                        as well as internal security policies, resulting in evidence collection that enables audits.
+                    </p>
+                    <p className='mb-4'>
+                        <strong className='text-base'>Reporting and alerting.</strong>
+                        Insights on your cloud's risk posture, as well as alerts and notifications bring risk to your
+                        attention, enabling investigation and in-time remediation.
+                    </p>
+                    <p className='mb-4'>
+                        <strong className='text-base'>Automation.</strong>
+                        One of the most important features of a CSPM tool. Automated remediation, helps security teams
+                        reduce the time and effort required by manual remediation, at the same time enabling evidence
+                        collection.
+                    </p>
+                    {useReactComponent ? (
+                        <Link className='underline' to='/blog/cloud-security-posture-management-cspm-guide/'>
+                            Read more in our guide
+                        </Link>
+                    ) : (
+                        <a href='https://cyscale.com/blog/cloud-security-posture-management-cspm-guide/'>
+                            Read more in our guide
+                        </a>
+                    )}
+                    .
+                </>
+            )
+        }
+    ];
+};
 
 const subtitleColor = css`
     color: #079bee;
@@ -85,7 +178,18 @@ const workflowPhaseHr = css`
     background: #d9d9d9;
 `;
 
+const subtitleFontSize = css`
+    font-size: 1.625rem;
+    line-height: 2rem;
+    @media screen and (min-width: 1024px) {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+`;
+
 const CSPM = ({ location }) => {
+    const [autoSlide, setAutoSlide] = useState(true);
+
     const data = useStaticQuery(graphql`
         query anotherQuery {
             heroImage: file(relativePath: { eq: "hero-cspm.png" }) {
@@ -344,7 +448,7 @@ const CSPM = ({ location }) => {
                             LEVERAGE THE BEST SECURITY TOOLS FOR
                             <br /> CLOUD-NATIVE APPLICATIONS
                         </p>
-                        <h2 className='font-montserrat font-bold text-blue text-center mt-8' css={titleSize}>
+                        <h2 className='font-montserrat font-bold text-blue text-center mt-8' css={subtitleFontSize}>
                             Demonstrate your cybersecurity posture to auditors and
                             <br /> customers to enable the business and scale securely
                         </h2>
@@ -389,7 +493,7 @@ const CSPM = ({ location }) => {
             <Container>
                 <Section>
                     <div
-                        className='py-24 flex flex-col items-center'
+                        className='py-24 flex flex-col items-center rounded-2xl'
                         css={css`
                             background-image: linear-gradient(90deg, #0f26aa -1.79%, #ff4a56 165.6%);
                         `}
@@ -425,24 +529,26 @@ const CSPM = ({ location }) => {
                         </p>
                         <ul className='list-disc ml-4'>
                             <li className='font-hind text-sm mt-2'>
-                                Track cloud resources with a searchable, easy to use, exportable Cloud Asset Inventory.
+                                Track cloud resources with a searchable, easy to use, exportable{' '}
+                                <strong>Cloud Asset Inventory.</strong>
                                 Cyscale integrates with AWS, Microsoft Azure, Google Cloud, Alibaba and identity
                                 providers such as Okta, Azure AD, Google Workspaces.
                             </li>
                             <li className='font-hind text-sm mt-2'>
-                                Easy cloud security posture management with powerful dashboards highlighting top cloud
-                                security risks across IaaS, PaaS, identity and data. Eliminate lack of visibility and
-                                make sure you're always working on what matters most.
+                                Easy cloud security posture management with <strong>powerful dashboards</strong>{' '}
+                                highlighting top cloud security risks across IaaS, PaaS, identity and data. Eliminate
+                                lack of visibility and make sure you're always working on what matters most.
                             </li>
                             <li className='font-hind text-sm mt-2'>
                                 Dive deep into cloud configurations and enable teams to build common understanding with
-                                graph-based infrastructure diagrams that contain risk information. Easily visualize
-                                access to S3 buckets, misconfigured ports that provide unintended internet exposure, and
-                                so on.
+                                graph-based infrastructure diagrams that contain risk information. Easily visualize{' '}
+                                <strong>access to S3 buckets</strong>, misconfigured ports that provide{' '}
+                                <strong>unintended internet exposure</strong>, and so on.
                             </li>
                             <li className='font-hind text-sm mt-2'>
                                 Enhanced visibility for the entire cloud is complemented with custom defined views based
-                                on scopes: cloud account, application, environment, end-customer, and many others.
+                                on <strong>scopes</strong>: cloud account, application, environment, end-customer, and
+                                many others.
                             </li>
                         </ul>
                     </div>
@@ -478,28 +584,29 @@ const CSPM = ({ location }) => {
                                 </p>
                                 <ul className='list-disc ml-4'>
                                     <li className='font-hind text-sm mt-2'>
-                                        Benefit from a large library of security controls drawing from industry
-                                        benchmarks such as CIS, as well as our security expertise. Cyscale controls
-                                        cover cloud services including identity, storage, networking, container
+                                        Benefit from a large <strong>library of security controls</strong> drawing from
+                                        industry benchmarks such as CIS, as well as our security expertise. Cyscale
+                                        controls cover cloud services including identity, storage, networking, container
                                         services, and managed Kubernetes.
                                     </li>
                                     <li className='font-hind text-sm mt-2'>
-                                        Eliminate false positives with exemptions, complete with an exemption approval
-                                        process and adequate reporting.
+                                        Eliminate false positives with exemptions, complete with an{' '}
+                                        <strong>exemption approval process</strong> and adequate reporting.
                                     </li>
                                     <li className='font-hind text-sm mt-2'>
-                                        Enable productivity for team members of all skill levels through detailed
-                                        remediation steps.
+                                        Enable productivity for team members of all skill levels through detailed{' '}
+                                        <strong>remediation steps.</strong>
                                     </li>
                                     <li className='font-hind text-sm mt-2'>
-                                        The Platform leverages the Security Knowledge Graph to perform contextual
-                                        analysis of misconfigurations, by automatically correlating them with
-                                        exploitable vulnerabilities, identities and paths to sensitive data.
+                                        The Platform leverages the Security Knowledge Graph to perform{' '}
+                                        <strong>contextual analysis of misconfigurations</strong>, by automatically
+                                        correlating them with exploitable vulnerabilities, identities and paths to
+                                        sensitive data.
                                     </li>
                                     <li className='font-hind text-sm mt-2'>
-                                        React quickly to new vulnerabilities with the help of continuous monitoring and
-                                        configurable alerts. Use integrations to route alerts to relevant teams, on
-                                        their preferred communication channel.
+                                        React quickly to new vulnerabilities with the help of continuous monitoring and{' '}
+                                        <strong>configurable alerts</strong>. Use integrations to route alerts to
+                                        relevant teams, on their preferred communication channel.
                                     </li>
                                 </ul>
                             </div>
@@ -526,37 +633,38 @@ const CSPM = ({ location }) => {
                         </p>
                         <ul className='list-disc ml-4'>
                             <li className='font-hind text-sm mt-2'>
-                                Continuous compliance monitoring for industry standards and regulations such as
-                                ISO27001, SOC2, PCI-DSS, GDPR, HIPAA, NIST, and many others.
+                                Continuous compliance monitoring for industry standards and regulations such as{' '}
+                                <strong>ISO27001, SOC2, PCI-DSS, GDPR, HIPAA, NIST</strong>, and many others.
                             </li>
                             <li className='font-hind text-sm mt-2'>
                                 In-app policy templates such as Data Protection, Identity and Access Management,
-                                Incident Response etc, and the ability to define your own.
+                                Incident Response etc, and the ability to <strong>define your own</strong>.
                             </li>
                             <li className='font-hind text-sm mt-2'>Requirement-based automated evidence collection.</li>
                             <li className='font-hind text-sm mt-2'>
-                                Get notified whenever policy violations occur and your compliance score falls beneath a
-                                customizable threshold. This helps you prevent security risks while maintaining
-                                compliance.
+                                Get notified whenever policy violations occur and your compliance score falls beneath a{' '}
+                                <strong>customizable threshold</strong>. This helps you prevent security risks while
+                                maintaining compliance.
                             </li>
                             <li className='font-hind text-sm mt-2'>
                                 Enhanced visualization with comprehensive pdf reports for auditors, customers, or other
-                                stakeholders. A powerful scoping mechanism allows for granular reporting.
+                                stakeholders. A powerful scoping mechanism allows for <stron>granular reporting</stron>.
                             </li>{' '}
                             <li className='font-hind text-sm mt-2'>
-                                Look at your cloud estate through the data lens with the help of a Data Security
-                                Dashboard that highlights data exposure and toxic combinations of risks that jeopardize
-                                your crown jewels.
+                                Look at your cloud estate through the data lens with the help of a{' '}
+                                <strong>Data Security Dashboard</strong> that highlights data exposure and toxic
+                                combinations of risks that jeopardize your crown jewels.
                             </li>{' '}
                             <li className='font-hind text-sm mt-2'>
-                                Easily perform regular access and permissions reviews with the help of an Identity
-                                Dashboard that highlights least privilege violations and other security issues in IAM.
+                                Easily perform regular access and permissions reviews with the help of an{' '}
+                                <strong>Identity Dashboard</strong> that highlights least privilege violations and other
+                                security issues in IAM.
                             </li>
                         </ul>
                     </div>
                     <div className='col-span-12 lg:col-span-6 mx-auto lg:mx-0'>
                         <div className='max-w-xl'>
-                            <Carousel>
+                            <Carousel autoSlide={autoSlide} setAutoSlide={setAutoSlide}>
                                 {slides.map((s, index) => {
                                     return (
                                         <div
@@ -565,6 +673,8 @@ const CSPM = ({ location }) => {
                                                 width: 100%;
                                                 height: 100%;
                                             `}
+                                            onMouseEnter={() => setAutoSlide(false)}
+                                            onMouseLeave={() => setAutoSlide(true)}
                                         >
                                             <GatsbyImage image={s} alt='' key={index} />
                                         </div>
@@ -584,7 +694,7 @@ const CSPM = ({ location }) => {
                 <Container>
                     <div className='grid grid-cols-12 gap-x-5'>
                         <div className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 '>
-                            <Link to={'/case-studies/smart-fintech'}>
+                            <Link to={'/case-studies/smart-fintech/'}>
                                 <GatsbyImage
                                     image={data.smartFintech.childImageSharp.gatsbyImageData}
                                     className='max-w-xl'
@@ -596,7 +706,7 @@ const CSPM = ({ location }) => {
                             <p className='font-montserrat text-base font-bold mt-4' css={subtitleColor}>
                                 CASE STUDY
                             </p>
-                            <Link to={'/case-studies/smart-fintech'}>
+                            <Link to={'/case-studies/smart-fintech/'}>
                                 {' '}
                                 <h2
                                     className='font-montserrat text-blue font-bold mt-2 hover:underline'
@@ -631,14 +741,7 @@ const CSPM = ({ location }) => {
                         <div className='max-w-xl mx-auto lg:mx-0  mb-20'>
                             <h2
                                 className='font-bold text-primary border-title-partly font-montserrat'
-                                css={css`
-                                    font-size: 1.625rem;
-                                    line-height: 2rem;
-                                    @media screen and (min-width: 1024px) {
-                                        font-size: 2rem;
-                                        line-height: 2.5rem;
-                                    }
-                                `}
+                                css={subtitleFontSize}
                             >
                                 Explore other Cyscale security solutions
                             </h2>
@@ -650,22 +753,22 @@ const CSPM = ({ location }) => {
                                         CNAPP
                                     </Link>
                                     <Link
-                                        className='block font-hind tex-lg hover:underline'
+                                        className='block font-hind tex-lg hover:underline mt-2'
                                         to='/use-cases/cloud-native-security/'
                                     >
-                                        CLOUD-NATIVE SECURITY
+                                        Cloud-Native Security
                                     </Link>
                                     <Link
-                                        className='block font-hind tex-lg hover:underline'
+                                        className='block font-hind tex-lg hover:underline mt-2'
                                         to='/products/security-knowledge-graph/'
                                     >
-                                        SECURITY KNOWLEDGE GRAPH
+                                        Security Knowledge Graph
                                     </Link>
                                     <Link
-                                        className='block font-hind tex-lg hover:underline'
+                                        className='block font-hind tex-lg hover:underline mt-2'
                                         to='/use-cases/cloud-compliance-and-auditing/'
                                     >
-                                        CLOUD COMPLIANCE
+                                        Cloud Compliance
                                     </Link>
                                 </div>
                                 <div className='col-span-12 lg:col-span-6 font-hind'>
@@ -673,25 +776,25 @@ const CSPM = ({ location }) => {
                                         className='block font-hind tex-lg hover:underline'
                                         to='/use-cases/cloud-misconfigurations/'
                                     >
-                                        CLOUD MISCONFIGURATIONS
+                                        Cloud Misconfigurations
                                     </Link>
                                     <Link
-                                        className='block font-hind tex-lg hover:underline'
+                                        className='block font-hind tex-lg hover:underline mt-2'
                                         to='/use-cases/aws-cloud-security/'
                                     >
-                                        AWS SECURITY
+                                        AWS Cloud Security
                                     </Link>
                                     <Link
-                                        className='block font-hind tex-lg hover:underline'
+                                        className='block font-hind tex-lg hover:underline mt-2'
                                         to='/use-cases/gcp-cloud-security/'
                                     >
-                                        GOOGLE CLOUD SECURITY{' '}
+                                        Google Cloud Security
                                     </Link>
                                     <Link
-                                        className='block font-hind tex-lg hover:underline'
+                                        className='block font-hind tex-lg hover:underline mt-2'
                                         to='/use-cases/azure-cloud-security/'
                                     >
-                                        MICROSOFT AZURE SECURITY
+                                        Microsoft Azure Security
                                     </Link>
                                 </div>
                             </Row>
@@ -703,7 +806,7 @@ const CSPM = ({ location }) => {
                 <img src={corner} width={500} className='hidden lg:block absolute top-12 -right-12 m-0 z-20' alt='' />
                 <Container>
                     <Section>
-                        <Faqs />
+                        <Faqs qas={qas} />
                     </Section>
                 </Container>
             </div>
