@@ -103,7 +103,6 @@ const attributeNames = [
     'data-category'
 ];
 const skipFiles = [
-    'cloud-security-posture-management.js',
     'security-knowledge-graph.js',
     'cloud-compliance-and-auditing.js',
     'cloud-data-security.js',
