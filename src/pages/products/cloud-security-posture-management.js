@@ -245,9 +245,12 @@ const CSPM = ({ location }) => {
     `);
 
     const slides = [
-        data.cards.childImageSharp.gatsbyImageData,
-        data.standards.childImageSharp.gatsbyImageData,
-        data.complianceHistory.childImageSharp.gatsbyImageData
+        { image: data.cards.childImageSharp.gatsbyImageData, alt: 'Screenshots from cloud security platform' },
+        { image: data.standards.childImageSharp.gatsbyImageData, alt: 'Standards view' },
+        {
+            image: data.complianceHistory.childImageSharp.gatsbyImageData,
+            alt: 'Standard view with compliance history graphic'
+        }
     ];
 
     return (
@@ -557,7 +560,11 @@ const CSPM = ({ location }) => {
                         </ul>
                     </div>
                     <div className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 max-w-xl'>
-                        <GatsbyImage image={data.visibility.childImageSharp.gatsbyImageData} alt='' className='mt-20' />
+                        <GatsbyImage
+                            image={data.visibility.childImageSharp.gatsbyImageData}
+                            alt='Screenshots from cloud security platform'
+                            className='mt-20'
+                        />
                     </div>
                 </div>
             </Container>
@@ -568,7 +575,7 @@ const CSPM = ({ location }) => {
                             <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-2xl'>
                                 <GatsbyImage
                                     image={data.continuosProtection.childImageSharp.gatsbyImageData}
-                                    alt=''
+                                    alt='Screenshots from cloud security platform'
                                     className='mt-28'
                                 />
                             </div>
@@ -617,7 +624,10 @@ const CSPM = ({ location }) => {
                         </div>
                         <div className='col-span-12 lg:col-span-6 mt-8 sm:mt-0 block lg:hidden'>
                             <div className='mx-auto max-w-xl lg:mt-8 lg:mx-0 lg:max-w-2xl'>
-                                <GatsbyImage image={data.continuosProtection.childImageSharp.gatsbyImageData} alt='' />
+                                <GatsbyImage
+                                    image={data.continuosProtection.childImageSharp.gatsbyImageData}
+                                    alt='Screenshots from cloud security platform'
+                                />
                             </div>
                         </div>
                     </div>
@@ -680,7 +690,7 @@ const CSPM = ({ location }) => {
                                             onMouseEnter={() => setAutoSlide(false)}
                                             onMouseLeave={() => setAutoSlide(true)}
                                         >
-                                            <GatsbyImage image={s} alt='' key={index} />
+                                            <GatsbyImage image={s.image} alt={s.alt} key={index} />
                                         </div>
                                     );
                                 })}
@@ -798,7 +808,7 @@ const CSPM = ({ location }) => {
                                         className='block font-hind tex-lg hover:underline mt-2'
                                         to='/use-cases/azure-cloud-security/'
                                     >
-                                        Microsoft Azure Security
+                                        Microsoft Azure Cloud Security
                                     </Link>
                                 </div>
                             </Row>
