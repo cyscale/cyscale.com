@@ -33,9 +33,13 @@ const topArticles = [
         link: '/blog/cloud-native-security-guide/'
     },
     {
-        text: 'Cloud Security and Compliance:<br class="hidden lg:block"> A Guide for Your Cloud Infrastructure',
-        link: '/blog/cloud-security-and-compliance/',
-        children: true
+        text: (
+            <>
+                Cloud Security and Compliance:
+                <br className='hidden lg:block' />A Guide for Your Cloud Infrastructure
+            </>
+        ),
+        link: '/blog/cloud-security-and-compliance/'
     }
 ];
 
