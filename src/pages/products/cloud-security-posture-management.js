@@ -260,6 +260,23 @@ const CSPM = ({ location }) => {
             title='Cloud Security Posture Management - CSPM Tool - Cyscale'
             description='Continuous visibility of multi-cloud environments to identify cloud misconfiguration vulnerabilities, ultimately securing your cloud from security risk and data breaches. Scan, monitor, and remediate across AWS, Azure, Google Cloud, Alibaba Cloud.'
         >
+            <div className='hidden' data-template-key>
+                hardcoded-pages
+            </div>
+            <div className='hidden' data-permalink>
+                /products/cloud-security-posture-management/
+            </div>
+            <div className='hidden' data-title>
+                Cloud Security Posture Management - CSPM Tool - Cyscale
+            </div>
+            <div className='hidden' data-description>
+                Continuous visibility of multi-cloud environments to identify cloud misconfiguration vulnerabilities,
+                ultimately securing your cloud from security risk and data breaches. Scan, monitor, and remediate across
+                AWS, Azure, Google Cloud, Alibaba Cloud.
+            </div>
+            <div className='hidden' data-category>
+                products
+            </div>
             <div
                 className='pt-8 relative'
                 css={css`
