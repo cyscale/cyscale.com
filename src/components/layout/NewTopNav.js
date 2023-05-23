@@ -69,13 +69,6 @@ const NewTopNav = ({ pageName, showLogo = true, location, animatedNavbar }) => {
         }
     }, [showMenu]);
 
-    useEffect(() => {
-        if (searchBar) {
-            setSearchBar(false);
-        }
-        //eslint-disable-next-line
-    }, [trigger]);
-
     useClickOutsideSearch(searchRef, searchBar, setSearchBar);
 
     const rootClasses = !trigger ? 'translate-y-0' : '-translate-y-full';
@@ -126,23 +119,24 @@ const NewTopNav = ({ pageName, showLogo = true, location, animatedNavbar }) => {
             {searchBar && (
                 <div
                     style={{ maxWidth: '100vw' }}
-                    className={'fixed left-0 block w-full mx-auto bg-white  shadow-2xl'}
+                    className={`fixed left-0 block w-full mx-auto bg-white shadow-2xl transform transition-all`}
                     css={[
                         css`
+                              transition-duration: 300ms;
                             z-index: 40;
                         `,
                         animatedNavbar &&
                             css`
                                 top: 7.563rem;
                                 @media (max-width: 1280px) {
-                                    top: ${isAtTop ? '7rem' : '5rem'};
+                                    top: ${isAtTop ? '7rem' : !trigger ? '5rem' : 0};
                                 }
                             `,
                         !animatedNavbar &&
                             css`
-                                top: 6.563rem;
+                                top: ${!trigger ? '6.563rem' : 0};
                                 @media (max-width: 1280px) {
-                                    top: 5rem;
+                                    top: ${!trigger ? '5rem' : 0};
                                 }
                             `
                     ]}
