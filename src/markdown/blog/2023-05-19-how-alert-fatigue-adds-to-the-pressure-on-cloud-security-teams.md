@@ -17,8 +17,8 @@ description: "The pressure on cybersecurity teams is intense, and alert fatigue
 seoDescription: By reducing false positives, tailoring alerts to specific teams,
   and prioritizing the most critical issues, we can empower cybersecurity teams
   to navigate the sea of alerts more efficiently.
-featuredpost: false
-featuredimage: /img/microsoftteams-image-4-.png
+featuredpost: true
+featuredimage: /img/blog_alert-fatigue-cover.png
 ---
 In the fast-paced world of cybersecurity, where threats lurk around every corner, the pressure on cybersecurity teams is immense. They are the defenders, the guardians of our digital fortresses. However, as much as we rely on these experts to keep us safe, we must also acknowledge the pressure on their demanding roles. One particular challenge that exacerbates this pressure is alert fatigue. In this article, we'll explore the impact of alert fatigue on cybersecurity teams. 
 
