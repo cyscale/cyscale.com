@@ -31,17 +31,17 @@ tags:
 ---
 As more organizations adopt a cloud-native approach to support their business operations, security may sometimes be left out of their initial plans. Moreover, a [cloud-native infrastructure](https://cyscale.com/blog/cloud-native-security-guide/) requires a different methodology in terms of securing it, since it has unique characteristics such as: 
 
-* Microservices, 
+* A microservices architecture, 
 * Containers, 
 * Serverless computing, and others. 
 
-These differences pose new security challenges, and in this article we will look at best practices for securing cloud-native environments and how to remediate any cybersecurity drifts. 
+These differences pose new security challenges, and in this article we will look at best practices for securing cloud-native environments across multiple cloud providers and how to remediate any cybersecurity drifts. 
 
 ## Understanding your cloud-native infrastructure 
 
 The first step to building a comprehensive security plan is understanding every side of your cloud computing environment. This means that visibility is the first aspect we need to talk about.  
 
-Visibility is the foundation on which security is built. Without visibility into your infrastructure, you cannot effectively secure your cloud resources, monitor for threats, detect anomalies, or respond to incidents. 
+Visibility is the foundation on which security is built. Without visibility into your infrastructure, you cannot effectively secure your cloud apps, monitor for threats, detect anomalies, or respond to incidents. 
 
 For example, with microservices and containers, it can be challenging to maintain visibility, as these components are constantly changing and evolving. 
 
@@ -61,7 +61,7 @@ This is a broad category that includes: 
 * unpatched vulnerabilities,  
 * poor access control, and others. 
 
-Running containers with excessive permissions, such as root, can lead to compromising the entire VM if the container is escaped. This misconfiguration is common because, by running a container as root, the administrator does not have to input their password for privileged actions. 
+Running containers with excessive permissions, such as root, can lead to compromising the entire VM (virtual machine) if the container is escaped. This misconfiguration is common because, by running a container as root, the administrator does not have to input their password for privileged actions. 
 
 Failing to update and patch containers and their underlying operating systems can lead to critical attacks that expose your cloud infrastructure. 
 
@@ -69,7 +69,7 @@ Poor access control can result in unauthorized access to sensitive data, such as
 
 ### 2. Missing or inadequate encryption 
 
-Encryption is a must-have in your cloud security plan. Protect data in transit and at rest by encrypting it with industry-recommended cryptographic algorithms and by having a robust key management system. Read more about encryption best practices [here](https://cyscale.com/blog/types-of-encryption/). 
+Encryption is a must-have in your cloud security plan for application development. Protect data in transit and at rest by encrypting it with industry-recommended cryptographic algorithms and by having a robust key management system for your cloud-native applications. Read more about encryption best practices [here](https://cyscale.com/blog/types-of-encryption/). 
 
 ### 3. Unsecured storage resources 
 
@@ -97,16 +97,18 @@ NSGs are virtual firewalls that allow you to filter inbound and outbound traffic
 
 It’s easy to fall short when securing your cloud environment; we know how difficult it is to obtain contextual visibility, check all of your resources, and implement remediation as fast as possible. But we've got you covered. 
 
+If you have a robust security posture, DevOps teams can streamline the software development lifecycle of native apps and shift their attention to important aspects. 
+
 These are the steps to secure your cloud-native infrastructure: 
 
 * ensure you have good visibility over your environment, 
 * fix all findings and reach a robust cloud security posture, 
 * continuously monitor your infrastructure. 
 
-Using the Cyscale platform, you have access to several powerful dashboards that enable you to see, in real-time, your assets, their relationships, misconfigurations, as well as existing accounts and IAM permissions. Gain complete visibility using: 
+Using the Cyscale cloud platform, you have access to several powerful dashboards that enable you to see, in real-time, your assets, their relationships, misconfigurations, as well as existing accounts and IAM permissions. Gain complete visibility using: 
 
 * A general dashboard, with an overall view of the company’s cloud environments, as well as an asset inventory, 
 * A [Data Security Dashboard](https://cyscale.com/blog/data-security-dashboard/), which delivers a comprehensive view over data at rest storage assets and keys, using DSPM (Data Security Posture Management) capabilities, 
 * [An Identity Dashboard](https://cyscale.com/blog/check-for-least-privilege/), that helps users understand the impact of IAM permissions. 
 
-Besides these dashboards, you have access to 400+ controls across multiple cloud service providers such as AWS, Azure, and Google Cloud that check your entire infrastructure for misconfigurations. On top of this, you get remediation steps that help you adjust your settings in no time.
+Besides these dashboards, you have access to 400+ controls across multiple public cloud service providers such as AWS (Amazon Web Services), Microsoft Azure, and Google Cloud that check your entire infrastructure for misconfigurations. On top of this, you get remediation steps that help you adjust your settings in no time, even if you’re using multi-cloud workloads.
