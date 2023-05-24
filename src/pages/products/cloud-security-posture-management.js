@@ -21,25 +21,25 @@ import Carousel from '../../components/cloud-security-posture-management/Carouse
 
 const topArticles = [
     {
-        text: 'CNAPP: The Key to Secure Cloud-Native Applications',
-        link: '/blog/cnapp-secure-native-applications/'
-    },
-    {
         text: 'CNAPP: A mix of CSPM & CWPP',
         link: '/blog/cnapp-a-mix-of-cspm-cwpp/'
     },
     {
-        text: 'Cloud-Native Security: A Comprehensive Guide to Securing Your Technology Stack',
-        link: '/blog/cloud-native-security-guide/'
+        text: 'CSPM: A Comprehensive Guide',
+        link: '/blog/cloud-security-posture-management-cspm-guide/'
+    },
+    {
+        text: 'What to Look for in a CSPM?',
+        link: '/blog/what-to-look-for-in-a-cspm/'
     },
     {
         text: (
             <>
-                Cloud Security and Compliance:
-                <br className='hidden lg:block' />A Guide for Your Cloud Infrastructure
+                What is a CSPM and
+                <br className='hidden lg:block' /> why should you consider using one?
             </>
         ),
-        link: '/blog/cloud-security-and-compliance/'
+        link: '/blog/cspm-visibility-compliance-security/'
     }
 ];
 
@@ -554,9 +554,8 @@ const CSPM = ({ location }) => {
                         <ul className='list-disc ml-4'>
                             <li className='font-hind text-sm mt-2'>
                                 Track cloud resources with a searchable, easy to use, exportable{' '}
-                                <strong>Cloud Asset Inventory.</strong>
-                                Cyscale integrates with AWS, Microsoft Azure, Google Cloud, Alibaba and identity
-                                providers such as Okta, Azure AD, Google Workspaces.
+                                <strong>Cloud Asset Inventory.</strong> Cyscale integrates with AWS, Microsoft Azure,
+                                Google Cloud, Alibaba and identity providers such as Okta, Azure AD, Google Workspaces.
                             </li>
                             <li className='font-hind text-sm mt-2'>
                                 Easy cloud security posture management with <strong>powerful dashboards</strong>{' '}
@@ -678,8 +677,9 @@ const CSPM = ({ location }) => {
                                 maintaining compliance.
                             </li>
                             <li className='font-hind text-sm mt-2'>
-                                Enhanced visualization with comprehensive pdf reports for auditors, customers, or other
-                                stakeholders. A powerful scoping mechanism allows for <stron>granular reporting</stron>.
+                                Enhanced visualization with comprehensive <strong>pdf reports</strong> for auditors,
+                                customers, or other stakeholders. A powerful scoping mechanism allows for{' '}
+                                <stron>granular reporting</stron>.
                             </li>{' '}
                             <li className='font-hind text-sm mt-2'>
                                 Look at your cloud estate through the data lens with the help of a{' '}
