@@ -27,9 +27,9 @@ tags:
 ---
 <!--StartFragment-->
 
-After we've described the [IAM implementations for AWS, GCP, and Azure](https://cyscale.com/blog/iam-services-in-aws-azure-gcp/), let's look at some of the best practices they recommend and how to check if your cloud environment is implementing them. 
+After we've described the [IAM implementations for AWS, GCP, and Azure](https://cyscale.com/blog/iam-services-in-aws-azure-gcp/), let's look at some of the security best practices they recommend and how to check if your cloud environment is implementing them. 
 
-With Cyscale, you can efficiently scan your cloud infrastructure and verify whether it follows the best practices that we're going to describe in this article. 
+With Cyscale, you can efficiently scan your cloud infrastructure and verify whether it follows the IAM best practices that we're going to describe in this article. 
 
 <div id="MFA">
 
@@ -47,9 +47,11 @@ A prevalent scenario of MFA is using a password and a code received on your phon
 
 Here are some of the controls implemented in Cyscale that check if MFA is configured for your cloud environment: 
 
-* *Ensure multi-factor authentication (MFA) is enabled for all IAM users that have a console password* for AWS Cloud 
+* *Ensure multi-factor authentication (MFA) is enabled for all IAM users that have a console password* for AWS 
 * *Ensure that multi-factor authentication is enabled for all privileged users* for Microsoft Azure 
 * *Ensure that multi-factor authentication is enabled for all non-privileged users* for Microsoft Azure 
+
+SSO (Single Sign-On) should also be integrated in the authentication scheme to grant access to individual users across multiple environments using just one set of credentials. 
 
 </div>
 
@@ -59,38 +61,40 @@ This best practice is recommended across all vendors and should be implemented i
 
 This method helps minimize the impact if a key or a set of credentials is breached. 
 
-In the case of credentials, passwords should be changed with new, different ones. 
+In the case of user credentials, passwords should be changed with new, different ones. 
 
 When rotating keys, the old ones should be retired, and new keys should be generated. 
 
 We suggest that you rotate your keys and credentials at least every 90 days. 
 
-Some examples of controls offered by Cyscale that check if credentials or keys are rotated regularly are: 
+Some examples of validation controls offered by Cyscale that check if credentials or keys are rotated regularly are: 
 
-* *Ensure access keys are rotated every 90 days or less* for AWS Cloud 
-* *Ensure API keys are rotated every 90 days* for Google Cloud Platform 
-* *Ensure IAM password policy expires passwords within 90 days or less* for AWS Cloud 
+* *Ensure access keys are rotated every 90 days or less* for AWS (Amazon Web Services) 
+* *Ensure API keys are rotated every 90 days* for GCP
+* *Ensure IAM password policy expires passwords within 90 days or less* for AWS 
+
+Moreover, a strong password policy should be implemented to prevent individuals from using weak passwords. 
 
 ### Comply with The Principle of Least Privilege 
 
 Conforming to The Principle of Lease Privilege is another essential best practice instilled in cloud security and recommended by the vendors we've discussed.  
 
-In order to comply with this concept, you need to restrict access to the lowest privilege every user needs and eliminate all administrator and root accounts that are not strictly necessary. 
+In order to comply with this concept, you need to restrict user access to the least privileged access and eliminate all administrator and root user accounts that are not strictly necessary.  
 
-AWS recommends that you start setting up your policies with a minimum of possible permissions and add more on the go, if necessary. 
+AWS recommends that you start setting up your policies with a minimum of possible permissions and add more on the go, if necessary, to correctly manage access control.  
 
 Make sure you're not missing anything when implementing the concept of least privilege by using controls offered by Cyscale that detect misconfigurations, like the ones below: 
 
-* *Ensure that ServiceAccount has no Admin privileges* for Google Cloud Platform 
-* *Eliminate use of the "root" user for administrative and daily tasks* for AWS Cloud 
+* *Ensure that ServiceAccount has no Admin privileges* for GCP
+* *Eliminate use of the "root" user for administrative and daily tasks* for AWS 
 
 ### Assign permissions at group level  
 
-Another best practice we recommend to ensure IAM Cloud Security is managing permissions at group level and not at the user level. 
+Another best practice we recommend to ensure IAM Cloud Security is managing specific permissions at group level and not at the user level. 
 
 Whenever you're adding a new user or trying to manage multiple users, assign them to a group with very well-defined rules and privileges. 
 
-Here are some controls from Cyscale that check if you're implementing this best practice: 
+Here are some controls from Cyscale that check if you're implementing this IAM security best practice: 
 
 * *Ensure IAM Users receive permissions only through Groups* for AWS Cloud 
 * *Ensure IAM Policies are attached only to groups or roles* for AWS Cloud 
@@ -99,7 +103,7 @@ Here are some controls from Cyscale that check if you're implementing this best 
 
 AWS, GCP, and Azure recommend that you implement logging and monitoring for your cloud environment. All three vendors provide these features.  
 
-For AWS, you can use one of the following services: 
+For AWS IAM, you can use one of the following IAM services: 
 
 * AWS CloudTrail 
 * Amazon CloudFront 
@@ -107,19 +111,17 @@ For AWS, you can use one of the following services: 
 * AWS Config 
 * Amazon S3 
 
-GCP supplies Cloud Audit Logs, a service that audits your IAM policy, access to service account keys, and other components of GCP. 
+GCP supplies Cloud Audit Logs, a service that audits your IAM policy, access to cloud service account keys, and other components of GCP. 
 
 For Azure, you can use Azure AD activity logs which can be supplemented by Azure Monitor logs to alert you on significant events. 
 
-Examples of controls provided by Cyscale can be seen below: 
+Examples of controls across all three cloud providers can be seen below: 
 
-* *Ensure CloudTrail trails are integrated with CloudWatch Logs* for AWS Cloud 
+* *Ensure CloudTrail trails are integrated with CloudWatch Logs* for AWS 
 * *Ensure that Diagnostic Logs are enabled for all services which support it* for Microsoft Azure 
-* *Ensure that Cloud Audit Logging is configured properly across all services and all users from a project* for Google Cloud Platform 
+* *Ensure that Cloud Audit Logging is configured properly across all services and all users from a project* for GCP
 
-  
-
-Identity and Access Management is a crucial component of the cloud and should be adequately secured to prevent data breaches and other cybersecurity incidents. 
+Identity and Access Management is a crucial component of the cloud and should be adequately secured to prevent data breaches and other cybersecurity incidents. Reduce the attack surface by eliminating any vulnerabilities in the authentication process and keeping hackers away.
 
 Use Cyscale to identify any [misconfigurations](https://cyscale.com/blog/common-cloud-misconfigurations-how-to-avoid-them/) or gaps in your cloud infrastructure and secure it with our over 400 controls. 
 
