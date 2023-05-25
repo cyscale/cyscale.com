@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Row } from '../atoms/Containers';
 import PostAuthor from './PostAuthor';
 import ReactMarkdown from 'react-markdown';
@@ -16,6 +16,7 @@ import ComplianceLinks from './ComplianceLinks';
 import CSPMLinks from './CSPMLinks';
 import OtherLinks from './OtherLinks';
 import FurtherReadingSection from './FurtherReadingSection';
+import ScrollIndicator from './ScrollbarIndicator';
 
 const ctaWhitepaperTextColor = css`
     color: #474747;
@@ -33,11 +34,21 @@ export default function PostContent({
 }) {
     const { emailInput, alert, onChange, onSubmit, onKeyDown } = useSubscribe(pageUri, pageName);
     const { categories } = data;
+    const scrollRef = useRef(null);
 
     return (
-        <div>
+        <div className='relative'>
+            <ScrollIndicator ref={scrollRef} />
             <div className='container max-w-7xl mx-auto xl:flex xl:pl-12 xl:pr-16'>
-                <div className='max-w-4xl mx-auto xl:mx-0 px-8'>
+                <div
+                    className='max-w-4xl mx-auto xl:mx-0 px-8'
+                    ref={scrollRef}
+                    css={css`
+                        height: 100%;
+                        width: 100%;
+                        overflow: auto;
+                    `}
+                >
                     <div className='py-10  border-b border-lightGrey2 lg:border-0'>
                         <Row>
                             <div className='col-span-12 lg:col-span-6 flex flex-col justify-between'>
