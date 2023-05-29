@@ -602,7 +602,7 @@ const HomePage = ({ location }) => {
                         overflow: hidden;
                     `}
                 >
-                    <div className='col-span-12 lg:col-span-6'>
+                    <div className='col-span-12 lg:col-span-6' data-aos='fade-right'>
                         <div
                             className='mt-6 lg:mt-0 rounded-xl pt-12 px-9 max-w-xl lg:max-w-2xl mx-auto lg:mr-0 lg:ml-auto relative'
                             css={featureStyle}
