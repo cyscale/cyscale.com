@@ -12,36 +12,29 @@ const cursor = css`
     margin-left: 2px;
 `;
 
-const Typewriter = ({ text = '', speed = 100, delay = 2000 }) => {
+const Typewriter = ({ text = '', speed = 100 }) => {
     const [displayedText, setDisplayedText] = useState('');
+    const [isTypingDone, setIsTypingDone] = useState(false);
 
     useEffect(() => {
         let index = 0;
-        let intervalId = null;
-
-        const type = () => {
+        const intervalId = setInterval(() => {
             if (index < text.length) {
                 setDisplayedText((prev) => prev + text[index]);
                 index++;
             } else {
                 clearInterval(intervalId);
-                setTimeout(() => {
-                    setDisplayedText('');
-                    index = 0;
-                    intervalId = setInterval(type, speed);
-                }, delay);
+                setIsTypingDone(true);
             }
-        };
-
-        intervalId = setInterval(type, speed);
+        }, speed);
 
         return () => clearInterval(intervalId);
-    }, [text, speed, delay]);
+    }, [text, speed]);
 
     return (
         <span>
             {displayedText}
-            <span css={cursor}>|</span>
+            {!isTypingDone && <span css={cursor}>|</span>}
         </span>
     );
 };
