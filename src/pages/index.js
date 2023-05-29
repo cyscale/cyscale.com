@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Layout from '../components/layout/CleanLayout';
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import { css } from 'twin.macro';
@@ -31,6 +31,10 @@ import BgHero from '../assets/images/bg-homepage.png';
 import GradientCard from '../components/Home/GradientCard';
 import Card from '../components/Home/Card';
 import BlogLink from '../components/Home/BlogLink';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import Typewriter from '../components/Home/Typewriter';
+import RightArrow from '../components/sharedComponent/RightArrow';
 
 const heroBackground = css`
     height: 44rem;
@@ -211,6 +215,7 @@ const HomePage = ({ location }) => {
             }
         }
     `);
+    const [isHover, setIsHover] = useState(false);
     const containerRef = useRef(null);
 
     const isDesktop = useMediaQuery('(max-width: 1024px)');
@@ -225,6 +230,14 @@ const HomePage = ({ location }) => {
     const { loadingMeetings } = useHSMeetingsLoaded();
 
     useLoadHSMeetingsScript();
+    useEffect(() => {
+        AOS.init({
+            disable: function () {
+                const windowWidth = document.documentElement.clientWidth;
+                return windowWidth < 1280;
+            }
+        });
+    }, []);
 
     return (
         <Layout
@@ -255,11 +268,12 @@ const HomePage = ({ location }) => {
                         <Row>
                             <div className='col-span-12 lg:col-span-6 order-last lg:order-first'>
                                 <div className='lg:mt-16 pt-4 max-w-xl mx-auto lg:mx-0'>
-                                    <h1
-                                        className='text-left text-blue text-4xl lg:text-5xl leading-normal lg:leading-normal mb-8 font-montserrat'
-                                        data-excluded
-                                    >
-                                        Leverage the Cloud<strong data-content> with Confidence</strong>
+                                    <h1 className='text-left text-blue text-4xl lg:text-5xl leading-normal lg:leading-normal mb-8 font-montserrat font-semibold h-40 md:h-28 lg:h-40'>
+                                        <Typewriter
+                                            text='Leverage the Cloud with Confidence'
+                                            speed={250}
+                                            delay={2000}
+                                        />
                                     </h1>
                                     <p className='text-left text-base lg:text-lg mb-8 leading-relaxed font-hind'>
                                         Cyscale automates cloud security analysis helping you identify and reduce risk
@@ -284,14 +298,22 @@ const HomePage = ({ location }) => {
                 </Container>
             </div>
             <Container className='my-16 lg:my-32'>
-                <div className='grid grid-cols-12 gap-x-5 mt-12'>
-                    <div className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 hidden lg:block'>
+                <div
+                    className='grid grid-cols-12 gap-x-5 mt-12'
+                    css={css`
+                        overflow: hidden;
+                    `}
+                >
+                    <div className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 hidden lg:block' data-aos='fade-right'>
                         <GatsbyImage
                             image={data.dashboardHomePage.childImageSharp.gatsbyImageData}
                             alt='Dashboard view'
                         />
                     </div>
-                    <div className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 max-w-xl lg:max-w-xl'>
+                    <div
+                        className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 max-w-xl lg:max-w-xl'
+                        data-aos='fade-left'
+                    >
                         <p className='font-montserrat text-base font-bold mt-0 lg:ml-5' css={sectionSubtitleColor}>
                             EMPOWER YOUR TEAM
                         </p>
@@ -323,8 +345,13 @@ const HomePage = ({ location }) => {
                 </div>
             </Container>
             <Container className='mb-16 lg:mb-24'>
-                <div className='grid grid-cols-12 gap-x-5 mt-12'>
-                    <div className='col-span-12 lg:col-span-4'>
+                <div
+                    className='grid grid-cols-12 gap-x-5 mt-12'
+                    css={css`
+                        overflow: hidden;
+                    `}
+                >
+                    <div className='col-span-12 lg:col-span-4' data-aos='fade-right'>
                         <GradientCard
                             icon={CISCOIcon}
                             title={'CISO'}
@@ -334,7 +361,7 @@ const HomePage = ({ location }) => {
                             link={'/products/cloud-security-posture-management/'}
                         />
                     </div>
-                    <div className='col-span-12 lg:col-span-4'>
+                    <div className='col-span-12 lg:col-span-4' data-aos='fade-up'>
                         <GradientCard
                             icon={ShieldSettingsIcon}
                             title={'CLOUD INFRASTRUCTURE'}
@@ -344,7 +371,7 @@ const HomePage = ({ location }) => {
                             link={'/products/cloud-security-posture-management/'}
                         />
                     </div>
-                    <div className='col-span-12 lg:col-span-4'>
+                    <div className='col-span-12 lg:col-span-4' data-aos='fade-left'>
                         <GradientCard
                             icon={ShieldCloudIcon}
                             title={'CLOUD SECURITY'}
@@ -363,8 +390,13 @@ const HomePage = ({ location }) => {
                 `}
             >
                 <Container>
-                    <div className='grid grid-cols-12 gap-x-5'>
-                        <div className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 lg:mt-8'>
+                    <div
+                        className='grid grid-cols-12 gap-x-5'
+                        css={css`
+                            overflow: hidden;
+                        `}
+                    >
+                        <div className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 lg:mt-8' data-aos='fade-right'>
                             <Link to={'/case-studies/smart-fintech'}>
                                 <GatsbyImage
                                     image={data.smartFintech.childImageSharp.gatsbyImageData}
@@ -373,7 +405,10 @@ const HomePage = ({ location }) => {
                                 />
                             </Link>
                         </div>
-                        <div className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 max-w-xl mt-8 lg:mt-0'>
+                        <div
+                            className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 max-w-xl mt-8 lg:mt-0'
+                            data-aos='fade-left'
+                        >
                             <p className='font-montserrat text-base font-bold mt-4' css={sectionSubtitleColor}>
                                 CASE STUDY
                             </p>
@@ -404,13 +439,17 @@ const HomePage = ({ location }) => {
                             </div>
                             <Link
                                 to={'/case-studies/smart-fintech'}
-                                className='font-hind text-base font-bold mt-6 underline block'
+                                onMouseEnter={() => setIsHover(true)}
+                                onMouseLeave={() => setIsHover(false)}
+                                className='font-hind text-base font-bold mt-6 hover:underline block'
                                 css={css`
+                                    color: #0f26aa;
                                     &:hover {
-                                        color: #0f26aa;
+                                        color: #0b175a;
                                     }
                                 `}
                             >
+                                <RightArrow fillColor={isHover ? '#0b175a' : '#0F26AA'} marginTop={'-0.1rem'} />
                                 Read the case study
                             </Link>
                         </div>
@@ -557,7 +596,12 @@ const HomePage = ({ location }) => {
                     </div>
                 </div>
 
-                <div className='grid grid-cols-12 gap-x-5 mt-12'>
+                <div
+                    className='grid grid-cols-12 gap-x-5 mt-12'
+                    css={css`
+                        overflow: hidden;
+                    `}
+                >
                     <div className='col-span-12 lg:col-span-6'>
                         <div
                             className='mt-6 lg:mt-0 rounded-xl pt-12 px-9 max-w-xl lg:max-w-2xl mx-auto lg:mr-0 lg:ml-auto relative'
@@ -576,7 +620,7 @@ const HomePage = ({ location }) => {
                             />
                         </div>
                     </div>
-                    <div className='col-span-12 lg:col-span-3'>
+                    <div className='col-span-12 lg:col-span-3' data-aos='fade-up'>
                         <div
                             className='mt-6 lg:mt-0 rounded-xl pt-12 max-w-xl lg:max-w-2xl mx-auto lg:mr-0 lg:ml-auto relative mb-20 lg:mb-0'
                             css={featureStyle}
@@ -604,10 +648,25 @@ const HomePage = ({ location }) => {
                             />
                         </div>
                     </div>
-                    <div className='col-span-12 lg:col-span-3 mt-20 lg:mt-0'>
+                    <div className='col-span-12 lg:col-span-3 mt-12 lg:mt-0' data-aos='fade-left'>
                         <div
                             className='mt-6 lg:mt-0 rounded-xl pt-12 px-12 max-w-xl lg:max-w-2xl mx-auto lg:mr-0 lg:ml-auto relative'
-                            css={featureStyle}
+                            css={css`
+                                background-image: linear-gradient(#e4edfc, #fff);
+                                height: 34rem;
+                                @media screen and (min-width: 380px) and (max-width: 440px) {
+                                    height: 40rem !important;
+                                }
+                                @media screen and (min-width: 441px) and (max-width: 525px) {
+                                    height: 44rem !important;
+                                }
+                                @media screen and (min-width: 526px) and (max-width: 1023px) {
+                                    height: 52rem !important;
+                                }
+                                @media screen and (min-width: 1024px) {
+                                    height: 32rem;
+                                }
+                            `}
                         >
                             <h3 className='font-montserrat font-bold' css={featureTitle}>
                                 Integrations
@@ -624,8 +683,13 @@ const HomePage = ({ location }) => {
                         </div>
                     </div>
                 </div>
-                <div className='grid grid-cols-12 gap-x-5 mt-24'>
-                    <div className='col-span-12 lg:col-span-3'>
+                <div
+                    className='grid grid-cols-12 gap-x-5 mt-24'
+                    css={css`
+                        overflow: hidden;
+                    `}
+                >
+                    <div className='col-span-12 lg:col-span-3' data-aos='fade-right'>
                         <div
                             className='mt-6 lg:mt-0 rounded-xl pt-8 pb-72 sm:pb-0 px-8 max-w-xl lg:max-w-2xl mx-auto lg:mr-0 lg:ml-auto relative h-72 bg-black'
                             css={css`
@@ -648,7 +712,7 @@ const HomePage = ({ location }) => {
                             />
                         </div>
                     </div>
-                    <div className='col-span-12 lg:col-span-3'>
+                    <div className='col-span-12 lg:col-span-3' data-aos='fade-up'>
                         <div
                             className='mt-6 lg:mt-0 rounded-xl pt-8 px-8 max-w-xl lg:max-w-2xl mx-auto lg:mr-0 lg:ml-auto relative h-40 lg:h-72'
                             css={css`
@@ -668,7 +732,7 @@ const HomePage = ({ location }) => {
                             <p className='text-base text-white mt-1 font-hind'>to detect cloud security drifts</p>
                         </div>
                     </div>
-                    <div className='col-span-12 lg:col-span-6'>
+                    <div className='col-span-12 lg:col-span-6' data-aos='fade-left'>
                         <div
                             className='mt-6 lg:mt-0 rounded-xl pt-8 max-w-xl lg:max-w-2xl mx-auto lg:mr-0 lg:ml-auto relative h-72'
                             css={css`
@@ -736,17 +800,26 @@ const HomePage = ({ location }) => {
                             </p>
                             <Link
                                 to={'/blog/'}
-                                className='font-hind text-base font-bold mt-6 underline block'
+                                onMouseEnter={() => setIsHover(true)}
+                                onMouseLeave={() => setIsHover(false)}
+                                className='font-hind text-base font-bold mt-6 hover:underline block'
                                 css={css`
+                                    color: #0f26aa;
                                     &:hover {
-                                        color: #0f26aa;
+                                        color: #0b175a;
                                     }
                                 `}
                             >
+                                <RightArrow fillColor={isHover ? '#0b175a' : '#0F26AA'} marginTop={'-0.1rem'} />
                                 Read more about cloud security
                             </Link>
                         </div>
-                        <div className='col-span-12 lg:col-span-8'>
+                        <div
+                            className='col-span-12 lg:col-span-8'
+                            css={css`
+                                overflow: hidden;
+                            `}
+                        >
                             <Carousel ref={containerRef} />
                         </div>
                         <div className='col-span-12 w-full h-72 lg:h-80 relative'>
