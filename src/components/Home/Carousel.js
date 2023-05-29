@@ -98,6 +98,7 @@ const Carousel = forwardRef((props, ref) => {
                     onMouseLeave={handleMouseLeave}
                     onKeyPress={() => {}}
                     role='presentation'
+                    data-aos='zoom-in'
                 >
                     {map(posts, ({ node }, index) => {
                         return (
