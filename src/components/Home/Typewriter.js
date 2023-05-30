@@ -9,7 +9,7 @@ const blink = keyframes`
 
 const cursor = css`
     animation: ${blink} 0.9s step-end infinite;
-    margin-left: 2px;
+    margin-left: 0.125rem;
 `;
 
 const Typewriter = ({ text = '', speed = 100 }) => {
@@ -34,7 +34,23 @@ const Typewriter = ({ text = '', speed = 100 }) => {
     return (
         <span>
             {displayedText}
-            {!isTypingDone && <span css={cursor}>|</span>}
+            {!isTypingDone && (
+                <span
+                    css={[
+                        cursor,
+                        css`
+                            position: absolute;
+                            height: 3.125rem;
+                            margin-top: 0.625rem;
+                            width: 0.313rem;
+                            background-color: #0f26aa;
+                            @media screen and (max-width: 1024px) {
+                                height: 2.188rem;
+                            }
+                        `
+                    ]}
+                ></span>
+            )}
         </span>
     );
 };
