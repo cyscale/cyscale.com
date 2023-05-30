@@ -59,11 +59,14 @@
         "react-tabs": "^4.2.0",
         "react-transition-group": "^4.4.2",
         "rehype-raw": "^6.1.1",
+        "remark-parse": "^10.0.2",
         "sass": "1.53.0",
         "slick-carousel": "^1.8.1",
         "striptags": "^3.2.0",
         "sweetalert2": "^11.4.8",
-        "twin.macro": "^2.8.2"
+        "twin.macro": "^2.8.2",
+        "unified": "^10.1.2",
+        "unist-util-visit": "^4.1.2"
     },
     "keywords": [
         "gatsby"

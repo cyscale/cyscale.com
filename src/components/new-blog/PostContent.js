@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Row } from '../atoms/Containers';
 import PostAuthor from './PostAuthor';
 import ReactMarkdown from 'react-markdown';
@@ -17,9 +17,40 @@ import CSPMLinks from './CSPMLinks';
 import OtherLinks from './OtherLinks';
 import FurtherReadingSection from './FurtherReadingSection';
 import ScrollIndicator from './ScrollbarIndicator';
+import { unified } from 'unified';
+import parse from 'remark-parse';
+import { visit } from 'unist-util-visit';
+import classnames from 'classnames';
+import useScrollTrigger from '../scrollTrigger';
+
+const createSlug = (str) => {
+    if (typeof str !== 'string') {
+        return typeof str === 'symbol' ? Symbol.keyFor(str) : 'fallback-slug';
+    }
+
+    return str.replace(/[^A-Za-z0-9]+/g, '-').toLowerCase();
+};
+const headingRenderer = (props) => {
+    const slug = createSlug(props.children[0]);
+    return React.createElement(`h${props.level}`, { id: slug }, props.children);
+};
+
+const getTextContent = (node) => {
+    if (node.type === 'text') {
+        return node.value;
+    }
+    if (node.children) {
+        return node.children.map(getTextContent).join('');
+    }
+    return '';
+};
 
 const ctaWhitepaperTextColor = css`
     color: #474747;
+`;
+
+const ctaTransition = css`
+    transition: all 0.25s ease-in-out 0s;
 `;
 
 export default function PostContent({
@@ -30,18 +61,129 @@ export default function PostContent({
     pageName,
     dataWhitepaper,
     dataBlueBird,
-    dataCompliceToolbox
+    dataCompliceToolbox,
+    tableOfContents
 }) {
     const { emailInput, alert, onChange, onSubmit, onKeyDown } = useSubscribe(pageUri, pageName);
     const { categories } = data;
+    const trigger = useScrollTrigger();
+
+    const [toc, setToc] = useState([]);
     const scrollRef = useRef(null);
+    const [activeId, setActiveId] = useState('');
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setActiveId(entry.target.id);
+                    }
+                });
+            },
+            { rootMargin: '0px 0px -80% 0px' }
+        );
+
+        const targets = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+        targets.forEach((target) => observer.observe(target));
+
+        return () => {
+            targets.forEach((target) => observer.unobserve(target));
+        };
+    }, []);
+
+    useEffect(() => {
+        const processor = unified().use(parse);
+        const ast = processor.parse(data.rawMarkdownBody);
+
+        let headings = [];
+        visit(ast, 'heading', (node) => {
+            const isFormatted = node.children.some((child) => child.type === 'emphasis' || child.type === 'strong');
+            if (isFormatted) {
+                return;
+            }
+
+            const textContent = getTextContent(node);
+            const slug = createSlug(textContent);
+            headings.push({ type: `h${node.depth}`, slug, value: textContent });
+        });
+        setToc(headings);
+    }, [data.rawMarkdownBody]);
 
     return (
         <div className='relative'>
             <ScrollIndicator ref={scrollRef} />
-            <div className='container max-w-7xl mx-auto xl:flex xl:pl-12 xl:pr-16'>
+            <div
+                className={classnames({
+                    'container mx-auto xl:flex': true,
+                    'xl:pl-8': tableOfContents,
+                    'xl:pl-12 xl:pr-16': !tableOfContents
+                })}
+                css={css`
+                    max-width: ${tableOfContents ? '90rem' : '80rem'};
+                `}
+            >
+                {tableOfContents && (
+                    <div
+                        className={classnames({
+                            'hidden xl:block sticky h-96': true,
+                            'top-0': trigger,
+                            'top-28': !trigger
+                        })}
+                        css={[
+                            css`
+                                width: 20rem;
+                            `,
+                            ctaTransition
+                        ]}
+                    >
+                        <p
+                            className='font-montserrat text-xs font-semibold pr-2 mb-2'
+                            css={css`
+                                margin-top: ${!trigger ? '2.5rem' : '0.938rem'};
+                            `}
+                        >
+                            CONTENTS
+                        </p>
+
+                        {toc.map((heading, index) => {
+                            const words = heading.value.replace(/\u00A0/g, '').split(' ');
+                            const displayText = words.slice(0, 6).join(' ') + (words.length > 6 ? '...' : '');
+
+                            const level = parseInt(heading.type.charAt(1));
+                            const indent = level > 2 ? (level - 3) * 20 : 0;
+
+                            return (
+                                <p
+                                    key={index}
+                                    className='font-montserrat text-xs font-semibold px-2 py-2 hover:text-blue'
+                                    css={css`
+                                        padding-left: calc(${(indent + 8) / 16}rem);
+                                        color: ${activeId === heading.slug ? '#0f26aa' : 'inherit'};
+                                        font-weight: ${activeId === heading.slug && activeId !== '' ? '700' : '500'};
+                                        border-left: 0.063rem solid
+                                            ${activeId === heading.slug ? '#0f26aa' : 'rgba(0, 0, 0, 0.1)'};
+                                        &:hover {
+                                            border-left: 0.063rem solid #0f26aa;
+                                        }
+                                    `}
+                                >
+                                    <ScrollLink
+                                        className='cursor-pointer'
+                                        to={`${heading.slug}`}
+                                        smooth={true}
+                                        duration={500}
+                                        offset={-100}
+                                    >
+                                        {displayText}
+                                    </ScrollLink>
+                                </p>
+                            );
+                        })}
+                    </div>
+                )}
                 <div
-                    className='max-w-4xl mx-auto xl:mx-0 px-8'
+                    className='max-w-4xl xl:max-w-7xl mx-auto xl:mx-0 px-8'
                     ref={scrollRef}
                     css={css`
                         height: 100%;
@@ -128,7 +270,13 @@ export default function PostContent({
                                             {children}
                                         </code>
                                     );
-                                }
+                                },
+                                h1: headingRenderer,
+                                h2: headingRenderer,
+                                h3: headingRenderer,
+                                h4: headingRenderer,
+                                h5: headingRenderer,
+                                h6: headingRenderer
                             }}
                         >
                             {data.rawMarkdownBody}
