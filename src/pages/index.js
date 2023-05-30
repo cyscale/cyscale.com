@@ -268,7 +268,18 @@ const HomePage = ({ location }) => {
                         <Row>
                             <div className='col-span-12 lg:col-span-6 order-last lg:order-first'>
                                 <div className='lg:mt-16 pt-4 max-w-xl mx-auto lg:mx-0'>
-                                    <h1 className='text-left text-blue text-4xl lg:text-5xl leading-normal lg:leading-normal mb-8 font-montserrat font-semibold h-40 md:h-28 lg:h-40'>
+                                    <h1
+                                        className='text-left text-blue text-4xl lg:text-5xl leading-normal lg:leading-normal mb-8 font-montserrat font-semibold'
+                                        css={css`
+                                            height: 10rem;
+                                            @media (min-width: 768px) {
+                                                height: 7rem;
+                                            }
+                                            @media (min-width: 1024px) {
+                                                height: 12rem;
+                                            }
+                                        `}
+                                    >
                                         <Typewriter text='Leverage the Cloud with Confidence' speed={50} />
                                     </h1>
                                     <p className='text-left text-base lg:text-lg mb-8 leading-relaxed font-hind'>
