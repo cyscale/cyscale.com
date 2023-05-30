@@ -43,13 +43,13 @@ Depending on the method they were built upon, we have three categories of applic
 * Cloud-based, 
 * Cloud-enabled. 
 
-**A cloud-native application** is developed and deployed in the cloud in its entirety.  
+A **cloud-native application** is an integral part of a [cloud-native infrastructure](https://cyscale.com/blog/cloud-native-security/). It is developed and deployed in the cloud in its entirety.  
 
 This type of application is containerized, for example in Docker or Kubernetes, to ensure isolated, dependency-free environments, and most of the time uses microservices to divide tasks and provide granularity.  
 
 **Cloud-based applications** are built and run outside the cloud but have certain features integrated into the cloud. 
 
-**A cloud-enabled or non-native application** is originally meant for an on-premises environment. It is built outside the cloud and later transferred into one, in order to enjoy some of its benefits. 
+A **cloud-enabled or non-native application** is originally meant for an on-premises environment. It is built outside the cloud and later transferred into one, in order to enjoy some of its benefits. 
 
 <div id="advantages">
 
