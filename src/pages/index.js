@@ -269,7 +269,7 @@ const HomePage = ({ location }) => {
                             <div className='col-span-12 lg:col-span-6 order-last lg:order-first'>
                                 <div className='lg:mt-16 pt-4 max-w-xl mx-auto lg:mx-0'>
                                     <h1 className='text-left text-blue text-4xl lg:text-5xl leading-normal lg:leading-normal mb-8 font-montserrat font-semibold h-40 md:h-28 lg:h-40'>
-                                        <Typewriter text='Leverage the Cloud with Confidence' speed={150} />
+                                        <Typewriter text='Leverage the Cloud with Confidence' speed={50} />
                                     </h1>
                                     <p className='text-left text-base lg:text-lg mb-8 leading-relaxed font-hind'>
                                         Cyscale automates cloud security analysis helping you identify and reduce risk
@@ -300,7 +300,11 @@ const HomePage = ({ location }) => {
                         overflow: hidden;
                     `}
                 >
-                    <div className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 hidden lg:block' data-aos='fade-right'>
+                    <div
+                        className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 hidden lg:block'
+                        data-aos='fade-right'
+                        data-aos-offset='-100'
+                    >
                         <GatsbyImage
                             image={data.dashboardHomePage.childImageSharp.gatsbyImageData}
                             alt='Dashboard view'
@@ -309,6 +313,7 @@ const HomePage = ({ location }) => {
                     <div
                         className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 max-w-xl lg:max-w-xl'
                         data-aos='fade-left'
+                        data-aos-offset='-100'
                     >
                         <p className='font-montserrat text-base font-bold mt-0 lg:ml-5' css={sectionSubtitleColor}>
                             EMPOWER YOUR TEAM
