@@ -5,10 +5,7 @@ import Share from '../Share/Share';
 import { css } from 'twin.macro';
 import useScrollTrigger from '../scrollTrigger';
 import classnames from 'classnames';
-
-const ctaTransition = css`
-    transition: all 0.25s ease-in-out 0s;
-`;
+import { ctaTransition } from '../../assets/css/styles';
 
 const ctaWhitepaperTextColor = css`
     color: #474747;

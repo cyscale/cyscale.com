@@ -46,3 +46,7 @@ export const cardBackgroundColor = css`
         }
     }
 `;
+
+export const ctaTransition = css`
+    transition: all 0.25s ease-in-out 0s;
+`;

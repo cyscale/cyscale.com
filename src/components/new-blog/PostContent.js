@@ -19,17 +19,12 @@ import FurtherReadingSection from './FurtherReadingSection';
 import ScrollIndicator from './ScrollbarIndicator';
 import classnames from 'classnames';
 import useScrollTrigger from '../scrollTrigger';
-import { createSlug, headingRenderer } from '../../common/utils';
+import { headingRenderer } from '../../common/utils';
 import TOC from './TOC';
 
 const ctaWhitepaperTextColor = css`
     color: #474747;
 `;
-
-const ctaTransition = css`
-    transition: all 0.25s ease-in-out 0s;
-`;
-
 export default function PostContent({
     data,
     suggestions,
@@ -45,31 +40,10 @@ export default function PostContent({
     const { categories } = data;
     const trigger = useScrollTrigger();
 
-    const [toc, setToc] = useState([]);
     const scrollRef = useRef(null);
     const [activeId, setActiveId] = useState('');
 
     useEffect(() => {
-        let headings = [];
-
-        for (const match of data.rawMarkdownBody.matchAll(/(#{1,6})\s(.+?)(?=\n|$)/g)) {
-            const depth = match[1].length;
-            const value = match[2].trim();
-            const slug = createSlug(value);
-
-            const words = value.replace(/\u00A0/g, '').split(' ');
-            const type = `h${depth}`;
-            const level = parseInt(type.charAt(1));
-
-            headings.push({
-                slug,
-                indent: level > 2 ? (level - 3) * 20 : 0,
-                displayText: words.slice(0, 6).join(' ') + (words.length > 6 ? '...' : '')
-            });
-        }
-
-        setToc(headings);
-
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
@@ -102,32 +76,7 @@ export default function PostContent({
                     max-width: ${tableOfContents ? '90rem' : '80rem'};
                 `}
             >
-                {tableOfContents && (
-                    <div
-                        className={classnames({
-                            'hidden xl:block sticky h-full': true,
-                            'top-0': trigger,
-                            'top-28': !trigger
-                        })}
-                        css={[
-                            css`
-                                width: 20rem;
-                            `,
-                            ctaTransition
-                        ]}
-                    >
-                        <p
-                            className='font-montserrat text-xs font-semibold pr-2 mb-2'
-                            css={css`
-                                margin-top: ${!trigger ? '2.5rem' : '0.938rem'};
-                            `}
-                        >
-                            CONTENTS
-                        </p>
-
-                        <TOC toc={toc} activeId={activeId} />
-                    </div>
-                )}
+                {tableOfContents && <TOC markdown={data.rawMarkdownBody} activeId={activeId} />}
                 <div
                     className='max-w-4xl xl:max-w-7xl mx-auto xl:mx-0 px-8'
                     ref={scrollRef}
