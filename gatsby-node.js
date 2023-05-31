@@ -167,6 +167,7 @@ exports.createPages = async ({ graphql, actions }) => {
                                         gatsbyImageData(width: 820, layout: CONSTRAINED)
                                     }
                                 }
+                                tableOfContents
                             }
                             rawMarkdownBody
                         }
@@ -402,6 +403,7 @@ exports.createSchemaCustomization = ({ actions }) => {
         permalink: String
         featuredimage: File @fileByRelativePath
         featuredpost: Boolean
+        tableOfContents: Boolean
     }
     
     type Hero {

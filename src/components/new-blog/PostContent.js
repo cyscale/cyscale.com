@@ -6,7 +6,7 @@ import rehypeRaw from 'rehype-raw';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import Categories from './Categories';
 import Share from '../Share/Share';
-import { Link as ScrollLink, Element } from 'react-scroll';
+
 import { GatsbyImage } from 'gatsby-plugin-image';
 import arrowRight from '../../assets/images/arrow-right-1-white.svg';
 import { Link } from 'gatsby';
@@ -17,11 +17,13 @@ import CSPMLinks from './CSPMLinks';
 import OtherLinks from './OtherLinks';
 import FurtherReadingSection from './FurtherReadingSection';
 import ScrollIndicator from './ScrollbarIndicator';
+import classnames from 'classnames';
+import { headingRenderer } from '../../common/utils';
+import Toc from './TOC';
 
 const ctaWhitepaperTextColor = css`
     color: #474747;
 `;
-
 export default function PostContent({
     data,
     suggestions,
@@ -30,18 +32,30 @@ export default function PostContent({
     pageName,
     dataWhitepaper,
     dataBlueBird,
-    dataCompliceToolbox
+    dataCompliceToolbox,
+    tableOfContents
 }) {
     const { emailInput, alert, onChange, onSubmit, onKeyDown } = useSubscribe(pageUri, pageName);
     const { categories } = data;
+
     const scrollRef = useRef(null);
 
     return (
         <div className='relative'>
             <ScrollIndicator ref={scrollRef} />
-            <div className='container max-w-7xl mx-auto xl:flex xl:pl-12 xl:pr-16'>
+            <div
+                className={classnames({
+                    'container mx-auto xl:flex': true,
+                    'xl:pl-8': tableOfContents,
+                    'xl:pl-12 xl:pr-16': !tableOfContents
+                })}
+                css={css`
+                    max-width: ${tableOfContents ? '90rem' : '80rem'};
+                `}
+            >
+                {tableOfContents && <Toc markdown={data.rawMarkdownBody} />}
                 <div
-                    className='max-w-4xl mx-auto xl:mx-0 px-8'
+                    className='max-w-4xl xl:max-w-7xl mx-auto xl:mx-0 px-8'
                     ref={scrollRef}
                     css={css`
                         height: 100%;
@@ -91,27 +105,6 @@ export default function PostContent({
                             rehypePlugins={[rehypeRaw]}
                             linkTarget='_blank'
                             components={{
-                                toc({ node, className, href, target, children, ...props }) {
-                                    return (
-                                        <ScrollLink
-                                            className={`${className} cursor-pointer`}
-                                            {...props}
-                                            smooth={true}
-                                            duration={500}
-                                            target={target}
-                                            to={href}
-                                        >
-                                            {children}
-                                        </ScrollLink>
-                                    );
-                                },
-                                el({ node, name, children, ...props }) {
-                                    return (
-                                        <Element name={name} {...props}>
-                                            {children}
-                                        </Element>
-                                    );
-                                },
                                 code({ node, inline, className, children, ...props }) {
                                     const match = /language-(\w+)/.exec(className || '');
                                     return !inline && match ? (
@@ -128,7 +121,13 @@ export default function PostContent({
                                             {children}
                                         </code>
                                     );
-                                }
+                                },
+                                h1: headingRenderer,
+                                h2: headingRenderer,
+                                h3: headingRenderer,
+                                h4: headingRenderer,
+                                h5: headingRenderer,
+                                h6: headingRenderer
                             }}
                         >
                             {data.rawMarkdownBody}

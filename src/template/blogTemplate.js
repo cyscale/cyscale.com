@@ -7,7 +7,7 @@ const BlogDetail = ({ pageContext, location }) => {
     const { frontmatter: data, rawMarkdownBody } = alldata;
     console.log(data);
     return (
-        <div className='bg-blog-post pt-28'>
+        <div className='pt-28'>
             <Layout
                 location={location}
                 pageName='blog-detail'
@@ -23,6 +23,7 @@ const BlogDetail = ({ pageContext, location }) => {
                     dataWhitepaper={whitepaperCover?.data}
                     dataBlueBird={blueBird?.data}
                     dataCompliceToolbox={compliceToolbox?.data}
+                    tableOfContents={data?.tableOfContents}
                 />
             </Layout>
         </div>
