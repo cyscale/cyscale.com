@@ -6,8 +6,9 @@ import { ctaTransition } from '../../assets/css/styles';
 import classnames from 'classnames';
 import { createSlug } from '../../common/utils';
 
-const TOC = ({ markdown, activeId }) => {
+const TOC = ({ markdown }) => {
     const trigger = useScrollTrigger();
+    const [activeId, setActiveId] = useState('');
     const [toc, setToc] = useState([]);
 
     useEffect(() => {
@@ -30,6 +31,25 @@ const TOC = ({ markdown, activeId }) => {
         }
 
         setToc(headings);
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setActiveId(entry.target.id);
+                    }
+                });
+            },
+            { rootMargin: '0px 0px -80% 0px' }
+        );
+
+        const targets = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+        targets.forEach((target) => observer.observe(target));
+
+        return () => {
+            targets.forEach((target) => observer.unobserve(target));
+        };
+        //eslint-disable-next-line
     }, []);
 
     return (

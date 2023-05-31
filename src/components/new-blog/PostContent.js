@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import { Row } from '../atoms/Containers';
 import PostAuthor from './PostAuthor';
 import ReactMarkdown from 'react-markdown';
@@ -18,9 +18,8 @@ import OtherLinks from './OtherLinks';
 import FurtherReadingSection from './FurtherReadingSection';
 import ScrollIndicator from './ScrollbarIndicator';
 import classnames from 'classnames';
-import useScrollTrigger from '../scrollTrigger';
 import { headingRenderer } from '../../common/utils';
-import TOC from './TOC';
+import Toc from './TOC';
 
 const ctaWhitepaperTextColor = css`
     color: #474747;
@@ -38,30 +37,8 @@ export default function PostContent({
 }) {
     const { emailInput, alert, onChange, onSubmit, onKeyDown } = useSubscribe(pageUri, pageName);
     const { categories } = data;
-    const trigger = useScrollTrigger();
 
     const scrollRef = useRef(null);
-    const [activeId, setActiveId] = useState('');
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        setActiveId(entry.target.id);
-                    }
-                });
-            },
-            { rootMargin: '0px 0px -80% 0px' }
-        );
-
-        const targets = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-        targets.forEach((target) => observer.observe(target));
-
-        return () => {
-            targets.forEach((target) => observer.unobserve(target));
-        };
-    }, []);
 
     return (
         <div className='relative'>
@@ -76,7 +53,7 @@ export default function PostContent({
                     max-width: ${tableOfContents ? '90rem' : '80rem'};
                 `}
             >
-                {tableOfContents && <TOC markdown={data.rawMarkdownBody} activeId={activeId} />}
+                {tableOfContents && <Toc markdown={data.rawMarkdownBody} />}
                 <div
                     className='max-w-4xl xl:max-w-7xl mx-auto xl:mx-0 px-8'
                     ref={scrollRef}
