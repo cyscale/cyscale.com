@@ -17,33 +17,9 @@ import CSPMLinks from './CSPMLinks';
 import OtherLinks from './OtherLinks';
 import FurtherReadingSection from './FurtherReadingSection';
 import ScrollIndicator from './ScrollbarIndicator';
-import { unified } from 'unified';
-import parse from 'remark-parse';
-import { visit } from 'unist-util-visit';
 import classnames from 'classnames';
 import useScrollTrigger from '../scrollTrigger';
-
-const createSlug = (str) => {
-    if (typeof str !== 'string') {
-        return typeof str === 'symbol' ? Symbol.keyFor(str) : 'fallback-slug';
-    }
-
-    return str.replace(/[^A-Za-z0-9]+/g, '-').toLowerCase();
-};
-const headingRenderer = (props) => {
-    const slug = createSlug(props.children[0]);
-    return React.createElement(`h${props.level}`, { id: slug }, props.children);
-};
-
-const getTextContent = (node) => {
-    if (node.type === 'text') {
-        return node.value;
-    }
-    if (node.children) {
-        return node.children.map(getTextContent).join('');
-    }
-    return '';
-};
+import { createSlug, headingRenderer } from '../../common/utils';
 
 const ctaWhitepaperTextColor = css`
     color: #474747;
@@ -73,6 +49,17 @@ export default function PostContent({
     const [activeId, setActiveId] = useState('');
 
     useEffect(() => {
+        let headings = [];
+
+        for (const match of data.rawMarkdownBody.matchAll(/(#{1,6})\s(.+?)(?=\n|$)/g)) {
+            const depth = match[1].length;
+            const value = match[2].trim();
+            const slug = createSlug(value);
+            headings.push({ type: `h${depth}`, slug, value });
+        }
+
+        setToc(headings);
+
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
@@ -91,24 +78,6 @@ export default function PostContent({
             targets.forEach((target) => observer.unobserve(target));
         };
     }, []);
-
-    useEffect(() => {
-        const processor = unified().use(parse);
-        const ast = processor.parse(data.rawMarkdownBody);
-
-        let headings = [];
-        visit(ast, 'heading', (node) => {
-            const isFormatted = node.children.some((child) => child.type === 'emphasis' || child.type === 'strong');
-            if (isFormatted) {
-                return;
-            }
-
-            const textContent = getTextContent(node);
-            const slug = createSlug(textContent);
-            headings.push({ type: `h${node.depth}`, slug, value: textContent });
-        });
-        setToc(headings);
-    }, [data.rawMarkdownBody]);
 
     return (
         <div className='relative'>
@@ -233,27 +202,6 @@ export default function PostContent({
                             rehypePlugins={[rehypeRaw]}
                             linkTarget='_blank'
                             components={{
-                                toc({ node, className, href, target, children, ...props }) {
-                                    return (
-                                        <ScrollLink
-                                            className={`${className} cursor-pointer`}
-                                            {...props}
-                                            smooth={true}
-                                            duration={500}
-                                            target={target}
-                                            to={href}
-                                        >
-                                            {children}
-                                        </ScrollLink>
-                                    );
-                                },
-                                el({ node, name, children, ...props }) {
-                                    return (
-                                        <Element name={name} {...props}>
-                                            {children}
-                                        </Element>
-                                    );
-                                },
                                 code({ node, inline, className, children, ...props }) {
                                     const match = /language-(\w+)/.exec(className || '');
                                     return !inline && match ? (

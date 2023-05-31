@@ -1,3 +1,5 @@
+import React from 'react';
+
 export const formatDate = (date) => new Intl.DateTimeFormat('en-US', { dateStyle: 'full' }).format(new Date(date));
 
 export const isAnimatedNavbarPage = (pathname) => {
@@ -47,3 +49,31 @@ export const isIPhone = () => {
 };
 
 export const isSafari = /^((?!chrome|android).)*safari/i.test(typeof window !== 'undefined' && navigator.userAgent);
+
+export const createSlug = (str) => {
+    if (typeof str !== 'string') {
+        return typeof str === 'symbol' ? Symbol.keyFor(str) : 'fallback-slug';
+    }
+
+    let slug = str.replace(/[^A-Za-z0-9]+/g, '-').toLowerCase();
+    if (slug.endsWith('-')) {
+        slug = slug.slice(0, -1);
+    }
+
+    return slug;
+};
+
+export const headingRenderer = (props) => {
+    const slug = createSlug(props.children[0]);
+    return React.createElement(`h${props.level}`, { id: slug }, props.children);
+};
+
+export const getTextContent = (node) => {
+    if (node.type === 'text') {
+        return node.value;
+    }
+    if (node.children) {
+        return node.children.map(getTextContent).join('');
+    }
+    return '';
+};
