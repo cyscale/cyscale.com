@@ -98,6 +98,7 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation, sea
         resources: false,
         company: false
     });
+    const [isSolutionsHovered, setIsSolutionsHovered] = useState(false);
     const hideMegaMenu = useScrollTrigger();
 
     return (
@@ -136,7 +137,12 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation, sea
                             <Platform pathname={pathname} activeLinks={activeLinks} setActiveLinks={setActiveLinks} />
                         </MegaMenu>
                     </NavItem>
-                    <NavItem disabled={isAnimation} searchBar={searchBar}>
+                    <NavItem
+                        disabled={isAnimation}
+                        searchBar={searchBar}
+                        onMouseEnter={() => setIsSolutionsHovered(true)}
+                        onMouseLeave={() => setIsSolutionsHovered(false)}
+                    >
                         <NavItemButton
                             type='button'
                             className={`${
@@ -164,7 +170,13 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation, sea
                             animatedNavbarPages={isAnimatedNavbarPage(pathname) && !isPlaygroundBlogPage(pathname)}
                             left='-17rem'
                         >
-                            <Solutions pathname={pathname} activeLinks={activeLinks} setActiveLinks={setActiveLinks} />
+                            {isSolutionsHovered && (
+                                <Solutions
+                                    pathname={pathname}
+                                    activeLinks={activeLinks}
+                                    setActiveLinks={setActiveLinks}
+                                />
+                            )}
                         </MegaMenu>
                     </NavItem>
                     <NavItem>
