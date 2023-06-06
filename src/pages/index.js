@@ -133,7 +133,7 @@ const featureStyle = css`
 const HomePage = ({ location }) => {
     const data = useStaticQuery(graphql`
         query HomeQuery {
-            dashboardHomePage: file(relativePath: { eq: "dashboard-homepage.png" }) {
+            graphContainers: file(relativePath: { eq: "graph-containers.png" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1920, layout: CONSTRAINED)
                 }
@@ -213,6 +213,16 @@ const HomePage = ({ location }) => {
                     gatsbyImageData(width: 70, layout: FIXED)
                 }
             }
+            baysCustomer: file(relativePath: { eq: "bays-customer.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 49, layout: FIXED)
+                }
+            }
+            smartFintechCustomer: file(relativePath: { eq: "smart-fintech-customer.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 170, layout: FIXED)
+                }
+            }
         }
     `);
     const [isHover, setIsHover] = useState(false);
@@ -269,23 +279,32 @@ const HomePage = ({ location }) => {
                             <div className='col-span-12 lg:col-span-6 order-last lg:order-first'>
                                 <div className='lg:mt-16 pt-4 max-w-xl mx-auto lg:mx-0'>
                                     <h1
-                                        className='text-left text-blue text-4xl lg:text-5xl leading-normal lg:leading-normal mb-8 font-montserrat font-semibold'
+                                        className='text-left text-blue text-3xl sm:text-4xl lg:text-5xl leading-normal lg:leading-normal mb-8 font-montserrat font-semibold'
                                         css={css`
                                             height: 10rem;
-                                            @media (min-width: 768px) {
+                                            @media (min-width: 464px) {
                                                 height: 7rem;
                                             }
-                                            @media (min-width: 1024px) {
-                                                height: 12rem;
+                                            @media (min-width: 1024px) and (max-width: 1036px) {
+                                                height: 22rem;
+                                            }
+                                            @media (min-width: 1037px) and (max-width: 1053px) {
+                                                height: 20rem;
+                                            }
+                                            @media (min-width: 1054px) {
+                                                height: 14rem;
                                             }
                                         `}
                                     >
-                                        <Typewriter text='Leverage the Cloud with Confidence' speed={50} />
+                                        <Typewriter
+                                            text='Improve your cloud security team’s productivity by 65%'
+                                            speed={50}
+                                        />
                                     </h1>
                                     <p className='text-left text-base lg:text-lg mb-8 leading-relaxed font-hind'>
-                                        Cyscale automates cloud security analysis helping you identify and reduce risk
-                                        from misconfigurations, vulnerabilities, improper access control, and data
-                                        exposure.
+                                        Our platform automates the contextual analysis of cloud misconfigurations,
+                                        vulnerabilities, access, and data, to provide an accurate and actionable
+                                        assessment of risk.
                                     </p>
                                     <div className='flex mt-8 justify-start'>
                                         <Link to='/free-trial'>
@@ -317,14 +336,14 @@ const HomePage = ({ location }) => {
                         data-aos-offset='-100'
                     >
                         <GatsbyImage
-                            image={data.dashboardHomePage.childImageSharp.gatsbyImageData}
-                            alt='Dashboard view'
+                            image={data.graphContainers.childImageSharp.gatsbyImageData}
+                            alt='Graph and screenshots from cloud security platform'
                         />
                     </div>
                     <div
                         className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 max-w-xl lg:max-w-xl'
                         data-aos='fade-left'
-                        data-aos-offset='-100'
+                        data-aos-offset='-140'
                     >
                         <p className='font-montserrat text-base font-bold mt-0 lg:ml-5' css={sectionSubtitleColor}>
                             EMPOWER YOUR TEAM
@@ -336,21 +355,52 @@ const HomePage = ({ location }) => {
                                 line-height: 2.5rem;
                             `}
                         >
-                            Stay ahead of cloud threats, optimize risk analysis,
+                            Uncover the most toxic combinations of risk that
                             <br className='hidden lg:block' />
-                            <spam className='lg:hidden'>&nbsp;</spam>and ensure compliance with industry regulations
+                            expose your company's crown jewels
                         </h2>
-                        <p className='font-hind text-base mt-12 lg:ml-5' css={sectionTextColor}>
-                            Cybersecurity specialists across industries rely on Cyscale to eliminate cloud security
-                            blindspots, understand the attack surface in their cloud environments and prevent data loss.
-                            We help you see through application and cloud infrastructure layers and scale your efforts
-                            to organization-wide impact.
+                        <p className='font-hind text-base mt-4 lg:ml-5' css={sectionTextColor}>
+                            Our solution goes beyond traditional security approaches by suggesting the 20% of most
+                            important fixes that help reduce 80% of your risk, allowing you to prioritize your resources
+                            and focus on what truly matters. With our cloud security solution, you can be confident that
+                            your assets are protected, and your business is secure.
                         </p>
+                        <div className='mt-4 lg:ml-5'>
+                            <p
+                                className='font-hind font-bold text-base'
+                                css={css`
+                                    color: #818791;
+                                `}
+                            >
+                                Our latest customers:
+                            </p>
+                            <div className='mt-1 flex items-center'>
+                                <a href='https://baysconsulting.co.uk/' target='_blank' rel='noreferrer'>
+                                    <GatsbyImage
+                                        image={data.baysCustomer.childImageSharp.gatsbyImageData}
+                                        alt=''
+                                        className='w-auto'
+                                    />
+                                </a>
+                                <a
+                                    href='https://www.smartfintech.eu/'
+                                    target='_blank'
+                                    rel='noreferrer'
+                                    className='ml-3'
+                                >
+                                    <GatsbyImage
+                                        image={data.smartFintechCustomer.childImageSharp.gatsbyImageData}
+                                        alt=''
+                                        className='w-auto'
+                                    />
+                                </a>
+                            </div>
+                        </div>
                     </div>
                     <div className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 block lg:hidden mt-12'>
                         <GatsbyImage
-                            image={data.dashboardHomePage.childImageSharp.gatsbyImageData}
-                            alt='Dashboard view'
+                            image={data.graphContainers.childImageSharp.gatsbyImageData}
+                            alt='Graph and screenshots from cloud security platform'
                             className='w-auto md:max-w-2xl lg:w-auto'
                         />
                     </div>
