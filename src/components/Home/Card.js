@@ -26,7 +26,7 @@ const Card = ({ icon, title, text, link, cardHeight, cardHeightLg }) => {
             to={link}
             className={`col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-4 lg:mt-0 flex flex-col justify-between p-4 rounded-md h-${cardHeight} lg:h-${cardHeightLg} xl:h-${cardHeight}`}
             css={cardBackgroundColor}
-            data-aos='fade-down'
+            data-aos='fade-up'
         >
             <div>
                 <img src={icon} alt='' height={40} width={40} />

@@ -45,6 +45,7 @@ const Typewriter = ({ text = '', speed = 100 }) => {
                             width: 0.313rem;
                             background-color: #0f26aa;
                             @media screen and (max-width: 1024px) {
+                                margin-top: 0.325rem;
                                 height: 2.188rem;
                             }
                         `
