@@ -341,7 +341,7 @@ const HomePage = ({ location }) => {
                         />
                     </div>
                     <div
-                        className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 max-w-xl lg:max-w-xl'
+                        className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 max-w-xl lg:max-w-xl lg:mt-4'
                         data-aos='fade-left'
                         data-aos-offset='-140'
                     >
@@ -365,37 +365,6 @@ const HomePage = ({ location }) => {
                             and focus on what truly matters. With our cloud security solution, you can be confident that
                             your assets are protected, and your business is secure.
                         </p>
-                        <div className='mt-4 lg:ml-5'>
-                            <p
-                                className='font-hind font-bold text-base'
-                                css={css`
-                                    color: #818791;
-                                `}
-                            >
-                                Our latest customers:
-                            </p>
-                            <div className='mt-1 flex items-center'>
-                                <a href='https://baysconsulting.co.uk/' target='_blank' rel='noreferrer'>
-                                    <GatsbyImage
-                                        image={data.baysCustomer.childImageSharp.gatsbyImageData}
-                                        alt=''
-                                        className='w-auto'
-                                    />
-                                </a>
-                                <a
-                                    href='https://www.smartfintech.eu/'
-                                    target='_blank'
-                                    rel='noreferrer'
-                                    className='ml-3'
-                                >
-                                    <GatsbyImage
-                                        image={data.smartFintechCustomer.childImageSharp.gatsbyImageData}
-                                        alt=''
-                                        className='w-auto'
-                                    />
-                                </a>
-                            </div>
-                        </div>
                     </div>
                     <div className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 block lg:hidden mt-12'>
                         <GatsbyImage
