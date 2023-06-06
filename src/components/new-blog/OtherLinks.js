@@ -70,6 +70,13 @@ const OtherLinks = ({ dataBlueBird }) => {
                             Cloud-Native Security: A Comprehensive
                             <br className='hidden lg:block' /> Guide to Securing Your Technology Stack
                         </Link>{' '}
+                        <Link
+                            to='/blog/cnapp-secure-native-applications/'
+                            className='text-base font-medium font-montserrat inline-block mt-4'
+                        >
+                            CNAPP: The Key to Cloud-Native
+                            <br className='hidden lg:block' /> Applications Security
+                        </Link>{' '}
                     </div>
                 </div>
                 <div className='col-span-12 lg:col-span-8 sm:max-w-lg md:max-w-lg lg:max-w-4xl mx-auto lg:mx-0'>
@@ -101,10 +108,7 @@ const OtherLinks = ({ dataBlueBird }) => {
                         </div>
 
                         <div className='hidden lg:block absolute bottom-0 right-0'>
-                            <GatsbyImage
-                                alt=''
-                                image={dataBlueBird.blueBird.childImageSharp.gatsbyImageData}
-                            />
+                            <GatsbyImage alt='' image={dataBlueBird.blueBird.childImageSharp.gatsbyImageData} />
                         </div>
                     </div>
                 </div>
