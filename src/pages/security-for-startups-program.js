@@ -113,7 +113,7 @@ const SecurityForStartupsProgram = ({ location }) => {
                     gatsbyImageData(width: 1080, layout: CONSTRAINED)
                 }
             }
-            cardStandards: file(relativePath: { eq: "card-standards.png" }) {
+            cardStandards: file(relativePath: { eq: "card-standards-home.png" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1080, layout: CONSTRAINED)
                 }
