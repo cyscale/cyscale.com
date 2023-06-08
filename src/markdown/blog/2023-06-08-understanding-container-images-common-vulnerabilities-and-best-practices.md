@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
-title: "Understanding container images: common vulnerabilities and best practices "
-seoTitle: "Understanding container images: common vulnerabilities and best practices "
+title: "Understanding Container Images: Common Vulnerabilities and Best Practices"
+seoTitle: "Understanding Container Images: Common Vulnerabilities and Best Practices"
 authors: Sabrina Lupșan
 permalink: container-images-best-practices
 categories:
