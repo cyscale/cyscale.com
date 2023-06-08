@@ -31,7 +31,6 @@ tableOfContents: false
 tags:
   - containers
   - security
-  - cspm
 ---
 Container images are files that contain everything needed to run software on containers: code, system tools, libraries, runtime tools. Containers are a lightweight solution that allows applications to run independently of operating systems. Containers encapsulate applications and their dependencies and provide numerous benefits, such as: 
 
