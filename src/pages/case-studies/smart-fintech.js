@@ -1,17 +1,22 @@
 import React from 'react';
 import Layout from '../../components/layout/CleanLayout';
-import tw, { css } from 'twin.macro';
+import { css } from 'twin.macro';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { graphql, Link as GatsbyLink, Link, useStaticQuery } from 'gatsby';
 import ChallengesIcon from '../../assets/images/challenges-icon.svg';
 import ResultsIcon from '../../assets/images/results-icon.svg';
 import LinksAndWhitepaper from '../../components/products/LinksAndWhitepaper';
 import { topArticles } from '../products/cnapp';
-import FurtherReadingSection from '../../components/new-blog/FurtherReadingSection';
-
-const Subtitle = tw.h2`text-xl font-bold font-montserrat mt-12 lg:mt-14`;
+import { Container } from '../../components/atoms/Containers';
+import { ctaTransition, hrStyle, Subtitle, subtitleColor } from '../../assets/css/styles';
+import { hoverButtonColorStyle, widthFitStyle } from '../../components/layout/style';
+import classnames from 'classnames';
+import useScrollTrigger from '../../components/scrollTrigger';
+import useStickyElement from '../../hooks/useStickyElement';
 
 const SmartFintech = ({ location }) => {
+    const trigger = useScrollTrigger();
+
     const data = useStaticQuery(graphql`
         query Whitepaper {
             whitepaperCover: file(relativePath: { eq: "whitepaper-cover-blog.png" }) {
@@ -47,6 +52,8 @@ const SmartFintech = ({ location }) => {
         }
     `);
 
+    const { isTop, parentRef, stickyRef } = useStickyElement();
+
     return (
         <Layout
             location={location}
@@ -71,12 +78,12 @@ const SmartFintech = ({ location }) => {
             <div className='hidden' data-category>
                 case studies
             </div>
-            <div className='container max-w-7xl pt-28 sm:pt-44 mx-auto xl:flex xl:pl-12 xl:pr-16'>
-                <div className='max-w-4xl mx-auto xl:mx-0 px-8'>
+            <div className='pt-28 lg:pt-32'>
+                <Container>
                     <div className='grid grid-cols-12 gap-4'>
                         <div className='col-span-12 lg:col-span-6'>
                             <p
-                                className='font-montserrat font-bold text-base'
+                                className='font-montserrat font-bold text-sm'
                                 css={css`
                                     color: #818791;
                                 `}
@@ -86,8 +93,8 @@ const SmartFintech = ({ location }) => {
                             <h1
                                 className='font-montserrat font-bold mt-4'
                                 css={css`
-                                    font-size: 1.375rem;
-                                    line-height: 1.688rem;
+                                    font-size: 1.875rem;
+                                    line-height: 2.313rem;
                                 `}
                             >
                                 Smart Fintech uses Cyscale to gain IAM visibility and ensure cloud security and
@@ -108,11 +115,13 @@ const SmartFintech = ({ location }) => {
                             <GatsbyImage image={data.cover.childImageSharp.gatsbyImageData} alt='Cover' />
                         </div>
                     </div>
+                </Container>
+            </div>
+            <div className='container max-w-7xl mx-auto xl:flex xl:pr-16'>
+                <div className='max-w-4xl xl:max-w-5xl mx-auto xl:mx-0 px-8'>
                     <div className='grid grid-cols-12 gap-1 mt-12 lg:mt-20'>
                         <div className='col-span-12 lg:col-span-6'>
-                            <p className='font-montserrat text-lg font-bold'>
-                                Challenges
-                            </p>
+                            <p className='font-montserrat text-lg font-bold'>Challenges</p>
                             <div className='flex items-center mt-4'>
                                 <img src={ChallengesIcon} alt='' className='inline-block mr-2' />
                                 <p className='font-hind text-base mt-1'>
@@ -127,9 +136,7 @@ const SmartFintech = ({ location }) => {
                             </div>
                             <div className='flex items-start lg:items-center mt-2'>
                                 <img src={ChallengesIcon} alt='' className='inline-block mr-2' />
-                                <p className='font-hind text-base'>
-                                    A time-consuming compliance process
-                                </p>
+                                <p className='font-hind text-base'>A time-consuming compliance process</p>
                             </div>
                         </div>
                         <div className='col-span-12 lg:col-span-6 mt-4 lg:mt-0'>
@@ -233,9 +240,7 @@ const SmartFintech = ({ location }) => {
                                     hanging. I don’t have to rely on affirmations that access has been removed, I can
                                     easily see it and confirm it in Cyscale.
                                 </p>
-                                <p className='text-base font-hind mt-2'>
-                                    Alex Cociu
-                                </p>
+                                <p className='text-base font-hind mt-2'>Alex Cociu</p>
                             </div>
                         </div>
                     </div>
@@ -272,7 +277,48 @@ const SmartFintech = ({ location }) => {
                         .
                     </p>{' '}
                 </div>
-                <FurtherReadingSection dataWhitepaper={data} />
+                <div className='flex flex-col self-stretch justify-between mt-20' ref={parentRef}>
+                    <div
+                        className={classnames({
+                            'hidden xl:block w-72 sticky pl-10': true,
+                            'mb-24': true,
+                            'top-0': trigger,
+                            'top-28': !trigger
+                        })}
+                        css={ctaTransition}
+                        ref={stickyRef}
+                    >
+                        <p
+                            className={classnames({ 'font-montserrat text-xs font-bold': true, 'pt-4': !isTop })}
+                            css={css`
+                                color: #818791;
+                            `}
+                        >
+                            DISCOVER THE NEXT CASE STUDY
+                        </p>
+                        <Link
+                            className='font-montserrat font-bold font-lg mt-2 block hover:underline'
+                            css={subtitleColor}
+                            to='/case-studies/bays-consulting/'
+                        >
+                            “It’s been great at identifying blind spots”: Bays Consulting achieves 50% productivity gain
+                            with Cyscale
+                        </Link>
+                        <hr className='mt-8' css={hrStyle} />
+                        <p className='font-montserrat text-lg font-bold pt-4' css={subtitleColor}>
+                            Ready to get started?
+                        </p>
+                        <div className='mt-4'>
+                            <Link
+                                className='bg-blue text-white py-2 px-4 rounded cursor-pointer font-medium font-hind'
+                                to='/request-demo/'
+                                css={[hoverButtonColorStyle, widthFitStyle]}
+                            >
+                                Contact Sales
+                            </Link>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div
                 className='py-24 flex flex-col items-center'

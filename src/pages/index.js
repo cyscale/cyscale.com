@@ -35,6 +35,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Typewriter from '../components/Home/Typewriter';
 import RightArrow from '../components/sharedComponent/RightArrow';
+import CaseStudyCarousel from '../components/cloud-security-posture-management/Carousel';
 
 const heroBackground = css`
     height: 44rem;
@@ -213,20 +214,21 @@ const HomePage = ({ location }) => {
                     gatsbyImageData(width: 70, layout: FIXED)
                 }
             }
-            baysCustomer: file(relativePath: { eq: "bays-customer.png" }) {
+            james: file(relativePath: { eq: "james-hawkes-home.png" }) {
                 childImageSharp {
-                    gatsbyImageData(width: 49, layout: FIXED)
+                    gatsbyImageData(width: 70, layout: FIXED)
                 }
             }
-            smartFintechCustomer: file(relativePath: { eq: "smart-fintech-customer.png" }) {
+            bays: file(relativePath: { eq: "bays-home.png" }) {
                 childImageSharp {
-                    gatsbyImageData(width: 170, layout: FIXED)
+                    gatsbyImageData(width: 1980, layout: CONSTRAINED)
                 }
             }
         }
     `);
     const [isHover, setIsHover] = useState(false);
     const containerRef = useRef(null);
+    const [autoSlide, setAutoSlide] = useState(true);
 
     const isDesktop = useMediaQuery('(max-width: 1024px)');
 
@@ -248,6 +250,39 @@ const HomePage = ({ location }) => {
             }
         });
     }, []);
+
+    const slides = [
+        {
+            image: data.bays.childImageSharp.gatsbyImageData,
+            alt: 'Cover Bays Consulting',
+            title: '“It’s been great at identifying blind spots”: Bays Consulting achieves 50% productivity gain with Cyscale',
+            quote: '“Exceptionally helpful when doing access reviews; I’m using the platform monthly and it simply automates my work!”',
+            employee: 'James Hawkes',
+            employeeImage: data.james.childImageSharp.gatsbyImageData,
+            position: (
+                <>
+                    Head of Delivery at
+                    <br className='block md:hidden' /> Bays Consulting
+                </>
+            ),
+            link: '/case-studies/bays-consulting/'
+        },
+        {
+            image: data.smartFintech.childImageSharp.gatsbyImageData,
+            alt: 'Mobile Payment Smart Fintech',
+            title: 'Smart Fintech uses Cyscale to gain IAM visibility and ensure cloud security and compliance',
+            quote: '“The platform helps me with IAM visibility a lot: I can understand who has access and why. When a person leaves the company, I can detect if their permissions remain hanging.”',
+            employee: 'Alex Cociu',
+            employeeImage: data.alex.childImageSharp.gatsbyImageData,
+            position: (
+                <>
+                    Risk and Compliance Officer at
+                    <br className='block md:hidden' /> Smart Fintech
+                </>
+            ),
+            link: '/case-studies/smart-fintech'
+        }
+    ];
 
     return (
         <Layout
@@ -421,70 +456,79 @@ const HomePage = ({ location }) => {
                 `}
             >
                 <Container>
-                    <div
-                        className='grid grid-cols-12 gap-x-5'
-                        css={css`
-                            overflow: hidden;
-                        `}
-                    >
-                        <div className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 lg:mt-8' data-aos='fade-right'>
-                            <Link to={'/case-studies/smart-fintech'}>
-                                <GatsbyImage
-                                    image={data.smartFintech.childImageSharp.gatsbyImageData}
-                                    className='max-w-xl'
-                                    alt='Mobile Payment Smart Fintech'
-                                />
-                            </Link>
-                        </div>
-                        <div
-                            className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 max-w-xl mt-8 lg:mt-0'
-                            data-aos='fade-left'
-                        >
-                            <p className='font-montserrat text-base font-bold mt-4' css={sectionSubtitleColor}>
-                                CASE STUDY
-                            </p>
-                            <Link to={'/case-studies/smart-fintech'}>
-                                {' '}
-                                <h2
-                                    className='font-montserrat text-blue font-bold mt-2 hover:underline'
-                                    css={titleSection}
+                    <CaseStudyCarousel autoSlide={autoSlide} setAutoSlide={setAutoSlide}>
+                        {slides.map((s, index) => {
+                            return (
+                                <div
+                                    className='grid grid-cols-12 gap-x-5'
+                                    css={css`
+                                        overflow: hidden;
+                                    `}
+                                    onMouseEnter={() => setAutoSlide(false)}
+                                    onMouseLeave={() => setAutoSlide(true)}
                                 >
-                                    Smart Fintech uses Cyscale to gain IAM visibility and ensure cloud security and
-                                    compliance
-                                </h2>
-                            </Link>
-                            <p className='mt-3 text-base font-hind font-normal'>
-                                “The platform helps me with IAM visibility a lot: I can understand who has access and
-                                why. When a person leaves the company, I can detect if their permissions remain hanging.
-                                ”
-                            </p>
-                            <div className='flex mt-3 px-2'>
-                                <GatsbyImage image={data.alex.childImageSharp.gatsbyImageData} alt='Alex Cociu' />
-                                <div className='ml-4 mt-1'>
-                                    <p className='font-hind text-base font-bold'>Alex Cociu</p>
-                                    <p className='font-hind text-base'>
-                                        Risk and Compliance Officer at
-                                        <br className='block md:hidden' /> Smart Fintech
-                                    </p>
+                                    <div
+                                        className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 lg:mt-8'
+                                        data-aos='fade-right'
+                                    >
+                                        <Link to={s.link}>
+                                            <GatsbyImage
+                                                image={s.image}
+                                                className='max-w-xl'
+                                                alt='Mobile Payment Smart Fintech'
+                                            />
+                                        </Link>
+                                    </div>
+                                    <div
+                                        className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 max-w-xl mt-8 lg:mt-0'
+                                        data-aos='fade-left'
+                                    >
+                                        <p
+                                            className='font-montserrat text-base font-bold mt-4'
+                                            css={sectionSubtitleColor}
+                                        >
+                                            CASE STUDY
+                                        </p>
+                                        <Link to={s.link}>
+                                            {' '}
+                                            <h2
+                                                className='font-montserrat text-blue font-bold mt-2 hover:underline'
+                                                css={titleSection}
+                                            >
+                                                {s.title}
+                                            </h2>
+                                        </Link>
+                                        <p className='mt-3 text-base font-hind font-normal'>{s.quote}</p>
+                                        <div className='flex mt-3 px-2'>
+                                            <GatsbyImage image={s.employeeImage} alt={s.alt} />
+                                            <div className='ml-4 mt-1'>
+                                                <p className='font-hind text-base font-bold'>{s.employee}</p>
+                                                <p className='font-hind text-base'>{s.position}</p>
+                                            </div>
+                                        </div>
+                                        <Link
+                                            to={s.link}
+                                            onMouseEnter={() => setIsHover(true)}
+                                            onMouseLeave={() => setIsHover(false)}
+                                            className='font-hind text-base font-bold mt-6 hover:underline block'
+                                            css={css`
+                                                color: #0f26aa;
+                                                &:hover {
+                                                    color: #0b175a;
+                                                }
+                                            `}
+                                        >
+                                            <RightArrow
+                                                fillColor={isHover ? '#0b175a' : '#0F26AA'}
+                                                marginTop={'-0.1rem'}
+                                            />
+                                            Read the case study
+                                        </Link>
+                                    </div>
                                 </div>
-                            </div>
-                            <Link
-                                to={'/case-studies/smart-fintech'}
-                                onMouseEnter={() => setIsHover(true)}
-                                onMouseLeave={() => setIsHover(false)}
-                                className='font-hind text-base font-bold mt-6 hover:underline block'
-                                css={css`
-                                    color: #0f26aa;
-                                    &:hover {
-                                        color: #0b175a;
-                                    }
-                                `}
-                            >
-                                <RightArrow fillColor={isHover ? '#0b175a' : '#0F26AA'} marginTop={'-0.1rem'} />
-                                Read the case study
-                            </Link>
-                        </div>
-                    </div>
+                            );
+                        })}
+                    </CaseStudyCarousel>
                 </Container>
             </div>
             <div className='pt-24 pb-24 lg:pt-32 lg:pb-32' css={useCasesSectionBackground}>

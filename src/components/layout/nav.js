@@ -105,7 +105,7 @@ const solutions = [
 const resources = [
     {
         text: 'Case Studies',
-        link: '/case-studies/smart-fintech/'
+        link: '/case-studies/bays-consulting/'
     },
     {
         text: 'Blog',
