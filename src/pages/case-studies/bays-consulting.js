@@ -314,7 +314,11 @@ const BaysConsulting = ({ location }) => {
                             Cyscale streamlined access reviews, improved security posture, and empowered Bays Consulting
                             to address cloud security challenges efficiently, ultimately boosting productivity and
                             achieving peace of mind. To read more about Cyscale and learn about cloud security, check
-                            out the blog.
+                            out the{' '}
+                            <Link to='/blog' className='underline cursor-pointer'>
+                                blog
+                            </Link>
+                            .
                         </p>
                     </div>
                     <div className='flex flex-col self-stretch justify-between mt-20' ref={parentRef}>
