@@ -5,7 +5,7 @@ import Share from '../Share/Share';
 import { css } from 'twin.macro';
 import useScrollTrigger from '../scrollTrigger';
 import classnames from 'classnames';
-import { ctaTransition } from '../../assets/css/styles';
+import { ctaTransition, hrStyle } from '../../assets/css/styles';
 
 const ctaWhitepaperTextColor = css`
     color: #474747;
@@ -13,11 +13,6 @@ const ctaWhitepaperTextColor = css`
 
 const downloadWhitepaperLinkColor = css`
     color: #0f26aa;
-`;
-
-const hrStyle = css`
-    color: #e3e3e3;
-    width: 13.5rem;
 `;
 
 const FurtherReadingSection = ({ alert, onChange, emailInput, onKeyDown, onSubmit, data, dataWhitepaper, blog }) => {

@@ -1,4 +1,4 @@
-import { css } from 'twin.macro';
+import tw, { css } from 'twin.macro';
 import styled from '@emotion/styled';
 
 export const heroHeight = css`
@@ -49,4 +49,19 @@ export const cardBackgroundColor = css`
 
 export const ctaTransition = css`
     transition: all 0.25s ease-in-out 0s;
+`;
+
+export const hrStyle = css`
+    color: #e3e3e3;
+    width: 13.5rem;
+`;
+
+export const Subtitle = tw.h2`text-xl font-bold font-montserrat mt-12 lg:mt-14`;
+
+export const subtitleColor = css`
+    color: #1d2639;
+`;
+
+export const textColor = css`
+    color: #363e4f;
 `;
