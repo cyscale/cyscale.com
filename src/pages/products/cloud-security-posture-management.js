@@ -147,10 +147,6 @@ const imageTextRowSubtitle = css`
     line-height: 2rem;
 `;
 
-const titleSize = css`
-    font-size: 2rem;
-`;
-
 const cartTitleSize = css`
     font-size: 1.375rem;
 `;
