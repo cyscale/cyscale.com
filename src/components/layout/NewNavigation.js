@@ -194,9 +194,12 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation, sea
                             className={`${
                                 pageName === 'blog' ||
                                 pageName === 'blog-detail' ||
-                                ['CloudComplianceWhitepaper', 'CloudStorageMisconfigurations', 'SmartFintech'].includes(
-                                    pageName
-                                ) ||
+                                [
+                                    'CloudComplianceWhitepaper',
+                                    'CloudStorageMisconfigurations',
+                                    'SmartFintech',
+                                    'BaysConsulting'
+                                ].includes(pageName) ||
                                 activeLinks.resources
                                     ? 'active'
                                     : ''
