@@ -219,8 +219,7 @@ const BaysConsulting = ({ location }) => {
                                     Bays Consulting faced the challenge of manually conducting access reviews for their
                                     AWS cloud environments, an essential process for ensuring cloud security and
                                     compliance. The task is time-consuming, prone to human error, and laborious. They
-                                    needed a way to automate this to identify vulnerabilities and
-                                    <br className='hidden xl:block' /> blind spots.
+                                    needed a way to automate this to identify vulnerabilities and blind spots.
                                 </p>
                                 <p className='font-hind text-base' css={textColor}>
                                     Moreover, as they were going through the ISO 27001 compliance process, they needed
@@ -403,7 +402,7 @@ const BaysConsulting = ({ location }) => {
                     </h2>
                     <p className='mt-8 text-base sm:text-lg lg:text-xl text-center px-2 sm:px-0'>
                         Sign up for a custom demo to see how we close security gaps
-                        <br /> and help you move to the cloud.
+                        <br /> and help you leverage the cloud with confidence.
                     </p>
                     <div className='mt-10 w-auto inline-block'>
                         <Link
