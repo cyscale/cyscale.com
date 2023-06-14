@@ -71,6 +71,23 @@ const BaysConsulting = ({ location }) => {
             title='Bays Consulting Case Study | Cloud Security & Compliance - Cyscale'
             description="Explore how Cyscale's cloud security platform helped Bays Consulting streamline access reviews, improve cloud security posture, and automate ISO 27001 compliance. Learn from their journey and start yours today!"
         >
+            <div className='hidden' data-template-key>
+                hardcoded-pages
+            </div>
+            <div className='hidden' data-permalink>
+                /case-studies/bays-consulting
+            </div>
+            <div className='hidden' data-title>
+                Bays Consulting Case Study | Cloud Security & Compliance - Cyscale
+            </div>
+            <div className='hidden' data-description>
+                Explore how Cyscale's cloud security platform helped Bays Consulting streamline access reviews, improve
+                cloud security posture, and automate ISO 27001 compliance. Learn from their journey and start yours
+                today!
+            </div>
+            <div className='hidden' data-category>
+                case studies
+            </div>
             <div className='pt-28 lg:pt-32 pb-16'>
                 <Container>
                     <div className='grid grid-cols-12 lg:gap-12'>
