@@ -472,11 +472,7 @@ const HomePage = ({ location }) => {
                                         data-aos='fade-right'
                                     >
                                         <Link to={s.link}>
-                                            <GatsbyImage
-                                                image={s.image}
-                                                className='max-w-xl'
-                                                alt='Mobile Payment Smart Fintech'
-                                            />
+                                            <GatsbyImage image={s.image} className='max-w-xl' alt={s.alt} />
                                         </Link>
                                     </div>
                                     <div
@@ -500,7 +496,7 @@ const HomePage = ({ location }) => {
                                         </Link>
                                         <p className='mt-3 text-base font-hind font-normal'>{s.quote}</p>
                                         <div className='flex mt-3 px-2'>
-                                            <GatsbyImage image={s.employeeImage} alt={s.alt} />
+                                            <GatsbyImage image={s.employeeImage} alt={s.employee} />
                                             <div className='ml-4 mt-1'>
                                                 <p className='font-hind text-base font-bold'>{s.employee}</p>
                                                 <p className='font-hind text-base'>{s.position}</p>
