@@ -314,7 +314,7 @@ const HomePage = ({ location }) => {
                             <div className='col-span-12 lg:col-span-6 order-last lg:order-first'>
                                 <div className='lg:mt-16 pt-4 max-w-xl mx-auto lg:mx-0'>
                                     <h1
-                                        className='text-left text-blue text-3xl sm:text-4xl lg:text-5xl leading-normal lg:leading-normal mb-8 font-montserrat font-semibold'
+                                        className='text-left text-blue text-3xl sm:text-4xl lg:text-5xl leading-normal lg:leading-normal mb-8 font-montserrat font-semibold hidden lg:block'
                                         css={css`
                                             height: 10rem;
                                             @media (min-width: 464px) {
@@ -335,6 +335,28 @@ const HomePage = ({ location }) => {
                                             text='Improve your cloud security team’s productivity by 65%'
                                             speed={50}
                                         />
+                                    </h1>
+                                    <h1
+                                        className='text-left text-blue  mb-8 font-montserrat font-semibold block lg:hidden font-bold'
+                                        css={css`
+                                            font-size: 2rem;
+                                            line-height: 2.5rem;
+                                            height: 10rem;
+                                            @media (min-width: 464px) {
+                                                height: 7rem;
+                                            }
+                                            @media (min-width: 1024px) and (max-width: 1036px) {
+                                                height: 22rem;
+                                            }
+                                            @media (min-width: 1037px) and (max-width: 1053px) {
+                                                height: 20rem;
+                                            }
+                                            @media (min-width: 1054px) {
+                                                height: 14rem;
+                                            }
+                                        `}
+                                    >
+                                        Improve your cloud security team’s productivity by 65%
                                     </h1>
                                     <p className='text-left text-base lg:text-lg mb-8 leading-relaxed font-hind'>
                                         Our platform automates the contextual analysis of cloud misconfigurations,
@@ -390,8 +412,7 @@ const HomePage = ({ location }) => {
                                 line-height: 2.5rem;
                             `}
                         >
-                            Uncover the most toxic combinations of risk that
-                            <br className='hidden lg:block' />
+                            Uncover the most toxic combinations of risk that <br className='hidden lg:block' />
                             expose your company's crown jewels
                         </h2>
                         <p className='font-hind text-base mt-4 lg:ml-5' css={sectionTextColor}>
