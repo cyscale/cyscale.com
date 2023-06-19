@@ -25,7 +25,7 @@ const TOC = ({ markdown }) => {
 
             headings.push({
                 slug,
-                indent: level > 2 ? (level - 3) * 20 : 0,
+                indent: level > 2 ? (level - 2) * 20 : 0,
                 displayText: words.slice(0, 6).join(' ') + (words.length > 6 ? '...' : '')
             });
         }
@@ -43,7 +43,7 @@ const TOC = ({ markdown }) => {
             { rootMargin: '0px 0px -80% 0px' }
         );
 
-        const targets = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+        const targets = document.querySelectorAll('h1, h2, h3');
         targets.forEach((target) => observer.observe(target));
 
         return () => {
