@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import rightArrow from '../../assets/images/right-arrow-cspm.svg';
 import leftArrow from '../../assets/images/left-arrow-cspm.svg';
 import { css } from 'twin.macro';
@@ -8,12 +8,33 @@ const hoverEffect = css`
         transform: scale(1.2);
     }
 `;
+
 const Carousel = ({ children: slides, autoSlide = true, autoSlideInterval = 2500, setAutoSlide }) => {
     const [curr, setCurr] = useState(0);
+    const swipeRef = useRef();
+    const touchStart = useRef(0);
+    const touchEnd = useRef(0);
 
     const prev = () => setCurr((curr) => (curr === 0 ? slides.length - 1 : curr - 1));
-    //eslint-disable-next-line
     const next = () => setCurr((curr) => (curr === slides.length - 1 ? 0 : curr + 1));
+
+    const handleTouchStart = (e) => {
+        touchStart.current = e.targetTouches[0].clientX;
+    };
+
+    const handleTouchMove = (e) => {
+        touchEnd.current = e.targetTouches[0].clientX;
+    };
+
+    const handleTouchEnd = () => {
+        if (touchStart.current - touchEnd.current > 75) {
+            next();
+        }
+
+        if (touchStart.current - touchEnd.current < -75) {
+            prev();
+        }
+    };
 
     useEffect(() => {
         if (!autoSlide) return;
@@ -27,6 +48,10 @@ const Carousel = ({ children: slides, autoSlide = true, autoSlideInterval = 2500
             css={css`
                 width: 100%;
             `}
+            ref={swipeRef}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
         >
             <div
                 className='flex transition-transform ease-out duration-500'
