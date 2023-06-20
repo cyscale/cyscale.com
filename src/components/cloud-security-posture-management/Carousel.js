@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import rightArrow from '../../assets/images/right-arrow-cspm.svg';
 import leftArrow from '../../assets/images/left-arrow-cspm.svg';
 import { css } from 'twin.macro';
@@ -16,7 +16,9 @@ const Carousel = ({ children: slides, autoSlide = true, autoSlideInterval = 2500
     const touchEnd = useRef(0);
 
     const prev = () => setCurr((curr) => (curr === 0 ? slides.length - 1 : curr - 1));
-    const next = () => setCurr((curr) => (curr === slides.length - 1 ? 0 : curr + 1));
+    const next = useCallback(() => {
+        setCurr((curr) => (curr === slides.length - 1 ? 0 : curr + 1));
+    }, [slides]);
 
     const handleTouchStart = (e) => {
         touchStart.current = e.targetTouches[0].clientX;

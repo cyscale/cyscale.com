@@ -33,7 +33,6 @@ import Card from '../components/Home/Card';
 import BlogLink from '../components/Home/BlogLink';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Typewriter from '../components/Home/Typewriter';
 import RightArrow from '../components/sharedComponent/RightArrow';
 import CaseStudyCarousel from '../components/cloud-security-posture-management/Carousel';
 
@@ -331,10 +330,7 @@ const HomePage = ({ location }) => {
                                             }
                                         `}
                                     >
-                                        <Typewriter
-                                            text='Improve your cloud security team’s productivity by 65%'
-                                            speed={50}
-                                        />
+                                        Improve your cloud security team’s productivity by 65%
                                     </h1>
                                     <h1
                                         className='text-left text-blue  mb-8 font-montserrat font-semibold block lg:hidden font-bold'
