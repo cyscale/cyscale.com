@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import { Row } from '../components/atoms/Containers';
 import useHSFormLoaded from '../hooks/useHSFormLoaded';
 import classnames from 'classnames';
@@ -26,9 +25,6 @@ const FreeTrial = ({ location }) => {
             title='Start Free Trial - Cyscale'
             description='Cyscale is an agentless CSPM solution that helps your organization map, secure and monitor cloud assets across multiple providers.'
         >
-            <Helmet>
-                <script charset='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js'></script>
-            </Helmet>
             <div className='hidden' data-template-key>
                 hardcoded-pages
             </div>

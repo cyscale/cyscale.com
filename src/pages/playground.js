@@ -25,9 +25,6 @@ const Playground = ({ location }) => {
             title='Playground Account Access - Cyscale'
             description='Get access to a playground account, fully featured and populated with data.'
         >
-            <Helmet>
-                <script charset='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js'></script>
-            </Helmet>
             <div className='hidden' data-template-key>
                 hardcoded-pages
             </div>
