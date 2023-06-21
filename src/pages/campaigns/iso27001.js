@@ -49,7 +49,7 @@ const Iso27001 = ({ location }) => {
                                     <ul className='list-disc pl-4'>
                                         <li className='mb-6'>
                                             <strong>Asset Inventory</strong>: Connect all your cloud accounts from AWS,
-                                            GCP, Azure, and Alibaba, in a read-only mode.
+                                            Google Cloud, Azure, and Alibaba, in a read-only mode.
                                         </li>
                                         <li className='mb-6'>
                                             <strong>Out-of-the-box Policies</strong>: A set of battle-tested policies to
@@ -94,7 +94,7 @@ const Iso27001 = ({ location }) => {
                                 <img src={azure} className='h-12' alt='Azure' />
                             </div>
                             <div className='px-3'>
-                                <img src={gcp} className='h-12' alt='GCP' />
+                                <img src={gcp} className='h-12' alt='Google Cloud' />
                             </div>
 
                             <div className='px-3'>
@@ -112,7 +112,7 @@ const Iso27001 = ({ location }) => {
                                 <h2 className='font-semibold  text-primary text-2xl lg:text-4xl'>Asset Inventory</h2>
                                 <p className='text-base lg:text-lg leading-relaxed mt-4 lg:mt-8'>
                                     Keep track of all your cloud assets such as virtual machines, storage buckets, and
-                                    IAM users. Cyscale allows you to connect all your cloud accounts from AWS, GCP,
+                                    IAM users. Cyscale allows you to connect all your cloud accounts from AWS, Google Cloud,
                                     Azure, and Alibaba, in a read-only mode.
                                 </p>
                             </div>

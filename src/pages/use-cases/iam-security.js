@@ -231,7 +231,7 @@ const IAMSecurity = ({ location }) => {
                                         Protect sensitive data and comply with strict industry regulations in your
                                         organization. Cyscale automatically runs all critical compliance checks across
                                         multiple public cloud providers such as AWS (Amazon Web Services), Azure and
-                                        GCP, and finds data at-risk.
+                                        Google Cloud, and finds data at-risk.
                                     </p>
                                 </div>
                                 <div className='col-span-12 lg:col-span-6'>

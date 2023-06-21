@@ -357,7 +357,7 @@ const SecurityForStartupsProgram = ({ location }) => {
                                     style={{ backgroundImage: 'linear-gradient(#E4EDFC,#fff)' }}
                                 >
                                     <h1 className='text-2xl font-medium'>Integrations</h1>
-                                    <p className='text-xl mt-4'>AWS, GCP, Azure and Alibaba Cloud</p>
+                                    <p className='text-xl mt-4'>AWS, Google Cloud, Azure and Alibaba Cloud</p>
                                     <GatsbyImage
                                         image={data.cardIntegrations.childImageSharp.gatsbyImageData}
                                         alt='Integrations'
