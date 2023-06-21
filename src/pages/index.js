@@ -355,9 +355,9 @@ const HomePage = ({ location }) => {
                                         Improve your cloud security team’s productivity by 65%
                                     </h1>
                                     <p className='text-left text-base lg:text-lg mb-8 leading-relaxed font-hind'>
-                                        Our platform automates the contextual analysis of cloud misconfigurations,
-                                        vulnerabilities, access, and data, to provide an accurate and actionable
-                                        assessment of risk.
+                                        Our cloud security platform automates the contextual analysis of cloud
+                                        misconfigurations, vulnerabilities, access, and data, to provide an accurate and
+                                        actionable assessment of risk.
                                     </p>
                                     <div className='flex mt-8 justify-start'>
                                         <Link to='/free-trial'>
