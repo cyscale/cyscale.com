@@ -82,7 +82,7 @@ const qas = (useReactComponent) => {
                     </li>
                     <li className='mb-4'>
                         Easily identify risks that could compromise your cloud network across cloud providers, such as
-                        GCP (Google Cloud), AWS and Microsoft Azure
+                        Google Cloud, AWS and Microsoft Azure
                     </li>
 
                     <li>

@@ -303,8 +303,8 @@ const CloudCompliance = ({ location }) => {
                                 <p className='text-base lg:text-lg leading-relaxed mt-4 lg:mt-8'>
                                     Keep track of all your cloud computing assets such as virtual machines, cloud
                                     storage buckets, and IAM users. Cyscale allows you to connect all your cloud
-                                    accounts from cloud service providers (AWS, GCP, Azure, and Alibaba), in a read-only
-                                    mode.
+                                    accounts from cloud service providers (AWS, Google Cloud, Azure, and Alibaba), in a
+                                    read-only mode.
                                 </p>
                             </div>
                             <div className='col-span-12 lg:col-span-6 order-1 lg:order-2 pb-4 lg:pb-0'>

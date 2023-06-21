@@ -245,7 +245,7 @@ const PricingPage = ({ location }) => {
                                     className='ml-2 text-sm hover:underline'
                                     to={'/use-cases/cloud-data-security/'}
                                 >
-                                    Multi-cloud support (AWS, GCP, Azure)
+                                    Multi-cloud support (AWS, Google Cloud, Azure)
                                 </GatsbyLink>
                             </div>
                             <div className='flex mt-2'>

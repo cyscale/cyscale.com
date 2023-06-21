@@ -91,10 +91,10 @@ const GCPCloudSecurity = ({ location }) => {
                         <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-lg pb-4'>
                             <p className='text-left text-base lg:text-lg mb-6 leading-relaxed'>
                                 Protect Google Cloud environments with a complete Cloud Security Posture Management
-                                (CSPM) solution - including support for the CIS GCP Foundations Benchmark.
+                                (CSPM) solution - including support for the CIS Google Cloud Foundations Benchmark.
                             </p>
                             <p className='text-left text-base lg:text-lg mb-20 leading-relaxed'>
-                                Map, secure, and monitor your GCP environment in minutes.
+                                Map, secure, and monitor your Google Cloud environment in minutes.
                             </p>
                             <div className='flex'>
                                 <Link to='/free-trial'>
@@ -122,7 +122,7 @@ const GCPCloudSecurity = ({ location }) => {
                         <div className='col-span-12 lg:col-span-5'>
                             <div className='mx-auto lg:mx-0  max-w-xl lg:max-w-none'>
                                 <p className='text-base leading-normal my-12 text-gray'>
-                                    <strong>Streamline posture management for GCP</strong> services and your multi-cloud
+                                    <strong>Streamline posture management for Google Cloud</strong> services and your multi-cloud
                                     environments. Get visibility into your cloud security and achieve continuous
                                     compliance.
                                 </p>
@@ -183,7 +183,7 @@ const GCPCloudSecurity = ({ location }) => {
                                 </p>
                                 <p className='leading-normal text-base text-gray'>
                                     Coming soon: create custom Controls that tap into our Security Knowledge Graph™ and
-                                    automate the GCP security and compliance checks that matter most for your
+                                    automate the Google Cloud security and compliance checks that matter most for your
                                     organization.
                                 </p>
                             </div>
@@ -251,7 +251,7 @@ const GCPCloudSecurity = ({ location }) => {
                     <Container>
                         <div className='mx-auto text-center lg:text-left lg:mx-0 max-w-sm lg:max-w-none'>
                             <h2 className='text-white text-xl md:text-2xl font-semibold font-montserrat uppercase'>
-                                Secure your GCP Cloud Resources
+                                Secure your Google Cloud Resources
                             </h2>
                             <p className='text-white font-montserrat text-lg md:text-2xl mb-20'>
                                 Start seeing value & saving money in minutes

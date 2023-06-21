@@ -226,7 +226,7 @@ const Soc2 = ({ location }) => {
                                 </p>
                                 <p className='leading-normal text-base text-gray py-2 font-hind'>
                                     Ensure SOC 2 compliance in your cloud computing environment across multiple cloud
-                                    service providers such as AWS, Azure, GCP (Google Cloud Platform).
+                                    service providers such as AWS, Azure, Google Cloud.
                                 </p>
                                 <p className='leading-normal text-base text-gray py-2 font-hind'>
                                     Coming soon: create custom Controls that tap into our Security Knowledge Graph™ to
