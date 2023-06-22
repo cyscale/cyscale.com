@@ -125,6 +125,10 @@ const resources = [
         text: 'Support',
         link: 'https://docs.cyscale.com/',
         external: true
+    },
+    {
+        text: 'All Resources',
+        link: '/resources/'
     }
 ];
 const company = [
