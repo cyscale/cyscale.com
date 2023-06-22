@@ -1,9 +1,10 @@
 ---
 templateKey: blog-post
-title: 'CNAPP: A mix of CSPM & CWPP'
+title: "CNAPP: A mix of CSPM & CWPP"
+seoTitle: "CNAPP: A mix of CSPM & CWPP - Cyscale"
 authors: Virginia Mitea
 permalink: cnapp-a-mix-of-cspm-cwpp
-categories: 
+categories:
   - CSPM
   - CNAPP
 date: 2021-11-24T15:35:49.333Z
@@ -17,8 +18,13 @@ description: >-
 
 
   The legitimate question would be: Why do I need another security tool?
+seoDescription: Unveil CNAPP, a blend of CSPM & CWPP for advanced cloud
+  security. Learn the benefits, compare it with separate tools, and understand
+  its impact on the future of cybersecurity. A comprehensive guide by Cyscale on
+  the latest trend in cloud protection.
 featuredpost: true
 featuredimage: /img/cspm-cwpp.png
+tableOfContents: true
 ---
 <!--StartFragment-->
 
@@ -77,7 +83,7 @@ CWPP vendors have started to add new features capabilities, including IaC scanni
 
 Some CSPMs have cutting edge-technology in place and can already give you some of the features promised by the CNAPP.
 
-This is the case of Cyscale Cloud Platform, the solution that offers advanced visibility, but more importantly, gives you context so you can better prioritize.\
+This is the case of [Cyscale Cloud Security Platform](https://cyscale.com), the solution that offers advanced visibility, but more importantly, gives you context so you can better prioritize.\
 The [Security Knowledge Graph](https://cyscale.com/products/security-knowledge-graph/)™ built within the platform may reveal, for example, that one of the resources usually reported to have a high-security risk, is not as vulnerable as it seems. (Let's think about a VM that has unencrypted disks attached, but is not being used in a production environment, or is not externally accessible from the internet).\
 This type of approach can make you realize that you need a more advanced risk analysis and a look beyond the classic list of logs, where the vulnerable components are reported without taking into consideration the bigger picture.
 
