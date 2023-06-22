@@ -85,7 +85,7 @@ const AnimatedNavbarLayout = ({ children, formId, formTargetId, location, title,
                 <Seo title={title} description={description} pageName={pageName} location={location} />
                 <Helmet>
                     {pageName !== 'RequestDemo' && (
-                        <script charSet='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js' />
+                        <script charSet='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js'></script>
                     )}
                     {noIndex && <meta name='robots' content='noindex' />}
                     {noIndex && <meta name='robots' content='nofollow' />}
