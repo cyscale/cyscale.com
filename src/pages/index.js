@@ -986,7 +986,7 @@ const HomePage = ({ location }) => {
                                 <br />,
                                 'Practices Recommended by',
                                 <br />,
-                                'AWS, Azure, and GCP'
+                                'AWS, Azure, and Google Cloud'
                             ]}
                             image={data.iamIcon.childImageSharp.gatsbyImageData}
                             classNames={'mt-10'}

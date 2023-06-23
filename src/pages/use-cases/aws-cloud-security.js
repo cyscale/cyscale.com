@@ -15,12 +15,12 @@ const topArticles = [
         children: true
     },
     {
-        text: 'IAM Services in AWS, Azure, and GCP -<br class="hidden lg:block"/> A Cloud Industry Overview',
+        text: 'IAM Services in AWS, Azure, and <br class="hidden lg:block"/>  Google Cloud - A Cloud Industry Overview',
         link: '/blog/iam-services-in-aws-azure-gcp/',
         children: true
     },
     {
-        text: 'Securing IAM - Best Practices <br class="hidden lg:block"/>Recommended by AWS, Azure, and GCP',
+        text: 'Securing IAM - Best Practices Recommended by AWS, Azure, and Google Cloud',
         link: '/blog/iam-best-practices-from-aws-azure-gcp/',
         children: true
     },

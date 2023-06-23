@@ -10,12 +10,12 @@ import LinksAndWhitepaper from '../../components/products/LinksAndWhitepaper';
 
 const topArticles = [
     {
-        text: 'IAM Services in AWS, Azure, and GCP -<br class="hidden lg:block"/> A Cloud Industry Overview',
+        text: 'IAM Services in AWS, Azure, and <br class="hidden lg:block"/>  Google Cloud - A Cloud Industry Overview',
         link: '/blog/iam-services-in-aws-azure-gcp/',
         children: true
     },
     {
-        text: 'Securing IAM - Best Practices Recommended by AWS, Azure, and GCP',
+        text: 'Securing IAM - Best Practices Recommended by AWS, Azure, and Google Cloud',
         link: '/blog/iam-best-practices-from-aws-azure-gcp/',
         children: true
     },
@@ -61,7 +61,7 @@ const GCPCloudSecurity = ({ location }) => {
         <Layout
             location={location}
             pageName='GCPCloudSecurity'
-            title='GCP Cloud Security | Google Cloud Security and Compliance - Cyscale'
+            title='Google Cloud Security | Google Cloud Security and Compliance - Cyscale'
             description='Protect Google  environments with a complete Cloud Security Posture Management (CSPM) solution'
         >
             <div className='hidden' data-template-key>
@@ -71,7 +71,7 @@ const GCPCloudSecurity = ({ location }) => {
                 /use-cases/gcp-cloud-security
             </div>
             <div className='hidden' data-title>
-                GCP Cloud Security | Google Cloud Security and Compliance - Cyscale
+                Google Cloud Security | Google Cloud Security and Compliance - Cyscale
             </div>
             <div className='hidden' data-description>
                 Protect Google environments with a complete Cloud Security Posture Management (CSPM) solution
@@ -122,9 +122,9 @@ const GCPCloudSecurity = ({ location }) => {
                         <div className='col-span-12 lg:col-span-5'>
                             <div className='mx-auto lg:mx-0  max-w-xl lg:max-w-none'>
                                 <p className='text-base leading-normal my-12 text-gray'>
-                                    <strong>Streamline posture management for Google Cloud</strong> services and your multi-cloud
-                                    environments. Get visibility into your cloud security and achieve continuous
-                                    compliance.
+                                    <strong>Streamline posture management for Google Cloud</strong> services and your
+                                    multi-cloud environments. Get visibility into your cloud security and achieve
+                                    continuous compliance.
                                 </p>
                                 <ul className='list-disc ml-4 text-gray'>
                                     <li className='mb-4'>
