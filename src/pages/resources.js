@@ -9,6 +9,7 @@ import { CSSTransition } from 'react-transition-group';
 import ArrowRight from '../assets/images/arrow-right-white.svg';
 import Carousel from '../components/resources/Carousel';
 import ArrowRightBlack from '../assets/images/arrow-right-black.svg';
+import PlayButton from '../components/resources/PlayButton';
 
 const heroBackground = css`
     @media (max-width: 1024px) {
@@ -245,7 +246,7 @@ const Resources = ({ location }) => {
                             </Link>
                         </div>
                     </Row>
-                    <div className='flex justify-end'>
+                    <div className='flex justify-center sm:justify-end'>
                         <Link to='/blog/' className='flex hover:underline'>
                             <p className='font-hind text-lg font-medium'>VIEW ALL ARTICLES</p>
                             <img src={ArrowRightBlack} alt='' width={18} className='mb-1 ml-1' />
@@ -377,7 +378,7 @@ const Resources = ({ location }) => {
                                         </Link>
                                     </div>
                                     <div className='col-span-12 sm:col-span-4 flex justify-center lg:justify-end mt-4 sm:mt-0'>
-                                        <Link to='/resources/data-security-e-book.pdf/' className='group'>
+                                        <Link to='/resources/data-security-e-book.pdf' className='group'>
                                             <div className='hover:underline'>
                                                 <div css={whitepaperCard}>
                                                     <GatsbyImage
@@ -424,15 +425,7 @@ const Resources = ({ location }) => {
                     </h2>
                     <Row className='py-12'>
                         <div className='col-span-12 md:col-span-6 lg:col-span-3'>
-                            <div
-                                onClick={() => {
-                                    setLeastPrivilegeModal(!leastPrivilegeModal);
-                                }}
-                                onKeyPress={() => {}}
-                                tabIndex='0'
-                                role='button'
-                                className='hover:underline'
-                            >
+                            <PlayButton modal={leastPrivilegeModal} setModal={setLeastPrivilegeModal}>
                                 <GatsbyImage
                                     image={data.leastPrivilege.childImageSharp.gatsbyImageData}
                                     alt='Check for Least Privilege with Cyscale’s Identity Dashboard'
@@ -442,7 +435,7 @@ const Resources = ({ location }) => {
                                 <p className='font-hind font-medium text-lg mt-2'>
                                     Check for Least Privilege with Cyscale’s Identity Dashboard
                                 </p>
-                            </div>
+                            </PlayButton>
                             {leastPrivilegeModal && <div className='modal-overlay'></div>}
                             <CSSTransition in={leastPrivilegeModal} timeout={300} classNames='video' unmountOnExit>
                                 <VideoCyscale
@@ -452,15 +445,7 @@ const Resources = ({ location }) => {
                             </CSSTransition>
                         </div>
                         <div className='col-span-12 md:col-span-6 lg:col-span-3 mt-6 md:mt-0'>
-                            <div
-                                onClick={() => {
-                                    setCyscaleModal(!cyscaleModal);
-                                }}
-                                onKeyPress={() => {}}
-                                tabIndex='0'
-                                role='button'
-                                className='hover:underline'
-                            >
+                            <PlayButton modal={cyscaleModal} setModal={setCyscaleModal}>
                                 <GatsbyImage
                                     image={data.cyscaleThumbnail.childImageSharp.gatsbyImageData}
                                     alt='Cyscale: The Cloud Visibility & Control Platform'
@@ -470,7 +455,7 @@ const Resources = ({ location }) => {
                                 <p className='font-hind font-medium text-lg mt-2'>
                                     Cyscale: The Cloud Visibility & Control Platform
                                 </p>
-                            </div>
+                            </PlayButton>
                             {cyscaleModal && <div className='modal-overlay'></div>}
                             <CSSTransition in={cyscaleModal} timeout={300} classNames='video' unmountOnExit>
                                 <VideoCyscale
@@ -480,15 +465,7 @@ const Resources = ({ location }) => {
                             </CSSTransition>
                         </div>
                         <div className='col-span-12 md:col-span-6 lg:col-span-3 mt-6 lg:mt-0'>
-                            <div
-                                onClick={() => {
-                                    setTeasingModal(!teasingModal);
-                                }}
-                                onKeyPress={() => {}}
-                                tabIndex='0'
-                                role='button'
-                                className='hover:underline'
-                            >
+                            <PlayButton modal={teasingModal} setModal={setTeasingModal}>
                                 <GatsbyImage
                                     image={data.teasingVideo.childImageSharp.gatsbyImageData}
                                     alt='Cyscale Teasing Video'
@@ -496,7 +473,7 @@ const Resources = ({ location }) => {
                                     css={cardBorder}
                                 />
                                 <p className='font-hind font-medium text-lg mt-2'>Cyscale Teasing Video</p>
-                            </div>
+                            </PlayButton>
                             {teasingModal && <div className='modal-overlay'></div>}
                             <CSSTransition in={teasingModal} timeout={300} classNames='video' unmountOnExit>
                                 <VideoCyscale
@@ -506,15 +483,7 @@ const Resources = ({ location }) => {
                             </CSSTransition>
                         </div>
                         <div className='col-span-12 md:col-span-6 lg:col-span-3 mt-6 lg:mt-0'>
-                            <div
-                                onClick={() => {
-                                    setFundingModal(!fundingModal);
-                                }}
-                                onKeyPress={() => {}}
-                                tabIndex='0'
-                                role='button'
-                                className='hover:underline'
-                            >
+                            <PlayButton modal={fundingModal} setModal={setFundingModal}>
                                 <GatsbyImage
                                     image={data.fundingVideo.childImageSharp.gatsbyImageData}
                                     alt='Funding Round'
@@ -522,7 +491,8 @@ const Resources = ({ location }) => {
                                     css={cardBorder}
                                 />
                                 <p className='font-hind font-medium text-lg mt-2'>Funding Round</p>
-                            </div>
+                            </PlayButton>
+
                             {fundingModal && <div className='modal-overlay'></div>}
                             <CSSTransition in={fundingModal} timeout={300} classNames='video' unmountOnExit>
                                 <VideoCyscale
