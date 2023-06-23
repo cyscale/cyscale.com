@@ -198,7 +198,8 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation, sea
                                     'CloudComplianceWhitepaper',
                                     'CloudStorageMisconfigurations',
                                     'SmartFintech',
-                                    'BaysConsulting'
+                                    'BaysConsulting',
+                                    'Resources'
                                 ].includes(pageName) ||
                                 activeLinks.resources
                                     ? 'active'
