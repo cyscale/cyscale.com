@@ -30,7 +30,7 @@ export const cspmPages = [
         link: '/use-cases/cloud-data-security/'
     },
     {
-        text: 'GCP Security',
+        text: 'Google Cloud Security',
         link: '/use-cases/gcp-cloud-security/'
     },
     {

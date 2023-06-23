@@ -39,5 +39,5 @@ tags:
 -   [Microsoft Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/cyscale.power-cloud-saas-basic) listing of the Cyscale Cloud Platform.
 -   Signup & access the Cyscale account using Microsoft, Google, or GitHub social logins.
 -   Notifications to _Slack_, _Teams_, _Datadog,_ and _Email_. Whenever your security policies are violated, you're instantly notified. You can also manually send an alert later.
--   Simplified onboarding for AWS and GCP using CloudFormation and Terraform.
+-   Simplified onboarding for AWS and Google Cloud using CloudFormation and Terraform.
 -   Use API Keys to speed up integrations with CI/CD and other developer tools.

@@ -95,7 +95,7 @@ Reduce the attack surface of your containerized applications: 
 
 ## Container images – where are they present? 
 
-Container images can be used in various cloud-based services across public cloud platforms like AWS, GCP, and Microsoft Azure.  
+Container images can be used in various cloud-based services across public cloud platforms like AWS, Google Cloud, and Microsoft Azure.  
 
 These services leverage container images to enable the seamless deployment, scaling, and management of containerized applications. 
 

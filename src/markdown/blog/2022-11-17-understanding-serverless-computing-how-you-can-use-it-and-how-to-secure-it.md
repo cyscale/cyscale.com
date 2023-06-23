@@ -81,9 +81,9 @@ Some of the Azure compute services are: 
 
 Azure also provides low-code or no-code application development with Power Apps. This feature allows developers to construct applications using drag-and-drop functionalities, connectors, and readily-available solutions for common use cases. 
 
-### 3. Cloud Run and Cloud Functions by GCP 
+### 3. Cloud Run and Cloud Functions by Google Cloud 
 
-These two solutions offered by GCP provide serverless compute services.  
+These two solutions offered by Google Cloud provide serverless compute services.  
 
 **Cloud Run** is an application development tool that separates infrastructure management from the code by placing applications in containers. Using Cloud Run, microservices can be deployed without specific configurations. It is highly scalable, and it can scale to zero – this means that if a service has no requests, all containers are removed, reducing costs. It supports the following programming languages: Go, Python, Java, Node.js, Ruby, .NET, as well as others. 
 
@@ -130,7 +130,7 @@ Moreover, safely store secrets and keys in Hardware Security Modules (HSM) or in
 
 * Azure Key Vault,  
 * AWS Key Management Service (AWS KMS),  
-* Cloud Key Management Service in GCP. 
+* Cloud Key Management Service in Google Cloud. 
 
 Do not store keys, connection strings, or passwords in the source code or in plain text. 
 

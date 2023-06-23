@@ -162,7 +162,7 @@ You can identify misconfigurations in the cloud and remediate them effectively u
 The Cyscale Cloud Platform offers a [CSPM (Cloud Security Posture Management)](https://cyscale.com/blog/what-to-look-for-in-a-cspm/) security tool that: 
 
 * checks for a wide variety of vulnerabilities using security controls, 
-* provides integration with the most important public cloud service providers like AWS (Amazon Web Services), GCP (Google Cloud), Azure, Alibaba, and supports multi-cloud environments,
+* provides integration with the most important public cloud service providers like AWS (Amazon Web Services), Google Cloud, Azure, Alibaba, and supports multi-cloud environments,
 * sends relevant alerts,  
 * provides remediation steps to help your security teams protect your cloud environment effectively and overcome security challenges, and others. 
 

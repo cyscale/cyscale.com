@@ -51,7 +51,7 @@ The three commonly used types of data classification are: 
 
 </br>
 
-In this article, we will understand how valuable data classification is for a company using cloud services, as well as how [AWS](https://cyscale.com/use-cases/aws-cloud-security/), [Azure](https://cyscale.com/use-cases/azure-cloud-security/), and [GCP](https://cyscale.com/use-cases/gcp-cloud-security/) handle the process of labeling/tagging assets. 
+In this article, we will understand how valuable data classification is for a company using cloud services, as well as how [AWS](https://cyscale.com/use-cases/aws-cloud-security/), [Azure](https://cyscale.com/use-cases/azure-cloud-security/), and [Google Cloud](https://cyscale.com/use-cases/gcp-cloud-security/) handle the process of labeling/tagging assets. 
 
 ## Benefits of data classification 
 
@@ -95,7 +95,7 @@ Therefore, data classification should be used in the cloud. Let’s look at what
 
 ## Data classification – an industry overview 
 
-We will look at the top 3 cloud vendors – AWS, Microsoft Azure, and GCP – to see how data classification is implemented and the different types of tags that can be applied depending on the cloud service selected. 
+We will look at the top 3 cloud vendors – AWS, Microsoft Azure, and Google Cloud – to see how data classification is implemented and the different types of tags that can be applied depending on the cloud service selected. 
 
 #### 1. Amazon Web Services 
 
@@ -119,13 +119,13 @@ When you create a resource in AWS, you can add tags (key-value pairs) to the res
 
 #### 2. Google Cloud Platform
 
-For data classification in GCP, we can find both labels and tags, which are two different things.  
+For data classification in Google Cloud, we can find both labels and tags, which are two different things.  
 
 A label is described as a key-value pair that you can create using the Resource Manager API and the Google Cloud console. These can be used to separate resources in terms of billing, to add information about resource state, and so on. 
 
-Tags, however, are the tools that allow GCP customers to classify data and establish rules based on their classification. 
+Tags, however, are the tools that allow Google Cloud customers to classify data and establish rules based on their classification. 
 
-The difference between labels and tags in Google Cloud is that labels are simply metadata added to resources, while tags categorize assets and can be used when defining policies and rules (for example, who is allowed to access a certain asset) in your GCP environment. 
+The difference between labels and tags in Google Cloud is that labels are simply metadata added to resources, while tags categorize assets and can be used when defining policies and rules (for example, who is allowed to access a certain asset) in your Google Cloud environment. 
 
 #### 3. Microsoft Azure 
 

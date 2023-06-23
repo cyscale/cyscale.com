@@ -58,7 +58,7 @@ If we expand a card of an identity that no longer exists in the company, we see 
 
 To understand an identity's impact on the entire organization's environment, you must have comprehensive visibility.  
 
-The following image shows that the analyzed user has accounts in Alibaba, AWS, Azure, GCP, and Okta. Furthermore, we can see that they are part of the "**Admins**" group, as well as others, and as a result, are "**Highly Privileged**”. 
+The following image shows that the analyzed user has accounts in Alibaba, AWS, Azure, Google Cloud, and Okta. Furthermore, we can see that they are part of the "**Admins**" group, as well as others, and as a result, are "**Highly Privileged**”. 
 
 ![Highly privileged identity](/img/blog_18-3-andrei-stefanie.png#shadow "Highly privileged identity")
 

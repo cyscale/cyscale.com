@@ -108,8 +108,8 @@ Here are some examples of controls that check for any misconfigurations and vuln
 
 * *Ensure encrypted storage is used for VMs that might host a database* for AWS 
 * *Ensure no SQL Databases allow ingress 0.0.0.0/0 (ANY IP)* for Microsoft Azure 
-* *Ensure that Cloud SQL database instances are configured with automated backups* for GCP 
-* *Ensure that Cloud SQL database instances require all incoming connections to use SSL* for GCP 
+* *Ensure that Cloud SQL database instances are configured with automated backups* for Google Cloud 
+* *Ensure that Cloud SQL database instances require all incoming connections to use SSL* for Google Cloud 
 * *Ensure parameter 'log_connections' is set to 'ON' for PostgreSQL Database* for Alibaba Cloud 
 
 Along with these controls that alert you on any findings, you receive remediation steps to quickly eliminate any vulnerabilities and secure your database in the cloud. 

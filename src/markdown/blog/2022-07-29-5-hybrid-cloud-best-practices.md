@@ -42,7 +42,7 @@ A Hybrid Cloud infrastructure contains at least two different environments, whic
 Let’s look at an example where all three components are interconnected and are used to achieve a company’s business goals: 
 
 * the on-premises computers act as web servers,  
-* the public cloud vendor, such as [AWS](https://cyscale.com/use-cases/aws-cloud-security/), [GCP](https://cyscale.com/use-cases/gcp-cloud-security/), or [Azure](https://cyscale.com/use-cases/azure-cloud-security/), hosts a different application integrated with the company’s website, 
+* the public cloud vendor, such as [AWS](https://cyscale.com/use-cases/aws-cloud-security/), [Google Cloud](https://cyscale.com/use-cases/gcp-cloud-security/), or [Azure](https://cyscale.com/use-cases/azure-cloud-security/), hosts a different application integrated with the company’s website, 
 * the private cloud contains the users’ database. 
 
 According to [Statista](https://www.statista.com/topics/7914/hybrid-cloud/), around 80% of enterprises follow a hybrid cloud strategy in 2022. 
@@ -129,7 +129,7 @@ Public cloud vendors provide backup services for your cloud assets. Some solutio
 
 * Azure Backup, 
 * AWS Backup, 
-* Actifio Go, for GCP. 
+* Actifio Go, for Google Cloud. 
 
 To back up your on-premises devices, establish a disaster recovery strategy and store backups separately from on-premises equipment. 
 

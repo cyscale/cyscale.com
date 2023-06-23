@@ -159,7 +159,7 @@ To read more about these compliance standards, as well as NIST, check out our [w
 
 Our [cloud compliance platform](https://cyscale.com/use-cases/cloud-compliance-and-auditing/)  can help you secure your cloud environment and become compliant with respected accreditations through: 
 
-* Over 400 controls, across multiple public cloud service providers, such as Microsoft Azure, AWS (Amazon Web Services), and GCP (Google Cloud), that help you stay on top of your security program, 
+* Over 400 controls, across multiple public cloud service providers, such as Microsoft Azure, AWS (Amazon Web Services), and Google Cloud, that help you stay on top of your security program, 
 * Both pre-configured and editable security policies that can be associated to controls, 
 * Powerful identity and security dashboards for enhanced visibility over your cloud infrastructure, and others. 
 

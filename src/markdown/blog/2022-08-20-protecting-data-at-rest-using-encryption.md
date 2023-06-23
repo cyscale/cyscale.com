@@ -94,7 +94,7 @@ For this reason, you need to use tools that utilize Cryptographically Secure Ran
 To generate a random, secure key, you can use: 
 
 * [GenerateRandom](https://docs.aws.amazon.com/kms/latest/APIReference/API_GenerateRandom.html), a tool provided by AWS, 
-* the [GenerateRandomBytes](https://cloud.google.com/kms/docs/generate-random) API from GCP, 
+* the [GenerateRandomBytes](https://cloud.google.com/kms/docs/generate-random) API from Google Cloud, 
 * [SecureRandom](https://docs.oracle.com/javase/8/docs/api/java/security/SecureRandom.html), a class from Java, and others. 
 
 ### 2. Store your keys separately from your ciphertext. 
@@ -129,7 +129,7 @@ Solutions from cloud vendors for safe key deletion are: 
 
 ## Server-side encryption - cloud solutions 
 
-AWS, Azure, and GCP provide data at rest encryption and key management solutions. Let's look at the available options and how to make sure you're using them correctly. 
+AWS, Azure, and Google Cloud provide data at rest encryption and key management solutions. Let's look at the available options and how to make sure you're using them correctly. 
 
 ### Encryption in AWS 
 
@@ -155,9 +155,9 @@ For key management, Azure provides the following services: 
 * Azure Key Vault, 
 * Vault Managed Hardware Security Model (HSM). 
 
-### Encryption in GCP 
+### Encryption in Google Cloud 
 
-For key management, GCP provides the Google Key Management Service. As an additional layer of security, the encryption key, named DEK (Data Encryption Key), is also encrypted using a KEK (Key-encryption key).  
+For key management, Google Cloud provides the Google Key Management Service. As an additional layer of security, the encryption key, named DEK (Data Encryption Key), is also encrypted using a KEK (Key-encryption key).  
 
 ## How do you check for encryption misconfigurations? 
 

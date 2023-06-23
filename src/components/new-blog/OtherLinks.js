@@ -46,8 +46,8 @@ const OtherLinks = ({ dataBlueBird }) => {
                             to='/blog/iam-services-in-aws-azure-gcp/'
                             className='text-base font-medium font-montserrat inline-block mt-4'
                         >
-                            IAM Services in AWS, Azure, and GCP - A<br className='hidden lg:block' /> Cloud Industry
-                            Overview
+                            IAM Services in AWS, Azure, and
+                            <br className='block' /> Google Cloud - A Cloud Industry Overview
                         </Link>{' '}
                         <Link
                             to='/blog/implementing-iso-27001-for-cloud-native-systems/'
@@ -60,8 +60,8 @@ const OtherLinks = ({ dataBlueBird }) => {
                             to='/blog/iam-best-practices-from-aws-azure-gcp/'
                             className='text-base font-medium font-montserrat inline-block mt-4'
                         >
-                            Securing IAM - Best Practices
-                            <br className='hidden lg:block' /> Recommended by AWS, Azure, and GCP
+                            Securing IAM - Best Practices Recommended <br className='hidden xl:block' /> by AWS, Azure,
+                            and Google Cloud
                         </Link>{' '}
                         <Link
                             to='/blog/cloud-native-security-guide/'

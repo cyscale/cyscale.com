@@ -11,7 +11,7 @@ description: "A queue is a data structure that allows you to store and retrieve
   data in efficiently. A message queue, in the context of the cloud, is a
   service used to temporarily store data before it is processed. Solutions
   offered by cloud vendors are: Amazon SQS, Azure Queue Storage and Cloud Tasks
-  in GCP. Best Practices for queues security are: encrypt the data that arrives,
+  in Google Cloud. Best Practices for queues security are: encrypt the data that arrives,
   log every action, restrict access to queue management and ensure access
   control, configure a dead-letter queue, use private endpoints for your queues
   and configure a long retention period."
@@ -19,7 +19,7 @@ seoDescription: "A queue is a data structure that allows you to store and
   retrieve data in efficiently. A message queue, in the context of the cloud, is
   a service used to temporarily store data before it is processed. Solutions
   offered by cloud vendors are: Amazon SQS, Azure Queue Storage and Cloud Tasks
-  in GCP. Best Practices for queues security are: encrypt the data that arrives,
+  in Google Cloud. Best Practices for queues security are: encrypt the data that arrives,
   log every action, restrict access to queue management and ensure access
   control, configure a dead-letter queue, use private endpoints for your queues
   and configure a long retention period."
@@ -57,9 +57,9 @@ This solution helps you manage distributed systems and asynchronous tasks by sto
 
 Azure Queue Storage helps you store large volumes of messages that can be accessed using authenticated HTTP or HTTPS requests. This type of storage offered by Microsoft Azure is useful in managing asynchronous tasks and ensuring no data loss occurs. 
 
-### 3. Cloud Tasks in GCP 
+### 3. Cloud Tasks in Google Cloud 
 
-Cloud Tasks is a slightly different service than we've discussed so far; GCP allows users to store asynchronous tasks in queues and easily manage them.  
+Cloud Tasks is a slightly different service than we've discussed so far; Google Cloud allows users to store asynchronous tasks in queues and easily manage them.  
 
 This type of queue can be used as a task scheduling system since you can set a time when a task should be executed. 
 

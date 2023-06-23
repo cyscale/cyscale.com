@@ -1,18 +1,18 @@
 ---
 templateKey: blog-post
-title: Securing IAM - Best Practices Recommended by AWS, Azure, and GCP
-seoTitle: Securing IAM - Best Practices Recommended by AWS, Azure, and GCP
+title: Securing IAM - Best Practices Recommended by AWS, Azure, and Google Cloud
+seoTitle: Securing IAM - Best Practices Recommended by AWS, Azure, and Google Cloud
 authors: Sabrina Lupșan
 permalink: iam-best-practices-from-aws-azure-gcp
 categories:
   - CSPM
 date: 2022-05-11T06:39:36.105Z
-description: We look at best practices recommended by AWS, Azure and GCP
+description: We look at best practices recommended by AWS, Azure and Google Cloud
   regarding securing IAM, like enabling MFA, rotating credentials and keys
   regularly, complying to the least privilege principle, implementing logging
   and monitoring, assigning permissions at group level. Examples of controls
   from the Cyscale application are shown.
-seoDescription: We look at best practices recommended by AWS, Azure and GCP
+seoDescription: We look at best practices recommended by AWS, Azure and Google Cloud
   regarding securing IAM, like enabling MFA, rotating credentials and keys
   regularly, complying to the least privilege principle, implementing logging
   and monitoring, assigning permissions at group level. Examples of controls
@@ -27,7 +27,7 @@ tags:
 ---
 <!--StartFragment-->
 
-After we've described the [IAM implementations for AWS, GCP, and Azure](https://cyscale.com/blog/iam-services-in-aws-azure-gcp/), let's look at some of the security best practices they recommend and how to check if your cloud environment is implementing them. 
+After we've described the [IAM implementations for AWS, Google Cloud, and Azure](https://cyscale.com/blog/iam-services-in-aws-azure-gcp/), let's look at some of the security best practices they recommend and how to check if your cloud environment is implementing them. 
 
 With Cyscale, you can efficiently scan your cloud infrastructure and verify whether it follows the IAM best practices that we're going to describe in this article. 
 
@@ -70,7 +70,7 @@ We suggest that you rotate your keys and credentials at least every 90 days. 
 Some examples of validation controls offered by Cyscale that check if credentials or keys are rotated regularly are: 
 
 * *Ensure access keys are rotated every 90 days or less* for AWS (Amazon Web Services) 
-* *Ensure API keys are rotated every 90 days* for GCP
+* *Ensure API keys are rotated every 90 days* for Google Cloud
 * *Ensure IAM password policy expires passwords within 90 days or less* for AWS 
 
 Moreover, a strong password policy should be implemented to prevent individuals from using weak passwords. 
@@ -85,7 +85,7 @@ AWS recommends that you start setting up your policies with a minimum of possibl
 
 Make sure you're not missing anything when implementing the concept of least privilege by using controls offered by Cyscale that detect misconfigurations, like the ones below: 
 
-* *Ensure that ServiceAccount has no Admin privileges* for GCP
+* *Ensure that ServiceAccount has no Admin privileges* for Google Cloud
 * *Eliminate use of the "root" user for administrative and daily tasks* for AWS 
 
 ### Assign permissions at group level  
@@ -101,7 +101,7 @@ Here are some controls from Cyscale that check if you're implementing this IAM s
 
 ### Implement logging and monitoring 
 
-AWS, GCP, and Azure recommend that you implement logging and monitoring for your cloud environment. All three vendors provide these features.  
+AWS, Google Cloud, and Azure recommend that you implement logging and monitoring for your cloud environment. All three vendors provide these features.  
 
 For AWS IAM, you can use one of the following IAM services: 
 
@@ -111,7 +111,7 @@ For AWS IAM, you can use one of the following IAM services: 
 * AWS Config 
 * Amazon S3 
 
-GCP supplies Cloud Audit Logs, a service that audits your IAM policy, access to cloud service account keys, and other components of GCP. 
+Google Cloud supplies Cloud Audit Logs, a service that audits your IAM policy, access to cloud service account keys, and other components of Google Cloud. 
 
 For Azure, you can use Azure AD activity logs which can be supplemented by Azure Monitor logs to alert you on significant events. 
 
@@ -119,7 +119,7 @@ Examples of controls across all three cloud providers can be seen below: 
 
 * *Ensure CloudTrail trails are integrated with CloudWatch Logs* for AWS 
 * *Ensure that Diagnostic Logs are enabled for all services which support it* for Microsoft Azure 
-* *Ensure that Cloud Audit Logging is configured properly across all services and all users from a project* for GCP
+* *Ensure that Cloud Audit Logging is configured properly across all services and all users from a project* for Google Cloud
 
 Identity and Access Management is a crucial component of the cloud and should be adequately secured to prevent data breaches and other cybersecurity incidents. Reduce the attack surface by eliminating any vulnerabilities in the authentication process and keeping hackers away.
 

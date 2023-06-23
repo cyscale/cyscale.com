@@ -44,7 +44,7 @@ export default function SecurityControlsandPolicies() {
                     </p>
                     <p className='text-lg leading-normal text-black mt-7'>
                         The controls help you achieve cloud security compliance over multiple cloud service providers
-                        such as AWS (Amazon Web Services), Microsoft Azure and GCP (Google Cloud).
+                        such as AWS (Amazon Web Services), Microsoft Azure and Google Cloud.
                     </p>
                 </div>
             </div>

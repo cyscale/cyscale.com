@@ -167,7 +167,7 @@ Another secure solution is storing keys in the cloud, using services such as: 
 
 * Azure Key Vault, 
 * AWS Key Management Service (AWS KMS),  
-* Cloud Key Management Service in GCP. 
+* Cloud Key Management Service in Google Cloud. 
 
 **What is at rest data vulnerable to?** 
 
@@ -184,7 +184,7 @@ Here are just a few examples of controls that ensure data security through encry
 
 * *Ensure all S3 buckets employ encryption-at-rest* for AWS 
 * *Ensure web app is using the latest version of TLS encryption* for Azure 
-* *Ensure VM disks for critical VMs are encrypted with Customer-Supplied Encryption Keys (CSEK)* for GCP 
+* *Ensure VM disks for critical VMs are encrypted with Customer-Supplied Encryption Keys (CSEK)* for Google Cloud 
 * *Ensure server-side encryption is set to 'Encrypt with Service Key'* for Alibaba 
 
 <!--EndFragment-->

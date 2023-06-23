@@ -78,7 +78,7 @@ Below, you can see the list of the 11 new controls added to Annex A of the ISO 2
 10. Web filtering (A.8.23) 
 11. Secure coding (A.8.28) 
 
-A notable control is 5.23, “Information security for the use of cloud services”, since now, cloud security has a dedicated control. This preventative control is designed to keep risk at a minimum and regulate the management and usage of cloud services such as AWS, Azure, and GCP. This control covers confidentiality, integrity, and availability. 
+A notable control is 5.23, “Information security for the use of cloud services”, since now, cloud security has a dedicated control. This preventative control is designed to keep risk at a minimum and regulate the management and usage of cloud services such as AWS, Azure, and Google Cloud. This control covers confidentiality, integrity, and availability. 
 
 ### 4. Controls have attributes 
 

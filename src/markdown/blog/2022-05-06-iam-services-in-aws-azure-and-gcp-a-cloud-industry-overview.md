@@ -1,17 +1,17 @@
 ---
 templateKey: blog-post
-title: IAM Services in AWS, Azure, and GCP - A Cloud Industry Overview
-seoTitle: IAM Services in AWS, Azure, and GCP - a Cloud Industry Overview
+title: IAM Services in AWS, Azure, and Google Cloud - A Cloud Industry Overview
+seoTitle: IAM Services in AWS, Azure, and Google Cloud - a Cloud Industry Overview
 authors: Sabrina Lupșan
 permalink: iam-services-in-aws-azure-gcp
 categories:
   - CSPM
 date: 2022-05-06T05:44:34.049Z
 description: An industry overview of the IAM Services. We look at AWS, Azure and
-  GCP and understand what identity and management is. The components of IAM are
+  Google Cloud and understand what identity and management is. The components of IAM are
   described for all three vendors.
 seoDescription: An industry overview of the IAM Services. We look at AWS, Azure
-  and GCP and understand what identity and management is. The components of IAM
+  and Google Cloud and understand what identity and management is. The components of IAM
   are described for all three vendors. Authentication methods are described,
   such as Single Sign-On (SSO) and Multi-Factor Authentication (MFA).
 featuredpost: true
@@ -98,7 +98,7 @@ You can see below the different types of AWS policies, ordered from the most fre
 
 ### Google Cloud Platform
 
-In GCP, permissions to access resources are organized into roles. To understand how IAM works in Google, we must look at the 3 IAM asset types: 
+In Google Cloud, permissions to access resources are organized into roles. To understand how IAM works in Google, we must look at the 3 IAM asset types: 
 
 * **Roles**, which represent a collection of permissions 
 * **Principals**, who are assigned to roles and can be: 
@@ -113,11 +113,11 @@ In GCP, permissions to access resources are organized into roles. To understand 
 * **Policies**, which define associations of principals and roles  
 * **Resources**, which are physical assets, such as computers and hard disk drives, and virtual assets, for example virtual machines. 
 
-In GCP, permissions cannot be applied to principals directly. Instead, principals must be assigned to roles and thus receive all the permissions allowed for that role. 
+In Google Cloud, permissions cannot be applied to principals directly. Instead, principals must be assigned to roles and thus receive all the permissions allowed for that role. 
 
 Below, you can see a diagram of the IAM components found in Google Cloud. 
 
-![GCP IAM Components](/img/gcp-iam.png#shadow "GCP IAM Components")
+![Google Cloud IAM Components](/img/gcp-iam.png#shadow "Google Cloud IAM Components")
 
 Image source – [Google Cloud Platform](https://cloud.google.com/iam/docs/overview) 
 
@@ -176,7 +176,7 @@ Access to resources is granted by assigning: 
 
 to a specific role and a specific scope. 
 
-Cyscale integrates with AWS, Azure, GCP and other vendors to check for vulnerabilities and [improve its customers‘ cloud security posture](https://cyscale.com/blog/improve-cloud-security-posture/). 
+Cyscale integrates with AWS, Azure, Google Cloud and other vendors to check for vulnerabilities and [improve its customers‘ cloud security posture](https://cyscale.com/blog/improve-cloud-security-posture/). 
 
 [In the following article](https://cyscale.com/blog/iam-best-practices-from-aws-azure-gcp/), we will look at best practices described by these vendors and how to check if your cloud infrastructure is implementing them correctly. 
 
