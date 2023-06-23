@@ -173,6 +173,11 @@ const HomePage = ({ location }) => {
                     gatsbyImageData(width: 180, layout: CONSTRAINED)
                 }
             }
+            cloudNativeIcon: file(relativePath: { eq: "cloud-native-icon.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 100, layout: FIXED)
+                }
+            }
             cloudIcon: file(relativePath: { eq: "cloud-security-icon.png" }) {
                 childImageSharp {
                     gatsbyImageData(width: 100, layout: FIXED)
@@ -183,22 +188,22 @@ const HomePage = ({ location }) => {
                     gatsbyImageData(width: 100, layout: FIXED)
                 }
             }
-            isoIcon: file(relativePath: { eq: "iso-27001-home-icon.png" }) {
+            cnappIcon: file(relativePath: { eq: "cnapp-home-icon.png" }) {
                 childImageSharp {
                     gatsbyImageData(width: 100, layout: FIXED)
                 }
             }
-            complianceIcon: file(relativePath: { eq: "compliance-home-icon.png" }) {
+            iamIcon: file(relativePath: { eq: "iam-home-icon.png" }) {
                 childImageSharp {
                     gatsbyImageData(width: 100, layout: FIXED)
                 }
             }
-            hybridCloudIcon: file(relativePath: { eq: "hybrid-cloud-home-icon.png" }) {
+            bucketIcon: file(relativePath: { eq: "bucket-home-icon.png" }) {
                 childImageSharp {
                     gatsbyImageData(width: 100, layout: FIXED)
                 }
             }
-            safeBoxIcon: file(relativePath: { eq: "safe-box-home-icon.png" }) {
+            nativeInfrastructureIcon: file(relativePath: { eq: "native-infrastucture-icon.png" }) {
                 childImageSharp {
                     gatsbyImageData(width: 100, layout: FIXED)
                 }
@@ -942,6 +947,18 @@ const HomePage = ({ location }) => {
                     </div>
                     <div className='grid grid-cols-12 gap-x-5 mt-12'>
                         <BlogLink
+                            link={'/blog/cloud-native-security-guide/'}
+                            categories={['cspm']}
+                            text={[
+                                'Cloud-Native Security: A',
+                                <br />,
+                                'Comprehensive Guide to',
+                                <br />,
+                                'Your Technology Stack'
+                            ]}
+                            image={data.cloudNativeIcon.childImageSharp.gatsbyImageData}
+                        />
+                        <BlogLink
                             link={'/blog/cloud-security-and-compliance'}
                             categories={['cspm', 'compliance']}
                             text={[
@@ -952,40 +969,46 @@ const HomePage = ({ location }) => {
                                 'Your Cloud Infrastructure'
                             ]}
                             image={data.cloudIcon.childImageSharp.gatsbyImageData}
-                        />
-                        <BlogLink
-                            link={'/blog/data-security-dashboard'}
-                            categories={['news', 'product']}
-                            text={['Introducing the New', <br />, 'Data Security Dashboard!']}
-                            image={data.dataSecurityIcon.childImageSharp.gatsbyImageData}
                             classNames={'mt-10 md:mt-0'}
                         />
                         <BlogLink
-                            link={'/blog/new-iso27001-2022-version'}
-                            categories={['news', 'compliance', 'cspm']}
-                            text={['The New ISO 27001', <br />, '2022 Version, Explained', <br />, 'for the Cloud']}
-                            image={data.isoIcon.childImageSharp.gatsbyImageData}
+                            link={'/blog/cnapp-secure-native-applications/'}
+                            categories={['cnapp']}
+                            text={['CNAPP: The Key', <br />, 'to Cloud-Native', <br />, 'Applications Security']}
+                            image={data.cnappIcon.childImageSharp.gatsbyImageData}
                             classNames={'mt-10 lg:mt-0'}
                         />
                         <BlogLink
-                            link={'/whitepaper/the-complete-guide-to-cloud-compliance/'}
-                            categories={['compliance']}
-                            text={['Cloud Compliance in 2023:', <br />, 'An In-Depth Guide']}
-                            image={data.complianceIcon.childImageSharp.gatsbyImageData}
+                            link={'/blog/iam-best-practices-from-aws-azure-gcp/'}
+                            categories={['cspm']}
+                            text={[
+                                'Securing IAM - Best',
+                                <br />,
+                                'Practices Recommended by',
+                                <br />,
+                                'AWS, Azure, and GCP'
+                            ]}
+                            image={data.iamIcon.childImageSharp.gatsbyImageData}
                             classNames={'mt-10'}
                         />
                         <BlogLink
-                            link={'/blog/hybrid-cloud-best-practices'}
+                            link={'/blog/s3-bucket-security/'}
                             categories={['cspm']}
-                            text={['5 Hybrid Cloud Best', <br />, 'Practices']}
-                            image={data.hybridCloudIcon.childImageSharp.gatsbyImageData}
+                            text={['Understanding S3', <br />, ' Bucket Security', <br />, 'A Contextual Approach']}
+                            image={data.bucketIcon.childImageSharp.gatsbyImageData}
                             classNames={'mt-10 hidden lg:block'}
                         />
                         <BlogLink
                             link={'/blog/cloud-data-security-guide'}
                             categories={['cspm']}
-                            text={['A Guide to Cloud Data', <br />, 'Security']}
-                            image={data.safeBoxIcon.childImageSharp.gatsbyImageData}
+                            text={[
+                                'Cloud-Native Infrastructure:',
+                                <br />,
+                                'How to Build a',
+                                <br />,
+                                'Comprehensive Security Plan'
+                            ]}
+                            image={data.nativeInfrastructureIcon.childImageSharp.gatsbyImageData}
                             classNames={'mt-10 hidden lg:block'}
                         />
                     </div>
