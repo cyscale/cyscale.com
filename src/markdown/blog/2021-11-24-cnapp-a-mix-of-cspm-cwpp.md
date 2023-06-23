@@ -24,7 +24,7 @@ seoDescription: Unveil CNAPP, a blend of CSPM & CWPP for advanced cloud
   the latest trend in cloud protection.
 featuredpost: true
 featuredimage: /img/cspm-cwpp.png
-tableOfContents: true
+tableOfContents: false
 ---
 <!--StartFragment-->
 
