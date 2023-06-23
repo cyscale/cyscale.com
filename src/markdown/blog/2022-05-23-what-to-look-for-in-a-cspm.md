@@ -18,7 +18,7 @@ seoDescription: A CSPM (Cloud Security Posture Management) tool is a product
   that scans your cloud environment for vulnerabilities and alerts you if it
   finds any misconfigurations in the cloud infrastructure. It should check for a
   wide variety of vulnerabilities, it should integrate with big cloud vendors
-  like GCP, Azure, AWS, Alibaba Cloud, it should support compliance frameworks
+  like Google Cloud, Azure, AWS, Alibaba Cloud, it should support compliance frameworks
   like ISO 27001, GDPR and SOC 2, it should provide vulnerability and risk
   scoring and should send out targeted alerts, as well as provide remediation
   for findings.
@@ -131,7 +131,7 @@ Make the right decision for your company by using a robust [CSPM](https://cyscal
 Cyscale ensures the following features: 
 
 * checks for a wide variety of vulnerabilities, 
-* integration with AWS, GCP, Azure, Alibaba, Okta, 
+* integration with AWS, Google Cloud, Azure, Alibaba, Okta, 
 * support for compliance frameworks and standards, 
 * prioritization of assets remediation and alerts, 
 * targeted and custom alerts, 

@@ -223,6 +223,6 @@ Besides the features that come with the Standard plan, which are at network and 
 
 After understanding the security demands required for the cloud, implementing them seems like a daunting task. However, using Cyscale, you can easily check if you’re lacking any of the mentioned implementations and remediate any findings. 
 
-Cyscale has over 400 controls that cover a large variety of misconfigurations and vulnerabilities and offer support not only for AWS, but for Azure, GCP Cloud, Alibaba Cloud as well. 
+Cyscale has over 400 controls that cover a large variety of misconfigurations and vulnerabilities and offer support not only for AWS, but for Azure, Google Cloud, Alibaba Cloud as well. 
 
 <!--EndFragment-->

@@ -34,7 +34,7 @@ Currently, the Playground is populated with data from three cloud vendors: 
 
 * [AWS (Amazon Cloud)](https://cyscale.com/use-cases/aws-cloud-security/), 
 * [Microsoft Azure,](https://cyscale.com/use-cases/azure-cloud-security/) and 
-* [GCP (Google Cloud Platform).](https://cyscale.com/use-cases/gcp-cloud-security/) 
+* [Google Cloud.](https://cyscale.com/use-cases/gcp-cloud-security/) 
 
 We also have integration with [Okta](https://cyscale.com/blog/provide-visibility-in-cloud-okta-integration/), an identity provider. 
 

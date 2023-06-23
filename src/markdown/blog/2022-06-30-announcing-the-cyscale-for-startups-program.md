@@ -37,7 +37,7 @@ Today, we believe our [stellar team](https://cyscale.com/about-us/) has delivere
 **Advantages** 
 
 * Access to the entire Cyscale Cloud Platform with Powerful Analytics & Dashboards (up to 1000 protected assets), 
-* Integrations with [AWS](https://cyscale.com/use-cases/aws-cloud-security/), [GCP](https://cyscale.com/use-cases/gcp-cloud-security/), [Azure](https://cyscale.com/use-cases/azure-cloud-security/), and Alibaba cloud, 
+* Integrations with [AWS](https://cyscale.com/use-cases/aws-cloud-security/), [Google Cloud](https://cyscale.com/use-cases/gcp-cloud-security/), [Azure](https://cyscale.com/use-cases/azure-cloud-security/), and Alibaba cloud, 
 * Asset inventory, 
 * [Misconfiguration detection](https://cyscale.com/use-cases/cloud-misconfigurations/), 
 * Alerts and remediation instructions in case of security drifts, 

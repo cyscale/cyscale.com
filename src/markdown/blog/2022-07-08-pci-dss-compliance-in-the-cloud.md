@@ -57,7 +57,7 @@ PCI-DSS is comprised of twelve main requirements. In the following section, we w
 
 Traffic to and from sensitive environments should be heavily filtered and restricted. Some examples of controls in Cyscale that ensure proper implementation are:  
 
-* *Ensure 'Enable connecting to serial ports' is not enabled for VM Instance* for GCP 
+* *Ensure 'Enable connecting to serial ports' is not enabled for VM Instance* for Google Cloud 
 * *Ensure no SQL Databases allow ingress 0.0.0.0/0 (ANY IP)* for Microsoft Azure 
 
 #### 2. Do not use vendor-supplied defaults for system passwords and other security parameters. 
@@ -69,7 +69,7 @@ Another aspect to look out for is allowing default access configuration on cloud
 Examples of controls that check if you’ve done this for the applications in your infrastructure are: 
 
 * *Do not setup access keys during initial user setup for all IAM users that have a console password* for AWS 
-* *Ensure that Cloud Storage buckets are not anonymously or publicly accessible* for GCP 
+* *Ensure that Cloud Storage buckets are not anonymously or publicly accessible* for Google Cloud 
 
 #### 3. Protect stored cardholder data. 
 
@@ -102,15 +102,15 @@ The following devices and systems should be continuously secured and patched whe
 
 Examples of controls in Cyscale that ensure this recommendation is attained are: 
 
-* *Ensure Kubernetes web UI / Dashboard is disabled* for GCP 
-* *Ensure that App Engine applications enforce HTTPS connections* for GCP 
+* *Ensure Kubernetes web UI / Dashboard is disabled* for Google Cloud 
+* *Ensure that App Engine applications enforce HTTPS connections* for Google Cloud 
 
 #### 7. Restrict access to cardholder data by business need to know. 
 
 Make sure only authorized personnel has access to customer’s card information and implement the Least Privilege Principle with the following controls: 
 
 * *Ensure IAM policies that allow full "\*:\*" administrative privileges are not created* for AWS 
-* *Ensure that instances are not configured to use the default service account with full access to all Cloud APIs* for GCP 
+* *Ensure that instances are not configured to use the default service account with full access to all Cloud APIs* for Google Cloud 
 
 #### 8. Identify and authenticate access to system components. 
 
@@ -118,14 +118,14 @@ Implement a robust authentication system that does not allow weak password usage
 
 Just two of the many controls Cyscale uses to ensure this requirement is implemented are: 
 
-* *Ensure API keys are rotated every 90 days* for GCP 
+* *Ensure API keys are rotated every 90 days* for Google Cloud 
 * *Ensure IAM password policy requires at least one symbol* for AWS 
 
 #### 9. Restrict physical access to cardholder data. 
 
 Access to databases, computers, servers and other devices should be heavily restricted. Cloud providers are in charge of physical access to these systems. 
 
-Make sure your cloud provider is PCI-DSS compliant and follows this requirement. AWS, Microsoft Azure and GCP are all PCI-DSS compliant and ensure that the physical medium is protected.   
+Make sure your cloud provider is PCI-DSS compliant and follows this requirement. AWS, Microsoft Azure and Google Cloud are all PCI-DSS compliant and ensure that the physical medium is protected.   
 
 #### 10. Track and monitor all access to network resources and cardholder data. 
 

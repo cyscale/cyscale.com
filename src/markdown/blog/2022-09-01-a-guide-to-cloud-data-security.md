@@ -10,11 +10,11 @@ date: 2022-09-01T10:59:21.743Z
 description: When it comes to data stored in the cloud, you must consider
   multiple aspects such as encryption, access control, backups, and how these
   map to the CIA triad. This article will cover the main mechanisms to ensure
-  proper data security in the cloud, whether you are using AWS, GCP, or Azure.
+  proper data security in the cloud, whether you are using AWS, Google Cloud, or Azure.
 seoDescription: When it comes to data stored in the cloud, you must consider
   multiple aspects such as encryption, access control, backups, and how these
   map to the CIA triad. This article will cover the main mechanisms to ensure
-  proper data security in the cloud, whether you are using AWS, GCP, or Azure.
+  proper data security in the cloud, whether you are using AWS, Google Cloud, or Azure.
 featuredpost: true
 featuredimage: /img/21-cover-01-min.png
 tags:
@@ -80,7 +80,7 @@ By implementing these IAM (Identity and Access Management) best practices, attac
 
 Classifying data does not protect it on its own. However, this process can help you understand which is the most sensitive data in order to better focus your efforts to secure it.
 
-AWS (Amazon Web Services), Azure, and GCP provide labels or tags for users to implement [data classification](https://cyscale.com/blog/data-classification/). Labels/tags can be predefined by the public cloud vendor or can be user-defined according to the user’s specific needs.
+AWS (Amazon Web Services), Azure, and Google Cloud provide labels or tags for users to implement [data classification](https://cyscale.com/blog/data-classification/). Labels/tags can be predefined by the public cloud vendor or can be user-defined according to the user’s specific needs.
 
 ## **How do you ensure integrity?**
 
@@ -91,7 +91,7 @@ They are computed before the data is used or transferred and then again after. I
 Let’s look at public cloud vendors and how they provide data integrity services:
 
 * AWS S3 uses CRC32, CRC32C, SHA-1, and SHA-256 to check the data integrity after uploading/downloading,
-* GCP also uses CRC32C checksums to verify data integrity.
+* Google Cloud also uses CRC32C checksums to verify data integrity.
 
 ## **How do you ensure availability?**
 
@@ -124,7 +124,7 @@ Cyscale provides powerful dashboards to ensure visibility of your assets, the id
 Moreover, 400+ security controls ensure that your security teams have implemented the cybersecurity principles and [best practices](https://cyscale.com/blog/5-cspm-best-practices-and-strategies/). Here are some examples of controls that can be used to ensure data security:
 
 * **In motion data encryption**: *Ensure web app is using the latest version of TLS encryption* for Microsoft Azure
-* **At rest data encryption**: *Ensure VM disks for critical VMs are encrypted with Customer*-Supplied Encryption Keys (CSEK) for GCP
+* **At rest data encryption**: *Ensure VM disks for critical VMs are encrypted with Customer*-Supplied Encryption Keys (CSEK) for Google Cloud
 * **Access control**: *Ensure S3 bucket policy does not grant Allow permission to everyone* for AWS
-* **Data classification**: *Ensure Kubernetes Clusters are configured with Labels* for GCP
+* **Data classification**: *Ensure Kubernetes Clusters are configured with Labels* for Google Cloud
 * **DDOS Protection**: *Ensure Anti-DDoS access and security log service is enabled* for Alibaba Cloud

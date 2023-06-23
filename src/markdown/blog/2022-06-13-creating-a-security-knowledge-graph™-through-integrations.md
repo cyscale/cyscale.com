@@ -117,7 +117,7 @@ Keep in mind that these are some examples. There are plenty of other situations 
 We currently integrate with: 
 
 * AWS (Amazon Web Services), 
-* GCP (Google Cloud Platform), 
+* Google Cloud, 
 * Microsoft Azure, 
 * Alibaba Cloud, 
 * Okta, and others. 

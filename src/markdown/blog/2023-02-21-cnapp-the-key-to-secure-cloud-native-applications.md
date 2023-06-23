@@ -100,7 +100,7 @@ It is recommended that: 
 * Assets are not publicly accessible unless it is necessary, 
 * Encryption keys are managed correctly in their entire lifecycle, and others. 
 
-For each of these best practices and more, Cyscale offers a wide variety of controls that cover AWS, Microsoft Azure, GCP, and Alibaba Cloud. Some examples of controls are: 
+For each of these best practices and more, Cyscale offers a wide variety of controls that cover AWS, Microsoft Azure, Google Cloud, and Alibaba Cloud. Some examples of controls are: 
 
 * *Ensure object containers don't have permissive access policies*, 
 * *Ensure databases are not publicly accessible*, 

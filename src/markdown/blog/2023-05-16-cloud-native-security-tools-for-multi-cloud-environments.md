@@ -14,7 +14,7 @@ description: As organizations continue to move their workloads to the cloud,
   misconfigurations and vulnerabilities, should help organizations meet
   regulatory compliance requirements and automate security processes. Using
   Cyscale, a CNAPP tool, you can bring together multi-cloud infrastructures and
-  secure your environment whether it is using AWS, Azure, GCP or more than one
+  secure your environment whether it is using AWS, Azure, Google Cloud or more than one
   provider.
 seoDescription: As organizations continue to move their workloads to the cloud,
   security concerns have become a top priority for CISOs. Cloud-native security
@@ -22,7 +22,7 @@ seoDescription: As organizations continue to move their workloads to the cloud,
   misconfigurations and vulnerabilities, should help organizations meet
   regulatory compliance requirements and automate security processes. Using
   Cyscale, a CNAPP tool, you can bring together multi-cloud infrastructures and
-  secure your environment whether it is using AWS, Azure, GCP or more than one
+  secure your environment whether it is using AWS, Azure, Google Cloud or more than one
   provider.
 featuredpost: true
 featuredimage: /img/40_blog-cover-cnapp-multi-cloud-tools.png
@@ -56,7 +56,7 @@ By automating security processes, DevOps teams can streamline the software devel
 
 ## Cloud-Native Security Tools in Multi-Cloud Environments 
 
-Achieving complete security and compliance in multi-cloud environments is extremely challenging. It is time-consuming to correlate all assets, their relationships, and the risk attached to them across multiple cloud service providers such as AWS, Azure, and GCP as each cloud provider comes with its own tools.  
+Achieving complete security and compliance in multi-cloud environments is extremely challenging. It is time-consuming to correlate all assets, their relationships, and the risk attached to them across multiple cloud service providers such as AWS, Azure, and Google Cloud as each cloud provider comes with its own tools.  
 
 Let's look at the options companies currently have to secure their cloud: 
 
@@ -72,7 +72,7 @@ For AWS (Amazon Web Services): 
 * AWS WAF (Web Application Firewall), 
 * AWS GuardDuty. 
 
-For GCP: 
+For Google Cloud: 
 
 * Google Cloud Security Command Center, 
 * Google Cloud IAM, 
@@ -102,7 +102,7 @@ A key advantage of CNAPP solutions is their ability to integrate with all cloud 
 
 Using this security platform, users can ensure that their cloud native technologies are in good hands. In the Cyscale app, you can find the following: 
 
-* Over 400 controls across AWS, Azure, GCP that check for misconfigurations and contain remediation steps to safeguard sensitive data, 
+* Over 400 controls across AWS, Azure, Google Cloud that check for misconfigurations and contain remediation steps to safeguard sensitive data, 
 * Powerful dashboards, such as the ones for Data Security, IAM, or Containers, 
 * Many compliance frameworks with editable policies and metrics to track your company’s progress and help it in the audit process, and others. 
 
