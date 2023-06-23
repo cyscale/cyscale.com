@@ -126,5 +126,5 @@ Moreover, 400+ security controls ensure that your security teams have implemente
 * **In motion data encryption**: *Ensure web app is using the latest version of TLS encryption* for Microsoft Azure
 * **At rest data encryption**: *Ensure VM disks for critical VMs are encrypted with Customer*-Supplied Encryption Keys (CSEK) for GCP
 * **Access control**: *Ensure S3 bucket policy does not grant Allow permission to everyone* for AWS
-* **Data classification**: *Ensure Kubernetes Clusters are configured with Labels* for GCP
+* **Data classification**: *Ensure Kubernetes Clusters are configured with Labels* for Google Cloud
 * **DDOS Protection**: *Ensure Anti-DDoS access and security log service is enabled* for Alibaba Cloud
