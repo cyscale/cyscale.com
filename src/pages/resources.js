@@ -331,8 +331,9 @@ const Resources = ({ location }) => {
                                 <br /> & guides
                             </h2>
                             <p className='font-hind font-medium text-base mt-2 text-white'>
-                                This guide helps CIOs, CISOs and security staff to understand the risk & dangers of data
-                                security breaches and the importance of a secure cloud <br /> storage infrastructure.
+                                Download additional resources for CIOs, CISOs and security staff to learn more about the
+                                risk & dangers of data security breaches, about how to achieve and maintain a healthy
+                                cloud security posture and to use as guides on the compliance journey.
                             </p>
                         </div>
                         <div
@@ -543,7 +544,6 @@ const Resources = ({ location }) => {
                                     image={data.documentation.childImageSharp.gatsbyImageData}
                                     alt='Documentation Logo'
                                     className='rounded-md'
-                                    css={cardBorder}
                                 />
                                 <p className='font-hind font-medium text-lg mt-2'>Dcoumentation</p>
                             </a>
@@ -557,7 +557,6 @@ const Resources = ({ location }) => {
                                     image={data.datasheet.childImageSharp.gatsbyImageData}
                                     alt='Datasheet Logo'
                                     className='rounded-md'
-                                    css={cardBorder}
                                 />
                                 <p className='font-hind font-medium text-lg mt-2'>Datasheet</p>
                             </Link>

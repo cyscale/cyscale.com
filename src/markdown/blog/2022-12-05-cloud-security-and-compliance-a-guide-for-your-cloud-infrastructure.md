@@ -26,7 +26,7 @@ seoDescription: Cloud security and compliance go hand-in-hand. Following
   your cloud environment and become compliant with respected accreditations.
 featuredpost: true
 featuredimage: /img/29_blog-cloud-and-compliance.png
-tableOfContents: true
+tableOfContents: false
 tags:
   - security
   - CSPM
