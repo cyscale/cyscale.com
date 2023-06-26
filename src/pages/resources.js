@@ -143,6 +143,22 @@ const Resources = ({ location }) => {
             title='Cloud Security Resources | Datasheets, Case Studies, White Papers - Cyscale'
             description="Dive into Cyscale's resources for expert insights on cloud security. Discover datasheets, case studies, white papers, and best practices to secure your cloud infrastructure."
         >
+            <div className='hidden' data-template-key>
+                hardcoded-pages
+            </div>
+            <div className='hidden' data-permalink>
+                /resources
+            </div>
+            <div className='hidden' data-title>
+                Cloud Security Resources | Datasheets, Case Studies, White Papers - Cyscale
+            </div>
+            <div className='hidden' data-description>
+                Dive into Cyscale's resources for expert insights on cloud security. Discover datasheets, case studies,
+                white papers, and best practices to secure your cloud infrastructure.
+            </div>
+            <div className='hidden' data-category>
+                website
+            </div>
             <div css={heroBackground} className='pt-8 relative'>
                 <div className='py-16 lg:pt-24 lg:pb-16'>
                     <Container>
