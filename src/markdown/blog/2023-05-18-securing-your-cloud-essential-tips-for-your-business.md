@@ -23,7 +23,7 @@ seoDescription: "In today's digital landscape, cloud computing has become
   establish a security plan. "
 featuredpost: true
 featuredimage: /img/microsoftteams-image-5-.png
-tableOfContents: true
+tableOfContents: false
 tags:
   - security
   - cspm
