@@ -164,4 +164,8 @@ Our [cloud compliance platform](https://cyscale.com/use-cases/cloud-compliance-a
 * Both pre-configured and editable security policies that can be associated to controls, 
 * Powerful identity and security dashboards for enhanced visibility over your cloud infrastructure, and others. 
 
+Secure your cloud infrastructure effectively with expert insights on cloud security and compliance best practices and international standards. Boost your data safety with our [Cloud Security Platform](https://cyscale.com/), offering 400+ controls, customizable security policies, and advanced dashboards for ultimate control and visibility.
+
+
+
 <!--EndFragment-->
