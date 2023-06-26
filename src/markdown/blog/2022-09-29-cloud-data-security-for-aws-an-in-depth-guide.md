@@ -23,6 +23,7 @@ seoDescription: "Understanding and managing all your assets and services in the
   availability zones. Secure your AWS environment using Cyscale!"
 featuredpost: true
 featuredimage: /img/24_blog-cover-photo.png
+tableOfContents: true
 tags:
   - security
   - CSPM
@@ -224,5 +225,9 @@ Besides the features that come with the Standard plan, which are at network and 
 After understanding the security demands required for the cloud, implementing them seems like a daunting task. However, using Cyscale, you can easily check if you’re lacking any of the mentioned implementations and remediate any findings. 
 
 Cyscale has over 400 controls that cover a large variety of misconfigurations and vulnerabilities and offer support not only for AWS, but for Azure, Google Cloud, Alibaba Cloud as well. 
+
+
+
+Enhance your AWS cloud data security with our [Cloud Security Platform](https://cyscale.com/) to automate the contextual analysis of misconfigurations, vulnerabilities, access, and data for an accurate risk assessment. With over 400 controls, we ensure optimal [AWS security compliance](https://cyscale.com/use-cases/aws-cloud-security/).
 
 <!--EndFragment-->
