@@ -23,7 +23,7 @@ seoDescription: "Understanding and managing all your assets and services in the
   availability zones. Secure your AWS environment using Cyscale!"
 featuredpost: true
 featuredimage: /img/24_blog-cover-photo.png
-tableOfContents: true
+tableOfContents: false
 tags:
   - security
   - CSPM
