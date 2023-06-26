@@ -30,7 +30,6 @@ export default function PostContent({
     preview = false,
     pageUri,
     pageName,
-    dataWhitepaper,
     dataBlueBird,
     dataCompliceToolbox,
     tableOfContents
@@ -142,8 +141,8 @@ export default function PostContent({
                         onKeyDown={onKeyDown}
                         onSubmit={onSubmit}
                         data={data}
-                        dataWhitepaper={dataWhitepaper}
                         blog={true}
+                        categories={categories}
                     />
                 )}
                 {!preview && (
