@@ -117,6 +117,4 @@ Moreover, the threat landscape constantly evolves, and businesses must remain vi
 
 Businesses may safeguard their sensitive information and assets, reduce the risk of security events, and ensure the continuity of company operations by adopting a proactive and strategic approach to cloud security.
 
-
-
-Upgrade your cloud security strategy with our [Cloud Security Platform](https://cyscale.com/), a powerful tool offering comprehensive cloud inventory, advanced risk detection, multi-cloud support, and streamlined compliance processes to strengthen your business's cloud security posture.
+Upgrade your cloud security strategy with our [Cloud Security Platform](https://cyscale.com/), a powerful tool offering comprehensive cloud inventory, advanced risk detection, multi-cloud support, and streamlined compliance processes to strengthen your business's cloud security posture..
