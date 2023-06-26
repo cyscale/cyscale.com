@@ -157,6 +157,6 @@ Cyscale helps you provide proof of compliance with DORA for this article by scan
 
 Moreover, we provide remediation steps for findings to aid you in quickly solving any security issues your cloud environment may have.  
 
-Cyscale has started preparing for DORA. Kickstart your compliance journey with us now and ensure a smooth process for DORA compliance 
+Cyscale has started preparing for DORA. Kickstart your compliance journey with us now and ensure a smooth process for DORA compliance. 
 
 <!--EndFragment-->
