@@ -577,96 +577,70 @@ const Resources = ({ location }) => {
                     <Row className='py-12'>
                         <div className='col-span-12 md:col-span-6 lg:col-span-3'>
                             <p className='font-montserrat font-bold text-xl'>Platform</p>
-                            <Link to='/products/cnapp/' className='flex mt-4 hover:underline'>
-                                <img src={ArrowRightBlack} alt='' width={15} />
-                                <p className='font-montserrat text-sm ml-1'>CNAPP Security</p>
+                            <Link to='/products/cnapp/' className='mt-4 hover:underline block'>
+                                <p className='font-montserrat text-sm'>CNAPP Security</p>
                             </Link>
                             <Link
                                 to='/products/cloud-security-posture-management/'
-                                className='flex mt-4 hover:underline'
+                                className='mt-4 hover:underline block'
                             >
-                                <img src={ArrowRightBlack} alt='' width={15} />
-                                <p className='font-montserrat text-sm ml-1'>CSPM Tool</p>
+                                <p className='font-montserrat text-sm'>CSPM Tool</p>
                             </Link>
-                            <Link to='/products/security-knowledge-graph/' className='flex mt-4 hover:underline'>
-                                <img src={ArrowRightBlack} alt='' width={15} />
-                                <p className='font-montserrat text-sm ml-1'>Security Knowledge Graph</p>
+                            <Link to='/products/security-knowledge-graph/' className='mt-4 hover:underline block'>
+                                <p className='font-montserrat text-sm'>Security Knowledge Graph</p>
                             </Link>
-                            <Link to='/use-cases/cloud-compliance-and-auditing/' className='flex mt-4 hover:underline'>
-                                <img src={ArrowRightBlack} alt='' width={15} />
-                                <p className='font-montserrat text-sm ml-1'>Cloud Security Compliance</p>
+                            <Link to='/use-cases/cloud-compliance-and-auditing/' className='mt-4 hover:underline block'>
+                                <p className='font-montserrat text-sm'>Cloud Security Compliance</p>
                             </Link>
-                            <Link
-                                to='/use-cases/cloud-native-security/'
-                                className='flex items-start mt-4 hover:underline'
-                            >
-                                <img src={ArrowRightBlack} alt='' width={15} className='mt-1' />
-                                <p className='font-montserrat text-sm ml-1'>Cloud Native Security Platform</p>
+                            <Link to='/use-cases/cloud-native-security/' className='mt-4 hover:underline block'>
+                                <p className='font-montserrat text-sm'>Cloud Native Security Platform</p>
                             </Link>
                         </div>
                         <div className='col-span-12 md:col-span-6 lg:col-span-3 mt-4 md:mt-0'>
                             <p className='font-montserrat font-bold text-xl'>Use cases</p>
-                            <Link
-                                to='/use-cases/cloud-misconfigurations/'
-                                className='flex items-start mt-4 hover:underline'
-                            >
-                                <img src={ArrowRightBlack} alt='' width={15} className='mt-1' />
-                                <p className='font-montserrat text-sm ml-1'>
+                            <Link to='/use-cases/cloud-misconfigurations/' className='mt-4 hover:underline block'>
+                                <p className='font-montserrat text-sm'>
                                     Automated Remediation for Cloud Misconfiguration
                                 </p>
                             </Link>
-                            <Link to='/use-cases/iam-security/' className='flex mt-4 hover:underline'>
-                                <img src={ArrowRightBlack} alt='' width={15} />
-                                <p className='font-montserrat text-sm ml-1'>IAM Cloud Security</p>
+                            <Link to='/use-cases/iam-security/' className='mt-4 hover:underline block'>
+                                <p className='font-montserrat text-sm'>IAM Cloud Security</p>
                             </Link>
-                            <Link to='/use-cases/remote-work-security/' className='flex mt-4 hover:underline'>
-                                <img src={ArrowRightBlack} alt='' width={15} />
-                                <p className='font-montserrat text-sm ml-1'>Remote Work Cloud Security</p>
+                            <Link to='/use-cases/remote-work-security/' className='mt-4 hover:underline block'>
+                                <p className='font-montserrat text-sm'>Remote Work Cloud Security</p>
                             </Link>
-                            <Link to='/use-cases/cloud-data-security/' className='flex mt-4 hover:underline'>
-                                <img src={ArrowRightBlack} alt='' width={15} />
-                                <p className='font-montserrat text-sm ml-1'>Multi-Cloud Data Security</p>
+                            <Link to='/use-cases/cloud-data-security/' className='mt-4 hover:underline block'>
+                                <p className='font-montserrat text-sm'>Multi-Cloud Data Security</p>
                             </Link>
-                            <Link to='/use-cases/container-security/' className='flex mt-4 hover:underline'>
-                                <img src={ArrowRightBlack} alt='' width={15} />
-                                <p className='font-montserrat text-sm ml-1'>Container Security</p>
+                            <Link to='/use-cases/container-security/' className='mt-4 hover:underline block'>
+                                <p className='font-montserrat text-sm'>Container Security</p>
                             </Link>
                         </div>
                         <div className='col-span-12 md:col-span-6 lg:col-span-3 mt-4 lg:mt-0'>
                             <p className='font-montserrat font-bold text-xl'>Compliance</p>
-                            <Link to='/use-cases/iso-27001-compliance/' className='flex mt-4 hover:underline'>
-                                <img src={ArrowRightBlack} alt='' width={15} />
-                                <p className='font-montserrat text-sm ml-1'>ISO 27001 Cloud Security</p>
+                            <Link to='/use-cases/iso-27001-compliance/' className='mt-4 hover:underline block'>
+                                <p className='font-montserrat text-sm'>ISO 27001 Cloud Security</p>
                             </Link>
-                            <Link to='/use-cases/pci-dss/' className='flex mt-4 hover:underline'>
-                                <img src={ArrowRightBlack} alt='' width={15} />
-                                <p className='font-montserrat text-sm ml-1'>PCI Cloud Compliance</p>
+                            <Link to='/use-cases/pci-dss/' className='mt-4 hover:underline block'>
+                                <p className='font-montserrat text-sm'>PCI Cloud Compliance</p>
                             </Link>
-                            <Link to='/use-cases/soc-2/' className='flex mt-4 hover:underline'>
-                                <img src={ArrowRightBlack} alt='' width={15} />
-                                <p className='font-montserrat text-sm ml-1'>SOC 2 Cloud Security</p>
+                            <Link to='/use-cases/soc-2/' className='mt-4 hover:underline block'>
+                                <p className='font-montserrat text-sm'>SOC 2 Cloud Security</p>
                             </Link>
-                            <Link to='/use-cases/nist-compliance/' className='flex mt-4 hover:underline'>
-                                <img src={ArrowRightBlack} alt='' width={15} />
-                                <p className='font-montserrat text-sm ml-1'>NIST Cloud Compliance</p>
+                            <Link to='/use-cases/nist-compliance/' className='mt-4 hover:underline block'>
+                                <p className='font-montserrat text-sm'>NIST Cloud Compliance</p>
                             </Link>
                         </div>
                         <div className='col-span-12 md:col-span-6 lg:col-span-3 mt-4 lg:mt-0'>
                             <p className='font-montserrat font-bold text-xl'>Environments</p>
-                            <Link to='/use-cases/aws-cloud-security/' className='flex items-start mt-4 hover:underline'>
-                                <img src={ArrowRightBlack} alt='' width={15} className='mt-1' />
-                                <p className='font-montserrat text-sm ml-1'>AWS Cloud Security and Compliance</p>
+                            <Link to='/use-cases/aws-cloud-security/' className='mt-4 hover:underline block'>
+                                <p className='font-montserrat text-sm'>AWS Cloud Security and Compliance</p>
                             </Link>
-                            <Link
-                                to='/use-cases/azure-cloud-security/'
-                                className='flex items-start mt-4 hover:underline'
-                            >
-                                <img src={ArrowRightBlack} alt='' width={15} className='mt-1' />
-                                <p className='font-montserrat text-sm ml-1'>Azure Cloud Security and Compliance</p>
+                            <Link to='/use-cases/azure-cloud-security/' className='mt-4 hover:underline block'>
+                                <p className='font-montserrat text-sm'>Azure Cloud Security and Compliance</p>
                             </Link>
-                            <Link to='/use-cases/gcp-cloud-security/' className='flex items-start mt-4 hover:underline'>
-                                <img src={ArrowRightBlack} alt='' width={15} className='mt-1' />
-                                <p className='font-montserrat text-sm ml-1'>Google Cloud Security and Compliance</p>
+                            <Link to='/use-cases/gcp-cloud-security/' className='mt-4 hover:underline block'>
+                                <p className='font-montserrat text-sm'>Google Cloud Security and Compliance</p>
                             </Link>
                         </div>
                     </Row>
