@@ -18,15 +18,15 @@ employmentType: full-time
 ---
 # A typical work week
 
-* Participate in product discovery meetings with the leadership team and other colleagues. This is where we discuss upcoming features based on the roadmap, as well as input from customers/prospects. This should result in clearly defined requirements (stories) for the team;
-* Document and present the requirements to the team explaining how they benefit the customers;
-* Participate in daily meetings and be in contact with story owners and the design team;
-* Incorporate technical debt and technical requirements into the backlog;
-* Research (cloud security news, competitors, open-source tools, cloud providers, etc.);
-* Go through notes from various discussions (internal or with customers);
-* Use and test the Cyscale product;
-* Work on the backlog and update the tracking view on progress against the roadmap;
-* Go through metrics making sure things are going as planned.
+* Participate in product discovery meetings with the leadership team and other colleagues. This is where we discuss upcoming features based on the roadmap, as well as input from customers/prospects. This should result in clearly defined requirements (stories) for the team
+* Document and present the requirements to the team explaining how they benefit the customers
+* Participate in daily meetings and be in contact with story owners and the design team
+* Incorporate technical debt and technical requirements into the backlog
+* Research (cloud security news, competitors, open-source tools, cloud providers, etc.)
+* Go through notes from various discussions (internal or with customers)
+* Use and test the Cyscale product
+* Work on the backlog and update the tracking view on progress against the roadmap
+* Go through metrics making sure things are going as planned
 
 ## Benefits
 
@@ -41,29 +41,29 @@ employmentType: full-time
 
 ## Responsibilities
 
-* Together with the leadership team, help refine the roadmap;
-* Participate in product discussions and bring input based on own research (market, competitor’s products, customer input);
-* Organize and prioritize the myriad of features we will deliver each quarter;
-* Translate business requirements into requirements for the dev team and vice-versa;
-* Write user stories and collaborate with the technical team to break them down into tasks;
-* Coordinate the collaboration between the technical team and the design team;
-* Efficiently conduct or delegate research work for new features;
-* Ensure that features get delivered;
-* Validate that the delivered features provide value to the customers, either directly or through other stakeholders involved in customer discussions.
+* Together with the leadership team, help refine the roadmap
+* Participate in product discussions and bring input based on own research (market, competitor’s products, customer input)
+* Organize and prioritize the myriad of features we will deliver each quarter
+* Translate business requirements into requirements for the dev team and vice-versa
+* Write user stories and collaborate with the technical team to break them down into tasks
+* Coordinate the collaboration between the technical team and the design team
+* Efficiently conduct or delegate research work for new features
+* Ensure that features get delivered
+* Validate that the delivered features provide value to the customers, either directly or through other stakeholders involved in customer discussions
 
 
 ## Required Skills
 
-* Comfortable with changing priorities and being proactive;
-* Proven track record of delivering a product;
-* At least 3 years experience in a similar role;
-* Capacity and desire to analyze the market and the competition;
-* Agile experience (we recently switched from SCRUM to Kanban).
+* Comfortable with changing priorities and being proactive
+* Proven track record of delivering a product
+* At least 3 years experience in a similar role
+* Capacity and desire to analyze the market and the competition
+* Agile experience (we recently switched from SCRUM to Kanban)
 
 ## Nice to have:
 
-* Solid understanding of the public cloud (AWS, Azure, Google Cloud). Experience with Kubernetes or other cloud providers is also great;
-* Technical background, MSc/BSc in Computer Science would be ideal.
+* Solid understanding of the public cloud (AWS, Azure, Google Cloud). Experience with Kubernetes or other cloud providers is also great
+* Technical background, MSc/BSc in Computer Science would be ideal
 
 # Apply for this role by:
 
