@@ -1,6 +1,5 @@
 import React from 'react';
 import VideoCyscale from '../campaigns/cspm-solutin/CyscaleVideo';
-import PlayButton from './PlayButton';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { css } from 'twin.macro';
 import { CSSTransition } from 'react-transition-group';
