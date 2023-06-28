@@ -10,6 +10,9 @@ import ArrowRight from '../assets/images/arrow-right-white.svg';
 import Carousel from '../components/resources/Carousel';
 import ArrowRightBlack from '../assets/images/arrow-right-black.svg';
 import PlayButton from '../components/resources/PlayButton';
+import FeaturedArticlesCarousel from '../components/resources/FeaturedArticlesCarousel';
+import CaseStudiesCarousel from '../components/resources/CaseStudiesCarousel';
+import VideosCarousel from '../components/resources/VideosCarousel';
 
 const heroBackground = css`
     @media (max-width: 1024px) {
@@ -45,6 +48,11 @@ const Resources = ({ location }) => {
     const [cyscaleModal, setCyscaleModal] = useState(false);
     const [teasingModal, setTeasingModal] = useState(false);
     const [fundingModal, setFundingModal] = useState(false);
+
+    const [leastPrivilegeModalM, setLeastPrivilegeModalM] = useState(false);
+    const [cyscaleModalM, setCyscaleModalM] = useState(false);
+    const [teasingModalM, setTeasingModalM] = useState(false);
+    const [fundingModalM, setFundingModalM] = useState(false);
 
     const data = useStaticQuery(graphql`
         query resourcesQuery {
@@ -133,8 +141,75 @@ const Resources = ({ location }) => {
                     gatsbyImageData(width: 1080, layout: CONSTRAINED)
                 }
             }
+            demo: file(relativePath: { eq: "book-a-demo-resources.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 1080, layout: CONSTRAINED)
+                }
+            }
         }
     `);
+
+    const slides = [
+        {
+            image: data.smartFintech.childImageSharp.gatsbyImageData,
+            alt: 'Smart Fintech uses Cyscale to gain IAM visibility and ensure cloud security and compliance\'',
+            text: 'Smart Fintech uses Cyscale to gain IAM visibility and ensure cloud security and compliance',
+            link: '/case-studies/smart-fintech/'
+        },
+        {
+            image: data.baysConsulting.childImageSharp.gatsbyImageData,
+            alt: 'Bays Consulting achieves 50% productivity gain with Cyscale Bays Consulting achieves 50%',
+            text: 'Bays Consulting achieves 50% productivity gain with Cyscale Bays Consulting achieves 50% productivity gain with Cyscale',
+            link: '/case-studies/bays-consulting/'
+        },
+        {
+            image: data.demo.childImageSharp.gatsbyImageData,
+            alt: '',
+            text: 'RequestDemo',
+            link: '/request-demo/',
+            cardText: (
+                <>
+                    Book a demo to discuss
+                    <br /> your use case
+                </>
+            )
+        }
+    ];
+
+    const videosSlides = [
+        {
+            image: data.leastPrivilege.childImageSharp.gatsbyImageData,
+            alt: 'Check for Least Privilege with Cyscale’s Identity Dashboard',
+            text: 'Check for Least Privilege with Cyscale’s Identity Dashboard',
+            modal: leastPrivilegeModalM,
+            setModal: setLeastPrivilegeModalM,
+            videoUrl: 'https://d3n52qn7viv754.cloudfront.net/videos/identity-dashboard.mp4'
+        },
+        {
+            image: data.cyscaleThumbnail.childImageSharp.gatsbyImageData,
+            alt: 'Cyscale: The Cloud Visibility & Control Platform',
+            text: 'Cyscale: The Cloud Visibility & Control Platform',
+            modal: cyscaleModalM,
+            setModal: setCyscaleModalM,
+            videoUrl: 'https://d3n52qn7viv754.cloudfront.net/videos/cyscale.mp4'
+        },
+        {
+            image: data.teasingVideo.childImageSharp.gatsbyImageData,
+            alt: 'Cyscale Teasing Video',
+            text: 'Cyscale Teasing Video',
+            modal: teasingModalM,
+            setModal: setTeasingModalM,
+            videoUrl: 'https://d3n52qn7viv754.cloudfront.net/videos/cyscale-short.mp4'
+        },
+        {
+            image: data.fundingVideo.childImageSharp.gatsbyImageData,
+            alt: 'Funding Roun',
+            text: 'Funding Round',
+            modal: fundingModalM,
+            setModal: setFundingModalM,
+            videoUrl: 'https://d3n52qn7viv754.cloudfront.net/videos/cyscale-search.mp4'
+        }
+    ];
 
     return (
         <Layout
@@ -208,8 +283,8 @@ const Resources = ({ location }) => {
                     >
                         Featured Articles
                     </h2>
-                    <Row className='py-12'>
-                        <div className='col-span-12 md:col-span-6 lg:col-span-3'>
+                    <Row className='md:pt-12 pb-12'>
+                        <div className='col-span-12 md:col-span-6 lg:col-span-3 hidden md:block'>
                             <Link to='/blog/cloud-native-security-guide/' className='hover:underline'>
                                 <GatsbyImage
                                     image={data.firstArticle.childImageSharp.gatsbyImageData}
@@ -222,7 +297,7 @@ const Resources = ({ location }) => {
                                 </p>
                             </Link>
                         </div>
-                        <div className='col-span-12 md:col-span-6 lg:col-span-3 mt-6 md:mt-0'>
+                        <div className='col-span-12 md:col-span-6 lg:col-span-3 mt-6 md:mt-0 hidden md:block'>
                             <Link to='/blog/cloud-security-and-compliance/' className='hover:underline'>
                                 <GatsbyImage
                                     image={data.secondArticle.childImageSharp.gatsbyImageData}
@@ -235,7 +310,7 @@ const Resources = ({ location }) => {
                                 </p>
                             </Link>
                         </div>
-                        <div className='col-span-12 md:col-span-6 lg:col-span-3 mt-6 lg:mt-0'>
+                        <div className='col-span-12 md:col-span-6 lg:col-span-3 mt-6 lg:mt-0 hidden md:block'>
                             <Link to='/blog/cnapp-secure-native-applications/' className='hover:underline'>
                                 <GatsbyImage
                                     image={data.thirdArticle.childImageSharp.gatsbyImageData}
@@ -248,7 +323,7 @@ const Resources = ({ location }) => {
                                 </p>
                             </Link>
                         </div>
-                        <div className='col-span-12 md:col-span-6 lg:col-span-3 mt-6 lg:mt-0'>
+                        <div className='col-span-12 md:col-span-6 lg:col-span-3 mt-6 lg:mt-0 hidden md:block'>
                             <Link to='/blog/iam-best-practices-from-aws-azure-gcp/' className='hover:underline'>
                                 <GatsbyImage
                                     image={data.forthArticle.childImageSharp.gatsbyImageData}
@@ -260,6 +335,16 @@ const Resources = ({ location }) => {
                                     Securing IAM - Best Practices Recommended by AWS, Azure, and GCP
                                 </p>
                             </Link>
+                        </div>
+                        <div className='col-span-12 block md:hidden'>
+                            <div
+                                className='relative'
+                                css={css`
+                                    height: 25rem;
+                                `}
+                            >
+                                <FeaturedArticlesCarousel duration={0} />
+                            </div>
                         </div>
                     </Row>
                     <div className='flex justify-center sm:justify-end'>
@@ -280,8 +365,8 @@ const Resources = ({ location }) => {
                     >
                         Case Studies
                     </h2>
-                    <Row className='py-12'>
-                        <div className='col-span-12 md:col-span-6 lg:col-span-3'>
+                    <Row className='pb-16 md:pt-12 md:pb-12'>
+                        <div className='col-span-12 md:col-span-6 lg:col-span-3 hidden md:block'>
                             <Link to='/case-studies/smart-fintech/' className='hover:underline'>
                                 <GatsbyImage
                                     image={data.smartFintech.childImageSharp.gatsbyImageData}
@@ -296,7 +381,7 @@ const Resources = ({ location }) => {
                                 </p>
                             </Link>
                         </div>
-                        <div className='col-span-12 md:col-span-6 lg:col-span-3 mt-6 md:mt-0'>
+                        <div className='col-span-12 md:col-span-6 lg:col-span-3 mt-6 md:mt-0 hidden md:block'>
                             <Link to='/case-studies/bays-consulting/' className='hover:underline'>
                                 <GatsbyImage
                                     image={data.baysConsulting.childImageSharp.gatsbyImageData}
@@ -308,6 +393,37 @@ const Resources = ({ location }) => {
                                     Bays Consulting achieves 50% productivity gain with Cyscale
                                 </p>
                             </Link>
+                        </div>
+                        <div className='col-span-12 md:col-span-6 lg:col-span-3 mt-6 md:mt-0 hidden md:block'>
+                            <Link to='/request-demo/' className='block relative group'>
+                                <GatsbyImage
+                                    image={data.demo.childImageSharp.gatsbyImageData}
+                                    alt=''
+                                    className='rounded-md'
+                                    css={cardBorder}
+                                />{' '}
+                                <p
+                                    className='font-hind text-base text-blue text-center group-hover:underline w-72'
+                                    css={css`
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 50%;
+                                        transform: translate(-50%, -50%);
+                                    `}
+                                >
+                                    Book a demo to discuss <br /> your use case
+                                </p>
+                            </Link>
+                        </div>
+                        <div className='col-span-12 block md:hidden'>
+                            <div
+                                className='relative'
+                                css={css`
+                                    height: 15rem;
+                                `}
+                            >
+                                <CaseStudiesCarousel slides={slides} />
+                            </div>
                         </div>
                     </Row>
                 </div>
@@ -440,8 +556,8 @@ const Resources = ({ location }) => {
                     >
                         Videos
                     </h2>
-                    <Row className='py-12'>
-                        <div className='col-span-12 md:col-span-6 lg:col-span-3'>
+                    <Row className='pb-6 md:py-12'>
+                        <div className='col-span-12 md:col-span-6 lg:col-span-3 hidden md:block'>
                             <PlayButton modal={leastPrivilegeModal} setModal={setLeastPrivilegeModal}>
                                 <GatsbyImage
                                     image={data.leastPrivilege.childImageSharp.gatsbyImageData}
@@ -461,7 +577,7 @@ const Resources = ({ location }) => {
                                 />
                             </CSSTransition>
                         </div>
-                        <div className='col-span-12 md:col-span-6 lg:col-span-3 mt-6 md:mt-0'>
+                        <div className='col-span-12 md:col-span-6 lg:col-span-3 mt-6 md:mt-0 hidden md:block'>
                             <PlayButton modal={cyscaleModal} setModal={setCyscaleModal}>
                                 <GatsbyImage
                                     image={data.cyscaleThumbnail.childImageSharp.gatsbyImageData}
@@ -481,7 +597,7 @@ const Resources = ({ location }) => {
                                 />
                             </CSSTransition>
                         </div>
-                        <div className='col-span-12 md:col-span-6 lg:col-span-3 mt-6 lg:mt-0'>
+                        <div className='col-span-12 md:col-span-6 lg:col-span-3 mt-6 lg:mt-0 hidden md:block'>
                             <PlayButton modal={teasingModal} setModal={setTeasingModal}>
                                 <GatsbyImage
                                     image={data.teasingVideo.childImageSharp.gatsbyImageData}
@@ -499,7 +615,7 @@ const Resources = ({ location }) => {
                                 />
                             </CSSTransition>
                         </div>
-                        <div className='col-span-12 md:col-span-6 lg:col-span-3 mt-6 lg:mt-0'>
+                        <div className='col-span-12 md:col-span-6 lg:col-span-3 mt-6 lg:mt-0 hidden md:block'>
                             <PlayButton modal={fundingModal} setModal={setFundingModal}>
                                 <GatsbyImage
                                     image={data.fundingVideo.childImageSharp.gatsbyImageData}
@@ -517,6 +633,16 @@ const Resources = ({ location }) => {
                                     videoUrl='https://d3n52qn7viv754.cloudfront.net/videos/cyscale-search.mp4'
                                 />
                             </CSSTransition>
+                        </div>
+                        <div className='col-span-12 block md:hidden'>
+                            <div
+                                className='relative'
+                                css={css`
+                                    height: 15rem;
+                                `}
+                            >
+                                <VideosCarousel slides={videosSlides} />
+                            </div>
                         </div>
                     </Row>
                 </div>
