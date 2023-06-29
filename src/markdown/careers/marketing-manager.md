@@ -11,7 +11,7 @@ description: Cyscale is a startup with offices in London (UK) and Cluj-Napoca
   experienced Product Marketing Manager.
 seoDescription: ""
 skills: Marketing, SaaS, Cybersecurity, Cloud, PLG
-experience: mid/senior
+experience: Mid/Senior
 department: Marketing
 workType: remote
 employmentType: full-time
