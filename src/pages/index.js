@@ -168,7 +168,7 @@ const HomePage = ({ location }) => {
                     gatsbyImageData(width: 1080, layout: CONSTRAINED)
                 }
             }
-            virginiaAndBarry: file(relativePath: { eq: "virginia-barry.png" }) {
+            manuelaOvidiuBarry: file(relativePath: { eq: "manuela-ovidiu-barry.png" }) {
                 childImageSharp {
                     gatsbyImageData(width: 180, layout: CONSTRAINED)
                 }
@@ -1038,9 +1038,9 @@ const HomePage = ({ location }) => {
                                 Use the calendar to select an appropriate time slot.
                             </p>{' '}
                             <GatsbyImage
-                                image={data.virginiaAndBarry.childImageSharp.gatsbyImageData}
+                                image={data.manuelaOvidiuBarry.childImageSharp.gatsbyImageData}
                                 className='mt-6'
-                                alt='Virginia and Barry'
+                                alt='Manuela, Ovidiu and Barry from support'
                             />
                         </div>
                         <div className='col-span-12 lg:col-span-8 mx-auto lg:mx-0 max-w-7xl'>

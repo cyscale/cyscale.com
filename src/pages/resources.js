@@ -347,7 +347,7 @@ const Resources = ({ location }) => {
                             </div>
                         </div>
                     </Row>
-                    <div className='flex justify-center sm:justify-end'>
+                    <div className='flex justify-start sm:justify-end'>
                         <Link to='/blog/' className='flex hover:underline'>
                             <p className='font-hind text-lg font-medium'>VIEW ALL ARTICLES</p>
                             <img src={ArrowRightBlack} alt='' width={18} className='mb-1 ml-1' />
