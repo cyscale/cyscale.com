@@ -94,8 +94,6 @@ Regularly update and patch the host operating system and other software dependen
 
 Running containers with high privileges can increase the attack surface by allowing attackers to take advantage of this misconfiguration and “escape” the containers, obtaining high privileges on the host virtual machine. This breaks the isolation of containers. Run your ECS containers as non-privileged by setting the *privileged* parameter in the container definition to *false*. 
 
-  
-
 Mitigate security risks by implementing the recommended best practices and secure your container environment. 
 
 To ensure complete protection of your Amazon ECS instances, Cyscale provides a Containers dashboard, where you can see what assets are using them and other details about containers, as well as controls that check for ECS misconfigurations and provide alerting and remediation steps to fix findings in no time.  
@@ -106,3 +104,11 @@ Some examples of security controls that you can find on the Cyscale platform are
 * *Ensure ECS clusters use Container Insights*
 * *Ensure ECS containers run as non-privileged*
 * *Ensure ECS containers are limited to read-only access to root filesystems*
+
+
+
+Cyscale - Your Trusted [Cloud Security Company](https://cyscale.com): 
+
+To ensure complete protection of your Amazon ECS instances, Cyscale offers a comprehensive Cloud Security Platform. Cyscale safeguards apps and data in the cloud with its Security Knowledge Graph™, making it easy to track security and [compliance across multi-cloud environments](https://cyscale.com/use-cases/cloud-compliance-and-auditing/). With Cyscale, you can confidently embrace your digital future.
+
+Learn more about [Container Security](https://cyscale.com/use-cases/container-security/) with Cyscale
