@@ -16,7 +16,7 @@ seoDescription: "Experienced Cloud Security Researcher or Analyst - responsible
   Cyscale Platform. "
 skills: Cloud Researcher, Cloud Architect, Cybersecurity, Cloud, Threat
   Analysis, Research, AWS, GCP, Azure, GRC
-experience: mid/senior
+experience: Mid/Senior
 department: Engineering
 workType: remote
 employmentType: full-time

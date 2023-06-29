@@ -11,7 +11,7 @@ description: Cyscale is a startup with offices in London (UK) and Cluj-Napoca
   experienced Product Designer.
 seoDescription: ""
 skills: Product, SaaS Software, Cybersecurity
-experience: senior
+experience: Senior
 department: Product
 workType: remote
 employmentType: full-time

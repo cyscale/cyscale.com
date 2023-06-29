@@ -12,7 +12,7 @@ seoDescription: ""
 skills: Go (Programming Language), Amazon Web Services (AWS), GraphQL, Google
   Cloud Platform (GCP), Microsoft Azure, Security, Cloud Security, Cloud-Native
   Architecture, Cryptography.
-experience: mid/senior
+experience: Mid/Senior
 department: Engineering
 workType: remote
 employmentType: full-time

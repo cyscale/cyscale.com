@@ -109,7 +109,7 @@ const Company = ({ pathname, activeLinks, setActiveLinks }) => {
                                 css={fontNavLinkStyle}
                                 activeClassName='active'
                             >
-                                {title} ({experience})
+                                {title} ({experience.toLowerCase()})
                             </Link>
                         </div>
                     );
