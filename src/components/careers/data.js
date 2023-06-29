@@ -22,7 +22,7 @@ import {
 
 const data = [
     {
-        order: 18,
+        order: 17,
         photo: <Simona />,
         name: 'Simona Lar',
         position: 'Head of People, Culture & Growth',
@@ -30,7 +30,7 @@ const data = [
         quote: false
     },
     {
-        order: 17,
+        order: 16,
         photo: <Barry />,
         name: 'Barry Lyne',
         position: 'VP of Sales',
@@ -38,7 +38,7 @@ const data = [
         quote: false
     },
     {
-        order: 16,
+        order: 15,
         photo: <Darius />,
         name: 'Darius Ungurean',
         position: 'Frontend Engineer',
@@ -46,7 +46,7 @@ const data = [
         quote: false
     },
     {
-        order: 15,
+        order: 14,
         photo: <Auras />,
         name: 'Auras Popescu',
         position: 'Backend Engineer',
@@ -54,7 +54,7 @@ const data = [
         quote: false
     },
     {
-        order: 14,
+        order: 13,
         photo: <Norbert />,
         name: 'Norbert Hambuer',
         position: 'Backend Engineer',
@@ -62,7 +62,7 @@ const data = [
         quote: false
     },
     {
-        order: 13,
+        order: 12,
         photo: <Mihnea />,
         name: 'Mihnea Stoian',
         position: 'Backend Engineer',
@@ -70,7 +70,7 @@ const data = [
         quote: false
     },
     {
-        order: 12,
+        order: 11,
         photo: <Petru />,
         name: 'Petru Giurgiu',
         position: 'Web Developer',
@@ -78,7 +78,7 @@ const data = [
         quote: false
     },
     {
-        order: 11,
+        order: 10,
         photo: <Sabrina />,
         name: 'Sabrina Lupșan',
         position: 'Cloud Security Analyst',
@@ -86,7 +86,7 @@ const data = [
         quote: false
     },
     {
-        order: 10,
+        order: 9,
         photo: <AndreiP />,
         name: 'Andrei Petri',
         position: 'Fullstack Engineer',
@@ -94,7 +94,7 @@ const data = [
         quote: false
     },
     {
-        order: 9,
+        order: 8,
         photo: <Levi />,
         name: 'Levente Scheck',
         position: 'Frontend Engineer',
@@ -102,7 +102,7 @@ const data = [
         quote: false
     },
     {
-        order: 8,
+        order: 7,
         photo: <MihaiB />,
         name: 'Mihai Brînză',
         position: 'UI/UX Designer',
@@ -110,7 +110,7 @@ const data = [
         quote: false
     },
     {
-        order: 7,
+        order: 6,
         photo: <MihaiM />,
         name: 'Mihai Matache',
         position: 'Backend Engineer',
@@ -118,20 +118,12 @@ const data = [
         quote: false
     },
     {
-        order: 6,
+        order: 5,
         photo: <AndreiS />,
         name: 'Andrei Ștefănie',
         position: 'Product Engineer',
         linkedin: 'https://www.linkedin.com/in/andreistefanie/',
         quote: `Being passionate about start-ups and what we can build on the cloud, Cyscale was the clear path onwards for me. I knew it will be fun, but hard and so it is. When it's fun, we laugh together, and when it's hard, we work together.`
-    },
-    {
-        order: 5,
-        photo: <Virginia />,
-        name: 'Virginia Mitea',
-        position: 'Sales and Business Development',
-        linkedin: 'https://www.linkedin.com/in/virginia-mitea-0688aab2/',
-        quote: `Friendly atmosphere: that's the first thing that comes to my mind when someone asks me to describe how working at Cyscale is. I discovered how the other teams are working, learned from them, and applied their agile-specific methods to my role.`
     },
     {
         order: 4,

@@ -43,11 +43,6 @@ function withImageData(WrappedComponent) {
                             gatsbyImageData(width: 256, layout: CONSTRAINED)
                         }
                     }
-                    virginia: file(relativePath: { eq: "virginia.jpg" }) {
-                        childImageSharp {
-                            gatsbyImageData(width: 256, layout: CONSTRAINED)
-                        }
-                    }
                     manuela: file(relativePath: { eq: "manuela.jpg" }) {
                         childImageSharp {
                             gatsbyImageData(width: 256, layout: CONSTRAINED)
@@ -184,9 +179,6 @@ export const MihaiB = withImageData((props) => (
 ));
 export const Levi = withImageData((props) => (
     <Img image={props.imageData.levi.childImageSharp.gatsbyImageData} {...props} />
-));
-export const Virginia = withImageData((props) => (
-    <Img image={props.imageData.virginia.childImageSharp.gatsbyImageData} {...props} />
 ));
 export const Notion = withImageData((props) => (
     <Img image={props.imageData.notion.childImageSharp.gatsbyImageData} alt='Notion Capital' {...props} />
