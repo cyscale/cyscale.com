@@ -10,7 +10,6 @@ import {
     MihaiM,
     Ovidiu,
     Sabrina,
-    Virginia,
     Petru,
     Mihnea,
     Norbert,
