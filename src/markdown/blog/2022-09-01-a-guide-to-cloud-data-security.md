@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
-title: "A Guide to Cloud Data Security "
-seoTitle: "A Guide to Cloud Data Security "
+title: A Guide to Cloud Data Security Best Practices
+seoTitle: A Guide to Cloud Data Security Best Practices
 authors: Sabrina Lupșan
 permalink: cloud-data-security-guide
 categories:
@@ -10,11 +10,13 @@ date: 2022-09-01T10:59:21.743Z
 description: When it comes to data stored in the cloud, you must consider
   multiple aspects such as encryption, access control, backups, and how these
   map to the CIA triad. This article will cover the main mechanisms to ensure
-  proper data security in the cloud, whether you are using AWS, Google Cloud, or Azure.
+  proper data security in the cloud, whether you are using AWS, Google Cloud, or
+  Azure.
 seoDescription: When it comes to data stored in the cloud, you must consider
   multiple aspects such as encryption, access control, backups, and how these
   map to the CIA triad. This article will cover the main mechanisms to ensure
-  proper data security in the cloud, whether you are using AWS, Google Cloud, or Azure.
+  proper data security in the cloud, whether you are using AWS, Google Cloud, or
+  Azure.
 featuredpost: true
 featuredimage: /img/21-cover-01-min.png
 tags:
