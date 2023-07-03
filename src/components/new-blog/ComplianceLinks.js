@@ -45,7 +45,7 @@ const compliancePages = [
 
 export const ArticleLink = ({ text, link }) => {
     return (
-        <Link to={link} className='text-base font-medium font-montserrat inline-block mt-4'>
+        <Link to={link} className='text-base font-medium font-montserrat inline-block mt-4 hover:underline'>
             {text}
         </Link>
     );
@@ -55,7 +55,7 @@ export const PageLink = ({ text, link }) => {
     return (
         <Link to={link} className='flex mt-4'>
             <img src={ArrowRight} alt='' width={24} />
-            <span className='text-base text-white font-montserrat font-bold ml-3'>{text}</span>
+            <span className='text-base text-white font-montserrat font-bold ml-3 hover:underline'>{text}</span>
         </Link>
     );
 };
@@ -85,14 +85,14 @@ const ComplianceLinks = ({ dataCompliceToolbox }) => {
                         {' '}
                         <Link
                             to='/blog/AWS-SOC-2-Compliance-Checklist-A-Detailed-Guide/'
-                            className='text-base font-medium font-montserrat inline-block mt-4'
+                            className='text-base font-medium font-montserrat inline-block mt-4 hover:underline'
                         >
                             AWS SOC 2 Compliance Checklist:
                             <br className='hidden lg:block' /> A Detailed Guide
                         </Link>{' '}
                         <Link
                             to='/blog/cloud-security-and-compliance/'
-                            className='text-base font-medium font-montserrat inline-block mt-4'
+                            className='text-base font-medium font-montserrat inline-block mt-4 hover:underline'
                         >
                             Cloud Security and Compliance: A <br className='hidden lg:block' /> Guide for Your Cloud
                             Infrastructure

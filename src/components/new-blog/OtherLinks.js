@@ -44,35 +44,35 @@ const OtherLinks = ({ dataBlueBird }) => {
                         ))}
                         <Link
                             to='/blog/iam-services-in-aws-azure-gcp/'
-                            className='text-base font-medium font-montserrat inline-block mt-4'
+                            className='text-base font-medium font-montserrat inline-block mt-4 hover:underline'
                         >
                             IAM Services in AWS, Azure, and
                             <br className='block' /> Google Cloud - A Cloud Industry Overview
                         </Link>{' '}
                         <Link
                             to='/blog/implementing-iso-27001-for-cloud-native-systems/'
-                            className='text-base font-medium font-montserrat inline-block mt-4'
+                            className='text-base font-medium font-montserrat inline-block mt-4 hover:underline'
                         >
                             Bridging the Gap Between ISO 27001
                             <br className='hidden lg:block' /> and Cloud-Native Systems
                         </Link>{' '}
                         <Link
                             to='/blog/iam-best-practices-from-aws-azure-gcp/'
-                            className='text-base font-medium font-montserrat inline-block mt-4'
+                            className='text-base font-medium font-montserrat inline-block mt-4 hover:underline'
                         >
                             Securing IAM - Best Practices Recommended <br className='hidden xl:block' /> by AWS, Azure,
                             and Google Cloud
                         </Link>{' '}
                         <Link
                             to='/blog/cloud-native-security-guide/'
-                            className='text-base font-medium font-montserrat inline-block mt-4'
+                            className='text-base font-medium font-montserrat inline-block mt-4 hover:underline'
                         >
                             Cloud-Native Security: A Comprehensive
                             <br className='hidden lg:block' /> Guide to Securing Your Technology Stack
                         </Link>{' '}
                         <Link
                             to='/blog/cnapp-secure-native-applications/'
-                            className='text-base font-medium font-montserrat inline-block mt-4'
+                            className='text-base font-medium font-montserrat inline-block mt-4 hover:underline'
                         >
                             CNAPP: The Key to Cloud-Native
                             <br className='hidden lg:block' /> Applications Security
