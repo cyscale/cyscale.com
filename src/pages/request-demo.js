@@ -74,7 +74,7 @@ const ContactUs = ({ location }) => {
                 >
                     <div
                         className={classnames({ hidden: loadingMeetings, 'meetings-iframe-container': true })}
-                        data-src='https://meetings.hubspot.com/virginia-mitea/demo-for-cyscale-cloud-platform?embed=true'
+                        data-src='https://meetings.hubspot.com/barry-lyne/cyscale-cloud-platform-demo?embed=true'
                     ></div>
                 </div>
             </div>

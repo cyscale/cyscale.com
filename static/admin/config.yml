@@ -26,7 +26,7 @@ collections:
                 label: 'Author',
                 name: 'authors',
                 widget: 'select',
-                options: ['Sabrina Lupșan', 'Andrei Ștefănie', 'Virginia Mitea', 'Manuela Țicudean', 'Ovidiu Cical']
+                options: ['Sabrina Lupșan', 'Andrei Ștefănie', 'Manuela Țicudean', 'Ovidiu Cical']
             }
           - { label: 'Permalink', name: 'permalink', widget: 'string' }
           - {
@@ -44,7 +44,14 @@ collections:
           - { label: 'SEO Description', name: 'seoDescription', widget: 'string' }
           - { label: 'Featured Post', name: 'featuredpost', widget: 'boolean' }
           - { label: 'Featured Image', name: 'featuredimage', widget: image }
-          - { label: 'Table of Contents', name: 'tableOfContents', widget: 'boolean', default: false, required: false, hint: 'Consult TOC documentation for an effective Table of Content: https://cyscale.atlassian.net/wiki/spaces/WEB/pages/1115881473/Table+of+contents+documentation' }
+          - {
+                label: 'Table of Contents',
+                name: 'tableOfContents',
+                widget: 'boolean',
+                default: false,
+                required: false,
+                hint: 'Consult TOC documentation for an effective Table of Content: https://cyscale.atlassian.net/wiki/spaces/WEB/pages/1115881473/Table+of+contents+documentation'
+            }
           - { label: 'Body', name: 'body', widget: 'markdown' }
           - { label: 'Tags', name: 'tags', widget: 'list' }
     - name: 'category'
@@ -117,123 +124,175 @@ collections:
       slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
       fields:
           - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'pages' }
-          - { label: 'Page Name', name: 'pageName', widget: 'string', hint: 'Should not contain any spaces, ex: SKGPage for SecurityKnowledge Graph' }
+          - {
+                label: 'Page Name',
+                name: 'pageName',
+                widget: 'string',
+                hint: 'Should not contain any spaces, ex: SKGPage for SecurityKnowledge Graph'
+            }
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Description', name: 'description', widget: 'string' }
-          - {
-            label: 'Category Path',
-            name: 'categoryPath',
-            widget: 'select',
-            options: [ 'use-cases', 'products' ],
-          }
+          - { label: 'Category Path', name: 'categoryPath', widget: 'select', options: ['use-cases', 'products'] }
           - { label: 'Path', name: 'path', widget: 'string', hint: 'Should not contain any spaces' }
           - {
-            label: 'Sections',
-            name: 'sections',
-            widget: 'select',
-            options: [ 'hero', 'textImageRow', 'secondTextImageRow', 'alignTeamsSection', 'featuresSection', 'cloudComplianceSection', 'ctaSection' ],
-            default: [ 'hero' ],
-            multiple: true
-          }
-          - label: "Hero"
-            name: "hero"
-            widget: "object"
+                label: 'Sections',
+                name: 'sections',
+                widget: 'select',
+                options:
+                    [
+                        'hero',
+                        'textImageRow',
+                        'secondTextImageRow',
+                        'alignTeamsSection',
+                        'featuresSection',
+                        'cloudComplianceSection',
+                        'ctaSection'
+                    ],
+                default: ['hero'],
+                multiple: true
+            }
+          - label: 'Hero'
+            name: 'hero'
+            widget: 'object'
             fields:
-              - { label: 'Hero Background', name: 'heroBackground', widget: image, required: false }
-              - { label: 'Hero Image', name: 'heroImage', widget: image }
-              - { label: 'Hero Image Alt', name: 'heroImageAlt', widget: 'string' }
-              - { label: 'Hero Title', name: 'heroTitle', widget: 'markdown',  hint: 'For title use H1 Hero and nothing more'  }
-              - { label: "Custom Components", name: "customComponents", widget: "boolean", default: false, hint: 'For using Netlify custom components in the markdown or Rich Text'}
-              - { label: 'Hero Markdown', name: 'heroMarkdown', widget: 'markdown' }
+                - { label: 'Hero Background', name: 'heroBackground', widget: image, required: false }
+                - { label: 'Hero Image', name: 'heroImage', widget: image }
+                - { label: 'Hero Image Alt', name: 'heroImageAlt', widget: 'string' }
+                - {
+                      label: 'Hero Title',
+                      name: 'heroTitle',
+                      widget: 'markdown',
+                      hint: 'For title use H1 Hero and nothing more'
+                  }
+                - {
+                      label: 'Custom Components',
+                      name: 'customComponents',
+                      widget: 'boolean',
+                      default: false,
+                      hint: 'For using Netlify custom components in the markdown or Rich Text'
+                  }
+                - { label: 'Hero Markdown', name: 'heroMarkdown', widget: 'markdown' }
           - label: 'Text Image Row'
             name: 'textImageRow'
             widget: 'list'
             allow_add: true
             fields:
-              - {
-                  label: 'Row Start Grid Cols',
-                  name: 'rowStartGridCols',
-                  widget: 'select',
-                  options: [ '5', '6', '7' ],
-                  multiple: false,
-                  default: [ '6' ]
-              }
-              - {
-                  label: 'Row End Grid Cols',
-                  name: 'rowEndGridCols',
-                  widget: 'select',
-                  options: [ '5', '6', '7' ],
-                  multiple: false,
-                  default: [ '6' ]
-                }
-              - {
-                  label: 'Row Image Position',
-                  name: 'rowImagePosition',
-                  widget: 'select',
-                  options: [ 'left', 'right' ],
-                  multiple: false
-                }
-              - { label: 'Row Image', name: 'rowImage', widget: image, required: false }
-              - { label: 'Row Alt', name: 'rowAlt', widget: 'string', required: false }
-              - { label: 'Row Subtitle', name: 'rowSubtitle', widget: 'markdown', required: false, hint: 'For subtitle use just H2 Subtitle and nothing more' }
-              - { label: "Custom Components", name: "customComponents", widget: "boolean", default: false, required: false, hint: 'For using Netlify custom components in the markdown or Rich Text' }
-              - { label: 'Row Markdown', name: 'rowMarkdown', widget: 'markdown', required: false }
-              - {
-                label: 'Row Background',
-                name: 'rowBackground',
-                widget: 'select',
-                options: [ '#FFFFFF', '#F3F8FF' ],
-                multiple: false
-              }
+                - {
+                      label: 'Row Start Grid Cols',
+                      name: 'rowStartGridCols',
+                      widget: 'select',
+                      options: ['5', '6', '7'],
+                      multiple: false,
+                      default: ['6']
+                  }
+                - {
+                      label: 'Row End Grid Cols',
+                      name: 'rowEndGridCols',
+                      widget: 'select',
+                      options: ['5', '6', '7'],
+                      multiple: false,
+                      default: ['6']
+                  }
+                - {
+                      label: 'Row Image Position',
+                      name: 'rowImagePosition',
+                      widget: 'select',
+                      options: ['left', 'right'],
+                      multiple: false
+                  }
+                - { label: 'Row Image', name: 'rowImage', widget: image, required: false }
+                - { label: 'Row Alt', name: 'rowAlt', widget: 'string', required: false }
+                - {
+                      label: 'Row Subtitle',
+                      name: 'rowSubtitle',
+                      widget: 'markdown',
+                      required: false,
+                      hint: 'For subtitle use just H2 Subtitle and nothing more'
+                  }
+                - {
+                      label: 'Custom Components',
+                      name: 'customComponents',
+                      widget: 'boolean',
+                      default: false,
+                      required: false,
+                      hint: 'For using Netlify custom components in the markdown or Rich Text'
+                  }
+                - { label: 'Row Markdown', name: 'rowMarkdown', widget: 'markdown', required: false }
+                - {
+                      label: 'Row Background',
+                      name: 'rowBackground',
+                      widget: 'select',
+                      options: ['#FFFFFF', '#F3F8FF'],
+                      multiple: false
+                  }
           - label: 'Second Text Image Row'
             name: 'secondTextImageRow'
             widget: 'list'
             allow_add: true
             fields:
-              - {
-                  label: 'Row Start Grid Cols',
-                  name: 'rowStartGridCols',
-                  widget: 'select',
-                  options: [ '5', '6', '7' ],
-                  multiple: false,
-                  default: [ '6' ]
-              }
-              - {
-                  label: 'Row End Grid Cols',
-                  name: 'rowEndGridCols',
-                  widget: 'select',
-                  options: [ '5', '6', '7' ],
-                  multiple: false,
-                  default: [ '6' ]
-              }
-              - {
-                  label: 'Row Image Position',
-                  name: 'rowImagePosition',
-                  widget: 'select',
-                  options: [ 'left', 'right' ],
-                  multiple: false
-              }
-              - { label: 'Row Image', name: 'rowImage', widget: image, required: false }
-              - { label: 'Row Alt', name: 'rowAlt', widget: 'string', required: false }
-              - { label: 'Row Subtitle', name: 'rowSubtitle', widget: 'markdown', required: false, hint: 'For subtitle use just H2 Subtitle and nothing more' }
-              - { label: "Custom Components", name: "customComponents", widget: "boolean", default: false, required: false, hint: 'For using Netlify custom components in the markdown or Rich Text' }
-              - { label: 'Row Markdown', name: 'rowMarkdown', widget: 'markdown', required: false }
-              - {
-                label: 'Row Background',
-                name: 'rowBackground',
-                widget: 'select',
-                options: [ '#FFFFFF', '#F3F8FF' ],
-                multiple: false
-              }
+                - {
+                      label: 'Row Start Grid Cols',
+                      name: 'rowStartGridCols',
+                      widget: 'select',
+                      options: ['5', '6', '7'],
+                      multiple: false,
+                      default: ['6']
+                  }
+                - {
+                      label: 'Row End Grid Cols',
+                      name: 'rowEndGridCols',
+                      widget: 'select',
+                      options: ['5', '6', '7'],
+                      multiple: false,
+                      default: ['6']
+                  }
+                - {
+                      label: 'Row Image Position',
+                      name: 'rowImagePosition',
+                      widget: 'select',
+                      options: ['left', 'right'],
+                      multiple: false
+                  }
+                - { label: 'Row Image', name: 'rowImage', widget: image, required: false }
+                - { label: 'Row Alt', name: 'rowAlt', widget: 'string', required: false }
+                - {
+                      label: 'Row Subtitle',
+                      name: 'rowSubtitle',
+                      widget: 'markdown',
+                      required: false,
+                      hint: 'For subtitle use just H2 Subtitle and nothing more'
+                  }
+                - {
+                      label: 'Custom Components',
+                      name: 'customComponents',
+                      widget: 'boolean',
+                      default: false,
+                      required: false,
+                      hint: 'For using Netlify custom components in the markdown or Rich Text'
+                  }
+                - { label: 'Row Markdown', name: 'rowMarkdown', widget: 'markdown', required: false }
+                - {
+                      label: 'Row Background',
+                      name: 'rowBackground',
+                      widget: 'select',
+                      options: ['#FFFFFF', '#F3F8FF'],
+                      multiple: false
+                  }
           - label: 'Features'
             name: 'featuresSection'
             widget: 'list'
             allow_add: true
             fields:
-              - { label: 'Feature Title', name: 'featureTitle', widget: 'string', required: false }
-              - { label: 'Feature Text', name: 'featureText', widget: 'string', required: false }
+                - { label: 'Feature Title', name: 'featureTitle', widget: 'string', required: false }
+                - { label: 'Feature Text', name: 'featureText', widget: 'string', required: false }
           - label: 'CTA'
             name: 'ctaSection'
             widget: 'object'
             fields:
-                - { label: 'CTA Markdown', name: 'ctaMarkdown', widget: 'markdown', required: false, hint: 'Use H1 CTA and nothing more' }
+                - {
+                      label: 'CTA Markdown',
+                      name: 'ctaMarkdown',
+                      widget: 'markdown',
+                      required: false,
+                      hint: 'Use H1 CTA and nothing more'
+                  }
