@@ -75,7 +75,7 @@ const CSPMLinks = ({ dataBlueBird }) => {
                         ))}
                         <Link
                             to='/blog/cspm-visibility-compliance-security/'
-                            className='text-base font-medium font-montserrat inline-block mt-4'
+                            className='text-base font-medium font-montserrat inline-block mt-4 hover:underline'
                         >
                             What is a CSPM and <br className='hidden lg:block' /> why should you consider using one?
                         </Link>{' '}

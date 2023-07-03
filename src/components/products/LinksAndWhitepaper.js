@@ -50,7 +50,7 @@ const LinksAndWhitepaper = ({
                                 return (
                                     <Link
                                         to={link}
-                                        className='text-base font-medium font-montserrat inline-block mt-4'
+                                        className='text-base font-medium font-montserrat inline-block mt-4 hover:underline'
                                         key={index}
                                         dangerouslySetInnerHTML={{ __html: text }}
                                     />
