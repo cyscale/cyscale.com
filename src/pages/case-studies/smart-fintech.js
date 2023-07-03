@@ -323,7 +323,7 @@ const SmartFintech = ({ location }) => {
                                 to='/request-demo/'
                                 css={[hoverButtonColorStyle, widthFitStyle]}
                             >
-                                Contact Sales
+                                CONTACT SALES
                             </Link>
                         </div>
                     </div>

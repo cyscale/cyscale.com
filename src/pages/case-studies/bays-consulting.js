@@ -374,7 +374,7 @@ const BaysConsulting = ({ location }) => {
                                     to='/request-demo/'
                                     css={[hoverButtonColorStyle, widthFitStyle]}
                                 >
-                                    Contact Sales
+                                    CONTACT SALES
                                 </Link>
                             </div>
                             <hr className='mt-8' css={hrStyle} />

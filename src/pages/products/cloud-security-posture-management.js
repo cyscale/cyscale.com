@@ -574,7 +574,7 @@ const CSPM = ({ location }) => {
                             to={'/request-demo/'}
                             className='bg-white text-blue rounded-md font-bold py-2 px-8 mt-8 hover:bg-grey3'
                         >
-                            Request Demo
+                            REQUEST DEMO
                         </Link>
                     </div>
                 </Section>
