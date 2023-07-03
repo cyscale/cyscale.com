@@ -26,6 +26,16 @@ const AboutUs = ({ location }) => {
                     gatsbyImageData(width: 1080, layout: CONSTRAINED)
                 }
             }
+            aws: file(relativePath: { eq: "aws-partner.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 89, layout: CONSTRAINED)
+                }
+            }
+            microsoft: file(relativePath: { eq: "microsoft-partner.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 182, layout: CONSTRAINED)
+                }
+            }
         }
     `);
 
@@ -201,6 +211,24 @@ const AboutUs = ({ location }) => {
                         >
                             <Seedblink />
                         </a>
+                    </div>
+                </Section>
+            </Container>
+            <Container className='relative' id='technical-partners'>
+                <Section>
+                    <h2 className='font-semibold font-montserrat text-blue sm:text-3xl text-4xl leading-normal mb-6 text-center'>
+                        Technical Partners
+                    </h2>
+                    <div className='flex justify-center flex-wrap mt-12'>
+                        <div>
+                            <GatsbyImage image={dataAboutUs.aws.childImageSharp.gatsbyImageData} alt='AWS Partner' />
+                        </div>
+                        <div className='ml-12 my-auto'>
+                            <GatsbyImage
+                                image={dataAboutUs.microsoft.childImageSharp.gatsbyImageData}
+                                alt='Microsoft Partner'
+                            />
+                        </div>
                     </div>
                 </Section>
             </Container>
