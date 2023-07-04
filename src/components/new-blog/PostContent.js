@@ -70,7 +70,7 @@ export default function PostContent({
                                         <Categories categories={data.categories} />
                                     </div>
                                 )}
-                                <h1 className='text-2xl my-4 font-medium'>{data.title}</h1>
+                                <h1 className='text-2xl my-4 font-semibold font-montserrat'>{data.title}</h1>
                                 {data.authors && (
                                     <PostAuthor preview={preview} date={data.date} author={data.authors} />
                                 )}
@@ -99,7 +99,7 @@ export default function PostContent({
                             </div>
                         </Row>
                     </div>
-                    <div className='blog-reset'>
+                    <div className='blog-reset overflow-hidden'>
                         <ReactMarkdown
                             rehypePlugins={[rehypeRaw]}
                             linkTarget='_blank'
@@ -148,7 +148,7 @@ export default function PostContent({
                 {!preview && (
                     <div className='max-w-4xl my-auto mx-auto xl:hidden px-8'>
                         <div className='flex items-center '>
-                            <p className='text-sm mt-2'>Interesting? Share it</p>
+                            <p className='text-sm mt-2 font-hind'>Interesting? Share it</p>
                             <div className='mt-2'>
                                 <Share
                                     title={data?.title}

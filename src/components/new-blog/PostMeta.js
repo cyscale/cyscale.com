@@ -8,7 +8,7 @@ export default function PostMeta({ categories, date }) {
             <span>
                 <Categories categories={categories} />
             </span>
-            <span className='text-xs text-black text-opacity-70 pt-1'>{formatDate(date)}</span>
+            <span className='text-xs text-black text-opacity-70 pt-1 font-montserrat'>{formatDate(date)}</span>
         </div>
     );
 }

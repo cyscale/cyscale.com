@@ -55,7 +55,7 @@ export default function HomePost({
             >
                 <PostMeta date={date} categories={categories} />
                 <Link ref={linkRef} to={`/blog/${permalink}/`} draggable={false}></Link>
-                <h2 className='text-lg my-4 leading-tight font-medium group-hover:text-primary transition-all h-16'>
+                <h2 className='text-lg my-4 leading-tight font-medium group-hover:text-primary transition-all h-16 font-montserrat'>
                     {title}
                 </h2>
                 <div className='mt-auto'>

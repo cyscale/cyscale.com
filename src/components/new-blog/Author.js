@@ -21,7 +21,7 @@ export default function Author({ author, permalink, title }) {
                                 alt: 'Author image'
                             })}
                         </div>
-                        <span className='text-xs text-black'>
+                        <span className='text-xs text-black font-montserrat'>
                             By <strong>{_author.name}</strong>
                         </span>
                     </div>
