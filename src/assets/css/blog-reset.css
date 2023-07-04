@@ -91,7 +91,6 @@
     font-family: 'Hind', sans-serif;
 }
 
-
 .blog-reset ol,
 .pages-reset ol {
     list-style: number;
@@ -141,6 +140,7 @@
 
 .blog-reset p,
 .blog-reset li,
-.blog-reset ol .blog-reset {
+.blog-reset ol,
+.blog-reset a {
     font-family: 'Hind', sans-serif;
 }
