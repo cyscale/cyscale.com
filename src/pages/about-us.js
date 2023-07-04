@@ -17,6 +17,7 @@ import getStartedIcon from '../assets/images/elemente-vectoriale-07.png';
 import data from '../components/careers/data';
 import { Link, useStaticQuery, graphql } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
+import { css } from 'twin.macro';
 
 const AboutUs = ({ location }) => {
     const dataAboutUs = useStaticQuery(graphql`
@@ -26,9 +27,14 @@ const AboutUs = ({ location }) => {
                     gatsbyImageData(width: 1080, layout: CONSTRAINED)
                 }
             }
+            awsStartup: file(relativePath: { eq: "aws-startup-program.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 140, layout: CONSTRAINED)
+                }
+            }
             aws: file(relativePath: { eq: "aws-partner.png" }) {
                 childImageSharp {
-                    gatsbyImageData(width: 89, layout: CONSTRAINED)
+                    gatsbyImageData(width: 120, layout: CONSTRAINED)
                 }
             }
             microsoft: file(relativePath: { eq: "microsoft-partner.png" }) {
@@ -215,22 +221,41 @@ const AboutUs = ({ location }) => {
                 </Section>
             </Container>
             <Container className='relative' id='technical-partners'>
-                <Section>
+                <div>
                     <h2 className='font-semibold font-montserrat text-blue sm:text-3xl text-4xl leading-normal mb-6 text-center'>
                         Technical Partners
                     </h2>
                     <div className='flex justify-center flex-wrap mt-12'>
-                        <div>
+                        <div className='my-auto'>
+                            <GatsbyImage
+                                image={dataAboutUs.awsStartup.childImageSharp.gatsbyImageData}
+                                alt='AWS Startup Programs'
+                            />
+                        </div>
+
+                        <div className='ml-12'>
                             <GatsbyImage image={dataAboutUs.aws.childImageSharp.gatsbyImageData} alt='AWS Partner' />
                         </div>
-                        <div className='ml-12 my-auto'>
+                        <div
+                            css={css`
+                                margin-top: 3rem;
+                                margin-left: 0;
+                                @media (min-width: 520px) {
+                                    margin-left: 3rem;
+                                }
+                                @media (min-width: 570px) {
+                                    margin-top: auto;
+                                    margin-bottom: auto;
+                                }
+                            `}
+                        >
                             <GatsbyImage
                                 image={dataAboutUs.microsoft.childImageSharp.gatsbyImageData}
                                 alt='Microsoft Partner'
                             />
                         </div>
                     </div>
-                </Section>
+                </div>
             </Container>
             <Container className='relative' id='team'>
                 <Section>
