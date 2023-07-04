@@ -91,7 +91,6 @@
     font-family: 'Hind', sans-serif;
 }
 
-
 .blog-reset ol,
 .pages-reset ol {
     list-style: number;
@@ -128,4 +127,20 @@
     border-radius: 0.2rem;
     box-decoration-break: clone;
     padding: 0.1rem 0.3rem 0.2rem;
+}
+
+.blog-reset h1,
+.blog-reset h2,
+.blog-reset h3,
+.blog-reset h4,
+.blog-reset h5,
+.blog-reset h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.blog-reset p,
+.blog-reset li,
+.blog-reset ol,
+.blog-reset a {
+    font-family: 'Hind', sans-serif;
 }

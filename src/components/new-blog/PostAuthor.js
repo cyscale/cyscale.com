@@ -8,7 +8,7 @@ export default function PostAuthor({ author, date, preview = false }) {
     if (preview) {
         return (
             <div>
-                <span className='text-sm text-black  h-7 block py-1'>
+                <span className='text-sm text-black  h-7 block py-1 font-montserrat'>
                     By <strong>{typeof _author === 'string' ? _author : _author.name}</strong>
                     <br />
                     <span className='text-sm text-black text-opacity-70'>{formatDate(date)}</span>
@@ -19,7 +19,7 @@ export default function PostAuthor({ author, date, preview = false }) {
     return (
         <div>
             {typeof _author === 'string' ? (
-                <span className='text-sm text-black  h-7 block py-1'>
+                <span className='text-sm text-black  h-7 block py-1 font-montserrat'>
                     By <strong>{_author}</strong>
                     <br />
                     <span className='text-sm text-black text-opacity-70'>{formatDate(date)}</span>
@@ -36,7 +36,7 @@ export default function PostAuthor({ author, date, preview = false }) {
                         <span className='text-sm text-black '>
                             By <strong>{_author.name}</strong>
                             <br />
-                            <span className='text-sm text-black text-opacity-70'>{formatDate(date)}</span>
+                            <span className='text-sm text-black text-opacity-70 font-montserrat'>{formatDate(date)}</span>
                         </span>
                     </div>
                 </div>

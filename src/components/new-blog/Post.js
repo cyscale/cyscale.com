@@ -32,7 +32,7 @@ export default function Post({ authors, categories, date, permalink, title, desc
             <div className='p-5 flex flex-col'>
                 <PostMeta date={date} categories={categories} />
                 <Link ref={linkRef} to={`/blog/${permalink}/`}>
-                    <h2 className='text-lg my-4 leading-tight font-medium group-hover:text-primary transition-all h-16'>
+                    <h2 className='text-lg my-4 leading-tight font-medium group-hover:text-primary transition-all h-16 font-montserrat'>
                         {title}
                     </h2>
                 </Link>
