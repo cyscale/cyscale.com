@@ -7,6 +7,7 @@ import ScrollButton from '../../components/ScrollButton/ScrollButton';
 import GradientButton from '../../components/buttons/GradientButton';
 import LightDarkButton from '../../components/buttons/LightDarkButton';
 import LinksAndWhitepaper from '../../components/products/LinksAndWhitepaper';
+import { css } from 'twin.macro';
 
 const topArticles = [
     {
@@ -56,6 +57,11 @@ const AzureCloudSecurity = ({ location }) => {
             card: file(relativePath: { eq: "cc-whitepaper-bluebird.png" }) {
                 childImageSharp {
                     gatsbyImageData(width: 386, layout: FIXED)
+                }
+            }
+            marketplace: file(relativePath: { eq: "azure-marketplace.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 250, layout: FIXED)
                 }
             }
         }
@@ -264,26 +270,48 @@ const AzureCloudSecurity = ({ location }) => {
                     </Section>
                 </Container>
             </div>
-            <div className='bg-mesh-logo py-24'>
-                <Section>
-                    <Container>
-                        <div className='mx-auto text-center lg:text-left lg:mx-0 max-w-sm lg:max-w-none'>
-                            <h2 className='text-white text-xl md:text-2xl font-semibold font-montserrat uppercase'>
-                                Secure your Azure Assets
-                            </h2>
-                            <p className='text-white font-montserrat text-lg md:text-2xl mb-20'>
-                                Start seeing value & saving money in minutes
-                            </p>
-                            <Link
-                                to='/free-trial'
-                                className='bg-white text-black font-medium transition-all cursor-pointer duration-300 border uppercase border-black py-5 px-16 rounded inline-block hover:bg-black hover:text-white'
-                            >
-                                Try Cyscale for Free
-                            </Link>
+            <Container>
+                <div className='pt-24 md:pt-24 pb-96 sm:pb-64'>
+                    <div className='flex h-48 flex-col items-center'>
+                        <h3
+                            className='text-center text-blue px-2 mt-4 mb-2 font-montserrat font-bold'
+                            css={css`
+                                font-size: 2.375rem;
+                            `}
+                        >
+                            Secure your Azure Cloud Assets today
+                        </h3>
+                        <p className='font-hind text-xl max-w-2xl text-center mt-12'>
+                            Get value & save money in minutes by starting for free. Alternatively, you can find Cyscale
+                            on the Azure Marketplace.
+                        </p>
+                        <div className='mt-10 flex'>
+                            <div className='w-auto inline-block'>
+                                <Link to='/free-trial'>
+                                    <button className='bg-gradient-to-r md:mx-0 from-blue to-red hover:from-red hover:to-blue block font-medium rounded text-white uppercase text-center py-4 px-14 no-underline hover:no-underline max-w-sm lg:inline-block font-hind'>
+                                        TRY CYSCALE FOR FREE
+                                    </button>
+                                </Link>
+                            </div>
+                            <div className='w-auto inline-block sm:ml-8'>
+                                <a
+                                    href='https://azuremarketplace.microsoft.com/en-us/marketplace/apps/cyscale.cyscale?tab=overview'
+                                    target='_blank'
+                                    rel='noopener noreferrer'
+                                >
+                                    <LightDarkButton text={'VIEW ON AZURE MARKETPLACE'} />
+                                </a>
+                            </div>
                         </div>
-                    </Container>
-                </Section>
-            </div>
+                        <div className='mt-12'>
+                            <GatsbyImage
+                                image={data.marketplace.childImageSharp.gatsbyImageData}
+                                alt=''
+                            />
+                        </div>
+                    </div>
+                </div>
+            </Container>
             <LinksAndWhitepaper
                 topArticles={topArticles}
                 data={data}
