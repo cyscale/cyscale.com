@@ -38,9 +38,7 @@ Once again, security specialists insist that cloud security is a complex subject
 
 There already are a lot of tools to take into consideration when you're concerned with cloud security. Up until now, cloud professionals were talking about three main security solutions: [Cloud Security Posture Management (CSPM)](https://cyscale.com/blog/cloud-security-posture-management-cspm-guide/), Cloud Workload Protection Platform (CWPP), and Cloud Access Security Broker (CASB).
 
-But recently, Gartner has defined a new category that is focused on securing cloud services and cloud-native applications, the so-called CNAPP- Cloud-Native Application Protection Platform.
-
-According to Gartner, “CNAPP is an integrated set of security and compliance capabilities designed to help secure and protect cloud-native applications across development and production.”
+But recently, Gartner has defined a new category that is focused on securing cloud services and cloud-native applications, the so-called CNAPP- Cloud-Native Application Protection Platform. CNAPP combines the capabilities of Cloud Security Posture Management (CSPM) and Cloud Workload Protection Platform (CWPP) to provide comprehensive [cloud native application security](https://cyscale.com/blog/cnapp-secure-native-applications/) across development and production environments.
 
 The legitimate question would be: ***Why do I need another security tool?***
 
@@ -81,7 +79,7 @@ Since this is a new category of products, the market for CNAPP has just started 
 
 CWPP vendors have started to add new features capabilities, including IaC scanning.
 
-Some CSPMs have cutting edge-technology in place and can already give you some of the features promised by the CNAPP.
+Some CSPMs have cutting edge-technology in place and can already give you some of the features promised a [CNAPP solution](https://cyscale.com/products/cnapp/).
 
 This is the case of [Cyscale Cloud Security Platform](https://cyscale.com), the solution that offers advanced visibility, but more importantly, gives you context so you can better prioritize.\
 The [Security Knowledge Graph](https://cyscale.com/products/security-knowledge-graph/)™ built within the platform may reveal, for example, that one of the resources usually reported to have a high-security risk, is not as vulnerable as it seems. (Let's think about a VM that has unencrypted disks attached, but is not being used in a production environment, or is not externally accessible from the internet).\
