@@ -227,14 +227,25 @@ const AboutUs = ({ location }) => {
                     </h2>
                     <div className='flex justify-center flex-wrap mt-12'>
                         <div className='my-auto'>
-                            <GatsbyImage
-                                image={dataAboutUs.awsStartup.childImageSharp.gatsbyImageData}
-                                alt='AWS Startup Programs'
-                            />
+                            <a
+                                href='https://aws.amazon.com/startups/startup-programs/'
+                                target='_blank'
+                                rel='noopener noreferrer'
+                            >
+                                <GatsbyImage
+                                    image={dataAboutUs.awsStartup.childImageSharp.gatsbyImageData}
+                                    alt='AWS Startup Programs'
+                                />
+                            </a>
                         </div>
 
                         <div className='ml-12'>
-                            <GatsbyImage image={dataAboutUs.aws.childImageSharp.gatsbyImageData} alt='AWS Partner' />
+                            <a href='https://aws.amazon.com/partners/' target='_blank' rel='noopener noreferrer'>
+                                <GatsbyImage
+                                    image={dataAboutUs.aws.childImageSharp.gatsbyImageData}
+                                    alt='AWS Startup Programs'
+                                />
+                            </a>
                         </div>
                         <div
                             css={css`
@@ -249,10 +260,16 @@ const AboutUs = ({ location }) => {
                                 }
                             `}
                         >
-                            <GatsbyImage
-                                image={dataAboutUs.microsoft.childImageSharp.gatsbyImageData}
-                                alt='Microsoft Partner'
-                            />
+                            <a
+                                href='https://www.microsoft.com/azure/partners'
+                                target='_blank'
+                                rel='noopener noreferrer'
+                            >
+                                <GatsbyImage
+                                    image={dataAboutUs.microsoft.childImageSharp.gatsbyImageData}
+                                    alt='Microsoft Partner'
+                                />
+                            </a>
                         </div>
                     </div>
                 </div>
