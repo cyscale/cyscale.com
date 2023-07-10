@@ -18,7 +18,7 @@ const useHSFormDisplayAndSubmit = ({ formId, target }) => {
     useEffect(() => {
         setTimeout(() => {
             if (window && window.hbspt) {
-                window.hbspt.forms.create({
+                window.hbspt.forms?.create({
                     portalId: '5413427',
                     formId,
                     target

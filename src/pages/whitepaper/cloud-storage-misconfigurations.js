@@ -12,7 +12,7 @@ const CloudStorageMisconfigurations = ({ location }) => {
     useEffect(() => {
         setTimeout(() => {
             if (window && window.hbspt) {
-                window.hbspt.forms.create({
+                window.hbspt.forms?.create({
                     portalId: '5413427',
                     formId: '5d2cef5a-dfcb-446c-977b-12b9e4cf138c',
                     target: '#storage-misconfigurations-form'

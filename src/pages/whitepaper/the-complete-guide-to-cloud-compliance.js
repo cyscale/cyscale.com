@@ -24,7 +24,7 @@ const TheCompleteGuideToCloudCompliance = ({ location }) => {
     useEffect(() => {
         setTimeout(() => {
             if (window && window.hbspt) {
-                window.hbspt.forms.create({
+                window.hbspt.forms?.create({
                     portalId: '5413427',
                     formId: '3a35898d-9962-4b6a-9fc0-90ebd3362875',
                     target: '#cloud-compliance-form'
