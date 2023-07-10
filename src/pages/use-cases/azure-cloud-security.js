@@ -64,6 +64,11 @@ const AzureCloudSecurity = ({ location }) => {
                     gatsbyImageData(width: 250, layout: FIXED)
                 }
             }
+            heroImage: file(relativePath: { eq: "azure-cloud-security.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 500, layout: FIXED)
+                }
+            }
         }
     `);
 
@@ -89,34 +94,43 @@ const AzureCloudSecurity = ({ location }) => {
             <div className='hidden' data-category>
                 solutions
             </div>
-            <div className='bg-cloud' style={{ backgroundColor: '#eeeeee' }}>
+            <div style={{ backgroundColor: '#eeeeee' }}>
                 <Container>
-                    <Section>
-                        <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-xl pt-16'>
-                            <h1 className='font-semibold font-montserrat text-left text-4xl lg:text-5xl leading-normal lg:leading-normal text-primary mb-10'>
-                                Azure Cloud Security
-                                <br /> and Compliance
-                            </h1>
-                        </div>
-                        <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-lg pb-4'>
-                            <p className='text-left text-base lg:text-lg mb-6 leading-relaxed'>
-                                Secure your Azure cloud subscriptions by continuously scanning for misconfigurations and
-                                surfacing risk.
-                            </p>
-                            <p className='text-left text-base lg:text-lg mb-20 leading-relaxed'>
-                                Automatically create and maintain compliance reports for PCI, HIPAA and more.
-                            </p>
-                            <div className='flex'>
-                                <Link to='/free-trial'>
-                                    <GradientButton text='Start Free Trial' />
-                                </Link>
-                                <Link to='/request-demo' className='ml-4'>
-                                    <LightDarkButton text={'Request Demo'} />
-                                </Link>
+                    <Row>
+                        <div className='col-span-12 lg:col-span-6 order-last lg:order-first mt-36 lg:mt-28'>
+                            <div className='lg:mt-16 pt-4 max-w-xl mx-auto lg:mx-0'>
+                                <h1 className='font-semibold font-montserrat text-left text-4xl lg:text-5xl leading-normal lg:leading-normal text-primary mb-10'>
+                                    Azure Cloud Security
+                                    <br /> and Compliance
+                                </h1>
+                                <p className='text-left text-base lg:text-lg mb-6 leading-relaxed'>
+                                    Secure your Azure cloud subscriptions by continuously scanning for misconfigurations
+                                    and surfacing risk.
+                                </p>
+                                <p className='text-left text-base lg:text-lg mb-20 leading-relaxed'>
+                                    Automatically create and maintain compliance reports for PCI, HIPAA and more.
+                                </p>
+                                <div className='flex mt-8 justify-start'>
+                                    <Link to='/free-trial'>
+                                        <GradientButton text='Start Free Trial' />
+                                    </Link>
+                                    <Link to='/request-demo' className='ml-4'>
+                                        <LightDarkButton text={'Request Demo'} />
+                                    </Link>
+                                </div>
                             </div>
                         </div>
-                    </Section>
-                    <div className='pb-8'>
+                        <div className='col-span-12 lg:col-span-6 hidden lg:block'>
+                            <div className='relative'>
+                                <div className='mt-48 xl:ml-24'>
+                                    <div className='hidden lg:block lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl'>
+                                        <GatsbyImage image={data.heroImage.childImageSharp.gatsbyImageData} alt='' />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </Row>
+                    <div className='mt-24 pb-8'>
                         <ScrollButton to='start' />
                     </div>
                 </Container>
@@ -304,10 +318,7 @@ const AzureCloudSecurity = ({ location }) => {
                             </div>
                         </div>
                         <div className='mt-12'>
-                            <GatsbyImage
-                                image={data.marketplace.childImageSharp.gatsbyImageData}
-                                alt=''
-                            />
+                            <GatsbyImage image={data.marketplace.childImageSharp.gatsbyImageData} alt='' />
                         </div>
                     </div>
                 </div>
