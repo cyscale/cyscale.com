@@ -4,7 +4,7 @@ export default function useHubSpot({ formId, target }) {
     useEffect(() => {
         setTimeout(() => {
             if (typeof window !== 'undefined' && window['hbspt']) {
-                window.hbspt.forms.create({
+                window.hbspt.forms?.create({
                     portalId: '5413427',
                     formId,
                     target

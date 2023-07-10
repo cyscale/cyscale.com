@@ -124,7 +124,7 @@ const SecurityForStartupsProgram = ({ location }) => {
     useEffect(() => {
         setTimeout(() => {
             if (window && window.hbspt) {
-                window.hbspt.forms.create({
+                window.hbspt.forms?.create({
                     portalId: '5413427',
                     formId: '65a11c92-0efd-489b-b2e7-671d77b43bc7',
                     target: '#startups-form'

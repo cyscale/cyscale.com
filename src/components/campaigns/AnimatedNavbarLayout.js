@@ -45,7 +45,7 @@ const AnimatedNavbarLayout = ({ children, formId, formTargetId, location, title,
         if (pageName !== 'RequestDemo') {
             setTimeout(() => {
                 if (window && window.hbspt && formId && formTargetId) {
-                    window.hbspt.forms.create({
+                    window.hbspt.forms?.create({
                         portalId: '5413427',
                         formId,
                         target: formTargetId
