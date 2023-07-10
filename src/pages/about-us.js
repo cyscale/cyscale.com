@@ -243,7 +243,7 @@ const AboutUs = ({ location }) => {
                             <a href='https://aws.amazon.com/partners/' target='_blank' rel='noopener noreferrer'>
                                 <GatsbyImage
                                     image={dataAboutUs.aws.childImageSharp.gatsbyImageData}
-                                    alt='AWS Startup Programs'
+                                    alt='AWS Partner'
                                 />
                             </a>
                         </div>
