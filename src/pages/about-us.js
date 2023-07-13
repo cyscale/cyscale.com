@@ -18,6 +18,7 @@ import data from '../components/careers/data';
 import { Link, useStaticQuery, graphql } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { css } from 'twin.macro';
+import CertificationCard from '../components/about/CertificationCard';
 
 const AboutUs = ({ location }) => {
     const dataAboutUs = useStaticQuery(graphql`
@@ -40,6 +41,68 @@ const AboutUs = ({ location }) => {
             microsoft: file(relativePath: { eq: "microsoft-partner.png" }) {
                 childImageSharp {
                     gatsbyImageData(width: 182, layout: CONSTRAINED)
+                }
+            }
+            azureSolutionsArchitect: file(relativePath: { eq: "azure-solutions-architect-expert.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 100, layout: CONSTRAINED)
+                }
+            }
+            azureSecurityEngineer: file(relativePath: { eq: "azure-security-engineer-certificate.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 100, layout: CONSTRAINED)
+                }
+            }
+            az303: file(relativePath: { eq: "az-303-certificate.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 100, layout: CONSTRAINED)
+                }
+            }
+            az304: file(relativePath: { eq: "az-304-certificate.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 100, layout: CONSTRAINED)
+                }
+            }
+            azureFundamentals: file(relativePath: { eq: "azure-fundamentals-certificate.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 100, layout: CONSTRAINED)
+                }
+            }
+            azureRed: file(relativePath: { eq: "azure-red-team-certificate.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 100, layout: CONSTRAINED)
+                }
+            }
+            awsSolutionsArchitectProfessional: file(relativePath: { eq: "solutions-architect-certificate.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 100, layout: CONSTRAINED)
+                }
+            }
+            awsSolutionsArchitectAssociate: file(
+                relativePath: { eq: "aws-certified-solutions-architect-associate.png" }
+            ) {
+                childImageSharp {
+                    gatsbyImageData(width: 100, layout: CONSTRAINED)
+                }
+            }
+            terraform: file(relativePath: { eq: "terraform-002-certificate.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 100, layout: CONSTRAINED)
+                }
+            }
+            googleCloud: file(relativePath: { eq: "google-cloud-certificate.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 100, layout: CONSTRAINED)
+                }
+            }
+            neo4j: file(relativePath: { eq: "neo4j-certificate.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 100, layout: CONSTRAINED)
+                }
+            }
+            ccna: file(relativePath: { eq: "ccna-certificate.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 100, layout: CONSTRAINED)
                 }
             }
         }
@@ -311,6 +374,233 @@ const AboutUs = ({ location }) => {
                             ))}
                     </Row>
                 </Section>
+            </Container>
+            <Container className='relative' id='certifications'>
+                <h2 className='font-semibold font-montserrat text-blue sm:text-3xl text-4xl leading-normal mb-6 text-center'>
+                    Our Certifications
+                </h2>
+                <Row className='mt-12 sm:mt-24'>
+                    <CertificationCard
+                        imageData={dataAboutUs.azureSolutionsArchitect.childImageSharp.gatsbyImageData}
+                        titleSm={
+                            <>
+                                Microsoft Certified: Azure
+                                <br /> Solutions Architect Expert
+                            </>
+                        }
+                        titleLg={
+                            <>
+                                Microsoft Certified:
+                                <br /> Azure Solutions
+                                <br /> Architect Expert
+                            </>
+                        }
+                        company='Microsoft'
+                    />
+                    <CertificationCard
+                        imageData={dataAboutUs.azureSecurityEngineer.childImageSharp.gatsbyImageData}
+                        titleSm={
+                            <>
+                                Microsoft Certified: Azure
+                                <br /> Security Engineer
+                            </>
+                        }
+                        titleLg={
+                            <>
+                                Microsoft Certified:
+                                <br /> Azure Security
+                                <br /> Engineer
+                            </>
+                        }
+                        company={'Microsoft'}
+                        classes={'mt-2 sm:mt-0'}
+                    />
+                    <CertificationCard
+                        imageData={dataAboutUs.az303.childImageSharp.gatsbyImageData}
+                        titleSm={
+                            <>
+                                {' '}
+                                AZ-303: Microsoft: Azure
+                                <br /> Architect Technologies
+                            </>
+                        }
+                        titleLg={
+                            <>
+                                AZ-303: Microsoft
+                                <br /> Azure Architect
+                                <br /> Technologies
+                            </>
+                        }
+                        company={'Microsoft'}
+                        classes={'mt-2 sm:mt-12 lg:mt-0'}
+                    />
+                    <CertificationCard
+                        imageData={dataAboutUs.az304.childImageSharp.gatsbyImageData}
+                        titleSm={
+                            <>
+                                AZ-304: Microsoft: Azure
+                                <br /> Architect Design
+                            </>
+                        }
+                        titleLg={
+                            <>
+                                AZ-304: Microsoft
+                                <br /> Azure Architect
+                                <br /> Design
+                            </>
+                        }
+                        company={'Microsoft'}
+                        classes={'mt-2 sm:mt-12'}
+                    />
+                    <CertificationCard
+                        imageData={dataAboutUs.azureFundamentals.childImageSharp.gatsbyImageData}
+                        titleSm={
+                            <>
+                                {' '}
+                                Microsoft Certified: Azure
+                                <br /> Fundamentals
+                            </>
+                        }
+                        titleLg={
+                            <>
+                                Microsoft Certified:
+                                <br /> Azure
+                                <br /> Fundamentals
+                            </>
+                        }
+                        company={'Microsoft'}
+                        classes={'mt-2 sm:mt-12'}
+                    />
+                    <CertificationCard
+                        imageData={dataAboutUs.azureRed.childImageSharp.gatsbyImageData}
+                        titleSm={
+                            <>
+                                Certified Azure Red Team
+                                <br /> Professional (CARTP)
+                            </>
+                        }
+                        titleLg={
+                            <>
+                                Certified Azure Red
+                                <br /> Team Professional
+                                <br /> (CARTP)
+                            </>
+                        }
+                        company={'Altered Security'}
+                        classes={'mt-2 sm:mt-12'}
+                    />
+                    <CertificationCard
+                        imageData={dataAboutUs.awsSolutionsArchitectProfessional.childImageSharp.gatsbyImageData}
+                        titleSm={
+                            <>
+                                AWS Certified Solutions
+                                <br /> Architect – Professional
+                            </>
+                        }
+                        titleLg={
+                            <>
+                                AWS Certified
+                                <br /> Solutions Architect –
+                                <br /> Professional
+                            </>
+                        }
+                        company={
+                            <>
+                                Amazon Web Services Training
+                                <br /> and Certification
+                            </>
+                        }
+                        classes={'mt-2 sm:mt-12'}
+                    />
+                    <CertificationCard
+                        imageData={dataAboutUs.awsSolutionsArchitectAssociate.childImageSharp.gatsbyImageData}
+                        titleSm={
+                            <>
+                                AWS Certified Solutions
+                                <br /> Architect – Associate
+                            </>
+                        }
+                        titleLg={
+                            <>
+                                AWS Certified
+                                <br /> Solutions Architect –
+                                <br /> Associate
+                            </>
+                        }
+                        company={
+                            <>
+                                Amazon Web Services Training
+                                <br /> and Certification
+                            </>
+                        }
+                        classes={'mt-2 sm:mt-12'}
+                    />
+                    <CertificationCard
+                        imageData={dataAboutUs.terraform.childImageSharp.gatsbyImageData}
+                        titleSm={
+                            <>
+                                HashiCorp Certified: <br /> Terraform Associate (002)
+                            </>
+                        }
+                        titleLg={
+                            <>
+                                HashiCorp Certified:
+                                <br /> Terraform Associate
+                                <br /> (002)
+                            </>
+                        }
+                        company='HashiCorp'
+                        classes={'mt-2 sm:mt-12'}
+                    />
+                    <CertificationCard
+                        imageData={dataAboutUs.googleCloud.childImageSharp.gatsbyImageData}
+                        titleSm={
+                            <>
+                                Google Cloud Certified
+                                <br /> Associate Cloud Engineer
+                            </>
+                        }
+                        titleLg={
+                            <>
+                                Google Cloud
+                                <br /> Certified Associate
+                                <br /> Cloud Engineer
+                            </>
+                        }
+                        company='Google Cloud'
+                        classes={'mt-2 sm:mt-12'}
+                    />
+                    <CertificationCard
+                        imageData={dataAboutUs.neo4j.childImageSharp.gatsbyImageData}
+                        titleSm='Neo4j Certified Professional'
+                        titleLg={
+                            <>
+                                Neo4j Certified
+                                <br /> Professional
+                            </>
+                        }
+                        company='Neo4j Certification'
+                        classes={'mt-2 sm:mt-12'}
+                    />
+                    <CertificationCard
+                        imageData={dataAboutUs.ccna.childImageSharp.gatsbyImageData}
+                        titleSm={
+                            <>
+                                CCNA (Cisco Certified
+                                <br /> Network Associate)
+                            </>
+                        }
+                        titleLg={
+                            <>
+                                CCNA (Cisco
+                                <br /> Certified Network
+                                <br /> Associate)
+                            </>
+                        }
+                        company='Cisco'
+                        classes={'mt-2 sm:mt-12'}
+                    />
+                </Row>
             </Container>
             <Container>
                 <Section>
