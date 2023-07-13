@@ -94,12 +94,6 @@ Detailed remediation steps do not miss from CSPM software. Recommendations on ho
 * A set of commands that fix the found issue, that can be used in a command line, 
 * Recommended reading materials that could help the cloud security professional understand the problem on a deeper level and avoid it in the future. 
 
-To understand how important the remediation feature is in a CSPM solution, we will look at an example. Let’s assume that the CSPM has identified that an Azure Key Vault is not recoverable; this means that, if the key vault were to be accidentally deleted, it would never be recovered. 
-
-In the image below, you can see the “Ensure Key Vault are Recoverable” security control in the Cyscale platform, which checks if there are any cloud resources that do not fulfill this best practice. The status of this control is failed, which means that the key vaults need to be made recoverable. 
-
-In the “Remediation” tab shown in the image, you can see how to correct this issue in the Azure portal or using Azure CLI or Azure PowerShell. 
-
 ### 5. Compliance aid 
 
 A company that seeks to achieve compliance with a certain standard or regulation must face a long and tedious journey, because this usually entails reviewing organizational, as well as technology-related practices, producing a lot of documentation in the form of policies and procedures, and ultimately ensuring that any system that comes in contact with customer data has appropriate security controls in place.  
@@ -112,11 +106,7 @@ With CSPMs, you don’t need to monitor your infrastructure in a different place
 
 In addition to analyzing security for cloud providers, some CSPMs offer additional types of integrations, such as those with identity providers. 
 
-  
-
 By taking a proactive stance on cloud security posture, IT professionals can benefit from the power of a CSPM solution and ensure that their organization’s cloud infrastructure is resilient against emerging threats. 
-
-
 
 ### CSPM in Action - Real Life Case Studies 
 
