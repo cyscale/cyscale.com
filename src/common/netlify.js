@@ -401,3 +401,48 @@ CMS.registerEditorComponent({
         }
     ]
 });
+
+CMS.registerEditorComponent({
+    id: 'faq-list',
+    label: 'FAQ List',
+    fields: [
+        {
+            label: 'FAQ Items',
+            name: 'faqs',
+            widget: 'list',
+            fields: [
+                { label: 'Question', name: 'question', widget: 'string' },
+                { label: 'Answer', name: 'answer', widget: 'text' }
+            ]
+        }
+    ],
+    pattern: /^<ul class="faq-list">(.*?)<\/ul>$/s,
+    fromBlock: function (match) {
+        const faqs = match[1].split('</li><li>').map((faq) => {
+            const matched = faq.match(
+                /^<li><p class="question" style="font-weight:bold;">(.*?)<\/p><p class="answer">(.*?)<\/p><\/li>$/s
+            );
+            return {
+                question: matched[1],
+                answer: matched[2]
+            };
+        });
+        return { faqs };
+    },
+    toBlock: function ({ faqs }) {
+        return `<ul class="faq-list">${faqs
+            .map(
+                (faq) =>
+                    `<li><p class="question" style="font-weight:bold;">${faq.question}</p><p class="answer">${faq.answer}</p></li>`
+            )
+            .join('')}</ul>`;
+    },
+    toPreview: function ({ faqs }) {
+        return `<ul class="faq-list">${faqs
+            .map(
+                (faq) =>
+                    `<li><p class="question" style="font-weight:bold;">${faq.question}</p><p class="answer">${faq.answer}</p></li>`
+            )
+            .join('')}</ul>`;
+    }
+});
