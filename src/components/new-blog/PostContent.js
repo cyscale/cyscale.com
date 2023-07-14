@@ -20,6 +20,8 @@ import ScrollIndicator from './ScrollbarIndicator';
 import classnames from 'classnames';
 import { headingRenderer } from '../../common/utils';
 import Toc from './TOC';
+import useFAQs from './useFAQs';
+import FAQsBlog from './FAQsBlog';
 
 const ctaWhitepaperTextColor = css`
     color: #474747;
@@ -39,8 +41,11 @@ export default function PostContent({
 
     const scrollRef = useRef(null);
 
+    const { faqContent: faqs } = useFAQs(data.rawMarkdownBody);
+
     return (
         <div className='relative'>
+            <FAQsBlog faqs={faqs} />
             <ScrollIndicator ref={scrollRef} />
             <div
                 className={classnames({
