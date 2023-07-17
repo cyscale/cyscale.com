@@ -211,22 +211,22 @@ const CSPM = ({ location }) => {
                     gatsbyImageData(width: 1920, layout: CONSTRAINED)
                 }
             }
-            smartFintech: file(relativePath: { eq: "smart-fintech-home.png" }) {
+            smartFintech: file(relativePath: { eq: "smart-fintech-home.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1980, layout: CONSTRAINED)
                 }
             }
-            alex: file(relativePath: { eq: "alex-cociu.png" }) {
+            alex: file(relativePath: { eq: "alex-cociu.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 70, layout: FIXED)
                 }
             }
-            james: file(relativePath: { eq: "james-hawkes-home.png" }) {
+            james: file(relativePath: { eq: "james-hawkes-home.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 70, layout: FIXED)
                 }
             }
-            bays: file(relativePath: { eq: "bays-home.png" }) {
+            bays: file(relativePath: { eq: "bays-home.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1980, layout: CONSTRAINED)
                 }
