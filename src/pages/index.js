@@ -143,12 +143,12 @@ const HomePage = ({ location }) => {
                     gatsbyImageData(width: 720, layout: CONSTRAINED)
                 }
             }
-            dashboard: file(relativePath: { eq: "dashboard-home.png" }) {
+            dashboard: file(relativePath: { eq: "dashboard-home.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1080, layout: CONSTRAINED)
                 }
             }
-            assetInventory: file(relativePath: { eq: "asset-inventory.png" }) {
+            assetInventory: file(relativePath: { eq: "asset-inventory.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 720, layout: CONSTRAINED)
                 }
@@ -168,62 +168,62 @@ const HomePage = ({ location }) => {
                     gatsbyImageData(width: 1080, layout: CONSTRAINED)
                 }
             }
-            manuelaOvidiuBarry: file(relativePath: { eq: "manuela-ovidiu-barry.png" }) {
+            manuelaOvidiuBarry: file(relativePath: { eq: "manuela-ovidiu-barry.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 180, layout: CONSTRAINED)
                 }
             }
-            cloudNativeIcon: file(relativePath: { eq: "cloud-native-icon.png" }) {
+            cloudNativeIcon: file(relativePath: { eq: "cloud-native-icon.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 100, layout: FIXED)
                 }
             }
-            cloudIcon: file(relativePath: { eq: "cloud-security-icon.png" }) {
+            cloudIcon: file(relativePath: { eq: "cloud-security-icon.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 100, layout: FIXED)
                 }
             }
-            dataSecurityIcon: file(relativePath: { eq: "data-security-home-icon.png" }) {
+            dataSecurityIcon: file(relativePath: { eq: "data-security-home-icon.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 100, layout: FIXED)
                 }
             }
-            cnappIcon: file(relativePath: { eq: "cnapp-home-icon.png" }) {
+            cnappIcon: file(relativePath: { eq: "cnapp-home-icon.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 100, layout: FIXED)
                 }
             }
-            iamIcon: file(relativePath: { eq: "iam-home-icon.png" }) {
+            iamIcon: file(relativePath: { eq: "iam-home-icon.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 100, layout: FIXED)
                 }
             }
-            bucketIcon: file(relativePath: { eq: "bucket-home-icon.png" }) {
+            bucketIcon: file(relativePath: { eq: "bucket-home-icon.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 100, layout: FIXED)
                 }
             }
-            nativeInfrastructureIcon: file(relativePath: { eq: "native-infrastucture-icon.png" }) {
+            nativeInfrastructureIcon: file(relativePath: { eq: "native-infrastucture-icon.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 100, layout: FIXED)
                 }
             }
-            smartFintech: file(relativePath: { eq: "smart-fintech-home.png" }) {
+            smartFintech: file(relativePath: { eq: "smart-fintech-home.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1980, layout: CONSTRAINED)
                 }
             }
-            alex: file(relativePath: { eq: "alex-cociu.png" }) {
+            alex: file(relativePath: { eq: "alex-cociu.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 70, layout: FIXED)
                 }
             }
-            james: file(relativePath: { eq: "james-hawkes-home.png" }) {
+            james: file(relativePath: { eq: "james-hawkes-home.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 70, layout: FIXED)
                 }
             }
-            bays: file(relativePath: { eq: "bays-home.png" }) {
+            bays: file(relativePath: { eq: "bays-home.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1980, layout: CONSTRAINED)
                 }

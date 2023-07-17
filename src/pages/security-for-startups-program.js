@@ -98,7 +98,7 @@ const SecurityForStartupsProgram = ({ location }) => {
                     gatsbyImageData(width: 720, layout: CONSTRAINED)
                 }
             }
-            assetInventory: file(relativePath: { eq: "asset-inventory.png" }) {
+            assetInventory: file(relativePath: { eq: "asset-inventory.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 720, layout: CONSTRAINED)
                 }
