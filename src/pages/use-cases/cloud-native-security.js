@@ -43,7 +43,7 @@ const CloudNativeSecurity = ({ location }) => {
                     gatsbyImageData(width: 1920, layout: CONSTRAINED)
                 }
             }
-            inventory: file(relativePath: { eq: "inventory-cnapp.png" }) {
+            inventory: file(relativePath: { eq: "inventory-cnapp.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1920, layout: CONSTRAINED)
                 }
