@@ -39,7 +39,7 @@ const topArticles = [
 export default function CloudComplianceContent() {
     const data = useStaticQuery(graphql`
         query CloudCompliance {
-            consistency: file(relativePath: { eq: "Achieve-clarity-consistency-image.png" }) {
+            consistency: file(relativePath: { eq: "Achieve-clarity-consistency-image.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1080, layout: CONSTRAINED)
                 }

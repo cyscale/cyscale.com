@@ -72,7 +72,7 @@ const PricingPage = ({ location }) => {
 
     const data = useStaticQuery(graphql`
         query PricingQuery {
-            videoThumbnail: file(relativePath: { eq: "video-thumbnail-pricing.png" }) {
+            videoThumbnail: file(relativePath: { eq: "video-thumbnail-pricing.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1080, layout: CONSTRAINED)
                 }

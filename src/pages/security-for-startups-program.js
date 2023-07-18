@@ -103,12 +103,12 @@ const SecurityForStartupsProgram = ({ location }) => {
                     gatsbyImageData(width: 720, layout: CONSTRAINED)
                 }
             }
-            cardIntegrations: file(relativePath: { eq: "card-integrations.png" }) {
+            cardIntegrations: file(relativePath: { eq: "card-integrations.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 720, layout: CONSTRAINED)
                 }
             }
-            cardMisconfiguration: file(relativePath: { eq: "card-misconfiguration.png" }) {
+            cardMisconfiguration: file(relativePath: { eq: "card-misconfiguration.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1080, layout: CONSTRAINED)
                 }

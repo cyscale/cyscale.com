@@ -64,7 +64,7 @@ const Header = ({
 
     const data = useStaticQuery(graphql`
         query ComplianceBanner {
-            image: file(relativePath: { eq: "compliance-banner-image2.png" }) {
+            image: file(relativePath: { eq: "compliance-banner-image2.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1080, layout: CONSTRAINED)
                 }
