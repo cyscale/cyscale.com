@@ -39,7 +39,7 @@ const topArticles = [
 const Index = () => {
     const data = useStaticQuery(graphql`
         query CSPMQuery {
-            card: file(relativePath: { eq: "csm-whitepaper-bluebird.png" }) {
+            card: file(relativePath: { eq: "csm-whitepaper-bluebird.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 386, layout: FIXED)
                 }

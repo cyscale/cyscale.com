@@ -81,7 +81,7 @@ const dataFeaturedProducts = [
 const CloudMissConfiguration = ({ location }) => {
     const data = useStaticQuery(graphql`
         query CloudMisconfigurationQuery {
-            card: file(relativePath: { eq: "csm-whitepaper-bluebird.png" }) {
+            card: file(relativePath: { eq: "csm-whitepaper-bluebird.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 386, layout: FIXED)
                 }

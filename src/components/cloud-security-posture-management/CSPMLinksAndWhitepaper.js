@@ -17,7 +17,7 @@ const cardTitle = css`
 const CSPMLinksAndWhitepaper = () => {
     const data = useStaticQuery(graphql`
         query CSPMLinksAndWhitepaperQuery {
-            card: file(relativePath: { eq: "csm-whitepaper-bluebird.png" }) {
+            card: file(relativePath: { eq: "csm-whitepaper-bluebird.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 386, layout: FIXED)
                 }

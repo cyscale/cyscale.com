@@ -48,7 +48,7 @@ const IAMSecurity = ({ location }) => {
                     gatsbyImageData(width: 1920, layout: CONSTRAINED)
                 }
             }
-            card: file(relativePath: { eq: "csm-whitepaper-bluebird.png" }) {
+            card: file(relativePath: { eq: "csm-whitepaper-bluebird.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 386, layout: FIXED)
                 }
