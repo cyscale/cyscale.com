@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import HeaderContext from './HeaderContext';
 import ScrollButton from '../ScrollButton/ScrollButton';
-import remoteWorkBannerImage from '../../assets/images/remote-work-banner-image.png';
+import remoteWorkBannerImage from '../../assets/images/remote-work-banner-image.webp';
 import {
     ISO27001Small,
     AicpaSoc2Small,

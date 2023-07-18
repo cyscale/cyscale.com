@@ -42,7 +42,7 @@ const topArticles = [
 const Index = ({ location }) => {
     const data = useStaticQuery(graphql`
         query CloudDataSecurityQuery {
-            dashboard: file(relativePath: { eq: "dashboard-cloud-data-security.png" }) {
+            dashboard: file(relativePath: { eq: "dashboard-cloud-data-security.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1920, layout: CONSTRAINED)
                 }
