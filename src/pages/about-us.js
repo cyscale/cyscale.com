@@ -105,6 +105,16 @@ const AboutUs = ({ location }) => {
                     gatsbyImageData(width: 100, layout: CONSTRAINED)
                 }
             }
+            securityCompliance: file(relativePath: { eq: "security-compliance-microsoft.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 100, layout: CONSTRAINED)
+                }
+            }
+            kubernetesAdministrator: file(relativePath: { eq: "kubernetes-administrator.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 100, layout: CONSTRAINED)
+                }
+            }
         }
     `);
 
@@ -472,6 +482,24 @@ const AboutUs = ({ location }) => {
                         classes={'mt-2 sm:mt-12'}
                     />
                     <CertificationCard
+                        imageData={dataAboutUs.securityCompliance.childImageSharp.gatsbyImageData}
+                        titleSm={
+                            <>
+                                Security, Compliance,
+                                <br /> and Identity Fundamentals
+                            </>
+                        }
+                        titleLg={
+                            <>
+                                Security, Compliance,
+                                <br /> and Identity
+                                <br /> Fundamentals
+                            </>
+                        }
+                        company={'Microsoft'}
+                        classes={'mt-2 sm:mt-12'}
+                    />
+                    <CertificationCard
                         imageData={dataAboutUs.azureRed.childImageSharp.gatsbyImageData}
                         titleSm={
                             <>
@@ -598,6 +626,21 @@ const AboutUs = ({ location }) => {
                             </>
                         }
                         company='Cisco'
+                        classes={'mt-2 sm:mt-12'}
+                    />
+                    <CertificationCard
+                        imageData={dataAboutUs.kubernetesAdministrator.childImageSharp.gatsbyImageData}
+                        titleSm={
+                            <>
+                                Certified <br /> Kubernetes Administrator
+                            </>
+                        }
+                        titleLg={
+                            <>
+                                Certified <br /> Kubernetes <br /> Administrator
+                            </>
+                        }
+                        company='CNCF'
                         classes={'mt-2 sm:mt-12'}
                     />
                 </Row>
