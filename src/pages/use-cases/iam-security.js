@@ -38,12 +38,12 @@ const IAMSecurity = ({ location }) => {
 
     const data = useStaticQuery(graphql`
         query IAMSecurityQuery {
-            identityDashboard: file(relativePath: { eq: "identity-dashboard.png" }) {
+            identityDashboard: file(relativePath: { eq: "identity-dashboard.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1920, layout: CONSTRAINED)
                 }
             }
-            identityPage: file(relativePath: { eq: "identity-page.png" }) {
+            identityPage: file(relativePath: { eq: "identity-page.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1920, layout: CONSTRAINED)
                 }

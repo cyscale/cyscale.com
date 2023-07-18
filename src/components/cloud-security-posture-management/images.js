@@ -17,7 +17,7 @@ function withImageData(WrappedComponent) {
                             gatsbyImageData(width: 1920, layout: CONSTRAINED)
                         }
                     }
-                    alertsCSPM: file(relativePath: { eq: "alerts-cspm.png" }) {
+                    alertsCSPM: file(relativePath: { eq: "alerts-cspm.webp" }) {
                         childImageSharp {
                             gatsbyImageData(width: 1920, layout: CONSTRAINED)
                         }

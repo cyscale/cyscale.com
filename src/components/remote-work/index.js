@@ -16,7 +16,7 @@ import { topArticles } from '../../pages/products/cnapp';
 export default function RemoteWorkContent() {
     const data = useStaticQuery(graphql`
         query RemoteWorkQuery {
-            supercharge: file(relativePath: { eq: "supercharge-cloud-security.png" }) {
+            supercharge: file(relativePath: { eq: "supercharge-cloud-security.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1920, layout: CONSTRAINED)
                 }
