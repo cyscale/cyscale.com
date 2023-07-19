@@ -49,7 +49,7 @@ const AWSCloudSecurity = ({ location }) => {
                     gatsbyImageData(width: 386, layout: FIXED)
                 }
             }
-            heroImage: file(relativePath: { eq: "aws-cloud-security.png" }) {
+            heroImage: file(relativePath: { eq: "aws-cloud-security.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 500, layout: FIXED)
                 }

@@ -54,7 +54,7 @@ const GCPCloudSecurity = ({ location }) => {
                     gatsbyImageData(width: 386, layout: FIXED)
                 }
             }
-            heroImage: file(relativePath: { eq: "google-cloud-security.png" }) {
+            heroImage: file(relativePath: { eq: "google-cloud-security.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 500, layout: FIXED)
                 }

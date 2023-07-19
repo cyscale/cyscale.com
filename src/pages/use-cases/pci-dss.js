@@ -39,7 +39,7 @@ const topArticles = [
 const PciDss = ({ location }) => {
     const data = useStaticQuery(graphql`
         query PSIteQuery {
-            graph: file(relativePath: { eq: "graph.png" }) {
+            graph: file(relativePath: { eq: "graph.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1080, layout: CONSTRAINED)
                 }
