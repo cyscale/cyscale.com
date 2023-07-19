@@ -44,7 +44,7 @@ const AzureCloudSecurity = ({ location }) => {
                     gatsbyImageData(width: 1080, layout: CONSTRAINED)
                 }
             }
-            azureGraph: file(relativePath: { eq: "graph.png" }) {
+            azureGraph: file(relativePath: { eq: "graph.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1080, layout: CONSTRAINED)
                 }
@@ -64,7 +64,7 @@ const AzureCloudSecurity = ({ location }) => {
                     gatsbyImageData(width: 250, layout: FIXED)
                 }
             }
-            heroImage: file(relativePath: { eq: "azure-cloud-security.png" }) {
+            heroImage: file(relativePath: { eq: "azure-cloud-security.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 500, layout: FIXED)
                 }

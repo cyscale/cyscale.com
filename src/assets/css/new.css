@@ -54,7 +54,7 @@
         background-repeat: no-repeat;
         background-position: center;
         background-position: 50% 35%;
-        background-image: url('../images/hero-CSPM-bg.jpg');
+        background-image: url('../images/hero-CSPM-bg.webp');
     }
     .bg-pouring {
         background-size: cover;
@@ -84,7 +84,7 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: 50% 35%;
-        background-image: url('../images/hero-soc2-bg.png');
+        background-image: url('../images/hero-soc2-bg.webp');
     }
     .title-cs-misconfiguration {
         font-size: 2.7rem;
@@ -103,7 +103,7 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: 50% 35%;
-        background-image: url('../images/hero-nist-bg.png');
+        background-image: url('../images/hero-nist-bg.webp');
     }
 }
 

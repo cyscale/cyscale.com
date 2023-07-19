@@ -78,7 +78,7 @@ const CloudCompliance = ({ location }) => {
                     gatsbyImageData(width: 1920, layout: CONSTRAINED)
                 }
             }
-            controls: file(relativePath: { eq: "controls-iso.png" }) {
+            controls: file(relativePath: { eq: "controls-iso.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1920, layout: CONSTRAINED)
                 }
