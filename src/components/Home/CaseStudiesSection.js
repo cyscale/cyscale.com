@@ -20,7 +20,7 @@ const CaseStudiesSection = () => {
         query CaseStudiesSectionQuery {
             smartFintech: file(relativePath: { eq: "smart-fintech-home.webp" }) {
                 childImageSharp {
-                    gatsbyImageData(width: 1980, layout: CONSTRAINED)
+                    gatsbyImageData(width: 720, layout: CONSTRAINED)
                 }
             }
             alex: file(relativePath: { eq: "alex-cociu.webp" }) {
@@ -35,7 +35,7 @@ const CaseStudiesSection = () => {
             }
             bays: file(relativePath: { eq: "bays-home.webp" }) {
                 childImageSharp {
-                    gatsbyImageData(width: 1980, layout: CONSTRAINED)
+                    gatsbyImageData(width: 720, layout: CONSTRAINED)
                 }
             }
         }
