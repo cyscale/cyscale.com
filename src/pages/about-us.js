@@ -23,12 +23,12 @@ import CertificationCard from '../components/about/CertificationCard';
 const AboutUs = ({ location }) => {
     const dataAboutUs = useStaticQuery(graphql`
         query AboutUsQuery {
-            team: file(relativePath: { eq: "team-cyscale.png" }) {
+            team: file(relativePath: { eq: "team-cyscale.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1080, layout: CONSTRAINED)
                 }
             }
-            awsStartup: file(relativePath: { eq: "aws-startup-program.png" }) {
+            awsStartup: file(relativePath: { eq: "aws-startup-program.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 140, layout: CONSTRAINED)
                 }
@@ -126,16 +126,16 @@ const AboutUs = ({ location }) => {
             description='Together, we draw broad industry expertise to create powerful cybersecurity solutions for our customers that automate and mitigate cloud security issues.'
         >
             <div className='bg-lightGrey'>
-                <div className='max-w-7xl m-auto pl-8 pr-8 pt-28 pb-4 lg:pb-10'>
+                <div className='max-w-7xl m-auto pl-8 pr-8 pt-28 lg:pt-44 pb-12 lg:pb-28'>
                     <Row>
                         <div className='col-span-12 md:col-span-6 '>
-                            <div className='pr-12 xl:max-w-lg xl:ml-auto xl:mr-24 2xl:max-w-full 2xl:ml-0 2xl:mr-0'>
-                                <h1 className='font-semibold font-montserrat text-3xl lg:text-5xl leading-normal text-primary mt-2 lg:mt-12 xl:mt-24'>
+                            <div className='xl:ml-auto max-w-full 2xl:ml-0 2xl:mr-0'>
+                                <h1 className='font-semibold font-montserrat text-3xl lg:text-5xl leading-normal text-primary mt-2 lg:mt-20'>
                                     Our Mission
                                 </h1>
                                 <p className='text-base lg:text-lg pt-2 lg:pt-10  leading-loose'>
                                     To help companies of all sizes to start, improve and maintain their Cloud Security
-                                    Program based on the industry best practices. Reducing the risk of security breaches
+                                    Program based on the industry best practices. Reducing the risk <br className="hidden xl:block"/> of security breaches
                                     when migrating or developing solutions in the cloud should be a constant priority
                                     and responsibility. We can ensure that this task will not be overwhelming for you.
                                 </p>
