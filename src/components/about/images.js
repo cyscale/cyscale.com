@@ -8,127 +8,127 @@ function withImageData(WrappedComponent) {
         <StaticQuery
             query={graphql`
                 query TeamQuery {
-                    ovidiu: file(relativePath: { eq: "ovidiu.jpg" }) {
+                    ovidiu: file(relativePath: { eq: "ovidiu.webp" }) {
                         childImageSharp {
                             gatsbyImageData(width: 256, layout: CONSTRAINED)
                         }
                     }
-                    leaderOvidiu: file(relativePath: { eq: "leader-ovidiu.jpg" }) {
+                    leaderOvidiu: file(relativePath: { eq: "leader-ovidiu.webp" }) {
                         childImageSharp {
                             gatsbyImageData(width: 500, layout: CONSTRAINED)
                         }
                     }
-                    leaderAndy: file(relativePath: { eq: "andy.jpg" }) {
+                    leaderAndy: file(relativePath: { eq: "andy.webp" }) {
                         childImageSharp {
                             gatsbyImageData(width: 500, layout: CONSTRAINED)
                         }
                     }
-                    leaderManuela: file(relativePath: { eq: "leader-manuela.jpg" }) {
+                    leaderManuela: file(relativePath: { eq: "leader-manuela.webp" }) {
                         childImageSharp {
                             gatsbyImageData(width: 500, layout: CONSTRAINED)
                         }
                     }
-                    ovidiuAndManuela: file(relativePath: { eq: "ovidiu-and-manuela.jpg" }) {
+                    ovidiuAndManuela: file(relativePath: { eq: "ovidiu-and-manuela.webp" }) {
                         childImageSharp {
                             gatsbyImageData(width: 720, layout: CONSTRAINED)
                         }
                     }
-                    andreiS: file(relativePath: { eq: "andrei-s.jpg" }) {
+                    andreiS: file(relativePath: { eq: "andrei-s.webp" }) {
                         childImageSharp {
                             gatsbyImageData(width: 256, layout: CONSTRAINED)
                         }
                     }
-                    andreiM: file(relativePath: { eq: "andrei-m.jpg" }) {
+                    andreiM: file(relativePath: { eq: "andrei-m.webp" }) {
                         childImageSharp {
                             gatsbyImageData(width: 256, layout: CONSTRAINED)
                         }
                     }
-                    manuela: file(relativePath: { eq: "manuela.jpg" }) {
+                    manuela: file(relativePath: { eq: "manuela.webp" }) {
                         childImageSharp {
                             gatsbyImageData(width: 256, layout: CONSTRAINED)
                         }
                     }
-                    andreip: file(relativePath: { eq: "andreip.jpg" }) {
+                    andreip: file(relativePath: { eq: "andreip.webp" }) {
                         childImageSharp {
                             gatsbyImageData(width: 256, layout: CONSTRAINED)
                         }
                     }
-                    gabriel: file(relativePath: { eq: "gabriel.jpg" }) {
+                    gabriel: file(relativePath: { eq: "gabriel.webp" }) {
                         childImageSharp {
                             gatsbyImageData(width: 256, layout: CONSTRAINED)
                         }
                     }
-                    sabrina: file(relativePath: { eq: "sabrina.png" }) {
+                    sabrina: file(relativePath: { eq: "sabrina.webp" }) {
                         childImageSharp {
                             gatsbyImageData(width: 256, layout: CONSTRAINED)
                         }
                     }
-                    mihaiB: file(relativePath: { eq: "mihai-b.jpg" }) {
+                    mihaiB: file(relativePath: { eq: "mihai-b.webp" }) {
                         childImageSharp {
                             gatsbyImageData(width: 256, layout: CONSTRAINED)
                         }
                     }
-                    mihaiM: file(relativePath: { eq: "mihai-m.jpg" }) {
+                    mihaiM: file(relativePath: { eq: "mihai-m.webp" }) {
                         childImageSharp {
                             gatsbyImageData(width: 256, layout: CONSTRAINED)
                         }
                     }
-                    levi: file(relativePath: { eq: "levi.jpg" }) {
+                    levi: file(relativePath: { eq: "levi.webp" }) {
                         childImageSharp {
                             gatsbyImageData(width: 256, layout: CONSTRAINED)
                         }
                     }
-                    notion: file(relativePath: { eq: "notion.jpg" }) {
+                    notion: file(relativePath: { eq: "notion.webp" }) {
                         childImageSharp {
                             gatsbyImageData(height: 102, layout: CONSTRAINED)
                         }
                     }
-                    seedcamp: file(relativePath: { eq: "seedcamp.jpg" }) {
+                    seedcamp: file(relativePath: { eq: "seedcamp.webp" }) {
                         childImageSharp {
                             gatsbyImageData(height: 102, layout: CONSTRAINED)
                         }
                     }
-                    gapminder: file(relativePath: { eq: "gapminder.jpg" }) {
+                    gapminder: file(relativePath: { eq: "gapminder.webp" }) {
                         childImageSharp {
                             gatsbyImageData(height: 102, layout: CONSTRAINED)
                         }
                     }
-                    seedblink: file(relativePath: { eq: "seedblink.jpg" }) {
+                    seedblink: file(relativePath: { eq: "seedblink.webp" }) {
                         childImageSharp {
                             gatsbyImageData(height: 102, layout: CONSTRAINED)
                         }
                     }
-                    petru: file(relativePath: { eq: "petru.png" }) {
+                    petru: file(relativePath: { eq: "petru.webp" }) {
                         childImageSharp {
                             gatsbyImageData(height: 256, layout: CONSTRAINED)
                         }
                     }
-                    mihnea: file(relativePath: { eq: "mihnea.png" }) {
+                    mihnea: file(relativePath: { eq: "mihnea.webp" }) {
                         childImageSharp {
                             gatsbyImageData(height: 256, layout: CONSTRAINED)
                         }
                     }
-                    norbert: file(relativePath: { eq: "norbert.png" }) {
+                    norbert: file(relativePath: { eq: "norbert.webp" }) {
                         childImageSharp {
                             gatsbyImageData(height: 256, layout: CONSTRAINED)
                         }
                     }
-                    auras: file(relativePath: { eq: "auras.png" }) {
+                    auras: file(relativePath: { eq: "auras.webp" }) {
                         childImageSharp {
                             gatsbyImageData(height: 256, layout: CONSTRAINED)
                         }
                     }
-                    darius: file(relativePath: { eq: "darius.jpeg" }) {
+                    darius: file(relativePath: { eq: "darius.webp" }) {
                         childImageSharp {
                             gatsbyImageData(height: 256, layout: CONSTRAINED)
                         }
                     }
-                    barry: file(relativePath: { eq: "barry.jpeg" }) {
+                    barry: file(relativePath: { eq: "barry.webp" }) {
                         childImageSharp {
                             gatsbyImageData(height: 256, layout: CONSTRAINED)
                         }
                     }
-                    simona: file(relativePath: { eq: "simona.png" }) {
+                    simona: file(relativePath: { eq: "simona.webp" }) {
                         childImageSharp {
                             gatsbyImageData(height: 256, layout: CONSTRAINED)
                         }
