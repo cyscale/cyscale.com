@@ -29,13 +29,13 @@ const Layout = ({ children, title, description, pageName, location, banner }) =>
                 </HeaderContext.Provider>
                 <main>{children}</main>
                 <Footer pageUri={location?.pathname} pageName={pageName} />
-                {/*{Boolean(cookies[cookieConsentKey]) !== true && (*/}
-                {/*    <CookiesBanner*/}
-                {/*        cookiesBanner={cookiesBanner}*/}
-                {/*        setCookiesBanner={setCookiesBanner}*/}
-                {/*        pageName={pageName}*/}
-                {/*    />*/}
-                {/*)}*/}
+                {Boolean(cookies[cookieConsentKey]) !== true && (
+                    <CookiesBanner
+                        cookiesBanner={cookiesBanner}
+                        setCookiesBanner={setCookiesBanner}
+                        pageName={pageName}
+                    />
+                )}
                 <ScrollToTopButton />
             </GlobalContext.Provider>
         </CookiesProvider>
