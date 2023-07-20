@@ -18,10 +18,10 @@ seoDescription: A CSPM (Cloud Security Posture Management) tool is a product
   that scans your cloud environment for vulnerabilities and alerts you if it
   finds any misconfigurations in the cloud infrastructure. It should check for a
   wide variety of vulnerabilities, it should integrate with big cloud vendors
-  like Google Cloud, Azure, AWS, Alibaba Cloud, it should support compliance frameworks
-  like ISO 27001, GDPR and SOC 2, it should provide vulnerability and risk
-  scoring and should send out targeted alerts, as well as provide remediation
-  for findings.
+  like Google Cloud, Azure, AWS, Alibaba Cloud, it should support compliance
+  frameworks like ISO 27001, GDPR and SOC 2, it should provide vulnerability and
+  risk scoring and should send out targeted alerts, as well as provide
+  remediation for findings.
 featuredpost: true
 featuredimage: /img/what-to-look-for-in-a-cspm.png
 tags:
@@ -73,7 +73,7 @@ A certificate of [compliance with a standard such as ISO 27001 or SOC 2](https:/
 * Your organization is working to reduce the risk of information security breaches, 
 * You are adequately managing information security. 
 
-In order to make the best use of your CSPM, take into account what compliance standard or certification your company is going for. A few examples are: 
+In order to make the best use of your [CSPM](https://cyscale.com/blog/understanding-cspm-an-essential-guide/), take into account what compliance standard or certification your company is going for. A few examples are: 
 
 * ISO 27001 
 * SOC 2 
@@ -126,7 +126,7 @@ Cyscale provides, along with the controls that pinpoint what vulnerability has b
 
 The remediation steps can ensure you're applying the modifications correctly and speed up the process of securing your assets. 
 
-Make the right decision for your company by using a robust [CSPM](https://cyscale.com/blog/cloud-security-posture-management-cspm-guide/) that helps secure your cloud infrastructure and provides all of the features mentioned above and more. 
+Make the right decision for your company by using a robust CSPM that helps secure your cloud infrastructure and provides all of the features mentioned above and more. 
 
 Cyscale ensures the following features: 
 
