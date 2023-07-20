@@ -18,7 +18,7 @@ const MobileNavbar = ({ showBurgerButton, showMenu, setShowMenu, searchBar, setS
 
                     <img
                         src={searchIcon}
-                        className={`pb-2.5 cursor-pointer mr-10 ${showBurgerButton ? 'inline-block' : 'hidden'}`}
+                        className='pb-2.5 cursor-pointer mr-10 inline-block'
                         alt=''
                         tabIndex='0'
                         onClick={() => setSearchBar(!searchBar)}
@@ -30,7 +30,7 @@ const MobileNavbar = ({ showBurgerButton, showMenu, setShowMenu, searchBar, setS
                 </div>
                 <button
                     type='button'
-                    className={`absolute right-0 top-6 xl:hidden ${showBurgerButton ? 'inline-block' : 'hidden'}`}
+                    className='absolute right-0 top-6 xl:hidden inline-block'
                     onClick={() => setShowMenu(!showMenu)}
                 >
                     <img src={navBars} alt='toggle menu' />
