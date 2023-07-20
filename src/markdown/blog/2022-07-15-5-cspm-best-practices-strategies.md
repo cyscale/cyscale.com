@@ -43,7 +43,7 @@ A CSPM (Cloud Security Posture Management) product is a component of cloud secur
 
 ## Best practices
 
-The following best practices we recommend can be implemented and followed with a CSPM. 
+The following best practices we recommend can be implemented and followed with a [CSPM](https://cyscale.com/blog/understanding-cspm-an-essential-guide/). 
 
 #### 1. Ensure visibility of assets
 
