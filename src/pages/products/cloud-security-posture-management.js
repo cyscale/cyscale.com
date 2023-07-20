@@ -42,6 +42,15 @@ const topArticles = [
             </>
         ),
         link: '/blog/cspm-visibility-compliance-security/'
+    },
+    {
+        text: (
+            <>
+                Understanding Cloud Security Posture Management (CSPM): <br className='block sm:hidden' /> An Essential
+                Guide
+            </>
+        ),
+        link: '/blog/understanding-cspm-an-essential-guide/'
     }
 ];
 
