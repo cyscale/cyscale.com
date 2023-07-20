@@ -5,6 +5,7 @@ import { Link } from 'gatsby';
 import CookiesModal from './cookies-modal/CookiesModal';
 import { useCookies } from 'react-cookie';
 import { cookieConsentKey } from '../../common/constants';
+import { css } from 'twin.macro';
 
 const CookiesBanner = ({ cookiesBanner, setCookiesBanner, pageName }) => {
     const [cookiesModal, setCookiesModal] = useState(false);
@@ -31,12 +32,12 @@ const CookiesBanner = ({ cookiesBanner, setCookiesBanner, pageName }) => {
         <div>
             {cookiesBanner && pageName !== 'privacyPolicy' && <div className='overlay'></div>}
             <FocusLock disabled={pageName === 'privacyPolicy'}>
-                <CSSTransition in={cookiesBanner} timeout={300} classNames='banner' unmountOnExit>
-                    <div className='banner h-96 sm:h-56 md:h-44 lg:h-36'>
+                {cookiesBanner && (
+                    <div className='banner h-26 sm:h-56 md:h-44 lg:h-36'>
                         <div className='grid grid-rows-12 h-full'>
                             <div className='col-span-12 md:col-start-1 md:col-end-6 lg:max-w-2xl xl:max-w-4xl 2xl:max-w-7xl flex items-center px-3'>
                                 <div>
-                                    <p className='text-black'>
+                                    <p className='text-black hidden sm:block'>
                                         This website <strong>stores cookies on your computer</strong>. These cookies are
                                         used to collect information about how you interact with our website and allow us
                                         to remember you. We use this information{' '}
@@ -44,8 +45,7 @@ const CookiesBanner = ({ cookiesBanner, setCookiesBanner, pageName }) => {
                                         for <strong>analytics and metrics about our visitors</strong> both on this
                                         website and other media.
                                     </p>
-                                    <p className='text-black mt-4'>
-                                        {' '}
+                                    <p className='text-black mt-2 sm:mt-4'>
                                         To find out more about the cookies we use, see our
                                         <Link className='text-primary' to='/policies/privacy-policy/'>
                                             <strong> Privacy Policy.</strong>
@@ -53,14 +53,14 @@ const CookiesBanner = ({ cookiesBanner, setCookiesBanner, pageName }) => {
                                     </p>
                                 </div>
                             </div>
-                            <div className='col-span-12 md:col-start-6 md:col-end-12 md:min-w-xl md:mx-6 md:max-x-xl h-full flex items-center justify-center md:flex-col lg:flex-row pb-4 sm:pb-0'>
-                                <p className='text-primary md:mb-2 lg:mb-0 cursor-pointer'>
+                            <div className='col-span-12 md:col-start-6 md:col-end-12 md:min-w-xl md:mx-6 md:max-x-xl h-full flex items-center justify-center md:flex-col lg:flex-row pb-2 sm:pb-0'>
+                                <p className='text-primary md:mb-2 lg:mb-0 cursor-pointer text-sm sm:text-base'>
                                     <button onClick={() => setCookiesModal(!cookiesModal)} onKeyUp={openModalOnKeyUp}>
                                         <strong>Cookies Settings</strong>
                                     </button>
                                 </p>
                                 <button
-                                    className='inline-block font-medium rounded bg-red text-white text-center py-3 px-6 ml-4 cookies-button'
+                                    className='inline-block font-medium rounded bg-red text-white text-center py-3 px-6 ml-4 cookies-button text-sm sm:text-base'
                                     aria-label='Accept cookies'
                                     onClick={() => {
                                         setCookie(
@@ -94,7 +94,7 @@ const CookiesBanner = ({ cookiesBanner, setCookiesBanner, pageName }) => {
                             </div>
                         </CSSTransition>
                     </div>
-                </CSSTransition>
+                )}
             </FocusLock>
         </div>
     );
