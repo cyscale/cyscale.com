@@ -422,10 +422,17 @@ CMS.registerEditorComponent({
             const matched = faq.match(
                 /^<li><p class="question" style="font-weight:bold;">(.*?)<\/p><p class="answer">(.*?)<\/p><\/li>$/s
             );
-            return {
-                question: matched[1],
-                answer: matched[2]
-            };
+            if (matched) {
+                return {
+                    question: matched[1],
+                    answer: matched[2]
+                };
+            } else {
+                return {
+                    question: '',
+                    answer: ''
+                };
+            }
         });
         return { faqs };
     },
