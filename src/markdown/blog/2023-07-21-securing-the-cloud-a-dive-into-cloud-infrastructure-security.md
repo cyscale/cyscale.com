@@ -136,7 +136,7 @@ Cloud security types typically correspond with cloud service models – Infrastr
 
 ### 3. What are the top cloud infrastructure security risks? 
 
-The top risks in cloud infrastructure security include data breaches, insecure APIs, system vulnerabilities, account hijacking, and insider threats. Understanding these risks and implementing robust security measures is crucial. 
+The top risks in cloud infrastructure security include data breaches, insecure APIs, system vulnerabilities, account hijacking, and insider threats. Understanding these risks and implementing robust security measures is crucial.
 
 
 
