@@ -119,18 +119,25 @@ const HomePage = ({ location }) => {
             }
         });
 
+        const currentRef = domRef.current;
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
-                if (entry.isIntersecting) {
+                if (entry.isIntersecting && entry.target === currentRef) {
                     setIsVisible(true);
-                    observer.unobserve(domRef.current);
+                    observer.unobserve(currentRef);
                 }
             });
         });
 
-        observer.observe(domRef.current);
+        if (currentRef) {
+            observer.observe(currentRef);
+        }
 
-        return () => observer.unobserve(domRef.current);
+        return () => {
+            if (currentRef) {
+                observer.unobserve(currentRef);
+            }
+        };
     }, []);
 
     return (
