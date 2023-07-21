@@ -45,7 +45,7 @@ export default function PostContent({
 
     return (
         <div className='relative'>
-            <FAQsBlog faqs={faqs} />
+            {!preview && faqs.length >= 1 && <FAQsBlog faqs={faqs} />}
             <ScrollIndicator ref={scrollRef} />
             <div
                 className={classnames({
