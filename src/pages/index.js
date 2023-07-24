@@ -120,14 +120,17 @@ const HomePage = ({ location }) => {
         });
 
         const currentRef = domRef.current;
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting && entry.target === currentRef) {
-                    setIsVisible(true);
-                    observer.unobserve(currentRef);
-                }
-            });
-        });
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting && entry.target === currentRef) {
+                        setIsVisible(true);
+                        observer.unobserve(currentRef);
+                    }
+                });
+            },
+            { rootMargin: '100px' }
+        );
 
         if (currentRef) {
             observer.observe(currentRef);
