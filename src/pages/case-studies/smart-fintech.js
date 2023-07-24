@@ -326,6 +326,17 @@ const SmartFintech = ({ location }) => {
                                 CONTACT SALES
                             </Link>
                         </div>
+                        <hr className='mt-8' css={hrStyle} />
+                        <p className='font-montserrat text-lg font-bold mt-8' css={subtitleColor}>
+                            Save for later
+                        </p>
+                        <p className='font-montserrat font-medium text-xs'>Smart Fintech Case Study</p>
+                        <Link
+                            to='/resources/case-study-smart-fintech.pdf'
+                            className='font-montserrat font-medium text-xs hover:underline cursor-pointer text-blue'
+                        >
+                            Download Case Study
+                        </Link>
                     </div>
                 </div>
             </div>
