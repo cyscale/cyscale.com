@@ -418,9 +418,14 @@ CMS.registerEditorComponent({
     ],
     pattern: /^<ul class="faq-list">(.*?)<\/ul>$/s,
     fromBlock: function (match) {
-        const faqs = match[1].split('</li><li>').map((faq) => {
+        const listItems = match[1]
+            .replace(/^<li>/, '')
+            .replace(/<\/li>$/, '')
+            .split('</li><li>');
+
+        const faqs = listItems.map((faq) => {
             const matched = faq.match(
-                /^<li><p class="question" style="font-weight:bold;">(.*?)<\/p><p class="answer">(.*?)<\/p><\/li>$/s
+                /^<p class="question" style="font-weight:bold;">(.*?)<\/p><p class="answer">(.*?)<\/p>$/s
             );
             if (matched) {
                 return {
