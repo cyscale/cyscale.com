@@ -129,7 +129,7 @@ const HomePage = ({ location }) => {
                     }
                 });
             },
-            { rootMargin: '100px' }
+            { rootMargin: '350px' }
         );
 
         if (currentRef) {
