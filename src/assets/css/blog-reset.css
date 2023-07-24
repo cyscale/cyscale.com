@@ -11,6 +11,10 @@
     margin-top: 0.75rem;
 }
 
+.blog-reset .faq-list {
+    padding-top: 0.05rem;
+}
+
 .blog-reset h1,
 .blog-reset h2,
 .blog-reset h3,
