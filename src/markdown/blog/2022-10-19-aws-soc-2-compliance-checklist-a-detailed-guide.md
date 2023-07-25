@@ -18,7 +18,7 @@ description: >-
   In this article, we will understand what requirements your company needs to fulfill to obtain the SOC 2 certifications and how to implement them correctly in your AWS environment. 
 seoDescription: AWS SOC 2 Compliance
 featuredpost: true
-featuredimage: /img/26-cyscale-blog-min.png
+featuredimage: /img/26-cyscale-blog-min.webp
 tags:
   - AWS
   - SOC 2

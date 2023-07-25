@@ -54,7 +54,7 @@ A knowledge graph is the perfect data model to support a contextual security ana
 
 [This all-inclusive graph](https://euc-word-edit.officeapps.live.com/we/The%20Cyscale%20Security%20Knowledge%20Graph%E2%84%A2%20is%20an%20all-inclusive%20graph%20that%20provides%20correlations%20between%20all%20of%20your%20cloud%20assets,%20as%20well%20as%20other%20apps%20and%20systems%20that%20may%20affect%20cloud%20security%20posture,%20and%20automatically%20pinpoints%20security%20issues.) highlights risk contextually and helps you make better sense of your [cloud security posture](https://cyscale.com/products/cloud-security-posture-management/). 
 
-<img src="/img/29_blog-knowledge-graph.png" alt="The Cyscale Security Knowledge Graph™" title="The Cyscale Security Knowledge Graph™" class=" blog-image-shadow " style="width:auto;height:auto;"/>
+<img src="/img/29_blog-knowledge-graph.webp" alt="The Cyscale Security Knowledge Graph™" title="The Cyscale Security Knowledge Graph™" class=" blog-image-shadow " style="width:auto;height:auto;"/>
 
 ### 2. IAM  
 

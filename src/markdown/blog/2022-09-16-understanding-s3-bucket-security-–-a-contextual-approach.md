@@ -20,7 +20,7 @@ seoDescription: An Amazon S3 bucket is a storage cloud asset that acts as a
   bucket, restrict public access to it, perform at rest and in transit
   encryption, log user actions, and perform regular backups.
 featuredpost: true
-featuredimage: /img/23_blog-cover-photo.png
+featuredimage: /img/23_blog-cover-photo.webp
 tags:
   - security
   - CSPM
@@ -117,7 +117,7 @@ Using a new feature in Cyscale, the bucket graph, you can put in context all of 
 
 Below, you can see an example of a bucket graph. 
 
-![Bucket Graph in Cyscale](/img/23_blog-graph-bucket.png#shadow "Bucket Graph in Cyscale")
+![Bucket Graph in Cyscale](/img/23_blog-graph-bucket.webp#shadow "Bucket Graph in Cyscale")
 
 Although the bucket (shown on the right) has only two IAM policies attached, we can see that these have a significant impact on the infrastructure: the AmazonS3FullAccess policy gives full access rights to a specific user and to a VM that can assume an associated IAMRole.  
 

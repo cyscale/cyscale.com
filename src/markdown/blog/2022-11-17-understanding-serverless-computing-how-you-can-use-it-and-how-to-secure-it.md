@@ -26,7 +26,7 @@ seoDescription: Serverless computing is a collection of services provided by
   computing due to source code flaws, unpatched or outdates libraries or
   packages, information disclosure in error messages and many others.
 featuredpost: true
-featuredimage: /img/27_blog-serverless-computing.png
+featuredimage: /img/27_blog-serverless-computing.webp
 tags:
   - security
   - CSPM

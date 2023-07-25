@@ -22,7 +22,7 @@ seoDescription: "Understanding and managing all your assets and services in the
   mechanisms to identify sensitive data and store it redundantly using
   availability zones. Secure your AWS environment using Cyscale!"
 featuredpost: true
-featuredimage: /img/24_blog-cover-photo.png
+featuredimage: /img/24_blog-cover-photo.webp
 tableOfContents: false
 tags:
   - security

@@ -24,7 +24,7 @@ seoDescription: "A queue is a data structure that allows you to store and
   control, configure a dead-letter queue, use private endpoints for your queues
   and configure a long retention period."
 featuredpost: true
-featuredimage: /img/25_blog-queue-security-cover-photo.png
+featuredimage: /img/25_blog-queue-security-cover-photo.webp
 tags:
   - queue
   - security
