@@ -8,7 +8,7 @@ categories:
 date: 2021-12-22T10:11:16.968Z
 description: Some concepts and techniques we leveraged to switch to a cloud-native message broker.
 featuredpost: true
-featuredimage: /img/nats-horizontal-color.png
+featuredimage: /img/nats-horizontal-color.webp
 tags:
     - publish-subscribe
     - messaging
@@ -37,7 +37,7 @@ The rest of the article will cover the main steps we took to integrate NATS into
 
 **The NATS Ecosystem**
 
-![The NATS ecosystem encompassing the core NATS server, JetStream, the NATS clients and CLI, and the NATS resources for Kubernetes](/img/cyscale-nats.png 'The NATS ecosystem')
+![The NATS ecosystem encompassing the core NATS server, JetStream, the NATS clients and CLI, and the NATS resources for Kubernetes](/img/cyscale-nats.webp 'The NATS ecosystem')
 
 ### Core NATS
 

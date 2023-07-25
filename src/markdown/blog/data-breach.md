@@ -8,7 +8,7 @@ categories:
 date: 2021-02-09T06:08:46.468Z
 description: The adoption of public cloud providers can bring many advantages to a business, but at the same time, cybersecurity threats can appear because of this usage.
 featuredpost: true
-featuredimage: /img/data-breach.jpg
+featuredimage: /img/data-breach.webp
 tags:
     - data breach prevention
     - CSPM

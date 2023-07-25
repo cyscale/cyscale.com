@@ -15,7 +15,7 @@ seoDescription: "5 of the most common cloud misconfigurations are: poor storage
   traffic, missing encryption, disabled or unconfigured logging and monitoring.
   Learn how to avoid them and improve your cloud security posture with Cyscale."
 featuredpost: true
-featuredimage: /img/common-cloud-misconfigurations.png
+featuredimage: /img/common-cloud-misconfigurations.webp
 tags:
   - CSPM
   - misconfigurations

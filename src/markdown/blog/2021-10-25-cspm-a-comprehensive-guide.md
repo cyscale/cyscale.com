@@ -18,7 +18,7 @@ seoDescription: Explore the intricacies of Cloud Security Posture Management
   it's pivotal for securing cloud environments against misconfigurations and
   threats
 featuredpost: true
-featuredimage: /img/hal-gatewood-tzc3vjpck-q-unsplash.jpg
+featuredimage: /img/hal-gatewood-tzc3vjpck-q-unsplash.webp
 tableOfContents: true
 tags: []
 ---

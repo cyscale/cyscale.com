@@ -16,7 +16,7 @@ description: >
 seoDescription: A comparison between the standards SOC 2 and ISO 27001 and how
   to acquire them, including price, duration and others.
 featuredpost: true
-featuredimage: /img/microsoftteams-image.png
+featuredimage: /img/microsoftteams-image.webp
 tags:
   - compliance
   - iso27001

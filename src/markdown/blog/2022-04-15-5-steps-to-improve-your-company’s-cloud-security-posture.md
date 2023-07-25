@@ -18,7 +18,7 @@ seoDescription: "Improve your company's cloud security posture by assuring
   compliance with security standards. Cyscale is a CSPM that provides solutions
   to all of the problems raised. "
 featuredpost: true
-featuredimage: /img/featured_image.png
+featuredimage: /img/featured_image.webp
 tags:
   - CSPM
   - visibility
@@ -66,7 +66,7 @@ Discovery and visibility in cloud imply being able to visualize cloud assets in 
 
 Even more useful is when visibility for each asset is enriched by additional context that may be provided in a graph view.
 
-![A graph from the Cyscale application.](/img/graph_image.png#shadow "The Cyscale Security Knowledge Graph™")
+![A graph from the Cyscale application.](/img/graph_image.webp#shadow "The Cyscale Security Knowledge Graph™")
 
 Looking at: 
 

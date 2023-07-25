@@ -8,7 +8,7 @@ categories:
 date: 2021-08-31T12:54:05.925Z
 description: Being compliant is a huge selling point and many well-established customers will even require this from their service providers. One missing product feature will probably not make or break the deal, but missing compliance will.
 featuredpost: true
-featuredimage: /img/romain-dancre-doplsdelx7e-unsplash.jpg
+featuredimage: /img/romain-dancre-doplsdelx7e-unsplash.webp
 tags:
     - compliance
     - iso27001

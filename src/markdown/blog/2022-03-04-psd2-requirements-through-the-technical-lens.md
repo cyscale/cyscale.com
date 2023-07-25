@@ -8,7 +8,7 @@ categories:
 date: 2022-03-04T13:12:59.854Z
 description: A deeper look at the most important regulation for payment services in Europe (PSD2), surfacing security requirements for the technology at the core of these businesses, tech-governance included.
 featuredpost: true
-featuredimage: /img/cyscale_psd2.png
+featuredimage: /img/cyscale_psd2.webp
 tags:
     - PSD2
     - fintech

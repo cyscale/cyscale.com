@@ -8,7 +8,7 @@ categories:
 date: 2021-09-30T09:07:50.384Z
 description: Going through an ISO 27001 implementation means that people in your company must work closely together towards that end, as most everyone will need to be involved in the process at one stage or the other. Across departments, team members will have to question their processes and their day-to-day work to make sure they are doing the right thing in the right way from a security perspective.
 featuredpost: true
-featuredimage: /img/scott-graham-5fnmwej4taa-unsplash.jpg
+featuredimage: /img/scott-graham-5fnmwej4taa-unsplash.webp
 tags:
     - ISO 27001
     - Standard
