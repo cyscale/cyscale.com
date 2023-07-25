@@ -24,7 +24,7 @@ seoDescription: "A CSPM uses controls to identify misconfigurations, sends
   standards, monitor your infrastructure and ensure logging, remediate findings
   quickly."
 featuredpost: true
-featuredimage: /img/cspm-best-practices.png
+featuredimage: /img/cspm-best-practices.webp
 tags:
   - CSPM
   - security
@@ -59,7 +59,7 @@ Below, you can see a section of Cyscale’s powerful dashboard, where you can al
 
 This inventory helps you keep track of assets and be aware of the different components in your cloud environment. 
 
-![Dashboard inventory in Cyscale](/img/inventory-dashboard.png#shadow "Dashboard inventory in Cyscale")
+![Dashboard inventory in Cyscale](/img/inventory-dashboard.webp#shadow "Dashboard inventory in Cyscale")
 
 #### 2. Classify assets and prioritize the most important ones
 
@@ -83,7 +83,7 @@ There is a long list of international standards that regulate configurations of 
 * PCI-DSS, 
 * NIST, and many more. 
 
-![International compliance standards](/img/standards.png#shadow "International compliance standards")
+![International compliance standards](/img/standards.webp#shadow "International compliance standards")
 
 #### 4. Monitor your infrastructure
 

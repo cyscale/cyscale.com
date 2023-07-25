@@ -18,7 +18,7 @@ seoDescription: When it comes to data stored in the cloud, you must consider
   proper data security in the cloud, whether you are using AWS, Google Cloud, or
   Azure.
 featuredpost: true
-featuredimage: /img/21-cover-01-min.png
+featuredimage: /img/21-cover-01-min.webp
 tags:
   - cspm
   - visibility

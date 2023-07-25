@@ -26,7 +26,7 @@ seoDescription: "Data classification is a way of grouping data to ensure easy
   availability. Use Cyscale to easily filter assets using their tags and
   labels."
 featuredpost: true
-featuredimage: /img/blog_14-data-classification.png
+featuredimage: /img/blog_14-data-classification.webp
 tags:
   - security
   - data

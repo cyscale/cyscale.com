@@ -22,7 +22,7 @@ seoDescription: "A database is one of the most important cloud assets. It
   attempts, and perform regular database backups. Keep RPO and RTO at a minimum
   to ensure high availability and protect your data."
 featuredpost: true
-featuredimage: /img/20_blog-cover-photo.png
+featuredimage: /img/20_blog-cover-photo.webp
 ---
 <!--StartFragment-->
 
@@ -92,7 +92,7 @@ Databases should be backed up regularly, to prevent loss of data, in the case of
 
 Although ransomware attacks are less common in cloud environments at the moment, attackers could in time develop the proper tactics. 
 
-![RPO and RTO](/img/20_blog-rpo-and-rto.png#shadow "RPO and RTO")
+![RPO and RTO](/img/20_blog-rpo-and-rto.webp#shadow "RPO and RTO")
 
 The time between the backups is known as RPO (Recovery Point Objective). It is measured as the time that passed between the last backup and the current one. If a disaster appears, the data written in that time is lost. 
 

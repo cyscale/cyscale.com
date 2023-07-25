@@ -23,7 +23,7 @@ seoDescription: "The Least Privilege Principle states that no user should be
   set up minimum permissions to add more on the go and remove or disable
   identities that haven’t been active in the last 30 days or more. "
 featuredpost: true
-featuredimage: /img/blog_18-cover.png
+featuredimage: /img/blog_18-cover.webp
 tags:
   - security
   - CSPM
@@ -48,19 +48,19 @@ Using this page, you can see your organization's identities and their level of a
 
 Entities that do not have permissions in the cloud but have an account are marked with the “No Access” tag on the right. 
 
-![No access permissions in dashboard](/img/blog_18-1.png#shadow "No access permissions in dashboard")
+![No access permissions in dashboard](/img/blog_18-1.webp#shadow "No access permissions in dashboard")
 
 Moreover, people who have left the organization are also visible on this dashboard. It is essential to know which entities have left to ensure you have a complete offboarding process and that they no longer have permissions. 
 
 If we expand a card of an identity that no longer exists in the company, we see that their account is disabled because it is greyed out. 
 
-![Disabled identity](/img/blog_18-2-disabled-identity.png#shadow "Disabled identity")
+![Disabled identity](/img/blog_18-2-disabled-identity.webp#shadow "Disabled identity")
 
 To understand an identity's impact on the entire organization's environment, you must have comprehensive visibility.  
 
 The following image shows that the analyzed user has accounts in Alibaba, AWS, Azure, Google Cloud, and Okta. Furthermore, we can see that they are part of the "**Admins**" group, as well as others, and as a result, are "**Highly Privileged**”. 
 
-![Highly privileged identity](/img/blog_18-3-andrei-stefanie.png#shadow "Highly privileged identity")
+![Highly privileged identity](/img/blog_18-3-andrei-stefanie.webp#shadow "Highly privileged identity")
 
 If we expand each account’s card, we can see the environment they have access to. Besides tracking permissions, it is crucial to also track the actual environments each user has access to. In the cloud, this tends to quickly become hard to track because applications often span multiple accounts. 
 
@@ -72,7 +72,7 @@ In this example, the user’s Okta account does not have MFA. [Okta is an identi
 
 In the image below, you can see the accounts assigned using Okta. Therefore, if there is a vulnerability in your Okta account, all those accounts may be compromised. 
 
-![Okta identity](/img/blog_18-4-okta.png#shadow "Okta identity")
+![Okta identity](/img/blog_18-4-okta.webp#shadow "Okta identity")
 
 Another useful feature of the Identity Dashboard is the “Alerts” section. If an account has security alerts, the user can click on them and be redirected to the Alerts page. There, you can see failed controls along with: 
 
