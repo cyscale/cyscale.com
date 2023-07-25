@@ -7,22 +7,12 @@ permalink: cloud-infrastructure-security
 categories:
   - CSPM
 date: 2023-07-21T14:45:58.368Z
-description: >-
-  In the wake of digital transformation, cloud services have emerged as an
-  essential facet of modern business operations. The convenience, scalability,
-  and cost-effectiveness they offer have seen the rise of a multi-cloud world
-  where enterprises deploy workloads across diverse cloud environments - be it
-  AWS, Azure, Google Cloud, or private clouds.  
-
-
-  This landscape, however, has also increased the attack surface for cyber threats, bringing the conversation to the forefront: cloud infrastructure security.  
-seoDescription: "In the wake of digital transformation, cloud services have
-  emerged as an essential facet of modern business operations. The convenience,
-  scalability, and cost-effectiveness they offer have seen the rise of a
-  multi-cloud world where enterprises deploy workloads across diverse cloud
-  environments - be it AWS, Azure, Google Cloud, or private clouds.    This
-  landscape, however, has also increased the attack surface for cyber threats,
-  bringing the conversation to the forefront: cloud infrastructure security.  "
+description: Explore the essentials of cloud infrastructure security, its five
+  main domains, and effective best practices. Learn how Cyscale's innovative
+  solutions can boost your cloud security posture.
+seoDescription: Explore the essentials of cloud infrastructure security, its
+  five main domains, and effective best practices. Learn how Cyscale's
+  innovative solutions can boost your cloud security posture.
 featuredpost: true
 featuredimage: /img/46_blog-cover-cloud-infra-security.png
 tableOfContents: false
