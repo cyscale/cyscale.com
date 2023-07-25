@@ -20,7 +20,7 @@ seoDescription: By implementing an early cybersecurity program using the Cyscale
   specialized staff. The purpose is to raise awareness about the importance of
   security and compliance in the cloud.
 featuredpost: true
-featuredimage: /img/cyscale-blog-june-2022-6-min.png
+featuredimage: /img/cyscale-blog-june-2022-6-min.webp
 tags:
   - CSPM
   - startups

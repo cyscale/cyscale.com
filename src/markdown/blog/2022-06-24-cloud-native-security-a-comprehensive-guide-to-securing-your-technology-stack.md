@@ -22,7 +22,7 @@ seoDescription: A comprehensive guide to securing your technology stack from the
   cloud levels. You can identify misconfigurations in the cloud and remediate
   them effectively using Cyscale.
 featuredpost: true
-featuredimage: /img/cloud-native.png
+featuredimage: /img/cloud-native.webp
 tags:
   - security
   - CSPM

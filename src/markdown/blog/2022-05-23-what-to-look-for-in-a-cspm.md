@@ -23,7 +23,7 @@ seoDescription: A CSPM (Cloud Security Posture Management) tool is a product
   risk scoring and should send out targeted alerts, as well as provide
   remediation for findings.
 featuredpost: true
-featuredimage: /img/what-to-look-for-in-a-cspm.png
+featuredimage: /img/what-to-look-for-in-a-cspm.webp
 tags:
   - CSPM
   - compliance
@@ -96,7 +96,7 @@ Vulnerability scoring is another essential feature that can help you avoid false
 
 This is why it is essential to ensure that false positives are avoided because they can cause noise that may distract employees from more important matters. 
 
-![Alerts divided by severity](/img/alerts-severity.jpeg#shadow "Risk scoring in Cyscale")
+![Alerts divided by severity](/img/alerts-severity.webp#shadow "Risk scoring in Cyscale")
 
 ### Do you receive targeted alerts? 
 
@@ -106,7 +106,7 @@ Cyscale currently has two types of notifications that can be customized to your 
 
 1. Security Posture. These weekly digests show you your cloud security posture trend and a high/medium/low-risk asset count. You can see an example below. 
 
-![A Security Posture email showing a posture trend and a high/medium/low-risk asset count](/img/security-posture.png#shadow "Security Posture Email from Cyscale")
+![A Security Posture email showing a posture trend and a high/medium/low-risk asset count](/img/security-posture.webp#shadow "Security Posture Email from Cyscale")
 
 2. Alerts. They are sent in batches for a given cloud account in a single email to ensure that they do not become overwhelming. These alerts inform you of new vulnerabilities found in your cloud infrastructure. 
 

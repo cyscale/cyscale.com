@@ -19,7 +19,7 @@ seoDescription: We are releasing a new feature in Cyscale, the Playground! It is
   frameworks (for example PCI-DSS, GDPR, ISO27001, etc.) and graph-based
   visibility of assets.
 featuredpost: true
-featuredimage: /img/playground.png
+featuredimage: /img/playground.webp
 tags:
   - Playground
   - compliance
@@ -52,7 +52,7 @@ By providing risk scoring, Cyscale can help you prioritize remediation for asset
 
 Below, you can find an example of 3 of the [compliance standards](https://cyscale.com/use-cases/cloud-compliance-and-auditing/) that we support: 
 
-![Compliance standards from the Playground](/img/playground_compliance_3.png#shadow "Playground compliance standards")
+![Compliance standards from the Playground](/img/playground_compliance_3.webp#shadow "Playground compliance standards")
 
 See for yourself how the Cyscale application suits your needs and check out [the Playground](https://app.cyscale.com/playground)! 
 
