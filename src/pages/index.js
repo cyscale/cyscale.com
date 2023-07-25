@@ -287,97 +287,79 @@ const HomePage = ({ location }) => {
                     </div>
                 </div>
             </Container>
-
-            <div ref={domRef}>
-                {isVisible && (
-                    <>
-                        {' '}
-                        <GradientCardsSection />
-                        <CaseStudiesSection />
-                        <div className='pt-24 pb-24 lg:pt-32 lg:pb-32' css={useCasesSectionBackground}>
-                            <Container>
-                                <div className='grid grid-cols-12 gap-x-5'>
-                                    <div className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 max-w-xl lg:max-w-lg'>
-                                        <p className='font-montserrat text-base font-bold text-white'>USE CASE</p>
-                                        <h2 className='font-montserrat font-bold text-white mt-4' css={titleSection}>
-                                            Get contextual insights
-                                        </h2>
-                                        <p className='mt-4 text-white text-base font-hind font-normal'>
-                                            An unpatched virtual machine running an app with the devastating Log4j
-                                            vulnerability is close to harmless in a private network. However, a server
-                                            running the same vulnerable cloud app while being exposed to the internet,
-                                            and having read or write access to a production datastore presents a totally
-                                            different risk.
-                                        </p>
-                                        <p className='mt-4 text-white text-base font-hind font-normal'>
-                                            Understanding context allows you to immediately see what needs fixing and
-                                            what can wait, and thus prioritize tasks on your cloud security roadmap.
-                                        </p>
-                                    </div>
-                                    <div className='col-span-12 lg:col-span-6 mt-20 lg:mt-0 mx-auto lg:mx-0'>
-                                        <GatsbyImage
-                                            image={data.graphHomePage.childImageSharp.gatsbyImageData}
-                                            alt='Graph'
-                                        />
-                                    </div>
-                                </div>
-                            </Container>
+            <GradientCardsSection />
+            <CaseStudiesSection />
+            <div className='pt-24 pb-24 lg:pt-32 lg:pb-32' css={useCasesSectionBackground}>
+                <Container>
+                    <div className='grid grid-cols-12 gap-x-5'>
+                        <div className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 max-w-xl lg:max-w-lg'>
+                            <p className='font-montserrat text-base font-bold text-white'>USE CASE</p>
+                            <h2 className='font-montserrat font-bold text-white mt-4' css={titleSection}>
+                                Get contextual insights
+                            </h2>
+                            <p className='mt-4 text-white text-base font-hind font-normal'>
+                                An unpatched virtual machine running an app with the devastating Log4j vulnerability is
+                                close to harmless in a private network. However, a server running the same vulnerable
+                                cloud app while being exposed to the internet, and having read or write access to a
+                                production datastore presents a totally different risk.
+                            </p>
+                            <p className='mt-4 text-white text-base font-hind font-normal'>
+                                Understanding context allows you to immediately see what needs fixing and what can wait,
+                                and thus prioritize tasks on your cloud security roadmap.
+                            </p>
                         </div>
-                        <div css={servicesSectionStyle} className='py-24 lg:py-32'>
-                            <div className='container max-w-7xl m-auto px-4 lg:px-8'>
-                                <div className='grid grid-cols-12 gap-x-5'>
-                                    <div className='col-span-12 lg:col-span-8 mx-auto lg:mx-0 max-w-2xl'>
-                                        <p
-                                            className='text-left uppercase font-montserrat font-bold'
-                                            css={sectionSubtitleColor}
-                                        >
-                                            CYSCALE CLOUD SECURITY PLATFORM
-                                        </p>
-                                        <h2 className='font-montserrat text-blue font-bold mt-3' css={titleSection}>
-                                            Your ally for a solid security program
-                                        </h2>
-                                        <p
-                                            className='text-base font-hind font-normal max-w-2xl mt-3'
-                                            css={sectionTextColor}
-                                        >
-                                            Cyscale is an <strong>agentless</strong> cloud-native application protection
-                                            platform (CNAPP) that helps
-                                            <br className='hidden sm:block' /> your organization protect against data
-                                            breaches and other types of modern attacks in the public cloud.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <CardsSections />
+                        <div className='col-span-12 lg:col-span-6 mt-20 lg:mt-0 mx-auto lg:mx-0'>
+                            <GatsbyImage image={data.graphHomePage.childImageSharp.gatsbyImageData} alt='Graph' />
                         </div>
-                        <KeyFeaturesSection />
-                        <CallToAction />
-                        <BlogCarousel />
-                        <div
-                            css={css`
-                                background-color: #0a1a76;
-                            `}
-                            className='py-16 lg:py-32'
-                        >
-                            <Container>
-                                <div className='grid grid-cols-12 gap-x-5'>
-                                    <div className='col-span-12 lg:col-span-8 mx-auto lg:mx-0 max-w-2xl'>
-                                        <p className='uppercase font-montserrat font-bold' css={sectionSubtitleColor}>
-                                            OUR BLOG
-                                        </p>
-                                        <h2 className='font-montserrat text-white font-bold mt-3' css={titleSection}>
-                                            The most read articles
-                                        </h2>
-                                    </div>
-                                </div>
-                                <MostReadArticles />
-                            </Container>
-                        </div>
-                        <Element name='meetings-calendar' />
-                        <CalendarSection />
-                    </>
-                )}
+                    </div>
+                </Container>
             </div>
+            <div css={servicesSectionStyle} className='py-24 lg:py-32'>
+                <div className='container max-w-7xl m-auto px-4 lg:px-8'>
+                    <div className='grid grid-cols-12 gap-x-5'>
+                        <div className='col-span-12 lg:col-span-8 mx-auto lg:mx-0 max-w-2xl'>
+                            <p className='text-left uppercase font-montserrat font-bold' css={sectionSubtitleColor}>
+                                CYSCALE CLOUD SECURITY PLATFORM
+                            </p>
+                            <h2 className='font-montserrat text-blue font-bold mt-3' css={titleSection}>
+                                Your ally for a solid security program
+                            </h2>
+                            <p className='text-base font-hind font-normal max-w-2xl mt-3' css={sectionTextColor}>
+                                Cyscale is an <strong>agentless</strong> cloud-native application protection platform
+                                (CNAPP) that helps
+                                <br className='hidden sm:block' /> your organization protect against data breaches and
+                                other types of modern attacks in the public cloud.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <CardsSections />
+            </div>
+            <KeyFeaturesSection />
+            <CallToAction />
+            <BlogCarousel />
+            <div
+                css={css`
+                    background-color: #0a1a76;
+                `}
+                className='py-16 lg:py-32'
+            >
+                <Container>
+                    <div className='grid grid-cols-12 gap-x-5'>
+                        <div className='col-span-12 lg:col-span-8 mx-auto lg:mx-0 max-w-2xl'>
+                            <p className='uppercase font-montserrat font-bold' css={sectionSubtitleColor}>
+                                OUR BLOG
+                            </p>
+                            <h2 className='font-montserrat text-white font-bold mt-3' css={titleSection}>
+                                The most read articles
+                            </h2>
+                        </div>
+                    </div>
+                    <MostReadArticles />
+                </Container>
+            </div>
+            <Element name='meetings-calendar' />
+            <div ref={domRef}>{isVisible && <CalendarSection />}</div>
         </Layout>
     );
 };
