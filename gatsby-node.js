@@ -1,6 +1,17 @@
 const path = require(`path`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
 const convertReactFilesToMD = require('./convertReactToMd');
+const webpack = require(`webpack`);
+
+exports.onCreateWebpackConfig = ({ actions }) => {
+    actions.setWebpackConfig({
+        plugins: [
+            new webpack.IgnorePlugin({
+                resourceRegExp: /^netlify-identity-widget$/
+            })
+        ]
+    });
+};
 
 exports.onPreInit = async () => {
     await convertReactFilesToMD();
