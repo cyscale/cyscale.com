@@ -319,11 +319,17 @@ const SmartFintech = ({ location }) => {
                         </p>
                         <div className='mt-4'>
                             <Link
-                                className='bg-blue text-white py-2 px-4 rounded cursor-pointer font-medium font-hind'
+                                className='bg-blue text-white rounded cursor-pointer font-medium font-hind'
                                 to='/request-demo/'
-                                css={[hoverButtonColorStyle, widthFitStyle]}
+                                css={[
+                                    hoverButtonColorStyle,
+                                    widthFitStyle,
+                                    css`
+                                        padding: 0.625rem 2.5rem;
+                                    `
+                                ]}
                             >
-                                CONTACT SALES
+                                Contact Sales
                             </Link>
                         </div>
                         <hr className='mt-8' css={hrStyle} />
@@ -355,7 +361,16 @@ const SmartFintech = ({ location }) => {
                 </p>
                 <GatsbyLink
                     to={'/request-demo/'}
-                    className='bg-white text-blue rounded-md font-bold py-2 px-8 mt-8 hover:bg-grey3'
+                    className='bg-white text-base font-medium rounded mt-8 hover:bg-transparent font-hind'
+                    css={css`
+                        padding: 0.625rem 2.5rem;
+                        border: thin solid #ffffff;
+                        color: #0f26aa;
+
+                        &:hover {
+                            color: #ffffff;
+                        }
+                    `}
                 >
                     REQUEST A DEMO
                 </GatsbyLink>

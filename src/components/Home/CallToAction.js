@@ -2,6 +2,7 @@ import React from 'react';
 import cloudIcon from '../../assets/images/cloud-icon.svg';
 import { Link as ScrollLink } from 'react-scroll';
 import { Container } from '../atoms/Containers';
+import { css } from 'twin.macro';
 
 const CallToAction = () => {
     return (
@@ -17,7 +18,10 @@ const CallToAction = () => {
                     </p>
                     <div className='mt-10 w-auto inline-block'>
                         <ScrollLink
-                            className='gradientBgBtn w-full block text-sm font-medium rounded text-white text-center py-4 px-12 hover:no-underline no-underline cursor-pointer uppercase'
+                            className='gradientBgBtn w-full block text-sm font-medium rounded text-white text-center hover:no-underline no-underline cursor-pointer uppercase font-hind'
+                            css={css`
+                                padding: 0.625rem 2.5rem;
+                            `}
                             to='meetings-calendar'
                             smooth={true}
                             duration={500}

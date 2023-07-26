@@ -1,4 +1,5 @@
 import React from 'react';
+import { css } from 'twin.macro';
 
 const getstarted = ({ description, btnText, btnLink, sectionName, icon, icon2, ExternalLink, btnComponent }) => {
     return (
@@ -50,7 +51,16 @@ const getstarted = ({ description, btnText, btnLink, sectionName, icon, icon2, E
                                     href={btnLink}
                                     target={!!ExternalLink ? '_blank' : '_self'}
                                     rel='noopener noreferrer'
-                                    className='inline-block min-w-289px text-16px font-medium rounded bg-white text-black uppercase text-center pt-21px pb-21px pl-49px pr-49px no-underline transition-all duration-300 border border-black hover:border-black border-solid hover:bg-black hover:text-white hover:no-underline blackBorder'
+                                    className='bg-white text-base font-medium rounded mt-8 hover:bg-transparent font-hind uppercase'
+                                    css={css`
+                                        padding: 0.625rem 2.5rem;
+                                        border: thin solid #ffffff;
+                                        color: #0f26aa;
+
+                                        &:hover {
+                                            color: #ffffff;
+                                        }
+                                    `}
                                 >
                                     {btnText}
                                 </a>
@@ -72,7 +82,16 @@ const getstarted = ({ description, btnText, btnLink, sectionName, icon, icon2, E
                                 </p>
                                 <a
                                     href='/request-demo/'
-                                    className='inline-block min-w-289px text-16px font-medium rounded text-white uppercase text-center pt-21px pb-21px pl-49px pr-49px no-underline transition-all duration-300 border border-white hover:border-black border-solid hover:bg-black hover:text-white hover:no-underline'
+                                    className='bg-white text-base font-medium rounded mt-8 hover:bg-transparent font-hind'
+                                    css={css`
+                                        padding: 0.625rem 2.5rem;
+                                        border: thin solid #ffffff;
+                                        color: #0f26aa;
+
+                                        &:hover {
+                                            color: #ffffff;
+                                        }
+                                    `}
                                 >
                                     BOOK YOUR DEMO
                                 </a>

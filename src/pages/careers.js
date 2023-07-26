@@ -1,7 +1,6 @@
 import React from 'react';
 import { Container, Row, Section } from '../components/atoms/Containers';
 import Layout from '../components/layout/CleanLayout';
-import Hire from '../assets/images/hire.inline.svg';
 import Stocks from '../assets/images/stocks.inline.svg';
 import PersonalDayOff from '../assets/images/personal-day-off.inline.svg';
 import HomeWork from '../assets/images/home-work.inline.svg';
@@ -14,6 +13,8 @@ import { useStaticQuery, graphql, Link } from 'gatsby';
 import { Link as ScrollLink } from 'react-scroll';
 import Apply from '../components/careers/apply-form';
 import employee from '../components/careers/data';
+import { css } from 'twin.macro';
+import { GatsbyImage } from 'gatsby-plugin-image';
 const settings = {
     speed: 500,
     dots: false,
@@ -84,6 +85,11 @@ const Careers = ({ location }) => {
                     }
                 }
             }
+            careersHero: file(relativePath: { eq: "careers-hero-image.webp" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 400, layout: CONSTRAINED)
+                }
+            }
         }
     `);
     let jobs = data.allMarkdownRemark.nodes.map(({ frontmatter }) => frontmatter);
@@ -108,13 +114,20 @@ const Careers = ({ location }) => {
                                         smooth={true}
                                         duration={500}
                                         to='open-positions'
-                                        className='bg-gradient-to-r from-blue to-red hover:from-red hover:to-blue cursor-pointer lg:max-w-xs inline-block lg:block font-medium rounded text-white uppercase text-center py-5 px-8 mt-16 no-underline hover:no-underline'
+                                        css={css`
+                                            padding: 0.625rem 2.5rem;
+                                        `}
+                                        className='mx-auto bg-gradient-to-r md:mx-0 from-blue to-red hover:from-red hover:to-blue mt-12 font-medium rounded text-white uppercase text-center no-underline hover:no-underline inline-block font-hind cursor-pointer'
                                     >
                                         See open positions
                                     </ScrollLink>
                                 </div>
                                 <div className='col-span-12 mb-10 lg:mb-0 lg:col-span-6 lg:pl-8 order-1 lg:order-2'>
-                                    <Hire alt='We are hiring' className='mx-auto w-auto h-auto  max-w-xs sm:max-w-sm md:max-w-md xl:max-w-lg 2xl:max-w-xl' />
+                                    <GatsbyImage
+                                        image={data.careersHero.childImageSharp.gatsbyImageData}
+                                        alt='We are hiring'
+                                        className='mx-auto max-w-xs sm:max-w-sm md:max-w-md xl:max-w-lg 2xl:max-w-xl'
+                                    />
                                 </div>
                             </Row>
                         </Section>
@@ -140,7 +153,21 @@ const Careers = ({ location }) => {
                                     smooth={true}
                                     duration={500}
                                     to='open-positions'
-                                    className='mt-4 cursor-pointer block w-52 text-sm text-black uppercase py-4 px-8 border-black border rounded-md hover:bg-black hover:text-white transition'
+                                    className='bg-white mx-auto md:mx-0 font-medium rounded text-blue uppercase text-center no-underline transition-all duration-100 hover:no-underline font-hind mt-12 cursor-pointer'
+                                    css={css`
+                                        padding: 0.625rem 2.5rem;
+                                        display: none;
+                                        border: thin solid #0f26aa;
+
+                                        &:hover {
+                                            background-color: #e5edfa;
+                                            border: thin solid #0f26aa;
+                                        }
+
+                                        @media (min-width: 641px) {
+                                            display: inline-block;
+                                        }
+                                    `}
                                 >
                                     See open positions
                                 </ScrollLink>
@@ -180,7 +207,7 @@ const Careers = ({ location }) => {
                     </div>
                 </Section>
             </Container>
-            <Section id="benefits">
+            <Section id='benefits'>
                 <Container>
                     <h2 className='font-semibold font-montserrat text-blue text-4xl text-center mx-auto  mb-4 leading-normal md:max-w-lg'>
                         Not your average benefits
@@ -306,7 +333,7 @@ const Careers = ({ location }) => {
                     </div>
                 </Container>
             </Section>
-            <Section id="join-us">
+            <Section id='join-us'>
                 <Container>
                     <h6 className='font-semibold font-montserrat text-blue text-4xl mx-auto mb-8 w-full max-w-md leading-normal new-line'>
                         Join us

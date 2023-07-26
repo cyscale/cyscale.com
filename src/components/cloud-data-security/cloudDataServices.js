@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import { css } from 'twin.macro';
 
 const Services = ({ data, bannerBtn1Text, bannerBtn1Link }) => {
     return (
@@ -20,8 +21,10 @@ const Services = ({ data, bannerBtn1Text, bannerBtn1Link }) => {
             <div className='mt-55px pb-41px w-full flex justify-center'>
                 <Link
                     to={bannerBtn1Link}
-                    className='gradientBgBtn md:min-w-232px sm:min-w-232px lg:min-w-232px xl:min-w-232px 2xl:min-w-232px
-                    text-16px rounded text-white uppercase text-center pt-21px pb-21px pl-49px pr-49px no-underline'
+                    css={css`
+                        padding: 0.625rem 2.5rem;
+                    `}
+                    className='mx-auto bg-gradient-to-r md:mx-0 from-blue to-red hover:from-red hover:to-blue block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind'
                 >
                     {bannerBtn1Text}
                 </Link>
