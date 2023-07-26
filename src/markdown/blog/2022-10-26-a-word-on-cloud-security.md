@@ -25,7 +25,7 @@ seoDescription: Given all this complexity and the pace at which we are trying to
   need that many people to do security full-time since the tools are getting
   more and more powerful.
 featuredpost: true
-featuredimage: /img/microsoftteams-image-3-.png
+featuredimage: /img/microsoftteams-image-3-.webp
 tags:
   - networking
   - IAM

@@ -15,7 +15,7 @@ seoDescription: An industry overview of the IAM Services. We look at AWS, Azure
   are described for all three vendors. Authentication methods are described,
   such as Single Sign-On (SSO) and Multi-Factor Authentication (MFA).
 featuredpost: true
-featuredimage: /img/iam-services-in-aws-azure-and-gcp-a-cloud-industry-overview.png
+featuredimage: /img/iam-services-in-aws-azure-and-gcp-a-cloud-industry-overview.webp
 tags:
   - CSPM
   - IAM
@@ -117,7 +117,7 @@ In Google Cloud, permissions cannot be applied to principals directly. Instead, 
 
 Below, you can see a diagram of the IAM components found in Google Cloud. 
 
-![Google Cloud IAM Components](/img/gcp-iam.png#shadow "Google Cloud IAM Components")
+![Google Cloud IAM Components](/img/gcp-iam.webp#shadow "Google Cloud IAM Components")
 
 Image source – [Google Cloud Platform](https://cloud.google.com/iam/docs/overview) 
 

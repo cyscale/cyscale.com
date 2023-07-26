@@ -26,7 +26,7 @@ seoDescription: "Amazon Elastic Container Service (ECS) is a highly scalable and
   only focus on deploying and scaling containers. AWS ECS is used for
   microservices architecture, batch processing, CI/CD, web apps."
 featuredpost: true
-featuredimage: /img/43_blog-container-security-ecs.png
+featuredimage: /img/43_blog-container-security-ecs.webp
 tableOfContents: false
 tags:
   - security

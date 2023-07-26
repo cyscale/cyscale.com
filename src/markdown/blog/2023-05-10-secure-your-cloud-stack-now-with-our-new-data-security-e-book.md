@@ -17,7 +17,7 @@ seoDescription: Our new e-book on data security contains best practices on how
   other recommendations to protect data. Read our comprehensive guide to expand
   your knowledge.
 featuredpost: true
-featuredimage: /img/blog_39-cover-ebook.png
+featuredimage: /img/blog_39-cover-ebook.webp
 tags:
   - data
   - security

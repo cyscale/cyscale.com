@@ -22,7 +22,7 @@ seoDescription: PCI-DSS (Payment Card Industry Data Security Standard) is the
   along with best practices and how can Cyscale can help you become PCI-DSS
   compliant.
 featuredpost: true
-featuredimage: /img/pci-dss-compliance.png
+featuredimage: /img/pci-dss-compliance.webp
 tags:
   - PCI-DSS
   - compliance
@@ -155,7 +155,7 @@ These requirements can be implemented in no time using Cyscale controls and the 
 
 Below, you can see a small part of the PCI-DSS standard page from the Cyscale platform, along with the first two requirements from the list we’ve discussed. 
 
-![The PCI-DSS page in Cyscale](/img/1.png#shadow "The PCI-DSS page in Cyscale")
+![The PCI-DSS page in Cyscale](/img/1.webp#shadow "The PCI-DSS page in Cyscale")
 
 We see a description and the controls necessary to ensure compliance by expanding the first requirement. The controls also contain steps on how to implement them. 
 

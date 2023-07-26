@@ -22,7 +22,7 @@ seoDescription: A Hybrid Cloud infrastructure contains at least two different
   Least Privilege Principle, use antiviruses and firewalls, monitor your
   environment, perform audits and backup data to keep a secure hybrid cloud.
 featuredpost: true
-featuredimage: /img/blog_15-hybrid-cloud-best-practices.png
+featuredimage: /img/blog_15-hybrid-cloud-best-practices.webp
 tags:
   - security
   - compliance

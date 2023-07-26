@@ -15,7 +15,7 @@ seoDescription: Explore the importance of Cloud Security Posture Management
   solutions like Cyscale enhance cloud security. Equip your organization for the
   cloud age
 featuredpost: true
-featuredimage: /img/christina-wocintechchat-com-glrqywjguey-unsplash.jpg
+featuredimage: /img/christina-wocintechchat-com-glrqywjguey-unsplash.webp
 tags:
   - cspm
   - visibility

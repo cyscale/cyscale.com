@@ -21,7 +21,7 @@ seoDescription: "The Health Insurance Portability and Accountability Act of 1996
   rule, the security rule, and the breach notification rule. Use Cyscale to
   achieve compliance with HIPAA and other international standards. "
 featuredpost: true
-featuredimage: /img/22_blog-cover-photo.png
+featuredimage: /img/22_blog-cover-photo.webp
 tags:
   - HIPAA
   - compliance

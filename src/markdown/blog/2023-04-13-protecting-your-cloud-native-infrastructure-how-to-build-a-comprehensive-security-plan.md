@@ -24,7 +24,7 @@ seoDescription: As more organizations adopt a cloud-native approach to support
   environment, fix all findings and reach a robust cloud security posture, and
   continuously monitor your infrastructure.
 featuredpost: true
-featuredimage: /img/blog_38-cover.png
+featuredimage: /img/blog_38-cover.webp
 tags:
   - security
   - cloud-native

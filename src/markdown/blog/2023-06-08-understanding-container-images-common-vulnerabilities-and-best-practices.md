@@ -26,7 +26,7 @@ seoDescription: "Container images are files that contain everything needed to
   performing regular updates, using trusted base images and ensuring visibility
   in your cloud environment."
 featuredpost: true
-featuredimage: /img/43_blog-container-images.png
+featuredimage: /img/43_blog-container-images.webp
 tableOfContents: false
 tags:
   - containers

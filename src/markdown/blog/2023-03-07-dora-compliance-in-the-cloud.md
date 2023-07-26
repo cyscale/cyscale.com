@@ -27,7 +27,7 @@ seoDescription: "DORA (Digital Operational Resilience Act) is a compliance
   preparing for DORA. Kickstart your compliance journey with us now and ensure a
   smooth process for DORA compliance. "
 featuredpost: true
-featuredimage: /img/35_dora-cover.png
+featuredimage: /img/35_dora-cover.webp
 tags:
   - DORA
   - compliance

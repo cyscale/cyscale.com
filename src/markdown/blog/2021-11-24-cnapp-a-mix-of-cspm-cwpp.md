@@ -23,7 +23,7 @@ seoDescription: Unveil CNAPP, a blend of CSPM & CWPP for advanced cloud
   its impact on the future of cybersecurity. A comprehensive guide by Cyscale on
   the latest trend in cloud protection.
 featuredpost: true
-featuredimage: /img/cspm-cwpp.png
+featuredimage: /img/cspm-cwpp.webp
 tableOfContents: false
 ---
 <!--StartFragment-->

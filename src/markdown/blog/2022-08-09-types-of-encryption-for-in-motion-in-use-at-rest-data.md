@@ -20,7 +20,7 @@ seoDescription: "Encryption is the process of altering data in order to hide its
   protecting data, you need to ensure you're taking in consideration all three
   states: in motion, in use, and at rest data."
 featuredpost: true
-featuredimage: /img/blog_17-cover-image.png
+featuredimage: /img/blog_17-cover-image.webp
 tags:
   - security
   - data
@@ -49,7 +49,7 @@ Examples of symmetric algorithms are: 
 
 The latter one is, in 2022, the industry standard and is recommended to be used with 128 bits keys. 
 
-![Symmetric encryption](/img/blog_17-cisco_encryption.png#shadow "Symmetric encryption")
+![Symmetric encryption](/img/blog_17-cisco_encryption.webp#shadow "Symmetric encryption")
 
 Image source – cisco.com 
 

@@ -23,7 +23,7 @@ seoDescription: "SOC 2 is an international compliance standard that defines
   processing integrity, confidentiality, privacy. In order to become SOC 2
   compliant, you must fulfill 64 controls across the 5 TSCs mentioned."
 featuredpost: true
-featuredimage: /img/blog_16-soc2.png
+featuredimage: /img/blog_16-soc2.webp
 tags:
   - security
   - CSPM
@@ -102,7 +102,7 @@ Cyscale can help you obtain the SOC 2 accreditation for your company by: 
 
 In the image below, you can see a part of the SOC 2 standard page in Cyscale, which gives you metrics to know how you're doing in your process of becoming compliant. 
 
-![SOC 2 standard page in Cyscale](/img/blog_16-soc-2-page-in-cyscale.png#shadow "SOC 2 standard page in Cyscale")
+![SOC 2 standard page in Cyscale](/img/blog_16-soc-2-page-in-cyscale.webp#shadow "SOC 2 standard page in Cyscale")
 
 A large set of technical controls included in this standard are mapped to SOC 2 points of focus to easily understand which ones you’re correctly implementing, and which require your attention. 
 

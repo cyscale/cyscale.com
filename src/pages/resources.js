@@ -66,7 +66,7 @@ const Resources = ({ location }) => {
                     gatsbyImageData(width: 146, layout: FIXED)
                 }
             }
-            firstArticle: file(relativePath: { eq: "cloud-native.png" }) {
+            firstArticle: file(relativePath: { eq: "cloud-native.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 700, layout: CONSTRAINED)
                 }
@@ -76,12 +76,12 @@ const Resources = ({ location }) => {
                     gatsbyImageData(width: 700, layout: CONSTRAINED)
                 }
             }
-            thirdArticle: file(relativePath: { eq: "blog_34-cover.png" }) {
+            thirdArticle: file(relativePath: { eq: "blog_34-cover.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 700, layout: CONSTRAINED)
                 }
             }
-            forthArticle: file(relativePath: { eq: "securing-iam.png" }) {
+            forthArticle: file(relativePath: { eq: "securing-iam.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 700, layout: CONSTRAINED)
                 }

@@ -8,7 +8,7 @@ description: At Cyscale, we see Darkness as a force for good. It can obscure the
 categories:
     - News
 permalink: dark-theme
-featuredimage: /img/darkprev.png
+featuredimage: /img/darkprev.webp
 tags:
     - release
     - cloud

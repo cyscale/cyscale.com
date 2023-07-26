@@ -18,7 +18,7 @@ seoDescription: We look at best practices recommended by AWS, Azure and Google C
   and monitoring, assigning permissions at group level. Examples of controls
   from the Cyscale application are shown.
 featuredpost: true
-featuredimage: /img/securing-iam.png
+featuredimage: /img/securing-iam.webp
 tags:
   - IAM
   - CSPM

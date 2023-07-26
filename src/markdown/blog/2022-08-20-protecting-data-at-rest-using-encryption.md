@@ -20,7 +20,7 @@ seoDescription: Data at rest is data that is not currently used or transmitted
   data, use industry-recommended algorithms, manage your keys by storing them in
   key vaults and rotating them.
 featuredpost: true
-featuredimage: /img/19_blog-cover-photo.png
+featuredimage: /img/19_blog-cover-photo.webp
 tags:
   - security
   - CSPM

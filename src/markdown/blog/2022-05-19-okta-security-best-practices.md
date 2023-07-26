@@ -24,7 +24,7 @@ seoDescription: "Okta is an identity and access management (IAM) service built
   of employees. Cyscale ensures your company does not drift away from some of
   these best practices."
 featuredpost: true
-featuredimage: /img/okta-security-best-practices.png
+featuredimage: /img/okta-security-best-practices.webp
 tags:
   - CSPM
   - Okta
