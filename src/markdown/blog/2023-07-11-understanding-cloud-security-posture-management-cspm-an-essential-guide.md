@@ -26,7 +26,7 @@ seoDescription: "Cloud Security Posture Management (CSPM) is a critical
   an overview of the compliance stage and ongoing efforts, remediation solutions
   for findings, and many others. "
 featuredpost: true
-featuredimage: /img/44_blog-what-is-cspm.png
+featuredimage: /img/44_blog-what-is-cspm.webp
 tableOfContents: false
 tags:
   - CSPM

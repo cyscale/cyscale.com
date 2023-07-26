@@ -24,7 +24,7 @@ seoDescription: AWS B2B SaaS Accelerator is a program launched by Amazon Web
   cloud compliance platform, CSPM capabilities, contextual visibility, The
   Security Knowledge Graph.
 featuredpost: true
-featuredimage: /img/47_blog-cover-aws-accelerator.png
+featuredimage: /img/47_blog-cover-aws-accelerator.webp
 tableOfContents: false
 tags:
   - CSPM

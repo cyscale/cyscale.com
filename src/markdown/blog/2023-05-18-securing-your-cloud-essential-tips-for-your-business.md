@@ -22,7 +22,7 @@ seoDescription: "In today's digital landscape, cloud computing has become
   measures.   This article will look at a high-level overview of the steps to
   establish a security plan. "
 featuredpost: true
-featuredimage: /img/microsoftteams-image-5-.png
+featuredimage: /img/microsoftteams-image-5-.webp
 tableOfContents: false
 tags:
   - security

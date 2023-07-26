@@ -19,7 +19,7 @@ seoDescription: The new PCI DSS version has been released, and the old PCI DSS
   about the new requirements, and everything else you need to know about PCI DSS
   version 4.
 featuredpost: true
-featuredimage: /img/45_blog-pci-v4.jpeg
+featuredimage: /img/45_blog-pci-v4.webp
 tableOfContents: true
 tags:
   - pci-dss

@@ -14,7 +14,7 @@ seoDescription: Explore the essentials of cloud infrastructure security, its
   five main domains, and effective best practices. Learn how Cyscale's
   innovative solutions can boost your cloud security posture.
 featuredpost: true
-featuredimage: /img/46_blog-cover-cloud-infra-security.png
+featuredimage: /img/46_blog-cover-cloud-infra-security.webp
 tableOfContents: false
 tags:
   - CSPM
