@@ -31,4 +31,4 @@ In the paper, you will find: 
 * An in-depth guide to securing your AWS cloud environment from encryption, data loss prevention, to S3 bucket security, 
 * Solutions for these problems through cloud security controls and a data security dashboard. 
 
-[Download the e-book now](https://cyscale.com/resources/data-security-e-book.pdf) to read up-to-date recommendations regarding data security in the cloud and expand your knowledge.
+[Download the e-book now](https://cta-service-cms2.hubspot.com/web-interactives/public/v1/track/redirect?encryptedPayload=AVxigLKcdzdjs3ubIU5XI1ozY9QJ9YF2yD%2BsoZJAk2vNcR0qYhDoYVmmHNu5VA5Avb9E7Sr%2BRbNjqakYxt0DJ%2B1qbaeIfqdLwOEW0Tl%2FYSlNPTCQfjQ%3D&webInteractiveContentId=127064433808&portalId=5413427) to read up-to-date recommendations regarding data security in the cloud and expand your knowledge.

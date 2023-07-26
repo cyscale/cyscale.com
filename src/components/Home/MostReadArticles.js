@@ -86,7 +86,7 @@ const MostReadArticles = () => {
                 classNames={'mt-10 hidden lg:block'}
             />
             <BlogLink
-                link={'/blog/cloud-data-security-guide'}
+                link={'/blog/cloud-native-security'}
                 categories={['cspm']}
                 text={['Cloud-Native Infrastructure:', <br />, 'How to Build a', <br />, 'Comprehensive Security Plan']}
                 image={data.nativeInfrastructureIcon.childImageSharp.gatsbyImageData}
