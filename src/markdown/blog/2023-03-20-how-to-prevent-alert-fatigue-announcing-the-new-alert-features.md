@@ -24,7 +24,7 @@ seoDescription: Alert fatigue is a phenomenon in which individuals receive an
   ensure that users have a deep understanding of their cloud infrastructure and
   can easily manage their alerts.
 featuredpost: true
-featuredimage: /img/36_blog-cover-image.jpg
+featuredimage: /img/36_blog-cover-image.webp
 tags:
   - alerts
   - CSPM
@@ -44,7 +44,7 @@ Cyscale is a CSPM that provides solutions for alert fatigue and helps users unde
 
 The first step to managing alerts efficiently is understanding them. With the following four sections, you get to see how your company is handling the alerts at a glance. 
 
-<img src="/img/36_blog-1-cards.png" alt="Alerts visualization cards in the Cyscale platforrm" title="Alerts visualization cards in the Cyscale platforrm" class=" blog-image-shadow " style="width:auto;height:auto;"/>
+<img src="/img/36_blog-1-cards.webp" alt="Alerts visualization cards in the Cyscale platforrm" title="Alerts visualization cards in the Cyscale platforrm" class=" blog-image-shadow " style="width:auto;height:auto;"/>
 
 The **Insights** card gives you context on how many alerts your assets have generated, as well as the average time to resolve them. This valuable information shows how efficiently the security team is working through findings. 
 

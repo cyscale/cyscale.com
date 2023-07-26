@@ -76,7 +76,7 @@ const Resources = ({ location }) => {
                     gatsbyImageData(width: 700, layout: CONSTRAINED)
                 }
             }
-            thirdArticle: file(relativePath: { eq: "blog_34-cover.png" }) {
+            thirdArticle: file(relativePath: { eq: "blog_34-cover.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 700, layout: CONSTRAINED)
                 }

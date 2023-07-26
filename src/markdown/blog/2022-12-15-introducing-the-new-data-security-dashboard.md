@@ -25,7 +25,7 @@ seoDescription: "We have released a new, powerful Data Security Dashboard to
   capabilities enable users to detect attack paths for data storage assets and
   quickly mitigate them.   "
 featuredpost: true
-featuredimage: /img/blog_30-cover-2.png
+featuredimage: /img/blog_30-cover-2.webp
 ---
 <!--StartFragment-->
 
@@ -45,7 +45,7 @@ The first section of the dashboard shows us the percentage of storage assets tha
 * encrypted with provider-managed-key, and  
 * encrypted with CMK (Customer Managed Key).  
 
-<img src="/img/32_blog-progress-card.png" alt="Progress card for encryption status" title="Progress card for encryption status" class="" style="width:auto;height:auto;"/>
+<img src="/img/32_blog-progress-card.webp" alt="Progress card for encryption status" title="Progress card for encryption status" class="" style="width:auto;height:auto;"/>
 
 This card is a good indicator of progress, and, by clicking on each section of the status bar, we see which assets fit in each of those states. Using this feature, you are at a click away from finding out which of your storage cloud assets are unencrypted. 
 
@@ -89,7 +89,7 @@ For example, a common attack is exploiting VMs that have open management ports. 
 
 Using the [Cyscale Knowledge Graph](https://cyscale.com/blog/security-knowledge-graph-integrations/), you can see that the VM named "sql-instance" has an instance profile that gives it full access to the bucket on the far right, and the VM also has port 22 (SSH) open. The VM is thus connected to the internet and therefore puts the data stored in the bucket at risk. 
 
-<img src="/img/cyscale-article-image-14-min.png" alt="Cyscale Knowledge Graph highlighting an attack path" title="Cyscale Knowledge Graph" class="" style="width:auto;height:auto;"/>
+<img src="/img/cyscale-article-image-14-min.webp" alt="Cyscale Knowledge Graph highlighting an attack path" title="Cyscale Knowledge Graph" class="" style="width:auto;height:auto;"/>
 
 Other critical issues highlighted for object containers include: 
 
@@ -103,7 +103,7 @@ Clicking on “Object containers with public access”, we get a list of misconf
 * Tags,  
 * Risks. 
 
-<img src="/img/blog_32-second-to-last.png" alt="List of misconfigured assets" title="List of misconfigured assets" class="" style="width:auto;height:auto;"/>
+<img src="/img/blog_32-second-to-last.webp" alt="List of misconfigured assets" title="List of misconfigured assets" class="" style="width:auto;height:auto;"/>
 
 Moving on to the databases card, using controls, Cyscale checks for the following misconfigurations: 
 
@@ -113,7 +113,7 @@ Moving on to the databases card, using controls, Cyscale checks for the followin
 * **Databases with no encryption,** 
 * **Databases with no/old TLS.** 
 
-<img src="/img/blog_32-databases-last.png" alt="Databases with issues in Cyscale" title="Databases with issues in Cyscale" class="" style="width:auto;height:auto;"/>
+<img src="/img/blog_32-databases-last.webp" alt="Databases with issues in Cyscale" title="Databases with issues in Cyscale" class="" style="width:auto;height:auto;"/>
 
 Use the multitude of features present in the Cyscale Data Security Dashboard to eliminate data exposure through [data storage misconfigurations](https://cyscale.com/whitepaper/cloud-storage-misconfigurations/). Check out our product in the [playground](https://cyscale.com/playground/) or [schedule a demo with us](https://cyscale.com/request-demo) to start your cloud security journey! 
 

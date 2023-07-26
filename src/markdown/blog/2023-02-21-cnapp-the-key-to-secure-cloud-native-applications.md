@@ -22,7 +22,7 @@ seoDescription: "CNAPP is a security solution designed to protect cloud-native
   capabilities, container image scanning, cloud workloads protection, Kubernetes
   Cluster inspection and IAM."
 featuredpost: true
-featuredimage: /img/blog_34-cover.png
+featuredimage: /img/blog_34-cover.webp
 tags:
   - cnapp
   - compliance
@@ -74,7 +74,7 @@ To solve this problem, security controls are used to check for misconfigurations
 
 For example, you can see a control from the Cyscale security platform in the image below. 
 
-<img src="/img/34_blog-1-control.png" alt="Control in the Cyscale platform" title="Control in the Cyscale platform" class=" blog-image-shadow " style="width:auto;height:auto;"/>
+<img src="/img/34_blog-1-control.webp" alt="Control in the Cyscale platform" title="Control in the Cyscale platform" class=" blog-image-shadow " style="width:auto;height:auto;"/>
 
 In Cyscale, you can find a collection of over 300 controls that check cloud services across multiple vendors and provide remediation steps for findings. 
 
@@ -123,7 +123,7 @@ To become compliant, companies use CNAPP security tools to prepare for audits. S
 
 Cyscale supports all of them and more. You can view all supported standards on the Standards page, enable or disable frameworks, track progress with your compliance process, and view the cloud-focused requirements and associated controls for each of the standards.  
 
-<img src="/img/34_blog-3-compliance.png" alt="Compliance standards in the Cyscale platform" title="Compliance standards in the Cyscale platform" class=" blog-image-shadow " style="width:auto;height:auto;"/>
+<img src="/img/34_blog-3-compliance.webp" alt="Compliance standards in the Cyscale platform" title="Compliance standards in the Cyscale platform" class=" blog-image-shadow " style="width:auto;height:auto;"/>
 
 ### 5. Container image scanning  
 
@@ -176,7 +176,7 @@ You can read more about securing IAM in the cloud [here](https://cyscale.com/blo
 
 To ensure a deep understanding of user permissions and their impact, Cyscale provides an [Identity Dashboard](https://cyscale.com/blog/check-for-least-privilege/). 
 
-<img src="/img/34_blog-4-iam.png" alt="The Identity Dashboard in the Cyscale platform" title="The Identity Dashboard in the Cyscale platform" class=" blog-image-shadow " style="width:auto;height:auto;"/>
+<img src="/img/34_blog-4-iam.webp" alt="The Identity Dashboard in the Cyscale platform" title="The Identity Dashboard in the Cyscale platform" class=" blog-image-shadow " style="width:auto;height:auto;"/>
 
 ## Conclusion 
 

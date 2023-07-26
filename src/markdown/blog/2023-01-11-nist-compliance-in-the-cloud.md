@@ -22,7 +22,7 @@ seoDescription: "NIST (The National Institute of Standards and Technology) is a
   page, you can track your progress and speed up the process in terms of your
   cloud-specific needs. "
 featuredpost: true
-featuredimage: /img/32_blog-cover.png
+featuredimage: /img/32_blog-cover.webp
 ---
 <!--StartFragment-->
 
