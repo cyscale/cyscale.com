@@ -313,7 +313,10 @@ const Soc2 = ({ location }) => {
                         </p>
                         <div className='mt-10 w-auto inline-block'>
                             <Link
-                                className='gradientBgBtn w-full block text-sm font-medium rounded text-white text-center py-4 px-12 hover:no-underline no-underline font-hind'
+                                css={css`
+                                    padding: 0.625rem 2.5rem;
+                                `}
+                                className='mx-auto bg-gradient-to-r md:mx-0 from-blue to-red hover:from-red hover:to-blue block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind'
                                 to='/request-demo'
                             >
                                 REQUEST LIVE DEMO

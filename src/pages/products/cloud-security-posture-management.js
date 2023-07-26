@@ -581,7 +581,16 @@ const CSPM = ({ location }) => {
 
                         <Link
                             to={'/request-demo/'}
-                            className='bg-white text-blue rounded-md font-bold py-2 px-8 mt-8 hover:bg-grey3'
+                            className='bg-white text-base font-medium rounded mt-8 hover:bg-transparent font-hind'
+                            css={css`
+                                padding: 0.625rem 2.5rem;
+                                border: thin solid #ffffff;
+                                color: #0f26aa;
+
+                                &:hover {
+                                    color: #ffffff;
+                                }
+                            `}
                         >
                             REQUEST DEMO
                         </Link>
@@ -942,7 +951,10 @@ const CSPM = ({ location }) => {
                         </p>
                         <div className='mt-10 w-auto inline-block'>
                             <Link
-                                className='gradientBgBtn w-full block text-sm font-medium rounded text-white text-center py-4 px-12 hover:no-underline no-underline cursor-pointer uppercase'
+                                className='gradientBgBtn w-full block text-sm font-medium rounded text-white text-center hover:no-underline no-underline cursor-pointer uppercase font-hind'
+                                css={css`
+                                    padding: 0.625rem 2.5rem;
+                                `}
                                 to='/request-demo/'
                                 smooth={true}
                                 duration={500}

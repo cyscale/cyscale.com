@@ -370,11 +370,17 @@ const BaysConsulting = ({ location }) => {
                             </p>
                             <div className='mt-4'>
                                 <Link
-                                    className='bg-blue text-white py-2 px-4 rounded cursor-pointer font-medium font-hind'
+                                    className='bg-blue text-white rounded cursor-pointer font-medium font-hind'
                                     to='/request-demo/'
-                                    css={[hoverButtonColorStyle, widthFitStyle]}
+                                    css={[
+                                        hoverButtonColorStyle,
+                                        widthFitStyle,
+                                        css`
+                                            padding: 0.625rem 2.5rem;
+                                        `
+                                    ]}
                                 >
-                                    CONTACT SALES
+                                    Contact Sales
                                 </Link>
                             </div>
                             <hr className='mt-8' css={hrStyle} />
@@ -406,8 +412,9 @@ const BaysConsulting = ({ location }) => {
                     </p>
                     <div className='mt-10 w-auto inline-block'>
                         <Link
-                            className='w-full block text-sm font-medium rounded text-white text-center py-4 px-8 hover:no-underline no-underline font-hind'
+                            className='w-full block text-sm font-medium rounded text-white text-center hover:no-underline no-underline font-hind'
                             css={css`
+                                padding: 0.625rem 2.5rem;
                                 background-image: linear-gradient(to right, #0f26aa, #ff4a56);
 
                                 &:hover {

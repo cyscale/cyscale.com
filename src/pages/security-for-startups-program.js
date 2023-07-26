@@ -14,6 +14,7 @@ import ReactDOMServer from 'react-dom/server';
 import useHSFormLoaded from '../hooks/useHSFormLoaded';
 import classnames from 'classnames';
 import LoaderContainer from '../components/Loader/LoaderContainer/LoaderContainer';
+import { css } from 'twin.macro';
 
 const q1 = () => {
     return [
@@ -534,7 +535,10 @@ const SecurityForStartupsProgram = ({ location }) => {
                             </h1>
                             <div className='mt-6 w-auto inline-block'>
                                 <button
-                                    className='gradientBgBtn w-full block text-base font-medium rounded text-white uppercase text-center py-5 px-24 hover:no-underline no-underline'
+                                    css={css`
+                                        padding: 0.625rem 2.5rem;
+                                    `}
+                                    className='mx-auto bg-gradient-to-r md:mx-0 from-blue to-red hover:from-red hover:to-blue block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind'
                                     onClick={() => animateScroll.scrollToTop()}
                                     tabIndex='0'
                                     onKeyDown={() => {}}

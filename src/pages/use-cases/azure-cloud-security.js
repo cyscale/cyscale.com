@@ -302,7 +302,12 @@ const AzureCloudSecurity = ({ location }) => {
                         <div className='mt-10 flex'>
                             <div className='w-auto inline-block'>
                                 <Link to='/free-trial'>
-                                    <button className='bg-gradient-to-r md:mx-0 from-blue to-red hover:from-red hover:to-blue block font-medium rounded text-white uppercase text-center py-4 px-14 no-underline hover:no-underline max-w-sm lg:inline-block font-hind'>
+                                    <button
+                                        css={css`
+                                            padding: 0.625rem 2.5rem;
+                                        `}
+                                        className='mx-auto bg-gradient-to-r md:mx-0 from-blue to-red hover:from-red hover:to-blue block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind'
+                                    >
                                         TRY CYSCALE FOR FREE
                                     </button>
                                 </Link>
@@ -313,7 +318,25 @@ const AzureCloudSecurity = ({ location }) => {
                                     target='_blank'
                                     rel='noopener noreferrer'
                                 >
-                                    <LightDarkButton text={'VIEW ON AZURE MARKETPLACE'} />
+                                    <button
+                                        className='bg-white mx-auto md:mx-0 font-medium rounded text-blue uppercase text-center no-underline transition-all duration-100 hover:no-underline font-hind cursor-pointer'
+                                        css={css`
+                                            padding: 0.625rem 2.5rem;
+                                            display: none;
+                                            border: thin solid #0f26aa;
+
+                                            &:hover {
+                                                background-color: #e5edfa;
+                                                border: thin solid #0f26aa;
+                                            }
+
+                                            @media (min-width: 641px) {
+                                                display: inline-block;
+                                            }
+                                        `}
+                                    >
+                                        VIEW ON AZURE MARKETPLACE
+                                    </button>
                                 </a>
                             </div>
                         </div>

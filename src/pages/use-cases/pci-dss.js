@@ -8,6 +8,7 @@ import headerImage from '../../assets/images/remote-work-heading-image.png';
 import GradientButton from '../../components/buttons/GradientButton';
 import LightDarkButton from '../../components/buttons/LightDarkButton';
 import LinksAndWhitepaper from '../../components/products/LinksAndWhitepaper';
+import { css } from 'twin.macro';
 
 const topArticles = [
     {
@@ -312,7 +313,16 @@ const PciDss = ({ location }) => {
                             </p>
                             <Link
                                 to='/free-trial'
-                                className='bg-white text-black font-medium transition-all cursor-pointer duration-300 border uppercase border-black py-5 px-16 rounded inline-block hover:bg-black hover:text-white'
+                                className='bg-white text-base uppercase font-medium rounded mt-8 hover:bg-transparent font-hind'
+                                css={css`
+                                    padding: 0.625rem 2.5rem;
+                                    border: thin solid #ffffff;
+                                    color: #0f26aa;
+
+                                    &:hover {
+                                        color: #ffffff;
+                                    }
+                                `}
                             >
                                 Try Cyscale for Free
                             </Link>

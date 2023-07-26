@@ -5,6 +5,7 @@ import { Formik } from 'formik';
 import { Row } from '../atoms/Containers';
 import { Link } from 'gatsby';
 import classNames from 'classnames';
+import { css } from 'twin.macro';
 
 const ALLOWED_FILES = ['application/pdf', 'application/msword'];
 const APPLY_JOB_ENDPOINT = 'https://23cl113kk3.execute-api.eu-central-1.amazonaws.com/production/apply-job';
@@ -199,8 +200,11 @@ const Apply = ({ jobTitle, jobs, dispaly = 'row' }) => {
                                         <button
                                             disabled={isSubmitting}
                                             type='submit'
+                                            css={css`
+                                                padding: 0.625rem 2.5rem;
+                                            `}
                                             className={classNames(
-                                                'gradientBgBtn  w-full text-base font-normal rounded text-white uppercase text-center py-5 px-16 no-underline',
+                                                'gradientBgBtn  w-full text-base font-normal rounded text-white uppercase text-center  no-underline',
                                                 { 'lg:max-w-xs': dispaly === 'row' }
                                             )}
                                         >

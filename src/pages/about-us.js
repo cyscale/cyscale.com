@@ -135,9 +135,10 @@ const AboutUs = ({ location }) => {
                                 </h1>
                                 <p className='text-base lg:text-lg pt-2 lg:pt-10  leading-loose'>
                                     To help companies of all sizes to start, improve and maintain their Cloud Security
-                                    Program based on the industry best practices. Reducing the risk <br className="hidden xl:block"/> of security breaches
-                                    when migrating or developing solutions in the cloud should be a constant priority
-                                    and responsibility. We can ensure that this task will not be overwhelming for you.
+                                    Program based on the industry best practices. Reducing the risk{' '}
+                                    <br className='hidden xl:block' /> of security breaches when migrating or developing
+                                    solutions in the cloud should be a constant priority and responsibility. We can
+                                    ensure that this task will not be overwhelming for you.
                                 </p>
                             </div>
                         </div>
@@ -657,7 +658,10 @@ const AboutUs = ({ location }) => {
                             <div className='col-span-12 flex justify-center'>
                                 <Link
                                     to='/careers/'
-                                    className='gradientBgBtn mx-auto inline-block min-w-md text-base font-medium rounded text-white uppercase text-center py-5 px-12 no-underline'
+                                    css={css`
+                                        padding: 0.625rem 2.5rem;
+                                    `}
+                                    className='mx-auto bg-gradient-to-r md:mx-0 from-blue to-red hover:from-red hover:to-blue block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind'
                                 >
                                     See our open positions
                                 </Link>
