@@ -115,7 +115,7 @@ const CNAPP = ({ location }) => {
                                         Get maximum cloud native security with our ultimate CNAPP solution. Protect your
                                         entire stack, VMs (virtual machines), containers, and serverless, on any cloud
                                         environment and confidently accelerate innovation.
-                                    </p>c
+                                    </p>
                                     <div className='flex mt-8 justify-start'>
                                         <Link to='/free-trial'>
                                             <GradientButton text='Start Free Trial' />
