@@ -31,4 +31,11 @@ In the paper, you will find: 
 * An in-depth guide to securing your AWS cloud environment from encryption, data loss prevention, to S3 bucket security, 
 * Solutions for these problems through cloud security controls and a data security dashboard. 
 
-[Download the e-book now](https://cta-service-cms2.hubspot.com/web-interactives/public/v1/track/redirect?encryptedPayload=AVxigLKcdzdjs3ubIU5XI1ozY9QJ9YF2yD%2BsoZJAk2vNcR0qYhDoYVmmHNu5VA5Avb9E7Sr%2BRbNjqakYxt0DJ%2B1qbaeIfqdLwOEW0Tl%2FYSlNPTCQfjQ%3D&webInteractiveContentId=127064433808&portalId=5413427) to read up-to-date recommendations regarding data security in the cloud and expand your knowledge.
+To read up-to-date recommendations regarding data security in the cloud and expand your knowledge, download the e-book:
+<div class="hs-cta-embed hs-cta-simple-placeholder hs-cta-embed-127064433808"
+  style="max-width:100%; max-height:100%; width:210px;height:42.390625px">
+  <a href="https://cta-service-cms2.hubspot.com/web-interactives/public/v1/track/redirect?encryptedPayload=AVxigLKcdzdjs3ubIU5XI1ozY9QJ9YF2yD%2BsoZJAk2vNcR0qYhDoYVmmHNu5VA5Avb9E7Sr%2BRbNjqakYxt0DJ%2B1qbaeIfqdLwOEW0Tl%2FYSlNPTCQfjQ%3D&webInteractiveContentId=127064433808&portalId=5413427" target="_blank" rel="noopener" crossorigin="anonymous">
+    <img alt="Download the eBook" loading="lazy" src="https://no-cache.hubspot.com/cta/default/5413427/interactive-127064433808.png" style="height: 100%; width: 100%; object-fit: fill"
+      onerror="this.style.display='none'" />
+  </a>
+</div
