@@ -7,7 +7,7 @@ const buttonStyle = css`
     border: thin solid #ffffff;
 
     &:hover {
-        background-color: #e5edfa;
+        background-color: transparent;
         border: thin solid #0f26aa;
     }
 
