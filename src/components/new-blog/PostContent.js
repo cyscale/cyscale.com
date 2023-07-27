@@ -104,7 +104,6 @@ export default function PostContent({
                     <div className='blog-reset overflow-hidden'>
                         <ReactMarkdown
                             rehypePlugins={[rehypeRaw]}
-                            linkTarget='_blank'
                             components={{
                                 code({ node, inline, className, children, ...props }) {
                                     const match = /language-(\w+)/.exec(className || '');
@@ -128,7 +127,8 @@ export default function PostContent({
                                 h3: headingRenderer,
                                 h4: headingRenderer,
                                 h5: headingRenderer,
-                                h6: headingRenderer
+                                h6: headingRenderer,
+                                a: ({ node, ...props }) => <a {...props} rel='noopener noreferrer' target='_blank' />
                             }}
                         >
                             {data.rawMarkdownBody}
