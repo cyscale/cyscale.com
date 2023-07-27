@@ -3,17 +3,17 @@ import { FaLinkedin, FaTwitter } from 'react-icons/fa';
 import classnames from 'classnames';
 const baseUrl = 'https://cyscale.com/blog/';
 
-export default function Share({ title, permalink, blog }) {
+export default function Share({ title, permalink, blog, mobile }) {
     const platforms = {
         linkedin: {
             name: 'LinkedIn',
             shareUrl: `https://www.linkedin.com/sharing/share-offsite/?url=${baseUrl + permalink}`,
-            icon: <FaLinkedin />
+            icon: <FaLinkedin size={mobile ? 24 : 16} />
         },
         twitter: {
             name: 'Twitter',
             shareUrl: `https://twitter.com/share?text=${title}: &url=${baseUrl + permalink}&via=cyscale`,
-            icon: <FaTwitter />
+            icon: <FaTwitter size={mobile ? 24 : 16} />
         }
     };
 
@@ -27,7 +27,7 @@ export default function Share({ title, permalink, blog }) {
             {Object.values(platforms).map(({ name, shareUrl, icon }) => (
                 <a
                     href={shareUrl}
-                    className={`py-3 ${blog ? 'px-0' : 'px-2'}`}
+                    className={`py-3 ${blog ? 'px-0' : mobile ? 'px-3' : 'px-2'}`}
                     title={`Share on ${name}`}
                     onClick={(e) => {
                         e.preventDefault();

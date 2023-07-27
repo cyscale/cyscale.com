@@ -128,6 +128,7 @@ export default function PostContent({
                                 h4: headingRenderer,
                                 h5: headingRenderer,
                                 h6: headingRenderer,
+                                // eslint-disable-next-line
                                 a: ({ node, ...props }) => <a {...props} rel='noopener noreferrer' target='_blank' />
                             }}
                         >
@@ -150,12 +151,13 @@ export default function PostContent({
                 {!preview && (
                     <div className='max-w-4xl my-auto mx-auto xl:hidden px-8'>
                         <div className='flex items-center '>
-                            <p className='text-sm mt-2 font-hind'>Interesting? Share it</p>
+                            <p className='text-sm mt-3 font-hind'>Interesting? Share it</p>
                             <div className='mt-2'>
                                 <Share
                                     title={data?.title}
                                     permalink={data?.permalink}
                                     description={data?.description}
+                                    mobile={true}
                                 />
                             </div>
                         </div>
