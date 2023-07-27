@@ -152,7 +152,7 @@ const Resources = ({ location }) => {
     const slides = [
         {
             image: data.smartFintech.childImageSharp.gatsbyImageData,
-            alt: 'Smart Fintech uses Cyscale to gain IAM visibility and ensure cloud security and compliance\'',
+            alt: 'Smart Fintech uses Cyscale to gain IAM visibility and ensure cloud security and compliance',
             text: 'Smart Fintech uses Cyscale to gain IAM visibility and ensure cloud security and compliance',
             link: '/case-studies/smart-fintech/'
         },
@@ -511,7 +511,10 @@ const Resources = ({ location }) => {
                                         </Link>
                                     </div>
                                     <div className='col-span-12 sm:col-span-4 flex justify-center lg:justify-end mt-4 sm:mt-0'>
-                                        <Link to='/resources/data-security-e-book.pdf' className='group'>
+                                        <a
+                                            href='https://cta-service-cms2.hubspot.com/web-interactives/public/v1/track/redirect?encryptedPayload=AVxigLKcdzdjs3ubIU5XI1ozY9QJ9YF2yD%2BsoZJAk2vNcR0qYhDoYVmmHNu5VA5Avb9E7Sr%2BRbNjqakYxt0DJ%2B1qbaeIfqdLwOEW0Tl%2FYSlNPTCQfjQ%3D&webInteractiveContentId=127064433808&portalId=5413427'
+                                            className='group'
+                                        >
                                             <div className='hover:underline'>
                                                 <div css={whitepaperCard}>
                                                     <GatsbyImage
@@ -532,7 +535,7 @@ const Resources = ({ location }) => {
                                                     </p>
                                                 </div>
                                             </div>
-                                        </Link>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
