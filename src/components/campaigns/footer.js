@@ -14,25 +14,25 @@ const CampaignsFooter = () => {
                     <div className='order-1'>
                         <a
                             href='/policies/terms-of-use/'
-                            className='font-light text-white no-underline hover:underline text-sm font-hind'
+                            className='font-light text-white text-sm font-hind'
                         >
-                            <span className='py-3.5 inline-block'>Terms of use</span>
+                            <span className='py-3.5 inline-block no-underline hover:underline'>Terms of use</span>
                         </a>
                     </div>
                     <div className='order-1'>
                         <a
                             href='/policies/security-policy/'
-                            className='font-light text-white no-underline hover:underline text-sm font-hind'
+                            className='font-light text-white text-sm font-hind'
                         >
-                            <span className='py-3.5 inline-block'>Security Policy</span>
+                            <span className='py-3.5 inline-block no-underline hover:underline'>Security Policy</span>
                         </a>
                     </div>
                     <div className='order-1'>
                         <a
                             href='/policies/privacy-policy/'
-                            className='font-light text-white no-underline hover:underline text-sm font-hind'
+                            className='font-light text-white text-sm font-hind'
                         >
-                            <span className='py-3.5 inline-block'>Privacy Policy</span>
+                            <span className='py-3.5 inline-block no-underline hover:underline'>Privacy Policy</span>
                         </a>
                     </div>
                     <div className='order-1'>
@@ -40,9 +40,9 @@ const CampaignsFooter = () => {
                             href='https://status.cyscale.com'
                             rel='noopener noreferrer'
                             target='_blank'
-                            className='font-light text-white no-underline hover:underline text-sm font-hind'
+                            className='font-light text-white text-sm font-hind'
                         >
-                            <span className='py-3.5 inline-block'>Status</span>
+                            <span className='py-3.5 inline-block no-underline hover:underline'>Status</span>
                         </a>
                     </div>
                     <div className='order-1'>
