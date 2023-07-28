@@ -50,6 +50,7 @@ const AlignTeams = () => {
                         </p>
                         <img
                             src={headerImage}
+                            loading='lazy'
                             alt='Govern all cloud entities from a single dashboard'
                             className='w-auto h-auto mt-8 mx-auto lg:mx-0'
                         />

@@ -15,7 +15,13 @@ const titleSectionFont = css`
 const CloudComplianceSection = () => {
     return (
         <div className='bg-gradient-to-b from-selago to-white relative z-10' id='confidence'>
-            <img src={corner} width={300} className='hidden md:block absolute top-0 right-0 m-0 z-20' alt='' />
+            <img
+                src={corner}
+                width={300}
+                className='hidden md:block absolute top-0 right-0 m-0 z-20'
+                alt=''
+                loading='lazy'
+            />
             <Container>
                 <div className='py-8 md:py-12 lg:py-20'>
                     <div className='max-w-xl mx-auto lg:mx-0 lg:max-w-md mb-20'>

@@ -64,7 +64,7 @@ const Fproducts = ({ sectionTitle, data, id }) => {
                                             onKeyDown={shiftTabPrev}
                                             onClick={shiftTabPrev}
                                         >
-                                            <img src={left} className='m-auto cursor-pointer' alt='left icon' />
+                                            <img src={left} className='m-auto cursor-pointer' alt='left icon' loading="lazy" />
                                         </button>
                                     </div>
                                     <div style={{ width: '100%', maxWidth: 960 }}>
@@ -81,7 +81,7 @@ const Fproducts = ({ sectionTitle, data, id }) => {
                                             onKeyDown={shiftTabNext}
                                             onClick={shiftTabNext}
                                         >
-                                            <img src={right} className='m-auto cursor-pointer' alt='right icon' />
+                                            <img src={right} className='m-auto cursor-pointer' alt='right icon' loading="lazy" />
                                         </button>
                                     </div>
                                 </div>

@@ -26,7 +26,7 @@ const SecureRemoteAccess = ({ image, headingFirst, headingSecond, description, s
                                 : 'order-2 lg:order-1'
                         } mt-6 lg:mt-0`}
                     >
-                        <img src={image} alt={headingFirst} className='w-auto h-auto' />
+                        <img src={image} alt={headingFirst} className='w-auto h-auto' loading='lazy' />
                     </div>
                     <div
                         className={`block w-full lg:w-2/5 ${

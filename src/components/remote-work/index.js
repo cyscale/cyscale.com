@@ -95,7 +95,12 @@ export default function RemoteWorkContent() {
                 />
             </div>
             <div className='max-w-1366px m-auto mb-12 lg:mb-24 pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px'>
-                <img src={EmployeeAccessFootprint} className='w-full h-auto' alt='employee-access-footprint' />
+                <img
+                    src={EmployeeAccessFootprint}
+                    className='w-full h-auto'
+                    alt='employee-access-footprint'
+                    loading='lazy'
+                />
             </div>
             <div
                 className='max-w-1366px m-auto pt-12 lg:pt-24 pb-12 lg:pb-24 pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px'

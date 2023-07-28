@@ -48,9 +48,9 @@ const CampaignsFooter = () => {
                     <div className='order-1'>
                         <a
                             href='/sitemap/'
-                            className='font-light text-white no-underline hover:underline text-sm font-hind'
+                            className='font-light text-white text-sm font-hind'
                         >
-                            <span className='py-3.5 inline-block'>Sitemap</span>
+                            <span className='py-3.5 inline-block no-underline hover:underline'>Sitemap</span>
                         </a>
                     </div>
                 </div>
