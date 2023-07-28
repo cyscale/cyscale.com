@@ -24,6 +24,7 @@ const getstarted = ({ description, btnText, btnLink, sectionName, icon, icon2, E
                                 <img
                                     src={icon}
                                     alt='icon'
+                                    loading='lazy'
                                     className={`mb-30px mx-auto ${
                                         !!sectionName && sectionName === 'getStartedFooter' ? 'sm:m-0 h-28' : ''
                                     }`}

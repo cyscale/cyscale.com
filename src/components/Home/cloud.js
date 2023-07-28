@@ -46,6 +46,7 @@ const Cloud = ({ title, sectionName, f_image, data, id }) => {
                                 className={`w-full lg:w-2/5 ${sectionName === 'systemGov' ? 'order-1 lg:order-2' : ''}`}
                             >
                                 <img
+                                    loading='lazy'
                                     src={f_image}
                                     className={`${
                                         sectionName === 'SKGSection'
@@ -72,7 +73,9 @@ const Cloud = ({ title, sectionName, f_image, data, id }) => {
                                 {data.map((content, index) => (
                                     <div key={index} className='text-16px relative text-black leading-normal'>
                                         {!!content.title && (
-                                            <h3 className='font-semibold  text-16px font-medium mb-5px'>{content.title}</h3>
+                                            <h3 className='font-semibold  text-16px font-medium mb-5px'>
+                                                {content.title}
+                                            </h3>
                                         )}
                                         {!!content.divider && <div className='mb-20px'>{content.divider}</div>}
                                         <p

@@ -70,7 +70,7 @@ const Support = ({ title, data, sectionName }) => {
                                 rel='noopener noreferrer'
                                 className='uppercase text-blue underline text-16px hover:no-underline hover:text-red font-medium'
                             >
-                                <img src={arrowDOwn} alt='arrow icon' className='mx-auto mb-23px w-20px' />
+                                <img src={arrowDOwn} alt='arrow icon' className='mx-auto mb-23px w-20px' loading="lazy" />
                                 <span className='block w-full text-center'>See all supported data types</span>
                             </a>
                         </div>
