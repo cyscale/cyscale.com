@@ -128,9 +128,8 @@ This framework contains 14 out of the 20 categories listed for NIST 800-53 and i
 
 ## Here’s how we can help 
 
-Choosing which framework is suitable for you and becoming compliant is not an easy task.  
-
-Cyscale can help you ease the process of becoming NIST compliant. Using our Standards page, you can track your progress and speed up the process in terms of your cloud-specific needs. 
+Choosing the right NIST framework and ensuring compliance is a pivotal task.\
+Cyscale is here to guide you, making the **[NIST cloud security](https://cyscale.com/use-cases/nist-compliance/)** journey simpler. Leveraging our Standards page, you can efficiently monitor your progress and expedite the compliance process, tailored for your cloud-specific requirements.
 
 <img src="/img/32_blog-standards.png" alt="The NIST Standard in Cyscale" title="The NIST Standard in Cyscale" class="" style="width:auto;height:auto;"/>
 
