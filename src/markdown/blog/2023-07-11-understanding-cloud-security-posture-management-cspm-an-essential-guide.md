@@ -124,6 +124,6 @@ The future of CSPM holds immense promise, driven by emerging technologies and an
 
 Machine learning and artificial intelligence are already making their mark in CSPM, enabling intelligent automation and anomaly detection. These advancements will empower organizations to stay ahead of threats by identifying and remediating risks in real time, reducing manual effort, and enhancing the overall efficiency of cloud security operations. 
 
-The next step after CSPM is *[CNAPP: Cloud-Native Application Protection Platform](https://cyscale.com/blog/cnapp-secure-native-applications)*. A CNAPP is a solution that incorporates multiple modules, among which is CSPM. Beside CSPM, you also find CIEM, Container Security, CWPP (Cloud Workload Protection Platform), and other components. 
+The next step after CSPM is *[CNAPP: Cloud-Native Application Protection Platform](https://cyscale.com/products/cnapp/)*. A CNAPP is a solution that incorporates multiple modules, among which is CSPM. Beside CSPM, you also find CIEM, Container Security, CWPP (Cloud Workload Protection Platform), and other components. 
 
 With this in mind, you can either use CSPM as a standalone solution, or integrate CNAPP with your cloud environment for more coverage in different areas in cloud security.
