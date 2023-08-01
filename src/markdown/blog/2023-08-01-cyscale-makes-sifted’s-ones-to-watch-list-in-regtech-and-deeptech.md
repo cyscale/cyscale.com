@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
-title: Cyscale makes Sifted’s ones to watch list in RegTech and DeepTech
-seoTitle: "Cyscale makes Sifted’s ones to watch list in RegTech and DeepTech "
+title: Cyscale Makes Sifted’s Ones to Watch List in RegTech and DeepTech
+seoTitle: Cyscale Makes Sifted’s Ones to Watch List in RegTech and DeepTech
 authors: Ovidiu Cical
 permalink: cyscale-top-100-sifted-regtech-deeptech
 categories:
