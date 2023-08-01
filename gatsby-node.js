@@ -33,6 +33,10 @@ const redirects = [
     {
         fromPath: '/blog/AWS-SOC%202-Compliance-Checklist-A-Detailed-Guide',
         toPath: '/blog/AWS-SOC-2-Compliance-Checklist-A-Detailed-Guide/'
+    },
+    {
+        fromPath: '/blog/cspm-visibility-compliance-security',
+        toPath: '/blog/understanding-cspm-an-essential-guide/'
     }
 ];
 
