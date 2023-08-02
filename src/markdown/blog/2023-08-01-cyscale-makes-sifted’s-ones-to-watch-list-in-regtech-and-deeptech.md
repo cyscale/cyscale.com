@@ -29,13 +29,13 @@ featuredpost: true
 featuredimage: /img/news_blog-cover.png
 tableOfContents: false
 ---
-We are excited to reveal that Cyscale – the cloud security platform – has been listed in Sifted’s 100 Companies to Watch in both RegTech and DeepTech, as demands for compliance and regulation technology accelerate in line with interest in risk management and AI.  
+We are excited to reveal that Cyscale – the [cloud security platform](https://cyscale.com) – has been listed in Sifted’s 100 Companies to Watch in both RegTech and DeepTech, as demands for compliance and regulation technology accelerate in line with interest in risk management and AI.  
 
 RegTech funding this year has nearly caught 2022’s total already, and over 1,000 legal acts have been [adopted by the EU](https://eur-lex.europa.eu/statistics/legislative-acts-statistics.html) so far in 2023, driving demand for solutions to help companies navigate more, and more complex, red tape.  
 
 Meanwhile, DeepTech has moved on from stumbling blockchain and last-mile delivery innovations to resurface in several facets of AI, with automation helping companies do more with fewer resources - especially in the field of regulatory compliance and security.   
 
-When it comes to both cloud security and compliance, identifying failure is only part of the process - you also need context to understand how to fix the problem. This context is provided by the Cyscale [Security Knowledge Graph](https://cyscale.com/products/security-knowledge-graph/).  
+When it comes to both [cloud security and compliance](<cloud security and compliance>), identifying failure is only part of the process - you also need context to understand how to fix the problem. This context is provided by the Cyscale [Security Knowledge Graph](https://cyscale.com/products/security-knowledge-graph/).  
 
 Cyscale can be found in Sifted’s [RegTech briefing](https://sifted.eu/pro/briefings/regtech/) in the Compliance Management Solutions part of the map, and in the [DeepTech briefing](https://sifted.eu/pro/briefings/deeptech/) as an early-stage startup to watch.   
 
