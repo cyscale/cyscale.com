@@ -58,7 +58,7 @@ There are some benefits in integrating your CSPM solution with an identity provi
 
 However, if you are using an external provider for user management, like Okta, unless the CSPM has an integration with that identity service, it is not possible for the CSPM to fully accomplish the actions mentioned above. 
 
-Moreover, if you have users in Okta and IAM users in the cloud, you will have to assess their configurations in two different systems, resulting in more work and more room for mistakes. 
+Moreover, understanding and following [Okta Security Best Practices](https://cyscale.com/blog/iam-okta-security-best-practices/) can significantly enhance your cloud's safety. If you have users in Okta and IAM users in the cloud, you will have to assess their configurations in two different systems, resulting in more work and more room for mistakes. 
 
 Checking for common configurations, for example, whether MFA is enabled for all users, can result in steps that need to be completed in two different places. 
 
@@ -148,7 +148,5 @@ We know how important visibility is in the cloud. Having all users in one place 
 * Azure AD, 
 * JumpCloud, 
 * G-suite, and others. 
-
- 
 
 <!--EndFragment-->
