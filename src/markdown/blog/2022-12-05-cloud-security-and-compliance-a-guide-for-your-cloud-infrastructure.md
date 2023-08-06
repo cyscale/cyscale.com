@@ -158,6 +158,8 @@ All of these compliance standards have rigorous regulatory requirements, and the
 
 To read more about these compliance standards, as well as NIST, check out our [whitepaper](https://cyscale.com/whitepaper/the-complete-guide-to-cloud-compliance/). 
 
+Understanding **cloud compliance** is crucial for organizations that want to ensure both the security and legality of their cloud operations. The constantly changing landscape of regulations demands a comprehensive approach to compliance, aligning with various standards such as ISO 27001, SOC 2, PCI-DSS, HIPAA, and GDPR. To equip yourself with foundational knowledge and practical tips on cloud compliance, [read our detailed guide on Cloud Compliance 101: Basics & Best Practices.](https://cyscale.com/blog/cloud-compliance-101-basics-best-practices/)
+
 Our [cloud compliance platform](https://cyscale.com/use-cases/cloud-compliance-and-auditing/)  can help you secure your cloud environment and become compliant with respected accreditations through: 
 
 * Over 400 controls, across multiple public cloud service providers, such as Microsoft Azure, AWS (Amazon Web Services), and Google Cloud, that help you stay on top of your security program, 
@@ -165,7 +167,5 @@ Our [cloud compliance platform](https://cyscale.com/use-cases/cloud-compliance-a
 * Powerful identity and security dashboards for enhanced visibility over your cloud infrastructure, and others. 
 
 Secure your cloud infrastructure effectively with expert insights on cloud security and compliance best practices and international standards. Boost your data safety with our [Cloud Security Platform](https://cyscale.com/), offering 400+ controls, customizable security policies, and advanced dashboards for ultimate control and visibility.
-
-
 
 <!--EndFragment-->
