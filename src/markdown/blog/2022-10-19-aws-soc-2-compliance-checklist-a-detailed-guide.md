@@ -27,7 +27,7 @@ tags:
 ---
 <!--StartFragment-->
 
-SOC 2 is a compliance standard that regulates the way data security is handled within B2B (business-to-business) organizations. SOC (Service and Organization Controls) 2 is an international standard developed by AICPA (The American Institute of Certified Public Accountants). 
+SOC 2 is a compliance standard that regulates the way data security is handled within B2B (business-to-business) organizations. SOC (Service and Organization Controls) 2 is an international standard developed by AICPA (The American Institute of Certified Public Accountants). In the context of **[cloud compliance](https://cyscale.com/blog/cloud-compliance-101-basics-best-practices/)**, understanding SOC 2 requirements in your AWS environment is crucial for data security.
 
 In this article, we will understand what requirements your company needs to fulfill to obtain the [SOC 2 certifications](https://cyscale.com/blog/soc-2-compliance-in-cloud/) and how to implement them correctly in your AWS environment. 
 
