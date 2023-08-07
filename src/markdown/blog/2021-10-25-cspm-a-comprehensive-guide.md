@@ -88,7 +88,7 @@ Not to mention that a multi-cloud strategy will complicate security efforts sinc
 
 CSPM solutions do not require the deployment of any additional resources to enforce cloud security best practices and will identify and help mitigate these security risks across cloud providers.
 
-According to Gartner, CSPM tools can identify risks in the configurations of your cloud infrastructure and will immediately react either with automatic remediations or with specific instructions on how to fix the misconfiguration and eliminate risks.
+According to Gartner, CSPM tools can identify risks in the configurations of your [cloud infrastructure security](https://cyscale.com/blog/cloud-infrastructure-security/) and will immediately react either with automatic remediations or with specific instructions on how to fix the misconfiguration and eliminate risks.
 
 There are other types of tools that handle sensitive workloads and data in the cloud or that monitor user activity. All these tools are enforcing security policies and together they can ensure the proper protection in the cloud.
 
