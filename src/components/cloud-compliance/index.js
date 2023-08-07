@@ -33,6 +33,15 @@ const topArticles = [
     {
         text: 'HIPAA Compliance in the Cloud',
         link: '/blog/hipaa-compliance-in-cloud/'
+    },
+    {
+        text: (
+            <>
+                Cloud Compliance 101:
+                <br /> From Basics to Best Practices
+            </>
+        ),
+        link: '/blog/cloud-compliance-101-basics-best-practices/'
     }
 ];
 
