@@ -146,6 +146,11 @@ const Resources = ({ location }) => {
                     gatsbyImageData(width: 1080, layout: CONSTRAINED)
                 }
             }
+            mssps: file(relativePath: { eq: "mssps.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 1080, layout: CONSTRAINED)
+                }
+            }
         }
     `);
 
@@ -674,7 +679,7 @@ const Resources = ({ location }) => {
                                     alt='Documentation Logo'
                                     className='rounded-md'
                                 />
-                                <p className='font-hind font-medium text-lg mt-2'>Dcoumentation</p>
+                                <p className='font-hind font-medium text-lg mt-2'>Documentation</p>
                             </a>
                         </div>
                         <div className='col-span-12 md:col-span-6 lg:col-span-3 mt-6 md:mt-0'>
@@ -688,6 +693,16 @@ const Resources = ({ location }) => {
                                     className='rounded-md'
                                 />
                                 <p className='font-hind font-medium text-lg mt-2'>Datasheet</p>
+                            </Link>
+                        </div>
+                        <div className='col-span-12 md:col-span-6 lg:col-span-3 mt-6 md:mt-0'>
+                            <Link to='/resources/empowering-mssps.pdf' className='hover:underline cursor-pointer'>
+                                <GatsbyImage
+                                    image={data.mssps.childImageSharp.gatsbyImageData}
+                                    alt="MSSP's Logo"
+                                    className='rounded-md'
+                                />
+                                <p className='font-hind font-medium text-lg mt-2'>Empowering MSSP’s</p>
                             </Link>
                         </div>
                     </Row>
