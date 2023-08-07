@@ -63,7 +63,7 @@ export const ArticleLink = ({ text, link }) => {
 export const PageLink = ({ text, link }) => {
     return (
         <Link to={link} className='flex mt-4'>
-            <img src={ArrowRight} alt='' width={24} />
+            <img src={ArrowRight} alt='' width={24} loading='lazy' />
             <span className='text-base text-white font-montserrat font-bold ml-3 hover:underline'>{text}</span>
         </Link>
     );

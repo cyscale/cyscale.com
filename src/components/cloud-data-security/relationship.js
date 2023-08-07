@@ -34,7 +34,7 @@ const Relationship = () => {
                     </div>
                     <div className='hidden lg:inline-flex'></div>
                     <div>
-                        <img src={Owsap} alt='owsap-logo' className='w-384px' />
+                        <img src={Owsap} alt='owsap-logo' className='w-384px' loading='lazy' />
                         <p className='mt-32px mb-38px text-black text-36px leading-normal'>Data Security Top 10</p>
                         <p className='new-line text-black text-16px leading-normal'>
                             Cyscale is built by the authors of the{' '}

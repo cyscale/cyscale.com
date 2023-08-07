@@ -118,7 +118,7 @@ const Index = () => {
                             </h2>
                             <Row>
                                 <div className='col-span-12 lg:col-span-4  mb-12 md:mb-0'>
-                                    <img className='max-w-xs' src={SKG_F_image} alt='decoration' />
+                                    <img className='max-w-xs' src={SKG_F_image} alt='decoration' loading='lazy' />
                                 </div>
                                 <div className='col-span-12 md:col-span-6 lg:col-span-4'>
                                     <p className='mb-6'>
@@ -150,8 +150,8 @@ const Index = () => {
                         </Container>
                     </Section>
                 </div>
-                <Video id="video"/>
-                <Section className='block w-full bg-white' id="nutshell">
+                <Video id='video' />
+                <Section className='block w-full bg-white' id='nutshell'>
                     <Container>
                         <p className='text-black text-base my-16'>
                             <strong>The Cyscale Security Knowledge Graph in a nutshell</strong>
@@ -159,7 +159,10 @@ const Index = () => {
                         <div className='border-t border-b border-borderGrey py-4'>
                             <Row>
                                 {dataFeatures.map((content, index) => (
-                                    <div key={index} className='col-span-12 sm:col-span-6 md:col-span-4 py-6 lg:py-0 lg:col-span-2'>
+                                    <div
+                                        key={index}
+                                        className='col-span-12 sm:col-span-6 md:col-span-4 py-6 lg:py-0 lg:col-span-2'
+                                    >
                                         {React.cloneElement(content.icon, {
                                             alt: 'decoration',
                                             className: 'h-8 block'
@@ -190,14 +193,14 @@ const Index = () => {
                 <GetStarted
                     description='Ready to give it a try and see how it works?'
                     btnText='START YOUR FREE TRIAL'
-                    btnLink={"/free-trial"}
+                    btnLink={'/free-trial'}
                     icon={getStartedICon}
                 />
             </div>
-            <div className='automation' id="automation">
+            <div className='automation' id='automation'>
                 <Automation />
             </div>
-            <div className='identifIssues' id="identify-issues">
+            <div className='identifIssues' id='identify-issues'>
                 <IdentifyIssues />
             </div>
             <div className='gradientBGCSPM-2'>
@@ -216,11 +219,11 @@ const Index = () => {
                 <GetStarted
                     description={`Accurate. Real-time. Context-aware.`}
                     btnText='TRY CYSCALE FOR FREE'
-                    btnLink={"/free-trial"}
+                    btnLink={'/free-trial'}
                     sectionName='dataSecFoot'
                 />
             </div>
-            <FAQs id="faqs"/>
+            <FAQs id='faqs' />
         </>
     );
 };

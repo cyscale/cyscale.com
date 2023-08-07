@@ -256,7 +256,13 @@ const Soc2 = ({ location }) => {
                 </div>
             </Container>
             <div className='bg-gradient-to-b from-selago to-white relative z-10' id='confidence'>
-                <img src={corner} width={300} className='hidden md:block absolute top-0 right-0 m-0 z-20' alt='' />
+                <img
+                    src={corner}
+                    width={300}
+                    className='hidden md:block absolute top-0 right-0 m-0 z-20'
+                    alt=''
+                    loading='lazy'
+                />
                 <Container>
                     <div className='py-8 md:py-12 lg:py-20'>
                         <div className='max-w-xl mx-auto lg:mx-0 lg:max-w-md mb-20'>
@@ -313,7 +319,7 @@ const Soc2 = ({ location }) => {
             <Container>
                 <div className='md:pt-12 pb-12 md:pb-24'>
                     <div className='flex h-48 flex-col items-center'>
-                        <img src={cloudIcon} alt='' />
+                        <img src={cloudIcon} alt='' loading='lazy' />
                         <h2 className='text-center px-2 mt-4 mb-2 montserrat-font font-bold font-hind text-lg lg:text-2xl'>
                             SOC COMPLIANCE AND CLOUD SECURITY
                         </h2>

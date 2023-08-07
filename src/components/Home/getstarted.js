@@ -73,6 +73,7 @@ const getstarted = ({ description, btnText, btnLink, sectionName, icon, icon2, E
                             <div className='block w-full md:w-96 mx-auto sm:m-auto text-white text-24px leading-normal text-center sm:text-left mt-20px sm:mt-0px'>
                                 <img
                                     src={icon2}
+                                    loading='lazy'
                                     alt='icon'
                                     className={`hidden sm:block mb-30px ${
                                         !!sectionName && sectionName === 'getStartedFooter' ? 'h-28' : 'mx-auto'
