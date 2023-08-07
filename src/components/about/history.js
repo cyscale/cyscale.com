@@ -9,7 +9,12 @@ const History = () => {
                     <div className='grid grid-cols-1 lg:grid-cols-4 gap-12 lg:gap-6 lg:border-t-8 lg:border-aboutBorder relative aboutHistory'>
                         <div className='border-t-8 border-aboutBorder lg:border-none'>
                             <div className='-mt-10 lg:-mt-14 hidden lg:block'>
-                                <img src={LogoSymbol} className='w-37px lg:mb-4' alt='cyscale-logo-symbols' />
+                                <img
+                                    src={LogoSymbol}
+                                    className='w-37px lg:mb-4'
+                                    alt='cyscale-logo-symbols'
+                                    loading='lazy'
+                                />
                                 <span className='block w-36px h-36px rounded-full bg-white border-8 border-aboutBorder'></span>
                             </div>
                             <p className='text-black text-base mt-8'>
@@ -21,7 +26,12 @@ const History = () => {
                         </div>
                         <div className='border-t-8 border-aboutBorder lg:border-none'>
                             <div className='-mt-10 lg:-mt-16 hidden lg:block'>
-                                <img src={LogoSymbol} className='w-37px lg:mb-6' alt='cyscale-logo-symbols' />
+                                <img
+                                    src={LogoSymbol}
+                                    className='w-37px lg:mb-6'
+                                    alt='cyscale-logo-symbols'
+                                    loading='lazy'
+                                />
                                 <span className='block w-36px h-36px rounded-full bg-white border-8 border-aboutBorder'></span>
                             </div>
                             <p className='text-black text-base mt-8'>
@@ -44,7 +54,12 @@ const History = () => {
                         </div>
                         <div className='border-t-8 border-aboutBorder lg:border-none'>
                             <div className='-mt-10 lg:-mt-20 hidden lg:block'>
-                                <img src={LogoSymbol} className='w-37px lg:mb-10' alt='cyscale-logo-symbols' />
+                                <img
+                                    src={LogoSymbol}
+                                    className='w-37px lg:mb-10'
+                                    alt='cyscale-logo-symbols'
+                                    loading='lazy'
+                                />
                                 <span className='block w-36px h-36px rounded-full bg-white border-8 border-aboutBorder'></span>
                             </div>
                             <p className='text-black text-base mt-8'>
@@ -57,7 +72,12 @@ const History = () => {
                         </div>
                         <div className='border-t-8 border-aboutBorder lg:border-none'>
                             <div className='-mt-10 lg:-mt-24 hidden lg:block'>
-                                <img src={LogoSymbol} className='w-37px lg:mb-14' alt='cyscale-logo-symbols' />
+                                <img
+                                    src={LogoSymbol}
+                                    className='w-37px lg:mb-14'
+                                    alt='cyscale-logo-symbols'
+                                    loading='lazy'
+                                />
                                 <span className='block w-36px h-36px rounded-full bg-white border-8 border-aboutBorder'></span>
                             </div>
                             <p className='text-black text-base mt-8'>

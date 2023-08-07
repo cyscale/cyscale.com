@@ -110,7 +110,12 @@ const FAQs = ({ id }) => {
                         <div className='grid grid-cols-1 lg:grid-cols-2 gap-12'>
                             <div className='justify-self-start'>
                                 <div className='h-full flex flex-wrap flex-grow'>
-                                    <img src={f_image} alt='FAQs' className='w-162px pt-50px h-auto mt-auto' />
+                                    <img
+                                        src={f_image}
+                                        alt='FAQs'
+                                        className='w-162px pt-50px h-auto mt-auto'
+                                        loading='lazy'
+                                    />
                                 </div>
                             </div>
                             <div>
@@ -129,6 +134,7 @@ const FAQs = ({ id }) => {
                                             <img
                                                 src={TabsArrow}
                                                 alt='arrow icon'
+                                                loading='lazy'
                                                 className='tabsArrow absolute top-8px right-0'
                                             />
                                         </button>

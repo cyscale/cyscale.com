@@ -76,6 +76,7 @@ const Sectionheader = ({ headingText, description, subText, pageName, section })
                     <div className='hidden lg:inline-flex'>
                         <img
                             src={headerImage}
+                            loading='lazy'
                             alt='Use the Cyscale Cloud Platform to'
                             className='w-auto h-auto ml-auto'
                         />
