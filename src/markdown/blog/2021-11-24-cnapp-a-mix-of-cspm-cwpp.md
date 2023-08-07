@@ -42,7 +42,7 @@ But recently, Gartner has defined a new category that is focused on securing clo
 
 The legitimate question would be: ***Why do I need another security tool?***
 
-Well, the idea is to focus not only on your cloud infrastructure's security configurations but also on your applications that run in the cloud.
+Well, the idea is to focus not only on your [cloud infrastructure's security](https://cyscale.com/blog/cloud-infrastructure-security/) configurations but also on your applications that run in the cloud.
 
 You could argue that your CWPP or your CSPM is already doing something about this - and you would be right!
 
