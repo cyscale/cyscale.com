@@ -33,6 +33,15 @@ const topArticles = [
     {
         text: 'PCI-DSS Compliance in the Cloud',
         link: '/blog/pci-dss-compliance-in-cloud/'
+    },
+    {
+        text: (
+            <>
+                Cloud Compliance 101:
+                <br /> From Basics to Best Practices
+            </>
+        ),
+        link: '/blog/cloud-compliance-101-basics-best-practices/'
     }
 ];
 

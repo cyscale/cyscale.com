@@ -29,6 +29,15 @@ const topArticles = [
         text: 'Cloud Security and Compliance:<br class="hidden lg:block"/>A Guide for Your Cloud Infrastructure',
         link: '/blog/cloud-security-and-compliance/',
         children: true
+    },
+    {
+        text: (
+            <>
+                Cloud Compliance 101:
+                <br /> From Basics to Best Practices
+            </>
+        ),
+        link: '/blog/cloud-compliance-101-basics-best-practices/'
     }
 ];
 

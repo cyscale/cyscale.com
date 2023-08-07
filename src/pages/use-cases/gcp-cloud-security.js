@@ -34,6 +34,15 @@ const topArticles = [
         text: 'What Is Data Classification And<br class="hidden lg:block"/> Why Is It Important?',
         link: '/blog/data-classification/',
         children: true
+    },
+    {
+        text: (
+            <>
+                Cloud Compliance 101:
+                <br /> From Basics to Best Practices
+            </>
+        ),
+        link: '/blog/cloud-compliance-101-basics-best-practices/'
     }
 ];
 
