@@ -59,7 +59,7 @@ By enabling this feature for different services that you use, you can improve vi
 
 You can enable Microsoft Defender either using the Azure CLI, the Azure portal, or Azure Powershell. For example, to enable Microsoft Defender for Key Vaults in the CLI, you can use the following command: 
 
-```
+```shell
 az security pricing create -n 'KeyVaults' --tier 'Standard'
 ```
 
@@ -93,7 +93,7 @@ I’m talking about password policies. Employees in your company are going to be
 
 **Set IAM password policy expiry date within 90 days or less:** 
 
-```
+```shell
 aws iam update-account-password-policy –max-password-age 90
 ```
 
@@ -113,7 +113,7 @@ In Azure, you can create Log Alerts for specific events to ensure that you catch
 
 The easiest way to implement this is using the Azure CLI: 
 
-```
+```shell
 az monitor activity-log alert create --resource-group "<resourceGroupName>" --condition category=Administrative and operationName=Microsoft.Authorization/policyAssignments/write and level=<verbose | information | warning | error | critical> --scope "/subscriptions/<subscriptionID>" --name "<activityLogRuleName>" --subscription <subscriptionID> --action-group <actionGroupID>
 ```
 
