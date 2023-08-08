@@ -103,7 +103,7 @@ aws iam update-account-password-policy –max-password-age 90
 aws iam update-account-password-policy –password-reuse-prevention 24
 ```
 
-That’s it. Run these commands and forget about them. Your cloud infrastructure is a bit safer than a few moments ago. 
+That’s it. Run these commands and forget about them. Your [cloud infrastructure](https://cyscale.com/blog/cloud-infrastructure-security/) is a bit safer than a few moments ago. 
 
 ### 5. Get relevant logs 
 
@@ -121,7 +121,7 @@ Simply replace resourceGroupName, subscriptionID, activityLogRuleName, actionGro
 
 ## A Peek at Cyscale's Approach 
 
-At Cyscale, we're more than familiar with the challenges of securing cloud resources. Our [CSPM solution](https://cyscale.com/products/cloud-security-posture-management/) offers real-time insights into your security posture. Or maybe you’re curious about cloud native applications? Our [CNAPP security](https://cyscale.com/products/cnapp/) tools are purpose-built to bolster your cloud-native security platform, ensuring threats are kept at bay. Dive deeper into our offerings and understand how a proactive approach to security, centered around a trusted [cloud native security](https://cyscale.com/blog/cloud-native-security-guide/) strategy, can change the game. 
+At Cyscale, we're more than familiar with the challenges of securing cloud resources. Our [CSPM solution](https://cyscale.com/products/cloud-security-posture-management/) offers real-time insights into your security posture. Or maybe you’re curious about [cloud native applications](https://cyscale.com/blog/cnapp-secure-native-applications/)? Our [CNAPP security](https://cyscale.com/products/cnapp/) tools are purpose-built to bolster your cloud-native security platform, ensuring threats are kept at bay. Dive deeper into our offerings and understand how a proactive approach to security, centered around a trusted [cloud native security](https://cyscale.com/blog/cloud-native-security-guide/) strategy, can change the game. 
 
 ## Concluding Thoughts 
 
@@ -129,4 +129,4 @@ An impeccable cloud security strategy is the sum of multiple moving parts. From 
 
 ## FAQs 
 
-<ul class="faq-list"><li><p class="question" style="font-weight:bold;">What are the key components of an effective cloud security strategy?</p><p class="answer">A robust strategy includes understanding the specific cloud environment, real-time vulnerability management, automation, a zero trust model, and continuous evaluation. Discover more about the intricacies of a [cloud security infrastructure](https://cyscale.com/blog/cloud-infrastructure-security/).</p></li><li><p class="question" style="font-weight:bold;">How do cloud service providers help in shaping security strategies?</p><p class="answer">Cloud service providers offer foundational security features. They often follow a shared responsibility model where they ensure the security of the cloud, but security in the cloud (data, apps, etc.) is the user's responsibility. Get in-depth insights on [cloud native application security](https://cyscale.com/blog/cnapp-secure-native-applications/).</p></li><li><p class="question" style="font-weight:bold;">Are there cloud security tools that can offer automated solutions?</p><p class="answer">Yes, numerous cloud security solutions offer automation, from threat detection to remediation. This ensures quick response times and reduced human errors. Learn more about the evolution of [multi-cloud data security](https://cyscale.com/use-cases/cloud-data-security/).</p></li></ul>
+<ul class="faq-list"><li><p class="question" style="font-weight:bold;">What are the key components of an effective cloud security strategy?</p><p class="answer">A robust strategy includes understanding the specific cloud environment, real-time vulnerability management, automation, a zero trust model, and continuous evaluation. Discover more about the intricacies of a cloud security infrastructure.</p></li><li><p class="question" style="font-weight:bold;">How do cloud service providers help in shaping security strategies?</p><p class="answer">Cloud service providers offer foundational security features. They often follow a shared responsibility model where they ensure the security of the cloud, but security in the cloud (data, apps, etc.) is the user's responsibility. Get in-depth insights on cloud native application security.</p></li><li><p class="question" style="font-weight:bold;">Are there cloud security tools that can offer automated solutions?</p><p class="answer">Yes, numerous cloud security solutions offer automation, from threat detection to remediation. This ensures quick response times and reduced human errors. Learn more about the evolution of multi-cloud data security.</p></li></ul>
