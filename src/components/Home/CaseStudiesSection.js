@@ -38,6 +38,16 @@ const CaseStudiesSection = () => {
                     gatsbyImageData(width: 720, layout: CONSTRAINED)
                 }
             }
+            medicalDevicesCompany: file(relativePath: { eq: "medical-devices-company-carousel.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 720, layout: CONSTRAINED)
+                }
+            }
+            quotes: file(relativePath: { eq: "quotes.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 55, layout: CONSTRAINED)
+                }
+            }
         }
     `);
 
@@ -83,6 +93,13 @@ const CaseStudiesSection = () => {
                 </>
             ),
             link: '/case-studies/smart-fintech'
+        },
+        {
+            image: data.medicalDevicesCompany.childImageSharp.gatsbyImageData,
+            alt: 'Securely Migrating a Medical Devices Leader from On-premises to the Cloudy',
+            title: 'Good Medicine: Securely Migrating a Medical Devices Leader from On-premises to the Cloud',
+            quote: 'Migrating a complex on-premises infrastructure to the public cloud without specialist resources is no easy feat. But this medical devices manufacturer was able to breathe easy and adapt their technical expertise to the new environment while keeping security at the forefront of the migration.',
+            link: '/case-studies/cloud-migration'
         }
     ];
 

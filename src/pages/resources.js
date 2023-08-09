@@ -151,6 +151,11 @@ const Resources = ({ location }) => {
                     gatsbyImageData(width: 1080, layout: CONSTRAINED)
                 }
             }
+            medicalDevicesCompany: file(relativePath: { eq: "medical-devices-company-cover.webp" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 720, layout: CONSTRAINED)
+                }
+            }
         }
     `);
 
@@ -163,9 +168,15 @@ const Resources = ({ location }) => {
         },
         {
             image: data.baysConsulting.childImageSharp.gatsbyImageData,
-            alt: 'Bays Consulting achieves 50% productivity gain with Cyscale Bays Consulting achieves 50%',
-            text: 'Bays Consulting achieves 50% productivity gain with Cyscale Bays Consulting achieves 50% productivity gain with Cyscale',
+            alt: 'Bays Consulting achieves 50% productivity gain with Cyscale',
+            text: 'Bays Consulting achieves 50% productivity gain with Cyscale',
             link: '/case-studies/bays-consulting/'
+        },
+        {
+            image: data.medicalDevicesCompany.childImageSharp.gatsbyImageData,
+            alt: 'Securely Migrating a Medical Devices Leader from On-premises to the Cloud with Cyscale',
+            text: 'Securely Migrating a Medical Devices Leader from On-premises to the Cloud with Cyscale',
+            link: '/case-studies/cloud-migration/'
         },
         {
             image: data.demo.childImageSharp.gatsbyImageData,
@@ -361,7 +372,7 @@ const Resources = ({ location }) => {
                 </div>
             </Container>
             <Container>
-                <div className='pb-10'>
+                <div className='pb-10' id="case-studies">
                     <h2
                         className='font-montserrat font-bold text-blue'
                         css={css`
@@ -396,6 +407,21 @@ const Resources = ({ location }) => {
                                 />{' '}
                                 <p className='font-hind font-medium text-lg mt-2 hover:underline'>
                                     Bays Consulting achieves 50% productivity gain with Cyscale
+                                </p>
+                            </Link>
+                        </div>
+                        <div className='col-span-12 md:col-span-6 lg:col-span-3 mt-6 md:mt-0 hidden md:block'>
+                            <Link to='/case-studies/cloud-migration/' className='hover:underline'>
+                                <GatsbyImage
+                                    image={data.medicalDevicesCompany.childImageSharp.gatsbyImageData}
+                                    alt='Securely Migrating a Medical Devices Leader from On-premises to the
+                                    Cloud'
+                                    className='rounded-md'
+                                    css={cardBorder}
+                                />{' '}
+                                <p className='font-hind font-medium text-lg mt-2 hover:underline'>
+                                    Securely Migrating a Medical Devices Leader from On-premises to the Cloud with
+                                    Cyscale
                                 </p>
                             </Link>
                         </div>

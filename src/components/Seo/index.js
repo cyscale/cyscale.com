@@ -15,6 +15,7 @@ import MisconfigurationsWhitepaperOg from '../../assets/images/misconfigurations
 import CloudComplianceWhitepaperOg from '../../assets/images/cloud-compliace-whitepaper-og.png';
 import SmartFintechOg from '../../assets/images/smart-fintech-og.png';
 import BaysConsultingOg from '../../assets/images/bays-consulting-og.png';
+import MedicalDevicesOg from '../../assets/images/medical-devices-company-case-study-og.png';
 import { useStaticQuery, graphql } from 'gatsby';
 
 const defaultOg = {
@@ -32,7 +33,8 @@ const defaultOg = {
     CloudStorageMisconfigurations: MisconfigurationsWhitepaperOg,
     CloudComplianceWhitepaper: CloudComplianceWhitepaperOg,
     SmartFintech: SmartFintechOg,
-    BaysConsulting: BaysConsultingOg
+    BaysConsulting: BaysConsultingOg,
+    MedicalDevicesCompany: MedicalDevicesOg
 };
 
 const Seo = ({ title, description, pageName, banner, location }) => {
