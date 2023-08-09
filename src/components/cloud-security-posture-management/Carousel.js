@@ -14,6 +14,7 @@ const Carousel = ({ children: slides, autoSlide = true, autoSlideInterval = 2500
     const swipeRef = useRef();
     const touchStart = useRef(0);
     const touchEnd = useRef(0);
+    const [slideWidth, setSlideWidth] = useState(0);
 
     const prev = () => setCurr((curr) => (curr === 0 ? slides.length - 1 : curr - 1));
     //eslint-disable-next-line
@@ -36,6 +37,12 @@ const Carousel = ({ children: slides, autoSlide = true, autoSlideInterval = 2500
             prev();
         }
     };
+
+    useEffect(() => {
+        if (swipeRef.current) {
+            setSlideWidth(swipeRef.current.offsetWidth);
+        }
+    }, []);
 
     useEffect(() => {
         if (!autoSlide) return;
@@ -63,7 +70,7 @@ const Carousel = ({ children: slides, autoSlide = true, autoSlideInterval = 2500
                 `}
             >
                 {slides.map((slide, index) => (
-                    <div key={index} style={{ width: `${100 / slides.length}%` }}>
+                    <div key={index} style={{ width: slideWidth }}>
                         {slide}
                     </div>
                 ))}
