@@ -239,7 +239,6 @@ const SmartFintech = ({ location }) => {
                                 `}
                                 className='p-4 rounded-md'
                             >
-                                {' '}
                                 <GatsbyImage alt='' image={data.quotes.childImageSharp.gatsbyImageData} />
                                 <p className='text-lg font-hind font-semibold mt-4' css={subtitleColor}>
                                     The platform helps me with IAM visibility a lot: I can understand who has access and

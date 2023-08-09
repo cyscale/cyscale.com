@@ -105,7 +105,7 @@ const solutions = [
 const resources = [
     {
         text: 'Case Studies',
-        link: '/case-studies/bays-consulting/'
+        link: '/resources/#case-studies'
     },
     {
         text: 'Blog',

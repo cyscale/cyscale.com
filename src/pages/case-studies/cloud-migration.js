@@ -14,22 +14,22 @@ import useScrollTrigger from '../../components/scrollTrigger';
 import { hoverButtonColorStyle, widthFitStyle } from '../../components/layout/style';
 import useStickyElement from '../../hooks/useStickyElement';
 
-const BaysConsulting = ({ location }) => {
+const CloudMigration = ({ location }) => {
     const trigger = useScrollTrigger();
 
     const data = useStaticQuery(graphql`
-        query ConsultingBaysQuery {
-            cover: file(relativePath: { eq: "bays-consulting-cover.png" }) {
+        query MedicalDevicesCompanyQuery {
+            cover: file(relativePath: { eq: "medical-devices-company-cover.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1080, layout: CONSTRAINED)
                 }
             }
-            logo: file(relativePath: { eq: "bays-logo.png" }) {
+            logo: file(relativePath: { eq: "medical-device-company-logo.png" }) {
                 childImageSharp {
                     gatsbyImageData(width: 98, layout: FIXED)
                 }
             }
-            mobileLogo: file(relativePath: { eq: "bays-logo.png" }) {
+            mobileLogo: file(relativePath: { eq: "medical-device-company-logo.png" }) {
                 childImageSharp {
                     gatsbyImageData(width: 58, layout: FIXED)
                 }
@@ -37,16 +37,6 @@ const BaysConsulting = ({ location }) => {
             quotes: file(relativePath: { eq: "quotes.png" }) {
                 childImageSharp {
                     gatsbyImageData(width: 41, layout: CONSTRAINED)
-                }
-            }
-            jamesQuotes: file(relativePath: { eq: "james-hawkes.png" }) {
-                childImageSharp {
-                    gatsbyImageData(width: 75, layout: FIXED)
-                }
-            }
-            jamesQuotesSm: file(relativePath: { eq: "james-hawkes.png" }) {
-                childImageSharp {
-                    gatsbyImageData(width: 165, layout: CONSTRAINED)
                 }
             }
             card: file(relativePath: { eq: "csm-whitepaper-bluebird.webp" }) {
@@ -67,23 +57,22 @@ const BaysConsulting = ({ location }) => {
     return (
         <Layout
             location={location}
-            pageName='BaysConsulting'
-            title='Bays Consulting Case Study | Cloud Security & Compliance - Cyscale'
-            description="Explore how Cyscale's cloud security platform helped Bays Consulting streamline access reviews, improve cloud security posture, and automate ISO 27001 compliance. Learn from their journey and start yours today!"
+            pageName='MedicalDevicesCompany'
+            title='Secure Cloud Migration Case Study | Automated Cloud Security | Cyscale'
+            description='Cyscale helped a medical devices leader migrate from a complex on-premises infrastructure to the public cloud securely and without specialist skills.'
         >
             <div className='hidden' data-template-key>
                 hardcoded-pages
             </div>
             <div className='hidden' data-permalink>
-                /case-studies/bays-consulting
+                /case-studies/cloud-migration
             </div>
             <div className='hidden' data-title>
-                Bays Consulting Case Study | Cloud Security & Compliance - Cyscale
+                Secure Cloud Migration Case Study | Automated Cloud Security | Cyscale
             </div>
             <div className='hidden' data-description>
-                Explore how Cyscale's cloud security platform helped Bays Consulting streamline access reviews, improve
-                cloud security posture, and automate ISO 27001 compliance. Learn from their journey and start yours
-                today!
+                Cyscale helped a medical devices leader migrate from a complex on-premises infrastructure to the public
+                cloud securely and without specialist skills.
             </div>
             <div className='hidden' data-category>
                 case studies
@@ -108,24 +97,25 @@ const BaysConsulting = ({ location }) => {
                                     color: #1d2639;
                                 `}
                             >
-                                “It’s been great at identifying blind spots”: Bays Consulting achieves 50% productivity
-                                gain with Cyscale
+                                Good Medicine: Securely Migrating <br /> a Medical Devices Leader from On-premises to
+                                the Cloud
                             </h1>
                             <div className='flex mt-6'>
                                 <GatsbyImage
                                     image={data.logo.childImageSharp.gatsbyImageData}
-                                    alt='Bays Consulting Logo'
+                                    alt='Medical Devices Company Logo'
                                     className='mt-4 flex-shrink-0 hidden sm:block'
                                 />
                                 <p className='font-hind text-base font-normal mt-4 sm:ml-5' css={textColor}>
-                                    Bays Consulting is a data analytics and consulting company who uses AWS to deliver
-                                    innovative data solutions and insights to businesses. Securing client data and
-                                    automating their ISO 27001 compliance is at the core of their business.
+                                    Migrating a complex on-premises infrastructure to the public cloud without
+                                    specialist resources is no easy feat. But this medical devices manufacturer was able
+                                    to breathe easy and adapt their technical expertise to the new environment while
+                                    keeping security at the forefront of the migration.
                                 </p>
                             </div>
                             <GatsbyImage
                                 image={data.mobileLogo.childImageSharp.gatsbyImageData}
-                                alt='Bays Consulting Logo'
+                                alt='Medical Devices Company Logo'
                                 className='mt-4 block sm:hidden '
                             />
                         </div>
@@ -146,149 +136,100 @@ const BaysConsulting = ({ location }) => {
                                 <p className='font-montserrat text-lg font-bold' css={subtitleColor}>
                                     Challenges
                                 </p>
-                                <div className='flex items-start  lg:items-center mt-4'>
+                                <div className='flex items-start mt-4'>
                                     <img src={ChallengesIcon} alt='' className='inline-block mr-2 mt-1' />
                                     <p className='font-hind text-base mt-1' css={subtitleColor}>
-                                        Tedious and time-consuming cloud access reviews
-                                    </p>{' '}
-                                </div>
-                                <div className='flex items-start mt-3'>
-                                    <img src={ChallengesIcon} alt='' className='inline-block mr-2' />
-                                    <p className='font-hind text-base' css={subtitleColor}>
-                                        Visibility and blind spots in the AWS environment
-                                    </p>{' '}
-                                </div>
-                                <div className='flex items-start mt-3'>
-                                    <img src={ChallengesIcon} alt='' className='inline-block mr-2' />
-                                    <p className='font-hind text-base' css={subtitleColor}>
-                                        Technical barrier from vendor security tools for non-cloud experts
+                                        A complex on-premises infrastructure that needs to be migrated to the cloud
                                     </p>
                                 </div>
-                            </div>
-                            <div className='col-span-12 lg:col-span-6 mt-4 lg:mt-0'>
-                                <p className='font-montserrat text-lg font-bold' css={subtitleColor}>
+                                <div className='flex items-start mt-3'>
+                                    <img src={ChallengesIcon} alt='' className='inline-block mr-2' />
+                                    <p className='font-hind text-base' css={subtitleColor}>
+                                        A lack of cloud specialists within the technical team
+                                    </p>
+                                </div>
+                                <div className='flex items-start mt-3'>
+                                    <img src={ChallengesIcon} alt='' className='inline-block mr-2' />
+                                    <p className='font-hind text-base' css={subtitleColor}>
+                                        IAM (Identity and Access Management) visibility gaps when offboarding users and
+                                        managing access control
+                                    </p>
+                                </div>
+                                <p className='font-montserrat text-lg font-bold mt-6' css={subtitleColor}>
                                     Results
                                 </p>
                                 <div className='flex items-start mt-4'>
                                     <img src={ResultsIcon} alt='' className='inline-block mr-2' />
                                     <p className='font-hind text-base' css={subtitleColor}>
-                                        50% increased productivity: access review time reduced by half{' '}
-                                    </p>{' '}
-                                </div>
-                                <div className='flex items-start mt-2'>
-                                    <img src={ResultsIcon} alt='' className='inline-block mr-2' />
-                                    <p className='font-hind text-base' css={subtitleColor}>
-                                        Enhanced confidence in using the cloud through real-time security monitoring
-                                    </p>{' '}
-                                </div>
-                                <div className='flex items-start mt-2'>
-                                    <img src={ResultsIcon} alt='' className='inline-block mr-2' />
-                                    <p className='font-hind text-base' css={subtitleColor}>
-                                        Cyber hygiene for all the services used in the cloud
-                                    </p>
-                                </div>{' '}
-                                <div className='flex items-start mt-2'>
-                                    <img src={ResultsIcon} alt='' className='inline-block mr-2' />
-                                    <p className='font-hind text-base' css={subtitleColor}>
-                                        Ease of use for all security stakeholders, including non-cloud security experts
+                                        A swift migration to a cloud infrastructure in AWS and Azure
                                     </p>
                                 </div>
-                            </div>
-                        </div>
-                        <div
-                            className='px-5 pt-6 pb-14 rounded-md mt-8'
-                            css={css`
-                                background-color: #fafafb;
-                            `}
-                        >
-                            <p className='font-hind font-semibold text-base' css={subtitleColor}>
-                                About Bays
-                            </p>
-                            <p className='font-hind font-medium text-base mt-4' css={textColor}>
-                                Maths, not Magic. Bays Consulting is a maths and data science consultancy that uses
-                                mathematical modelling, statistical predictions, and cutting-edge data science to
-                                provide actionable insight to its clients. With a skill set including classical
-                                statistics, modern machine learning, and innovative artificial intelligence, Bays are
-                                dedicated to turning raw data into meaningful information.
-                            </p>
-                        </div>
-                        <Subtitle css={subtitleColor}>Problem</Subtitle>
-                        <div className='grid grid-cols-12 gap-0 lg:gap-8 mt-8 rounded-md'>
-                            <div className='col-span-12 lg:col-span-6'>
-                                <p className='font-hind text-base' css={textColor}>
-                                    Bays Consulting faced the challenge of manually conducting access reviews for their
-                                    AWS cloud environments, an essential process for ensuring cloud security and
-                                    compliance. The task is time-consuming, prone to human error, and laborious. They
-                                    needed a way to automate this to identify vulnerabilities and blind spots.
-                                </p>
-                                <p className='font-hind text-base' css={textColor}>
-                                    Moreover, as they were going through the ISO 27001 compliance process, they needed
-                                    better visibility into their cloud security posture, to ensure that configurations
-                                    are aligned with the requirements of the standard.
-                                </p>
+                                <div className='flex items-start mt-2'>
+                                    <img src={ResultsIcon} alt='' className='inline-block mr-2' />
+                                    <p className='font-hind text-base' css={subtitleColor}>
+                                        Integrated cloud security by design from the start
+                                    </p>
+                                </div>
+                                <div className='flex items-start mt-2'>
+                                    <img src={ResultsIcon} alt='' className='inline-block mr-2' />
+                                    <p className='font-hind text-base' css={subtitleColor}>
+                                        Confidence in a secure cloud environment despite having no in-house cloud
+                                        expertise
+                                    </p>
+                                </div>
                             </div>
                             <div className='col-span-12 lg:col-span-6 mt-4 lg:mt-0'>
                                 <div
                                     css={css`
-                                        background-color: #f5f9ff;
+                                        background-color: #fafafb;
                                     `}
-                                    className='px-4 py-6 rounded-md'
+                                    className='p-4 rounded-md'
                                 >
-                                    <p className='text-base font-hind font-semibold mt-4' css={subtitleColor}>
-                                        Exceptionally helpful when doing access reviews; I’m using the platform monthly
-                                        and it simply automates my work!
+                                    <p className='text-lg font-hind font-semibold mt-4' css={subtitleColor}>
+                                        About the company
                                     </p>
-                                    <div className='grid grid-cols-12 mt-5'>
-                                        <div className='col-span-12 lg:col-span-2'>
-                                            <div className='block w-24 mx-auto sm:mx-0'>
-                                                <GatsbyImage
-                                                    alt=''
-                                                    image={data.jamesQuotes.childImageSharp.gatsbyImageData}
-                                                    className='p-1'
-                                                />
-                                            </div>
-                                        </div>
-                                        <div className='col-span-12 lg:col-span-10'>
-                                            {' '}
-                                            <p className='text-base font-hind lg:ml-4 mt-4' css={subtitleColor}>
-                                                <strong>James Hawkes,</strong>
-                                                <br /> Head of Delivery at Bays Consulting
-                                            </p>
-                                        </div>
-                                    </div>
+                                    <p className='text-lg font-hind mt-2' css={subtitleColor}>
+                                        The medical device company is a leader in the pharmaceutical and medical devices
+                                        production industry, with over 20 years of experience and millions of patients.
+                                        The company has a strong reputation in the industry due to its dedication to
+                                        producing high-quality medical devices and pharmaceutical products widely used
+                                        and trusted by healthcare professionals and patients alike.
+                                    </p>
                                 </div>
                             </div>
                         </div>
+                        <Subtitle css={subtitleColor}>Problem</Subtitle>
+                        <p className='font-hind text-base mt-8' css={textColor}>
+                            To take advantage of the scalability of the cloud, our customer aimed to migrate their
+                            applications, VMWare virtual machines, databases, and other components of their complex
+                            infrastructure to a multi-cloud environment. However, they faced challenges due to lack of
+                            cloud security expertise and a small infrastructure team, resulting in reduced confidence
+                            and slower progress.
+                        </p>
+                        <p className='font-hind text-base mt-4' css={textColor}>
+                            They needed a plan to “start right”, to ensure maximum efficiency and security by migrating
+                            their resources securely from the beginning.
+                        </p>
+                        <p className='font-hind text-base mt-4' css={textColor}>
+                            Furthermore, in an environment with highly sensitive data, the customer had concerns
+                            regarding offboarding users and managing IAM (Identity and Access Management) permissions.
+                            They wanted to make sure that there would be no gaps in their security posture, such as
+                            former employees with active permissions after having left the company, or users with overly
+                            broad access rights.
+                        </p>
                         <Subtitle css={subtitleColor}>Solutions</Subtitle>
                         <p className='font-hind text-base mt-8' css={textColor}>
-                            Cyscale helped Bays Consulting address their challenges and streamlined the access review
-                            process: “Exceptionally helpful when doing access reviews; I’m using the platform monthly
-                            and it simply automates my work!”, says James Hawkes, Head of Delivery at Bays Consulting.
-                            IAM is an essential aspect of cloud security and Cyscale provides the visibility and
-                            controls that are required for compliance with ISO 27001.
+                            Cyscale recognised the customer’s need for cloud expertise and delivered a cloud security
+                            platform that automated the security assessment process, inspiring confidence in the new
+                            public cloud environment by enabling the team to do more with limited resources.
                         </p>
                         <p className='font-hind text-base mt-4' css={textColor}>
-                            Furthermore, Cyscale provides contextual, real-time alerts designed to prevent alert fatigue
-                            and pinpoint critical vulnerabilities early. The team at Bays appreciates that they are
-                            integrated with notification channels such as Slack, aligning perfectly with their working
-                            practices. The alerts allow them to give more freedom to members of the team, since
-                            misconfigurations are immediately highlighted.
-                        </p>{' '}
-                        <p className='font-hind text-base mt-4' css={textColor}>
-                            Using alerts, Bays Consulting has gained valuable insights into its infrastructure. “Alerts
-                            in Slack are a great help, I can see instantly what others are doing, and it's easy to
-                            understand what needs to be secured." James has also found the cloud asset graph practical
-                            for identifying misconfigurations: “I love it, it’s really useful when troubleshooting
-                            issues such as access configuration or networking”.
-                        </p>
-                        <p className='font-hind text-base mt-4' css={textColor}>
-                            Cyscale helped Bays with compliance efforts as well, highlighting issues that they might
-                            have otherwise missed. Utilizing security controls mapped directly to the ISO 27001
-                            standard, they were able to track the compliance score and get ready for the audit with
-                            minimal effort.
+                            The company did not need to hire new personnel to achieve security in the cloud due to our
+                            platform, which highlighted any misconfigurations and vulnerabilities present in their
+                            infrastructure and helped them remediate the findings:
                         </p>
                         <div
-                            className='grid grid-cols-12 gap-1 mt-12 p-3 rounded-md'
+                            className='grid grid-cols-12 gap-1 my-8 p-3 rounded-md'
                             css={css`
                                 background-color: #f5f9ff;
                             `}
@@ -300,41 +241,62 @@ const BaysConsulting = ({ location }) => {
                             </div>
                             <div className='col-span-12 lg:col-span-11 mt-4 lg:mt-0'>
                                 <p className='text-lg font-semibold font-hind' css={subtitleColor}>
-                                    Alerts in Slack are a great help, I can see instantly what others are doing, and
-                                    it's easy to understand what needs to be secured.
-                                </p>{' '}
+                                    I have confidence that whatever we put in our cloud environments is properly
+                                    configured.
+                                </p>
                                 <p className='text-base font-hind mt-4' css={subtitleColor}>
-                                    <strong>James Hawkes</strong>, Head of Delivery at Bays Consulting
+                                    says the Infrastructure Engineer
                                 </p>
                             </div>
                         </div>
+                        <p className='font-hind text-base mt-4' css={textColor}>
+                            Besides this, Cyscale also helped them identify any resources left undeleted after being
+                            used to explore settings during this project. This allowed the team to explore the cloud
+                            environment within guardrails, gaining confidence and proficiency in managing cloud
+                            resources effectively.
+                        </p>
+                        <p className='font-hind text-base mt-4' css={textColor}>
+                            Moreover, we promptly responded with excellent customer support with our team of cloud
+                            security specialists. We helped them with any questions and issues they had and informed
+                            them of best practices. An example of a best practice applied by the company due to our
+                            recommendations is assigning permissions to groups instead of users in the cloud.
+                        </p>
                         <Subtitle css={subtitleColor}>Results</Subtitle>
                         <p className='font-hind text-base mt-8' css={textColor}>
-                            Bays Consulting has doubled its productivity: "Cyscale saves us 50% of the time spent doing
-                            access reviews". In addition, using Cyscale’s cloud security platform, Bays Consulting can
-                            ensure that IAM is a strong point in their infrastructure and that sensitive data is
-                            protected from unwanted access.
+                            The company found that previous security tools created more work for the small team by
+                            bombarding them with dozens of security alerts that contained little context. Cyscale
+                            enabled the company to establish its own risk rules, so alerts were only sent out within
+                            defined parameters and contained all relevant context to remediate the issue quickly. With
+                            Cyscale, the company managed to securely and efficiently migrate their on-premises
+                            infrastructure to the cloud.
+                            <strong> "I can't imagine being able to manage the project without Cyscale.”</strong> says
+                            the Infrastructure Engineer.
                         </p>
-                        <p className='font-hind text-base' css={textColor}>
-                            With the help of automated cloud misconfiguration checks and real-time alerts delivered on
-                            the preferred communication channel, James Hawkes has managed to remove manual work, become
-                            more efficient and make significant time savings across the team.
+                        <p className='font-hind text-base mt-4' css={textColor}>
+                            Cyscale allowed the medical device manufacturer to migrate projects from legacy
+                            infrastructure to a multi-cloud architecture, providing increased confidence in the project
+                            and allowing the technical team to focus on adapting to the new environment rather than
+                            worrying about security. Using security controls that continuously checked the
+                            configurations applied, our customer consistently addressed security issues as they arose
+                            and kept alerts at zero.
+                            <strong>“Cyscale gave me visibility and confidence in our cloud infrastructure”</strong>,
+                            says the VP of Information Technology.
+                        </p>
+                        <p className='font-hind text-base mt-4' css={textColor}>
+                            The technical team was eager to understand how the cloud and its many services work, and
+                            Cyscale enabled them to learn and build their multi-cloud infrastructure without worrying
+                            about vulnerabilities in their systems.
                         </p>{' '}
                         <p className='font-hind text-base' css={textColor}>
-                            Bays Consulting can now easily monitor their compliance score, get notified when deviations
-                            occur and ensure they have all the relevant information readily available for their future
-                            ISO 27001 audits.
+                            Finally, using Cyscale, the company managed to identify offboarded users that still had
+                            permissions to access resources, as well as improve access control policies.
                         </p>
                         <Subtitle css={subtitleColor}>Conclusion</Subtitle>
                         <p className='font-hind text-base mt-8 mb-24' css={textColor}>
-                            Cyscale streamlined access reviews, improved security posture, and empowered Bays Consulting
-                            to address cloud security challenges efficiently, ultimately boosting productivity and
-                            achieving peace of mind. To read more about Cyscale and learn about cloud security, check
-                            out the{' '}
-                            <Link to='/blog' className='underline cursor-pointer'>
-                                blog
-                            </Link>
-                            .
+                            Cyscale helped the customer migrate their on-premises infrastructure to the cloud, secure
+                            all cloud assets from the beginning, and manage IAM (Identity and Access Management)
+                            permissions. The company's confidence in its infrastructure in the cloud was enhanced
+                            drastically, while security and efficiency were top priorities.
                         </p>
                     </div>
                     <div className='flex flex-col self-stretch justify-between mt-20' ref={parentRef}>
@@ -387,9 +349,9 @@ const BaysConsulting = ({ location }) => {
                             <p className='font-montserrat text-lg font-bold mt-8' css={subtitleColor}>
                                 Save for later
                             </p>
-                            <p className='font-montserrat font-medium text-xs'>Bays Consulting Case Study</p>
+                            <p className='font-montserrat font-medium text-xs'>Cloud Migration Case Study</p>
                             <Link
-                                to='/resources/case-study-bays-consulting.pdf'
+                                to='/resources/case-study-cloud-migration.pdf'
                                 className='font-montserrat font-medium text-xs hover:underline cursor-pointer text-blue'
                             >
                                 Download Case Study
@@ -443,4 +405,4 @@ const BaysConsulting = ({ location }) => {
     );
 };
 
-export default BaysConsulting;
+export default CloudMigration;
