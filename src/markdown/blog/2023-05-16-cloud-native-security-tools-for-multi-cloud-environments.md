@@ -25,7 +25,7 @@ seoDescription: As organizations continue to move their workloads to the cloud,
   secure your environment whether it is using AWS, Azure, Google Cloud or more than one
   provider.
 featuredpost: true
-featuredimage: /img/40_blog-cover-cnapp-multi-cloud-tools-latest.png
+featuredimage: /img/40_blog-cover-cnapp-multi-cloud-tools.png
 tags:
   - cspm
   - cnapp
