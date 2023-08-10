@@ -151,21 +151,10 @@ const Resources = ({ location }) => {
                     gatsbyImageData(width: 1080, layout: CONSTRAINED)
                 }
             }
-            medicalDevicesCompany: file(relativePath: { eq: "medical-devices-company-cover.webp" }) {
-                childImageSharp {
-                    gatsbyImageData(width: 720, layout: CONSTRAINED)
-                }
-            }
         }
     `);
 
     const slides = [
-        {
-            image: data.medicalDevicesCompany.childImageSharp.gatsbyImageData,
-            alt: 'Securely Migrating a Medical Devices Leader from On-premises to the Cloud with Cyscale',
-            text: 'Securely Migrating a Medical Devices Leader from On-premises to the Cloud with Cyscale',
-            link: '/case-studies/cloud-migration/'
-        },
         {
             image: data.baysConsulting.childImageSharp.gatsbyImageData,
             alt: 'Bays Consulting achieves 50% productivity gain with Cyscale',
@@ -382,21 +371,6 @@ const Resources = ({ location }) => {
                         Case Studies
                     </h2>
                     <Row className='pb-16 md:pt-12 md:pb-12'>
-                        <div className='col-span-12 md:col-span-6 lg:col-span-3 mt-6 md:mt-0 hidden md:block'>
-                            <Link to='/case-studies/cloud-migration/' className='hover:underline'>
-                                <GatsbyImage
-                                    image={data.medicalDevicesCompany.childImageSharp.gatsbyImageData}
-                                    alt='Securely Migrating a Medical Devices Leader from On-premises to the
-                                    Cloud'
-                                    className='rounded-md'
-                                    css={cardBorder}
-                                />{' '}
-                                <p className='font-hind font-medium text-lg mt-2 hover:underline'>
-                                    Securely Migrating a Medical Devices Leader from On-premises to the Cloud with
-                                    Cyscale
-                                </p>
-                            </Link>
-                        </div>
                         <div className='col-span-12 md:col-span-6 lg:col-span-3 mt-6 md:mt-0 hidden md:block'>
                             <Link to='/case-studies/bays-consulting/' className='hover:underline'>
                                 <GatsbyImage
