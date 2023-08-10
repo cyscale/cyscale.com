@@ -58,9 +58,6 @@ const Carousel = ({ children: slides, autoSlide = true, autoSlideInterval = 2500
                 width: 100%;
             `}
             ref={swipeRef}
-            onTouchStart={handleTouchStart}
-            onTouchMove={handleTouchMove}
-            onTouchEnd={handleTouchEnd}
         >
             <div
                 className='flex transition-transform ease-out duration-500'
@@ -68,6 +65,9 @@ const Carousel = ({ children: slides, autoSlide = true, autoSlideInterval = 2500
                     transform: translateX(-${curr * (100 / slides.length)}%);
                     width: ${slides.length * 100}%;
                 `}
+                onTouchStart={handleTouchStart}
+                onTouchMove={handleTouchMove}
+                onTouchEnd={handleTouchEnd}
             >
                 {slides.map((slide, index) => (
                     <div key={index} style={{ width: cspmCarousel ? `${100 / slides.length}%` : slideWidth }}>
