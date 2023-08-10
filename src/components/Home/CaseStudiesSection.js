@@ -65,6 +65,13 @@ const CaseStudiesSection = () => {
 
     const slides = [
         {
+            image: data.medicalDevicesCompany.childImageSharp.gatsbyImageData,
+            alt: 'Securely Migrating a Medical Devices Leader from On-premises to the Cloudy',
+            title: 'Good Medicine: Securely Migrating a Medical Devices Leader from On-premises to the Cloud',
+            quote: 'Migrating a complex on-premises infrastructure to the public cloud without specialist resources is no easy feat. But this medical devices manufacturer was able to breathe easy and adapt their technical expertise to the new environment while keeping security at the forefront of the migration.',
+            link: '/case-studies/cloud-migration'
+        },
+        {
             image: data.bays.childImageSharp.gatsbyImageData,
             alt: 'Cover Bays Consulting',
             title: '“It’s been great at identifying blind spots”: Bays Consulting achieves 50% productivity gain with Cyscale',
@@ -93,13 +100,6 @@ const CaseStudiesSection = () => {
                 </>
             ),
             link: '/case-studies/smart-fintech'
-        },
-        {
-            image: data.medicalDevicesCompany.childImageSharp.gatsbyImageData,
-            alt: 'Securely Migrating a Medical Devices Leader from On-premises to the Cloudy',
-            title: 'Good Medicine: Securely Migrating a Medical Devices Leader from On-premises to the Cloud',
-            quote: 'Migrating a complex on-premises infrastructure to the public cloud without specialist resources is no easy feat. But this medical devices manufacturer was able to breathe easy and adapt their technical expertise to the new environment while keeping security at the forefront of the migration.',
-            link: '/case-studies/cloud-migration'
         }
     ];
 

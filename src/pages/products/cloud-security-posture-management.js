@@ -260,6 +260,11 @@ const CSPM = ({ location }) => {
                     gatsbyImageData(width: 1920, layout: CONSTRAINED)
                 }
             }
+            medicalDevicesCompany: file(relativePath: { eq: "medical-devices-company-carousel.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 720, layout: CONSTRAINED)
+                }
+            }
         }
     `);
 
@@ -273,6 +278,13 @@ const CSPM = ({ location }) => {
     ];
 
     const caseStudiesSlides = [
+        {
+            image: data.medicalDevicesCompany.childImageSharp.gatsbyImageData,
+            alt: 'Securely Migrating a Medical Devices Leader from On-premises to the Cloudy',
+            title: 'Good Medicine: Securely Migrating a Medical Devices Leader from On-premises to the Cloud',
+            quote: 'Migrating a complex on-premises infrastructure to the public cloud without specialist resources is no easy feat. But this medical devices manufacturer was able to breathe easy and adapt their technical expertise to the new environment while keeping security at the forefront of the migration.',
+            link: '/case-studies/cloud-migration'
+        },
         {
             image: data.bays.childImageSharp.gatsbyImageData,
             alt: 'Cover Bays Consulting',
@@ -756,7 +768,7 @@ const CSPM = ({ location }) => {
                     </div>
                     <div className='col-span-12 lg:col-span-6 mx-auto lg:mx-0'>
                         <div className='max-w-xl'>
-                            <Carousel autoSlide={autoSlide} setAutoSlide={setAutoSlide}>
+                            <Carousel autoSlide={autoSlide} setAutoSlide={setAutoSlide} cspmCarousel>
                                 {slides.map((s, index) => {
                                     return (
                                         <div
