@@ -161,10 +161,10 @@ const Resources = ({ location }) => {
 
     const slides = [
         {
-            image: data.smartFintech.childImageSharp.gatsbyImageData,
-            alt: 'Smart Fintech uses Cyscale to gain IAM visibility and ensure cloud security and compliance',
-            text: 'Smart Fintech uses Cyscale to gain IAM visibility and ensure cloud security and compliance',
-            link: '/case-studies/smart-fintech/'
+            image: data.medicalDevicesCompany.childImageSharp.gatsbyImageData,
+            alt: 'Securely Migrating a Medical Devices Leader from On-premises to the Cloud with Cyscale',
+            text: 'Securely Migrating a Medical Devices Leader from On-premises to the Cloud with Cyscale',
+            link: '/case-studies/cloud-migration/'
         },
         {
             image: data.baysConsulting.childImageSharp.gatsbyImageData,
@@ -173,10 +173,10 @@ const Resources = ({ location }) => {
             link: '/case-studies/bays-consulting/'
         },
         {
-            image: data.medicalDevicesCompany.childImageSharp.gatsbyImageData,
-            alt: 'Securely Migrating a Medical Devices Leader from On-premises to the Cloud with Cyscale',
-            text: 'Securely Migrating a Medical Devices Leader from On-premises to the Cloud with Cyscale',
-            link: '/case-studies/cloud-migration/'
+            image: data.smartFintech.childImageSharp.gatsbyImageData,
+            alt: 'Smart Fintech uses Cyscale to gain IAM visibility and ensure cloud security and compliance',
+            text: 'Smart Fintech uses Cyscale to gain IAM visibility and ensure cloud security and compliance',
+            link: '/case-studies/smart-fintech/'
         },
         {
             image: data.demo.childImageSharp.gatsbyImageData,
@@ -372,7 +372,7 @@ const Resources = ({ location }) => {
                 </div>
             </Container>
             <Container>
-                <div className='pb-10' id="case-studies">
+                <div className='pb-10' id='case-studies'>
                     <h2
                         className='font-montserrat font-bold text-blue'
                         css={css`
@@ -382,18 +382,18 @@ const Resources = ({ location }) => {
                         Case Studies
                     </h2>
                     <Row className='pb-16 md:pt-12 md:pb-12'>
-                        <div className='col-span-12 md:col-span-6 lg:col-span-3 hidden md:block'>
-                            <Link to='/case-studies/smart-fintech/' className='hover:underline'>
+                        <div className='col-span-12 md:col-span-6 lg:col-span-3 mt-6 md:mt-0 hidden md:block'>
+                            <Link to='/case-studies/cloud-migration/' className='hover:underline'>
                                 <GatsbyImage
-                                    image={data.smartFintech.childImageSharp.gatsbyImageData}
-                                    alt='Smart Fintech uses Cyscale to gain IAM visibility and ensure cloud security and
-                                    compliance'
+                                    image={data.medicalDevicesCompany.childImageSharp.gatsbyImageData}
+                                    alt='Securely Migrating a Medical Devices Leader from On-premises to the
+                                    Cloud'
                                     className='rounded-md'
                                     css={cardBorder}
-                                />
-                                <p className='font-hind font-medium text-lg mt-2'>
-                                    Smart Fintech uses Cyscale to gain IAM visibility and ensure cloud security and
-                                    compliance
+                                />{' '}
+                                <p className='font-hind font-medium text-lg mt-2 hover:underline'>
+                                    Securely Migrating a Medical Devices Leader from On-premises to the Cloud with
+                                    Cyscale
                                 </p>
                             </Link>
                         </div>
@@ -410,18 +410,18 @@ const Resources = ({ location }) => {
                                 </p>
                             </Link>
                         </div>
-                        <div className='col-span-12 md:col-span-6 lg:col-span-3 mt-6 md:mt-0 hidden md:block'>
-                            <Link to='/case-studies/cloud-migration/' className='hover:underline'>
+                        <div className='col-span-12 md:col-span-6 lg:col-span-3 hidden md:block'>
+                            <Link to='/case-studies/smart-fintech/' className='hover:underline'>
                                 <GatsbyImage
-                                    image={data.medicalDevicesCompany.childImageSharp.gatsbyImageData}
-                                    alt='Securely Migrating a Medical Devices Leader from On-premises to the
-                                    Cloud'
+                                    image={data.smartFintech.childImageSharp.gatsbyImageData}
+                                    alt='Smart Fintech uses Cyscale to gain IAM visibility and ensure cloud security and
+                                    compliance'
                                     className='rounded-md'
                                     css={cardBorder}
-                                />{' '}
-                                <p className='font-hind font-medium text-lg mt-2 hover:underline'>
-                                    Securely Migrating a Medical Devices Leader from On-premises to the Cloud with
-                                    Cyscale
+                                />
+                                <p className='font-hind font-medium text-lg mt-2'>
+                                    Smart Fintech uses Cyscale to gain IAM visibility and ensure cloud security and
+                                    compliance
                                 </p>
                             </Link>
                         </div>

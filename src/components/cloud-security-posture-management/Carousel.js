@@ -9,7 +9,7 @@ const hoverEffect = css`
     }
 `;
 
-const Carousel = ({ children: slides, autoSlide = true, autoSlideInterval = 2500, setAutoSlide }) => {
+const Carousel = ({ children: slides, autoSlide = true, autoSlideInterval = 2500, setAutoSlide, cspmCarousel }) => {
     const [curr, setCurr] = useState(0);
     const swipeRef = useRef();
     const touchStart = useRef(0);
@@ -70,7 +70,7 @@ const Carousel = ({ children: slides, autoSlide = true, autoSlideInterval = 2500
                 `}
             >
                 {slides.map((slide, index) => (
-                    <div key={index} style={{ width: slideWidth }}>
+                    <div key={index} style={{ width: cspmCarousel ? `${100 / slides.length}%` : slideWidth }}>
                         {slide}
                     </div>
                 ))}

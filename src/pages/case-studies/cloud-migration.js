@@ -217,7 +217,7 @@ const CloudMigration = ({ location }) => {
                             former employees with active permissions after having left the company, or users with overly
                             broad access rights.
                         </p>
-                        <Subtitle css={subtitleColor}>Solutions</Subtitle>
+                        <Subtitle css={subtitleColor}>Solution</Subtitle>
                         <p className='font-hind text-base mt-8' css={textColor}>
                             Cyscale recognised the customer’s need for cloud expertise and delivered a cloud security
                             platform that automated the security assessment process, inspiring confidence in the new
@@ -245,7 +245,7 @@ const CloudMigration = ({ location }) => {
                                     configured.
                                 </p>
                                 <p className='text-base font-hind mt-4' css={subtitleColor}>
-                                    says the Infrastructure Engineer
+                                    Infrastructure Engineer
                                 </p>
                             </div>
                         </div>
@@ -269,7 +269,7 @@ const CloudMigration = ({ location }) => {
                             defined parameters and contained all relevant context to remediate the issue quickly. With
                             Cyscale, the company managed to securely and efficiently migrate their on-premises
                             infrastructure to the cloud.
-                            <strong> "I can't imagine being able to manage the project without Cyscale.”</strong> says
+                            <strong> "I can't imagine being able to manage the project without Cyscale”</strong> says
                             the Infrastructure Engineer.
                         </p>
                         <p className='font-hind text-base mt-4' css={textColor}>
@@ -278,7 +278,7 @@ const CloudMigration = ({ location }) => {
                             and allowing the technical team to focus on adapting to the new environment rather than
                             worrying about security. Using security controls that continuously checked the
                             configurations applied, our customer consistently addressed security issues as they arose
-                            and kept alerts at zero.
+                            and kept alerts at zero.{' '}
                             <strong>“Cyscale gave me visibility and confidence in our cloud infrastructure”</strong>,
                             says the VP of Information Technology.
                         </p>
