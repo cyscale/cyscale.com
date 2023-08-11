@@ -41,6 +41,8 @@ In our latest major update, we’ve added:
 * **Enhanced graphs** - All the info you need in one place, no matter how many clouds. Now with increased support for misconfigurations and vulnerabilities for greater context, as well as revealing the relationships between cloud assets, data and permissions, resulting in accurate security scores that help identify and prioritize critical findings. 
 * **Attack paths** - Eliminate security blind spots in the case of asset misconfigurations that propagate risk to other cloud assets with easy-to-understand highlights.
 * **Asset security score** - Prioritize remediation based on a percentage score for each individual asset, computed from criteria including: the number and severity of asset misconfigurations, and the number and severity of vulnerabilities where applicable.
+
+
 * **More controls** – Support for AWS EC2 Launch Templates, EC2, SageMaker Notebooks, ECS, Azure MFA, and more. Enhanced filtering of the library of controls and now eliminate false positives with exemptions.
 * **Improved inventory interrogation** - Chain multiple filters together to refine the search and gain even more contextual and valuable information on your security posture.
 * **Integration with AWS Inspector** – Correlate findings from native cloud security tools into one dashboard to reduce click fatigue and the need to jump between tools.
