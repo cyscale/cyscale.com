@@ -82,7 +82,7 @@ const sectionTextColor = css`
 `;
 
 const useCasesSectionBackground = css`
-    background: linear-gradient(86.75deg, #1f1118 -17.76%, #0f26aa 44.32%, #ff4a56 148.58%);
+    background: linear-gradient(90deg, #071042, #0f26aa, #ff4a56);
 `;
 
 const servicesSectionStyle = css`
@@ -340,7 +340,7 @@ const HomePage = ({ location }) => {
             <BlogCarousel />
             <div
                 css={css`
-                    background-color: #0a1a76;
+                    background: linear-gradient(90deg, #071042, #0f26aa, #ff4a56);
                 `}
                 className='py-16 lg:py-32'
             >
