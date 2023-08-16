@@ -22,7 +22,6 @@
         "gatsby-plugin-algolia": "^1.0.3",
         "gatsby-plugin-canonical-urls": "^5.11.0",
         "gatsby-plugin-emotion": "^8.11.0",
-        "gatsby-plugin-gdpr-cookies": "^2.0.8",
         "gatsby-plugin-google-tagmanager": "^5.11.0",
         "gatsby-plugin-image": "^3.11.0",
         "gatsby-plugin-meta-redirect": "^1.1.1",
