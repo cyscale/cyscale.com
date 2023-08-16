@@ -1,6 +1,5 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
-import BackgroundImage from 'gatsby-background-image';
 import { GatsbyImage as Img } from 'gatsby-plugin-image';
 
 function withImageData(WrappedComponent) {
@@ -216,16 +215,4 @@ export const Barry = withImageData((props) => (
 
 export const Simona = withImageData((props) => (
     <Img image={props.imageData.simona.childImageSharp.gatsbyImageData} {...props} />
-));
-
-export const OvidiuAndManuelaBackground = withImageData((props) => (
-    <BackgroundImage
-        Tag='div'
-        className={props.className}
-        style={props.style}
-        image={props.imageData.ovidiuAndManuela.childImageSharp.gatsbyImageData}
-        alt='Manuela and Ovidiu leaders of Cyscale'
-    >
-        {props.children}
-    </BackgroundImage>
 ));
