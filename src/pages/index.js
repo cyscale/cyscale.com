@@ -9,13 +9,13 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import { Element } from 'react-scroll';
 import BgHeroMobile from '../assets/images/bg-homepage-mobile.webp';
 import BgHero from '../assets/images/bg-homepage.webp';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import loadable from '@loadable/component';
 import GradientCard from '../components/Home/GradientCard';
 import CISCOIcon from '../assets/images/ciso-icon.svg';
 import ShieldSettingsIcon from '../assets/images/shield-settings-icon.svg';
 import ShieldCloudIcon from '../assets/images/shield-cloud-icon.svg';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const BlogCarousel = loadable(() => import('../components/Home/BlogSection'));
 const CardsSections = loadable(() => import('../components/Home/CardsSections'));
@@ -158,7 +158,8 @@ const HomePage = ({ location }) => {
             disable: function () {
                 const windowWidth = document.documentElement.clientWidth;
                 return windowWidth < 1280;
-            }
+            },
+            once: true
         });
 
         const currentRef = domRef.current;
