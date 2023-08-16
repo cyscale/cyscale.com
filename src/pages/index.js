@@ -434,7 +434,7 @@ const HomePage = ({ location }) => {
                         overflow: hidden;
                     `}
                 >
-                    <div className='col-span-12 lg:col-span-6' data-aos='fade-right'>
+                    <div className='col-span-12 lg:col-span-6'>
                         <div
                             className='mt-6 lg:mt-0 rounded-xl pt-12 px-9 max-w-xl lg:max-w-2xl mx-auto lg:mr-0 lg:ml-auto relative'
                             css={featureStyle}
@@ -452,7 +452,7 @@ const HomePage = ({ location }) => {
                             />
                         </div>
                     </div>
-                    <div className='col-span-12 lg:col-span-3' data-aos='fade-up'>
+                    <div className='col-span-12 lg:col-span-3'>
                         <div
                             className='mt-6 lg:mt-0 rounded-xl pt-12 max-w-xl lg:max-w-2xl mx-auto lg:mr-0 lg:ml-auto relative mb-20 lg:mb-0'
                             css={featureStyle}
@@ -480,7 +480,7 @@ const HomePage = ({ location }) => {
                             />
                         </div>
                     </div>
-                    <div className='col-span-12 lg:col-span-3 mt-12 lg:mt-0' data-aos='fade-left'>
+                    <div className='col-span-12 lg:col-span-3 mt-12 lg:mt-0'>
                         <div
                             className='mt-6 lg:mt-0 rounded-xl pt-12 px-12 max-w-xl lg:max-w-2xl mx-auto lg:mr-0 lg:ml-auto relative'
                             css={css`
@@ -521,7 +521,7 @@ const HomePage = ({ location }) => {
                         overflow: hidden;
                     `}
                 >
-                    <div className='col-span-12 lg:col-span-3' data-aos='fade-right'>
+                    <div className='col-span-12 lg:col-span-3'>
                         <div
                             className='mt-6 lg:mt-0 rounded-xl pt-8 pb-72 sm:pb-0 px-8 max-w-xl lg:max-w-2xl mx-auto lg:mr-0 lg:ml-auto relative h-72 bg-black'
                             css={css`
@@ -544,7 +544,7 @@ const HomePage = ({ location }) => {
                             />
                         </div>
                     </div>
-                    <div className='col-span-12 lg:col-span-3' data-aos='fade-up'>
+                    <div className='col-span-12 lg:col-span-3'>
                         <div
                             className='mt-6 lg:mt-0 rounded-xl pt-8 px-8 max-w-xl lg:max-w-2xl mx-auto lg:mr-0 lg:ml-auto relative h-40 lg:h-72'
                             css={css`
@@ -564,7 +564,7 @@ const HomePage = ({ location }) => {
                             <p className='text-base text-white mt-1 font-hind'>to detect cloud security drifts</p>
                         </div>
                     </div>
-                    <div className='col-span-12 lg:col-span-6' data-aos='fade-left'>
+                    <div className='col-span-12 lg:col-span-6'>
                         <div
                             className='mt-6 lg:mt-0 rounded-xl pt-8 max-w-xl lg:max-w-2xl mx-auto lg:mr-0 lg:ml-auto relative h-72'
                             css={css`
