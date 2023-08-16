@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { css } from 'twin.macro';
 import { Container } from '../atoms/Containers';
 import CaseStudyCarousel from '../cloud-security-posture-management/Carousel';
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import RightArrow from '../sharedComponent/RightArrow';
-import AOS from 'aos';
 
 const sectionSubtitleColor = css`
     color: #38aff1;
@@ -48,15 +47,6 @@ const CaseStudiesSection = () => {
 
     const [isHover, setIsHover] = useState(false);
     const [autoSlide, setAutoSlide] = useState(true);
-
-    useEffect(() => {
-        AOS.init({
-            disable: function () {
-                const windowWidth = document.documentElement.clientWidth;
-                return windowWidth < 1280;
-            }
-        });
-    }, []);
 
     const slides = [
         {

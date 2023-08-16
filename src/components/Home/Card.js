@@ -1,10 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { css } from 'twin.macro';
 import { LearnMoreSection } from '../../assets/css/styles';
 import LearnMoreLink from '../use-cases/LearnMoreLink';
 import { Link } from 'gatsby';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 const cardBackgroundColor = css`
     @media (max-width: 1024px) {
@@ -23,15 +21,6 @@ const cardBackgroundColor = css`
 `;
 
 const Card = ({ icon, title, text, link, cardHeight, cardHeightLg }) => {
-    useEffect(() => {
-        AOS.init({
-            disable: function () {
-                const windowWidth = document.documentElement.clientWidth;
-                return windowWidth < 1280;
-            }
-        });
-    }, []);
-
     return (
         <>
             {link ? (
