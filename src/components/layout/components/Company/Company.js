@@ -27,7 +27,7 @@ const Company = ({ pathname, activeLinks, setActiveLinks }) => {
         query CareersQueryForNewMenu {
             allMarkdownRemark(
                 limit: 5
-                sort: { fields: frontmatter___date, order: DESC }
+                sort: { frontmatter: { date: DESC } }
                 filter: { frontmatter: { templateKey: { eq: "career-page" }, disabled: { eq: false } } }
             ) {
                 nodes {

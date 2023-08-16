@@ -69,7 +69,7 @@ const Careers = ({ location }) => {
     const data = useStaticQuery(graphql`
         query JobsQuery {
             allMarkdownRemark(
-                sort: { fields: frontmatter___date, order: DESC }
+                sort: { frontmatter: { date: DESC } }
                 filter: { frontmatter: { templateKey: { eq: "career-page" }, disabled: { eq: false } } }
             ) {
                 nodes {
@@ -117,7 +117,7 @@ const Careers = ({ location }) => {
                                         css={css`
                                             padding: 0.625rem 2.5rem;
                                         `}
-                                        className='mx-auto bg-gradient-to-r md:mx-0 from-blue to-red hover:from-red hover:to-blue mt-12 font-medium rounded text-white uppercase text-center no-underline hover:no-underline inline-block font-hind cursor-pointer'
+                                        className='mx-auto bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] mt-12 font-medium rounded text-white uppercase text-center no-underline hover:no-underline inline-block font-hind cursor-pointer'
                                     >
                                         See open positions
                                     </ScrollLink>

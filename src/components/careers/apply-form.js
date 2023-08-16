@@ -132,11 +132,9 @@ const Apply = ({ jobTitle, jobs, dispaly = 'row' }) => {
                                             onChange={handleChange}
                                             onBlur={handleBlur}
                                             value={values.message}
-                                            placeholder='Personal Note'
+                                            placeholder='Your Message'
                                             className='block w-full bg-white text-base'
-                                        >
-                                            Your Message
-                                        </textarea>
+                                        ></textarea>
                                         <div className='text-red text-sm pt-1' style={{ height: 20 }}>
                                             {errors.message && touched.message && errors.message}
                                         </div>

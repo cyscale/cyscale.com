@@ -83,7 +83,7 @@ exports.createPages = async ({ graphql, actions }) => {
     await graphql(`
         query loadCareersQuery {
             allMarkdownRemark(
-                sort: { order: DESC, fields: frontmatter___date }
+                sort: { frontmatter: { date: DESC } }
                 filter: { frontmatter: { templateKey: { eq: "career-page" }, disabled: { eq: false } } }
             ) {
                 edges {
@@ -147,40 +147,38 @@ exports.createPages = async ({ graphql, actions }) => {
         }
     `);
 
-    await graphql(
-        `
-            query loadPostsQuery {
-                allMarkdownRemark(
-                    sort: { order: DESC, fields: frontmatter___date }
-                    filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
-                ) {
-                    edges {
-                        node {
-                            frontmatter {
-                                authors
-                                categories
-                                title
-                                seoTitle
-                                description
-                                seoDescription
-                                date
-                                featuredpost
-                                permalink
-                                featuredimage {
-                                    publicURL
-                                    childImageSharp {
-                                        gatsbyImageData(width: 820, layout: CONSTRAINED)
-                                    }
+    await graphql(`
+        query loadPostsQuery {
+            allMarkdownRemark(
+                sort: { frontmatter: { date: DESC } }
+                filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+            ) {
+                edges {
+                    node {
+                        frontmatter {
+                            authors
+                            categories
+                            title
+                            seoTitle
+                            description
+                            seoDescription
+                            date
+                            featuredpost
+                            permalink
+                            featuredimage {
+                                publicURL
+                                childImageSharp {
+                                    gatsbyImageData(width: 820, layout: CONSTRAINED)
                                 }
-                                tableOfContents
                             }
-                            rawMarkdownBody
+                            tableOfContents
                         }
+                        rawMarkdownBody
                     }
                 }
             }
-        `
-    ).then(async (result) => {
+        }
+    `).then(async (result) => {
         if (result.errors) throw result.errors;
 
         const allPosts = [];
@@ -231,25 +229,23 @@ exports.createPages = async ({ graphql, actions }) => {
         });
     });
 
-    await graphql(
-        `
-            query loadCategoriesQuery {
-                allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "category" } } }) {
-                    edges {
-                        node {
-                            frontmatter {
-                                name
-                                slug
-                                seoTitle
-                                seoDescription
-                                disabled
-                            }
+    await graphql(`
+        query loadCategoriesQuery {
+            allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "category" } } }) {
+                edges {
+                    node {
+                        frontmatter {
+                            name
+                            slug
+                            seoTitle
+                            seoDescription
+                            disabled
                         }
                     }
                 }
             }
-        `
-    ).then((result) => {
+        }
+    `).then((result) => {
         if (result.errors) throw result.errors;
 
         const categories = result.data.allMarkdownRemark.edges;

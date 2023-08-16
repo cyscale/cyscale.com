@@ -252,7 +252,7 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation, sea
                     </li>
                     <li className='py-6 pr-0 pl-7'>
                         <Link
-                            className='bg-gradient-to-r from-blue to-red hover:from-red hover:to-blue w-auto text-sm px-4 border-transparent box-border rounded-md h-10 hidden xl:flex justify-center items-center uppercase leading-none text-white transition duration-500 hover:no-underline font-medium'
+                            className='bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] w-auto text-sm px-4 border-transparent box-border rounded-md h-10 hidden xl:flex justify-center items-center uppercase leading-none text-white transition duration-500 hover:no-underline font-medium'
                             to='/free-trial'
                         >
                             Start Free Trial

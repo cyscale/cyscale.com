@@ -40,7 +40,7 @@ const Fproducts = ({ sectionTitle, data, id }) => {
                     <TabList>
                         {data.map((content, index) => (
                             <Tab key={index}>
-                                <span className="font-montserrat">{content.tabTitle}</span>
+                                <span className='font-montserrat'>{content.tabTitle}</span>
                             </Tab>
                         ))}
                     </TabList>
@@ -64,7 +64,12 @@ const Fproducts = ({ sectionTitle, data, id }) => {
                                             onKeyDown={shiftTabPrev}
                                             onClick={shiftTabPrev}
                                         >
-                                            <img src={left} className='m-auto cursor-pointer' alt='left icon' loading="lazy" />
+                                            <img
+                                                src={left}
+                                                className='m-auto cursor-pointer'
+                                                alt='left icon'
+                                                loading='lazy'
+                                            />
                                         </button>
                                     </div>
                                     <div style={{ width: '100%', maxWidth: 960 }}>
@@ -81,7 +86,12 @@ const Fproducts = ({ sectionTitle, data, id }) => {
                                             onKeyDown={shiftTabNext}
                                             onClick={shiftTabNext}
                                         >
-                                            <img src={right} className='m-auto cursor-pointer' alt='right icon' loading="lazy" />
+                                            <img
+                                                src={right}
+                                                className='m-auto cursor-pointer'
+                                                alt='right icon'
+                                                loading='lazy'
+                                            />
                                         </button>
                                     </div>
                                 </div>

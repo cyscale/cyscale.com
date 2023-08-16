@@ -9,7 +9,7 @@ const Carousel = forwardRef((props, ref) => {
         query PostsPreviewHomeQuery {
             allMarkdownRemark(
                 limit: 6
-                sort: { fields: frontmatter___date, order: DESC }
+                sort: { frontmatter: { date: DESC } }
                 filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
             ) {
                 edges {

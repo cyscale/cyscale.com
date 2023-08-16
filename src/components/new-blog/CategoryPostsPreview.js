@@ -15,7 +15,7 @@ const CategoryPostsPreview = ({ category, id }) => {
             }
             allMarkdownRemark(
                 limit: 5
-                sort: { fields: frontmatter___date, order: DESC }
+                sort: { frontmatter: { date: DESC } }
                 filter: { frontmatter: { templateKey: { eq: "blog-post" }, categories: { in: "CSPM" } } }
             ) {
                 nodes {
@@ -94,7 +94,7 @@ const CategoryPostsPreview = ({ category, id }) => {
                                 <div className='col-span-6 hidden lg:flex lg:justify-end'>
                                     <GatsbyImage
                                         alt='White paper Cover'
-                                        className="rounded-md"
+                                        className='rounded-md'
                                         image={data.whitepaperCover.childImageSharp.gatsbyImageData}
                                     />
                                 </div>

@@ -1,6 +1,6 @@
 module.exports = {
-    purge: ['./src/**/*.{js,jsx,ts,tsx}'],
-    darkMode: false,
+    content: ['./src/**/*.{js,jsx,ts,tsx}'],
+    media: false,
     options: {
         keyframes: true
     },

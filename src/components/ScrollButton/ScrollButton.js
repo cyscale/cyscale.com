@@ -13,7 +13,7 @@ export default function ScrollButton({ to, pageName, btnText }) {
                         css={css`
                             padding: 0.625rem 2.5rem;
                         `}
-                        className='gradientBgBtn w-full sm:min-w-232px block text-16px font-medium rounded text-white uppercase text-center hover:no-underline no-underline'
+                        className='bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] w-full sm:min-w-232px block text-16px font-medium rounded text-white uppercase text-center hover:no-underline no-underline'
                     >
                         {btnText}
                     </button>

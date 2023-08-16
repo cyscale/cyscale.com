@@ -10,7 +10,7 @@ const PostsPreview = ({ bg }) => {
         query PostsPreviewQuery {
             allMarkdownRemark(
                 limit: 3
-                sort: { fields: frontmatter___date, order: DESC }
+                sort: { frontmatter: { date: DESC } }
                 filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
             ) {
                 edges {

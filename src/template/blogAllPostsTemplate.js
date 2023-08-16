@@ -41,7 +41,7 @@ export default BlogAllPostsTemplate;
 export const query = graphql`
     query BlogsQuery($skip: Int!, $limit: Int!) {
         allMarkdownRemark(
-            sort: { order: DESC, fields: frontmatter___date }
+            sort: { frontmatter: { date: DESC } }
             filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
             limit: $limit
             skip: $skip
