@@ -4,6 +4,7 @@ import { LearnMoreSection } from '../../assets/css/styles';
 import LearnMoreLink from '../use-cases/LearnMoreLink';
 import { Link } from 'gatsby';
 import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const cardBackgroundColor = css`
     @media (max-width: 1024px) {

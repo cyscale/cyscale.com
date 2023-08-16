@@ -11,7 +11,7 @@ const GradientButton = ({ text, alignLeft }) => {
                     padding: 0.625rem 2.5rem;
                 `
             ]}
-            className='bg-gradient-to-r md:mx-0 from-blue to-red hover:from-red hover:to-blue block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind'
+            className='bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind'
         >
             {text}
         </button>

@@ -4,6 +4,7 @@ import { css } from 'twin.macro';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { graphql, useStaticQuery } from 'gatsby';
 import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const sectionSubtitleColor = css`
     color: #38aff1;

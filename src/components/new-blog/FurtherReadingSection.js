@@ -170,10 +170,13 @@ const FurtherReadingSection = ({ alert, onChange, emailInput, onKeyDown, onSubmi
                         )}
                         <button
                             type='submit'
-                            className='text-white mt-2 hover:bg-blue-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded text-sm w-full pb-2.5 pt-3'
+                            className='text-white mt-2 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded text-sm w-full pb-2.5 pt-3'
                             onClick={onSubmit}
                             css={css`
-                                background-color: #0f26aa;
+                                background-color: #0f26aa !important;
+                                &:hover {
+                                    background-color: #0b175a !important;
+                                }
                             `}
                         >
                             Subscribe to newsletter

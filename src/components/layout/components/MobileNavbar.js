@@ -15,10 +15,11 @@ const MobileNavbar = ({ showBurgerButton, showMenu, setShowMenu, searchBar, setS
                     <Link to='/' className='inline-flex'>
                         <HeaderLogo src={logo} alt='Cyscale' />
                     </Link>
-
+                </div>
+                <div className='absolute right-0 top-5'>
                     <img
                         src={searchIcon}
-                        className={`pb-2.5 cursor-pointer mr-10 ${showBurgerButton ? 'inline-block' : 'hidden'}`}
+                        className={`pb-2.5 cursor-pointer mr-5 ${showBurgerButton ? 'inline-block' : 'hidden'}`}
                         alt=''
                         tabIndex='0'
                         onClick={() => setSearchBar(!searchBar)}
@@ -27,14 +28,14 @@ const MobileNavbar = ({ showBurgerButton, showMenu, setShowMenu, searchBar, setS
                         onKeyPress={() => {}}
                         width={22}
                     />
+                    <button
+                        type='button'
+                        className={`xl:hidden ${showBurgerButton ? 'inline-block' : 'hidden'}`}
+                        onClick={() => setShowMenu(!showMenu)}
+                    >
+                        <img src={navBars} alt='toggle menu' />
+                    </button>
                 </div>
-                <button
-                    type='button'
-                    className={`absolute right-0 top-6 xl:hidden ${showBurgerButton ? 'inline-block' : 'hidden'}`}
-                    onClick={() => setShowMenu(!showMenu)}
-                >
-                    <img src={navBars} alt='toggle menu' />
-                </button>
             </div>
         </>
     );
