@@ -105,8 +105,6 @@ Managing security across hybrid and multi-cloud environments introduces complexi
 
 Multi-cloud setups demand the appropriate handling of various security controls specific to each cloud provider and maintaining visibility across them, while hybrid models require seamless integration and consistent policies between on-premises and public cloud assets. In both cases, the complexity of the infrastructure and policies increases, making it crucial to stay on top of your security posture. 
 
- 
-
 Addressing these challenges requires a comprehensive understanding of the cloud environment, robust strategies, and leveraging solutions like [multi-cloud data security](https://cyscale.com/use-cases/cloud-data-security/). 
 
 The good news? These challenges aren't insurmountable. In the sections that follow, we'll explore best practices to fortify your cloud infrastructure.
@@ -145,8 +143,6 @@ While the challenges of cloud security can seem overwhelming, having a comprehen
 * **Provide Continuous Training:** Educate security teams and employees on emerging threats, security best practices, and ongoing compliance requirements. 
 * **Evaluate Emerging Technologies:** Keep up with new technologies and approaches in cloud security, like [cloud security strategy best practices](https://cyscale.com/cloud-security-strategy-best-practices-tutorials), to continually innovate and strengthen your security posture. 
 
- 
-
 Building a comprehensive cloud security strategy is not a one-time effort. It's a dynamic and ongoing process that requires careful planning, execution, and adaptation. By following this roadmap, you can navigate the complex terrain of cloud security challenges and forge a path toward a resilient and secure cloud environment. 
 
 ## Putting the cloud security plan into action 
@@ -155,4 +151,4 @@ In the ever-evolving landscape of cloud security, 2023 stands as a significant m
 
 Understanding the top 10 challenges a comprehensive cloud security strategy needs to overcome can set you up for success when you face these complexities head-on. Remember, the key to your defense lies in continuous adaptation, education, and employing the right tools. 
 
-Don’t get overwhelmed with the scope of the task. Cyscale’s Automated Cloud Security platform can be a valuable partner in safeguarding your cloud infrastructure environment and ensuring compliance. [Click here to schedule your demo](http://cyscale.com/) and see our platform in action.
+Don’t get overwhelmed with the scope of the task. Cyscale’s Automated Cloud Security platform can be a valuable partner in safeguarding your cloud infrastructure environment and ensuring compliance. [Click here to schedule your demo](https://cyscale.com/request-demo/) and see our platform in action.
