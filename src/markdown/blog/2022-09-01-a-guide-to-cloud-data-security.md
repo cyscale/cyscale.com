@@ -62,7 +62,7 @@ Using these best practices, you can improve your cloud security posture and prev
 
 ### **Access control** 
 
-A layered approach should be used when securing data in the cloud. This means that encryption of data at rest should only be considered as the last measure of protection if access control rules are bypassed. 
+A layered approach should be used when securing data in the cloud. This is where a robust **[cloud infrastructure security](https://cyscale.com/blog/cloud-infrastructure-security/)** becomes crucial. This means that encryption of data at rest should only be considered as the last measure of protection if access control rules are bypassed. 
 
 You must secure access to databases, buckets, and other storage assets by restricting it as much as possible. In doing this, you become compliant with the [Least Privilege Principle](https://cyscale.com/blog/check-for-least-privilege/). 
 
