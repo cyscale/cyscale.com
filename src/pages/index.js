@@ -14,8 +14,6 @@ import GradientCard from '../components/Home/GradientCard';
 import CISCOIcon from '../assets/images/ciso-icon.svg';
 import ShieldSettingsIcon from '../assets/images/shield-settings-icon.svg';
 import ShieldCloudIcon from '../assets/images/shield-cloud-icon.svg';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 const BlogCarousel = loadable(() => import('../components/Home/BlogSection'));
 const CardsSections = loadable(() => import('../components/Home/CardsSections'));
@@ -154,14 +152,6 @@ const HomePage = ({ location }) => {
     const domRef = useRef();
 
     useEffect(() => {
-        AOS.init({
-            disable: function () {
-                const windowWidth = document.documentElement.clientWidth;
-                return windowWidth < 1280;
-            },
-            once: true
-        });
-
         const currentRef = domRef.current;
         const observer = new IntersectionObserver(
             (entries) => {
@@ -288,8 +278,6 @@ const HomePage = ({ location }) => {
                 >
                     <div
                         className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 hidden lg:block'
-                        data-aos='fade-right'
-                        data-aos-offset='-100'
                     >
                         <GatsbyImage
                             image={data.graphContainers.childImageSharp.gatsbyImageData}
@@ -298,8 +286,6 @@ const HomePage = ({ location }) => {
                     </div>
                     <div
                         className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 max-w-xl lg:max-w-xl lg:mt-4'
-                        data-aos='fade-left'
-                        data-aos-offset='-140'
                     >
                         <p className='font-montserrat text-base font-bold mt-0 lg:ml-5' css={sectionSubtitleColor}>
                             EMPOWER YOUR TEAM
@@ -337,7 +323,7 @@ const HomePage = ({ location }) => {
                         overflow: hidden;
                     `}
                 >
-                    <div className='col-span-12 lg:col-span-4' data-aos='fade-right'>
+                    <div className='col-span-12 lg:col-span-4' >
                         <GradientCard
                             icon={CISCOIcon}
                             title={'CISO'}
@@ -347,7 +333,7 @@ const HomePage = ({ location }) => {
                             link={'/products/cloud-security-posture-management/'}
                         />
                     </div>
-                    <div className='col-span-12 lg:col-span-4' data-aos='fade-up'>
+                    <div className='col-span-12 lg:col-span-4'>
                         <GradientCard
                             icon={ShieldSettingsIcon}
                             title={'CLOUD INFRASTRUCTURE'}
@@ -357,7 +343,7 @@ const HomePage = ({ location }) => {
                             link={'/products/cloud-security-posture-management/'}
                         />
                     </div>
-                    <div className='col-span-12 lg:col-span-4' data-aos='fade-left'>
+                    <div className='col-span-12 lg:col-span-4'>
                         <GradientCard
                             icon={ShieldCloudIcon}
                             title={'CLOUD SECURITY'}

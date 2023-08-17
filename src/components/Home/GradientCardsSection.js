@@ -5,18 +5,8 @@ import CISCOIcon from '../../assets/images/ciso-icon.svg';
 import ShieldSettingsIcon from '../../assets/images/shield-settings-icon.svg';
 import ShieldCloudIcon from '../../assets/images/shield-cloud-icon.svg';
 import { Container } from '../atoms/Containers';
-import AOS from 'aos';
 
 const GradientCardsSection = () => {
-    useEffect(() => {
-        AOS.init({
-            disable: function () {
-                const windowWidth = document.documentElement.clientWidth;
-                return windowWidth < 1280;
-            }
-        });
-    }, []);
-
     return (
         <Container className='mb-16 lg:mb-24'>
             <div
@@ -25,7 +15,7 @@ const GradientCardsSection = () => {
                     overflow: hidden;
                 `}
             >
-                <div className='col-span-12 lg:col-span-4' data-aos='fade-right'>
+                <div className='col-span-12 lg:col-span-4'>
                     <GradientCard
                         icon={CISCOIcon}
                         title={'CISO'}
@@ -35,7 +25,7 @@ const GradientCardsSection = () => {
                         link={'/products/cloud-security-posture-management/'}
                     />
                 </div>
-                <div className='col-span-12 lg:col-span-4' data-aos='fade-up'>
+                <div className='col-span-12 lg:col-span-4'>
                     <GradientCard
                         icon={ShieldSettingsIcon}
                         title={'CLOUD INFRASTRUCTURE'}
@@ -45,7 +35,7 @@ const GradientCardsSection = () => {
                         link={'/products/cloud-security-posture-management/'}
                     />
                 </div>
-                <div className='col-span-12 lg:col-span-4' data-aos='fade-left'>
+                <div className='col-span-12 lg:col-span-4'>
                     <GradientCard
                         icon={ShieldCloudIcon}
                         title={'CLOUD SECURITY'}

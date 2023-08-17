@@ -102,7 +102,6 @@ const CaseStudiesSection = () => {
                             >
                                 <div
                                     className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 lg:mt-8'
-                                    data-aos='fade-right'
                                 >
                                     <Link to={s.link}>
                                         <GatsbyImage image={s.image} className='max-w-xl' alt={s.alt} />
@@ -110,7 +109,6 @@ const CaseStudiesSection = () => {
                                 </div>
                                 <div
                                     className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 max-w-xl mt-8 lg:mt-0'
-                                    data-aos='fade-left'
                                 >
                                     <p className='font-montserrat text-base font-bold mt-4' css={sectionSubtitleColor}>
                                         CASE STUDY
