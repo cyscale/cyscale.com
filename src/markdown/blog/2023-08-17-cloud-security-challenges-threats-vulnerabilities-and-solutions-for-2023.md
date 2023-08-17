@@ -15,7 +15,7 @@ seoDescription: "Understand the top 10 cloud security challenges,
   create a robust cloud security strategy for 2023 and beyond. "
 featuredpost: true
 featuredimage: /img/50_blog-cloud-security-challenges.jpeg
-tableOfContents: true
+tableOfContents: false
 tags:
   - CSPM
   - security
