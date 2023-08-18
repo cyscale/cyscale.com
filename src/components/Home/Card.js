@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { css } from 'twin.macro';
 import { LearnMoreSection } from '../../assets/css/styles';
 import LearnMoreLink from '../use-cases/LearnMoreLink';
 import { Link } from 'gatsby';
+import sal from 'sal.js';
 
 const cardBackgroundColor = css`
     @media (max-width: 1024px) {
@@ -21,6 +22,13 @@ const cardBackgroundColor = css`
 `;
 
 const Card = ({ icon, title, text, link, cardHeight, cardHeightLg }) => {
+    useEffect(() => {
+        sal({
+            threshold: 0.1,
+            once: false
+        });
+    }, []);
+
     return (
         <>
             {link ? (
@@ -28,6 +36,7 @@ const Card = ({ icon, title, text, link, cardHeight, cardHeightLg }) => {
                     to={link}
                     className={`col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-4 lg:mt-0 flex flex-col justify-between p-4 rounded-md h-${cardHeight} lg:h-${cardHeightLg} xl:h-${cardHeight}`}
                     css={cardBackgroundColor}
+                    data-sal='slide-up'
                 >
                     <div>
                         <img src={icon} alt='' height={40} width={40} />
@@ -44,6 +53,7 @@ const Card = ({ icon, title, text, link, cardHeight, cardHeightLg }) => {
                 <div
                     className={`col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-4 lg:mt-0 flex flex-col justify-between p-4 rounded-md h-${cardHeight} lg:h-${cardHeightLg} xl:h-${cardHeight}`}
                     css={cardBackgroundColor}
+                    data-sal='slide-up'
                 >
                     <div>
                         <img src={icon} alt='' height={40} width={40} />

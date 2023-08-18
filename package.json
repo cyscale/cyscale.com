@@ -57,6 +57,7 @@
         "react-tabs": "^6.0.2",
         "react-transition-group": "^4.4.2",
         "rehype-raw": "^6.1.1",
+        "sal.js": "^0.8.5",
         "sass": "^1.65.1",
         "slick-carousel": "^1.8.1",
         "striptags": "^3.2.0",

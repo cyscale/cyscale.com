@@ -14,6 +14,7 @@ import GradientCard from '../components/Home/GradientCard';
 import CISCOIcon from '../assets/images/ciso-icon.svg';
 import ShieldSettingsIcon from '../assets/images/shield-settings-icon.svg';
 import ShieldCloudIcon from '../assets/images/shield-cloud-icon.svg';
+import sal from 'sal.js';
 
 const BlogCarousel = loadable(() => import('../components/Home/BlogSection'));
 const CardsSections = loadable(() => import('../components/Home/CardsSections'));
@@ -152,6 +153,10 @@ const HomePage = ({ location }) => {
     const domRef = useRef();
 
     useEffect(() => {
+        sal({
+            once: false
+        });
+
         const currentRef = domRef.current;
         const observer = new IntersectionObserver(
             (entries) => {
@@ -276,9 +281,7 @@ const HomePage = ({ location }) => {
                         overflow: hidden;
                     `}
                 >
-                    <div
-                        className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 hidden lg:block'
-                    >
+                    <div className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 hidden lg:block' data-sal='slide-right'>
                         <GatsbyImage
                             image={data.graphContainers.childImageSharp.gatsbyImageData}
                             alt='Graph and screenshots from cloud security platform'
@@ -286,6 +289,7 @@ const HomePage = ({ location }) => {
                     </div>
                     <div
                         className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 max-w-xl lg:max-w-xl lg:mt-4'
+                        data-sal='slide-left'
                     >
                         <p className='font-montserrat text-base font-bold mt-0 lg:ml-5' css={sectionSubtitleColor}>
                             EMPOWER YOUR TEAM
@@ -323,7 +327,7 @@ const HomePage = ({ location }) => {
                         overflow: hidden;
                     `}
                 >
-                    <div className='col-span-12 lg:col-span-4' >
+                    <div className='col-span-12 lg:col-span-4' data-sal='slide-right'>
                         <GradientCard
                             icon={CISCOIcon}
                             title={'CISO'}
@@ -333,7 +337,7 @@ const HomePage = ({ location }) => {
                             link={'/products/cloud-security-posture-management/'}
                         />
                     </div>
-                    <div className='col-span-12 lg:col-span-4'>
+                    <div className='col-span-12 lg:col-span-4' data-sal='slide-up'>
                         <GradientCard
                             icon={ShieldSettingsIcon}
                             title={'CLOUD INFRASTRUCTURE'}
@@ -343,7 +347,7 @@ const HomePage = ({ location }) => {
                             link={'/products/cloud-security-posture-management/'}
                         />
                     </div>
-                    <div className='col-span-12 lg:col-span-4'>
+                    <div className='col-span-12 lg:col-span-4' data-sal='slide-left'>
                         <GradientCard
                             icon={ShieldCloudIcon}
                             title={'CLOUD SECURITY'}
@@ -420,7 +424,10 @@ const HomePage = ({ location }) => {
                         overflow: hidden;
                     `}
                 >
-                    <div className='col-span-12 lg:col-span-6'>
+                    <div
+                        className='col-span-12 lg:col-span-6'
+                        data-sal='slide-right'
+                    >
                         <div
                             className='mt-6 lg:mt-0 rounded-xl pt-12 px-9 max-w-xl lg:max-w-2xl mx-auto lg:mr-0 lg:ml-auto relative'
                             css={featureStyle}
@@ -438,7 +445,7 @@ const HomePage = ({ location }) => {
                             />
                         </div>
                     </div>
-                    <div className='col-span-12 lg:col-span-3'>
+                    <div className='col-span-12 lg:col-span-3' data-sal='slide-up'>
                         <div
                             className='mt-6 lg:mt-0 rounded-xl pt-12 max-w-xl lg:max-w-2xl mx-auto lg:mr-0 lg:ml-auto relative mb-20 lg:mb-0'
                             css={featureStyle}
@@ -466,7 +473,7 @@ const HomePage = ({ location }) => {
                             />
                         </div>
                     </div>
-                    <div className='col-span-12 lg:col-span-3 mt-12 lg:mt-0'>
+                    <div className='col-span-12 lg:col-span-3 mt-12 lg:mt-0' data-sal='slide-left'>
                         <div
                             className='mt-6 lg:mt-0 rounded-xl pt-12 px-12 max-w-xl lg:max-w-2xl mx-auto lg:mr-0 lg:ml-auto relative'
                             css={css`
@@ -507,7 +514,7 @@ const HomePage = ({ location }) => {
                         overflow: hidden;
                     `}
                 >
-                    <div className='col-span-12 lg:col-span-3'>
+                    <div className='col-span-12 lg:col-span-3' data-sal='slide-right'>
                         <div
                             className='mt-6 lg:mt-0 rounded-xl pt-8 pb-72 sm:pb-0 px-8 max-w-xl lg:max-w-2xl mx-auto lg:mr-0 lg:ml-auto relative h-72 bg-black'
                             css={css`
@@ -530,7 +537,7 @@ const HomePage = ({ location }) => {
                             />
                         </div>
                     </div>
-                    <div className='col-span-12 lg:col-span-3'>
+                    <div className='col-span-12 lg:col-span-3' data-sal='slide-up'>
                         <div
                             className='mt-6 lg:mt-0 rounded-xl pt-8 px-8 max-w-xl lg:max-w-2xl mx-auto lg:mr-0 lg:ml-auto relative h-40 lg:h-72'
                             css={css`
@@ -550,7 +557,7 @@ const HomePage = ({ location }) => {
                             <p className='text-base text-white mt-1 font-hind'>to detect cloud security drifts</p>
                         </div>
                     </div>
-                    <div className='col-span-12 lg:col-span-6'>
+                    <div className='col-span-12 lg:col-span-6' data-sal='slide-left'>
                         <div
                             className='mt-6 lg:mt-0 rounded-xl pt-8 max-w-xl lg:max-w-2xl mx-auto lg:mr-0 lg:ml-auto relative h-72'
                             css={css`
