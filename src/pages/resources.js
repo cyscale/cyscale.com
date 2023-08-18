@@ -13,6 +13,7 @@ import PlayButton from '../components/resources/PlayButton';
 import FeaturedArticlesCarousel from '../components/resources/FeaturedArticlesCarousel';
 import CaseStudiesCarousel from '../components/resources/CaseStudiesCarousel';
 import VideosCarousel from '../components/resources/VideosCarousel';
+import CarouselCheatSheet from '../components/resources/CarouselCheatSheet';
 
 const heroBackground = css`
     @media (max-width: 1024px) {
@@ -149,6 +150,21 @@ const Resources = ({ location }) => {
             mssps: file(relativePath: { eq: "mssps.png" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1080, layout: CONSTRAINED)
+                }
+            }
+            awsCheatSheet: file(relativePath: { eq: "aws-cheat-sheet.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 700, layout: CONSTRAINED)
+                }
+            }
+            azureCheatSheet: file(relativePath: { eq: "azure-cheat-sheet.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 700, layout: CONSTRAINED)
+                }
+            }
+            googleCheatSheet: file(relativePath: { eq: "google-cloud-cheat-sheet.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 700, layout: CONSTRAINED)
                 }
             }
         }
@@ -443,7 +459,7 @@ const Resources = ({ location }) => {
                     <div className='grid grid-cols-12 gap-4 pt-8 px-4 md:px-10'>
                         <div className='col-span-12 gap-20 lg:col-span-4'>
                             <h2
-                                className='font-montserrat font-hind font-bold text-white'
+                                className='font-montserrat font-bold text-white'
                                 css={css`
                                     font-size: 2rem;
                                 `}
@@ -709,6 +725,125 @@ const Resources = ({ location }) => {
                 </div>
             </Container>
             <Container>
+                <div
+                    className='pb-8 rounded-md'
+                    css={css`
+                        background: linear-gradient(90deg, #000 0.08%, #0f26aa 19.01%, #68338b 44.53%, #ff4a56 88.03%);
+                    `}
+                    id='cheat-sheets'
+                >
+                    <div className='grid grid-cols-12 gap-4 pt-8 px-4 md:px-10'>
+                        <div className='col-span-12 gap-20 lg:col-span-4'>
+                            <h2
+                                className='font-montserrat font-bold text-white'
+                                css={css`
+                                    font-size: 2rem;
+                                `}
+                            >
+                                Cheat sheets
+                            </h2>
+                            <p className='font-hind font-medium text-base mt-2 text-white'>
+                                Download the cheat sheets for AWS, Azure, and Google Cloud to secure your cloud
+                                environment in no time.
+                            </p>
+                        </div>
+                        <div
+                            className='col-span-12 lg:col-span-8'
+                            css={css`
+                                @media (max-width: 768px) {
+                                    height: 390px;
+                                }
+                                height: 100%;
+                            `}
+                        >
+                            <div className='hidden md:block'>
+                                <div className='grid grid-cols-12 gap-4'>
+                                    <div className='col-span-12 sm:col-span-4 flex justify-center lg:justify-end mt-4 sm:mt-0'>
+                                        <Link to='/resources/aws-cloud-security-cheat-sheet.pdf' className='group'>
+                                            <div css={whitepaperCard}>
+                                                <GatsbyImage
+                                                    image={data.awsCheatSheet.childImageSharp.gatsbyImageData}
+                                                    alt='AWS Cloud Security Cheat Sheet'
+                                                    className='rounded'
+                                                />
+                                            </div>
+                                            <p
+                                                css={whipaperParagraph}
+                                                className='mt-2 text-white font-hind text-base group-hover:underline'
+                                            >
+                                                AWS Cloud Security
+                                                <br /> Cheat Sheet
+                                            </p>
+                                            <div className='flex mt-1'>
+                                                <img src={ArrowRight} alt='' width={15} />
+                                                <p className='font-montserrat text-xs text-white font-bold ml-2 group-hover:underline'>
+                                                    Download
+                                                </p>
+                                            </div>
+                                        </Link>
+                                    </div>
+                                    <div className='col-span-12 sm:col-span-4 flex justify-center lg:justify-end mt-4 sm:mt-0'>
+                                        <Link to='/resources/azure-cloud-security-cheat-sheet.pdf' className='group'>
+                                            <div css={whitepaperCard}>
+                                                <GatsbyImage
+                                                    image={data.azureCheatSheet.childImageSharp.gatsbyImageData}
+                                                    alt='Azure Cloud Security Cheat Sheet'
+                                                    className='rounded'
+                                                />
+                                            </div>
+                                            <p
+                                                css={whipaperParagraph}
+                                                className='mt-2 text-white font-hind text-base group-hover:underline'
+                                            >
+                                                Azure Cloud Security
+                                                <br /> Cheat Sheet
+                                            </p>
+                                            <div className='flex mt-1'>
+                                                <img src={ArrowRight} alt='' width={15} />
+                                                <p className='font-montserrat text-xs text-white font-bold ml-2 group-hover:underline'>
+                                                    Download
+                                                </p>
+                                            </div>
+                                        </Link>
+                                    </div>
+                                    <div className='col-span-12 sm:col-span-4 flex justify-center lg:justify-end mt-4 sm:mt-0'>
+                                        <Link to='/resources/google-cloud-security-cheat-sheet.pdf' className='group'>
+                                            <div className='hover:underline'>
+                                                <div css={whitepaperCard}>
+                                                    <GatsbyImage
+                                                        image={data.googleCheatSheet.childImageSharp.gatsbyImageData}
+                                                        alt='Google Cloud Security Cheat Sheet'
+                                                        className='rounded'
+                                                    />
+                                                </div>
+                                                <p
+                                                    css={whipaperParagraph}
+                                                    className='mt-2 text-white font-hind text-base group-hover:underline'
+                                                >
+                                                    Google Cloud Security
+                                                    <br /> Cheat Sheet
+                                                </p>
+                                                <div className='flex mt-1'>
+                                                    <img src={ArrowRight} alt='' width={15} />
+                                                    <p className='font-montserrat text-xs text-white font-bold ml-2 group-hover:underline'>
+                                                        Download
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='block md:hidden'>
+                                <div className='relative'>
+                                    <CarouselCheatSheet />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </Container>
+            <Container className='mt-16 lg:mt-24'>
                 <div className='pb-10 lg:pb-32'>
                     <h2
                         className='font-montserrat font-bold text-blue'
