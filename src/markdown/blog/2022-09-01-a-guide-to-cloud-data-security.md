@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
-title: A Guide to Cloud Data Security Best Practices
-seoTitle: A Guide to Cloud Data Security Best Practices
+title: A Guide to Cloud Security Best Practices
+seoTitle: A Guide to Cloud Security Best Practices
 authors: Sabrina Lupșan
 permalink: cloud-data-security-guide
 categories:
