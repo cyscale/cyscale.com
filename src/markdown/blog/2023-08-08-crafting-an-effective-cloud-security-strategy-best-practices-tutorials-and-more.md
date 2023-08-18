@@ -27,7 +27,7 @@ tags:
 ---
 The age of cloud computing has revolutionized the way businesses handle data and applications. With a myriad of cloud services at your fingertips, the potential for growth is immense. But with great power comes great responsibility. How do you ensure cybersecurity in this ever-evolving cloud environment? 
 
-Let’s dive in and understand the cornerstones of a good cloud security strategy, while looking at some examples and tutorials for given best practices. 
+Let’s dive in and understand the cornerstones of a good cloud security strategy, while looking at some examples and tutorials for given [best practices](https://cyscale.com/blog/cloud-data-security-guide/). 
 
 ## Five Key Pillars of a Strong Cloud Security Strategy 
 
