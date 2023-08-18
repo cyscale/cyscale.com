@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { css } from 'twin.macro';
 import { Container } from '../atoms/Containers';
 import CaseStudyCarousel from '../cloud-security-posture-management/Carousel';
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import RightArrow from '../sharedComponent/RightArrow';
+import sal from 'sal.js';
 
 const sectionSubtitleColor = css`
     color: #38aff1;
@@ -81,6 +82,12 @@ const CaseStudiesSection = () => {
         }
     ];
 
+    useEffect(() => {
+        sal({
+            once: false
+        });
+    }, []);
+
     return (
         <div
             className='pt-24 pb-24 lg:pt-32 lg:pb-32'
@@ -102,7 +109,7 @@ const CaseStudiesSection = () => {
                             >
                                 <div
                                     className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 lg:mt-8'
-                                    data-aos='fade-right'
+                                    data-sal='slide-right'
                                 >
                                     <Link to={s.link}>
                                         <GatsbyImage image={s.image} className='max-w-xl' alt={s.alt} />
@@ -110,7 +117,7 @@ const CaseStudiesSection = () => {
                                 </div>
                                 <div
                                     className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 max-w-xl mt-8 lg:mt-0'
-                                    data-aos='fade-left'
+                                    data-sal='slide-left'
                                 >
                                     <p className='font-montserrat text-base font-bold mt-4' css={sectionSubtitleColor}>
                                         CASE STUDY

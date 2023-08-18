@@ -3,8 +3,6 @@ import { Container } from '../atoms/Containers';
 import { css } from 'twin.macro';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { graphql, useStaticQuery } from 'gatsby';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 const sectionSubtitleColor = css`
     color: #38aff1;
@@ -60,15 +58,6 @@ const KeyFeaturesSection = () => {
         }
     `);
 
-    useEffect(() => {
-        AOS.init({
-            disable: function () {
-                const windowWidth = document.documentElement.clientWidth;
-                return windowWidth < 1280;
-            }
-        });
-    }, []);
-
     return (
         <Container className='my-16 lg:my-32'>
             <div className='grid grid-cols-12 gap-x-5'>
@@ -88,7 +77,7 @@ const KeyFeaturesSection = () => {
                     overflow: hidden;
                 `}
             >
-                <div className='col-span-12 lg:col-span-6' data-aos='fade-right'>
+                <div className='col-span-12 lg:col-span-6'>
                     <div
                         className='mt-6 lg:mt-0 rounded-xl pt-12 px-9 max-w-xl lg:max-w-2xl mx-auto lg:mr-0 lg:ml-auto relative'
                         css={featureStyle}
@@ -106,7 +95,7 @@ const KeyFeaturesSection = () => {
                         />
                     </div>
                 </div>
-                <div className='col-span-12 lg:col-span-3' data-aos='fade-up'>
+                <div className='col-span-12 lg:col-span-3'>
                     <div
                         className='mt-6 lg:mt-0 rounded-xl pt-12 max-w-xl lg:max-w-2xl mx-auto lg:mr-0 lg:ml-auto relative mb-20 lg:mb-0'
                         css={featureStyle}
@@ -134,7 +123,7 @@ const KeyFeaturesSection = () => {
                         />
                     </div>
                 </div>
-                <div className='col-span-12 lg:col-span-3 mt-12 lg:mt-0' data-aos='fade-left'>
+                <div className='col-span-12 lg:col-span-3 mt-12 lg:mt-0'>
                     <div
                         className='mt-6 lg:mt-0 rounded-xl pt-12 px-12 max-w-xl lg:max-w-2xl mx-auto lg:mr-0 lg:ml-auto relative'
                         css={css`
@@ -174,7 +163,7 @@ const KeyFeaturesSection = () => {
                     overflow: hidden;
                 `}
             >
-                <div className='col-span-12 lg:col-span-3' data-aos='fade-right'>
+                <div className='col-span-12 lg:col-span-3'>
                     <div
                         className='mt-6 lg:mt-0 rounded-xl pt-8 pb-72 sm:pb-0 px-8 max-w-xl lg:max-w-2xl mx-auto lg:mr-0 lg:ml-auto relative h-72 bg-black'
                         css={css`
@@ -197,7 +186,7 @@ const KeyFeaturesSection = () => {
                         />
                     </div>
                 </div>
-                <div className='col-span-12 lg:col-span-3' data-aos='fade-up'>
+                <div className='col-span-12 lg:col-span-3'>
                     <div
                         className='mt-6 lg:mt-0 rounded-xl pt-8 px-8 max-w-xl lg:max-w-2xl mx-auto lg:mr-0 lg:ml-auto relative h-40 lg:h-72'
                         css={css`
@@ -210,7 +199,7 @@ const KeyFeaturesSection = () => {
                         <p className='text-base text-white mt-1 font-hind'>to detect cloud security drifts</p>
                     </div>
                 </div>
-                <div className='col-span-12 lg:col-span-6' data-aos='fade-left'>
+                <div className='col-span-12 lg:col-span-6'>
                     <div
                         className='mt-6 lg:mt-0 rounded-xl pt-8 max-w-xl lg:max-w-2xl mx-auto lg:mr-0 lg:ml-auto relative h-72'
                         css={css`

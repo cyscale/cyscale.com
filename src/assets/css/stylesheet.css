@@ -752,7 +752,7 @@ h5 {
 }
 /* .bigger-box{
   width: 100% !important;
- 
+
 } */
 
 .bigger-box .w-full {
@@ -918,5 +918,14 @@ h5 {
     background-position: center 70% !important;
 }
 
+@media (max-width: 1280px) {
+    [data-sal] {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
 @import url('blog-reset.css');
 @import url('new.css');
+@import url('sal.js/dist/sal.css');
+
