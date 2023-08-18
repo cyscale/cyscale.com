@@ -37,15 +37,6 @@ const topArticles = [
     {
         text: (
             <>
-                What is a CSPM and
-                <br className='hidden lg:block' /> why should you consider using one?
-            </>
-        ),
-        link: '/blog/cspm-visibility-compliance-security/'
-    },
-    {
-        text: (
-            <>
                 Understanding Cloud Security Posture Management (CSPM): <br className='block sm:hidden' /> An Essential
                 Guide
             </>

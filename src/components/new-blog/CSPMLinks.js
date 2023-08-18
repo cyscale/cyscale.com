@@ -74,16 +74,11 @@ const CSPMLinks = ({ dataBlueBird }) => {
                             <ArticleLink text={text} link={link} key={index} />
                         ))}
                         <Link
-                            to='/blog/cspm-visibility-compliance-security/'
-                            className='text-base font-medium font-montserrat inline-block mt-4 hover:underline'
-                        >
-                            What is a CSPM and <br className='hidden lg:block' /> why should you consider using one?
-                        </Link>
-                        <Link
                             to='/blog/understanding-cspm-an-essential-guide/'
                             className='text-base font-medium font-montserrat inline-block mt-4 hover:underline'
                         >
-                            Understanding Cloud Security Posture Management (CSPM): <br className='block sm:hidden' /> An Essential Guide
+                            Understanding Cloud Security Posture Management (CSPM): <br className='block sm:hidden' />{' '}
+                            An Essential Guide
                         </Link>
                     </div>
                 </div>
