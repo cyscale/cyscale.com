@@ -36,7 +36,7 @@ tags:
 
 -   Multi-tenancy support for a Corporate Account and associated Users.
 -   Single auto-onboarding step for multiple Azure Subscriptions under a Tenant.
--   [Microsoft Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/cyscale.power-cloud-saas-basic) listing of the Cyscale Cloud Platform.
+-   [Microsoft Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/cyscale.cyscale?tab=overview) listing of the Cyscale Cloud Platform.
 -   Signup & access the Cyscale account using Microsoft, Google, or GitHub social logins.
 -   Notifications to _Slack_, _Teams_, _Datadog,_ and _Email_. Whenever your security policies are violated, you're instantly notified. You can also manually send an alert later.
 -   Simplified onboarding for AWS and Google Cloud using CloudFormation and Terraform.
