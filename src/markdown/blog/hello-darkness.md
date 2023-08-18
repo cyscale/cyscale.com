@@ -36,6 +36,6 @@ The new dark mode adapts automatically to your system's theme settings. It revam
 
 <br/>
 
-A lot of people simply prefer it and we hope you will like it too. Any feedback is [welcome](https://cyscale.com/support).
+A lot of people simply prefer it and we hope you will like it too. Any feedback is [welcome](https://cyscale.com/contact-us/).
 
 <br/>

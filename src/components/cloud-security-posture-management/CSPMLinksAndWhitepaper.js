@@ -55,7 +55,7 @@ const CSPMLinksAndWhitepaper = () => {
                             className='text-base font-medium font-montserrat inline-block mt-4'
                         >
                             What is a CSPM and <br className='hidden lg:block' /> why should you consider using one?
-                        </Link>{' '}
+                        </Link>
                     </div>
                 </div>
                 <div className='col-span-12 lg:col-span-8 sm:max-w-lg md:max-w-lg lg:max-w-4xl mx-auto lg:mx-0'>
