@@ -45,9 +45,7 @@ The shared responsibility model is a concept that defines how security responsib
 The most popular cloud service providers are: 
 
 1. Amazon Web Services (AWS) 
-
 2. Google Cloud 
-
 3. Microsoft Azure 
 
 All major providers have, and regularly renew, their certificates of compliance with regulations. However, the weight of these regular updates also falls on the users’ shoulders: they still have the responsibility of getting certified to prove that the way they make use of cloud services (for apps, data, and workloads) matches the standard requirement. 
@@ -119,6 +117,6 @@ Easier compliance is just a login away! [Start Your Free Trial](https://cyscale.
 
 <ul class="faq-list"><li><p class="question" style="font-weight:bold;">What is cloud compliance?</p><p class="answer">Cloud compliance encompasses regulations and guidelines that companies must adhere to when storing data in the cloud. It ensures that both cloud service providers and users maintain data integrity and security. 
 
-Dive deeper into our [cloud security strategy](https://cyscale.com/cloud-security-strategy-best-practices-tutorials).</p></li><li><p class="question" style="font-weight:bold;">Who is responsible for compliance in the cloud?</p><p class="answer">Compliance in the cloud is a shared responsibility. While cloud service providers, such as AWS or Google Cloud, manage the infrastructure's security, it’s up to the users to ensure application-level security and data protection.</p></li><li><p class="question" style="font-weight:bold;">What is the importance of cloud compliance standards?</p><p class="answer">Compliance standards like GDPR, PCI DSS, HIPAA, and NIST provide a framework to ensure data safety, privacy, and integrity. Adhering to these standards mitigates risks, safeguards sensitive information, and can significantly boost customer trust.</p></li></ul>
+Dive deeper into our [cloud security strategy](https://cyscale.com/blog/cloud-security-strategy-best-practices-tutorials).</p></li><li><p class="question" style="font-weight:bold;">Who is responsible for compliance in the cloud?</p><p class="answer">Compliance in the cloud is a shared responsibility. While cloud service providers, such as AWS or Google Cloud, manage the infrastructure's security, it’s up to the users to ensure application-level security and data protection.</p></li><li><p class="question" style="font-weight:bold;">What is the importance of cloud compliance standards?</p><p class="answer">Compliance standards like GDPR, PCI DSS, HIPAA, and NIST provide a framework to ensure data safety, privacy, and integrity. Adhering to these standards mitigates risks, safeguards sensitive information, and can significantly boost customer trust.</p></li></ul>
 
 Ready to soar confidently through the cloud? Dive into Cyscale's Cloud Security Platform and consider [signing up for a demo](https://cyscale.com/request-demo). Secure, compliant cloud operations are just a click away.
