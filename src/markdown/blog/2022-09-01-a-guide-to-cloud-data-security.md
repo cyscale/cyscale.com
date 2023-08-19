@@ -123,10 +123,12 @@ Ensuring [multi-cloud data security](https://cyscale.com/use-cases/cloud-data-se
 
 Cyscale provides powerful dashboards to ensure visibility of your assets, the identities in your cloud, and an overview of your data security.
 
-Moreover, 400+ security controls ensure that your security teams have implemented the cybersecurity principles and [best practices](https://cyscale.com/blog/5-cspm-best-practices-and-strategies/). Here are some examples of controls that can be used to ensure data security:
+Moreover, 400+ security controls ensure that your security teams have implemented the cybersecurity principles and best practices. Here are some examples of controls that can be used to ensure data security:
 
 * **In motion data encryption**: *Ensure web app is using the latest version of TLS encryption* for Microsoft Azure
 * **At rest data encryption**: *Ensure VM disks for critical VMs are encrypted with Customer*-Supplied Encryption Keys (CSEK) for Google Cloud
 * **Access control**: *Ensure S3 bucket policy does not grant Allow permission to everyone* for AWS
 * **Data classification**: *Ensure Kubernetes Clusters are configured with Labels* for Google Cloud
 * **DDOS Protection**: *Ensure Anti-DDoS access and security log service is enabled* for Alibaba Cloud
+
+Before diving into specific controls, it's essential to acknowledge the evolving **[cloud security challenges](https://cyscale.com/blog/cloud-security-challenges/)** that businesses face. With a constantly changing digital landscape, understanding these challenges can help shape your security strategies more effectively.
