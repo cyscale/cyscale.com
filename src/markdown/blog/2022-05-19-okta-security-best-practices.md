@@ -178,6 +178,10 @@ There should be a well-defined set of steps when an employee leaves the company.
 * You correctly deprovision their account, and 
 * They cannot access and make changes to your systems anymore. 
 
+
+
+Along with these Okta-centric recommendations, it's essential to ensure that your organization adheres to broader **[cloud security best practices](https://cyscale.com/blog/cloud-data-security-guide/)**. Diversifying your security strategies and keeping abreast of best practices in the wider cloud ecosystem provides a layered defense against potential threats.
+
 <br/>
 
 Are you following these best practices in your company? 
