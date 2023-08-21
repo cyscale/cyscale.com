@@ -225,8 +225,32 @@ const Sitemap = ({ location }) => {
                                     marginTop='-m-1'
                                 />
                                 <SitemapLink
-                                    text='Securing IAM - Best Practices Recommended by AWS, Azure, and GCP'
+                                    text='Securing IAM - Best Practices Recommended by AWS, Azure, and Google Cloud'
                                     link='/blog/iam-best-practices-from-aws-azure-gcp/'
+                                    flexItemsPosition='items-start'
+                                    marginTop='-m-1'
+                                />
+                                <SitemapLink
+                                    text='A Guide to Cloud Data Security Best Practices'
+                                    link='/blog/cloud-data-security-guide/'
+                                    flexItemsPosition='items-start'
+                                    marginTop='-m-1'
+                                />
+                                <SitemapLink
+                                    text='Securing the Cloud: A Dive into Cloud Infrastructure Security'
+                                    link='/blog/cloud-infrastructure-security/'
+                                    flexItemsPosition='items-start'
+                                    marginTop='-m-1'
+                                />
+                                <SitemapLink
+                                    text='Cloud Security Strategy: Best Practices, Tutorials, and More'
+                                    link='/blog/cloud-security-strategy-best-practices-tutorials/'
+                                    flexItemsPosition='items-start'
+                                    marginTop='-m-1'
+                                />
+                                <SitemapLink
+                                    text='Understanding Cloud Security Posture Management (CSPM): An Essential Guide'
+                                    link='/blog/understanding-cspm-an-essential-guide/'
                                     flexItemsPosition='items-start'
                                     marginTop='-m-1'
                                 />

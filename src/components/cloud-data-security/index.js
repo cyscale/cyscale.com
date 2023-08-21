@@ -15,27 +15,26 @@ import NewTopNav from '../layout/NewTopNav';
 import { graphql, useStaticQuery } from 'gatsby';
 import LinksAndWhitepaper from '../products/LinksAndWhitepaper';
 
-const topArticles = [
+export const topArticles = [
     {
         text: 'A Guide to Cloud Data Security',
         link: '/blog/cloud-data-security-guide/'
     },
     {
-        text: 'CNAPP: A mix of CSPM & CWPP',
-        link: '/blog/cnapp-a-mix-of-cspm-cwpp/'
+        text: 'Securing the Cloud: A Dive into Cloud Infrastructure Security',
+        link: '/blog/cloud-infrastructure-security/'
     },
     {
-        text: 'CSPM: A Comprehensive Guide',
-        link: '/blog/cloud-security-posture-management-cspm-guide/'
+        text: 'Cloud Security Strategy: Best Practices, Tutorials, and More',
+        link: '/blog/cloud-security-strategy-best-practices-tutorials/'
     },
     {
-        text: 'What to Look for in a CSPM?',
-        link: '/blog/what-to-look-for-in-a-cspm/'
+        text: 'Okta Security Best Practices',
+        link: '/blog/iam-okta-security-best-practices/'
     },
     {
-        text: 'What is a CSPM and<br class="hidden lg:block"> why should you consider using one?',
-        link: '/blog/cspm-visibility-compliance-security/',
-        children: true
+        text: 'Understanding Cloud Security Posture Management (CSPM): An Essential Guide',
+        link: '/blog/understanding-cspm-an-essential-guide/',
     }
 ];
 
