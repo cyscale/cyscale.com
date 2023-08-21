@@ -52,7 +52,7 @@ const MostReadArticles = () => {
                 image={data.cloudNativeIcon.childImageSharp.gatsbyImageData}
             />
             <BlogLink
-                link={'/blog/cloud-security-and-compliance'}
+                link={'/blog/cloud-security-and-compliance/'}
                 categories={['cspm', 'compliance']}
                 text={['Cloud Security and', <br />, 'Compliance: A Guide for', <br />, 'Your Cloud Infrastructure']}
                 image={data.cloudIcon.childImageSharp.gatsbyImageData}

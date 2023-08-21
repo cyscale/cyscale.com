@@ -202,7 +202,7 @@ const Apply = ({ jobTitle, jobs, dispaly = 'row' }) => {
                                                 padding: 0.625rem 2.5rem;
                                             `}
                                             className={classNames(
-                                                'gradientBgBtn  w-full text-base font-normal rounded text-white uppercase text-center  no-underline',
+                                                'bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] w-full text-base font-normal rounded text-white uppercase text-center no-underline',
                                                 { 'lg:max-w-xs': dispaly === 'row' }
                                             )}
                                         >

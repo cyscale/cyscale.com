@@ -205,7 +205,7 @@ const Index = () => {
                 <GetStarted
                     description='Ready to give it a try and see how it works?'
                     btnText='START YOUR FREE TRIAL'
-                    btnLink={'/free-trial'}
+                    btnLink={'/free-trial/'}
                     icon={getStartedICon}
                 />
             </div>
@@ -231,7 +231,7 @@ const Index = () => {
                 <GetStarted
                     description={`Accurate. Real-time. Context-aware.`}
                     btnText='TRY CYSCALE FOR FREE'
-                    btnLink={'/free-trial'}
+                    btnLink={'/free-trial/'}
                     sectionName='dataSecFoot'
                 />
             </div>

@@ -116,7 +116,7 @@ const CloudCompliance = ({ location }) => {
                 hardcoded-pages
             </div>
             <div className='hidden' data-permalink>
-                /use-cases/iso-27001-compliance
+                /use-cases/iso-27001-compliance/
             </div>
             <div className='hidden' data-title>
                 ISO 27001 Cloud Security | Compliance & Security - Cyscale
@@ -143,10 +143,10 @@ const CloudCompliance = ({ location }) => {
                                         policies.
                                     </p>
                                     <div className='flex mt-8'>
-                                        <Link to='/free-trial'>
+                                        <Link to='/free-trial/'>
                                             <GradientButton text='Start Free Trial' />
                                         </Link>
-                                        <Link to='/request-demo' className='ml-4'>
+                                        <Link to='/request-demo/' className='ml-4'>
                                             <LightDarkButton text={'Request Demo'} />
                                         </Link>
                                     </div>
@@ -405,7 +405,7 @@ const CloudCompliance = ({ location }) => {
                 <GetStarted
                     icon={getStartedICon}
                     btnText='Start your free trial'
-                    btnLink={'/free-trial'}
+                    btnLink={'/free-trial/'}
                     description='Achieve true continuous compliance for ISO 27001'
                 />
             </div>

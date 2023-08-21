@@ -92,7 +92,7 @@ const AzureCloudSecurity = ({ location }) => {
                 hardcoded-pages
             </div>
             <div className='hidden' data-permalink>
-                /use-cases/azure-cloud-security
+                /use-cases/azure-cloud-security/
             </div>
             <div className='hidden' data-title>
                 Azure Cloud Security and Compliance Automation - Cyscale
@@ -120,10 +120,10 @@ const AzureCloudSecurity = ({ location }) => {
                                     Automatically create and maintain compliance reports for PCI, HIPAA and more.
                                 </p>
                                 <div className='flex mt-8 justify-start'>
-                                    <Link to='/free-trial'>
+                                    <Link to='/free-trial/'>
                                         <GradientButton text='Start Free Trial' />
                                     </Link>
-                                    <Link to='/request-demo' className='ml-4'>
+                                    <Link to='/request-demo/' className='ml-4'>
                                         <LightDarkButton text={'Request Demo'} />
                                     </Link>
                                 </div>
@@ -310,7 +310,7 @@ const AzureCloudSecurity = ({ location }) => {
                         </p>
                         <div className='mt-10 flex'>
                             <div className='w-auto inline-block'>
-                                <Link to='/free-trial'>
+                                <Link to='/free-trial/'>
                                     <button
                                         css={css`
                                             padding: 0.625rem 2.5rem;

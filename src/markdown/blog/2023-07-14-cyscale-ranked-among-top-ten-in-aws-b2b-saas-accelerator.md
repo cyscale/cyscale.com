@@ -70,6 +70,6 @@ We believe that Cyscale’s placement among the top 10 companies in the AWS B2B 
 * [Security Knowledge Graph](https://cyscale.com/products/security-knowledge-graph/), 
 * [Cloud compliance platform](https://cyscale.com/use-cases/cloud-compliance-and-auditing/), 
 * [CSPM capabilities](https://cyscale.com/products/cloud-security-posture-management/), 
-* [Contextual visibility](https://cyscale.com/blog/s3-bucket-security). 
+* [Contextual visibility](https://cyscale.com/blog/s3-bucket-security/). 
 
 We are incredibly excited to participate in this program, where we have the opportunity to gain invaluable insights from AWS mentors as we strive to help as many companies as possible secure their cloud!

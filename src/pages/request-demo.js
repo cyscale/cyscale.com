@@ -38,7 +38,7 @@ const ContactUs = ({ location }) => {
                 hardcoded-pages
             </div>
             <div className='hidden' data-permalink>
-                /request-demo
+                /request-demo/
             </div>
             <div className='hidden' data-title>
                 Request Demo - Cyscale

@@ -78,7 +78,7 @@ const AWSCloudSecurity = ({ location }) => {
                 hardcoded-pages
             </div>
             <div className='hidden' data-permalink>
-                /use-cases/aws-cloud-security
+                /use-cases/aws-cloud-security/
             </div>
             <div className='hidden' data-title>
                 AWS Cloud Security and Compliance - Cyscale
@@ -106,10 +106,10 @@ const AWSCloudSecurity = ({ location }) => {
                                     Map, secure, and monitor your AWS assets in minutes.
                                 </p>
                                 <div className='flex mt-8 justify-start'>
-                                    <Link to='/free-trial'>
+                                    <Link to='/free-trial/'>
                                         <GradientButton text='Start Free Trial' />
                                     </Link>
-                                    <Link to='/request-demo' className='ml-4'>
+                                    <Link to='/request-demo/' className='ml-4'>
                                         <LightDarkButton text={'Request Demo'} />
                                     </Link>
                                 </div>
@@ -266,7 +266,7 @@ const AWSCloudSecurity = ({ location }) => {
                                 Start seeing value & saving money in minutes
                             </p>
                             <Link
-                                to='/free-trial'
+                                to='/free-trial/'
                                 className='bg-white text-base uppercase font-medium rounded mt-8 hover:bg-transparent font-hind'
                                 css={css`
                                     padding: 0.625rem 2.5rem;

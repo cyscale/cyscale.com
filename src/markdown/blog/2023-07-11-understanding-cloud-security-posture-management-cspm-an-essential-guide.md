@@ -112,7 +112,7 @@ By taking a proactive stance on cloud security posture, IT professionals can ben
 
 Cyscale is a [CSPM solution](https://cyscale.com/products/cloud-security-posture-management/) that brings together multi-cloud infrastructures and automatically highlights misconfigurations and vulnerabilities using powerful dashboards and security controls, saving teams considerable time on remediation. Cyscale also supports companies in their journey to compliance. 
 
-To see real-life examples of how a powerful CSPM tool works, you can read our case studies and learn *[how we’ve helped a company gain IAM visibility and ensure cloud security and compliance](https://cyscale.com/case-studies/smart-fintech)*, or *[how we’ve identified blind spots in the infrastructure of another one of our customers, increasing their productivity by 50%.](https://cyscale.com/case-studies/bays-consulting/)* 
+To see real-life examples of how a powerful CSPM tool works, you can read our case studies and learn *[how we’ve helped a company gain IAM visibility and ensure cloud security and compliance](https://cyscale.com/case-studies/smart-fintech/)*, or *[how we’ve identified blind spots in the infrastructure of another one of our customers, increasing their productivity by 50%.](https://cyscale.com/case-studies/bays-consulting/)* 
 
 By implementing a robust CSPM solution, the companies gained comprehensive visibility into their cloud infrastructure, identified compliance gaps, and remediated them accordingly. Their security team was equipped with actionable insights, enabling them to quickly identify and address issues, preventing potential security incidents.  
 

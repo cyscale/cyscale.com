@@ -28,7 +28,7 @@ const redirects = [
     },
     {
         fromPath: '/startups',
-        toPath: '/security-for-startups-program'
+        toPath: '/security-for-startups-program/'
     },
     {
         fromPath: '/blog/AWS-SOC%202-Compliance-Checklist-A-Detailed-Guide',
@@ -213,7 +213,7 @@ exports.createPages = async ({ graphql, actions }) => {
         const numPages = Math.ceil(allPosts.length / postsPerPage);
         Array.from({ length: numPages }).forEach((_, i) => {
             createPage({
-                path: i === 0 ? `/blog` : `/blog/${i + 1}`,
+                path: i === 0 ? `/blog/` : `/blog/${i + 1}/`,
                 component: blogAllPostsTemplate,
                 context: {
                     limit: postsPerPage,
@@ -260,7 +260,7 @@ exports.createPages = async ({ graphql, actions }) => {
                     createPage({
                         path:
                             i === 0
-                                ? `/blog/${node.frontmatter.name.toLowerCase()}`
+                                ? `/blog/${node.frontmatter.name.toLowerCase()}/`
                                 : `/blog/${node.frontmatter.name.toLowerCase()}/${i + 1}`,
                         component: path.resolve(`src/template/blogCategoriesTemplate.js`),
                         context: {

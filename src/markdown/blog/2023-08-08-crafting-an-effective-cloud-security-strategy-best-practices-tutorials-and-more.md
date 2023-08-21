@@ -73,7 +73,7 @@ It's not just about having a plan; it’s about knowing how to implement it corr
 
 Google Cloud has a very useful feature for Compute Instances, which is called Shielded VM. By taking the extra step to enable this feature, you ensure that your virtual machines are hardened by a set of security measures that help defend against different types of malware. 
 
-A pro tip would be setting an organizational policy to ensure that all new VMs will be created with the Shielded VM feature enabled. To do that, while logged in your Google Cloud console, click [here](https://console.cloud.google.com/iam-admin/orgpolicies/compute-requireShieldedVm). You can also protect your already existent VMs. Cyscale provides detailed steps on how to do that and other ways of protecting your Compute Instances, which you can discover with [a free trial](https://cyscale.com/free-trial). 
+A pro tip would be setting an organizational policy to ensure that all new VMs will be created with the Shielded VM feature enabled. To do that, while logged in your Google Cloud console, click [here](https://console.cloud.google.com/iam-admin/orgpolicies/compute-requireShieldedVm). You can also protect your already existent VMs. Cyscale provides detailed steps on how to do that and other ways of protecting your Compute Instances, which you can discover with [a free trial](https://cyscale.com/free-trial/). 
 
 ### 3. Automation is key
 

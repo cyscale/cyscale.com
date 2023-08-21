@@ -93,7 +93,7 @@ const PricingPage = ({ location }) => {
                 hardcoded-pages
             </div>
             <div className='hidden' data-permalink>
-                /pricing
+                /pricing/
             </div>
             <div className='hidden' data-title>
                 Pricing - Cyscale
@@ -187,7 +187,7 @@ const PricingPage = ({ location }) => {
                                 Not sure how many assets you want to protect?
                             </p>
                             <p className='text-base font-montserrat text-blue font-medium text-center'>
-                                <GatsbyLink to='/free-trial' className='hover:underline'>
+                                <GatsbyLink to='/free-trial/' className='hover:underline'>
                                     Find out with the Free Trial
                                 </GatsbyLink>
                             </p>
@@ -367,7 +367,7 @@ const PricingPage = ({ location }) => {
                     <h4 className='text-center lg:text-lg font-montserrat font-semibold mt-2' css={linkFontSize}>
                         View Cyscale in action{' '}
                         <GatsbyLink
-                            to='/playground'
+                            to='/playground/'
                             className='text-blue hover:underline font-montserrat font-semibold'
                         >
                             on the Playground account

@@ -126,7 +126,7 @@ export default function RemoteWorkContent() {
                 <GetStarted
                     description='Support productive, secure & compliant remote workflows'
                     btnText='START YOUR FREE TRIAL'
-                    btnLink={'/free-trial'}
+                    btnLink={'/free-trial/'}
                     icon={getStartedICon}
                     sectionName='RemoteWork'
                 />
@@ -217,7 +217,7 @@ export default function RemoteWorkContent() {
                     icon={getStartedICon}
                     description={`Prevent cloud data spills and keep remote work incident-free`}
                     btnText='Start your free trial'
-                    btnLink={'/free-trial'}
+                    btnLink={'/free-trial/'}
                 />
             </div>
             <LinksAndWhitepaper

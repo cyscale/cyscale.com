@@ -69,7 +69,7 @@ const Platform = ({ pathname, activeLinks, setActiveLinks }) => {
                 <p className='mb-4'>Explore the knowledge graph in our playground account populated with data.</p>
                 <Link
                     className='bg-blue text-white py-2 px-4 rounded cursor-pointer font-medium flex'
-                    to='/playground'
+                    to='/playground/'
                     css={[hoverButtonColorStyle, widthFitStyle]}
                 >
                     <RightArrow fillColor={'white'} marginTop='0.2rem' />

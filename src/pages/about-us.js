@@ -189,7 +189,7 @@ const AboutUs = ({ location }) => {
                 <GetStarted
                     description='Start improving your Cloud Security Posture'
                     btnText='TRY CYSCALE FOR FREE'
-                    btnLink={'/free-trial'}
+                    btnLink={'/free-trial/'}
                     icon={getStartedIcon}
                     sectionName='aboutUsGetStarted'
                 />

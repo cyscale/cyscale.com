@@ -57,7 +57,7 @@ Overall, the Cyscale for Startups Program is similar to our [Pro Plan](https://c
 
 **Getting started** 
 
-You can [apply to the program](https://cyscale.com/security-for-startups-program) regardless of whether you’re new to Cyscale or an existing Cyscale customer. You only have to meet our qualification criteria above. 
+You can [apply to the program](https://cyscale.com/security-for-startups-program/) regardless of whether you’re new to Cyscale or an existing Cyscale customer. You only have to meet our qualification criteria above. 
 
 By implementing an early cybersecurity program using the Cyscale Platform, startups can take advantage of our intensive cloud security research, up-to-date compliance frameworks mapping, and [best practices](https://cyscale.com/blog/5-cspm-best-practices-and-strategies/) in improving their security posture without spending too much or hiring specialized staff. The purpose is to raise awareness about the importance of security and compliance in the cloud. 
 

@@ -25,7 +25,7 @@ tags:
   - pci-dss
   - compliance
 ---
-The new [PCI DSS](https://cyscale.com/blog/pci-dss-compliance-in-cloud) version has been released, and the old PCI DSS standard will be deprecated as of the 31st of March, 2024. In this article, we will discuss all the deadlines by which you have to become compliant, details about the new requirements, and everything else you need to know about PCI DSS version 4.
+The new [PCI DSS](https://cyscale.com/blog/pci-dss-compliance-in-cloud/) version has been released, and the old PCI DSS standard will be deprecated as of the 31st of March, 2024. In this article, we will discuss all the deadlines by which you have to become compliant, details about the new requirements, and everything else you need to know about PCI DSS version 4.
 
 ## Timeline and deadlines
 

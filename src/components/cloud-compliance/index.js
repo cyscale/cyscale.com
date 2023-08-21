@@ -153,7 +153,7 @@ export default function CloudComplianceContent() {
                 <GetStarted
                     description='Easier compliance is just a login away! Leave the heavy lifting to us'
                     btnText='START YOUR FREE TRIAL'
-                    btnLink={'/free-trial'}
+                    btnLink={'/free-trial/'}
                     icon={getStartedICon}
                     sectionName='RemoteWork'
                 />
@@ -196,7 +196,7 @@ export default function CloudComplianceContent() {
                 <GetStarted
                     description='Explore the full toolbox for your GRC system'
                     btnText='START YOUR FREE TRIAL'
-                    btnLink={'/free-trial'}
+                    btnLink={'/free-trial/'}
                     icon={getStartedICon}
                     sectionName='RemoteWork'
                 />

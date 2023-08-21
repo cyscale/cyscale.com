@@ -94,10 +94,10 @@ const CloudMissConfiguration = ({ location }) => {
             heroBG={heroBG}
             location={location}
             bannerBtn1Text='Start Free Trial'
-            bannerBtn1Link={'/free-trial'}
+            bannerBtn1Link={'/free-trial/'}
             bannerBtn1LinkInternal={true}
             bannerBtn2Text='Request demo'
-            bannerBtn2Link='/request-demo'
+            bannerBtn2Link='/request-demo/'
             pageName='MisconfigurationsPage'
             title='Cloud Misconfiguration Security - Cyscale'
             bannerTitle='Eliminate Cloud Misconfigurations with Security Automation'
@@ -111,7 +111,7 @@ const CloudMissConfiguration = ({ location }) => {
                 <GetStarted
                     description='When did you last scan your cloud for misconfigurations?'
                     btnText='Start scanning for free'
-                    btnLink={'/free-trial'}
+                    btnLink={'/free-trial/'}
                     icon={iconTwo}
                     icon2={iconThree}
                     sectionName='getStartedFooter'

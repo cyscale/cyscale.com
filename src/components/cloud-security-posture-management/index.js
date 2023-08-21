@@ -224,7 +224,7 @@ const Index = () => {
                     title={`AGENTLESS, MULTI-CLOUD, PAINLESS CSPM`}
                     description='Start seeing value & saving money in minutes'
                     btnText='TRY CYSCALE FOR FREE'
-                    btnLink={'/free-trial'}
+                    btnLink={'/free-trial/'}
                 />
             </div>
         </>

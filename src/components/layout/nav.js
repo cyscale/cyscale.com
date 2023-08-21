@@ -141,7 +141,7 @@ const company = [
         text: 'Careers'
     },
     {
-        link: '/contact-us',
+        link: '/contact-us/',
         text: 'Contact us'
     }
 ];
