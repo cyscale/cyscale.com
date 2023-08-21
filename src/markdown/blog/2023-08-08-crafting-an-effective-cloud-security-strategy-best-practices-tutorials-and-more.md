@@ -121,7 +121,7 @@ Simply replace resourceGroupName, subscriptionID, activityLogRuleName, actionGro
 
 ## A Peek at Cyscale's Approach 
 
-At Cyscale, we're more than familiar with the challenges of securing cloud resources. Our [CSPM solution](https://cyscale.com/products/cloud-security-posture-management/) offers real-time insights into your security posture. Or maybe you’re curious about [cloud native applications](https://cyscale.com/blog/cnapp-secure-native-applications/)? Our [CNAPP security](https://cyscale.com/products/cnapp/) tools are purpose-built to bolster your cloud-native security platform, ensuring threats are kept at bay. Dive deeper into our offerings and understand how a proactive approach to security, centered around a trusted [cloud native security](https://cyscale.com/blog/cloud-native-security-guide/) strategy, can change the game. 
+At Cyscale, we're more than familiar with [cloud security challenges](https://cyscale.com/blog/cloud-security-challenges/). Our [CSPM solution](https://cyscale.com/products/cloud-security-posture-management/) offers real-time insights into your security posture. Or maybe you’re curious about [cloud native applications](https://cyscale.com/blog/cnapp-secure-native-applications/)? Our [CNAPP security](https://cyscale.com/products/cnapp/) tools are purpose-built to bolster your cloud-native security platform, ensuring threats are kept at bay. Dive deeper into our offerings and understand how a proactive approach to security, centered around a trusted [cloud native security](https://cyscale.com/blog/cloud-native-security-guide/) strategy, can change the game. 
 
 ## Concluding Thoughts 
 
