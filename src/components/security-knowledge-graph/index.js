@@ -15,10 +15,22 @@ import Icon3 from '../../assets/images/feature_icon_3.inline.svg';
 import Icon4 from '../../assets/images/feature_icon_4.inline.svg';
 import Icon5 from '../../assets/images/feature_icon_5.inline.svg';
 import Icon6 from '../../assets/images/feature_icon_6.inline.svg';
-import { Link } from 'gatsby';
+import { graphql, Link, useStaticQuery } from 'gatsby';
 import { Container, Row, Section } from '../atoms/Containers';
+import LinksAndWhitepaper from '../products/LinksAndWhitepaper';
+import { topArticles } from '../cloud-data-security';
 
 const Index = () => {
+    const data = useStaticQuery(graphql`
+        query SKGQuery {
+            card: file(relativePath: { eq: "csm-whitepaper-bluebird.webp" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 386, layout: FIXED)
+                }
+            }
+        }
+    `);
+
     const dataFeatures = [
         {
             icon: <Icon1 />,
@@ -224,6 +236,17 @@ const Index = () => {
                 />
             </div>
             <FAQs id='faqs' />
+            <LinksAndWhitepaper
+                topArticles={topArticles}
+                data={data}
+                title={'Cloud Data Security'}
+                titleCard={'The Complete Guide<br class="hidden lg:block" /> to Cloud Storage Misconfigurations'}
+                textCard={
+                    'This guide helps CIOs, CISOs and security staff to understand the risk & dangers of data security breaches and the importance of a secure cloud storage infrastructure.'
+                }
+                linkCard={'/whitepaper/cloud-storage-misconfigurations/'}
+                misconfigurationWhitepaper={true}
+            />
         </>
     );
 };
