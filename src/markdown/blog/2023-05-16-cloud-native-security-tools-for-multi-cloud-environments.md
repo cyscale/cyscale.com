@@ -94,7 +94,7 @@ A CNAPP tool is capable of providing: 
 2. Security controls, 
 3. Compliance features, 
 4. Container image scanning,  
-5. [IAM (Identity and Access Management)](https://cyscale.com/blog/iam-services-in-aws-azure-gcp) assessments, and many others. 
+5. [IAM (Identity and Access Management)](https://cyscale.com/blog/iam-services-in-aws-azure-gcp/) assessments, and many others. 
 
 A key advantage of CNAPP solutions is their ability to integrate with all cloud providers. This allows them to monitor cloud workloads and provide real-time alerts and remediation steps for their users. 
 

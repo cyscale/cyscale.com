@@ -103,8 +103,8 @@ const OtherLinks = ({ dataBlueBird }) => {
                             {cspmPages.map(({ text, link }, index) => (
                                 <PageLink text={text} link={link} key={index} />
                             ))}
-                            <PageLink text='Container Security' link='/use-cases/container-security' />
-                            <PageLink text='Cloud Native Security Platform' link='/use-cases/cloud-native-security' />
+                            <PageLink text='Container Security' link='/use-cases/container-security/' />
+                            <PageLink text='Cloud Native Security Platform' link='/use-cases/cloud-native-security/' />
                         </div>
 
                         <div className='hidden lg:block absolute bottom-0 right-0'>

@@ -292,7 +292,7 @@ const CSPM = ({ location }) => {
                     <br className='block md:hidden' /> Smart Fintech
                 </>
             ),
-            link: '/case-studies/smart-fintech'
+            link: '/case-studies/smart-fintech/'
         }
     ];
 
@@ -347,10 +347,10 @@ const CSPM = ({ location }) => {
                                         Google Cloud, Alibaba Cloud.
                                     </p>
                                     <div className='flex mt-8 justify-start'>
-                                        <Link to='/free-trial'>
+                                        <Link to='/free-trial/'>
                                             <GradientButton text='Start Free Trial' />
                                         </Link>
-                                        <Link to='/request-demo' className='ml-4'>
+                                        <Link to='/request-demo/' className='ml-4'>
                                             <LightDarkButton text={'Request Demo'} />
                                         </Link>
                                     </div>

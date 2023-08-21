@@ -182,7 +182,7 @@ const Home = () => {
                 <GetStarted
                     description='Start seeing value & saving money in minutes'
                     btnText=' Try Cyscale for free'
-                    btnLink="/free-trial"
+                    btnLink="/free-trial/"
                 />
             </div>
             <Cloud
@@ -215,7 +215,7 @@ const Home = () => {
                 <GetStarted
                     description='When did you last scan your cloud for misconfigurations?'
                     btnText='Start scanning for free'
-                    btnLink="/free-trial"
+                    btnLink="/free-trial/"
                     icon={iconTwo}
                     icon2={iconThree}
                     sectionName='getStartedFooter'

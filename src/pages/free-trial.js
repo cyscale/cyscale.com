@@ -29,7 +29,7 @@ const FreeTrial = ({ location }) => {
                 hardcoded-pages
             </div>
             <div className='hidden' data-permalink>
-                /free-trial
+                /free-trial/
             </div>
             <div className='hidden' data-title>
                 Start Free Trial - Cyscale

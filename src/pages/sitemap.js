@@ -59,7 +59,7 @@ const Sitemap = ({ location }) => {
                 hardcoded-pages
             </div>
             <div className='hidden' data-permalink>
-                /sitemap
+                /sitemap/
             </div>
             <div className='hidden' data-title>
                 Sitemap - Cyscale
@@ -208,7 +208,7 @@ const Sitemap = ({ location }) => {
                                 />
                                 <SitemapLink
                                     text='Cloud Security and Compliance: A Guide for Your Cloud Infrastructure'
-                                    link='/blog/cloud-security-and-compliance'
+                                    link='/blog/cloud-security-and-compliance/'
                                     flexItemsPosition='items-start'
                                     marginTop='-m-1'
                                 />

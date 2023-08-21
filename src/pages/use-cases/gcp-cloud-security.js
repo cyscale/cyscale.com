@@ -83,7 +83,7 @@ const GCPCloudSecurity = ({ location }) => {
                 hardcoded-pages
             </div>
             <div className='hidden' data-permalink>
-                /use-cases/gcp-cloud-security
+                /use-cases/gcp-cloud-security/
             </div>
             <div className='hidden' data-title>
                 Google Cloud Security | Google Cloud Security and Compliance - Cyscale
@@ -111,10 +111,10 @@ const GCPCloudSecurity = ({ location }) => {
                                     Map, secure, and monitor your Google Cloud environment in minutes.
                                 </p>
                                 <div className='flex mt-8 justify-start'>
-                                    <Link to='/free-trial'>
+                                    <Link to='/free-trial/'>
                                         <GradientButton text='Start Free Trial' />
                                     </Link>
-                                    <Link to='/request-demo' className='ml-4'>
+                                    <Link to='/request-demo/' className='ml-4'>
                                         <LightDarkButton text={'Request Demo'} />
                                     </Link>
                                 </div>
@@ -281,7 +281,7 @@ const GCPCloudSecurity = ({ location }) => {
                                 Start seeing value & saving money in minutes
                             </p>
                             <Link
-                                to='/free-trial'
+                                to='/free-trial/'
                                 className='bg-white text-base uppercase font-medium rounded mt-8 hover:bg-transparent font-hind'
                                 css={css`
                                     padding: 0.625rem 2.5rem;

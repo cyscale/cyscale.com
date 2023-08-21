@@ -78,7 +78,7 @@ const PciDss = ({ location }) => {
                 hardcoded-pages
             </div>
             <div className='hidden' data-permalink>
-                /use-cases/pci-dss
+                /use-cases/pci-dss/
             </div>
             <div className='hidden' data-title>
                 PCI Cloud Security & Compliance | Automate PCI DSS Compliance - Cyscale
@@ -108,10 +108,10 @@ const PciDss = ({ location }) => {
                                 </strong>
                             </p>
                             <div className='flex mt-8'>
-                                <Link to='/free-trial'>
+                                <Link to='/free-trial/'>
                                     <GradientButton text='Start Free Trial' />
                                 </Link>
-                                <Link to='/request-demo' className='ml-4'>
+                                <Link to='/request-demo/' className='ml-4'>
                                     <LightDarkButton text={'Request Demo'} />
                                 </Link>
                             </div>
@@ -322,7 +322,7 @@ const PciDss = ({ location }) => {
                                 Start seeing value & saving money in minutes
                             </p>
                             <Link
-                                to='/free-trial'
+                                to='/free-trial/'
                                 className='bg-white text-base uppercase font-medium rounded mt-8 hover:bg-transparent font-hind'
                                 css={css`
                                     padding: 0.625rem 2.5rem;

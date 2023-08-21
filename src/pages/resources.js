@@ -243,7 +243,7 @@ const Resources = ({ location }) => {
                 hardcoded-pages
             </div>
             <div className='hidden' data-permalink>
-                /resources
+                /resources/
             </div>
             <div className='hidden' data-title>
                 Cloud Security Resources | Datasheets, Case Studies, White Papers - Cyscale

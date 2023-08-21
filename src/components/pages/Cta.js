@@ -20,7 +20,7 @@ const Cta = ({ markdown }) => {
                     <div className='mt-10 w-auto inline-block'>
                         <Link
                             className='gradientBgBtn w-full block text-sm font-medium rounded text-white text-center py-4 px-12 hover:no-underline no-underline font-hind'
-                            to='/request-demo'
+                            to='/request-demo/'
                         >
                             REQUEST LIVE DEMO
                         </Link>

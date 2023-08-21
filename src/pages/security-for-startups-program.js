@@ -70,11 +70,11 @@ const q2 = (useReactComponent) => {
                 <p className='mb-4'>
                     The{' '}
                     {useReactComponent ? (
-                        <Link className='underline' to='/security-for-startups-program'>
+                        <Link className='underline' to='/security-for-startups-program/'>
                             Cyscale for Startups{' '}
                         </Link>
                     ) : (
-                        <a href='https://cyscale.com/security-for-startups-program'>Cyscale for Startups</a>
+                        <a href='https://cyscale.com/security-for-startups-program/'>Cyscale for Startups</a>
                     )}
                     Program contract has an annual duration. (6 months free + 6 months at a discounted price)
                 </p>
@@ -203,7 +203,7 @@ const SecurityForStartupsProgram = ({ location }) => {
                     hardcoded-pages
                 </div>
                 <div className='hidden' data-permalink>
-                    /security-for-startups-program
+                    /security-for-startups-program/
                 </div>
                 <div className='hidden' data-title>
                     Startups Program - Cyscale

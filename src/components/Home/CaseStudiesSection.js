@@ -78,7 +78,7 @@ const CaseStudiesSection = () => {
                     <br className='block md:hidden' /> Smart Fintech
                 </>
             ),
-            link: '/case-studies/smart-fintech'
+            link: '/case-studies/smart-fintech/'
         }
     ];
 

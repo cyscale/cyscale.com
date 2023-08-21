@@ -54,6 +54,6 @@ In our latest major update, we’ve added:
 
 Cyscale is building the most user-friendly agentless cloud-native security platform, that automates the assessment and gives you contextual analysis of cloud misconfigurations, vulnerabilities, access, and data, to provide an accurate and actionable assessment of risk.
 
-Our solution takes away the requirement for specialist security skills in-house and identifies the 20% of fixes that will solve 80% of your cloud security challenges in just a few minutes. If you want to see Cyscale in action, [book a demo](https://cyscale.com/request-demo).
+Our solution takes away the requirement for specialist security skills in-house and identifies the 20% of fixes that will solve 80% of your cloud security challenges in just a few minutes. If you want to see Cyscale in action, [book a demo](https://cyscale.com/request-demo/).
 
 Our updated product data sheet, which puts all the above updates into context, is also available [here](https://cyscale.com/resources/cyscale-cloud-data-security-datasheet.pdf).

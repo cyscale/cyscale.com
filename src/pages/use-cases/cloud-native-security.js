@@ -67,7 +67,7 @@ const CloudNativeSecurity = ({ location }) => {
                 hardcoded-pages
             </div>
             <div className='hidden' data-permalink>
-                /use-cases/cloud-native-security
+                /use-cases/cloud-native-security/
             </div>
             <div className='hidden' data-title>
                 Powerful Cloud Native Security Platform - Cyscale
@@ -104,10 +104,10 @@ const CloudNativeSecurity = ({ location }) => {
                                         confidently accelerate innovation.
                                     </p>
                                     <div className='flex mt-8 justify-start'>
-                                        <Link to='/free-trial'>
+                                        <Link to='/free-trial/'>
                                             <GradientButton text='Start Free Trial' />
                                         </Link>
-                                        <Link to='/request-demo' className='ml-4'>
+                                        <Link to='/request-demo/' className='ml-4'>
                                             <LightDarkButton text={'Request Demo'} />
                                         </Link>
                                     </div>
@@ -227,7 +227,7 @@ const CloudNativeSecurity = ({ location }) => {
                             </p>
                         </div>
                         <LearnMoreSection>
-                            <LearnMoreLink link='/products/cnapp' />
+                            <LearnMoreLink link='/products/cnapp/' />
                         </LearnMoreSection>
                     </div>
                 </Row>
@@ -458,7 +458,7 @@ const CloudNativeSecurity = ({ location }) => {
                         <div className='mt-10 w-auto inline-block'>
                             <Link
                                 className='gradientBgBtn w-full block text-sm font-medium rounded text-white text-center py-4 px-12 hover:no-underline no-underline font-hind`'
-                                to='/request-demo'
+                                to='/request-demo/'
                             >
                                 REQUEST LIVE DEMO
                             </Link>

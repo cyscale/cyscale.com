@@ -106,7 +106,7 @@ const queries = [
                         title: node.frontmatter.title,
                         templateKey: node.frontmatter.templateKey,
                         description: node.frontmatter.description,
-                        permalink: `/${node.frontmatter.categoryPath}/${node.frontmatter.path}`,
+                        permalink: `/${node.frontmatter.categoryPath}/${node.frontmatter.path}/`,
                         content: striptags(new MarkdownIt().render(striptags(content))),
                         category: node.frontmatter.categoryPath === 'use-cases' ? 'solutions' : 'website'
                     };
@@ -126,8 +126,8 @@ const queries = [
                         description: node.frontmatter.description,
                         permalink:
                             node.frontmatter.templateKey === 'blog-post'
-                                ? /blog/ + node.frontmatter.permalink
-                                : node.frontmatter.permalink,
+                                ? /blog/ + node.frontmatter.permalink + '/'
+                                : node.frontmatter.permalink + '/',
                         content: striptags(new MarkdownIt().render(striptags(node.rawMarkdownBody))),
                         category: node.frontmatter.templateKey === 'blog-post' ? 'blog' : node.frontmatter.category
                     };
@@ -144,6 +144,7 @@ module.exports = {
         description:
             'Map all your cloud assets across providers in under 5 mins. Optimize costs, ensure cloud security, and prove compliance with the scalable Cyscale CSPM.'
     },
+    trailingSlash: 'always',
     plugins: [
         `gatsby-plugin-image`,
         'gatsby-plugin-sass',

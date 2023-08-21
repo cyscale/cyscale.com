@@ -69,7 +69,7 @@ const MobileNavigation = ({ showMenu, setShowMenu, appLink }) => {
                         })}
                         <div className='flex px-8 mt-4'>
                             <img src={IconUser} alt='' />
-                            <Link className='ml-2' to='/free-trial'>
+                            <Link className='ml-2' to='/free-trial/'>
                                 Start Free Trial
                             </Link>
                         </div>
@@ -87,7 +87,7 @@ const MobileNavigation = ({ showMenu, setShowMenu, appLink }) => {
                 {activeMenu === 'company' && <CompanyMobile />}
                 <div className='px-8 mb-3 w-full bg-white absolute bottom-0'>
                     <Link
-                        to='/request-demo'
+                        to='/request-demo/'
                         className='gradientBgBtn block font-medium rounded text-white text-center py-4 hover:no-underline no-underline max-w-sm'
                     >
                         Request Demo

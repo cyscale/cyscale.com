@@ -177,7 +177,7 @@ const Index = ({ location }) => {
                     description={`Stuck playing catch-up with data security, with no breathing space for projects that move the needle? It's time for a change of pace.\n\n Give your engineers clarity and accuracy - use the Cyscale Cloud Platform to turn cloud data security into a manageable routine.\n\nKeep tabs on your fast-growing cloud inventory with real-time automated data discovery and classification, compliance scans on autopilot and a fully auditable evidence trail. And that's just a taste!`}
                 />
             </div>
-            <Services bannerBtn1Text='Start Free Trial' bannerBtn1Link='/free-trial' data={dataServices} />
+            <Services bannerBtn1Text='Start Free Trial' bannerBtn1Link='/free-trial/' data={dataServices} />
             <div
                 className='max-w-1366px mx-auto pt-70px pb-70px pl-20px pr-20px md:pl-40px md:pr-40px lg:pl-60px lg:pr-60px xl:pl-80px xl:pr-80px 2xl:pl-80px 2xl:pr-80px'
                 id='discover'
@@ -201,7 +201,7 @@ const Index = ({ location }) => {
                 <GetStarted
                     description={`Automate key data security tasks & keep your head above water`}
                     btnText='START YOUR FREE TRIAL'
-                    btnLink={'/free-trial'}
+                    btnLink={'/free-trial/'}
                     sectionName='cloudDataSecurity'
                     icon={getStartedICon}
                 />

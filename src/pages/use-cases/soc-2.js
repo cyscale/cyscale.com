@@ -92,7 +92,7 @@ const Soc2 = ({ location }) => {
                 hardcoded-pages
             </div>
             <div className='hidden' data-permalink>
-                /use-cases/soc-2
+                /use-cases/soc-2/
             </div>
             <div className='hidden' data-title>
                 SOC 2 Cloud Security and Compliance Automation - Cyscale
@@ -123,10 +123,10 @@ const Soc2 = ({ location }) => {
                                         Out-of-the-box policies that you can use for a solid data security program.
                                     </p>
                                     <div className='flex mt-8 justify-start'>
-                                        <Link to='/free-trial'>
+                                        <Link to='/free-trial/'>
                                             <GradientButton text='Start Free Trial' />
                                         </Link>
-                                        <Link to='/request-demo' className='ml-4'>
+                                        <Link to='/request-demo/' className='ml-4'>
                                             <LightDarkButton text={'Request Demo'} />
                                         </Link>
                                     </div>
@@ -332,7 +332,7 @@ const Soc2 = ({ location }) => {
                                     padding: 0.625rem 2.5rem;
                                 `}
                                 className='mx-auto bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind'
-                                to='/request-demo'
+                                to='/request-demo/'
                             >
                                 REQUEST LIVE DEMO
                             </Link>

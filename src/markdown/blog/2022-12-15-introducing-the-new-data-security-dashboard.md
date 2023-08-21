@@ -115,6 +115,6 @@ Moving on to the databases card, using controls, Cyscale checks for the followin
 
 <img src="/img/blog_32-databases-last.webp" alt="Databases with issues in Cyscale" title="Databases with issues in Cyscale" class="" style="width:auto;height:auto;"/>
 
-Use the multitude of features present in the Cyscale Data Security Dashboard to eliminate data exposure through [data storage misconfigurations](https://cyscale.com/whitepaper/cloud-storage-misconfigurations/). Check out our product in the [playground](https://cyscale.com/playground/) or [schedule a demo with us](https://cyscale.com/request-demo) to start your cloud security journey! 
+Use the multitude of features present in the Cyscale Data Security Dashboard to eliminate data exposure through [data storage misconfigurations](https://cyscale.com/whitepaper/cloud-storage-misconfigurations/). Check out our product in the [playground](https://cyscale.com/playground/) or [schedule a demo with us](https://cyscale.com/request-demo/) to start your cloud security journey! 
 
 <!--EndFragment-->
