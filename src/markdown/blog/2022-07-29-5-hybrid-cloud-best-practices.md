@@ -45,7 +45,7 @@ Let’s look at an example where all three components are interconnected and are
 * the public cloud vendor, such as [AWS](https://cyscale.com/use-cases/aws-cloud-security/), [Google Cloud](https://cyscale.com/use-cases/gcp-cloud-security/), or [Azure](https://cyscale.com/use-cases/azure-cloud-security/), hosts a different application integrated with the company’s website, 
 * the private cloud contains the users’ database. 
 
-According to [Statista](https://www.statista.com/topics/7914/hybrid-cloud/), around 80% of enterprises follow a hybrid cloud strategy in 2022. 
+According to [Statista](https://www.statista.com/topics/7914/hybrid-cloud/), around 80% of enterprises follow a hybrid [cloud strategy](https://cyscale.com/blog/cloud-security-strategy-best-practices-tutorials/) in 2022. 
 
 ## Advantages and disadvantages of using a hybrid cloud scheme
 
@@ -87,8 +87,6 @@ In order to secure an infrastructure that uses hybrid cloud, besides managing yo
 
 * be updated regularly, 
 * be protected by antiviruses and firewalls. 
-
-
 
 #### 2. Implement the Least Privilege Principle. 
 
