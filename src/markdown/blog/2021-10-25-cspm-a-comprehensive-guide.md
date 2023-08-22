@@ -130,7 +130,7 @@ This is when the ongoing monitoring capability of the CSPM software comes in han
 
 Your Compliance Officers can use the CSPM as an in-house audit tool, assisting them in preparing for externally conducted or formal compliance audits.
 
-A CSPM tool will help you handle compliance concerns, minimize threats, catch errors and empower you to align IT security strategy across the company.
+A CSPM tool will help you handle compliance concerns, minimize threats, catch errors and empower you to align [cloud security strategy](https://cyscale.com/blog/cloud-security-strategy-best-practices-tutorials/) across the company.
 
 When you are looking for a CSPM solution, keep in mind that visibility and context go hand in hand and that Cyscale Cloud Platform can offer the most comprehensive context thanks to its unique Security Knowledge Graph™.
 
