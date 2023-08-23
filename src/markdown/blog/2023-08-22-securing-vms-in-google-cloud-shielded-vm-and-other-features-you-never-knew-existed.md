@@ -7,7 +7,7 @@ authors: Sabrina Lupșan
 permalink: securing-google-cloud-compute-shielded-vm
 categories:
   - CSPM
-date: 2023-08-22T15:16:04.584Z
+date: 2023-08-23T15:16:04.584Z
 description: Best practices for securing VMs in Google Cloud, including the
   Shielded VM feature description and practical steps to enable it.
 seoDescription: Best practices for securing VMs in Google Cloud, including the
@@ -15,8 +15,15 @@ seoDescription: Best practices for securing VMs in Google Cloud, including the
 featuredpost: true
 featuredimage: /img/51-cyscale-blog-min.jpg
 tableOfContents: false
+tags:
+  - googlecloud
+  - shieldedvm
+  - compute
+  - securityconfiguration
 ---
 While assessing the controls suggested by the CIS Benchmark 2.0.0 for Google Cloud, I stumbled upon an interesting recommendation: to launch compute instances with Shielded VM enabled. When you think of VM security, you think of open management ports, outdated OS versions, unencrypted VM disks and so on. So what is Shielded VM and why do you need to enable it ASAP? 
+
+
 
 ## Shielded VM 
 
@@ -30,7 +37,7 @@ The advantage of this setting is that, with just a few clicks, you significantly
 
 **Secure Boot** is a feature that verifies the digital signature of all boot components of a virtual machine. In this way, if any signature verification fails, that boot process is halted, thus ensuring that only authentic software is run on the system. This means that you cannot use any custom drivers on the machine, because if you do, it will cause the VM to not boot anymore. If a failure occurs, the user receives two errors:
 
-* **UEFI: Failed to load image, and** 
+* **UEFI: Failed to load image**, and 
 * **Status: Security Violation.** 
 
 **vTPM, or Virtual Trusted Platform Module,** is a computer chip specialized in protecting secrets. To understand what vTPM is, let’s break it down. TPM, or Trusted Platform Module, is a hardware component that stores cryptographic keys, passwords, and other sensitive data securely. By virtualizing it, the same result is achieved, but on a software level, meaning that VMs in the cloud can also be protected using a TPM, even though at hardware-level they may share components with other VMs. 
@@ -40,6 +47,8 @@ vTPM also introduces **Measure Boot**, a mechanism that checks the integrity of 
 The integrity policy baseline needs to be updated if changes appear, such as a system update. 
 
 Through the process described, **integrity monitoring** is achieved using Shielded VM and the Measure Boot mechanism. 
+
+
 
 ### How to enable Shielded VM 
 
@@ -58,11 +67,11 @@ To enable Shielded VM, you can do it through the Google Cloud console, or using 
 
 1. Stop the instance: 
 
-`gcloud compute instances stop <instanceName> `
+`gcloud compute instances stop <instanceName>`
 
 2. Turn on vTPM and Integrity Monitoring: 
 
-`gcloud compute instances update <instanceName> --shielded-vtpm --shieldedvm-integrity-monitoring `
+`gcloud compute instances update <instanceName> --shielded-vtpm --shieldedvm-integrity-monitoring`
 
 3. To also turn on Secure Boot (if you have no custom or unsigned drivers on the instance), add the *\--shielded-vm-secure-boot* parameter to the previous command or execute the following command separately: 
 
@@ -70,11 +79,13 @@ To enable Shielded VM, you can do it through the Google Cloud console, or using 
 
 4. After applying the changes, restart the instance: 
 
-`gcloud compute instances start <instanceName> `
+`gcloud compute instances start <instanceName>`
 
 Note that Shielded VM is not enabled by default on a VM. However, you can set an organizational policy that will cause all the future VMs to have Shielded VM enabled. To do that, click [here](https://console.cloud.google.com/iam-admin/orgpolicies/compute-requireShieldedVm).  
 
-**Other configurations that you should consider for your Google Cloud VMs** 
+
+
+#### Other configurations that you should consider for your Google Cloud VMs 
 
 There are some settings you should always check when assessing the security of a virtual machine. Here are just a few examples: 
 
