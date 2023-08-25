@@ -141,6 +141,7 @@ const SecurityForStartupsProgram = ({ location }) => {
                 pageName='Startups'
                 title='Startups Program - Cyscale'
                 description='Startups Program'
+                noIndex={true}
             >
                 <Helmet>
                     <script charSet='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js'></script>
