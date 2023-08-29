@@ -301,7 +301,7 @@ const SecurityForStartups = ({ location }) => {
                                             color: #2d2d2d;
                                         `}
                                     >
-                                        If you are a scaleup or mid-seize company or your situation is different, let’s
+                                        If you are a scaleup or mid-size company or your situation is different, let’s
                                         have a conversation and see what we can do.
                                     </p>
                                     <Link
@@ -319,7 +319,7 @@ const SecurityForStartups = ({ location }) => {
                                         ]}
                                     >
                                         <RightArrow fillColor={'white'} marginTop='0.2rem' />
-                                        <span className='text-md ml-2 text-white'>Get in touch</span>
+                                        <span className='text-md ml-2 text-white'>Get in Touch</span>
                                     </Link>
                                 </div>
                             </div>

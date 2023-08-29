@@ -46,7 +46,7 @@ const Solutions = ({ pathname, activeLinks, setActiveLinks }) => {
                 <p className='mb-4'>Build and maintain a strong Security Program from the start.</p>
                 <Link
                     className='bg-blue text-white py-2 px-4 rounded cursor-pointer mb-22 font-medium flex'
-                    to='/security-for-startups-program/'
+                    to='/security-for-startups/'
                     css={[hoverButtonColorStyle, widthFitStyle]}
                 >
                     <RightArrow fillColor={'white'} marginTop='0.2rem' />
