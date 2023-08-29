@@ -180,21 +180,11 @@ const SecurityForStartups = ({ location }) => {
                                         <h1 className='text-center sm:text-left text-blue text-4xl lg:text-5xl leading-normal mb-8 font-montserrat font-bold'>
                                             Cyscale for Startups
                                         </h1>
-                                        <h2
-                                            className='text-center sm:text-left mb-8 text-blue font-bold'
-                                            css={css`
-                                                font-size: 1.5rem;
-                                                line-height: 2rem;
-                                                @media (min-width: 640px) {
-                                                    font-size: 2rem;
-                                                    line-height: 2.25rem;
-                                                }
-                                            `}
-                                        >
+                                        <h2 className='text-center sm:text-left mb-8 text-blue font-bold text-2xl sm:text-3xl'>
                                             Your cloud apps and data, secured ✅
                                         </h2>
                                         <p
-                                            className='text-center sm:text-left text-base lg:text-2xl mb-8'
+                                            className='text-center sm:text-left text-base lg:text-lg  mb-8'
                                             css={css`
                                                 color: #454545;
                                             `}
@@ -204,7 +194,7 @@ const SecurityForStartups = ({ location }) => {
                                             cloud without the need for a big security team or a big budget.
                                         </p>
                                         <p
-                                            className='text-center sm:text-left text-base lg:text-2xl mb-2 font-bold'
+                                            className='text-center sm:text-left text-base lg:text-lg  mb-2 font-bold'
                                             css={css`
                                                 color: #454545;
                                             `}
@@ -252,16 +242,11 @@ const SecurityForStartups = ({ location }) => {
                     <div className='py-12 md:py-24'>
                         <div id='start'>
                             <div className='mx-auto lg:mx-0 '>
-                                <h2
-                                    className='text-center lg:text-left mb-4 font-montserrat font-bold text-blue'
-                                    css={css`
-                                        font-size: 2rem;
-                                    `}
-                                >
+                                <h2 className='text-center lg:text-left mb-4 font-montserrat font-bold text-blue text-2xl'>
                                     How do I qualify?
                                 </h2>
                                 <h3
-                                    className='text-center lg:text-left text-lg lg:text-2xl mb-8'
+                                    className='text-center lg:text-left text-base mb-8'
                                     css={css`
                                         color: #454545;
                                     `}
@@ -289,7 +274,7 @@ const SecurityForStartups = ({ location }) => {
                                             }
                                         `}
                                     >
-                                        You get 75% off first year and protection for up to 1000 assets.
+                                        You get 75% off your first year and protection for up to 1000 assets.
                                     </p>
                                 </div>
                             </div>
@@ -329,12 +314,7 @@ const SecurityForStartups = ({ location }) => {
                 <Container>
                     <div className='pt-2 pb-0 sm:pb-24'>
                         <div>
-                            <h2
-                                className='text-center lg:text-left mb-8 font-montserrat font-bold text-blue'
-                                css={css`
-                                    font-size: 2rem;
-                                `}
-                            >
+                            <h2 className='text-center lg:text-left mb-8 font-montserrat font-bold text-blue text-2xl'>
                                 What do I get?
                             </h2>
                         </div>
@@ -349,10 +329,15 @@ const SecurityForStartups = ({ location }) => {
                                         `
                                     ]}
                                 >
-                                    <h1 className='text-2xl font-montserrat font-bold'>
+                                    <h3
+                                        className='font-montserrat font-bold'
+                                        css={css`
+                                            font-size: 1.375rem;
+                                        `}
+                                    >
                                         Access to the full Cyscale Automated Cloud Security Platform with Powerful
                                         Analytics & Dashboards
-                                    </h1>
+                                    </h3>
                                     <GatsbyImage
                                         image={data.dashboard.childImageSharp.gatsbyImageData}
                                         alt='Dashboard'
@@ -372,10 +357,15 @@ const SecurityForStartups = ({ location }) => {
                                         `
                                     ]}
                                 >
-                                    <h1 className='text-2xl font-montserrat font-bold px-4 lg:px-8 text-center'>
+                                    <h3
+                                        className='font-montserrat font-bold px-4 lg:px-8 text-center'
+                                        css={css`
+                                            font-size: 1.375rem;
+                                        `}
+                                    >
                                         Asset inventory
-                                    </h1>
-                                    <p className='text-lg font-hind mt-4 text-center'>Up to 1000 protected assets.</p>
+                                    </h3>
+                                    <p className='text-lg font-hind mt-4 text-center'>Up to 1000 protected assets</p>
                                     <GatsbyImage
                                         image={data.assetInventory.childImageSharp.gatsbyImageData}
                                         alt='Asset inventory'
@@ -396,7 +386,14 @@ const SecurityForStartups = ({ location }) => {
                                         `
                                     ]}
                                 >
-                                    <h1 className='text-2xl font-montserrat font-bold '>Integrations</h1>
+                                    <h3
+                                        className='font-montserrat font-bold'
+                                        css={css`
+                                            font-size: 1.375rem;
+                                        `}
+                                    >
+                                        Integrations
+                                    </h3>
                                     <p className='text-lg font-hind mt-4'>AWS, Google Cloud, Azure and Alibaba Cloud</p>
                                     <GatsbyImage
                                         image={data.cardIntegrations.childImageSharp.gatsbyImageData}
@@ -504,12 +501,7 @@ const SecurityForStartups = ({ location }) => {
                     <Container className='mt-8'>
                         <div className='py-12 md:py-24'>
                             <div>
-                                <h2
-                                    className='text-center lg:text-left mb-8 font-montserrat font-bold text-blue'
-                                    css={css`
-                                        font-size: 2rem;
-                                    `}
-                                >
+                                <h2 className='text-center lg:text-left mb-8 font-montserrat font-bold text-blue text-2xl'>
                                     FAQs
                                 </h2>
                             </div>
@@ -522,7 +514,7 @@ const SecurityForStartups = ({ location }) => {
                                         >
                                             <div className='flex'>
                                                 <h3
-                                                    className='font-bold font-hind text-lg mb-0 pl-2 leading-snug cursor-pointer select-none'
+                                                    className='font-bold font-hind text-base mb-0 pl-2 leading-snug cursor-pointer select-none'
                                                     role='presentation'
                                                     tabIndex={-1}
                                                     onClick={() => setActive((s) => (s === key ? null : key))}
@@ -551,7 +543,7 @@ const SecurityForStartups = ({ location }) => {
                                             </div>
 
                                             <p
-                                                className={classNames('mt-4 pl-2 font-hind text-lg', {
+                                                className={classNames('mt-4 pl-2 font-hind text-base', {
                                                     block: active === key,
                                                     hidden: active !== key
                                                 })}
@@ -572,7 +564,7 @@ const SecurityForStartups = ({ location }) => {
                                         >
                                             <div className='flex'>
                                                 <h3
-                                                    className='font-bold font-hind text-lg mb-0 pl-2 leading-snug cursor-pointer select-none'
+                                                    className='font-bold font-hind text-base mb-0 pl-2 leading-snug cursor-pointer select-none'
                                                     role='presentation'
                                                     tabIndex={-1}
                                                     onClick={() => setActive((s) => (s === key + 3 ? null : key + 3))}
@@ -601,7 +593,7 @@ const SecurityForStartups = ({ location }) => {
                                             </div>
 
                                             <p
-                                                className={classNames('mt-4 pl-2 text-lg', {
+                                                className={classNames('mt-4 pl-2 text-base', {
                                                     block: active === key + 3,
                                                     hidden: active !== key + 3
                                                 })}
@@ -622,27 +614,15 @@ const SecurityForStartups = ({ location }) => {
                 <Container className='mt-8'>
                     <div className='py-12'>
                         <div>
-                            <h2
-                                className='text-center lg:text-left mb-8 font-montserrat font-bold text-blue'
-                                css={css`
-                                    font-size: 2rem;
-                                `}
-                            >
+                            <h2 className='text-center lg:text-left mb-8 font-montserrat font-bold text-blue text-2xl'>
                                 Case Study
                             </h2>
                         </div>
                         <div className='grid grid-cols-12 gap-x-5 mt-4'>
                             <div className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 lg:mt-0 max-w-lg lg:max-w-full'>
+                                <p className='font-montserrat font-bold text-xl'>Access management in Fintech</p>
                                 <p
-                                    className='font-montserrat font-bold'
-                                    css={css`
-                                        font-size: 1.375rem;
-                                    `}
-                                >
-                                    Access management in Fintech
-                                </p>
-                                <p
-                                    className='font-hind text-lg mt-2'
+                                    className='font-hind text-base mt-2'
                                     css={css`
                                         color: #454545;
                                     `}
@@ -653,11 +633,11 @@ const SecurityForStartups = ({ location }) => {
                                     the cloud environment was always in compliance with their policies.
                                 </p>
                                 <img src={QuotesStartups} alt='' className='mt-4' />
-                                <p className='mt-4 text-lg font-semibold font-hind'>
+                                <p className='mt-4 text-base  font-semibold font-hind'>
                                     Cyscale is eliminating the need to ask the team for tedious configuration reports,
                                     greatly improving our visibility and helping us understand things we didn’t know.
                                 </p>
-                                <p className='font-hind text-lg mt-2'>
+                                <p className='font-hind text-base mt-2'>
                                     <strong>Alex Cociu,</strong>
                                     <br /> Risk and Compliance Officer at Smart Fintech
                                 </p>
@@ -667,16 +647,11 @@ const SecurityForStartups = ({ location }) => {
                                 />
                             </div>
                             <div className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 mt-20 lg:mt-0 max-w-lg lg:max-w-full'>
-                                <p
-                                    className='font-montserrat font-bold'
-                                    css={css`
-                                        font-size: 1.375rem;
-                                    `}
-                                >
+                                <p className='font-montserrat font-bold text-xl'>
                                     Increased productivity with automated security
                                 </p>
                                 <p
-                                    className='font-hind text-lg mt-2'
+                                    className='font-hind text-base mt-2'
                                     css={css`
                                         color: #454545;
                                     `}
@@ -688,11 +663,11 @@ const SecurityForStartups = ({ location }) => {
                                     process.
                                 </p>
                                 <img src={QuotesStartups} alt='' className='mt-4' />
-                                <p className='mt-4 text-lg font-semibold font-hind'>
+                                <p className='mt-4 text-base font-semibold font-hind'>
                                     Exceptionally helpful when doing access reviews; I’m using the platform monthly and
                                     it simply automates my work!
                                 </p>
-                                <p className='font-hind text-lg mt-9'>
+                                <p className='font-hind text-base mt-2'>
                                     <strong>James Hawkes,</strong>
                                     <br /> Head of Delivery at Bays Consulting
                                 </p>
@@ -710,7 +685,7 @@ const SecurityForStartups = ({ location }) => {
                             <img src={cloudIcon} alt='Cloud Icon' />
                             <h2 className='text-center px-2 mb-2 text-lg lg:text-2xl font-hind'>
                                 Get enterprise-grade security
-                                <br /> without the enterprise-grade price tag.
+                                <br /> without the enterprise-grade price tag
                             </h2>
                             <div className='mt-6 w-auto inline-block'>
                                 <button
