@@ -84,7 +84,7 @@ const AutomatedSecurityForStartups = ({ location }) => {
             <Layout
                 location={location}
                 pageName='AutomatedSecurityStartups'
-                title='Cyscale for Startups - Cyscale'
+                title='Cyscale Pro for Startups - Cyscale'
                 description='For a fast-growing SaaS company, cloud security shouldn’t hold you back. The Cyscale platform automates security for your apps and data in the cloud without the need for a big security team or a big budget.'
             >
                 <Helmet>
@@ -97,7 +97,7 @@ const AutomatedSecurityForStartups = ({ location }) => {
                     /automated-security-for-startups/
                 </div>
                 <div className='hidden' data-title>
-                    Cyscale for Startups - Cyscale
+                    Cyscale Pro for Startups - Cyscale
                 </div>
                 <div className='hidden' data-description>
                     For a fast-growing SaaS company, cloud security shouldn’t hold you back. The Cyscale platform
