@@ -1,11 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import Layout from '../components/layout/CleanLayout';
 import { Container, Row } from '../components/atoms/Containers';
-import classNames from 'classnames';
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import expand from '../assets/images/expand-startups.svg';
-import collapse from '../assets/images/collapse-startups.svg';
 import cloudIcon from '../assets/images/cloud-icon.svg';
 import ScrollButtonStartups from '../components/ScrollButton/ScrollButtonStartups';
 import { animateScroll } from 'react-scroll';
@@ -18,82 +15,15 @@ import { Helmet } from 'react-helmet';
 import { hoverButtonColorStyle, widthFitStyle } from '../components/layout/style';
 import RightArrow from '../components/sharedComponent/RightArrow';
 
-const q1 = (useReactComponent) => {
-    return [
-        {
-            question: 'What is Cyscale for Startups?',
-            answer: (
-                <>
-                    <p className='mb-4'>
-                        Automated Cloud Security designed for fast-growing startups. Enterprise-focused security
-                        offerings come with a hefty price tag and an overly complex array of features and functions that
-                        are overkill for smaller, more agile companies. We believe cloud security is critical for your
-                        business and shouldn’t hold you back.
-                    </p>
-                    <p>Good security should enable growth through trust and credibility!</p>
-                </>
-            )
-        },
-        {
-            question: 'What are the eligibility requirements?',
-            answer: (
-                <>
-                    <p>
-                        The Cyscale for Startups program is aimed at early-stage companies that have raised $10m or
-                        less.
-                    </p>
-                    <p>If your situation is different let’s have a conversation and see what we can do.</p>
-                    {useReactComponent ? (
-                        <Link className='underline mb-4' to='/contact-us/'>
-                            <br />
-                            Get in touch.
-                        </Link>
-                    ) : (
-                        <a href='https://cyscale.com/contact-us/'>Get in touch.</a>
-                    )}
-                </>
-            )
-        }
-    ];
-};
-
-const q2 = (useReactComponent) => {
-    return [
-        {
-            question: 'How do I apply?',
-            answer: (
-                <>
-                    <p className='mb-4'>
-                        Submit your application using the form on our webpage and we’ll respond within 24 hours, usually
-                        faster.
-                    </p>
-                </>
-            )
-        },
-        {
-            question: 'What are the terms of the contract?',
-            answer: (
-                <p className='mb-4'>
-                    The Cyscale for Startups program gives you 75% off the list price for 12 months and coverage for up
-                    to 1,000 assets. This works out at just over $200 per month for continuous security for your data
-                    and apps in the cloud.
-                </p>
-            )
-        }
-    ];
-};
-
 const blueGradientCard = css`
     background-image: linear-gradient(#e4edfc, #fff);
 `;
 
-const SecurityForStartups = ({ location }) => {
-    const [active, setActive] = useState(-1);
-
+const AutomatedSecurityForStartups = ({ location }) => {
     const { loadingForm } = useHSFormLoaded();
 
     const data = useStaticQuery(graphql`
-        query StartupsSecurityQuery {
+        query AutomatedStartupsSecurityQuery {
             dashboard: file(relativePath: { eq: "dashboard-startups.png" }) {
                 childImageSharp {
                     gatsbyImageData(width: 720, layout: CONSTRAINED)
@@ -129,6 +59,11 @@ const SecurityForStartups = ({ location }) => {
                     gatsbyImageData(width: 48, layout: FIXED)
                 }
             }
+            pricingIcon: file(relativePath: { eq: "pricing-icon.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 420, layout: CONSTRAINED)
+                }
+            }
         }
     `);
 
@@ -137,7 +72,7 @@ const SecurityForStartups = ({ location }) => {
             if (window && window.hbspt) {
                 window.hbspt.forms?.create({
                     portalId: '5413427',
-                    formId: '5271f779-a0a1-454d-8d6b-f419fd780c3c',
+                    formId: '65a11c92-0efd-489b-b2e7-671d77b43bc7',
                     target: '#startups-form'
                 });
             }
@@ -148,10 +83,9 @@ const SecurityForStartups = ({ location }) => {
         <>
             <Layout
                 location={location}
-                pageName='SecurityStartups'
+                pageName='AutomatedSecurityStartups'
                 title='Cyscale for Startups - Cyscale'
-                description='Automated Cloud Security designed for fast-growing startups'
-                noIndex={true}
+                description='For a fast-growing SaaS company, cloud security shouldn’t hold you back. The Cyscale platform automates security for your apps and data in the cloud without the need for a big security team or a big budget.'
             >
                 <Helmet>
                     <script charSet='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js'></script>
@@ -160,13 +94,15 @@ const SecurityForStartups = ({ location }) => {
                     hardcoded-pages
                 </div>
                 <div className='hidden' data-permalink>
-                    /security-for-startups/
+                    /automated-security-for-startups/
                 </div>
                 <div className='hidden' data-title>
                     Cyscale for Startups - Cyscale
                 </div>
                 <div className='hidden' data-description>
-                    Automated Cloud Security designed for fast-growing startups
+                    For a fast-growing SaaS company, cloud security shouldn’t hold you back. The Cyscale platform
+                    automates security for your apps and data in the cloud without the need for a big security team or a
+                    big budget.
                 </div>
                 <div className='hidden' data-category>
                     website
@@ -174,11 +110,11 @@ const SecurityForStartups = ({ location }) => {
                 <div className='bg-pouring pt-8'>
                     <Container>
                         <div className='py-24 lg:pt-32 lg:pb-16'>
-                            <Row>
+                            <div className='grid grid-cols-12'>
                                 <div className='col-span-12 lg:col-span-6 '>
-                                    <div className='lg:mt-16 pt-4 max-w-xl mx-auto lg:mx-0'>
+                                    <div className='lg:mt-16 pt-4 max-w-xl lg:max-w-4xl mx-auto lg:mx-0'>
                                         <h1 className='text-center sm:text-left text-blue text-4xl lg:text-5xl leading-normal mb-8 font-montserrat font-bold'>
-                                            Cyscale for Startups
+                                            Cyscale Pro for Startups
                                         </h1>
                                         <h2
                                             className='text-center sm:text-left mb-8 text-blue font-bold'
@@ -201,7 +137,7 @@ const SecurityForStartups = ({ location }) => {
                                         >
                                             If you’re a fast-growing SaaS company, cloud security shouldn’t hold you
                                             back. The Cyscale platform automates security for your apps and data in the
-                                            cloud without the need for a big security team or a big budget.
+                                            cloud without the need for a big security team or a big budget
                                         </p>
                                         <p
                                             className='text-center sm:text-left text-base lg:text-2xl mb-2 font-bold'
@@ -210,7 +146,8 @@ const SecurityForStartups = ({ location }) => {
                                             `}
                                         >
                                             Easy to deploy, easy to use. Job done. Box checked.{' '}
-                                            <br className='hidden lg:block' /> Regulator satisfied.
+                                            <br className='hidden lg:block' />
+                                            Regulator satisfied.
                                         </p>
                                     </div>
                                 </div>
@@ -241,7 +178,7 @@ const SecurityForStartups = ({ location }) => {
                                         />
                                     </div>
                                 </div>
-                            </Row>
+                            </div>
                         </div>
                         <div className='pb-16 hidden sm:block '>
                             <ScrollButtonStartups to='start' />
@@ -251,45 +188,49 @@ const SecurityForStartups = ({ location }) => {
                 <Container className='mt-8'>
                     <div className='py-12 md:py-24'>
                         <div id='start'>
-                            <div className='mx-auto lg:mx-0 '>
+                            <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-full'>
                                 <h2
                                     className='text-center lg:text-left mb-4 font-montserrat font-bold text-blue'
                                     css={css`
-                                        font-size: 2rem;
+                                        font-size: 1.625rem;
                                     `}
                                 >
-                                    How do I qualify?
+                                    Is Cyscale Pro for me?
                                 </h2>
                                 <h3
-                                    className='text-center lg:text-left text-lg lg:text-2xl mb-8'
+                                    className='text-lg lg:text-2xl mb-2'
                                     css={css`
                                         color: #454545;
                                     `}
                                 >
-                                    If your startup has received $10m or less in funding and you‘re building a startup
-                                    rocketship 🚀
+                                    If you’re purchasing your first cloud security solution or found you’ve outgrown
+                                    cloud native tools, Cyscale turns automated assessments into easy-to-follow actions
+                                    to secure your apps and data in the cloud.
                                 </h3>
+                                <p
+                                    className='font-hind text-lg mb-8'
+                                    css={css`
+                                        color: #454545;
+                                    `}
+                                >
+                                    If you’ve got better things to do with your time than clicking through reports and
+                                    fixing alerts without context, Cyscale is for you.
+                                </p>
                             </div>
                         </div>
                         <div className='grid grid-cols-12 gap-x-5'>
                             <div className='col-span-12 lg:col-span-6 lg:mx-0'>
                                 <div
-                                    className='mt-6 lg:mt-0 rounded-xl max-w-lg lg:max-w-2xl mx-auto flex items-center justify-center p-4 lg:p-0 h-36 lg:h-40'
+                                    className='mt-6 lg:mt-0 rounded-xl max-w-lg lg:max-w-2xl mx-auto flex items-center justify-center p-4 lg:p-0 h-44 lg:h-40'
                                     css={css`
                                         background: linear-gradient(48deg, #000 0%, #0f26aa 36.65%, #ff4a56 100%),
                                             #0f26aa;
                                     `}
                                 >
-                                    <p
-                                        className='font-montserrat text-white text-center font-bold'
-                                        css={css`
-                                            font-size: 1.5rem;
-                                            @media (min-width: 1024px) {
-                                                font-size: 2rem;
-                                            }
-                                        `}
-                                    >
-                                        You get 75% off first year and protection for up to 1000 assets.
+                                    <p className='font-montserrat text-white text-center px-4 text-lg sm:text-xl'>
+                                        Our solution guides you to the 20% of most important fixes that{' '}
+                                        <strong>will reduce 80%</strong>
+                                        of your risk, giving you back time to focus on building your rocket ship.
                                     </p>
                                 </div>
                             </div>
@@ -332,10 +273,10 @@ const SecurityForStartups = ({ location }) => {
                             <h2
                                 className='text-center lg:text-left mb-8 font-montserrat font-bold text-blue'
                                 css={css`
-                                    font-size: 2rem;
+                                    font-size: 1.625rem;
                                 `}
                             >
-                                What do I get?
+                                What do I get with Cyscale Pro?
                             </h2>
                         </div>
                         <div className='grid grid-cols-12 gap-x-5'>
@@ -349,7 +290,12 @@ const SecurityForStartups = ({ location }) => {
                                         `
                                     ]}
                                 >
-                                    <h1 className='text-2xl font-montserrat font-bold'>
+                                    <h1
+                                        className='font-montserrat font-bold'
+                                        css={css`
+                                            font-size: 1.375rem;
+                                        `}
+                                    >
                                         Access to the full Cyscale Automated Cloud Security Platform with Powerful
                                         Analytics & Dashboards
                                     </h1>
@@ -372,7 +318,12 @@ const SecurityForStartups = ({ location }) => {
                                         `
                                     ]}
                                 >
-                                    <h1 className='text-2xl font-montserrat font-bold px-4 lg:px-8 text-center'>
+                                    <h1
+                                        className='font-montserrat font-bold px-4 lg:px-8 text-center'
+                                        css={css`
+                                            font-size: 1.375rem;
+                                        `}
+                                    >
                                         Asset inventory
                                     </h1>
                                     <p className='text-lg font-hind mt-4 text-center'>Up to 1000 protected assets.</p>
@@ -396,7 +347,14 @@ const SecurityForStartups = ({ location }) => {
                                         `
                                     ]}
                                 >
-                                    <h1 className='text-2xl font-montserrat font-bold '>Integrations</h1>
+                                    <h1
+                                        className='font-montserrat font-bold'
+                                        css={css`
+                                            font-size: 1.375rem;
+                                        `}
+                                    >
+                                        Integrations
+                                    </h1>
                                     <p className='text-lg font-hind mt-4'>AWS, Google Cloud, Azure and Alibaba Cloud</p>
                                     <GatsbyImage
                                         image={data.cardIntegrations.childImageSharp.gatsbyImageData}
@@ -500,132 +458,186 @@ const SecurityForStartups = ({ location }) => {
                         </div>
                     </div>
                 </Container>
-                <div style={{ backgroundImage: 'linear-gradient(#fff, #E4EDFC)' }}>
-                    <Container className='mt-8'>
+                <div className='flex justify-center mt-16 sm:mt-0'>
+                    <Link
+                        to='/free-trial/'
+                        className='bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind'
+                        css={[
+                            css`
+                                padding: 0.625rem 2.5rem;
+                            `
+                        ]}
+                    >
+                        Start your 1 month free trial
+                    </Link>
+                </div>
+                <div>
+                    <Container>
                         <div className='py-12 md:py-24'>
                             <div>
                                 <h2
                                     className='text-center lg:text-left mb-8 font-montserrat font-bold text-blue'
                                     css={css`
-                                        font-size: 2rem;
+                                        font-size: 1.625rem;
                                     `}
                                 >
-                                    FAQs
+                                    Stress-free security for small businesses
+                                    <br className='hidden sm:block' /> building apps in the cloud
                                 </h2>
                             </div>
                             <div className='grid grid-cols-12 gap-x-5'>
-                                <div className='col-span-12 lg:col-span-6 lg:mx-0'>
-                                    {q1(true).map((q, key) => (
-                                        <div
-                                            className='mx-auto mb-0 p-4 max-w-lg lg:max-w-2xl mb-4 rounded-xl relative bg-white'
-                                            key={key}
+                                <div className='col-span-12 lg:col-span-6'>
+                                    <div
+                                        className='mt-6 lg:mt-0 rounded-xl max-w-lg lg:max-w-full p-6 mx-auto lg:mx-0'
+                                        css={css`
+                                            @media (max-width: 545px) {
+                                                height: 31.5rem;
+                                            }
+                                            @media screen and (min-width: 545px) and (max-width: 1024px) {
+                                                height: 20.5rem;
+                                            }
+
+                                            background: linear-gradient(0deg, #e4edfc 0%, #e4edfc 100%),
+                                                linear-gradient(180deg, #e4edfc 0%, rgba(217, 217, 217, 0) 100%);
+                                            @media screen and (min-width: 1024px) and (max-width: 1165px) {
+                                                height: 26.5rem;
+                                            }
+                                            @media (min-width: 1165px) {
+                                                height: 20.5rem;
+                                            }
+                                        `}
+                                    >
+                                        <h3
+                                            className='font-montserrat font-bold'
+                                            css={css`
+                                                font-size: 1.375rem;
+                                            `}
                                         >
-                                            <div className='flex'>
-                                                <h3
-                                                    className='font-bold font-hind text-lg mb-0 pl-2 leading-snug cursor-pointer select-none'
-                                                    role='presentation'
-                                                    tabIndex={-1}
-                                                    onClick={() => setActive((s) => (s === key ? null : key))}
-                                                    onKeyDown={() => {}}
-                                                >
-                                                    {q.question}
-                                                </h3>
-
-                                                <button
-                                                    onClick={() => setActive((s) => (s === key ? null : key))}
-                                                    className='rounded-full w-6 h-6 pt-px flex items-center justify-center hover:opacity-80 transition-opacity ml-auto'
-                                                    tabIndex='0'
-                                                    onKeyDown={() => {}}
-                                                >
-                                                    <img
-                                                        className={classNames('transform transition-all', {
-                                                            '-rotate-90': active !== key,
-                                                            'rotate-270': active === key
-                                                        })}
-                                                        src={active === key ? collapse : expand}
-                                                        alt='decoration'
-                                                        width={12}
-                                                        height={12}
-                                                    />
-                                                </button>
-                                            </div>
-
-                                            <p
-                                                className={classNames('mt-4 pl-2 font-hind text-lg', {
-                                                    block: active === key,
-                                                    hidden: active !== key
-                                                })}
-                                                css={css`
-                                                    color: #454545;
-                                                `}
-                                            >
-                                                {q.answer}
-                                            </p>
-                                        </div>
-                                    ))}
+                                            Cyscale is an Automated Cloud Security platform designed for fast-growing
+                                            startups.
+                                        </h3>
+                                        <p className='font-hind text-lg mt-4'>
+                                            Enterprise-focused security offerings come with a hefty price tag and an
+                                            overly complex array of features and functions that are overkill for
+                                            smaller, more agile companies. We believe cloud security is critical and
+                                            shouldn’t hold you back. Good security should enable growth through trust
+                                            and credibility!
+                                        </p>
+                                    </div>
                                 </div>
-                                <div className='col-span-12 lg:col-span-6 lg:mx-0'>
-                                    {q2(true).map((q, key) => (
-                                        <div
-                                            className='mx-auto mb-0 p-4 max-w-lg lg:max-w-2xl mb-4 rounded-xl relative bg-white'
-                                            key={key}
-                                        >
-                                            <div className='flex'>
-                                                <h3
-                                                    className='font-bold font-hind text-lg mb-0 pl-2 leading-snug cursor-pointer select-none'
-                                                    role='presentation'
-                                                    tabIndex={-1}
-                                                    onClick={() => setActive((s) => (s === key + 3 ? null : key + 3))}
-                                                    onKeyDown={() => {}}
-                                                >
-                                                    {q.question}
-                                                </h3>
-
-                                                <button
-                                                    onClick={() => setActive((s) => (s === key + 3 ? null : key + 3))}
-                                                    className='rounded-full w-6 h-6 pt-px flex items-center justify-center hover:opacity-80 transition-opacity ml-auto'
-                                                    tabIndex='0'
-                                                    onKeyDown={() => {}}
-                                                >
-                                                    <img
-                                                        className={classNames('transform transition-all', {
-                                                            '-rotate-90': active !== key + 3,
-                                                            'rotate-270': active === key + 3
-                                                        })}
-                                                        src={active === key + 3 ? collapse : expand}
-                                                        alt='decoration'
-                                                        width={12}
-                                                        height={12}
-                                                    />
-                                                </button>
-                                            </div>
-
-                                            <p
-                                                className={classNames('mt-4 pl-2 text-lg', {
-                                                    block: active === key + 3,
-                                                    hidden: active !== key + 3
-                                                })}
-                                                css={css`
-                                                    color: #454545;
-                                                `}
-                                            >
-                                                {q.answer}
-                                            </p>
-                                        </div>
-                                    ))}
+                                <div className='col-span-12 lg:col-span-3'>
+                                    <div
+                                        className='mt-6 lg:mt-0 rounded-xl p-6 max-w-lg mx-auto lg:mr-0 lg:ml-auto relative sm:mb-6 md:mb-6 lg:mb-0'
+                                        css={css`
+                                            height: 16.5rem;
+                                            @media screen and (min-width: 545px) and (max-width: 1024px) {
+                                                height: 10rem;
+                                            }
+                                            background: linear-gradient(0deg, #e4edfc 0%, #e4edfc 100%),
+                                                linear-gradient(180deg, #e4edfc 0%, rgba(217, 217, 217, 0) 100%);
+                                            @media screen and (min-width: 1024px) and (max-width: 1165px) {
+                                                height: 26.5rem;
+                                            }
+                                            @media (min-width: 1165px) {
+                                                height: 20.5rem;
+                                            }
+                                        `}
+                                    >
+                                        <p className='font-hind text-lg'>
+                                            Don’t get overwhelmed with alerts and complex toolkits. Cyscale continuously
+                                            monitors for vulnerabilities and misconfigurations in your cloud
+                                            environment, then guides you through the actions you need to take to fix
+                                            them.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className='col-span-12 lg:col-span-3'>
+                                    <div
+                                        className='mt-6 sm:mt-0 rounded-xl p-6 max-w-lg  mx-auto lg:mr-0 lg:ml-auto relative'
+                                        css={css`
+                                            height: 17rem;
+                                            @media screen and (min-width: 545px) and (max-width: 1024px) {
+                                                height: 11.5rem;
+                                            }
+                                            background: linear-gradient(0deg, #e4edfc 0%, #e4edfc 100%),
+                                                linear-gradient(180deg, #e4edfc 0%, rgba(217, 217, 217, 0) 100%);
+                                            @media screen and (min-width: 1024px) and (max-width: 1165px) {
+                                                height: 26.5rem;
+                                            }
+                                            @media (min-width: 1165px) {
+                                                height: 20.5rem;
+                                            }
+                                        `}
+                                    >
+                                        <p className='font-hind text-lg'>
+                                            Easy compliance reporting. Don’t stress about audits. Understand your
+                                            evolving cloud infrastructure and check your security posture against
+                                            compliance frameworks including CIS Cloud Benchmarks, ISO 27001, SOC 2,
+                                            GDPR, HIPAA, PCI DSS, NIST, and more.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </Container>
                 </div>
-
+                <div
+                    className='pt-24 pb-24 lg:pt-32 lg:pb-32'
+                    css={css`
+                        background: linear-gradient(180deg, #fff 0%, #e4edfc 100%), #e5edfb;
+                    `}
+                >
+                    <Container>
+                        <Row>
+                            <div className='col-span-12 lg:col-span-6 mx-auto lg:mx-0'>
+                                <h2
+                                    className='text-center lg:text-left mb-8 font-montserrat font-bold text-blue'
+                                    css={css`
+                                        font-size: 1.625rem;
+                                    `}
+                                >
+                                    How much does it cost?
+                                </h2>
+                                <div className='max-w-lg lg:max-w-3xl'>
+                                    <p
+                                        className='font-hind text-lg'
+                                        css={css`
+                                            color: #454545;
+                                        `}
+                                    >
+                                        After a one-month free trial to demonstrate the value of the platform (we think
+                                        you’ll love it!) Cyscale Pro for Startups gives coverage for up to 1,000 assets
+                                        for $10,000 per year. This works out at just over $800 per month for continuous
+                                        security for your data and apps in the cloud.
+                                    </p>
+                                    <p
+                                        className='font-hind text-lg mt-4'
+                                        css={css`
+                                            color: #454545;
+                                        `}
+                                    >
+                                        We get it, your finance team is looking at the cost of security versus the cost
+                                        of a breach. Let’s help you cover the former, so they don’t have to find out the
+                                        latter.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className='col-span-12 lg:col-span-6 mt-20 lg:mt-0 mx-auto lg:mx-0 flex justify-center items-center'>
+                                <GatsbyImage
+                                    image={data.pricingIcon.childImageSharp.gatsbyImageData}
+                                    alt='Pricing Charts'
+                                />
+                            </div>
+                        </Row>
+                    </Container>
+                </div>
                 <Container className='mt-8'>
                     <div className='py-12'>
                         <div>
                             <h2
                                 className='text-center lg:text-left mb-8 font-montserrat font-bold text-blue'
                                 css={css`
-                                    font-size: 2rem;
+                                    font-size: 1.625rem;
                                 `}
                             >
                                 Case Study
@@ -733,4 +745,4 @@ const SecurityForStartups = ({ location }) => {
     );
 };
 
-export default SecurityForStartups;
+export default AutomatedSecurityForStartups;
