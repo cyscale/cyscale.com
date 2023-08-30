@@ -259,27 +259,28 @@ const SecurityForStartups = ({ location }) => {
                         <div className='grid grid-cols-12 gap-x-5'>
                             <div className='col-span-12 lg:col-span-6 lg:mx-0'>
                                 <div
-                                    className='mt-6 lg:mt-0 rounded-xl max-w-lg lg:max-w-2xl mx-auto flex items-center justify-center p-4 lg:p-0 h-36 lg:h-40'
+                                    className='mt-6 lg:mt-0 rounded-xl max-w-lg lg:max-w-2xl mx-auto flex items-center justify-center p-4 lg:p-0 h-40 sm:h-36 lg:h-40'
                                     css={css`
                                         background: linear-gradient(48deg, #000 0%, #0f26aa 36.65%, #ff4a56 100%),
                                             #0f26aa;
                                     `}
                                 >
-                                    <p
-                                        className='font-montserrat text-white text-center font-bold'
-                                        css={css`
-                                            font-size: 1.5rem;
-                                            @media (min-width: 1024px) {
-                                                font-size: 2rem;
-                                            }
-                                        `}
-                                    >
-                                        You get 75% off your first year and protection for up to 1000 assets.
+                                    <p className='font-montserrat text-white text-center font-bold text-2xl leading-normal'>
+                                        You get 75% off your first year and
+                                        <br className='hidden sm:block' /> protection for up to 1000 assets.
                                     </p>
                                 </div>
                             </div>
                             <div className='col-span-12 lg:col-span-6 lg:mx-0'>
-                                <div className='mt-6 lg:mt-0 rounded-xl max-w-lg lg:max-w-2xl mx-auto bg-selago px-8 py-4 sm:py-5 h-48 lg:h-40'>
+                                <div
+                                    className='mt-6 lg:mt-0 rounded-xl max-w-lg lg:max-w-2xl mx-auto bg-selago px-8 py-4 sm:py-6 lg:py-7 h-48 lg:h-40'
+                                    css={css`
+                                        @media screen and (min-width: 1024px) and (max-width: 1131px) {
+                                            padding-top: 1rem !important;
+                                            padding-bottom: 0.2rem !important;
+                                        }
+                                    `}
+                                >
                                     <p
                                         className='font-hind text-lg'
                                         css={css`
@@ -290,7 +291,7 @@ const SecurityForStartups = ({ location }) => {
                                         have a conversation and see what we can do.
                                     </p>
                                     <Link
-                                        className='py-2 pl-4 pr-6 rounded cursor-pointer font-medium mt-2 sm:mt-4 lg:mt-2 xl:mt-6 flex bg-blue'
+                                        className='py-2 pl-4 pr-6 rounded cursor-pointer font-medium mt-2 sm:mt-4 lg:mt-1 xl:mt-2 flex bg-blue'
                                         to='/request-demo/'
                                         css={[
                                             hoverButtonColorStyle,
@@ -299,6 +300,9 @@ const SecurityForStartups = ({ location }) => {
                                                 color: #0f26aa;
                                                 &:hover {
                                                     color: white;
+                                                }
+                                                @media screen and (min-width: 1024px) and (max-width: 1131px) {
+                                                    margin-top: 0.2rem !important;
                                                 }
                                             `
                                         ]}
