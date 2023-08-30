@@ -116,21 +116,11 @@ const AutomatedSecurityForStartups = ({ location }) => {
                                         <h1 className='text-center sm:text-left text-blue text-4xl lg:text-5xl leading-normal mb-8 font-montserrat font-bold'>
                                             Cyscale Pro for Startups
                                         </h1>
-                                        <h2
-                                            className='text-center sm:text-left mb-8 text-blue font-bold'
-                                            css={css`
-                                                font-size: 1.5rem;
-                                                line-height: 2rem;
-                                                @media (min-width: 640px) {
-                                                    font-size: 2rem;
-                                                    line-height: 2.25rem;
-                                                }
-                                            `}
-                                        >
+                                        <h2 className='text-center sm:text-left mb-8 text-blue font-bold text-2xl sm:text-3xl'>
                                             Your cloud apps and data, secured ✅
                                         </h2>
                                         <p
-                                            className='text-center sm:text-left text-base lg:text-2xl mb-8'
+                                            className='text-center sm:text-left text-base lg:text-lg mb-8'
                                             css={css`
                                                 color: #454545;
                                             `}
@@ -140,7 +130,7 @@ const AutomatedSecurityForStartups = ({ location }) => {
                                             cloud without the need for a big security team or a big budget
                                         </p>
                                         <p
-                                            className='text-center sm:text-left text-base lg:text-2xl mb-2 font-bold'
+                                            className='text-center sm:text-left text-base lg:text-lg mb-2 font-bold'
                                             css={css`
                                                 color: #454545;
                                             `}
@@ -189,16 +179,11 @@ const AutomatedSecurityForStartups = ({ location }) => {
                     <div className='py-12 md:py-24'>
                         <div id='start'>
                             <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-full'>
-                                <h2
-                                    className='text-center lg:text-left mb-4 font-montserrat font-bold text-blue'
-                                    css={css`
-                                        font-size: 1.625rem;
-                                    `}
-                                >
+                                <h2 className='text-center lg:text-left mb-4 font-montserrat font-bold text-blue text-2xl'>
                                     Is Cyscale Pro for me?
                                 </h2>
                                 <h3
-                                    className='text-lg lg:text-2xl mb-2'
+                                    className='text-lg mb-2'
                                     css={css`
                                         color: #454545;
                                     `}
@@ -208,7 +193,7 @@ const AutomatedSecurityForStartups = ({ location }) => {
                                     to secure your apps and data in the cloud.
                                 </h3>
                                 <p
-                                    className='font-hind text-lg mb-8'
+                                    className='font-hind text-base mb-8'
                                     css={css`
                                         color: #454545;
                                     `}
@@ -270,12 +255,7 @@ const AutomatedSecurityForStartups = ({ location }) => {
                 <Container>
                     <div className='pt-2 pb-0 sm:pb-24'>
                         <div>
-                            <h2
-                                className='text-center lg:text-left mb-8 font-montserrat font-bold text-blue'
-                                css={css`
-                                    font-size: 1.625rem;
-                                `}
-                            >
+                            <h2 className='text-center lg:text-left mb-8 font-montserrat font-bold text-blue text-2xl'>
                                 What do I get with Cyscale Pro?
                             </h2>
                         </div>
@@ -326,7 +306,7 @@ const AutomatedSecurityForStartups = ({ location }) => {
                                     >
                                         Asset inventory
                                     </h1>
-                                    <p className='text-lg font-hind mt-4 text-center'>Up to 1000 protected assets.</p>
+                                    <p className='text-lg font-hind mt-4 text-center'>Up to 1000 protected assets</p>
                                     <GatsbyImage
                                         image={data.assetInventory.childImageSharp.gatsbyImageData}
                                         alt='Asset inventory'
@@ -475,12 +455,7 @@ const AutomatedSecurityForStartups = ({ location }) => {
                     <Container>
                         <div className='py-12 md:py-24'>
                             <div>
-                                <h2
-                                    className='text-center lg:text-left mb-8 font-montserrat font-bold text-blue'
-                                    css={css`
-                                        font-size: 1.625rem;
-                                    `}
-                                >
+                                <h2 className='text-center lg:text-left mb-8 font-montserrat font-bold text-blue text-2xl'>
                                     Stress-free security for small businesses
                                     <br className='hidden sm:block' /> building apps in the cloud
                                 </h2>
@@ -590,12 +565,7 @@ const AutomatedSecurityForStartups = ({ location }) => {
                     <Container>
                         <Row>
                             <div className='col-span-12 lg:col-span-6 mx-auto lg:mx-0'>
-                                <h2
-                                    className='text-center lg:text-left mb-8 font-montserrat font-bold text-blue'
-                                    css={css`
-                                        font-size: 1.625rem;
-                                    `}
-                                >
+                                <h2 className='text-center lg:text-left mb-8 font-montserrat font-bold text-blue text-2xl'>
                                     How much does it cost?
                                 </h2>
                                 <div className='max-w-lg lg:max-w-3xl'>
@@ -634,27 +604,15 @@ const AutomatedSecurityForStartups = ({ location }) => {
                 <Container className='mt-8'>
                     <div className='py-12'>
                         <div>
-                            <h2
-                                className='text-center lg:text-left mb-8 font-montserrat font-bold text-blue'
-                                css={css`
-                                    font-size: 1.625rem;
-                                `}
-                            >
-                                Case Study
+                            <h2 className='text-center lg:text-left mb-8 font-montserrat font-bold text-blue text-2xl'>
+                                Cyscale in action
                             </h2>
                         </div>
                         <div className='grid grid-cols-12 gap-x-5 mt-4'>
                             <div className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 lg:mt-0 max-w-lg lg:max-w-full'>
+                                <p className='font-montserrat font-bold text-xl'>Access management in Fintech</p>
                                 <p
-                                    className='font-montserrat font-bold'
-                                    css={css`
-                                        font-size: 1.375rem;
-                                    `}
-                                >
-                                    Access management in Fintech
-                                </p>
-                                <p
-                                    className='font-hind text-lg mt-2'
+                                    className='font-hind text-base mt-2'
                                     css={css`
                                         color: #454545;
                                     `}
@@ -665,11 +623,11 @@ const AutomatedSecurityForStartups = ({ location }) => {
                                     the cloud environment was always in compliance with their policies.
                                 </p>
                                 <img src={QuotesStartups} alt='' className='mt-4' />
-                                <p className='mt-4 text-lg font-semibold font-hind'>
+                                <p className='mt-4 text-base font-semibold font-hind'>
                                     Cyscale is eliminating the need to ask the team for tedious configuration reports,
                                     greatly improving our visibility and helping us understand things we didn’t know.
                                 </p>
-                                <p className='font-hind text-lg mt-2'>
+                                <p className='font-hind text-base mt-2'>
                                     <strong>Alex Cociu,</strong>
                                     <br /> Risk and Compliance Officer at Smart Fintech
                                 </p>
@@ -679,16 +637,11 @@ const AutomatedSecurityForStartups = ({ location }) => {
                                 />
                             </div>
                             <div className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 mt-20 lg:mt-0 max-w-lg lg:max-w-full'>
-                                <p
-                                    className='font-montserrat font-bold'
-                                    css={css`
-                                        font-size: 1.375rem;
-                                    `}
-                                >
+                                <p className='font-montserrat font-bold text-xl'>
                                     Increased productivity with automated security
                                 </p>
                                 <p
-                                    className='font-hind text-lg mt-2'
+                                    className='font-hind text-base mt-2'
                                     css={css`
                                         color: #454545;
                                     `}
@@ -700,11 +653,11 @@ const AutomatedSecurityForStartups = ({ location }) => {
                                     process.
                                 </p>
                                 <img src={QuotesStartups} alt='' className='mt-4' />
-                                <p className='mt-4 text-lg font-semibold font-hind'>
+                                <p className='mt-4 text-base font-semibold font-hind'>
                                     Exceptionally helpful when doing access reviews; I’m using the platform monthly and
                                     it simply automates my work!
                                 </p>
-                                <p className='font-hind text-lg mt-9'>
+                                <p className='font-hind text-base mt-2'>
                                     <strong>James Hawkes,</strong>
                                     <br /> Head of Delivery at Bays Consulting
                                 </p>
@@ -722,7 +675,7 @@ const AutomatedSecurityForStartups = ({ location }) => {
                             <img src={cloudIcon} alt='Cloud Icon' />
                             <h2 className='text-center px-2 mb-2 text-lg lg:text-2xl font-hind'>
                                 Get enterprise-grade security
-                                <br /> without the enterprise-grade price tag.
+                                <br /> without the enterprise-grade price tag
                             </h2>
                             <div className='mt-6 w-auto inline-block'>
                                 <button

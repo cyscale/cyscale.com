@@ -184,7 +184,7 @@ const SecurityForStartups = ({ location }) => {
                                             Your cloud apps and data, secured ✅
                                         </h2>
                                         <p
-                                            className='text-center sm:text-left text-base lg:text-lg  mb-8'
+                                            className='text-center sm:text-left text-base lg:text-lg mb-8'
                                             css={css`
                                                 color: #454545;
                                             `}
@@ -194,7 +194,7 @@ const SecurityForStartups = ({ location }) => {
                                             cloud without the need for a big security team or a big budget.
                                         </p>
                                         <p
-                                            className='text-center sm:text-left text-base lg:text-lg  mb-2 font-bold'
+                                            className='text-center sm:text-left text-base lg:text-lg mb-2 font-bold'
                                             css={css`
                                                 color: #454545;
                                             `}
@@ -615,7 +615,7 @@ const SecurityForStartups = ({ location }) => {
                     <div className='py-12'>
                         <div>
                             <h2 className='text-center lg:text-left mb-8 font-montserrat font-bold text-blue text-2xl'>
-                                Case Study
+                                Cyscale in action
                             </h2>
                         </div>
                         <div className='grid grid-cols-12 gap-x-5 mt-4'>
@@ -633,7 +633,7 @@ const SecurityForStartups = ({ location }) => {
                                     the cloud environment was always in compliance with their policies.
                                 </p>
                                 <img src={QuotesStartups} alt='' className='mt-4' />
-                                <p className='mt-4 text-base  font-semibold font-hind'>
+                                <p className='mt-4 text-base font-semibold font-hind'>
                                     Cyscale is eliminating the need to ask the team for tedious configuration reports,
                                     greatly improving our visibility and helping us understand things we didn’t know.
                                 </p>
