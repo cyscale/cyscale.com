@@ -15,7 +15,7 @@ seoDescription: Explore how AWS's new IPv4 billing changes, effective from
   February 2024, will influence both your financial and security strategies.
   Understand the implications for small startups to large enterprises, from cost
   optimization to IPv6 transition, NAT64, and security enhancements.
-featuredpost: false
+featuredpost: true
 featuredimage: /img/aws-ipv4-article.png
 tableOfContents: true
 ---
