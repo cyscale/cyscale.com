@@ -214,33 +214,37 @@ const AutomatedSecurityForStartups = ({ location }) => {
                                 >
                                     <p className='font-montserrat text-white text-left px-4 text-lg'>
                                         Our solution guides you to the 20% of most important fixes that{' '}
-                                        <strong>will reduce 80%</strong>
-                                        {' '}
-                                        of your risk, giving you back time to focus on building your rocket ship.
+                                        <strong>will reduce 80%</strong> of your risk, giving you back time to focus on
+                                        building your rocket ship.
                                     </p>
                                 </div>
                             </div>
                             <div className='col-span-12 lg:col-span-6 lg:mx-0'>
                                 <div
-                                    className='mt-6 lg:mt-0 rounded-xl max-w-lg lg:max-w-2xl mx-auto bg-selago px-8 py-4 sm:py-6 lg:py-7 h-48 lg:h-40'
+                                    className='mt-6 lg:mt-0 rounded-xl max-w-lg lg:max-w-2xl mx-auto bg-selago px-8 py-4 sm:py-6 lg:py-7 h-52 sm:h-48 lg:h-40'
                                     css={css`
                                         @media screen and (min-width: 1024px) and (max-width: 1131px) {
+                                            padding-top: 1rem !important;
+                                            padding-bottom: 0.2rem !important;
+                                        }
+                                        @media screen and (min-width: 1131px) and (max-width: 1251px) {
                                             padding-top: 1rem !important;
                                             padding-bottom: 0.2rem !important;
                                         }
                                     `}
                                 >
                                     <p
-                                        className='font-hind text-lg'
+                                        className='font-montserrat'
                                         css={css`
                                             color: #2d2d2d;
+                                            font-size: 1.09rem;
                                         `}
                                     >
                                         If you are a scaleup or mid-size company or your situation is different, let’s
                                         have a conversation and see what we can do.
                                     </p>
                                     <Link
-                                        className='py-2 pl-4 pr-6 rounded cursor-pointer font-medium mt-2 sm:mt-4 lg:mt-1 xl:mt-2 flex bg-blue'
+                                        className='py-2 pl-4 pr-6 rounded cursor-pointer font-medium mt-2 sm:mt-4 lg:mt-1 xl:mt-3 flex bg-blue'
                                         to='/request-demo/'
                                         css={[
                                             hoverButtonColorStyle,
