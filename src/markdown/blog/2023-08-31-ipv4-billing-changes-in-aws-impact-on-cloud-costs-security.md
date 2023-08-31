@@ -17,7 +17,7 @@ seoDescription: Explore how AWS's new IPv4 billing changes, effective from
   optimization to IPv6 transition, NAT64, and security enhancements.
 featuredpost: true
 featuredimage: /img/aws-ipv4-article.png
-tableOfContents: true
+tableOfContents: false
 ---
 Beginning February 1, 2024, Amazon Web Services (AWS) will usher in a significant change by charging for public IPv4 addresses. Whether you are a seasoned cloud engineer or a business decision-maker this shift by one of the world's leading cloud providers will likely have broad implications.
 
