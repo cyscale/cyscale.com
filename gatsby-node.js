@@ -77,8 +77,47 @@ exports.createPages = async ({ graphql, actions }) => {
 
     const blogTemplate = path.resolve(`src/template/blogTemplate.js`);
     const careerTemplate = path.resolve(`src/template/careerTemplate.js`);
+    const closedCareerTemplate = path.resolve(`src/template/closedCareerTemplate.js`);
     const blogAllPostsTemplate = path.resolve(`src/template/blogAllPostsTemplate.js`);
     const pagesTemplate = path.resolve(`src/template/pagesTemplate.js`);
+
+    await graphql(`
+        query loadClosedCareersQuery {
+            allMarkdownRemark(
+                sort: { frontmatter: { date: DESC } }
+                filter: { frontmatter: { templateKey: { eq: "career-page" }, disabled: { eq: true } } }
+            ) {
+                edges {
+                    node {
+                        frontmatter {
+                            title
+                            seoTitle
+                            description
+                            seoDescription
+                            permalink
+                        }
+                    }
+                }
+            }
+        }
+    `).then((result) => {
+        if (result.errors) throw result.errors;
+
+        const posts = result.data.allMarkdownRemark.edges;
+
+        posts.forEach((edge) => {
+            const node = edge.node;
+            createPage({
+                // Path for this page — required
+                path: '/careers/' + node.frontmatter.permalink + '/',
+                component: closedCareerTemplate,
+                context: {
+                    alldata: node,
+                    jobs: posts.map(({ node }) => node.frontmatter.title)
+                }
+            });
+        });
+    });
 
     await graphql(`
         query loadCareersQuery {
