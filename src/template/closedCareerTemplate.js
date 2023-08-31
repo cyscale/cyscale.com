@@ -24,7 +24,7 @@ const ClosedCareerTemplate = ({ pageContext, location }) => {
     return (
         <Layout
             location={location}
-            pageName='jobDetails'
+            pageName='closedJobDetails'
             title={`${data.seoTitle || data.title} - Cyscale`}
             description={data.seoDescription || data.description}
             noIndex={true}
