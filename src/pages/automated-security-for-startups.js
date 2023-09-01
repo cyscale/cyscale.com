@@ -127,7 +127,7 @@ const AutomatedSecurityForStartups = ({ location }) => {
                                         >
                                             If you’re a fast-growing SaaS company, cloud security shouldn’t hold you
                                             back. The Cyscale platform automates security for your apps and data in the
-                                            cloud without the need for a big security team or a big budget
+                                            cloud without the need for a big security team or a big budget.
                                         </p>
                                         <p
                                             className='text-center sm:text-left text-base lg:text-lg mb-2 font-bold'
