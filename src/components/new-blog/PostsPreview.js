@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import Post from './Post';
-import { Row, Container } from '../atoms/Containers';
+import { Row } from '../atoms/Containers';
 import { map } from 'lodash';
 import classNames from 'classnames';
 
@@ -45,7 +45,7 @@ const PostsPreview = ({ bg }) => {
                 'bg-transparent': bg === 'transparent'
             })}
         >
-            <Container>
+            <div className='container max-w-7xl m-auto'>
                 <Row className='gap-4 lg:gap-8'>
                     {map(posts, ({ node }, index) => {
                         return (
@@ -65,7 +65,7 @@ const PostsPreview = ({ bg }) => {
                         </Link>
                     </div>
                 </div>
-            </Container>
+            </div>
         </div>
     );
 };
