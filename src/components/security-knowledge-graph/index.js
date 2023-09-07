@@ -122,7 +122,7 @@ const Index = () => {
         <>
             <div>
                 <div id='start'>
-                    <Section>
+                    <div className='pt-24 pb-24 lg:pt-32'>
                         <Container>
                             <h2 className='font-semibold  text-blue text-2xl md:text-4xl max-w-sm leading-normal sectionTitle mb-10 font-montserrat'>
                                 What is a Security
@@ -160,10 +160,9 @@ const Index = () => {
                                 </div>
                             </Row>
                         </Container>
-                    </Section>
+                    </div>
                 </div>
-                <Video id='video' />
-                <Section className='block w-full bg-white' id='nutshell'>
+                <div className='pt-12 pb-24 lg:pb-32 block w-full bg-white' id='nutshell'>
                     <Container>
                         <p className='text-black text-base my-16'>
                             <strong>The Cyscale Security Knowledge Graph in a nutshell</strong>
@@ -194,7 +193,7 @@ const Index = () => {
                             </p>
                         </div>
                     </Container>
-                </Section>
+                </div>
                 <Cloud
                     title={`If knowledge graph tech is this useful, why hasn't anyone used it before?`}
                     sectionName='SKGBeneifts'
