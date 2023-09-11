@@ -5,7 +5,6 @@ import Automation from './automation';
 import IdentifyIssues from './identifyIssues';
 import CSPMgetStarted from '../cloud-security-posture-management/CSPMgetStarted';
 import FAQs from './faqs';
-import Video from './video';
 import getStartedICon from '../../assets/images/getStartedIconCPSM.svg';
 import SKG_F_image from '../../assets/images/skg_f_image.png';
 import SKG_F_image_2 from '../../assets/images/Group-421.svg';
@@ -16,7 +15,7 @@ import Icon4 from '../../assets/images/feature_icon_4.inline.svg';
 import Icon5 from '../../assets/images/feature_icon_5.inline.svg';
 import Icon6 from '../../assets/images/feature_icon_6.inline.svg';
 import { graphql, Link, useStaticQuery } from 'gatsby';
-import { Container, Row, Section } from '../atoms/Containers';
+import { Container, Row } from '../atoms/Containers';
 import LinksAndWhitepaper from '../products/LinksAndWhitepaper';
 import { topArticles } from '../cloud-data-security';
 

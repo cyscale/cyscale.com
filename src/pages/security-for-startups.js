@@ -181,7 +181,7 @@ const SecurityForStartups = ({ location }) => {
                                             Cyscale for Startups
                                         </h1>
                                         <h2 className='text-center sm:text-left mb-8 text-blue font-bold text-2xl sm:text-3xl'>
-                                            Your cloud apps and data, secured ✅
+                                            Simple cloud security. <br /> Instant peace of mind ✅
                                         </h2>
                                         <p
                                             className='text-center sm:text-left text-base lg:text-lg mb-8'
