@@ -166,6 +166,41 @@ const HomePage = ({ location }) => {
                     gatsbyImageData(width: 1080, layout: CONSTRAINED)
                 }
             }
+            aws: file(relativePath: { eq: "aws-icon-homepage.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 40, layout: CONSTRAINED)
+                }
+            }
+            azure: file(relativePath: { eq: "azure-icon-homepage.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 40, layout: CONSTRAINED)
+                }
+            }
+            gc: file(relativePath: { eq: "gc-icon-homepage.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 40, layout: CONSTRAINED)
+                }
+            }
+            alibaba: file(relativePath: { eq: "alibaba-cloud-icon-homepage.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 40, layout: CONSTRAINED)
+                }
+            }
+            okta: file(relativePath: { eq: "okta-icon-homepage.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 55, layout: CONSTRAINED)
+                }
+            }
+            googleCloud: file(relativePath: { eq: "google-cloud-icon-homepage.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 33, layout: CONSTRAINED)
+                }
+            }
+            azureAD: file(relativePath: { eq: "azure-ad-icon-homepage.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 34, layout: CONSTRAINED)
+                }
+            }
         }
     `);
     const [isVisible, setIsVisible] = useState(false);
@@ -254,6 +289,15 @@ const HomePage = ({ location }) => {
                                             <LightDarkButton text={'Request Demo'} />
                                         </Link>
                                     </div>
+                                </div>
+                                <div className='hidden lg:flex space-x-3 mt-12 '>
+                                    <GatsbyImage alt='' image={data.aws.childImageSharp.gatsbyImageData} />
+                                    <GatsbyImage alt='' image={data.azure.childImageSharp.gatsbyImageData} />
+                                    <GatsbyImage alt='' image={data.gc.childImageSharp.gatsbyImageData} />
+                                    <GatsbyImage alt='' image={data.alibaba.childImageSharp.gatsbyImageData} />{' '}
+                                    <GatsbyImage alt='' image={data.okta.childImageSharp.gatsbyImageData} />
+                                    <GatsbyImage alt='' image={data.googleCloud.childImageSharp.gatsbyImageData} />
+                                    <GatsbyImage alt='' image={data.azureAD.childImageSharp.gatsbyImageData} />
                                 </div>
                             </div>
                             <div className='col-span-12 lg:col-span-6'>
