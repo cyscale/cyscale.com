@@ -10,11 +10,10 @@ import { Element } from 'react-scroll';
 import BgHeroMobile from '../assets/images/bg-homepage-mobile.webp';
 import BgHero from '../assets/images/bg-homepage.webp';
 import loadable from '@loadable/component';
-import GradientCard from '../components/Home/GradientCard';
-import CISCOIcon from '../assets/images/ciso-icon.svg';
-import ShieldSettingsIcon from '../assets/images/shield-settings-icon.svg';
-import ShieldCloudIcon from '../assets/images/shield-cloud-icon.svg';
 import sal from 'sal.js';
+import FixIcon from '../assets/images/fix-icon-home.svg';
+import PrioritizeIcon from '../assets/images/prioritize-icon-home.svg';
+import IdentifyIcon from '../assets/images/identity-icon-home.svg';
 
 const BlogCarousel = loadable(() => import('../components/Home/BlogSection'));
 const CardsSections = loadable(() => import('../components/Home/CardsSections'));
@@ -107,6 +106,26 @@ const featureStyle = css`
     @media screen and (min-width: 1024px) {
         height: 32rem;
     }
+`;
+
+const onHoverMarginHr = css`
+    &:hover hr {
+        margin-top: 0px;
+    }
+`;
+
+const workflowPhaseGradient = css`
+    height: 4px;
+    border: none;
+    background: #0f26aa;
+    background: linear-gradient(90deg, #0f26aa 11.63%, #ff4a56 95.75%) 0 / 70% no-repeat;
+`;
+
+const workflowPhaseHr = css`
+    border: 0;
+    margin-top: 40px;
+    height: 1px;
+    background: #d9d9d9;
 `;
 
 const HomePage = ({ location }) => {
@@ -211,51 +230,17 @@ const HomePage = ({ location }) => {
                             <div className='col-span-12 lg:col-span-6 order-last lg:order-first'>
                                 <div className='lg:mt-16 pt-4 max-w-xl mx-auto lg:mx-0'>
                                     <h1
-                                        className='text-left text-blue text-3xl sm:text-4xl lg:text-5xl leading-normal lg:leading-normal mb-8 font-montserrat font-semibold hidden lg:block'
+                                        className='text-left text-blue text-3xl sm:text-4xl lg:text-5xl leading-normal lg:leading-normal font-montserrat font-semibold'
                                         css={css`
                                             height: 10rem;
-                                            @media (min-width: 464px) {
-                                                height: 7rem;
-                                            }
-                                            @media (min-width: 1024px) and (max-width: 1036px) {
-                                                height: 22rem;
-                                            }
-                                            @media (min-width: 1037px) and (max-width: 1053px) {
-                                                height: 20rem;
-                                            }
-                                            @media (min-width: 1054px) {
-                                                height: 14rem;
-                                            }
                                         `}
                                     >
-                                        Improve your cloud security team’s productivity by 65%
-                                    </h1>
-                                    <h1
-                                        className='text-left text-blue mb-8 font-montserrat block lg:hidden font-bold'
-                                        css={css`
-                                            font-size: 2rem;
-                                            line-height: 2.5rem;
-                                            height: 10rem;
-                                            @media (min-width: 464px) {
-                                                height: 7rem;
-                                            }
-                                            @media (min-width: 1024px) and (max-width: 1036px) {
-                                                height: 22rem;
-                                            }
-                                            @media (min-width: 1037px) and (max-width: 1053px) {
-                                                height: 20rem;
-                                            }
-                                            @media (min-width: 1054px) {
-                                                height: 14rem;
-                                            }
-                                        `}
-                                    >
-                                        Improve your cloud security team’s productivity by 65%
+                                        Secure your cloud <br className='block' /> quickly and easily
                                     </h1>
                                     <p className='text-left text-base lg:text-lg mb-8 leading-relaxed font-hind'>
-                                        Our cloud security platform automates the contextual analysis of cloud
-                                        misconfigurations, vulnerabilities, access, and data, to provide an accurate and
-                                        actionable assessment of risk.
+                                        The Cyscale automated cloud security platform delivers contextual analysis of
+                                        cloud misconfigurations, vulnerabilities, access, and data, to provide an
+                                        accurate and actionable assessment of risk.
                                     </p>
                                     <div className='flex mt-8 justify-start'>
                                         <Link to='/free-trial/'>
@@ -274,7 +259,7 @@ const HomePage = ({ location }) => {
                     </div>
                 </Container>
             </div>
-            <Container className='my-16 lg:my-32'>
+            <Container className='my-16 lg:mt-32'>
                 <div
                     className='grid grid-cols-12 gap-x-5 mt-12'
                     css={css`
@@ -292,7 +277,7 @@ const HomePage = ({ location }) => {
                         data-sal='slide-left'
                     >
                         <p className='font-montserrat text-base font-bold mt-0 lg:ml-5' css={sectionSubtitleColor}>
-                            EMPOWER YOUR TEAM
+                            CLOUD SECURITY IN CONTEXT
                         </p>
                         <h2
                             className='text-blue font-bold font-montserrat mt-4 lg:ml-5'
@@ -301,14 +286,13 @@ const HomePage = ({ location }) => {
                                 line-height: 2.5rem;
                             `}
                         >
-                            Uncover the most toxic combinations of risk that <br className='hidden lg:block' />
-                            expose your company's crown jewels
+                            We guide you to the 20% of most important fixes that will reduce 80% of your risk
                         </h2>
                         <p className='font-hind text-base mt-4 lg:ml-5' css={sectionTextColor}>
-                            Our solution goes beyond traditional security approaches by suggesting the 20% of most
-                            important fixes that help reduce 80% of your risk, allowing you to prioritize your resources
-                            and focus on what truly matters. With our cloud security solution, you can be confident that
-                            your assets are protected, and your business is secure.
+                            Cloud security shouldn't hold you back. If you’re purchasing your first cloud security
+                            solution or you’ve outgrown tools from AWS, Azure, or Google Cloud, Cyscale reduces the
+                            noise to keep you focused on what's urgent. Get peace of mind that your assets are
+                            protected.
                         </p>
                     </div>
                     <div className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 block lg:hidden mt-12'>
@@ -320,42 +304,67 @@ const HomePage = ({ location }) => {
                     </div>
                 </div>
             </Container>
-            <Container className='mb-16 lg:mb-24'>
-                <div
-                    className='grid grid-cols-12 gap-x-5 mt-12'
-                    css={css`
-                        overflow: hidden;
-                    `}
-                >
-                    <div className='col-span-12 lg:col-span-4' data-sal='slide-right'>
-                        <GradientCard
-                            icon={CISCOIcon}
-                            title={'CISO'}
-                            text={
-                                'Keep technological risk in check for the organization, track cloud security posture and remediation activities and generate reports for business stakeholders.'
-                            }
-                            link={'/products/cloud-security-posture-management/'}
-                        />
-                    </div>
-                    <div className='col-span-12 lg:col-span-4' data-sal='slide-up'>
-                        <GradientCard
-                            icon={ShieldSettingsIcon}
-                            title={'CLOUD INFRASTRUCTURE'}
-                            text={
-                                'Get visibility on the security posture of your multi-cloud environments from high-level to detail and ensure the productivity of your cloud team.'
-                            }
-                            link={'/products/cloud-security-posture-management/'}
-                        />
-                    </div>
-                    <div className='col-span-12 lg:col-span-4' data-sal='slide-left'>
-                        <GradientCard
-                            icon={ShieldCloudIcon}
-                            title={'CLOUD SECURITY'}
-                            text={
-                                'Identify the highest security risk with the help of our Security Knowledge Graph™ technology, capturing relationships between cloud resources, identities, and data.'
-                            }
-                            link={'/products/security-knowledge-graph/'}
-                        />
+            <Container>
+                <div className='pt-24 pb-24'>
+                    <p className='font-montserrat text-base font-bold mb-2' css={sectionSubtitleColor}>
+                        EMPOWER YOUR TEAM
+                    </p>
+                    <h3 className='text-blue font-montserrat font-bold mb-12 text-3xl  sm:text-4xl'>Don’t just assess, FIX</h3>
+                    <div className='grid grid-cols-12 gap-4 lg:gap-0'>
+                        <div
+                            className='col-span-12 sm:col-span-6 lg:col-span-4 mx-0 max-w-xl lg:max-w-full group'
+                            css={onHoverMarginHr}
+                        >
+                            <img src={IdentifyIcon} alt='' className='mx-0 sm:mx-auto lg:mx-0' />
+                            <p className='font-montserrat font-bold text-xl text-left sm:text-center lg:text-left mt-3'>
+                                IDENTITY
+                            </p>
+                            <div className='mt-9 group-hover:block hidden' css={workflowPhaseGradient}></div>
+                            <hr css={workflowPhaseHr} />
+                            <div className='mt-9 lg:pr-8'>
+                                <p className='font-hind text-base mt-4 sm:text-center lg:text-left'>
+                                    Continuous and automated monitoring of your AWS, Microsoft Azure, Google Cloud, and
+                                    Alibaba Cloud environments. Each cloud asset is a node in the Security Knowledge
+                                    Graph™ so it's easy to see how it interacts with other entities, enabling you to
+                                    identify issues in a much richer context.
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            className='col-span-12 sm:col-span-6 lg:col-span-4 mx-0 max-w-xl lg:max-w-full group mt-4 sm:mt-0'
+                            css={onHoverMarginHr}
+                        >
+                            <img src={PrioritizeIcon} alt='' className='mx-0 sm:mx-auto lg:mx-0' />
+                            <p className='font-montserrat font-bold text-xl text-left sm:text-center lg:text-left mt-3'>
+                                PRIORITIZE
+                            </p>
+                            <div className='mt-9 group-hover:block hidden' css={workflowPhaseGradient}></div>
+                            <hr css={workflowPhaseHr} />
+                            <div className='mt-9 lg:pr-8'>
+                                <p className='font-hind text-base mt-4 sm:text-center lg:text-left'>
+                                    Context is important. Don't waste time chasing false positives or getting
+                                    overwhelmed by rigid and complex tools. Configurable risk rules let you define your
+                                    own thresholds to identify the highest security risk to act on.
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            className='col-span-12 sm:col-span-6 lg:col-span-4 mx-0 max-w-xl lg:max-w-full group mt-4 lg:mt-0'
+                            css={onHoverMarginHr}
+                        >
+                            <img src={FixIcon} alt='' className='mx-0 sm:mx-auto lg:mx-0' />
+                            <p className='font-montserrat font-bold text-xl text-left sm:text-center lg:text-left mt-3'>
+                                FIX
+                            </p>
+                            <div className='mt-9 group-hover:block hidden' css={workflowPhaseGradient}></div>
+                            <hr css={workflowPhaseHr} />
+                            <div className='mt-9 lg:pr-8'>
+                                <p className='font-hind text-base mt-4 sm:text-center lg:text-left'>
+                                    Cyscale guides you through the remediation process for each risk so you can quickly
+                                    solve misconfigurations and vulnerabilities leading to compliance violations.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </Container>
@@ -364,7 +373,10 @@ const HomePage = ({ location }) => {
                 <Container>
                     <div className='grid grid-cols-12 gap-x-5'>
                         <div className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 max-w-xl lg:max-w-lg'>
-                            <p className='font-montserrat text-base font-bold text-white'>USE CASE</p>
+                            <p className='font-montserrat text-base font-bold text-white'>
+                                A DEEPER UNDERSTANDING
+                                <br className='block sm:hidden' /> OF YOUR UNIQUE CLOUD RISK
+                            </p>
                             <h2 className='font-montserrat font-bold text-white mt-4' css={titleSection}>
                                 Get contextual insights
                             </h2>
@@ -372,11 +384,11 @@ const HomePage = ({ location }) => {
                                 An unpatched virtual machine running an app with the devastating Log4j vulnerability is
                                 close to harmless in a private network. However, a server running the same vulnerable
                                 cloud app while being exposed to the internet, and having read or write access to a
-                                production datastore presents a totally different risk.
+                                production datastore presents an urgent risk.
                             </p>
                             <p className='mt-4 text-white text-base font-hind font-normal'>
-                                Understanding context allows you to immediately see what needs fixing and what can wait,
-                                and thus prioritize tasks on your cloud security roadmap.
+                                Don't waste time chasing false positives. Context enables you to immediately see what
+                                you need to prioritize on your cloud security roadmap.
                             </p>
                         </div>
                         <div className='col-span-12 lg:col-span-6 mt-20 lg:mt-0 mx-auto lg:mx-0'>
@@ -390,16 +402,16 @@ const HomePage = ({ location }) => {
                     <div className='grid grid-cols-12 gap-x-5'>
                         <div className='col-span-12 lg:col-span-8 mx-auto lg:mx-0 max-w-2xl'>
                             <p className='text-left uppercase font-montserrat font-bold' css={sectionSubtitleColor}>
-                                CYSCALE CLOUD SECURITY PLATFORM
+                                CLOUD SECURITY IS CRITICAL <br className='block sm:hidden' /> BUT IT SHOULDN'T BE
+                                COMPLEX
                             </p>
                             <h2 className='font-montserrat text-blue font-bold mt-3' css={titleSection}>
-                                Your ally for a solid security program
+                                Peace of mind with <br className='hidden sm:block' /> automated cloud security
                             </h2>
                             <p className='text-base font-hind font-normal max-w-2xl mt-3' css={sectionTextColor}>
                                 Cyscale is an <strong>agentless</strong> cloud-native application protection platform
-                                (CNAPP) that helps
-                                <br className='hidden sm:block' /> your organization protect against data breaches and
-                                other types of modern attacks in the public cloud.
+                                (CNAPP) that helps protect your organization against data breaches and other types of
+                                modern threats in the public cloud.
                             </p>
                         </div>
                     </div>
@@ -410,10 +422,11 @@ const HomePage = ({ location }) => {
                 <div className='grid grid-cols-12 gap-x-5'>
                     <div className='col-span-12 lg:col-span-8 mx-auto lg:mx-0 max-w-2xl'>
                         <p className='uppercase font-montserrat font-bold' css={sectionSubtitleColor}>
-                            CYSCALE KEY FEATURES
+                            AUTOMATED CLOUD SECURITY
                         </p>
                         <h2 className='font-montserrat text-blue font-bold mt-3' css={titleSection}>
-                            Protect your business with Cyscale
+                            Secure your cloud apps and
+                            <br className='hidden sm:block' /> data without being an expert
                         </h2>
                     </div>
                 </div>
@@ -424,10 +437,7 @@ const HomePage = ({ location }) => {
                         overflow: hidden;
                     `}
                 >
-                    <div
-                        className='col-span-12 lg:col-span-6'
-                        data-sal='slide-right'
-                    >
+                    <div className='col-span-12 lg:col-span-6' data-sal='slide-right'>
                         <div
                             className='mt-6 lg:mt-0 rounded-xl pt-12 px-9 max-w-xl lg:max-w-2xl mx-auto lg:mr-0 lg:ml-auto relative'
                             css={featureStyle}

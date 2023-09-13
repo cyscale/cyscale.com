@@ -34,7 +34,7 @@ const Card = ({ icon, title, text, link, cardHeight, cardHeightLg }) => {
             {link ? (
                 <Link
                     to={link}
-                    className={`col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-4 lg:mt-0 flex flex-col justify-between p-4 rounded-md h-${cardHeight} lg:h-${cardHeightLg} xl:h-${cardHeight}`}
+                    className={`col-span-12 lg:col-span-4 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-4 lg:mt-0 flex flex-col justify-between p-4 rounded-md h-${cardHeight} lg:h-${cardHeightLg} xl:h-${cardHeight}`}
                     css={cardBackgroundColor}
                     data-sal='slide-up'
                 >
@@ -51,7 +51,7 @@ const Card = ({ icon, title, text, link, cardHeight, cardHeightLg }) => {
                 </Link>
             ) : (
                 <div
-                    className={`col-span-12 lg:col-span-3 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-4 lg:mt-0 flex flex-col justify-between p-4 rounded-md h-${cardHeight} lg:h-${cardHeightLg} xl:h-${cardHeight}`}
+                    className={`col-span-12 lg:col-span-4 mx-auto max-w-xl lg:max-w-lg lg:mx-0 mt-4 lg:mt-0 flex flex-col justify-between p-4 rounded-md h-${cardHeight} lg:h-${cardHeightLg} xl:h-${cardHeight}`}
                     css={cardBackgroundColor}
                     data-sal='slide-up'
                 >
