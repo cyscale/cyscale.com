@@ -49,7 +49,10 @@ const Footer = ({ pageUri, pageName }) => {
                                         <img src={logo} className='w-40' alt='Cyscale Logo' />
                                     </Link>
                                     <div className='mt-5 text-sm max-w-auto md:max-w-sm font-light leading-normal text-white font-hind'>
-                                        Cyscale is a <a href="https://cyscale.com">Cloud Security Platform</a> that safeguards apps and data in the cloud. Its Security Knowledge Graph™ makes it easy to track security and compliance across multi-cloud environments, helping companies embrace their digital future with confidence.
+                                        Cyscale is an agentless cloud-native application protection platform (CNAPP)
+                                        that automates the contextual analysis of cloud misconfigurations,
+                                        vulnerabilities, access, and data, to provide an accurate and actionable
+                                        assessment of risk.
                                     </div>
                                 </div>
                                 <div className='col-span-12 md:col-span-6 lg:col-span-12'>
