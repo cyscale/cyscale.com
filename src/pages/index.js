@@ -230,8 +230,12 @@ const HomePage = ({ location }) => {
                             <div className='col-span-12 lg:col-span-6 order-last lg:order-first'>
                                 <div className='lg:mt-16 pt-4 max-w-xl mx-auto lg:mx-0'>
                                     <h1
-                                        className='text-left text-blue text-3xl sm:text-4xl lg:text-5xl leading-normal lg:leading-normal font-montserrat font-semibold'
+                                        className='text-left text-blue text-4xl lg:text-5xl leading-normal lg:leading-normal font-montserrat font-bold'
                                         css={css`
+                                            @media (max-width: 640px) {
+                                                font-size: 2rem;
+                                                line-height: 2.5rem;
+                                            }
                                             height: 10rem;
                                         `}
                                     >
@@ -309,7 +313,9 @@ const HomePage = ({ location }) => {
                     <p className='font-montserrat text-base font-bold mb-2' css={sectionSubtitleColor}>
                         EMPOWER YOUR TEAM
                     </p>
-                    <h3 className='text-blue font-montserrat font-bold mb-12 text-3xl  sm:text-4xl'>Don’t just assess, FIX</h3>
+                    <h3 className='text-blue font-montserrat font-bold mb-12 text-3xl  sm:text-4xl'>
+                        Don’t just assess, FIX
+                    </h3>
                     <div className='grid grid-cols-12 gap-4 lg:gap-0'>
                         <div
                             className='col-span-12 sm:col-span-6 lg:col-span-4 mx-0 max-w-xl lg:max-w-full group'
@@ -317,7 +323,7 @@ const HomePage = ({ location }) => {
                         >
                             <img src={IdentifyIcon} alt='' className='mx-0 sm:mx-auto lg:mx-0' />
                             <p className='font-montserrat font-bold text-xl text-left sm:text-center lg:text-left mt-3'>
-                                IDENTITY
+                                IDENTIFY
                             </p>
                             <div className='mt-9 group-hover:block hidden' css={workflowPhaseGradient}></div>
                             <hr css={workflowPhaseHr} />
