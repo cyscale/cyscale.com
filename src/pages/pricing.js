@@ -1,24 +1,23 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import { Container, Row } from '../components/atoms/Containers';
 import Layout from '../components/layout/CleanLayout';
 import HeroPricing from '../assets/images/hero-pricing.png';
 import checkMarkIcon from '../assets/images/check-mark-icon.svg';
-import PlayButton from '../assets/images/play-icon.png';
 import { css } from 'twin.macro';
-import styled from '@emotion/styled';
-import { graphql, Link as GatsbyLink, useStaticQuery } from 'gatsby';
-import { GatsbyImage } from 'gatsby-plugin-image';
-import useMediaQuery from '../hooks/useMediaQuery';
-import { CSSTransition } from 'react-transition-group';
-import VideoCyscale from '../components/campaigns/cspm-solutin/CyscaleVideo';
+import { Link as GatsbyLink } from 'gatsby';
 import VisibilityIcon from '../assets/images/visibility-icon-pricing.svg';
 import SecurityIcon from '../assets/images/security-icon-pricing.svg';
 import ComplianceIcon from '../assets/images/compliance-icon-pricing.svg';
 import { Link, Element } from 'react-scroll';
 import classnames from 'classnames';
-import useHSMeetingsLoaded from '../hooks/useHSMeetingsLoaded';
-import useLoadHSMeetingsScript from '../hooks/useLoadHSMeetingsScript';
+
 import { hoverButtonColorStyle } from '../components/layout/style';
+import PricingCheck from '../assets/images/princing-check.svg';
+import CaseStudiesSection from '../components/Home/CaseStudiesSection';
+import useHSFormLoaded from '../hooks/useHSFormLoaded';
+import { Helmet } from 'react-helmet';
+import LoaderContainer from '../components/Loader/LoaderContainer/LoaderContainer';
+import CyscaleBird from '../assets/images/cyscale-bird-homepage.svg';
 
 const customFontSize = css`
     font-size: 1.75rem;
@@ -26,11 +25,6 @@ const customFontSize = css`
     @media (max-width: 1024px) {
         font-size: 1.625rem;
     }
-`;
-
-const mostPopularCard = css`
-    box-shadow: 0px 4px 14px rgba(51, 124, 234, 0.25);
-    border-radius: 10px;
 `;
 
 const heroBackground = css`
@@ -48,12 +42,6 @@ const featuresTitleFontSize = css`
     }
 `;
 
-const PlayIcon = styled.img`
-    top: calc((100% / 2) - 1.25rem);
-    left: calc((100% / 2) - 1.25rem);
-    transform: ${({ isHover }) => (isHover ? 'scale(2.5)' : 'scale(2)')};
-`;
-
 const widthFeatureIcon = css`
     width: 3.25rem;
 `;
@@ -65,22 +53,19 @@ const linkFontSize = css`
 `;
 
 const PricingPage = ({ location }) => {
-    const [modal, setModal] = useState(false);
-    const [isHover, setIsHover] = useState(false);
-    const matches = useMediaQuery('(min-width: 23.438rem) and (max-width: 63.938rem)');
-    const { loadingMeetings } = useHSMeetingsLoaded();
+    const { loadingForm } = useHSFormLoaded();
 
-    const data = useStaticQuery(graphql`
-        query PricingQuery {
-            videoThumbnail: file(relativePath: { eq: "video-thumbnail-pricing.webp" }) {
-                childImageSharp {
-                    gatsbyImageData(width: 1080, layout: CONSTRAINED)
-                }
+    useEffect(() => {
+        setTimeout(() => {
+            if (window && window.hbspt) {
+                window.hbspt.forms?.create({
+                    portalId: '5413427',
+                    formId: 'c2d8e2e6-6edb-43d2-9052-350e7f00d1f6',
+                    target: '#meeting-form'
+                });
             }
-        }
-    `);
-
-    useLoadHSMeetingsScript();
+        }, 600);
+    }, []);
 
     return (
         <Layout
@@ -89,6 +74,9 @@ const PricingPage = ({ location }) => {
             title='Pricing - Cyscale'
             description="Pay fair for security experts' advice and guidance. Quantifiable ROI for cloud data security and compliance. Reduce cloud costs and consumption."
         >
+            <Helmet>
+                <script charSet='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js'></script>
+            </Helmet>
             <div className='hidden' data-template-key>
                 hardcoded-pages
             </div>
@@ -109,36 +97,17 @@ const PricingPage = ({ location }) => {
                 <div className='pt-24 pb-12 sm:pb-24 lg:py-32'>
                     <Container>
                         <h1 className='text-center text-blue text-4xl lg:text-5xl font-montserrat font-bold'>
-                            Get the Cyscale Platform
+                            Effective and affordable
+                            <br /> cloud security
                         </h1>
                         <h4 className='text-center font-semibold font-montserrat text-base lg:text-lg mt-8'>
-                            Whether you’re a Fortune 500 company or a startup,
-                            <br className='hidden sm:block' /> Cyscale can help you with Cloud Visibility, Security and
-                            Compliance.
+                            Enterprise-grade cloud security, without enterprise-grade pricing
+                            <br className='hidden sm:block' />
+                            Cyscale delivers Cloud Visibility, Security and Compliance for companies of all sizes
                         </h4>
                         <Row className='mt-8 md:mt-16 lg:max-w-5xl mx-auto'>
                             <div className='col-span-12 lg:col-span-4'>
-                                <div className='h-28 sm:h-40 w-64 sm:w-auto bg-white rounded-lg flex flex-col justify-between p-4 max-w-lg mx-auto lg:mx-0'>
-                                    <Link
-                                        to='meetings-calendar'
-                                        smooth={true}
-                                        duration={500}
-                                        className='cursor-pointer'
-                                    >
-                                        <h2 className='text-blue font-montserrat font-bold' css={customFontSize}>
-                                            Pro
-                                        </h2>
-                                    </Link>
-                                    <h4 className='text-blue font-montserrat font-semibold text-base lg:text-lg'>
-                                        With up to 1000 assets
-                                    </h4>
-                                </div>
-                            </div>
-                            <div className='col-span-12 lg:col-span-4'>
-                                <div
-                                    className='h-28 sm:h-40 w-64 sm:w-auto bg-white rounded-lg flex flex-col justify-between p-4 max-w-lg mx-auto lg:mx-0'
-                                    css={mostPopularCard}
-                                >
+                                <div className='h-72 w-auto bg-white rounded-lg p-4 max-w-lg mx-auto lg:mx-0'>
                                     <div className='flex items-center justify-between'>
                                         <Link
                                             to='meetings-calendar'
@@ -146,50 +115,220 @@ const PricingPage = ({ location }) => {
                                             duration={500}
                                             className='cursor-pointer'
                                         >
-                                            <h2 className='text-blue font-montserrat font-bold' css={customFontSize}>
-                                                Scale
+                                            <h2
+                                                className='text-blue font-montserrat font-bold mt-3'
+                                                css={css`
+                                                    font-size: 1.125rem;
+                                                `}
+                                            >
+                                                Pro
                                             </h2>
                                         </Link>
                                         <p
-                                            className='text-blue py-2 px-4 rounded-md'
+                                            className='text-blue py-2 px-3 rounded-md font-bold font-hind text-xs mt-3'
                                             css={css`
                                                 background-color: #d8deff;
                                             `}
                                         >
-                                            Most Popular
+                                            95% of SaaS startups fit into this plan
                                         </p>
                                     </div>
-                                    <h4 className='text-blue font-montserrat font-semibold text-base lg:text-lg'>
-                                        With up to 5000 assets
-                                    </h4>
+                                    <p className='text-base font-hind font-medium mt-3'>
+                                        <span className='font-montserrat text-2xl font-bold'>$833</span> / month billed
+                                        annually
+                                    </p>
+                                    <div className='flex'>
+                                        <img src={PricingCheck} alt='' className='mt-1.5' />
+                                        <p
+                                            className='font-hind text-base mt-2 ml-2'
+                                            css={css`
+                                                color: #818791;
+                                            `}
+                                        >
+                                            Full access to the platform
+                                        </p>
+                                    </div>{' '}
+                                    <div className='flex'>
+                                        <img src={PricingCheck} alt='' className='mt-1.5' />
+                                        <p
+                                            className='font-hind text-base mt-2 ml-2'
+                                            css={css`
+                                                color: #818791;
+                                            `}
+                                        >
+                                            Up to 1000 assets
+                                        </p>
+                                    </div>
+                                    <div className='mt-63px'>
+                                        <Link
+                                            to='meetings-calendar'
+                                            smooth={true}
+                                            duration={500}
+                                            className='bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] py-3 px-7 rounded-md text-white text-sm font-bold cursor-pointer'
+                                            css={css`
+                                                background-color: #d8deff;
+                                            `}
+                                        >
+                                            GET STARTED
+                                        </Link>
+                                    </div>
                                 </div>
                             </div>
                             <div className='col-span-12 lg:col-span-4'>
-                                <div className='h-28 sm:h-40 w-64 sm:w-auto bg-white rounded-lg flex flex-col justify-between p-4 max-w-lg mx-auto lg:mx-0'>
-                                    <Link
-                                        to='meetings-calendar'
-                                        smooth={true}
-                                        duration={500}
-                                        className='cursor-pointer'
+                                <div className='h-72 w-auto bg-white rounded-lg p-4 max-w-lg mx-auto lg:mx-0'>
+                                    <div className='flex items-center justify-between'>
+                                        <Link
+                                            to='meetings-calendar'
+                                            smooth={true}
+                                            duration={500}
+                                            className='cursor-pointer'
+                                        >
+                                            <h2
+                                                className='text-blue font-montserrat font-bold mt-3'
+                                                css={css`
+                                                    font-size: 1.125rem;
+                                                `}
+                                            >
+                                                Scale
+                                            </h2>
+                                        </Link>
+                                    </div>
+                                    <p className='text-base font-hind font-medium mt-4'>
+                                        <span className='font-montserrat text-2xl font-bold'>$4,333</span> / month
+                                        billed annually
+                                    </p>
+                                    <p
+                                        className='font-hind text-base mt-2'
+                                        css={css`
+                                            color: #818791;
+                                        `}
                                     >
-                                        <h2 className='text-blue font-montserrat font-bold' css={customFontSize}>
-                                            Enterprise
-                                        </h2>
-                                    </Link>
-                                    <h4 className='text-blue font-montserrat font-semibold text-base lg:text-lg'>
-                                        Custom plan
-                                    </h4>
+                                        Scale your company
+                                    </p>
+                                    <div className='flex'>
+                                        <img src={PricingCheck} alt='' className='mt-1.5' />
+                                        <p
+                                            className='font-hind text-base mt-2 ml-2'
+                                            css={css`
+                                                color: #818791;
+                                            `}
+                                        >
+                                            Full access to the platform
+                                        </p>
+                                    </div>{' '}
+                                    <div className='flex'>
+                                        <img src={PricingCheck} alt='' className='mt-1.5' />
+                                        <p
+                                            className='font-hind text-base mt-2 ml-2'
+                                            css={css`
+                                                color: #818791;
+                                            `}
+                                        >
+                                            Up to 5000 assets
+                                        </p>
+                                    </div>
+                                    <div className='mt-8'>
+                                        <Link
+                                            to='meetings-calendar'
+                                            smooth={true}
+                                            duration={500}
+                                            className='bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] py-3 px-7 rounded-md text-white text-sm font-bold cursor-pointer'
+                                            css={css`
+                                                background-color: #d8deff;
+                                            `}
+                                        >
+                                            GET STARTED
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='col-span-12 lg:col-span-4'>
+                                <div className='h-72 w-auto bg-white rounded-lg p-4 max-w-lg mx-auto lg:mx-0'>
+                                    <div className='flex items-center justify-between'>
+                                        <Link
+                                            to='meetings-calendar'
+                                            smooth={true}
+                                            duration={500}
+                                            className='cursor-pointer'
+                                        >
+                                            <h2
+                                                className='text-blue font-montserrat font-bold mt-3'
+                                                css={css`
+                                                    font-size: 1.125rem;
+                                                `}
+                                            >
+                                                Enterprise
+                                            </h2>
+                                        </Link>
+                                    </div>
+                                    <div className='flex mt-4'>
+                                        <img src={PricingCheck} alt='' className='mt-1.5' />
+                                        <p
+                                            className='font-hind text-base mt-2 ml-2'
+                                            css={css`
+                                                color: #818791;
+                                            `}
+                                        >
+                                            Custom plan
+                                        </p>
+                                    </div>{' '}
+                                    <div className='flex'>
+                                        <img src={PricingCheck} alt='' className='mt-1.5' />
+                                        <p
+                                            className='font-hind text-base mt-2 ml-2'
+                                            css={css`
+                                                color: #818791;
+                                            `}
+                                        >
+                                            1-on-1 onboarding
+                                        </p>
+                                    </div>{' '}
+                                    <div className='flex items-start'>
+                                        <img src={PricingCheck} alt='' className='mt-2.5' />
+                                        <p
+                                            className='font-hind text-base mt-2 ml-2'
+                                            css={css`
+                                                color: #818791;
+                                            `}
+                                        >
+                                            Group training and best practices tips for your team
+                                        </p>
+                                    </div>
+                                    <div className='mt-10 sm:mt-14 lg:mt-10'>
+                                        <Link
+                                            to='meetings-calendar'
+                                            smooth={true}
+                                            duration={500}
+                                            className='py-3 px-7 rounded-md text-sm font-bold cursor-pointer'
+                                            css={css`
+                                                background-color: #d8deff;
+                                                color: #0f26aa;
+                                                &:hover {
+                                                    background-color: #0f26aa;
+                                                    color: white;
+                                                }
+                                            `}
+                                        >
+                                            CONTACT US
+                                        </Link>
+                                    </div>
                                 </div>
                             </div>
                         </Row>
                         <div className='mt-8 md:mt-16'>
                             <p className='text-base font-montserrat font-medium text-center'>
                                 Not sure how many assets you want to protect?
-                            </p>
-                            <p className='text-base font-montserrat text-blue font-medium text-center'>
+                            </p>{' '}
+                            <p className='text-base font-montserrat font-medium text-center'>
+                                We can help you work that out on our discovery call.
+                            </p>{' '}
+                            <p className='text-base font-montserrat text-blue font-medium text-center mt-4'>
                                 <GatsbyLink to='/free-trial/' className='hover:underline'>
-                                    Find out with the Free Trial
+                                    Or you can find out in minutes with the full access free trial.
                                 </GatsbyLink>
+                            </p>
+                            <p className='text-base font-montserrat font-medium text-center mt-4'>
+                                95% of SaaS startups we've talked to fit into our Pro plan.
                             </p>
                         </div>
                         <div className='flex justify-center mt-8'>
@@ -205,7 +344,7 @@ const PricingPage = ({ location }) => {
                                     `
                                 ]}
                             >
-                                GET QUOTE
+                                GET STARTED
                             </Link>
                         </div>
                         <p
@@ -215,47 +354,47 @@ const PricingPage = ({ location }) => {
                                 line-height: 25px;
 
                                 @media (max-width: 1024px) {
-                                    font-size: 0.75rem;
-                                    line-height: 1.25rem;
+                                    font-size: 0.875rem;
+                                    line-height: 1.5625rem;
                                 }
                             `}
                         >
                             Every cloud resource in your environment counts as an asset and is factored into the
                             Security Knowlege Graph. The entire data is used as a basis for security analysis, including
-                            IAM entities (users, groups, policies, etc.), compute instances, disks, VPCs, storage, etc.
+                            IAM entities (users, groups, policies, etc.), compute instances, disks, VPCs, storage and
+                            more. We will clarify your assets on a discovery call before you are charged.
                         </p>
                     </Container>
                 </div>
             </div>
             <div className='py-24'>
                 <h1 className='text-center text-blue font-montserrat' css={featuresTitleFontSize}>
-                    {' '}
-                    <strong> You get all features included,</strong> <br />
-                    regardless of which plan you choose.
+                    <strong> Unlike other solutions, we don't charge for features.</strong> <br />
+                    Get full access to the platform on every plan.
                 </h1>
                 <Container>
-                    <Row className='mt-16 gap-0 lg:gap-10'>
+                    <Row className='mt-16 gap-0 lg:gap-5'>
                         <div className='col-span-12 lg:col-span-4 mx-auto max-w-lg lg:mx-0'>
                             <img src={VisibilityIcon} alt='' css={widthFeatureIcon} />
                             <h2 className='font-montserrat font-bold mt-3' css={customFontSize}>
                                 Visibility
                             </h2>
                             <p className='text-base font-mediun font-montserrat mt-4'>
-                                Continuous visibility over multi-cloud environments to identify vulnerable areas. Scan,
-                                monitor, and remediate across your cloud infrastructure.
+                                Continuous and automated visibility over your multi-cloud environments. Each cloud asset
+                                is a node in the Security Knowledge Graph.
                             </p>
-                            <div className='flex mt-8'>
+                            <div className='flex mt-8 items-start'>
                                 <img src={checkMarkIcon} alt='' />{' '}
                                 <GatsbyLink
                                     className='ml-2 text-sm hover:underline'
                                     to={'/use-cases/cloud-data-security/'}
                                 >
-                                    Multi-cloud support (AWS, Google Cloud, Azure)
+                                    Multi-cloud support (AWS, Google Cloud, Azure, Alibaba Cloud)
                                 </GatsbyLink>
                             </div>
                             <div className='flex mt-2'>
                                 <img src={checkMarkIcon} alt='' />{' '}
-                                <p className='ml-2 text-sm'>Integrations (AWS SSO, Okta, Github)</p>
+                                <p className='ml-2 text-sm'>Integrations (AWS SSO, Okta, Github, Azure AD)</p>
                             </div>
                             <div className='flex mt-2'>
                                 <img src={checkMarkIcon} alt='' />
@@ -265,6 +404,14 @@ const PricingPage = ({ location }) => {
                                 <img src={checkMarkIcon} alt='' />
                                 <p className='ml-2 text-sm'>Powerful dashboards</p>
                             </div>
+                            <div className='flex mt-2'>
+                                <img src={checkMarkIcon} alt='' />
+                                <p className='ml-2 text-sm'>Graph diagrams</p>
+                            </div>{' '}
+                            <div className='flex mt-2'>
+                                <img src={checkMarkIcon} alt='' />
+                                <p className='ml-2 text-sm'>Context / Contextual visibility</p>
+                            </div>
                         </div>
                         <div className='col-span-12 lg:col-span-4 mx-auto max-w-lg lg:mx-0 mt-8 lg:mt-0'>
                             <img src={SecurityIcon} alt='' css={widthFeatureIcon} />
@@ -272,8 +419,8 @@ const PricingPage = ({ location }) => {
                                 Security
                             </h2>
                             <p className='text-base font-mediun font-montserrat mt-4'>
-                                Your company’s security posture is properly analyzed, considering signals from several
-                                sources and leaving no risk or misconfiguration uncovered.
+                                Comprehensive analysis of your cloud security posture, leaving no vulnerability or
+                                misconfiguration undetected.
                             </p>
                             <div className='flex mt-8 items-start'>
                                 <img src={checkMarkIcon} alt='' />{' '}
@@ -295,7 +442,7 @@ const PricingPage = ({ location }) => {
                             <div className='flex mt-2'>
                                 <img src={checkMarkIcon} alt='' />
                                 <p className='ml-2 text-sm'>Alerts & Notifications</p>
-                            </div>{' '}
+                            </div>
                             <div className='flex mt-2'>
                                 <img src={checkMarkIcon} alt='' />{' '}
                                 <GatsbyLink
@@ -305,6 +452,14 @@ const PricingPage = ({ location }) => {
                                     Security Knowledge Graph
                                 </GatsbyLink>
                             </div>
+                            <div className='flex mt-2'>
+                                <img src={checkMarkIcon} alt='' />
+                                <p className='ml-2 text-sm'>Configurable risk rules</p>
+                            </div>
+                            <div className='flex mt-2'>
+                                <img src={checkMarkIcon} alt='' />
+                                <p className='ml-2 text-sm'>Automated prioritization</p>
+                            </div>
                         </div>
                         <div className='col-span-12 lg:col-span-4 mx-auto max-w-lg lg:mx-0 mt-8 lg:mt-0'>
                             <img src={ComplianceIcon} alt='' css={widthFeatureIcon} />
@@ -312,8 +467,8 @@ const PricingPage = ({ location }) => {
                                 Compliance
                             </h2>
                             <p className='text-base font-mediun font-montserrat mt-4'>
-                                Technical controls are automatically mapped to your organization’s policies and
-                                procedures so that compliance gaps are immediately brought to attention.
+                                Technical controls automatically mapped to your organization’s policies and procedures
+                                so you are immediatley notified of compliance gaps.
                             </p>
                             <div className='flex mt-8'>
                                 <img src={checkMarkIcon} alt='' />{' '}
@@ -321,7 +476,7 @@ const PricingPage = ({ location }) => {
                                     className='ml-2 text-sm hover:underline'
                                     to={'/use-cases/cloud-compliance-and-auditing/'}
                                 >
-                                    Policies
+                                    Policy templates
                                 </GatsbyLink>
                             </div>
                             <div className='flex mt-2'>
@@ -333,13 +488,14 @@ const PricingPage = ({ location }) => {
                                     Policy Editor
                                 </GatsbyLink>
                             </div>
-                            <div className='flex mt-2'>
+                            <div className='flex mt-2 items-start'>
                                 <img src={checkMarkIcon} alt='' />{' '}
                                 <GatsbyLink
                                     className='ml-2 text-sm hover:underline'
                                     to={'/use-cases/cloud-compliance-and-auditing/'}
                                 >
-                                    Standards
+                                    Standards (CIS Cloud Benchmarks, ISO 27001, SOC 2, GDPR, HIPAA, PCI DSS, NIST, and
+                                    many more)
                                 </GatsbyLink>
                             </div>
                             <div className='flex mt-2 items-start'>
@@ -354,7 +510,7 @@ const PricingPage = ({ location }) => {
                         </div>
                     </Row>
                     <h4 className='text-center lg:text-lg mt-24 font-montserrat font-semibold' css={linkFontSize}>
-                        Full technical specifications{' '}
+                        Full technical specifications and documentation{' '}
                         <a
                             href='https://docs.cyscale.com/'
                             target='_blank'
@@ -363,15 +519,6 @@ const PricingPage = ({ location }) => {
                         >
                             available here
                         </a>
-                    </h4>
-                    <h4 className='text-center lg:text-lg font-montserrat font-semibold mt-2' css={linkFontSize}>
-                        View Cyscale in action{' '}
-                        <GatsbyLink
-                            to='/playground/'
-                            className='text-blue hover:underline font-montserrat font-semibold'
-                        >
-                            on the Playground account
-                        </GatsbyLink>
                     </h4>
                 </Container>
             </div>
@@ -384,9 +531,10 @@ const PricingPage = ({ location }) => {
                 <h2 className='text-white font-bold font-montserrat' css={customFontSize}>
                     Schedule a Demo
                 </h2>
-                <p className='text-white mt-8'>
-                    Sign up for a custom demo to see how we close
-                    <br /> security gaps and help you move to the cloud.
+                <p className='text-white mt-8 text-center'>
+                    Still unsure? We know cloud security can be complex,
+                    <br className='hidden sm:block' /> but in just 20 minutes we can show you that it doesn't have to
+                    be!
                 </p>
                 <GatsbyLink
                     to={'/request-demo/'}
@@ -401,72 +549,61 @@ const PricingPage = ({ location }) => {
                         }
                     `}
                 >
-                    REQUEST DEMO
+                    BOOK A DEMO
                 </GatsbyLink>
             </div>
-            <div className='pt-24 pb-32'>
+            <div
+                css={css`
+                    background-color: #f5f9ff;
+                `}
+            >
                 <Container>
-                    <h2 className='text-center text-blue font-montserrat font-bold' css={customFontSize}>
-                        See the full power of Cyscale
-                    </h2>
-                    <div className='max-w-2xl mx-auto mt-8'>
-                        <div
-                            className='cursor-pointer relative'
-                            onMouseEnter={() => setIsHover(true)}
-                            onMouseLeave={() => setIsHover(false)}
-                            onClick={() => setModal(!modal)}
-                            onKeyPress={() => {}}
-                            tabIndex='-1'
-                            role='presentation'
-                        >
-                            <PlayIcon
-                                src={PlayButton}
-                                onMouseEnter={() => setIsHover(true)}
-                                onClick={() => setModal(!modal)}
-                                className='w-10 inline-block absolute cursor-pointer z-10'
-                                alt=''
-                                isHover={isHover}
-                                matches={matches}
-                            />
-                            <GatsbyImage
-                                image={data.videoThumbnail.childImageSharp.gatsbyImageData}
-                                alt='Video Thumbnail'
-                            />
-                        </div>
-                    </div>
-                    {modal && <div className='modal-overlay'></div>}
-                    <CSSTransition in={modal} timeout={300} classNames='video' unmountOnExit>
-                        <VideoCyscale
-                            setModal={setModal}
-                            videoUrl='https://d3n52qn7viv754.cloudfront.net/videos/cyscale.mp4'
-                        />
-                    </CSSTransition>
+                    <CaseStudiesSection pricing={true} />
                 </Container>
             </div>
-            <div className='pt-12' css={heroBackground}>
-                <Container>
-                    <Element name='meetings-calendar' />
-                    <h1 className='text-blue text-center text-3xl lg:text-5xl font-bold font-montserrat mt-8'>
-                        Let’s make it a win-win!
-                    </h1>
-                    <p className='my-8 text-center font-medium text-sm lg:text-base font-montserrat'>
-                        Let's talk about your team, your products, and your challenges and come <br /> up with a pricing
-                        scheme that ultimately brings you a positive ROI and helps you move faster.
-                    </p>
-                </Container>
+            <div
+                css={css`
+                    background-color: #f5f9ff;
+                `}
+            >
+                <Element name='meetings-calendar' />
                 <div
-                    className='lg:px-8'
+                    className='relative pb-16'
                     css={css`
-                        height: 43rem;
-                        @media (min-width: 48rem) {
-                            padding-bottom: 50rem;
+                        background-color: #f5f9ff;
+                        @media (min-width: 1280px) {
+                            height: 55.25rem;
                         }
                     `}
                 >
-                    <div
-                        className={classnames({ hidden: loadingMeetings, 'meetings-iframe-container': true })}
-                        data-src='https://meetings.hubspot.com/virginia-mitea/get-new-quote?embed=true'
-                    ></div>
+                    <Container className='mb-16'>
+                        <h1 className='text-blue text-center text-3xl lg:text-5xl font-bold font-montserrat'>
+                            Let's talk
+                        </h1>
+                        <p className='my-8 text-center font-medium text-sm lg:text-base font-montserrat'>
+                            Get peace of mind with cloud security that doesn't hold you back!
+                        </p>
+                        <div className='mt-12'>
+                            <div className='rounded-xl shadow-lg mt-6 lg:mt-0 py-4 pt-12 pb-0 px-8 md:px-12 mx-auto relative bg-white max-w-xl'>
+                                {loadingForm && <LoaderContainer minHeight={515} />}
+                                <div
+                                    style={{ minHeight: 515 }}
+                                    id='meeting-form'
+                                    className={classnames('pb-4', { hidden: loadingForm })}
+                                />
+                            </div>
+                        </div>
+                    </Container>
+                    <img
+                        src={CyscaleBird}
+                        className='absolute hidden xl:block'
+                        alt=''
+                        css={css`
+                            width: 20rem;
+                            left: -1rem;
+                            bottom: 9.5rem;
+                        `}
+                    />
                 </div>
             </div>
         </Layout>
