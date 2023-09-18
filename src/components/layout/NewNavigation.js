@@ -160,7 +160,8 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation, sea
                                     'NIST',
                                     'AWSCloudSecurity',
                                     'AzureCloudSecurity',
-                                    'GCPCloudSecurity'
+                                    'GCPCloudSecurity',
+                                    'OktaIntegration'
                                 ].includes(pageName) || activeLinks.solutions
                                     ? 'active'
                                     : ''
