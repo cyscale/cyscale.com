@@ -69,9 +69,9 @@ const IAMSecurity = ({ location }) => {
                                     misconfigurations across all your cloud resources to meet strict IAM compliance
                                     directives and improve your cloud security posture.
                                 </p>
-                                <p className='mb-20 text-base lg:text-lg text-red text-left leading-relaxed'>
+                                <p className='mb-20 text-base lg:text-lg text-left leading-relaxed'>
                                     Onboard your{' '}
-                                    <Link to='/use-cases/okta-cyscale-integration/' className='hover:underline'>
+                                    <Link to='/use-cases/okta-cyscale-integration/' className='underline'>
                                         Okta account
                                     </Link>{' '}
                                     into Cyscale and get full visibility over identities and permissions.
