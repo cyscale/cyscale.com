@@ -96,7 +96,7 @@ const OktaCyscaleIntegration = ({ location }) => {
                                     organization at risk.
                                 </p>
                                 <div className='flex mt-8 justify-start mb-20'>
-                                    <Link to='/free-trial/'>
+                                    <Link to='/request-demo/'>
                                         <GradientButton text='BOOK A DEMO' />
                                     </Link>
                                 </div>
