@@ -96,20 +96,19 @@ const CaseStudiesSection = ({ pricing }) => {
             `}
         >
             <Container>
-                {pricing && (
-                    <h2
-                        className='text-center text-blue font-montserrat font-bold pb-12'
-                        css={css`
-                            font-size: 1.75rem;
+                <h2
+                    className='text-center text-blue font-montserrat font-bold pb-12'
+                    css={css`
+                        font-size: 1.75rem;
 
-                            @media (max-width: 1024px) {
-                                font-size: 1.625rem;
-                            }
-                        `}
-                    >
-                        Trusted by companies worldwide
-                    </h2>
-                )}
+                        @media (max-width: 1024px) {
+                            font-size: 1.625rem;
+                        }
+                    `}
+                >
+                    Trusted by companies worldwide
+                </h2>
+
                 <CaseStudyCarousel autoSlide={autoSlide} setAutoSlide={setAutoSlide}>
                     {slides.map((s, index) => {
                         return (

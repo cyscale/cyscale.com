@@ -71,8 +71,8 @@ const PricingPage = ({ location }) => {
         <Layout
             location={location}
             pageName='Pricing'
-            title='Pricing - Cyscale'
-            description="Pay fair for security experts' advice and guidance. Quantifiable ROI for cloud data security and compliance. Reduce cloud costs and consumption."
+            title='Cyscale | Pricing | Simple Cloud Security '
+            description='Enterprise-grade cloud security, without enterprise-grade pricing. Cloud security designed for startups.'
         >
             <Helmet>
                 <script charSet='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js'></script>
@@ -84,11 +84,10 @@ const PricingPage = ({ location }) => {
                 /pricing/
             </div>
             <div className='hidden' data-title>
-                Pricing - Cyscale
+                Cyscale | Pricing | Simple Cloud Security
             </div>
             <div className='hidden' data-description>
-                Pay fair for security experts' advice and guidance. Quantifiable ROI for cloud data security and
-                compliance. Reduce cloud costs and consumption.
+                Enterprise-grade cloud security, without enterprise-grade pricing. Cloud security designed for startups.
             </div>
             <div className='hidden' data-category>
                 website

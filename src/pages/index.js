@@ -4,7 +4,6 @@ import { graphql, Link, useStaticQuery } from 'gatsby';
 import { css } from 'twin.macro';
 import { Container, Row } from '../components/atoms/Containers';
 import GradientButton from '../components/buttons/GradientButton';
-import LightDarkButton from '../components/buttons/LightDarkButton';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { Element } from 'react-scroll';
 import BgHeroMobile from '../assets/images/bg-homepage-mobile.webp';
@@ -239,8 +238,8 @@ const HomePage = ({ location }) => {
         <Layout
             location={location}
             pageName='HomePage'
-            title='Robust Cloud Security Platform - Cyscale'
-            description='Map all your cloud assets across providers in under 5 mins. Optimize costs, ensure cloud security, and prove compliance with the scalable Cyscale CSPM.'
+            title='Cyscale | Simple Cloud Security. Instant peace of mind'
+            description='Contextual analysis of cloud misconfigurations, vulnerabilities, access, and data, providing an intuitive and actionable assessment of risk.'
         >
             <div className='hidden' data-template-key>
                 hardcoded-pages
@@ -249,11 +248,11 @@ const HomePage = ({ location }) => {
                 /
             </div>
             <div className='hidden' data-title>
-                Robust Cloud Security Platform - Cyscale
+                Cyscale | Simple Cloud Security. Instant peace of mind
             </div>
             <div className='hidden' data-description>
-                Map all your cloud assets across providers in under 5 mins. Optimize costs, ensure cloud security, and
-                prove compliance with the scalable Cyscale CSPM.
+                Contextual analysis of cloud misconfigurations, vulnerabilities, access, and data, providing an
+                intuitive and actionable assessment of risk.
             </div>
             <div className='hidden' data-category>
                 website
@@ -282,11 +281,8 @@ const HomePage = ({ location }) => {
                                         accurate and actionable assessment of risk.
                                     </p>
                                     <div className='flex mt-8 justify-start'>
-                                        <Link to='/free-trial/'>
-                                            <GradientButton text='Start Free Trial' />
-                                        </Link>
-                                        <Link to='/request-demo/' className='ml-4'>
-                                            <LightDarkButton text={'Request Demo'} />
+                                        <Link to='/request-demo/'>
+                                            <GradientButton text='BOOK A DEMO' />
                                         </Link>
                                     </div>
                                 </div>
@@ -354,9 +350,6 @@ const HomePage = ({ location }) => {
             </Container>
             <Container>
                 <div className='pt-24 pb-24'>
-                    <p className='font-montserrat text-base font-bold mb-2' css={sectionSubtitleColor}>
-                        EMPOWER YOUR TEAM
-                    </p>
                     <h3 className='text-blue font-montserrat font-bold mb-12 text-3xl  sm:text-4xl'>
                         Don’t just assess, FIX
                     </h3>
