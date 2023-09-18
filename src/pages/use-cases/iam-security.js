@@ -10,28 +10,7 @@ import LinksAndWhitepaper from '../../components/products/LinksAndWhitepaper';
 import { css } from 'twin.macro';
 import VideoCyscale from '../../components/campaigns/cspm-solutin/CyscaleVideo';
 import { CSSTransition } from 'react-transition-group';
-
-const topArticles = [
-    {
-        text: 'Securing IAM - Best Practices Recommended by AWS, Azure, and Google Cloud',
-        link: '/blog/iam-best-practices-from-aws-azure-gcp/',
-        children: true
-    },
-    {
-        text: 'IAM Services in AWS, Azure, and <br class="hidden lg:block"/>  Google Cloud - A Cloud Industry Overview',
-        link: '/blog/iam-services-in-aws-azure-gcp/',
-        children: true
-    },
-    {
-        text: 'Okta Security Best Practices',
-        link: '/blog/iam-okta-security-best-practices/'
-    },
-    {
-        text: 'Providing Visibility Over Cloud Access –<br class="hidden lg:block" /> Okta Integration in Cyscale',
-        link: '/blog/provide-visibility-in-cloud-okta-integration/',
-        children: true
-    }
-];
+import { IAMTopArticles } from '../../common/links';
 
 const IAMSecurity = ({ location }) => {
     const [modal, setModal] = useState(false);
@@ -298,7 +277,7 @@ const IAMSecurity = ({ location }) => {
                 </Section>
             </div>
             <LinksAndWhitepaper
-                topArticles={topArticles}
+                topArticles={IAMTopArticles}
                 data={data}
                 title={'IAM'}
                 titleCard={'The Complete Guide<br class="hidden lg:block" /> to Cloud Storage Misconfigurations'}

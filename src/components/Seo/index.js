@@ -16,6 +16,7 @@ import CloudComplianceWhitepaperOg from '../../assets/images/cloud-compliace-whi
 import SmartFintechOg from '../../assets/images/smart-fintech-og.png';
 import BaysConsultingOg from '../../assets/images/bays-consulting-og.png';
 import MedicalDevicesOg from '../../assets/images/medical-devices-company-case-study-og.png';
+import OktaIntegrationOg from '../../assets/images/okta-integration-og.png';
 import { useStaticQuery, graphql } from 'gatsby';
 
 const defaultOg = {
@@ -34,7 +35,8 @@ const defaultOg = {
     CloudComplianceWhitepaper: CloudComplianceWhitepaperOg,
     SmartFintech: SmartFintechOg,
     BaysConsulting: BaysConsultingOg,
-    MedicalDevicesCompany: MedicalDevicesOg
+    MedicalDevicesCompany: MedicalDevicesOg,
+    OktaIntegration: OktaIntegrationOg
 };
 
 const Seo = ({ title, description, pageName, banner, location }) => {

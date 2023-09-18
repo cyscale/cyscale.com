@@ -84,7 +84,7 @@ const solutions = [
     },
     {
         title: 'Environments',
-        description: 'Integrations with multiple cloud providers',
+        description: 'Integrations with multiple connectors"',
         icon: Cloud,
         links: [
             {
@@ -98,6 +98,10 @@ const solutions = [
             {
                 link: '/use-cases/gcp-cloud-security/',
                 text: 'Google Cloud Security'
+            },
+            {
+                link: '/use-cases/okta-cyscale-integration/',
+                text: 'Integration with Okta'
             }
         ]
     }
