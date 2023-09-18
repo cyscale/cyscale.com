@@ -64,10 +64,17 @@ const IAMSecurity = ({ location }) => {
                                 <p className='text-left text-base lg:text-lg mb-2 leading-relaxed'>
                                     <strong>Scan, monitor and prioritize cloud IAM risk.</strong>
                                 </p>
-                                <p className='text-left text-base lg:text-lg mb-24 leading-relaxed'>
+                                <p className='text-left text-base lg:text-lg mb-5 leading-relaxed'>
                                     Continuous multi-cloud monitoring for identity and access management (IAM)
                                     misconfigurations across all your cloud resources to meet strict IAM compliance
                                     directives and improve your cloud security posture.
+                                </p>
+                                <p className='mb-20 text-base lg:text-lg text-red text-left leading-relaxed'>
+                                    Onboard your{' '}
+                                    <Link to='/use-cases/okta-cyscale-integration/' className='hover:underline'>
+                                        Okta account
+                                    </Link>{' '}
+                                    into Cyscale and get full visibility over identities and permissions.
                                 </p>
                                 <div className='flex mt-8'>
                                     <Link to='/free-trial/'>
