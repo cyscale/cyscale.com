@@ -109,7 +109,10 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation, sea
                     pageName === 'AWSCloudSecurityCampaign' ||
                     pageName === 'CSPMSolutionCampaign') &&
                     tw`container`,
-                isAnimatedNavbarPage(pathname) && tw`pl-12`
+                isAnimatedNavbarPage(pathname) &&
+                    css`
+                        padding-left: 4.5rem;
+                    `
             ]}
         >
             <div tw='mx-auto flex flex-row justify-between'>
@@ -250,12 +253,12 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation, sea
                             <img src={loginIcon} className='py-2' alt='' />
                         </a>
                     </li>
-                    <li className='py-6 pr-0 pl-7'>
+                    <li className='ml-auto py-6 pr-0 pl-7'>
                         <Link
                             className='bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] w-auto text-sm px-4 border-transparent box-border rounded-md h-10 hidden xl:flex justify-center items-center uppercase leading-none text-white transition duration-500 hover:no-underline font-medium'
-                            to='/free-trial/'
+                            to='/request-demo/'
                         >
-                            Start Free Trial
+                            Book a demo
                         </Link>
                     </li>
                 </ul>

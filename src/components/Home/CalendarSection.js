@@ -63,7 +63,7 @@ const CalendarSection = () => {
                 <div className='grid grid-cols-12 lg:gap-x-2 xl:gap-x-0'>
                     <div className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 max-w-xl'>
                         <p className='font-montserrat text-base font-bold' css={sectionSubtitleColor}>
-                            GET IN TOUCH
+                            BOOK A DEMO
                         </p>{' '}
                         <h2
                             className='font-montserrat text-blue font-bold mt-3'

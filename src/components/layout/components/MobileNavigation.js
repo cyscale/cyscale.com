@@ -90,7 +90,7 @@ const MobileNavigation = ({ showMenu, setShowMenu, appLink }) => {
                         to='/request-demo/'
                         className='gradientBgBtn block font-medium rounded text-white text-center py-4 hover:no-underline no-underline max-w-sm'
                     >
-                        Request Demo
+                        BOOK A DEMO
                     </Link>
                     <Link className='block mt-3' to='/blog/'>
                         Cloud Security Blog

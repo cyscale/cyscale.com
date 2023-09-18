@@ -18,7 +18,7 @@ import RightArrow from '../../../sharedComponent/RightArrow';
 const caretCompany = (isAnimatedNavbarPage) => css`
     :before {
         ${caretMenuWhiteStyle};
-        left: ${isAnimatedNavbarPage ? '39.3rem' : '56rem'};
+        left: ${isAnimatedNavbarPage ? '40.7rem' : '57.4rem'};
     }
 `;
 
