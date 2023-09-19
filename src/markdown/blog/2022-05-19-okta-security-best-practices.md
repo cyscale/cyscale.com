@@ -193,4 +193,6 @@ Cyscale checks if access to your cloud environment is correctly configured and i
 * Access control, 
 * Strong credential policies and many more. 
 
+Furthermore, you can [onboard your Okta account into Cyscale](https://cyscale.com/use-cases/okta-cyscale-integration/) and get full visibility over identities in your organization and cloud permissions, along with a contextual analysis of access, cloud assets and sensitive data to reveal toxic combinations that put your organization at risk. 
+
 <!--EndFragment-->
