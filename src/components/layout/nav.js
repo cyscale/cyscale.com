@@ -84,7 +84,7 @@ const solutions = [
     },
     {
         title: 'Environments',
-        description: 'Integrations with multiple connectors"',
+        description: 'Integrations with multiple connectors',
         icon: Cloud,
         links: [
             {
