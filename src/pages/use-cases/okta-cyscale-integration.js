@@ -119,7 +119,7 @@ const OktaCyscaleIntegration = ({ location }) => {
             </div>
             <div
                 css={css`
-                    background-color: #e9eef6;
+                    background: linear-gradient(0deg, #e9eef6 0%, #fff 100%), #e9eef6;
                 `}
             >
                 <Container>
