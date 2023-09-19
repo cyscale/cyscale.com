@@ -55,7 +55,7 @@ Let’s assume we use BigQuery in Google Cloud for a health analytics applicatio
 
 Now, we want to make sure that the data is securely stored. We look at the BigQuery table’s graph to see if the table poses any risk and, low and behold, it does! 
 
-<img src="/img/blog_54-graf-0.png" alt="Contextual security through the graph" title="Contextual security through the graph" class=" blog-image-shadow " style="width:auto;height:auto;"/>
+<img src="/img/blog_54-graf0.png" alt="Contextual security through the graph" title="Contextual security through the graph" class=" blog-image-shadow " style="width:auto;height:auto;"/>
 
 We can observe, in the image above, that no less than 7 Cloud Functions and 4 VMs can access it across 9 Service Accounts that have permissions on the BigQueryTable, as well as 7 IAM Users. Does this alarm you? It should. 
 
