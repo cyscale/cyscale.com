@@ -11,7 +11,7 @@
 <h2 id="case-study">Case Study </h2>
 <p>Let’s assume we use BigQuery in Google Cloud for a health analytics application. We have a table that contains some datasets of patients from a hospital, including PII data. These datasets are very valuable and cannot fall in the hands of outsiders. </p>
 <p>Now, we want to make sure that the data is securely stored. We look at the BigQuery table’s graph to see if the table poses any risk and, low and behold, it does! </p>
-<img src="/img/blog_54-graf-0.png" alt="Contextual security through the graph" title="Contextual security through the graph" class="blog-image-shadow" style="width:auto;height:auto"/>
+<img src="/img/blog_54-graf0.png" alt="Contextual security through the graph" title="Contextual security through the graph" class="blog-image-shadow" style="width:auto;height:auto"/>
 <p>We can observe, in the image above, that no less than 7 Cloud Functions and 4 VMs can access it across 9 Service Accounts that have permissions on the BigQueryTable, as well as 7 IAM Users. Does this alarm you? It should. </p>
 <p>But just because a VM, or a function, can have access to the table does not mean anything, right? Wrong! I’m going to show you exactly how bad things can get in this situation. I’m going to put my hacker shoes on and show you potential scenarios that might lead to data being stolen. </p>
 <h3 id="scenario-1-compromised-vm">Scenario 1: compromised VM </h3>
