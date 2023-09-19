@@ -61,8 +61,6 @@ We can observe, in the image above, that no less than 7 Cloud Functions and 4 VM
 
 But just because a VM, or a function, can have access to the table does not mean anything, right? Wrong! I’m going to show you exactly how bad things can get in this situation. I’m going to put my hacker shoes on and show you potential scenarios that might lead to data being stolen. 
 
-  
-
 ### Scenario 1: compromised VM 
 
 Out of the 4 VMs that we see in the image, one is an Internet-facing one. The compute instance “dev-1” hosts an application that has the Log4J vulnerability, a classic. A hacker leverages the vulnerability and gains access to the instance, being able to execute commands on it, and the disaster begins. **Because a Service Account is associated to the VM, the attacker has that account’s permissions.** In our scenario, the application running on the Instance needs to process data in the dataset, so the associated Service Account was given the roles/bigquery.dataEditor permission. 
@@ -97,8 +95,6 @@ If we expand the graph’s nodes that we used in this chain of attacks, you can 
 
 <img src="/img/blog_54-primul-graf.png" alt="Attack path through the VM" title="Attack path through the VM" class=" blog-image-shadow " style="width:auto;height:auto;"/>
 
-
-
 With the bigquery.dataEditor role, the attacker can now: 
 
 * view data and metadata, 
@@ -111,6 +107,8 @@ With the bigquery.dataEditor role, the attacker can now: 
 * isolating the Compute Instance from the Internet by closing the exposed port, if possible, 
 * restricting the Service Account’s permissions as much as possible 
 * making sure secrets are cleared from the VM files.   
+
+<img src="/img/blog_54-ss6.png" alt="Access to the BigQueryTable datasets" title="Access to the BigQueryTable datasets" class=" blog-image-shadow " style="width:auto;height:auto;"/>
 
 ### Scenario 2: compromised user 
 
@@ -125,7 +123,5 @@ Enabling MFA would prevent this. 
 Besides this, a common mistake is focusing on protecting your environment from the outside, and forgetting about your own users. If one of the employees in the organization has too many permissions, they may produce damage without intention. By exploring the account and looking at resources, a user can accidentally modify or delete an asset. 
 
 This is why the Least Privilege Principle is so important – always limit the users’ access as much as possible and only assign the necessary permissions. 
-
-  
 
 We believe that context is the future of cloud security. We’ve seen how the most simple relations between assets can be leveraged by attackers to take over cloud assets; and if your customers’ data is stored in those assets, the greater the prize is for hackers – and they will do anything to get it.
