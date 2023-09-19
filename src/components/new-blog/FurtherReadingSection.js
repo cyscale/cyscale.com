@@ -38,12 +38,16 @@ const FurtherReadingSection = ({ alert, onChange, emailInput, onKeyDown, onSubmi
                 className={classnames({
                     'hidden xl:block w-72 sticky pl-10 font-montserrat': true,
                     'mt-6': blog,
-                    'mb-60': blog,
                     'mb-24': !blog,
                     'top-0': trigger,
                     'top-28': !trigger
                 })}
-                css={ctaTransition}
+                css={[
+                    ctaTransition,
+                    css`
+                        padding-bottom: 14rem;
+                    `
+                ]}
             >
                 <p
                     className={classnames({
@@ -148,9 +152,9 @@ const FurtherReadingSection = ({ alert, onChange, emailInput, onKeyDown, onSubmi
                 )}
             </div>
             {blog && (
-                <div className='w-72 pl-10 hidden xl:block'>
+                <div className='w-72 pl-10 hidden xl:block z-10'>
                     <div className='bg-lightGrey2 rounded-md p-4 mt-4'>
-                        <p className='text-lg font-bold font-montserrat mb-4'>Stay Connected</p>
+                        <p className='text-lg font-bold font-montserrat mb-4'>Stay Connected </p>
                         <p className='text-xs font-medium font-montserrat mb-2' css={ctaWhitepaperTextColor}>
                             Receive our latest blog posts and product updates.
                         </p>

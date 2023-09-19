@@ -289,7 +289,7 @@ const SmartFintech = ({ location }) => {
                     <div
                         className={classnames({
                             'hidden xl:block w-72 sticky pl-10': true,
-                            'mb-24': true,
+                            'pb-12': true,
                             'top-0': trigger,
                             'top-28': !trigger
                         })}
