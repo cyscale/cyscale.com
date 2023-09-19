@@ -69,7 +69,7 @@ Moreover, in a VM, credentials used to manually authenticate are stored on the C
 
 <img src="/img/blog_54-ss1.png" alt="Credentials stored in Google Cloud VM" title="Credentials stored in Google Cloud VM" class=" blog-image-shadow " style="width:auto;height:auto;"/>
 
-This is a standard location and it stores the last private key that was used to authenticate as a Service Account.  You can also find access tokens in the same folder, in access_tokens.db. Moreover, you can see any other private keys used previously (which may still be valid, if they were not deleted in the Google Cloud Console) in */.config/gcloud/legacy_credentials/<serviceAccountEmail>/adc.json*. 
+This is a standard location and it stores the last private key that was used to authenticate as a Service Account.  You can also find access tokens in the same folder, in *access_tokens.db*. Moreover, you can see any other private keys used previously (which may still be valid, if they were not deleted in the Google Cloud Console) in */.config/gcloud/legacy_credentials/<serviceAccountEmail>/adc.json*. 
 
 Looking at the file credentials.db, we notice that the information is not stored in the standard format for a private key for a Service Account. With a few adjustments, we obtain a valid private key that we then use to authenticate. To authenticate as a Service Account with a private key, simply use the following command:  
 
@@ -103,9 +103,9 @@ With the bigquery.dataEditor role, the attacker can now: 
 
  This breach could be avoided by: 
 
-* ensuring the VM does not have vulnerabilities and patching the Log4J one, 
+* ensuring the VM does not have vulnerabilities, and patching the Log4J one, 
 * isolating the Compute Instance from the Internet by closing the exposed port, if possible, 
-* restricting the Service Account’s permissions as much as possible 
+* restricting the Service Account’s permissions as much as possible,
 * making sure secrets are cleared from the VM files.   
 
 <img src="/img/blog_54-ss6.png" alt="Access to the BigQueryTable datasets" title="Access to the BigQueryTable datasets" class=" blog-image-shadow " style="width:auto;height:auto;"/>
