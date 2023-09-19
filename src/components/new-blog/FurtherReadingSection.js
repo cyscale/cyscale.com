@@ -44,7 +44,6 @@ const FurtherReadingSection = ({ alert, onChange, emailInput, onKeyDown, onSubmi
                 })}
                 css={[
                     ctaTransition,
-                    // blog &&
                     css`
                         padding-bottom: 14rem;
                     `
