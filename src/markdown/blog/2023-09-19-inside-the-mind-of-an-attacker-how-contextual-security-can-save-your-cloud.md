@@ -5,7 +5,7 @@ seoTitle: "Inside the Mind of an Attacker: How Contextual Security Can Save Your
 authors: Sabrina Lupșan
 permalink: contextual-security-google-cloud
 categories:
-  - News
+  - CSPM
 date: 2023-09-19T09:01:02.199Z
 description: >-
   The future of cloud security is contextual security. To fully understand how
