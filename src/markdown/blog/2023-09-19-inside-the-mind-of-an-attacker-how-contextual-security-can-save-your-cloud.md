@@ -63,7 +63,7 @@ But just because a VM, or a function, can have access to the table does not mean
 
 ### Scenario 1: compromised VM 
 
-Out of the 4 VMs that we see in the image, one is an Internet-facing one. The compute instance “dev-1” hosts an application that has the Log4J vulnerability, a classic. A hacker leverages the vulnerability and is able to gain ssh access to the instance, and the disaster begins. **Because a Service Account is associated to the VM, the attacker has that account’s permissions.** In our scenario, the application running on the Instance needs to process data in the dataset, so the associated Service Account was given the roles/bigquery.dataEditor permission. 
+Out of the 4 VMs that we see in the image, one is an Internet-facing one. The compute instance “dev-1” hosts an application that has the Log4J vulnerability, a classic. A hacker leverages the vulnerability and gains access to the instance. If they take over an IAMUser with the Compute Instance Admin role, or obtain SSH access to the VM, the disaster begins. **Because a Service Account is associated to the VM, the attacker has that account’s permissions.** In our scenario, the application running on the Instance needs to process data in the dataset, so the associated Service Account was given the roles/bigquery.dataEditor permission. 
 
 Moreover, in a VM, credentials used to manually authenticate are stored on the Compute Instance after the first time a user authenticates as a Service Account, in */.config/gcloud/credentials.db*, as you can see in the image below. 
 
