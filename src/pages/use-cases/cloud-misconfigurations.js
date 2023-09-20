@@ -93,8 +93,8 @@ const CloudMissConfiguration = ({ location }) => {
         <Layout
             heroBG={heroBG}
             location={location}
-            bannerBtn1Text='Start Free Trial'
-            bannerBtn1Link={'/free-trial/'}
+            bannerBtn1Text='BOOK A DEMO'
+            bannerBtn1Link={'/request-demo/'}
             bannerBtn1LinkInternal={true}
             bannerBtn2Text='Request demo'
             bannerBtn2Link='/request-demo/'

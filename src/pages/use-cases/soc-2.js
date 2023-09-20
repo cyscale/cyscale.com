@@ -6,7 +6,6 @@ import cloudIcon from '../../assets/images/cloud-icon.svg';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import GradientButton from '../../components/buttons/GradientButton';
-import LightDarkButton from '../../components/buttons/LightDarkButton';
 import { css } from 'twin.macro';
 import LinksAndWhitepaper from '../../components/products/LinksAndWhitepaper';
 
@@ -123,11 +122,8 @@ const Soc2 = ({ location }) => {
                                         Out-of-the-box policies that you can use for a solid data security program.
                                     </p>
                                     <div className='flex mt-8 justify-start'>
-                                        <Link to='/free-trial/'>
-                                            <GradientButton text='Start Free Trial' />
-                                        </Link>
-                                        <Link to='/request-demo/' className='ml-4'>
-                                            <LightDarkButton text={'Request Demo'} />
+                                        <Link to='/request-demo/'>
+                                            <GradientButton text='BOOK A DEMO' />
                                         </Link>
                                     </div>
                                 </div>

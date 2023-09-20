@@ -5,7 +5,6 @@ import { useStaticQuery, graphql, Link } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import ScrollButton from '../../components/ScrollButton/ScrollButton';
 import GradientButton from '../../components/buttons/GradientButton';
-import LightDarkButton from '../../components/buttons/LightDarkButton';
 import LinksAndWhitepaper from '../../components/products/LinksAndWhitepaper';
 import { css } from 'twin.macro';
 import VideoCyscale from '../../components/campaigns/cspm-solutin/CyscaleVideo';
@@ -77,11 +76,8 @@ const IAMSecurity = ({ location }) => {
                                     into Cyscale and get full visibility over identities and permissions.
                                 </p>
                                 <div className='flex mt-8'>
-                                    <Link to='/free-trial/'>
-                                        <GradientButton text='Start Free Trial' />
-                                    </Link>
-                                    <Link to='/request-demo/' className='ml-4'>
-                                        <LightDarkButton text={'Request Demo'} />
+                                    <Link to='/request-demo/'>
+                                        <GradientButton text='BOOK A DEMO' />
                                     </Link>
                                 </div>
                             </div>

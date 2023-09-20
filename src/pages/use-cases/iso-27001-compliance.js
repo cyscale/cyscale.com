@@ -6,7 +6,6 @@ import getStartedICon from '../../assets/images/getStartedIconCPSM.svg';
 import GetStarted from '../../components/Home/getstarted';
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import GradientButton from '../../components/buttons/GradientButton';
-import LightDarkButton from '../../components/buttons/LightDarkButton';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import LinksAndWhitepaper from '../../components/products/LinksAndWhitepaper';
 
@@ -143,11 +142,8 @@ const CloudCompliance = ({ location }) => {
                                         policies.
                                     </p>
                                     <div className='flex mt-8'>
-                                        <Link to='/free-trial/'>
-                                            <GradientButton text='Start Free Trial' />
-                                        </Link>
-                                        <Link to='/request-demo/' className='ml-4'>
-                                            <LightDarkButton text={'Request Demo'} />
+                                        <Link to='/request-demo/'>
+                                            <GradientButton text='BOOK A DEMO' />
                                         </Link>
                                     </div>
                                 </div>
