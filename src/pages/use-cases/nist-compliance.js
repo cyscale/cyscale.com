@@ -7,7 +7,6 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import GradientButton from '../../components/buttons/GradientButton';
 import { css } from 'twin.macro';
-import LightDarkButton from '../../components/buttons/LightDarkButton';
 import LinksAndWhitepaper from '../../components/products/LinksAndWhitepaper';
 
 const titleSection = css`
@@ -126,11 +125,8 @@ const NISTCompliance = ({ location }) => {
                                         violations with predefined rules mapped to NIST 800-53 compliance controls.
                                     </p>
                                     <div className='flex mt-8 justify-start'>
-                                        <Link to='/free-trial/'>
-                                            <GradientButton text='Start Free Trial' />
-                                        </Link>
-                                        <Link to='/request-demo/' className='ml-4'>
-                                            <LightDarkButton text={'Request Demo'} />
+                                        <Link to='/request-demo/'>
+                                            <GradientButton text='BOOK A DEMO' />
                                         </Link>
                                     </div>
                                 </div>

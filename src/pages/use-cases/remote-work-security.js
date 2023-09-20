@@ -9,8 +9,8 @@ const RemoteWorkSecurity = ({ location }) => {
             pageName='RemoteWork'
             bannerTitle={`Cloud security and visibility for remote work setups`}
             bannerDescription={`Changes in your company's WFH setup keep throwing you curveballs? Protect the backbone remote work depends on and keep your cloud entities secure and compliant.`}
-            bannerBtn1Text='Start Free Trial'
-            bannerBtn1Link={'/free-trial/'}
+            bannerBtn1Text='BOOK A DEMO'
+            bannerBtn1Link={'/request-demo/'}
             bannerBtn1LinkInternal={true}
             bannerBtn2Text='Request demo'
             bannerBtn2Link='/request-demo/'
