@@ -7,7 +7,7 @@ import NewNavigation from './NewNavigation';
 import MobileNavbar from './components/MobileNavbar';
 import MobileNavigation from './components/MobileNavigation';
 import CustomSearch from '../Search/CustomSearch';
-import useClickOutsideSearch from '../../hooks/useClickOutsideSearch';
+import { useClickOutsideSearch } from '../../hooks/useClickOutsideSearch';
 
 const paddingNav = css`
     padding-left: 2rem;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import FocusLock from 'react-focus-lock';
 import menuCloseCookiesModal from '../../assets/images/menuCloseCookiesModal.svg';
 import { css } from 'twin.macro';
@@ -6,15 +6,19 @@ import classnames from 'classnames';
 import useHSMeetingsLoaded from '../../hooks/useHSMeetingsLoaded';
 import useLoadHSMeetingsScript from '../../hooks/useLoadHSMeetingsScript';
 import useLockBodyScroll from '../../hooks/useLockBodyScroll';
+import { useClickOutsideSearch as useClickOutside } from '../../hooks/useClickOutsideSearch';
+
 const RequestDemoModal = ({ calendarModal, setCalendarModal }) => {
+    const ref = useRef(null);
     const { loadingMeetings } = useHSMeetingsLoaded();
 
     useLoadHSMeetingsScript();
-
     useLockBodyScroll();
+    useClickOutside(ref, calendarModal, setCalendarModal);
 
     return (
         <div
+            ref={ref}
             className='bg-white sm:bg-transparent relative w-full sm:max-w-xl md:max-w-2xl lg:max-w-3xl sm:rounded-lg'
             role='dialog'
             aria-modal='true'
@@ -38,11 +42,11 @@ const RequestDemoModal = ({ calendarModal, setCalendarModal }) => {
                 >
                     <div>
                         <div
-                            className={classnames({ hidden: loadingMeetings, 'meetings-iframe-container': true })}
+                            className={classnames({
+                                hidden: loadingMeetings,
+                                'meetings-iframe-container relative': true
+                            })}
                             data-src='https://meetings.hubspot.com/barry-lyne/cyscale-cloud-platform-demo?embed=true'
-                            css={css`
-                                position: relative;
-                            `}
                         >
                             {!loadingMeetings && (
                                 <button
