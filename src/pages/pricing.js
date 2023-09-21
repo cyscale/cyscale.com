@@ -101,8 +101,6 @@ const PricingPage = ({ location }) => {
                         </h1>
                         <h4 className='text-center font-semibold font-montserrat text-base lg:text-lg mt-8'>
                             Enterprise-grade cloud security, without enterprise-grade pricing
-                            <br className='hidden sm:block' />
-                            Cyscale delivers Cloud Visibility, Security and Compliance for companies of all sizes
                         </h4>
                         <Row className='mt-8 md:mt-16 lg:max-w-5xl mx-auto'>
                             <div className='col-span-12 lg:col-span-4'>
@@ -129,11 +127,11 @@ const PricingPage = ({ location }) => {
                                                 background-color: #d8deff;
                                             `}
                                         >
-                                            95% of SaaS startups fit into this plan
+                                            fits most SaaS companies
                                         </p>
                                     </div>
                                     <p className='text-base font-hind font-medium mt-3'>
-                                        <span className='font-montserrat text-2xl font-bold'>$833</span> / month billed
+                                        <span className='font-montserrat text-2xl font-bold'>$700</span> / month, billed
                                         annually
                                     </p>
                                     <div className='flex'>
@@ -147,7 +145,7 @@ const PricingPage = ({ location }) => {
                                             Full access to the platform
                                         </p>
                                     </div>{' '}
-                                    <div className='flex'>
+                                    <div className='flex relative'>
                                         <img src={PricingCheck} alt='' className='mt-1.5' />
                                         <p
                                             className='font-hind text-base mt-2 ml-2'
@@ -193,7 +191,7 @@ const PricingPage = ({ location }) => {
                                         </Link>
                                     </div>
                                     <p className='text-base font-hind font-medium mt-4'>
-                                        <span className='font-montserrat text-2xl font-bold'>$4,333</span> / month
+                                        <span className='font-montserrat text-2xl font-bold'>$2,000</span> / month,
                                         billed annually
                                     </p>
                                     <p
@@ -326,9 +324,6 @@ const PricingPage = ({ location }) => {
                                     Or you can find out in minutes with the full access free trial.
                                 </GatsbyLink>
                             </p>
-                            <p className='text-base font-montserrat font-medium text-center mt-4'>
-                                95% of SaaS startups we've talked to fit into our Pro plan.
-                            </p>
                         </div>
                         <div className='flex justify-center mt-8'>
                             <Link
@@ -346,23 +341,6 @@ const PricingPage = ({ location }) => {
                                 GET STARTED
                             </Link>
                         </div>
-                        <p
-                            className='text-center font-medium font-montserrat mt-8 md:mt-16 max-w-5xl mx-auto'
-                            css={css`
-                                font-size: 13px;
-                                line-height: 25px;
-
-                                @media (max-width: 1024px) {
-                                    font-size: 0.875rem;
-                                    line-height: 1.5625rem;
-                                }
-                            `}
-                        >
-                            Every cloud resource in your environment counts as an asset and is factored into the
-                            Security Knowlege Graph. The entire data is used as a basis for security analysis, including
-                            IAM entities (users, groups, policies, etc.), compute instances, disks, VPCs, storage and
-                            more. We will clarify your assets on a discovery call before you are charged.
-                        </p>
                     </Container>
                 </div>
             </div>
