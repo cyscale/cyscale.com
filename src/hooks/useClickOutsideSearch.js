@@ -21,4 +21,4 @@ const useClickOutsideSearch = (ref, state, setState) => {
     }, [state, setState]);
 };
 
-export default useClickOutsideSearch;
+export { useClickOutsideSearch };

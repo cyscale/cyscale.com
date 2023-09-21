@@ -20,7 +20,7 @@ import { css } from 'twin.macro';
 
 import loadable from '@loadable/component';
 import CustomSearch from '../Search/CustomSearch';
-import useClickOutsideSearch from '../../hooks/useClickOutsideSearch';
+import { useClickOutsideSearch } from '../../hooks/useClickOutsideSearch';
 const Footer = loadable(() => import('./footer'));
 
 const paddingNav = css`

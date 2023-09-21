@@ -72,7 +72,7 @@ const ModalTest = ({ location }) => {
                         .
                     </p>
                 </div>
-                <div className="px-3 sm:px-0">
+                <div className='px-3 sm:px-0'>
                     <div className='rounded-xl shadow-lg mt-16 py-4 pt-12 pb-0 px-8 md:px-12 mx-auto relative bg-white max-w-xl'>
                         {loadingForm && <LoaderContainer minHeight={515} />}
                         <div
@@ -89,7 +89,7 @@ const ModalTest = ({ location }) => {
                         className='sm:flex sm:justify-center sm:items-center'
                         css={css`
                             height: 100vh;
-                            background-color: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+                            background-color: rgba(0, 0, 0, 0.5);
                             backdrop-filter: blur(10px);
                         `}
                     >
