@@ -557,7 +557,7 @@ const PricingPage = ({ location }) => {
                 `}
             >
                 <Container>
-                    <CaseStudiesSection pricing={true} />
+                    <CaseStudiesSection disableAnimation={true} />
                 </Container>
             </div>
             <div

@@ -6,6 +6,7 @@ import { heroHeight } from '../assets/css/styles';
 import RequestDemoModal from '../components/contact/RequestDemoModal';
 import useHSFormLoaded from '../hooks/useHSFormLoaded';
 import LoaderContainer from '../components/Loader/LoaderContainer/LoaderContainer';
+import CaseStudiesSection from '../components/Home/CaseStudiesSection';
 
 const ModalTest = ({ location }) => {
     const [calendarModal, setCalendarModal] = useState(false);
@@ -28,8 +29,8 @@ const ModalTest = ({ location }) => {
         <AnimatedNavbarLayout
             location={location}
             pageName='RequestDemo'
-            title='Request Demo - Cyscale'
-            description='We are happy to schedule a product demo with you.'
+            title='See Cyscale Automated Cloud Security in Action'
+            description="Cloud infrastructure security can be complex, but we can show you that it doesn't have to be!"
         >
             <div className='hidden' data-template-key>
                 hardcoded-pages
@@ -38,10 +39,10 @@ const ModalTest = ({ location }) => {
                 /request-demo/
             </div>
             <div className='hidden' data-title>
-                Request Demo - Cyscale
+                See Cyscale Automated Cloud Security in Action
             </div>
             <div className='hidden' data-description>
-                We are happy to schedule a product demo with you.
+                Cloud infrastructure security can be complex, but we can show you that it doesn't have to be!
             </div>
             <div className='hidden' data-category>
                 website
@@ -53,10 +54,14 @@ const ModalTest = ({ location }) => {
                             'text-blue text-center text-3xl lg:text-5xl font-bold font-montserrat mt-12 sm:mt-20 lg:mt-0': true
                         })}
                     >
-                        Request Demo
+                        Get a Demo
                     </h1>
                 </div>
                 <div className='max-w-xl mx-auto mt-12'>
+                    <p className='my-4 text-center font-medium text-sm lg:text-base font-montserrat px-4 sm:px-0'>
+                        We know cloud security can be complex, but if you give us a few minutes we can show you that it
+                        doesn't have to be!
+                    </p>
                     <p className='my-4 text-center font-medium text-sm lg:text-base font-montserrat px-4 sm:px-0'>
                         Leave your details here and we'll get back to you today,
                         <br className='hidden sm:block' /> or if you have a preferred time you can{' '}
@@ -72,7 +77,7 @@ const ModalTest = ({ location }) => {
                         .
                     </p>
                 </div>
-                <div className='px-3 sm:px-0'>
+                <div className='px-3 sm:px-0 mb-16'>
                     <div className='rounded-xl shadow-lg mt-16 py-4 pt-12 pb-0 px-8 md:px-12 mx-auto relative bg-white max-w-xl'>
                         {loadingForm && <LoaderContainer minHeight={515} />}
                         <div
@@ -83,6 +88,7 @@ const ModalTest = ({ location }) => {
                     </div>
                 </div>
             </div>
+            <CaseStudiesSection disableAnimation={true} subtitle="YOU'RE IN GOOD COMPANY" />
             {calendarModal && (
                 <div className='w-screen h-screen fixed top-0 left-0 right-0 bottom-0' style={{ zIndex: 102 }}>
                     <div
