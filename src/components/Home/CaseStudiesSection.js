@@ -15,7 +15,7 @@ const titleSection = css`
     font-size: 2rem;
 `;
 
-const CaseStudiesSection = ({ pricing }) => {
+const CaseStudiesSection = ({ disableAnimation, subtitle = 'Trusted by companies worldwide' }) => {
     const data = useStaticQuery(graphql`
         query CaseStudiesSectionQuery {
             smartFintech: file(relativePath: { eq: "smart-fintech-home.webp" }) {
@@ -106,7 +106,7 @@ const CaseStudiesSection = ({ pricing }) => {
                         }
                     `}
                 >
-                    Trusted by companies worldwide
+                    {subtitle}
                 </h2>
 
                 <CaseStudyCarousel autoSlide={autoSlide} setAutoSlide={setAutoSlide}>
@@ -122,7 +122,7 @@ const CaseStudiesSection = ({ pricing }) => {
                             >
                                 <div
                                     className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 lg:mt-8'
-                                    data-sal={!pricing ? 'slide-right' : 'undefined'}
+                                    data-sal={!disableAnimation ? 'slide-right' : 'undefined'}
                                 >
                                     <Link to={s.link}>
                                         <GatsbyImage image={s.image} className='max-w-xl' alt={s.alt} />
@@ -130,7 +130,7 @@ const CaseStudiesSection = ({ pricing }) => {
                                 </div>
                                 <div
                                     className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 max-w-xl mt-8 lg:mt-0'
-                                    data-sal={!pricing ? 'slide-left' : 'undefined'}
+                                    data-sal={!disableAnimation ? 'slide-left' : 'undefined'}
                                 >
                                     <p className='font-montserrat text-base font-bold mt-4' css={sectionSubtitleColor}>
                                         CASE STUDY
