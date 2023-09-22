@@ -2,7 +2,7 @@ import React from 'react';
 
 const AssetsTooltip = () => {
     return (
-        <span className='group hover:bg-gray-100 underline'>
+        <span className='group underline'>
             assets
             <span className='absolute top-full left-0 w-full mt-1 p-2 bg-black text-white text-sm rounded shadow-lg opacity-0 group-hover:opacity-100 transition ease-in-out duration-200 font-hind'>
                 Every cloud resource in your environment counts as an asset and is factored into the Security Knowlege
