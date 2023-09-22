@@ -18,6 +18,7 @@ import useHSFormLoaded from '../hooks/useHSFormLoaded';
 import { Helmet } from 'react-helmet';
 import LoaderContainer from '../components/Loader/LoaderContainer/LoaderContainer';
 import CyscaleBird from '../assets/images/cyscale-bird-homepage.svg';
+import AssetsTooltip from '../components/pricing/AssetsTooltip';
 
 const customFontSize = css`
     font-size: 1.75rem;
@@ -153,7 +154,7 @@ const PricingPage = ({ location }) => {
                                                 color: #818791;
                                             `}
                                         >
-                                            Up to 1000 assets
+                                            Up to 1000 <AssetsTooltip />
                                         </p>
                                     </div>
                                     <div className='mt-63px'>
@@ -213,7 +214,7 @@ const PricingPage = ({ location }) => {
                                             Full access to the platform
                                         </p>
                                     </div>{' '}
-                                    <div className='flex'>
+                                    <div className='flex relative'>
                                         <img src={PricingCheck} alt='' className='mt-1.5' />
                                         <p
                                             className='font-hind text-base mt-2 ml-2'
@@ -221,7 +222,7 @@ const PricingPage = ({ location }) => {
                                                 color: #818791;
                                             `}
                                         >
-                                            Up to 5000 assets
+                                            Up to 5000 <AssetsTooltip />
                                         </p>
                                     </div>
                                     <div className='mt-8'>
