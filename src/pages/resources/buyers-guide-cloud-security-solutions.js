@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Layout from '../../components/layout/CleanLayout';
 import { css } from 'twin.macro';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import useScrollTrigger from '../../components/scrollTrigger';
 import classnames from 'classnames';
-import FormModal from '../../components/FormModal/FormModal';
 
 const ctaTransition = css`
     transition: all 0.25s ease-in-out 0s;
@@ -25,8 +24,6 @@ const hrStyle = css`
 `;
 
 const BuyersGuide = ({ location }) => {
-    const [formModal, setFormModal] = useState(false);
-
     const data = useStaticQuery(graphql`
         query BuyersGuide {
             whitepaperCover: file(relativePath: { eq: "whitepaper-cover-blog.png" }) {
@@ -166,25 +163,6 @@ const BuyersGuide = ({ location }) => {
                     </div>
                 </div>
             </div>
-            {formModal && (
-                <div className='w-screen h-screen fixed top-0 left-0 right-0 bottom-0' style={{ zIndex: 102 }}>
-                    <div
-                        className='sm:flex sm:justify-center sm:items-center'
-                        css={css`
-                            height: 100vh;
-                            background-color: rgba(0, 0, 0, 0.5);
-                            backdrop-filter: blur(10px);
-                        `}
-                    >
-                        <FormModal
-                            formModal={formModal}
-                            setFormModal={setFormModal}
-                            formId={'8fbb1e17-23c0-40da-9540-c4be82ea0ae3'}
-                            target={'register-form'}
-                        />
-                    </div>
-                </div>
-            )}
         </Layout>
     );
 };
