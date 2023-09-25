@@ -17,6 +17,7 @@ import SmartFintechOg from '../../assets/images/smart-fintech-og.png';
 import BaysConsultingOg from '../../assets/images/bays-consulting-og.png';
 import MedicalDevicesOg from '../../assets/images/medical-devices-company-case-study-og.png';
 import OktaIntegrationOg from '../../assets/images/okta-integration-og.png';
+import WebinarOg from '../../assets/images/webinar-cover.png';
 import { useStaticQuery, graphql } from 'gatsby';
 
 const defaultOg = {
@@ -36,7 +37,8 @@ const defaultOg = {
     SmartFintech: SmartFintechOg,
     BaysConsulting: BaysConsultingOg,
     MedicalDevicesCompany: MedicalDevicesOg,
-    OktaIntegration: OktaIntegrationOg
+    OktaIntegration: OktaIntegrationOg,
+    Webinar: WebinarOg
 };
 
 const Seo = ({ title, description, pageName, banner, location }) => {

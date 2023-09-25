@@ -72,6 +72,10 @@ const FormModal = ({ formModal, setFormModal }) => {
                                     right: 2rem;
                                     top: 3rem;
                                 }
+                                @media (min-width: 614px) and (max-width: 640px) {
+                                    right: 3rem;
+                                    top: 3rem;
+                                }
                                 @media (min-width: 650px) and (max-width: 768px) {
                                     right: 1rem;
                                     top: 3rem;
