@@ -17,7 +17,7 @@ import SmartFintechOg from '../../assets/images/smart-fintech-og.png';
 import BaysConsultingOg from '../../assets/images/bays-consulting-og.png';
 import MedicalDevicesOg from '../../assets/images/medical-devices-company-case-study-og.png';
 import OktaIntegrationOg from '../../assets/images/okta-integration-og.png';
-import WebinarOg from '../../assets/images/webinar-cover.png';
+import WebinarOg from '../../assets/images/webinar-cover-og.png';
 import { useStaticQuery, graphql } from 'gatsby';
 
 const defaultOg = {
