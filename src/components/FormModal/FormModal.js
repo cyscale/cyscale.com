@@ -48,15 +48,15 @@ const FormModal = ({ formModal, setFormModal }) => {
                     className='overflow-x-auto'
                     css={css`
                         @media screen and (max-width: 639px) {
-                            height: 548px;
+                            height: 618px;
                         }
                     `}
                 >
                     <div>
                         <div className='rounded-xl shadow-lg mt-6 lg:mt-0 py-4 pt-12 pb-0 px-8 md:px-12 mx-auto relative bg-white max-w-xl'>
-                            {loadingForm && <LoaderContainer minHeight={415} />}
+                            {loadingForm && <LoaderContainer minHeight={485} />}
                             <div
-                                style={{ minHeight: 415 }}
+                                style={{ minHeight: 485 }}
                                 id='register-form'
                                 className={classnames('pb-4', { hidden: loadingForm })}
                             />
