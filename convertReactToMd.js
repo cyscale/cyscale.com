@@ -112,7 +112,7 @@ const skipFiles = [
     'about-us.js',
     'careers.js'
 ];
-const skipFolders = ['campaigns', 'policies'];
+const skipFolders = ['campaigns', 'policies', 'resources'];
 
 function convertReactFilesToMDWrapper() {
     convertReactFilesToMD(reactFolder, mdFolder, attributeNames, skipFiles, skipFolders);
