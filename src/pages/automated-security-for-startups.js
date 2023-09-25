@@ -593,8 +593,7 @@ const AutomatedSecurityForStartups = ({ location }) => {
                                     >
                                         After a one-month free trial to demonstrate the value of the platform (we think
                                         you’ll love it!) Cyscale Pro for Startups gives coverage for up to 1,000 assets
-                                        for $10,000 per year. This works out at just over $800 per month for continuous
-                                        security for your data and apps in the cloud.
+                                        for $700 per month for continuous security for your data and apps in the cloud.
                                     </p>
                                     <p
                                         className='font-hind text-lg mt-4'
