@@ -201,7 +201,7 @@ const CloudSecurityPostureLessons = ({ location }) => {
                                 `}
                             >
                                 Cloud Security Analyst
-                                <br /> and Cloud Engineer at Cyscale
+                                <br /> and Cloud Architect at Cyscale
                             </p>
                         </div>
                     </div>
