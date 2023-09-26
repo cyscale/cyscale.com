@@ -1,14 +1,16 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import Layout from '../../components/layout/CleanLayout';
 import { css } from 'twin.macro';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import useScrollTrigger from '../../components/scrollTrigger';
 import classnames from 'classnames';
-import GradientButton from '../../components/buttons/GradientButton';
-import FormModal from '../../components/FormModal/FormModal';
 import CalendarIcon from '../../assets/images/calendar-icon-webinar.svg';
 import LocationIcon from '../../assets/images/location-icon-webinar.svg';
+import LoaderContainer from '../../components/Loader/LoaderContainer/LoaderContainer';
+import useHSFormLoaded from '../../hooks/useHSFormLoaded';
+import { Helmet } from 'react-helmet';
+import { Element, Link as ScrollLink } from 'react-scroll';
 
 const ctaTransition = css`
     transition: all 0.25s ease-in-out 0s;
@@ -28,7 +30,7 @@ const hrStyle = css`
 `;
 
 const CloudSecurityPostureLessons = ({ location }) => {
-    const [formModal, setFormModal] = useState(false);
+    const { loadingForm } = useHSFormLoaded();
 
     const data = useStaticQuery(graphql`
         query Webinar {
@@ -49,6 +51,18 @@ const CloudSecurityPostureLessons = ({ location }) => {
             }
         }
     `);
+
+    useEffect(() => {
+        setTimeout(() => {
+            if (window && window.hbspt) {
+                window.hbspt.forms?.create({
+                    portalId: '5413427',
+                    formId: '8fbb1e17-23c0-40da-9540-c4be82ea0ae3',
+                    target: '#register-form'
+                });
+            }
+        }, 600);
+    }, []);
 
     const trigger = useScrollTrigger();
     return (
@@ -74,6 +88,9 @@ const CloudSecurityPostureLessons = ({ location }) => {
             <div className='hidden' data-category>
                 website
             </div>
+            <Helmet>
+                <script charSet='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js'></script>
+            </Helmet>
             <div className='container max-w-7xl pt-28 sm:pt-32 mx-auto xl:flex xl:pl-12 xl:pr-16'>
                 <div className='max-w-4xl mx-auto xl:mx-0 px-8'>
                     <div className='grid grid-cols-12 gap-4'>
@@ -113,14 +130,18 @@ const CloudSecurityPostureLessons = ({ location }) => {
                             <p className='text-xs font-hind mt-2'>
                                 The webinar will be recorded and made available on demand{' '}
                             </p>
-                            <div
-                                className='mt-4'
-                                onClick={() => setFormModal(!formModal)}
-                                onKeyDown={() => {}}
-                                tabIndex='0'
-                                role='button'
-                            >
-                                <GradientButton text='REGISTER' alignLeft={true} />
+                            <div className='mt-4'>
+                                <ScrollLink
+                                    to='form-register'
+                                    smooth={true}
+                                    duration={500}
+                                    className='bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] py-3 px-7 rounded-md text-white text-sm font-bold cursor-pointer'
+                                    css={css`
+                                        background-color: #d8deff;
+                                    `}
+                                >
+                                    REGISTER
+                                </ScrollLink>
                             </div>
                         </div>
                         <div className='col-span-12 lg:col-span-6'>
@@ -165,7 +186,7 @@ const CloudSecurityPostureLessons = ({ location }) => {
                     >
                         Speakers
                     </h3>
-                    <div className='flex mt-4 mb-20'>
+                    <div className='flex mt-4'>
                         <GatsbyImage
                             image={data.andrei.childImageSharp.gatsbyImageData}
                             alt=''
@@ -182,6 +203,25 @@ const CloudSecurityPostureLessons = ({ location }) => {
                                 Cloud Security Analyst
                                 <br /> and Cloud Engineer at Cyscale
                             </p>
+                        </div>
+                    </div>
+                    <Element name='form-register' />
+                    <div className='mt-12 mb-20'>
+                        <div
+                            className='rounded-xl shadow-lg mt-6 lg:mt-0 py-4 pt-12 pb-0 px-8 md:px-12 relative max-w-xl'
+                            css={css`
+                                background-color: #f8fbff;
+                            `}
+                        >
+                            {loadingForm && <LoaderContainer minHeight={485} />}
+                            <div
+                                style={{ minHeight: 485 }}
+                                id='register-form'
+                                className={classnames('pb-4', { hidden: loadingForm })}
+                                css={css`
+                                    background-color: #f8fbff;
+                                `}
+                            />
                         </div>
                     </div>
                 </div>
@@ -235,20 +275,6 @@ const CloudSecurityPostureLessons = ({ location }) => {
                     </div>
                 </div>
             </div>
-            {formModal && (
-                <div className='w-screen h-screen fixed top-0 left-0 right-0 bottom-0' style={{ zIndex: 102 }}>
-                    <div
-                        className='sm:flex sm:justify-center sm:items-center'
-                        css={css`
-                            height: 100vh;
-                            background-color: rgba(0, 0, 0, 0.5);
-                            backdrop-filter: blur(10px);
-                        `}
-                    >
-                        <FormModal formModal={formModal} setFormModal={setFormModal} />
-                    </div>
-                </div>
-            )}
         </Layout>
     );
 };
