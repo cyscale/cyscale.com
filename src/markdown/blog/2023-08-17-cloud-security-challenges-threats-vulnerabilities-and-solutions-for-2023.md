@@ -155,10 +155,10 @@ Understanding the top 10 challenges a comprehensive cloud security strategy need
 
 Don’t get overwhelmed with the scope of the task. Cyscale’s Automated Cloud Security platform can be a valuable partner in safeguarding your cloud infrastructure environment and ensuring compliance. [Click here to schedule your demo](https://cyscale.com/request-demo/) and see our platform in action.
 
-<div class="hs-cta-embed hs-cta-simple-placeholder hs-cta-embed-136440984941"
-  style="max-width:100%; max-height:100%; width:210px;height:42.390625px" data-hubspot-wrapper-cta-id="136440984941">
-  <a href="https://cta-service-cms2.hubspot.com/web-interactives/public/v1/track/redirect?encryptedPayload=AVxigLKGnvYFqkT1Litl8%2FxBoGBss8Ol08LIMI%2Ff59Bwfu3F3VzT6%2BmoKsf2jGvF8n66Pq%2BDyTA5s48%2By2DXwEFRK1ifFnh2VpE83k0eDdLa3vFOzjyMkqw2RR1tzMzTHAt6LRw6vMSCnZT6spL7Bk1u2oiEkVV2viw7HPc%2BtakfNqHGrS2jgleu8%2BMW6yZXG8M4oWUEgOVhboOs5dFVpMkfjfAG%2BgAPwdQcYSebC0QVT6nCIJ%2FjvCwIZwyVj4sw9hQFTaoIkKCNnZyiF5SEceEnB156T%2FI%3D&webInteractiveContentId=136440984941&portalId=5413427" target="_blank" rel="noopener" crossorigin="anonymous">
-    <img alt="Download" loading="lazy" src="https://no-cache.hubspot.com/cta/default/5413427/interactive-136440984941.png" style="height: 100%; width: 100%; object-fit: fill"
-      onerror="this.style.display='none'" />
-  </a>
+<div class="hs-cta-embed hs-cta-simple-placeholder hs-cta-embed-136440984941"
+  style="max-width:100%; max-height:100%; width:210px;height:42.390625px" data-hubspot-wrapper-cta-id="136440984941">
+  <a href="https://cta-service-cms2.hubspot.com/web-interactives/public/v1/track/redirect?encryptedPayload=AVxigLKGnvYFqkT1Litl8%2FxBoGBss8Ol08LIMI%2Ff59Bwfu3F3VzT6%2BmoKsf2jGvF8n66Pq%2BDyTA5s48%2By2DXwEFRK1ifFnh2VpE83k0eDdLa3vFOzjyMkqw2RR1tzMzTHAt6LRw6vMSCnZT6spL7Bk1u2oiEkVV2viw7HPc%2BtakfNqHGrS2jgleu8%2BMW6yZXG8M4oWUEgOVhboOs5dFVpMkfjfAG%2BgAPwdQcYSebC0QVT6nCIJ%2FjvCwIZwyVj4sw9hQFTaoIkKCNnZyiF5SEceEnB156T%2FI%3D&webInteractiveContentId=136440984941&portalId=5413427" target="_blank" rel="noopener" crossorigin="anonymous">
+    <img alt="Download" loading="lazy" src="https://no-cache.hubspot.com/cta/default/5413427/interactive-136440984941.png" style="height: 100%; width: 100%; object-fit: fill"
+      onerror="this.style.display='none'" />
+  </a>
 </div>
