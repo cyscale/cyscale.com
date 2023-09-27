@@ -134,10 +134,4 @@ CIEM (Cloud Infrastructure Entitlements Management) tools manage identities and 
 
 **Download this guide as a PDF** 
 
-<div class="hs-cta-embed hs-cta-simple-placeholder hs-cta-embed-136438852760"
-  style="max-width:100%; max-height:100%; width:210px;height:42.390625px" data-hubspot-wrapper-cta-id="136438852760">
-  <a href="https://cta-service-cms2.hubspot.com/web-interactives/public/v1/track/redirect?encryptedPayload=AVxigLKn3OMHIDYQAbR6KVxVtgMQ%2Fdc5%2FR3oUJO8MnIAdwgjdDHGk7lVmmWDgXVjh9T%2B7lmgJ2w4NS23c%2FVo8YATras7cWVg%2FFZdJbLC4K%2FpKkyiybxAKjlNzhgmtnLnKRIJr7H0pPvlIl%2FnJAe%2Fy6nQ4sbXhQpFWF7x6iFyRTBBwskmIfHpbIs3ewMa1Ykm1JESBTGveP%2FHUGNSdioTHao9QsJKnoH0hDmyPWmxN%2B%2BMAo%2F%2Bq4tSBe60QxX7nkzLQXAwDEIA7ywwXwkssrDqI574lVtSulag%2B2dlX9kjHoY%3D&webInteractiveContentId=136438852760&portalId=5413427" target="_blank" rel="noopener" crossorigin="anonymous">
-    <img alt="Download" loading="lazy" src="https://no-cache.hubspot.com/cta/default/5413427/interactive-136438852760.png" style="height: 100%; width: 100%; object-fit: fill"
-      onerror="this.style.display='none'" />
-  </a>
-</div>
+<div class="hs-cta-embed hs-cta-simple-placeholder hs-cta-embed-136438852760" style="max-width:100%; max-height:100%;width:210px;height:42.390625px" data-hubspot-wrapper-cta-id="136438852760"><a href="https://cta-service-cms2.hubspot.com/web-interactives/public/v1/track/redirect?encryptedPayload=AVxigLKTGbp%2Fo9uY%2B1cpwqxYO%2BVdgBMG2bgcgDZpv3UP7fDM0cPci8FmFfQrFEsURZY%2FBCwYOLNlG1XYE6BnbA1HIeTHNfwLiP2GUGYlTRO8CW82qb9egx0YmY9aQqHwOJa6iekClG%2FMfqEbCu0Dp5wkLzxfl7v4ITdglHTHc9cfvbVS11AWnEbx0NEGVzaWJngIJAT7AL7Hb9Sj8j%2BtDc7O96NDo4C5OsZhIeDO7CXDRRccKrDRsTFtfE9f4VAPVJWvV65oHjHpAVfzD5qX8u%2BU%2FIVvOMducO6AS96ZUM4%3D&webInteractiveContentId=136438852760&portalId=5413427" target="_blank" rel="noopener" crossorigin="anonymous"><img alt="Download" loading="lazy" src="https://no-cache.hubspot.com/cta/default/5413427/interactive-136438852760.png" style="height: 100%; width: 100%; object-fit: fill" onerror="this.style.display='none'"/></a></div>
