@@ -14,6 +14,9 @@ seoDescription: "This essential guide for startups looks at the pros and cons of
 featuredpost: true
 featuredimage: /img/cyscale-blog-cover-buyers-guide.png
 tableOfContents: false
+tags:
+  - guide
+  - cloudsecurity
 ---
 ### Where do I even start when it comes to cloud security? 
 
@@ -131,10 +134,10 @@ CIEM (Cloud Infrastructure Entitlements Management) tools manage identities and 
 
 **Download this guide as a PDF** 
 
-<div class="hs-cta-embed hs-cta-simple-placeholder hs-cta-embed-136438852760"\
-  style="max-width:100%; max-height:100%; width:210px;height:42.390625px" data-hubspot-wrapper-cta-id="136438852760">\
-  <a href="https://cta-service-cms2.hubspot.com/web-interactives/public/v1/track/redirect?encryptedPayload=AVxigLKTGbp%2Fo9uY%2B1cpwqxYO%2BVdgBMG2bgcgDZpv3UP7fDM0cPci8FmFfQrFEsURZY%2FBCwYOLNlG1XYE6BnbA1HIeTHNfwLiP2GUGYlTRO8CW82qb9egx0YmY9aQqHwOJa6iekClG%2FMfqEbCu0Dp5wkLzxfl7v4ITdglHTHc9cfvbVS11AWnEbx0NEGVzaWJngIJAT7AL7Hb9Sj8j%2BtDc7O96NDo4C5OsZhIeDO7CXDRRccKrDRsTFtfE9f4VAPVJWvV65oHjHpAVfzD5qX8u%2BU%2FIVvOMducO6AS96ZUM4%3D&webInteractiveContentId=136438852760&portalId=5413427" target="_blank" rel="noopener" crossorigin="anonymous">\
-    <img alt="Download" loading="lazy" src="https://no-cache.hubspot.com/cta/default/5413427/interactive-136438852760.png" style="height: 100%; width: 100%; object-fit: fill"\
-      onerror="this.style.display='none'" />\
-  </a>\
+<div class="hs-cta-embed hs-cta-simple-placeholder hs-cta-embed-136438852760"
+  style="max-width:100%; max-height:100%; width:210px;height:42.390625px" data-hubspot-wrapper-cta-id="136438852760">
+  <a href="https://cta-service-cms2.hubspot.com/web-interactives/public/v1/track/redirect?encryptedPayload=AVxigLKTGbp%2Fo9uY%2B1cpwqxYO%2BVdgBMG2bgcgDZpv3UP7fDM0cPci8FmFfQrFEsURZY%2FBCwYOLNlG1XYE6BnbA1HIeTHNfwLiP2GUGYlTRO8CW82qb9egx0YmY9aQqHwOJa6iekClG%2FMfqEbCu0Dp5wkLzxfl7v4ITdglHTHc9cfvbVS11AWnEbx0NEGVzaWJngIJAT7AL7Hb9Sj8j%2BtDc7O96NDo4C5OsZhIeDO7CXDRRccKrDRsTFtfE9f4VAPVJWvV65oHjHpAVfzD5qX8u%2BU%2FIVvOMducO6AS96ZUM4%3D&webInteractiveContentId=136438852760&portalId=5413427" target="_blank" rel="noopener" crossorigin="anonymous">
+    <img alt="Download" loading="lazy" src="https://no-cache.hubspot.com/cta/default/5413427/interactive-136438852760.png" style="height: 100%; width: 100%; object-fit: fill"
+      onerror="this.style.display='none'" />
+  </a>
 </div>
