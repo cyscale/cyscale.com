@@ -11,7 +11,6 @@ import CalendarIcon from '../../assets/images/calendar-icon-webinar.svg';
 import LocationIcon from '../../assets/images/location-icon-webinar.svg';
 import LoaderContainer from '../../components/Loader/LoaderContainer/LoaderContainer';
 import classnames from 'classnames';
-import { Element, Link as ScrollLink } from 'react-scroll';
 
 const CloudSecurityPostureLessons = ({ location }) => {
     const { loadingForm } = useHSFormLoaded();
@@ -111,24 +110,38 @@ const CloudSecurityPostureLessons = ({ location }) => {
                                         <img src={LocationIcon} alt='' />
                                         <p className='font-montserrat text-base font-semibold ml-2 lg:ml-4'>Online</p>
                                     </div>
-                                    <p className='text-xs font-hind mt-2'>
+                                    <p className='text-xs font-hind mt-2 mb-12'>
                                         The webinar will be recorded and made available on demand{' '}
                                     </p>
-                                    <div className='mt-6 mb-12 block lg:hidden'>
-                                        <ScrollLink
-                                            to='form-register'
-                                            smooth={true}
-                                            duration={500}
-                                            className='bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] py-3 px-7 rounded-md text-white text-sm font-bold cursor-pointer'
-                                            css={css`
-                                                background-color: #d8deff;
-                                            `}
-                                        >
-                                            REGISTER
-                                        </ScrollLink>
-                                    </div>
                                 </div>
-                                <div className='max-w-xl lg:max-w-full mx-auto lg:mx-0'>
+                            </div>
+                            <div className='col-span-12 lg:col-span-5 lg:mt-20'>
+                                <div
+                                    className='rounded-xl shadow-lg py-4 pt-12 pb-0 px-8 md:px-12 mx-auto lg:mx-0 relative max-w-xl z-10'
+                                    css={css`
+                                        background-color: rgba(255, 255, 255, 0.6);
+                                        backdrop-filter: blur(5px);
+                                    `}
+                                >
+                                    <div className='max-w-xl'>{loadingForm && <LoaderContainer minHeight={545} />}</div>
+                                    <div
+                                        style={{ minHeight: 545 }}
+                                        id='register-form'
+                                        className={classnames('pb-4', { hidden: loadingForm })}
+                                    />
+                                </div>
+                            </div>
+                        </Row>
+                        <Row>
+                            <div
+                                className='col-span-12 lg:col-span-7 z-10'
+                                css={css`
+                                    @media (min-width: 1024px) {
+                                        margin-top: -300px;
+                                    }
+                                `}
+                            >
+                                <div className='max-w-xl lg:max-w-full mx-auto lg:mx-0 mt-8 lg:mt-0'>
                                     <p className='font-hind font-base mt-6'>
                                         Every company's cloud security posture is unique due to their specific cloud
                                         environment, infrastructure, and technology stack. This makes it challenging to
@@ -189,23 +202,6 @@ const CloudSecurityPostureLessons = ({ location }) => {
                                             </p>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div className='col-span-12 lg:col-span-5 mt-20 '>
-                                <Element name='form-register' />
-                                <div
-                                    className='rounded-xl shadow-lg py-4 pt-12 pb-0 px-8 md:px-12 mx-auto lg:mx-0 relative max-w-xl z-10'
-                                    css={css`
-                                        background-color: rgba(255, 255, 255, 0.6);
-                                        backdrop-filter: blur(5px);
-                                    `}
-                                >
-                                    <div className='max-w-xl'>{loadingForm && <LoaderContainer minHeight={545} />}</div>
-                                    <div
-                                        style={{ minHeight: 545 }}
-                                        id='register-form'
-                                        className={classnames('pb-4', { hidden: loadingForm })}
-                                    />
                                 </div>
                             </div>
                         </Row>
