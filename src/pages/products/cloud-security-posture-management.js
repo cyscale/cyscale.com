@@ -758,6 +758,10 @@ const CSPM = ({ location }) => {
                                             `}
                                             onMouseEnter={() => setAutoSlide(false)}
                                             onMouseLeave={() => setAutoSlide(true)}
+                                            role='button'
+                                            tabIndex='-1'
+                                            onClick={() => {}}
+                                            onKeyDown={() => {}}
                                         >
                                             <GatsbyImage image={s.image} alt={s.alt} key={index} />
                                         </div>
@@ -785,9 +789,13 @@ const CSPM = ({ location }) => {
                                     `}
                                     onMouseEnter={() => setAutoSlideCarousel(false)}
                                     onMouseLeave={() => setAutoSlideCarousel(true)}
+                                    role='button'
+                                    tabIndex='-1'
+                                    onClick={() => {}}
+                                    onKeyDown={() => {}}
                                 >
                                     <div className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 lg:mt-8'>
-                                        <Link to={s.link}>
+                                        <Link to={s.link} tabIndex='-1'>
                                             <GatsbyImage image={s.image} className='max-w-xl' alt={s.alt} />
                                         </Link>
                                     </div>
@@ -800,8 +808,7 @@ const CSPM = ({ location }) => {
                                         >
                                             CASE STUDY
                                         </p>
-                                        <Link to={s.link}>
-                                            {' '}
+                                        <Link to={s.link} tabIndex='-1'>
                                             <h2
                                                 className='font-montserrat text-blue font-bold mt-2 hover:underline'
                                                 css={css`
@@ -821,6 +828,7 @@ const CSPM = ({ location }) => {
                                         </div>
                                         <Link
                                             to={s.link}
+                                            tabIndex='-1'
                                             onMouseEnter={() => setIsHover(true)}
                                             onMouseLeave={() => setIsHover(false)}
                                             className='font-hind text-base font-bold mt-6 hover:underline block'

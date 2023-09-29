@@ -237,17 +237,15 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation, sea
                         </MegaMenu>
                     </NavItem>
                     <li className='py-6 pl-4'>
-                        <img
-                            src={searchIcon}
-                            className='py-2 cursor-pointer'
-                            alt=''
+                        <span
                             tabIndex='0'
                             onClick={() => setSearchBar(!searchBar)}
                             role='button'
                             aria-label='Search'
-                            onKeyPress={() => {}}
-                            width={22}
-                        />
+                            onKeyDown={() => {}}
+                        >
+                            <img src={searchIcon} className='py-2 cursor-pointer' alt='' width={22} />
+                        </span>
                     </li>
                     <li className='py-6 pl-4'>
                         <a href='https://app.cyscale.com' target='_blank' rel='noopener noreferrer'>
