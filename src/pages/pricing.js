@@ -370,9 +370,11 @@ const PricingPage = ({ location }) => {
                                     Multi-cloud support (AWS, Google Cloud, Azure, Alibaba Cloud)
                                 </GatsbyLink>
                             </div>
-                            <div className='flex mt-2'>
+                            <div className='flex mt-2 items-start'>
                                 <img src={checkMarkIcon} alt='' />{' '}
-                                <p className='ml-2 text-sm'>Integrations (AWS SSO, Okta, Github, Azure AD)</p>
+                                <p className='ml-2 text-sm'>
+                                    Integrations (AWS SSO, Okta, Google Workspace, <br className="hidden lg:block" /> Azure AD)
+                                </p>
                             </div>
                             <div className='flex mt-2'>
                                 <img src={checkMarkIcon} alt='' />
