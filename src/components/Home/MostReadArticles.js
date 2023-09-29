@@ -48,20 +48,38 @@ const MostReadArticles = () => {
             <BlogLink
                 link={'/blog/cloud-native-security-guide/'}
                 categories={['cspm']}
-                text={['Cloud-Native Security: A', <br />, 'Comprehensive Guide to', <br />, 'Your Technology Stack']}
+                text={[
+                    'Cloud-Native Security: A',
+                    <br key='br1' />,
+                    'Comprehensive Guide to',
+                    <br key='br2' />,
+                    'Your Technology Stack'
+                ]}
                 image={data.cloudNativeIcon.childImageSharp.gatsbyImageData}
             />
             <BlogLink
                 link={'/blog/cloud-security-and-compliance/'}
                 categories={['cspm', 'compliance']}
-                text={['Cloud Security and', <br />, 'Compliance: A Guide for', <br />, 'Your Cloud Infrastructure']}
+                text={[
+                    'Cloud Security and',
+                    <br key='br1' />,
+                    'Compliance: A Guide for',
+                    <br key='br2' />,
+                    'Your Cloud Infrastructure'
+                ]}
                 image={data.cloudIcon.childImageSharp.gatsbyImageData}
                 classNames={'mt-10 md:mt-0'}
             />
             <BlogLink
                 link={'/blog/cnapp-secure-native-applications/'}
                 categories={['cnapp']}
-                text={['CNAPP: The Key', <br />, 'to Cloud-Native', <br />, 'Applications Security']}
+                text={[
+                    'CNAPP: The Key',
+                    <br key='br1' />,
+                    'to Cloud-Native',
+                    <br key='br2' />,
+                    'Applications Security'
+                ]}
                 image={data.cnappIcon.childImageSharp.gatsbyImageData}
                 classNames={'mt-10 lg:mt-0'}
             />
@@ -70,9 +88,9 @@ const MostReadArticles = () => {
                 categories={['cspm']}
                 text={[
                     'Securing IAM - Best',
-                    <br />,
+                    <br key='br1' />,
                     'Practices Recommended by',
-                    <br />,
+                    <br key='br2' />,
                     'AWS, Azure, and Google Cloud'
                 ]}
                 image={data.iamIcon.childImageSharp.gatsbyImageData}
@@ -81,14 +99,26 @@ const MostReadArticles = () => {
             <BlogLink
                 link={'/blog/s3-bucket-security/'}
                 categories={['cspm']}
-                text={['Understanding S3', <br />, ' Bucket Security', <br />, 'A Contextual Approach']}
+                text={[
+                    'Understanding S3',
+                    <br key='br1' />,
+                    ' Bucket Security',
+                    <br key='br2' />,
+                    'A Contextual Approach'
+                ]}
                 image={data.bucketIcon.childImageSharp.gatsbyImageData}
                 classNames={'mt-10 hidden lg:block'}
             />
             <BlogLink
                 link={'/blog/cloud-native-security'}
                 categories={['cspm']}
-                text={['Cloud-Native Infrastructure:', <br />, 'How to Build a', <br />, 'Comprehensive Security Plan']}
+                text={[
+                    'Cloud-Native Infrastructure:',
+                    <br key='br1' />,
+                    'How to Build a',
+                    <br key='br2' />,
+                    'Comprehensive Security Plan'
+                ]}
                 image={data.nativeInfrastructureIcon.childImageSharp.gatsbyImageData}
                 classNames={'mt-10 hidden lg:block'}
             />
