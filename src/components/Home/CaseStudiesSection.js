@@ -119,12 +119,16 @@ const CaseStudiesSection = ({ disableAnimation, subtitle = 'Trusted by companies
                                 `}
                                 onMouseEnter={() => setAutoSlide(false)}
                                 onMouseLeave={() => setAutoSlide(true)}
+                                role='button'
+                                tabIndex='-1'
+                                onClick={() => {}}
+                                onKeyDown={() => {}}
                             >
                                 <div
                                     className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 lg:mt-8'
                                     data-sal={!disableAnimation ? 'slide-right' : 'undefined'}
                                 >
-                                    <Link to={s.link}>
+                                    <Link to={s.link} tabIndex='-1'>
                                         <GatsbyImage image={s.image} className='max-w-xl' alt={s.alt} />
                                     </Link>
                                 </div>
@@ -135,8 +139,7 @@ const CaseStudiesSection = ({ disableAnimation, subtitle = 'Trusted by companies
                                     <p className='font-montserrat text-base font-bold mt-4' css={sectionSubtitleColor}>
                                         CASE STUDY
                                     </p>
-                                    <Link to={s.link}>
-                                        {' '}
+                                    <Link to={s.link} tabIndex='-1'>
                                         <h2
                                             className='font-montserrat text-blue font-bold mt-2 hover:underline'
                                             css={titleSection}
@@ -156,6 +159,7 @@ const CaseStudiesSection = ({ disableAnimation, subtitle = 'Trusted by companies
                                         to={s.link}
                                         onMouseEnter={() => setIsHover(true)}
                                         onMouseLeave={() => setIsHover(false)}
+                                        tabIndex='-1'
                                         className='font-hind text-base font-bold mt-6 hover:underline block'
                                         css={css`
                                             color: #0f26aa;

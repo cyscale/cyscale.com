@@ -17,17 +17,20 @@ const MobileNavbar = ({ showBurgerButton, showMenu, setShowMenu, searchBar, setS
                     </Link>
                 </div>
                 <div className='absolute right-0 top-5'>
-                    <img
-                        src={searchIcon}
-                        className={`pb-2.5 cursor-pointer mr-5 ${showBurgerButton ? 'inline-block' : 'hidden'}`}
-                        alt=''
+                    <span
                         tabIndex='0'
                         onClick={() => setSearchBar(!searchBar)}
                         role='button'
                         aria-label='Search'
-                        onKeyPress={() => {}}
-                        width={22}
-                    />
+                        onKeyDown={() => {}}
+                    >
+                        <img
+                            src={searchIcon}
+                            className={`pb-2.5 cursor-pointer mr-5 ${showBurgerButton ? 'inline-block' : 'hidden'}`}
+                            alt=''
+                            width={22}
+                        />
+                    </span>
                     <button
                         type='button'
                         className={`xl:hidden ${showBurgerButton ? 'inline-block' : 'hidden'}`}

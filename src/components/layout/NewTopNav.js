@@ -134,7 +134,7 @@ const NewTopNav = ({ pageName, showLogo = true, location, animatedNavbar }) => {
                             `,
                         !animatedNavbar &&
                             css`
-                                top: ${!trigger ? '6.563rem' : 0};
+                                top: ${!trigger ? '6.2rem' : 0};
                                 @media (max-width: 1280px) {
                                     top: ${!trigger ? '5rem' : 0};
                                 }

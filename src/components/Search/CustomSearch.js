@@ -120,17 +120,13 @@ const CustomSearch = ({ searchBar, setSearchBar }) => {
                                 }
                             `}
                         />
-                        <img
-                            src={ClearInput}
-                            alt=''
-                            width={16}
-                            className='absolute right-0 top-1 lg:top-3 cursor-pointer'
+                        <span
                             onKeyDown={(event) => {
                                 if (event.key === 'Enter' || event.key === ' ') {
                                     setSearchBar(!searchBar);
                                 }
                             }}
-                            //eslint-disable-next-line
+                            role='button'
                             tabIndex={0}
                             onClick={() => {
                                 if (query === '') {
@@ -140,7 +136,14 @@ const CustomSearch = ({ searchBar, setSearchBar }) => {
                                 setQuery('');
                                 setResults([]);
                             }}
-                        />
+                        >
+                            <img
+                                src={ClearInput}
+                                alt=''
+                                width={16}
+                                className='absolute right-0 top-1 lg:top-3 cursor-pointer'
+                            />
+                        </span>
                     </div>
                     {query !== '' && Object.keys(results).length >= 1 && (
                         <div className='block bg-white mt-2'>
