@@ -14,12 +14,12 @@ import FixIcon from '../assets/images/fix-icon-home.svg';
 import PrioritizeIcon from '../assets/images/prioritize-icon-home.svg';
 import IdentifyIcon from '../assets/images/identity-icon-home.svg';
 
-const BlogCarousel = loadable(() => import('../components/Home/BlogSection'));
-const CardsSections = loadable(() => import('../components/Home/CardsSections'));
-const CalendarSection = loadable(() => import('../components/Home/CalendarSection'));
-const MostReadArticles = loadable(() => import('../components/Home/MostReadArticles'));
 const CaseStudiesSection = loadable(() => import('../components/Home/CaseStudiesSection'));
+const CardsSections = loadable(() => import('../components/Home/CardsSections'));
 const CallToAction = loadable(() => import('../components/Home/CallToAction'));
+const BlogCarousel = loadable(() => import('../components/Home/BlogSection'));
+const MostReadArticles = loadable(() => import('../components/Home/MostReadArticles'));
+const CalendarSection = loadable(() => import('../components/Home/CalendarSection'));
 
 const heroBackground = css`
     height: 44rem;

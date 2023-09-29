@@ -113,6 +113,7 @@ const CaseStudiesSection = ({ disableAnimation, subtitle = 'Trusted by companies
                     {slides.map((s, index) => {
                         return (
                             <div
+                                key={index}
                                 className='grid grid-cols-12 gap-x-5'
                                 css={css`
                                     overflow: hidden;
