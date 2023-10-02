@@ -16,6 +16,7 @@ const titleSection = css`
 `;
 
 const CaseStudiesSection = ({ disableAnimation, subtitle = 'Trusted by companies worldwide' }) => {
+    const [curr, setCurr] = useState(0);
     const data = useStaticQuery(graphql`
         query CaseStudiesSectionQuery {
             smartFintech: file(relativePath: { eq: "smart-fintech-home.webp" }) {
@@ -109,7 +110,7 @@ const CaseStudiesSection = ({ disableAnimation, subtitle = 'Trusted by companies
                     {subtitle}
                 </h2>
 
-                <CaseStudyCarousel autoSlide={autoSlide} setAutoSlide={setAutoSlide}>
+                <CaseStudyCarousel autoSlide={autoSlide} setAutoSlide={setAutoSlide} curr={curr} setCurr={setCurr}>
                     {slides.map((s, index) => {
                         return (
                             <div
@@ -121,7 +122,7 @@ const CaseStudiesSection = ({ disableAnimation, subtitle = 'Trusted by companies
                                 onMouseEnter={() => setAutoSlide(false)}
                                 onMouseLeave={() => setAutoSlide(true)}
                                 role='button'
-                                tabIndex='-1'
+                                tabIndex={curr === index ? 0 : -1}
                                 onClick={() => {}}
                                 onKeyDown={() => {}}
                             >
@@ -129,7 +130,7 @@ const CaseStudiesSection = ({ disableAnimation, subtitle = 'Trusted by companies
                                     className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 lg:mt-8'
                                     data-sal={!disableAnimation ? 'slide-right' : 'undefined'}
                                 >
-                                    <Link to={s.link} tabIndex='-1'>
+                                    <Link to={s.link} tabIndex={curr === index ? 0 : -1}>
                                         <GatsbyImage image={s.image} className='max-w-xl' alt={s.alt} />
                                     </Link>
                                 </div>
@@ -140,7 +141,7 @@ const CaseStudiesSection = ({ disableAnimation, subtitle = 'Trusted by companies
                                     <p className='font-montserrat text-base font-bold mt-4' css={sectionSubtitleColor}>
                                         CASE STUDY
                                     </p>
-                                    <Link to={s.link} tabIndex='-1'>
+                                    <Link to={s.link} tabIndex={curr === index ? 0 : -1}>
                                         <h2
                                             className='font-montserrat text-blue font-bold mt-2 hover:underline'
                                             css={titleSection}
@@ -160,7 +161,7 @@ const CaseStudiesSection = ({ disableAnimation, subtitle = 'Trusted by companies
                                         to={s.link}
                                         onMouseEnter={() => setIsHover(true)}
                                         onMouseLeave={() => setIsHover(false)}
-                                        tabIndex='-1'
+                                        tabIndex={curr === index ? 0 : -1}
                                         className='font-hind text-base font-bold mt-6 hover:underline block'
                                         css={css`
                                             color: #0f26aa;

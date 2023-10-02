@@ -9,8 +9,7 @@ const hoverEffect = css`
     }
 `;
 
-const Carousel = ({ children: slides, autoSlide = true, autoSlideInterval = 2500, setAutoSlide, cspmCarousel }) => {
-    const [curr, setCurr] = useState(0);
+const Carousel = ({ children: slides, autoSlide = true, autoSlideInterval = 2500, setAutoSlide, cspmCarousel, curr, setCurr }) => {
     const swipeRef = useRef();
     const touchStart = useRef(0);
     const touchEnd = useRef(0);
