@@ -190,6 +190,8 @@ const subtitleFontSize = css`
 `;
 
 const CSPM = ({ location }) => {
+    const [curr, setCurr] = useState(0);
+    const [currImage, setCurrImage] = useState(0);
     const [autoSlide, setAutoSlide] = useState(true);
     const [isHover, setIsHover] = useState(false);
     const [autoSlideCarousel, setAutoSlideCarousel] = useState(true);
@@ -747,7 +749,13 @@ const CSPM = ({ location }) => {
                     </div>
                     <div className='col-span-12 lg:col-span-6 mx-auto lg:mx-0'>
                         <div className='max-w-xl'>
-                            <Carousel autoSlide={autoSlide} setAutoSlide={setAutoSlide} cspmCarousel>
+                            <Carousel
+                                autoSlide={autoSlide}
+                                setAutoSlide={setAutoSlide}
+                                cspmCarousel
+                                curr={currImage}
+                                setCurr={setCurrImage}
+                            >
                                 {slides.map((s, index) => {
                                     return (
                                         <div
@@ -779,7 +787,12 @@ const CSPM = ({ location }) => {
                 `}
             >
                 <Container>
-                    <CaseStudyCarousel autoSlide={autoSlideCarousel} setAutoSlide={setAutoSlideCarousel}>
+                    <CaseStudyCarousel
+                        autoSlide={autoSlideCarousel}
+                        setAutoSlide={setAutoSlideCarousel}
+                        curr={curr}
+                        setCurr={setCurr}
+                    >
                         {caseStudiesSlides.map((s, index) => {
                             return (
                                 <div
@@ -790,7 +803,7 @@ const CSPM = ({ location }) => {
                                     onMouseEnter={() => setAutoSlideCarousel(false)}
                                     onMouseLeave={() => setAutoSlideCarousel(true)}
                                     role='button'
-                                    tabIndex='-1'
+                                    tabIndex={curr === index ? 0 : -1}
                                     onClick={() => {}}
                                     onKeyDown={() => {}}
                                 >
@@ -808,7 +821,7 @@ const CSPM = ({ location }) => {
                                         >
                                             CASE STUDY
                                         </p>
-                                        <Link to={s.link} tabIndex='-1'>
+                                        <Link to={s.link} tabIndex={curr === index ? 0 : -1}>
                                             <h2
                                                 className='font-montserrat text-blue font-bold mt-2 hover:underline'
                                                 css={css`
@@ -828,7 +841,7 @@ const CSPM = ({ location }) => {
                                         </div>
                                         <Link
                                             to={s.link}
-                                            tabIndex='-1'
+                                            tabIndex={curr === index ? 0 : -1}
                                             onMouseEnter={() => setIsHover(true)}
                                             onMouseLeave={() => setIsHover(false)}
                                             className='font-hind text-base font-bold mt-6 hover:underline block'
