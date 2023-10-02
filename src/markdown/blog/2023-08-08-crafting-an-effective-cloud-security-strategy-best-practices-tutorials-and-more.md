@@ -1,8 +1,7 @@
 ---
 templateKey: blog-post
-title: "Crafting an Effective Cloud Security Strategy: Best Practices,
-  Tutorials, and More"
-seoTitle: "Crafting an Effective Cloud Security Strategy: Best Practices & Tutorials "
+title: "Cloud Security Strategy: Best Practices, Tutorials, and More"
+seoTitle: "Cloud Security Strategy: Best Practices & Tutorials "
 authors: Sabrina Lupșan
 permalink: cloud-security-strategy-best-practices-tutorials
 categories:
