@@ -18,8 +18,9 @@ import BaysConsultingOg from '../../assets/images/bays-consulting-og.png';
 import MedicalDevicesOg from '../../assets/images/medical-devices-company-case-study-og.png';
 import OktaIntegrationOg from '../../assets/images/okta-integration-og.png';
 import WebinarOg from '../../assets/images/webinar-cover-og.png';
-import BuyersGuideOg from "../../assets/images/buyers-guide-og.jpg"
-import TopChallengesOg from "../../assets/images/top-ten-cloud-security-challenges-og.jpg"
+import BuyersGuideOg from '../../assets/images/buyers-guide-og.jpg';
+import TopChallengesOg from '../../assets/images/top-ten-cloud-security-challenges-og.jpg';
+import MisconfigurationsCampaignOg from '../../assets/images/misconfigurations-campaign-og.png';
 import { useStaticQuery, graphql } from 'gatsby';
 
 const defaultOg = {
@@ -42,7 +43,8 @@ const defaultOg = {
     OktaIntegration: OktaIntegrationOg,
     Webinar: WebinarOg,
     BuyersGuide: BuyersGuideOg,
-    TopChallenges: TopChallengesOg
+    TopChallenges: TopChallengesOg,
+    MisconfigurationsCampaign: MisconfigurationsCampaignOg
 };
 
 const Seo = ({ title, description, pageName, banner, location }) => {
