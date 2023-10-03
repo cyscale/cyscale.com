@@ -13,29 +13,28 @@ const CaseStudiesCarousel = ({ slides }) => {
         >
             <div className='flex flex-nowrap gap-2 overflow-x-scroll scrollbar-hide z-10'>
                 {slides.map((slide, index) => {
+                    const isRequestDemo = slide.text === 'RequestDemo';
+                    const linkClasses = `w-72 m-2 block ${isRequestDemo ? 'relative' : ''}`;
+                    const textClasses = `font-hind text-base ${
+                        isRequestDemo ? 'text-blue text-center w-72' : 'group-hover:underline mt-2'
+                    }`;
+                    const textCss = isRequestDemo
+                        ? css`
+                              position: absolute;
+                              top: 50%;
+                              left: 50%;
+                              transform: translate(-50%, -50%);
+                          `
+                        : null;
+
                     return (
                         <div className='py-4' key={index}>
-                            {slide.text !== 'RequestDemo' ? (
-                                <Link to={slide.link} className='w-72 m-2 block'>
-                                    <GatsbyImage image={slide.image} alt={slide.alt} className='rounded-md' />
-                                    <p className='mt-2 font-hind text-base group-hover:underline'>{slide.text}</p>
-                                </Link>
-                            ) : (
-                                <Link to={slide.link} className='w-72 m-2 block relative'>
-                                    <GatsbyImage image={slide.image} alt={slide.alt} className='rounded-md' />
-                                    <p
-                                        className='font-hind text-base text-blue text-center w-72'
-                                        css={css`
-                                            position: absolute;
-                                            top: 50%;
-                                            left: 50%;
-                                            transform: translate(-50%, -50%);
-                                        `}
-                                    >
-                                        {slide.cardText}
-                                    </p>
-                                </Link>
-                            )}
+                            <Link to={slide.link} className={linkClasses}>
+                                <GatsbyImage image={slide.image} alt={slide.alt} className='rounded-md' />
+                                <p className={textClasses} css={textCss}>
+                                    {isRequestDemo ? slide.cardText : slide.text}
+                                </p>
+                            </Link>
                         </div>
                     );
                 })}
