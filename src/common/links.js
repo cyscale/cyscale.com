@@ -35,3 +35,24 @@ export const IAMTopArticles = [
         link: '/blog/provide-visibility-in-cloud-okta-integration/'
     }
 ];
+
+export const MisconfigurationsTopArticles = [
+    {
+        text: 'Common Cloud Misconfigurations and <br class="hidden lg:block" /> How to Avoid Them',
+        link: '/blog/common-cloud-misconfigurations-how-to-avoid-them/',
+        children: true
+    },
+    {
+        text: 'Understanding S3 Bucket Security – <br class="hidden lg:block" /> A Contextual Approach',
+        link: '/blog/s3-bucket-security/',
+        children: true
+    },
+    {
+        text: '5 Steps to Improve Your Company’s Cloud Security Posture',
+        link: '/blog/improve-cloud-security-posture/'
+    },
+    {
+        text: 'CSPM: A Comprehensive Guide',
+        link: '/blog/cloud-security-posture-management-cspm-guide/'
+    }
+];
