@@ -24,7 +24,7 @@ const VideosCarousel = ({ slides }) => {
                                 onClick={() => {
                                     slide.setModal(!slides.modal);
                                 }}
-                                onKeyPress={() => {}}
+                                onKeyDown={() => {}}
                                 tabIndex='0'
                                 role='button'
                                 className='hover:underline w-72'
