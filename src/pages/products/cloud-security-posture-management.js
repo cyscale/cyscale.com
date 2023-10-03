@@ -733,7 +733,7 @@ const CSPM = ({ location }) => {
                             <li className='font-hind text-sm mt-2'>
                                 Enhanced visualization with comprehensive <strong>pdf reports</strong> for auditors,
                                 customers, or other stakeholders. A powerful scoping mechanism allows for{' '}
-                                <stron>granular reporting</stron>.
+                                <strong>granular reporting</strong>.
                             </li>{' '}
                             <li className='font-hind text-sm mt-2'>
                                 Look at your cloud estate through the data lens with the help of a{' '}
@@ -770,8 +770,9 @@ const CSPM = ({ location }) => {
                                             tabIndex='-1'
                                             onClick={() => {}}
                                             onKeyDown={() => {}}
+                                            key={index}
                                         >
-                                            <GatsbyImage image={s.image} alt={s.alt} key={index} />
+                                            <GatsbyImage image={s.image} alt={s.alt} />
                                         </div>
                                     );
                                 })}
@@ -806,6 +807,7 @@ const CSPM = ({ location }) => {
                                     tabIndex={curr === index ? 0 : -1}
                                     onClick={() => {}}
                                     onKeyDown={() => {}}
+                                    key={index}
                                 >
                                     <div className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 lg:mt-8'>
                                         <Link to={s.link} tabIndex='-1'>
@@ -968,8 +970,6 @@ const CSPM = ({ location }) => {
                                     padding: 0.625rem 2.5rem;
                                 `}
                                 to='/request-demo/'
-                                smooth={true}
-                                duration={500}
                             >
                                 Request Demo
                             </Link>

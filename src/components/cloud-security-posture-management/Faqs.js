@@ -63,7 +63,7 @@ export default function Faqs({ qas }) {
                                 max-height: ${active === key ? `${heights[key] / 16}rem` : '0rem'};
                             `}
                         >
-                            <p>{q.answer}</p>
+                            <span>{q.answer}</span>
                         </div>
                         <button
                             onClick={() => setActive((s) => (s === key ? null : key))}
