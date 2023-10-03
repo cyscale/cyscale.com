@@ -111,6 +111,7 @@ const Misconfigurations = ({ location }) => {
                                 <GatsbyImage
                                     image={data.inventoryCSPM.childImageSharp.gatsbyImageData}
                                     alt='Inventory view with assets and risk information'
+                                    className='shadow-lg'
                                 />
                             </div>
                         </div>
@@ -142,6 +143,7 @@ const Misconfigurations = ({ location }) => {
                                 <GatsbyImage
                                     image={data.inventoryCSPM.childImageSharp.gatsbyImageData}
                                     alt='Inventory view with assets and risk information'
+                                    className='shadow-lg'
                                 />
                             </div>
                         </div>
@@ -178,6 +180,7 @@ const Misconfigurations = ({ location }) => {
                                 <GatsbyImage
                                     image={data.alertsCSPM.childImageSharp.gatsbyImageData}
                                     alt='Alerts view'
+                                    className='shadow-lg'
                                 />
                             </div>
                         </div>
@@ -192,6 +195,7 @@ const Misconfigurations = ({ location }) => {
                                 <GatsbyImage
                                     image={data.policiesCSPM.childImageSharp.gatsbyImageData}
                                     alt=' Policies view with compliance score'
+                                    className='shadow-lg'
                                 />
                             </div>
                         </div>
@@ -222,6 +226,7 @@ const Misconfigurations = ({ location }) => {
                                 <GatsbyImage
                                     image={data.policiesCSPM.childImageSharp.gatsbyImageData}
                                     alt=' Policies view with compliance score'
+                                    className='shadow-lg'
                                 />
                             </div>
                         </div>
@@ -232,7 +237,7 @@ const Misconfigurations = ({ location }) => {
                 <img
                     src={corner}
                     width={300}
-                    className='hidden md:block absolute top-0 right-0 m-0 z-20'
+                    className='hidden lg:block absolute top-0 right-0 m-0 z-20'
                     alt=''
                     loading='lazy'
                 />
