@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import Layout from '../components/layout/CleanLayout';
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import { css } from 'twin.macro';
-import { Container, Row } from '../components/atoms/Containers';
+import { Container } from '../components/atoms/Containers';
 import GradientButton from '../components/buttons/GradientButton';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { Element } from 'react-scroll';
@@ -22,18 +22,12 @@ const MostReadArticles = loadable(() => import('../components/Home/MostReadArtic
 const CalendarSection = loadable(() => import('../components/Home/CalendarSection'));
 
 const heroBackground = css`
-    height: 44rem;
-    background-image: url(${BgHeroMobile});
-    background-position: right 40% bottom 38%;
-    background-size: cover;
-    background-repeat: no-repeat;
+    height: 40rem;
+    background: linear-gradient(0deg, rgba(174, 207, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 74.53%), #f5f9ff;
 
     @media screen and (min-width: 500px) {
         height: 42rem;
-        background-image: url(${BgHeroMobile});
-        background-position: right 40% bottom 0%;
-        background-size: cover;
-        background-repeat: no-repeat;
+        background: linear-gradient(0deg, rgba(174, 207, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 74.53%), #f5f9ff;
     }
 
     @media screen and (min-width: 640px) {
@@ -200,6 +194,11 @@ const HomePage = ({ location }) => {
                     gatsbyImageData(width: 34, layout: CONSTRAINED)
                 }
             }
+            mobileHero: file(relativePath: { eq: "hero-homepage-mobile.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 720, layout: CONSTRAINED)
+                }
+            }
         }
     `);
     const [isVisible, setIsVisible] = useState(false);
@@ -260,7 +259,7 @@ const HomePage = ({ location }) => {
             <div className='pt-8' css={heroBackground}>
                 <Container>
                     <div className='py-16 md:py-24 lg:pt-24 lg:pb-36'>
-                        <Row>
+                        <div className='grid grid-cols-12'>
                             <div className='col-span-12 lg:col-span-6 order-last lg:order-first'>
                                 <div className='lg:mt-16 pt-4 max-w-xl mx-auto lg:mx-0'>
                                     <h1
@@ -269,6 +268,7 @@ const HomePage = ({ location }) => {
                                             @media (max-width: 640px) {
                                                 font-size: 2rem;
                                                 line-height: 2.5rem;
+                                                height: 8rem;
                                             }
                                             height: 10rem;
                                         `}
@@ -276,9 +276,8 @@ const HomePage = ({ location }) => {
                                         Secure your cloud <br className='block' /> quickly and easily
                                     </h1>
                                     <p className='text-left text-base lg:text-lg mb-8 leading-relaxed font-hind'>
-                                        The Cyscale automated cloud security platform delivers contextual analysis of
-                                        cloud misconfigurations, vulnerabilities, access, and data, to provide an
-                                        accurate and actionable assessment of risk.
+                                        Get contextual analysis of cloud misconfigurations, vulnerabilities, access, and
+                                        data for an accurate and actionable assessment of risk.
                                     </p>
                                     <div className='flex mt-8 justify-start'>
                                         <Link to='/request-demo/'>
@@ -286,7 +285,15 @@ const HomePage = ({ location }) => {
                                         </Link>
                                     </div>
                                 </div>
-                                <div className='hidden lg:flex space-x-3 mt-12 '>
+                                <p
+                                    className='font-hind text-base mt-8 block sm:hidden'
+                                    css={css`
+                                        color: #747474;
+                                    `}
+                                >
+                                    Integrations
+                                </p>
+                                <div className='flex sm:hidden lg:flex space-x-3 lg:mt-12'>
                                     <GatsbyImage alt='' image={data.aws.childImageSharp.gatsbyImageData} />
                                     <GatsbyImage alt='' image={data.azure.childImageSharp.gatsbyImageData} />
                                     <GatsbyImage alt='' image={data.gc.childImageSharp.gatsbyImageData} />
@@ -295,17 +302,32 @@ const HomePage = ({ location }) => {
                                     <GatsbyImage alt='' image={data.googleCloud.childImageSharp.gatsbyImageData} />
                                     <GatsbyImage alt='' image={data.azureAD.childImageSharp.gatsbyImageData} />
                                 </div>
+                                <div className='max-w-xl mt-6 block sm:hidden'>
+                                    <GatsbyImage
+                                        alt=''
+                                        image={data.mobileHero.childImageSharp.gatsbyImageData}
+                                        className='shadow-lg'
+                                    />
+                                </div>
                             </div>
-                            <div className='col-span-12 lg:col-span-6'>
-                                <div className='lg:mt-16 pt-4 max-w-lg lg:max-w-2xl mx-auto lg:mx-0'></div>
-                            </div>
-                        </Row>
+                        </div>
                     </div>
                 </Container>
             </div>
-            <Container className='my-16 lg:mt-32'>
+            <div
+                className='container max-w-7xl sm:m-auto px-4 lg:px-8 mb-16 sm:my-16 lg:mt-32'
+                css={css`
+                    overflow: hidden;
+                    @media (max-width: 350px) {
+                        margin-top: 8rem;
+                    }
+                    @media (min-width: 351px) and (max-width: 640px) {
+                        margin-top: calc(112px + (100vw - 350px) * (160 / 290));
+                    }
+                `}
+            >
                 <div
-                    className='grid grid-cols-12 gap-x-5 mt-12'
+                    className='grid grid-cols-12 gap-x-5 mt-20 sm:mt-12'
                     css={css`
                         overflow: hidden;
                     `}
@@ -347,7 +369,7 @@ const HomePage = ({ location }) => {
                         />
                     </div>
                 </div>
-            </Container>
+            </div>
             <Container>
                 <div className='pt-24 pb-24'>
                     <h3 className='text-blue font-montserrat font-bold mb-12 text-3xl  sm:text-4xl'>
