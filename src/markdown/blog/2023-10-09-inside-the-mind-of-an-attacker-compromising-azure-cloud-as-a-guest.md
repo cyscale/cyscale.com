@@ -52,7 +52,7 @@ Fintech Inc. is a financial technology startup developing a new banking applicat
 
 The company must invite an external consultant, Anita, to collaborate in the cloud. Any user is allowed by default to invite guests in Microsoft Entra ID (former Azure Active Directory), so John, a member of the IT department, invites Anita as a guest. 
 
-However, he makes a mistake; because he’s trying to accomplish many things in a short period of time, instead of inviting [anita@fintechinc.com](mailto:anita@fintechinc.com), he invites [anita@fintech.com](mailto:anita@fintech.com). The new guest user accepts the invitation and becomes a guest in Microsoft Entra ID. 
+However, he makes a mistake; because he’s trying to accomplish many things in a short period of time, instead of inviting anita@fintechinc.com, he invites anita@fintech.com. The new guest user accepts the invitation and becomes a guest in Microsoft Entra ID. 
 
 As a guest, the "fake" Anita cannot do much. She can only access some resources that guests can access, she can manage her profile and collaborate with other users in Office 365 apps.  
 
@@ -74,7 +74,7 @@ We can see this relation in the graph below. Tracing the attack path, we immedia
 
 The storage account has a "backups" container with a "diskBackup.vhd" file inside. This contains the files and data an ex-employee used before leaving the company. While in a rush, an IT admin has decided to back up the disk and look at it at some other time, later forgetting about it. 
 
-<img src="/img/55_blog-backups-container.png" alt="The contents of the "backups" container" title="The contents of the "backups" container" class=" blog-image-shadow " style="width:auto;height:auto;"/>
+<img src="/img/55_blog-backups-container.png" alt="The contents of the 'backups' container" title="The contents of the 'backups' container" class=" blog-image-shadow " style="width:auto;height:auto;"/>
 
 Upon restoring this file as a computer disk, Anita discovers a set of credentials. She knows she should not log in using those credentials, but she does it anyway – after all, this is not the first questionable action she’s done -, because she is curious.  
 
