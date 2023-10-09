@@ -98,21 +98,15 @@ A key vault is a huge discovery for Anita, who can investigate further. Using th
 
 Anita can now further discover other assets available on Fintech Inc.’s Azure cloud environment and possibly make use of the secrets stored in the “Credentials2” Key Vault. For example, we know that, as a best practice, [databases are encrypted](https://cyscale.com/blog/best-practices-for-securing-databases/), so a leaked decryption cryptographic key, for example, can lead to total compromise of the company’s data. 
 
-
-
 To understand everything that happened here, we need to look at all the bad practices and vulnerabilities that we have uncovered, in chronological order: 
 
 1. Due to being in a rush, an employee invited the wrong person to collaborate in Azure, and no one picked up on it. 
 2. The dynamic membership rule for the ITAdmins group is very broad and may accept unintended cases. 
-3. The ITAdmins group has a highly privileged role over a resource group with many resources that may contain sensitive information, such as key vaults, databases, and storage accounts. 
+3. The ITAdmins group has a highly privileged role over a resource group with many resources that may contain sensitive information, such as databases, and storage accounts. 
 4. A disk backup that can be restored is held unencrypted in a storage account, containing a cleartext password for an active Azure account. 
 5. A test user that was intended to be temporary is still active. 
 6. A test user has access to a very high-value resource. 
 
-  
-
 As you can see, each mistake allowed the intruder to advance more and more and compromise additional resources. 
-
-  
 
 This is why contextual security and proper IAM security are necessary. Contextual security allows cloud professionals to understand what assets are impacted by others, while IAM best practices protect the cloud environment from intruders and represent the first barrier of entry.
