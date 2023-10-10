@@ -21,6 +21,7 @@ import { css } from 'twin.macro';
 import loadable from '@loadable/component';
 import CustomSearch from '../Search/CustomSearch';
 import { useClickOutsideSearch } from '../../hooks/useClickOutsideSearch';
+import classnames from 'classnames';
 const Footer = loadable(() => import('./footer'));
 
 const paddingNav = css`
@@ -97,7 +98,14 @@ const AnimatedNavbarLayout = ({ children, formId, formTargetId, location, title,
                         </p>
                     </div>
                 </Container>
-                <header id='head' className='bg-lightGrey pt-8 pb-8 hidden xl:block'>
+                <header
+                    id='head'
+                    className={classnames({
+                        'pt-8 pb-8 hidden xl:block': true,
+                        'bg-lightGrey': pageName !== 'MisconfigurationsCampaign',
+                        'bg-zircon': pageName === 'MisconfigurationsCampaign'
+                    })}
+                >
                     <div className='container max-w-7xl m-auto px-4 lg:px-8 flex items-center'>
                         <Link to='/' className='inline-flex z-40'>
                             <img className='block h-10' src={logo} alt='Cyscale' />

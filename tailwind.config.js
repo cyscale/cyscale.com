@@ -714,7 +714,8 @@ module.exports = {
                 aboutBorder: '#E6E6E6 !important',
                 black1: '#292929 !important',
                 selago: '#e4edfc',
-                pictonBlue: '#42B1F0'
+                pictonBlue: '#42B1F0',
+                zircon: '#F1F7FF !important'
             },
             fontFamily: {
                 sans: [

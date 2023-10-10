@@ -7,7 +7,9 @@
 .bg-gradient-footer {
     background-image: url(../images/half-circle-3.svg),
         linear-gradient(81.64deg, #000000 -19.9%, #0f26aa 35.28%, #ff4a56 133.13%);
-    background-position: left bottom, left bottom;
+    background-position:
+        left bottom,
+        left bottom;
     background-repeat: no-repeat, no-repeat;
     background-size: 320px, cover;
 }
@@ -46,7 +48,9 @@
 @media screen and (min-width: 1024px) {
     .bg-image-jobs {
         background-repeat: no-repeat;
-        background-position: left center, right center;
+        background-position:
+            left center,
+            right center;
         background-image: url('../images/elemente-vectoriale-04.png'), url('../images/elemente-vectoriale-04.png');
     }
     .bg-cloud {
@@ -140,7 +144,9 @@
 
 .bg-mesh-logo {
     background-image: url(../images/half-circle-2.svg), url(../images/gradient-bg.svg);
-    background-position: right bottom, left bottom;
+    background-position:
+        right bottom,
+        left bottom;
     background-repeat: no-repeat, no-repeat;
     background-size: auto, cover;
 }
@@ -279,7 +285,9 @@ input:checked ~ .dot {
 .modal-enter-active {
     opacity: 1;
     transform: translateX(0);
-    transition: opacity 300ms, transform 300ms;
+    transition:
+        opacity 300ms,
+        transform 300ms;
 }
 .modal-exit {
     opacity: 1;
@@ -287,12 +295,16 @@ input:checked ~ .dot {
 .modal-exit-active {
     opacity: 0;
     transform: scale(0.9);
-    transition: opacity 300ms, transform 300ms;
+    transition:
+        opacity 300ms,
+        transform 300ms;
 }
 
 img[src*='#shadow'],
 .blog-image-shadow {
-    box-shadow: 0 4px 15px 3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    box-shadow:
+        0 4px 15px 3px rgb(0 0 0 / 0.1),
+        0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
 .bg-cta-playground {
@@ -310,7 +322,6 @@ img[src*='#shadow'],
     z-index: 100;
     top: 2.688rem;
     position: absolute;
-    background-color: #eeeeee;
     margin-left: calc(((100vw - 80rem) / 2) + 18.5rem);
 }
 
