@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Row } from '../../components/atoms/Containers';
-import { graphql, Link, useStaticQuery } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 import cloudIcon from '../../assets/images/cloud-icon.svg';
-import ScrollButtonStartups from '../../components/ScrollButton/ScrollButtonStartups';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import AnimatedNavbarLayout from '../../components/campaigns/AnimatedNavbarLayout';
 import useHSFormLoaded from '../../hooks/useHSFormLoaded';
@@ -12,6 +11,11 @@ import corner from '../../assets/images/corner-campaigns-iam-security.svg';
 import { css } from 'twin.macro';
 import LinksAndWhitepaper from '../../components/products/LinksAndWhitepaper';
 import { MisconfigurationsTopArticles } from '../../common/links';
+import RightArrow from '../../components/sharedComponent/RightArrow';
+import HeroImage from '../../assets/images/bg-image-misconfigurations-campaigns.svg';
+import { Link as ScrollLink } from 'react-scroll';
+import ScrollDownIcon from '../../assets/images/scroll-down-icon.svg';
+import Carousel from '../../components/cloud-security-posture-management/Carousel';
 
 const subtitle = css`
     font-size: 1.625rem;
@@ -23,21 +27,34 @@ const subtitle = css`
 `;
 
 const Misconfigurations = ({ location }) => {
+    const [curr, setCurr] = useState(0);
+    const [currImage, setCurrImage] = useState(0);
+    const [autoSlide, setAutoSlide] = useState(true);
     const { loadingForm } = useHSFormLoaded();
 
     const data = useStaticQuery(graphql`
         query MisconfigurationsCampaignQuery {
-            inventoryCSPM: file(relativePath: { eq: "inventory-cspm.png" }) {
+            continuosProtection: file(relativePath: { eq: "continuos-protection-cspm.png" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1920, layout: CONSTRAINED)
                 }
             }
-            alertsCSPM: file(relativePath: { eq: "alerts-cspm.webp" }) {
+            graph: file(relativePath: { eq: "graph-misconfiguration.png" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1920, layout: CONSTRAINED)
                 }
             }
-            policiesCSPM: file(relativePath: { eq: "policies-cspm.png" }) {
+            cards: file(relativePath: { eq: "cards-cspm.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 1920, layout: CONSTRAINED)
+                }
+            }
+            standards: file(relativePath: { eq: "standards-cspm.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 1920, layout: CONSTRAINED)
+                }
+            }
+            complianceHistory: file(relativePath: { eq: "compliance-history-cspm.png" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1920, layout: CONSTRAINED)
                 }
@@ -49,6 +66,23 @@ const Misconfigurations = ({ location }) => {
             }
         }
     `);
+
+    const slides = [
+        { image: data.cards.childImageSharp.gatsbyImageData, alt: 'Screenshots from cloud security platform' },
+        { image: data.standards.childImageSharp.gatsbyImageData, alt: 'Standards view' },
+        {
+            image: data.complianceHistory.childImageSharp.gatsbyImageData,
+            alt: 'Standard view with compliance history graphic'
+        }
+    ];
+    const mobileSlides = [
+        { image: data.cards.childImageSharp.gatsbyImageData, alt: 'Screenshots from cloud security platform' },
+        { image: data.standards.childImageSharp.gatsbyImageData, alt: 'Standards view' },
+        {
+            image: data.complianceHistory.childImageSharp.gatsbyImageData,
+            alt: 'Standard view with compliance history graphic'
+        }
+    ];
 
     return (
         <AnimatedNavbarLayout
@@ -62,46 +96,139 @@ const Misconfigurations = ({ location }) => {
             pageName={'MisconfigurationsCampaign'}
             noIndex={true}
         >
-            <div className='bg-hero-campaigns-iam-security pb-8 pt-32 lg:pt-40 xl:pt-12'>
+            <div className='bg-zircon pb-8 sm:pb-0 pt-32 lg:pt-40 xl:pt-12 relative'>
                 <Container>
-                    <div>
-                        <Row>
-                            <div className='col-span-12 lg:col-span-6 '>
-                                <div className='lg:mt-4 pt-2 md:pt-8 lg:pt-4 max-w-xl mx-auto lg:mx-0'>
-                                    <h1 className='text-center lg:text-left text-blue text-3xl md:text-4xl lg:text-5xl leading-normal mb-8 font-montserrat font-semibold'>
-                                        Identify and Fix Cloud Misconfigurations
-                                    </h1>
-                                    <p className='text-center sm:text-left text-base lg:text-lg leading-relaxed text-gray font-semibold max-w-md mx-auto lg:mx-0'>
-                                        Automatically improve your cloud security posture. Scan, monitor, and remediate
-                                        across AWS, Microsoft Azure, Google Cloud, Alibaba Cloud.
+                    <Row>
+                        <div className='col-span-12 lg:col-span-6'>
+                            <div className='lg:mt-4 pt-2 md:pt-8 lg:pt-4 max-w-2xl mx-auto lg:mx-0'>
+                                <h1
+                                    className='text-center lg:text-left text-blue mb-8 font-montserrat font-bold'
+                                    css={css`
+                                        font-size: 2rem;
+                                        @media (min-width: 1024px) {
+                                            &:after {
+                                                content: '';
+                                                display: block;
+                                                width: 40%;
+                                                height: 6px;
+                                                margin-top: 16px;
+                                                background-image: linear-gradient(to right, #0f26aa, #ff4a56);
+                                            }
+                                        }
+                                    `}
+                                >
+                                    Identify and Fix Cloud Misconfigurations
+                                </h1>
+                                <p
+                                    className='text-center sm:text-left text-base lg:text-lg max-w-xl mx-auto lg:mx-0'
+                                    css={css`
+                                        color: #484848;
+                                    `}
+                                >
+                                    Automatically improve your cloud security posture. Scan, monitor, and remediate
+                                    across AWS, Microsoft Azure, Google Cloud, Alibaba Cloud.
+                                </p>
+                                <div className='max-w-lg sm:max-w-xl mx-auto lg:mx-0'>
+                                    <p className='font-hind text-base mt-8'>Get a demo and see Cyscale in action:</p>
+                                    <p
+                                        className='bg-white py-2 px-4 rounded font-medium flex mt-4'
+                                        css={css`
+                                            width: fit-content;
+                                            color: #0f26aa;
+                                        `}
+                                    >
+                                        <RightArrow fillColor={'#0F26AA'} marginTop='0.2rem' />
+                                        <span className='text-md ml-2'>
+                                            <span className='font-bold'> Always-On Monitoring</span>: Monitor your
+                                            assets 24/7
+                                        </span>
+                                    </p>
+                                    <p
+                                        className='bg-white py-2 px-4 rounded font-medium flex mt-4'
+                                        css={css`
+                                            width: fit-content;
+                                            color: #0f26aa;
+                                        `}
+                                    >
+                                        <RightArrow fillColor={'#0F26AA'} marginTop='0.2rem' />
+                                        <span className='text-md ml-2'>
+                                            <span className='font-bold'>Smart Alerts</span>: Contextual alerts for
+                                            actionable insights
+                                        </span>
+                                    </p>
+                                    <p
+                                        className='bg-white py-2 px-4 rounded font-medium flex mt-4'
+                                        css={css`
+                                            width: fit-content;
+                                            color: #0f26aa;
+                                        `}
+                                    >
+                                        <RightArrow fillColor={'#0F26AA'} marginTop='0.2rem' />
+                                        <span className='text-md ml-2'>
+                                            <span className='font-bold'>Quick Remediation</span>: Step-by-step guides to
+                                            instant fixes
+                                        </span>
                                     </p>
                                 </div>
                             </div>
-                            <div className='col-span-12 lg:col-span-6' id='apply-now'>
+                        </div>
+                        <div className='col-span-12 lg:col-span-6' id='apply-now'>
+                            <div
+                                className='rounded-xl shadow-lg mt-6 lg:mt-0 py-4 lg:pt-12 pb-0 px-8 md:px-12 max-w-lg mx-auto lg:mr-0 lg:ml-auto relative z-10'
+                                style={{
+                                    backgroundColor: 'rgba(255, 255, 255, 0.6)',
+                                    backdropFilter: 'blur(5px)'
+                                }}
+                                id='form'
+                            >
+                                <h2 className='font-semibold text-2xl sm:text-3xl lg:text-2xl leading-normal mb-8 mt-8 lg:mt-0 font-montserrat'>
+                                    Book a live demo
+                                </h2>
+                                {loadingForm && <LoaderContainer minHeight={420} />}
                                 <div
-                                    className='rounded-xl shadow-lg mt-6 lg:mt-0 py-4 lg:pt-12 pb-0 px-8 md:px-12 max-w-lg mx-auto lg:mr-0 lg:ml-auto relative'
-                                    style={{
-                                        backgroundColor: 'rgba(255, 255, 255, 0.6)',
-                                        backdropFilter: 'blur(5px)'
-                                    }}
-                                >
-                                    <h2 className='font-semibold text-2xl sm:text-3xl lg:text-2xl leading-normal mb-8 mt-8 lg:mt-0 font-montserrat'>
-                                        Request a live demo
-                                    </h2>
-                                    {loadingForm && <LoaderContainer minHeight={450} />}
-                                    <div
-                                        style={{ minHeight: 450 }}
-                                        id='request-demo'
-                                        className={classnames('pb-4', { hidden: loadingForm })}
-                                    />
-                                </div>
+                                    style={{ minHeight: 420 }}
+                                    id='request-demo'
+                                    className={classnames('pb-4', { hidden: loadingForm })}
+                                />
                             </div>
-                        </Row>
-                    </div>
-                    <div className='py-16 hidden sm:block '>
-                        <ScrollButtonStartups to='start' />
+                        </div>
+                    </Row>
+
+                    <div className='pt-8 hidden sm:block'>
+                        <p className='text-center font-montserrat text-base cursor-pointer'>
+                            <ScrollLink to={'start'} smooth={true} duration={500}>
+                                Scroll down
+                            </ScrollLink>
+                        </p>
+                        <ScrollLink
+                            className='cursor-pointer'
+                            to={'start'}
+                            smooth={true}
+                            duration={500}
+                            css={css`
+                                width: 50px;
+                                height: 50px;
+                                display: block;
+                                margin: auto;
+                            `}
+                        >
+                            <span>
+                                <img
+                                    src={ScrollDownIcon}
+                                    alt='down arrow icon'
+                                    className='mx-auto mt-2'
+                                    height={20}
+                                    width={20}
+                                />
+                            </span>
+                        </ScrollLink>
                     </div>
                 </Container>
+                <div className='absolute bottom-0 right-0 '>
+                    <div className='hidden lg:block lg:max-w-2xl'>
+                        <img src={HeroImage} alt='' />
+                    </div>
+                </div>
             </div>
             <Container className='mt-0 md:mt-12 lg:mt-0'>
                 <div className='pb-8 lg:pt-32 lg:pb-16' id='start'>
@@ -109,9 +236,8 @@ const Misconfigurations = ({ location }) => {
                         <div className='col-span-12 lg:col-span-6 mt-8 sm:mt-0 hidden lg:block'>
                             <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-2xl'>
                                 <GatsbyImage
-                                    image={data.inventoryCSPM.childImageSharp.gatsbyImageData}
-                                    alt='Inventory view with assets and risk information'
-                                    className='shadow-lg'
+                                    image={data.continuosProtection.childImageSharp.gatsbyImageData}
+                                    alt='Screenshots from cloud security platform'
                                 />
                             </div>
                         </div>
@@ -138,12 +264,11 @@ const Misconfigurations = ({ location }) => {
                                 </p>
                             </div>
                         </div>
-                        <div className='col-span-12 lg:col-span-6 mt-8 sm:mt-0 block lg:hidden'>
+                        <div className='col-span-12 lg:col-span-6 my-8 sm:mt-0 block lg:hidden'>
                             <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-2xl'>
                                 <GatsbyImage
-                                    image={data.inventoryCSPM.childImageSharp.gatsbyImageData}
-                                    alt='Inventory view with assets and risk information'
-                                    className='shadow-lg'
+                                    image={data.continuosProtection.childImageSharp.gatsbyImageData}
+                                    alt='Screenshots from cloud security platform'
                                 />
                             </div>
                         </div>
@@ -178,9 +303,8 @@ const Misconfigurations = ({ location }) => {
                         <div className='col-span-12 lg:col-span-6 mt-8 sm:mt-0'>
                             <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-2xl'>
                                 <GatsbyImage
-                                    image={data.alertsCSPM.childImageSharp.gatsbyImageData}
-                                    alt='Alerts view'
-                                    className='shadow-lg'
+                                    image={data.graph.childImageSharp.gatsbyImageData}
+                                    alt='Graph with alert and control details'
                                 />
                             </div>
                         </div>
@@ -191,12 +315,35 @@ const Misconfigurations = ({ location }) => {
                 <div className='py-8 lg:py-16'>
                     <div className='sm:grid sm:grid-cols-12 sm:gap-12'>
                         <div className='col-span-12 lg:col-span-6 mt-8 sm:mt-0 hidden lg:block'>
-                            <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-2xl'>
-                                <GatsbyImage
-                                    image={data.policiesCSPM.childImageSharp.gatsbyImageData}
-                                    alt=' Policies view with compliance score'
-                                    className='shadow-lg'
-                                />
+                            <div className='max-w-xl'>
+                                <Carousel
+                                    autoSlide={autoSlide}
+                                    setAutoSlide={setAutoSlide}
+                                    cspmCarousel
+                                    curr={currImage}
+                                    setCurr={setCurrImage}
+                                >
+                                    {slides.map((s, index) => {
+                                        return (
+                                            <div
+                                                className='mt-12 block'
+                                                css={css`
+                                                    width: 100%;
+                                                    height: 100%;
+                                                `}
+                                                onMouseEnter={() => setAutoSlide(false)}
+                                                onMouseLeave={() => setAutoSlide(true)}
+                                                role='button'
+                                                tabIndex='-1'
+                                                onClick={() => {}}
+                                                onKeyDown={() => {}}
+                                                key={index}
+                                            >
+                                                <GatsbyImage image={s.image} alt={s.alt} />
+                                            </div>
+                                        );
+                                    })}
+                                </Carousel>
                             </div>
                         </div>
                         <div className='col-span-12 lg:col-span-6 mt-12 md:mt-0'>
@@ -223,11 +370,36 @@ const Misconfigurations = ({ location }) => {
                         </div>
                         <div className='col-span-12 lg:col-span-6 mt-8 sm:mt-0 block lg:hidden'>
                             <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-2xl'>
-                                <GatsbyImage
-                                    image={data.policiesCSPM.childImageSharp.gatsbyImageData}
-                                    alt=' Policies view with compliance score'
-                                    className='shadow-lg'
-                                />
+                                <div className='max-w-xl'>
+                                    <Carousel
+                                        autoSlide={autoSlide}
+                                        setAutoSlide={setAutoSlide}
+                                        cspmCarousel
+                                        curr={curr}
+                                        setCurr={setCurr}
+                                    >
+                                        {mobileSlides.map((s, index) => {
+                                            return (
+                                                <div
+                                                    className='mt-12 block'
+                                                    css={css`
+                                                        width: 100%;
+                                                        height: 100%;
+                                                    `}
+                                                    onMouseEnter={() => setAutoSlide(false)}
+                                                    onMouseLeave={() => setAutoSlide(true)}
+                                                    role='button'
+                                                    tabIndex='-1'
+                                                    onClick={() => {}}
+                                                    onKeyDown={() => {}}
+                                                    key={index}
+                                                >
+                                                    <GatsbyImage image={s.image} alt={s.alt} />
+                                                </div>
+                                            );
+                                        })}
+                                    </Carousel>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -300,15 +472,17 @@ const Misconfigurations = ({ location }) => {
                             Get peace of mind with automated cloud security
                         </h2>
                         <div className='mt-10 w-auto inline-block'>
-                            <Link
+                            <ScrollLink
+                                to={'form'}
+                                smooth={true}
+                                duration={500}
                                 css={css`
                                     padding: 0.625rem 2.5rem;
                                 `}
-                                className='mx-auto bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind'
-                                to='/request-demo/'
+                                className='mx-auto bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind cursor-pointer'
                             >
                                 BOOK YOUR DEMO
-                            </Link>
+                            </ScrollLink>
                         </div>
                     </div>
                 </div>
