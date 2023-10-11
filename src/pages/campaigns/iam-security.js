@@ -51,10 +51,11 @@ const IamSecurity = ({ location }) => {
                 <Container>
                     <Row>
                         <div className='col-span-12 lg:col-span-6 '>
-                            <div className='lg:mt-16 pt-12 md:pt-8 lg:pt-4 max-w-lg mx-auto lg:mx-0'>
+                            <div className='lg:mt-4 pt-2 md:pt-8 lg:pt-4 max-w-2xl mx-auto lg:mx-0'>
                                 <h1
-                                    className='text-center sm:text-left text-blue text-3xl md:text-4xl lg:text-5xl leading-normal mb-16 montserrat-font font-semibold'
+                                    className='text-center lg:text-left text-blue mb-8 font-montserrat font-bold'
                                     css={css`
+                                        font-size: 2rem;
                                         @media (min-width: 1024px) {
                                             &:after {
                                                 content: '';
@@ -67,15 +68,16 @@ const IamSecurity = ({ location }) => {
                                         }
                                     `}
                                 >
-                                    Identity and Access Management Security for Cloud
+                                    Identity and Access
+                                    <br /> Management <br /> Security for Cloud
                                 </h1>
-                                <p className='text-center sm:text-left text-base lg:text-lg mb-4 leading-relaxed text-gray'>
+                                <p className='text-center lg:text-left text-base lg:text-lg mb-4 leading-relaxed text-gray'>
                                     Continuous multi-cloud monitoring for identity and access management (IAM)
                                     misconfigurations across all your cloud assets to meet strict IAM compliance
                                     directives and improve your cloud security posture. Full integration with Okta.
                                 </p>
                                 <p
-                                    className='bg-white py-2 px-4 rounded font-medium flex mt-4 mx-auto sm:mx-0'
+                                    className='bg-white py-2 px-4 rounded font-medium flex mt-4 mx-auto lg:mx-0'
                                     css={css`
                                         width: fit-content;
                                         color: #0f26aa;
@@ -116,18 +118,19 @@ const IamSecurity = ({ location }) => {
                         </div>
                         <div className='col-span-12 lg:col-span-6' id='apply-now'>
                             <div
-                                className='rounded-xl shadow-lg mt-6 lg:mt-0 py-4 lg:pt-12 pb-0 px-8 md:px-12 max-w-lg mx-auto lg:mr-0 lg:ml-auto relative z-10'
-                                style={{
-                                    backgroundColor: 'rgba(255, 255, 255, 0.6)',
-                                    backdropFilter: 'blur(5px)'
-                                }}
+                                className='rounded-xl shadow-lg mt-6 lg:mt-0 py-4 lg:pt-12 pb-0 px-8 md:px-12 max-w-lg mx-auto lg:mr-0 lg:ml-auto relative'
+                                css={css`
+                                    background-color: rgba(255, 255, 255, 0.6);
+                                    backdrop-filter: blur(5px);
+                                    z-index: 1;
+                                `}
                             >
                                 <h2 className='font-semibold text-2xl sm:text-3xl lg:text-2xl leading-normal mb-8 mt-8 lg:mt-0 montserrat-font'>
                                     Book a live demo
                                 </h2>
-                                {loadingForm && <LoaderContainer minHeight={420} />}
+                                {loadingForm && <LoaderContainer minHeight={435} />}
                                 <div
-                                    style={{ minHeight: 420 }}
+                                    style={{ minHeight: 435 }}
                                     id='iamsecurity-campaign-form'
                                     className={classnames('pb-4', { hidden: loadingForm })}
                                 />
