@@ -15,7 +15,11 @@ const titleSection = css`
     font-size: 2rem;
 `;
 
-const CaseStudiesSection = ({ disableAnimation, subtitle = 'Trusted by companies worldwide' }) => {
+const CaseStudiesSection = ({
+    disableAnimation,
+    subtitle = 'Trusted by companies worldwide',
+    backgroundColor = '#f5f9ff'
+}) => {
     const [curr, setCurr] = useState(0);
     const data = useStaticQuery(graphql`
         query CaseStudiesSectionQuery {
@@ -93,7 +97,7 @@ const CaseStudiesSection = ({ disableAnimation, subtitle = 'Trusted by companies
         <div
             className='pt-24 pb-24 lg:pt-32 lg:pb-32'
             css={css`
-                background-color: #f5f9ff;
+                background-color: ${backgroundColor};
             `}
         >
             <Container>
