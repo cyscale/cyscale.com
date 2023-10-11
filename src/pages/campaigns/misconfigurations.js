@@ -13,7 +13,7 @@ import LinksAndWhitepaper from '../../components/products/LinksAndWhitepaper';
 import { MisconfigurationsTopArticles } from '../../common/links';
 import RightArrow from '../../components/sharedComponent/RightArrow';
 import HeroImage from '../../assets/images/bg-image-misconfigurations-campaigns.svg';
-import { Link as ScrollLink } from 'react-scroll';
+import { animateScroll, Link as ScrollLink } from 'react-scroll';
 import ScrollDownIcon from '../../assets/images/scroll-down-icon.svg';
 import Carousel from '../../components/cloud-security-posture-management/Carousel';
 
@@ -120,7 +120,7 @@ const Misconfigurations = ({ location }) => {
                                     Identify and Fix Cloud Misconfigurations
                                 </h1>
                                 <p
-                                    className='text-center sm:text-left text-base lg:text-lg max-w-xl mx-auto lg:mx-0'
+                                    className='text-center lg:text-left text-base lg:text-lg max-w-xl mx-auto lg:mx-0'
                                     css={css`
                                         color: #484848;
                                     `}
@@ -129,9 +129,11 @@ const Misconfigurations = ({ location }) => {
                                     across AWS, Microsoft Azure, Google Cloud, Alibaba Cloud.
                                 </p>
                                 <div className='max-w-lg sm:max-w-xl mx-auto lg:mx-0'>
-                                    <p className='font-hind text-base mt-8'>Get a demo and see Cyscale in action:</p>
+                                    <p className='font-hind text-base mt-8 text-center lg:text-left'>
+                                        Get a demo and see Cyscale in action:
+                                    </p>
                                     <p
-                                        className='bg-white py-2 px-4 rounded font-medium flex mt-4'
+                                        className='bg-white py-2 px-4 rounded font-medium flex mt-4 mx-auto lg:mx-0'
                                         css={css`
                                             width: fit-content;
                                             color: #0f26aa;
@@ -144,7 +146,7 @@ const Misconfigurations = ({ location }) => {
                                         </span>
                                     </p>
                                     <p
-                                        className='bg-white py-2 px-4 rounded font-medium flex mt-4'
+                                        className='bg-white py-2 px-4 rounded font-medium flex mt-4 mx-auto lg:mx-0'
                                         css={css`
                                             width: fit-content;
                                             color: #0f26aa;
@@ -157,7 +159,7 @@ const Misconfigurations = ({ location }) => {
                                         </span>
                                     </p>
                                     <p
-                                        className='bg-white py-2 px-4 rounded font-medium flex mt-4'
+                                        className='bg-white py-2 px-4 rounded font-medium flex mt-4 mx-auto lg:mx-0'
                                         css={css`
                                             width: fit-content;
                                             color: #0f26aa;
@@ -174,11 +176,12 @@ const Misconfigurations = ({ location }) => {
                         </div>
                         <div className='col-span-12 lg:col-span-6' id='apply-now'>
                             <div
-                                className='rounded-xl shadow-lg mt-6 lg:mt-0 py-4 lg:pt-12 pb-0 px-8 md:px-12 max-w-lg mx-auto lg:mr-0 lg:ml-auto relative z-10'
-                                style={{
-                                    backgroundColor: 'rgba(255, 255, 255, 0.6)',
-                                    backdropFilter: 'blur(5px)'
-                                }}
+                                className='rounded-xl shadow-lg mt-6 lg:mt-0 py-4 lg:pt-12 pb-0 px-8 md:px-12 max-w-lg mx-auto lg:mr-0 lg:ml-auto relative'
+                                css={css`
+                                    background-color: rgba(255, 255, 255, 0.6);
+                                    backdrop-filter: blur(5px);
+                                    z-index: 1;
+                                `}
                                 id='form'
                             >
                                 <h2 className='font-semibold text-2xl sm:text-3xl lg:text-2xl leading-normal mb-8 mt-8 lg:mt-0 font-montserrat'>
@@ -472,17 +475,15 @@ const Misconfigurations = ({ location }) => {
                             Get peace of mind with automated cloud security
                         </h2>
                         <div className='mt-10 w-auto inline-block'>
-                            <ScrollLink
-                                to={'form'}
-                                smooth={true}
-                                duration={500}
+                            <button
+                                onClick={() => animateScroll.scrollToTop()}
                                 css={css`
                                     padding: 0.625rem 2.5rem;
                                 `}
                                 className='mx-auto bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind cursor-pointer'
                             >
                                 BOOK YOUR DEMO
-                            </ScrollLink>
+                            </button>
                         </div>
                     </div>
                 </div>
