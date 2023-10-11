@@ -2,7 +2,6 @@ import React from 'react';
 import { Container, Row, Section } from '../../components/atoms/Containers';
 import { graphql, useStaticQuery } from 'gatsby';
 import cloudIcon from '../../assets/images/cloud-icon.svg';
-import ScrollButtonStartups from '../../components/ScrollButton/ScrollButtonStartups';
 import corner from '../../assets/images/corner-campaigns-iam-security.svg';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import gcpLogo from '../../assets/images/google-cloud-campaigns-iam-security.svg';
@@ -10,11 +9,15 @@ import awsLogo from '../../assets/images/aws-campaigns-iam-security.svg';
 import azureLogo from '../../assets/images/azure-campaigns-iam-security.svg';
 import alibabaLogo from '../../assets/images/alibaba-campaigns-iam-security.svg';
 import oktaLogo from '../../assets/images/okta-campaigns-iam-security.svg';
-import { animateScroll } from 'react-scroll';
+import { animateScroll, Link as ScrollLink } from 'react-scroll';
 import AnimatedNavbarLayout from '../../components/campaigns/AnimatedNavbarLayout';
 import useHSFormLoaded from '../../hooks/useHSFormLoaded';
 import classnames from 'classnames';
 import LoaderContainer from '../../components/Loader/LoaderContainer/LoaderContainer';
+import HeroImage from '../../assets/images/bg-image-misconfigurations-campaigns.svg';
+import { css } from 'twin.macro';
+import ScrollDownIcon from '../../assets/images/scroll-down-icon.svg';
+import RightArrow from '../../components/sharedComponent/RightArrow';
 
 const IamSecurity = ({ location }) => {
     const { loadingForm } = useHSFormLoaded();
@@ -41,86 +44,131 @@ const IamSecurity = ({ location }) => {
             location={location}
             title={'Identity and Access Management Security for Cloud - Cyscale'}
             description={'Identity and Access Management Security for Cloud'}
-            pageName={'Identity and Access Management Security for Cloud'}
+            pageName={'IAMCampaign'}
             noIndex={true}
         >
-            <div className='bg-hero-campaigns-iam-security pb-8 pt-32 lg:pt-40 xl:pt-12'>
+            <div className='bg-zircon pb-8 pt-32 lg:pt-40 xl:pt-12 relative'>
                 <Container>
-                    <div>
-                        <Row>
-                            <div className='col-span-12 lg:col-span-6 '>
-                                <div className='lg:mt-16 pt-12 md:pt-8 lg:pt-4 max-w-lg mx-auto lg:mx-0'>
-                                    <h1 className='text-center sm:text-left text-blue text-3xl md:text-4xl lg:text-5xl leading-normal mb-16 montserrat-font font-semibold'>
-                                        Identity and Access Management Security for Cloud
-                                    </h1>
-                                    <p className='text-center sm:text-left text-base lg:text-lg mb-8 leading-relaxed text-gray'>
-                                        Continuous multi-cloud monitoring for identity and access management (IAM)
-                                        misconfigurations across all your cloud assets to meet strict IAM compliance
-                                        directives and improve your cloud security posture.
-                                    </p>
-                                    <div className='flex flex-row max-w-md sm:max-w-lg justify-between flex-wrap space-y-6 lg:space-y-0 lg:space-x-1 px-18 sm:px-0 mx-auto'>
-                                        <img
-                                            style={{ marginTop: '0' }}
-                                            className='mx-auto sm:mx-0'
-                                            src={gcpLogo}
-                                            alt=''
-                                        />
-                                        <img
-                                            style={{ marginTop: '0' }}
-                                            className='mx-auto sm:mx-0'
-                                            src={awsLogo}
-                                            alt=''
-                                        />
-                                        <img
-                                            style={{ marginTop: '0' }}
-                                            className='mx-auto sm:mx-0'
-                                            src={azureLogo}
-                                            alt=''
-                                        />
-                                        <img
-                                            style={{ marginTop: '0' }}
-                                            className='mx-auto sm:mx-0 hidden sm:block'
-                                            src={alibabaLogo}
-                                            alt=''
-                                        />
-                                        <img
-                                            style={{ marginTop: '0' }}
-                                            className='mx-auto sm:mx-0 hidden sm:block'
-                                            src={oktaLogo}
-                                            alt=''
-                                        />
-                                    </div>
-                                    <div className='flex flex-row max-w-xs justify-evenly flex-wrap space-y-6 px-18 sm:px-0 mx-auto  block sm:hidden'>
-                                        <img style={{ marginTop: '0' }} className='' src={alibabaLogo} alt='' />
-                                        <img style={{ marginTop: '0' }} className='' src={oktaLogo} alt='' />
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='col-span-12 lg:col-span-6' id='apply-now'>
-                                <div
-                                    className='rounded-xl shadow-lg mt-6 lg:mt-0 py-4 lg:pt-12 pb-0 px-8 md:px-12 max-w-lg mx-auto lg:mr-0 lg:ml-auto relative'
-                                    style={{
-                                        backgroundColor: 'rgba(255, 255, 255, 0.6)',
-                                        backdropFilter: 'blur(5px)'
-                                    }}
+                    <Row>
+                        <div className='col-span-12 lg:col-span-6 '>
+                            <div className='lg:mt-16 pt-12 md:pt-8 lg:pt-4 max-w-lg mx-auto lg:mx-0'>
+                                <h1
+                                    className='text-center sm:text-left text-blue text-3xl md:text-4xl lg:text-5xl leading-normal mb-16 montserrat-font font-semibold'
+                                    css={css`
+                                        @media (min-width: 1024px) {
+                                            &:after {
+                                                content: '';
+                                                display: block;
+                                                width: 40%;
+                                                height: 6px;
+                                                margin-top: 16px;
+                                                background-image: linear-gradient(to right, #0f26aa, #ff4a56);
+                                            }
+                                        }
+                                    `}
                                 >
-                                    <h2 className='font-semibold text-2xl sm:text-3xl lg:text-2xl leading-normal mb-8 mt-8 lg:mt-0 montserrat-font'>
-                                        Request a live demo
-                                    </h2>
-                                    {loadingForm && <LoaderContainer minHeight={390} />}
-                                    <div
-                                        style={{ minHeight: 390 }}
-                                        id='iamsecurity-campaign-form'
-                                        className={classnames('pb-4', { hidden: loadingForm })}
+                                    Identity and Access Management Security for Cloud
+                                </h1>
+                                <p className='text-center sm:text-left text-base lg:text-lg mb-4 leading-relaxed text-gray'>
+                                    Continuous multi-cloud monitoring for identity and access management (IAM)
+                                    misconfigurations across all your cloud assets to meet strict IAM compliance
+                                    directives and improve your cloud security posture. Full integration with Okta.
+                                </p>
+                                <p
+                                    className='bg-white py-2 px-4 rounded font-medium flex mt-4 mx-auto sm:mx-0'
+                                    css={css`
+                                        width: fit-content;
+                                        color: #0f26aa;
+                                    `}
+                                >
+                                    <RightArrow fillColor={'#0F26AA'} marginTop='0.2rem' />
+                                    <span className='text-md ml-2'>
+                                        Take control of your cloud identities and permissions.
+                                    </span>
+                                </p>
+                                <div className='flex flex-row max-w-md sm:max-w-lg justify-between flex-wrap space-y-6 lg:space-y-0 lg:space-x-1 px-18 sm:px-0 mx-auto mt-4'>
+                                    <img style={{ marginTop: '0' }} className='mx-auto sm:mx-0' src={gcpLogo} alt='' />
+                                    <img style={{ marginTop: '0' }} className='mx-auto sm:mx-0' src={awsLogo} alt='' />
+                                    <img
+                                        style={{ marginTop: '0' }}
+                                        className='mx-auto sm:mx-0'
+                                        src={azureLogo}
+                                        alt=''
+                                    />
+                                    <img
+                                        style={{ marginTop: '0' }}
+                                        className='mx-auto sm:mx-0 hidden sm:block'
+                                        src={alibabaLogo}
+                                        alt=''
+                                    />
+                                    <img
+                                        style={{ marginTop: '0' }}
+                                        className='mx-auto sm:mx-0 hidden sm:block'
+                                        src={oktaLogo}
+                                        alt=''
                                     />
                                 </div>
+                                <div className='flex flex-row max-w-xs justify-evenly flex-wrap space-y-6 px-18 sm:px-0 mx-auto  block sm:hidden'>
+                                    <img style={{ marginTop: '0' }} className='' src={alibabaLogo} alt='' />
+                                    <img style={{ marginTop: '0' }} className='' src={oktaLogo} alt='' />
+                                </div>
                             </div>
-                        </Row>
-                    </div>
-                    <div className='py-16 hidden sm:block '>
-                        <ScrollButtonStartups to='start' />
+                        </div>
+                        <div className='col-span-12 lg:col-span-6' id='apply-now'>
+                            <div
+                                className='rounded-xl shadow-lg mt-6 lg:mt-0 py-4 lg:pt-12 pb-0 px-8 md:px-12 max-w-lg mx-auto lg:mr-0 lg:ml-auto relative z-10'
+                                style={{
+                                    backgroundColor: 'rgba(255, 255, 255, 0.6)',
+                                    backdropFilter: 'blur(5px)'
+                                }}
+                            >
+                                <h2 className='font-semibold text-2xl sm:text-3xl lg:text-2xl leading-normal mb-8 mt-8 lg:mt-0 montserrat-font'>
+                                    Book a live demo
+                                </h2>
+                                {loadingForm && <LoaderContainer minHeight={420} />}
+                                <div
+                                    style={{ minHeight: 420 }}
+                                    id='iamsecurity-campaign-form'
+                                    className={classnames('pb-4', { hidden: loadingForm })}
+                                />
+                            </div>
+                        </div>
+                    </Row>
+                    <div className='pt-8 hidden sm:block'>
+                        <p className='text-center font-montserrat text-base cursor-pointer'>
+                            <ScrollLink to={'start'} smooth={true} duration={500}>
+                                Scroll down
+                            </ScrollLink>
+                        </p>
+                        <ScrollLink
+                            className='cursor-pointer'
+                            to={'start'}
+                            smooth={true}
+                            duration={500}
+                            css={css`
+                                width: 50px;
+                                height: 50px;
+                                display: block;
+                                margin: auto;
+                            `}
+                        >
+                            <span>
+                                <img
+                                    src={ScrollDownIcon}
+                                    alt='down arrow icon'
+                                    className='mx-auto mt-2'
+                                    height={20}
+                                    width={20}
+                                />
+                            </span>
+                        </ScrollLink>
                     </div>
                 </Container>
+                <div className='absolute bottom-0 right-0 '>
+                    <div className='hidden lg:block lg:max-w-2xl'>
+                        <img src={HeroImage} alt='' />
+                    </div>
+                </div>
             </div>
             <Container>
                 <Section id='start'>

@@ -22,6 +22,7 @@ import loadable from '@loadable/component';
 import CustomSearch from '../Search/CustomSearch';
 import { useClickOutsideSearch } from '../../hooks/useClickOutsideSearch';
 import classnames from 'classnames';
+import { hasZirconBgColordHero } from '../../common/utils';
 const Footer = loadable(() => import('./footer'));
 
 const paddingNav = css`
@@ -102,8 +103,8 @@ const AnimatedNavbarLayout = ({ children, formId, formTargetId, location, title,
                     id='head'
                     className={classnames({
                         'pt-8 pb-8 hidden xl:block': true,
-                        'bg-lightGrey': pageName !== 'MisconfigurationsCampaign',
-                        'bg-zircon': pageName === 'MisconfigurationsCampaign'
+                        'bg-lightGrey': !hasZirconBgColordHero(pageName),
+                        'bg-zircon': hasZirconBgColordHero(pageName)
                     })}
                 >
                     <div className='container max-w-7xl m-auto px-4 lg:px-8 flex items-center'>
