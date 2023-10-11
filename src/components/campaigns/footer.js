@@ -14,7 +14,7 @@ const CampaignsFooter = () => {
                                 <img src={logo} className='w-40 mt-1' alt='Cyscale Logo' />
                             </Link>
                         </div>
-                        <div className='order-1 lg:ml-6'>
+                        <div className='order-1 lg:ml-6 mt-3 lg:mt-0'>
                             <Link to='/policies/terms-of-use/' className='font-light text-white text-sm font-hind'>
                                 <span className='py-3.5 inline-block no-underline hover:underline'>Terms of use</span>
                             </Link>
