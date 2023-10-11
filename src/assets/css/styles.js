@@ -3,11 +3,11 @@ import styled from '@emotion/styled';
 
 export const heroHeight = css`
     @media (min-width: 720px) and (max-width: 1280px) {
-        min-height: calc(100vh - 11.5rem);
+        min-height: calc(100vh - 7.5rem);
     }
 
     @media (min-width: 1280px) {
-        min-height: calc(100vh - 18.75rem);
+        min-height: calc(100vh - 15.75rem);
     }
 `;
 
