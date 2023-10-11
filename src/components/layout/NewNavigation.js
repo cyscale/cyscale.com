@@ -105,7 +105,7 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation, sea
         <nav
             css={[
                 tw`relative block`,
-                (pageName === 'Identity and Access Management Security for Cloud' ||
+                (pageName === 'IAMCampaign' ||
                     pageName === 'AWSCloudSecurityCampaign' ||
                     pageName === 'CSPMSolutionCampaign') &&
                     tw`container`,

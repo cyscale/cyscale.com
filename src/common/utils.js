@@ -17,6 +17,10 @@ export const requestDemoButtonPage = (pageName) => {
     return ['HomePage', 'CSPMPage', 'SKGPage', 'ComplianceAuditing'].includes(pageName);
 };
 
+export const hasZirconBgColordHero = (pageName) => {
+    return ['MisconfigurationsCampaign', 'IAMCampaign'].includes(pageName);
+};
+
 const orientationMap = {
     90: 'landscape-primary',
     '-90': 'landscape-secondary',
