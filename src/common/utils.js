@@ -18,7 +18,7 @@ export const requestDemoButtonPage = (pageName) => {
 };
 
 export const hasZirconBgColordHero = (pageName) => {
-    return ['MisconfigurationsCampaign', 'IAMCampaign'].includes(pageName);
+    return ['MisconfigurationsCampaign', 'IAMCampaign', 'RequestDemo'].includes(pageName);
 };
 
 const orientationMap = {
