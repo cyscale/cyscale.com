@@ -2,6 +2,7 @@ import React from 'react';
 import { Container } from '../atoms/Containers';
 import { Link } from 'gatsby';
 import logo from '../../assets/images/logo-footer.svg';
+import { css } from 'twin.macro';
 
 const CampaignsFooter = () => {
     return (
@@ -48,7 +49,12 @@ const CampaignsFooter = () => {
                         </div>
                     </div>
                     <div className='lg:py-5'>
-                        <small className='text-white text-sm font-hind py-3.5 inline-block'>
+                        <small
+                            className='text-sm font-hind py-3.5 inline-block'
+                            css={css`
+                                color: rgba(255, 255, 255, 0.5);
+                            `}
+                        >
                             &copy; {new Date().getFullYear()} Cyscale Limited
                         </small>
                     </div>
