@@ -6,8 +6,6 @@ import { Container } from '../components/atoms/Containers';
 import GradientButton from '../components/buttons/GradientButton';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { Element } from 'react-scroll';
-import BgHeroMobile from '../assets/images/bg-homepage-mobile.webp';
-import BgHero from '../assets/images/bg-homepage.webp';
 import loadable from '@loadable/component';
 import sal from 'sal.js';
 import FixIcon from '../assets/images/fix-icon-home.svg';
@@ -20,51 +18,6 @@ const CallToAction = loadable(() => import('../components/Home/CallToAction'));
 const BlogCarousel = loadable(() => import('../components/Home/BlogSection'));
 const MostReadArticles = loadable(() => import('../components/Home/MostReadArticles'));
 const CalendarSection = loadable(() => import('../components/Home/CalendarSection'));
-
-const heroBackground = css`
-    height: 40rem;
-    background: linear-gradient(0deg, rgba(174, 207, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 74.53%), #f5f9ff;
-
-    @media screen and (min-width: 500px) {
-        height: 42rem;
-        background: linear-gradient(0deg, rgba(174, 207, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 74.53%), #f5f9ff;
-    }
-
-    @media screen and (min-width: 640px) {
-        height: 50rem;
-        background-position: 70% 95%;
-        background-image: url(${BgHeroMobile});
-    }
-
-    @media screen and (min-width: 1024px) {
-        height: auto;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: 50% 35%;
-        background-image: url(${BgHero});
-    }
-    @media screen and (min-width: 1536px) {
-        height: 48rem;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: 50% 35%;
-        background-image: url(${BgHero});
-    }
-    @media screen and (min-width: 2000px) {
-        height: 54rem;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: 50% 30%;
-        background-image: url(${BgHero});
-    }
-    @media screen and (min-width: 2560px) {
-        height: 60rem;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: 50% 25%;
-        background-image: url(${BgHero});
-    }
-`;
 
 const sectionSubtitleColor = css`
     color: #38aff1;
@@ -194,9 +147,9 @@ const HomePage = ({ location }) => {
                     gatsbyImageData(width: 34, layout: CONSTRAINED)
                 }
             }
-            mobileHero: file(relativePath: { eq: "hero-homepage-mobile.png" }) {
+            heroImage: file(relativePath: { eq: "hero-image-homepage.png" }) {
                 childImageSharp {
-                    gatsbyImageData(width: 720, layout: CONSTRAINED)
+                    gatsbyImageData(width: 1920, layout: CONSTRAINED)
                 }
             }
         }
@@ -256,92 +209,119 @@ const HomePage = ({ location }) => {
             <div className='hidden' data-category>
                 website
             </div>
-            <div className='pt-8' css={heroBackground}>
-                <Container>
-                    <div className='py-16 md:py-24 lg:pt-24 lg:pb-36'>
-                        <div className='grid grid-cols-12'>
-                            <div className='col-span-12 lg:col-span-6 order-last lg:order-first'>
-                                <div className='lg:mt-16 pt-4 max-w-xl mx-auto lg:mx-0'>
-                                    <h1
-                                        className='text-left text-blue text-4xl lg:text-5xl leading-normal lg:leading-normal font-montserrat font-bold'
+            <div className='pt-8'>
+                <div className='pt-16 md:pt-24 md:pb-16 lg:pb-0 '>
+                    <div
+                        className='max-w-7xl mx-4 xl:m-auto px-4 xl:px-8'
+                        css={css`
+                            border-radius: 1rem;
+                            background: linear-gradient(0deg, #f5f9ff 0%, #f5f9ff 100%);
+                        `}
+                    >
+                        <div className='container m-auto pb-12'>
+                            <div className='grid grid-cols-12'>
+                                <div className='col-span-12 lg:col-span-6 order-first'>
+                                    <div className='lg:mt-16 pt-4 max-w-xl mx-auto lg:mx-0'>
+                                        <h1
+                                            className='text-left text-blue text-4xl lg:text-5xl leading-normal lg:leading-normal font-montserrat font-bold'
+                                            css={css`
+                                                @media (max-width: 640px) {
+                                                    font-size: 2rem;
+                                                    line-height: 2.5rem;
+                                                    height: 8rem;
+                                                }
+                                                height: 10rem;
+                                            `}
+                                        >
+                                            Secure your cloud{' '}
+                                            <br
+                                                className='hidden sm:block'
+                                                css={css`
+                                                    display: none;
+                                                    @media screen and (min-width: 368px) {
+                                                        display: block;
+                                                    }
+                                                `}
+                                            />{' '}
+                                            quickly and easily
+                                        </h1>
+                                        <p className='text-left text-base lg:text-lg mb-8 leading-relaxed font-hind'>
+                                            Get contextual analysis of cloud misconfigurations, vulnerabilities, access,
+                                            and data for an accurate and actionable assessment of risk.
+                                        </p>
+                                        <div className='flex mt-8 justify-start'>
+                                            <Link to='/request-demo/'>
+                                                <GradientButton text='BOOK A DEMO' />
+                                            </Link>
+                                        </div>
+                                    </div>
+                                    <p
+                                        className='font-hind text-base mt-12 hidden lg:block'
                                         css={css`
-                                            @media (max-width: 640px) {
-                                                font-size: 2rem;
-                                                line-height: 2.5rem;
-                                                height: 8rem;
-                                            }
-                                            height: 10rem;
+                                            color: #747474;
                                         `}
                                     >
-                                        Secure your cloud <br className='block' /> quickly and easily
-                                    </h1>
-                                    <p className='text-left text-base lg:text-lg mb-8 leading-relaxed font-hind'>
-                                        Get contextual analysis of cloud misconfigurations, vulnerabilities, access, and
-                                        data for an accurate and actionable assessment of risk.
+                                        Integrations
                                     </p>
-                                    <div className='flex mt-8 justify-start'>
-                                        <Link to='/request-demo/'>
-                                            <GradientButton text='BOOK A DEMO' />
-                                        </Link>
+                                    <div className='hidden lg:flex space-x-3 lg:mt-2'>
+                                        <GatsbyImage alt='' image={data.aws.childImageSharp.gatsbyImageData} />
+                                        <GatsbyImage alt='' image={data.azure.childImageSharp.gatsbyImageData} />
+                                        <GatsbyImage alt='' image={data.gc.childImageSharp.gatsbyImageData} />
+                                        <GatsbyImage alt='' image={data.alibaba.childImageSharp.gatsbyImageData} />{' '}
+                                        <GatsbyImage alt='' image={data.okta.childImageSharp.gatsbyImageData} />
+                                        <GatsbyImage alt='' image={data.googleCloud.childImageSharp.gatsbyImageData} />
+                                        <GatsbyImage alt='' image={data.azureAD.childImageSharp.gatsbyImageData} />
                                     </div>
                                 </div>
-                                <p
-                                    className='font-hind text-base mt-8 block sm:hidden'
-                                    css={css`
-                                        color: #747474;
-                                    `}
-                                >
-                                    Integrations
-                                </p>
-                                <div className='flex sm:hidden lg:flex space-x-3 lg:mt-12'>
-                                    <GatsbyImage alt='' image={data.aws.childImageSharp.gatsbyImageData} />
-                                    <GatsbyImage alt='' image={data.azure.childImageSharp.gatsbyImageData} />
-                                    <GatsbyImage alt='' image={data.gc.childImageSharp.gatsbyImageData} />
-                                    <GatsbyImage alt='' image={data.alibaba.childImageSharp.gatsbyImageData} />{' '}
-                                    <GatsbyImage alt='' image={data.okta.childImageSharp.gatsbyImageData} />
-                                    <GatsbyImage alt='' image={data.googleCloud.childImageSharp.gatsbyImageData} />
-                                    <GatsbyImage alt='' image={data.azureAD.childImageSharp.gatsbyImageData} />
-                                </div>
-                                <div className='max-w-xl mt-6 block sm:hidden'>
-                                    <GatsbyImage
-                                        alt=''
-                                        image={data.mobileHero.childImageSharp.gatsbyImageData}
-                                        className='shadow-lg'
-                                    />
+                                <div className='col-span-12 lg:col-span-6 mt-8 lg:mt-0'>
+                                    <div className='lg:mt-16 pt-4 max-w-lg lg:max-w-2xl mx-auto lg:mx-0'>
+                                        <GatsbyImage image={data.heroImage.childImageSharp.gatsbyImageData} alt='' />
+                                    </div>
+                                    <div className='max-w-xl mx-auto block lg:hidden'>
+                                        <p
+                                            className='font-hind text-base mt-4 block lg:hidden'
+                                            css={css`
+                                                color: #747474;
+                                            `}
+                                        >
+                                            Integrations
+                                        </p>
+                                        <div className='flex lg:hidden space-x-3 lg:mt-2'>
+                                            <GatsbyImage alt='' image={data.aws.childImageSharp.gatsbyImageData} />
+                                            <GatsbyImage alt='' image={data.azure.childImageSharp.gatsbyImageData} />
+                                            <GatsbyImage alt='' image={data.gc.childImageSharp.gatsbyImageData} />
+                                            <GatsbyImage
+                                                alt=''
+                                                image={data.alibaba.childImageSharp.gatsbyImageData}
+                                            />{' '}
+                                            <GatsbyImage alt='' image={data.okta.childImageSharp.gatsbyImageData} />
+                                            <GatsbyImage
+                                                alt=''
+                                                image={data.googleCloud.childImageSharp.gatsbyImageData}
+                                            />
+                                            <GatsbyImage alt='' image={data.azureAD.childImageSharp.gatsbyImageData} />
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </Container>
+                </div>
             </div>
-            <div
-                className='container max-w-7xl sm:m-auto px-4 lg:px-8 mb-16 sm:my-16 lg:mt-32'
-                css={css`
-                    overflow: hidden;
-                    @media (max-width: 350px) {
-                        margin-top: 8rem;
-                    }
-                    @media (min-width: 351px) and (max-width: 640px) {
-                        margin-top: calc(112px + (100vw - 350px) * (160 / 290));
-                    }
-                `}
-            >
+            <div className='container max-w-7xl sm:m-auto px-4 lg:px-8 mb-16 sm:my-16 lg:mt-32'>
                 <div
                     className='grid grid-cols-12 gap-x-5 mt-20 sm:mt-12'
                     css={css`
                         overflow: hidden;
                     `}
                 >
-                    <div className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 hidden lg:block' data-sal='slide-right'>
+                    <div className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 hidden lg:block'>
                         <GatsbyImage
                             image={data.graphContainers.childImageSharp.gatsbyImageData}
                             alt='Graph and screenshots from cloud security platform'
                         />
                     </div>
-                    <div
-                        className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 max-w-xl lg:max-w-xl lg:mt-4'
-                        data-sal='slide-left'
-                    >
+                    <div className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 max-w-xl lg:max-w-xl lg:mt-4'>
                         <p className='font-montserrat text-base font-bold mt-0 lg:ml-5' css={sectionSubtitleColor}>
                             CLOUD SECURITY IN CONTEXT
                         </p>
