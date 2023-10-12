@@ -90,7 +90,7 @@ const ModalTest = ({ location }) => {
             <div className='hidden' data-category>
                 website
             </div>
-            <div className='bg-zircon pt-24 lg:pt-0 pb-10 relative'>
+            <div className='bg-zircon pt-32 lg:pt-0 pb-10 relative'>
                 <Container>
                     <Row>
                         <div className='col-span-12 lg:col-span-6'>
