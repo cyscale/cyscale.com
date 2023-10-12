@@ -120,7 +120,7 @@ const Misconfigurations = ({ location }) => {
                                     Identify and Fix Cloud Misconfigurations
                                 </h1>
                                 <p
-                                    className='text-center lg:text-left text-base lg:text-lg max-w-xl mx-auto lg:mx-0'
+                                    className='text-center lg:text-left text-base lg:text-lg max-w-xl mx-auto lg:mx-0 font-hind'
                                     css={css`
                                         color: #484848;
                                     `}
@@ -133,7 +133,7 @@ const Misconfigurations = ({ location }) => {
                                         Get a demo and see Cyscale in action:
                                     </p>
                                     <p
-                                        className='bg-white py-2 px-4 rounded font-medium flex mt-4 mx-auto lg:mx-0'
+                                        className='bg-white py-2 px-4 rounded font-medium font-montserrat flex mt-4 mx-auto lg:mx-0'
                                         css={css`
                                             width: fit-content;
                                             color: #0f26aa;
@@ -146,7 +146,7 @@ const Misconfigurations = ({ location }) => {
                                         </span>
                                     </p>
                                     <p
-                                        className='bg-white py-2 px-4 rounded font-medium flex mt-4 mx-auto lg:mx-0'
+                                        className='bg-white py-2 px-4 rounded font-medium font-montserrat flex mt-4 mx-auto lg:mx-0'
                                         css={css`
                                             width: fit-content;
                                             color: #0f26aa;
@@ -159,7 +159,7 @@ const Misconfigurations = ({ location }) => {
                                         </span>
                                     </p>
                                     <p
-                                        className='bg-white py-2 px-4 rounded font-medium flex mt-4 mx-auto lg:mx-0'
+                                        className='bg-white py-2 px-4 rounded font-medium font-montserrat flex mt-4 mx-auto lg:mx-0'
                                         css={css`
                                             width: fit-content;
                                             color: #0f26aa;
@@ -254,14 +254,14 @@ const Misconfigurations = ({ location }) => {
                                 </h2>
                             </div>
                             <div className='mx-auto lg:mx-0 max-w-xl lg:pl-16'>
-                                <p className='leading-normal text-base text-gray pt-12 pb-2'>
+                                <p className='leading-normal text-base text-gray pt-12 pb-2 font-hind'>
                                     A single misconfiguration can have a devastating impact on your cloud security.
                                 </p>
-                                <p className='leading-normal text-base text-gray py-2'>
+                                <p className='leading-normal text-base text-gray py-2 font-hind'>
                                     Cyscale automatically detects misconfigured services across identity, compute,
                                     storage, networking, container services, managed Kubernetes, and many more.
                                 </p>
-                                <p className='leading-normal text-base text-gray py-2'>
+                                <p className='leading-normal text-base text-gray py-2 font-hind'>
                                     Get step-by-step remediation guidelines for any finding, so that you can act fast to
                                     reduce your attack surface and prevent incidents.
                                 </p>
@@ -292,11 +292,11 @@ const Misconfigurations = ({ location }) => {
                                 </h2>
                             </div>
                             <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-lg'>
-                                <p className='leading-normal text-base text-gray pt-12 pb-2'>
+                                <p className='leading-normal text-base text-gray pt-12 pb-2 font-hind'>
                                     Don't waste time chasing false positives. Get contextual alerts when your cloud
                                     assets drift away from established security and compliance standards.
                                 </p>
-                                <p className='leading-normal text-base text-gray py-2'>
+                                <p className='leading-normal text-base text-gray py-2 font-hind'>
                                     Instead of overwhelming list-based management, Cyscale's Security Knowledge Graph™
                                     makes precise correlations between all your cloud assets and data repositories to
                                     automatically pinpoint critical security improvements.
@@ -359,12 +359,12 @@ const Misconfigurations = ({ location }) => {
                                 </h2>
                             </div>
                             <div className='mx-auto lg:mx-0 max-w-xl lg:pl-16'>
-                                <p className='leading-normal text-base text-gray pt-12 pb-2'>
+                                <p className='leading-normal text-base text-gray pt-12 pb-2 font-hind'>
                                     In-app security standards and organizational security policy templates for CIS Cloud
                                     Benchmarks, ISO 27001, SOC 2, GDPR, HIPAA, PCI DSS, NIST, and many more help your
                                     team with internal or external audits.
                                 </p>
-                                <p className='leading-normal text-base text-gray py-2'>
+                                <p className='leading-normal text-base text-gray py-2 font-hind'>
                                     Automated and continuous assessment of your cloud compliance, with custom Controls
                                     that tap into our Security Knowledge Graph to deliver the security and compliance
                                     checks that matter most to your organization.

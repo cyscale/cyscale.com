@@ -71,13 +71,13 @@ const IamSecurity = ({ location }) => {
                                     Identity and Access
                                     <br /> Management <br /> Security for Cloud
                                 </h1>
-                                <p className='text-center lg:text-left text-base lg:text-lg mb-4 leading-relaxed text-gray'>
+                                <p className='font-hind text-center lg:text-left text-base lg:text-lg mb-4 leading-relaxed text-gray'>
                                     Continuous multi-cloud monitoring for identity and access management (IAM)
                                     misconfigurations across all your cloud assets to meet strict IAM compliance
                                     directives and improve your cloud security posture. Full integration with Okta.
                                 </p>
                                 <p
-                                    className='bg-white py-2 px-4 rounded font-medium flex mt-4 mx-auto lg:mx-0'
+                                    className='bg-white py-2 px-4 rounded font-medium font-montserrat flex mt-4 mx-auto lg:mx-0'
                                     css={css`
                                         width: fit-content;
                                         color: #0f26aa;
@@ -181,24 +181,25 @@ const IamSecurity = ({ location }) => {
                                 <GatsbyImage
                                     image={data.usersList.childImageSharp.gatsbyImageData}
                                     className='shadow-2xl'
+                                    alt=''
                                 />
                             </div>
                         </div>
                         <div className='col-span-12 lg:col-span-6 mt-12 md:mt-0'>
                             <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-sm lg:pl-16'>
-                                <h2 className='text-3xl font-bold text-primary leading-normal border-title montserrat-font'>
+                                <h2 className='text-3xl font-bold text-primary leading-normal border-title font-montserrat'>
                                     Understand access
                                     <br /> configuration
                                 </h2>
                             </div>
                             <div className='mx-auto lg:mx-0 max-w-xl lg:pl-16'>
-                                <p className='text-base leading-normal my-12 text-gray montserrat-font'>
+                                <p className='text-base leading-normal my-12 text-gray font-montserrat'>
                                     <strong>
                                         Effectively manage user permissions and enforce privilege access for a robust
                                         cloud security posture.
                                     </strong>
                                 </p>
-                                <ul className='list-disc ml-4 text-gray'>
+                                <ul className='list-disc ml-4 text-gray font-hind'>
                                     <li className='mb-4'>
                                         A powerful Identity Dashboard helping you understand how access is provisioned
                                         in your organization on a per-person basis
@@ -226,18 +227,18 @@ const IamSecurity = ({ location }) => {
                     <div className='sm:grid sm:grid-cols-12 sm:gap-12'>
                         <div className='col-span-12 lg:col-span-6'>
                             <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-sm'>
-                                <h2 className='text-3xl font-bold text-primary leading-normal border-title montserrat-font'>
+                                <h2 className='text-3xl font-bold text-primary leading-normal border-title font-montserrat'>
                                     Deep dive into
                                     <br /> User assets
                                 </h2>
                             </div>
                             <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-lg'>
-                                <p className='leading-normal text-base text-gray my-12 montserrat-font'>
+                                <p className='leading-normal text-base text-gray my-12 font-montserrat'>
                                     <strong>
                                         An optimized page for user assets helps you visualize and understand:
                                     </strong>
                                 </p>
-                                <ul className='list-disc ml-4 text-gray'>
+                                <ul className='list-disc ml-4 text-gray font-hind'>
                                     <li className='mb-2'>Access (groups and permissions)</li>
                                     <li className='mb-2'>Risk</li>
                                     <li className='mb-2'>Policy violations</li>
@@ -250,6 +251,7 @@ const IamSecurity = ({ location }) => {
                                 <GatsbyImage
                                     image={data.identityCampaigns.childImageSharp.gatsbyImageData}
                                     className='shadow-2xl'
+                                    alt=''
                                 />
                             </div>
                         </div>
@@ -267,15 +269,15 @@ const IamSecurity = ({ location }) => {
                 <Container>
                     <Section>
                         <div className='max-w-xl mx-auto lg:mx-0 lg:max-w-sm mb-20'>
-                            <h2 className='text-3xl font-bold text-primary leading-normal border-title montserrat-font'>
+                            <h2 className='text-3xl font-bold text-primary leading-normal border-title font-montserrat'>
                                 100% Confidence with your IAM Compliance
                             </h2>
                         </div>
                         <div className='max-w-xl mx-auto lg:mx-0 lg:max-w-3xl'>
                             <Row className='lg:gap-20'>
                                 <div className='col-span-12 lg:col-span-6'>
-                                    <p className='leading-normal text-base text-gray mb-6'>
-                                        <strong className='montserrat-font'>Meet industry regulations</strong>
+                                    <p className='leading-normal font-hind text-base text-gray mb-6'>
+                                        <strong className='font-montserrat'>Meet industry regulations</strong>
                                         <br />
                                         Protect sensitive data and comply with strict industry in your Financial
                                         organisation. Cyscale automatically runs all critical compliance checks and
@@ -283,16 +285,16 @@ const IamSecurity = ({ location }) => {
                                     </p>
                                 </div>
                                 <div className='col-span-12 lg:col-span-6'>
-                                    <p className='leading-normal text-base text-gray mb-6'>
-                                        <strong className='montserrat-font'>PCI-DSS, SOC 2, GDPR, and more</strong>
+                                    <p className='leading-normal font-hind text-base text-gray mb-6'>
+                                        <strong className='font-montserrat'>PCI-DSS, SOC 2, GDPR, and more</strong>
                                         <br />
                                         Cyscale supports a wide range of CIS control benchmarks, including: CIS,
                                         ISO27001, PCI-DSS, NIST, SOC2, GDPR.
                                     </p>
                                 </div>
                                 <div className='col-span-12 lg:col-span-6'>
-                                    <p className='leading-normal text-base text-gray mb-6'>
-                                        <strong className='montserrat-font'>
+                                    <p className='leading-normal font-hind text-base text-gray mb-6'>
+                                        <strong className='font-montserrat'>
                                             500+ out-of-the-box security controls
                                         </strong>
                                         <br />
@@ -301,8 +303,8 @@ const IamSecurity = ({ location }) => {
                                     </p>
                                 </div>
                                 <div className='col-span-12 lg:col-span-6'>
-                                    <p className='leading-normal text-base text-gray mb-6'>
-                                        <strong className='montserrat-font'>Prioritize misconfiguration risk</strong>
+                                    <p className='leading-normal font-hind text-base text-gray mb-6'>
+                                        <strong className='font-montserrat'>Prioritize misconfiguration risk</strong>
                                         <br />
                                         With our Security Knowledge Graph™, we surface crucial issues based on deep
                                         understanding of all your interlinked assets - rather than a mishmash of
@@ -318,10 +320,12 @@ const IamSecurity = ({ location }) => {
                 <div className='pt-12 pb-24 lg:pt-32 lg:pb-32'>
                     <div className='flex h-48 flex-col items-center'>
                         <img src={cloudIcon} alt='Cloud Icon' />
-                        <h1 className='text-center px-2 mt-4 mb-2'>Scan, monitor and prioritize cloud IAM risk</h1>
+                        <h1 className='text-center px-2 mt-4 mb-2 font-montserrat'>
+                            Scan, monitor and prioritize cloud IAM risk
+                        </h1>
                         <div className='mt-10 w-auto inline-block'>
                             <button
-                                className='gradientBgBtn w-full block text-base font-medium rounded text-white uppercase text-center py-4 px-12 hover:no-underline no-underline'
+                                className='gradientBgBtn w-full block text-base font-medium rounded text-white uppercase text-center py-4 px-12 hover:no-underline no-underline font-hind'
                                 onClick={() => animateScroll.scrollToTop()}
                             >
                                 Request Live Demo
