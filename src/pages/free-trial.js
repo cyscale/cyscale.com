@@ -154,18 +154,18 @@ const FreeTrial = ({ location }) => {
                             {!formSubmitted ? (
                                 <div className='col-span-12 lg:col-span-6'>
                                     <div
-                                        className='bg-white rounded-lg mt-6 lg:mt-0 lg:rounded-xl shadow-lg  pt-6 pb-0 px-4 md:px-12 max-w-lg mx-auto lg:mr-0 lg:ml-auto relative'
+                                        className='bg-white rounded-lg mt-6 lg:mt-0 lg:rounded-xl shadow-lg pt-6 lg:pt-8 pb-0 px-4 md:px-12 max-w-lg mx-auto lg:mr-0 lg:ml-auto relative'
                                         style={{
                                             backgroundColor: 'rgba(255, 255, 255, 0.6)',
                                             backdropFilter: 'blur(5px)'
                                         }}
                                     >
-                                        <h2 className='font-bold text-xl lg:text-2xl leading-normal mb-1 font-montserrat'>
-                                            Start your free trial today.
+                                        <h2 className='font-bold text-xl lg:text-2xl leading-normal mb-6 font-montserrat'>
+                                            Start your free trial today
                                         </h2>
-                                        {loadingForm && <LoaderContainer minHeight={420} />}
+                                        {loadingForm && <LoaderContainer minHeight={390} />}
                                         <div
-                                            style={{ minHeight: 420 }}
+                                            style={{ minHeight: 390 }}
                                             id='free-trial-form'
                                             className={classnames({ hidden: loadingForm })}
                                         />
