@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Container, Row } from '../components/atoms/Containers';
 import useHSFormLoaded from '../hooks/useHSFormLoaded';
 import classnames from 'classnames';
@@ -71,6 +71,30 @@ const FreeTrial = ({ location }) => {
         formId: 'abd54fce-98b1-41ca-b21a-c375b100edb4',
         target: '#free-trial-form'
     });
+
+    const hubspotHandler = (event) => {
+        if (
+            event.data.type === 'hsFormCallback' &&
+            event.data.eventName === 'onFormSubmitted' &&
+            event.data.id === 'abd54fce-98b1-41ca-b21a-c375b100edb4'
+        ) {
+            const formData = event.data.data;
+            const email = formData.submissionValues.email;
+
+            if (email && window.innerWidth > 1280) {
+                window.location.href = `https://app.cyscale.com/playground?promo_code=TRIAL-FORM&email=${email}`;
+            }
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('message', hubspotHandler);
+
+        return () => {
+            window.removeEventListener('message', hubspotHandler);
+        };
+        // eslint-disable-next-line
+    }, []);
 
     return (
         <AnimatedNavbarLayout
