@@ -37,7 +37,8 @@
         },
         {
             "text": "Data Sheet",
-            "link": "/resources/cyscale-cloud-data-security-datasheet.pdf"
+            "link": "https://cyscale.com/resources/cyscale-cloud-data-security-datasheet.pdf",
+            "external": true
         },
         {
             "text": "FAQ + Support",

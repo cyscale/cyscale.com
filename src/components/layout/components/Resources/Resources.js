@@ -119,13 +119,13 @@ const Resources = ({ pathname, activeLinks, setActiveLinks }) => {
                     <hr css={hrStyle} />
                 </div>
                 <div className='py-2 mt-4'>
-                    <Link
+                    <a
                         className='p-2 hover:font-medium block'
-                        to='/resources/cyscale-cloud-data-security-datasheet.pdf'
+                        href='https://cyscale.com/resources/cyscale-cloud-data-security-datasheet.pdf'
                         css={fontNavLinkStyle}
                     >
                         <span>Download Data Sheet</span>
-                    </Link>
+                    </a>
                 </div>
             </div>
         </div>
