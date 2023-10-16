@@ -22,7 +22,7 @@ const ThankYouFreeTrial = ({ email }) => {
     }, [counter]);
 
     return (
-        <div className='pt-24 pb-24 lg:pt-32 lg:pb-32 bg-lightGrey2'>
+        <div className='pb-24 pt-32 lg:pb-32 bg-lightGrey2'>
             <Container>
                 <div className='bg-white rounded-md pt-12 pb-24 px-1'>
                     <img src={EmailIcon} alt='' className={'block mx-auto'} />
