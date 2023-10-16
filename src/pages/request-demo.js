@@ -8,52 +8,10 @@ import LoaderContainer from '../components/Loader/LoaderContainer/LoaderContaine
 import CaseStudiesSection from '../components/Home/CaseStudiesSection';
 import { Container, Row } from '../components/atoms/Containers';
 import HeroImage from '../assets/images/bg-image-misconfigurations-campaigns.svg';
-import { graphql, useStaticQuery } from 'gatsby';
-import { GatsbyImage } from 'gatsby-plugin-image';
+import IntegrationsIcons from '../components/Home/IntegrationsIcons';
 
 const ModalTest = ({ location }) => {
     const [calendarModal, setCalendarModal] = useState(false);
-
-    const data = useStaticQuery(graphql`
-        query RequestDemoQuery {
-            aws: file(relativePath: { eq: "aws-icon-homepage.png" }) {
-                childImageSharp {
-                    gatsbyImageData(width: 40, layout: CONSTRAINED)
-                }
-            }
-            azure: file(relativePath: { eq: "azure-icon-homepage.png" }) {
-                childImageSharp {
-                    gatsbyImageData(width: 40, layout: CONSTRAINED)
-                }
-            }
-            gc: file(relativePath: { eq: "gc-icon-homepage.png" }) {
-                childImageSharp {
-                    gatsbyImageData(width: 40, layout: CONSTRAINED)
-                }
-            }
-            alibaba: file(relativePath: { eq: "alibaba-cloud-icon-homepage.png" }) {
-                childImageSharp {
-                    gatsbyImageData(width: 40, layout: CONSTRAINED)
-                }
-            }
-            okta: file(relativePath: { eq: "okta-icon-homepage.png" }) {
-                childImageSharp {
-                    gatsbyImageData(width: 55, layout: CONSTRAINED)
-                }
-            }
-            googleCloud: file(relativePath: { eq: "google-cloud-icon-homepage.png" }) {
-                childImageSharp {
-                    gatsbyImageData(width: 33, layout: CONSTRAINED)
-                }
-            }
-            azureAD: file(relativePath: { eq: "azure-ad-icon-homepage.png" }) {
-                childImageSharp {
-                    gatsbyImageData(width: 34, layout: CONSTRAINED)
-                }
-            }
-        }
-    `);
-
     const { loadingForm } = useHSFormLoaded();
 
     useEffect(() => {
@@ -151,13 +109,7 @@ const ModalTest = ({ location }) => {
                                 </p>
                                 <div className='mt-2 mx-0 sm:mx-auto lg:mx-0 max-w-sm'>
                                     <div className='flex space-x-3'>
-                                        <GatsbyImage alt='' image={data.aws.childImageSharp.gatsbyImageData} />
-                                        <GatsbyImage alt='' image={data.azure.childImageSharp.gatsbyImageData} />
-                                        <GatsbyImage alt='' image={data.gc.childImageSharp.gatsbyImageData} />
-                                        <GatsbyImage alt='' image={data.alibaba.childImageSharp.gatsbyImageData} />{' '}
-                                        <GatsbyImage alt='' image={data.okta.childImageSharp.gatsbyImageData} />
-                                        <GatsbyImage alt='' image={data.googleCloud.childImageSharp.gatsbyImageData} />
-                                        <GatsbyImage alt='' image={data.azureAD.childImageSharp.gatsbyImageData} />
+                                        <IntegrationsIcons />
                                     </div>
                                 </div>
                             </div>
@@ -191,7 +143,7 @@ const ModalTest = ({ location }) => {
                     </div>
                 </div>
             </div>
-            <CaseStudiesSection disableAnimation={true} subtitle="You’re in good company" backgroundColor={'#fff'} />
+            <CaseStudiesSection disableAnimation={true} subtitle='You’re in good company' backgroundColor={'#fff'} />
             {calendarModal && (
                 <div className='w-screen h-screen fixed top-0 left-0 right-0 bottom-0' style={{ zIndex: 102 }}>
                     <div

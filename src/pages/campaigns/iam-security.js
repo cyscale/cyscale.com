@@ -9,15 +9,15 @@ import awsLogo from '../../assets/images/aws-campaigns-iam-security.svg';
 import azureLogo from '../../assets/images/azure-campaigns-iam-security.svg';
 import alibabaLogo from '../../assets/images/alibaba-campaigns-iam-security.svg';
 import oktaLogo from '../../assets/images/okta-campaigns-iam-security.svg';
-import { animateScroll, Link as ScrollLink } from 'react-scroll';
+import { animateScroll } from 'react-scroll';
 import AnimatedNavbarLayout from '../../components/campaigns/AnimatedNavbarLayout';
 import useHSFormLoaded from '../../hooks/useHSFormLoaded';
 import classnames from 'classnames';
 import LoaderContainer from '../../components/Loader/LoaderContainer/LoaderContainer';
 import HeroImage from '../../assets/images/bg-image-misconfigurations-campaigns.svg';
 import { css } from 'twin.macro';
-import ScrollDownIcon from '../../assets/images/scroll-down-icon.svg';
-import RightArrow from '../../components/sharedComponent/RightArrow';
+import ScrollDown from '../../components/ScrollButton/ScrollDown';
+import ServiceHighlight from '../../components/campaigns/ServiceHighlight';
 
 const IamSecurity = ({ location }) => {
     const { loadingForm } = useHSFormLoaded();
@@ -76,18 +76,9 @@ const IamSecurity = ({ location }) => {
                                     misconfigurations across all your cloud assets to meet strict IAM compliance
                                     directives and improve your cloud security posture. Full integration with Okta.
                                 </p>
-                                <p
-                                    className='bg-white py-2 px-4 rounded font-medium font-montserrat flex mt-4 mx-auto lg:mx-0'
-                                    css={css`
-                                        width: fit-content;
-                                        color: #0f26aa;
-                                    `}
-                                >
-                                    <RightArrow fillColor={'#0F26AA'} marginTop='0.2rem' />
-                                    <span className='text-md ml-2'>
-                                        Take control of your cloud identities and permissions.
-                                    </span>
-                                </p>
+                                <ServiceHighlight>
+                                    Take control of your cloud identities and permissions.
+                                </ServiceHighlight>
                                 <div className='flex flex-row max-w-md sm:max-w-lg justify-between flex-wrap space-y-6 lg:space-y-0 lg:space-x-1 px-18 sm:px-0 mx-auto mt-4'>
                                     <img style={{ marginTop: '0' }} className='mx-auto sm:mx-0' src={gcpLogo} alt='' />
                                     <img style={{ marginTop: '0' }} className='mx-auto sm:mx-0' src={awsLogo} alt='' />
@@ -137,35 +128,7 @@ const IamSecurity = ({ location }) => {
                             </div>
                         </div>
                     </Row>
-                    <div className='pt-8 hidden sm:block'>
-                        <p className='text-center font-montserrat text-base cursor-pointer'>
-                            <ScrollLink to={'start'} smooth={true} duration={500}>
-                                Scroll down
-                            </ScrollLink>
-                        </p>
-                        <ScrollLink
-                            className='cursor-pointer'
-                            to={'start'}
-                            smooth={true}
-                            duration={500}
-                            css={css`
-                                width: 50px;
-                                height: 50px;
-                                display: block;
-                                margin: auto;
-                            `}
-                        >
-                            <span>
-                                <img
-                                    src={ScrollDownIcon}
-                                    alt='down arrow icon'
-                                    className='mx-auto mt-2'
-                                    height={20}
-                                    width={20}
-                                />
-                            </span>
-                        </ScrollLink>
-                    </div>
+                    <ScrollDown />
                 </Container>
                 <div className='absolute bottom-0 right-0 '>
                     <div className='hidden lg:block lg:max-w-2xl'>

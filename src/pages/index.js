@@ -11,6 +11,7 @@ import sal from 'sal.js';
 import FixIcon from '../assets/images/fix-icon-home.svg';
 import PrioritizeIcon from '../assets/images/prioritize-icon-home.svg';
 import IdentifyIcon from '../assets/images/identity-icon-home.svg';
+import IntegrationsIcons from '../components/Home/IntegrationsIcons';
 
 const CaseStudiesSection = loadable(() => import('../components/Home/CaseStudiesSection'));
 const CardsSections = loadable(() => import('../components/Home/CardsSections'));
@@ -110,41 +111,6 @@ const HomePage = ({ location }) => {
             cardStandards: file(relativePath: { eq: "card-standards-home.png" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1080, layout: CONSTRAINED)
-                }
-            }
-            aws: file(relativePath: { eq: "aws-icon-homepage.png" }) {
-                childImageSharp {
-                    gatsbyImageData(width: 40, layout: CONSTRAINED)
-                }
-            }
-            azure: file(relativePath: { eq: "azure-icon-homepage.png" }) {
-                childImageSharp {
-                    gatsbyImageData(width: 40, layout: CONSTRAINED)
-                }
-            }
-            gc: file(relativePath: { eq: "gc-icon-homepage.png" }) {
-                childImageSharp {
-                    gatsbyImageData(width: 40, layout: CONSTRAINED)
-                }
-            }
-            alibaba: file(relativePath: { eq: "alibaba-cloud-icon-homepage.png" }) {
-                childImageSharp {
-                    gatsbyImageData(width: 40, layout: CONSTRAINED)
-                }
-            }
-            okta: file(relativePath: { eq: "okta-icon-homepage.png" }) {
-                childImageSharp {
-                    gatsbyImageData(width: 55, layout: CONSTRAINED)
-                }
-            }
-            googleCloud: file(relativePath: { eq: "google-cloud-icon-homepage.png" }) {
-                childImageSharp {
-                    gatsbyImageData(width: 33, layout: CONSTRAINED)
-                }
-            }
-            azureAD: file(relativePath: { eq: "azure-ad-icon-homepage.png" }) {
-                childImageSharp {
-                    gatsbyImageData(width: 34, layout: CONSTRAINED)
                 }
             }
             heroImage: file(relativePath: { eq: "hero-image-homepage.png" }) {
@@ -264,13 +230,7 @@ const HomePage = ({ location }) => {
                                         Integrations
                                     </p>
                                     <div className='hidden lg:flex space-x-3 lg:mt-2'>
-                                        <GatsbyImage alt='' image={data.aws.childImageSharp.gatsbyImageData} />
-                                        <GatsbyImage alt='' image={data.azure.childImageSharp.gatsbyImageData} />
-                                        <GatsbyImage alt='' image={data.gc.childImageSharp.gatsbyImageData} />
-                                        <GatsbyImage alt='' image={data.alibaba.childImageSharp.gatsbyImageData} />{' '}
-                                        <GatsbyImage alt='' image={data.okta.childImageSharp.gatsbyImageData} />
-                                        <GatsbyImage alt='' image={data.googleCloud.childImageSharp.gatsbyImageData} />
-                                        <GatsbyImage alt='' image={data.azureAD.childImageSharp.gatsbyImageData} />
+                                        <IntegrationsIcons />
                                     </div>
                                 </div>
                                 <div className='col-span-12 lg:col-span-6 mt-8 lg:mt-0'>
@@ -287,19 +247,7 @@ const HomePage = ({ location }) => {
                                             Integrations
                                         </p>
                                         <div className='flex lg:hidden space-x-3 lg:mt-2'>
-                                            <GatsbyImage alt='' image={data.aws.childImageSharp.gatsbyImageData} />
-                                            <GatsbyImage alt='' image={data.azure.childImageSharp.gatsbyImageData} />
-                                            <GatsbyImage alt='' image={data.gc.childImageSharp.gatsbyImageData} />
-                                            <GatsbyImage
-                                                alt=''
-                                                image={data.alibaba.childImageSharp.gatsbyImageData}
-                                            />{' '}
-                                            <GatsbyImage alt='' image={data.okta.childImageSharp.gatsbyImageData} />
-                                            <GatsbyImage
-                                                alt=''
-                                                image={data.googleCloud.childImageSharp.gatsbyImageData}
-                                            />
-                                            <GatsbyImage alt='' image={data.azureAD.childImageSharp.gatsbyImageData} />
+                                            <IntegrationsIcons />
                                         </div>
                                     </div>
                                 </div>

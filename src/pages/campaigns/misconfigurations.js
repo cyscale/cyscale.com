@@ -11,11 +11,11 @@ import corner from '../../assets/images/corner-campaigns-iam-security.svg';
 import { css } from 'twin.macro';
 import LinksAndWhitepaper from '../../components/products/LinksAndWhitepaper';
 import { MisconfigurationsTopArticles } from '../../common/links';
-import RightArrow from '../../components/sharedComponent/RightArrow';
 import HeroImage from '../../assets/images/bg-image-misconfigurations-campaigns.svg';
-import { animateScroll, Link as ScrollLink } from 'react-scroll';
-import ScrollDownIcon from '../../assets/images/scroll-down-icon.svg';
+import { animateScroll } from 'react-scroll';
 import Carousel from '../../components/cloud-security-posture-management/Carousel';
+import ScrollDown from '../../components/ScrollButton/ScrollDown';
+import ServiceHighlight from '../../components/campaigns/ServiceHighlight';
 
 const subtitle = css`
     font-size: 1.625rem;
@@ -132,45 +132,18 @@ const Misconfigurations = ({ location }) => {
                                     <p className='font-hind text-base mt-8 text-center lg:text-left'>
                                         Get a demo and see Cyscale in action:
                                     </p>
-                                    <p
-                                        className='bg-white py-2 px-4 rounded font-medium font-montserrat flex mt-4 mx-auto lg:mx-0'
-                                        css={css`
-                                            width: fit-content;
-                                            color: #0f26aa;
-                                        `}
-                                    >
-                                        <RightArrow fillColor={'#0F26AA'} marginTop='0.2rem' />
-                                        <span className='text-md ml-2'>
-                                            <span className='font-bold'> Always-On Monitoring</span>: Monitor your
-                                            assets 24/7
-                                        </span>
-                                    </p>
-                                    <p
-                                        className='bg-white py-2 px-4 rounded font-medium font-montserrat flex mt-4 mx-auto lg:mx-0'
-                                        css={css`
-                                            width: fit-content;
-                                            color: #0f26aa;
-                                        `}
-                                    >
-                                        <RightArrow fillColor={'#0F26AA'} marginTop='0.2rem' />
-                                        <span className='text-md ml-2'>
-                                            <span className='font-bold'>Smart Alerts</span>: Contextual alerts for
-                                            actionable insights
-                                        </span>
-                                    </p>
-                                    <p
-                                        className='bg-white py-2 px-4 rounded font-medium font-montserrat flex mt-4 mx-auto lg:mx-0'
-                                        css={css`
-                                            width: fit-content;
-                                            color: #0f26aa;
-                                        `}
-                                    >
-                                        <RightArrow fillColor={'#0F26AA'} marginTop='0.2rem' />
-                                        <span className='text-md ml-2'>
-                                            <span className='font-bold'>Quick Remediation</span>: Step-by-step guides to
-                                            instant fixes
-                                        </span>
-                                    </p>
+                                    <ServiceHighlight>
+                                        <span className='font-bold'> Always-On Monitoring</span>: Monitor your assets
+                                        24/7
+                                    </ServiceHighlight>
+                                    <ServiceHighlight>
+                                        <span className='font-bold'>Smart Alerts</span>: Contextual alerts for
+                                        actionable insights
+                                    </ServiceHighlight>
+                                    <ServiceHighlight>
+                                        <span className='font-bold'>Quick Remediation</span>: Step-by-step guides to
+                                        instant fixes
+                                    </ServiceHighlight>
                                 </div>
                             </div>
                         </div>
@@ -196,36 +169,7 @@ const Misconfigurations = ({ location }) => {
                             </div>
                         </div>
                     </Row>
-
-                    <div className='pt-8 hidden sm:block'>
-                        <p className='text-center font-montserrat text-base cursor-pointer'>
-                            <ScrollLink to={'start'} smooth={true} duration={500}>
-                                Scroll down
-                            </ScrollLink>
-                        </p>
-                        <ScrollLink
-                            className='cursor-pointer'
-                            to={'start'}
-                            smooth={true}
-                            duration={500}
-                            css={css`
-                                width: 50px;
-                                height: 50px;
-                                display: block;
-                                margin: auto;
-                            `}
-                        >
-                            <span>
-                                <img
-                                    src={ScrollDownIcon}
-                                    alt='down arrow icon'
-                                    className='mx-auto mt-2'
-                                    height={20}
-                                    width={20}
-                                />
-                            </span>
-                        </ScrollLink>
-                    </div>
+                    <ScrollDown />
                 </Container>
                 <div className='absolute bottom-0 right-0 '>
                     <div className='hidden lg:block lg:max-w-2xl'>
