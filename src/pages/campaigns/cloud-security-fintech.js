@@ -15,7 +15,7 @@ import ServiceHighlight from '../../components/campaigns/ServiceHighlight';
 import BankIcon from '../../assets/images/bank-icon-fintech.svg';
 import EncryptIcon from '../../assets/images/encrypt-icon-fintech.svg';
 import OnlineBanking from '../../assets/images/online-banking-icon.svg';
-import IdentityFintech from "../../assets/images/identity-icon-fintech.svg"
+import IdentityFintech from '../../assets/images/identity-icon-fintech.svg';
 
 const subtitle = css`
     font-size: 1.625rem;
@@ -54,11 +54,6 @@ const CloudSecurityFintech = ({ location }) => {
                     gatsbyImageData(width: 1920, layout: CONSTRAINED)
                 }
             }
-            standards: file(relativePath: { eq: "standards-cspm.png" }) {
-                childImageSharp {
-                    gatsbyImageData(width: 1920, layout: CONSTRAINED)
-                }
-            }
             smartFintech: file(relativePath: { eq: "smart-fintech-home.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 720, layout: CONSTRAINED)
@@ -89,8 +84,8 @@ const CloudSecurityFintech = ({ location }) => {
                     <Row>
                         <div className='col-span-12 lg:col-span-6'>
                             <div className='lg:mt-4 pt-2 md:pt-8 lg:pt-4 max-w-2xl mx-auto lg:mx-0'>
-                                <div className="max-w-xs mx-auto lg:mx-0">
-                                    <img src={BankIcon} alt='' className="mx-auto lg:mx-0" />
+                                <div className='max-w-xs mx-auto lg:mx-0'>
+                                    <img src={BankIcon} alt='' className='mx-auto lg:mx-0' />
                                 </div>
                                 <h1
                                     className='text-center lg:text-left mb-8 font-montserrat font-bold'
@@ -194,7 +189,7 @@ const CloudSecurityFintech = ({ location }) => {
                         </div>
                         <div className='col-span-12 lg:col-span-6 mt-12 md:mt-0'>
                             <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-sm lg:pl-16'>
-                                <img src={EncryptIcon} alt='' className="lg:mt-12" />
+                                <img src={EncryptIcon} alt='' className='lg:mt-12' />
                                 <h2
                                     className='font-bold text-primary border-title-partly font-montserrat mt-2'
                                     css={subtitle}
@@ -230,7 +225,7 @@ const CloudSecurityFintech = ({ location }) => {
                     <div className='sm:grid sm:grid-cols-12 sm:gap-12'>
                         <div className='col-span-12 lg:col-span-6'>
                             <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-sm'>
-                                <img src={OnlineBanking} alt='' className="lg:mt-6"  />
+                                <img src={OnlineBanking} alt='' className='lg:mt-6' />
                                 <h2
                                     className='font-bold text-primary border-title-partly font-montserrat mt-2'
                                     css={subtitle}
@@ -271,7 +266,7 @@ const CloudSecurityFintech = ({ location }) => {
                         </div>
                         <div className='col-span-12 lg:col-span-6 mt-12 md:mt-0'>
                             <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-lg lg:pl-16'>
-                                <img src={IdentityFintech} alt='' className="lg:mt-12"  />
+                                <img src={IdentityFintech} alt='' className='lg:mt-12' />
                                 <h2
                                     className='font-bold text-primary border-title-partly font-montserrat mt-2'
                                     css={subtitle}
