@@ -7,7 +7,7 @@ import { css } from 'twin.macro';
 import LatestArticlesCarousel from './LatestArticlesCarousel';
 
 const ThankYouFreeTrial = ({ email }) => {
-    const [counter, setCounter] = useState(5);
+    const [counter, setCounter] = useState(10);
 
     useEffect(() => {
         const redirectUrl = `https://app.cyscale.com/playground?promo_code=TRIAL-FORM&email=${encodeURIComponent(
