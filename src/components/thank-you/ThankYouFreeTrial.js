@@ -26,11 +26,13 @@ const ThankYouFreeTrial = ({ email }) => {
             <Container>
                 <div className='bg-white rounded-md pt-12 pb-24 px-1'>
                     <img src={EmailIcon} alt='' className={'block mx-auto'} />
-                    <h1 className='text-center text-xl lg:text-4xl text-blue font-montserrat font-bold mt-8 lg:mt-10'>
-                        Thank you for contacting us, our team will be in touch shortly.
+                    <h1 className='text-center text-xl lg:text-2xl text-blue font-montserrat font-bold mt-8 lg:mt-10'>
+                        You are now being redirected to the Cyscale Playground account complete with simulation data. If
+                        you want to import your own data please wait for us to complete setting up your free trial. You
+                        will receive an email soon!
                     </h1>
-                    <p className='text-lg lg:text-2xl font-montserrat text-center mt-4'>
-                        Redirecting to playground in {counter} seconds...
+                    <p className='text-lg lg:text-xl font-montserrat text-center mt-4'>
+                        Redirecting in {counter} seconds...
                     </p>{' '}
                 </div>
                 <p className='text-lg lg:text-2xl font-montserrat text-center mt-24'>
