@@ -52,7 +52,6 @@ const NavItemButton = styled.button`
 
     &:hover,
     &.active {
-        font-weight: 600;
         color: #0f26aa;
     }
 
