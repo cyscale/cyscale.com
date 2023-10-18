@@ -50,9 +50,26 @@ const NavItemButton = styled.button`
     box-sizing: border-box;
     outline: none;
 
+    &:before {
+        content: attr(data-text);
+        font-weight: 600;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        color: transparent;
+        visibility: hidden;
+    }
+
     &:hover,
     &.active {
-        color: #0f26aa;
+        color: transparent;
+        background: none;
+
+        &:before {
+            color: #0f26aa;
+            visibility: visible;
+        }
     }
 
     & > span {
@@ -71,10 +88,6 @@ const NavItemButton = styled.button`
         visibility: hidden;
         -ms-transition: all 0.25s ease-in-out 0s;
         transition: all 0.25s ease-in-out 0s;
-    }
-
-    & > span::before {
-        color: #0f26aa;
     }
 
     &:hover span::before,
@@ -125,6 +138,7 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation, sea
                 <ul className='flex flex-row'>
                     <NavItem disabled={isAnimation} searchBar={searchBar}>
                         <NavItemButton
+                            data-text='Platform'
                             type='button'
                             className={`${
                                 ['SKGPage', 'CSPMPage', 'ComplianceAuditing', 'CNAPP'].includes(pageName) ||
@@ -146,6 +160,7 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation, sea
                         onMouseLeave={() => setIsSolutionsHovered(false)}
                     >
                         <NavItemButton
+                            data-text='Solutions'
                             type='button'
                             className={`${
                                 [
@@ -183,7 +198,7 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation, sea
                         </MegaMenu>
                     </NavItem>
                     <NavItem>
-                        <NavItemButton className={`${pageName === 'Pricing' ? 'active' : ''}`}>
+                        <NavItemButton data-text='Pricing' className={`${pageName === 'Pricing' ? 'active' : ''}`}>
                             <span>
                                 <Link to='/pricing/' activeClassName='active' className='font-medium'>
                                     Pricing
@@ -193,6 +208,7 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation, sea
                     </NavItem>
                     <NavItem disabled={isAnimation} searchBar={searchBar}>
                         <NavItemButton
+                            data-text='Resources'
                             type='button'
                             className={`${
                                 pageName === 'blog' ||
@@ -221,6 +237,7 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation, sea
                     </NavItem>
                     <NavItem disabled={isAnimation} searchBar={searchBar}>
                         <NavItemButton
+                            data-text='Company'
                             type='button'
                             className={`${
                                 ['aboutUs', 'careers', 'jobDetails', 'ContactUs'].includes(pageName) ||
