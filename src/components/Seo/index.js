@@ -21,6 +21,7 @@ import WebinarOg from '../../assets/images/webinar-cover-og.png';
 import BuyersGuideOg from '../../assets/images/buyers-guide-og.jpg';
 import TopChallengesOg from '../../assets/images/top-ten-cloud-security-challenges-og.jpg';
 import MisconfigurationsCampaignOg from '../../assets/images/misconfigurations-campaign-og.png';
+import CloudSecurityFintechCampaignOg from '../../assets/images/cloud-security-fintech-campaign-og.png';
 import { useStaticQuery, graphql } from 'gatsby';
 
 const defaultOg = {
@@ -44,7 +45,8 @@ const defaultOg = {
     Webinar: WebinarOg,
     BuyersGuide: BuyersGuideOg,
     TopChallenges: TopChallengesOg,
-    MisconfigurationsCampaign: MisconfigurationsCampaignOg
+    MisconfigurationsCampaign: MisconfigurationsCampaignOg,
+    FintechCampaign: CloudSecurityFintechCampaignOg
 };
 
 const Seo = ({ title, description, pageName, banner, location }) => {
