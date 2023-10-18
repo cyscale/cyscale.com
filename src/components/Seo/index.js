@@ -46,7 +46,8 @@ const defaultOg = {
     BuyersGuide: BuyersGuideOg,
     TopChallenges: TopChallengesOg,
     MisconfigurationsCampaign: MisconfigurationsCampaignOg,
-    FintechCampaign: CloudSecurityFintechCampaignOg
+    FintechCampaign: CloudSecurityFintechCampaignOg,
+    FintechUseCase: CloudSecurityFintechCampaignOg
 };
 
 const Seo = ({ title, description, pageName, banner, location }) => {
