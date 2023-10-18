@@ -56,6 +56,10 @@ const solutions = [
             {
                 link: '/use-cases/cloud-data-security/',
                 text: 'Multi-Cloud Data Security'
+            },
+            {
+                link: '/use-cases/cloud-security-fintech/',
+                text: 'Cloud Security Fintech'
             }
         ]
     },
