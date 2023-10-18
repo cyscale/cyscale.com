@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
-title: "Securing the Cloud: A Dive into Cloud Infrastructure Security  "
-seoTitle: "Securing the Cloud: A Dive into Cloud Infrastructure Security  "
+title: "Cloud Infrastructure Security: Navigating the Risks and Solutions"
+seoTitle: "Cloud Infrastructure Security: Navigating the Risks and Solutions"
 authors: Sabrina Lupșan
 permalink: cloud-infrastructure-security
 categories:
