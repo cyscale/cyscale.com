@@ -350,7 +350,7 @@ const CloudSecurityFintech = ({ location }) => {
                 </Container>
             </div>
             <Container>
-                <div className='md:pt-12 pb-12 md:pb-24'>
+                <div className='md:pt-12 pb-32'>
                     <div className='flex h-48 flex-col items-center'>
                         <img src={cloudIcon} alt='' loading='lazy' />
                         <h2 className='text-center px-2 mt-4 mb-2 font-montserrat font-bold text-lg lg:text-2xl'>
