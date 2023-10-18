@@ -69,7 +69,7 @@ const CloudSecurityFintech = ({ location }) => {
 
     return (
         <AnimatedNavbarLayout
-            formId={'8543c2b4-5f8e-4df7-9305-aa991806e01f'}
+            formId={'70b45d40-4522-4f1a-b6b9-9836cf06f40e'}
             formTargetId={'#request-demo'}
             location={location}
             title={'Cloud security and compliance for fintech | Cyscale'}
