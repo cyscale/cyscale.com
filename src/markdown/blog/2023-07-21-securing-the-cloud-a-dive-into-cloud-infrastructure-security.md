@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
-title: "Cloud Infrastructure Security: Navigating the Risks and Solutions"
-seoTitle: "Cloud Infrastructure Security: Navigating the Risks and Solutions"
+title: "Cloud Infrastructure Security: Risks and Solutions"
+seoTitle: "Cloud Infrastructure Security: Risks and Solutions"
 authors: Sabrina Lupșan
 permalink: cloud-infrastructure-security
 categories:
