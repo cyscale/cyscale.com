@@ -8,7 +8,7 @@ const platform = [
     {
         icon: CNAPPIcon,
         title: 'Cloud Native Application Protection (CNAPP)',
-        description: 'Secure your cloud apps and data across the entire lifecycle..',
+        description: 'Secure your cloud apps and data across the entire lifecycle.',
         mobileDescription: 'Secure your cloud apps and data across the entire lifecycle.',
         link: '/products/cnapp/'
     },
@@ -17,14 +17,15 @@ const platform = [
         title: 'Cloud Security Posture Management (CSPM)',
         description:
             'Continuously detect vulnerabilities, prevent misconfigurations, control threats, and ensure compliance for your cloud assets.',
-        mobileDescription: 'Enable teams to continuously detect, prevent misconfigurations, control threats.',
+        mobileDescription:
+            'Continuously detect vulnerabilities, prevent misconfigurations, control threats, and ensure compliance for your cloud assets.',
         link: '/products/cloud-security-posture-management/'
     },
     {
         icon: Graph,
         title: 'Cloud Infrastructure Entitlement Management (CIEM)',
         description: 'Manage security risks related to cloud identities and access.',
-        mobileDescription: 'Cross-cloud context-aware automation for your security and compliance program.',
+        mobileDescription: 'Manage security risks related to cloud identities and access.',
         link: '/use-cases/iam-security/'
     },
     {
