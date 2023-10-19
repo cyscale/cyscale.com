@@ -7,29 +7,29 @@ import CNAPPIcon from './icons/cnapp-icon.svg';
 const platform = [
     {
         icon: CNAPPIcon,
-        title: 'CNAPP',
-        description: 'Ensure security and compliance with our all-in-one solution for multi-cloud environments.',
-        mobileDescription: 'Ensure security and compliance with our all-in-one solution for multi-cloud environments.',
+        title: 'Cloud Native Application Protection (CNAPP)',
+        description: 'Secure your cloud apps and data across the entire lifecycle..',
+        mobileDescription: 'Secure your cloud apps and data across the entire lifecycle.',
         link: '/products/cnapp/'
     },
     {
         icon: Cloud,
-        title: 'Cloud Security Posture Management',
+        title: 'Cloud Security Posture Management (CSPM)',
         description:
-            'Enable teams to continuously detect, prevent misconfigurations and control threats and ensure compliance for your cloud assets.',
+            'Continuously detect vulnerabilities, prevent misconfigurations, control threats, and ensure compliance for your cloud assets.',
         mobileDescription: 'Enable teams to continuously detect, prevent misconfigurations, control threats.',
         link: '/products/cloud-security-posture-management/'
     },
     {
         icon: Graph,
-        title: 'Security Knowledge Graph',
-        description: 'Cross-cloud context-aware automation for your security and compliance program.',
+        title: 'Cloud Infrastructure Entitlement Management (CIEM)',
+        description: 'Manage security risks related to cloud identities and access.',
         mobileDescription: 'Cross-cloud context-aware automation for your security and compliance program.',
-        link: '/products/security-knowledge-graph/'
+        link: '/use-cases/iam-security/'
     },
     {
         icon: Shield,
-        title: 'Cloud Compliance Platform',
+        title: 'Cloud Compliance',
         description: 'CIS, ISO 27001:2013, SOC 2, NIST 800, NIST CSF, PCI DSS, CCPA, GDPR, HITRUST, HIPAA.',
         mobileDescription: 'CIS, ISO 27001:2013, SOC 2, NIST 800, NIST CSF, PCI DSS, CCPA, GDPR, HITRUST, HIPAA.',
         link: '/use-cases/cloud-compliance-and-auditing/'

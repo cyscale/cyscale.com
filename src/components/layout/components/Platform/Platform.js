@@ -59,26 +59,29 @@ const Platform = ({ pathname, activeLinks, setActiveLinks }) => {
             role='presentation'
         >
             <div className='col-span-5 bg-selago p-6'>
-                <h1 css={montserratFontStyle} className='text-2xl font-semibold mb-6'>
+                <h1 css={montserratFontStyle} className='text-2xl font-semibold mb-3'>
                     Platform Overview
                 </h1>
-                <p className='mb-6'>
+                <p className='mb-3'>
                     Cloud visibility, security and compliance. Map, secure and monitor cloud assets across multiple
-                    providers.{' '}
+                    providers, including AWS, Azure, Google Cloud, and Alibaba.
                 </p>
-                <p className='mb-4'>Explore the knowledge graph in our playground account populated with data.</p>
+                <p className='mb-3'>
+                    Book a demo or start a trial to see our cloud security platform in action and get detailed insights
+                    from your own data.
+                </p>
                 <Link
                     className='bg-blue text-white py-2 px-4 rounded cursor-pointer font-medium flex'
-                    to='/playground/'
+                    to='/request-demo/'
                     css={[hoverButtonColorStyle, widthFitStyle]}
                 >
                     <RightArrow fillColor={'white'} marginTop='0.2rem' />
-                    <span className='text-md ml-2'>Try Cyscale Platform</span>
+                    <span className='text-md ml-2'>Book a demo</span>
                 </Link>
-                <div className='flex mt-12'>
+                <div className='flex mt-6'>
                     <img src={IconUser} alt='' />
-                    <Link className='ml-2 font-medium' to='/request-demo/'>
-                        Request Demo
+                    <Link className='ml-2 font-medium' to='/free-trial/'>
+                        Start a Trial
                     </Link>
                 </div>
                 <div className='flex mt-2'>
