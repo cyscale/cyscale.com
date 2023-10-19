@@ -50,16 +50,12 @@ const solutions = [
                 text: 'IAM Cloud Security'
             },
             {
-                link: '/use-cases/remote-work-security/',
-                text: 'Remote Work'
-            },
-            {
                 link: '/use-cases/cloud-data-security/',
                 text: 'Multi-Cloud Data Security'
             },
             {
                 link: '/use-cases/cloud-security-fintech/',
-                text: 'Cloud Security Fintech'
+                text: 'Fintech'
             }
         ]
     },

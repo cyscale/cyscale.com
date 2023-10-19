@@ -1,7 +1,6 @@
 import React from 'react';
 import Layout from '../../components/layout/CleanLayout';
 import { Container, Row } from '../../components/atoms/Containers';
-import BankIcon from '../../assets/images/bank-icon-fintech.svg';
 import { css } from 'twin.macro';
 import ServiceHighlight from '../../components/campaigns/ServiceHighlight';
 import ScrollDown from '../../components/ScrollButton/ScrollDown';
@@ -93,9 +92,6 @@ const CloudSecurityFintechUC = ({ location }) => {
                     <Row>
                         <div className='col-span-12 lg:col-span-6 order-last lg:order-first'>
                             <div className='lg:mt-4 pt-2 lg:pt-4 max-w-2xl mx-auto lg:mx-0'>
-                                <div className='max-w-xs mx-auto lg:mx-0'>
-                                    <img src={BankIcon} alt='' className='mx-auto lg:mx-0' />
-                                </div>
                                 <h1
                                     className='text-center lg:text-left mb-8 font-montserrat font-bold'
                                     css={css`
