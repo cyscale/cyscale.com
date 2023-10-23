@@ -94,7 +94,7 @@ This is why a centralized solution for access review is the best approach to man
 
 In the image below we notice how one single person has permissions over Microsoft Azure, Google Cloud, AWS, GitHub, and other environments. Besides this, we see the effective permissions assigned to each cloud account or application, security information such as the password’s lifetime and whether MFA is activated; this information would normally be spread out across multiple consoles and hard to follow. 
 
-<img src="/img/56_blog-iam-security-dashboard.jpeg" alt="The Cyscale IAM dashboard." title="The Cyscale IAM dashboard." class=" blog-image-shadow " style="width:auto;height:auto;"/>
+<img src="/img/56_blog-edited-screenshot-1.png" alt="The Cyscale IAM dashboard." title="The Cyscale IAM dashboard." class=" blog-image-shadow " style="width:auto;height:auto;"/>
 
 Using this dashboard, you can review users’ access in a timely manner, without missing important information. You can go through users one by one and review the permissions they have, instead of circling through groups and permissions trying to figure out what users inherit based on their group assignment. 
 
@@ -108,7 +108,7 @@ Follow the [Least Privilege Principle](https://cyscale.com/blog/check-for-least-
 
 In the previous section, we looked at an IAM dashboard and identified how many user accounts a single person has. On the right-hand side of the dashboard, we can see a “Highly privileged” tag next to the Azure account.  
 
-<img src="/img/56_blog-azure-iam-dashboard.jpeg" alt="A “Highly privileged” tag next to the Azure account." title="A “Highly privileged” tag next to the Azure account." class=" blog-image-shadow " style="width:auto;height:auto;"/>
+<img src="/img/56_blog-edited-screenshot-2.png" alt="A “Highly privileged” tag next to the Azure account." title="A “Highly privileged” tag next to the Azure account." class=" blog-image-shadow " style="width:auto;height:auto;"/>
 
 The user ‘Gabriel’ has a Contributor role over the second subscription in Azure, revealing a wide range of permissions. This user has full access to manage all resources, meaning he can modify and delete resources. Alarm bells should start ringing here because if this user were to be compromised, the entire Azure environment would be at risk.  
 
