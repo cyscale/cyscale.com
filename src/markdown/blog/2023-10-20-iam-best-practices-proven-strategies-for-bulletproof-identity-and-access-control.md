@@ -110,7 +110,7 @@ In the previous section, we looked at an IAM dashboard and identified how many u
 
 <img src="/img/56_blog-edited-screenshot-2.png" alt="A “Highly privileged” tag next to the Azure account." title="A “Highly privileged” tag next to the Azure account." class=" blog-image-shadow " style="width:auto;height:auto;"/>
 
-The user ‘Gabriel’ has a Contributor role over the second subscription in Azure, revealing a wide range of permissions. This user has full access to manage all resources, meaning he can modify and delete resources. Alarm bells should start ringing here because if this user were to be compromised, the entire Azure environment would be at risk.  
+The user ‘John’ has a Contributor role over the second subscription in Azure, revealing a wide range of permissions. This user has full access to manage all resources, meaning he can modify and delete resources. Alarm bells should start ringing here because if this user were to be compromised, the entire Azure environment would be at risk.
 
 ### Best practices for identity and access control  
 
