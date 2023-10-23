@@ -69,7 +69,7 @@ A cloud company should use an identity provider (whether that’s one built-in i
 Managing identities in a central location, as well as using SSO, are key elements of ensuring IAM security in the cloud. These are the risks of not using SSO in your company: 
 
 1. **Password fatigue leading to security issues.** Having users input their passwords multiple times a day and for different applications can and probably will lead to them re-using the same password across multiple platforms or using very simple, easy to remember passwords. No-one wants to pull out the password manager 20 times a day. Password fatigue can lead to credentials leak and may put a company in danger.  
-2. **Long-term credentials.** When you create an IAM user in AWS, you create a password or an access key. Those credentials are long term and can end up being leaked. However, when you use SSO, the mechanism creates temporary credentials that expire after the user's session. This helps mitigate the risk of long-term credential exposure, because even if these temporary credentials were to be leaked, they would only be valid for a short period. 
+2. **Long-term credentials accidentally disclosed or stolen.** Managing cloud access at individual account level implies creating long-term credentials such as passwords or access keys. Through SSO, temporary credentials are used and they expire after the user's session. This helps mitigate the risk of long-term credential exposure, because even if these temporary credentials were to be leaked, they would only be valid for a short period.
 3. **It’s overall a better user experience.**  
 
 ### MFA (Multi-Factor Authentication) 
