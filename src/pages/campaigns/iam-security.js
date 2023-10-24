@@ -42,7 +42,7 @@ const IamSecurity = ({ location }) => {
             formId={'0f6ac136-20fa-4420-95a4-da1ff837f635'}
             formTargetId={'#iamsecurity-campaign-form'}
             location={location}
-            title={'Identity and Access Management Security for Cloud - Cyscale'}
+            title={'Identity and Access Management Security for Cloud | Cyscale'}
             description={'Identity and Access Management Security for Cloud'}
             pageName={'IAMCampaign'}
             noIndex={true}

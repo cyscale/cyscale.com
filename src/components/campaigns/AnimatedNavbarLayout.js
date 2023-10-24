@@ -22,7 +22,7 @@ import loadable from '@loadable/component';
 import CustomSearch from '../Search/CustomSearch';
 import { useClickOutsideSearch } from '../../hooks/useClickOutsideSearch';
 import classnames from 'classnames';
-import { hasZirconBgColordHero } from '../../common/utils';
+import { disableLogoLink, hasZirconBgColordHero } from '../../common/utils';
 const Footer = loadable(() => import('./footer'));
 
 const paddingNav = css`
@@ -108,7 +108,13 @@ const AnimatedNavbarLayout = ({ children, formId, formTargetId, location, title,
                     })}
                 >
                     <div className='container max-w-7xl m-auto px-4 lg:px-8 flex items-center'>
-                        <Link to='/' className='inline-flex z-40'>
+                        <Link
+                            to={disableLogoLink(pageName) ? '#' : '/'}
+                            className={classnames({
+                                'inline-flex z-40': true,
+                                'cursor-auto': disableLogoLink(pageName)
+                            })}
+                        >
                             <img className='block h-10' src={logo} alt='Cyscale' />
                         </Link>
                         <img

@@ -3,11 +3,7 @@ import React from 'react';
 export const formatDate = (date) => new Intl.DateTimeFormat('en-US', { dateStyle: 'full' }).format(new Date(date));
 
 export const isAnimatedNavbarPage = (pathname) => {
-    return (
-        pathname.includes('campaigns') ||
-        pathname.includes('playground') ||
-        pathname.includes('free-trial')
-    );
+    return pathname.includes('campaigns') || pathname.includes('playground') || pathname.includes('free-trial');
 };
 
 export const isPlaygroundBlogPage = (pathname) => pathname.includes('/blog/playground-announcement');
@@ -77,4 +73,8 @@ export const getTextContent = (node) => {
         return node.children.map(getTextContent).join('');
     }
     return '';
+};
+
+export const disableLogoLink = (pageName) => {
+    return ['MisconfigurationsCampaign', 'IAMCampaign', 'FintechCampaign'].includes(pageName);
 };
