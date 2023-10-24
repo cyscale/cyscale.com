@@ -9,6 +9,7 @@ import CaseStudiesSection from '../components/Home/CaseStudiesSection';
 import { Container, Row } from '../components/atoms/Containers';
 import HeroImage from '../assets/images/bg-image-misconfigurations-campaigns.svg';
 import IntegrationsIcons from '../components/Home/IntegrationsIcons';
+import { Helmet } from 'react-helmet';
 
 const ModalTest = ({ location }) => {
     const [calendarModal, setCalendarModal] = useState(false);
@@ -33,6 +34,9 @@ const ModalTest = ({ location }) => {
             title='See Cyscale Automated Cloud Security in Action'
             description="Cloud infrastructure security can be complex, but we can show you that it doesn't have to be!"
         >
+            <Helmet>
+                <script charset='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js'></script>
+            </Helmet>
             <div className='hidden' data-template-key>
                 hardcoded-pages
             </div>
