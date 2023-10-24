@@ -158,9 +158,9 @@ const Misconfigurations = ({ location }) => {
                                 <h2 className='font-semibold text-2xl sm:text-3xl lg:text-2xl leading-normal mb-8 mt-8 lg:mt-0 font-montserrat'>
                                     Book a live demo
                                 </h2>
-                                {loadingForm && <LoaderContainer minHeight={420} />}
+                                {loadingForm && <LoaderContainer minHeight={310} />}
                                 <div
-                                    style={{ minHeight: 420 }}
+                                    style={{ minHeight: 310 }}
                                     id='request-demo'
                                     className={classnames('pb-4', { hidden: loadingForm })}
                                 />
