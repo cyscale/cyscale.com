@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import AnimatedNavbarLayout from '../components/campaigns/AnimatedNavbarLayout';
+import Layout from '../components/layout/CleanLayout';
 import { css } from 'twin.macro';
 import classnames from 'classnames';
 import RequestDemoModal from '../components/contact/RequestDemoModal';
@@ -27,7 +27,7 @@ const ModalTest = ({ location }) => {
     }, []);
 
     return (
-        <AnimatedNavbarLayout
+        <Layout
             location={location}
             pageName='RequestDemo'
             title='See Cyscale Automated Cloud Security in Action'
@@ -48,7 +48,7 @@ const ModalTest = ({ location }) => {
             <div className='hidden' data-category>
                 website
             </div>
-            <div className='bg-zircon pt-32 xl:pt-0 pb-10 relative'>
+            <div className='bg-zircon pt-32 pb-10 lg:pb-28 lg:pt-44 relative'>
                 <Container>
                     <Row>
                         <div className='col-span-12 lg:col-span-6'>
@@ -127,9 +127,9 @@ const ModalTest = ({ location }) => {
                                 <h2 className='font-semibold text-2xl sm:text-3xl lg:text-2xl leading-normal mb-8 mt-8 lg:mt-0 font-montserrat'>
                                     Book a live demo
                                 </h2>
-                                {loadingForm && <LoaderContainer minHeight={480} />}
+                                {loadingForm && <LoaderContainer minHeight={310} />}
                                 <div
-                                    style={{ minHeight: 480 }}
+                                    style={{ minHeight: 310 }}
                                     id='meeting-form'
                                     className={classnames('pb-4', { hidden: loadingForm })}
                                 />
@@ -158,7 +158,7 @@ const ModalTest = ({ location }) => {
                     </div>
                 </div>
             )}
-        </AnimatedNavbarLayout>
+        </Layout>
     );
 };
 

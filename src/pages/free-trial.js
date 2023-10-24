@@ -163,9 +163,9 @@ const FreeTrial = ({ location }) => {
                                         <h2 className='font-bold text-xl lg:text-2xl leading-normal mb-6 font-montserrat'>
                                             Start your free trial today
                                         </h2>
-                                        {loadingForm && <LoaderContainer minHeight={390} />}
+                                        {loadingForm && <LoaderContainer minHeight={310} />}
                                         <div
-                                            style={{ minHeight: 390 }}
+                                            style={{ minHeight: 310 }}
                                             id='free-trial-form'
                                             className={classnames({ hidden: loadingForm })}
                                         />

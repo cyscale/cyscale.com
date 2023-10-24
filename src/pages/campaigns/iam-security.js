@@ -42,7 +42,7 @@ const IamSecurity = ({ location }) => {
             formId={'0f6ac136-20fa-4420-95a4-da1ff837f635'}
             formTargetId={'#iamsecurity-campaign-form'}
             location={location}
-            title={'Identity and Access Management Security for Cloud - Cyscale'}
+            title={'Identity and Access Management Security for Cloud | Cyscale'}
             description={'Identity and Access Management Security for Cloud'}
             pageName={'IAMCampaign'}
             noIndex={true}
@@ -119,9 +119,9 @@ const IamSecurity = ({ location }) => {
                                 <h2 className='font-semibold text-2xl sm:text-3xl lg:text-2xl leading-normal mb-8 mt-8 lg:mt-0 montserrat-font'>
                                     Book a live demo
                                 </h2>
-                                {loadingForm && <LoaderContainer minHeight={435} />}
+                                {loadingForm && <LoaderContainer minHeight={310} />}
                                 <div
-                                    style={{ minHeight: 435 }}
+                                    style={{ minHeight: 310 }}
                                     id='iamsecurity-campaign-form'
                                     className={classnames('pb-4', { hidden: loadingForm })}
                                 />

@@ -9,8 +9,6 @@ import classnames from 'classnames';
 import LoaderContainer from '../../components/Loader/LoaderContainer/LoaderContainer';
 import corner from '../../assets/images/corner-campaigns-iam-security.svg';
 import { css } from 'twin.macro';
-import LinksAndWhitepaper from '../../components/products/LinksAndWhitepaper';
-import { MisconfigurationsTopArticles } from '../../common/links';
 import HeroImage from '../../assets/images/bg-image-misconfigurations-campaigns.svg';
 import { animateScroll } from 'react-scroll';
 import Carousel from '../../components/cloud-security-posture-management/Carousel';
@@ -160,9 +158,9 @@ const Misconfigurations = ({ location }) => {
                                 <h2 className='font-semibold text-2xl sm:text-3xl lg:text-2xl leading-normal mb-8 mt-8 lg:mt-0 font-montserrat'>
                                     Book a live demo
                                 </h2>
-                                {loadingForm && <LoaderContainer minHeight={420} />}
+                                {loadingForm && <LoaderContainer minHeight={310} />}
                                 <div
-                                    style={{ minHeight: 420 }}
+                                    style={{ minHeight: 310 }}
                                     id='request-demo'
                                     className={classnames('pb-4', { hidden: loadingForm })}
                                 />
@@ -412,7 +410,7 @@ const Misconfigurations = ({ location }) => {
                 </Container>
             </div>
             <Container>
-                <div className='md:pt-12 pb-12 md:pb-24'>
+                <div className='sm:pt-12 pb-32'>
                     <div className='flex h-48 flex-col items-center'>
                         <img src={cloudIcon} alt='' loading='lazy' />
                         <h2 className='text-center px-2 mt-4 mb-2 font-montserrat font-bold text-lg lg:text-2xl'>
@@ -432,17 +430,6 @@ const Misconfigurations = ({ location }) => {
                     </div>
                 </div>
             </Container>
-            <LinksAndWhitepaper
-                topArticles={MisconfigurationsTopArticles}
-                data={data}
-                title={'Misconfigurations'}
-                titleCard={'The Complete Guide<br class="hidden lg:block" /> to Cloud Storage Misconfigurations'}
-                textCard={
-                    'This guide helps CIOs, CISOs and security staff to understand the risk & dangers of data security breaches and the importance of a secure cloud storage infrastructure.'
-                }
-                linkCard={'/whitepaper/cloud-storage-misconfigurations/'}
-                misconfigurationWhitepaper={true}
-            />
         </AnimatedNavbarLayout>
     );
 };
