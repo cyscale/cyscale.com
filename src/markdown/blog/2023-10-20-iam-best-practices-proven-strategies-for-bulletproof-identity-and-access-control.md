@@ -17,14 +17,9 @@ description: "In traditional infrastructures, the first line of defense is the
   is shifted to identity and access control, known as IAM (Identity and Access
   Management), which focuses on the prevention of unauthorized users and devices
   from accessing cloud assets. "
-seoDescription: "In traditional infrastructures, the first line of defense is
-  the network layer. Network administrators in legacy systems invest significant
-  effort into securing routers, adding firewalls and ensuring that all network
-  devices function correctly. In the cloud, under the shared responsibility
-  model, the customer does not deal with physical devices anymore, and security
-  is shifted to identity and access control, known as IAM (Identity and Access
-  Management), which focuses on the prevention of unauthorized users and devices
-  from accessing cloud assets. "
+seoDescription: Discover proven strategies for bulletproof access control with
+  our in-depth guide on IAM best practices. Ideal for CISOs, DevOps, and Cloud
+  Security experts.
 featuredpost: true
 featuredimage: /img/56_blog-cover-image.png
 tableOfContents: true
