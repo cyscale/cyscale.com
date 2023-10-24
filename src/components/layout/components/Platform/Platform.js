@@ -62,11 +62,21 @@ const Platform = ({ pathname, activeLinks, setActiveLinks }) => {
                 <h1 css={montserratFontStyle} className='text-2xl font-semibold mb-3'>
                     Platform Overview
                 </h1>
-                <p className='mb-3'>
+                <p
+                    className='mb-3 text-grey2'
+                    css={css`
+                        font-size: 0.9rem;
+                    `}
+                >
                     Cloud visibility, security and compliance. Map, secure and monitor cloud assets across multiple
                     providers, including AWS, Azure, Google Cloud, and Alibaba.
                 </p>
-                <p className='mb-3'>
+                <p
+                    className='mb-3 text-grey2'
+                    css={css`
+                        font-size: 0.9rem;
+                    `}
+                >
                     Book a demo or start a trial to see our cloud security platform in action and get detailed insights
                     from your own data.
                 </p>
@@ -95,12 +105,20 @@ const Platform = ({ pathname, activeLinks, setActiveLinks }) => {
                 {platform.map((item, key) => {
                     return (
                         <PlatformLink key={key} css={pathname === item.link ? activePlatformLink : null}>
-                            <Link className='mb-4' to={item.link}>
+                            <Link className='mb-6' to={item.link}>
                                 <div className='flex mb-1'>
                                     <img src={item.icon} alt='' />
                                     <PlatformLinkTitle>{item.title}</PlatformLinkTitle>
                                 </div>
-                                <p className='ml-9 text-base font-light' css={descriptionColorStyle}>
+                                <p
+                                    className='ml-9 font-light'
+                                    css={[
+                                        descriptionColorStyle,
+                                        css`
+                                            font-size: 0.9rem;
+                                        `
+                                    ]}
+                                >
                                     {item.description}
                                 </p>
                             </Link>
