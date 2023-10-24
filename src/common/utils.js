@@ -5,7 +5,6 @@ export const formatDate = (date) => new Intl.DateTimeFormat('en-US', { dateStyle
 export const isAnimatedNavbarPage = (pathname) => {
     return (
         pathname.includes('campaigns') ||
-        pathname.includes('request-demo') ||
         pathname.includes('playground') ||
         pathname.includes('free-trial')
     );
@@ -18,7 +17,7 @@ export const requestDemoButtonPage = (pageName) => {
 };
 
 export const hasZirconBgColordHero = (pageName) => {
-    return ['MisconfigurationsCampaign', 'IAMCampaign', 'RequestDemo', 'FintechCampaign'].includes(pageName);
+    return ['MisconfigurationsCampaign', 'IAMCampaign', 'FintechCampaign'].includes(pageName);
 };
 
 const orientationMap = {
