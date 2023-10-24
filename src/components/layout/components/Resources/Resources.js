@@ -1,12 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { graphql, Link, useStaticQuery } from 'gatsby';
-import {
-    caretMenuSelegoStyle,
-    fontNavLinkStyle,
-    hoverButtonColorStyle,
-    montserratFontStyle,
-    widthFitStyle
-} from '../../style';
+import { caretMenuSelegoStyle, fontNavLinkStyle } from '../../style';
 import { resources } from '../../nav';
 import { css } from 'twin.macro';
 import { isAnimatedNavbarPage, isPlaygroundBlogPage } from '../../../../common/utils';
@@ -26,10 +20,9 @@ const hrStyle = css`
 `;
 
 const Resources = ({ pathname, activeLinks, setActiveLinks }) => {
-    const [isHover, setIsHover] = useState(false);
     const data = useStaticQuery(graphql`
         query ResourcesQuery {
-            whitepapers: file(relativePath: { eq: "compliance-whitepaper.png" }) {
+            whitepapers: file(relativePath: { eq: "whitepapers.png" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1080, layout: CONSTRAINED)
                 }
@@ -52,40 +45,38 @@ const Resources = ({ pathname, activeLinks, setActiveLinks }) => {
             <div className='bg-selago py-6 pl-6 pr-12 col-span-8'>
                 <div className='grid grid-cols-12'>
                     <div className='col-span-6'>
-                        <h1 css={montserratFontStyle} className='text-2xl font-semibold mb-6'>
+                        <h1 className='text-2xl font-semibold mb-6 font-montserrat'>
                             Get our latest <br /> Whitepapers
                         </h1>
                         <p className='mb-6'>
-                            Understand the risk & dangers of data security breaches and the importance <br /> of a
-                            secure cloud storage infrastructure.
+                            Understand how to secure what you <br /> build in the cloud.
                         </p>
                         <Link
-                            className='bg-blue text-white py-2 px-4 rounded cursor-pointer mb-22 font-medium flex'
-                            to='/whitepaper/the-complete-guide-to-cloud-compliance/'
-                            css={[hoverButtonColorStyle, widthFitStyle]}
+                            className='cursor-pointer font-medium flex mt-4 text-blue hover:underline'
+                            to='/blog/cloud-security-challenges/'
                         >
-                            <RightArrow fillColor={'white'} marginTop='0.2rem' />
-
+                            <RightArrow fillColor={'#0F26AA'} marginTop='0.2rem' />
+                            <span className='text-md ml-2'>Top 10 Cloud Security Challenges</span>
+                        </Link>
+                        <Link
+                            className='cursor-pointer font-medium flex mt-4 text-blue hover:underline'
+                            to='/blog/saas-cto-cloud-security-checklist/'
+                        >
+                            <RightArrow fillColor={'#0F26AA'} marginTop='0.2rem' />
+                            <span className='text-md ml-2'>SaaS CTO Cloud Security Handbook</span>
+                        </Link>
+                        <Link
+                            className='cursor-pointer font-medium flex mt-4 text-blue hover:underline'
+                            to='/whitepaper/the-complete-guide-to-cloud-compliance/'
+                        >
+                            <RightArrow fillColor={'#0F26AA'} marginTop='0.2rem' />
                             <span className='text-md ml-2'>Cloud Compliance in 2023</span>
                         </Link>
                         <Link
-                            className='bg-white py-2 px-4 rounded cursor-pointer mb-22 font-medium flex mt-4'
+                            className='cursor-pointer font-medium flex mt-4 text-blue hover:underline'
                             to='/whitepaper/cloud-storage-misconfigurations/'
-                            css={[
-                                hoverButtonColorStyle,
-                                widthFitStyle,
-                                css`
-                                    color: #0f26aa;
-                                    &:hover {
-                                        color: white;
-                                    }
-                                `
-                            ]}
-                            onMouseEnter={() => setIsHover(true)}
-                            onMouseLeave={() => setIsHover(false)}
                         >
-                            {' '}
-                            <RightArrow fillColor={isHover ? 'white' : '#0F26AA'} marginTop='0.2rem' />
+                            <RightArrow fillColor={'#0F26AA'} marginTop='0.2rem' />
                             <span className='text-md ml-2'>Cloud Storage Misconfigurations</span>
                         </Link>
                     </div>
