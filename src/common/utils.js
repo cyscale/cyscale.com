@@ -18,7 +18,7 @@ export const requestDemoButtonPage = (pageName) => {
 };
 
 export const hasZirconBgColordHero = (pageName) => {
-    return ['MisconfigurationsCampaign', 'IAMCampaign', 'FintechCampaign'].includes(pageName);
+    return ['MisconfigurationsCampaign', 'IAMCampaign', 'FintechCampaign', 'SecureCloudCampaign'].includes(pageName);
 };
 
 const orientationMap = {
@@ -81,7 +81,11 @@ export const getTextContent = (node) => {
 };
 
 export const disableLogoLink = (pageName) => {
-    return ['MisconfigurationsCampaign', 'IAMCampaign', 'FintechCampaign', 'AutomatedSecurityStartups'].includes(
-        pageName
-    );
+    return [
+        'MisconfigurationsCampaign',
+        'IAMCampaign',
+        'FintechCampaign',
+        'AutomatedSecurityStartups',
+        'SecureCloudCampaign'
+    ].includes(pageName);
 };
