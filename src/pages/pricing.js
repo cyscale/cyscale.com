@@ -552,7 +552,7 @@ const PricingPage = ({ location }) => {
                     css={css`
                         background-color: #f5f9ff;
                         @media (min-width: 1280px) {
-                            height: 55.25rem;
+                            height: 41.7rem;
                         }
                     `}
                 >
@@ -565,9 +565,9 @@ const PricingPage = ({ location }) => {
                         </p>
                         <div className='mt-12'>
                             <div className='rounded-xl shadow-lg mt-6 lg:mt-0 py-4 pt-12 pb-0 px-8 md:px-12 mx-auto relative bg-white max-w-xl'>
-                                {loadingForm && <LoaderContainer minHeight={515} />}
+                                {loadingForm && <LoaderContainer minHeight={315} />}
                                 <div
-                                    style={{ minHeight: 515 }}
+                                    style={{ minHeight: 315 }}
                                     id='meeting-form'
                                     className={classnames('pb-4', { hidden: loadingForm })}
                                 />
