@@ -97,7 +97,7 @@ const CaseStudiesSection = ({
         <div
             className='pt-24 pb-24 lg:pt-32 lg:pb-32'
             css={css`
-                background-color: ${backgroundColor};
+                background: ${backgroundColor};
             `}
         >
             <Container>
