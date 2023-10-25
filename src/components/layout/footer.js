@@ -173,9 +173,8 @@ const Footer = ({ pageUri, pageName }) => {
                                                     key={key}
                                                     to={item.link}
                                                     className='font-light text-white no-underline hover:underline block text-xs pb-3 font-hind'
-                                                >
-                                                    {item.text}
-                                                </Link>
+                                                    dangerouslySetInnerHTML={{ __html: item.text }}
+                                                />
                                             );
                                         }
                                     })}

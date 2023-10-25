@@ -1,28 +1,32 @@
 {
     "platform": [
         {
-            "text": "CNAPP",
+            "text": "Cloud Native Application <br class=\"hidden lg:block\" /> Protection (CNAPP)",
             "link": "/products/cnapp/"
         },
         {
-            "text": "Cloud Security Posture<br class=\"hidden lg:block\" /> Management",
+            "text": "Cloud Security Posture <br class=\"hidden lg:block\" /> Management (CSPM)",
             "link": "/products/cloud-security-posture-management/"
         },
         {
-            "text": "Security Knowledge Graph™",
-            "link": "/products/security-knowledge-graph/"
+            "text": "Cloud Infrastructure Entitlement <br class=\"hidden lg:block\" /> Management (CIEM)",
+            "link": "/use-cases/iam-security/"
         },
         {
-            "text": "Cloud Compliance Platform™",
+            "text": "Cloud Compliance",
             "link": "/use-cases/cloud-compliance-and-auditing/"
         },
         {
-            "text": "Playground Account",
-            "link": "/playground/"
+            "text": "Book a Demo",
+            "link": "/request-demo/"
         },
         {
-            "text": "Free Trial",
+            "text": "Start a Trial",
             "link": "/free-trial/"
+        },
+        {
+            "text": "Pricing",
+            "link": "/pricing/"
         }
     ],
     "resources": [
@@ -46,8 +50,16 @@
             "external": true
         },
         {
-            "text": "Pricing",
-            "link": "/pricing/"
+            "text": "Cloud Security Buyer’s <br class=\"hidden lg:block\" /> Guide",
+            "link": "/blog/buyers-guide-cloud-security-solutions/"
+        },
+        {
+            "text": "SaaS CTO Cloud <br class=\"hidden lg:block\" /> Security Handbook",
+            "link": "/blog/saas-cto-cloud-security-checklist/"
+        },
+        {
+            "text": "Top 10 Cloud Security <br class=\"hidden lg:block\" /> Challenges",
+            "link": "/blog/cloud-security-challenges/"
         }
     ],
     "company": [
