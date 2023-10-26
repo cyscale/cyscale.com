@@ -22,6 +22,7 @@ import BuyersGuideOg from '../../assets/images/buyers-guide-og.jpg';
 import TopChallengesOg from '../../assets/images/top-ten-cloud-security-challenges-og.jpg';
 import MisconfigurationsCampaignOg from '../../assets/images/misconfigurations-campaign-og.png';
 import CloudSecurityFintechCampaignOg from '../../assets/images/cloud-security-fintech-campaign-og.png';
+import SecureCloudCampaignOg from '../../assets/images/secure-cloud-campaign-og.png';
 import { useStaticQuery, graphql } from 'gatsby';
 
 const defaultOg = {
@@ -47,7 +48,8 @@ const defaultOg = {
     TopChallenges: TopChallengesOg,
     MisconfigurationsCampaign: MisconfigurationsCampaignOg,
     FintechCampaign: CloudSecurityFintechCampaignOg,
-    FintechUseCase: CloudSecurityFintechCampaignOg
+    FintechUseCase: CloudSecurityFintechCampaignOg,
+    SecureCloudCampaign: SecureCloudCampaignOg
 };
 
 const Seo = ({ title, description, pageName, banner, location }) => {
