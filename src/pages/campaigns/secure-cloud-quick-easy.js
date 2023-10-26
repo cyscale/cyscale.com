@@ -48,7 +48,7 @@ const SecureCloudQuickEasy = ({ location }) => {
 
     return (
         <AnimatedNavbarLayout
-            formId={'70b45d40-4522-4f1a-b6b9-9836cf06f40e'}
+            formId={'6eecfd34-71c8-43c9-bc71-647ac0f7a9f0'}
             formTargetId={'#request-demo'}
             location={location}
             title={'Cyscale | Simple Cloud Security. Instant peace of mind.'}

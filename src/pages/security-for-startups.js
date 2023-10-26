@@ -223,9 +223,9 @@ const SecurityForStartups = ({ location }) => {
                                         >
                                             Apply now
                                         </h2>
-                                        {loadingForm && <LoaderContainer minHeight={480} />}
+                                        {loadingForm && <LoaderContainer minHeight={400} />}
                                         <div
-                                            style={{ minHeight: 480 }}
+                                            style={{ minHeight: 400 }}
                                             id='startups-form'
                                             className={classnames('pb-4', { hidden: loadingForm })}
                                         />
