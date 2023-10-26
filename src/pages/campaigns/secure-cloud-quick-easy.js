@@ -170,7 +170,8 @@ const SecureCloudQuickEasy = ({ location }) => {
                                     className='font-bold text-primary border-title-partly font-montserrat mt-2 lg:mt-12'
                                     css={subtitle}
                                 >
-                                    The 20% of most important fixes that will reduce 80% of your risk
+                                    The 20% of most important fixes
+                                    <br className='hidden sm:block lg:hidden' /> that will reduce 80% of your risk
                                 </h2>
                             </div>
                             <div className='mx-auto lg:mx-0 max-w-xl lg:pl-16'>
@@ -204,7 +205,8 @@ const SecureCloudQuickEasy = ({ location }) => {
                                     className='font-bold text-primary border-title-partly font-montserrat mt-2 lg:mt-6'
                                     css={subtitle}
                                 >
-                                    Achieve true cloud-native transformation with CNAPP
+                                    Achieve true cloud-native
+                                    <br className='hidden sm:block lg:hidden' /> transformation with CNAPP
                                 </h2>
                             </div>
                             <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-lg'>
@@ -243,7 +245,8 @@ const SecureCloudQuickEasy = ({ location }) => {
                                     className='font-bold text-primary border-title-partly font-montserrat mt-2 lg:mt-12'
                                     css={subtitle}
                                 >
-                                    Identify, prioritize, and fix misconfigurations and vulnerabilities
+                                    Identify, prioritize, and fix
+                                    <br className='hidden sm:block lg:hidden' /> misconfigurations and vulnerabilities
                                 </h2>
                             </div>
                             <div className='mx-auto lg:mx-0 max-w-xl lg:pl-16'>
