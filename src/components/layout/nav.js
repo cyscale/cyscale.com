@@ -57,6 +57,10 @@ const solutions = [
             {
                 link: '/use-cases/cloud-security-fintech/',
                 text: 'Fintech'
+            },
+            {
+                link: '/campaigns/cloud-security-mssp/',
+                text: 'MSSP Portal'
             }
         ]
     },
