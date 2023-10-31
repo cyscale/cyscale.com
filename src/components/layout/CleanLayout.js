@@ -13,7 +13,7 @@ import { cookieConsentKey } from '../../common/constants';
 import NewTopNav from './NewTopNav';
 import { Helmet } from 'react-helmet';
 
-const Layout = ({ children, title, description, pageName, location, banner, noIndex }) => {
+const Layout = ({ children, title, description, pageName, location, banner, noIndex, blogDetails }) => {
     useHubspotEvents({ pageName });
     const [sticker, setSticker] = useState(false);
     const { cookies, cookiesBanner, setCookiesBanner } = useSetCookieBanner();
@@ -21,7 +21,14 @@ const Layout = ({ children, title, description, pageName, location, banner, noIn
     return (
         <CookiesProvider>
             <GlobalContext.Provider value={{ location }}>
-                <Seo title={title} description={description} pageName={pageName} location={location} banner={banner} />
+                <Seo
+                    title={title}
+                    description={description}
+                    pageName={pageName}
+                    location={location}
+                    banner={banner}
+                    blogDetails={blogDetails}
+                />
                 <Helmet>
                     {noIndex && <meta name='robots' content='noindex' />}
                     {noIndex && <meta name='robots' content='nofollow' />}
