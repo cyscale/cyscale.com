@@ -54,7 +54,7 @@ const defaultOg = {
     CampaignMSSP: CampaignMSSPOg
 };
 
-const Seo = ({ title, description, pageName, banner, location }) => {
+const Seo = ({ title, description, pageName, banner, location, blogDetails }) => {
     let ogImage = banner;
     if (!banner) {
         ogImage = pageName && defaultOg[pageName] ? defaultOg[pageName] : defaultOg['HomePage'];
@@ -85,6 +85,7 @@ const Seo = ({ title, description, pageName, banner, location }) => {
             <meta name='description' content={description} />
             <meta name='og:description' content={description} />
             <meta property='og:type' content={pageName !== 'blog-detail' ? 'website' : 'article'} />
+            {pageName === 'blog-detail' && <meta property='article:author' content={blogDetails.author} />}
 
             <meta name='twitter:card' content='summary_large_image' />
             <meta property='twitter:domain' content='cyscale.com' />

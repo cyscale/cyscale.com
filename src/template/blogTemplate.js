@@ -14,6 +14,7 @@ const BlogDetail = ({ pageContext, location }) => {
                 title={data.seoTitle || data.title}
                 banner={data.featuredimage.publicURL}
                 description={data.seoDescription || data.description}
+                blogDetails={{ author: data.authors, date: data.date }}
             >
                 <PostContent
                     data={{ ...data, rawMarkdownBody }}
