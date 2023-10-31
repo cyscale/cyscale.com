@@ -7,13 +7,13 @@ permalink: iam-best-practices-from-aws-azure-gcp
 categories:
   - CSPM
 date: 2022-05-11T06:39:36.105Z
-description: We look at best practices recommended by AWS, Azure and Google Cloud
-  regarding securing IAM, like enabling MFA, rotating credentials and keys
+description: We look at best practices recommended by AWS, Azure and Google
+  Cloud regarding securing IAM, like enabling MFA, rotating credentials and keys
   regularly, complying to the least privilege principle, implementing logging
   and monitoring, assigning permissions at group level. Examples of controls
   from the Cyscale application are shown.
-seoDescription: We look at best practices recommended by AWS, Azure and Google Cloud
-  regarding securing IAM, like enabling MFA, rotating credentials and keys
+seoDescription: We look at best practices recommended by AWS, Azure and Google
+  Cloud regarding securing IAM, like enabling MFA, rotating credentials and keys
   regularly, complying to the least privilege principle, implementing logging
   and monitoring, assigning permissions at group level. Examples of controls
   from the Cyscale application are shown.
@@ -124,5 +124,9 @@ Examples of controls across all three cloud providers can be seen below: 
 Identity and Access Management is a crucial component of the cloud and should be adequately secured to prevent data breaches and other cybersecurity incidents. Reduce the attack surface by eliminating any vulnerabilities in the authentication process and keeping hackers away.
 
 Use Cyscale to identify any [misconfigurations](https://cyscale.com/blog/common-cloud-misconfigurations-how-to-avoid-them/) or gaps in your cloud infrastructure and secure it with our over 400 controls. 
+
+In the following article, we will look at [IAM best practices](https://cyscale.com/blog/iam-best-practices-identity/) described by these vendors and how to check if your cloud infrastructure is implementing them correctly.
+
+
 
 <!--EndFragment-->
