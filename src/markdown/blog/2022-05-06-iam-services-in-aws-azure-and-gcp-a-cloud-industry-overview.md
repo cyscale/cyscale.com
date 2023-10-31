@@ -8,12 +8,13 @@ categories:
   - CSPM
 date: 2022-05-06T05:44:34.049Z
 description: An industry overview of the IAM Services. We look at AWS, Azure and
-  Google Cloud and understand what identity and management is. The components of IAM are
-  described for all three vendors.
+  Google Cloud and understand what identity and management is. The components of
+  IAM are described for all three vendors.
 seoDescription: An industry overview of the IAM Services. We look at AWS, Azure
-  and Google Cloud and understand what identity and management is. The components of IAM
-  are described for all three vendors. Authentication methods are described,
-  such as Single Sign-On (SSO) and Multi-Factor Authentication (MFA).
+  and Google Cloud and understand what identity and management is. The
+  components of IAM are described for all three vendors. Authentication methods
+  are described, such as Single Sign-On (SSO) and Multi-Factor Authentication
+  (MFA).
 featuredpost: true
 featuredimage: /img/iam-services-in-aws-azure-and-gcp-a-cloud-industry-overview.webp
 tags:
@@ -178,6 +179,6 @@ to a specific role and a specific scope. 
 
 Cyscale integrates with AWS, Azure, Google Cloud and other vendors to check for vulnerabilities and [improve its customers‘ cloud security posture](https://cyscale.com/blog/improve-cloud-security-posture/). 
 
-[In the following article](https://cyscale.com/blog/iam-best-practices-from-aws-azure-gcp/), we will look at best practices described by these vendors and how to check if your cloud infrastructure is implementing them correctly. 
+In the following article, we will look at [IAM best practices](https://cyscale.com/blog/iam-best-practices-identity/) described by these vendors and how to check if your cloud infrastructure is implementing them correctly. 
 
 <!--EndFragment-->
