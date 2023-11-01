@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
-title: Understanding S3 Bucket Security – A Contextual Approach
-seoTitle: Understanding S3 Bucket Security – A Contextual Approach
+title: "S3 Bucket Misconfiguration: Common Oversights and Their Fixes"
+seoTitle: "S3 Bucket Misconfiguration: Common Oversights and Their Fixes"
 authors: Sabrina Lupșan
 permalink: s3-bucket-security
 categories:
