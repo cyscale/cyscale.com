@@ -10,14 +10,10 @@ categories:
   - News
   - Product
 date: 2023-11-02T13:00:05.768Z
-description: Cyscale is excited to give a first glimpse into the potential
-  enabled by generative AI and Large Language Models (LLM),  unveiling our
-  AI-powered Security Assistant, which makes cloud security as intuitive as
-  asking a question.
-seoDescription: Cyscale is excited to give a first glimpse into the potential
-  enabled by generative AI and Large Language Models (LLM),  unveiling our
-  AI-powered Security Assistant, which makes cloud security as intuitive as
-  asking a question.
+description: Cyscale gives a first glimpse into our AI-powered Security
+  Assistant, which makes cloud security as intuitive as asking a question.
+seoDescription: Cyscale gives a first glimpse into our AI-powered Security
+  Assistant, which makes cloud security as intuitive as asking a question.
 featuredpost: true
 featuredimage: /img/aipowered-security-assistant.png
 tableOfContents: false
@@ -61,4 +57,4 @@ This is important because [Gartner estimates that 99% of cloud security failures
 
 Cyscale’s Security Assistant is still in development, so stay tuned for more insights into the potential unlocked by AI, but existing customers and new prospects can request to have it added to their account for testing.  
 
-[B﻿ook a demo to see](https://cyscale.com/request-demo/)
+[B﻿ook a demo to see](https://cyscale.com/request-demo/) it in action.
