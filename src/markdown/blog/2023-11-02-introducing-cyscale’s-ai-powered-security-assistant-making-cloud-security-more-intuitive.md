@@ -2,8 +2,7 @@
 templateKey: blog-post
 title: "Introducing Cyscale’s AI-powered Security Assistant: Making Cloud
   Security More Intuitive"
-seoTitle: "Introducing Cyscale’s AI-powered Security Assistant: Making Cloud
-  Security More Intuitive"
+seoTitle: Introducing Cyscale’s AI-powered Security Assistant | Cyscale
 authors: Ovidiu Cical
 permalink: introducing-ai-powered-security-assistant
 categories:
