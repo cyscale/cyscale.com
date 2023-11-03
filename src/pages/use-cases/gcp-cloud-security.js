@@ -82,7 +82,7 @@ const GCPCloudSecurity = ({ location }) => {
                 hardcoded-pages
             </div>
             <div className='hidden' data-permalink>
-                /use-cases/gcp-cloud-security/
+                /use-cases/gcp-cloud-security
             </div>
             <div className='hidden' data-title>
                 Google Cloud Security | Google Cloud Security and Compliance - Cyscale

@@ -77,7 +77,7 @@ const PciDss = ({ location }) => {
                 hardcoded-pages
             </div>
             <div className='hidden' data-permalink>
-                /use-cases/pci-dss/
+                /use-cases/pci-dss
             </div>
             <div className='hidden' data-title>
                 PCI Cloud Security & Compliance | Automate PCI DSS Compliance - Cyscale

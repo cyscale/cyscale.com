@@ -77,7 +77,7 @@ const AWSCloudSecurity = ({ location }) => {
                 hardcoded-pages
             </div>
             <div className='hidden' data-permalink>
-                /use-cases/aws-cloud-security/
+                /use-cases/aws-cloud-security
             </div>
             <div className='hidden' data-title>
                 AWS Cloud Security and Compliance - Cyscale

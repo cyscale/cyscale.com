@@ -93,7 +93,7 @@ const AutomatedSecurityForStartups = ({ location }) => {
                 hardcoded-pages
             </div>
             <div className='hidden' data-permalink>
-                /automated-security-for-startups/
+                /automated-security-for-startups
             </div>
             <div className='hidden' data-title>
                 Cyscale Pro for Startups - Cyscale

@@ -91,7 +91,7 @@ const Soc2 = ({ location }) => {
                 hardcoded-pages
             </div>
             <div className='hidden' data-permalink>
-                /use-cases/soc-2/
+                /use-cases/soc-2
             </div>
             <div className='hidden' data-title>
                 SOC 2 Cloud Security and Compliance Automation - Cyscale

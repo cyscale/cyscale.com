@@ -67,7 +67,7 @@ const CloudNativeSecurity = ({ location }) => {
                 hardcoded-pages
             </div>
             <div className='hidden' data-permalink>
-                /use-cases/cloud-native-security/
+                /use-cases/cloud-native-security
             </div>
             <div className='hidden' data-title>
                 Powerful Cloud Native Security Platform - Cyscale

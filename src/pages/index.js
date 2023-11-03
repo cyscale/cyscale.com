@@ -162,9 +162,7 @@ const HomePage = ({ location }) => {
             <div className='hidden' data-template-key>
                 hardcoded-pages
             </div>
-            <div className='hidden' data-permalink>
-                /
-            </div>
+            <div className='hidden' data-permalink></div>
             <div className='hidden' data-title>
                 Cyscale | Simple Cloud Security. Instant peace of mind
             </div>

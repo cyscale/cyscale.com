@@ -115,7 +115,7 @@ const CloudCompliance = ({ location }) => {
                 hardcoded-pages
             </div>
             <div className='hidden' data-permalink>
-                /use-cases/iso-27001-compliance/
+                /use-cases/iso-27001-compliance
             </div>
             <div className='hidden' data-title>
                 ISO 27001 Cloud Security | Compliance & Security - Cyscale

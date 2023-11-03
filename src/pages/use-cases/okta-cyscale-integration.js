@@ -64,7 +64,7 @@ const OktaCyscaleIntegration = ({ location }) => {
                 hardcoded-pages
             </div>
             <div className='hidden' data-permalink>
-                /use-cases/okta-cyscale-integration/
+                /use-cases/okta-cyscale-integration
             </div>
             <div className='hidden' data-title>
                 Integrate Okta + Cyscale | Simple Cloud Security

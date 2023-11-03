@@ -309,7 +309,7 @@ const CSPM = ({ location }) => {
                 hardcoded-pages
             </div>
             <div className='hidden' data-permalink>
-                /products/cloud-security-posture-management/
+                /products/cloud-security-posture-management
             </div>
             <div className='hidden' data-title>
                 Cloud Security Posture Management - CSPM Tool - Cyscale

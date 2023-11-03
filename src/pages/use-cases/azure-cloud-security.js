@@ -91,7 +91,7 @@ const AzureCloudSecurity = ({ location }) => {
                 hardcoded-pages
             </div>
             <div className='hidden' data-permalink>
-                /use-cases/azure-cloud-security/
+                /use-cases/azure-cloud-security
             </div>
             <div className='hidden' data-title>
                 Azure Cloud Security and Compliance Automation - Cyscale

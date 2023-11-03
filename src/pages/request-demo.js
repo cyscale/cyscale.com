@@ -41,7 +41,7 @@ const ModalTest = ({ location }) => {
                 hardcoded-pages
             </div>
             <div className='hidden' data-permalink>
-                /request-demo/
+                /request-demo
             </div>
             <div className='hidden' data-title>
                 See Cyscale Automated Cloud Security in Action

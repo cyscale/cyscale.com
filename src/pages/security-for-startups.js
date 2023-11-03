@@ -160,7 +160,7 @@ const SecurityForStartups = ({ location }) => {
                     hardcoded-pages
                 </div>
                 <div className='hidden' data-permalink>
-                    /security-for-startups/
+                    /security-for-startups
                 </div>
                 <div className='hidden' data-title>
                     Cyscale for Startups - Cyscale

@@ -75,7 +75,7 @@ const CloudSecurityFintechUC = ({ location }) => {
                 hardcoded-pages
             </div>
             <div className='hidden' data-permalink>
-                /use-cases/cloud-security-fintech/
+                /use-cases/cloud-security-fintech
             </div>
             <div className='hidden' data-title>
                 Cloud security and compliance for fintech | Cyscale

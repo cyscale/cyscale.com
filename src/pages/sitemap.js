@@ -59,7 +59,7 @@ const Sitemap = ({ location }) => {
                 hardcoded-pages
             </div>
             <div className='hidden' data-permalink>
-                /sitemap/
+                /sitemap
             </div>
             <div className='hidden' data-title>
                 Sitemap - Cyscale
