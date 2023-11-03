@@ -65,7 +65,7 @@ const SmartFintech = ({ location }) => {
                 hardcoded-pages
             </div>
             <div className='hidden' data-permalink>
-                /case-studies/smart-fintech/
+                /case-studies/smart-fintech
             </div>
             <div className='hidden' data-title>
                 Smart Fintech Case Study | Cloud Security & Compliance - Cyscale

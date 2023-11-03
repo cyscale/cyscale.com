@@ -84,7 +84,7 @@ const CNAPP = ({ location }) => {
                 hardcoded-pages
             </div>
             <div className='hidden' data-permalink>
-                /products/cnapp/
+                /products/cnapp
             </div>
             <div className='hidden' data-title>
                 CNAPP: Cloud-Native Application Security and Compliance Solution - Cyscale

@@ -204,7 +204,7 @@ const SecurityForStartupsProgram = ({ location }) => {
                     hardcoded-pages
                 </div>
                 <div className='hidden' data-permalink>
-                    /security-for-startups-program/
+                    /security-for-startups-program
                 </div>
                 <div className='hidden' data-title>
                     Startups Program - Cyscale

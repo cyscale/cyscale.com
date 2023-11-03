@@ -84,7 +84,7 @@ const CloudMissConfiguration = ({ location }) => {
                 hardcoded-pages
             </div>
             <div className='hidden' data-permalink>
-                /use-cases/cloud-misconfigurations/
+                /use-cases/cloud-misconfigurations
             </div>
             <div className='hidden' data-title>
                 Cloud Misconfiguration Security - Cyscale

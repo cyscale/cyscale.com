@@ -53,7 +53,7 @@ const CloudSecurityPostureLessons = ({ location }) => {
                 hardcoded-pages
             </div>
             <div className='hidden' data-permalink>
-                /events/cloud-security-posture-lessons/
+                /events/cloud-security-posture-lessons
             </div>
             <div className='hidden' data-title>
                 Improving Your Cloud Security Posture: Lessons for Startups | Webinar

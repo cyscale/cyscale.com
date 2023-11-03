@@ -48,7 +48,7 @@ const TheCompleteGuideToCloudCompliance = ({ location }) => {
                     hardcoded-pages
                 </div>
                 <div className='hidden' data-permalink>
-                    /whitepaper/cloud-storage-misconfigurations/
+                    /whitepaper/cloud-storage-misconfigurations
                 </div>
                 <div className='hidden' data-title>
                     [White Paper] The Complete Guide to Cloud Compliance in 2023 - Cyscale

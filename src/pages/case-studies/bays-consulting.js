@@ -75,7 +75,7 @@ const BaysConsulting = ({ location }) => {
                 hardcoded-pages
             </div>
             <div className='hidden' data-permalink>
-                /case-studies/bays-consulting/
+                /case-studies/bays-consulting
             </div>
             <div className='hidden' data-title>
                 Bays Consulting Case Study | Cloud Security & Compliance - Cyscale

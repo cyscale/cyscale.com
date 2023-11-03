@@ -82,7 +82,7 @@ const PricingPage = ({ location }) => {
                 hardcoded-pages
             </div>
             <div className='hidden' data-permalink>
-                /pricing/
+                /pricing
             </div>
             <div className='hidden' data-title>
                 Cyscale | Pricing | Simple Cloud Security

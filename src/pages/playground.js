@@ -28,7 +28,7 @@ const Playground = ({ location }) => {
                 hardcoded-pages
             </div>
             <div className='hidden' data-permalink>
-                /playground/
+                /playground
             </div>
             <div className='hidden' data-title>
                 Playground Account Access - Cyscale

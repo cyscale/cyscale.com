@@ -95,7 +95,7 @@ const NISTCompliance = ({ location }) => {
                 hardcoded-pages
             </div>
             <div className='hidden' data-permalink>
-                /use-cases/nist-compliance/
+                /use-cases/nist-compliance
             </div>
             <div className='hidden' data-title>
                 NIST Cloud Compliance & Security - Cyscale
