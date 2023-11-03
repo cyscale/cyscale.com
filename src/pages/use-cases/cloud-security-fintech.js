@@ -136,15 +136,36 @@ const CloudSecurityFintechUC = ({ location }) => {
                                     <p className='font-hind text-base mt-8 text-center lg:text-left font-bold'>
                                         Get a demo and see Cyscale in action:
                                     </p>
-                                    <ServiceHighlight>
+                                    <ServiceHighlight
+                                        cssCheckMark={css`
+                                            @media (max-width: 639px) {
+                                                margin-top: -1.5rem;
+                                            }
+                                        `}
+                                    >
                                         <span className='font-bold'> Automated visibility of cloud inventory</span>:
                                         Monitor assets 24/7
                                     </ServiceHighlight>
-                                    <ServiceHighlight>
+                                    <ServiceHighlight
+                                        cssCheckMark={css`
+                                            @media (max-width: 639px) {
+                                                margin-top: -1.5rem;
+                                            }
+                                            @media (max-width: 375px) {
+                                                margin-top: -2.9rem;
+                                            }
+                                        `}
+                                    >
                                         <span className='font-bold'>Identity and Access Management</span>: Take control
                                         of permissions
                                     </ServiceHighlight>
-                                    <ServiceHighlight>
+                                    <ServiceHighlight
+                                        cssCheckMark={css`
+                                            @media (max-width: 540px) {
+                                                margin-top: -1.5rem;
+                                            }
+                                        `}
+                                    >
                                         <span className='font-bold'>Compliance and Governance</span>: Keep regulators
                                         satisfied
                                     </ServiceHighlight>

@@ -76,8 +76,14 @@ const IamSecurity = ({ location }) => {
                                     misconfigurations across all your cloud assets to meet strict IAM compliance
                                     directives and improve your cloud security posture. Full integration with Okta.
                                 </p>
-                                <ServiceHighlight>
-                                    Take control of your cloud identities and permissions.
+                                <ServiceHighlight
+                                    cssCheckMark={css`
+                                        @media (max-width: 530px) {
+                                            margin-top: -1.5rem;
+                                        }
+                                    `}
+                                >
+                                    <span className="font-semibold">Take control of your cloud identities and permissions.</span>
                                 </ServiceHighlight>
                                 <div className='flex flex-row max-w-md sm:max-w-lg justify-between flex-wrap space-y-6 lg:space-y-0 lg:space-x-1 px-18 sm:px-0 mx-auto mt-4'>
                                     <img style={{ marginTop: '0' }} className='mx-auto sm:mx-0' src={gcpLogo} alt='' />
