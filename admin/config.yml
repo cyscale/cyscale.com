@@ -37,7 +37,7 @@ collections:
                 min: 1,
                 max: 3,
                 default: ['News'],
-                options: ['News', 'Product', 'CSPM', 'Compliance', 'CNAPP', 'Engineering']
+                options: ['News', 'Product', 'CSPM', 'Compliance', 'CNAPP', 'Engineering', 'IAM', 'Misconfigurations']
             }
           - { label: 'Publish Date', name: 'date', widget: 'datetime' }
           - { label: 'Description', name: 'description', widget: 'text' }
