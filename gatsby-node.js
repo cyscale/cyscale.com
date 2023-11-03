@@ -294,7 +294,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
             if (!node.frontmatter.disabled) {
                 // Create category pages
-                const numPages = Math.ceil(postsByCategory[node.frontmatter.name].length / postsPerPage);
+                const numPages = Math.ceil(postsByCategory[node.frontmatter.name]?.length / postsPerPage);
                 Array.from({ length: numPages }).forEach((_, i) => {
                     createPage({
                         path:
