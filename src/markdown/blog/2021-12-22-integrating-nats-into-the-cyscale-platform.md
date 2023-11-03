@@ -1,20 +1,26 @@
 ---
 templateKey: blog-post
 title: Integrating NATS Into the Cyscale Platform
+seoTitle: Integrating NATS Into the Cyscale Platform
 authors: Andrei Ștefănie
 permalink: integrating-nats-into-the-cyscale-platform
 categories:
-    - Engineering
+  - Product
 date: 2021-12-22T10:11:16.968Z
-description: Some concepts and techniques we leveraged to switch to a cloud-native message broker.
+description: Some concepts and techniques we leveraged to switch to a
+  cloud-native message broker.
+seoDescription: Discover how Cyscale has enhanced cloud security integration by
+  utilizing NATS on Kubernetes for efficient, scalable message-based
+  communication. Read about the journey, benefits, and technical implementation
+  on our blog.
 featuredpost: true
 featuredimage: /img/nats-horizontal-color.webp
 tags:
-    - publish-subscribe
-    - messaging
-    - cloud-native
-    - kubernetes
-    - helm
+  - publish-subscribe
+  - messaging
+  - cloud-native
+  - kubernetes
+  - helm
 ---
 
 <!--StartFragment-->
