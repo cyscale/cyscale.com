@@ -5,7 +5,6 @@ seoTitle: "CNAPP: A mix of CSPM & CWPP - Cyscale"
 authors: Virginia Mitea
 permalink: cnapp-a-mix-of-cspm-cwpp
 categories:
-  - CSPM
   - CNAPP
 date: 2021-11-24T15:35:49.333Z
 description: >-
