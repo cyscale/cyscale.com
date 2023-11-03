@@ -14,7 +14,7 @@ description: Cyscale gives a first glimpse into our AI-powered Security
 seoDescription: Cyscale gives a first glimpse into our AI-powered Security
   Assistant, which makes cloud security as intuitive as asking a question.
 featuredpost: true
-featuredimage: /img/aipowered-security-assistant.png
+featuredimage: /img/blog-cover-ai-assistant.png
 tableOfContents: false
 tags: []
 ---
