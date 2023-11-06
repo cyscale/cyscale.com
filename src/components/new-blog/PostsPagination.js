@@ -67,7 +67,7 @@ const PostsPagination = ({
                                 <Chip
                                     className='mr-2 last:mr-0'
                                     active={category === item}
-                                    to={`/blog/${item.toLowerCase()}/`}
+                                    to={`/blog/${item === 'Cloud Security' ? 'cloud-security' : item.toLowerCase()}/`}
                                     key={item}
                                 >
                                     {item}
