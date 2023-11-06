@@ -299,8 +299,8 @@ exports.createPages = async ({ graphql, actions }) => {
                     createPage({
                         path:
                             i === 0
-                                ? `/blog/${node.frontmatter.name.toLowerCase()}/`
-                                : `/blog/${node.frontmatter.name.toLowerCase()}/${i + 1}`,
+                                ? `/blog/${node.frontmatter.slug.toLowerCase()}/`
+                                : `/blog/${node.frontmatter.slug.toLowerCase()}/${i + 1}`,
                         component: path.resolve(`src/template/blogCategoriesTemplate.js`),
                         context: {
                             limit: postsPerPage,
