@@ -5,7 +5,7 @@ seoTitle: Common Cloud Misconfigurations and How to Avoid Them
 authors: Sabrina Lupșan
 permalink: common-cloud-misconfigurations-how-to-avoid-them
 categories:
-  - CSPM
+  - Misconfigurations
 date: 2022-04-20T07:01:46.443Z
 description: Cloud misconfigurations are the number one reason for security
   breaches. The first step towards securing your environment and improving your
