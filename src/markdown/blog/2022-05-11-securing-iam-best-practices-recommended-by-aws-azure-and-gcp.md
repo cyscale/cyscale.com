@@ -5,7 +5,7 @@ seoTitle: Securing IAM - Best Practices Recommended by AWS, Azure, and Google Cl
 authors: Sabrina Lupșan
 permalink: iam-best-practices-from-aws-azure-gcp
 categories:
-  - CSPM
+  - IAM
 date: 2022-05-11T06:39:36.105Z
 description: We look at best practices recommended by AWS, Azure and Google
   Cloud regarding securing IAM, like enabling MFA, rotating credentials and keys
