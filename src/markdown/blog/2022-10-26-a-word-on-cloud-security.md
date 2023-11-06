@@ -3,7 +3,7 @@ templateKey: blog-post
 title: A Word on Cloud Security
 seoTitle: A Word on Cloud Security
 authors: Andrei Ștefănie
-permalink: cloud-security
+permalink: a-word-on-cloud-security
 categories:
   - News
   - CSPM
