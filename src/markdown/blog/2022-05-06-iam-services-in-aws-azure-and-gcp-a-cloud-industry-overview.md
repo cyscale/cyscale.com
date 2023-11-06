@@ -5,7 +5,7 @@ seoTitle: IAM Services in AWS, Azure, and Google Cloud - a Cloud Industry Overvi
 authors: Sabrina Lupșan
 permalink: iam-services-in-aws-azure-gcp
 categories:
-  - CSPM
+  - IAM
 date: 2022-05-06T05:44:34.049Z
 description: An industry overview of the IAM Services. We look at AWS, Azure and
   Google Cloud and understand what identity and management is. The components of
