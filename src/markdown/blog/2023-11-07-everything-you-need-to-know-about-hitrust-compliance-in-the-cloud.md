@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Everything You Need to Know about HITRUST Compliance in the Cloud
-seoTitle: Everything You Need to Know about HITRUST Compliance in the Cloud
+seoTitle: Everything to Know about HITRUST Compliance in the Cloud
 authors: Sabrina Lupșan
 permalink: hitrust-compliance-in-the-cloud
 categories:
@@ -19,17 +19,8 @@ description: >-
 
 
   HITRUST CSF is based on ISO/IEC 27001 and 27002 and incorporates more than 50 regulations, standards, and frameworks, thus providing a complete set of requirements and best practices to ensure security. 
-seoDescription: "HITRUST (Health Information Trust) Alliance is the organization
-  that established the HITRUST CSF (Common Security Framework), a framework for
-  managing and securing information in the healthcare industry. This
-  comprehensive framework regulates how healthcare providers and other health
-  businesses handle sensitive data, store it and protect it.   The HITRUST
-  framework goes above and beyond what HIPAA requires and while its stringency
-  can make it daunting to implement, the benefits of this certification in terms
-  of credibility and assurance are not to be underestimated.   HITRUST CSF is
-  based on ISO/IEC 27001 and 27002 and incorporates more than 50 regulations,
-  standards, and frameworks, thus providing a complete set of requirements and
-  best practices to ensure security. "
+seoDescription: While it can be daunting to implement, HITRUST is considered
+  best-in-class for data security and privacy healthcare certification.
 featuredpost: true
 featuredimage: /img/58_blog-cover-image.png
 tableOfContents: true
