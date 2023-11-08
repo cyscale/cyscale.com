@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: High-severity Vulnerabilities Put Kubernetes Secrets at Risk
-seoTitle: Critical Vulnerabilities Put Kubernetes Secrets at Risk
+seoTitle: Critical NGINX Ingress Vulnerabilities Put Kubernetes Secrets at Risk
 authors: Sabrina Lupșan
 permalink: critical-vulnerabilities-kubernetes-secrets-risk
 categories:
@@ -43,23 +43,25 @@ An ingress-NGINX controller is a specific implementation of an Ingress controlle
 
 **CVE-2023-5043** 
 
+Annotations are key/value pairs that can be attached to Kubernetes objects in order to add additional information to those objects. 
+
 Due to poor input sanitization, the annotation nginx.ingress.kubernetes.io/configuration-snippet can be used to inject command execution. 
 
-Annotations are key/value pairs that can be attached to Kubernetes objects in order to add additional information to those objects. In this case, the “configuration-snippet” annotation, or metadata, allows users to inject custom configuration code into the NGINX configuration file. 
+The “configuration-snippet” annotation, or metadata, allows users to inject custom configuration code into the NGINX configuration file. 
 
 **CVE-2023-5044** 
 
-This vulnerability occurs for the nginx.ingress.kubernetes.io/permanent-redirect annotation. This annotation allows you to establish a permanent HTTP redirect (Return Code 301). As a result, the controller will redirect traffic to that path.   
+This vulnerability occurs for the nginx.ingress.kubernetes.io/permanent-redirect annotation. This annotation allows you to establish a permanent HTTP redirect (Return Code 301) by injecting arbitrary code via the annotation. As a result, the controller will redirect traffic to that path. 
 
 **CVE-2022-4886** 
 
-This issue can be exploited by someone with create or update permissions on ingress objects. By bypassing the sanitization of the field spec.rules\[].http.paths\[].path, an attacker can obtain the credentials of the controller. 
+This issue can be exploited by someone with create or update permissions on ingress API objects.   
 
-The field allows you to specify where incoming requests to your applications should be routed based on the path in the URL. Since the input is not correctly sanitized, the attacker can specify an internal file as the path, thus obtaining access to sensitive data. 
+The field spec.rules\[].http.paths\[].path allows you to specify where incoming requests to your applications should be routed based on the path in the URL. Since the input is not correctly sanitized, the attacker can specify an internal file as the path, obtaining the credentials of the controller. Thus, by exploiting the poor sanitization, the attacker gains access to sensitive data. 
 
 ### Impact of the NGINX Ingress controller vulnerabilities 
 
-Ingress controllers run with high privileges. By default, by having access to the credentials of the ingress controller, you have access to all secrets in the cluster. As you can imagine, the impact of these vulnerabilities left unchecked can create significant risk for your data. So, it’s no surprise that the vulnerabilities described have been assigned such high CVSS scores.  
+Ingress controllers run with high privileges. By default, having access to the credentials of the ingress controller means you have access to all secrets in the cluster. As you can imagine, the impact of these vulnerabilities left unchecked can create significant risk for your data. So, it’s no surprise that the vulnerabilities described have been assigned such high CVSS scores.  
 
 ### Mitigation of the NGINX Ingress controller vulnerabilities 
 
