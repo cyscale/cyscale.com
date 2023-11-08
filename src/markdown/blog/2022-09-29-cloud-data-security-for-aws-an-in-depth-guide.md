@@ -5,7 +5,7 @@ seoTitle: "Cloud Data Security For AWS: An In-Depth Guide "
 authors: Sabrina Lupșan
 permalink: cloud-security-for-aws
 categories:
-  - CSPM
+  - Cloud Security
 date: 2022-09-29T06:25:58.261Z
 description: "Understanding and managing all your assets and services in the
   cloud are demanding tasks. It is easy to overlook even the smallest
