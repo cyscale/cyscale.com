@@ -5,7 +5,7 @@ seoTitle: "Best Practices for Securing Databases in the Cloud "
 authors: Sabrina Lupșan
 permalink: best-practices-for-securing-databases
 categories:
-  - CSPM
+  - Cloud Security
 date: 2022-08-26T07:19:11.434Z
 description: "A database is one of the most important cloud assets. It usually
   stores sensitive information that should be well protected.  Best practices to
