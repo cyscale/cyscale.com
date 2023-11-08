@@ -5,7 +5,6 @@ seoTitle: Creating a Security Knowledge Graph™ Through Integrations
 authors: Sabrina Lupșan
 permalink: security-knowledge-graph-integrations
 categories:
-  - CSPM
   - Product
 date: 2022-06-13T05:16:07.150Z
 description: A knowledge graph is the perfect tool to analyze your cloud
