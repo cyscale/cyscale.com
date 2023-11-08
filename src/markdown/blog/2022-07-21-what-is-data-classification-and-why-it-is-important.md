@@ -5,8 +5,7 @@ seoTitle: What Is Data Classification And Why Is It Important?
 authors: Sabrina Lupșan
 permalink: data-classification
 categories:
-  - CSPM
-  - Compliance
+  - Cloud Security
 date: 2022-07-21T09:32:21.283Z
 description: >+
   Data classification is a way of grouping data to ensure easy sorting,
