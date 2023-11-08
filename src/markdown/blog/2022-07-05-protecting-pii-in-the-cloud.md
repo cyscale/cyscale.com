@@ -5,8 +5,7 @@ seoTitle: "Protecting PII in the Cloud "
 authors: Sabrina Lupșan
 permalink: protecting-pii-in-the-cloud
 categories:
-  - CSPM
-  - Compliance
+  - Cloud Security
 date: 2022-07-05T09:18:38.757Z
 description: "PII (Personally Identifiable Information) is any information about
   an individual that can be directly tied to that person’s identity. Examples of
