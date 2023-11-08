@@ -6,7 +6,6 @@ authors: Sabrina Lupșan
 permalink: soc-2-compliance-in-cloud
 categories:
   - Compliance
-  - CSPM
 date: 2022-08-03T09:00:42.862Z
 description: "SOC 2 is an international compliance standard that defines rules
   for B2B (business-to-business) organizations regarding data security. SOC
