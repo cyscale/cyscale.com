@@ -5,7 +5,7 @@ seoTitle: "5 Hybrid Cloud Best Practices "
 authors: Sabrina Lupșan
 permalink: hybrid-cloud-best-practices
 categories:
-  - CSPM
+  - Cloud Security
 date: 2022-07-29T05:32:05.559Z
 description: A Hybrid Cloud infrastructure contains at least two different
   environments, which can be on-premises, in the public cloud and in a private
