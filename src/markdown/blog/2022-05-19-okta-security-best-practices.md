@@ -5,7 +5,7 @@ seoTitle: "Okta Security Best Practices "
 authors: Sabrina Lupșan
 permalink: iam-okta-security-best-practices
 categories:
-  - CSPM
+  - IAM
 date: 2022-05-19T07:40:18.390Z
 description: "Okta is an identity and access management (IAM) service built for
   the cloud. Best practices for cloud access recommended by Okta are:
