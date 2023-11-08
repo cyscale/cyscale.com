@@ -6,7 +6,7 @@ authors: Sabrina Lupșan
 permalink: critical-vulnerabilities-kubernetes-secrets-risk
 categories:
   - Cloud Security
-date: 2023-11-07T15:15:20.627Z
+date: 2023-11-06T15:15:20.627Z
 description: "Three high-severity security vulnerabilities have been disclosed
   in the NGINX Ingress controller for Kubernetes, which could put credentials
   and other secrets at risk of theft by threat actors. "
