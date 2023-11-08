@@ -5,7 +5,7 @@ seoTitle: A Guide to Cloud Security Best Practices
 authors: Sabrina Lupșan
 permalink: cloud-data-security-guide
 categories:
-  - CSPM
+  - Cloud Security
 date: 2022-09-01T10:59:21.743Z
 description: When it comes to data stored in the cloud, you must consider
   multiple aspects such as encryption, access control, backups, and how these
