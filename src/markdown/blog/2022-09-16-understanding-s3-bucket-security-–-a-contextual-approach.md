@@ -5,7 +5,7 @@ seoTitle: "S3 Bucket Misconfiguration: Common Oversights and Their Fixes"
 authors: Sabrina Lupșan
 permalink: s3-bucket-security
 categories:
-  - CSPM
+  - Misconfigurations
 date: 2022-09-16T08:07:20.546Z
 description: An Amazon S3 bucket is a storage cloud asset that acts as a
   container for data stored in the public cloud. Buckets are object storage
