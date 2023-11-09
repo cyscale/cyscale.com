@@ -3,12 +3,12 @@ import { Container, Row } from '../../atoms/Containers';
 import LoaderContainer from '../../Loader/LoaderContainer/LoaderContainer';
 import classnames from 'classnames';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import { animateScroll, Link as ScrollLink } from 'react-scroll';
-import upsideDownTriangle from '../../../assets/images/upside-down-triangle.svg';
+import { animateScroll } from 'react-scroll';
 import cloudIcon from '../../../assets/images/cloud-icon.svg';
 import AnimatedNavbarLayout from '../AnimatedNavbarLayout';
 import useHSFormLoaded from '../../../hooks/useHSFormLoaded';
 import HeroContent from './HeroContent';
+import ScrollDown from '../../ScrollButton/ScrollDown';
 
 const Original = ({ location, data }) => {
     const { loadingForm } = useHSFormLoaded();
@@ -25,7 +25,7 @@ const Original = ({ location, data }) => {
             pageName={'CSPMSolutionCampaign'}
             noIndex={true}
         >
-            <div className='bg-hero-campaigns-iam-security pb-8 pt-32 lg:pt-40 xl:pt-12'>
+            <div className='bg-hero-campaigns-iam-security pt-32 lg:pt-40 xl:pt-12'>
                 <Container>
                     <div>
                         <Row>
@@ -53,26 +53,8 @@ const Original = ({ location, data }) => {
                             </div>
                         </Row>
                     </div>
-                    <div className='py-16 hidden sm:block '>
-                        <div className='h-5'>
-                            <ScrollLink
-                                className='scroll-button-startups cursor-pointer'
-                                to={'start'}
-                                smooth={true}
-                                duration={500}
-                            >
-                                <span>
-                                    <img
-                                        src={upsideDownTriangle}
-                                        alt='down arrow icon'
-                                        className='mx-auto'
-                                        height={20}
-                                        width={20}
-                                        style={{ marginRight: '0.8rem', marginTop: '1.1rem' }}
-                                    />
-                                </span>
-                            </ScrollLink>
-                        </div>
+                    <div className='pb-16 sm:pb-0 lg:pt-4'>
+                        <ScrollDown />
                     </div>
                 </Container>
             </div>

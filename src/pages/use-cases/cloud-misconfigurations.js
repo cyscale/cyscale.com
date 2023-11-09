@@ -14,6 +14,7 @@ import { MisconfigurationsTopArticles } from '../../common/links';
 import AutomateIcon from '../../assets/images/automate-icon-misconfig.svg';
 import PreventIcon from '../../assets/images/prevent-icon-misconfig.svg';
 import AlertIcon from '../../assets/images/alerts-icon-misconfig.svg';
+import ScrollDown from '../../components/ScrollButton/ScrollDown';
 
 const imageTextRowSubtitle = css`
     font-size: 1.75rem;
@@ -96,7 +97,7 @@ const CloudMissConfiguration = ({ location }) => {
             <div className='hidden' data-category>
                 solutions
             </div>
-            <div className='bg-zircon pb-8 sm:pb-0 pt-32 lg:pt-40 xl:pt-32 relative'>
+            <div className='bg-zircon sm:pb-0 pt-32 lg:pt-40 xl:pt-32 relative'>
                 <Container>
                     <Row>
                         <div className='col-span-12 lg:col-span-6 order-last lg:order-first'>
@@ -159,10 +160,13 @@ const CloudMissConfiguration = ({ location }) => {
                             </div>
                         </div>
                     </Row>
+                    <div className='pb-16 sm:pb-0'>
+                        <ScrollDown />
+                    </div>
                 </Container>
             </div>
             <Container>
-                <div className='pt-20'>
+                <div className='pt-20' id='start'>
                     <div className='flex h-48 flex-col items-center'>
                         <img src={cloudIcon} alt='' />
                         <h2 className='text-center px-2 mt-4 mb-2 font-montserrat font-bold text-3xl lg:text-4xl'>

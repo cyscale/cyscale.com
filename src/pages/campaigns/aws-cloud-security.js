@@ -2,13 +2,13 @@ import React from 'react';
 import { Container, Row } from '../../components/atoms/Containers';
 import { graphql, useStaticQuery } from 'gatsby';
 import cloudIcon from '../../assets/images/cloud-icon.svg';
-import ScrollButtonStartups from '../../components/ScrollButton/ScrollButtonStartups';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { animateScroll } from 'react-scroll';
 import AnimatedNavbarLayout from '../../components/campaigns/AnimatedNavbarLayout';
 import useHSFormLoaded from '../../hooks/useHSFormLoaded';
 import classnames from 'classnames';
 import LoaderContainer from '../../components/Loader/LoaderContainer/LoaderContainer';
+import ScrollDown from '../../components/ScrollButton/ScrollDown';
 
 const AWSCloudSolution = ({ location }) => {
     const { loadingForm } = useHSFormLoaded();
@@ -43,7 +43,7 @@ const AWSCloudSolution = ({ location }) => {
             pageName='AWSCloudSecurityCampaign'
             noIndex={true}
         >
-            <div className='bg-hero-campaigns-iam-security pb-8 pt-32 lg:pt-40 xl:pt-12'>
+            <div className='bg-hero-campaigns-iam-security pt-32 lg:pt-40 xl:pt-12'>
                 <Container>
                     <div>
                         <Row>
@@ -91,8 +91,8 @@ const AWSCloudSolution = ({ location }) => {
                             </div>
                         </Row>
                     </div>
-                    <div className='py-16 hidden sm:block '>
-                        <ScrollButtonStartups to='start' />
+                    <div className='pb-16 sm:pb-0'>
+                        <ScrollDown />
                     </div>
                 </Container>
             </div>

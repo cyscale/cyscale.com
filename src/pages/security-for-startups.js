@@ -7,7 +7,6 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import expand from '../assets/images/expand-startups.svg';
 import collapse from '../assets/images/collapse-startups.svg';
 import cloudIcon from '../assets/images/cloud-icon.svg';
-import ScrollButtonStartups from '../components/ScrollButton/ScrollButtonStartups';
 import { animateScroll } from 'react-scroll';
 import useHSFormLoaded from '../hooks/useHSFormLoaded';
 import classnames from 'classnames';
@@ -17,6 +16,7 @@ import QuotesStartups from '../assets/images/quotes-startups.svg';
 import { Helmet } from 'react-helmet';
 import { hoverButtonColorStyle, widthFitStyle } from '../components/layout/style';
 import RightArrow from '../components/sharedComponent/RightArrow';
+import ScrollDown from '../components/ScrollButton/ScrollDown';
 
 const q1 = (useReactComponent) => {
     return [
@@ -233,9 +233,7 @@ const SecurityForStartups = ({ location }) => {
                                 </div>
                             </Row>
                         </div>
-                        <div className='pb-16 hidden sm:block '>
-                            <ScrollButtonStartups to='start' />
-                        </div>
+                        <ScrollDown />
                     </Container>
                 </div>
                 <Container className='mt-8'>

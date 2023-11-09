@@ -3,11 +3,11 @@ import { Container, Row, Section } from '../../components/atoms/Containers';
 import Layout from '../../components/layout/CleanLayout';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import ScrollButton from '../../components/ScrollButton/ScrollButton';
 import headerImage from '../../assets/images/remote-work-heading-image.png';
 import GradientButton from '../../components/buttons/GradientButton';
 import LinksAndWhitepaper from '../../components/products/LinksAndWhitepaper';
 import { css } from 'twin.macro';
+import ScrollDown from '../../components/ScrollButton/ScrollDown';
 
 const topArticles = [
     {
@@ -91,8 +91,8 @@ const PciDss = ({ location }) => {
             </div>
             <div className='bg-cloud bg-lightGrey'>
                 <Container>
-                    <Section className='pb-3'>
-                        <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-xl pt-16 pb-4'>
+                    <div className="pt-24 pb-16 sm:pb-0 pb-20 lg:pt-32">
+                        <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-xl pt-16'>
                             <h1 className='font-semibold font-montserrat text-left text-4xl lg:text-5xl leading-normal lg:leading-normal text-primary mb-16'>
                                 PCI DSS
                                 <br /> Compliance for Cloud
@@ -112,10 +112,8 @@ const PciDss = ({ location }) => {
                                 </Link>
                             </div>
                         </div>
-                    </Section>
-                    <div className='pb-8'>
-                        <ScrollButton to='start' />
                     </div>
+                    <ScrollDown />
                 </Container>
             </div>
             <Container className='h-96 sm:h-96 md:h-80'>

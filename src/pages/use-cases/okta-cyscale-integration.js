@@ -10,6 +10,7 @@ import IconId from '../../assets/images/id-icon-okta.svg';
 import IconIdentity from '../../assets/images/identity-icon-okta.svg';
 import IconCompliance from '../../assets/images/compliance-icon-okta.svg';
 import { IAMTopArticles } from '../../common/links';
+import ScrollDown from '../../components/ScrollButton/ScrollDown';
 
 const subtitleColor = css`
     color: #079bee;
@@ -95,7 +96,7 @@ const OktaCyscaleIntegration = ({ location }) => {
                                     cloud assets and sensitive data to reveal toxic combinations that put your
                                     organization at risk.
                                 </p>
-                                <div className='flex mt-8 justify-start mb-20'>
+                                <div className='flex mt-8 justify-start'>
                                     <Link to='/request-demo/'>
                                         <GradientButton text='BOOK A DEMO' />
                                     </Link>
@@ -106,6 +107,7 @@ const OktaCyscaleIntegration = ({ location }) => {
                             <div className='block lg:hidden mt-28 max-w-xl mx-auto'>
                                 <GatsbyImage image={data.heroImageMobile.childImageSharp.gatsbyImageData} alt='' />
                             </div>
+
                             <div className='relative hidden lg:block'>
                                 <div className='mt-48 xl:ml-24'>
                                     <div className='hidden lg:block lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl'>
@@ -115,6 +117,9 @@ const OktaCyscaleIntegration = ({ location }) => {
                             </div>
                         </div>
                     </Row>
+                    <div className='pb-16 sm:pb-0'>
+                        <ScrollDown />
+                    </div>
                 </Container>
             </div>
             <div
@@ -123,7 +128,7 @@ const OktaCyscaleIntegration = ({ location }) => {
                 `}
             >
                 <Container>
-                    <Section>
+                    <div className="pt-24 pb-24 lg:pt-32 lg:pb-32" id="start">
                         <p className='font-montserrat font-bold text-center' css={subtitleColor}>
                             LEVERAGE THE BEST SECURITY TOOLS FOR
                             <br /> CLOUD-NATIVE APPLICATIONS
@@ -171,7 +176,7 @@ const OktaCyscaleIntegration = ({ location }) => {
                                 </p>
                             </div>
                         </Row>
-                    </Section>
+                    </div>
                 </Container>
             </div>
             <Container>

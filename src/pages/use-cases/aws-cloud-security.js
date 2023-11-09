@@ -3,10 +3,10 @@ import { Container, Row, Section } from '../../components/atoms/Containers';
 import Layout from '../../components/layout/CleanLayout';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import ScrollButton from '../../components/ScrollButton/ScrollButton';
 import GradientButton from '../../components/buttons/GradientButton';
 import LinksAndWhitepaper from '../../components/products/LinksAndWhitepaper';
 import { css } from 'twin.macro';
+import ScrollDown from '../../components/ScrollButton/ScrollDown';
 
 const topArticles = [
     {
@@ -121,8 +121,8 @@ const AWSCloudSecurity = ({ location }) => {
                             </div>
                         </div>
                     </Row>
-                    <div className='mt-24 pb-8'>
-                        <ScrollButton to='start' />
+                    <div className='pb-16 sm:pb-0'>
+                        <ScrollDown />
                     </div>
                 </Container>
             </div>

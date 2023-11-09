@@ -19,6 +19,7 @@ import LightDarkButton from '../buttons/LightDarkButton';
 import { css } from 'twin.macro';
 import { requestDemoButtonPage } from '../../common/utils';
 import { GatsbyImage } from 'gatsby-plugin-image';
+import ScrollDown from '../ScrollButton/ScrollDown';
 
 const complianceAuditingRequestDemoButton = css`
     @media (min-width: 641px) and (max-width: 1024px) {
@@ -257,7 +258,7 @@ const Header = ({
                                 pageName !== 'HomePage' ? 'hidden sm:' : ''
                             }inline-block relative py-2`}
                         >
-                            <ScrollButton to='start' />
+                            <ScrollDown />
                         </div>
                     )}
                 </div>

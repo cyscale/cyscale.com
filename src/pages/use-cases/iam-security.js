@@ -3,13 +3,13 @@ import { Container, Row, Section } from '../../components/atoms/Containers';
 import Layout from '../../components/layout/CleanLayout';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import ScrollButton from '../../components/ScrollButton/ScrollButton';
 import GradientButton from '../../components/buttons/GradientButton';
 import LinksAndWhitepaper from '../../components/products/LinksAndWhitepaper';
 import { css } from 'twin.macro';
 import VideoCyscale from '../../components/campaigns/cspm-solutin/CyscaleVideo';
 import { CSSTransition } from 'react-transition-group';
 import { IAMTopArticles } from '../../common/links';
+import ScrollDown from '../../components/ScrollButton/ScrollDown';
 
 const IAMSecurity = ({ location }) => {
     const [modal, setModal] = useState(false);
@@ -127,8 +127,8 @@ const IAMSecurity = ({ location }) => {
                             </CSSTransition>
                         </div>
                     </Row>
-                    <div className='pb-8 mt-12 lg:mt-32'>
-                        <ScrollButton to='start' />
+                    <div className="pb-16 sm:pb-0">
+                        <ScrollDown />
                     </div>
                 </Container>
             </div>

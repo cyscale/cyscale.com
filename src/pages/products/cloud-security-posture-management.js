@@ -20,6 +20,7 @@ import onboardingIcon from '../../assets/images/onboarding-icon-cspm.svg';
 import Carousel from '../../components/cloud-security-posture-management/Carousel';
 import CaseStudyCarousel from '../../components/cloud-security-posture-management/Carousel';
 import RightArrow from '../../components/sharedComponent/RightArrow';
+import ScrollDown from '../../components/ScrollButton/ScrollDown';
 
 const topArticles = [
     {
@@ -360,6 +361,7 @@ const CSPM = ({ location }) => {
                             </div>
                         </Row>
                     </div>
+                    <ScrollDown />
                 </Container>
                 <div className='absolute bottom-0 right-0 '>
                     <div className='hidden lg:block lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl'>
@@ -369,7 +371,7 @@ const CSPM = ({ location }) => {
             </div>
             <Container>
                 <Section>
-                    <div className='grid grid-cols-12 gap-4 lg:gap-0'>
+                    <div className='grid grid-cols-12 gap-4 lg:gap-0' id="start">
                         <div
                             className='col-span-12 sm:col-span-6 lg:col-span-3 mx-0 max-w-xl lg:max-w-full group'
                             css={onHoverMarginHr}

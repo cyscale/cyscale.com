@@ -10,7 +10,6 @@ import alibabaLogo from '../../assets/images/alibaba-campaigns-iam-security.svg'
 import oktaLogo from '../../assets/images/okta-campaigns-iam-security.svg';
 import LoaderContainer from '../../components/Loader/LoaderContainer/LoaderContainer';
 import classnames from 'classnames';
-import ScrollButtonStartups from '../../components/ScrollButton/ScrollButtonStartups';
 import loadable from '@loadable/component';
 import DataClassificationIcon from '../../assets/images/data-classification-policy.svg';
 import DataLabelingIcon from '../../assets/images/data-labeling-icon.svg';
@@ -18,6 +17,7 @@ import DataWhereaboutsIcon from '../../assets/images/data-whereabouts-icon.svg';
 import DataSecurityIcon from '../../assets/images/data-security-icon.svg';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { css } from 'twin.macro';
+import ScrollDown from '../../components/ScrollButton/ScrollDown';
 
 const DataSecurityList = loadable(() => import('../../components/campaigns/data-security/DataSecurityList'));
 const DataManagementSection = loadable(() => import('../../components/campaigns/data-security/DataManagementSection'));
@@ -67,7 +67,7 @@ const DataSecurity = ({ location }) => {
             pageName={'DataSecurityCampaign'}
             noIndex={true}
         >
-            <div className='bg-hero-campaigns-iam-security pb-8 pt-32 lg:pt-40 xl:pt-12'>
+            <div className='bg-hero-campaigns-iam-security pt-32 lg:pt-40 xl:pt-12'>
                 <Container>
                     <div>
                         <Row>
@@ -141,8 +141,8 @@ const DataSecurity = ({ location }) => {
                             </div>
                         </Row>
                     </div>
-                    <div className='py-16 hidden sm:block '>
-                        <ScrollButtonStartups to='start' />
+                    <div className='pb-16 sm:pb-0 lg:pt-4'>
+                        <ScrollDown />
                     </div>
                 </Container>
             </div>

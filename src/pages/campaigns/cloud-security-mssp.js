@@ -54,7 +54,7 @@ const CloudSecurityMSSP = ({ location }) => {
             description={'Unlock new revenue streams with a comprehensive managed cloud security solution.'}
             pageName={'CampaignMSSP'}
         >
-            <div className='bg-zircon pb-8 sm:pb-0 pt-32 lg:pt-40 xl:pt-12 relative'>
+            <div className='bg-zircon pb-16 sm:pb-0 pt-32 lg:pt-40 xl:pt-12 relative'>
                 <Container>
                     <Row>
                         <div className='col-span-12 lg:col-span-6'>

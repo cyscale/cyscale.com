@@ -1,13 +1,13 @@
 import React from 'react';
 import { Container, Row, Section } from '../../components/atoms/Containers';
 import Layout from '../../components/layout/CleanLayout';
-import ScrollButton from '../../components/ScrollButton/ScrollButton';
 import getStartedICon from '../../assets/images/getStartedIconCPSM.svg';
 import GetStarted from '../../components/Home/getstarted';
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import GradientButton from '../../components/buttons/GradientButton';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import LinksAndWhitepaper from '../../components/products/LinksAndWhitepaper';
+import ScrollDown from '../../components/ScrollButton/ScrollDown';
 
 const topArticles = [
     {
@@ -127,10 +127,10 @@ const CloudCompliance = ({ location }) => {
             <div className='hidden' data-category>
                 solutions
             </div>
-            <div className='bg-lightGrey'>
+            <div className='bg-zircon'>
                 <Container>
                     <div className='pt-20 max-w-lg mx-auto lg:mx-0 lg:max-w-none'>
-                        <Section>
+                        <div className="pt-24 pb-20 lg:pt-32">
                             <Row>
                                 <div className='col-span-12 lg:col-span-6 order-2 lg:order-1'>
                                     <h1 className='font-semibold font-montserrat text-3xl lg:text-5xl leading-normal lg:leading-normal text-primary'>
@@ -155,11 +155,9 @@ const CloudCompliance = ({ location }) => {
                                     />
                                 </div>
                             </Row>
-                        </Section>
+                        </div>
                     </div>
-                    <div className='pb-8'>
-                        <ScrollButton to='start' />
-                    </div>
+                    <ScrollDown />
                 </Container>
             </div>
             <Container id='start'>
