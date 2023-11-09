@@ -21,6 +21,7 @@ import cloudIcon from '../../assets/images/cloud-white-icon.svg';
 import LearnMoreLink from '../../components/use-cases/LearnMoreLink';
 import { heroTitleFontSize, LearnMoreSection, cardBackgroundColor } from '../../assets/css/styles';
 import LinksAndWhitepaper from '../../components/products/LinksAndWhitepaper';
+import ScrollDown from '../../components/ScrollButton/ScrollDown';
 
 //eslint-disable-next-line
 export const topArticles = [
@@ -98,7 +99,7 @@ const CNAPP = ({ location }) => {
             </div>
             <div className='bg-cnapp pt-8'>
                 <Container>
-                    <div className='py-16 md:py-24 lg:pt-24 lg:pb-16'>
+                    <div className='pt-16 md:pt-24 lg:pt-24'>
                         <Row>
                             <div className='col-span-12 lg:col-span-6 order-last lg:order-first'>
                                 <div className='lg:mt-16 pt-4 max-w-xl mx-auto lg:mx-0'>
@@ -128,10 +129,13 @@ const CNAPP = ({ location }) => {
                             </div>
                         </Row>
                     </div>
+                    <div className="pb-16 sm:pb-0">
+                        <ScrollDown />
+                    </div>
                 </Container>
             </div>
             <Container>
-                <div className='pt-8 pb-8 md:pt-12 md:pb-12 lg:pt-20 pb-12'>
+                <div className='pt-8 pb-8 md:pt-12 md:pb-12 lg:pt-20 pb-12' id='start'>
                     <div className='sm:grid sm:grid-cols-12 sm:gap-12'>
                         <div className='col-span-12 lg:col-span-6'>
                             <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-md'>

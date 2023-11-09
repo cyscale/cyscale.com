@@ -87,7 +87,7 @@ const CloudSecurityFintechUC = ({ location }) => {
             <div className='hidden' data-category>
                 solutions
             </div>
-            <div className='bg-zircon pb-8 sm:pb-0 pt-32 lg:pt-40 xl:pt-32 relative'>
+            <div className='bg-zircon sm:pb-0 pt-32 lg:pt-40 xl:pt-32 relative'>
                 <Container>
                     <Row>
                         <div className='col-span-12 lg:col-span-6 order-last lg:order-first'>
@@ -178,7 +178,9 @@ const CloudSecurityFintechUC = ({ location }) => {
                             </div>
                         </div>
                     </Row>
-                    <ScrollDown />
+                    <div className='pb-16 sm:pb-0'>
+                        <ScrollDown />
+                    </div>
                 </Container>
             </div>
             <Container className='mt-0 md:mt-12 lg:mt-0'>

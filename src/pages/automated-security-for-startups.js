@@ -3,7 +3,6 @@ import { Container, Row } from '../components/atoms/Containers';
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import cloudIcon from '../assets/images/cloud-icon.svg';
-import ScrollButtonStartups from '../components/ScrollButton/ScrollButtonStartups';
 import { animateScroll } from 'react-scroll';
 import useHSFormLoaded from '../hooks/useHSFormLoaded';
 import classnames from 'classnames';
@@ -14,6 +13,7 @@ import { Helmet } from 'react-helmet';
 import { hoverButtonColorStyle, widthFitStyle } from '../components/layout/style';
 import RightArrow from '../components/sharedComponent/RightArrow';
 import AnimatedNavbarLayout from '../components/campaigns/AnimatedNavbarLayout';
+import ScrollDown from '../components/ScrollButton/ScrollDown';
 
 const blueGradientCard = css`
     background-image: linear-gradient(#e4edfc, #fff);
@@ -169,8 +169,8 @@ const AutomatedSecurityForStartups = ({ location }) => {
                             </div>
                         </div>
                     </div>
-                    <div className='pb-16 hidden sm:block '>
-                        <ScrollButtonStartups to='start' />
+                    <div className='pb-16'>
+                        <ScrollDown />
                     </div>
                 </Container>
             </div>
