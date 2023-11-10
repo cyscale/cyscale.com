@@ -7,6 +7,7 @@ import expand from '../../../assets/images/expand.svg';
 import FocusLock from 'react-focus-lock';
 import { useCookies } from 'react-cookie';
 import { cookieConsentKey } from '../../../common/constants';
+import PrivacyAndCookieInfo from './PrivacyAndCookieInfo';
 
 const dataModal = [
     {
@@ -86,7 +87,7 @@ const ConfirmButtons = ({
                 } cookies-button`}
                 onClick={acceptAllCookies}
             >
-                Accept All Cookies
+                Accept Cookies
             </button>
         </div>
     );
@@ -176,6 +177,9 @@ const CookiesModal = ({
                             </div>
                         );
                     })}
+                    <div className='block sm:hidden px-4 mt-8 pb-8'>
+                        <PrivacyAndCookieInfo />
+                    </div>
                     <div className='hidden sm:block bottom-0 absolute h-24 w-full bg-white border-t-confirm-buttons rounded-b-lg'>
                         <ConfirmButtons
                             paddingY={6}
