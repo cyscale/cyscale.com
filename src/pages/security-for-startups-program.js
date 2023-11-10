@@ -254,9 +254,9 @@ const SecurityForStartupsProgram = ({ location }) => {
                                         <h2 className='font-semibold text-2xl sm:text-3xl lg:text-2xl leading-normal mb-8 mt-8 lg:mt-0'>
                                             Apply now
                                         </h2>
-                                        {loadingForm && <LoaderContainer minHeight={515} />}
+                                        {loadingForm && <LoaderContainer minHeight={385} />}
                                         <div
-                                            style={{ minHeight: 515 }}
+                                            style={{ minHeight: 385 }}
                                             id='startups-form'
                                             className={classnames('pb-4', { hidden: loadingForm })}
                                         />
