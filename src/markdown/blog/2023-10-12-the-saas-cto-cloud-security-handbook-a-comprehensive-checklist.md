@@ -55,7 +55,7 @@ In this *[guide to cloud security best practices](https://cyscale.com/blog/cloud
 
 A foundational building block for any cloud-native cybersecurity strategy is a thorough understanding of your infrastructure and unique characteristics of your web applications including microservices architectures, virtual machines, containers, and serverless computing, among others. 
 
-This guide looks at how you can *[properly assess your cloud-native infrastructure,](https://cyscale.com/blog/cloud-native-security/)* draw conclusions and create an efficient plan for remediation.  
+This guide looks at how you can *[properly assess your cloud-native infrastructure,](https://cyscale.com/blog/cloud-native-infrastructure/)* draw conclusions and create an efficient plan for remediation.  
 
 If you need a *[deeper dive into the cloud-native technology stack,](https://cyscale.com/blog/cloud-native-security-guide/)* our explainer looks at the differences between cloud-native, cloud-based, and cloud-enabled approaches.  
 
