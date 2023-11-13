@@ -6,7 +6,6 @@ authors: Sabrina Lupșan
 permalink: data-security-e-book
 categories:
   - News
-  - CSPM
 date: 2023-05-10T12:19:20.367Z
 description: Our new e-book on data security contains best practices on how to
   encrypt and classify data, how to secure your cloud environment and many other
