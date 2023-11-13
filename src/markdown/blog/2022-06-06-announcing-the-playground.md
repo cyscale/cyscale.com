@@ -5,7 +5,6 @@ seoTitle: "Announcing the Playground! "
 authors: Sabrina Lupșan
 permalink: playground-announcement
 categories:
-  - News
   - Product
 date: 2022-06-06T07:18:50.439Z
 description: We are releasing a new feature in Cyscale, the Playground! It is an
