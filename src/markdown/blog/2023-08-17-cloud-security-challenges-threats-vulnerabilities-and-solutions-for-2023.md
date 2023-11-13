@@ -5,7 +5,7 @@ seoTitle: "Top 10 Cloud Security Challenges for SaaS Startups | Cyscale "
 authors: Sabrina Lupșan
 permalink: cloud-security-challenges
 categories:
-  - CSPM
+  - Cloud Security
 date: 2023-08-17T10:05:11.467Z
 description: "Understand the top 10 cloud security challenges, vulnerabilities,
   and misconfigurations, and learn how to build a roadmap to create a robust
