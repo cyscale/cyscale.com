@@ -4,20 +4,20 @@ import PostsPagination from '../components/new-blog/PostsPagination';
 
 const BlogCategoriesTemplate = ({ pageContext, location, data }) => {
     const { category, categoriesList, seoTitle, seoDescription } = pageContext;
-    const { currentPage, numPages, limit } = pageContext;
+    const { currentPage, numPages, limit, categorySlug } = pageContext;
 
     const prevPagePath =
         currentPage - 1 === 1 || currentPage - 1 === 0
-            ? `/blog/${category.toLowerCase()}/`
-            : `/blog/${category.toLowerCase()}/` + (currentPage - 1).toString();
-    const nextPagePath = `/blog/${category.toLowerCase()}/` + (currentPage + 1).toString();
+            ? `/blog/${categorySlug}/`
+            : `/blog/${categorySlug}/` + (currentPage - 1).toString();
+    const nextPagePath = `/blog/${categorySlug}/` + (currentPage + 1).toString();
 
     const getPageNumberPath = (currentIndex) => {
         if (currentIndex === 0) {
-            return `/blog/${category.toLowerCase()}`;
+            return `/blog/${categorySlug}`;
         }
 
-        return `/blog/${category.toLowerCase()}/` + (currentIndex + 1);
+        return `/blog/${categorySlug}/` + (currentIndex + 1);
     };
 
     return (
