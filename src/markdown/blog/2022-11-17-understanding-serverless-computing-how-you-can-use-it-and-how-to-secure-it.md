@@ -5,7 +5,7 @@ seoTitle: "Understanding serverless computing: how you can use it and how to sec
 authors: Sabrina Lupșan
 permalink: what-is-serverless-computing
 categories:
-  - CSPM
+  - Cloud Security
 date: 2022-11-17T08:55:54.909Z
 description: Serverless computing is a collection of services provided by cloud
   vendors. It allows users to write and execute code in the cloud without
