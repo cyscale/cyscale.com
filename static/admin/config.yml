@@ -69,7 +69,7 @@ collections:
       label: 'Category'
       folder: 'src/markdown/categories'
       create: true
-      slug: '{{slug}}'
+      slug: '{{fields.slug}}'
       editor:
           preview: false
       fields:
