@@ -5,7 +5,7 @@ seoTitle: Cloud Queues Security Best Practices
 authors: Sabrina Lupșan
 permalink: cloud-queues-security-best-practices
 categories:
-  - Cloud Security
+  - Product
 date: 2022-10-07T06:51:22.269Z
 description: "A queue is a data structure that allows you to store and retrieve
   data in efficiently. A message queue, in the context of the cloud, is a
