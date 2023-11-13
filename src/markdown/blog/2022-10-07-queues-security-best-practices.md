@@ -5,24 +5,24 @@ seoTitle: Cloud Queues Security Best Practices
 authors: Sabrina Lupșan
 permalink: cloud-queues-security-best-practices
 categories:
-  - CSPM
+  - Product
 date: 2022-10-07T06:51:22.269Z
 description: "A queue is a data structure that allows you to store and retrieve
   data in efficiently. A message queue, in the context of the cloud, is a
   service used to temporarily store data before it is processed. Solutions
   offered by cloud vendors are: Amazon SQS, Azure Queue Storage and Cloud Tasks
-  in Google Cloud. Best Practices for queues security are: encrypt the data that arrives,
-  log every action, restrict access to queue management and ensure access
-  control, configure a dead-letter queue, use private endpoints for your queues
-  and configure a long retention period."
+  in Google Cloud. Best Practices for queues security are: encrypt the data that
+  arrives, log every action, restrict access to queue management and ensure
+  access control, configure a dead-letter queue, use private endpoints for your
+  queues and configure a long retention period."
 seoDescription: "A queue is a data structure that allows you to store and
   retrieve data in efficiently. A message queue, in the context of the cloud, is
   a service used to temporarily store data before it is processed. Solutions
   offered by cloud vendors are: Amazon SQS, Azure Queue Storage and Cloud Tasks
-  in Google Cloud. Best Practices for queues security are: encrypt the data that arrives,
-  log every action, restrict access to queue management and ensure access
-  control, configure a dead-letter queue, use private endpoints for your queues
-  and configure a long retention period."
+  in Google Cloud. Best Practices for queues security are: encrypt the data that
+  arrives, log every action, restrict access to queue management and ensure
+  access control, configure a dead-letter queue, use private endpoints for your
+  queues and configure a long retention period."
 featuredpost: true
 featuredimage: /img/25_blog-queue-security-cover-photo.webp
 tags:
