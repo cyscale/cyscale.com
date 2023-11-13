@@ -5,7 +5,7 @@ seoTitle: "The Buyer’s Guide to Cloud Security Solutions for Startups | Cyscal
 authors: Sabrina Lupșan
 permalink: buyers-guide-cloud-security-solutions
 categories:
-  - Product
+  - Cloud Security
 date: 2023-09-27T12:23:26.972Z
 description: "This essential guide for startups looks at the pros and cons of
   enterprise-grade, free, and cloud providers' own security solutions. "
