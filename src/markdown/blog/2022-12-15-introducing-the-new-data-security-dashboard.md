@@ -5,7 +5,6 @@ seoTitle: Introducing the New Data Security Dashboard!
 authors: Sabrina Lupșan
 permalink: data-security-dashboard
 categories:
-  - News
   - Product
 date: 2022-12-15T09:34:35.185Z
 description: "We have released a new, powerful Data Security Dashboard to
