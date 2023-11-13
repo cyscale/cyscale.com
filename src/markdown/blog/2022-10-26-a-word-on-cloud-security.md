@@ -5,9 +5,7 @@ seoTitle: A Word on Cloud Security
 authors: Andrei Ștefănie
 permalink: a-word-on-cloud-security
 categories:
-  - News
-  - CSPM
-  - CNAPP
+  - Cloud Security
 date: 2022-10-25T14:41:49.426Z
 description: >
   Given all this complexity and the pace at which we are trying to deliver our
