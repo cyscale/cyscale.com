@@ -5,9 +5,7 @@ seoTitle: "How to Prevent Alert Fatigue: Announcing the New Alert Features"
 authors: Sabrina Lupșan
 permalink: prevent-alert-fatigue
 categories:
-  - News
   - Product
-  - CSPM
 date: 2023-03-20T04:55:49.633Z
 description: Alert fatigue is a phenomenon in which individuals receive an
   overwhelming amount of alerts and become desensitized to them. To avoid alert
