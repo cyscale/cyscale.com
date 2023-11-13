@@ -3,7 +3,7 @@ templateKey: blog-post
 title: "Cloud-Native Infrastructure: How to Build a Comprehensive Security Plan"
 seoTitle: "Cloud-Native Infrastructure: How to Build a Comprehensive Security Plan"
 authors: Sabrina Lupșan
-permalink: cloud-native-security
+permalink: cloud-native-infrastructure
 categories:
   - CSPM
 date: 2023-04-13T11:40:40.049Z
