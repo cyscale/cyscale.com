@@ -5,7 +5,7 @@ seoTitle: "Securing Your Cloud: Essential Tips for Your Business"
 authors: Sabrina Lupșan
 permalink: essential-tips-cloud-security
 categories:
-  - CSPM
+  - Cloud Security
 date: 2023-05-18T10:05:42.486Z
 description: >-
   In today's digital landscape, cloud computing has become essential for
