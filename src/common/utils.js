@@ -95,3 +95,7 @@ export const disableLogoLink = (pageName) => {
         'SecureCloudCampaign'
     ].includes(pageName);
 };
+
+export const formatCategoryToSlug = (categoryName) => {
+    return categoryName.toLowerCase().split(' ').join('-');
+};
