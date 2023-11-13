@@ -5,7 +5,6 @@ seoTitle: "AWS SOC 2 Compliance Checklist: A Detailed Guide"
 authors: Sabrina Lupșan
 permalink: AWS-SOC-2-Compliance-Checklist-A-Detailed-Guide
 categories:
-  - News
   - Compliance
 date: 2022-10-19T10:11:42.781Z
 description: >-
