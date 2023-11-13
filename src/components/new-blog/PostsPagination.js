@@ -6,6 +6,7 @@ import { map, takeRight } from 'lodash';
 import FeaturedPost from './FeaturedPost';
 import Post from './Post';
 import Pagination from './Pagination';
+import { formatCategoryToSlug } from '../../common/utils';
 
 const getFeaturedAndPosts = (nodes, isFirst) => {
     const posts = [];
@@ -67,7 +68,7 @@ const PostsPagination = ({
                                 <Chip
                                     className='mr-2 last:mr-0'
                                     active={category === item}
-                                    to={`/blog/${item === 'Cloud Security' ? 'cloud-security' : item.toLowerCase()}/`}
+                                    to={`/blog/${formatCategoryToSlug(item)}/`}
                                     key={item}
                                 >
                                     {item}
