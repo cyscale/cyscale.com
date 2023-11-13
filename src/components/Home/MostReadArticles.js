@@ -110,7 +110,7 @@ const MostReadArticles = () => {
                 classNames={'mt-10 hidden lg:block'}
             />
             <BlogLink
-                link={'/blog/cloud-native-security'}
+                link={'/blog/cloud-native-infrastructure'}
                 categories={['cspm']}
                 text={[
                     'Cloud-Native Infrastructure:',
