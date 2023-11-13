@@ -5,7 +5,7 @@ seoTitle: "Cloud Security Strategy: Best Practices & Tutorials "
 authors: Sabrina Lupșan
 permalink: cloud-security-strategy-best-practices-tutorials
 categories:
-  - CSPM
+  - Cloud Security
 date: 2023-08-08T12:20:59.185Z
 description: Explore the essentials of a robust cloud security strategy,
   blending best practices with hands-on tutorials. Dive into the importance of
