@@ -6,7 +6,7 @@ seoTitle: "Securing VMs in Google Cloud: Shielded VM"
 authors: Sabrina Lupșan
 permalink: securing-google-cloud-compute-shielded-vm
 categories:
-  - CSPM
+  - Cloud Security
 date: 2023-08-23T15:16:04.584Z
 description: Best practices for securing VMs in Google Cloud, including the
   Shielded VM feature description and practical steps to enable it.
