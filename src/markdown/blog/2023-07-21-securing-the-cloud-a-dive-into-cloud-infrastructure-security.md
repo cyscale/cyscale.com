@@ -5,7 +5,7 @@ seoTitle: "Cloud Infrastructure Security: Risks and Solutions"
 authors: Sabrina Lupșan
 permalink: cloud-infrastructure-security
 categories:
-  - CSPM
+  - Cloud Security
 date: 2023-07-21T14:45:58.368Z
 description: Explore the essentials of cloud infrastructure security, its five
   main domains, and effective best practices. Learn how Cyscale's innovative
