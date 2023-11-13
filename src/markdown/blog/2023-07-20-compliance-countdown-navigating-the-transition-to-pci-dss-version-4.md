@@ -5,7 +5,6 @@ seoTitle: "Compliance Countdown: Navigating the Transition to PCI DSS Version 4"
 authors: Sabrina Lupșan
 permalink: pci-dss-version-4
 categories:
-  - News
   - Compliance
 date: 2023-07-20T09:21:54.388Z
 description: >
