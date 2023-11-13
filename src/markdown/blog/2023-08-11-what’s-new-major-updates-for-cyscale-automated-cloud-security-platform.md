@@ -5,7 +5,6 @@ seoTitle: "What’s new: Major updates for Cyscale Automated Cloud Security Plat
 authors: Manuela Țicudean
 permalink: major-update-cyscale
 categories:
-  - News
   - Product
 date: 2023-08-10T14:17:48.511Z
 description: In the newest major update, Cyscale has added to the Cloud Security
