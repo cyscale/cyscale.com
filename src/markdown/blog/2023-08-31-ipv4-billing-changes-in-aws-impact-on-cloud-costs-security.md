@@ -5,7 +5,7 @@ seoTitle: "IPv4 Billing Changes in AWS: Impact on Cloud Costs & Security"
 authors: Andrei Ștefănie
 permalink: aws-ipv4-impact-on-cloud-costs-and-security
 categories:
-  - News
+  - Cloud Security
 date: 2023-08-31T09:03:04.258Z
 description: Explore how AWS's new IPv4 billing changes, effective from February
   2024, will influence both your financial and security strategies. Understand
