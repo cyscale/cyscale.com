@@ -5,7 +5,6 @@ seoTitle: "Cloud Security and Compliance: A Guide for Your Cloud Infrastructure"
 authors: Sabrina Lupșan
 permalink: cloud-security-and-compliance
 categories:
-  - CSPM
   - Compliance
 date: 2022-12-05T08:12:56.508Z
 description: Cloud security and compliance go hand-in-hand. Following security
