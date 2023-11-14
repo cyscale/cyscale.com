@@ -5,8 +5,7 @@ seoTitle: "The SaaS CTO Cloud Security Handbook: A Comprehensive Checklist "
 authors: Sabrina Lupșan
 permalink: saas-cto-cloud-security-checklist
 categories:
-  - CSPM
-  - CNAPP
+  - Cloud Security
 date: 2023-10-12T09:37:39.256Z
 description: A comprehensive checklist for SaaS and startup CTOs and CISOs.
   Learn everything from effective cloud security strategy to effective incident
