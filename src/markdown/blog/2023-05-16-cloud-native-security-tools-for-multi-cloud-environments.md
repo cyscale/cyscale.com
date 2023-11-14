@@ -5,8 +5,7 @@ seoTitle: Cloud-Native Security Tools for Multi-Cloud Environments
 authors: Sabrina Lupșan
 permalink: cloud-native-tools-multi-cloud
 categories:
-  - CSPM
-  - CNAPP
+  - Cloud Native Security
 date: 2023-05-16T10:06:37.307Z
 description: As organizations continue to move their workloads to the cloud,
   security concerns have become a top priority for CISOs. Cloud-native security
@@ -14,16 +13,16 @@ description: As organizations continue to move their workloads to the cloud,
   misconfigurations and vulnerabilities, should help organizations meet
   regulatory compliance requirements and automate security processes. Using
   Cyscale, a CNAPP tool, you can bring together multi-cloud infrastructures and
-  secure your environment whether it is using AWS, Azure, Google Cloud or more than one
-  provider.
+  secure your environment whether it is using AWS, Azure, Google Cloud or more
+  than one provider.
 seoDescription: As organizations continue to move their workloads to the cloud,
   security concerns have become a top priority for CISOs. Cloud-native security
   solutions should be designed to provide contextual alerts for
   misconfigurations and vulnerabilities, should help organizations meet
   regulatory compliance requirements and automate security processes. Using
   Cyscale, a CNAPP tool, you can bring together multi-cloud infrastructures and
-  secure your environment whether it is using AWS, Azure, Google Cloud or more than one
-  provider.
+  secure your environment whether it is using AWS, Azure, Google Cloud or more
+  than one provider.
 featuredpost: true
 featuredimage: /img/40_blog-cover-cnapp-multi-cloud-tools.png
 tags:
