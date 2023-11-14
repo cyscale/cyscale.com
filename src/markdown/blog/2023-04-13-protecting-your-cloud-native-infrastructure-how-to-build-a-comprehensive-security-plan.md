@@ -5,7 +5,7 @@ seoTitle: "Cloud-Native Infrastructure: How to Build a Comprehensive Security Pl
 authors: Sabrina Lupșan
 permalink: cloud-native-infrastructure
 categories:
-  - CSPM
+  - Cloud Native Security
 date: 2023-04-13T11:40:40.049Z
 description: >-
   As more organizations adopt a cloud-native approach to support their business
