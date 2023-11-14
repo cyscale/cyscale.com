@@ -36,7 +36,7 @@ const LinksAndWhitepaper = ({
                         RECOMMENDED ARTICLES
                     </p>
                     <h2
-                        className='font-bold font-montserrat'
+                        className='font-bold font-montserrat text-blue'
                         css={css`
                             font-size: 2rem;
                         `}
