@@ -5,7 +5,7 @@ seoTitle: "Types of Encryption for in Motion, in Use, at Rest Data "
 authors: Sabrina Lupșan
 permalink: types-of-encryption
 categories:
-  - CSPM
+  - Encryption
 date: 2022-08-09T10:02:07.086Z
 description: "Encryption is the process of altering data in order to hide its
   content and ensure confidentiality. Entities that do not have the decryption
