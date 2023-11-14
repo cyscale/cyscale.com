@@ -7,7 +7,7 @@ seoTitle: "IAM Best Practices: Proven Strategies for Bulletproof Identity and
 authors: Sabrina Lupșan
 permalink: iam-best-practices-identity
 categories:
-  - CSPM
+  - IAM
 date: 2023-10-20T13:33:59.643Z
 description: "In traditional infrastructures, the first line of defense is the
   network layer. Network administrators in legacy systems invest significant
