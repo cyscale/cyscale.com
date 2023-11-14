@@ -7,7 +7,7 @@ seoTitle: "Cloud-Native Security: A Comprehensive Guide to Securing Your
 authors: Sabrina Lupșan
 permalink: cloud-native-security-guide
 categories:
-  - CSPM
+  - Cloud Native Security
 date: 2022-06-24T10:33:17.619Z
 description: An article about cloud native security. We understand the
   advantages of cloud-native applications based on on-premises applications, as
