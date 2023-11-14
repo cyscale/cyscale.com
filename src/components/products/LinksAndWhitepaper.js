@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from '../atoms/Containers';
 import { css } from 'twin.macro';
-import { ArticleLink, PageLink } from '../new-blog/ComplianceLinks';
+import { ArticleLink, PageLink } from '../new-blog/LatestCategoryArticles';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { Link } from 'gatsby';
 import classnames from 'classnames';

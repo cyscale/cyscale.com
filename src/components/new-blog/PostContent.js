@@ -12,29 +12,18 @@ import arrowRight from '../../assets/images/arrow-right-1-white.svg';
 import { Link } from 'gatsby';
 import useSubscribe from '../../hooks/useSubscribe';
 import { css } from 'twin.macro';
-import ComplianceLinks from './ComplianceLinks';
-import CSPMLinks from './CSPMLinks';
-import OtherLinks from './OtherLinks';
 import FurtherReadingSection from './FurtherReadingSection';
 import ScrollIndicator from './ScrollbarIndicator';
 import classnames from 'classnames';
 import { headingRenderer } from '../../common/utils';
 import Toc from './TOC';
 import FAQsBlog from './FAQsBlog';
+import BlogLinks from './BlogLinks';
 
 const ctaWhitepaperTextColor = css`
     color: #474747;
 `;
-export default function PostContent({
-    data,
-    suggestions,
-    preview = false,
-    pageUri,
-    pageName,
-    dataBlueBird,
-    dataCompliceToolbox,
-    tableOfContents
-}) {
+export default function PostContent({ data, suggestions, preview = false, pageUri, pageName, tableOfContents }) {
     const { emailInput, alert, onChange, onSubmit, onKeyDown } = useSubscribe(pageUri, pageName);
     const { categories } = data;
 
@@ -255,27 +244,7 @@ export default function PostContent({
                     </>
                 )}
             </div>
-            {!preview &&
-                categories.includes('CSPM') &&
-                categories.includes('Compliance') &&
-                categories.indexOf('Compliance') < categories.indexOf('CSPM') && (
-                    <ComplianceLinks dataCompliceToolbox={dataCompliceToolbox} />
-                )}
-            {!preview &&
-                categories.includes('CSPM') &&
-                categories.includes('Compliance') &&
-                categories.indexOf('CSPM') < categories.indexOf('Compliance') && (
-                    <CSPMLinks dataBlueBird={dataBlueBird} />
-                )}{' '}
-            {!preview && categories.includes('CSPM') && !categories.includes('Compliance') && (
-                <CSPMLinks dataBlueBird={dataBlueBird} />
-            )}
-            {!preview && !categories.includes('CSPM') && categories.includes('Compliance') && (
-                <ComplianceLinks dataCompliceToolbox={dataCompliceToolbox} />
-            )}
-            {!preview && !categories.includes('Compliance') && !categories.includes('CSPM') && (
-                <OtherLinks dataBlueBird={dataBlueBird} />
-            )}
+            {!preview && <BlogLinks categories={categories} />}
         </div>
     );
 }

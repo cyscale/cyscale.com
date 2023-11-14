@@ -52,6 +52,15 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
             value: slug
         });
     }
+
+    if (node.internal.type === `MarkdownRemark`) {
+        const firstCategory = node.frontmatter.categories ? node.frontmatter.categories[0] : null;
+        createNodeField({
+            node,
+            name: `firstCategory`,
+            value: firstCategory
+        });
+    }
 };
 
 const postsByCategory = {};
@@ -166,26 +175,6 @@ exports.createPages = async ({ graphql, actions }) => {
         });
     });
 
-    const cyscaleBlueBird = await graphql(`
-        query WhitepaperCover {
-            blueBird: file(relativePath: { eq: "cyscale-blue-bird.png" }) {
-                childImageSharp {
-                    gatsbyImageData(width: 386, layout: FIXED)
-                }
-            }
-        }
-    `);
-
-    const compliceToolbox = await graphql(`
-        query WhitepaperCover {
-            blueBird: file(relativePath: { eq: "compliance-toolbox-blog.png" }) {
-                childImageSharp {
-                    gatsbyImageData(width: 366, layout: FIXED)
-                }
-            }
-        }
-    `);
-
     await graphql(`
         query loadPostsQuery {
             allMarkdownRemark(
@@ -241,9 +230,7 @@ exports.createPages = async ({ graphql, actions }) => {
                 component: blogTemplate,
                 context: {
                     alldata: node,
-                    suggestions: [posts[0], posts[1], posts[2], posts[3]],
-                    blueBird: cyscaleBlueBird,
-                    compliceToolbox
+                    suggestions: [posts[0], posts[1], posts[2], posts[3]]
                 }
             });
         });

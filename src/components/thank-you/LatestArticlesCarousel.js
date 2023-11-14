@@ -4,7 +4,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import HomePost from '../new-blog/PostHome';
 import { css } from 'twin.macro';
 
-const LatestArticlesCarousel = ({ duration }) => {
+const LatestArticlesCarousel = ({ duration, maxWidthModifier = 1 }) => {
     const data = useStaticQuery(graphql`
         query PostsPreviewQuery {
             allMarkdownRemark(
@@ -39,7 +39,7 @@ const LatestArticlesCarousel = ({ duration }) => {
         <div
             className='absolute mt-4 lg:mt-0 z-10'
             css={css`
-                max-width: calc(100% + 1rem);
+                max-width: calc(100% + ${maxWidthModifier}rem);
             `}
         >
             <div className='flex flex-nowrap gap-2 overflow-x-scroll scrollbar-hide z-10'>

@@ -5,7 +5,7 @@ import { Row } from '../atoms/Containers';
 import { map } from 'lodash';
 import classNames from 'classnames';
 
-const PostsPreview = ({ bg }) => {
+const PostsPreview = ({ bg, blog }) => {
     const data = useStaticQuery(graphql`
         query PostsPreviewQuery {
             allMarkdownRemark(
@@ -40,7 +40,7 @@ const PostsPreview = ({ bg }) => {
     return (
         <div
             className={classNames({
-                'mt-0 py-12': true,
+                'mt-0 py-12': !blog,
                 'bg-lightGrey ': bg !== 'transparent',
                 'bg-transparent': bg === 'transparent'
             })}
@@ -55,16 +55,18 @@ const PostsPreview = ({ bg }) => {
                         );
                     })}
                 </Row>
-                <div className='block w-full mt-50px text-center'>
-                    <div className='mt-6 mx-auto w-auto flex justify-center'>
-                        <Link
-                            to='/blog/'
-                            className='gradientBgBtn max-w-md text-base font-medium rounded text-white uppercase text-center py-5 px-12 no-underline'
-                        >
-                            Read more about cloud security
-                        </Link>
+                {!blog && (
+                    <div className='block w-full mt-50px text-center'>
+                        <div className='mt-6 mx-auto w-auto flex justify-center'>
+                            <Link
+                                to='/blog/'
+                                className='gradientBgBtn max-w-md text-base font-medium rounded text-white uppercase text-center py-5 px-12 no-underline'
+                            >
+                                Read more about cloud security
+                            </Link>
+                        </div>
                     </div>
-                </div>
+                )}
             </div>
         </div>
     );

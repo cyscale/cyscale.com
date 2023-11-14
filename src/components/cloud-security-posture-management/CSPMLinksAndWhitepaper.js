@@ -1,10 +1,24 @@
 import React from 'react';
 import { css } from 'twin.macro';
-import { ArticleLink, PageLink } from '../new-blog/ComplianceLinks';
+import { ArticleLink, PageLink } from '../new-blog/LatestCategoryArticles';
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { Container } from '../atoms/Containers';
-import { topArticles } from '../new-blog/CSPMLinks';
+
+const topArticles = [
+    {
+        text: 'CNAPP: A mix of CSPM & CWPP',
+        link: '/blog/cnapp-a-mix-of-cspm-cwpp/'
+    },
+    {
+        text: 'CSPM: A Comprehensive Guide',
+        link: '/blog/cloud-security-posture-management-cspm-guide/'
+    },
+    {
+        text: 'What to Look for in a CSPM?',
+        link: '/blog/what-to-look-for-in-a-cspm/'
+    }
+];
 
 const cardTitle = css`
     @media (max-width: 768px) {
