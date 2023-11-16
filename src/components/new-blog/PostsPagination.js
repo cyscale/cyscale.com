@@ -39,6 +39,7 @@ const PostsPagination = ({
     location,
     categoriesList,
     category,
+    heading,
     prevPagePath,
     nextPagePath,
     currentPage,
@@ -59,7 +60,7 @@ const PostsPagination = ({
             <Layout title={seoTitle} description={seoDescription} pageName='blog' location={location}>
                 <Container>
                     <Section>
-                        <h1 className='text-3xl font-medium mb-4'>Welcome to the Cyscale blog</h1>
+                        <h1 className='text-3xl font-medium mb-4'>{heading}</h1>
                         <div className='overflow-x-auto py-2 -mx-8 md:mx-0 pl-8 md:pl-0 hide-scrollbar max-w-screen'>
                             <Chip className='mr-2' to={`/blog/`} active={category === 'All'}>
                                 All

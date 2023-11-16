@@ -249,7 +249,8 @@ exports.createPages = async ({ graphql, actions }) => {
                     category: 'All',
                     seoTitle: i === 0 ? 'Blog - Cyscale' : `Blog Page ${i + 1} - Cyscale`,
                     seoDescription: 'Cloud and Data Security Blog',
-                    categoriesList: categoriesWithPosts
+                    categoriesList: categoriesWithPosts,
+                    heading: 'Welcome to the Cyscale blog'
                 }
             });
         });
@@ -265,6 +266,7 @@ exports.createPages = async ({ graphql, actions }) => {
                             slug
                             seoTitle
                             seoDescription
+                            heading
                             disabled
                         }
                     }
@@ -297,6 +299,7 @@ exports.createPages = async ({ graphql, actions }) => {
                             category: node.frontmatter.name,
                             seoTitle: node.frontmatter.seoTitle,
                             seoDescription: node.frontmatter.seoDescription,
+                            heading: node.frontmatter.heading,
                             categoriesList: categoriesWithPosts,
                             categorySlug: node.frontmatter.name.toLowerCase().split(' ').join('-')
                         }

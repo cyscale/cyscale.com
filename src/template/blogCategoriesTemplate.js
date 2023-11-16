@@ -4,7 +4,7 @@ import PostsPagination from '../components/new-blog/PostsPagination';
 
 const BlogCategoriesTemplate = ({ pageContext, location, data }) => {
     const { category, categoriesList, seoTitle, seoDescription } = pageContext;
-    const { currentPage, numPages, limit, categorySlug } = pageContext;
+    const { currentPage, numPages, limit, categorySlug, heading } = pageContext;
 
     const prevPagePath =
         currentPage - 1 === 1 || currentPage - 1 === 0
@@ -28,6 +28,7 @@ const BlogCategoriesTemplate = ({ pageContext, location, data }) => {
             location={location}
             categoriesList={categoriesList}
             category={category}
+            heading={heading}
             currentPage={currentPage}
             prevPagePath={prevPagePath}
             nextPagePath={nextPagePath}

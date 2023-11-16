@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import PostsPagination from '../components/new-blog/PostsPagination';
 
 const BlogAllPostsTemplate = ({ pageContext, location, data }) => {
-    const { category, categoriesList, seoTitle, seoDescription } = pageContext;
+    const { category, categoriesList, seoTitle, seoDescription, heading } = pageContext;
     const { currentPage, numPages, limit } = pageContext;
 
     const prevPagePath =
@@ -26,6 +26,7 @@ const BlogAllPostsTemplate = ({ pageContext, location, data }) => {
             location={location}
             categoriesList={categoriesList}
             category={category}
+            heading={heading}
             currentPage={currentPage}
             prevPagePath={prevPagePath}
             nextPagePath={nextPagePath}
