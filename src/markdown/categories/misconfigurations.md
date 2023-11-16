@@ -1,8 +1,8 @@
 ---
 templateKey: category
-seoTitle: Cyscale - Misconfigurations
+seoTitle: Cloud Misconfigurations - Expert Insights and Tips | Cyscale Blog
 slug: misconfigurations
 name: Misconfigurations
-seoDescription: News about Cyscale Misconfigurations
+seoDescription: Navigate the complexities of cloud misconfigurations. Get insights on prevention, detection, and solutions for securing your cloud infrastructure.
 disabled: false
 ---

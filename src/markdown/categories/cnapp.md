@@ -2,7 +2,7 @@
 templateKey: category
 name: CNAPP
 slug: cnapp
-seoTitle: Cyscale - CNAPP
+seoTitle: CNAPP Expert Insights and Tips | Cyscale Blog
 disabled: false
-seoDescription: News about Cyscale CNAPP
+seoDescription: Explore the forefront of Cloud-Native Application Protection. Discover latest CNAPP trends, strategies, and expert advice for robust cloud application security.
 ---
