@@ -73,6 +73,11 @@ const AboutUs = ({ location }) => {
                     gatsbyImageData(width: 100, layout: CONSTRAINED)
                 }
             }
+            azureAdminAssociate: file(relativePath: { eq: "azure-administrator-associate.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 100, layout: CONSTRAINED)
+                }
+            }
             awsSolutionsArchitectProfessional: file(relativePath: { eq: "solutions-architect-certificate.png" }) {
                 childImageSharp {
                     gatsbyImageData(width: 100, layout: CONSTRAINED)
@@ -495,6 +500,24 @@ const AboutUs = ({ location }) => {
                                 Security, Compliance,
                                 <br /> and Identity
                                 <br /> Fundamentals
+                            </>
+                        }
+                        company={'Microsoft'}
+                        classes={'mt-2 sm:mt-12'}
+                    />
+                    <CertificationCard
+                        imageData={dataAboutUs.azureAdminAssociate.childImageSharp.gatsbyImageData}
+                        titleSm={
+                            <>
+                                Microsoft Certified: Azure
+                                <br /> Administrator Associate
+                            </>
+                        }
+                        titleLg={
+                            <>
+                                Microsoft Certified:
+                                <br /> Azure Administrator
+                                <br /> Associate
                             </>
                         }
                         company={'Microsoft'}
