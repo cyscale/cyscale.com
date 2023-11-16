@@ -34,6 +34,16 @@ const IamSecurity = ({ location }) => {
                     gatsbyImageData(width: 1080, layout: CONSTRAINED)
                 }
             }
+            halodata: file(relativePath: { eq: "halodata-icon.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 200, layout: CONSTRAINED)
+                }
+            }
+            renaissance: file(relativePath: { eq: "renaissance-icon.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 100, layout: FIXED)
+                }
+            }
         }
     `);
 
@@ -83,7 +93,9 @@ const IamSecurity = ({ location }) => {
                                         }
                                     `}
                                 >
-                                    <span className="font-semibold">Take control of your cloud identities and permissions.</span>
+                                    <span className='font-semibold'>
+                                        Take control of your cloud identities and permissions.
+                                    </span>
                                 </ServiceHighlight>
                                 <div className='flex flex-row max-w-md sm:max-w-lg justify-between flex-wrap space-y-6 lg:space-y-0 lg:space-x-1 px-18 sm:px-0 mx-auto mt-4'>
                                     <img style={{ marginTop: '0' }} className='mx-auto sm:mx-0' src={gcpLogo} alt='' />
@@ -113,24 +125,43 @@ const IamSecurity = ({ location }) => {
                                 </div>
                             </div>
                         </div>
-                        <div className='col-span-12 lg:col-span-6' id='apply-now'>
-                            <div
-                                className='rounded-xl shadow-lg mt-6 lg:mt-0 py-4 lg:pt-12 pb-0 px-8 md:px-12 max-w-lg mx-auto lg:mr-0 lg:ml-auto relative'
-                                css={css`
-                                    background-color: rgba(255, 255, 255, 0.6);
-                                    backdrop-filter: blur(5px);
-                                    z-index: 1;
-                                `}
-                            >
-                                <h2 className='font-semibold text-2xl sm:text-3xl lg:text-2xl leading-normal mb-8 mt-8 lg:mt-0 montserrat-font'>
-                                    Book a live demo
-                                </h2>
-                                {loadingForm && <LoaderContainer minHeight={310} />}
+                        <div className='col-span-12 lg:col-span-6' id='apply-now-or'>
+                            <div className='flex flex-col lg:block'>
                                 <div
-                                    style={{ minHeight: 310 }}
-                                    id='iamsecurity-campaign-form'
-                                    className={classnames('pb-4', { hidden: loadingForm })}
-                                />
+                                    className='order-2 lg:order-1 rounded-xl shadow-lg mt-6 lg:mt-0 py-4 lg:pt-12 pb-0 px-8 md:px-12 max-w-lg mx-auto lg:mr-0 lg:ml-auto relative'
+                                    css={css`
+                                        background-color: rgba(255, 255, 255, 0.6);
+                                        backdrop-filter: blur(5px);
+                                        z-index: 1;
+                                    `}
+                                >
+                                    <h2 className='font-semibold text-2xl sm:text-3xl lg:text-2xl leading-normal mb-8 mt-8 lg:mt-0 montserrat-font'>
+                                        Book a live demo
+                                    </h2>
+                                    {loadingForm && <LoaderContainer minHeight={310} />}
+                                    <div
+                                        style={{ minHeight: 310 }}
+                                        id='iamsecurity-campaign-form'
+                                        className={classnames('pb-4', { hidden: loadingForm })}
+                                    />
+                                </div>
+                                <div
+                                    className='order-1 lg:order-2 flex items-center lg:ml-20 justify-center lg:justify-start'
+                                    css={css`
+                                        margin-top: 2.15rem;
+                                    `}
+                                >
+                                    <GatsbyImage
+                                        image={data.halodata.childImageSharp.gatsbyImageData}
+                                        alt=''
+                                        className='z-10'
+                                    />
+                                    <GatsbyImage
+                                        image={data.renaissance.childImageSharp.gatsbyImageData}
+                                        alt=''
+                                        className='ml-6 z-10'
+                                    />
+                                </div>
                             </div>
                         </div>
                     </Row>

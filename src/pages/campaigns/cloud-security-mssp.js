@@ -42,6 +42,16 @@ const CloudSecurityMSSP = ({ location }) => {
                     gatsbyImageData(width: 1920, layout: CONSTRAINED)
                 }
             }
+            halodata: file(relativePath: { eq: "halodata-icon.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 200, layout: CONSTRAINED)
+                }
+            }
+            renaissance: file(relativePath: { eq: "renaissance-icon.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 100, layout: FIXED)
+                }
+            }
         }
     `);
 
@@ -146,6 +156,23 @@ const CloudSecurityMSSP = ({ location }) => {
                                     style={{ minHeight: 310 }}
                                     id='request-demo'
                                     className={classnames('pb-4', { hidden: loadingForm })}
+                                />
+                            </div>
+                            <div
+                                className='flex items-center lg:ml-20 justify-center lg:justify-start'
+                                css={css`
+                                    margin-top: 2.15rem;
+                                `}
+                            >
+                                <GatsbyImage
+                                    image={data.halodata.childImageSharp.gatsbyImageData}
+                                    alt=''
+                                    className='z-10'
+                                />
+                                <GatsbyImage
+                                    image={data.renaissance.childImageSharp.gatsbyImageData}
+                                    alt=''
+                                    className='ml-6 z-10'
                                 />
                             </div>
                         </div>
