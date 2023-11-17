@@ -43,7 +43,7 @@ const PlatformLink = styled.div`
 const caretPlatform = (isAnimatedNavbarPage) => css`
     :before {
         ${caretMenuSelegoStyle};
-        left: ${isAnimatedNavbarPage ? '8.4rem' : '25.3rem'};
+        left: ${isAnimatedNavbarPage ? '8.4rem' : '13.3rem'};
     }
 `;
 const Platform = ({ pathname, activeLinks, setActiveLinks }) => {

@@ -15,10 +15,10 @@ import useScrollTrigger from '../scrollTrigger';
 import { isAnimatedNavbarPage, isPlaygroundBlogPage } from '../../common/utils';
 
 const MegaMenu = styled.div`
-    left: ${({ animatedNavbarPages, left }) => (animatedNavbarPages ? left : '0')};
+    left: ${({ animatedNavbarPages, left }) => (animatedNavbarPages ? left : '')};
+    right: 0;
     position: absolute;
     text-align: left;
-    width: 100%;
     z-index: -99;
     -ms-transform: translateY(-1.25rem);
     transform: translateY(-1.25rem);
@@ -110,8 +110,9 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation, sea
         resources: false,
         company: false
     });
-    const [isSolutionsHovered, setIsSolutionsHovered] = useState(false);
     const hideMegaMenu = useScrollTrigger();
+    const [hoveredNavItem, setHoveredNavItem] = useState(null);
+    const isNavItemHovered = (navItemName) => hoveredNavItem === navItemName;
 
     return (
         <nav
@@ -136,7 +137,12 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation, sea
                     )}
                 </div>
                 <ul className='flex flex-row'>
-                    <NavItem disabled={isAnimation} searchBar={searchBar}>
+                    <NavItem
+                        disabled={isAnimation}
+                        searchBar={searchBar}
+                        onMouseEnter={() => setHoveredNavItem('platform')}
+                        onMouseLeave={() => setHoveredNavItem(null)}
+                    >
                         <NavItemButton
                             data-text='Platform'
                             type='button'
@@ -150,14 +156,20 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation, sea
                             <span>Platform</span>
                         </NavItemButton>
                         <MegaMenu css={[hideMegaMenu ? hiddenMegaMenuOnScroll : null]}>
-                            <Platform pathname={pathname} activeLinks={activeLinks} setActiveLinks={setActiveLinks} />
+                            {isNavItemHovered('platform') && (
+                                <Platform
+                                    pathname={pathname}
+                                    activeLinks={activeLinks}
+                                    setActiveLinks={setActiveLinks}
+                                />
+                            )}
                         </MegaMenu>
                     </NavItem>
                     <NavItem
                         disabled={isAnimation}
                         searchBar={searchBar}
-                        onMouseEnter={() => setIsSolutionsHovered(true)}
-                        onMouseLeave={() => setIsSolutionsHovered(false)}
+                        onMouseEnter={() => setHoveredNavItem('solutions')}
+                        onMouseLeave={() => setHoveredNavItem(null)}
                     >
                         <NavItemButton
                             data-text='Solutions'
@@ -189,7 +201,7 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation, sea
                             animatedNavbarPages={isAnimatedNavbarPage(pathname) && !isPlaygroundBlogPage(pathname)}
                             left='-17rem'
                         >
-                            {isSolutionsHovered && (
+                            {isNavItemHovered('solutions') && (
                                 <Solutions
                                     pathname={pathname}
                                     activeLinks={activeLinks}
@@ -207,7 +219,12 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation, sea
                             </span>
                         </NavItemButton>
                     </NavItem>
-                    <NavItem disabled={isAnimation} searchBar={searchBar}>
+                    <NavItem
+                        disabled={isAnimation}
+                        searchBar={searchBar}
+                        onMouseEnter={() => setHoveredNavItem('resources')}
+                        onMouseLeave={() => setHoveredNavItem(null)}
+                    >
                         <NavItemButton
                             data-text='Resources'
                             type='button'
@@ -233,10 +250,21 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation, sea
                             animatedNavbarPages={isAnimatedNavbarPage(pathname) && !isPlaygroundBlogPage(pathname)}
                             left='-4rem'
                         >
-                            <Resources pathname={pathname} activeLinks={activeLinks} setActiveLinks={setActiveLinks} />
+                            {isNavItemHovered('resources') && (
+                                <Resources
+                                    pathname={pathname}
+                                    activeLinks={activeLinks}
+                                    setActiveLinks={setActiveLinks}
+                                />
+                            )}
                         </MegaMenu>
                     </NavItem>
-                    <NavItem disabled={isAnimation} searchBar={searchBar}>
+                    <NavItem
+                        disabled={isAnimation}
+                        searchBar={searchBar}
+                        onMouseEnter={() => setHoveredNavItem('company')}
+                        onMouseLeave={() => setHoveredNavItem(null)}
+                    >
                         <NavItemButton
                             data-text='Company'
                             type='button'
@@ -250,7 +278,13 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation, sea
                             <span>Company</span>
                         </NavItemButton>
                         <MegaMenu css={[hideMegaMenu ? hiddenMegaMenuOnScroll : null]}>
-                            <Company pathname={pathname} activeLinks={activeLinks} setActiveLinks={setActiveLinks} />
+                            {isNavItemHovered('company') && (
+                                <Company
+                                    pathname={pathname}
+                                    activeLinks={activeLinks}
+                                    setActiveLinks={setActiveLinks}
+                                />
+                            )}
                         </MegaMenu>
                     </NavItem>
                     <li className='py-6 pl-4'>
