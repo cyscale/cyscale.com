@@ -159,9 +159,9 @@ const CloudSecurityMSSP = ({ location }) => {
                                 />
                             </div>
                             <div
-                                className='flex items-center lg:ml-20 justify-center lg:justify-start'
+                                className='flex items-center lg:ml-24 justify-center lg:justify-start'
                                 css={css`
-                                    margin-top: 2.15rem;
+                                    margin-top: 1.85rem;
                                 `}
                             >
                                 <GatsbyImage
