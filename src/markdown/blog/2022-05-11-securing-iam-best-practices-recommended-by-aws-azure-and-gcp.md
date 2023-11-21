@@ -29,7 +29,7 @@ tags:
 
 After we've described the [IAM implementations for AWS, Google Cloud, and Azure](https://cyscale.com/blog/iam-services-in-aws-azure-gcp/), let's look at some of the security best practices they recommend and how to check if your cloud environment is implementing them. 
 
-With Cyscale, you can efficiently scan your cloud infrastructure and verify whether it follows the IAM best practices that we're going to describe in this article. 
+With Cyscale, you can efficiently scan your cloud infrastructure and verify whether it follows the [IAM best practices](https://cyscale.com/blog/iam-best-practices-identity/) that we're going to describe in this article. 
 
 <div id="MFA">
 
@@ -126,7 +126,5 @@ Identity and Access Management is a crucial component of the cloud and should be
 Use Cyscale to identify any [misconfigurations](https://cyscale.com/blog/common-cloud-misconfigurations-how-to-avoid-them/) or gaps in your cloud infrastructure and secure it with our over 400 controls. 
 
 In the following article, we will look at [IAM best practices](https://cyscale.com/blog/iam-best-practices-identity/) described by these vendors and how to check if your cloud infrastructure is implementing them correctly.
-
-
 
 <!--EndFragment-->
