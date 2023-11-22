@@ -59,7 +59,7 @@ const solutions = [
                 text: 'Fintech'
             },
             {
-                link: '/campaigns/cloud-security-mssp/',
+                link: '/use-cases/cloud-security-mssp/',
                 text: 'MSSP Portal'
             }
         ]

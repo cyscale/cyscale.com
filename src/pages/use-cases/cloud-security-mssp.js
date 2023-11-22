@@ -1,17 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import Layout from '../../components/layout/CleanLayout';
 import { Container, Row } from '../../components/atoms/Containers';
-import { graphql, Link, useStaticQuery } from 'gatsby';
-import cloudIcon from '../../assets/images/cloud-icon.svg';
-import { GatsbyImage } from 'gatsby-plugin-image';
-import AnimatedNavbarLayout from '../../components/campaigns/AnimatedNavbarLayout';
-import useHSFormLoaded from '../../hooks/useHSFormLoaded';
-import classnames from 'classnames';
-import LoaderContainer from '../../components/Loader/LoaderContainer/LoaderContainer';
 import { css } from 'twin.macro';
-import HeroImage from '../../assets/images/bg-image-misconfigurations-campaigns.svg';
-import ScrollDown from '../../components/ScrollButton/ScrollDown';
 import ServiceHighlight from '../../components/campaigns/ServiceHighlight';
+import LoaderContainer from '../../components/Loader/LoaderContainer/LoaderContainer';
+import classnames from 'classnames';
+import { GatsbyImage } from 'gatsby-plugin-image';
+import ScrollDown from '../../components/ScrollButton/ScrollDown';
+import HeroImage from '../../assets/images/bg-image-misconfigurations-campaigns.svg';
+import cloudIcon from '../../assets/images/cloud-icon.svg';
+import { graphql, Link, useStaticQuery } from 'gatsby';
 import CaseStudiesSection from '../../components/Home/CaseStudiesSection';
+import useHSFormLoaded from '../../hooks/useHSFormLoaded';
+import { Helmet } from 'react-helmet';
 
 const subtitle = css`
     font-size: 1.625rem;
@@ -26,7 +27,7 @@ const CloudSecurityMSSP = ({ location }) => {
     const { loadingForm } = useHSFormLoaded();
 
     const data = useStaticQuery(graphql`
-        query MSSPCampaignQuery {
+        query MSSPPage {
             continuosProtection: file(relativePath: { eq: "continuos-protection-cspm.png" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1920, layout: CONSTRAINED)
@@ -55,21 +56,45 @@ const CloudSecurityMSSP = ({ location }) => {
         }
     `);
 
+    useEffect(() => {
+        setTimeout(() => {
+            if (window && window.hbspt) {
+                window.hbspt.forms?.create({
+                    portalId: '5413427',
+                    formId: 'c2d8e2e6-6edb-43d2-9052-350e7f00d1f6',
+                    target: '#request-demo'
+                });
+            }
+        }, 600);
+    }, []);
+
     return (
-        <AnimatedNavbarLayout
-            formId={'9fa1b442-4540-4106-9e6a-3c1ad06ec295'}
-            formTargetId={'#request-demo'}
+        <Layout
             location={location}
             title={'Cyscale | Cloud Security for MSSPs'}
             description={'Unlock new revenue streams with a comprehensive managed cloud security solution.'}
-            pageName={'CampaignMSSP'}
-            noIndex
+            pageName={'MSSPPage'}
         >
-            <div className='bg-zircon pb-16 sm:pb-0 pt-32 lg:pt-40 xl:pt-12 relative'>
+            <Helmet>
+                <script charset='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js'></script>
+            </Helmet>
+            <div className='hidden' data-permalink>
+                /use-cases/cloud-security-mssp
+            </div>
+            <div className='hidden' data-title>
+                Cyscale | Cloud Security for MSSPs
+            </div>
+            <div className='hidden' data-description>
+                Unlock new revenue streams with a comprehensive managed cloud security solution.
+            </div>
+            <div className='hidden' data-category>
+                solutions
+            </div>
+            <div className='bg-zircon pb-16 sm:pb-0 pt-32 lg:pt-52 relative'>
                 <Container>
                     <Row>
                         <div className='col-span-12 lg:col-span-6'>
-                            <div className='lg:mt-4 pt-2 md:pt-8 lg:pt-4 max-w-2xl mx-auto lg:mx-0'>
+                            <div className='pt-2 md:pt-8 lg:pt-0 max-w-2xl mx-auto lg:mx-0'>
                                 <h1
                                     className='text-center lg:text-left mb-8 font-montserrat font-bold'
                                     css={css`
@@ -180,8 +205,8 @@ const CloudSecurityMSSP = ({ location }) => {
                     </Row>
                     <ScrollDown />
                 </Container>
-                <div className='absolute bottom-0 xl:top-0 right-0 '>
-                    <div className='hidden lg:block lg:max-w-2xl'>
+                <div className='absolute bottom-0 xl:top-0 mt-44 right-0 '>
+                    <div className='hidden xl:block lg:max-w-2xl'>
                         <img src={HeroImage} alt='' />
                     </div>
                 </div>
@@ -365,7 +390,7 @@ const CloudSecurityMSSP = ({ location }) => {
                 disableAnimation={true}
                 backgroundColor={`linear-gradient(0deg, #fff 7.02%, #e4edfc 100%), #e4edfc`}
             />
-        </AnimatedNavbarLayout>
+        </Layout>
     );
 };
 
