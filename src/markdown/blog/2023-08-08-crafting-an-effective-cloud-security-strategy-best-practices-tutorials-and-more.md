@@ -106,7 +106,7 @@ That’s it. Run these commands and forget about them. Your [cloud infrastructur
 
 ### 5. Get relevant logs 
 
-Setting up a logging system is like walking on thin ice; you think everything is important, but when you see thousands of logs piling up, you end up feeling like nothing matters anymore. However, logging and monitoring is one of the key pillars in cloud security and must not be neglected.  
+Setting up a logging system is like walking on thin ice; you think everything is important, but when you see thousands of logs piling up, you end up feeling like nothing matters anymore. However, logging and monitoring is one of the key pillars in [multi-cloud security](https://cyscale.com/use-cases/cloud-data-security/) and must not be neglected.  
 
 In Azure, you can create Log Alerts for specific events to ensure that you catch what matters to you. Are you worried that someone may create a bad policy assignment? Do you want to know when a network security group is updated, or if someone has deleted SQL Server Firewall rules? Fear not, you can granularly choose your battles and select which events are relevant for your company. 
 
