@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
-title: Securing IAM - Best Practices Recommended by AWS, Azure, and Google Cloud
-seoTitle: Securing IAM - Best Practices Recommended by AWS, Azure, and Google Cloud
+title: IAM Best Practices for AWS, Google Cloud and Azure
+seoTitle: IAM Best Practices for AWS, Google Cloud and Azure
 authors: Sabrina Lupșan
 permalink: iam-best-practices-from-aws-azure-gcp
 categories:
