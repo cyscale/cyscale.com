@@ -78,6 +78,9 @@ const CloudSecurityMSSP = ({ location }) => {
             <Helmet>
                 <script charset='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js'></script>
             </Helmet>
+            <div className='hidden' data-template-key>
+                hardcoded-pages
+            </div>
             <div className='hidden' data-permalink>
                 /use-cases/cloud-security-mssp
             </div>
