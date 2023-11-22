@@ -28,7 +28,7 @@ tags:
   - security
   - IAM
 ---
-In traditional infrastructures, the first line of defense is the network layer. Network administrators in legacy systems invest significant effort into securing routers, adding firewalls and ensuring that all network devices function correctly. In the cloud, under the shared responsibility model, the customer does not deal with physical devices anymore, and security is shifted to identity and access control, known as [IAM (Identity and Access Management)](https://cyscale.com/blog/iam-best-practices-from-aws-azure-gcp/), which focuses on the prevention of unauthorized users and devices from accessing cloud assets.  
+In traditional infrastructures, the first line of defense is the network layer. Network administrators in legacy systems invest significant effort into securing routers, adding firewalls and ensuring that all network devices function correctly. In the cloud, under the shared responsibility model, the customer does not deal with physical devices anymore, and security is shifted to identity and access control, known as IAM (Identity and Access Management), which focuses on the prevention of unauthorized users and devices from accessing cloud assets.  
 
 ## Why is IAM important? 
 
@@ -61,7 +61,7 @@ Often, companies will deploy multiple cloud accounts, and the best practice is t
 
 A cloud company should use an identity provider (whether that’s one built-in into the cloud service provider, such as Azure AD, or an external SSO provider, like [Okta](https://cyscale.com/blog/iam-okta-security-best-practices/)) to manage cloud access, as opposed to having multiple users defined within individual cloud accounts. 
 
-Managing identities in a central location, as well as using SSO, are key elements of ensuring IAM security in the cloud. These are the risks of not using SSO in your company: 
+Managing identities in a central location, as well as using SSO, are key elements of ensuring [IAM security](https://cyscale.com/use-cases/iam-security/) in the cloud. These are the risks of not using SSO in your company: 
 
 1. **Password fatigue leading to security issues.** Having users input their passwords multiple times a day and for different applications can and probably will lead to them re-using the same password across multiple platforms or using very simple, easy to remember passwords. No-one wants to pull out the password manager 20 times a day. Password fatigue can lead to credentials leak and may put a company in danger.  
 2. **Long-term credentials accidentally disclosed or stolen.** Managing cloud access at individual account level implies creating long-term credentials such as passwords or access keys. Through SSO, temporary credentials are used and they expire after the user's session. This helps mitigate the risk of long-term credential exposure, because even if these temporary credentials were to be leaked, they would only be valid for a short period.
