@@ -108,10 +108,10 @@ const ContactUs = ({ location }) => {
                                             </p>
                                         </div>
                                     )}
-                                    {loadingForm && <LoaderContainer minHeight={510} />}
+                                    {loadingForm && <LoaderContainer minHeight={540} />}
                                     {showFormMessage && (
                                         <div
-                                            style={{ minHeight: 510 }}
+                                            style={{ minHeight: 540 }}
                                             id='contact-form'
                                             className={classnames({ hidden: loadingForm })}
                                         />
