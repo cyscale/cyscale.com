@@ -7,7 +7,8 @@ export const isAnimatedNavbarPage = (pathname) => {
         pathname.includes('campaigns') ||
         pathname.includes('playground') ||
         pathname.includes('free-trial') ||
-        pathname.includes('automated-security-for-startups')
+        pathname.includes('automated-security-for-startups') ||
+        pathname.includes('cloud-security-risk-assessment')
     );
 };
 
