@@ -51,7 +51,8 @@ const defaultOg = {
     FintechCampaign: CloudSecurityFintechCampaignOg,
     FintechUseCase: CloudSecurityFintechCampaignOg,
     SecureCloudCampaign: SecureCloudCampaignOg,
-    CampaignMSSP: CampaignMSSPOg
+    CampaignMSSP: CampaignMSSPOg,
+    MSSPPage: CampaignMSSPOg
 };
 
 const Seo = ({ title, description, pageName, banner, location, blogDetails }) => {
