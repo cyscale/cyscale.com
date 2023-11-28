@@ -35,7 +35,7 @@ RegTech funding this year has nearly caught 2022’s total already, and over 1,0
 
 Meanwhile, DeepTech has moved on from stumbling blockchain and last-mile delivery innovations to resurface in several facets of AI, with automation helping companies do more with fewer resources - especially in the field of regulatory compliance and security.   
 
-When it comes to both [cloud security and compliance](<cloud security and compliance>), identifying failure is only part of the process - you also need context to understand how to fix the problem. This context is provided by the Cyscale [Security Knowledge Graph](https://cyscale.com/products/security-knowledge-graph/).  
+When it comes to both [cloud security and compliance](https://cyscale.com/blog/cloud-compliance-101-basics-best-practices/), identifying failure is only part of the process - you also need context to understand how to fix the problem. This context is provided by the Cyscale [Security Knowledge Graph](https://cyscale.com/products/security-knowledge-graph/).  
 
 Cyscale can be found in Sifted’s [RegTech briefing](https://sifted.eu/pro/briefings/regtech/) in the Compliance Management Solutions part of the map, and in the [DeepTech briefing](https://sifted.eu/pro/briefings/deeptech/) as an early-stage startup to watch.   
 
