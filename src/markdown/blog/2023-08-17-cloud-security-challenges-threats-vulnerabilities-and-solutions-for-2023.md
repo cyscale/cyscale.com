@@ -143,7 +143,7 @@ While the challenges of cloud security can seem overwhelming, having a comprehen
 
 * **Review and Update Security Measures:** Regularly review and update security measures to stay ahead of evolving threats and security landscape changes. 
 * **Provide Continuous Training:** Educate security teams and employees on emerging threats, security best practices, and ongoing compliance requirements. 
-* **Evaluate Emerging Technologies:** Keep up with new technologies and approaches in cloud security, like [cloud security strategy best practices](https://cyscale.com/cloud-security-strategy-best-practices-tutorials), to continually innovate and strengthen your security posture. 
+* **Evaluate Emerging Technologies:** Keep up with new technologies and approaches in cloud security, like [cloud security strategy best practices](https://cyscale.com/blog/cloud-security-strategy-best-practices-tutorials/), to continually innovate and strengthen your security posture. 
 
 Building a comprehensive cloud security strategy is not a one-time effort. It's a dynamic and ongoing process that requires careful planning, execution, and adaptation. By following this roadmap, you can navigate the complex terrain of cloud security challenges and forge a path toward a resilient and secure cloud environment. 
 
