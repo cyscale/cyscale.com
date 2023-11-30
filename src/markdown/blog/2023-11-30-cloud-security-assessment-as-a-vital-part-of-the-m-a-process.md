@@ -138,6 +138,10 @@ All these compliance standards and controls are analyzed within the Cyscale app,
 
 This consolidates your reputation as a transparent, data-focused organization that proves to customers, auditors, and regulatory compliance bodies how robustly it protects Personally Identifiable Information (PII). 
 
-An easy-to-understand report can then be used to make the case for additional funding or remediation requirements, for both technical stakeholders such as CTOs, CISOs, and security engineers, as well as more business-minded executives such as CFOs, CEOs or the Board.   
+An easy-to-understand report can then be used to make the case for additional funding or remediation requirements, for both technical stakeholders such as CTOs, CISOs, and security engineers, as well as more business-minded executives such as CFOs, CEOs or the Board.  
+
+### See how we build an asset inventory in this video
+
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/OQj8Yo71DvQ?si=C4n-svhf206ClYSQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
 
 [Book a cloud security assessment](https://cyscale.com/request-demo/) ahead of your M&A activity and identify unforeseen risks in minutes.
