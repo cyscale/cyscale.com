@@ -102,8 +102,6 @@ Without great visibility into a changing environment, mistakes are bound to happ
 
 Furthermore, perform access reviews to thoroughly understand the permissions users have and whether they are overprovisioned or even redundant.  
 
-[See how Cyscale solved this challenge. ](#inventory)
-
 ### [](#inventory)Expanding compliance and regulatory challenges 
 
 M&A events can often cross multiple geographic or legal jurisdictions, each with its own set of compliance requirements. Ensuring alignment with these diverse regulatory landscapes can be a daunting task, and failure to meet compliance standards can lead to severe penalties and legal consequences. 
@@ -125,8 +123,6 @@ The Cyscale platform is designed to help close these security gaps by providing 
 ### Preparing for M&A with a cloud security assessment 
 
 The Cyscale cloud security platform is an agentless cloud-native application protection platform (CNAPP) that can help you assess risk during both the due diligence process and day zero of the merger and integration.  
-
-`<﻿p id="inventory"></p>`
 
 To start with, a fully automated security assessment across AWS, Azure, Google Cloud, Alibaba, and Kubernetes assets will provide you with comprehensive insights into your partner’s cloud estate, including all vulnerabilities and misconfigurations, in a matter of minutes.  
 
