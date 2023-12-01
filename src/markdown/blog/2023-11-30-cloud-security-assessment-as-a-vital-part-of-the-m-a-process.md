@@ -15,7 +15,7 @@ seoDescription: Mergers and acquisitions (M&A) that involve the consolidation of
   risk.
 featuredpost: true
 featuredimage: /img/mandaprocess.png
-tableOfContents: false
+tableOfContents: true
 ---
 Although 2023 began with a cautious outlook on M&A activity, analysts predict that the ongoing focus on digital transformation, including innovation around generative AI, is creating dynamic market conditions that could create transformation opportunities for more buoyant merger and acquisitions activity in the near term.   
 
