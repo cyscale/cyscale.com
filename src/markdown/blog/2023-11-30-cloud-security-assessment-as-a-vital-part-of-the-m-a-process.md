@@ -144,6 +144,4 @@ An easy-to-understand report can then be used to make the case for additional fu
 
 <p><iframe width="560" height="315" src="https://www.youtube.com/embed/OQj8Yo71DvQ?si=C4n-svhf206ClYSQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
 
-<img src="" alt="" title="" class=" blog-image-shadow " style="width:auto;height:auto;"/>
-
 [Book a cloud security assessment](https://cyscale.com/request-demo/) ahead of your M&A activity and identify unforeseen risks in minutes.
