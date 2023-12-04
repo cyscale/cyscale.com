@@ -316,6 +316,7 @@ collections:
       create: true
       slug: '{{fields.slug}}'
       fields:
+          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'top-articles-category-based' }
           - { label: 'Slug', name: 'slug', widget: 'string', required: false }
           - { label: 'Category', name: 'category', widget: 'string', required: false }
           - label: 'Related Blog Post'
