@@ -40,7 +40,19 @@ const redirects = [
     }
 ];
 
-exports.onCreateNode = ({ node, getNode, actions }) => {
+function findNodeByTitle(title, getNodes) {
+    const allMarkdownNodes = getNodes().filter((node) => node.internal.type === 'MarkdownRemark');
+
+    for (const markdownNode of allMarkdownNodes) {
+        if (markdownNode.frontmatter.title === title) {
+            return markdownNode;
+        }
+    }
+
+    return null;
+}
+
+exports.onCreateNode = ({ node, getNode, getNodes, actions }) => {
     const { createNodeField } = actions;
 
     if (node.internal.type === `MarkdownRemark`) {
@@ -60,6 +72,32 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
             name: `firstCategory`,
             value: firstCategory
         });
+    }
+
+    if (node.internal.type === `MarkdownRemark`) {
+        if (node.frontmatter.templateKey === 'blog-post') {
+            const slug = createFilePath({ node, getNode, basePath: `pages` });
+            createNodeField({
+                node,
+                name: `slug`,
+                value: slug
+            });
+        }
+
+        if (node.frontmatter.templateKey === 'top-articles-category-based' && node.frontmatter.relatedBlogPost) {
+            const relatedPostsPermalinks = node.frontmatter.relatedBlogPost.map((relatedPost) => {
+                const relatedNode = findNodeByTitle(relatedPost.blogPost, getNodes);
+                return relatedNode
+                    ? { title: relatedNode.frontmatter.title, permalink: relatedNode.frontmatter.permalink }
+                    : null;
+            });
+
+            createNodeField({
+                node,
+                name: `relatedPostsPermalinks`,
+                value: relatedPostsPermalinks
+            });
+        }
     }
 };
 
