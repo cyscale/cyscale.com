@@ -49,7 +49,7 @@ collections:
                         'Misconfigurations',
                         'Cloud Security',
                         'Encryption',
-                        "Cloud Native Security"
+                        'Cloud Native Security'
                     ]
             }
           - { label: 'Publish Date', name: 'date', widget: 'datetime' }
@@ -310,3 +310,23 @@ collections:
                       required: false,
                       hint: 'Use H1 CTA and nothing more'
                   }
+    - name: 'top-articles-category-based'
+      label: 'Top Articles Category Based'
+      folder: 'src/markdown/top-articles-category-based'
+      create: true
+      slug: '{{fields.slug}}'
+      fields:
+          - { label: 'Slug', name: 'slug', widget: 'string', required: false }
+          - { label: 'Category', name: 'category', widget: 'string', required: false }
+          - label: 'Related Blog Post'
+            name: 'relatedBlogPost'
+            widget: 'list'
+            max: 6
+            fields:
+                - label: 'Blog Post'
+                  name: 'blogPost'
+                  widget: 'relation'
+                  collection: 'blog'
+                  searchFields: ['title']
+                  valueField: 'title'
+                  displayFields: ['title', 'permalink']
