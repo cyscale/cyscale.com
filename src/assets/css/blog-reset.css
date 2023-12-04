@@ -152,3 +152,9 @@
 .blog-reset a {
     font-family: 'Hind', sans-serif;
 }
+
+.blog-reset img.link {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
