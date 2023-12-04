@@ -315,6 +315,7 @@ collections:
       folder: 'src/markdown/top-articles-category-based'
       create: true
       slug: '{{fields.slug}}'
+      identifier_field: 'category'
       fields:
           - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'top-articles-category-based' }
           - { label: 'Slug', name: 'slug', widget: 'string', required: false }
