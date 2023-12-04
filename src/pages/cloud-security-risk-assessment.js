@@ -68,7 +68,7 @@ const CloudSecurityRiskAssessment = ({ location }) => {
 
     const { loadingForm } = useHSFormLoaded();
     const { formSubmitted } = useHSFormDisplayAndSubmit({
-        formId: 'abd54fce-98b1-41ca-b21a-c375b100edb4',
+        formId: '6bcc9259-6eab-4b6c-8218-203a1481f228',
         target: '#free-trial-form'
     });
 
@@ -419,8 +419,7 @@ const CloudSecurityRiskAssessment = ({ location }) => {
                                             font-size: 1.375rem;
                                         `}
                                     >
-                                        Cyscale is an Automated Cloud Security platform designed for cloud-natives
-                                        startups.
+                                        Cyscale is an Automated Cloud Security platform designed for cloud-natives.
                                     </h3>
                                     <p className='font-hind text-lg mt-4'>
                                         Enterprise-focused security offerings come with a hefty price tag and an overly
