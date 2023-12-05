@@ -61,6 +61,8 @@ The negative consequences of failing to comprehensively assess your cloud securi
 
 ## Common misconceptions when integrating a new cloud environment  
 
+<br class="" />
+
 * **We both use the same cloud platform so the integration will be easy:** Unique configurations, architectures, and approaches mean that no two cloud environments are alike, even on the same platform. 
 * **We’re mostly on-prem so it’s just adding a new technology:** The cloud is a wildly different environment to anything that has come before and even now there is a significant shortage of experience and expertise in the market. Many security problems arise from a lack of education about how to operate safely in the cloud.  
 * **We will audit the cloud environment at a later date:** Due to its public nature, security incidents in the cloud happen in real time. A new zero-day vulnerability in a common software package can be exploited on a mass scale hours after being revealed. A DevOps team spinning up a new instance with a misconfiguration can open your entire infrastructure up to risk. Cloud security posture has to be monitored constantly.  
@@ -85,7 +87,7 @@ It’s not enough to understand the technology you’ve been using to date, you 
 <br class="" />
 
 <a href="#data">
-  <img src="/img/data-dash.png" alt="" title="" class="link" style="width:38.0625rem;height:auto;"/>
+  <img src="/img/data-dash.png" alt="" title="" class="blog-image-shadow" style="width:auto;height:auto;"/>
 </a>
 
 ### Attempting integration of incompatible systems 
@@ -101,10 +103,10 @@ Minimize the time data is unencrypted. Decrypt the data only when necessary for 
 <br class="" />
 
 <a href="#data">
-  <img src="/img/encryption-dash.png" alt="" title="" class="link" style="width:22.0625rem;height:auto;"/>
+  <img src="/img/encryption-dash.png" alt="" title="" class="blog-image-shadow" style="width:32.0625rem;height:auto;"/>
     <br>
-    See how Cyscale solved this challenge by revealing encryption status for data <br class="hidden lg:block">
-    and identifying misconfigurations in data stores
+    <span class='text-center block'> See how Cyscale solved this challenge by revealing encryption status for data <br class="hidden lg:block">
+    and identifying misconfigurations in data stores</span>
 </a>
 
 ### Lack of visibility into the extended cloud estate 
@@ -120,13 +122,13 @@ Furthermore, perform access reviews to thoroughly understand the permissions use
 <br class="" />
 
 <a href="#inventory">
-    <img src="/img/inventory-dash.png" alt="" title="" class="link" style="width:38.0625rem;height:auto;"/>
+    <img src="/img/inventory-dash.png" alt="" title="" class="blog-image-shadow" style="width:auto;height:auto;"/>
     <br>
-    See how Cyscale gives you full visibility of your cloud estate by revealing all assets <br class="hidden lg:block">
-    and their issues in minutes
+    <span class='text-center block'>See how Cyscale gives you full visibility of your cloud estate by revealing all assets 
+    and their issues in minutes</span>
 </a>
 
-### [](#inventory)Expanding compliance and regulatory challenges 
+### Expanding compliance and regulatory challenges 
 
 M&A events can often cross multiple geographic or legal jurisdictions, each with its own set of compliance requirements. Ensuring alignment with these diverse regulatory landscapes can be a daunting task, and failure to meet compliance standards can lead to severe penalties and legal consequences. 
 
@@ -141,11 +143,15 @@ In terms of data sovereignty, this means understanding how to store data in the 
 <br class="" />
 
 <a href="#compliance">
-    <img src="/img/compliance-dash.png" alt="" title="" class="link" style="width:28.563rem;height:auto;"/>
+    <img src="/img/compliance-dash.png" alt="" title="" class="blog-image-shadow" style="width:38.563rem;height:auto;"/>
     <br>
-    See how Cyscale helps you comply with dozens of standards out of the box <br class='hidden lg:block'>
-    and offers support for custom controls
+    <span class='block text-center'>See how Cyscale helps you comply with dozens of standards out of the box
+    and offers support for custom controls</span>
 </a>
+
+### See how we build an asset inventory in this video
+
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/OQj8Yo71DvQ?si=C4n-svhf206ClYSQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
 
 ## Approaching cloud security in M&A holistically  
 
@@ -179,14 +185,10 @@ This consolidates your reputation as a transparent, data-focused organization th
 
 An easy-to-understand report can then be used to make the case for additional funding or remediation requirements, for both technical stakeholders such as CTOs, CISOs, and security engineers, as well as more business-minded executives such as CFOs, CEOs or the Board.  
 
-### See how we build an asset inventory in this video
-
-<p><iframe width="560" height="315" src="https://www.youtube.com/embed/OQj8Yo71DvQ?si=C4n-svhf206ClYSQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
-
 <br class="" />
 
 <br class="" />
 
 <a href="https://cyscale.com/request-demo/">
-  <img src="/img/assessment-cta.png" alt="" title="" class="link" style="width:25rem;height:12.5rem;"/>
+    <img src="/img/assessment-cta.png" alt="" title="" id='cta-image'/>
 </a>

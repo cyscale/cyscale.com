@@ -158,3 +158,15 @@
     padding: 0;
     border: 0;
 }
+
+#cta-image {
+    width: 31.2195rem;
+    height: 18.75rem;
+}
+
+@media screen and (max-width: 640px) {
+    #cta-image {
+        width: auto !important;
+        height: auto !important;
+    }
+}
