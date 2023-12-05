@@ -12,6 +12,8 @@ import FixIcon from '../assets/images/fix-icon-home.svg';
 import PrioritizeIcon from '../assets/images/prioritize-icon-home.svg';
 import IdentifyIcon from '../assets/images/identity-icon-home.svg';
 import IntegrationsIcons from '../components/Home/IntegrationsIcons';
+import { CSSTransition } from 'react-transition-group';
+import VideoCyscale from '../components/campaigns/cspm-solutin/CyscaleVideo';
 
 const CaseStudiesSection = loadable(() => import('../components/Home/CaseStudiesSection'));
 const CardsSections = loadable(() => import('../components/Home/CardsSections'));
@@ -120,6 +122,7 @@ const HomePage = ({ location }) => {
             }
         }
     `);
+    const [modal, setModal] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
     const domRef = useRef();
 
@@ -237,7 +240,31 @@ const HomePage = ({ location }) => {
                             </div>
                             <div className='col-span-12 lg:col-span-6 mt-8 lg:mt-0'>
                                 <div className='pt-4 max-w-lg lg:max-w-2xl mx-auto lg:mx-0'>
-                                    <GatsbyImage image={data.heroImage.childImageSharp.gatsbyImageData} alt='' />
+                                    <div
+                                        onClick={() => {
+                                            setModal(!modal);
+                                        }}
+                                        onKeyPress={() => {}}
+                                        tabIndex='0'
+                                        role='button'
+                                    >
+                                        <GatsbyImage
+                                            image={data.heroImage.childImageSharp.gatsbyImageData}
+                                            css={css`
+                                                &:hover {
+                                                    scale: 1.075;
+                                                }
+                                            `}
+                                            alt=''
+                                        />
+                                    </div>
+                                    {modal && <div className='modal-overlay'></div>}
+                                    <CSSTransition in={modal} timeout={300} classNames='video' unmountOnExit>
+                                        <VideoCyscale
+                                            setModal={setModal}
+                                            videoUrl='https://static-cyscale-com.s3.amazonaws.com/videos/Cyscale-explainer-video-2023-12-Dec.mp4'
+                                        />
+                                    </CSSTransition>
                                 </div>
                                 <div className='max-w-xl mx-auto block lg:hidden'>
                                     <p
