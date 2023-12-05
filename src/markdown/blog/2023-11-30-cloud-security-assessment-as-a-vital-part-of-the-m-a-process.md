@@ -82,6 +82,12 @@ This misconfiguration inadvertently exposed sensitive data, including financial 
 
 It’s not enough to understand the technology you’ve been using to date, you also need to have a good grasp of the new cloud provider you’re integrating with as every cloud’s approach is different.  
 
+<br class="" />
+
+<a href="#data">
+  <img src="/img/data-dash.png" alt="" title="" class="link" style="width:38.0625rem;height:auto;"/>
+</a>
+
 ### Attempting integration of incompatible systems 
 
 Harmonizing disparate IT systems, particularly cloud environments, is a formidable challenge in M&A events. Incompatible technologies can create vulnerabilities that malicious actors may exploit.  
@@ -130,7 +136,7 @@ To start with, a fully automated security assessment across AWS, Azure, Google C
 
 This will give you a full asset inventory and flag any urgent issues that need to be addressed. The Cyscale Graph View means that misconfigurations are analyzed in context, automatically correlating issues that affect compute, data storage and identity assets, determining their real impact on data security and helping prioritize remediation efforts. 
 
-**D﻿ata**
+<strong id="data">Data</strong>
 
 The assessment will also identify all data stores and give you valuable information about encryption status for data at rest, encryption keys, as well as identifying any object containers and databases with issues, such as public access, permissive access policies, or lack of deletion protection.  
 
@@ -150,7 +156,6 @@ An easy-to-understand report can then be used to make the case for additional fu
 
 <p><iframe width="560" height="315" src="https://www.youtube.com/embed/OQj8Yo71DvQ?si=C4n-svhf206ClYSQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
 
-
 <br class="" />
 
 <br class="" />
@@ -158,4 +163,3 @@ An easy-to-understand report can then be used to make the case for additional fu
 <a href="https://cyscale.com/request-demo/">
   <img src="/img/assessment-cta.png" alt="" title="" class="link" style="width:25rem;height:12.5rem;"/>
 </a>
-
