@@ -98,6 +98,15 @@ In one case two companies performed encryption for PII differently, and when the
 
 Minimize the time data is unencrypted. Decrypt the data only when necessary for the merge and re-encrypt it promptly after the process is complete. Moreover, perform the decryption and re-encryption within a secure, controlled environment with restricted access. Use encrypted communication channels and isolated systems to prevent unauthorized access to the unencrypted data. 
 
+<br class="" />
+
+<a href="#data">
+  <img src="/img/encryption-dash.png" alt="" title="" class="link" style="width:22.0625rem;height:auto;"/>
+    <br>
+    See how Cyscale solved this challenge by revealing encryption status for data <br class="hidden lg:block">
+    and identifying misconfigurations in data stores
+</a>
+
 ### Lack of visibility into the extended cloud estate 
 
 One of the big problems that often appears during or after a merger or an acquisition is the lack of visibility into the new or extended cloud estate. When you have to deal with complex infrastructures and unknown environments, security issues can creep in without you noticing. Roles or permissions that should be onboarded or offboarded, redundant VMs that have to be deprovisioned, storage resources that have to be deleted, these are just some examples of cloud resources that may change during an M&A.  
@@ -107,6 +116,15 @@ Without great visibility into a changing environment, mistakes are bound to happ
 **Solution:** To gain much-needed visibility in the cloud, have an active inventory of all your cloud resources and assets, and ideally, the context of how they all interconnect. There are tools which will automatically scan your estate and build an inventory, and some use dashboards to help visualize your cloud infrastructure even across multiple clouds. 
 
 Furthermore, perform access reviews to thoroughly understand the permissions users have and whether they are overprovisioned or even redundant.  
+
+<br class="" />
+
+<a href="#inventory">
+    <img src="/img/inventory-dash.png" alt="" title="" class="link" style="width:38.0625rem;height:auto;"/>
+    <br>
+    See how Cyscale gives you full visibility of your cloud estate by revealing all assets <br class="hidden lg:block">
+    and their issues in minutes
+</a>
 
 ### [](#inventory)Expanding compliance and regulatory challenges 
 
@@ -120,6 +138,15 @@ Common examples include the applicability of US State Privacy Laws, such as the 
 
 In terms of data sovereignty, this means understanding how to store data in the country where it’s supposed to be stored.  
 
+<br class="" />
+
+<a href="#compliance">
+    <img src="/img/compliance-dash.png" alt="" title="" class="link" style="width:28.563rem;height:auto;"/>
+    <br>
+    See how Cyscale helps you comply with dozens of standards out of the box <br class='hidden lg:block'>
+    and offers support for custom controls
+</a>
+
 ## Approaching cloud security in M&A holistically  
 
 Although the considerations set out in this article make an M&A event seem daunting, going into the process with an understanding of what to look out for is half the battle. Proper planning and a comprehensive assessment of your cloud infrastructure(s) during both the due diligence process and day zero of the merge will ensure the process runs smoothly and safely. 
@@ -130,7 +157,7 @@ The Cyscale platform is designed to help close these security gaps by providing 
 
 The Cyscale cloud security platform is an agentless cloud-native application protection platform (CNAPP) that can help you assess risk during both the due diligence process and day zero of the merger and integration.  
 
-**I﻿nventory**
+<strong id="inventory">Inventory</strong>
 
 To start with, a fully automated security assessment across AWS, Azure, Google Cloud, Alibaba, and Kubernetes assets will provide you with comprehensive insights into your partner’s cloud estate, including all vulnerabilities and misconfigurations, in a matter of minutes.  
 
@@ -142,7 +169,7 @@ The assessment will also identify all data stores and give you valuable informa
 
 This can help ensure your crown jewels are protected, prevent data leakage, and ensure solid foundations for tasks like merging encrypted databases.  
 
-**C﻿ompliance**
+<strong id="compliance">Compliance</strong>
 
 In terms of both planning the integration work and having ongoing proof of compliance, Cyscale has in-app support for dozens of compliance standards, including CIS Cloud Benchmarks, ISO 27001, SOC 2, GDPR (General Data Protection Regulation), HIPAA, PCI DSS (Payment Card Industry Data Security Standard), NIST and more. 
 
