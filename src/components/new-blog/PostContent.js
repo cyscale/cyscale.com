@@ -118,7 +118,16 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
                                 h5: headingRenderer,
                                 h6: headingRenderer,
                                 // eslint-disable-next-line
-                                a: ({ node, ...props }) => <a {...props} rel='noopener noreferrer' target='_blank' />
+                                a: ({ node, ...props }) => {
+                                    const isInternalLink = props.href.startsWith('#');
+                                    return (
+                                        <a
+                                            {...props}
+                                            rel='noopener noreferrer'
+                                            target={isInternalLink ? '_self' : '_blank'}
+                                        />
+                                    );
+                                }
                             }}
                         >
                             {data.rawMarkdownBody}
