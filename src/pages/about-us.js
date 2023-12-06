@@ -14,7 +14,6 @@ import Layout from '../components/layout/CleanLayout';
 import History from '../components/about/history';
 import GetStarted from '../components/Home/getstarted';
 import getStartedIcon from '../assets/images/elemente-vectoriale-07.png';
-import data from '../components/careers/data';
 import { Link, useStaticQuery, graphql } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { css } from 'twin.macro';
@@ -304,7 +303,7 @@ const AboutUs = ({ location }) => {
                     <h2 className='font-semibold font-montserrat text-blue sm:text-3xl text-4xl leading-normal mb-6 text-center'>
                         Technical Partners
                     </h2>
-                    <div className='flex justify-center flex-wrap mt-12'>
+                    <div className='flex justify-center flex-wrap mt-12 lg:mt-16'>
                         <div className='my-auto'>
                             <a
                                 href='https://aws.amazon.com/startups/startup-programs/'
@@ -353,49 +352,11 @@ const AboutUs = ({ location }) => {
                     </div>
                 </div>
             </Container>
-            <Container className='relative' id='team'>
-                <Section>
-                    <Row className='md:gap-8'>
-                        <div className='col-span-12'>
-                            <h2 className='font-semibold font-montserrat text-blue sm:text-3xl text-4xl leading-normal mb-6 text-center'>
-                                Our Team
-                            </h2>
-                        </div>
-                        {data
-                            .filter(({ leader, photo }) => !leader && photo)
-                            .sort((a, b) => a.order - b.order)
-                            .map(({ photo, name, position, linkedin }) => (
-                                <div className='col-span-6 md:col-span-4 lg:col-span-3'>
-                                    <div className='mx-auto max-w-xs pt-4'>
-                                        {React.cloneElement(photo, {
-                                            ...photo.props,
-                                            alt: `${name} - ${position}`,
-                                            className: 'rounded-md shadow-md'
-                                        })}
-                                        <div className='mt-4'>
-                                            <strong>{name}</strong>
-                                            <br />
-                                            <a
-                                                href={linkedin}
-                                                className='text-sm flex hover:text-primary mt-1 text-neutral-600'
-                                                rel='noopener noreferrer'
-                                                target='_blank'
-                                            >
-                                                <FaLinkedin className='text-lg' />
-                                                <span className='ml-2'>{position}</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                    </Row>
-                </Section>
-            </Container>
-            <Container className='relative' id='certifications'>
+            <Container className='relative mt-24 lg:mt-36' id='certifications'>
                 <h2 className='font-semibold font-montserrat text-blue sm:text-3xl text-4xl leading-normal mb-6 text-center'>
                     Our Certifications
                 </h2>
-                <Row className='mt-12 sm:mt-24'>
+                <Row className='mt-12 sm:mt-16'>
                     <CertificationCard
                         imageData={dataAboutUs.azureSolutionsArchitect.childImageSharp.gatsbyImageData}
                         titleSm={
