@@ -252,9 +252,10 @@ const HomePage = ({ location }) => {
                                             image={data.heroImage.childImageSharp.gatsbyImageData}
                                             css={css`
                                                 &:hover {
-                                                    scale: 1.075;
+                                                    scale: 1.025;
                                                 }
                                             `}
+                                            className="rounded-xl"
                                             alt=''
                                         />
                                     </div>
