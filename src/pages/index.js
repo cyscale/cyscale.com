@@ -239,7 +239,7 @@ const HomePage = ({ location }) => {
                                 </div>
                             </div>
                             <div className='col-span-12 lg:col-span-6 mt-8 lg:mt-0'>
-                                <div className='pt-4 max-w-lg lg:max-w-2xl mx-auto lg:mx-0'>
+                                <div className='pt-4 max-w-lg lg:max-w-2xl mx-auto lg:mx-0 ml-4'>
                                     <div
                                         onClick={() => {
                                             setModal(!modal);
@@ -252,7 +252,7 @@ const HomePage = ({ location }) => {
                                             image={data.heroImage.childImageSharp.gatsbyImageData}
                                             css={css`
                                                 &:hover {
-                                                    scale: 1.075;
+                                                    scale: 1.025;
                                                 }
                                             `}
                                             alt=''
