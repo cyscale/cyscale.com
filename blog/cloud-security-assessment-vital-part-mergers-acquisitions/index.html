@@ -42,7 +42,7 @@
 <p>During the migration, the team utilized Shared Access Signatures (SAS) in Azure to control access to the stored data. However, due to time constraints and the complexity of the migration process, the team hastily generated SAS tokens with overly broad permissions. </p>
 <p>Instead of applying fine-grained access controls to specific resources or limiting access to authorized personnel, the tokens granted broader read and write permissions across a wider range of containers or blobs within the Azure Storage Account. </p>
 <p>This misconfiguration inadvertently exposed sensitive data, including financial records and proprietary algorithms. </p>
-<p><strong>Solution:</strong> Even though a migration can be daunting, take it step by step and understand the best practices of cloud resources you’re using so you can make informed decisions. For example, in the case of storage accounts in Azure, a recommendation is to use RBAC (Role-based access control), rather than SAS signatures.  </p>
+<p><strong>Solution:</strong> Even though a migration can be daunting, take it step by step and understand the <a href="https://cyscale.com/blog/cloud-data-security-guide/" rel="noopener noreferrer" target="_blank">best practices of cloud resources</a> you’re using so you can make informed decisions. For example, in the case of storage accounts in Azure, a recommendation is to use RBAC (Role-based access control), rather than SAS signatures.  </p>
 <p>It’s not enough to understand the technology you’ve been using to date, you also need to have a good grasp of the new cloud provider you’re integrating with as every cloud’s approach is different.  </p>
 <br class=""/>
 <a href="#data" rel="noopener noreferrer" target="_self">
