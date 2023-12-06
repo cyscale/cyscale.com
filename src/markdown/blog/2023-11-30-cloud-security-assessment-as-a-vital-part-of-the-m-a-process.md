@@ -115,7 +115,7 @@ One of the big problems that often appears during or after a merger or an acquis
 
 Without great visibility into a changing environment, mistakes are bound to happen. 
 
-**Solution:** To gain much-needed visibility in the cloud, have an active inventory of all your cloud resources and assets, and ideally, the context of how they all interconnect. There are tools which will automatically scan your estate and build an inventory, and some use dashboards to help visualize your cloud infrastructure even across multiple clouds. 
+**Solution:** To gain much-needed visibility in the cloud, have an active inventory of all your cloud resources and assets, and ideally, the context of how they all interconnect. There are tools which will automatically scan your estate and build an inventory, and some use dashboards to help visualize your [cloud infrastructure](https://cyscale.com/blog/cloud-infrastructure-security/) even across multiple clouds. 
 
 Furthermore, perform access reviews to thoroughly understand the permissions users have and whether they are overprovisioned or even redundant.  
 
