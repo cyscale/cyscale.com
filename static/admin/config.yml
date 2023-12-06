@@ -330,7 +330,7 @@ collections:
                   widget: 'relation'
                   collection: 'blog'
                   searchFields: ['title']
-                  valueField: 'permalink'
+                  valueField: 'title'
                   displayFields: ['title']
                 - label: 'Blog Post URL'
                   name: 'blogPostURL'
