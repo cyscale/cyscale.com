@@ -187,7 +187,7 @@ const HomePage = ({ location }) => {
                     >
                         <div className='grid grid-cols-12'>
                             <div className='col-span-12 lg:col-span-6'>
-                                <div className='sm:pt-4 max-w-xl mx-auto lg:mx-0'>
+                                <div className='sm:pt-4 max-w-lg mx-auto lg:mx-0'>
                                     <h1
                                         className='text-left text-blue text-4xl lg:text-5xl leading-normal lg:leading-normal font-montserrat font-bold'
                                         css={css`
@@ -216,18 +216,18 @@ const HomePage = ({ location }) => {
                                         />{' '}
                                         quickly and easily
                                     </h1>
-                                    <p className='text-left text-base lg:text-lg mb-8 leading-relaxed font-hind'>
+                                    <p className='text-left text-base lg:text-lg mb-4 leading-relaxed font-hind'>
                                         Get contextual analysis of cloud misconfigurations, vulnerabilities, access, and
                                         data for an accurate and actionable assessment of risk.
                                     </p>
-                                    <div className='flex mt-8 justify-start'>
+                                    <div className='flex mt-4 justify-start'>
                                         <Link to='/request-demo/'>
                                             <GradientButton text='BOOK A DEMO' />
                                         </Link>
                                     </div>
                                 </div>
                                 <p
-                                    className='font-hind text-base mt-12 hidden lg:block'
+                                    className='font-hind text-base mt-6 hidden lg:block'
                                     css={css`
                                         color: #747474;
                                     `}
@@ -267,7 +267,7 @@ const HomePage = ({ location }) => {
                                         />
                                     </CSSTransition>
                                 </div>
-                                <div className='max-w-xl mx-auto block lg:hidden'>
+                                <div className='max-w-lg mx-auto block lg:hidden'>
                                     <p
                                         className='font-hind text-base mt-4 block lg:hidden'
                                         css={css`
