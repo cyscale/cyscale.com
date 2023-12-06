@@ -80,7 +80,7 @@ Instead of applying fine-grained access controls to specific resources or limiti
 
 This misconfiguration inadvertently exposed sensitive data, including financial records and proprietary algorithms. 
 
-**Solution:** Even though a migration can be daunting, take it step by step and understand the best practices of cloud resources you’re using so you can make informed decisions. For example, in the case of storage accounts in Azure, a recommendation is to use RBAC (Role-based access control), rather than SAS signatures.  
+**Solution:** Even though a migration can be daunting, take it step by step and understand the [best practices of cloud resources](https://cyscale.com/blog/cloud-data-security-guide/) you’re using so you can make informed decisions. For example, in the case of storage accounts in Azure, a recommendation is to use RBAC (Role-based access control), rather than SAS signatures.  
 
 It’s not enough to understand the technology you’ve been using to date, you also need to have a good grasp of the new cloud provider you’re integrating with as every cloud’s approach is different.  
 
