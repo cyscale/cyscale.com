@@ -458,3 +458,45 @@ CMS.registerEditorComponent({
             .join('')}</ul>`;
     }
 });
+
+CMS.registerEditorComponent({
+    id: 'ctaButton',
+    label: 'CTA Button',
+    pattern:
+        /^<div class="pb-12 pt-20 lg:pb-24 lg:pt-32 flex flex-col items-center"><a href="([^"]*)"><button class="([^"]*)">(.*?)<\/button><\/a><\/div>$/,
+    fromBlock: (match) => {
+        return {
+            href: match[1],
+            class: match[2],
+            text: match[3]
+        };
+    },
+    toBlock: ({ href, text }) => {
+        const classes =
+            'bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind';
+        const style = 'padding: 0.625rem 2.5rem;';
+        return `<div class="pb-12 pt-20 lg:pb-24 lg:pt-32 flex flex-col items-center"><a href="${
+            href || '#'
+        }"><button class="${classes}" style="${style}">${text || 'Button Text'}</button></a></div>`;
+    },
+    toPreview: ({ href, text }) => {
+        const classes =
+            'bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind';
+        const style = 'padding: 0.625rem 2.5rem;';
+        return `<div class="pb-12 pt-20 lg:pb-24 lg:pt-32 flex flex-col items-center"><a href="${href}"><button class="${classes}" style="${style}">${text}</button></a></div>`;
+    },
+    fields: [
+        {
+            label: 'Button Text',
+            name: 'text',
+            widget: 'string',
+            default: 'BOOK A DEMO'
+        },
+        {
+            label: 'Link (href)',
+            name: 'href',
+            widget: 'string',
+            default: '/request-demo/'
+        }
+    ]
+});
