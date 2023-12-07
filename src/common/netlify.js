@@ -490,13 +490,13 @@ CMS.registerEditorComponent({
             label: 'Button Text',
             name: 'text',
             widget: 'string',
-            default: 'Button Text'
+            default: 'BOOK A DEMO'
         },
         {
             label: 'Link (href)',
             name: 'href',
             widget: 'string',
-            default: '#'
+            default: '/request-demo/'
         }
     ]
 });
