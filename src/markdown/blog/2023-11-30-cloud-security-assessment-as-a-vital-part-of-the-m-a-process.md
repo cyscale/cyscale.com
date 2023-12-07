@@ -68,6 +68,8 @@ The negative consequences of failing to comprehensively assess your cloud securi
 * **We will audit the cloud environment at a later date:** Due to its public nature, security incidents in the cloud happen in real time. A new zero-day vulnerability in a common software package can be exploited on a mass scale hours after being revealed. A DevOps team spinning up a new instance with a misconfiguration can open your entire infrastructure up to risk. Cloud security posture has to be monitored constantly.  
 * **We can rely on our existing toolset or expertise:** The difference from one cloud platform to another is considerable. They even use different terminology. An expert in AWS is not necessarily an expert in Azure, and security tools may not comprehensively cover multiple environments. The introduction of another cloud is the introduction of another risk, and another visibility challenge.  
 
+<div class="pb-12 pt-20 lg:pb-24 lg:pt-32 flex flex-col items-center"><a href="/request-demo/"><button class="bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind" style="padding: 0.625rem 2.5rem;">BOOK A DEMO</button></a></div>
+
 ## Cloud security risks that come with an M&A event: Real examples 
 
 ### Data leakage 
