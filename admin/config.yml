@@ -332,10 +332,3 @@ collections:
                   searchFields: ['title']
                   valueField: 'title'
                   displayFields: ['title']
-                - label: 'Blog Post URL'
-                  name: 'blogPostURL'
-                  widget: 'relation'
-                  collection: 'blog'
-                  searchFields: ['title']
-                  valueField: 'permalink'
-                  displayFields: ['title']
