@@ -256,7 +256,7 @@ const HomePage = ({ location }) => {
                                                 }
                                             `}
                                             className="rounded-xl"
-                                            alt=''
+                                            alt='Video Thumbnail'
                                         />
                                     </div>
                                     {modal && <div className='modal-overlay'></div>}
