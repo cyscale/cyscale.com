@@ -3,6 +3,8 @@ templateKey: top-articles-category-based
 slug: news
 category: News
 relatedBlogPost:
+  - blogPost: "Introducing Cyscale’s AI-powered Security Assistant: Making Cloud
+      Security More Intuitive"
   - blogPost: SEC Charges SolarWinds CISO with Fraud over Cybersecurity Failures
   - blogPost: "Cyscale Featured in The Europas Awards Nominations as Cybersecurity
       Startup to Watch "
