@@ -17,7 +17,7 @@ seoDescription: Demand for cloud operations and cybersecurity as-a-service shows
   perfect opportunity to meet growing demand by adding cloud security to your
   services portfolio, providing additional value to new and existing clients,
   and generating more revenue.
-featuredpost: true
+featuredpost: false
 featuredimage: /img/capture-demand-cloud-security-blog.jpg
 tableOfContents: true
 ---
