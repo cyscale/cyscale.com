@@ -37,15 +37,21 @@ Industry association and advisory firm the Technology & Services Industry Associ
 
 There was a time when ‘technology companies’ stood alone from the financial companies, healthcare companies, or media companies. Now all companies in all sectors share one common thread evident in the emergence of new sector-specific innovators, such as fintechs and healthtechs, and that common thread is adoption of the cloud.   
 
-The rapid adoption of new technology has had a significant knock-on effect however, in that it has become common practice to leverage IT outsourcing or managed services to support a shortfall in internal skills. 
+The rapid adoption of cloud technology has had a significant knock-on effect however, in that it has become common practice to leverage IT outsourcing or managed services to support a shortfall in internal skills. 
 
 The great promise of the cloud was to enable everything on-demand, but in delivery, the speed of innovation has far outpaced most companies’ ability to keep up. This means external support is sought to help with cost reduction, risk aversion, transition from capital expenditure (CapEx) to operating expenditure (OpEx), or to try and accelerate return on investment in that technology.  
 
-Over 50% of respondents in S&P Global/451 Research's [Voice of the Enterprise: Cloud, Hosting & Managed Services, Managed Services 2022](https://www.spglobal.com/marketintelligence/en/news-insights/research/managed-services-market-forecast-managed-cloud-services-coming-to-the-fore) survey said they currently relied on managed service providers to support their cloud environments. And this appetite is growing. 
+As a result, over 50% of respondents in S&P Global/451 Research's [Voice of the Enterprise: Cloud, Hosting & Managed Services, Managed Services 2022](https://www.spglobal.com/marketintelligence/en/news-insights/research/managed-services-market-forecast-managed-cloud-services-coming-to-the-fore) survey said they currently relied on managed service providers to support their cloud environments. And this appetite is growing. 
 
 Application services including cybersecurity; operational services; and disaster recovery (backup and archiving) ranked as the top three managed services deployed in conjunction with public cloud deployments. 
 
 Furthermore, managed services for cloud are not seen as a stopgap measure but as a long-term solution, with 73% of those companies currently using managed services for cloud apps and data, expecting to rely more on managed services over time. And nearly nine in 10 agree that managed services are becoming more important as technology skills become more difficult to acquire and maintain. 
+
+<﻿a href="https://cyscale.com/resources/empowering-mssps.pdf">
+
+<img src="/img/cloud-security-mssps-banner.jpg" alt="Get the Cyscale Cloud Security Platform for MSSPs Datasheet" title="" class=" blog-image-shadow " style="width:auto;height:auto;"/>
+
+<﻿/a>
 
 ## From MSP to MSSP (Managed Security Service Provider) 
 
@@ -75,7 +81,9 @@ In combining the two biggest revenue drivers – cloud and security - the approa
 
 Continuous monitoring of the estate can make this an ongoing relationship, and a repeat revenue generator covering the full spectrum of threat prevention, detection, and remediation.  
 
-<a href="/request-demo/" rel="noopener noreferrer" target="_blank"><button class="bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind" style="padding: 0.625rem 2.5rem;">BOOK A DEMO</button></a> 
+**Unlock new revenue streams with Cyscale's MSSP Cloud Security Platform**
+
+<a href="/use-cases/cloud-security-mssp/" rel="noopener noreferrer" target="_blank"><button class="bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind" style="padding: 0.625rem 2.5rem;">LEARN MORE</button></a> 
 
 ## Where technology goes, risk follows 
 
@@ -107,6 +115,6 @@ An easy-to-understand report can then be used to make the case for additional re
 
 With in-app support for dozens of compliance standards, including CIS Cloud Benchmarks, ISO 27001, SOC 2, GDPR (General Data Protection Regulation), HIPAA, PCI DSS (Payment Card Industry Data Security Standard), NIST and more, you can also perform automated evaluations for customers who need to prove compliance.  
 
-Interested in discussing Cyscale’s Cloud Security as a Managed Service offering? Book a call here 
+**Interested in discussing Cyscale’s Cloud Security Platform for MSPs and MSSPs?** 
 
-Or download the Cyscale Cloud Security MSSP datasheet
+<a href="/use-cases/cloud-security-mssp/" rel="noopener noreferrer" target="_blank"><button class="bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind" style="padding: 0.625rem 2.5rem;">BOOK A CALL</button></a>
