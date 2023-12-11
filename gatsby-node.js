@@ -268,7 +268,7 @@ exports.createPages = async ({ graphql, actions }) => {
                     seoTitle: i === 0 ? 'Blog - Cyscale' : `Blog Page ${i + 1} - Cyscale`,
                     seoDescription: 'Cloud and Data Security Blog',
                     categoriesList: categoriesWithPosts,
-                    heading: 'Welcome to the Cyscale blog'
+                    heading: 'All you need to know about protecting SaaS apps and data in the cloud'
                 }
             });
         });
