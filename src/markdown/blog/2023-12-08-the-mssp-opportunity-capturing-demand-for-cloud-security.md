@@ -19,7 +19,7 @@ seoDescription: Demand for cloud operations and cybersecurity as-a-service shows
   and generating more revenue.
 featuredpost: false
 featuredimage: /img/capture-demand-cloud-security-blog.jpg
-tableOfContents: true
+tableOfContents: false
 ---
 Demand for cybersecurity as-a-service shows no sign of letting up. Cyber skills are in short supply and corresponding experience in cloud and cyber remains years out. Meanwhile the tech landscape continues to evolve at a dizzying pace, with explosive innovations like generative AI bringing new and unknown risks for companies struggling to keep pace with developments.   
 
@@ -46,12 +46,6 @@ As a result, over 50% of respondents in S&P Global/451 Research's [Voice of the 
 Application services including cybersecurity; operational services; and disaster recovery (backup and archiving) ranked as the top three managed services deployed in conjunction with public cloud deployments. 
 
 Furthermore, managed services for cloud are not seen as a stopgap measure but as a long-term solution, with 73% of those companies currently using managed services for cloud apps and data, expecting to rely more on managed services over time. And nearly nine in 10 agree that managed services are becoming more important as technology skills become more difficult to acquire and maintain. 
-
-<﻿a href="https://cyscale.com/resources/empowering-mssps.pdf">
-
-<img src="/img/cloud-security-mssps-banner.jpg" alt="Get the Cyscale Cloud Security Platform for MSSPs Datasheet" title="" class=" blog-image-shadow " style="width:auto;height:auto;"/>
-
-<﻿/a>
 
 ## From MSP to MSSP (Managed Security Service Provider) 
 
@@ -83,8 +77,6 @@ Continuous monitoring of the estate can make this an ongoing relationship, and a
 
 **Unlock new revenue streams with Cyscale's MSSP Cloud Security Platform**
 
-<a href="/use-cases/cloud-security-mssp/" rel="noopener noreferrer" target="_blank"><button class="bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind" style="padding: 0.625rem 2.5rem;">LEARN MORE</button></a> 
-
 ## Where technology goes, risk follows 
 
 For customers with multi- and hybrid-cloud infrastructures, there is also the opportunity for an MSSP with a well put together service package to deliver a layer of abstraction that reduces the complexity for customers working across multiple dashboards and interfaces.  
@@ -115,6 +107,4 @@ An easy-to-understand report can then be used to make the case for additional re
 
 With in-app support for dozens of compliance standards, including CIS Cloud Benchmarks, ISO 27001, SOC 2, GDPR (General Data Protection Regulation), HIPAA, PCI DSS (Payment Card Industry Data Security Standard), NIST and more, you can also perform automated evaluations for customers who need to prove compliance.  
 
-**Interested in discussing Cyscale’s Cloud Security Platform for MSPs and MSSPs?** 
-
-<a href="/use-cases/cloud-security-mssp/" rel="noopener noreferrer" target="_blank"><button class="bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind" style="padding: 0.625rem 2.5rem;">BOOK A CALL</button></a>
+**Interested in discussing Cyscale’s Cloud Security Platform for MSPs and MSSPs?**
