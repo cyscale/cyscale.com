@@ -72,8 +72,6 @@ exports.onCreateNode = ({ node, getNode, getNodes, actions }) => {
                     : null;
             });
 
-            console.log(relatedPostsPermalink);
-
             createNodeField({
                 node,
                 name: `relatedPostsPermalink`,

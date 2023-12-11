@@ -8,5 +8,5 @@ relatedBlogPost:
       Need to Know"
   - blogPost: Critical Confluence Authorization Vulnerability Actively Exploited
   - blogPost: High-severity Vulnerabilities Put Kubernetes Secrets at Risk
-  - blogPost: "The SaaS CTO Cloud Security Handbook: A Comprehensive Checklist"
+  - blogPost: "The SaaS CTO Cloud Security Handbook: A Comprehensive Checklist "
 ---
