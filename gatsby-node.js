@@ -72,23 +72,12 @@ exports.onCreateNode = ({ node, getNode, getNodes, actions }) => {
                     : null;
             });
 
-            console.log(relatedPostsPermalink);
-
             createNodeField({
                 node,
                 name: `relatedPostsPermalink`,
                 value: relatedPostsPermalink
             });
         }
-    }
-
-    if (node.internal.type === `MarkdownRemark`) {
-        const firstCategory = node.frontmatter.categories ? node.frontmatter.categories[0] : null;
-        createNodeField({
-            node,
-            name: `firstCategory`,
-            value: firstCategory
-        });
     }
 };
 

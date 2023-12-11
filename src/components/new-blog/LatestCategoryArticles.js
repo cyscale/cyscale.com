@@ -84,10 +84,10 @@ const LatestCategoryArticles = ({ category, latestArticles }) => {
                             {category}
                         </h2>
                         <div className='flex flex-col'>
-                            {latestArticles.nodes.map((item, index) => (
+                            {latestArticles.map((item, index) => (
                                 <ArticleLink
-                                    text={item.frontmatter.title}
-                                    link={`/blog/${item.frontmatter.permalink}`}
+                                    text={item.title}
+                                    link={`/blog/${item.permalink}`}
                                     key={index}
                                 />
                             ))}
