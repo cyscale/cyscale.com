@@ -45,7 +45,13 @@ As a result, over 50% of respondents in S&P Global/451 Research's [Voice of the 
 
 Application services including cybersecurity; operational services; and disaster recovery (backup and archiving) ranked as the top three managed services deployed in conjunction with public cloud deployments. 
 
-Furthermore, managed services for cloud are not seen as a stopgap measure but as a long-term solution, with 73% of those companies currently using managed services for cloud apps and data, expecting to rely more on managed services over time. And nearly nine in 10 agree that managed services are becoming more important as technology skills become more difficult to acquire and maintain. 
+Furthermore, managed services for cloud are not seen as a stopgap measure but as a long-term solution, with 73% of those companies currently using managed services for cloud apps and data, expecting to rely more on managed services over time. And nearly nine in 10 agree that managed
+
+<br class="" />
+
+<a href="https://cyscale.com/resources/empowering-mssps.pdf">
+    <img src="/img/cloud-security-mssps-banner.jpg" alt="Get the Cyscale Cloud Security Platform for MSSPs Datasheet" title="" class=" " style="width:33.75rem;height:auto;"/>
+</a>
 
 ## From MSP to MSSP (Managed Security Service Provider) 
 
