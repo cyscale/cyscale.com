@@ -77,6 +77,8 @@ Continuous monitoring of the estate can make this an ongoing relationship, and a
 
 **Unlock new revenue streams with Cyscale's MSSP Cloud Security Platform**
 
+<div class="pb-12 pt-20 lg:pb-24 lg:pt-32 flex flex-col items-center"><a href="/use-cases/cloud-security-mssp/"><button class="bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind" style="padding: 0.625rem 2.5rem;">LEARN MORE</button></a></div>
+
 ## Where technology goes, risk follows 
 
 For customers with multi- and hybrid-cloud infrastructures, there is also the opportunity for an MSSP with a well put together service package to deliver a layer of abstraction that reduces the complexity for customers working across multiple dashboards and interfaces.  
@@ -108,3 +110,5 @@ An easy-to-understand report can then be used to make the case for additional re
 With in-app support for dozens of compliance standards, including CIS Cloud Benchmarks, ISO 27001, SOC 2, GDPR (General Data Protection Regulation), HIPAA, PCI DSS (Payment Card Industry Data Security Standard), NIST and more, you can also perform automated evaluations for customers who need to prove compliance.  
 
 **Interested in discussing Cyscale’s Cloud Security Platform for MSPs and MSSPs?**
+
+<div class="pb-12 pt-20 lg:pb-24 lg:pt-32 flex flex-col items-center"><a href="/use-cases/cloud-security-mssp/"><button class="bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind" style="padding: 0.625rem 2.5rem;">BOOK A CALL</button></a></div>
