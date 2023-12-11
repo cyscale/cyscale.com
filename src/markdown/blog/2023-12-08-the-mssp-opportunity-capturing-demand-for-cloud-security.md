@@ -115,7 +115,7 @@ An easy-to-understand report can then be used to make the case for additional re
 
 With in-app support for dozens of compliance standards, including CIS Cloud Benchmarks, ISO 27001, SOC 2, GDPR (General Data Protection Regulation), HIPAA, PCI DSS (Payment Card Industry Data Security Standard), NIST and more, you can also perform automated evaluations for customers who need to prove compliance.  
 
-
+<br class="" />
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/BLxIoTANSH0?si=KUDk03_Z60mrI8rl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
