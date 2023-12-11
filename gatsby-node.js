@@ -79,15 +79,6 @@ exports.onCreateNode = ({ node, getNode, getNodes, actions }) => {
             });
         }
     }
-
-    if (node.internal.type === `MarkdownRemark`) {
-        const firstCategory = node.frontmatter.categories ? node.frontmatter.categories[0] : null;
-        createNodeField({
-            node,
-            name: `firstCategory`,
-            value: firstCategory
-        });
-    }
 };
 
 const postsByCategory = {};
