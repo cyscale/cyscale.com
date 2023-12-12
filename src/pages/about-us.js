@@ -1,6 +1,7 @@
 import React from 'react';
 import {
-    Gapminder, LeaderAndrei,
+    Gapminder,
+    LeaderAndrei,
     LeaderAndy,
     LeaderManuela,
     LeaderOvidiu,
@@ -263,10 +264,7 @@ const AboutUs = ({ location }) => {
                                 </a>
                             </div>{' '}
                             <div className='col-span-6 sm:col-span-3'>
-                                <LeaderAndrei
-                                    className='rounded-md shadow-md mb-4'
-                                    alt='Andrei Milaș - CTO'
-                                />
+                                <LeaderAndrei className='rounded-md shadow-md mb-4' alt='Andrei Milaș - CTO' />
                                 <strong className='text-black sm:text-white'>Andrei Milaș</strong>
                                 <br />
                                 <a
