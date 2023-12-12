@@ -500,3 +500,39 @@ CMS.registerEditorComponent({
         }
     ]
 });
+
+CMS.registerEditorComponent({
+    id: 'youtube',
+    label: 'YouTube',
+    fields: [{ name: 'url', label: 'YouTube Video URL', widget: 'string' }],
+    pattern: /^<div style=".*"><iframe\s.*?src="https:\/\/www\.youtube\.com\/embed\/(.+?)".*?><\/iframe><\/div>$/,
+    fromBlock: function (match) {
+        return {
+            url: `https://youtu.be/${match[1]}`
+        };
+    },
+    toBlock: function (obj) {
+        const videoId = extractVideoID(obj.url);
+        return (
+            `<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">` +
+            `<iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allowfullscreen></iframe>` +
+            `</div>`
+        );
+    },
+    toPreview: function (obj) {
+        return (
+            `<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">` +
+            `<iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/${extractVideoID(
+                obj.url
+            )}" frameborder="0" allowfullscreen></iframe>` +
+            `</div>`
+        );
+    }
+});
+
+function extractVideoID(url) {
+    const regex =
+        /(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{6,11})/;
+    const match = url.match(regex);
+    return match ? match[1] : null;
+}
