@@ -26,6 +26,11 @@ function withImageData(WrappedComponent) {
                         gatsbyImageData(width: 500, layout: CONSTRAINED)
                     }
                 }
+                leaderAndrei: file(relativePath: { eq: "leader-andrei.png" }) {
+                    childImageSharp {
+                        gatsbyImageData(width: 500, layout: CONSTRAINED)
+                    }
+                }
                 ovidiuAndManuela: file(relativePath: { eq: "ovidiu-and-manuela.webp" }) {
                     childImageSharp {
                         gatsbyImageData(width: 720, layout: CONSTRAINED)
@@ -149,6 +154,9 @@ export const LeaderAndy = withImageData((props) => (
 ));
 export const LeaderManuela = withImageData((props) => (
     <Img image={props.imageData.leaderManuela.childImageSharp.gatsbyImageData} {...props} />
+));
+export const LeaderAndrei = withImageData((props) => (
+    <Img image={props.imageData.leaderAndrei.childImageSharp.gatsbyImageData} {...props} />
 ));
 export const AndreiM = withImageData((props) => (
     <Img image={props.imageData.andreiM.childImageSharp.gatsbyImageData} {...props} />
