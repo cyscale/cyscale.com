@@ -215,7 +215,6 @@ const CloudSecurityRiskAssessment = ({ location }) => {
                     >
                         <GatsbyImage
                             image={data.videoThumbnail.childImageSharp.gatsbyImageData}
-                            alt='Video Thumbnail'
                             css={css`
                                 &:hover {
                                     scale: 1.025;

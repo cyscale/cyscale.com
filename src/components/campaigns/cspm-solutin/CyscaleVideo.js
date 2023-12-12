@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import useLockBodyScroll from '../../../hooks/useLockBodyScroll';
-import menuCloseCookiesModal from '../../../assets/images/menuCloseCookiesModal.svg';
+import BlackCloseButton from '../../../assets/images/menuCloseCookiesModal.svg';
+import GrayCloseButton from '../../../assets/images/grayCloseModal.svg';
 import useKeyPress from '../../../hooks/useKeyPress';
 import FocusLock from 'react-focus-lock';
 import useScreenOrientation from '../../../hooks/useScreenOrientation';
@@ -8,7 +9,7 @@ import classNames from 'classnames';
 import useMediaQuery from '../../../hooks/useMediaQuery';
 import useOnClickOutside from '../../../hooks/useOutsideClick';
 
-const VideoCyscale = ({ setModal, videoUrl }) => {
+const VideoCyscale = ({ setModal, videoUrl, greyCloseButton }) => {
     const videoRef = React.useRef(null);
     const wrapperRef = useRef(null);
     const orientation = useScreenOrientation();
@@ -49,7 +50,12 @@ const VideoCyscale = ({ setModal, videoUrl }) => {
                             onClick={onCloseVideo}
                             tabIndex='0'
                         >
-                            <img src={menuCloseCookiesModal} alt='toggle menu' width={15} height={15} />
+                            <img
+                                src={greyCloseButton ? GrayCloseButton : BlackCloseButton}
+                                alt='toggle menu'
+                                width={15}
+                                height={15}
+                            />
                         </button>
                         <video width='auto' height='auto' autoPlay controls tabIndex='2' ref={videoRef}>
                             <source src={videoUrl} type='video/mp4' />
