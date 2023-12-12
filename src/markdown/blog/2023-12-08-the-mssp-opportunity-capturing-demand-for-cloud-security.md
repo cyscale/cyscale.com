@@ -117,7 +117,7 @@ With in-app support for dozens of compliance standards, including CIS Cloud Benc
 
 <br class="" />
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BLxIoTANSH0?si=KUDk03_Z60mrI8rl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"><iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/BLxIoTANSH0" frameborder="0" allowfullscreen></iframe></div>
 
 **Interested in discussing Cyscale’s Cloud Security Platform for MSPs and MSSPs?**
 
