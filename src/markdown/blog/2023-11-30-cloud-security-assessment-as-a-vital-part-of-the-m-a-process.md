@@ -153,7 +153,11 @@ In terms of data sovereignty, this means understanding how to store data in the 
 
 ### See how we build an asset inventory in this video
 
-<p><iframe width="560" height="315" src="https://www.youtube.com/embed/OQj8Yo71DvQ?si=C4n-svhf206ClYSQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<br class="" />
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"><iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/OQj8Yo71DvQ" frameborder="0" allowfullscreen></iframe></div>
+
+
 
 ## Approaching cloud security in M&A holistically  
 
