@@ -503,7 +503,7 @@ CMS.registerEditorComponent({
 
 CMS.registerEditorComponent({
     id: 'youtube',
-    label: 'YouTube',
+    label: 'YouTube Video',
     fields: [{ name: 'url', label: 'YouTube Video URL', widget: 'string' }],
     pattern: /^<div style=".*"><iframe\s.*?src="https:\/\/www\.youtube\.com\/embed\/(.+?)".*?><\/iframe><\/div>$/,
     fromBlock: function (match) {
