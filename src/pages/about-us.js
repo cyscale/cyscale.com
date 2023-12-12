@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-    Gapminder,
+    Gapminder, LeaderAndrei,
     LeaderAndy,
     LeaderManuela,
     LeaderOvidiu,
@@ -211,7 +211,7 @@ const AboutUs = ({ location }) => {
                             </h2>
                         </div>
                         <Row className='max-w-4xl mx-auto md:gap-8'>
-                            <div className='col-span-6 sm:col-span-4'>
+                            <div className='col-span-6 sm:col-span-3'>
                                 <LeaderOvidiu
                                     className='rounded-md shadow-md mb-4'
                                     alt='Ovidiu Cical - Founder & CEO'
@@ -228,7 +228,7 @@ const AboutUs = ({ location }) => {
                                     <span className='ml-1 sm:ml-2'>Founder & CEO</span>
                                 </a>
                             </div>
-                            <div className='col-span-6 sm:col-span-4'>
+                            <div className='col-span-6 sm:col-span-3'>
                                 <LeaderManuela
                                     className='rounded-md shadow-md mb-4'
                                     alt='Manuela Țicudean - Founder & COO'
@@ -245,7 +245,7 @@ const AboutUs = ({ location }) => {
                                     <span className='ml-1 sm:ml-2'>Founder & COO</span>
                                 </a>
                             </div>
-                            <div className='col-span-6 sm:col-span-4'>
+                            <div className='col-span-6 sm:col-span-3'>
                                 <LeaderAndy
                                     className='rounded-md shadow-md mb-4'
                                     alt='Andy Leaver - VP Ops in Residence'
@@ -260,6 +260,23 @@ const AboutUs = ({ location }) => {
                                 >
                                     <FaLinkedin className='text-sm sm:text-lg mt-1 sm:mt-0' />
                                     <span className='ml-1 sm:ml-2'>VP Ops in Residence</span>
+                                </a>
+                            </div>{' '}
+                            <div className='col-span-6 sm:col-span-3'>
+                                <LeaderAndrei
+                                    className='rounded-md shadow-md mb-4'
+                                    alt='Andrei Milaș - CTO'
+                                />
+                                <strong className='text-black sm:text-white'>Andrei Milaș</strong>
+                                <br />
+                                <a
+                                    href='https://ro.linkedin.com/in/andrei-milas/'
+                                    className='flex text-sm text-black sm:text-white hover:underline'
+                                    rel='noopener noreferrer'
+                                    target='_blank'
+                                >
+                                    <FaLinkedin className='text-sm sm:text-lg mt-1 sm:mt-0' />
+                                    <span className='ml-1 sm:ml-2'>CTO</span>
                                 </a>
                             </div>
                         </Row>
