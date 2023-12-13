@@ -7,4 +7,5 @@ relatedBlogPost:
   - blogPost: Top 10 Cloud Security Challenges for SaaS
   - blogPost: "Cloud Security Strategy: Best Practices, Tutorials, and More"
   - blogPost: A Guide to Cloud Security Best Practices
+  - blogPost: Cloud Security Assessment as a Vital Part of the M&A Process
 ---
