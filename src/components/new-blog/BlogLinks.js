@@ -12,7 +12,7 @@ const BlogLinks = ({ categories }) => {
                     }
                 }
                 sort: { frontmatter: { date: DESC } }
-                limit: 5
+                limit: 6
             ) {
                 edges {
                     node {
@@ -33,7 +33,7 @@ const BlogLinks = ({ categories }) => {
                     frontmatter: { templateKey: { eq: "top-articles-category-based" }, category: { eq: "Compliance" } }
                 }
                 sort: { frontmatter: { date: DESC } }
-                limit: 5
+                limit: 6
             ) {
                 edges {
                     node {
@@ -54,7 +54,7 @@ const BlogLinks = ({ categories }) => {
                     frontmatter: { templateKey: { eq: "top-articles-category-based" }, category: { eq: "News" } }
                 }
                 sort: { frontmatter: { date: DESC } }
-                limit: 5
+                limit: 6
             ) {
                 edges {
                     node {
@@ -75,7 +75,7 @@ const BlogLinks = ({ categories }) => {
                     frontmatter: { templateKey: { eq: "top-articles-category-based" }, category: { eq: "Product" } }
                 }
                 sort: { frontmatter: { date: DESC } }
-                limit: 5
+                limit: 6
             ) {
                 edges {
                     node {
@@ -94,7 +94,7 @@ const BlogLinks = ({ categories }) => {
             iam: allMarkdownRemark(
                 filter: { frontmatter: { templateKey: { eq: "top-articles-category-based" }, category: { eq: "IAM" } } }
                 sort: { frontmatter: { date: DESC } }
-                limit: 5
+                limit: 6
             ) {
                 edges {
                     node {
@@ -115,7 +115,7 @@ const BlogLinks = ({ categories }) => {
                     frontmatter: { templateKey: { eq: "top-articles-category-based" }, category: { eq: "CSPM" } }
                 }
                 sort: { frontmatter: { date: DESC } }
-                limit: 5
+                limit: 6
             ) {
                 edges {
                     node {
@@ -136,7 +136,7 @@ const BlogLinks = ({ categories }) => {
                     frontmatter: { templateKey: { eq: "top-articles-category-based" }, category: { eq: "CNAPP" } }
                 }
                 sort: { frontmatter: { date: DESC } }
-                limit: 5
+                limit: 6
             ) {
                 edges {
                     node {
@@ -160,7 +160,7 @@ const BlogLinks = ({ categories }) => {
                     }
                 }
                 sort: { frontmatter: { date: DESC } }
-                limit: 5
+                limit: 6
             ) {
                 edges {
                     node {
@@ -184,7 +184,7 @@ const BlogLinks = ({ categories }) => {
                     }
                 }
                 sort: { frontmatter: { date: DESC } }
-                limit: 5
+                limit: 6
             ) {
                 edges {
                     node {
@@ -205,7 +205,7 @@ const BlogLinks = ({ categories }) => {
                     frontmatter: { templateKey: { eq: "top-articles-category-based" }, category: { eq: "Encryption" } }
                 }
                 sort: { frontmatter: { date: DESC } }
-                limit: 5
+                limit: 6
             ) {
                 edges {
                     node {
@@ -223,8 +223,6 @@ const BlogLinks = ({ categories }) => {
             }
         }
     `);
-
-    console.log(data);
 
     return (
         <>
