@@ -88,9 +88,7 @@ It’s not enough to understand the technology you’ve been using to date, you 
 
 <br class="" />
 
-<a href="#data">
-  <img src="/img/data-dash.png" alt="" title="" class="blog-image-shadow" style="width:auto;height:auto;"/>
-</a>
+<a href="#data"><img src="/img/data-dash.png" alt="" title="" class=" blog-image-shadow " style="width:auto;height:auto;"/></a>
 
 ### Attempting integration of incompatible systems 
 
@@ -156,8 +154,6 @@ In terms of data sovereignty, this means understanding how to store data in the 
 <br class="" />
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"><iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/OQj8Yo71DvQ" frameborder="0" allowfullscreen></iframe></div>
-
-
 
 ## Approaching cloud security in M&A holistically  
 
