@@ -12,6 +12,7 @@ import HeroImage from '../../assets/images/bg-image-misconfigurations-campaigns.
 import ScrollDown from '../../components/ScrollButton/ScrollDown';
 import ServiceHighlight from '../../components/campaigns/ServiceHighlight';
 import CaseStudiesSection from '../../components/Home/CaseStudiesSection';
+import TourVideo from '../../components/video/TourVideo';
 
 const subtitle = css`
     font-size: 1.625rem;
@@ -186,7 +187,8 @@ const CloudSecurityMSSP = ({ location }) => {
                     </div>
                 </div>
             </div>
-            <Container className='mt-0 md:mt-12 lg:mt-0'>
+            <TourVideo />
+            <Container>
                 <div className='pb-8 lg:pt-32 lg:pb-16' id='start'>
                     <div className='sm:grid sm:grid-cols-12 sm:gap-12'>
                         <div className='col-span-12 lg:col-span-6 mt-8 sm:mt-0 hidden lg:block'>
@@ -197,7 +199,7 @@ const CloudSecurityMSSP = ({ location }) => {
                                 />
                             </div>
                         </div>
-                        <div className='col-span-12 lg:col-span-6 mt-12 md:mt-0'>
+                        <div className='col-span-12 lg:col-span-6'>
                             <div className='mx-auto lg:mx-0 max-w-xl lg:pl-16'>
                                 <h2
                                     className='font-bold text-primary border-title-partly font-montserrat mt-2 lg:mt-12'

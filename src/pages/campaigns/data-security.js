@@ -18,6 +18,7 @@ import DataSecurityIcon from '../../assets/images/data-security-icon.svg';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { css } from 'twin.macro';
 import ScrollDown from '../../components/ScrollButton/ScrollDown';
+import TourVideo from '../../components/video/TourVideo';
 
 const DataSecurityList = loadable(() => import('../../components/campaigns/data-security/DataSecurityList'));
 const DataManagementSection = loadable(() => import('../../components/campaigns/data-security/DataManagementSection'));
@@ -146,8 +147,9 @@ const DataSecurity = ({ location }) => {
                     </div>
                 </Container>
             </div>
+            <TourVideo />
             <Container>
-                <div className='py-8 lg:py-32' id='start'>
+                <div className='pb-8 lg:pt-32 lg:pb-32' id='start'>
                     <div className='sm:grid sm:grid-cols-12 sm:gap-8'>
                         <div className='col-span-12 lg:col-span-6'>
                             <div className='mx-auto lg:mx-0 max-w-md sm:max-w-xl lg:max-w-sm'>

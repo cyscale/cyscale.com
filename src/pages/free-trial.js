@@ -15,6 +15,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import cloudIcon from '../assets/images/cloud-icon.svg';
 import { animateScroll } from 'react-scroll';
 import QuotesStartups from '../assets/images/quotes-startups.svg';
+import TourVideo from '../components/video/TourVideo';
 
 const blueGradientCard = css`
     background-image: linear-gradient(#e4edfc, #fff);
@@ -178,7 +179,8 @@ const FreeTrial = ({ location }) => {
                     </div>
                 </div>
             </div>
-            <Container className='mt-12 lg:pt-24'>
+            <TourVideo />
+            <Container className='lg:mt-8 lg:pt-24'>
                 <div className='pt-2 pb-0 sm:pb-24'>
                     <div>
                         <h2 className='text-center lg:text-left mb-8 font-montserrat font-bold text-blue text-2xl'>

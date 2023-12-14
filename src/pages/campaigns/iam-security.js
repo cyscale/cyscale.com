@@ -18,6 +18,7 @@ import HeroImage from '../../assets/images/bg-image-misconfigurations-campaigns.
 import { css } from 'twin.macro';
 import ScrollDown from '../../components/ScrollButton/ScrollDown';
 import ServiceHighlight from '../../components/campaigns/ServiceHighlight';
+import TourVideo from '../../components/video/TourVideo';
 
 const IamSecurity = ({ location }) => {
     const { loadingForm } = useHSFormLoaded();
@@ -173,10 +174,11 @@ const IamSecurity = ({ location }) => {
                     </div>
                 </div>
             </div>
+            <TourVideo />
             <Container>
-                <Section id='start'>
+                <div className="pb-24 lg:pt-32 lg:pb-32" id='start'>
                     <div className='sm:grid sm:grid-cols-12 sm:gap-12'>
-                        <div className='col-span-12 lg:col-span-6 mt-8 sm:mt-0'>
+                        <div className='col-span-12 lg:col-span-6'>
                             <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-2xl'>
                                 <GatsbyImage
                                     image={data.usersList.childImageSharp.gatsbyImageData}
@@ -220,7 +222,7 @@ const IamSecurity = ({ location }) => {
                             </div>
                         </div>
                     </div>
-                </Section>
+                </div>
             </Container>
             <Container>
                 <Section>
