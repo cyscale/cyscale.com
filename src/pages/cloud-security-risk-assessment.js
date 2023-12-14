@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import useHSFormLoaded from '../hooks/useHSFormLoaded';
 import useHSFormDisplayAndSubmit from '../hooks/useHSFormDisplayAndSubmit';
@@ -66,7 +66,6 @@ const CloudSecurityRiskAssessment = ({ location }) => {
             }
         }
     `);
-    const [modal, setModal] = useState(false);
 
     const { loadingForm } = useHSFormLoaded();
     const { formSubmitted } = useHSFormDisplayAndSubmit({
