@@ -9,6 +9,7 @@ import useHSFormLoaded from '../../hooks/useHSFormLoaded';
 import classnames from 'classnames';
 import LoaderContainer from '../../components/Loader/LoaderContainer/LoaderContainer';
 import ScrollDown from '../../components/ScrollButton/ScrollDown';
+import TourVideo from '../../components/video/TourVideo';
 
 const AWSCloudSolution = ({ location }) => {
     const { loadingForm } = useHSFormLoaded();
@@ -96,7 +97,8 @@ const AWSCloudSolution = ({ location }) => {
                     </div>
                 </Container>
             </div>
-            <Container className='mt-0 md:mt-12 lg:mt-0'>
+            <TourVideo />
+            <Container>
                 <div className='pb-8 lg:pt-32 lg:pb-16' id='start'>
                     <div className='sm:grid sm:grid-cols-12 sm:gap-12'>
                         <div className='col-span-12 lg:col-span-6 mt-8 sm:mt-0 hidden lg:block'>
@@ -107,7 +109,7 @@ const AWSCloudSolution = ({ location }) => {
                                 />
                             </div>
                         </div>
-                        <div className='col-span-12 lg:col-span-6 mt-12 md:mt-0'>
+                        <div className='col-span-12 lg:col-span-6'>
                             <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-sm lg:pl-16'>
                                 <h2 className='text-3xl font-bold text-primary leading-normal border-title-partly montserrat-font'>
                                     Prevent misconfigurations & mistakes

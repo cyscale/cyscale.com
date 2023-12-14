@@ -15,19 +15,10 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import { animateScroll } from 'react-scroll';
 import QuotesStartups from '../assets/images/quotes-startups.svg';
 import cloudIcon from '../assets/images/cloud-icon.svg';
-import { CSSTransition } from 'react-transition-group';
-import VideoCyscale from '../components/campaigns/cspm-solutin/CyscaleVideo';
+import TourVideo from '../components/video/TourVideo';
 
 const blueGradientCard = css`
     background-image: linear-gradient(#e4edfc, #fff);
-`;
-
-const customFontSize = css`
-    font-size: 1.75rem;
-
-    @media (max-width: 1024px) {
-        font-size: 1.625rem;
-    }
 `;
 
 const CloudSecurityRiskAssessment = ({ location }) => {
@@ -71,11 +62,6 @@ const CloudSecurityRiskAssessment = ({ location }) => {
             pricingIcon: file(relativePath: { eq: "pricing-icon.png" }) {
                 childImageSharp {
                     gatsbyImageData(width: 420, layout: CONSTRAINED)
-                }
-            }
-            videoThumbnail: file(relativePath: { eq: "hero-image-homepage.png" }) {
-                childImageSharp {
-                    gatsbyImageData(width: 1920, layout: CONSTRAINED)
                 }
             }
         }
@@ -199,40 +185,7 @@ const CloudSecurityRiskAssessment = ({ location }) => {
                     </div>
                 </div>
             </div>
-            <div className='pt-24 pb-24 lg:pb-0'>
-                <Container>
-                    <h2 className='text-center text-blue font-montserrat font-bold' css={customFontSize}>
-                        Take the 2 minute tour
-                    </h2>
-                    <div
-                        className='max-w-2xl mx-auto mt-8'
-                        onClick={() => {
-                            setModal(!modal);
-                        }}
-                        onKeyPress={() => {}}
-                        tabIndex='0'
-                        role='button'
-                    >
-                        <GatsbyImage
-                            image={data.videoThumbnail.childImageSharp.gatsbyImageData}
-                            css={css`
-                                &:hover {
-                                    scale: 1.025;
-                                }
-                            `}
-                            className='rounded-xl'
-                            alt='Video Thumbnail'
-                        />
-                    </div>
-                    {modal && <div className='modal-overlay'></div>}
-                    <CSSTransition in={modal} timeout={300} classNames='video' unmountOnExit>
-                        <VideoCyscale
-                            setModal={setModal}
-                            videoUrl='https://static-cyscale-com.s3.amazonaws.com/videos/Cyscale-explainer-video-2023-12-Dec.mp4'
-                        />
-                    </CSSTransition>
-                </Container>
-            </div>
+            <TourVideo />
             <Container className='lg:mt-8 lg:pt-24'>
                 <div className='pt-2 pb-0 sm:pb-24'>
                     <div>

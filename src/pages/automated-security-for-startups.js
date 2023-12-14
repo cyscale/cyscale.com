@@ -14,6 +14,7 @@ import { hoverButtonColorStyle, widthFitStyle } from '../components/layout/style
 import RightArrow from '../components/sharedComponent/RightArrow';
 import AnimatedNavbarLayout from '../components/campaigns/AnimatedNavbarLayout';
 import ScrollDown from '../components/ScrollButton/ScrollDown';
+import TourVideo from '../components/video/TourVideo';
 
 const blueGradientCard = css`
     background-image: linear-gradient(#e4edfc, #fff);
@@ -174,8 +175,9 @@ const AutomatedSecurityForStartups = ({ location }) => {
                     </div>
                 </Container>
             </div>
-            <Container className='mt-8'>
-                <div className='py-12 md:py-24'>
+            <TourVideo />
+            <Container>
+                <div className='pb-12 md:pb-24 lg:pt-32'>
                     <div id='start'>
                         <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-full'>
                             <h2 className='text-center lg:text-left mb-4 font-montserrat font-bold text-blue text-2xl'>

@@ -9,6 +9,7 @@ import AnimatedNavbarLayout from '../AnimatedNavbarLayout';
 import useHSFormLoaded from '../../../hooks/useHSFormLoaded';
 import HeroContent from './HeroContent';
 import ScrollDown from '../../ScrollButton/ScrollDown';
+import TourVideo from '../../video/TourVideo';
 
 const Original = ({ location, data }) => {
     const { loadingForm } = useHSFormLoaded();
@@ -58,9 +59,9 @@ const Original = ({ location, data }) => {
                     </div>
                 </Container>
             </div>
+            <TourVideo />
             <div>
-                {' '}
-                <Container className='mt-0 md:mt-12 lg:mt-0'>
+                <Container>
                     <div className='pb-8 lg:pt-32 lg:pb-16' id='start'>
                         <div className='sm:grid sm:grid-cols-12 sm:gap-12'>
                             <div className='col-span-12 lg:col-span-6 mt-8 sm:mt-0 hidden lg:block'>
@@ -71,7 +72,7 @@ const Original = ({ location, data }) => {
                                     />
                                 </div>
                             </div>
-                            <div className='col-span-12 lg:col-span-6 mt-12 md:mt-0'>
+                            <div className='col-span-12 lg:col-span-6'>
                                 <div className='mx-auto lg:mx-0 max-w-xl lg:max-w-sm lg:pl-16'>
                                     <h2 className='text-3xl font-bold text-primary leading-normal border-title-partly montserrat-font'>
                                         Prevent misconfigurations & mistakes
