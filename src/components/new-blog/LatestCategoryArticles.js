@@ -13,7 +13,7 @@ const pages = [
         link: '/products/cloud-security-posture-management/'
     },
     {
-        text: 'Cloud Data Security',
+        text: 'Multi-Cloud Data Security',
         link: '/use-cases/cloud-data-security/'
     },
     {
