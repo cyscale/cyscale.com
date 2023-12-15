@@ -4,7 +4,7 @@ import { Container, Row } from '../components/atoms/Containers';
 import { css } from 'twin.macro';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { Link, useStaticQuery, graphql } from 'gatsby';
-import VideoCyscale from '../components/campaigns/cspm-solutin/CyscaleVideo';
+import VideoCyscale from '../components/campaigns/cspm-solution/CyscaleVideo';
 import { CSSTransition } from 'react-transition-group';
 import ArrowRight from '../assets/images/arrow-right-white.svg';
 import Carousel from '../components/resources/Carousel';

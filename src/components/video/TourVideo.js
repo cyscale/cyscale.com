@@ -3,7 +3,7 @@ import { Container } from '../atoms/Containers';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { css } from 'twin.macro';
 import { CSSTransition } from 'react-transition-group';
-import VideoCyscale from '../campaigns/cspm-solutin/CyscaleVideo';
+import VideoCyscale from '../campaigns/cspm-solution/CyscaleVideo';
 import { graphql, useStaticQuery } from 'gatsby';
 
 const customFontSize = css`
