@@ -6,7 +6,7 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import GradientButton from '../../components/buttons/GradientButton';
 import LinksAndWhitepaper from '../../components/products/LinksAndWhitepaper';
 import { css } from 'twin.macro';
-import VideoCyscale from '../../components/campaigns/cspm-solutin/CyscaleVideo';
+import VideoCyscale from '../../components/campaigns/cspm-solution/CyscaleVideo';
 import { CSSTransition } from 'react-transition-group';
 import { IAMTopArticles } from '../../common/links';
 import ScrollDown from '../../components/ScrollButton/ScrollDown';

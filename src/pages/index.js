@@ -13,7 +13,7 @@ import PrioritizeIcon from '../assets/images/prioritize-icon-home.svg';
 import IdentifyIcon from '../assets/images/identity-icon-home.svg';
 import IntegrationsIcons from '../components/Home/IntegrationsIcons';
 import { CSSTransition } from 'react-transition-group';
-import VideoCyscale from '../components/campaigns/cspm-solutin/CyscaleVideo';
+import VideoCyscale from '../components/campaigns/cspm-solution/CyscaleVideo';
 
 const CaseStudiesSection = loadable(() => import('../components/Home/CaseStudiesSection'));
 const CardsSections = loadable(() => import('../components/Home/CardsSections'));

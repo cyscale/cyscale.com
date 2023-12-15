@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import Original from '../../components/campaigns/cspm-solutin/Original';
+import Original from '../../components/campaigns/cspm-solution/Original';
 
 const CSPMSolution = ({ location }) => {
     const data = useStaticQuery(graphql`
