@@ -58,6 +58,7 @@ const TourVideo = () => {
                     <VideoCyscale
                         setModal={setModal}
                         videoUrl='https://static-cyscale-com.s3.amazonaws.com/videos/Cyscale-explainer-video-2023-12-Dec.mp4'
+                        greyCloseButton
                     />
                 </CSSTransition>
             </Container>
