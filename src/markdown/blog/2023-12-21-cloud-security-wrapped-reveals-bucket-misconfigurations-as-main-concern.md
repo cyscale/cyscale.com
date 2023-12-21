@@ -12,7 +12,7 @@ description: "Cyscale’s inaugural Cloud Security Wrapped revealed buckets as t
   source of most high-severity security alerts.  "
 seoDescription: "Cyscale’s Cloud Security Wrapped 2023 revealed buckets as the
   source of most high-severity security alerts.  "
-featuredpost: false
+featuredpost: true
 featuredimage: /img/wrapped-blog.png
 tableOfContents: false
 ---
