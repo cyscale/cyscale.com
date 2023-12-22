@@ -51,6 +51,7 @@ const TourVideo = () => {
                         `}
                         className='rounded-xl'
                         alt='Video Thumbnail'
+                        imgStyle={{ borderRadius: '0.75rem' }}
                     />
                 </div>
                 {modal && <div className='modal-overlay'></div>}
