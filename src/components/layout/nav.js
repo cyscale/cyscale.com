@@ -113,6 +113,10 @@ const solutions = [
 ];
 const resources = [
     {
+        text: 'Product Tours',
+        link: '/full-platform-tour/'
+    },
+    {
         text: 'Case Studies',
         link: '/resources/#case-studies'
     },
@@ -128,11 +132,6 @@ const resources = [
     {
         text: 'Release Notes',
         link: 'https://headwayapp.co/cyscale-changelog/',
-        external: true
-    },
-    {
-        text: 'Support',
-        link: 'https://docs.cyscale.com/',
         external: true
     },
     {

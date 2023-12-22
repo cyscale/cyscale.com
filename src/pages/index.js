@@ -255,7 +255,7 @@ const HomePage = ({ location }) => {
                                                     scale: 1.025;
                                                 }
                                             `}
-                                            className='rounded-xl'
+                                            imgStyle={{ borderRadius: '0.75rem' }}
                                             alt='Video Thumbnail'
                                         />
                                     </div>
@@ -263,7 +263,7 @@ const HomePage = ({ location }) => {
                                     <CSSTransition in={modal} timeout={300} classNames='video' unmountOnExit>
                                         <VideoCyscale
                                             setModal={setModal}
-                                            videoUrl='https://static-cyscale-com.s3.amazonaws.com/videos/Cyscale-explainer-video-2023-12-Dec.mp4'
+                                            videoUrl='https://d3n52qn7viv754.cloudfront.net/videos/Cyscale-explainer-video-2023-12-Dec.mp4'
                                             greyCloseButton
                                         />
                                     </CSSTransition>
