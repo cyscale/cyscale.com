@@ -147,7 +147,7 @@ const FullPlatformTour = ({ location }) => {
                                             padding: 2px 5px;
                                         `}
                                     >
-                                        video tour
+                                        tours
                                     </span>
                                 </h1>
                                 <p
@@ -157,7 +157,7 @@ const FullPlatformTour = ({ location }) => {
                                     `}
                                 >
                                     Get a comprehensive overview of the features and capabilities of the Cyscale
-                                    platform as a video demo. Scroll down to see a breakdown in easily understandable
+                                    platform as an interactive demo. Scroll down to see a breakdown in easily understandable
                                     sections.
                                 </p>
                                 <Link
