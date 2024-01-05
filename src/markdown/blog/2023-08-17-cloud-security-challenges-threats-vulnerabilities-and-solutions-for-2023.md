@@ -157,8 +157,6 @@ To prevent against damage caused by current or previous employees, ensure that:�
 * You're following the [Least Privilege Principle](https://cyscale.com/blog/check-for-least-privilege/) and only assigning the necessary permissions for the amount of time required, 
 * You're monitoring user activity and performing regular assessments of user access and permissions. 
 
-  
-
 # 9. Cryptographic keys management 
 
 Managing encryption keys effectively is critical for safeguarding data. With the growing volume of encrypted data in the cloud, ensuring secure storage, access, rotation, and revocation of encryption keys has become challenging. 
@@ -207,6 +205,10 @@ The challenges of 2024 bring forward a landscape where technological advancement
 As we navigate AI-driven threats, the looming potential of quantum computing, and growing multi-cloud environments, hackers find ever-more innovative ways to attack companies, and so we must focus on fortifying our defenses, meaning proactive measures become imperative. 
 
 To prepare for this changing landscape, book a free cloud security health assessment with Cyscale. Get complete visibility of your entire cloud estate in minutes and assess your cloud security posture, so you can expose, understand, and prioritize any threats. 
+
+<a href="https://cyscale.com/request-demo/">
+    <img src="/img/assessment-cta.png" alt="" title="" id='cta-image'/>
+</a>
 
 ## Cloud Security Strategy Roadmap 
 
