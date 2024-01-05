@@ -1,15 +1,14 @@
 ---
 templateKey: blog-post
-title: Top 10 Cloud Security Challenges for SaaS
-seoTitle: "Top 10 Cloud Security Challenges for SaaS Startups | Cyscale "
+title: Top 10 Cloud Security Challenges in 2024
+seoTitle: "Top 10 Cloud Security Challenges for Startups in 2024 | Cyscale "
 authors: Sabrina Lupșan
 permalink: cloud-security-challenges
 categories:
   - Cloud Security
-date: 2023-08-17T10:05:11.467Z
+date: 2024-01-05T11:05:11.467Z
 description: "Understand the top 10 cloud security challenges, vulnerabilities,
-  and misconfigurations, and learn how to build a roadmap to create a robust
-  cloud security strategy for 2023 and beyond. "
+  and misconfigurations, and learn how to build a roadmap to a secure cloud. "
 seoDescription: "Understand the top 10 cloud security challenges,
   vulnerabilities, and misconfigurations, and learn how to build a roadmap to a
   secure cloud. "
@@ -20,96 +19,194 @@ tags:
   - CSPM
   - security
 ---
-**Threats, Vulnerabilities, and Solutions for 2023**
+Any article covering the top cybersecurity challenges is typically dominated by the human element – humans being the weakest link, prone to errors, misconfigurations, and poor security hygiene. But this year it’s different.  
 
-2023 marks a critical year for cloud security following a global shift towards remote work, digital transformation, and increasingly complex cloud infrastructure environments. Protecting sensitive data and ensuring compliance has become paramount for professionals like Solutions Architects, CISOs, Cloud Security Researchers, DevOps Engineers, and others in the technology space tasked with ensuring transformative technologies remain secure. 
+The rapid and unpredictable rise of AI has drawn attention through all of 2023, leading to questions about the positive and negative impact it will have on lives and businesses going forward.  
 
-But what exactly are the top cloud security challenges, and why are they a matter of pressing concern? Whether its data breaches caused by cyberattacks or vulnerabilities due to misconfiguration, cloud security threats are multifaceted and evolving, quickly outpacing our human ability to keep up. 
+There’s no doubt AI-driven attacks will be a pivotal challenge that defines the cloud security landscape for 2024, but it’s not the only consideration characterized by intricate and cutting-edge vulnerabilities and attacks. 
 
-In this comprehensive guide, we will explore the top 10 cloud security challenges and present a roadmap for creating a robust cloud security strategy, with real-life examples, actionable solutions, and insights to aid your journey towards a secure cloud. 
+Let's take a close look at the top 10 cloud security challenges we've identified in the last year that need to be closely monitored in 2024 and beyond. 
 
-## Top 10 Cloud Security Challenges 
+# 1. Advanced AI-driven threats 
 
-The digital landscape is filled with opportunities, but it is not without its obstacles. Cloud security challenges represent significant hurdles that organizations must overcome to fully leverage the power of cloud infrastructure.  
+Throughout 2023, AI exploded as a megatrend that changes the risk landscape significantly – both positively and negatively. We’ve seen AI-powered DDoS attacks, where attackers use automation to adjust threat vectors based on real-time analysis of success against various attack surfaces, and ransomware and malware that can adapt to the environment and replicate using existing and newly discovered vulnerabilities.  
 
-Let's dive into the top 10 challenges that are shaping the conversation in 2023: 
+The potential for generative AI and Large Language Models (LLMs) is a double-edged sword, and the cloud security landscape feels uncertain as attackers come up with more and more sophisticated attacks. 
 
-### 1. Vulnerabilities in Cloud Infrastructure: 
+In 2023, hackers managed to abuse the growing popularity of OpenAI's well-known tool, ChatGPT. [The chatbot was found to be "hallucinating"](https://vulcan.io/blog/ai-hallucinations-package-risk) in its responses to questions about coding packages and libraries and recommending things that didn't exist.  
 
-The rise of cloud computing has unveiled a plethora of vulnerabilities that can be exploited by hackers. Whether it's poorly designed APIs or weak authentication protocols, these vulnerabilities are often the entry points for unauthorized access. 
+Hackers went ahead and created malicious packages with the same names, so developers receiving the same recommendations from ChatGPT would download the malicious software. 
 
-The famous [Equifax data breach in 2017](https://en.wikipedia.org/wiki/2017_Equifax_data_breach) occurred due to a vulnerability in an Apache Struts framework that allowed attackers to leak data using a vulnerable API. That breach affected approximately 147 million customers. 
+Although the threat is of great concern, it’s not all doom and gloom, according to Google Cloud’s own CISO. While it’s true we expect to see AI help attackers, AI should also give defenders a [significant advantage because AI is good at amplifying capability based on data](https://cloud.google.com/blog/products/identity-security/cloud-ciso-perspectives-how-the-ai-megatrend-can-help-manage-threats-reduce-toil-and-scale-talent) — and defenders have more data. 
 
-### 2. Security Threats from Hackers and Malware: 
+## Protecting against AI-driven threats 
 
-Hackers continually evolve their techniques to breach cloud security defenses or simply take services offline. From sophisticated malware to phishing attacks and holding services to ransom, the threats are relentless and require constant vigilance and real-time security solutions.  
+In this rapidly changing field, continuous education regarding emerging AI-threats is vital. Awareness campaigns and training are the best weapons against these kinds of attacks. 
 
-In early 2023, one botnet conducted a complex DDoS attack that was able to issue between 50 and 70 million requests per second originating from different cloud providers, [according to Cloudflare](https://blog.cloudflare.com/cloudflare-mitigates-record-breaking-71-million-request-per-second-ddos-attack/). VMs in the cloud can be both targets of DDoS attacks, as well as unwitting participants if a compromise goes undetected. 
+Cloud security solutions such as [Cyscale](https://cyscale.com/products/cloud-security-posture-management/) are also leading the application of AI to make cybersecurity more human friendly. As security practitioners are overwhelmed by information, making sense of that information in terms of context and inference is becoming more of a challenge.  
 
-### 3. Misconfigurations and Human Errors: 
+ Cyscale’s AI-powered Security Assistant is a move towards making cloud security as intuitive as asking a question.  
 
-Simple misconfigurations can lead to catastrophic data breaches and with many companies facing a complex and sprawling cloud infrastructure it’s easy to make mistakes. Human error, whether accidental or due to lack of understanding of cloud configurations, is a consistent challenge. 
+Our platform can [automatically respond to queries and surface uncovered issues](https://cyscale.com/blog/introducing-ai-powered-security-assistant/) using the specific customers’ cloud footprint combined with LLMs of vulnerabilities and exploits.     
 
-Let’s look at a common cloud misconfiguration example: your S3 bucket, which contains sensitive data about your customers, is publicly accessible. It sounds obvious, but a simple setting - making the bucket private - can prevent someone from the Internet accessing the data. However, if you are not aware of that configuration, this simple oversight might become a significant problem for your company; this is why it is very important to continuously monitor for misconfigurations and ensure you fix any findings in a timely manner. 
+# 2. Phishing and Social Engineering 
 
-### 4. Insider Threats and Unauthorized Access: 
+Human behavior remains one of the staples in any list of risks, both as an external threat as well as an internal one due to disgruntled employees.  
 
-From disgruntled employees to compromised credentials, insider threats pose a unique and often overlooked challenge. Rigorous access control and monitoring are essential.  
+As an external threat, phishing is still one of the most effective attacks. Humans are always the weak link in the security chain, and AI is making defending from social engineering attacks even harder due to the ease with which deep fakes can be produced that appear to be someone you know, to automated, convincing emails, messages, and chats with no grammar errors or that take on the tone and style of a specific person. 
 
-Moreover, a robust offboarding process for users is important to ensure that former employees no longer have access to the company’s assets after they have left the organization. Although the process of onboarding or offboarding an employee can be tedious, there should be a well-defined set of steps to check access rights when an employee leaves the company. After all, a favorite exercise of compliance auditors is to check a list of recently departed employees against current permissions and entitlements.  
+In the cloud, [IAM](https://cyscale.com/blog/iam-best-practices-identity/) (Identity and Access Management) is the first line of defense when focusing on the prevention of unauthorized users and devices from accessing cloud assets. 
 
-### 5. Cloud Service Providers and Shared Responsibility Model: 
+Leaked credentials and bypassed authentication processes are very dangerous and can lead to massive disasters, such as data breaches and unauthorized access to sensitive resources. 
 
-Understanding the shared responsibility model with cloud service providers (CSPs) like AWS, Microsoft Azure, or Google Cloud is vital. The delineation of responsibilities can sometimes be blurred, leading to security gaps.  
+## Protecting against phishing and social engineering attacks 
 
-For example, if a user thinks that the cloud provider secures a virtual machine, they might neglect:  
+Training programs for social engineering attacks are necessary to prevent employees from falling for phishing scams.  
 
-* closing management ports such as RDP (3389) and SSH (22), 
-* using network security tools (such as firewalls, access control lists, network security groups), 
-* managing VM disk encryption. 
+Enforcing MFA (Multi-Factor Authentication) is essential. Whether you’re using a passwordless solution or passwords, MFA should be enabled for everyone and especially for high-privilege users.   
 
-This might leave the VM unprotected because of the expectation that security is ‘somebody else’s problem’. 
+# 3. Evolving regulatory frameworks 
 
-### 6. Data Breaches and Loss: 
+As technology advances, we see more and more updates and additions to [compliance laws and standards](https://cyscale.com/blog/cloud-compliance-101-basics-best-practices/) ensuring both businesses and customer data are adequately protected.  
 
-Protecting sensitive data is at the heart of cloud security. Data breaches and loss due to cyberattacks, human error, or even natural disasters can have devastating effects on organizations. Having PII (Personally Identifiable Information) stolen or leaked can lead to very grave consequences for a company. 
+Maintaining compliance with the increasing complexity of frameworks and benchmarks can become overwhelming very quickly, especially for small teams.  
 
-In January 2023, the American wireless network provider T-Mobile revealed that a data breach that [potentially affected 37 million accounts occurred](https://www.reuters.com/technology/t-mobile-says-investigating-data-breach-affecting-37-mln-accounts-2023-01-19/) during 2022. Names, billing addresses, emails and phone numbers were some of the data that was leaked through an API with no authorization. Immediately in the wake of the news, T-Mobile stock fell 1%, and the company is currently under investigation by the FCC which could lead to further penalties.  
+For example, in 2023, we saw multiple [updates to CIS benchmarks](https://www.cisecurity.org/cis-benchmarks) for cloud services including Azure, AWS, and Kubernetes.  
 
-### 7. Non-Compliance and Legal Risks: 
+For financial institutions, the implementation deadline for [DORA (Digital Operational Resilience Act)](https://cyscale.com/blog/dora-compliance-in-the-cloud/) is also quickly approaching, with the release scheduled for early 2025 (17th of January). 
 
-Adhering to regulatory requirements such as PCI-DSS, GDPR, or HIPAA in the cloud can be complex. Non-compliance carries both legal risks and potential damage to reputation, especially for organizations in regulated sectors such as finance or healthcare. Compliance with international standards and laws ensures that: 
+All told, 2024 is a pivotal year for compliance and companies must keep up with the evolving regulations and maintain a good cloud security posture to protect themselves from emerging cybersecurity threats. 
 
-* Your company follows current cybersecurity best practices, 
-* The reputation of your company is well maintained due to the continuous efforts to remain compliant. 
+## Maintaining compliance with cloud security regulations and standards 
 
-To understand how serious non-compliance penalties can be, HIPAA is a good example. The maximum financial penalty for a HIPAA financial is almost $2 million, while criminal penalties can put the wrong-doer in jail for up to 10 years. It’s worth noting that regulation is also trending in the direction of at fault executives being held personally accountable, including jail time, to ensure that infringements can’t be offset by profits.  
+Because of the ever-changing landscape, staying on top of cloud security compliance is a continuous process that involves regular assessments of your cloud estate and compliance posture.  
 
-One of the worst HIPAA violation cases happened in 2008 in one of the UCLA Health System hospitals. Employees accessed celebrity patients' medical records without authorization. A settlement of $865,000 was paid by the hospital, and the employees faced disciplinary actions. In general, employee discipline only goes as far as termination of employment but in some cases, employees have done time behind bars. 
+You can keep up to date on new and changing requirements by [reading our blog posts.](https://cyscale.com/blog/compliance/) Furthermore, cloud security solutions like [Cyscale](https://cyscale.com/use-cases/cloud-compliance-and-auditing/) can also help you keep track of your compliance progress and know where you’re standing. 
 
-### 8. Security Controls and Configurations: 
+# 4. Quantum computing for password cracking 
 
-A security control in the cloud is a measure implemented based on a recommendation, a best practice or a requirement, designed to ensure that security and compliance of cloud resources and configurations are achieved.  
+Widely used encryption algorithms such as RSA were originally designed to withstand traditional computing attack methods, requiring a significant amount of computations to be made in order to crack passwords.  
 
-Implementing and managing the right security controls and configurations is critical and tools like a Cloud Security Posture Management ([CSPM) platform](https://cyscale.com/products/cloud-security-posture-management/) can be instrumental in managing these aspects effectively. Some tools, like Cyscale, go even further and visibility is greatly improved by bringing all of the security controls into one place, compared to multiple lists and dashboards of controls for each cloud provider, which can make it particularly challenging to see the big picture in the case of multi-cloud infrastructures. 
+The entire cryptographic landscape is currently based on this solution, with RSA protecting sensitive data everywhere. But developments in quantum computing keep advancing and threaten to make the impossible number of computations achievable.  
 
-### 9. Endpoint Security and Real-time Protections: 
+As a result, it’s expected that traditional encryption methods might one day become obsolete. The day quantum computing attacks will become possible is named Q-day, and it might be around the corner. 
 
-Endpoints are any device connected to a network. Examples of devices include desktop computers, laptops, smartphones, IoT devices, point of sale terminals, and others. 
+## Protecting against quantum computing attacks 
 
-With the rise of IoT and mobile workforces, securing endpoints and implementing real-time protections is more important than ever and more challenging given that these endpoints are often in the possession of individuals or at not easily accessible locations. A compromised or stolen laptop belonging to a senior engineer might be a good example here.  
+In parallel with developments in quantum computing, [quantum-resistant cryptographic algorithms](https://www.nist.gov/news-events/news/2022/07/nist-announces-first-four-quantum-resistant-cryptographic-algorithms) or post-quantum cryptography are our only solutions at this time, and the first group of encryption tools that are designed to withstand the assault of a future quantum computer are in development.   
 
-Real-time protection allows for threat detection and rapid response to attacks as they happen, as well as data loss prevention. For example, if you detect that a suspicious identity has connected to one of your VMs in the cloud, you can quickly act and cut off that identity before it can pivot to other cloud resources in your infrastructure. 
+# 5. Complexity in multi-cloud environments 
 
-### 10. Hybrid Cloud and Multi-cloud Environments: 
+It’s often said that the real killer in cloud security is the complexity. Cloud platforms and products have evolved in a granular fashion and security has followed suit. One often quoted Gartner prediction is that 99% of cloud security failures through 2025 will be due to user error as admins struggle to keep control of sprawling estates.
 
-Managing security across hybrid and multi-cloud environments introduces complexity.  
+Cloud service providers offer menus of products and services running into the hundreds, each with their own security configuration, and in a multi-cloud environment this complexity is amplified.  
 
-Multi-cloud setups demand the appropriate handling of various security controls specific to each cloud provider and maintaining visibility across them, while hybrid models require seamless integration and consistent policies between on-premises and public cloud assets. In both cases, the complexity of the infrastructure and policies increases, making it crucial to stay on top of your security posture. 
+Managing data security in multi-cloud environments can be especially challenging due to cloud providers' different configurations, security policies, even their vocabulary. As new tools appear, fully understanding a multi-cloud infrastructure can become harder. Remember, a certified AWS cloud expert is not an Azure cloud expert by default, and vice versa.   
 
-Addressing these challenges requires a comprehensive understanding of the cloud environment, robust strategies, and leveraging solutions like [multi-cloud data security](https://cyscale.com/use-cases/cloud-data-security/). 
+## Reducing complexity in multi-cloud environments
 
-The good news? These challenges aren't insurmountable. In the sections that follow, we'll explore best practices to fortify your cloud infrastructure.
+Bringing all your cloud assets, information, and configurations into one single platform is the key to not getting lost in your own cloud, and this means adopting a security strategy that includes a [CSPM](https://cyscale.com/products/cloud-security-posture-management/) or a [CNAPP](https://cyscale.com/products/cnapp/) solution.   
+
+Gartner research found that CSPM implementations can reduce cloud security incidents caused by misconfigurations by up to 80%. The single-pane-of-glass view across your multi-cloud estate also cuts down on the need to switch between multiple dashboards and means you can understand your entire cloud inventory in context.  
+
+<video width="auto" height="auto" controls="" tabindex="2"><source src="https://d3n52qn7viv754.cloudfront.net/videos/inventory-tour.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+
+# 6. Cybersecurity alert fatigue 
+
+Stress and burnout are rampant among cybersecurity professionals and the impact of [user fatigue](https://cyscale.com/blog/alert-fatigue-cybersecurity-cloud-security/) is no secret - thousands of alerts and logs that signal everything and anything that happens in the cloud is not a helpful approach. In many cloud security setups, the default process is to alert for every event, regardless of its criticality.  
+
+This flood of alerts can quickly become overwhelming for cloud security professionals who become used to severe or critical alerts popping up every day. When everything is critical, nothing is. So, this can desensitize them, and when an actual breach occurs and legitimately critical alerts are sent out, they can end up being overlooked. 
+
+This approach can also turn into a resource hog, giving security practitioners an endless list of tasks to work through that might not achieve the desired results.  
+
+## Protecting against alert fatigue 
+
+To prevent user fatigue, contextual security is the best approach and your ability to prioritize remediation work efficiently depends on the capabilities of your [CNAPP](https://cyscale.com/products/cnapp/) or [CSPM](https://cyscale.com/products/cloud-security-posture-management/).  
+
+By filtering out alerts that are not actually high risk in your unique cloud environment and shifting focus to your own most sensitive cloud resources, you can help your security people work more effectively.  
+
+<video width="auto" height="auto" controls="" tabindex="2"><source src="https://d3n52qn7viv754.cloudfront.net/videos/alerts-tour.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+
+# 7. Executive decisions and responsibilities 
+
+One of the biggest challenges a CISO or CTO faces when approaching the board or C suite for funding is justifying their cybersecurity spend. There has long been a perception gap between the cost of security versus the cost of a breach and the simple truth is, you can spend some money up front to reduce the likelihood of a breach, or you can spend more later when the breach has happened.  
+
+The [global average cost of a data breach has climbed 15% over the last three years](https://newsroom.ibm.com/2023-07-24-IBM-Report-Half-of-Breached-Organizations-Unwilling-to-Increase-Security-Spend-Despite-Soaring-Breach-Costs) and with lagging investment, only about one third of breaches are picked up by an organization’s own team.  
+
+Furthermore, we’ve seen how decisions made by individuals in executive positions make or break a company through their impact on the company's security strategy. Look at the [SolarWinds case](https://cyscale.com/blog/sec-charges-solarwinds-ciso-for-fraud/) as an example, where the SolarWinds CISO ended up being investigated for fraud over failure to fully disclose security gaps and issues in the company. 
+
+There’s also the issue of how those responsible for executing on the security strategy are impacted by executive decisions. The SEC investigation into SolarWinds found that “the volume of security issues being identified have outstripped the capacity of Engineering teams to resolve.”   
+
+## Empowering security leaders to be effective 
+
+As increasing board liability for risk is sinking in, CTOs, CISOs, and security leaders should be looking to justify their security spend by aligning it with business goals, and instead of operating in a vacuum to build a culture of cybersecurity.  
+
+This also means formulating policies and establishing processes (and actually following them!) is an approach that all companies need to be doing to ensure employees follow good practices and don't move away from established rules. 
+
+# 8. Insider threats and privilege misuse 
+
+Sometimes, it's easy to focus on preventing unwanted access from external actors and forgetting that harm can also be done from the inside. Malicious or unintentional actions by employees with privileged access can pose significant security risks. 
+
+Estimates vary but most research agrees that more than half of security breaches experienced are a result of internal threats or abuse of privilege. 
+
+## Protecting against insider threats 
+
+To prevent against damage caused by current or previous employees, ensure that: 
+
+* When offboarding users, you're removing all access and not leaving any dangling permissions that can be abused, 
+* You're following the [Least Privilege Principle](https://cyscale.com/blog/check-for-least-privilege/) and only assigning the necessary permissions for the amount of time required, 
+* You're monitoring user activity and performing regular assessments of user access and permissions. 
+
+  
+
+# 9. Cryptographic keys management 
+
+Managing encryption keys effectively is critical for safeguarding data. With the growing volume of encrypted data in the cloud, ensuring secure storage, access, rotation, and revocation of encryption keys has become challenging. 
+
+Why is the way you store and manage cryptographic keys so important? A good example is the leak of 38TB of secrets that occurred in 2023, when a GitHub repository owned by Microsoft’s AI research division provided a link to a misconfigured Azure storage resource. 
+
+[Microsoft AI Researchers exposed](https://cybersecuritynews.com/microsoft-ai-accidently-leaked-38tb/) crypto keys, passwords, and other data through a storage account that could be accessed using leaked SAS (Shared Access Signature) tokens. If encryption keys are leaked, the effort of encrypting data goes to waste. 
+
+And it’s not just about protecting data but maintaining access to it. If an encryption key expires before it’s rotated out, you could end up losing access to precious data.  
+
+## Effective cryptographic keys management 
+
+As part of an effective CSPM approach, you need a solid crypto key management strategy. Cloud security platforms like Cyscale check a wide palette of settings using security controls across multiple cloud service providers to ensure keys on different platforms remain secure. 
+
+A few examples are: 
+
+* Ensure encryption keys are not expiring within the next 14 days 
+* Ensure encryption keys don't have permissive access policies 
+* Ensure in-use encryption keys are not scheduled for deletion 
+* Ensure Cloud KMS cryptokeys are not anonymously or publicly accessible 
+
+  <video width="auto" height="auto" controls="" tabindex="2"><source src="https://d3n52qn7viv754.cloudfront.net/videos/data-security-tour.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+
+# 10. Incident Response 
+
+Preventative cybersecurity measures will only take you so far. Developing and implementing robust incident response plans specific to cloud environments is essential.  
+
+According to the [annual M-Trends report](https://www.mandiant.com/resources/blog/m-trends-2023) by Mandiant, part of Google, global median dwell time was down to 16 days in 2023 from 21 the year before, meaning attacks are being detected more quickly than ever before.  
+
+Although this decrease is in part down to better tools and better approaches by defenders, an explosion in ransomware is also driving this number down as the point of these attacks is to make themselves known for extortion purposes.  
+
+So, when it comes to responding to an active incident, speed is of the essence.  
+
+## Effective incident response in cloud security 
+
+Given the volume of tasks and pressure on human resources, automation can take a lot of the toil out of triage, prioritization, and remediation when it comes to detecting and acting on incidents.  
+
+Effective coordination, timely response to security incidents, and comprehensive recovery strategies are vital for minimizing damage and restoring operations. 
+
+Finally, while resumption of normal operations is the priority, care should also be taken to preserve evidence during the recovery and remediation phases. In some cases this may even be a regulatory requirement.  
+
+## Challenges and opportunities in 2024: Adapting amid technological shifts   
+
+The challenges of 2024 bring forward a landscape where technological advancements intertwine with vulnerabilities, creating a need for adaptable and comprehensive security strategies.  
+
+As we navigate AI-driven threats, the looming potential of quantum computing, and growing multi-cloud environments, hackers find ever-more innovative ways to attack companies, and so we must focus on fortifying our defenses, meaning proactive measures become imperative. 
+
+To prepare for this changing landscape, book a free cloud security health assessment with Cyscale. Get complete visibility of your entire cloud estate in minutes and assess your cloud security posture, so you can expose, understand, and prioritize any threats. 
 
 ## Cloud Security Strategy Roadmap 
 
@@ -149,16 +246,10 @@ Building a comprehensive cloud security strategy is not a one-time effort. It's 
 
 ## Putting the cloud security plan into action 
 
-In the ever-evolving landscape of cloud security, 2023 stands as a significant milestone where opportunities and challenges converge. From managing vulnerabilities, thwarting hackers, and grappling with misconfigurations, to mastering compliance and mitigating data loss, the hurdles are many but not insurmountable. 
+In the ever-evolving landscape of cloud security, opportunities and challenges converge. From managing vulnerabilities, thwarting hackers, and grappling with misconfigurations, to mastering compliance and mitigating data loss, the hurdles are many but not insurmountable. 
 
 Understanding the top 10 challenges a comprehensive cloud security strategy needs to overcome can set you up for success when you face these complexities head-on. Remember, the key to your defense lies in continuous adaptation, education, and employing the right tools. 
 
-Don’t get overwhelmed with the scope of the task. Cyscale’s Automated Cloud Security platform can be a valuable partner in safeguarding your cloud infrastructure environment and ensuring compliance. [Click here to schedule your demo](https://cyscale.com/request-demo/) and see our platform in action.
+Don’t get overwhelmed with the scope of the task. Cyscale’s Automated Cloud Security platform can be a valuable partner in safeguarding your cloud infrastructure environment and ensuring compliance.
 
-<div class="hs-cta-embed hs-cta-simple-placeholder hs-cta-embed-136440984941"
-  style="max-width:100%; max-height:100%; width:210px;height:42.390625px" data-hubspot-wrapper-cta-id="136440984941">
-  <a href="https://cta-service-cms2.hubspot.com/web-interactives/public/v1/track/redirect?encryptedPayload=AVxigLKGnvYFqkT1Litl8%2FxBoGBss8Ol08LIMI%2Ff59Bwfu3F3VzT6%2BmoKsf2jGvF8n66Pq%2BDyTA5s48%2By2DXwEFRK1ifFnh2VpE83k0eDdLa3vFOzjyMkqw2RR1tzMzTHAt6LRw6vMSCnZT6spL7Bk1u2oiEkVV2viw7HPc%2BtakfNqHGrS2jgleu8%2BMW6yZXG8M4oWUEgOVhboOs5dFVpMkfjfAG%2BgAPwdQcYSebC0QVT6nCIJ%2FjvCwIZwyVj4sw9hQFTaoIkKCNnZyiF5SEceEnB156T%2FI%3D&webInteractiveContentId=136440984941&portalId=5413427" target="_blank" rel="noopener" crossorigin="anonymous">
-    <img alt="Download" loading="lazy" src="https://no-cache.hubspot.com/cta/default/5413427/interactive-136440984941.png" style="height: 100%; width: 100%; object-fit: fill"
-      onerror="this.style.display='none'" />
-  </a>
-</div>
+<div class="pb-12 pt-20 lg:pb-24 lg:pt-32 flex flex-col items-center"><a href="/full-platform-tour/" rel="noopener noreferrer" target="_blank"><button class="bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind" style="padding: 0.625rem 2.5rem;">TAKE A TOUR OF CYSCALE</button></a></div>
