@@ -19,7 +19,7 @@ tags:
   - CSPM
   - security
 ---
-Any article covering the top cybersecurity challenges is typically dominated by the human element – humans being the weakest link, prone to errors, misconfigurations, and poor security hygiene. But this year it’s different.  
+Any article covering the top cybersecurity challenges is typically dominated by the human element – humans being the weakest link, prone to errors, misconfigurations, and poor security hygiene. But this year it’s different. 
 
 The rapid and unpredictable rise of AI has drawn attention through all of 2023, leading to questions about the positive and negative impact it will have on lives and businesses going forward.  
 
