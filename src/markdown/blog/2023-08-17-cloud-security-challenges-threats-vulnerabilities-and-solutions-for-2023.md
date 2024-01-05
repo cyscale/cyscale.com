@@ -206,7 +206,7 @@ As we navigate AI-driven threats, the looming potential of quantum computing, an
 
 To prepare for this changing landscape, book a free cloud security health assessment with Cyscale. Get complete visibility of your entire cloud estate in minutes and assess your cloud security posture, so you can expose, understand, and prioritize any threats. 
 
-<a href="https://cyscale.com/request-demo/">
+<a href="https://cyscale.com/cloud-security-risk-assessment/">
     <img src="/img/assessment-cta.png" alt="" title="" id='cta-image'/>
 </a>
 
