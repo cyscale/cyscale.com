@@ -68,4 +68,4 @@ Periodic IAM (Identity and Access Management) reviews can be accelerated and, in
 
 And there is also a great opportunity for cloud security solutions like Cyscale to help reduce your cloud infrastructure costs by identifying left-over and unused resources, as well as shadow infrastructure that has crept into your estate without your knowledge.
 
-<a href="https://5413427.fs1.hubspotusercontent-na1.net/hubfs/5413427/Cyscale%20Wrapped%202023.pdf"><img src="/img/wrapped-email.png" alt="" title="" class=" blog-image-shadow " style="width:auto;height:auto;"/></a>
+<a href="https://5413427.fs1.hubspotusercontent-na1.net/hubfs/5413427/Cyscale%20Wrapped%202023.pdf"><img src="/img/wrapped-email.png" alt="" title="" class="" style="width:auto;height:auto;"/></a>
