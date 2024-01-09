@@ -81,7 +81,7 @@ const Platform = ({ pathname, activeLinks, setActiveLinks }) => {
                     from your own data.
                 </p>
                 <Link
-                    className='bg-blue text-white py-2 px-4 rounded cursor-pointer font-medium flex'
+                    className='bg-blue text-white py-2 px-4 rounded cursor-pointer font-medium flex mt-24'
                     to='/request-demo/'
                     css={[hoverButtonColorStyle, widthFitStyle]}
                 >
