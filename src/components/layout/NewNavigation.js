@@ -189,7 +189,8 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation, sea
                                     'GCPCloudSecurity',
                                     'OktaIntegration',
                                     'FintechUseCase',
-                                    "MSSPPage"
+                                    'MSSPPage',
+                                    'KSPMPage'
                                 ].includes(pageName) || activeLinks.solutions
                                     ? 'active'
                                     : ''

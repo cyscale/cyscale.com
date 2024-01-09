@@ -3,6 +3,7 @@ import Cloud from './icons/icon-cloud.svg';
 import Graph from './icons/icon-graph.svg';
 import Shield from './icons/icon-shield.svg';
 import CNAPPIcon from './icons/cnapp-icon.svg';
+import KubernetesIcon from './icons/k8s-icon.svg';
 
 const platform = [
     {
@@ -34,6 +35,13 @@ const platform = [
         description: 'CIS, ISO 27001:2013, SOC 2, NIST 800, NIST CSF, PCI DSS, CCPA, GDPR, HITRUST, HIPAA.',
         mobileDescription: 'CIS, ISO 27001:2013, SOC 2, NIST 800, NIST CSF, PCI DSS, CCPA, GDPR, HITRUST, HIPAA.',
         link: '/use-cases/cloud-compliance-and-auditing/'
+    },
+    {
+        icon: KubernetesIcon,
+        title: 'Kubernetes Security Posture Management (KSPM)',
+        description: 'Protect your K8s environments with a complete security and compliance platform',
+        mobileDescription: 'Protect your K8s environments with a complete security and compliance platform',
+        link: '/use-cases/kubernetes-security-platform/'
     }
 ];
 const solutions = [
@@ -107,6 +115,10 @@ const solutions = [
             {
                 link: '/use-cases/okta-cyscale-integration/',
                 text: 'Integration with Okta'
+            },
+            {
+                link: '/use-cases/kubernetes-security-platform/',
+                text: 'Kubernetes'
             }
         ]
     }
