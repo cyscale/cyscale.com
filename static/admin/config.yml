@@ -332,3 +332,14 @@ collections:
                   searchFields: ['title']
                   valueField: 'title'
                   displayFields: ['title']
+    - name: "authors"
+      label: "Authors"
+      folder: "src/markdown/authors"
+      create: true
+      slug: '{{fields.slug}}'
+      fields:
+        - { label: "Name", name: "name", widget: "string" }
+        - { label: "Position", name: "position", widget: "string" }
+        - { label: "LinkedIn", name: "linkedin", widget: "string" }
+        - { label: "Description", name: "description", widget: "text" }
+        - { label: "Slug", name: "slug", widget: "string", pattern: [ '^[a-z]+(?:-[a-z]+)*$', 'Slugs must be lowercase and can only contain letters and hyphens. No numbers, spaces, or special characters allowed.' ] }
