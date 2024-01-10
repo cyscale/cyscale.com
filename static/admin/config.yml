@@ -342,4 +342,4 @@ collections:
         - { label: "Position", name: "position", widget: "string" }
         - { label: "LinkedIn", name: "linkedin", widget: "string" }
         - { label: "Description", name: "description", widget: "text" }
-        - { label: "Slug", name: "slug", widget: "string", pattern: [ '^[a-z]+(?:-[a-z]+)*$', 'Slugs must be lowercase and can only contain letters and hyphens. No numbers, spaces, or special characters allowed.' ] }
+        - { label: "Slug", name: "slug", widget: "string", required: false, pattern: ['^[a-z]+(?:-[a-z]+)*$', 'Slugs must be lowercase and can only contain letters and hyphens. No numbers, spaces, or special characters allowed.'], hint: "Use lowercase letters and hyphens only. This slug will be used in the URL path for the author, e.g., 'john-doe' for 'cyscale.com/john-doe'." }
