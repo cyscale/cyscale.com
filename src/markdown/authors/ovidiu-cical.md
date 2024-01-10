@@ -1,4 +1,5 @@
 ---
+templateKey: authors
 name: Ovidiu Cical
 position: CEO & Founder at Cyscale
 linkedin: https://www.linkedin.com/in/ovidiucical/
