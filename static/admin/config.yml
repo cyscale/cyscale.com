@@ -338,6 +338,7 @@ collections:
       create: true
       slug: '{{fields.slug}}'
       fields:
+        - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'authors' }
         - { label: "Name", name: "name", widget: "string" }
         - { label: "Position", name: "position", widget: "string" }
         - { label: "LinkedIn", name: "linkedin", widget: "string" }
