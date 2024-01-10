@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Top 10 Cloud Security Challenges in 2024
-seoTitle: "Top 10 Cloud Security Challenges for Startups in 2024 | Cyscale "
+seoTitle: "Top 10 Cloud Security Challenges in 2024 | Cyscale "
 authors: Sabrina Lupșan
 permalink: cloud-security-challenges
 categories:
