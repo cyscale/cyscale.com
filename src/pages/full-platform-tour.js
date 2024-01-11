@@ -97,8 +97,8 @@ const FullPlatformTour = ({ location }) => {
         <Layout
             location={location}
             pageName='FullTourPage'
-            title='Cyscale Cloud Security Platform video tour'
-            description='Get a comprehensive overview of the features and capabilities of the Cyscale platform as a video demo.'
+            title='Cyscale Cloud Security Platform interactive product tours'
+            description='Get a comprehensive overview of the features and capabilities of the Cyscale Platform as interactive product tours.'
         >
             <div className='hidden' data-template-key>
                 hardcoded-pages
@@ -107,10 +107,10 @@ const FullPlatformTour = ({ location }) => {
                 /full-platform-tour
             </div>
             <div className='hidden' data-title>
-                Cyscale Cloud Security Platform video tour
+                Cyscale Cloud Security Platform interactive product tours
             </div>
             <div className='hidden' data-description>
-                Get a comprehensive overview of the features and capabilities of the Cyscale platform as a video demo.
+                Get a comprehensive overview of the features and capabilities of the Cyscale platform as interactive product tours.
             </div>
             <div className='hidden' data-category>
                 website
@@ -157,7 +157,7 @@ const FullPlatformTour = ({ location }) => {
                                     `}
                                 >
                                     Get a comprehensive overview of the features and capabilities of the Cyscale
-                                    platform as an interactive demo. Scroll down to see a breakdown in easily understandable
+                                    platform as interactive product tours. Scroll down to see a breakdown in easily understandable
                                     sections.
                                 </p>
                                 <Link
