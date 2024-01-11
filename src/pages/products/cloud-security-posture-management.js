@@ -611,7 +611,7 @@ const CSPM = ({ location }) => {
                             <li className='font-hind text-sm mt-2'>
                                 Track cloud resources with a searchable, easy to use, exportable{' '}
                                 <strong>Cloud Asset Inventory.</strong> Cyscale integrates with AWS, Microsoft Azure,
-                                Google Cloud, Alibaba and identity providers such as Okta, Azure AD, Google Workspaces.
+                                Google Cloud, Alibaba and identity providers such as Okta, Azure AD, Google Workspace.
                             </li>
                             <li className='font-hind text-sm mt-2'>
                                 Easy cloud security posture management with <strong>powerful dashboards</strong>{' '}
