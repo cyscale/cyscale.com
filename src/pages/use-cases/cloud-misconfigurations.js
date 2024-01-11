@@ -78,8 +78,8 @@ const CloudMissConfiguration = ({ location }) => {
         <Layout
             location={location}
             pageName='MisconfigurationsPage'
-            title='Cloud Misconfiguration Security - Cyscale'
-            description='Improve your security posture in the cloud, a centralized view of all your assets and servers in one place. Detect and eliminate critical misconfigurations, policy violations, and mistakes.'
+            title='Identify and Fix Cloud Misconfigurations Automatically'
+            description='Improve your cloud security posture in minutes. Detect and eliminate critical misconfigurations, policy violations, and mistakes.'
         >
             <div className='hidden' data-template-key>
                 hardcoded-pages
@@ -88,11 +88,11 @@ const CloudMissConfiguration = ({ location }) => {
                 /use-cases/cloud-misconfigurations
             </div>
             <div className='hidden' data-title>
-                Cloud Misconfiguration Security - Cyscale
+                Identify and Fix Cloud Misconfigurations Automatically
             </div>
             <div className='hidden' data-description>
-                Improve your security posture in the cloud, a centralized view of all your assets and servers in one
-                place. Detect and eliminate critical misconfigurations, policy violations, and mistakes.
+                Improve your cloud security posture in minutes. Detect and eliminate critical misconfigurations, policy
+                violations, and mistakes.
             </div>
             <div className='hidden' data-category>
                 solutions
