@@ -171,20 +171,17 @@ const KubernetesSecurity = ({ location }) => {
                                 />
                             </div>
                         </div>
-                        <div className='col-span-12 lg:col-span-5'>
+                        <div className='col-span-12 lg:col-span-5 mt-4 lg:mt-0'>
                             <div className='mx-auto lg:mx-0  max-w-xl lg:max-w-none'>
                                 <p className='text-base leading-normal text-gray font-bold'>
                                     Streamline posture management with Cyscale’s Kubernetes security platform. Get
                                     visibility into your K8s security and achieve continuous compliance.
                                 </p>
                                 <ul className='list-disc ml-4 text-gray'>
-                                    <li className='mb-4'>
+                                    <li className='mb-4 mt-8'>
                                         Cloud-native cybersecurity across workloads, with Azure Kubernetes Service
                                         (AKS), Amazon Elastic Kubernetes Service (EKS), and Google Kubernetes Engine
                                         Service (GKE) management and monitoring.
-                                    </li>
-                                    <li className='mb-4'>
-                                        Understand Kubernetes application behavior and detect any suspicious activity.
                                     </li>
                                     <li className='mb-4'>
                                         Security controls for Kubernetes clusters, pods, containers and other services
