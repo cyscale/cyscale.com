@@ -15,7 +15,7 @@ seoDescription: Cloud-native applications introduce new and specific security
   Platform (CNAPP)
 featuredpost: true
 featuredimage: /img/cnapp-buyers-guide-cover.png
-tableOfContents: true
+tableOfContents: false
 ---
 With the transition to the cloud, application architectures have shifted to make use of new technologies such as containers, Kubernetes, and serverless. But while these developments have made it easier than ever to deploy applications, they have dramatically changed the landscape in terms of security.   
 
