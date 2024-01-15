@@ -31,7 +31,7 @@ These technologies significantly increase scalability and flexibility in the clo
 
 Due to the differences between native and non-native cloud applications, a CNAPP is becoming a necessary solution to cover the specific security needs of applications developed for the cloud.   
 
-Coined by Gartner, cloud-native application protection platforms (CNAPPs) are described as a unified and tightly integrated set of security and compliance capabilities designed to secure and protect cloud-native applications across development and production.  
+Coined by Gartner, [cloud-native application protection platforms (CNAPPs)](https://cyscale.com/products/cnapp/) are described as a unified and tightly integrated set of security and compliance capabilities designed to secure and protect cloud-native applications across development and production.  
 
 One of the key features being that CNAPPs consolidate several previously siloed capabilities, including container scanning, cloud security posture management, infrastructure as code (IaC) scanning, cloud infrastructure entitlement management (CIEM), runtime cloud workload protection and runtime vulnerability/configuration scanning, into one solution. 
 
@@ -45,7 +45,9 @@ A CNAPP combines multiple functionalities that are otherwise found in separate t
 * [KSPM](https://cyscale.com/use-cases/kubernetes-security-platform/) (Kubernetes Security Posture Management)  
 * Container Security 
 
-  
+**G﻿et an overview of CNAPP capabilities**
+
+<video width="auto" height="auto" controls="" tabindex="2"><source src="https://d3n52qn7viv754.cloudfront.net/videos/Cyscale-explainer-video-2023-12-Dec.mp4" type="video/mp4">Your browser does not support the video tag.</video>
 
 ## Visibility of cloud-native infrastructure 
 
@@ -64,8 +66,6 @@ Therefore, the visibility features found in CSPM solutions are incorporated into
 * Does it bring your multi-cloud infrastructure together in one tool and deliver risk-aware context? 
 * Does it identify assets that might or have drifted from your organization’s compliance baseline? 
 
-  
-
 ## Cloud-native security controls  
 
 Manually going through every cloud asset configuration to check for issues and vulnerabilities is tedious and error prone in smaller estates and impossible in large cloud environments where thousands of assets are in use. Don’t forget that the approach for AWS is different to that of Azure, is different to Google Cloud, and different again with Kubernetes.   
@@ -80,8 +80,6 @@ To solve these challenges, automatic security controls are used to check for mis
 * Does it detect misconfigurations and vulnerabilities in real-time, enabling you to react and fix findings quickly, saving your organization from a breach? 
 * Does it deliver efficient remediation steps on detected issues? 
 
-  
-
 ## Data security in the cloud 
 
 Due to the dynamic nature of cloud-native applications with ephemeral workloads and infrastructure that is scaling up and down quickly, sensitive data may be unwittingly exposed. Through DSPM (Data Security Posture Management) capabilities, CNAPPs can help keep track of data stores and provide actionable suggestions for your organization to secure your crown jewels. 
@@ -93,8 +91,6 @@ A CNAPP will detect and highlight unencrypted storage resources, cryptographic k
 * Are the Data Security Dashboard capabilities of the CNAPP capable of pinpointing blind spots in your infrastructure? 
 * Some cloud providers encrypt data in storage resources by default, while others do not so it is easy to overlook what you think you know and miss important details. Does the CNAPP help you understand your encryption status? 
 * Instead of dealing with cryptographic key rotation and deletion, some CNAPPs show you what keys need to be rotated and when. Does the CNAPP provide this capability? 
-
-  
 
 ## Container image scanning   
 
@@ -110,8 +106,6 @@ For example, if a container image uses an unpatched version of Log4J, this could
 * Does the CNAPP help you understand who has permissions over containers to prevent unauthorized access? 
 * Are you able to monitor for and identify any misconfigurations developers might have missed when spinning up containers? 
 
-  
-
 ## Cloud workloads protection  
 
 The Cloud Workload Protection Platform (CWPP) component of a CNAPP helps companies discover vulnerabilities and correlate them with cloud misconfigurations. Using a CWPP, you mitigate risk across multi-cloud environments by identifying vulnerabilities documented in CVEs and pinpointing which misconfigurations have exposed your cloud infrastructure to them.  
@@ -122,15 +116,11 @@ To secure cloud-native applications, a CWPP tool analyzes:  
 * Containers  
 * Serverless functions, and others. 
 
- 
-
 ### Key considerations and questions: 
 
 * Does the CNAPP enable you to see running workloads in one dashboard to easily keep you up to date with your organization’s activity all the time? 
 * Does it help you prioritize vulnerable workloads efficiently based on severity to ensure effective remediation measures? 
 * Does it automatically keep up with emerging threats, so you don’t have to check the news all the time? Your CNAPP should do the work for you by constantly checking your workloads for newly discovered vulnerabilities. 
-
-  
 
 ## Kubernetes cluster inspection  
 
@@ -142,15 +132,11 @@ Misconfigurations that can be found using cluster inspection are:  
 * Missing patches   
 * Insecure network configurations, and others. 
 
- 
-
 ### Key considerations and questions: 
 
 * Does the CNAPP give you visibility of your Kubernetes objects? 
 * Does it help you assess your cluster based on the CIS Kubernetes benchmark, which contains up-to-date and industry-standard best practices? 
 * Does it detect vulnerabilities in your Kubernetes cluster with no need for manual effort from your team? You should be able to see where you have Kubernetes images with vulnerabilities and where those images are deployed.  
-
-  
 
 ## CIEM and IAM: Access management   
 
@@ -162,8 +148,6 @@ For cloud-native applications, IAM can become a very complex aspect of cloud sec
 * Cloud-native software may run across multi-cloud environments as well as on-premises  
 * The microservices architecture can increase the difficulty of managing identities at the service level 
 
- 
-
 Companies can use a CNAPP solution to better secure their cloud in terms of identity and access management.   
 
 ## Best practices regarding IAM:  
@@ -173,8 +157,6 @@ Companies can use a CNAPP solution to better secure their cloud in terms of iden
 * Comply with the Least Privilege Principle to restrict access to the lowest privilege necessary for the user to do their job  
 * Assign permissions at group level and assign well-defined rules and privileges to groups. This decreases the risk of data breaches.  
 
-  
-
 ### Key considerations and questions: 
 
 * Does the CNAPP identify any drifts from your company’s security or compliance posture using a powerful IAM dashboard that pinpoints users with issues, such as the ones that do not have MFA enabled? 
@@ -182,8 +164,6 @@ Companies can use a CNAPP solution to better secure their cloud in terms of iden
 * Does it help you understand if users or groups have more permissions than necessary? 
 * Does the CNAPP support you in performing effective access reviews that don’t take all day and require no manual work? 
 * Does it help you gain confidence in your organization’s security posture? 
-
-  
 
 ## Compliance  
 
@@ -198,11 +178,7 @@ To become compliant, companies use CNAPP tools to perform assessments in prepara
 * HIPAA  
 * NIST 
 
- 
-
 Other standards like DORA are becoming increasingly important for some sectors, and there are regional equivalents of some regulations like Brazil’s LGDP data protection laws. 
-
-  
 
 ### Key considerations and questions: 
 
@@ -212,7 +188,7 @@ Other standards like DORA are becoming increasingly important for some sectors, 
 * Can you view your compliance score at-a-glance and at any time? 
 * Are you able to export detailed reports to help explain your security and compliance posture to other stakeholders or to help you make a case to the board? 
 
- 
+<div class="pb-12 pt-20 lg:pb-24 lg:pt-32 flex flex-col items-center"><a href="/full-platform-tour/" rel="noopener noreferrer" target="_blank"><button class="bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind" style="padding: 0.625rem 2.5rem;">TAKE A TOUR OF CYSCALE'S CNAPP</button></a></div>
 
 ## Summary: CNAPP as a critical part of cloud-native security 
 
@@ -242,8 +218,6 @@ That said, CNAPP (Cloud-Native Application Protection Platform) solutions are re
 6. Kubernetes cluster inspection  
 7. IAM  
 
-  
-
 [Cyscale’s CNAPP](https://cyscale.com/products/cnapp/) is designed to protect your entire stack, VMs (virtual machines), containers, and serverless, on any cloud environment, enabling you to confidently accelerate innovation. 
 
 By analyzing cloud configuration, workload, and identity, it identifies the most critical attack vectors that pose a threat, rather than overwhelming you with numerous alerts for vulnerabilities, permissions, and exposed services. 
@@ -253,3 +227,7 @@ With our security platform, you can prioritize and address the most significant 
 You can sign up for a [no commitment cloud risk assessment here](https://cyscale.com/cloud-security-risk-assessment/), and check the health of your cloud estate in a matter of minutes.  
 
 Or explore each of the components that make up an [effective CNAPP in our video tours](https://cyscale.com/full-platform-tour/), here.
+
+<a href="https://cyscale.com/cloud-security-risk-assessment/" rel="noopener noreferrer" target="_blank">
+    <img src="/img/assessment-cta.png" alt="" title="" id="cta-image">
+</a>
