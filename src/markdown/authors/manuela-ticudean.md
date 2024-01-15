@@ -9,4 +9,8 @@ description: Manuela directs product development at Cyscale with an emphasis on
   infused with robust security measures to support the company's commitment to
   safe, compliant growth.
 slug: manuela-ticudean
+metaTitle: Manuela Ticudean - Cloud Security Insights from a CPO - Cyscale
+metaDescription: Explore how Manuela, CPO at Cyscale, blends customer focus with
+  cybersecurity to develop products that meet market needs safely and
+  effectively.
 ---
