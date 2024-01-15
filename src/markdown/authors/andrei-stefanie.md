@@ -9,4 +9,7 @@ description: Specializing in cloud solutions and software engineering, Andrei
   cloud-native technologies, benefitting the company’s product engineering
   efforts.
 slug: andrei-stefanie
+metaTitle: Andrei Ștefănie - Cloud Security Insights from a Product Engineer - Cyscale
+metaDescription: Join Andrei, Product Engineer at Cyscale, as he delves into
+  scalable cloud solutions and offers key insights into engineering.
 ---
