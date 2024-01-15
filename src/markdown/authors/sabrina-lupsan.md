@@ -9,4 +9,8 @@ description: Sabrina Lupsan merges her academic knowledge in Information
   in Computer Science and Economics to keep the company’s services at the
   leading edge of cybersecurity developments.
 slug: sabrina-lupsan
+metaTitle: Sabrina Lupsan - Insights from a Cloud Security Analyst - Cyscale
+metaDescription: Discover how Sabrina Lupsan, a seasoned Cloud Security Analyst
+  at Cyscale, integrates academic expertise and research to advance cloud
+  security practices.
 ---
