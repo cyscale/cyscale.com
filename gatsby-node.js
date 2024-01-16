@@ -82,6 +82,7 @@ exports.onCreateNode = ({ node, getNode, getNodes, actions }) => {
 };
 
 const postsByCategory = {};
+const postsByAuthor = {};
 const postsPerPage = 9;
 
 exports.createPages = async ({ graphql, actions }) => {
@@ -232,6 +233,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
         posts.forEach((edge) => {
             const node = edge.node;
+            const author = node.frontmatter.authors;
             allPosts.push(edge.node);
             // Get all distinct categories
             node.frontmatter.categories.forEach((category) => {
@@ -241,6 +243,14 @@ exports.createPages = async ({ graphql, actions }) => {
                     postsByCategory[category].push(node);
                 }
             });
+
+            if (author) {
+                if (!postsByAuthor[author]) {
+                    postsByAuthor[author] = [node];
+                } else {
+                    postsByAuthor[author].push(node);
+                }
+            }
 
             createPage({
                 // Path for this page — required
@@ -320,6 +330,59 @@ exports.createPages = async ({ graphql, actions }) => {
                             heading: node.frontmatter.heading,
                             categoriesList: categoriesWithPosts,
                             categorySlug: node.frontmatter.name.toLowerCase().split(' ').join('-')
+                        }
+                    });
+                });
+            }
+        });
+    });
+
+    await graphql(`
+        query loadAuthorsQuery {
+            allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "authors" } } }) {
+                edges {
+                    node {
+                        frontmatter {
+                            name
+                            position
+                            linkedin
+                            description
+                            slug
+                            metaTitle
+                            metaDescription
+                        }
+                    }
+                }
+            }
+        }
+    `).then((result) => {
+        if (result.errors) {
+            throw result.errors;
+        }
+
+        const authors = result.data.allMarkdownRemark.edges;
+
+        authors.forEach((edge) => {
+            const node = edge.node;
+
+            if (!node.frontmatter.disabled) {
+                const numPages = Math.ceil(postsByAuthor[node.frontmatter.name]?.length / postsPerPage);
+                Array.from({ length: numPages }).forEach((_, i) => {
+                    createPage({
+                        path:
+                            i === 0
+                                ? `/blog/${node.frontmatter.slug.toLowerCase()}/`
+                                : `/blog/${node.frontmatter.slug.toLowerCase()}/${i + 1}`,
+                        component: path.resolve(`src/template/authorPageTemplate.js`),
+                        context: {
+                            limit: postsPerPage,
+                            skip: i * postsPerPage,
+                            numPages,
+                            currentPage: i + 1,
+                            authors: node.frontmatter.name,
+                            seoTitle: node.frontmatter.metaTitle,
+                            seoDescription: node.frontmatter.metaDescription,
+                            authorSlug: node.frontmatter.slug
                         }
                     });
                 });

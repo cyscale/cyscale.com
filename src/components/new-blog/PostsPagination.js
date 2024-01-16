@@ -1,12 +1,14 @@
 import React from 'react';
 import Layout from '../layout/CleanLayout';
-import { Container, Row, Section } from '../atoms/Containers';
+import { Container, Row } from '../atoms/Containers';
 import Chip from '../atoms/Chip';
 import { map, takeRight } from 'lodash';
 import FeaturedPost from './FeaturedPost';
 import Post from './Post';
 import Pagination from './Pagination';
 import { formatCategoryToSlug } from '../../common/utils';
+import AuthorSection from './AuthorSection';
+import classNames from 'classnames';
 
 const getFeaturedAndPosts = (nodes, isFirst) => {
     const posts = [];
@@ -45,7 +47,8 @@ const PostsPagination = ({
     currentPage,
     getPageNumberPath,
     numPages,
-    limit
+    limit,
+    author
 }) => {
     const isFirst = currentPage === 1;
     const isLast = currentPage === numPages;
@@ -58,27 +61,36 @@ const PostsPagination = ({
     return (
         <div className='bg-lightGrey2'>
             <Layout title={seoTitle} description={seoDescription} pageName='blog' location={location}>
-                <Container>
-                    <Section>
-                        <h1 className='text-3xl font-medium mb-4'>{heading}</h1>
-                        <div className='overflow-x-auto py-2 -mx-8 md:mx-0 pl-8 md:pl-0 hide-scrollbar max-w-screen'>
-                            <Chip className='mr-2' to={`/blog/`} active={category === 'All'}>
-                                All
-                            </Chip>
-                            {map(categoriesList, (item) => (
-                                <Chip
-                                    className='mr-2 last:mr-0'
-                                    active={category === item}
-                                    to={`/blog/${formatCategoryToSlug(item)}/`}
-                                    key={item}
-                                >
-                                    {item}
-                                </Chip>
-                            ))}
+                {author && (
+                    <div className='bg-zircon pt-24 lg:pt32 pb-10'>
+                        <div className='mx-auto max-w-4xl'>
+                            <AuthorSection author={author} authorPage />
                         </div>
+                    </div>
+                )}
+                <Container>
+                    <div className={classNames({ 'pb-24 lg:pb-32': true, 'pt-24 lg:pt-32': !author })}>
+                        {!author && <h1 className='text-3xl font-medium mb-4'>{heading}</h1>}
+                        {!author && (
+                            <div className='overflow-x-auto py-2 -mx-8 md:mx-0 pl-8 md:pl-0 hide-scrollbar max-w-screen'>
+                                <Chip className='mr-2' to={`/blog/`} active={category === 'All'}>
+                                    All
+                                </Chip>
+                                {map(categoriesList, (item) => (
+                                    <Chip
+                                        className='mr-2 last:mr-0'
+                                        active={category === item}
+                                        to={`/blog/${formatCategoryToSlug(item)}/`}
+                                        key={item}
+                                    >
+                                        {item}
+                                    </Chip>
+                                ))}
+                            </div>
+                        )}
                         <Row className='mt-8 gap-4 lg:gap-8'>
                             {isFirst && (
-                                <div className='col-span-12' id='what in the world are you talking about?'>
+                                <div className='col-span-12'>
                                     <div className='hidden md:block'>
                                         {posts && <FeaturedPost {...featuredPost.frontmatter} />}
                                     </div>
@@ -103,7 +115,7 @@ const PostsPagination = ({
                                 </div>
                             ))}
                         </Row>
-                    </Section>
+                    </div>
                 </Container>
                 <Pagination
                     numPages={numPages}
