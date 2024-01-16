@@ -402,7 +402,6 @@ CMS.registerEditorComponent({
             height: match[7]
         },
     toBlock: function ({ url, image, alt, title, classes, width, height }, getAsset, fields) {
-        console.log('from the block, what in the world?');
         return `<a href="${url || '#'}"><img src="${image || ''}" alt="${alt || ''}" title="${title || ''}" class="${
             classes || ''
         }" style="width:${width / 16 || 'auto'}${width >= 1 ? 'rem' : ''};height:${height / 16 || 'auto'}${
@@ -410,7 +409,6 @@ CMS.registerEditorComponent({
         };"/></a>`;
     },
     toPreview: ({ url, image, alt, title, classes, width, height }, getAsset, fields) => {
-        console.log('from to Preview, what in the world?');
         return `<a href="${
             url || '#'
         }"><img src="${image}" alt="${alt}" title="${title}" class="${classes}" style="width:${width};height:${height};"/></a>`;

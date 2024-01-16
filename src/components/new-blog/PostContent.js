@@ -19,6 +19,7 @@ import { headingRenderer } from '../../common/utils';
 import Toc from './TOC';
 import FAQsBlog from './FAQsBlog';
 import BlogLinks from './BlogLinks';
+import AuthorSection from './AuthorSection';
 
 const ctaWhitepaperTextColor = css`
     color: #474747;
@@ -133,6 +134,7 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
                             {data.rawMarkdownBody}
                         </ReactMarkdown>
                     </div>
+                    {!tableOfContents && <AuthorSection author={data.authors} />}
                 </div>
                 {!preview && (
                     <FurtherReadingSection
@@ -162,7 +164,8 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
                     </div>
                 )}
             </div>
-            <div className='container max-w-4xl m-auto px-4'>
+            <div className='container max-w-4xl m-auto px-4 lg:px-0'>
+                {tableOfContents && <AuthorSection author={data.authors} />}
                 {!preview && (
                     <>
                         <div className='mx_auto mt-16 hidden lg:block xl:hidden'>
