@@ -73,6 +73,7 @@ const AuthorSection = ({ author, authorPage }) => {
                                     <GatsbyImage
                                         image={matchedAuthor.imageData}
                                         className='rounded-full border-digital border'
+                                        imgStyle={{ borderRadius: '50%' }}
                                         css={css`
                                             height: 100px;
                                         `}
