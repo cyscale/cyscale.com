@@ -10,22 +10,22 @@ const AuthorSection = ({ author, authorPage }) => {
         query AuthorSectionQuery {
             ovidiu: file(relativePath: { eq: "ovidiu.webp" }) {
                 childImageSharp {
-                    gatsbyImageData(width: 100, layout: CONSTRAINED)
+                    gatsbyImageData(width: 400, layout: CONSTRAINED)
                 }
             }
             manuela: file(relativePath: { eq: "manuela.webp" }) {
                 childImageSharp {
-                    gatsbyImageData(width: 100, layout: CONSTRAINED)
+                    gatsbyImageData(width: 400, layout: CONSTRAINED)
                 }
             }
             andrei: file(relativePath: { eq: "andrei-s.webp" }) {
                 childImageSharp {
-                    gatsbyImageData(width: 100, layout: CONSTRAINED)
+                    gatsbyImageData(width: 400, layout: CONSTRAINED)
                 }
             }
             sabrina: file(relativePath: { eq: "sabrina.webp" }) {
                 childImageSharp {
-                    gatsbyImageData(width: 100, layout: CONSTRAINED)
+                    gatsbyImageData(width: 400, layout: CONSTRAINED)
                 }
             }
             allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "authors" } } }) {
@@ -70,13 +70,14 @@ const AuthorSection = ({ author, authorPage }) => {
                     <div className='grid grid-cols-12 gap-x-6'>
                         <div className='col-span-12 md:col-span-2'>
                             <div className='flex justify-center'>
-                                <Link to={`/blog/${matchedAuthor.slug}/`}>
+                                <Link to={`/blog/${matchedAuthor.slug}/`} className='transition-transform hover:scale-[1.1]'>
                                     <GatsbyImage
                                         image={matchedAuthor.imageData}
                                         className='rounded-full border-digital border'
                                         imgStyle={{ borderRadius: '50%' }}
                                         css={css`
-                                            height: 100px;
+                                            width: 6.25rem;
+                                            height: 6.25rem;
                                         `}
                                         alt=''
                                     />
