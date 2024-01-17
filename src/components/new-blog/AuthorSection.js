@@ -3,6 +3,7 @@ import { graphql, Link, useStaticQuery } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { css } from 'twin.macro';
 import classNames from 'classnames';
+import { FaLinkedin } from 'react-icons/fa';
 
 const AuthorSection = ({ author, authorPage }) => {
     const data = useStaticQuery(graphql`
@@ -83,15 +84,26 @@ const AuthorSection = ({ author, authorPage }) => {
                             </div>
                         </div>
                         <div className='col-span-12 md:col-span-10 mt-8 md:mt-0'>
-                            <h3>
+                            <div className='flex justify-center md:justify-start'>
                                 <Link
-                                    className='font-montserrat text-2xl font-bold hover:underline'
+                                    className={classNames({
+                                        'font-montserrat text-2xl font-bold': true,
+                                        underline: !authorPage
+                                    })}
                                     to={`/blog/${matchedAuthor.slug}/`}
                                 >
-                                    {matchedAuthor.name}{' '}
+                                    {matchedAuthor.name}
                                 </Link>
-                            </h3>
-                            <p className='font-montserrat text-lg'>{matchedAuthor.position}</p>
+                                <a
+                                    href={matchedAuthor.linkedin}
+                                    className='flex text-sm text-black sm:text-white hover:underline ml-1'
+                                    rel='noopener noreferrer'
+                                    target='_blank'
+                                >
+                                    <FaLinkedin size={30} color={'#079BEE'} />
+                                </a>
+                            </div>
+                            <p className='font-montserrat text-lg text-center md:text-left'>{matchedAuthor.position}</p>
                             <p className='mt-6 font-hind font-base'>{matchedAuthor.description}</p>
                         </div>
                     </div>
