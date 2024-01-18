@@ -117,6 +117,11 @@ const Resources = ({ location }) => {
                     gatsbyImageData(width: 1080, layout: CONSTRAINED)
                 }
             }
+            CDSecurity: file(relativePath: { eq: "cd-security-logo-resources.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 1080, layout: CONSTRAINED)
+                }
+            }
             csm: file(relativePath: { eq: "csm-resources.png" }) {
                 childImageSharp {
                     gatsbyImageData(width: 700, layout: CONSTRAINED)
@@ -182,6 +187,16 @@ const Resources = ({ location }) => {
             alt: 'Smart Fintech uses Cyscale to gain IAM visibility and ensure cloud security and compliance',
             text: 'Smart Fintech uses Cyscale to gain IAM visibility and ensure cloud security and compliance',
             link: '/case-studies/smart-fintech/'
+        },
+        {
+            image: data.CDSecurity.childImageSharp.gatsbyImageData,
+            alt: 'Data security in a multi-cloud environment',
+            text: (
+                <>
+                    Data security in a<br /> multi-cloud environment
+                </>
+            ),
+            link: '/case-studies/cloud-data-security/'
         },
         {
             image: data.demo.childImageSharp.gatsbyImageData,
@@ -412,6 +427,20 @@ const Resources = ({ location }) => {
                                 <p className='font-hind font-medium text-lg mt-2'>
                                     Smart Fintech uses Cyscale to gain IAM visibility and ensure cloud security and
                                     compliance
+                                </p>
+                            </Link>
+                        </div>
+                        <div className='col-span-12 md:col-span-6 lg:col-span-3 hidden md:block'>
+                            <Link to='/case-studies/cloud-data-security/' className='hover:underline'>
+                                <GatsbyImage
+                                    image={data.CDSecurity.childImageSharp.gatsbyImageData}
+                                    alt='Data security in a multi-cloud environment'
+                                    className='rounded-md'
+                                    css={cardBorder}
+                                />
+                                <p className='font-hind font-medium text-lg mt-2'>
+                                    Data security in a <br />
+                                    multi-cloud environment
                                 </p>
                             </Link>
                         </div>

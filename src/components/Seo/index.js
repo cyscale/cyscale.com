@@ -24,6 +24,7 @@ import MisconfigurationsCampaignOg from '../../assets/images/misconfigurations-c
 import CloudSecurityFintechCampaignOg from '../../assets/images/cloud-security-fintech-campaign-og.png';
 import SecureCloudCampaignOg from '../../assets/images/secure-cloud-campaign-og.png';
 import CampaignMSSPOg from '../../assets/images/cloud-security-mssp-og.png';
+import CDSecurityOg from '../../assets/images/cd-security-logo.png';
 import { useStaticQuery, graphql } from 'gatsby';
 
 const defaultOg = {
@@ -52,7 +53,8 @@ const defaultOg = {
     FintechUseCase: CloudSecurityFintechCampaignOg,
     SecureCloudCampaign: SecureCloudCampaignOg,
     CampaignMSSP: CampaignMSSPOg,
-    MSSPPage: CampaignMSSPOg
+    MSSPPage: CampaignMSSPOg,
+    CDSecurityPage: CDSecurityOg
 };
 
 const Seo = ({ title, description, pageName, banner, location, blogDetails }) => {
