@@ -27,7 +27,7 @@ const platform = [
         title: 'Cloud Infrastructure Entitlement Management (CIEM)',
         description: 'Manage security risks related to cloud identities and access.',
         mobileDescription: 'Manage security risks related to cloud identities and access.',
-        link: '/use-cases/iam-security/'
+        link: '/products/ciem/'
     },
     {
         icon: Shield,
