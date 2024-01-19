@@ -24,7 +24,8 @@ export const hasZirconBgColordHero = (pageName) => {
         'IAMCampaign',
         'FintechCampaign',
         'SecureCloudCampaign',
-        'CampaignMSSP'
+        'CampaignMSSP',
+        'KubernetesCampaign'
     ].includes(pageName);
 };
 
