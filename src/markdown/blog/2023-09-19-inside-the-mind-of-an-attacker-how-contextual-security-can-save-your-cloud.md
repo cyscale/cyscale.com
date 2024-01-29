@@ -6,6 +6,8 @@ authors: Sabrina Lupșan
 permalink: contextual-security-google-cloud
 categories:
   - CSPM
+  - IAM
+  - Misconfigurations
 date: 2023-09-19T09:01:02.199Z
 description: >-
   The future of cloud security is contextual security. To fully understand how
