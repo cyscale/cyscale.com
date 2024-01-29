@@ -6,6 +6,7 @@ authors: Sabrina Lupșan
 permalink: protecting-data-at-rest
 categories:
   - Cloud Security
+  - Encryption
 date: 2022-08-20T07:06:54.032Z
 description: >+
   Data at rest is data that is not currently used or transmitted between
