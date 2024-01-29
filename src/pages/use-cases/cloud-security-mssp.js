@@ -77,7 +77,7 @@ const CloudSecurityMSSP = ({ location }) => {
             pageName={'MSSPPage'}
         >
             <Helmet>
-                <script charset='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js'></script>
+                <script charSet='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js'></script>
             </Helmet>
             <div className='hidden' data-template-key>
                 hardcoded-pages
