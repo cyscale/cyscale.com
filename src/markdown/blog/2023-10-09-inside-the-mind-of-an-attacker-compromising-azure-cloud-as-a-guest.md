@@ -6,6 +6,8 @@ authors: Sabrina Lupșan
 permalink: compromising-azure-cloud-as-guest
 categories:
   - IAM
+  - CSPM
+  - Misconfigurations
 date: 2023-10-09T12:24:24.858Z
 description: >-
   Identity and Access Management (IAM) is the first line of defense against
