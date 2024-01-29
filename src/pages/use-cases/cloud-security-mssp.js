@@ -12,7 +12,6 @@ import cloudIcon from '../../assets/images/cloud-icon.svg';
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import CaseStudiesSection from '../../components/Home/CaseStudiesSection';
 import useHSFormLoaded from '../../hooks/useHSFormLoaded';
-import { Helmet } from 'react-helmet';
 import TourVideo from '../../components/video/TourVideo';
 
 const subtitle = css`
@@ -58,6 +57,10 @@ const CloudSecurityMSSP = ({ location }) => {
     `);
 
     useEffect(() => {
+        const script = document.createElement('script');
+        script.src = 'https://js.hsforms.net/forms/shell.js';
+        document.body.appendChild(script);
+
         setTimeout(() => {
             if (window && window.hbspt) {
                 window.hbspt.forms?.create({
@@ -76,9 +79,6 @@ const CloudSecurityMSSP = ({ location }) => {
             description={'Unlock new revenue streams with a comprehensive managed cloud security solution.'}
             pageName={'MSSPPage'}
         >
-            <Helmet>
-                <script charSet='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js'></script>
-            </Helmet>
             <div className='hidden' data-template-key>
                 hardcoded-pages
             </div>
