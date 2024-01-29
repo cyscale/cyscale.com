@@ -6,6 +6,7 @@ authors: Sabrina Lupșan
 permalink: container-images-best-practices
 categories:
   - CNAPP
+  - Misconfigurations
 date: 2023-06-08T09:34:09.972Z
 description: "Container images are files that contain everything needed to run
   software on containers: code, system tools, libraries, runtime tools.
