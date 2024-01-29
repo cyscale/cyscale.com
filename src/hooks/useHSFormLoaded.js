@@ -1,13 +1,13 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 
 const useHSFormLoaded = () => {
     const [loadingForm, setLoadingForm] = useState(true);
 
-    const hubspotHandler = useCallback((event) => {
+    const hubspotHandler = (event) => {
         if (event.data.type === 'hsFormCallback' && event.data.eventName === 'onFormReady') {
-            setLoadingForm((loadingForm) => !loadingForm);
+            setLoadingForm(false);
         }
-    }, []);
+    };
 
     useEffect(() => {
         window.addEventListener('message', hubspotHandler);
