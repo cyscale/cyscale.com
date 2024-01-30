@@ -19,8 +19,6 @@ featuredpost: true
 featuredimage: /img/aws-ipv4-article.png
 tableOfContents: false
 ---
-\[4:19 PM] Ovidiu Cical
-
 *Note: post updated January 30, 2024*
 
 Beginning February 1, 2024, Amazon Web Services (AWS) will usher in a significant change by charging for public IPv4 addresses. Whether you are a seasoned cloud engineer or a business decision-maker this shift by one of the world's leading cloud providers will likely have broad implications.
