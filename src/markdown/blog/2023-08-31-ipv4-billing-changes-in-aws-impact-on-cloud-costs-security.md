@@ -31,7 +31,7 @@ In terms of your business and the tech landscape, this change goes beyond additi
 
 <br class="" />
 
-<img src="/img/aws-ip-cost.png" alt="" title="" class="" style="width:auto;height:auto;"/>
+<img src="/img/aws-ip-cost.png" alt="" title="" class="" style="width:64.75rem;height:64.375rem;"/>
 
 Starting February 1, 2024, AWS will charge for all public IPv4 addresses at a rate of 0.5 cents per hour. While this figure may initially seem inconsequential, it is vital to understand how swiftly it can accumulate. 
 
