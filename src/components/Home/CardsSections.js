@@ -46,11 +46,11 @@ const CardsSections = () => {
             <Row className='mt-8 lg:mt-16 gap-0 lg:gap-8'>
                 <Card
                     icon={CIEMIcon}
-                    title={'IAM Security'}
+                    title={'CIEM'}
                     text={
                         'A powerful Identity Dashboard to help you understand how effective your access controls are. Effectively monitor user permissions and privilege access for a robust cloud security posture. Onboard your Okta account for full visibility on cloud SSO users.'
                     }
-                    link={'/use-cases/iam-security/'}
+                    link={'/products/ciem/'}
                     cardHeight={72}
                     cardHeightLg={72}
                 />
@@ -70,6 +70,7 @@ const CardsSections = () => {
                     text={
                         'Secure cloud native applications with contextual security analysis of vulnerabilities, misconfigurations, networking and access. Know where container images are running, and get a complete inventory for your Kubernetes clusters, either managed or unmanaged.'
                     }
+                    link={'/use-cases/kubernetes-security-platform/'}
                     cardHeight={64}
                     cardHeightLg={72}
                 />

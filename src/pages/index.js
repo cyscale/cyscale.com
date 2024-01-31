@@ -14,6 +14,8 @@ import IdentifyIcon from '../assets/images/identity-icon-home.svg';
 import IntegrationsIcons from '../components/Home/IntegrationsIcons';
 import { CSSTransition } from 'react-transition-group';
 import VideoCyscale from '../components/campaigns/cspm-solution/CyscaleVideo';
+import useMediaQuery from '../hooks/useMediaQuery';
+import StorylaneModal from '../components/full-platform-tour/StorylaneModal';
 
 const CaseStudiesSection = loadable(() => import('../components/Home/CaseStudiesSection'));
 const CardsSections = loadable(() => import('../components/Home/CardsSections'));
@@ -78,6 +80,8 @@ const workflowPhaseHr = css`
 `;
 
 const HomePage = ({ location }) => {
+    const isDesktop = useMediaQuery('(min-width: 1024px)');
+
     const data = useStaticQuery(graphql`
         query HomeQuery {
             graphContainers: file(relativePath: { eq: "graph-containers.png" }) {
@@ -261,11 +265,18 @@ const HomePage = ({ location }) => {
                                     </div>
                                     {modal && <div className='modal-overlay'></div>}
                                     <CSSTransition in={modal} timeout={300} classNames='video' unmountOnExit>
-                                        <VideoCyscale
-                                            setModal={setModal}
-                                            videoUrl='https://d3n52qn7viv754.cloudfront.net/videos/Cyscale-explainer-video-2023-12-Dec.mp4'
-                                            greyCloseButton
-                                        />
+                                        {isDesktop ? (
+                                            <StorylaneModal
+                                                setModal={setModal}
+                                                src='https://app.storylane.io/demo/xiaviyvpr3sd'
+                                            />
+                                        ) : (
+                                            <VideoCyscale
+                                                setModal={setModal}
+                                                videoUrl='https://d3n52qn7viv754.cloudfront.net/videos/Cyscale-explainer-video-2023-12-Dec.mp4'
+                                                greyCloseButton
+                                            />
+                                        )}
                                     </CSSTransition>
                                 </div>
                                 <div className='max-w-lg mx-auto block lg:hidden'>
