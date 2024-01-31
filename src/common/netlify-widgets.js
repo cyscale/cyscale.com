@@ -313,29 +313,39 @@ CMS.registerEditorComponent({
 CMS.registerEditorComponent({
     id: 'ctaButton',
     label: 'CTA Button',
-    pattern:
-        /^<div class="pb-12 pt-20 lg:pb-24 lg:pt-32 flex flex-col items-center"><a href="([^"]*)"><button class="([^"]*)">(.*?)<\/button><\/a><\/div>$/,
+    pattern: /^<div class="([^"]*)"><a href="([^"]*)"><button class="([^"]*)">(.*?)<\/button><\/a><\/div>$/,
+
     fromBlock: (match) => {
         return {
-            href: match[1],
-            class: match[2],
-            text: match[3]
+            divClass: match[1],
+            href: match[2],
+            class: match[3],
+            text: match[4]
         };
     },
-    toBlock: ({ href, text }) => {
-        const classes =
+
+    toBlock: ({ href, text, pb, pt, lgPb, lgPt }) => {
+        const divClasses = `pb-${pb || 0} pt-${pt || 0} lg:pb-${lgPb || 0} lg:pt-${
+            lgPt || 0
+        } flex flex-col items-center`;
+        const buttonClasses =
             'bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind';
         const style = 'padding: 0.625rem 2.5rem;';
-        return `<div class="pb-12 pt-20 lg:pb-24 lg:pt-32 flex flex-col items-center"><a href="${
-            href || '#'
-        }"><button class="${classes}" style="${style}">${text || 'Button Text'}</button></a></div>`;
+        return `<div class="${divClasses}"><a href="${href || '#'}"><button class="${buttonClasses}" style="${style}">${
+            text || 'Button Text'
+        }</button></a></div>`;
     },
-    toPreview: ({ href, text }) => {
-        const classes =
+
+    toPreview: ({ href, text, pb, pt, lgPb, lgPt }) => {
+        const divClasses = `pb-${pb || 0} pt-${pt || 0} lg:pb-${lgPb || 0} lg:pt-${
+            lgPt || 0
+        } flex flex-col items-center`;
+        const buttonClasses =
             'bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind';
         const style = 'padding: 0.625rem 2.5rem;';
-        return `<div class="pb-12 pt-20 lg:pb-24 lg:pt-32 flex flex-col items-center"><a href="${href}"><button class="${classes}" style="${style}">${text}</button></a></div>`;
+        return `<div class="${divClasses}"><a href="${href}"><button class="${buttonClasses}" style="${style}">${text}</button></a></div>`;
     },
+
     fields: [
         {
             label: 'Button Text',
@@ -348,6 +358,34 @@ CMS.registerEditorComponent({
             name: 'href',
             widget: 'string',
             default: '/request-demo/'
+        },
+        {
+            label: 'Padding Bottom (pb)',
+            name: 'pb',
+            widget: 'number',
+            default: 12,
+            hint: "Set the bottom padding for mobile and tablets, the default is 12. If you don't want padding set all the paddings to 0 Check documentation for the proper usage: https://tailwindcss.com/docs/padding#add-padding-to-a-single-side"
+        },
+        {
+            label: 'Padding Top (pt)',
+            name: 'pt',
+            widget: 'number',
+            default: 20,
+            hint: 'Set the top padding for mobile and tablets, the default is 20.'
+        },
+        {
+            label: 'Desktop Screen Padding Bottom (lg:pb)',
+            name: 'lgPb',
+            widget: 'number',
+            default: 24,
+            hint: 'Set the bottom padding for desktop screens, the default is 24.'
+        },
+        {
+            label: 'Desktop Screen Padding Top (lg:pt)',
+            name: 'lgPt',
+            widget: 'number',
+            default: 32,
+            hint: 'Set the top padding for desktop screens, the default is 32.'
         }
     ]
 });
@@ -510,6 +548,5 @@ CMS.registerEditorComponent({
         return `<${obj.tagType} id="${obj.id}">${obj.textContent}</${obj.tagType}>`;
     }
 });
-
 
 export default CMS;
