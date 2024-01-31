@@ -70,8 +70,6 @@ Source: <https://www.nist.gov/cyberframework/updating-nist-cybersecurity-framewo
 * add a sixth function, Govern, which covers decision-making around cybersecurity in terms of people, processes, and technology, and relates to the five other functions: Identify, Protect, Detect, Respond, and Recover (to read about the other functions, read [our detailed article on NIST](https://cyscale.com/blog/nist-compliance-in-the-cloud/)), 
 * improve the guidance on implementing the CSF. 
 
-  
-
 ## HITRUST: Setting the standard in healthcare 
 
 The most recent version of [HITRUST](https://cyscale.com/blog/hitrust-compliance-in-the-cloud/) (11.2.0) was released in November of 2023. It contains 14 control categories, divided into 49 objectives with 156 control references. Control references are requirements and best practices.  
@@ -90,4 +88,4 @@ Other regions should take note because the SEC also adopted rules requiring fore
 
 Find out how Cyscale can help you keep up with the continuous changes in the cybersecurity landscape and achieve (and maintain) compliance with less stress. Cyscale provides support for all of the frameworks mentioned in this article, as well as ISO 27001, SOC 2, GDPR, HIPAA, MAS TRM, and more. 
 
-<div class="pb-12 pt-20 lg:pb-24 lg:pt-32 flex flex-col items-center"><a href="/use-cases/cloud-compliance-and-auditing/" rel="noopener noreferrer" target="_blank"><button class="bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind" style="padding: 0.625rem 2.5rem;">LEARN MORE</button></a></div>
+<div class="pb-12 pt-20 lg:pb-24 lg:pt-32 flex flex-col items-center"><a href="/use-cases/cloud-compliance-and-auditing/"><button class="bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind" style="padding: 0.625rem 2.5rem;">LEARN MORE</button></a></div>
