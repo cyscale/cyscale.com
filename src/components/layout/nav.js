@@ -113,13 +113,13 @@ const solutions = [
                 text: 'Google Cloud Security'
             },
             {
+                link: '/use-cases/kubernetes-security-platform/',
+                text: 'Kubernetes'
+            },
+            {
                 link: '/use-cases/okta-cyscale-integration/',
                 text: 'Integration with Okta'
             },
-            {
-                link: '/use-cases/kubernetes-security-platform/',
-                text: 'Kubernetes'
-            }
         ]
     }
 ];
