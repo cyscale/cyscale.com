@@ -285,7 +285,7 @@ module.exports = {
             options: {
                 appId: `041PWC8D0P`,
                 apiKey: process.env.ALGOLIA_API_KEY,
-                indexName: `cyscale_website`,
+                indexName: `cyscale_website_test`,
                 queries,
                 chunkSize: 10000,
                 concurrentQueries: true,

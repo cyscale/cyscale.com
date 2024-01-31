@@ -78,7 +78,9 @@ function processDirectory(reactFolder, mdFolder, attributeNames, skipFiles, skip
                 processDirectory(currentPath, mdFolder, attributeNames, skipFiles, skipFolders);
             }
         } else if (path.extname(file) === '.js' && !skipFiles.includes(file)) {
-            const mdOutputPath = path.join(mdFolder, path.basename(file, '.js') + '.md');
+            const parentFolderName = path.basename(reactFolder);
+            const mdFileName = path.basename(file, '.js') + '-' + parentFolderName + '.md';
+            const mdOutputPath = path.join(mdFolder, mdFileName);
             extractAndSaveMD(currentPath, mdOutputPath, attributeNames);
         }
     });
@@ -105,7 +107,6 @@ const attributeNames = [
 const skipFiles = [
     'security-knowledge-graph.js',
     'cloud-compliance-and-auditing.js',
-    'cloud-data-security.js',
     'cloud-misconfigurations.js',
     'remote-work-security.js',
     '404.js',
