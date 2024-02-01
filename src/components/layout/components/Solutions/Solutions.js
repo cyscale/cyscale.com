@@ -75,18 +75,41 @@ const Solutions = ({ pathname, activeLinks, setActiveLinks }) => {
                                     {solution.description}
                                 </p>
                                 {solution.links.map((link, key) => {
-                                    return (
-                                        <div className='mb-2' key={key}>
-                                            <Link
-                                                className='p-2 hover:font-medium block'
-                                                to={link.link}
-                                                css={fontNavLinkStyle}
-                                                activeClassName='active'
-                                            >
-                                                {link.text}
-                                            </Link>
-                                        </div>
-                                    );
+                                    if (solution.title === 'Environments') {
+                                        return (
+                                            <div className='mb-2' key={key}>
+                                                <Link
+                                                    className='p-2 hover:font-medium flex items-center'
+                                                    to={link.link}
+                                                    css={fontNavLinkStyle}
+                                                    activeClassName='active'
+                                                >
+                                                    <img
+                                                        src={link.icon}
+                                                        width={30}
+                                                        css={css`
+                                                            height: 20px;
+                                                        `}
+                                                        alt=''
+                                                    />
+                                                    <span className='ml-2'>{link.text}</span>
+                                                </Link>
+                                            </div>
+                                        );
+                                    } else {
+                                        return (
+                                            <div className='mb-2' key={key}>
+                                                <Link
+                                                    className='p-2 hover:font-medium flex items-center'
+                                                    to={link.link}
+                                                    css={fontNavLinkStyle}
+                                                    activeClassName='active'
+                                                >
+                                                    {link.text}
+                                                </Link>
+                                            </div>
+                                        );
+                                    }
                                 })}
                             </div>
                         );
