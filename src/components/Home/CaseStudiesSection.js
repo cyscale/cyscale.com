@@ -28,6 +28,11 @@ const CaseStudiesSection = ({
                     gatsbyImageData(width: 720, layout: CONSTRAINED)
                 }
             }
+            cds: file(relativePath: { eq: "cds-case-study.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 720, layout: CONSTRAINED)
+                }
+            }
             alex: file(relativePath: { eq: "alex-cociu.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 70, layout: FIXED)
@@ -55,6 +60,20 @@ const CaseStudiesSection = ({
     const [autoSlide, setAutoSlide] = useState(true);
 
     const slides = [
+        {
+            image: data.cds.childImageSharp.gatsbyImageData,
+            alt: 'Data security in a multi-cloud environment',
+            title: (
+                <>
+                    Data security in a <br className="hidden lg:block" /> multi-cloud environment
+                </>
+            ),
+            quote: 'This US-based data intelligence platform was experiencing strong growth, resulting in significantly more customer data being stored in the cloud. As the company approached the 400-employee mark and began to feel more pressure on its cybersecurity team, the time came to sunset in-house tools developed on open-source offerings and deploy a solution that would make it easier to maintain a strong security posture over a sprawling multi-cloud estate.',
+            employee: null,
+            employeeImage: null,
+            position: null,
+            link: '/case-studies/cloud-data-security/'
+        },
         {
             image: data.bays.childImageSharp.gatsbyImageData,
             alt: 'Cover Bays Consulting',

@@ -19,7 +19,7 @@ const CDSecurity = ({ location }) => {
 
     const data = useStaticQuery(graphql`
         query CDSecurityQuery {
-            cover: file(relativePath: { eq: "cd-security-logo.png" }) {
+            cover: file(relativePath: { eq: "cds-case-study.png" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1080, layout: CONSTRAINED)
                 }

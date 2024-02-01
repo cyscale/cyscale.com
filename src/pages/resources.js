@@ -117,7 +117,7 @@ const Resources = ({ location }) => {
                     gatsbyImageData(width: 1080, layout: CONSTRAINED)
                 }
             }
-            CDSecurity: file(relativePath: { eq: "cd-security-logo-resources.png" }) {
+            CDSecurity: file(relativePath: { eq: "cds-case-study.png" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1080, layout: CONSTRAINED)
                 }

@@ -234,6 +234,11 @@ const CSPM = ({ location }) => {
                     gatsbyImageData(width: 1980, layout: CONSTRAINED)
                 }
             }
+            cds: file(relativePath: { eq: "cds-case-study.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 720, layout: CONSTRAINED)
+                }
+            }
             card: file(relativePath: { eq: "csm-whitepaper-bluebird.webp" }) {
                 childImageSharp {
                     gatsbyImageData(width: 386, layout: FIXED)
@@ -267,6 +272,20 @@ const CSPM = ({ location }) => {
     ];
 
     const caseStudiesSlides = [
+        {
+            image: data.cds.childImageSharp.gatsbyImageData,
+            alt: 'Data security in a multi-cloud environment',
+            title: (
+                <>
+                    Data security in a <br className='hidden lg:block' /> multi-cloud environment
+                </>
+            ),
+            quote: 'This US-based data intelligence platform was experiencing strong growth, resulting in significantly more customer data being stored in the cloud. As the company approached the 400-employee mark and began to feel more pressure on its cybersecurity team, the time came to sunset in-house tools developed on open-source offerings and deploy a solution that would make it easier to maintain a strong security posture over a sprawling multi-cloud estate.',
+            employee: null,
+            employeeImage: null,
+            position: null,
+            link: '/case-studies/cloud-data-security/'
+        },
         {
             image: data.bays.childImageSharp.gatsbyImageData,
             alt: 'Cover Bays Consulting',
@@ -371,7 +390,7 @@ const CSPM = ({ location }) => {
             </div>
             <Container>
                 <Section>
-                    <div className='grid grid-cols-12 gap-4 lg:gap-0' id="start">
+                    <div className='grid grid-cols-12 gap-4 lg:gap-0' id='start'>
                         <div
                             className='col-span-12 sm:col-span-6 lg:col-span-3 mx-0 max-w-xl lg:max-w-full group'
                             css={onHoverMarginHr}
