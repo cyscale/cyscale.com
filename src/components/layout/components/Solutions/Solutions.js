@@ -75,7 +75,7 @@ const Solutions = ({ pathname, activeLinks, setActiveLinks }) => {
                                     {solution.description}
                                 </p>
                                 {solution.links.map((link, key) => {
-                                    if (solution.title === 'Environments') {
+                                    if (solution.title === 'Environments' || solution.title === 'Compliance') {
                                         return (
                                             <div className='mb-2' key={key}>
                                                 <Link
@@ -86,9 +86,9 @@ const Solutions = ({ pathname, activeLinks, setActiveLinks }) => {
                                                 >
                                                     <img
                                                         src={link.icon}
-                                                        width={30}
+                                                        width={32}
                                                         css={css`
-                                                            height: 20px;
+                                                            height: 24px;
                                                         `}
                                                         alt=''
                                                     />
@@ -100,7 +100,7 @@ const Solutions = ({ pathname, activeLinks, setActiveLinks }) => {
                                         return (
                                             <div className='mb-2' key={key}>
                                                 <Link
-                                                    className='p-2 hover:font-medium flex items-center'
+                                                    className='px-2 pt-2 pb-3 hover:font-medium flex items-center'
                                                     to={link.link}
                                                     css={fontNavLinkStyle}
                                                     activeClassName='active'

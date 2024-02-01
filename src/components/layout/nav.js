@@ -8,6 +8,10 @@ import AWSIcon from './icons/aws-icon.svg';
 import AzureIcon from './icons/azure-icon.svg';
 import GCIcon from './icons/google-cloud-icon.svg';
 import OktaIcon from './icons/okta-icon.svg';
+import ISOIcon from './icons/iso.svg';
+import PCIDSSIcon from './icons/pci.svg';
+import SOC2Icon from './icons/soc2.svg';
+import NISTIcon from './icons/nist.svg';
 
 const platform = [
     {
@@ -82,18 +86,22 @@ const solutions = [
         icon: Shield,
         links: [
             {
+                icon: ISOIcon,
                 link: '/use-cases/iso-27001-compliance/',
                 text: 'ISO 27001'
             },
             {
+                icon: PCIDSSIcon,
                 link: '/use-cases/pci-dss/',
                 text: 'PCI DSS'
             },
             {
+                icon: SOC2Icon,
                 link: '/use-cases/soc-2/',
                 text: 'SOC 2'
             },
             {
+                icon: NISTIcon,
                 link: '/use-cases/nist-compliance/',
                 text: 'NIST'
             }
