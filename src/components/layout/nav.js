@@ -4,6 +4,10 @@ import Graph from './icons/icon-graph.svg';
 import Shield from './icons/icon-shield.svg';
 import CNAPPIcon from './icons/cnapp-icon.svg';
 import KubernetesIcon from './icons/k8s-icon.svg';
+import AWSIcon from './icons/aws-icon.svg';
+import AzureIcon from './icons/azure-icon.svg';
+import GCIcon from './icons/google-cloud-icon.svg';
+import OktaIcon from './icons/okta-icon.svg';
 
 const platform = [
     {
@@ -101,25 +105,30 @@ const solutions = [
         icon: Cloud,
         links: [
             {
+                icon: AWSIcon,
                 link: '/use-cases/aws-cloud-security/',
                 text: 'AWS Cloud Security'
             },
             {
+                icon: AzureIcon,
                 link: '/use-cases/azure-cloud-security/',
                 text: 'Azure Cloud Security'
             },
             {
+                icon: GCIcon,
                 link: '/use-cases/gcp-cloud-security/',
                 text: 'Google Cloud Security'
             },
             {
+                icon: KubernetesIcon,
                 link: '/use-cases/kubernetes-security-platform/',
                 text: 'Kubernetes'
             },
             {
+                icon: OktaIcon,
                 link: '/use-cases/okta-cyscale-integration/',
                 text: 'Integration with Okta'
-            },
+            }
         ]
     }
 ];
