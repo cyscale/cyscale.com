@@ -85,7 +85,7 @@ const MobileNavigation = ({ showMenu, setShowMenu, appLink }) => {
                 {activeMenu === 'solutions' && <SolutionsMobile />}
                 {activeMenu === 'resources' && <ResourcesMobile />}
                 {activeMenu === 'company' && <CompanyMobile />}
-                <div className='px-8 mb-3 w-full bg-white absolute bottom-0'>
+                <div className='px-8 mb-3 w-full bg-white fixed -bottom-4'>
                     <Link
                         to='/request-demo/'
                         className='gradientBgBtn block font-medium rounded text-white text-center py-4 hover:no-underline no-underline max-w-sm'
@@ -98,7 +98,7 @@ const MobileNavigation = ({ showMenu, setShowMenu, appLink }) => {
                     <Link className='block my-3' to='/contact-us/'>
                         Contact
                     </Link>
-                    <div>
+                    <div className='pb-5'>
                         <a href='https://app.cyscale.com' target='_blank' rel='noopener noreferrer'>
                             Login
                         </a>{' '}
