@@ -106,7 +106,11 @@ Websites should use HTTPS (Hypertext Transfer Protocol Secure) instead of HTTP t
 
 **What is in motion data vulnerable to?** 
 
-**Eavesdropping attacks.** In this situation, malicious entities can analyze traffic sent over the internet and read unencrypted data.   
+**Eavesdropping attacks.** In this situation, malicious entities can analyze traffic sent over the internet and read unencrypted data.
+
+To find out how Cyscale protects you against these types of attacks, book a demo.
+
+<div class="pb-0 pt-6 lg:pb-0 lg:pt-6 flex flex-col items-center"><a href="/request-demo/"><button class="bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind" style="padding: 0.625rem 2.5rem;">BOOK A DEMO</button></a></div>
 
 ### In Use Encryption 
 
@@ -131,8 +135,6 @@ A method of encryption for data in use is Secure Encrypted Virtualization (SEV).
 In use data is vulnerable to **authentication attacks**. These types of attacks are used to gain access to the data by bypassing authentication, brute-forcing or obtaining credentials, and others. 
 
 Another type of attack for data in use is a **cold boot attack**. Even though the RAM memory is considered volatile, after a computer is turned off, it takes a few minutes for that memory to be erased. If kept at low temperatures, RAM memory can be extracted, and, therefore, the last data loaded in the RAM memory can be read. 
-
-<div class="pb-10 pt-20 lg:pb-10 lg:pt-20 flex flex-col items-center"><a href="/request-demo/"><button class="bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind" style="padding: 0.625rem 2.5rem;">BOOK A DEMO</button></a></div>
 
 ### At Rest Encryption 
 
@@ -189,10 +191,10 @@ Here are just a few examples of controls that ensure data security through encry
 * *Ensure VM disks for critical VMs are encrypted with Customer-Supplied Encryption Keys (CSEK)* for Google Cloud 
 * *Ensure server-side encryption is set to 'Encrypt with Service Key'* for Alibaba 
 
-R﻿ead more about cloud security to understand how attackers can obtain access to your data.
+To discover more about your data and keys, book a free cloud security health assessment with Cyscale.
 
-<a href="https://cyscale.com/blog/contextual-security-google-cloud/"><img src="/img/blog_54-cover.png" alt="" title="" class=" blog-image-shadow " style="width:25rem;height:auto;"/></a>
+<a href="https://cyscale.com/cloud-security-risk-assessment/"><img src="/img/cyscale-article-image-4.jpg" alt="" title="" class=" blog-image-shadow " style="width:auto;height:auto;"/></a>
 
-<div class="pb-6 pt-2 lg:pb-6 lg:pt-2 flex flex-col items-center"><a href="https://cyscale.com/blog/contextual-security-google-cloud/"><button class="bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind" style="padding: 0.625rem 2.5rem;">Click to read</button></a></div>
+<div class="pb-6 pt-2 lg:pb-6 lg:pt-2 flex flex-col items-center"><a href="https://cyscale.com/cloud-security-risk-assessment/"><button class="bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind" style="padding: 0.625rem 2.5rem;">Start assessment</button></a></div>
 
 <!--EndFragment-->
