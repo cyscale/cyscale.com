@@ -23,6 +23,7 @@ import CustomSearch from '../Search/CustomSearch';
 import { useClickOutsideSearch } from '../../hooks/useClickOutsideSearch';
 import classnames from 'classnames';
 import { disableLogoLink, hasZirconBgColordHero } from '../../common/utils';
+import PlatformTours from '../platform-tours/PlatformTours';
 const Footer = loadable(() => import('./footer'));
 
 const paddingNav = css`
@@ -40,6 +41,8 @@ const AnimatedNavbarLayout = ({ children, formId, formTargetId, location, title,
     const [navOpen, setNavOpen] = useState(false);
     const [isAnimation, setIsAnimation] = useState(true);
     const [searchBar, setSearchBar] = useState(false);
+    const [kModal, setKModal] = useState(false);
+    const [platformModal, setPlatformModal] = useState(false);
     const searchRef = useRef(null);
     const appLink = useAppLink();
 
@@ -143,6 +146,10 @@ const AnimatedNavbarLayout = ({ children, formId, formTargetId, location, title,
                                 isAnimation={isAnimation}
                                 searchBar={searchBar}
                                 setSearchBar={setSearchBar}
+                                kModal={kModal}
+                                setKModal={setKModal}
+                                platformModal={platformModal}
+                                setPlatformModal={setPlatformModal}
                             />
                         </div>
                     </CSSTransition>
@@ -170,6 +177,12 @@ const AnimatedNavbarLayout = ({ children, formId, formTargetId, location, title,
                     <CookiesBanner cookiesBanner={cookiesBanner} setCookiesBanner={setCookiesBanner} />
                 )}
                 <ScrollToTopButton />
+                <PlatformTours
+                    kModal={kModal}
+                    setKModal={setKModal}
+                    platformModal={platformModal}
+                    setPlatformModal={setPlatformModal}
+                />
             </GlobalContext.Provider>
         </CookiesProvider>
     );
