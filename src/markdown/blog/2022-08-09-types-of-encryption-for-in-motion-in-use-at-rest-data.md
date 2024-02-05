@@ -108,9 +108,11 @@ Websites should use HTTPS (Hypertext Transfer Protocol Secure) instead of HTTP t
 
 **Eavesdropping attacks.** In this situation, malicious entities can analyze traffic sent over the internet and read unencrypted data.
 
-To find out how Cyscale protects you against this type of attack, book a demo.
+To discover more about your data and keys, book a free cloud security health assessment with Cyscale.
 
-<div class="pb-0 pt-6 lg:pb-0 lg:pt-6 flex flex-col items-center"><a href="/request-demo/"><button class="bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind" style="padding: 0.625rem 2.5rem;">BOOK A DEMO</button></a></div>
+<a href="https://cyscale.com/cloud-security-risk-assessment/"><img src="/img/cyscale-article-image-4.jpg" alt="" title="" class=" blog-image-shadow " style="width:auto;height:auto;"/></a>
+
+<div class="pb-6 pt-2 lg:pb-6 lg:pt-2 flex flex-col items-center"><a href="https://cyscale.com/cloud-security-risk-assessment/"><button class="bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind" style="padding: 0.625rem 2.5rem;">Start assessment</button></a></div>
 
 ### In Use Encryption 
 
@@ -191,10 +193,10 @@ Here are just a few examples of controls that ensure data security through encry
 * *Ensure VM disks for critical VMs are encrypted with Customer-Supplied Encryption Keys (CSEK)* for Google Cloud 
 * *Ensure server-side encryption is set to 'Encrypt with Service Key'* for Alibaba 
 
-To discover more about your data and keys, book a free cloud security health assessment with Cyscale.
+To find out how Cyscale protects you against attacks in the cloud, book a demo.
 
-<a href="https://cyscale.com/cloud-security-risk-assessment/"><img src="/img/cyscale-article-image-4.jpg" alt="" title="" class=" blog-image-shadow " style="width:auto;height:auto;"/></a>
 
-<div class="pb-6 pt-2 lg:pb-6 lg:pt-2 flex flex-col items-center"><a href="https://cyscale.com/cloud-security-risk-assessment/"><button class="bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind" style="padding: 0.625rem 2.5rem;">Start assessment</button></a></div>
+
+<div class="pb-12 pt-8 lg:pb-26 lg:pt-32 flex flex-col items-center"><a href="/request-demo/"><button class="bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind" style="padding: 0.625rem 2.5rem;">BOOK A DEMO</button></a></div>
 
 <!--EndFragment-->
