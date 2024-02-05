@@ -132,6 +132,8 @@ In use data is vulnerable to **authentication attacks**. These types of attacks 
 
 Another type of attack for data in use is a **cold boot attack**. Even though the RAM memory is considered volatile, after a computer is turned off, it takes a few minutes for that memory to be erased. If kept at low temperatures, RAM memory can be extracted, and, therefore, the last data loaded in the RAM memory can be read. 
 
+<div class="pb-0 pt-10 lg:pb-25 lg:pt-32 flex flex-col items-center"><a href="/request-demo/"><button class="bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind" style="padding: 0.625rem 2.5rem;">BOOK A DEMO</button></a></div>
+
 ### At Rest Encryption 
 
 Once data arrives at the destination and is not used, it becomes at rest.  
@@ -186,5 +188,9 @@ Here are just a few examples of controls that ensure data security through encry
 * *Ensure web app is using the latest version of TLS encryption* for Azure 
 * *Ensure VM disks for critical VMs are encrypted with Customer-Supplied Encryption Keys (CSEK)* for Google Cloud 
 * *Ensure server-side encryption is set to 'Encrypt with Service Key'* for Alibaba 
+
+R﻿ead more about cloud security to understand how attackers can obtain access to your data.
+
+<a href="https://cyscale.com/blog/contextual-security-google-cloud/"><img src="/img/blog_54-cover.png" alt="" title="" class=" blog-image-shadow " style="width:auto;height:auto;"/></a>
 
 <!--EndFragment-->
