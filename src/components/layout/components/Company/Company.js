@@ -76,7 +76,7 @@ const Company = ({ pathname, activeLinks, setActiveLinks }) => {
                     <img src={IconCyscaleUser} alt='' />
                 </div>
             </div>
-            <div className='col-span-2 p-6'>
+            <div className='col-span-2 py-6 px-2'>
                 <p className='text-base font-light mb-6' css={[sectionTitleColorStyle, paddingLeftStyle]}>
                     OVERVIEW
                 </p>

@@ -8,6 +8,7 @@ import MobileNavbar from './components/MobileNavbar';
 import MobileNavigation from './components/MobileNavigation';
 import CustomSearch from '../Search/CustomSearch';
 import { useClickOutsideSearch } from '../../hooks/useClickOutsideSearch';
+import PlatformTours from '../platform-tours/PlatformTours';
 
 const paddingNav = css`
     padding-left: 2rem;
@@ -27,6 +28,9 @@ const NewTopNav = ({ pageName, showLogo = true, location, animatedNavbar }) => {
     const [showBanner, setShowBanner] = useState(true);
     const [searchBar, setSearchBar] = useState(false);
     const [isAtTop, setIsAtTop] = useState(true);
+    const [kModal, setKModal] = useState(false);
+    const [platformModal, setPlatformModal] = useState(false);
+
     const appLink = useAppLink();
 
     useEffect(() => {
@@ -88,6 +92,10 @@ const NewTopNav = ({ pageName, showLogo = true, location, animatedNavbar }) => {
                         location={location}
                         searchBar={searchBar}
                         setSearchBar={setSearchBar}
+                        kModal={kModal}
+                        setKModal={setKModal}
+                        platformModal={platformModal}
+                        setPlatformModal={setPlatformModal}
                     />
                 </div>
                 {showBanner && animatedNavbar && (
@@ -122,7 +130,7 @@ const NewTopNav = ({ pageName, showLogo = true, location, animatedNavbar }) => {
                     className={`fixed left-0 block w-full mx-auto bg-white shadow-2xl transform transition-all`}
                     css={[
                         css`
-                              transition-duration: 300ms;
+                            transition-duration: 300ms;
                             z-index: 40;
                         `,
                         animatedNavbar &&
@@ -148,6 +156,12 @@ const NewTopNav = ({ pageName, showLogo = true, location, animatedNavbar }) => {
                 </div>
             )}
             {showMenu && <MobileNavigation showMenu={showMenu} setShowMenu={setShowMenu} appLink={appLink} />}
+            <PlatformTours
+                kModal={kModal}
+                setKModal={setKModal}
+                platformModal={platformModal}
+                setPlatformModal={setPlatformModal}
+            />
         </>
     );
 };

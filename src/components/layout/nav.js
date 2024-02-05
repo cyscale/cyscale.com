@@ -178,6 +178,10 @@ const company = [
         text: 'Careers'
     },
     {
+        link: '/security-for-startups/',
+        text: 'Startups Program'
+    },
+    {
         link: '/contact-us/',
         text: 'Contact us'
     }

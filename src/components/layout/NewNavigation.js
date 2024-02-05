@@ -102,7 +102,19 @@ const HeaderLogo = styled.img`
     ${tw`block`};
 `;
 
-const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation, searchBar, setSearchBar }) => {
+const NewNavigation = ({
+    pageName,
+    showLogo,
+    appLink,
+    location,
+    isAnimation,
+    searchBar,
+    setSearchBar,
+    kModal,
+    setKModal,
+    platformModal,
+    setPlatformModal
+}) => {
     const { pathname } = location;
     const [activeLinks, setActiveLinks] = useState({
         platform: false,
@@ -208,6 +220,10 @@ const NewNavigation = ({ pageName, showLogo, appLink, location, isAnimation, sea
                                     pathname={pathname}
                                     activeLinks={activeLinks}
                                     setActiveLinks={setActiveLinks}
+                                    kModal={kModal}
+                                    setKModal={setKModal}
+                                    platformModal={platformModal}
+                                    setPlatformModal={setPlatformModal}
                                 />
                             )}
                         </MegaMenu>

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import IconCyscaleShield from '../../icons/icon-cyscale-shield.svg';
 import {
     caretMenuWhiteStyle,
     fontNavLinkStyle,
@@ -26,7 +25,7 @@ const caretSolutions = (isAnimatedNavbarPage) => css`
     }
 `;
 
-const Solutions = ({ pathname, activeLinks, setActiveLinks }) => {
+const Solutions = ({ pathname, activeLinks, setActiveLinks, kModal, setKModal, platformModal, setPlatformModal }) => {
     return (
         <div
             className='w-full grid grid-cols-12 gap-2 ml-auto shadow-2xl bg-white'
@@ -40,20 +39,40 @@ const Solutions = ({ pathname, activeLinks, setActiveLinks }) => {
             role='presentation'
         >
             <div className='col-span-3 bg-selago p-6'>
-                <h1 css={montserratFontStyle} className='text-2xl font-semibold mb-6'>
-                    Startups Program
+                <h1 css={montserratFontStyle} className='text-2xl font-semibold mb-3'>
+                    Product Tours
                 </h1>
-                <p className='mb-4'>Build and maintain a strong Security Program from the start.</p>
-                <Link
-                    className='bg-blue text-white py-2 px-4 rounded cursor-pointer mb-22 font-medium flex'
-                    to='/security-for-startups/'
+                <p className='mb-2'>Understand at a glance the security posture for your K8s clusters</p>
+                <div
+                    onClick={() => {
+                        setKModal(!kModal);
+                    }}
+                    onKeyPress={() => {}}
+                    tabIndex='0'
+                    role='button'
+                    className='bg-blue text-white py-2 px-4 rounded cursor-pointer font-medium flex'
                     css={[hoverButtonColorStyle, widthFitStyle]}
                 >
                     <RightArrow fillColor={'white'} marginTop='0.2rem' />
-                    <span className='text-md ml-2'>Submit Your Application</span>
-                </Link>
-                <div className='mt-32'>
-                    <img src={IconCyscaleShield} alt='' />
+                    <span className='text-md ml-2'>Kubernetes Security</span>
+                </div>
+
+                <p className='mb-2 mt-5'>
+                    A single-pane-of-glass view and security for AWS, Azure, Google Cloud, Kubernetes, Okta, containers,
+                    and more
+                </p>
+                <div
+                    onClick={() => {
+                        setPlatformModal(!platformModal);
+                    }}
+                    onKeyPress={() => {}}
+                    tabIndex='0'
+                    role='button'
+                    className='bg-blue text-white py-2 px-4 rounded cursor-pointer font-medium flex'
+                    css={[hoverButtonColorStyle, widthFitStyle]}
+                >
+                    <RightArrow fillColor={'white'} marginTop='0.2rem' />
+                    <span className='text-md ml-2'>Cloud Security Platform</span>
                 </div>
             </div>
             <div className='col-span-9'>
