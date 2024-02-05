@@ -191,6 +191,8 @@ Here are just a few examples of controls that ensure data security through encry
 
 R﻿ead more about cloud security to understand how attackers can obtain access to your data.
 
-<a href="https://cyscale.com/blog/contextual-security-google-cloud/"><img src="/img/blog_54-cover.png" alt="" title="" class=" blog-image-shadow " style="width:25rem;height:auto;"/></a>
+<a href="https://cyscale.com/blog/contextual-security-google-cloud/"><img src="/img/blog_54-cover.png" alt="" title="" class=" blog-image-shadow " style="width:auto;height:auto;"/></a>
+
+<div class="pb-10 pt-6 lg:pb-8 lg:pt-32 flex flex-col items-center"><a href="https://cyscale.com/blog/contextual-security-google-cloud/"><button class="bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind" style="padding: 0.625rem 2.5rem;">Click to read</button></a></div>
 
 <!--EndFragment-->
