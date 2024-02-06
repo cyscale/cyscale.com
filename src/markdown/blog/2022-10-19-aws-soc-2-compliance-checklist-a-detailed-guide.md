@@ -63,6 +63,12 @@ Steps to enable MFA in your AWS environment, according to the [documentation](ht
 
 If your company is using an external identity provider, you have to ensure that MFA is configured for access to the AWS console. 
 
+To can check if users have MFA enabled, or to gain actionable insights regarding IAM, book a free assessment now.
+
+<a href="https://cyscale.com/cloud-security-risk-assessment/"><img src="/img/56_blog-edited-screenshot-1.png" alt="" title="" class=" blog-image-shadow " style="width:auto;height:auto;"/></a>
+
+<div class="pb-0 pt-4 lg:pb-0 lg:pt-4 flex flex-col items-center"><a href="https://cyscale.com/cloud-security-risk-assessment/"><button class="bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind" style="padding: 0.625rem 2.5rem;">Start assessment</button></a></div>
+
 ### Restricts Access 
 
 This criteria, in the “Security” TSC refers to restricting traffic to and from any cloud services and assets hosted in the cloud. This includes: 
@@ -131,5 +137,9 @@ A few examples of controls that apply to the presented requirements (and more) a
 * Ensure all users have MFA configured. 
 * Ensure CloudTrail is enabled in all regions. 
 * Ensure no security groups allow ingress from 0.0.0.0/0 to port 22 (SSH). 
+
+B﻿ook a demo now to use these controls and many more and assess your cloud security posture in AWS.
+
+<div class="pb-12 pt-6 lg:pb-24 lg:pt-32 flex flex-col items-center"><a href="/request-demo/"><button class="bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind" style="padding: 0.625rem 2.5rem;">BOOK A DEMO</button></a></div>
 
 <!--EndFragment-->
