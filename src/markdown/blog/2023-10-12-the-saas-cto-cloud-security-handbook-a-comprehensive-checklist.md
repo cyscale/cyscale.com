@@ -86,7 +86,13 @@ While our *[buyer’s guide to cloud security solutions](https://cyscale.com/blo
 
 Another acronym you may encounter - CNAPP (Cloud-Native Application Protection Platform) - refers to a security solution designed to protect cloud-native apps and combines multiple functionalities from separate toolsets, including CSPM, CWPP (Cloud Workload Protection Platform), and CIEM (Cloud Infrastructure Entitlements Management), essentially covering all the bases of identity and access, code, and infrastructure.  
 
-We have a primer on *[cloud-native applications security](https://cyscale.com/blog/cnapp-secure-native-applications/)* that looks at why and when you may need a CNAPP solution.  
+We have a primer on *[cloud-native applications security](https://cyscale.com/blog/cnapp-secure-native-applications/)* that looks at why and when you may need a CNAPP solution.
+
+B﻿ook a free assessment with Cyscale to use CNAPP capabilities to secure your cloud security posture.
+
+<a href="https://cyscale.com/cloud-security-risk-assessment/"><img src="/img/36_blog-1-cards.webp" alt="" title="" class=" blog-image-shadow " style="width:auto;height:auto;"/></a>
+
+<div class="pb-0 pt-4 lg:pb-0 lg:pt-2 flex flex-col items-center"><a href="https://cyscale.com/cloud-security-risk-assessment/"><button class="bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind" style="padding: 0.625rem 2.5rem;">Start assessment</button></a></div>
 
 ## **Common cloud misconfigurations and how to avoid them** 
 
@@ -130,3 +136,7 @@ We have a *[step-by-step checklist in our essential cloud security tips](https:/
 As the threat landscape constantly evolves, so must your cloud security awareness and strategy. Business leaders must remain vigilant to new threats and vulnerabilities as well as any changes in their existing environment.  
 
 Even with a good cloud security strategy in place, an effective plan is an adaptive plan, and one that ensures ongoing defense against new threats.
+
+B﻿ook a demo now to find out actionable insights and prepare for cloud security challenges.
+
+<div class="pb-12 pt-6 lg:pb-12 lg:pt-6 flex flex-col items-center"><a href="/request-demo/"><button class="bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind" style="padding: 0.625rem 2.5rem;">BOOK A DEMO</button></a></div>
