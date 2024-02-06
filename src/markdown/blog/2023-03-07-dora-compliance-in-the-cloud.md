@@ -87,7 +87,11 @@ This section in DORA is related to ICT systems, protocols, and tools and how the
 
 Frequently updating the applications, operating systems, and technologies cloud security teams use is essential in keeping the cloud secure.  
 
-Cyscale helps you ensure you’re compliant with Article 7. An example of control is *Ensure that the latest OS Patches for all Virtual Machines are applied.* 
+Cyscale helps you ensure you’re compliant with Article 7. An example of control is *Ensure that the latest OS Patches for all Virtual Machines are applied.* To check if your cloud environment is secure, do a free health check with Cyscale now.
+
+<a href="https://cyscale.com/cloud-security-risk-assessment/"><img src="/img/security-posture.webp" alt="" title="" class=" blog-image-shadow " style="width:auto;height:auto;"/></a>
+
+<div class="pb-2 pt-6 lg:pb-2 lg:pt-6 flex flex-col items-center"><a href="https://cyscale.com/cloud-security-risk-assessment/"><button class="bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind" style="padding: 0.625rem 2.5rem;">Start assessment</button></a></div>
 
 ### Article 9, Protection and prevention 
 
@@ -156,6 +160,8 @@ Cyscale helps you provide proof of compliance with DORA for this article by scan
 
 Moreover, we provide remediation steps for findings to aid you in quickly solving any security issues your cloud environment may have.  
 
-Cyscale has started preparing for DORA. Kickstart your compliance journey with us now and ensure a smooth process for DORA compliance. 
+Cyscale has started preparing for DORA. Kickstart your compliance journey with us now and ensure a smooth process for DORA compliance. Book a demo now to see how Cyscale can help you achieve compliance with DORA and secure your cloud.
+
+<div class="pb-12 pt-6 lg:pb-12 lg:pt-6 flex flex-col items-center"><a href="/request-demo/"><button class="bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind" style="padding: 0.625rem 2.5rem;">BOOK A DEMO</button></a></div>
 
 <!--EndFragment-->
