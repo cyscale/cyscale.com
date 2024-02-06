@@ -64,7 +64,7 @@ Environmental metrics allow for more customized and specific vulnerability asses
 
 Y﻿ou can book a free assessment to detect vulnerabilities in your cloud environment. 
 
-<a href="#"><img src="/img/cve-screen.png" alt="" title="" class=" blog-image-shadow " style="width:31.25rem;height:auto;"/></a>
+<a href="https://cyscale.com/cloud-security-risk-assessment/"><img src="/img/cve-screen.png" alt="" title="" class=" blog-image-shadow " style="width:28rem;height:auto;"/></a>
 
 <div class="pb-0 pt-4 lg:pb-0 lg:pt-4 flex flex-col items-center"><a href="https://cyscale.com/cloud-security-risk-assessment/"><button class="bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind" style="padding: 0.625rem 2.5rem;">Start assessment</button></a></div>
 
@@ -86,8 +86,6 @@ EPSS typically considers various factors, including: 
 It is important to understand that CVSS version 4.0 does not apply retroactively. Only the vulnerabilities discovered after the release of CVSS 4.0 will receive the new scoring. 
 
 The new CVSS version 4.0 will bring much sought after value to companies trying to assess their security posture. At Cyscale, we display the CVSS and the EPSS scores to help users better understand their cloud environment. We show the CVSS score of vulnerabilities to highlight which ones should be prioritized. By factoring in the CVSS value, which is now much more relevant, we can help organizations understand risks more accurately and highlight [cloud security infrastructure](https://cyscale.com/blog/cloud-infrastructure-security/) improvements with the highest impact and the lowest level of effort required. 
-
-<img src="/img/cve-screen.png" alt="CVE vulnerability info card in Cyscale" title="" class=" blog-image-shadow " style="width:auto;height:auto;"/>
 
 B﻿ook a demo now to understand how Cyscale can help you identify and fix vulnerabilities in your cloud.
 
