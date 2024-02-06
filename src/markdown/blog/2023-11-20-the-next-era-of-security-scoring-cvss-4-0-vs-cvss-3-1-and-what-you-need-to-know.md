@@ -66,7 +66,7 @@ Y﻿ou can book a free assessment to detect vulnerabilities in your cloud enviro
 
 <a href="#"><img src="/img/cve-screen.png" alt="" title="" class=" blog-image-shadow " style="width:31.25rem;height:auto;"/></a>
 
-<div class="pb-12 pt-6 lg:pb-12 lg:pt-6 flex flex-col items-center"><a href="https://cyscale.com/cloud-security-risk-assessment/"><button class="bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind" style="padding: 0.625rem 2.5rem;">Start assessment</button></a></div>
+<div class="pb-0 pt-4 lg:pb-0 lg:pt-4 flex flex-col items-center"><a href="https://cyscale.com/cloud-security-risk-assessment/"><button class="bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind" style="padding: 0.625rem 2.5rem;">Start assessment</button></a></div>
 
 ## The relation between CVSS and EPSS: Brothers in arms 
 
