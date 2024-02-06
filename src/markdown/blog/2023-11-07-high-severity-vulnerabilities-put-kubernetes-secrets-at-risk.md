@@ -59,6 +59,12 @@ This issue can be exploited by someone with create or update permissions on ingr
 
 The field spec.rules\[].http.paths\[].path allows you to specify where incoming requests to your applications should be routed based on the path in the URL. Since the input is not correctly sanitized, the attacker can specify an internal file as the path, obtaining the credentials of the controller. Thus, by exploiting the poor sanitization, the attacker gains access to sensitive data. 
 
+To prepare for these threats and any upcoming ones, book a free cloud security health assessment with Cyscale.
+
+<a href="https://cyscale.com/cloud-security-risk-assessment/"><img src="/img/assessment-cta.png" alt="" title="" class=" blog-image-shadow " style="width:auto;height:auto;"/></a>
+
+<div class="pb-0 pt-4 lg:pb-0 lg:pt-4 flex flex-col items-center"><a href="https://cyscale.com/cloud-security-risk-assessment/"><button class="bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind" style="padding: 0.625rem 2.5rem;">Start assessment</button></a></div>
+
 ### Impact of the NGINX Ingress controller vulnerabilities 
 
 Ingress controllers run with high privileges. By default, having access to the credentials of the ingress controller means you have access to all secrets in the cluster. As you can imagine, the impact of these vulnerabilities left unchecked can create significant risk for your data. So, it’s no surprise that the vulnerabilities described have been assigned such high CVSS scores.  
@@ -77,3 +83,7 @@ The next question is, are cloud environments impacted by these vulnerabilities? 
 Moreover, the ingress controller manages incoming traffic, so the disruption of such a critical component of an infrastructure can cause availability issues leading to downtime and possible financial losses. 
 
 Cyscale customers are already protected, as the [Cyscale cloud security platform](https://cyscale.com/products/cloud-security-posture-management/) surfaces assets affected by the NGINX Ingress controller bugs as long as their vulnerability scanner of choice has been updated.
+
+Y﻿ou can also be protected from these vulnerabilities and any emerging threats, with Cyscale. Book a demo now.
+
+<div class="pb-12 pt-6 lg:pb-12 lg:pt-6 flex flex-col items-center"><a href="/request-demo/"><button class="bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind" style="padding: 0.625rem 2.5rem;">BOOK A DEMO</button></a></div>
