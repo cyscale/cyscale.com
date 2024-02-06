@@ -63,7 +63,7 @@ Steps to enable MFA in your AWS environment, according to the [documentation](ht
 
 If your company is using an external identity provider, you have to ensure that MFA is configured for access to the AWS console. 
 
-To can check if users have MFA enabled, or to gain actionable insights regarding IAM, book a free assessment now.
+To check if users have MFA enabled, or to gain actionable insights regarding IAM, book a free assessment now.
 
 <a href="https://cyscale.com/cloud-security-risk-assessment/"><img src="/img/56_blog-edited-screenshot-1.png" alt="" title="" class=" blog-image-shadow " style="width:auto;height:auto;"/></a>
 
@@ -140,6 +140,6 @@ A few examples of controls that apply to the presented requirements (and more) a
 
 B﻿ook a demo now to use these controls and many more and assess your cloud security posture in AWS.
 
-<div class="pb-12 pt-6 lg:pb-24 lg:pt-32 flex flex-col items-center"><a href="/request-demo/"><button class="bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind" style="padding: 0.625rem 2.5rem;">BOOK A DEMO</button></a></div>
+<div class="pb-12 pt-6 lg:pb-12 lg:pt-6 flex flex-col items-center"><a href="/request-demo/"><button class="bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind" style="padding: 0.625rem 2.5rem;">BOOK A DEMO</button></a></div>
 
 <!--EndFragment-->
