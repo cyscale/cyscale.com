@@ -105,10 +105,10 @@ Some examples of security controls that you can find on the Cyscale platform are
 * *Ensure ECS containers run as non-privileged*
 * *Ensure ECS containers are limited to read-only access to root filesystems*
 
-
-
 Cyscale - Your Trusted [Cloud Security Company](https://cyscale.com): 
 
 To ensure complete protection of your Amazon ECS instances, Cyscale offers a comprehensive Cloud Security Platform. Cyscale safeguards apps and data in the cloud with its Security Knowledge Graph™, making it easy to track security and [compliance across multi-cloud environments](https://cyscale.com/use-cases/cloud-compliance-and-auditing/). With Cyscale, you can confidently embrace your digital future.
 
-Learn more about [Container Security](https://cyscale.com/use-cases/container-security/) with Cyscale
+Learn more about [Container Security](https://cyscale.com/use-cases/container-security/) with Cyscale or book a demo now to start your cloud security journey!
+
+<div class="pb-12 pt-6 lg:pb-12 lg:pt-6 flex flex-col items-center"><a href="/request-demo/"><button class="bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind" style="padding: 0.625rem 2.5rem;">BOOK A DEMO</button></a></div>
