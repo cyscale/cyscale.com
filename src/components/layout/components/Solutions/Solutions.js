@@ -1,18 +1,16 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { graphql, Link, useStaticQuery } from 'gatsby';
 import {
     caretMenuWhiteStyle,
     fontNavLinkStyle,
-    hoverButtonColorStyle,
     montserratFontStyle,
     paddingLeftStyle,
-    sectionTitleColorStyle,
-    widthFitStyle
+    sectionTitleColorStyle
 } from '../../style';
 import { solutions } from '../../nav';
 import { css } from 'twin.macro';
-import RightArrow from '../../../sharedComponent/RightArrow';
 import { isAnimatedNavbarPage } from '../../../../common/utils';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 const descriptionMaxWidth = css`
     max-width: 13.25rem;
@@ -26,6 +24,21 @@ const caretSolutions = (isAnimatedNavbarPage) => css`
 `;
 
 const Solutions = ({ pathname, activeLinks, setActiveLinks, kModal, setKModal, platformModal, setPlatformModal }) => {
+    const data = useStaticQuery(graphql`
+        query SolutionsQuery {
+            k8s: file(relativePath: { eq: "k8s-thumbnail-solutions.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 261, layout: CONSTRAINED)
+                }
+            }
+            csp: file(relativePath: { eq: "csp-thumbnail-solutions.png" }) {
+                childImageSharp {
+                    gatsbyImageData(width: 261, layout: CONSTRAINED)
+                }
+            }
+        }
+    `);
+
     return (
         <div
             className='w-full grid grid-cols-12 gap-2 ml-auto shadow-2xl bg-white'
@@ -42,7 +55,8 @@ const Solutions = ({ pathname, activeLinks, setActiveLinks, kModal, setKModal, p
                 <h1 css={montserratFontStyle} className='text-2xl font-semibold mb-3'>
                     Product Tours
                 </h1>
-                <p className='mb-2'>Understand at a glance the security posture for your K8s clusters</p>
+                <p className='mb-2 text-blue text-base font-bold'>Kubernetes Security</p>
+                <p className='mb-2 text-sm'>Understand at a glance the security posture for your K8s clusters</p>
                 <div
                     onClick={() => {
                         setKModal(!kModal);
@@ -50,14 +64,20 @@ const Solutions = ({ pathname, activeLinks, setActiveLinks, kModal, setKModal, p
                     onKeyPress={() => {}}
                     tabIndex='0'
                     role='button'
-                    className='bg-blue text-white py-2 px-4 rounded cursor-pointer font-medium flex'
-                    css={[hoverButtonColorStyle, widthFitStyle]}
                 >
-                    <RightArrow fillColor={'white'} marginTop='0.2rem' />
-                    <span className='text-md ml-2'>Kubernetes Security</span>
+                    <GatsbyImage
+                        image={data.k8s.childImageSharp.gatsbyImageData}
+                        alt='Kubernetes Security Thumbnail Product Tour'
+                        className='hover:cursor-pointer'
+                        css={css`
+                            &:hover {
+                                scale: 1.08;
+                            }
+                        `}
+                    />
                 </div>
-
-                <p className='mb-2 mt-5'>
+                <p className='mb-2 mt-4 text-blue text-base font-bold'>Cloud Security Platform</p>
+                <p className='mb-2 text-sm'>
                     A single-pane-of-glass view and security for AWS, Azure, Google Cloud, Kubernetes, Okta, containers,
                     and more
                 </p>
@@ -68,11 +88,17 @@ const Solutions = ({ pathname, activeLinks, setActiveLinks, kModal, setKModal, p
                     onKeyPress={() => {}}
                     tabIndex='0'
                     role='button'
-                    className='bg-blue text-white py-2 px-4 rounded cursor-pointer font-medium flex'
-                    css={[hoverButtonColorStyle, widthFitStyle]}
                 >
-                    <RightArrow fillColor={'white'} marginTop='0.2rem' />
-                    <span className='text-md ml-2'>Cloud Security Platform</span>
+                    <GatsbyImage
+                        image={data.k8s.childImageSharp.gatsbyImageData}
+                        alt='Cloud Security Platform Thumbnail Product Tour'
+                        className='hover:cursor-pointer'
+                        css={css`
+                            &:hover {
+                                scale: 1.08;
+                            }
+                        `}
+                    />
                 </div>
             </div>
             <div className='col-span-9'>
