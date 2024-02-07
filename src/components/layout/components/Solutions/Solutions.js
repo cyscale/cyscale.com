@@ -90,7 +90,7 @@ const Solutions = ({ pathname, activeLinks, setActiveLinks, kModal, setKModal, p
                     role='button'
                 >
                     <GatsbyImage
-                        image={data.k8s.childImageSharp.gatsbyImageData}
+                        image={data.csp.childImageSharp.gatsbyImageData}
                         alt='Cloud Security Platform Thumbnail Product Tour'
                         className='hover:cursor-pointer'
                         css={css`
