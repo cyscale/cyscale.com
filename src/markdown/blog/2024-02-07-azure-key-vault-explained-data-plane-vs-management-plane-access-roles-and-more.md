@@ -89,6 +89,10 @@ Besides following the best practices described in this article, you can also ena
 * anomaly detection, and  
 * behavior analytics. 
 
-Also, don't forget about logging! Ensure to log user activity to identify suspicious behavior and obtain an audit trail to identify who accessed Key Vaults and when. You can find all of these best practices and more in the Cyscale app, where we highlight misconfigurations and give you step-by-step instructions on configuring Azure Key Vaults correctly and keeping your secrets safe. 
+Also, don't forget about logging! Ensure to log user activity to identify suspicious behavior and obtain an audit trail to identify who accessed Key Vaults and when. 
+
+You can find all of these best practices and more in the Cyscale app, where we highlight misconfigurations and give you step-by-step instructions on configuring Azure Key Vaults correctly and keeping your secrets safe. 
+
+<video width="auto" height="auto" controls="" tabindex="2"><source src="https://d3n52qn7viv754.cloudfront.net/videos/data-security-tour.mp4" type="video/mp4">Your browser does not support the video tag.</video>
 
 <!--EndFragment-->
