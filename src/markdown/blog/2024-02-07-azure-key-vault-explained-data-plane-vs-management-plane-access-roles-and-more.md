@@ -2,8 +2,7 @@
 templateKey: blog-post
 title: "Azure Key Vault Explained: Data Plane vs. Management Plane, Access Roles
   and More"
-seoTitle: "Azure Key Vault Explained: Data Plane vs. Management Plane, Access
-  Roles and More"
+seoTitle: "Azure Key Vault Explained: Access Roles and More"
 authors: Sabrina Lupșan
 permalink: azure-key-vault-explained
 categories:
@@ -11,31 +10,12 @@ categories:
   - Cloud Native Security
   - CNAPP
 date: 2024-02-07T11:00:24.062Z
-description: Azure Key Vault is a Microsoft Azure product that securely stores
-  secrets, certificates, and cryptographic keys and facilitates their usage by
-  applications and services. It also allows users to manage a key's lifecycle,
-  from key generation to destruction. Key Vault authorization is done on two
-  different planes: the management plane, which allows users to delete key
-  vaults, update access policies, and see properties, and the data plane, where
-  Key Vault objects can be added, deleted and modified. Azure Key Vault has a
-  very useful feature called **soft-delete**. This allows for Key Vaults and Key
-  Vault objects to remain recoverable for a period of 7 to 90 days (if no period
-  is specified, then the default is set to 90). So, if someone accidentally
-  deletes something, it can still be recovered within that timeframe.
-seoDescription: Azure Key Vault is a Microsoft Azure product that securely
-  stores secrets, certificates, and cryptographic keys and facilitates their
-  usage by applications and services. It also allows users to manage a key's
-  lifecycle, from key generation to destruction. Key Vault authorization is done
-  on two different planes: the management plane, which allows users to delete
-  key vaults, update access policies, and see properties, and the data plane,
-  where Key Vault objects can be added, deleted and modified. Azure Key Vault
-  has a very useful feature called **soft-delete**. This allows for Key Vaults
-  and Key Vault objects to remain recoverable for a period of 7 to 90 days (if
-  no period is specified, then the default is set to 90). So, if someone
-  accidentally deletes something, it can still be recovered within that
-  timeframe.
+description: "Azure Key Vault securely stores secrets, certificates, and
+  cryptographic keys and facilitates their usage by applications and services. "
+seoDescription: "Azure Key Vault securely stores secrets, certificates, and
+  cryptographic keys and facilitates their usage by applications and services. "
 featuredpost: true
-featuredimage: /img/1-cover.webp
+featuredimage: /img/azure-key-vault-explained.jpg
 tableOfContents: false
 tags:
   - security
