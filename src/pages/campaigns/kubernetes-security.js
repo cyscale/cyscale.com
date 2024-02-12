@@ -96,33 +96,15 @@ const KubernetesSecurity = ({ location }) => {
                                     deployed
                                 </p>
                                 <div className='max-w-lg sm:max-w-xl mx-auto lg:mx-0'>
-                                    <ServiceHighlight
-                                        cssCheckMark={css`
-                                            @media (max-width: 483px) {
-                                                margin-top: -1.5rem;
-                                            }
-                                        `}
-                                    >
+                                    <ServiceHighlight>
                                         <span className='font-bold'> Always-On Monitoring</span>: Monitor your assets
                                         24/7
                                     </ServiceHighlight>
-                                    <ServiceHighlight
-                                        cssCheckMark={css`
-                                            @media (max-width: 526px) {
-                                                margin-top: -1.5rem;
-                                            }
-                                        `}
-                                    >
+                                    <ServiceHighlight>
                                         <span className='font-bold'>Smart Alerts</span>: Contextual alerts for
                                         actionable insights
                                     </ServiceHighlight>
-                                    <ServiceHighlight
-                                        cssCheckMark={css`
-                                            @media (max-width: 639px) {
-                                                margin-top: -1.5rem;
-                                            }
-                                        `}
-                                    >
+                                    <ServiceHighlight>
                                         <span className='font-bold'>Quick Remediation</span>: Step-by-step guides to
                                         instant fixes
                                     </ServiceHighlight>

@@ -131,33 +131,15 @@ const Misconfigurations = ({ location }) => {
                                     <p className='font-hind text-base mt-8 text-center lg:text-left'>
                                         Get a demo and see Cyscale in action:
                                     </p>
-                                    <ServiceHighlight
-                                        cssCheckMark={css`
-                                            @media (max-width: 483px) {
-                                                margin-top: -1.5rem;
-                                            }
-                                        `}
-                                    >
+                                    <ServiceHighlight>
                                         <span className='font-bold'> Always-On Monitoring</span>: Monitor your assets
                                         24/7
                                     </ServiceHighlight>
-                                    <ServiceHighlight
-                                        cssCheckMark={css`
-                                            @media (max-width: 526px) {
-                                                margin-top: -1.5rem;
-                                            }
-                                        `}
-                                    >
+                                    <ServiceHighlight>
                                         <span className='font-bold'>Smart Alerts</span>: Contextual alerts for
                                         actionable insights
                                     </ServiceHighlight>
-                                    <ServiceHighlight
-                                        cssCheckMark={css`
-                                            @media (max-width: 639px) {
-                                                margin-top: -1.5rem;
-                                            }
-                                        `}
-                                    >
+                                    <ServiceHighlight>
                                         <span className='font-bold'>Quick Remediation</span>: Step-by-step guides to
                                         instant fixes
                                     </ServiceHighlight>
