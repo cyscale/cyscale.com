@@ -87,13 +87,7 @@ const IamSecurity = ({ location }) => {
                                     misconfigurations across all your cloud assets to meet strict IAM compliance
                                     directives and improve your cloud security posture. Full integration with Okta.
                                 </p>
-                                <ServiceHighlight
-                                    cssCheckMark={css`
-                                        @media (max-width: 530px) {
-                                            margin-top: -1.5rem;
-                                        }
-                                    `}
-                                >
+                                <ServiceHighlight>
                                     <span className='font-semibold'>
                                         Take control of your cloud identities and permissions.
                                     </span>
@@ -176,7 +170,7 @@ const IamSecurity = ({ location }) => {
             </div>
             <TourVideo />
             <Container>
-                <div className="pb-24 lg:pt-32 lg:pb-32" id='start'>
+                <div className='pb-24 lg:pt-32 lg:pb-32' id='start'>
                     <div className='sm:grid sm:grid-cols-12 sm:gap-12'>
                         <div className='col-span-12 lg:col-span-6'>
                             <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-2xl'>

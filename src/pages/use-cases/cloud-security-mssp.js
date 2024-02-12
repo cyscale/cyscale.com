@@ -138,31 +138,13 @@ const CloudSecurityMSSP = ({ location }) => {
                                     will help you accelerate time-to-value by enhancing your cloud security portfolio.
                                 </p>
                                 <div className='max-w-lg sm:max-w-xl mx-auto lg:mx-0'>
-                                    <ServiceHighlight
-                                        cssCheckMark={css`
-                                            @media (max-width: 462px) {
-                                                margin-top: -1.5rem;
-                                            }
-                                        `}
-                                    >
+                                    <ServiceHighlight>
                                         <span className='font-bold'>Fully automated cloud security assessments</span>
                                     </ServiceHighlight>
-                                    <ServiceHighlight
-                                        cssCheckMark={css`
-                                            @media (max-width: 410px) {
-                                                margin-top: -1.5rem;
-                                            }
-                                        `}
-                                    >
+                                    <ServiceHighlight>
                                         <span className='font-bold'>Fully managed cloud security services</span>
                                     </ServiceHighlight>
-                                    <ServiceHighlight
-                                        cssCheckMark={css`
-                                            @media (max-width: 463px) {
-                                                margin-top: -1.5rem;
-                                            }
-                                        `}
-                                    >
+                                    <ServiceHighlight>
                                         <span className='font-bold'>Drive incremental revenue with remediation</span>
                                     </ServiceHighlight>
                                 </div>
