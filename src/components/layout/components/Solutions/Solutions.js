@@ -55,28 +55,7 @@ const Solutions = ({ pathname, activeLinks, setActiveLinks, kModal, setKModal, p
                 <h1 css={montserratFontStyle} className='text-2xl font-semibold mb-3'>
                     Product Tours
                 </h1>
-                <p className='mb-2 text-blue text-base font-bold'>Kubernetes Security</p>
-                <p className='mb-2 text-sm'>Understand at a glance the security posture for your K8s clusters</p>
-                <div
-                    onClick={() => {
-                        setKModal(!kModal);
-                    }}
-                    onKeyPress={() => {}}
-                    tabIndex='0'
-                    role='button'
-                >
-                    <GatsbyImage
-                        image={data.k8s.childImageSharp.gatsbyImageData}
-                        alt='Kubernetes Security Thumbnail Product Tour'
-                        className='hover:cursor-pointer'
-                        css={css`
-                            &:hover {
-                                scale: 1.08;
-                            }
-                        `}
-                    />
-                </div>
-                <p className='mb-2 mt-4 text-blue text-base font-bold'>Cloud Security Platform</p>
+                <p className='mb-2 text-blue text-base font-bold'>Cloud Security Platform</p>
                 <p className='mb-2 text-sm'>
                     A single-pane-of-glass view and security for AWS, Azure, Google Cloud, Kubernetes, Okta, containers,
                     and more
@@ -92,6 +71,27 @@ const Solutions = ({ pathname, activeLinks, setActiveLinks, kModal, setKModal, p
                     <GatsbyImage
                         image={data.csp.childImageSharp.gatsbyImageData}
                         alt='Cloud Security Platform Thumbnail Product Tour'
+                        className='hover:cursor-pointer'
+                        css={css`
+                            &:hover {
+                                scale: 1.08;
+                            }
+                        `}
+                    />
+                </div>
+                <p className='mb-2 mt-4 text-blue text-base font-bold'>Kubernetes Security</p>
+                <p className='mb-2 text-sm'>Understand at a glance the security posture for your K8s clusters</p>
+                <div
+                    onClick={() => {
+                        setKModal(!kModal);
+                    }}
+                    onKeyPress={() => {}}
+                    tabIndex='0'
+                    role='button'
+                >
+                    <GatsbyImage
+                        image={data.k8s.childImageSharp.gatsbyImageData}
+                        alt='Kubernetes Security Thumbnail Product Tour'
                         className='hover:cursor-pointer'
                         css={css`
                             &:hover {
