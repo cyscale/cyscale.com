@@ -300,7 +300,7 @@ const NISTCompliance = ({ location }) => {
                 <div className='md:pt-12 pb-12 md:pb-24'>
                     <div className='flex h-48 flex-col items-center'>
                         <img src={cloudIcon} alt='' loading='lazy' />
-                        <h1 className='text-center px-2 mt-4 mb-2 font-montserrat font-bold font-hind text-lg lg:text-2xl'>
+                        <h1 className='text-center px-2 mt-4 mb-2 font-montserrat font-bold text-lg lg:text-2xl'>
                             NIST COMPLIANCE AND CLOUD SECURITY
                         </h1>
                         <p className='font-hind text-base sm:text-lg lg:text-xl'>

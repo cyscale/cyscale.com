@@ -715,7 +715,9 @@ module.exports = {
                 black1: '#292929 !important',
                 selago: '#e4edfc',
                 pictonBlue: '#42B1F0',
-                zircon: '#F1F7FF !important'
+                zircon: '#F1F7FF',
+                beauBlue: '#bed0e7',
+                blueZodiac: '#122345'
             },
             fontFamily: {
                 sans: [
