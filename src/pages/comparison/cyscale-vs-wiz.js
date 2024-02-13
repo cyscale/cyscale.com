@@ -60,7 +60,7 @@ const CyscaleVsWiz = ({ location }) => {
             </div>
             <div className='bg-zircon pb-16 pt-32 relative lg:pb-20'>
                 <Container>
-                    <div className='max-w-xl lg:mt-12'>
+                    <div className='max-w-2xl lg:mt-12'>
                         <p
                             className='font-montserrat font-bold'
                             css={css`
@@ -72,6 +72,10 @@ const CyscaleVsWiz = ({ location }) => {
                         <h1
                             className='font-montserrat text-5xl text-blue font-bold'
                             css={css`
+                                @media (max-width: 1024px) {
+                                    font-size: 2rem;
+                                    line-height: 3rem;
+                                }
                                 font-size: 2.625rem;
                                 line-height: 3.25rem;
                                 @media (max-width: 1280px) {
@@ -88,8 +92,8 @@ const CyscaleVsWiz = ({ location }) => {
                                 }
                             `}
                         >
-                            Cloud Security
-                            <br /> Solution Capabilities
+                            Compare Cloud Security
+                            <br className="hidden sm:block" /> Solution Capabilities
                         </h1>
                     </div>
                 </Container>
@@ -105,14 +109,17 @@ const CyscaleVsWiz = ({ location }) => {
                             css={border}
                         >
                             <p
-                                className='font-montserrat font-bold pl-4 py-6 text-blueZodiac bg-white rounded-md'
+                                className='font-montserrat font-bold pl-3 lg:pl-4 py-6 text-blueZodiac bg-white rounded-md'
                                 css={fontSizeHeadings}
                             >
                                 Cyscale
                             </p>
                         </div>
                         <div className='col-span-3 lg:col-span-4 min-h-32' css={border}>
-                            <p className='font-montserrat font-bold pl-8 py-6 text-blueZodiac' css={fontSizeHeadings}>
+                            <p
+                                className='font-montserrat font-bold pl-6 lg:pl-8 py-6 text-blueZodiac'
+                                css={fontSizeHeadings}
+                            >
                                 Wiz
                             </p>
                         </div>
@@ -121,7 +128,7 @@ const CyscaleVsWiz = ({ location }) => {
                         capability={<>CSPM (Cloud Security Posture Management)</>}
                         cyscaleStatus={
                             <>
-                                Detect critical cloud <br /> misconfigurations
+                                Detect critical cloud <br className='hidden lg:block' /> misconfigurations
                             </>
                         }
                     />
@@ -129,8 +136,9 @@ const CyscaleVsWiz = ({ location }) => {
                         capability={<>CNAPP</>}
                         cyscaleStatus={
                             <>
-                                Total visibility, risk prioritization, <br /> and remediation in one
-                                <br /> platform
+                                Total visibility, risk prioritization, <br className='hidden lg:block' /> and
+                                remediation in one
+                                <br className='hidden lg:block' /> platform
                             </>
                         }
                     />
@@ -139,8 +147,8 @@ const CyscaleVsWiz = ({ location }) => {
                         cyscaleStatus={
                             <>
                                 Identify and resolve risks across
-                                <br /> K8s & containerized
-                                <br /> environments
+                                <br className='hidden lg:block' /> K8s & containerized
+                                <br className='hidden lg:block' /> environments
                             </>
                         }
                     />
@@ -149,8 +157,9 @@ const CyscaleVsWiz = ({ location }) => {
                         cyscaleStatus={
                             <>
                                 Proactive defense and
-                                <br /> mitigation of attacks that target
-                                <br /> cloud infrastructure and data
+                                <br className='hidden lg:block' /> mitigation of attacks{' '}
+                                <br className='block sm:hidden' /> that target
+                                <br className='hidden lg:block' /> cloud infrastructure and data
                             </>
                         }
                     />
@@ -159,7 +168,7 @@ const CyscaleVsWiz = ({ location }) => {
                         cyscaleStatus={
                             <>
                                 Enforce least privilege, secure
-                                <br /> cloud access
+                                <br className='hidden lg:block' /> cloud access
                             </>
                         }
                     />
@@ -168,7 +177,7 @@ const CyscaleVsWiz = ({ location }) => {
                         cyscaleStatus={
                             <>
                                 Automate compliance and
-                                <br /> generate executive reports
+                                <br className='hidden lg:block' /> generate executive reports
                             </>
                         }
                     />
@@ -177,7 +186,7 @@ const CyscaleVsWiz = ({ location }) => {
                         cyscaleStatus={
                             <>
                                 Protect your most sensitive data
-                                <br /> in the cloud
+                                <br className='hidden lg:block' /> in the cloud
                             </>
                         }
                     />
@@ -186,7 +195,7 @@ const CyscaleVsWiz = ({ location }) => {
                         cyscaleStatus={
                             <>
                                 Do more with less. Turn your
-                                <br /> team into multi-cloud experts
+                                <br className='hidden lg:block' /> team into multi-cloud experts
                             </>
                         }
                     />
@@ -195,7 +204,7 @@ const CyscaleVsWiz = ({ location }) => {
                         cyscaleStatus={
                             <>
                                 Find and fix vulnerabilities at
-                                <br /> cloud scale
+                                <br className='hidden lg:block' /> cloud scale
                             </>
                         }
                     />
@@ -329,14 +338,17 @@ const CyscaleVsWiz = ({ location }) => {
                             css={border}
                         >
                             <p
-                                className='font-montserrat font-bold pl-4 py-6 text-blueZodiac bg-white rounded-md'
+                                className='font-montserrat font-bold pl-3 lg:pl-4 py-6 text-blueZodiac bg-white rounded-md'
                                 css={fontSizeHeadings}
                             >
                                 Cyscale
                             </p>
                         </div>
                         <div className='col-span-4 lg:col-span-4 min-h-32' css={border}>
-                            <p className='font-montserrat font-bold pl-8 py-6 text-blueZodiac' css={fontSizeHeadings}>
+                            <p
+                                className='font-montserrat font-bold pl-6 lg:pl-8 py-6 text-blueZodiac'
+                                css={fontSizeHeadings}
+                            >
                                 Wiz
                             </p>
                         </div>
@@ -372,7 +384,8 @@ const CyscaleVsWiz = ({ location }) => {
                         feature={<>Pricing Structure</>}
                         cyscaleFeatureDetail={
                             <>
-                                Cost-effective, scaled to deliver more value <br /> for under-resourced teams
+                                Cost-effective, scaled to deliver more value <br className='hidden lg:block' /> for
+                                under-resourced teams
                             </>
                         }
                         wizFeatureDetail={
