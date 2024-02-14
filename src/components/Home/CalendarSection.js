@@ -5,7 +5,6 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import classnames from 'classnames';
 import CyscaleBird from '../../assets/images/cyscale-bird-homepage.svg';
 import { graphql, useStaticQuery } from 'gatsby';
-import { Helmet } from 'react-helmet';
 import LoaderContainer from '../Loader/LoaderContainer/LoaderContainer';
 import useHSFormLoaded from '../../hooks/useHSFormLoaded';
 import RequestDemoModal from '../contact/RequestDemoModal';
@@ -37,6 +36,10 @@ const CalendarSection = () => {
     const { loadingForm } = useHSFormLoaded();
 
     useEffect(() => {
+        const script = document.createElement('script');
+        script.src = 'https://js.hsforms.net/forms/shell.js';
+        document.body.appendChild(script);
+
         setTimeout(() => {
             if (window && window.hbspt) {
                 window.hbspt.forms?.create({
@@ -59,9 +62,6 @@ const CalendarSection = () => {
                     }
                 `}
             >
-                <Helmet>
-                    <script charSet='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js'></script>
-                </Helmet>
                 <Container className='my-16'>
                     <div className='grid grid-cols-12 lg:gap-x-2 xl:gap-x-0'>
                         <div className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 max-w-xl'>
