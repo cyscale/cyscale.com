@@ -49,6 +49,10 @@ Now that we know the difference between the two planes, let's look at some of th
 
 *Authorization for the data plane can be done using Azure Key Vault access policies as well as RBAC roles, but for the management plane, only RBAC roles can be used. Access policies are now considered legacy, and we recommend using RBAC.* 
 
+And while access control policies help you define fine-grained control over objects and resources, this is not the way to go anymore. Policies are not a centralized management solution, meaning that you can’t just see and change permissions in one place; you would have to check each policy to see what the effective permissions of a user are. Moreover, removing permissions can be difficult; the user no longer needs access to keys? Instead of going over one or more policies and unchecking the boxes that give them access, you can just remove their Key Vault Crypto Officer role and you’re done! And that way you don’t risk forgetting about a policy in the process. 
+
+To transition from access policies to RBAC, assess current permissions for all users, change to an RBAC permission model, establish the correct roles for them (and follow the Least Privilege Principle), assign those roles and thoroughly test the setup. And to know which Key Vault Roles to use, keep reading this article! 
+
 ## Roles in Azure Key Vault 
 
 Managing access control correctly and using the appropriate role for the job is good practice for cloud security. Following the Least Privilege Principle and only providing the necessary permissions are the keys to minimizing attack surfaces and giving your cloud environment the best chance against attackers. 
