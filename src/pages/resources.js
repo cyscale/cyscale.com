@@ -747,7 +747,7 @@ const Resources = ({ location }) => {
                                     alt="MSSP's Logo"
                                     className='rounded-md'
                                 />
-                                <p className='font-hind font-medium text-lg mt-2'>Empowering MSSP’s</p>
+                                <p className='font-hind font-medium text-lg mt-2'>Empowering MSSPs</p>
                             </Link>
                         </div>
                     </Row>
