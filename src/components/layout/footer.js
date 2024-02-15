@@ -42,7 +42,7 @@ const Footer = ({ pageUri, pageName }) => {
             <div className='container max-w-7xl m-auto px-8 lg:px-8 text-white'>
                 <div className='py-16'>
                     <div className='grid grid-cols-12 md:gap-12'>
-                        <div className='col-span-12 lg:col-span-6'>
+                        <div className='col-span-12 lg:col-span-5'>
                             <div className='grid grid-cols-12  md:gap-12'>
                                 <div className='col-span-12 md:col-span-6 lg:col-span-12'>
                                     <Link to='/'>
@@ -119,9 +119,9 @@ const Footer = ({ pageUri, pageName }) => {
                             </div>
                         </div>
 
-                        <div className='hidden md:block col-span-12 lg:col-span-6'>
+                        <div className='hidden md:block col-span-12 lg:col-span-7'>
                             <div className='grid grid-cols-12 gap-2'>
-                                <div className='col-span-12 md:col-span-4'>
+                                <div className='col-span-12 md:col-span-6'>
                                     <h3 className='font-semibold text-sm leading-normal text-white pb-10 font-hind'>
                                         Platform
                                     </h3>
@@ -179,7 +179,7 @@ const Footer = ({ pageUri, pageName }) => {
                                         }
                                     })}
                                 </div>
-                                <div className='col-span-12 md:col-span-4'>
+                                <div className='col-span-12 md:col-span-2'>
                                     <h3 className='font-semibold text-sm leading-normal text-white pb-10 font-hind'>
                                         Company
                                     </h3>

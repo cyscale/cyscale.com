@@ -1,20 +1,28 @@
 {
     "platform": [
         {
-            "text": "Cloud Native Application <br class=\"hidden lg:block\" /> Protection (CNAPP)",
+            "text": "Cloud Native Application Protection (CNAPP)",
             "link": "/products/cnapp/"
         },
         {
-            "text": "Cloud Security Posture <br class=\"hidden lg:block\" /> Management (CSPM)",
+            "text": "Cloud Security Posture Management (CSPM)",
             "link": "/products/cloud-security-posture-management/"
         },
         {
-            "text": "Cloud Infrastructure Entitlement <br class=\"hidden lg:block\" /> Management (CIEM)",
+            "text": "Cloud Infrastructure Entitlement Management (CIEM)",
             "link": "/use-cases/iam-security/"
+        },
+        {
+            "text": "Kubernetes Security Posture Management (KSPM)",
+            "link": "/use-cases/kubernetes-security-platform/"
         },
         {
             "text": "Cloud Compliance",
             "link": "/use-cases/cloud-compliance-and-auditing/"
+        },
+        {
+            "text": "MSSP Portal",
+            "link": "/use-cases/cloud-security-mssp/"
         },
         {
             "text": "Book a Demo",
@@ -35,6 +43,14 @@
             "link": "/blog/"
         },
         {
+            "text": "Product Tours",
+            "link": "/full-platform-tour/"
+        },
+        {
+            "text": "Case Studies",
+            "link": "/resources/#case-studies"
+        },
+        {
             "text": "Documentation",
             "link": "https://docs.cyscale.com/",
             "external": true
@@ -50,15 +66,15 @@
             "external": true
         },
         {
-            "text": "Cloud Security Buyer’s <br class=\"hidden lg:block\" /> Guide",
+            "text": "Cloud Security Buyer’s Guide",
             "link": "/blog/buyers-guide-cloud-security-solutions/"
         },
         {
-            "text": "SaaS CTO Cloud <br class=\"hidden lg:block\" /> Security Handbook",
+            "text": "SaaS CTO Cloud Security Handbook",
             "link": "/blog/saas-cto-cloud-security-checklist/"
         },
         {
-            "text": "Top 10 Cloud Security <br class=\"hidden lg:block\" /> Challenges",
+            "text": "Top 10 Cloud Security Challenges",
             "link": "/blog/cloud-security-challenges/"
         }
     ],
