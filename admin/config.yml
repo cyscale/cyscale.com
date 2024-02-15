@@ -346,4 +346,23 @@ collections:
         - { label: "Slug", name: "slug", widget: "string", pattern: [ '^[a-z]+(?:-[a-z]+)*$', 'Slugs must be lowercase and can only contain letters and hyphens. No numbers, spaces, or special characters allowed.' ], hint: "Use lowercase letters and hyphens only. This slug will be used in the URL path for the author, e.g., 'john-doe' for 'cyscale.com/john-doe'." }
         - { label: "Meta Title", name: "metaTitle", widget: "string" }
         - { label: "Meta Description", name: "metaDescription" }
+    - name: 'top-bar'
+      label: 'Top Bar'
+      folder: 'src/markdown/top-bar'
+      create: true
+      slug: '{{fields.slug}}'
+      fields:
+        - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'topbar' }
+        - {
+          label: 'Enabled',
+          name: 'enabled',
+          widget: 'boolean',
+          default: false,
+          hint: 'Toggle to show or hide the top bar on the website.'
+        }
+        - { label: 'Slug', name: 'slug', widget: 'string' }
+        - label: 'Content'
+          name: 'content'
+          widget: 'markdown'
+          hint: 'Edit the message to display in the top bar. Supports markdown.'
 
