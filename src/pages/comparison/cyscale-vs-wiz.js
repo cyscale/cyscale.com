@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import Layout from '../../components/layout/CleanLayout';
-import { Container, Row, Section } from '../../components/atoms/Containers';
+import { Container, Row } from '../../components/atoms/Containers';
 import { css } from 'twin.macro';
 import cloudIcon from '../../assets/images/cloud-icon.svg';
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import corner from '../../assets/images/corner-campaigns-iam-security.svg';
-import { CapabilityCheckRow, FeatureComparisonRow } from '../../components/competitors/table';
+import { CapabilityCheckRow, FeatureComparisonRow, CTARow } from '../../components/competitors/table';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { CSSTransition } from 'react-transition-group';
 import StorylaneModal from '../../components/full-platform-tour/StorylaneModal';
@@ -58,7 +58,105 @@ const CyscaleVsWiz = ({ location }) => {
             <div className='hidden' data-category>
                 website
             </div>
-            <div className='bg-zircon pb-16 pt-32 relative lg:pb-20'>
+            <div className='bg-white'>
+                <Container>
+                    <div className='pt-24 lg:pt-32'>
+                        <div className='max-w-2xl lg:mt-12 mx-auto lg:mx-0'>
+                            <p
+                                className='font-montserrat font-bold'
+                                css={css`
+                                    color: #079bee;
+                                `}
+                            >
+                                Cyscale vs Wiz
+                            </p>
+                            <h1
+                                className='font-montserrat text-4xl text-blue font-bold'
+                                css={css`
+                                    &::after {
+                                        content: '';
+                                        display: block;
+                                        width: 35%;
+                                        height: 6px;
+                                        margin-top: 16px;
+                                        background-image: linear-gradient(to right, #0f26aa, #ff4a56);
+                                    }
+                                `}
+                            >
+                                Why customers choose Cyscale over Wiz for ease of use
+                            </h1>
+                        </div>
+                    </div>
+                </Container>
+                <Container>
+                    <div className='pt-16 lg:pt-24 pb-24 lg:pb-36'>
+                        <Row className='mt-8'>
+                            <div className='col-span-12 lg:col-span-6 py-6 px-7 rounded-md mx-auto lg:mx-0 max-w-xl bg-zircon'>
+                                <h3
+                                    className='font-montserrat font-bold text-blue'
+                                    css={css`
+                                        font-size: 1.75rem;
+                                    `}
+                                >
+                                    Key Differentiators for Cyscale
+                                </h3>
+                                <ul className='font-hind text-base mt-6 list-disc ml-5'>
+                                    <li>
+                                        <strong>Focused on smaller cloud-native companies</strong>, making it more
+                                        aligned with their specific needs and constraints.
+                                    </li>
+                                    <li className='mt-4'>
+                                        <strong>
+                                            Provides a unique approach to identity, access management and reviews, and
+                                            entitlements
+                                        </strong>
+                                        , for richer contextual analysis (CIEM).
+                                    </li>
+                                    <li className='mt-4'>
+                                        <strong>Intuitive and actionable risk assessment</strong> that can reduce noise
+                                        and direct focus on urgent issues, particularly beneficial for smaller teams.
+                                    </li>
+                                    <li className='font-bold mt-4'>
+                                        Enables less experienced security practitioners to operate as multi-cloud
+                                        experts.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className='col-span-12 lg:col-span-6 py-6 px-7 rounded-md mx-auto lg:mx-0 max-w-xl lg:max-w-xl bg-lightGrey'>
+                                <h3
+                                    className='font-montserrat font-bold'
+                                    css={css`
+                                        font-size: 1.75rem;
+                                        color: #4f5765;
+                                    `}
+                                >
+                                    Key Differentiators for Wiz
+                                </h3>
+                                <ul
+                                    className='font-hind text-base mt-6 list-disc ml-5'
+                                    css={css`
+                                        color: #4f5765;
+                                    `}
+                                >
+                                    <li>
+                                        Broad market appeal, but mainly <strong>focused on larger enterprises</strong>,
+                                        as reflected in pricing.
+                                    </li>
+                                    <li className='mt-4'>
+                                        Combines multiple security aspects (CSPM, vulnerability scanning, container
+                                        security, CIEM), but may prove <strong>overpowered for small teams</strong>.
+                                    </li>
+                                    <li className='mt-4'>
+                                        Provides a comprehensive solution that covers the entire cloud stack but{' '}
+                                        <strong>needs extensive resources to manage and operate</strong>.
+                                    </li>
+                                </ul>
+                            </div>
+                        </Row>
+                    </div>
+                </Container>
+            </div>
+            <div className='bg-zircon pb-16 pt-12 relative lg:pb-20'>
                 <Container>
                     <div className='max-w-2xl lg:mt-12'>
                         <p
@@ -70,18 +168,8 @@ const CyscaleVsWiz = ({ location }) => {
                             Cyscale vs Wiz
                         </p>
                         <h1
-                            className='font-montserrat text-5xl text-blue font-bold'
+                            className='font-montserrat text-3xl lg:text-4xl text-blue font-bold'
                             css={css`
-                                @media (max-width: 1024px) {
-                                    font-size: 2rem;
-                                    line-height: 3rem;
-                                }
-                                font-size: 2.625rem;
-                                line-height: 3.25rem;
-                                @media (max-width: 1280px) {
-                                    font-size: 2rem;
-                                    line-height: 2.5rem;
-                                }
                                 &::after {
                                     content: '';
                                     display: block;
@@ -93,7 +181,7 @@ const CyscaleVsWiz = ({ location }) => {
                             `}
                         >
                             Compare Cloud Security
-                            <br className="hidden sm:block" /> Solution Capabilities
+                            <br className='hidden sm:block' /> Solution Capabilities
                         </h1>
                     </div>
                 </Container>
@@ -208,11 +296,7 @@ const CyscaleVsWiz = ({ location }) => {
                             </>
                         }
                     />
-                    <div className='grid grid-cols-12'>
-                        <div className='hidden lg:block col-span-4 h-12'></div>
-                        <div className='hidden lg:block col-span-4 h-12 rounded-b-md bg-white'></div>
-                        <div className='hidden lg:block col-span-4 h-12'></div>
-                    </div>
+                    <CTARow />
                 </Container>
             </div>
             <div className='pt-24 pb-24 lg:pb-0 lg:pt-32 relative'>
@@ -220,7 +304,7 @@ const CyscaleVsWiz = ({ location }) => {
                     <Row>
                         <div className='col-span-12 lg:col-span-6'>
                             <div className='lg:mt-4 pt-2 md:pt-8 lg:pt-4 max-w-2xl mx-auto lg:mx-0 lg:mb-48'>
-                                <h1
+                                <h2
                                     className='text-center lg:text-left mb-8 font-montserrat font-bold text-blue'
                                     css={css`
                                         font-size: 2rem;
@@ -236,8 +320,8 @@ const CyscaleVsWiz = ({ location }) => {
                                         }
                                     `}
                                 >
-                                    Why customers choose Cyscale over Wiz for ease of use
-                                </h1>
+                                    Take a few minutes to walk through our interactive tour
+                                </h2>
                                 <p
                                     className='text-center lg:text-left text-base max-w-xl mx-auto lg:mx-0 font-hind'
                                     css={css`
@@ -419,29 +503,7 @@ const CyscaleVsWiz = ({ location }) => {
                         }
                         wizFeatureDetail={<>Steady development, focused on broad market trends</>}
                     />
-                    <div className='grid grid-cols-12'>
-                        <div className='hidden lg:block lg:col-span-4 h-12'></div>
-                        <div className='col-span-12 lg:col-span-4 rounded-b-md bg-white pt-8 pb-20'>
-                            <div className='flex flex-col items-center'>
-                                <img src={cloudIcon} alt='' loading='lazy' className='mx-auto' />
-                                <p className='text-center px-2 font-montserrat font-bold text-lg lg:text-2xl'>
-                                    See for yourself
-                                </p>
-                                <div className='mt-5 w-auto inline-block mx-auto'>
-                                    <Link
-                                        css={css`
-                                            padding: 0.625rem 2.5rem;
-                                        `}
-                                        className='mx-auto bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind uppercase'
-                                        to='/request-demo/'
-                                    >
-                                        Book A Demo
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='hidden lg:block lg: lg:col-span-4 h-12'></div>
-                    </div>
+                    <CTARow />
                 </Container>
             </div>
             <div className='bg-gradient-to-b from-zircon to-white relative z-10' id='confidence'>
@@ -555,72 +617,6 @@ const CyscaleVsWiz = ({ location }) => {
                     </div>
                 </Container>
             </div>
-            <Container>
-                <Section>
-                    <Row className='mt-8'>
-                        <div className='col-span-12 lg:col-span-6 py-6 px-7 rounded-md mx-auto lg:mx-0 max-w-xl bg-zircon'>
-                            <h3
-                                className='font-montserrat font-bold text-blue'
-                                css={css`
-                                    font-size: 1.75rem;
-                                `}
-                            >
-                                Key Differentiators for Cyscale
-                            </h3>
-                            <ul className='font-hind text-base mt-6 list-disc ml-5'>
-                                <li>
-                                    <strong>Focused on smaller cloud-native companies</strong>, making it more aligned
-                                    with their specific needs and constraints.
-                                </li>
-                                <li className='mt-4'>
-                                    <strong>
-                                        Provides a unique approach to identity, access management and reviews, and
-                                        entitlements
-                                    </strong>
-                                    , for richer contextual analysis (CIEM).
-                                </li>
-                                <li className='mt-4'>
-                                    <strong>Intuitive and actionable risk assessment</strong> that can reduce noise and
-                                    direct focus on urgent issues, particularly beneficial for smaller teams.
-                                </li>
-                                <li className='font-bold mt-4'>
-                                    Enables less experienced security practitioners to operate as multi-cloud experts.
-                                </li>
-                            </ul>
-                        </div>
-                        <div className='col-span-12 lg:col-span-6 py-6 px-7 rounded-md mx-auto lg:mx-0 max-w-xl lg:max-w-xl bg-lightGrey'>
-                            <h3
-                                className='font-montserrat font-bold'
-                                css={css`
-                                    font-size: 1.75rem;
-                                    color: #4f5765;
-                                `}
-                            >
-                                Key Differentiators for Wiz
-                            </h3>
-                            <ul
-                                className='font-hind text-base mt-6 list-disc ml-5'
-                                css={css`
-                                    color: #4f5765;
-                                `}
-                            >
-                                <li>
-                                    <strong>Broad market appeal</strong>, but mainly focused on larger enterprises, as
-                                    reflected in pricing.
-                                </li>
-                                <li className='mt-4'>
-                                    Combines multiple security aspects (CSPM, vulnerability scanning, container
-                                    security, CIEM), but may prove overpowered for small teams.
-                                </li>
-                                <li className='mt-4'>
-                                    Provides a comprehensive solution that covers the entire cloud stack but needs
-                                    extensive resources to manage and operate.
-                                </li>
-                            </ul>
-                        </div>
-                    </Row>
-                </Section>
-            </Container>
             <Container>
                 <div className='md:pt-0 pb-32 md:pb-32'>
                     <div className='flex h-48 flex-col items-center'>

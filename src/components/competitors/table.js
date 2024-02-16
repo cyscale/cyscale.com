@@ -2,6 +2,8 @@ import React from 'react';
 import { css } from 'twin.macro';
 import CyscaleCheck from '../../assets/images/check-cyscale-icon.svg';
 import GreyCheck from '../../assets/images/check-grey-icon.svg';
+import cloudIcon from '../../assets/images/cloud-icon.svg';
+import { Link } from 'gatsby';
 
 const border = css`
     border-bottom: 1px solid #bed0e7;
@@ -47,7 +49,9 @@ export const FeatureComparisonRow = ({ feature, cyscaleFeatureDetail, wizFeature
                 </div>
             </div>
             <div className='col-span-8 lg:col-span-4 min-h-32 block lg:hidden'>
-                <p className='font-montserrat font-bold text-lg pl-3 lg:pl-4 py-6 text-blueZodiac block lg:hidden'>{feature}</p>
+                <p className='font-montserrat font-bold text-lg pl-3 lg:pl-4 py-6 text-blueZodiac block lg:hidden'>
+                    {feature}
+                </p>
             </div>
             <div
                 className='col-span-8 lg:col-span-4 min-h-32 lg:bg-white flex flex-col lg:flex-row lg:items-center pb-2 lg:pb-0'
@@ -62,6 +66,32 @@ export const FeatureComparisonRow = ({ feature, cyscaleFeatureDetail, wizFeature
                     <p className='font-montserrat text-base'>{wizFeatureDetail}</p>
                 </div>
             </div>
+        </div>
+    );
+};
+
+export const CTARow = () => {
+    return (
+        <div className='grid grid-cols-12'>
+            <div className='hidden lg:block lg:col-span-4 h-12'></div>
+            <div className='col-span-12 lg:col-span-4 rounded-b-md bg-white pt-8 pb-20'>
+                <div className='flex flex-col items-center'>
+                    <img src={cloudIcon} alt='' loading='lazy' className='mx-auto' />
+                    <p className='text-center px-2 font-montserrat font-bold text-lg lg:text-2xl'>See for yourself</p>
+                    <div className='mt-5 w-auto inline-block mx-auto'>
+                        <Link
+                            css={css`
+                                padding: 0.625rem 2.5rem;
+                            `}
+                            className='mx-auto bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind uppercase'
+                            to='/request-demo/'
+                        >
+                            Book A Demo
+                        </Link>
+                    </div>
+                </div>
+            </div>
+            <div className='hidden lg:block lg: lg:col-span-4 h-12'></div>
         </div>
     );
 };
