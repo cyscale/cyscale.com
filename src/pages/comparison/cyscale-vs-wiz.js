@@ -197,7 +197,7 @@ const CyscaleVsWiz = ({ location }) => {
                             css={border}
                         >
                             <p
-                                className='font-montserrat font-bold pl-3 lg:pl-4 py-6 text-blueZodiac bg-white rounded-md'
+                                className='font-montserrat font-bold pl-3 lg:pl-4 py-6 text-blueZodiac bg-white rounded-md lg:text-center lg:mr-6'
                                 css={fontSizeHeadings}
                             >
                                 Cyscale
@@ -205,7 +205,7 @@ const CyscaleVsWiz = ({ location }) => {
                         </div>
                         <div className='col-span-3 lg:col-span-4 min-h-32' css={border}>
                             <p
-                                className='font-montserrat font-bold pl-6 lg:pl-8 py-6 text-blueZodiac'
+                                className='font-montserrat font-bold pl-6 lg:pl-8 py-6 text-blueZodiac lg:text-center lg:mr-8'
                                 css={fontSizeHeadings}
                             >
                                 Wiz
@@ -225,8 +225,7 @@ const CyscaleVsWiz = ({ location }) => {
                         cyscaleStatus={
                             <>
                                 Total visibility, risk prioritization, <br className='hidden lg:block' /> and
-                                remediation in one
-                                <br className='hidden lg:block' /> platform
+                                remediation in one platform
                             </>
                         }
                     />
@@ -234,8 +233,8 @@ const CyscaleVsWiz = ({ location }) => {
                         capability={<>Kubernetes & Container security</>}
                         cyscaleStatus={
                             <>
-                                Identify and resolve risks across
-                                <br className='hidden lg:block' /> K8s & containerized
+                                Identify and resolve risks
+                                <br className='hidden lg:block' /> across K8s & containerized
                                 <br className='hidden lg:block' /> environments
                             </>
                         }
@@ -246,8 +245,7 @@ const CyscaleVsWiz = ({ location }) => {
                             <>
                                 Proactive defense and
                                 <br className='hidden lg:block' /> mitigation of attacks{' '}
-                                <br className='block sm:hidden' /> that target
-                                <br className='hidden lg:block' /> cloud infrastructure and data
+                                <br className='block sm:hidden' /> that target cloud infrastructure and data
                             </>
                         }
                     />
@@ -255,8 +253,8 @@ const CyscaleVsWiz = ({ location }) => {
                         capability={<>CIEM</>}
                         cyscaleStatus={
                             <>
-                                Enforce least privilege, secure
-                                <br className='hidden lg:block' /> cloud access
+                                Enforce least privilege,
+                                <br className='hidden lg:block' /> secure cloud access
                             </>
                         }
                     />
@@ -271,12 +269,7 @@ const CyscaleVsWiz = ({ location }) => {
                     />
                     <CapabilityCheckRow
                         capability={<>DSPM (Data Security Posture Management)</>}
-                        cyscaleStatus={
-                            <>
-                                Protect your most sensitive data
-                                <br className='hidden lg:block' /> in the cloud
-                            </>
-                        }
+                        cyscaleStatus={<>Protect your most sensitive data in the cloud</>}
                     />
                     <CapabilityCheckRow
                         capability={<>AI automation & assistance</>}
