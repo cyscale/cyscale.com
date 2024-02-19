@@ -23,16 +23,27 @@ export const CapabilityCheckRow = ({ capability, cyscaleStatus }) => {
                 </p>
             </div>
             <div
-                className='col-span-9 lg:col-span-4 min-h-32 lg:bg-white flex flex-col lg:flex-row lg:items-center pb-2 lg:pb-0'
+                className='col-span-9 lg:col-span-4 min-h-32 lg:bg-white flex flex-col lg:flex-row lg:items-center justify-center pb-2 lg:pb-0'
                 css={border}
             >
-                <div className='flex pl-3 pr-3 lg:pr-4 lg:pl-4 py-6 bg-white rounded-md w-full'>
-                    <img src={CyscaleCheck} alt='' />
-                    <p className='font-montserrat pl-4'>{cyscaleStatus}</p>
+                <div className='flex justify-center w-full'>
+                    <div
+                        className='flex items-center pl-3 pr-3 lg:pr-4 lg:pl-4 py-6 bg-white rounded-md'
+                        css={css`
+                            @media (min-width: 1024px) {
+                                width: 21rem;
+                            }
+                            width: 100%;
+                        `}
+                    >
+                        <img src={CyscaleCheck} alt='' />
+                        <p className='font-montserrat pl-4'>{cyscaleStatus}</p>
+                    </div>
                 </div>
             </div>
-            <div className='col-span-3 lg:col-span-4 min-h-32 flex items-center' css={border}>
-                <div className='pl-6 lg:pl-8 py-6 w-full'>
+
+            <div className='col-span-3 lg:col-span-4 min-h-32 flex items-center lg:justify-center' css={border}>
+                <div className='pl-6 lg:pl-0 py-6 w-full lg:flex lg:justify-center'>
                     <img src={GreyCheck} alt='' className='mb-2 lg:mb-0' />
                 </div>
             </div>
