@@ -47,7 +47,11 @@ Cloud security solutions such as [Cyscale](https://cyscale.com/products/cloud-se
 
  Cyscale’s AI-powered Security Assistant is a move towards making cloud security as intuitive as asking a question.  
 
-Our platform can [automatically respond to queries and surface uncovered issues](https://cyscale.com/blog/introducing-ai-powered-security-assistant/) using the specific customers’ cloud footprint combined with LLMs of vulnerabilities and exploits.     
+Our platform can [automatically respond to queries and surface uncovered issues](https://cyscale.com/blog/introducing-ai-powered-security-assistant/) using the specific customers’ cloud footprint combined with LLMs of vulnerabilities and exploits.
+
+<a href="https://cyscale.com/cloud-security-risk-assessment/">
+    <img src="/img/assessment-cta.png" alt="" title="" id='cta-image'/>
+</a>
 
 # 2. Phishing and Social Engineering 
 
