@@ -139,6 +139,9 @@ const CloudSecurityMSSP = ({ location }) => {
                                 </p>
                                 <div className='max-w-lg sm:max-w-xl mx-auto lg:mx-0'>
                                     <ServiceHighlight>
+                                        <span className='font-bold'>Turnkey solution designed for MSSPs</span>
+                                    </ServiceHighlight>
+                                    <ServiceHighlight>
                                         <span className='font-bold'>Fully automated cloud security assessments</span>
                                     </ServiceHighlight>
                                     <ServiceHighlight>
