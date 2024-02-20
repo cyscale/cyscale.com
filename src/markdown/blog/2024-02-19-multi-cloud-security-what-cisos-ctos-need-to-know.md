@@ -60,7 +60,7 @@ But companies with legacy infrastructure, or those in highly regulated industrie
     <div class='col-span-12 lg:col-span-4 flex justify-center items-center'>
         <a class='mx-auto bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind' href='/request-demo/'>
             <span style='padding: 0.625rem 2.5rem' class='text-white block'>
-                Start now
+Show me
             </span>
         </a>
     </div>
