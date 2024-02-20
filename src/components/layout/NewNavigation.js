@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import tw, { css } from 'twin.macro';
 import { Link } from 'gatsby';
 import logo from '../../assets/images/logo.svg';
@@ -13,6 +13,7 @@ import Company from './components/Company/Company';
 import { logoStyle } from './style';
 import useScrollTrigger from '../scrollTrigger';
 import { isAnimatedNavbarPage, isPlaygroundBlogPage } from '../../common/utils';
+import TopBarContext from '../../context/TopBarContext';
 
 const MegaMenu = styled.div`
     left: ${({ animatedNavbarPages, left }) => (animatedNavbarPages ? left : '')};
@@ -124,6 +125,7 @@ const NewNavigation = ({
     });
     const hideMegaMenu = useScrollTrigger();
     const [hoveredNavItem, setHoveredNavItem] = useState(null);
+    const { topBar, topBarHeight } = useContext(TopBarContext);
     const isNavItemHovered = (navItemName) => hoveredNavItem === navItemName;
 
     return (
@@ -136,6 +138,7 @@ const NewNavigation = ({
                     tw`container`,
                 isAnimatedNavbarPage(pathname) &&
                     css`
+                        margin-top: ${topBar ? topBarHeight / 16 + 'rem' : '0rem'};
                         padding-left: 4.5rem;
                     `
             ]}

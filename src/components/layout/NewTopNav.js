@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import useScrollTrigger from '../scrollTrigger';
 import { useAppLink } from '../../common/links';
 import { css } from 'twin.macro';
@@ -9,6 +9,7 @@ import MobileNavigation from './components/MobileNavigation';
 import CustomSearch from '../Search/CustomSearch';
 import { useClickOutsideSearch } from '../../hooks/useClickOutsideSearch';
 import PlatformTours from '../platform-tours/PlatformTours';
+import TopBarContext from '../../context/TopBarContext';
 
 const paddingNav = css`
     padding-left: 2rem;
@@ -23,6 +24,7 @@ const NewTopNav = ({ pageName, showLogo = true, location, animatedNavbar }) => {
     const root = useRef();
     const searchRef = useRef(null);
     const trigger = useScrollTrigger();
+    const { topBar, topBarHeight } = useContext(TopBarContext);
     const [showBurgerButton, setShowBurgerButton] = useState(pageName !== 'HomePage');
     const [showMenu, setShowMenu] = useState(false);
     const [showBanner, setShowBanner] = useState(true);
@@ -83,6 +85,9 @@ const NewTopNav = ({ pageName, showLogo = true, location, animatedNavbar }) => {
                 ref={root}
                 style={{ maxWidth: '100vw' }}
                 className={`fixed top-0 left-0 block w-full mx-auto z-50 transition duration-300 transform ${rootClasses}`}
+                css={css`
+                    margin-top: ${topBar && isAtTop ? topBarHeight / 16 + 'rem' : '0rem'};
+                `}
             >
                 <div tw='container max-w-7xl mx-auto pt-2.5 hidden xl:block' css={paddingNav}>
                     <NewNavigation
@@ -130,12 +135,13 @@ const NewTopNav = ({ pageName, showLogo = true, location, animatedNavbar }) => {
                     className={`fixed left-0 block w-full mx-auto bg-white shadow-2xl transform transition-all`}
                     css={[
                         css`
+                            margin-top: ${topBar && isAtTop ? '2.2rem' : '0rem'};
                             transition-duration: 300ms;
                             z-index: 40;
                         `,
                         animatedNavbar &&
                             css`
-                                top: 7.563rem;
+                                top: 11.563rem;
                                 @media (max-width: 1280px) {
                                     top: ${isAtTop ? '7rem' : !trigger ? '5rem' : 0};
                                 }
