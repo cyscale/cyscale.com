@@ -81,4 +81,24 @@ With a lack of cloud experience and cyber skills on the market, cloud native org
 
 [Cyscale’s CNAPP](https://cyscale.com/full-platform-tour/) is the only tool of its kind that has been designed to be deployed and used by smaller teams, helping the CTO or CISO and your security team gain the confidence to acquire visibility, prioritize assets, ace audits for compliance benchmarks, and perform other operations that actually serve the business, rather than endless firefighting across the multi-cloud estate.  
 
-<a href="https://cyscale.com/full-platform-tour/"><img src="/img/tour-cyscale-cnapp.png" alt="Take a tour of Cyscale's CNAPP" title="" class="" style="width:auto;height:auto;"/></a>
+<!-- Start of Text Image Widget -->
+<div class='mt-16 rounded-tl-2xl rounded-b-2xl grid grid-cols-12 gap-4 bg-zircon py-8 px-4 lg:py-4' style='borderTopRightRadius: 3rem'>
+    <div class='col-span-12 lg:col-span-2'>
+        <div class='flex justify-center'>
+            <img src='/img/cloud-icon-widget.svg' alt='' id='img-text-button' />
+        </div>
+    </div>
+    <div class='col-span-12 lg:col-span-6 flex items-center justify-center'>
+         <p class='font-montserrat font-bold' id="paragraph-text-button">
+            Take a Tour of<span id="font-gradient">Cyscale's CNAPP</span>Today 
+        </p>
+    </div>
+    <div class='col-span-12 lg:col-span-4 flex justify-center items-center'>
+        <a class='mx-auto bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind' href='/request-demo/'>
+            <span style='padding: 0.625rem 2.5rem' class='text-white block'>
+                Start now
+            </span>
+        </a>
+    </div>
+</div>
+<!-- End of Text Image Widget -->
