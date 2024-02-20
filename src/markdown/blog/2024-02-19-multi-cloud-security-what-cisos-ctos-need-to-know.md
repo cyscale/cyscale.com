@@ -45,7 +45,7 @@ But companies with legacy infrastructure, or those in highly regulated industrie
 * **Reduced visibility:** This is a big one. There is no security without [visibility](https://cyscale.com/blog/provide-visibility-in-cloud-okta-integration/) in the cloud, after all, you can’t secure what you can’t see. And something that’s less obvious but even more important in the cloud is context. When you can’t see all your assets, you can’t understand the relations between them and how a misconfiguration on one asset affects another. This also goes for users (both human and non-human identities) and their permissions. Without comprehensive visibility and inventory, you cannot identify vulnerabilities and gaps in your security.  
 * **The need for cloud-specific skills:** Being an expert in Azure does not directly translate to AWS and vice-versa. Same with any other cloud. All vendors have different assets, each with their own technologies, settings, security best practices, even naming conventions.  
 
-<a href="https://cyscale.com/full-platform-tour/"><img src="/img/blog-cta-multicloud.png" alt="See how Cyscale protects your multi-cloud estate" title="" class=" blog-image-shadow " style="width:auto;height:auto;"/></a>
+<a href="https://cyscale.com/full-platform-tour/"><img src="/img/blog-cta-multicloud.png" alt="See how Cyscale protects your multi-cloud estate" title="" class="" style="width:auto;height:auto;"/></a>
 
 ## Making multi-cloud work and keeping your estate protected 
 
@@ -79,6 +79,6 @@ The complexities introduced by added infrastructure layers, each with their own 
 
 With a lack of cloud experience and cyber skills on the market, cloud native organizations should really be looking at CNAPP (Cloud-Native Application Protection Platform)-type solutions to enhance and augment existing human resources and skills with the aim of achieving a robust cloud security posture in a multi-cloud setup. 
 
-[Cyscale’s CNAPP ](https://cyscale.com/products/cnapp/)is the only tool of its kind that has been designed to be deployed and used by smaller teams, helping the CTO or CISO and your security team gain the confidence to acquire visibility, prioritize assets, ace audits for compliance benchmarks, and perform other operations that actually serve the business, rather than endless firefighting across a multi-cloud estate.
+[Cyscale’s CNAPP](https://cyscale.com/full-platform-tour/) is the only tool of its kind that has been designed to be deployed and used by smaller teams, helping the CTO or CISO and your security team gain the confidence to acquire visibility, prioritize assets, ace audits for compliance benchmarks, and perform other operations that actually serve the business, rather than endless firefighting across the multi-cloud estate.  
 
-<a href="https://cyscale.com/full-platform-tour/"><img src="/img/tour-cyscale-cnapp.png" alt="Take a tour of the Cyscale CNAPP" title="" class=" blog-image-shadow " style="width:auto;height:auto;"/></a>
+<a href="https://cyscale.com/full-platform-tour/"><img src="/img/tour-cyscale-cnapp.png" alt="Take a tour of Cyscale's CNAPP" title="" class="" style="width:auto;height:auto;"/></a>
