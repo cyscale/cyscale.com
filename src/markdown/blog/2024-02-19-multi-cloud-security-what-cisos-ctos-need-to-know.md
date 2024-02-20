@@ -43,26 +43,42 @@ But companies with legacy infrastructure, or those in highly regulated industrie
 
 * **Added complexity:** An infrastructure that spans across cloud vendors is inherently more complex and more challenging to manage and secure. This is a daunting task for any CTO and engineering team. Each cloud provider has its own naming conventions, service structures, deployment models, API endpoints, and more, meaning both engineering and security professionals often forget best practices for each specific service, which can and will introduce security gaps in the company. 
 * **Reduced visibility:** This is a big one. There is no security without [visibility](https://cyscale.com/blog/provide-visibility-in-cloud-okta-integration/) in the cloud, after all, you can’t secure what you can’t see. And something that’s less obvious but even more important in the cloud is context. When you can’t see all your assets, you can’t understand the relations between them and how a misconfiguration on one asset affects another. This also goes for users (both human and non-human identities) and their permissions. Without comprehensive visibility and inventory, you cannot identify vulnerabilities and gaps in your security.  
-* **The need for cloud-specific skills:** Being an expert in Azure does not directly translate to AWS and vice-versa. Same with any other cloud. All vendors have different assets, each with their own technologies, settings, security best practices, even naming conventions
+* **The need for cloud-specific skills:** Being an expert in Azure does not directly translate to AWS and vice-versa. Same with any other cloud. All vendors have different assets, each with their own technologies, settings, security best practices, even naming conventions.  
 
-<!-- Start of Text Image Widget -->
-<div class='mt-16 rounded-tl-2xl rounded-b-2xl grid grid-cols-12 gap-4 bg-zircon py-8 px-4 lg:py-4' style='borderTopRightRadius: 3rem'>
-    <div class='col-span-12 lg:col-span-2'>
-        <div class='flex justify-center'>
-            <img src='/img/cloud-icon-widget.svg' alt='' id='img-text-button' />
-        </div>
-    </div>
-    <div class='col-span-12 lg:col-span-6 flex items-center justify-center'>
-         <p class='font-montserrat font-bold' id="paragraph-text-button">
-            Take a Tour of<span id="font-gradient">Cyscale's CNAPP</span>Today
-        </p>
-    </div>
-    <div class='col-span-12 lg:col-span-4 flex justify-center items-center'>
-        <a class='mx-auto bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind' href='/full-platform-tour/'>
-            <span style='padding: 0.625rem 2.5rem' class='text-white block'>
-                Start now
-            </span>
-        </a>
-    </div>
-</div>
-<!-- End of Text Image Widget -->
+<a href="https://cyscale.com/full-platform-tour/"><img src="/img/blog-cta-multicloud.png" alt="See how Cyscale protects your multi-cloud estate" title="" class="" style="width:auto;height:auto;"/></a>
+
+## Making multi-cloud work and keeping your estate protected 
+
+So, how do you leverage the advantages of multi-cloud and keep the downsides of having to manage and secure a multi-cloud environment under control? Let’s look at some best practices along with actionable insights to enhance data security in multi-cloud deployments. 
+
+### 1. Achieve visibility of your multi-cloud estate 
+
+Continuous visibility is the first step to securing a multi-cloud infrastructure. To achieve this, centralize an inventory of your clouds in one single place using a [CNAPP](https://cyscale.com/products/cnapp/) (Cloud-Native Application Protection Platform). Having one or two dashboards that showcase your entire inventory across cloud service providers is more manageable and gives you an integrated picture versus switching tabs and constantly having to look up resources in each specific cloud console or portal.  
+
+### 2. Continuous monitoring to keep up with your clouds 
+
+Monitoring goes hand in hand with visibility. By ensuring continuous logging and monitoring, your security team can identify suspicious behavior in real-time, and be aware of what’s happening in the cloud. Sudden spike in resource usage or anomalous behavior? Time to investigate. Centralize logs to have everything in one place and obtain a comprehensive view of the cloud. 
+
+### 3. Achieve and maintain compliance with international frameworks 
+
+International standards and laws like ISO 27001, SOC 2, GDPR, and HIPAA enforce security requirements that are meant to prevent data breaches within companies. By becoming compliant with such frameworks, you're not only strengthening your organization's cloud security posture but also showing customers that you're making efforts toward securing their data. In fact, even as the cloud skills gap has increased, so has the expectation of provable security. ISO saw an increase of 51% in ISO 27001 certifications between 2020 and 2022, as more buyers demand compliance from suppliers. Compliance applies across all security providers, and multi-cloud companies are not exempted. You should use a CNAPP to track your efforts and ace your audits by showing comprehensive reports that demonstrate your ongoing efforts. 
+
+### 4. Prioritize cloud resources to optimize security efficiency  
+
+Segment your assets based on their criticality to business operations and data sensitivity. Identify the core components that, if compromised, could have severe consequences for your organization. By categorizing assets, you establish a hierarchy that guides the allocation of security resources and efforts, and in a world where both cloud and cyber skills are in short supply, optimizing your efforts is key. A CNAPP tool can help perform this prioritization based on the severity of existing vulnerabilities and misconfigurations, as well as how many other assets a cloud resource impacts or is related to. This can make the difference between a quick fix in a typical workday or a data breach that can cost a company a fortune in remediation, fines, or reputational damage.  
+
+### 5. Use automation to make security teams more efficient 
+
+Depending on the skills and human resources available to you, some CTOs and CISOs might be able to easily accomplish the things we’ve discussed in a simple cloud environment, while those with reduced resources might struggle already. But there’s no denying that when you introduce another cloud provider (or two) into the discussion, a manageable manual workload quickly turns into an overwhelming mountain. For example, access reviews in a multi-cloud infrastructure are nearly impossible to do traditionally; you would have to go back and forth between identity providers and clouds and assess each permission at a time. Not only is this a very tedious job that creates lots of room for mistakes, it’s the soul-destroying kind of task that stops security teams doing work they find enriching and putting them on the lookout for other opportunities.  
+
+Modern cloud security solutions such as a CNAPP however, aggregate all this information in one place, making your people more efficient, and suddenly applying the Least Privilege Principle no longer seems daunting.  
+
+## Overcoming the complexity of multi-cloud  
+
+The complexities introduced by added infrastructure layers, each with their own approaches, and the need for cross-cloud expertise demand a proactive approach to security. While multi-cloud environments promise significant opportunities, it is important to address the associated risks, especially those related to complexity, reduced visibility, and the evolving skill set requirements. In this case, prevention really is better than cure, but as with all security, some ‘cure’ is inevitable.  
+
+With a lack of cloud experience and cyber skills on the market, cloud native organizations should really be looking at CNAPP (Cloud-Native Application Protection Platform)-type solutions to enhance and augment existing human resources and skills with the aim of achieving a robust cloud security posture in a multi-cloud setup. 
+
+[Cyscale’s CNAPP](https://cyscale.com/full-platform-tour/) is the only tool of its kind that has been designed to be deployed and used by smaller teams, helping the CTO or CISO and your security team gain the confidence to acquire visibility, prioritize assets, ace audits for compliance benchmarks, and perform other operations that actually serve the business, rather than endless firefighting across the multi-cloud estate.  
+
+<a href="https://cyscale.com/full-platform-tour/"><img src="/img/tour-cyscale-cnapp.png" alt="Take a tour of Cyscale's CNAPP" title="" class="" style="width:auto;height:auto;"/></a>
