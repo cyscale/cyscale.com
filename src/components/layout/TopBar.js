@@ -57,13 +57,17 @@ const TopBar = () => {
             css={css`
                 & a {
                     text-decoration: underline;
+                    font-weight: 500;
+                    font-size: 1rem;
                 }
                 & p {
                     text-align: center;
+                    font-weight: 500;
+                    font-size: 1rem;
                 }
             `}
         >
-            <div className='container max-w-7xl px-8 py-2 relative min-h-9 text-white flex font-montserrat items-center justify-center'>
+            <div className='container max-w-7xl px-8 py-2 relative min-h-9 text-white flex font-hind items-center justify-center'>
                 <ReactMarkdown
                     rehypePlugins={[rehypeRaw]}
                     components={{
