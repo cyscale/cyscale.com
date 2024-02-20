@@ -8,14 +8,14 @@ categories:
   - Cloud Security
   - Cloud Native Security
 date: 2024-02-19T11:40:03.512Z
-description: "While multi-cloud companies gain several advantages, careful not
-  to compromise on security and visibility, giving the CISO or CTO sleepless
+description: "While multi-cloud gives several advantages, be careful not to
+  compromise on security and visibility, giving the CISO or CTO sleepless
   nights. "
-seoDescription: "While multi-cloud companies gain several advantages, careful
-  not to compromise on security and visibility, giving the CISO or CTO sleepless
-  nights. "
+seoDescription: While multi-cloud gives several advantages, be careful not to
+  compromise on security and visibility, giving the CISO or CTO sleepless
+  nights.
 featuredpost: true
-featuredimage: /img/40_blog-cover-cnapp-multi-cloud-tools.png
+featuredimage: /img/multicloud-security-ciso-cto.png
 tableOfContents: true
 ---
 ## Why go multi-cloud? It’s not always by choice 
@@ -39,15 +39,11 @@ But companies with legacy infrastructure, or those in highly regulated industrie
 * **Redundancy and high availability:** Distributing data across multiple cloud platforms ensures high availability and redundancy. If one provider experiences downtime or disruptions, data remains accessible from alternative sources, minimizing the risk of service interruptions. 
 * **Geo-location options:** By distributing data across vendors, you can be closer to end-users from all around the world, reducing latency and improving overall user experience. Moreover, for data sovereignty reasons, you can also ensure compliance with various standards that may require that data stays inside a particular country or geographical location. This is a particularly important consideration in regulated sectors but can just as easily apply to any company that deals with customer data – which is pretty much every company. The EU’s GDPR privacy regulation is a prime compliance example, and the US is catching up now with state-specific considerations, like California’s CCPA.  
 
- 
-
 ## Risks and downsides of multi-cloud 
 
 * **Added complexity:** An infrastructure that spans across cloud vendors is inherently more complex and more challenging to manage and secure. This is a daunting task for any CTO and engineering team. Each cloud provider has its own naming conventions, service structures, deployment models, API endpoints, and more, meaning both engineering and security professionals often forget best practices for each specific service, which can and will introduce security gaps in the company. 
 * **Reduced visibility:** This is a big one. There is no security without [visibility](https://cyscale.com/blog/provide-visibility-in-cloud-okta-integration/) in the cloud, after all, you can’t secure what you can’t see. And something that’s less obvious but even more important in the cloud is context. When you can’t see all your assets, you can’t understand the relations between them and how a misconfiguration on one asset affects another. This also goes for users (both human and non-human identities) and their permissions. Without comprehensive visibility and inventory, you cannot identify vulnerabilities and gaps in your security.  
 * **The need for cloud-specific skills:** Being an expert in Azure does not directly translate to AWS and vice-versa. Same with any other cloud. All vendors have different assets, each with their own technologies, settings, security best practices, even naming conventions.  
-
- 
 
 ## Making multi-cloud work and keeping your estate protected 
 
@@ -82,3 +78,5 @@ The complexities introduced by added infrastructure layers, each with their own 
 With a lack of cloud experience and cyber skills on the market, cloud native organizations should really be looking at CNAPP (Cloud-Native Application Protection Platform)-type solutions to enhance and augment existing human resources and skills with the aim of achieving a robust cloud security posture in a multi-cloud setup. 
 
 [Cyscale’s CNAPP ](https://cyscale.com/products/cnapp/)is the only tool of its kind that has been designed to be deployed and used by smaller teams, helping the CTO or CISO and your security team gain the confidence to acquire visibility, prioritize assets, ace audits for compliance benchmarks, and perform other operations that actually serve the business, rather than endless firefighting across a multi-cloud estate.
+
+<a href="https://cyscale.com/full-platform-tour/"><img src="/img/tour-cyscale-cnapp.png" alt="Take a tour of the Cyscale CNAPP" title="" class=" blog-image-shadow " style="width:auto;height:auto;"/></a>
