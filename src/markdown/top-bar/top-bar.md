@@ -1,6 +1,6 @@
 ---
 templateKey: topbar
-enabled: false
+enabled: true
 slug: top-bar
-content: Content [sample](https://cyscale.com/)
+content: "Cyscale releases [human and non-human identity (NHI) security](https://cyscale.com/products/ciem/) for multi-cloud infrastructure."
 ---
