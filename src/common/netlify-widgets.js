@@ -549,4 +549,90 @@ CMS.registerEditorComponent({
     }
 });
 
+CMS.registerEditorComponent({
+    id: 'textButton',
+    label: 'Text Button Widget',
+    fields: [
+        {
+            label: 'Heading Text',
+            name: 'headingText',
+            widget: 'string',
+            default: 'Get Your Free Cloud Security Assessment',
+            hint: 'To apply a font gradient to certain words, wrap those words in <span id="font-gradient"></span> and paste them into the input. Doing so will prevent breaking the CMS.'
+        },
+        {
+            label: 'Button Text',
+            name: 'buttonText',
+            widget: 'string',
+            default: 'Start now'
+        },
+        {
+            label: 'Link (href)',
+            name: 'href',
+            widget: 'string',
+            default: '/request-demo/'
+        }
+    ],
+    pattern: /^<!-- Start of Text Image Widget -->([\s\S]*?)<!-- End of Text Image Widget -->$/,
+    fromBlock: function (match) {
+        const headingTextMatch = match[1].match(/class='font-montserrat[^>]*>([^<]+)<\/p>/);
+        const buttonTextMatch = match[1].match(/class='text-white block'[^>]*>([^<]+)<\/span>/);
+        const hrefMatch = match[1].match(/href='([^']+)'/);
+
+        return {
+            headingText: headingTextMatch ? headingTextMatch[1] : '',
+            buttonText: buttonTextMatch ? buttonTextMatch[1] : '',
+            href: hrefMatch ? hrefMatch[1] : ''
+        };
+    },
+    toBlock: function ({ headingText, buttonText, href }) {
+        return `<!-- Start of Text Image Widget -->
+<div class='mt-16 rounded-tl-2xl rounded-b-2xl grid grid-cols-12 gap-4 bg-zircon py-8 px-4 lg:py-4' style='borderTopRightRadius: 3rem'>
+    <div class='col-span-12 lg:col-span-2'>
+        <div class='flex justify-center'>
+            <img src='/img/cloud-icon-widget.svg' alt='' id='img-text-button' />
+        </div>
+    </div>
+    <div class='col-span-12 lg:col-span-6 flex items-center justify-center'>
+         <p class='font-montserrat font-bold' id="paragraph-text-button">
+            ${headingText || 'Get Your Free Cloud Security Assessment'}
+        </p>
+    </div>
+    <div class='col-span-12 lg:col-span-4 flex justify-center items-center'>
+        <a class='mx-auto bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind' href='${
+            href || '/request-demo/'
+        }'>
+            <span style='padding: 0.625rem 2.5rem' class='text-white block'>
+                ${buttonText || 'Start now'}
+            </span>
+        </a>
+    </div>
+</div>
+<!-- End of Text Image Widget -->`;
+    },
+    toPreview: function ({ headingText, buttonText, href }) {
+        return `
+<div class='mt-16 rounded-tl-2xl rounded-b-2xl grid grid-cols-12 gap-4 bg-zircon py-8 px-4 lg:py-4' style='borderTopRightRadius: 3rem'>
+    <div class='col-span-12 lg:col-span-2'>
+        <div class='flex justify-center'>
+            <img src='/img/cloud-icon-widget.svg' alt='' id='img-text-button' />
+        </div>
+    </div>
+    <div class='col-span-12 lg:col-span-6 flex items-center justify-center'>
+         <p class='font-montserrat font-bold' id="paragraph-text-button">
+            ${headingText}
+        </p>
+    </div>
+    <div class='col-span-12 lg:col-span-4 flex justify-center items-center'>
+        <a class='mx-auto bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind' href='${href}'>
+            <span style='padding: 0.625rem 2.5rem' class='text-white block'>
+                ${buttonText}
+            </span>
+        </a>
+    </div>
+</div>
+        `.trim();
+    }
+});
+
 export default CMS;
