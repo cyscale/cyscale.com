@@ -58,7 +58,7 @@ But companies with legacy infrastructure, or those in highly regulated industrie
         </p>
     </div>
     <div class='col-span-12 lg:col-span-4 flex justify-center items-center'>
-        <a class='mx-auto bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind' href='/request-demo/'>
+        <a class='mx-auto bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind' href='/full-platform-tour/'>
             <span style='padding: 0.625rem 2.5rem' class='text-white block'>
 Show me
             </span>
@@ -114,7 +114,7 @@ With a lack of cloud experience and cyber skills on the market, cloud native org
         </p>
     </div>
     <div class='col-span-12 lg:col-span-4 flex justify-center items-center'>
-        <a class='mx-auto bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind' href='/request-demo/'>
+        <a class='mx-auto bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind' href='/full-platform-tour/'>
             <span style='padding: 0.625rem 2.5rem' class='text-white block'>
                 Start now
             </span>
