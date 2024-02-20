@@ -45,7 +45,27 @@ But companies with legacy infrastructure, or those in highly regulated industrie
 * **Reduced visibility:** This is a big one. There is no security without [visibility](https://cyscale.com/blog/provide-visibility-in-cloud-okta-integration/) in the cloud, after all, you can’t secure what you can’t see. And something that’s less obvious but even more important in the cloud is context. When you can’t see all your assets, you can’t understand the relations between them and how a misconfiguration on one asset affects another. This also goes for users (both human and non-human identities) and their permissions. Without comprehensive visibility and inventory, you cannot identify vulnerabilities and gaps in your security.  
 * **The need for cloud-specific skills:** Being an expert in Azure does not directly translate to AWS and vice-versa. Same with any other cloud. All vendors have different assets, each with their own technologies, settings, security best practices, even naming conventions.  
 
-<a href="https://cyscale.com/full-platform-tour/"><img src="/img/blog-cta-multicloud.png" alt="See how Cyscale protects your multi-cloud estate" title="" class="" style="width:auto;height:auto;"/></a>
+<!-- Start of Text Image Widget -->
+<div class='mt-16 rounded-tl-2xl rounded-b-2xl grid grid-cols-12 gap-4 bg-zircon py-8 px-4 lg:py-4' style='borderTopRightRadius: 3rem'>
+    <div class='col-span-12 lg:col-span-2'>
+        <div class='flex justify-center'>
+            <img src='/img/cloud-icon-widget.svg' alt='' id='img-text-button' />
+        </div>
+    </div>
+    <div class='col-span-12 lg:col-span-6 flex items-center justify-center'>
+         <p class='font-montserrat font-bold' id="paragraph-text-button">
+            See How Cyscale Helps Protect<br class="hidden lg:block"/> Your <span id="font-gradient">Multi-Cloud Estate</span>
+        </p>
+    </div>
+    <div class='col-span-12 lg:col-span-4 flex justify-center items-center'>
+        <a class='mx-auto bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind' href='/request-demo/'>
+            <span style='padding: 0.625rem 2.5rem' class='text-white block'>
+                Start now
+            </span>
+        </a>
+    </div>
+</div>
+<!-- End of Text Image Widget -->
 
 ## Making multi-cloud work and keeping your estate protected 
 
