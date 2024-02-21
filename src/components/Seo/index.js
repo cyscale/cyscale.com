@@ -25,6 +25,7 @@ import CloudSecurityFintechCampaignOg from '../../assets/images/cloud-security-f
 import SecureCloudCampaignOg from '../../assets/images/secure-cloud-campaign-og.png';
 import CampaignMSSPOg from '../../assets/images/cloud-security-mssp-og.png';
 import CDSecurityOg from '../../assets/images/cd-security-logo.png';
+import FullTourOg from '../../assets/images/platform-tour-og.png';
 import { useStaticQuery, graphql } from 'gatsby';
 
 const defaultOg = {
@@ -54,7 +55,8 @@ const defaultOg = {
     SecureCloudCampaign: SecureCloudCampaignOg,
     CampaignMSSP: CampaignMSSPOg,
     MSSPPage: CampaignMSSPOg,
-    CDSecurityPage: CDSecurityOg
+    CDSecurityPage: CDSecurityOg,
+    FullTourPage: FullTourOg
 };
 
 const Seo = ({ title, description, pageName, banner, location, blogDetails }) => {

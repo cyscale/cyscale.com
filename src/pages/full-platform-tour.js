@@ -147,7 +147,7 @@ const FullPlatformTour = ({ location }) => {
                                             padding: 2px 5px;
                                         `}
                                     >
-                                        tours
+                                        Tours
                                     </span>
                                 </h1>
                                 <p
