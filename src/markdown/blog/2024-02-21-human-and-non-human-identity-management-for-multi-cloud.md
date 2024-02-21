@@ -64,6 +64,6 @@ Our updated Identity dashboard now gives you an overview of the identities of yo
 * Who / What can access that asset  
 * What other resources can be accessed by that asset as a machine or non-human identity 
 
-<img src="/img/service-identities.png" alt="Understand permissions, both human and non-human" title="" class="" style="width:auto;height:auto;"/>
+<img src="/img/identity-dashboard-service-accs.png" alt="The Cyscale Identity dashboard" title="" class="" style="width:auto;height:auto;"/>
 
 \*﻿\*SailPoint: <https://www.sailpoint.com/blog/survey-finds-non-employee-and-non-human-identities-leading-to-major-security-issues/>
