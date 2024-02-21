@@ -45,7 +45,7 @@ But companies with legacy infrastructure, or those in highly regulated industrie
 * **Reduced visibility:** This is a big one. There is no security without [visibility](https://cyscale.com/blog/provide-visibility-in-cloud-okta-integration/) in the cloud, after all, you can’t secure what you can’t see. And something that’s less obvious but even more important in the cloud is context. When you can’t see all your assets, you can’t understand the relations between them and how a misconfiguration on one asset affects another. This also goes for users (both human and non-human identities) and their permissions. Without comprehensive visibility and inventory, you cannot identify vulnerabilities and gaps in your security.  
 * **The need for cloud-specific skills:** Being an expert in Azure does not directly translate to AWS and vice-versa. Same with any other cloud. All vendors have different assets, each with their own technologies, settings, security best practices, even naming conventions.  
 
-<!-- Start of Text Image Widget -->
+
 <div class='mt-16 rounded-tl-2xl rounded-b-2xl grid grid-cols-12 gap-4 bg-zircon py-8 px-4 lg:py-4' style='borderTopRightRadius: 3rem'>
     <div class='col-span-12 lg:col-span-2'>
         <div class='flex justify-center'>
@@ -54,18 +54,17 @@ But companies with legacy infrastructure, or those in highly regulated industrie
     </div>
     <div class='col-span-12 lg:col-span-6 flex items-center justify-center'>
          <p class='font-montserrat font-bold' id="paragraph-text-button">
-            See How Cyscale Helps Protect<br class="hidden lg:block"/> Your <span id="font-gradient">Multi-Cloud Estate</span>
+             See How Cyscale Helps Protect<br class="hidden lg:block"/> Your <span id="font-gradient">Multi-Cloud Estate</span>
         </p>
     </div>
     <div class='col-span-12 lg:col-span-4 flex justify-center items-center'>
         <a class='mx-auto bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind' href='/full-platform-tour/'>
             <span style='padding: 0.625rem 2.5rem' class='text-white block'>
-Show me
+                Show me
             </span>
         </a>
     </div>
 </div>
-<!-- End of Text Image Widget -->
 
 ## Making multi-cloud work and keeping your estate protected 
 
@@ -101,7 +100,7 @@ With a lack of cloud experience and cyber skills on the market, cloud native org
 
 [Cyscale’s CNAPP](https://cyscale.com/full-platform-tour/) is the only tool of its kind that has been designed to be deployed and used by smaller teams, helping the CTO or CISO and your security team gain the confidence to acquire visibility, prioritize assets, ace audits for compliance benchmarks, and perform other operations that actually serve the business, rather than endless firefighting across the multi-cloud estate.  
 
-<!-- Start of Text Image Widget -->
+
 <div class='mt-16 rounded-tl-2xl rounded-b-2xl grid grid-cols-12 gap-4 bg-zircon py-8 px-4 lg:py-4' style='borderTopRightRadius: 3rem'>
     <div class='col-span-12 lg:col-span-2'>
         <div class='flex justify-center'>
@@ -110,7 +109,7 @@ With a lack of cloud experience and cyber skills on the market, cloud native org
     </div>
     <div class='col-span-12 lg:col-span-6 flex items-center justify-center'>
          <p class='font-montserrat font-bold' id="paragraph-text-button">
-            Take a Tour of<span id="font-gradient">Cyscale's CNAPP</span>Today 
+             Take a Tour of<span id="font-gradient">Cyscale's CNAPP</span>Today
         </p>
     </div>
     <div class='col-span-12 lg:col-span-4 flex justify-center items-center'>
@@ -121,4 +120,3 @@ With a lack of cloud experience and cyber skills on the market, cloud native org
         </a>
     </div>
 </div>
-<!-- End of Text Image Widget -->
