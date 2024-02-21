@@ -5,6 +5,8 @@ import { css } from 'twin.macro';
 import { CSSTransition } from 'react-transition-group';
 import VideoCyscale from '../campaigns/cspm-solution/CyscaleVideo';
 import { graphql, useStaticQuery } from 'gatsby';
+import StorylaneModal from '../full-platform-tour/StorylaneModal';
+import useMediaQuery from '../../hooks/useMediaQuery';
 
 const customFontSize = css`
     font-size: 1.75rem;
@@ -15,6 +17,7 @@ const customFontSize = css`
 `;
 
 const TourVideo = () => {
+    const isDesktop = useMediaQuery('(min-width: 1024px)');
     const [modal, setModal] = useState(false);
 
     const data = useStaticQuery(graphql`
@@ -31,7 +34,7 @@ const TourVideo = () => {
         <div className='pt-24 pb-24 lg:pt-32 lg:pb-0'>
             <Container>
                 <h2 className='text-center text-blue font-montserrat font-bold' css={customFontSize}>
-                    Take the 2 minute tour
+                    Take the 2 minute interactive tour
                 </h2>
                 <div
                     className='max-w-2xl mx-auto mt-8'
@@ -56,11 +59,15 @@ const TourVideo = () => {
                 </div>
                 {modal && <div className='modal-overlay'></div>}
                 <CSSTransition in={modal} timeout={300} classNames='video' unmountOnExit>
-                    <VideoCyscale
-                        setModal={setModal}
-                        videoUrl='https://d3n52qn7viv754.cloudfront.net/videos/Cyscale-explainer-video-2023-12-Dec.mp4'
-                        greyCloseButton
-                    />
+                    {isDesktop ? (
+                        <StorylaneModal setModal={setModal} src='https://app.storylane.io/demo/xiaviyvpr3sd' />
+                    ) : (
+                        <VideoCyscale
+                            setModal={setModal}
+                            videoUrl='https://d3n52qn7viv754.cloudfront.net/videos/Cyscale-explainer-video-2023-12-Dec.mp4'
+                            greyCloseButton
+                        />
+                    )}
                 </CSSTransition>
             </Container>
         </div>
