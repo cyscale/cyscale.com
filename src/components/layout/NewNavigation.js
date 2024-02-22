@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import tw, { css } from 'twin.macro';
-import { graphql, Link, useStaticQuery } from 'gatsby';
+import { Link } from 'gatsby';
 import logo from '../../assets/images/logo.svg';
 import loginIcon from '../../assets/images/login.svg';
 import searchIcon from '../../assets/images/search-icon.svg';
@@ -124,19 +124,6 @@ const NewNavigation = ({
     });
     const hideMegaMenu = useScrollTrigger();
     const [hoveredNavItem, setHoveredNavItem] = useState(null);
-
-    const data = useStaticQuery(graphql`
-        query NewNavigationQuery {
-            markdownRemark(frontmatter: { slug: { eq: "top-bar" } }) {
-                frontmatter {
-                    enabled
-                }
-            }
-        }
-    `);
-
-    const { enabled } = data.markdownRemark.frontmatter;
-
     const isNavItemHovered = (navItemName) => hoveredNavItem === navItemName;
 
     return (
@@ -149,9 +136,6 @@ const NewNavigation = ({
                     tw`container`,
                 isAnimatedNavbarPage(pathname) &&
                     css`
-                        @media (min-width: 1024px) {
-                            margin-top: ${enabled ? '2.5rem' : '0rem'};
-                        }
                         padding-left: 4.5rem;
                     `
             ]}

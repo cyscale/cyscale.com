@@ -9,6 +9,7 @@ import MobileNavigation from './components/MobileNavigation';
 import CustomSearch from '../Search/CustomSearch';
 import { useClickOutsideSearch } from '../../hooks/useClickOutsideSearch';
 import PlatformTours from '../platform-tours/PlatformTours';
+import TopBar from './TopBar';
 import { graphql, useStaticQuery } from 'gatsby';
 
 const paddingNav = css`
@@ -21,6 +22,15 @@ const paddingNav = css`
 `;
 
 const NewTopNav = ({ pageName, showLogo = true, location, animatedNavbar }) => {
+    const data = useStaticQuery(graphql`
+        query NewTopNavQuery {
+            markdownRemark(frontmatter: { slug: { eq: "top-bar" } }) {
+                frontmatter {
+                    enabled
+                }
+            }
+        }
+    `);
     const root = useRef();
     const searchRef = useRef(null);
     const trigger = useScrollTrigger();
@@ -31,18 +41,6 @@ const NewTopNav = ({ pageName, showLogo = true, location, animatedNavbar }) => {
     const [isAtTop, setIsAtTop] = useState(true);
     const [kModal, setKModal] = useState(false);
     const [platformModal, setPlatformModal] = useState(false);
-
-    const data = useStaticQuery(graphql`
-        query NewTopNavQuery {
-            markdownRemark(frontmatter: { slug: { eq: "top-bar" } }) {
-                frontmatter {
-                    enabled
-                }
-            }
-        }
-    `);
-
-    const { enabled } = data.markdownRemark.frontmatter;
 
     const appLink = useAppLink();
 
@@ -96,12 +94,8 @@ const NewTopNav = ({ pageName, showLogo = true, location, animatedNavbar }) => {
                 ref={root}
                 style={{ maxWidth: '100vw' }}
                 className={`fixed top-0 left-0 block w-full mx-auto z-50 transition duration-300 transform ${rootClasses}`}
-                css={css`
-                    @media (min-width: 1024px) {
-                        margin-top: ${enabled && isAtTop ? '2.5rem' : '0rem'};
-                    }
-                `}
             >
+                <TopBar />
                 <div tw='container max-w-7xl mx-auto pt-2.5 hidden xl:block' css={paddingNav}>
                     <NewNavigation
                         pageName={pageName}
@@ -149,7 +143,7 @@ const NewTopNav = ({ pageName, showLogo = true, location, animatedNavbar }) => {
                     css={[
                         css`
                             @media (min-width: 1024px) {
-                                margin-top: ${enabled && isAtTop ? '2.5rem' : '0rem'};
+                                margin-top: ${data.markdownRemark.frontmatter.enabled && isAtTop ? '2.5rem' : '0rem'};
                             }
                             transition-duration: 300ms;
                             z-index: 40;

@@ -12,11 +12,23 @@ import useSetCookieBanner from '../cookies-banner/useSetCookieBanner';
 import { cookieConsentKey } from '../../common/constants';
 import NewTopNav from './NewTopNav';
 import { Helmet } from 'react-helmet';
+import { graphql, useStaticQuery } from 'gatsby';
+import { css } from 'twin.macro';
 
 const Layout = ({ children, title, description, pageName, location, banner, noIndex, blogDetails }) => {
     useHubspotEvents({ pageName });
     const [sticker, setSticker] = useState(false);
     const { cookies, cookiesBanner, setCookiesBanner } = useSetCookieBanner();
+
+    const data = useStaticQuery(graphql`
+        query LayoutQuery {
+            markdownRemark(frontmatter: { slug: { eq: "top-bar" } }) {
+                frontmatter {
+                    enabled
+                }
+            }
+        }
+    `);
 
     return (
         <CookiesProvider>
@@ -36,7 +48,15 @@ const Layout = ({ children, title, description, pageName, location, banner, noIn
                 <HeaderContext.Provider value={{ sticker, setSticker }}>
                     <NewTopNav pageName={pageName} location={location} />
                 </HeaderContext.Provider>
-                <main>{children}</main>
+                <main
+                    css={css`
+                        @media (min-width: 1024px) {
+                            padding-top: ${data.markdownRemark.frontmatter.enabled ? '2rem' : '0rem'};
+                        }
+                    `}
+                >
+                    {children}
+                </main>
                 <Footer pageUri={location?.pathname} pageName={pageName} />
                 {Boolean(cookies[cookieConsentKey]) !== true && (
                     <CookiesBanner
