@@ -6,7 +6,7 @@ import GlobalContext from '../../context/GlobalContext';
 import Seo from '../Seo';
 import { Helmet } from 'react-helmet';
 import { Container } from '../atoms/Containers';
-import { graphql, Link, useStaticQuery } from 'gatsby';
+import {  Link } from 'gatsby';
 import logo from '../../assets/images/logo.svg';
 import { CSSTransition } from 'react-transition-group';
 import CookiesBanner from '../cookies-banner/CookiesBanner';
@@ -45,18 +45,6 @@ const AnimatedNavbarLayout = ({ children, formId, formTargetId, location, title,
     const [platformModal, setPlatformModal] = useState(false);
     const searchRef = useRef(null);
     const appLink = useAppLink();
-
-    const data = useStaticQuery(graphql`
-        query AmitatedNavbarQuery {
-            markdownRemark(frontmatter: { slug: { eq: "top-bar" } }) {
-                frontmatter {
-                    content
-                }
-            }
-        }
-    `);
-
-    const { enabled } = data.markdownRemark.frontmatter;
 
     useEffect(() => {
         if (pageName !== 'RequestDemo') {
@@ -172,7 +160,7 @@ const AnimatedNavbarLayout = ({ children, formId, formTargetId, location, title,
                         style={{ maxWidth: '100vw' }}
                         className={'fixed left-0 block w-full mx-auto bg-white z-10 shadow-2xl'}
                         css={css`
-                            top: ${enabled ? '11rem' : '8.125rem'};
+                            top: 8.125rem;
                         `}
                     >
                         <div tw='container max-w-7xl mx-auto pt-2.5 hidden xl:block' css={paddingNav}>
