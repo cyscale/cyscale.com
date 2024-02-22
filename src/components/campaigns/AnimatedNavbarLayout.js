@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import navBars from '../layout/icons/navbars-campaigns.svg';
 import { CookiesProvider } from 'react-cookie';
 import { useAppLink } from '../../common/links';
@@ -6,7 +6,7 @@ import GlobalContext from '../../context/GlobalContext';
 import Seo from '../Seo';
 import { Helmet } from 'react-helmet';
 import { Container } from '../atoms/Containers';
-import { Link } from 'gatsby';
+import { graphql, Link, useStaticQuery } from 'gatsby';
 import logo from '../../assets/images/logo.svg';
 import { CSSTransition } from 'react-transition-group';
 import CookiesBanner from '../cookies-banner/CookiesBanner';
@@ -24,7 +24,6 @@ import { useClickOutsideSearch } from '../../hooks/useClickOutsideSearch';
 import classnames from 'classnames';
 import { disableLogoLink, hasZirconBgColordHero } from '../../common/utils';
 import PlatformTours from '../platform-tours/PlatformTours';
-import TopBarContext from '../../context/TopBarContext';
 const Footer = loadable(() => import('./footer'));
 
 const paddingNav = css`
@@ -46,7 +45,18 @@ const AnimatedNavbarLayout = ({ children, formId, formTargetId, location, title,
     const [platformModal, setPlatformModal] = useState(false);
     const searchRef = useRef(null);
     const appLink = useAppLink();
-    const { topBar } = useContext(TopBarContext);
+
+    const data = useStaticQuery(graphql`
+        query AmitatedNavbarQuery {
+            markdownRemark(frontmatter: { slug: { eq: "top-bar" } }) {
+                frontmatter {
+                    content
+                }
+            }
+        }
+    `);
+
+    const { enabled } = data.markdownRemark.frontmatter;
 
     useEffect(() => {
         if (pageName !== 'RequestDemo') {
@@ -162,7 +172,7 @@ const AnimatedNavbarLayout = ({ children, formId, formTargetId, location, title,
                         style={{ maxWidth: '100vw' }}
                         className={'fixed left-0 block w-full mx-auto bg-white z-10 shadow-2xl'}
                         css={css`
-                            top: ${topBar ? '11rem' : '8.125rem'};
+                            top: ${enabled ? '11rem' : '8.125rem'};
                         `}
                     >
                         <div tw='container max-w-7xl mx-auto pt-2.5 hidden xl:block' css={paddingNav}>

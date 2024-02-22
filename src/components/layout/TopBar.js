@@ -1,21 +1,16 @@
-import React, { useContext, useEffect, useRef } from 'react';
-import closeIcon from '../../assets/images/white-close-icon.svg';
-import TopBarContext from '../../context/TopBarContext';
+import React, { useEffect, useState } from 'react';
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import { css } from 'twin.macro';
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 
 const TopBar = () => {
-    const { topBar, setTopBar, setTopBarHeight } = useContext(TopBarContext);
-    const ref = useRef(null);
+    const [isAtTop, setIsAtTop] = useState(true);
     const data = useStaticQuery(graphql`
         query TopBarQuery {
             markdownRemark(frontmatter: { slug: { eq: "top-bar" } }) {
                 frontmatter {
-                    templateKey
                     enabled
-                    slug
                     content
                 }
             }
@@ -38,21 +33,26 @@ const TopBar = () => {
 
     const { enabled, content } = data.markdownRemark.frontmatter;
 
-    useEffect(() => {
-        if (ref.current) {
-            setTopBarHeight(ref.current.offsetHeight);
-        } else {
-            setTopBarHeight(0);
-        }
-    }, [setTopBarHeight]);
 
-    if (!topBar || !enabled) {
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const position = window.pageYOffset;
+            setIsAtTop(position === 0);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        handleScroll();
+
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    if (!enabled || !isAtTop) {
         return null;
     }
 
     return (
         <div
-            ref={ref}
             className='bg-blue hidden lg:block'
             css={css`
                 & a {
@@ -76,30 +76,6 @@ const TopBar = () => {
                 >
                     {content}
                 </ReactMarkdown>
-                <div
-                    className='absolute right-10 top-0 bottom-0 flex items-center justify-end cursor-pointer ml-4 lg:ml-8'
-                    onClick={() => {
-                        setTopBar(false);
-                    }}
-                    tabIndex='0'
-                    role='button'
-                    aria-label='Close Top Bar'
-                    onKeyDown={() => {}}
-                >
-                    <img
-                        src={closeIcon}
-                        alt=''
-                        css={css`
-                            height: 0.85rem;
-                            width: 0.85rem;
-                            transition: transform 0.2s ease-in-out;
-                            &:hover {
-                                transform: rotate(90deg);
-                            }
-                        `}
-                        className='block'
-                    />
-                </div>
             </div>
         </div>
     );
