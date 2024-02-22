@@ -16,7 +16,7 @@ seoDescription: "To effectively use the cloud, you need to be able to trust
   third-parties. "
 featuredpost: true
 featuredimage: /img/human-non-human-identity-cloud.png
-tableOfContents: true
+tableOfContents: false
 ---
 So far, Cyscale has focused on making it easy to see **who** (colleagues, collaborators, guests, fellow humans) has access to your cloud environments. Now you can also see **what**.  
 
@@ -37,6 +37,15 @@ Any attacker capable of exploiting that identity will be able to move laterally 
 While it’s well established that [IAM (Identity and Access Management) plays an important role in a company’s security and compliance posture](https://cyscale.com/products/ciem/), and most organizations have specific policies in place so that the process of handling identities and access is well documented and manageable, the life of a CISO, CTO, or security analyst gets more difficult if they need to go into more depth. 
 
 Let’s say you have an employee that’s leaving in a month, and you need to see a list of all the resources they have access to? Or you discover some unusual logs on one of your VMs and need to know who has access to it? These questions are not so easy to answer from your AWS, Azure, or Google Cloud console. 
+
+<div class='grid grid-cols-12 mt-12 gap-2'>
+  <div class='col-span-12 lg:col-span-6'>
+    <img src="/img/inventory-permissions.png" alt="" class="rounded-md" style="width: 100%; margin: 0;" />
+  </div>
+  <div class='col-span-12 lg:col-span-6'>
+    <img src="/img/inventory-accessible.png" alt="" class="rounded-md" style="width: 100%; margin: 0;" />
+  </div>
+</div>
 
 ## Cloud identity management is hard 
 
@@ -64,6 +73,6 @@ Our updated Identity dashboard now gives you an overview of the identities of yo
 * Who / What can access that asset  
 * What other resources can be accessed by that asset as a machine or non-human identity 
 
-<img src="/img/identity-dashboard-service-accs.png" alt="The Cyscale Identity dashboard" title="" class="" style="width:auto;height:auto;"/>
+<img src="/img/identity-dashboard-service-accs.png" alt="The Cyscale Identity dashboard" title="" class=" blog-image-shadow " style="width:90%;height:auto;"/>
 
 \*﻿\*SailPoint: <https://www.sailpoint.com/blog/survey-finds-non-employee-and-non-human-identities-leading-to-major-security-issues/>
