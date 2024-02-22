@@ -47,6 +47,27 @@ Let’s say you have an employee that’s leaving in a month, and you need to se
   </div>
 </div>
 
+
+<div class='mt-16 rounded-tl-2xl rounded-b-2xl grid grid-cols-12 gap-4 bg-zircon py-8 px-4 lg:py-4' style='borderTopRightRadius: 3rem'>
+    <div class='col-span-12 lg:col-span-2'>
+        <div class='flex justify-center'>
+            <img src='/img/cloud-icon-widget.svg' alt='' id='img-text-button' />
+        </div>
+    </div>
+    <div class='col-span-12 lg:col-span-6 flex items-center justify-center'>
+         <p class='font-montserrat font-bold' id="paragraph-text-button">
+            See How Cyscale Helps Protect <span id="font-gradient">Human and Non-Human</span> Identities
+        </p>
+    </div>
+    <div class='col-span-12 lg:col-span-4 flex justify-center items-center'>
+        <a class='mx-auto bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind' href='https://cyscale.com/products/ciem/'>
+            <span style='padding: 0.625rem 2.5rem' class='text-white block'>
+                Show me
+            </span>
+        </a>
+    </div>
+</div>
+
 ## Cloud identity management is hard 
 
 Popular security tools offered by the public cloud providers suffer from two main problems:  
@@ -73,6 +94,6 @@ Our updated Identity dashboard now gives you an overview of the identities of yo
 * Who / What can access that asset  
 * What other resources can be accessed by that asset as a machine or non-human identity 
 
-<img src="/img/identity-dashboard-service-accs.png" alt="The Cyscale Identity dashboard" title="" class=" blog-image-shadow " style="width:90%;height:auto;"/>
+<img src="/img/identity-dashboard-service-accs.png" alt="The Cyscale Identity dashboard" title="" class=" blog-image-shadow " style="width:auto;height:auto;"/>
 
 \*﻿\*SailPoint: <https://www.sailpoint.com/blog/survey-finds-non-employee-and-non-human-identities-leading-to-major-security-issues/>
