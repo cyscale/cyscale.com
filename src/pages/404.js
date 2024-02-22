@@ -5,7 +5,6 @@ import road from '../assets/images/hit-the-road.svg';
 import Footer from '../components/layout/footer';
 import Seo from '../components/Seo';
 import NewTopNav from '../components/layout/NewTopNav';
-import { css } from 'twin.macro';
 import classnames from 'classnames';
 
 const NotFoundPage = ({ location }) => {
