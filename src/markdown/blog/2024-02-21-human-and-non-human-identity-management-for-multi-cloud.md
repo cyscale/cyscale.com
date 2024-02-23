@@ -40,10 +40,10 @@ Let’s say you have an employee that’s leaving in a month, and you need to se
 
 <div class='grid grid-cols-12 mt-12 gap-2'>
   <div class='col-span-12 lg:col-span-6'>
-    <img src="/img/inventory-permissions.png" alt="" class="rounded-md" style="width: 100%; margin: 0;" />
+    <img src="/img/inventory-permissions.png" alt="Inventory display of assets accessible to user" class="rounded-md" style="width: 100%; margin: 0;" />
   </div>
   <div class='col-span-12 lg:col-span-6'>
-    <img src="/img/inventory-accessible.png" alt="" class="rounded-md" style="width: 100%; margin: 0;" />
+    <img src="/img/inventory-accessible.png" alt="Inventory view of database access control" class="rounded-md" style="width: 100%; margin: 0;" />
   </div>
 </div>
 
