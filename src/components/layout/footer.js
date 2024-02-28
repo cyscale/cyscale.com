@@ -8,14 +8,9 @@ import arrowRight from '../../assets/images/arrow-right-1-white.svg';
 import useSubscribe from '../../hooks/useSubscribe';
 import { css } from 'twin.macro';
 import TermsLinks from './TermsLinks';
-
-const subscribeButtonGradient = css`
-    background-image: linear-gradient(to right, #883980, #ff4a56);
-
-    &:hover {
-        background-image: linear-gradient(to left, #883980, #ff4a56);
-    }
-`;
+import ISOIcon from '../layout/icons/iso.svg';
+import SOC2Icon from '../../assets/images/soc2-white.svg';
+import classnames from 'classnames';
 
 const disclaimerTextColor = css`
     color: #a1a3a1;
@@ -75,7 +70,13 @@ const Footer = ({ pageUri, pageName }) => {
                                         <button
                                             type='submit'
                                             className='text-white hover:bg-blue-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded text-sm w-full lg:w-20 ml-0 md:ml-3 pb-2.5 pt-3 w-auto md:w-20 lg:w-20'
-                                            css={subscribeButtonGradient}
+                                            css={css`
+                                                background-image: linear-gradient(to right, #883980, #ff4a56);
+
+                                                &:hover {
+                                                    background-image: linear-gradient(to left, #883980, #ff4a56);
+                                                }
+                                            `}
                                             onClick={onSubmit}
                                         >
                                             <span className='block uppercase md:hidden font-hind'>Subscribe</span>
@@ -204,8 +205,49 @@ const Footer = ({ pageUri, pageName }) => {
                             </div>
                         </div>
                     </div>
-
-                    <hr className='mt-24 text-grey2' />
+                    <div className='hidden sm:flex justify-center sm:justify-end items-center mt-24'>
+                        <div className='flex'>
+                            <img
+                                src={ISOIcon}
+                                width={32}
+                                css={css`
+                                    height: 30px;
+                                `}
+                                alt=''
+                                className='mt-2.5'
+                            />
+                            <span className='inline-block mt-2 text-xs text-white font-hind py-2 pr-2'>ISO 27001</span>
+                            <span
+                                className='inline-block mt-2 text-xs font-hind p-2 rounded-md'
+                                css={css`
+                                    background-color: #00141e;
+                                    color: #2d94cc;
+                                `}
+                            >
+                                Compliant
+                            </span>
+                            <img
+                                className='mt-3 ml-2'
+                                src={SOC2Icon}
+                                width={32}
+                                css={css`
+                                    height: 24px;
+                                `}
+                                alt=''
+                            />
+                            <span className='inline-block mt-2 text-xs text-white font-hind py-2 pr-2'>SOC 2</span>
+                            <span
+                                className='inline-block mt-2 text-xs font-hind p-2 rounded-md'
+                                css={css`
+                                    background-color: #00141e;
+                                    color: #2d94cc;
+                                `}
+                            >
+                                In progress
+                            </span>
+                        </div>
+                    </div>
+                    <hr className='mt-24 sm:mt-2 text-grey2' />
                     <Row className='mt-4'>
                         <div className='col-span-12 lg:col-span-6'>
                             <p className='text-center sm:text-left text-xs font-hind' css={linksHidden}>
@@ -234,8 +276,15 @@ const Footer = ({ pageUri, pageName }) => {
                             <div className='col-span-6'>
                                 <div className='flex items-center justify-center sm:justify-start lg:justify-end mt-4 lg:mt-1 ml-2 sm:ml-0'>
                                     {footerNavigation.social.map((item, key) => {
+                                        const isLastItem = key === footerNavigation.social.length - 1;
                                         return (
-                                            <div key={key} className='pl-3 sm:pl-0 pr-3 sm:pr-6'>
+                                            <div
+                                                key={key}
+                                                className={classnames('pl-3 sm:pl-0', {
+                                                    'pr-3 sm:pr-6': !isLastItem,
+                                                    'pr-3 sm:pr-0': isLastItem
+                                                })}
+                                            >
                                                 <a
                                                     href={item.link}
                                                     rel='noopener noreferrer'
