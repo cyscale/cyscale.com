@@ -67,11 +67,11 @@ Tellingly, security is the most common function for which organizations use MSPs
 
 ## Aggregation of tools and automation as the solution 
 
-“These trends that JumpCloud has highlighted in the SME sector align closely with what we are hearing from the market and our own SME customer base,” said Ovidiu Cical, CEO of Cyscale. 
+These trends that JumpCloud has highlighted in the SME sector align closely with what we are hearing from the market and our own SME customer base.
 
-“When it comes to cloud security specifically, IT admins and security professionals are struggling with multiple point solution tools that only apply to a single ecosystem. The cloud provider security tools only work for their own cloud, and skills for managing and securing that cloud are not transferable to another cloud either. This leaves SMEs struggling to meet security and compliance requirements and potentially losing business as a result.  
+When it comes to cloud security specifically, IT admins and security professionals are struggling with multiple point solution tools that only apply to a single ecosystem. The cloud provider security tools only work for their own cloud, and skills for managing and securing that cloud are not transferable to another cloud either. This leaves SMEs struggling to meet security and compliance requirements and potentially losing business as a result.  
 
-“So, it comes as no surprise to see MSPs as the winners here. When small and medium businesses cannot get the skills in-house, but are seeing growing compliance pressures, they have no choice but to outsource the problem. What’s interesting is that MSPs and MSSPs face the same challenge, because the skills shortage is industry wide. But we work with a large number of managed service providers to help them unify their cloud security tools into a single platform and use automation to augment the security skills of their analysts to be transferable across all clouds and containerized environments. This means they can serve more customers with the same resources.”
+So, it comes as no surprise to see MSPs as the winners here. When small and medium businesses cannot get the skills in-house, but are seeing growing compliance pressures, they have no choice but to outsource the problem. What’s interesting is that MSPs and MSSPs face the same challenge, because the skills shortage is industry wide. But we work with a large number of managed service providers to help them unify their cloud security tools into a single platform and use automation to augment the security skills of their analysts to be transferable across all clouds and containerized environments. This means they can serve more customers with the same resources.
 
 <div class='mt-16 rounded-tl-2xl rounded-b-2xl grid grid-cols-12 gap-4 bg-zircon py-8 px-4 lg:py-4' style='borderTopRightRadius: 3rem'>
     <div class='col-span-12 lg:col-span-2'>
