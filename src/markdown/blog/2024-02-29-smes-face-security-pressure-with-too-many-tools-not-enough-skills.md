@@ -45,6 +45,26 @@ The survey found that an MSP completely manages the IT environment for 42% of re
 
 Tellingly, security is the most common function for which organizations use MSPs (57% in 2024 versus 53% in April 2023), and the most popular reason why is that SMEs believe MSPs are up to date on the latest technologies (65%, up from 61% in April 2023), suggesting that smaller organizations are plugging the skills gap for complex subjects like security, cloud, and AI, with outsourcing.  
 
+<div class='mt-16 rounded-tl-2xl rounded-b-2xl grid grid-cols-12 gap-4 bg-zircon py-8 px-4 lg:py-4' style='borderTopRightRadius: 3rem'>
+    <div class='col-span-12 lg:col-span-2'>
+        <div class='flex justify-center'>
+            <img src='/img/cloud-icon-widget.svg' alt='' id='img-text-button' />
+        </div>
+    </div>
+    <div class='col-span-12 lg:col-span-6 flex items-center justify-center'>
+         <p class='font-montserrat font-bold' id="paragraph-text-button">
+            Unlock New Revenue Streams With<span id="font-gradient">Cyscale Cloud Security for MSPs</span> 
+        </p>
+    </div>
+    <div class='col-span-12 lg:col-span-4 flex justify-center items-center'>
+        <a class='mx-auto bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind' href='https://cyscale.com/use-cases/cloud-security-mssp/'>
+            <span style='padding: 0.625rem 2.5rem' class='text-white block'>
+                Show me
+            </span>
+        </a>
+    </div>
+</div> 
+
 ## Aggregation of tools and automation as the solution 
 
 “These trends that JumpCloud has highlighted in the SME sector align closely with what we are hearing from the market and our own SME customer base,” said Ovidiu Cical, CEO of Cyscale. 
@@ -52,3 +72,23 @@ Tellingly, security is the most common function for which organizations use MSPs
 “When it comes to cloud security specifically, IT admins and security professionals are struggling with multiple point solution tools that only apply to a single ecosystem. The cloud provider security tools only work for their own cloud, and skills for managing and securing that cloud are not transferable to another cloud either. This leaves SMEs struggling to meet security and compliance requirements and potentially losing business as a result.  
 
 “So, it comes as no surprise to see MSPs as the winners here. When small and medium businesses cannot get the skills in-house, but are seeing growing compliance pressures, they have no choice but to outsource the problem. What’s interesting is that MSPs and MSSPs face the same challenge, because the skills shortage is industry wide. But we work with a large number of managed service providers to help them unify their cloud security tools into a single platform and use automation to augment the security skills of their analysts to be transferable across all clouds and containerized environments. This means they can serve more customers with the same resources.”
+
+<div class='mt-16 rounded-tl-2xl rounded-b-2xl grid grid-cols-12 gap-4 bg-zircon py-8 px-4 lg:py-4' style='borderTopRightRadius: 3rem'>
+    <div class='col-span-12 lg:col-span-2'>
+        <div class='flex justify-center'>
+            <img src='/img/cloud-icon-widget.svg' alt='' id='img-text-button' />
+        </div>
+    </div>
+    <div class='col-span-12 lg:col-span-6 flex items-center justify-center'>
+         <p class='font-montserrat font-bold' id="paragraph-text-button">
+            See How Cyscale Unifies Multiple<span id="font-gradient">Cloud Security</span> Tools
+        </p>
+    </div>
+    <div class='col-span-12 lg:col-span-4 flex justify-center items-center'>
+        <a class='mx-auto bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind' href='https://cyscale.com/full-platform-tour/'>
+            <span style='padding: 0.625rem 2.5rem' class='text-white block'>
+                Show me
+            </span>
+        </a>
+    </div>
+</div>
