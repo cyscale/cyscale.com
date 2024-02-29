@@ -16,6 +16,7 @@ import { CSSTransition } from 'react-transition-group';
 import VideoCyscale from '../components/campaigns/cspm-solution/CyscaleVideo';
 import useMediaQuery from '../hooks/useMediaQuery';
 import StorylaneModal from '../components/full-platform-tour/StorylaneModal';
+import TiltImage from '../components/Home/TiltImage';
 
 const CaseStudiesSection = loadable(() => import('../components/Home/CaseStudiesSection'));
 const CardsSections = loadable(() => import('../components/Home/CardsSections'));
@@ -339,8 +340,11 @@ const HomePage = ({ location }) => {
                     </div>
                 </div>
             </div>
+            <Container className="overflow-hidden mt-12 pb-20">
+                <TiltImage />
+            </Container>
             <Container>
-                <div className='pt-24 pb-24'>
+                <div className='pt-8 lg:pt-24 pb-24'>
                     <h3 className='text-blue font-montserrat font-bold mb-12 text-3xl  sm:text-4xl'>
                         Don’t just assess, FIX
                     </h3>

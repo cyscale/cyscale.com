@@ -757,12 +757,17 @@ module.exports = {
                 'spin-reverse': {
                     '0%': { transform: 'rotate(0deg)' },
                     '100%': { transform: 'rotate(-360deg)' }
+                },
+                pulse: {
+                    '0%, 100%': { transform: 'scale(1)', opacity: '0.5' },
+                    '50%': { transform: 'scale(1.5)', opacity: '0.7' }
                 }
             },
             animation: {
                 'spin-loader': 'spin 1.5s linear infinite',
                 'spin-loader-after': 'spin 2.5s linear infinite',
-                'spin-reverse': 'spin-reverse 0.8s linear infinite'
+                'spin-reverse': 'spin-reverse 0.8s linear infinite',
+                pulse: 'pulse 2s infinite ease-in-out'
             }
         },
         container: {
