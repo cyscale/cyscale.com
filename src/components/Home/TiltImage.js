@@ -78,6 +78,9 @@ const TiltImage = () => {
                     className='w-full h-auto rounded-2xl shadow-2xl'
                     image={data.heroImage.childImageSharp.gatsbyImageData}
                     alt='Interactive Cyscale Dashboard'
+                    css={css`
+                        border: 1px solid #f0f1f2;
+                    `}
                 />
                 <div
                     css={css`
