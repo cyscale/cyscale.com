@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: SMEs face security pressure with too many tools, not enough skills
+title: SMEs Face Security Pressure with Too Many Tools, Not Enough Skills
 seoTitle: SMEs face security pressure with too many tools, not enough skills
 authors: Ovidiu Cical
 permalink: sme-security-pressure-too-many-tools-not-enough-skills
