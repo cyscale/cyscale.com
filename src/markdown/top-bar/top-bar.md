@@ -1,6 +1,6 @@
 ---
 templateKey: topbar
-enabled: true
+enabled: false
 slug: top-bar
 content: Cyscale releases [human and non-human identity (NHI)
   security](/blog/human-non-human-identity-management-multi-cloud/) for
