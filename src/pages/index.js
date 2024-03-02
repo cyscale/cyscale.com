@@ -172,7 +172,7 @@ const HomePage = ({ location }) => {
             </div>
             <div className='hidden' data-permalink></div>
             <div className='hidden' data-title>
-                Cyscale | Simple Cloud Security. Instant peace of mind
+                Cyscale | Unify and empower your cloud defenders. Get actionable insights for small security teams.
             </div>
             <div className='hidden' data-description>
                 Contextual analysis of cloud misconfigurations, vulnerabilities, access, and data, providing an
@@ -197,8 +197,8 @@ const HomePage = ({ location }) => {
                                         className='text-left text-blue text-4xl lg:text-5xl leading-normal lg:leading-normal font-montserrat font-bold'
                                         css={css`
                                             @media (max-width: 640px) {
-                                                font-size: 2rem;
-                                                line-height: 2.5rem;
+                                                font-size: 1.75rem;
+                                                line-height: 2rem;
                                                 height: 8rem;
                                             }
                                             height: 10rem;
@@ -207,7 +207,7 @@ const HomePage = ({ location }) => {
                                             }
                                         `}
                                     >
-                                        Secure your cloud{' '}
+                                        Unify and empower your cloud defenders.{' '}
                                         <br
                                             css={css`
                                                 display: none;
@@ -219,7 +219,7 @@ const HomePage = ({ location }) => {
                                                 }
                                             `}
                                         />{' '}
-                                        quickly and easily
+                                        Get actionable insights for small security teams.
                                     </h1>
                                     <p className='text-left text-base lg:text-lg mb-4 leading-relaxed font-hind'>
                                         Get contextual analysis of cloud misconfigurations, vulnerabilities, access, and
