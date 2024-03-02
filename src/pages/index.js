@@ -196,22 +196,26 @@ const HomePage = ({ location }) => {
                                     <h1
                                         className='text-left text-blue text-4xl lg:text-5xl leading-normal lg:leading-normal font-montserrat font-bold'
                                         css={css`
-                                            @media (max-width: 640px) {
+                                            @media (max-width: 451px) {
                                                 font-size: 1.75rem;
                                                 line-height: 2.5rem;
-                                                height: 8rem;
+                                                height: 12.5rem;
                                             }
-                                            height: 10rem;
-                                            @media screen and (min-width: 1024px) and (max-width: 1035px) {
-                                                height: 14rem;
+                                            @media screen and (min-width: 452px) and (max-width: 1024px) {
+                                                height: 13.5rem;
+                                            }
+                                            height: 19rem;
+
+                                            @media screen and (min-width: 1024px) and (max-width: 1140px) {
+                                                height: 23rem;
                                             }
                                         `}
                                     >
-                                        Empower cloud defenders with unified security and actionable insights{' '}
+                                        Empower cloud defenders with unified security and actionable insights
                                     </h1>
                                     <p className='text-left text-base lg:text-lg mb-4 leading-relaxed font-hind'>
-                                        Strengthen your cloud security and eliminate guesswork with real-time intelligence 
-                                        on misconfigurations, vulnerabilities, identities, and data access. 
+                                        Strengthen your cloud security and eliminate guesswork with real-time
+                                        intelligence on misconfigurations, vulnerabilities, identities, and data access.
                                         Works great for small secutity teams.
                                     </p>
                                     <div className='flex mt-4 justify-start'>
@@ -329,7 +333,7 @@ const HomePage = ({ location }) => {
                     </div>
                 </div>
             </div>
-            <Container className="overflow-hidden mt-12 pb-20">
+            <Container className='overflow-hidden mt-12 pb-20'>
                 <TiltImage />
             </Container>
             <Container>
