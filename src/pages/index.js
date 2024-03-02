@@ -198,7 +198,7 @@ const HomePage = ({ location }) => {
                                         css={css`
                                             @media (max-width: 640px) {
                                                 font-size: 1.75rem;
-                                                line-height: 2rem;
+                                                line-height: 2.5rem;
                                                 height: 8rem;
                                             }
                                             height: 10rem;
@@ -207,23 +207,12 @@ const HomePage = ({ location }) => {
                                             }
                                         `}
                                     >
-                                        Unify and empower your cloud defenders.{' '}
-                                        <br
-                                            css={css`
-                                                display: none;
-                                                @media screen and (min-width: 497px) {
-                                                    display: block;
-                                                }
-                                                @media screen and (min-width: 1024px) and (max-width: 1035px) {
-                                                    display: none;
-                                                }
-                                            `}
-                                        />{' '}
-                                        Get actionable insights for small security teams.
+                                        Empower cloud defenders with unified security and actionable insights{' '}
                                     </h1>
                                     <p className='text-left text-base lg:text-lg mb-4 leading-relaxed font-hind'>
-                                        Get contextual analysis of cloud misconfigurations, vulnerabilities, access, and
-                                        data for an accurate and actionable assessment of risk.
+                                        Strengthen your cloud security and eliminate guesswork with real-time intelligence 
+                                        on misconfigurations, vulnerabilities, identities, and data access. 
+                                        Works great for small secutity teams.
                                     </p>
                                     <div className='flex mt-4 justify-start'>
                                         <Link to='/request-demo/'>
