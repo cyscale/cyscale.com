@@ -194,24 +194,45 @@ const HomePage = ({ location }) => {
                             <div className='col-span-12 lg:col-span-6'>
                                 <div className='sm:pt-4 max-w-lg mx-auto lg:mx-0'>
                                     <h1
-                                        className='text-left text-blue text-4xl lg:text-5xl leading-normal lg:leading-normal font-montserrat font-bold'
+                                        className='text-left leading-normal lg:leading-normal font-montserrat font-bold  mb-6 lg:mb-8'
                                         css={css`
-                                            @media (max-width: 451px) {
-                                                font-size: 1.75rem;
-                                                line-height: 2.5rem;
-                                                height: 12.5rem;
-                                            }
-                                            @media screen and (min-width: 452px) and (max-width: 1024px) {
-                                                height: 13.5rem;
-                                            }
-                                            height: 19rem;
-
-                                            @media screen and (min-width: 1024px) and (max-width: 1140px) {
-                                                height: 23rem;
-                                            }
+                                            font-size: 2rem;
                                         `}
                                     >
-                                        Empower cloud defenders with unified security and actionable insights
+                                        Empower cloud defenders with unified
+                                        <span
+                                            css={css`
+                                                background-image: linear-gradient(
+                                                    89deg,
+                                                    #0f26aa 54.38%,
+                                                    #ff4a56 75.89%
+                                                );
+                                                color: transparent;
+                                                -webkit-background-clip: text;
+                                                background-clip: text;
+                                                display: inline-block;
+                                                padding: 2px 5px;
+                                            `}
+                                        >
+                                            security
+                                        </span>
+                                        and actionable
+                                        <span
+                                            css={css`
+                                                background-image: linear-gradient(
+                                                    89deg,
+                                                    #0f26aa 54.38%,
+                                                    #ff4a56 75.89%
+                                                );
+                                                color: transparent;
+                                                -webkit-background-clip: text;
+                                                background-clip: text;
+                                                display: inline-block;
+                                                padding: 2px 5px;
+                                            `}
+                                        >
+                                            insights
+                                        </span>
                                     </h1>
                                     <p className='text-left text-base lg:text-lg mb-4 leading-relaxed font-hind'>
                                         Strengthen your cloud security and eliminate guesswork with real-time
