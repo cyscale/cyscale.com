@@ -312,25 +312,19 @@ const HomePage = ({ location }) => {
                     </div>
                 </Container>
             </div>
-            <div className='container max-w-7xl sm:m-auto px-4 lg:px-8 mb-16 sm:my-16 lg:mt-32'>
+            <div className='container max-w-7xl sm:m-auto px-4 lg:px-8 mb-16 sm:my-16 lg:mt-24'>
                 <div
                     className='grid grid-cols-12 gap-x-5 mt-20 sm:mt-12'
                     css={css`
                         overflow: hidden;
                     `}
                 >
-                    <div className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 hidden lg:block'>
-                        <GatsbyImage
-                            image={data.graphContainers.childImageSharp.gatsbyImageData}
-                            alt='Graph and screenshots from cloud security platform'
-                        />
-                    </div>
-                    <div className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 max-w-xl lg:max-w-xl lg:mt-4'>
-                        <p className='font-montserrat text-base font-bold mt-0 lg:ml-5' css={sectionSubtitleColor}>
+                    <div className='col-span-12 mx-auto max-w-xl lg:max-w-5xl lg:mt-4'>
+                        <p className='font-montserrat text-base font-bold mt-0' css={sectionSubtitleColor}>
                             CLOUD SECURITY IN CONTEXT
                         </p>
                         <h2
-                            className='text-blue font-bold font-montserrat mt-4 lg:ml-5'
+                            className='text-blue font-bold font-montserrat mt-4'
                             css={css`
                                 font-size: 2rem;
                                 line-height: 2.5rem;
@@ -338,19 +332,12 @@ const HomePage = ({ location }) => {
                         >
                             We guide you to the 20% of most important fixes that will reduce 80% of your risk
                         </h2>
-                        <p className='font-hind text-base mt-4 lg:ml-5' css={sectionTextColor}>
+                        <p className='font-hind text-base mt-4' css={sectionTextColor}>
                             Cloud security shouldn't hold you back. If you’re purchasing your first cloud security
                             solution or you’ve outgrown tools from AWS, Azure, or Google Cloud, Cyscale reduces the
                             noise to keep you focused on what's urgent. Get peace of mind that your assets are
                             protected.
                         </p>
-                    </div>
-                    <div className='col-span-12 lg:col-span-6 mx-auto lg:mx-0 block lg:hidden mt-12'>
-                        <GatsbyImage
-                            image={data.graphContainers.childImageSharp.gatsbyImageData}
-                            alt='Graph and screenshots from cloud security platform'
-                            className='w-auto md:max-w-2xl lg:w-auto'
-                        />
                     </div>
                 </div>
             </div>
