@@ -45,10 +45,9 @@ const BlogSection = () => {
             <Container>
                 <div className='grid grid-cols-12 gap-x-5 mt-12'>
                     <div className='col-span-12 lg:col-span-4  mx-auto lg:mx-0 max-w-xl lg:max-w-lg'>
-                        {' '}
                         <p className='font-montserrat text-base font-bold' css={sectionSubtitleColor}>
                             LATEST ARTICLES
-                        </p>{' '}
+                        </p>
                         <h2 className='font-montserrat text-blue font-bold mt-3' css={titleSection}>
                             What we’re up to
                         </h2>
