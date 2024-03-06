@@ -82,7 +82,7 @@ const Carousel = forwardRef((props, ref) => {
                         max-width: calc(100vw - (((100vw - 80rem) / 2) + ((80rem / 12) * 4) + 3.6rem));
                     }
                     @media (min-width: 1280px) {
-                        max-width: calc(100vw - (((100vw - 80rem) / 2) + ((80rem / 12) * 4) + 1.7rem));
+                        max-width: calc(100vw - (((100vw - 80rem) / 2) + ((80rem / 12) * 4) + 1.8rem));
                     }
                 `}
             >
