@@ -65,7 +65,7 @@ const FullPlatformTour = ({ location }) => {
                     gatsbyImageData(width: 1920, layout: CONSTRAINED)
                 }
             }
-            iam: file(relativePath: { eq: "iam-video.png" }) {
+            iam: file(relativePath: { eq: "iam-thumbnail-tours.png" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1920, layout: CONSTRAINED)
                 }
