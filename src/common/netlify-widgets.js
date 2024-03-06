@@ -404,16 +404,16 @@ CMS.registerEditorComponent({
         const videoId = extractVideoID(obj.url);
         return (
             `<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">` +
-            `<iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allowfullscreen></iframe>` +
+            `<iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>` +
             `</div>`
         );
     },
     toPreview: function (obj) {
         return (
             `<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">` +
-            `<iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/${extractVideoID(
+            `<iframe style="position: absolute; top: 0; left 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/${extractVideoID(
                 obj.url
-            )}" frameborder="0" allowfullscreen></iframe>` +
+            )}?rel=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>` +
             `</div>`
         );
     }
