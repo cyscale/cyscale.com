@@ -153,7 +153,7 @@ In terms of data sovereignty, this means understanding how to store data in the 
 
 <br class="" />
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"><iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/OQj8Yo71DvQ" frameborder="0" allowfullscreen></iframe></div>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"><iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/OQj8Yo71DvQ?rel=0&modestbranding=1" frameborder="0" allowfullscreen></iframe></div>
 
 ## Approaching cloud security in M&A holistically  
 

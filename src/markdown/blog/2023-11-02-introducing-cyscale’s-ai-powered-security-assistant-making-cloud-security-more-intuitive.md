@@ -36,7 +36,7 @@ In our first look at Cyscale’s AI-powered Security Assistant you can see how w
  
 
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"><iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/boWgsssdTDI" frameborder="0" allowfullscreen></iframe></div>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"><iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/boWgsssdTDI?rel=0&modestbranding=1" frameborder="0" allowfullscreen></iframe></div>
 
 The key value here is the democratization of cloud security. Regardless of your skill level, the Security Assistant connects all the dots between disparate information sources so you don’t have to. This means security practitioners struggling to keep up with technical tasks can get information that’s relevant to them, just the same as compliance officers can get information about security posture through a lens that’s more relevant to their interests.  
 
