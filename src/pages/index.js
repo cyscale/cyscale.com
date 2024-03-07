@@ -237,7 +237,7 @@ const HomePage = ({ location }) => {
                                     <p className='text-left text-base lg:text-lg mb-4 leading-relaxed font-hind'>
                                         Strengthen your cloud security and eliminate guesswork with real-time
                                         intelligence on misconfigurations, vulnerabilities, identities, and data access.
-                                        Works great for small secutity teams.
+                                        Works great for small security teams.
                                     </p>
                                     <div className='flex mt-4 justify-start'>
                                         <Link to='/request-demo/'>
