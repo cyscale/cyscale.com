@@ -53,7 +53,7 @@ const TiltImage = () => {
     const progress = Math.min(1, scrollY / scrollThreshold);
 
     const scale = animationsEnabled ? 0.5 + 0.5 * progress : 1;
-    const rotateX = animationsEnabled ? 90 * (1 - progress) : 0;
+    const rotateX = animationsEnabled ? 40 * (1 - progress) : 0;
 
     return (
         <div
