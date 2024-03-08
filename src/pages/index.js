@@ -181,15 +181,14 @@ const HomePage = ({ location }) => {
             <div className='hidden' data-category>
                 website
             </div>
-            <div className='pt-24 sm:pt-32'>
+            <div
+                className='pt-24 sm:pt-32'
+                css={css`
+                    background: linear-gradient(0deg, #f5f9ff 0%, #f5f9ff 100%);
+                `}
+            >
                 <Container>
-                    <div
-                        className='py-6 lg:py-16 px-4 lg:px-8'
-                        css={css`
-                            border-radius: 1rem;
-                            background: linear-gradient(0deg, #f5f9ff 0%, #f5f9ff 100%);
-                        `}
-                    >
+                    <div className='pt-6 pb-20 lg:pb-24 lg:pt-16 px-4 lg:px-8'>
                         <div className='grid grid-cols-12'>
                             <div className='col-span-12 lg:col-span-6'>
                                 <div className='sm:pt-4 max-w-lg mx-auto lg:mx-0'>
@@ -320,11 +319,11 @@ const HomePage = ({ location }) => {
                     `}
                 >
                     <div className='col-span-12 mx-auto max-w-xl lg:max-w-5xl lg:mt-4'>
-                        <p className='font-montserrat text-base font-bold mt-0' css={sectionSubtitleColor}>
+                        <p className='font-montserrat text-base font-bold mt-0 text-center' css={sectionSubtitleColor}>
                             CLOUD SECURITY IN CONTEXT
                         </p>
                         <h2
-                            className='text-blue font-bold font-montserrat mt-4'
+                            className='text-blue font-bold font-montserrat mt-4 text-center'
                             css={css`
                                 font-size: 2rem;
                                 line-height: 2.5rem;
@@ -332,11 +331,11 @@ const HomePage = ({ location }) => {
                         >
                             We guide you to the 20% of most important fixes that will reduce 80% of your risk
                         </h2>
-                        <p className='font-hind text-base mt-4' css={sectionTextColor}>
+                        <p className='font-hind text-base mt-4 text-center' css={sectionTextColor}>
                             Cloud security shouldn't hold you back. If you’re purchasing your first cloud security
-                            solution or you’ve outgrown tools from AWS, Azure, or Google Cloud, Cyscale reduces the
-                            noise to keep you focused on what's urgent. Get peace of mind that your assets are
-                            protected.
+                            solution or you’ve outgrown tools from AWS, Azure, or <br className='hidden xl:block' />{' '}
+                            Google Cloud, Cyscale reduces the noise to keep you focused on what's urgent. Get peace of
+                            mind that your assets are protected.
                         </p>
                     </div>
                 </div>
