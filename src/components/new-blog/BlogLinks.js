@@ -233,25 +233,64 @@ const BlogLinks = ({ categories }) => {
                 />
             )}
             {categories[0] === 'Compliance' && (
-                <LatestCategoryArticles category={categories[0]} latestArticles={data.compliance.edges[0].node.fields.relatedPostsPermalink} />
+                <LatestCategoryArticles
+                    category={categories[0]}
+                    latestArticles={data.compliance.edges[0].node.fields.relatedPostsPermalink}
+                />
             )}
-            {categories[0] === 'News' && <LatestCategoryArticles category={categories[0]} latestArticles={data.news.edges[0].node.fields.relatedPostsPermalink} />}
+            {categories[0] === 'News' && (
+                <LatestCategoryArticles
+                    category={categories[0]}
+                    latestArticles={data.news.edges[0].node.fields.relatedPostsPermalink}
+                />
+            )}
             {categories[0] === 'Product' && (
-                <LatestCategoryArticles category={categories[0]} latestArticles={data.product.edges[0].node.fields.relatedPostsPermalink} />
+                <LatestCategoryArticles
+                    category={categories[0]}
+                    latestArticles={data.product.edges[0].node.fields.relatedPostsPermalink}
+                />
             )}
-            {categories[0] === 'IAM' && <LatestCategoryArticles category={categories[0]} latestArticles={data.iam.edges[0].node.fields.relatedPostsPermalink} />}
-            {categories[0] === 'CSPM' && <LatestCategoryArticles category={categories[0]} latestArticles={data.cspm.edges[0].node.fields.relatedPostsPermalink} />}
+            {categories[0] === 'IAM' && (
+                <LatestCategoryArticles
+                    category={categories[0]}
+                    latestArticles={data.iam.edges[0].node.fields.relatedPostsPermalink}
+                />
+            )}
+            {categories[0] === 'CSPM' && (
+                <LatestCategoryArticles
+                    category={categories[0]}
+                    latestArticles={data.cspm.edges[0].node.fields.relatedPostsPermalink}
+                />
+            )}
             {categories[0] === 'CNAPP' && (
-                <LatestCategoryArticles category={categories[0]} latestArticles={data.cnapp.edges[0].node.fields.relatedPostsPermalink} />
+                <LatestCategoryArticles
+                    category={categories[0]}
+                    latestArticles={data.cnapp.edges[0].node.fields.relatedPostsPermalink}
+                />
             )}
             {categories[0] === 'Cloud Native Security' && (
-                <LatestCategoryArticles category={categories[0]} latestArticles={data.cloudNativeSecurity.edges[0].node.fields.relatedPostsPermalink} />
+                <LatestCategoryArticles
+                    category={categories[0]}
+                    latestArticles={data.cloudNativeSecurity.edges[0].node.fields.relatedPostsPermalink}
+                />
+            )}{' '}
+            {categories[0] === 'Engineering' && (
+                <LatestCategoryArticles
+                    category={categories[0]}
+                    latestArticles={data.cloudNativeSecurity.edges[0].node.fields.relatedPostsPermalink}
+                />
             )}
             {categories[0] === 'Misconfigurations' && (
-                <LatestCategoryArticles category={categories[0]} latestArticles={data.misconfigurations.edges[0].node.fields.relatedPostsPermalink} />
+                <LatestCategoryArticles
+                    category={categories[0]}
+                    latestArticles={data.misconfigurations.edges[0].node.fields.relatedPostsPermalink}
+                />
             )}
             {categories[0] === 'Encryption' && (
-                <LatestCategoryArticles category={categories[0]} latestArticles={data.encryption.edges[0].node.fields.relatedPostsPermalink} />
+                <LatestCategoryArticles
+                    category={categories[0]}
+                    latestArticles={data.encryption.edges[0].node.fields.relatedPostsPermalink}
+                />
             )}
         </>
     );
