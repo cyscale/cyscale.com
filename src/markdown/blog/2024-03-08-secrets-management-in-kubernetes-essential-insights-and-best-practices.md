@@ -60,8 +60,6 @@ You can also turn on secrets encryption for your Kubernetes clusters using this 
 aws eks associate-encryption-config --cluster-name <clusterName> --encryption-config '\[{"resources":["secrets"],"provider":{"keyArn":"arn:aws:kms:<regionCode>:<account>:key/<key>"}}]'
 ```
 
- 
-
 **AKS (Azure Kubernetes Service)** 
 
 To turn on KMS etcd encryption for an existing cluster, you can use the following command: 
@@ -154,13 +152,9 @@ When you use the Google Cloud console to create a key, Cloud KMS sets the rotati
 These are the steps to rotate your decryption key, according to [Kubernetes](https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/): 
 
 1. Generate a new key securely and add it as the second entry for the current provider on all control plane nodes. Restart all kube-apiserver processes so that each server can decrypt data encrypted with the new key. 
-
 2. Backup the new encryption key. If you lose it, you lose access to all data encrypted with it.  
-
 3. Make the new key the first entry in the keys array and restart all kube-apiserver processes. 
-
 4. Run *kubectl get secrets --all-namespaces -o json | kubectl replace -f -* to encrypt all secrets with the new key. 
-
 5. Remove the old key from the configuration. 
 
 ### RBAC and the Least Privilege Principle 
@@ -192,8 +186,6 @@ rules:
 
   verbs: ["get", "watch", "list"] 
 ```
-
-
 
 A ClusterRole would simply have “kind: ClusterRole”, and no namespace specified. 
 
@@ -238,8 +230,6 @@ Always remember to assign the minimum permissions necessary. This minimizes the 
 * Perform regular access reviews to ensure everything is functioning correctly and users are not accessing resources they shouldn’t, 
 * Monitor your Kubernetes cluster constantly to identify suspicious behaviour. 
 
-  
-
 ### **Centralized Secrets Store providers** 
 
 By using a cloud Secrets Store solution, you can centralize secrets management and leave the storage, auditing, logging to the cloud provider. Moreover, if you integrate your Kubernetes cluster within the cloud using a managed solution (like EKS, AKS, GKE), you obtain a unified infrastructure. 
@@ -254,11 +244,7 @@ By using a managed solution, the pressure on developers decreases, allowing them
 
 **Google Cloud Secret Manager** is Google Cloud’s version for storing secrets securely. Google Cloud Secret Manager offers a fully managed solution for storing and managing secrets, such as API keys, passwords, and certificates. It provides versioning, access controls, and audit logging capabilities, ensuring the secure storage and retrieval of sensitive information. 
 
-
-
 Using the [Secrets Store CSI Driver](https://kubernetes-csi.github.io/docs/) for Kubernetes secrets, Secrets stored in managed stores in the cloud can be treated as files mounted in Kubernetes pods, allowing for a seamless utilization of secrets with no added complexity but with maximum security. 
-
-
 
 Managing secrets in Kubernetes is a critical aspect of securing your Kubernetes cluster. In this article, we’ve discussed secrets encryption at rest, RBAC, and managed Secrets Store solutions in the cloud. 
 
