@@ -15,8 +15,9 @@ const Tooltip = ({ tooltipText, isVisible, position = 'left' }) => {
                 transform: ${position === 'left' ? 'translateX(-50%)' : 'translateX(50%)'};
                 opacity: ${isVisible ? 1 : 0};
                 transition: opacity 0.5s linear;
+                z-index: 101;
             `}
-            className='text-sm z-20 text-white bg-black font-hind'
+            className='text-sm text-white bg-black font-hind'
         >
             {tooltipText}
         </span>
