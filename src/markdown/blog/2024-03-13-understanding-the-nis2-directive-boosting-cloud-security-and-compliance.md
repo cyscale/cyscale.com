@@ -61,16 +61,12 @@ All entities in scope should take measures to cover the most important elements,
 
 You can find more details about these requirements directly from [the NIS2 directive](https://eur-lex.europa.eu/eli/dir/2022/2555). 
 
-
-
 The NIS2 is crucial for implementing cybersecurity best practices and protecting critical infrastructure. Organizations can mitigate risks and contribute to a safer digital environment by adopting the mentioned requirements.  
 
 ## F﻿AQ on NIS2 Directive
 
 <ul class="faq-list"><li><p class="question" style="font-weight:bold;">What is the goal of the NIS2 Directive?</p><p class="answer">It aims to enhance cybersecurity resilience for the EU's critical infrastructure and digital service providers.</p></li><li><p class="question" style="font-weight:bold;">Who does the NIS2 Directive apply to?</p><p class="answer">It applies to entities that provide essential or important services to the European economy from different sectors such as energy, transportation, healthcare, finance, but not limited to those.</p></li><li><p class="question" style="font-weight:bold;">How does the NIS2 Directive affect cloud providers?</p><p class="answer">Cloud providers must implement robust security measures to comply with the directive and protect services from cyber threats.</p></li><li><p class="question" style="font-weight:bold;">What happens if you don't comply with the NIS2 Directive?</p><p class="answer">Non-compliance can lead to penalties such as fines and sanctions, along with increased cyber risks and disruptions to critical services.</p></li><li><p class="question" style="font-weight:bold;">How can organizations comply with the NIS2 Directive?</p><p class="answer">By conducting risk assessments, implementing security controls, establishing incident response procedures, and promoting cybersecurity awareness.</p></li></ul>
 
-[You can perform a free risk assessment right now](https://cyscale.com/request-demo/) to see where your company stands in terms of cloud security and find out the most actionable insights that can improve your business’ cloud security posture. 
-
- 
+[You can perform a free risk assessment right now](https://cyscale.com/cloud-security-risk-assessment/) to see where your company stands in terms of cloud security and find out the most actionable insights that can improve your business’ cloud security posture. 
 
 <!--EndFragment-->
