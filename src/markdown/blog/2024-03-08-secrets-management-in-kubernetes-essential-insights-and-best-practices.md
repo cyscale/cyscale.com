@@ -84,31 +84,19 @@ In Google Cloud, Kubernetes secrets are encrypted at rest by default. However, y
 1. **To begin the process of encrypting your secrets at rest**, generate an encryption key. You can use a Key Vault or a KMS to do this. Then, you need to create a configuration file. Here is an example provided by CNCF: 
 
 ```html
-apiVersion: apiserver.config.k8s.io/v1 
-
-kind: EncryptionConfiguration 
-
-resources: 
-
-- resources: 
-
-- secrets 
-
-- configmaps 
-
-- pandas.awesome.bears.example 
-
-    providers: 
-
-- aescbc: 
-
-          keys: 
-
-- name: key1 
-
-              secret: <base64 encoded key> 
-
-- identity: {}
+apiVersion: apiserver.config.k8s.io/v1
+kind: EncryptionConfiguration
+resources:
+  - resources: null
+  - secrets
+  - configmaps
+  - pandas.awesome.bears.example
+providers:
+  - aescbc:
+      keys: null
+  - name: key1
+    secret: <base64 encoded key>
+  - identity: {}
 ```
 
 After you base64-encode it, add the key as the secret value. 
@@ -120,6 +108,26 @@ Don’t forget that your configuration file contains your key. Base64 encoding a
 3. Edit the manifest for the kube-apiserver static pod (/etc/kubernetes/manifests/kube-apiserver.yaml) to contain the following command: *\--encryption-provider-config=/etc/kubernetes/enc/enc.yaml*. [Read more on the Kubernetes](https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/#write-an-encryption-configuration-file) website to see how to do this. 
 
 After this, restart your API server to apply changes. After ensuring that all secrets are encrypted, remove the last line of the config file; “identity” allows for plaintext retrieval of secrets. 
+
+<div class='mt-16 rounded-tl-2xl rounded-b-2xl grid grid-cols-12 gap-4 bg-zircon py-8 px-4 lg:py-4' style='borderTopRightRadius: 3rem'>
+    <div class='col-span-12 lg:col-span-2'>
+        <div class='flex justify-center'>
+            <img src='/img/cloud-icon-widget.svg' alt='' id='img-text-button' />
+        </div>
+    </div>
+    <div class='col-span-12 lg:col-span-6 flex items-center justify-center'>
+         <p class='font-montserrat font-bold' id="paragraph-text-button">
+            Start to <span id="font-gradient"> manage secrets </span> like a pro
+        </p>
+    </div>
+    <div class='col-span-12 lg:col-span-4 flex justify-center items-center'>
+        <a class='mx-auto bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind' href='https://cyscale.com/full-platform-tour/'>
+            <span style='padding: 0.625rem 2.5rem' class='text-white block'>
+                See demo
+            </span>
+        </a>
+    </div>
+</div>
 
 ### Key rotation 
 
@@ -168,23 +176,20 @@ To manage permissions for secrets and for other Kubernetes objects, we recommend
 Roles and ClusterRoles are two kinds of Kubernetes objects that describe the permissions users are given if they have that role. The basic Role sets the permissions over an object or a set of objects within a specific namespace, while the ClusterRole spans across all namespaces of the cluster. Below, you can see an example of a Role: 
 
 ```html
-apiVersion: rbac.authorization.k8s.io/v1 
-
-kind: Role 
-
-metadata: 
-
-  namespace: default 
-
-  name: pod-reader 
-
-rules: 
-
-- apiGroups: [""]  
-
-  resources: ["pods"] 
-
-  verbs: ["get", "watch", "list"] 
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: default
+  name: pod-reader
+rules:
+  - apiGroups:
+      - ''
+    resources:
+      - pods
+    verbs:
+      - get
+      - watch
+      - list
 ```
 
 A ClusterRole would simply have “kind: ClusterRole”, and no namespace specified. 
@@ -196,31 +201,19 @@ You can also reference a ClusterRole in a RoleBinding! This way lets you define 
 [This is an example](https://kubernetes.io/docs/reference/access-authn-authz/rbac/#restrictions-on-role-creation-or-update) of a ClusterRole, assigned to the user “dave” in the “development” namespace using a RoleBinding. 
 
 ```html
-apiVersion: rbac.authorization.k8s.io/v1 
-
-kind: RoleBinding 
-
-metadata: 
-
-  name: read-secrets 
-
-  namespace: development 
-
-subjects: 
-
-- kind: User 
-
-  name: dave  
-
-  apiGroup: rbac.authorization.k8s.io 
-
-roleRef: 
-
-  kind: ClusterRole 
-
-  name: secret-reader 
-
-  apiGroup: rbac.authorization.k8s.io
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: read-secrets
+  namespace: development
+subjects:
+  - kind: User
+    name: dave
+    apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: ClusterRole
+  name: secret-reader
+  apiGroup: rbac.authorization.k8s.io
 ```
 
 Always remember to assign the minimum permissions necessary. This minimizes the attack surface and prevents privilege escalation in case one of your pods or users is compromised. To follow the Least Privilege Principle and protect your secrets, keep in mind the following best practices for Kubernetes: 
