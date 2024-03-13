@@ -63,6 +63,26 @@ You can find more details about these requirements directly from [the NIS2 direc
 
 The NIS2 is crucial for implementing cybersecurity best practices and protecting critical infrastructure. Organizations can mitigate risks and contribute to a safer digital environment by adopting the mentioned requirements.  
 
+<div class='mt-16 rounded-tl-2xl rounded-b-2xl grid grid-cols-12 gap-4 bg-zircon py-8 px-4 lg:py-4' style='borderTopRightRadius: 3rem'>
+    <div class='col-span-12 lg:col-span-2'>
+        <div class='flex justify-center'>
+            <img src='/img/cloud-icon-widget.svg' alt='' id='img-text-button' />
+        </div>
+    </div>
+    <div class='col-span-12 lg:col-span-6 flex items-center justify-center'>
+         <p class='font-montserrat font-bold' id="paragraph-text-button">
+            Meet NIS 2 compliance with Cyscale<span id="font-gradient">Unified Cloud Security</span>
+        </p>
+    </div>
+    <div class='col-span-12 lg:col-span-4 flex justify-center items-center'>
+        <a class='mx-auto bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind' href='https://cyscale.com/full-platform-tour/'>
+            <span style='padding: 0.625rem 2.5rem' class='text-white block'>
+                See Demo
+            </span>
+        </a>
+    </div>
+</div>
+
 ## F﻿AQ on NIS2 Directive
 
 <ul class="faq-list"><li><p class="question" style="font-weight:bold;">What is the goal of the NIS2 Directive?</p><p class="answer">It aims to enhance cybersecurity resilience for the EU's critical infrastructure and digital service providers.</p></li><li><p class="question" style="font-weight:bold;">Who does the NIS2 Directive apply to?</p><p class="answer">It applies to entities that provide essential or important services to the European economy from different sectors such as energy, transportation, healthcare, finance, but not limited to those.</p></li><li><p class="question" style="font-weight:bold;">How does the NIS2 Directive affect cloud providers?</p><p class="answer">Cloud providers must implement robust security measures to comply with the directive and protect services from cyber threats.</p></li><li><p class="question" style="font-weight:bold;">What happens if you don't comply with the NIS2 Directive?</p><p class="answer">Non-compliance can lead to penalties such as fines and sanctions, along with increased cyber risks and disruptions to critical services.</p></li><li><p class="question" style="font-weight:bold;">How can organizations comply with the NIS2 Directive?</p><p class="answer">By conducting risk assessments, implementing security controls, establishing incident response procedures, and promoting cybersecurity awareness.</p></li></ul>
