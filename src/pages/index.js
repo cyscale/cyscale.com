@@ -198,7 +198,7 @@ const HomePage = ({ location }) => {
                                             font-size: 2rem;
                                         `}
                                     >
-                                        Empower cloud defenders with unified
+                                        Empower cloud defenders with
                                         <span
                                             css={css`
                                                 background-image: linear-gradient(
@@ -213,25 +213,9 @@ const HomePage = ({ location }) => {
                                                 padding: 2px 5px;
                                             `}
                                         >
-                                            security
+                                            unified security
                                         </span>
-                                        and actionable
-                                        <span
-                                            css={css`
-                                                background-image: linear-gradient(
-                                                    89deg,
-                                                    #0f26aa 54.38%,
-                                                    #ff4a56 75.89%
-                                                );
-                                                color: transparent;
-                                                -webkit-background-clip: text;
-                                                background-clip: text;
-                                                display: inline-block;
-                                                padding: 2px 5px;
-                                            `}
-                                        >
-                                            insights
-                                        </span>
+                                        and actionable insights
                                     </h1>
                                     <p className='text-left text-base lg:text-lg mb-4 leading-relaxed font-hind'>
                                         Strengthen your cloud security and eliminate guesswork with real-time
@@ -329,13 +313,14 @@ const HomePage = ({ location }) => {
                                 line-height: 2.5rem;
                             `}
                         >
-                            We guide you to the 20% of most important fixes that will reduce 80% of your risk
+                            Target your most critical 20% issues to reduce
+                            <br className='hidden lg:block' /> cloud security risk exposure
                         </h2>
                         <p className='font-hind text-base mt-4 text-center' css={sectionTextColor}>
-                            Cloud security shouldn't hold you back. If you’re purchasing your first cloud security
-                            solution or you’ve outgrown tools from AWS, Azure, or <br className='hidden xl:block' />{' '}
-                            Google Cloud, Cyscale reduces the noise to keep you focused on what's urgent. Get peace of
-                            mind that your assets are protected.
+                            Cloud security shouldn't hold you back. Whether you're investing in your first cloud
+                            security solution or looking beyond AWS, Azure, or Google Cloud tools, Cyscale reduces the
+                            noise and keeps you focused on fixing the highest-impact tasks. Get real-time threat
+                            detection, incident response measurements, and sensitive data protection.
                         </p>
                     </div>
                 </div>

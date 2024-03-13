@@ -4,6 +4,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import PulsingCircles from './PulsingCircles';
 import { css } from 'twin.macro';
 import { isSafari } from '../../common/utils';
+import useMediaQuery from '../../hooks/useMediaQuery';
 
 const TiltImage = () => {
     const data = useStaticQuery(graphql`
@@ -16,47 +17,89 @@ const TiltImage = () => {
         }
     `);
 
-    const [scrollY, setScrollY] = useState(0);
-    const [animationsEnabled, setAnimationsEnabled] = useState(true);
-    const [animationRan, setAnimationRan] = useState(false);
-    const requestRef = useRef();
+    const initialScale = 0.8505;
+    const initialRotateX = 11.96;
+
+    const [isMounted, setIsMounted] = useState(false);
+    const [scale, setScale] = useState(initialScale);
+    const [rotateX, setRotateX] = useState(initialRotateX);
+    const [animationCompleted, setAnimationCompleted] = useState(false);
+    const imageRef = useRef();
+    const isMobile = useMediaQuery('(max-width: 1280px)');
+    const animationsEnabled = !isSafari && !isMobile && isMounted;
 
     useEffect(() => {
-        if (isSafari) {
-            setAnimationsEnabled(false);
+        const resetStateOnRefresh = () => {
+            setScale(initialScale);
+            setRotateX(initialRotateX);
+            setAnimationCompleted(false);
+        };
+
+        window.addEventListener('load', resetStateOnRefresh);
+
+        return () => {
+            window.removeEventListener('load', resetStateOnRefresh);
+        };
+    }, []);
+
+    useEffect(() => {
+        setIsMounted(true);
+
+        if (!animationsEnabled) {
+            return;
         }
 
-        const animate = () => {
-            if (!animationRan) {
-                requestRef.current = requestAnimationFrame(animate);
-                handleScroll();
+        const handleScroll = () => {
+            if (animationCompleted) return;
+
+            const boundingClientRect = imageRef.current.getBoundingClientRect();
+            const visiblePercentage = Math.max(
+                0,
+                Math.min(1, (window.innerHeight - boundingClientRect.top) / window.innerHeight)
+            );
+            const newScale = Math.min(1, initialScale + (1 - initialScale) * visiblePercentage);
+            const newRotateX = initialRotateX * (1 - visiblePercentage);
+
+            setScale(newScale);
+            setRotateX(newRotateX);
+
+            if (newScale === 1) {
+                setAnimationCompleted(true);
+                window.removeEventListener('scroll', handleScroll);
             }
         };
 
-        if (!animationRan) {
-            requestRef.current = requestAnimationFrame(animate);
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting && !animationCompleted) {
+                    window.addEventListener('scroll', handleScroll);
+                    handleScroll();
+                } else {
+                    window.removeEventListener('scroll', handleScroll);
+                }
+            },
+            {
+                threshold: 0.05
+            }
+        );
+
+        if (imageRef.current) {
+            observer.observe(imageRef.current);
         }
 
-        return () => cancelAnimationFrame(requestRef.current);
-    }, [animationRan]);
+        return () => {
+            if (imageRef.current) {
+                observer.unobserve(imageRef.current);
+            }
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [animationsEnabled, animationCompleted]);
 
-    const handleScroll = () => {
-        const newScrollY = window.scrollY;
-        setScrollY(newScrollY);
-        if (newScrollY >= scrollThreshold && !animationRan) {
-            setAnimationRan(true);
-            cancelAnimationFrame(requestRef.current);
-        }
-    };
-
-    const scrollThreshold = 1000;
-    const progress = Math.min(1, scrollY / scrollThreshold);
-
-    const scale = animationsEnabled ? 0.5 + 0.5 * progress : 1;
-    const rotateX = animationsEnabled ? 40 * (1 - progress) : 0;
+    const transform = !animationsEnabled ? 'none' : `scale(${scale}) rotateX(${rotateX}deg)`;
 
     return (
         <div
+            ref={imageRef}
             css={css`
                 perspective: ${animationsEnabled ? '1000px' : 'none'};
                 -webkit-perspective: ${animationsEnabled ? '1000px' : 'none'};
@@ -68,9 +111,9 @@ const TiltImage = () => {
             <div
                 css={css`
                     will-change: transform;
-                    transform: scale(${scale}) rotateX(${rotateX}deg);
+                    transform: ${transform};
                     transform-style: preserve-3d;
-                    transition: ${animationsEnabled ? 'transform 0.7s ease-out' : 'none'};
+                    transition: ${!animationsEnabled ? 'none' : 'transform 0.7s ease-out'};
                     position: relative;
                 `}
             >
@@ -143,6 +186,7 @@ const TiltImage = () => {
                         position: absolute;
                         top: 65%;
                         left: 38%;
+                        z-index: 100;
                     `}
                 >
                     <PulsingCircles
@@ -162,6 +206,7 @@ const TiltImage = () => {
                         position: absolute;
                         top: 65%;
                         right: 8%;
+                        z-index: 100;
                     `}
                 >
                     <PulsingCircles
