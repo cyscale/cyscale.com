@@ -557,7 +557,7 @@ const PricingPage = ({ location }) => {
                 >
                     <Container className='mb-16'>
                         <h1 className='text-blue text-center text-3xl lg:text-5xl font-bold font-montserrat'>
-                            Det a Demo
+                            Get a Demo
                         </h1>
                         <p className='my-8 text-center font-medium text-sm lg:text-base font-montserrat'>
                             Get peace of mind with cloud security that doesn't hold you back!
