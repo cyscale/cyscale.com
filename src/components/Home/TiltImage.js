@@ -143,7 +143,6 @@ const TiltImage = () => {
                         }
                     />
                 </div>
-
                 <PulsingCircles
                     tooltipText={
                         <>
@@ -157,7 +156,7 @@ const TiltImage = () => {
                         position: absolute;
                         top: 24%;
                         right: 36%;
-                        padding: 10px;
+                        padding: 0.625rem;
                     `}
                 />
                 <PulsingCircles
@@ -175,7 +174,7 @@ const TiltImage = () => {
                         position: absolute;
                         top: 25%;
                         right: 8%;
-                        padding: 10px;
+                        padding: 0.625rem;
                     `}
                 />
                 <PulsingCircles
@@ -193,7 +192,7 @@ const TiltImage = () => {
                         top: 65%;
                         left: 38%;
                         z-index: 100;
-                        padding: 10px;
+                        padding: 0.625rem;
                     `}
                     useDebounce={true}
                 />
@@ -213,7 +212,7 @@ const TiltImage = () => {
                         top: 65%;
                         right: 8%;
                         z-index: 100;
-                        padding: 10px;
+                        padding: 0.625rem;
                     `}
                     useDebounce={true}
                 />
