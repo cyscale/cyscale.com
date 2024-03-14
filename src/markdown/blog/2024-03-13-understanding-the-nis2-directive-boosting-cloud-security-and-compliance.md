@@ -82,6 +82,24 @@ The NIS2 is crucial for implementing cybersecurity best practices and protecting
     </div>
 </div>
 
+## Timeline and Deadlines
+
+* By **17 July 2024**, The European cyber crisis liaison organisation network (*EU-CyCLONe*) is required to submit its first report to the European Parliament and the Council, assessing its work. This report will be submitted *every 18 months* thereafter.
+
+* By **17 October 2024**, Member States must adopt and publish the necessary measures to comply with the NIS 2 Directive.
+    
+* Also by **17 October 2024**, the Commission is required to adopt implementing acts detailing the technical and methodological requirements of the measures for various service providers.
+    
+* The application of these measures by Member States will commence from **18 October 2024**. This date also marks the repeal of *Directive (EU) 2016/1148* (the NIS Directive).
+    
+* By **17 January 2025**, the Cooperation Group, with the assistance of the Commission and ENISA, and where relevant, the CSIRTs network, will establish the methodology and organizational aspects of peer reviews. These reviews aim to enhance Member States’ cybersecurity capabilities and policies necessary to implement this Directive. Participation in peer reviews is voluntary and will be carried out by cybersecurity experts designated by at least two Member States.
+    
+* By **17 April 2025**, Member States are required to establish a list of essential and important entities, as well as entities providing domain name registration services. This list will be reviewed and updated regularly, at least *every two years*.
+    
+* By the same date, **17 April 2025**, and every two years thereafter, the competent authorities will notify the Commission and the Cooperation Group of the number of essential and important entities for each sector.
+    
+* The first review of the functioning of this Directive by the Commission will take place by **17 October 2027**, and subsequently *every 36 months*, with a report to be submitted to the European Parliament and the Council.
+
 ## F﻿AQ on NIS2 Directive
 
 <ul class="faq-list"><li><p class="question" style="font-weight:bold;">What is the goal of the NIS2 Directive?</p><p class="answer">It aims to enhance cybersecurity resilience for the EU's critical infrastructure and digital service providers.</p></li><li><p class="question" style="font-weight:bold;">Who does the NIS2 Directive apply to?</p><p class="answer">It applies to entities that provide essential or important services to the European economy from different sectors such as energy, transportation, healthcare, finance, but not limited to those.</p></li><li><p class="question" style="font-weight:bold;">How does the NIS2 Directive affect cloud providers?</p><p class="answer">Cloud providers must implement robust security measures to comply with the directive and protect services from cyber threats.</p></li><li><p class="question" style="font-weight:bold;">What happens if you don't comply with the NIS2 Directive?</p><p class="answer">Non-compliance can lead to penalties such as fines and sanctions, along with increased cyber risks and disruptions to critical services.</p></li><li><p class="question" style="font-weight:bold;">How can organizations comply with the NIS2 Directive?</p><p class="answer">By conducting risk assessments, implementing security controls, establishing incident response procedures, and promoting cybersecurity awareness.</p></li></ul>
