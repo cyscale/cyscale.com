@@ -13,6 +13,18 @@ import AlignTeams from '../components/pages/AlignTeams';
 import Features from '../components/pages/Features';
 import CustomPagesStyles from '../components/pages/CustomPagesStyles';
 
+const injectCustomStyle = () => {
+    const style = document.createElement('style');
+    style.innerHTML = `
+    div[data-slate-editor] {
+      -webkit-user-modify: read-write !important;
+    }
+  `;
+    document.head.appendChild(style);
+};
+
+injectCustomStyle();
+
 const BlogPreview = ({ entry }) => (
     <PostContent
         preview={true}
@@ -149,4 +161,3 @@ const PagesPreview = ({ entry }) => {
 };
 
 CMS.registerPreviewTemplate('pages', PagesPreview);
-
