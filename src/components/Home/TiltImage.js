@@ -143,85 +143,80 @@ const TiltImage = () => {
                         }
                     />
                 </div>
-                <div
-                    css={css`
+
+                <PulsingCircles
+                    tooltipText={
+                        <>
+                            <span className='text-base px-1 mb-2 inline-block'>Attack path graph</span>
+                            <span className='px-1 inline-block'>
+                                Visual representation of attack paths and vulnerable assets
+                            </span>
+                        </>
+                    }
+                    wrapperStyle={css`
                         position: absolute;
                         top: 24%;
                         right: 36%;
+                        padding: 10px;
                     `}
-                >
-                    <PulsingCircles
-                        tooltipText={
-                            <>
-                                <span className='text-base px-1 mb-2 inline-block'>Attack path graph</span>
-                                <span className='px-1 inline-block'>
-                                    Visual representation of attack paths and vulnerable assets
-                                </span>
-                            </>
-                        }
-                    />
-                </div>
-                <div
-                    css={css`
+                />
+                <PulsingCircles
+                    tooltipText={
+                        <>
+                            <span className='text-base px-1 mb-2 inline-block'>High-risk misconfigurations</span>
+                            <span className='px-1 inline-block'>
+                                Automatically fix high-risk misconfigurations affecting multiple assets. Fix these and
+                                fix 80% of your issues!
+                            </span>
+                        </>
+                    }
+                    position='right'
+                    wrapperStyle={css`
                         position: absolute;
                         top: 25%;
                         right: 8%;
+                        padding: 10px;
                     `}
-                >
-                    <PulsingCircles
-                        tooltipText={
-                            <>
-                                <span className='text-base px-1 mb-2 inline-block'>High-risk misconfigurations</span>
-                                <span className='px-1 inline-block'>
-                                    Automatically fix high-risk misconfigurations affecting multiple assets. Fix these
-                                    and fix 80% of your issues!
-                                </span>
-                            </>
-                        }
-                        position='right'
-                    />
-                </div>
-                <div
-                    css={css`
+                />
+                <PulsingCircles
+                    tooltipText={
+                        <>
+                            <span className='text-base px-1 mb-2 inline-block'>Compliance</span>
+                            <span className='px-1 inline-block'>
+                                Out of the box support for a wide range of compliance frameworks and customizable
+                                policies
+                            </span>
+                        </>
+                    }
+                    wrapperStyle={css`
                         position: absolute;
                         top: 65%;
                         left: 38%;
                         z-index: 100;
+                        padding: 10px;
                     `}
-                >
-                    <PulsingCircles
-                        tooltipText={
-                            <>
-                                <span className='text-base px-1 mb-2 inline-block'>Compliance</span>
-                                <span className='px-1 inline-block'>
-                                    Out of the box support for a wide range of compliance frameworks and customizable
-                                    policies
-                                </span>
-                            </>
-                        }
-                    />
-                </div>
-                <div
-                    css={css`
+                    useDebounce={true}
+                />
+                <PulsingCircles
+                    tooltipText={
+                        <>
+                            <span className='text-base px-1 mb-2 inline-block'>Public resources</span>
+                            <span className='px-1 inline-block'>
+                                Keep track of publicly accessible resources. Some are supposed to be public. Some
+                                aren’t!
+                            </span>
+                        </>
+                    }
+                    position='right'
+                    wrapperStyle={css`
                         position: absolute;
                         top: 65%;
                         right: 8%;
                         z-index: 100;
+                        padding: 10px;
                     `}
-                >
-                    <PulsingCircles
-                        tooltipText={
-                            <>
-                                <span className='text-base px-1 mb-2 inline-block'>Public resources</span>
-                                <span className='px-1 inline-block'>
-                                    Keep track of publicly accessible resources. Some are supposed to be public. Some
-                                    aren’t!
-                                </span>
-                            </>
-                        }
-                        position='right'
-                    />
-                </div>
+                    useDebounce={true}
+                />
             </div>
         </div>
     );
