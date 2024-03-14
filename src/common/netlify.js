@@ -1,5 +1,5 @@
 import CMS from 'netlify-cms-app';
-import './netlify-widgets'
+import './netlify-widgets';
 import React from 'react';
 import PostContent from '../components/new-blog/PostContent';
 import '../styles/netify-preview.css';
@@ -12,6 +12,7 @@ import Cta from '../components/pages/Cta';
 import AlignTeams from '../components/pages/AlignTeams';
 import Features from '../components/pages/Features';
 import CustomPagesStyles from '../components/pages/CustomPagesStyles';
+import CursorStabilizer from './CursorStabilizer';
 
 const injectCustomStyle = () => {
     const style = document.createElement('style');
@@ -26,17 +27,20 @@ const injectCustomStyle = () => {
 injectCustomStyle();
 
 const BlogPreview = ({ entry }) => (
-    <PostContent
-        preview={true}
-        data={{
-            title: entry.getIn(['data', 'title']),
-            featuredimage: { publicURL: entry.getIn(['data', 'featuredimage']) },
-            rawMarkdownBody: entry.getIn(['data', 'body']),
-            date: entry.getIn(['data', 'date']),
-            authors: entry.getIn(['data', 'authors']),
-            categories: entry.getIn(['data', 'categories']).toArray()
-        }}
-    />
+    <>
+        <CursorStabilizer />
+        <PostContent
+            preview={true}
+            data={{
+                title: entry.getIn(['data', 'title']),
+                featuredimage: { publicURL: entry.getIn(['data', 'featuredimage']) },
+                rawMarkdownBody: entry.getIn(['data', 'body']),
+                date: entry.getIn(['data', 'date']),
+                authors: entry.getIn(['data', 'authors']),
+                categories: entry.getIn(['data', 'categories']).toArray()
+            }}
+        />
+    </>
 );
 
 CMS.registerPreviewTemplate('blog', BlogPreview);
