@@ -5,7 +5,6 @@ seoTitle: "Understanding the NIS2 Directive: Boosting Cloud Security and Complia
 authors: Sabrina Lupșan
 permalink: nis2-directive-readiness
 categories:
-  - News
   - Compliance
 date: 2024-03-13T10:57:22.229Z
 description: "NIS2 (Network and Information Systems Security Directive 2) is a
