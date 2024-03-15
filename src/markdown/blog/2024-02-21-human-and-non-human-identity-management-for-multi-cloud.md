@@ -5,7 +5,6 @@ seoTitle: Human and Non-Human Identity Management for Multi-Cloud
 authors: Ovidiu Cical
 permalink: human-non-human-identity-management-multi-cloud
 categories:
-  - News
   - IAM
 date: 2024-02-21T14:45:48.245Z
 description: "To effectively use the cloud, you need to be able to trust
