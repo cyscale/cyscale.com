@@ -113,11 +113,7 @@ const PricingPage = ({ location }) => {
                                             duration={500}
                                             className='cursor-pointer'
                                         >
-                                            <h2
-                                                className='text-blue font-montserrat font-bold text-xl mt-3'
-                                            >
-                                                Pro
-                                            </h2>
+                                            <h2 className='text-blue font-montserrat font-bold text-xl mt-3'>Pro</h2>
                                         </Link>
                                         <p
                                             className='text-blue py-2 px-3 rounded-md font-bold font-hind text-xs mt-3'
@@ -154,7 +150,7 @@ const PricingPage = ({ location }) => {
                                             Up to 1000 <AssetsTooltip />
                                         </p>
                                     </div>
-                                    <div className='mt-63px'>
+                                    <div className='mt-8'>
                                         <Link
                                             to='meetings-calendar'
                                             smooth={true}
@@ -178,11 +174,7 @@ const PricingPage = ({ location }) => {
                                             duration={500}
                                             className='cursor-pointer'
                                         >
-                                            <h2
-                                                className='text-blue font-montserrat font-bold text-2xl mt-3'
-                                            >
-                                                Scale
-                                            </h2>
+                                            <h2 className='text-blue font-montserrat font-bold text-2xl mt-3'>Scale</h2>
                                         </Link>
                                         <p
                                             className='text-blue py-2 px-3 rounded-md font-bold font-hind text-xs mt-3'
@@ -243,9 +235,7 @@ const PricingPage = ({ location }) => {
                                             duration={500}
                                             className='cursor-pointer'
                                         >
-                                            <h2
-                                                className='text-blue font-montserrat font-bold text-xl mt-3'
-                                            >
+                                            <h2 className='text-blue font-montserrat font-bold text-2xl mt-3'>
                                                 Enterprise
                                             </h2>
                                         </Link>
@@ -258,21 +248,11 @@ const PricingPage = ({ location }) => {
                                             growth stage
                                         </p>
                                     </div>
+                                    <p className='font-montserrat text-2xl mt-4'>Tailored to your needs</p>
                                     <div className='flex mt-4'>
                                         <img src={PricingCheck} alt='' className='mt-1.5' />
                                         <p
-                                            className='font-hind text-base mt-2 ml-2'
-                                            css={css`
-                                                color: #818791;
-                                            `}
-                                        >
-                                            Custom plan
-                                        </p>
-                                    </div>{' '}
-                                    <div className='flex'>
-                                        <img src={PricingCheck} alt='' className='mt-1.5' />
-                                        <p
-                                            className='font-hind text-base mt-2 ml-2'
+                                            className='font-hind text-base mt-4 ml-2'
                                             css={css`
                                                 color: #818791;
                                             `}
@@ -280,18 +260,18 @@ const PricingPage = ({ location }) => {
                                             1-on-1 onboarding
                                         </p>
                                     </div>{' '}
-                                    <div className='flex items-start'>
-                                        <img src={PricingCheck} alt='' className='mt-2.5' />
+                                    <div className='flex relative'>
+                                        <img src={PricingCheck} alt='' className='mt-1.5' />
                                         <p
                                             className='font-hind text-base mt-2 ml-2'
                                             css={css`
                                                 color: #818791;
                                             `}
                                         >
-                                            Group training and best practices tips for your team
+                                            Support for your team
                                         </p>
                                     </div>
-                                    <div className='mt-10 sm:mt-14 lg:mt-10'>
+                                    <div className='mt-8'>
                                         <Link
                                             to='meetings-calendar'
                                             smooth={true}
@@ -372,7 +352,8 @@ const PricingPage = ({ location }) => {
                             <div className='flex mt-2 items-start'>
                                 <img src={checkMarkIcon} alt='' />{' '}
                                 <p className='ml-2 text-sm'>
-                                    Integrations (AWS SSO, Okta, Google Workspace, <br className="hidden lg:block" /> Azure AD)
+                                    Integrations (AWS SSO, Okta, Google Workspace, <br className='hidden lg:block' />{' '}
+                                    Entra ID)
                                 </p>
                             </div>
                             <div className='flex mt-2'>
