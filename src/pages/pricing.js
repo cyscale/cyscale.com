@@ -113,7 +113,7 @@ const PricingPage = ({ location }) => {
                                             duration={500}
                                             className='cursor-pointer'
                                         >
-                                            <h2 className='text-blue font-montserrat font-bold text-xl mt-3'>Pro</h2>
+                                            <h2 className='text-blue font-montserrat font-bold text-2xl mt-3'>Pro</h2>
                                         </Link>
                                         <p
                                             className='text-blue py-2 px-3 rounded-md font-bold font-hind text-xs mt-3'
@@ -124,12 +124,12 @@ const PricingPage = ({ location }) => {
                                             fits most SaaS companies
                                         </p>
                                     </div>
-                                    <p className='text-base font-hind font-medium mt-3'>
+                                    <p className='text-base font-hind font-medium mt-4'>
                                         <span className='font-montserrat text-2xl font-bold'>$850</span> / month, billed
                                         annually
                                     </p>
                                     <div className='flex mt-4'>
-                                        <img src={PricingCheck} alt='' className='mt-1.5' />
+                                        <img src={PricingCheck} alt='' className='mt-3.5' />
                                         <p
                                             className='font-hind text-base mt-4 ml-2'
                                             css={css`
@@ -190,7 +190,7 @@ const PricingPage = ({ location }) => {
                                         billed annually
                                     </p>
                                     <div className='flex mt-4'>
-                                        <img src={PricingCheck} alt='' className='mt-1.5' />
+                                        <img src={PricingCheck} alt='' className='mt-3.5' />
                                         <p
                                             className='font-hind text-base mt-4 ml-2'
                                             css={css`
@@ -248,9 +248,9 @@ const PricingPage = ({ location }) => {
                                             growth stage
                                         </p>
                                     </div>
-                                    <p className='font-montserrat text-2xl mt-4'>Tailored to your needs</p>
+                                    <p className='font-montserrat text-2xl font-medium mt-4'>Tailored to your needs</p>
                                     <div className='flex mt-4'>
-                                        <img src={PricingCheck} alt='' className='mt-1.5' />
+                                        <img src={PricingCheck} alt='' className='mt-3.5' />
                                         <p
                                             className='font-hind text-base mt-4 ml-2'
                                             css={css`
@@ -346,7 +346,8 @@ const PricingPage = ({ location }) => {
                                     className='ml-2 text-sm hover:underline'
                                     to={'/use-cases/cloud-data-security/'}
                                 >
-                                    Multi-cloud support (AWS, Google Cloud, Azure, Alibaba Cloud)
+                                    Multi-cloud support (AWS, Google Cloud, Azure,
+                                    <br className='hidden lg:block' /> Alibaba Cloud)
                                 </GatsbyLink>
                             </div>
                             <div className='flex mt-2 items-start'>
