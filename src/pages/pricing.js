@@ -347,7 +347,7 @@ const PricingPage = ({ location }) => {
                                     to={'/use-cases/cloud-data-security/'}
                                 >
                                     Multi-cloud support (AWS, Google Cloud, Azure,
-                                    <br className='hidden lg:block' /> Alibaba Cloud)
+                                    <br className='hidden xl:block' /> Alibaba Cloud)
                                 </GatsbyLink>
                             </div>
                             <div className='flex mt-2 items-start'>
