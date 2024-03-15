@@ -53,10 +53,14 @@ const TiltImage = () => {
             if (animationCompleted) return;
 
             const boundingClientRect = imageRef.current.getBoundingClientRect();
-            const visiblePercentage = Math.max(
+            let visiblePercentage = Math.max(
                 0,
                 Math.min(1, (window.innerHeight - boundingClientRect.top) / window.innerHeight)
             );
+
+            const animationSpeedMultiplier = 1.5;
+            visiblePercentage = Math.min(1, visiblePercentage * animationSpeedMultiplier);
+
             const newScale = Math.min(1, initialScale + (1 - initialScale) * visiblePercentage);
             const newRotateX = initialRotateX * (1 - visiblePercentage);
 
