@@ -113,14 +113,7 @@ const PricingPage = ({ location }) => {
                                             duration={500}
                                             className='cursor-pointer'
                                         >
-                                            <h2
-                                                className='text-blue font-montserrat font-bold mt-3'
-                                                css={css`
-                                                    font-size: 1.125rem;
-                                                `}
-                                            >
-                                                Pro
-                                            </h2>
+                                            <h2 className='text-blue font-montserrat font-bold text-2xl mt-3'>Pro</h2>
                                         </Link>
                                         <p
                                             className='text-blue py-2 px-3 rounded-md font-bold font-hind text-xs mt-3'
@@ -131,14 +124,14 @@ const PricingPage = ({ location }) => {
                                             fits most SaaS companies
                                         </p>
                                     </div>
-                                    <p className='text-base font-hind font-medium mt-3'>
-                                        <span className='font-montserrat text-2xl font-bold'>$700</span> / month, billed
+                                    <p className='text-base font-hind font-medium mt-4'>
+                                        <span className='font-montserrat text-2xl font-bold'>$850</span> / month, billed
                                         annually
                                     </p>
-                                    <div className='flex'>
-                                        <img src={PricingCheck} alt='' className='mt-1.5' />
+                                    <div className='flex mt-4'>
+                                        <img src={PricingCheck} alt='' className='mt-3.5' />
                                         <p
-                                            className='font-hind text-base mt-2 ml-2'
+                                            className='font-hind text-base mt-4 ml-2'
                                             css={css`
                                                 color: #818791;
                                             `}
@@ -157,7 +150,7 @@ const PricingPage = ({ location }) => {
                                             Up to 1000 <AssetsTooltip />
                                         </p>
                                     </div>
-                                    <div className='mt-63px'>
+                                    <div className='mt-8'>
                                         <Link
                                             to='meetings-calendar'
                                             smooth={true}
@@ -181,32 +174,25 @@ const PricingPage = ({ location }) => {
                                             duration={500}
                                             className='cursor-pointer'
                                         >
-                                            <h2
-                                                className='text-blue font-montserrat font-bold mt-3'
-                                                css={css`
-                                                    font-size: 1.125rem;
-                                                `}
-                                            >
-                                                Scale
-                                            </h2>
+                                            <h2 className='text-blue font-montserrat font-bold text-2xl mt-3'>Scale</h2>
                                         </Link>
+                                        <p
+                                            className='text-blue py-2 px-3 rounded-md font-bold font-hind text-xs mt-3'
+                                            css={css`
+                                                background-color: #d8deff;
+                                            `}
+                                        >
+                                            perfect for SMEs
+                                        </p>
                                     </div>
                                     <p className='text-base font-hind font-medium mt-4'>
                                         <span className='font-montserrat text-2xl font-bold'>$2,000</span> / month,
                                         billed annually
                                     </p>
-                                    <p
-                                        className='font-hind text-base mt-2'
-                                        css={css`
-                                            color: #818791;
-                                        `}
-                                    >
-                                        Scale your company
-                                    </p>
-                                    <div className='flex'>
-                                        <img src={PricingCheck} alt='' className='mt-1.5' />
+                                    <div className='flex mt-4'>
+                                        <img src={PricingCheck} alt='' className='mt-3.5' />
                                         <p
-                                            className='font-hind text-base mt-2 ml-2'
+                                            className='font-hind text-base mt-4 ml-2'
                                             css={css`
                                                 color: #818791;
                                             `}
@@ -249,31 +235,24 @@ const PricingPage = ({ location }) => {
                                             duration={500}
                                             className='cursor-pointer'
                                         >
-                                            <h2
-                                                className='text-blue font-montserrat font-bold mt-3'
-                                                css={css`
-                                                    font-size: 1.125rem;
-                                                `}
-                                            >
+                                            <h2 className='text-blue font-montserrat font-bold text-2xl mt-3'>
                                                 Enterprise
                                             </h2>
                                         </Link>
-                                    </div>
-                                    <div className='flex mt-4'>
-                                        <img src={PricingCheck} alt='' className='mt-1.5' />
                                         <p
-                                            className='font-hind text-base mt-2 ml-2'
+                                            className='text-blue py-2 px-3 rounded-md font-bold font-hind text-xs mt-3'
                                             css={css`
-                                                color: #818791;
+                                                background-color: #d8deff;
                                             `}
                                         >
-                                            Custom plan
+                                            growth stage
                                         </p>
-                                    </div>{' '}
-                                    <div className='flex'>
-                                        <img src={PricingCheck} alt='' className='mt-1.5' />
+                                    </div>
+                                    <p className='font-montserrat text-2xl font-medium mt-4'>Tailored to your needs</p>
+                                    <div className='flex mt-4'>
+                                        <img src={PricingCheck} alt='' className='mt-3.5' />
                                         <p
-                                            className='font-hind text-base mt-2 ml-2'
+                                            className='font-hind text-base mt-4 ml-2'
                                             css={css`
                                                 color: #818791;
                                             `}
@@ -281,18 +260,18 @@ const PricingPage = ({ location }) => {
                                             1-on-1 onboarding
                                         </p>
                                     </div>{' '}
-                                    <div className='flex items-start'>
-                                        <img src={PricingCheck} alt='' className='mt-2.5' />
+                                    <div className='flex relative'>
+                                        <img src={PricingCheck} alt='' className='mt-1.5' />
                                         <p
                                             className='font-hind text-base mt-2 ml-2'
                                             css={css`
                                                 color: #818791;
                                             `}
                                         >
-                                            Group training and best practices tips for your team
+                                            Support for your team
                                         </p>
                                     </div>
-                                    <div className='mt-10 sm:mt-14 lg:mt-10'>
+                                    <div className='mt-8'>
                                         <Link
                                             to='meetings-calendar'
                                             smooth={true}
@@ -367,13 +346,15 @@ const PricingPage = ({ location }) => {
                                     className='ml-2 text-sm hover:underline'
                                     to={'/use-cases/cloud-data-security/'}
                                 >
-                                    Multi-cloud support (AWS, Google Cloud, Azure, Alibaba Cloud)
+                                    Multi-cloud support (AWS, Google Cloud, Azure,
+                                    <br className='hidden xl:block' /> Alibaba Cloud)
                                 </GatsbyLink>
                             </div>
                             <div className='flex mt-2 items-start'>
                                 <img src={checkMarkIcon} alt='' />{' '}
                                 <p className='ml-2 text-sm'>
-                                    Integrations (AWS SSO, Okta, Google Workspace, <br className="hidden lg:block" /> Azure AD)
+                                    Integrations (AWS SSO, Okta, Google Workspace, <br className='hidden lg:block' />{' '}
+                                    Entra ID)
                                 </p>
                             </div>
                             <div className='flex mt-2'>
@@ -558,7 +539,7 @@ const PricingPage = ({ location }) => {
                 >
                     <Container className='mb-16'>
                         <h1 className='text-blue text-center text-3xl lg:text-5xl font-bold font-montserrat'>
-                            Let's talk
+                            Get a Demo
                         </h1>
                         <p className='my-8 text-center font-medium text-sm lg:text-base font-montserrat'>
                             Get peace of mind with cloud security that doesn't hold you back!
