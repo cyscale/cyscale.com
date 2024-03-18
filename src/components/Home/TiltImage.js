@@ -20,32 +20,17 @@ const TiltImage = () => {
     const initialScale = 0.8505;
     const initialRotateX = 11.96;
 
-    const [isMounted, setIsMounted] = useState(false);
     const [scale, setScale] = useState(initialScale);
     const [rotateX, setRotateX] = useState(initialRotateX);
     const [animationCompleted, setAnimationCompleted] = useState(false);
     const imageRef = useRef();
     const isMobile = useMediaQuery('(max-width: 1280px)');
-    const animationsEnabled = !isSafari && !isMobile && isMounted;
 
     useEffect(() => {
-        const resetStateOnRefresh = () => {
-            setScale(initialScale);
-            setRotateX(initialRotateX);
-            setAnimationCompleted(false);
-        };
-
-        window.addEventListener('load', resetStateOnRefresh);
-
-        return () => {
-            window.removeEventListener('load', resetStateOnRefresh);
-        };
-    }, []);
-
-    useEffect(() => {
-        setIsMounted(true);
-
-        if (!animationsEnabled) {
+        if (isSafari || isMobile) {
+            setAnimationCompleted(true);
+            setScale(1);
+            setRotateX(0);
             return;
         }
 
@@ -69,55 +54,35 @@ const TiltImage = () => {
 
             if (newScale === 1) {
                 setAnimationCompleted(true);
-                window.removeEventListener('scroll', handleScroll);
             }
         };
 
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting && !animationCompleted) {
-                    window.addEventListener('scroll', handleScroll);
-                    handleScroll();
-                } else {
-                    window.removeEventListener('scroll', handleScroll);
-                }
-            },
-            {
-                threshold: 0.05
-            }
-        );
+        handleScroll();
 
-        if (imageRef.current) {
-            observer.observe(imageRef.current);
-        }
+        window.addEventListener('scroll', handleScroll);
 
-        return () => {
-            if (imageRef.current) {
-                observer.unobserve(imageRef.current);
-            }
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, [animationsEnabled, animationCompleted]);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [animationCompleted]);
 
-    const transform = !animationsEnabled ? 'none' : `scale(${scale}) rotateX(${rotateX}deg)`;
+    const transformStyle = `scale(${scale}) rotateX(${rotateX}deg)`;
 
     return (
         <div
             ref={imageRef}
             css={css`
-                perspective: ${animationsEnabled ? '1000px' : 'none'};
-                -webkit-perspective: ${animationsEnabled ? '1000px' : 'none'};
-                perspective-origin: 50%;
-                -webkit-perspective-origin: 50%;
+                perspective: 1000px;
+                -webkit-perspective: 1000px;
+                perspective-origin: center;
+                -webkit-perspective-origin: center;
                 position: relative;
             `}
         >
             <div
                 css={css`
                     will-change: transform;
-                    transform: ${transform};
+                    transform: ${transformStyle};
                     transform-style: preserve-3d;
-                    transition: ${!animationsEnabled ? 'none' : 'transform 0.7s ease-out'};
+                    transition: transform 0.7s ease-out;
                     position: relative;
                 `}
             >
