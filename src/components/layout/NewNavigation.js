@@ -316,11 +316,6 @@ const NewNavigation = ({
                             <img src={searchIcon} className='py-2 cursor-pointer' alt='' width={22} />
                         </span>
                     </li>
-                    <li className='py-6 pl-4'>
-                        <a href='https://app.cyscale.com' target='_blank' rel='noopener noreferrer'>
-                            <img src={loginIcon} className='py-2' alt='' />
-                        </a>
-                    </li>
                     <li className='ml-auto py-6 pr-0 pl-7'>
                         <Link
                             className='bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] w-auto text-sm px-4 border-transparent box-border rounded-md h-10 hidden xl:flex justify-center items-center uppercase leading-none text-white transition duration-500 hover:no-underline font-medium'

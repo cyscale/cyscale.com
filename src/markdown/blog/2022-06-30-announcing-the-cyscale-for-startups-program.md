@@ -61,6 +61,6 @@ You can [apply to the program](https://cyscale.com/security-for-startups-program
 
 By implementing an early cybersecurity program using the Cyscale Platform, startups can take advantage of our intensive cloud security research, up-to-date compliance frameworks mapping, and [best practices](https://cyscale.com/blog/5-cspm-best-practices-and-strategies/) in improving their security posture without spending too much or hiring specialized staff. The purpose is to raise awareness about the importance of security and compliance in the cloud. 
 
-If you don’t meet these criteria but are still interested in learning more about Cyscale, you can [sign up for free](https://app.cyscale.com/) or book a [demo](https://cyscale.com/request-demo/). 
+If you don’t meet these criteria but are still interested in learning more about Cyscale, you can book a [demo](https://cyscale.com/request-demo/). 
 
 <!--EndFragment-->
