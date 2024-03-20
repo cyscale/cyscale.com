@@ -98,15 +98,6 @@ const MobileNavigation = ({ showMenu, setShowMenu, appLink }) => {
                     <Link className='block my-3' to='/contact-us/'>
                         Contact
                     </Link>
-                    <div className='pb-5'>
-                        <a href='https://app.cyscale.com' target='_blank' rel='noopener noreferrer'>
-                            Login
-                        </a>{' '}
-                        |{' '}
-                        <a href={appLink} target='_blank' rel='noopener noreferrer'>
-                            Sign Up
-                        </a>{' '}
-                    </div>
                 </div>
             </div>
         </div>
