@@ -136,7 +136,7 @@ const NewNavigation = ({
                     tw`container`,
                 isAnimatedNavbarPage(pathname) &&
                     css`
-                        padding-left: 4.5rem;
+                        padding-left: 6.8rem;
                     `
             ]}
         >
