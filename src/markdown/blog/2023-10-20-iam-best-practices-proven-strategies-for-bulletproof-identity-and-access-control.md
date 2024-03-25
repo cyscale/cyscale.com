@@ -51,6 +51,12 @@ Let’s take a look at the key stages in the access management lifecycle, keepin
 * **Access review:** these are periodic evaluations of permissions assigned to users, groups, or roles. This stage involves reviewing and validating that individuals or entities have appropriate access levels based on their current roles and responsibilities. 
 * **Offboarding:** This stage is crucial and involves removing users from the company's systems, revoking permissions and disabling accounts, thus preventing unauthorized access after an individual leaves the organization. 
 
+
+
+In addition to the critical aspects of managing human identities within the IAM framework, it's equally important to address **non-human identity management**. Non-human identities, such as service accounts, bots, and IoT devices, play a critical role in the cloud environment. 
+
+These identities require a different set of strategies for effective access control and security management. The complexity and significance of non-human identity management in a multi-cloud ecosystem cannot be overstated. It involves the careful orchestration of permissions and roles tailored to the specific needs and risks associated with automated processes and machine-to-machine interactions. For a deeper dive into managing both human and non-human identities across multiple cloud platforms, check out our comprehensive guide on **[non-human identity management.](https://cyscale.com/blog/human-non-human-identity-management-multi-cloud/)**
+
 ### Centralizing IAM processes in the cloud 
 
 In order to handle an impossible workload and ensure due process is followed each and every time, centralization has become key. Let’s look at best practices to secure [IAM in the cloud](https://cyscale.com/blog/iam-services-in-aws-azure-gcp/) throughout the identity lifecycle. 
