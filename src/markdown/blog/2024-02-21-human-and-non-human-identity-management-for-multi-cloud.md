@@ -19,7 +19,7 @@ tableOfContents: false
 ---
 So far, Cyscale has focused on making it easy to see **who** (colleagues, collaborators, guests, fellow humans) has access to your cloud environments. Now you can also see **what**.  
 
-## Why are non-human identities important? 
+## Why is non-human identity management important? 
 
 Nearly 90% of organizations routinely provide access privileges to non-humans, and 50% admit they have granted inappropriate access to non-humans*. But a similar number (54%) also revealed that inappropriate access granted to a non-employee or non-human has resulted in severe incidents, such as lost control of resources, data loss, and direct security breaches.    
 
@@ -30,6 +30,8 @@ It’s become widely accepted that to effectively use the cloud, you need to tru
 But we frequently encounter environments among our own customer base with a non-human identity attached to a machine that has high or inappropriate privileges, is publicly accessible from the internet, and has a vulnerability.  
 
 Any attacker capable of exploiting that identity will be able to move laterally in the environment. 
+
+
 
 ## But humans use the cloud 
 
@@ -45,7 +47,6 @@ Let’s say you have an employee that’s leaving in a month, and you need to se
     <img src="/img/inventory-accessible.png" alt="Inventory view of database access control" class="rounded-md" style="width: 100%; margin: 0;" />
   </div>
 </div>
-
 
 <div class='mt-16 rounded-tl-2xl rounded-b-2xl grid grid-cols-12 gap-4 bg-zircon py-8 px-4 lg:py-4' style='borderTopRightRadius: 3rem'>
     <div class='col-span-12 lg:col-span-2'>
@@ -93,6 +94,6 @@ Our updated Identity dashboard now gives you an overview of the identities of yo
 * Who / What can access that asset  
 * What other resources can be accessed by that asset as a machine or non-human identity 
 
-<img src="/img/identity-dashboard-service-accs.png" alt="The Cyscale Identity dashboard" title="" class=" blog-image-shadow " style="width:90%;height:auto;"/>
+<img src="/img/identity-dashboard-service-accs.png" alt="The Cyscale Identity dashboard" title="" class=" blog-image-shadow " style="width:auto;height:auto;"/>
 
 \*﻿\*SailPoint: <https://www.sailpoint.com/blog/survey-finds-non-employee-and-non-human-identities-leading-to-major-security-issues/>
