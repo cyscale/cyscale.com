@@ -132,7 +132,9 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
                                         />
                                     );
                                 },
-                                img: ({ node, ...props }) => <CustomImageRenderer {...props} images={images} />
+                                ...(preview ? {} : {
+                                    img: ({ node, ...props }) => <CustomImageRenderer {...props} images={images} preview={preview} />,
+                                }),
                             }}
                         >
                             {data.rawMarkdownBody}
