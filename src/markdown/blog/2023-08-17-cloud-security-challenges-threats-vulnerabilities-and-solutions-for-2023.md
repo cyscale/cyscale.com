@@ -50,7 +50,7 @@ Cloud security solutions such as [Cyscale](https://cyscale.com/products/cloud-se
 Our platform can [automatically respond to queries and surface uncovered issues](https://cyscale.com/blog/introducing-ai-powered-security-assistant/) using the specific customers’ cloud footprint combined with LLMs of vulnerabilities and exploits.
 
 <a href="https://cyscale.com/cloud-security-risk-assessment/">
-    <img src="/img/assessment-cta.png" alt="" title="" id='cta-image'/>
+    <img src="/img/assessment-cta.png" alt="" title="" id='cta-image' data-ignore="true"/>
 </a>
 
 # 2. Phishing and Social Engineering 
@@ -211,7 +211,7 @@ As we navigate AI-driven threats, the looming potential of quantum computing, an
 To prepare for this changing landscape, book a free cloud security health assessment with Cyscale. Get complete visibility of your entire cloud estate in minutes and assess your cloud security posture, so you can expose, understand, and prioritize any threats. 
 
 <a href="https://cyscale.com/cloud-security-risk-assessment/">
-    <img src="/img/assessment-cta.png" alt="" title="" id='cta-image'/>
+    <img src="/img/assessment-cta.png" alt="" title="" id='cta-image' data-ignore="true"/>
 </a>
 
 ## Cloud Security Strategy Roadmap 

@@ -15,11 +15,12 @@ import { css } from 'twin.macro';
 import FurtherReadingSection from './FurtherReadingSection';
 import ScrollIndicator from './ScrollbarIndicator';
 import classnames from 'classnames';
-import { headingRenderer } from '../../common/utils';
+import { extractImagesFromMarkdown, headingRenderer } from '../../common/utils';
 import Toc from './TOC';
 import FAQsBlog from './FAQsBlog';
 import BlogLinks from './BlogLinks';
 import AuthorSection from './AuthorSection';
+import CustomImageRenderer from './CustomImageRenderer';
 
 const ctaWhitepaperTextColor = css`
     color: #474747;
@@ -29,6 +30,8 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
     const { categories } = data;
 
     const scrollRef = useRef(null);
+
+    const images = extractImagesFromMarkdown(data.rawMarkdownBody);
 
     return (
         <div className='relative'>
@@ -128,7 +131,8 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
                                             target={isInternalLink ? '_self' : '_blank'}
                                         />
                                     );
-                                }
+                                },
+                                img: ({ node, ...props }) => <CustomImageRenderer {...props} images={images} />
                             }}
                         >
                             {data.rawMarkdownBody}

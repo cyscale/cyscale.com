@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import tw, { css } from 'twin.macro';
 import { Link } from 'gatsby';
 import logo from '../../assets/images/logo.svg';
-import loginIcon from '../../assets/images/login.svg';
 import searchIcon from '../../assets/images/search-icon.svg';
 
 import styled from '@emotion/styled';

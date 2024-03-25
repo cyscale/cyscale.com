@@ -101,3 +101,22 @@ export const disableLogoLink = (pageName) => {
 export const formatCategoryToSlug = (categoryName) => {
     return categoryName.toLowerCase().split(' ').join('-');
 };
+
+export const extractImagesFromMarkdown = (markdown) => {
+    const images = [];
+
+    const markdownImageRegex = /!\[([^\]]*)\]\(([^)"'\s]+).*?\)/g;
+
+    const htmlImageRegex = /<img\s+(?![^>]*\sdata-ignore="true")[^>]*src="([^"]*)"[^>]*alt="([^"]*)"/g;
+
+    let match;
+    while ((match = markdownImageRegex.exec(markdown)) !== null) {
+        images.push({ alt: match[1].trim(), src: match[2].trim() });
+    }
+
+    while ((match = htmlImageRegex.exec(markdown)) !== null) {
+        images.push({ src: match[1].trim(), alt: match[2].trim() });
+    }
+
+    return images;
+};

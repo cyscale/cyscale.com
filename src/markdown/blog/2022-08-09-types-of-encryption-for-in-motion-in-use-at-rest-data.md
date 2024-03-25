@@ -110,12 +110,12 @@ Websites should use HTTPS (Hypertext Transfer Protocol Secure) instead of HTTP t
 
 To discover more about your data and keys, book a free cloud security risk assessment with Cyscale.
 
-<a href="https://cyscale.com/cloud-security-risk-assessment/"><img src="/img/cyscale-article-image-4.jpg" alt="" title="" class=" blog-image-shadow " style="width:31.25rem;height:auto;"/></a>
+<a href="https://cyscale.com/cloud-security-risk-assessment/"><img src="/img/cyscale-article-image-4.jpg" alt="" title="" class=" blog-image-shadow " style="width:31.25rem;height:auto;" data-ignore="true"/></a>
 
 
 
 <a href="https://cyscale.com/cloud-security-risk-assessment/">
-    <img src="/img/assessment-cta.png" alt="" title="" id='cta-image'/>
+    <img src="/img/assessment-cta.png" alt="" title="" id='cta-image' data-ignore="true"/>
 </a>
 
 ### In Use Encryption 

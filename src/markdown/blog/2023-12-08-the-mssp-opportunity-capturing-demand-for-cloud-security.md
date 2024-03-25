@@ -49,7 +49,7 @@ Furthermore, managed services for cloud are not seen as a stopgap measure but as
 
 <br class="" />
 
-<a href="https://cyscale.com/resources/empowering-mssps.pdf"><img src="/img/cloud-security-mssps-banner.jpg" alt="Get the Cyscale Cloud Security Platform for MSSPs Datasheet" title="" class="" style="width:33.75rem;height:auto;"/></a>
+<a href="https://cyscale.com/resources/empowering-mssps.pdf"><img src="/img/cloud-security-mssps-banner.jpg" alt="Get the Cyscale Cloud Security Platform for MSSPs Datasheet" title="" class="" style="width:33.75rem;height:auto;" data-ignore="true"/></a>
 
 ## From MSP to MSSP (Managed Security Service Provider) 
 

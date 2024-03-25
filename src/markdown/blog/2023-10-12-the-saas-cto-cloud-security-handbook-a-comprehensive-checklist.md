@@ -90,7 +90,7 @@ We have a primer on *[cloud-native applications security](https://cyscale.com/bl
 
 B﻿ook a free assessment with Cyscale to use CNAPP capabilities to secure your cloud security posture.
 
-<a href="https://cyscale.com/cloud-security-risk-assessment/"><img src="/img/36_blog-1-cards.webp" alt="" title="" class=" blog-image-shadow " style="width:auto;height:auto;"/></a>
+<a href="https://cyscale.com/cloud-security-risk-assessment/"><img src="/img/36_blog-1-cards.webp" alt="" title="" class=" blog-image-shadow " style="width:auto;height:auto;" data-ignore="true"/></a>
 
 <div class="pb-0 pt-4 lg:pb-0 lg:pt-2 flex flex-col items-center"><a href="https://cyscale.com/cloud-security-risk-assessment/"><button class="bg-gradient-to-r from-[#0F26AA] to-[#FF4A56] hover:from-[#FF4A56] hover:to-[#0F26AA] block font-medium rounded text-white uppercase text-center no-underline hover:no-underline max-w-sm lg:inline-block font-hind" style="padding: 0.625rem 2.5rem;">Start assessment</button></a></div>
 
