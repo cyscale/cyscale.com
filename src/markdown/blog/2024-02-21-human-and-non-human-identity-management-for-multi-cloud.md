@@ -31,9 +31,7 @@ But we frequently encounter environments among our own customer base with a non-
 
 Any attacker capable of exploiting that identity will be able to move laterally in the environment. 
 
-The complexity of managing non-human identities in multi-cloud environments highlights the importance of adopting strategies to oversee service accounts, automated processes, and machine identities.  These non-human entities play a crucial role in operational efficiency but present unique challenges in security management.
 
-For an in-depth exploration of best practices and innovative approaches to managing non-human identities, consider reading our detailed article on [Human and Non-Human Identity Management](https://cyscale.com/blog/human-non-human-identity-management-multi-cloud/) for Multi-Cloud. 
 
 ## But humans use the cloud 
 
