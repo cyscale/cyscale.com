@@ -60,6 +60,12 @@ As a guest, the "fake" Anita cannot do much. She can only access some resources 
 
 But, looking closely, she discovers that she is now part of the ITAdmins group. How did that happen?! On a closer look, ITAdmins has a dynamic membership rule that states that all users whose department is "IT" become part of the group. The IT department wanted to make things easy for them and allow all employees in IT to join this group automatically. 
 
+
+
+As we dissect these vulnerabilities and missteps, it's vital to also turn our attention towards the realm of **non-human identity management**. Just as human identities can be compromised or mismanaged leading to security breaches, non-human identities, such as automated service accounts, APIs, and machine identities, present their own set of challenges in cloud security. 
+
+These non-human entities often have permissions and access that, if not properly managed, could be exploited in similar or more complex attack vectors. Managing these identities requires specialized strategies to ensure they are as secure as human identities. For a comprehensive understanding of how to manage both human and non-human identities effectively in multi-cloud environments, our in-depth guide on **[non-human identity management](https://cyscale.com/blog/human-non-human-identity-management-multi-cloud/)** offers valuable insights and best practices.
+
 <img src="/img/55_blog-dynamic-membership-rule.png" alt="Dynamic membership rule for ITAdmins group" title="Dynamic membership rule for ITAdmins group" class=" blog-image-shadow " style="width:auto;height:auto;"/>
 
 However, this rule is very broad and opens up the possibility for mistakes. In this case, Anita was assigned the “IT” department, and she immediately joined the ITAdmins group, since Azure checks the attributes for a user whenever they are changed or a new user joins the cloud.  
