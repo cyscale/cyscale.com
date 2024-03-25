@@ -29,7 +29,7 @@ const ImageModal = ({ src, alt, toggleModal }) => {
             onClick={toggleModal}
             onKeyPress={() => {}}
             tabIndex="0"
-            role='button'
+            role='presentation'
         >
             <button type='button' className='top-5 right-10 inline-block absolute cursor-pointer z-40' tabIndex='0'>
                 <img src={WhiteCloseButton} alt='toggle menu' width={15} height={15} />
@@ -74,7 +74,7 @@ const CustomImageRenderer = ({ src, alt, id, images, ...rest }) => {
                     `}
                     onKeyPress={() => {}}
                     tabIndex="0"
-                    role='button'
+                    role='presentation'
                     onClick={toggleModal}
                 />
             ) : (
