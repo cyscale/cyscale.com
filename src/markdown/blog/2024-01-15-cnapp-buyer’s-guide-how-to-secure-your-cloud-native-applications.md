@@ -229,5 +229,5 @@ You can sign up for a [no commitment cloud risk assessment here](https://cyscale
 Or explore each of the components that make up an [effective CNAPP in our video tours](https://cyscale.com/full-platform-tour/), here.
 
 <a href="https://cyscale.com/cloud-security-risk-assessment/" rel="noopener noreferrer" target="_blank">
-    <img src="/img/assessment-cta.png" alt="" title="" id="cta-image">
+    <img src="/img/assessment-cta.png" alt="" title="" id="cta-image" data-ignore="true">
 </a>

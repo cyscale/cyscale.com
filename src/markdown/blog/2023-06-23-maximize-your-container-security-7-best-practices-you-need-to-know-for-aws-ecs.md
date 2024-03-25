@@ -67,7 +67,7 @@ While ECS provides a robust container management framework, it's crucial to be a
 * **Lack of logging and monitoring**: Insufficient monitoring and logging of ECS services can make detecting and responding to security incidents challenging. 
 
 <a href="https://cyscale.com/cloud-security-risk-assessment/">
-    <img src="/img/assessment-cta.png" alt="" title="" id='cta-image'/>
+    <img src="/img/assessment-cta.png" alt="" title="" id='cta-image' data-ignore="true"/>
 </a>
 
 ## Best practices for containers security on ECS 

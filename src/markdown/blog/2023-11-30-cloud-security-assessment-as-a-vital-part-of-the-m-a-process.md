@@ -88,7 +88,7 @@ It’s not enough to understand the technology you’ve been using to date, you 
 
 <br class="" />
 
-<a href="#data"><img src="/img/data-dash.png" alt="" title="" class=" blog-image-shadow " style="width:auto;height:auto;"/></a>
+<a href="#data"><img src="/img/data-dash.png" alt="" title="" class=" blog-image-shadow " style="width:auto;height:auto;" data-ignore="true"/></a>
 
 ### Attempting integration of incompatible systems 
 
@@ -103,7 +103,7 @@ Minimize the time data is unencrypted. Decrypt the data only when necessary for 
 <br class="" />
 
 <a href="#data">
-  <img src="/img/encryption-dash.png" alt="" title="" class="blog-image-shadow" style="width:32.0625rem;height:auto;"/>
+  <img src="/img/encryption-dash.png" alt="" title="" class="blog-image-shadow" style="width:32.0625rem;height:auto;" data-ignore="true"/>
     <br>
     <span class='text-center block'> See how Cyscale solved this challenge by revealing encryption status for data <br class="hidden lg:block">
     and identifying misconfigurations in data stores</span>
@@ -122,7 +122,7 @@ Furthermore, perform access reviews to thoroughly understand the permissions use
 <br class="" />
 
 <a href="#inventory">
-    <img src="/img/inventory-dash.png" alt="" title="" class="blog-image-shadow" style="width:auto;height:auto;"/>
+    <img src="/img/inventory-dash.png" alt="" title="" class="blog-image-shadow" style="width:auto;height:auto;" data-ignore="true"/>
     <br>
     <span class='text-center block'>See how Cyscale gives you full visibility of your cloud estate by revealing all assets 
     and their issues in minutes</span>
@@ -143,7 +143,7 @@ In terms of data sovereignty, this means understanding how to store data in the 
 <br class="" />
 
 <a href="#compliance">
-    <img src="/img/compliance-dash.png" alt="" title="" class="blog-image-shadow" style="width:38.563rem;height:auto;"/>
+    <img src="/img/compliance-dash.png" alt="" title="" class="blog-image-shadow" style="width:38.563rem;height:auto;" data-ignore="true"/>
     <br>
     <span class='block text-center'>See how Cyscale helps you comply with dozens of standards out of the box
     and offers support for custom controls</span>
@@ -192,5 +192,5 @@ An easy-to-understand report can then be used to make the case for additional fu
 <br class="" />
 
 <a href="https://cyscale.com/request-demo/">
-    <img src="/img/assessment-cta.png" alt="" title="" id='cta-image'/>
+    <img src="/img/assessment-cta.png" alt="" title="" id='cta-image' data-ignore="true"/>
 </a>
