@@ -100,8 +100,7 @@ const Resources = ({ pathname, activeLinks, setActiveLinks, pageName }) => {
                                 className={classnames({
                                     'p-2 hover:font-medium block': true,
                                     active:
-                                        (resource.text === 'Blog' && pageName === 'blog') ||
-                                        (resource.text === 'Blog' && pageName === 'blog-detail')
+                                        resource.text === 'Blog' && (pageName === 'blog' || pageName === 'blog-detail')
                                 })}
                                 to={resource.link}
                                 css={fontNavLinkStyle}
