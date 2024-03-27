@@ -12,6 +12,7 @@ import Company from './components/Company/Company';
 import { logoStyle } from './style';
 import useScrollTrigger from '../scrollTrigger';
 import { isAnimatedNavbarPage, isPlaygroundBlogPage } from '../../common/utils';
+import page from '../pages/Page';
 
 const MegaMenu = styled.div`
     left: ${({ animatedNavbarPages, left }) => (animatedNavbarPages ? left : '')};
@@ -272,6 +273,7 @@ const NewNavigation = ({
                                     pathname={pathname}
                                     activeLinks={activeLinks}
                                     setActiveLinks={setActiveLinks}
+                                    pageName={pageName}
                                 />
                             )}
                         </MegaMenu>

@@ -6,6 +6,7 @@ import { css } from 'twin.macro';
 import { isAnimatedNavbarPage, isPlaygroundBlogPage } from '../../../../common/utils';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import RightArrow from '../../../sharedComponent/RightArrow';
+import classnames from 'classnames';
 
 const caretResources = (isAnimatedNavbarPage) => css`
     :before {
@@ -19,7 +20,7 @@ const hrStyle = css`
     width: 9.625rem;
 `;
 
-const Resources = ({ pathname, activeLinks, setActiveLinks }) => {
+const Resources = ({ pathname, activeLinks, setActiveLinks, pageName }) => {
     const data = useStaticQuery(graphql`
         query ResourcesQuery {
             whitepapers: file(relativePath: { eq: "whitepapers.png" }) {
@@ -96,7 +97,12 @@ const Resources = ({ pathname, activeLinks, setActiveLinks }) => {
                     ) : (
                         <div className='mb-2' key={key}>
                             <Link
-                                className='p-2 hover:font-medium block'
+                                className={classnames({
+                                    'p-2 hover:font-medium block': true,
+                                    active:
+                                        (resource.text === 'Blog' && pageName === 'blog') ||
+                                        (resource.text === 'Blog' && pageName === 'blog-detail')
+                                })}
                                 to={resource.link}
                                 css={fontNavLinkStyle}
                                 activeClassName='active'
