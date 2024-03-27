@@ -272,6 +272,7 @@ const NewNavigation = ({
                                     pathname={pathname}
                                     activeLinks={activeLinks}
                                     setActiveLinks={setActiveLinks}
+                                    pageName={pageName}
                                 />
                             )}
                         </MegaMenu>
