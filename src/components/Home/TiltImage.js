@@ -24,10 +24,10 @@ const TiltImage = () => {
     const [rotateX, setRotateX] = useState(initialRotateX);
     const [animationCompleted, setAnimationCompleted] = useState(false);
     const imageRef = useRef();
-    const isMobile = useMediaQuery('(max-width: 1280px)');
+    const isMobile = useRef(useMediaQuery('(max-width: 1280px)'));
 
     useEffect(() => {
-        if (isSafari || isMobile) {
+        if (isSafari || isMobile.current) {
             setAnimationCompleted(true);
             setScale(1);
             setRotateX(0);

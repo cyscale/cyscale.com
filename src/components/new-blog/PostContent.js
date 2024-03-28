@@ -121,10 +121,10 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
                                 h4: headingRenderer,
                                 h5: headingRenderer,
                                 h6: headingRenderer,
-                                // eslint-disable-next-line
                                 a: ({ node, ...props }) => {
                                     const isInternalLink = props.href.startsWith('#');
                                     return (
+                                        // eslint-disable-next-line
                                         <a
                                             {...props}
                                             rel='noopener noreferrer'
@@ -132,9 +132,13 @@ export default function PostContent({ data, suggestions, preview = false, pageUr
                                         />
                                     );
                                 },
-                                ...(preview ? {} : {
-                                    img: ({ node, ...props }) => <CustomImageRenderer {...props} images={images} />,
-                                }),
+                                ...(preview
+                                    ? {}
+                                    : {
+                                          img: ({ node, ...props }) => (
+                                              <CustomImageRenderer {...props} images={images} />
+                                          )
+                                      })
                             }}
                         >
                             {data.rawMarkdownBody}
