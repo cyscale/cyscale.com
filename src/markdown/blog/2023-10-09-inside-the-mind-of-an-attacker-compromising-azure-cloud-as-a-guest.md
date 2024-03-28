@@ -100,7 +100,7 @@ With the Key Vault Administrator role, Anita can [perform all data plane operati
 
 A key vault is a huge discovery for Anita, who can investigate further. Using the commandlet *Get-AzKeyVaultSecret*, Anita can see that there are a few keys and secrets in the key vault. She can now read them, delete them or add new versions of those secrets. 
 
-<img src="/img/55_blog-contents-of-the-key-vault.png" alt="The contents of the Credentials2 Key Vault" title="The contents of the Credentials2 Key Vault" class=" blog-image-shadow " style="width:auto;height:auto;"/>
+<img src="/img/55_blog-contents-of-the-key-vault.png" alt="The contents of the Credentials2 Key Vault" title="The contents of the Credentials2 Key Vault" class=" blog-image-shadow " style="width:auto;height:auto;" data-ignore="true"/>
 
 <img src="/img/55_blog-second-graph.png" alt="The attack path for the new user" title="The attack path for the new user" class=" blog-image-shadow " style="width:auto;height:auto;"/>
 

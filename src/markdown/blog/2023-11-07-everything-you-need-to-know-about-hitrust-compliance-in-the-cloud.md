@@ -151,7 +151,7 @@ There are a number of things you can do to protect your cloud apps and data agai
 
 Turning on Shielded VM in Google Cloud takes just a few clicks. Navigate to the VMs' "Security" configurations and tick all boxes under this feature.  
 
-<img src="/img/58_blog-shieldedvm.png" alt="Enabling Shielded VM in Google Cloud" title="Enabling Shielded VM in Google Cloud" class=" blog-image-shadow " style="width:auto;height:auto;"/>
+<img src="/img/58_blog-shieldedvm.png" alt="Enabling Shielded VM in Google Cloud" title="Enabling Shielded VM in Google Cloud" class=" blog-image-shadow " style="width:auto;height:auto;" data-ignore="true"/>
 
 ## Cloud back-ups best practices 
 
@@ -182,4 +182,4 @@ HITRUST CSF is a very complex and detailed compliance standard that can be overw
 
 To make the overall process more manageable, consider a solution such as the [Cyscale cloud securty platform](https://cyscale.com/) to keep track of your progress, monitor for drifts, and automate security checks that validate your efforts toward achieving HITRUST compliance. Cyscale has over 300 controls that verify your cloud settings against the HITRUST CSF standard and features easily exportable reports to better illustrate your efforts to an auditor, speeding your journey to accreditation. 
 
-<img src="/img/58_blog-standard-in-cyscale.png" alt="HITRUST in Cyscale" title="HITRUST in Cyscale" class=" blog-image-shadow " style="width:auto;height:auto;"/>
+<img src="/img/58_blog-standard-in-cyscale.png" alt="HITRUST in Cyscale" title="HITRUST in Cyscale" class=" blog-image-shadow " style="width:auto;height:auto;" data-ignore="true"/>
