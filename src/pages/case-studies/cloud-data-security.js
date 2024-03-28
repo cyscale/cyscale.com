@@ -355,12 +355,13 @@ const CDSecurity = ({ location }) => {
                         <p className='font-hind text-base mt-4' css={textColor}>
                             Ready to find out how Cyscale can protect your data in the cloud? Watch this video
                         </p>
-                        <video width='auto' height='auto' controls tabIndex='2' className='xl:pb-24 mt-4'>
+                        <video width='auto' height='auto' controls tabIndex='0' className='xl:pb-24 mt-4'>
                             <source
                                 src='https://d3n52qn7viv754.cloudfront.net/videos/data-security-tour.mp4'
                                 type='video/mp4'
                             />
                             Your browser does not support the video tag.
+                            <track src={null} kind="captions" srcLang="en" label="english_captions" />
                         </video>
                     </div>
                     <div className='flex flex-col self-stretch justify-between mt-20' ref={parentRef}>

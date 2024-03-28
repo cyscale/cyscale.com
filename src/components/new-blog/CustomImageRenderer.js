@@ -8,6 +8,7 @@ import WhiteCloseButton from '../../assets/images/white-close-icon.svg';
 const ImageModal = ({ src, alt, toggleModal }) => {
     useLockBodyScroll();
     useKeyPressStorylane('Escape', null, toggleModal);
+
     const handleImageClick = (event) => {
         event.stopPropagation();
     };
@@ -20,19 +21,21 @@ const ImageModal = ({ src, alt, toggleModal }) => {
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background-color: rgba(0, 0, 0, 0.5);
+                background-color: black;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 z-index: 1000;
             `}
             onClick={toggleModal}
-            onKeyPress={() => {}}
-            tabIndex="0"
             role='presentation'
         >
-            <button type='button' className='top-5 right-10 inline-block absolute cursor-pointer z-40' tabIndex='0'>
-                <img src={WhiteCloseButton} alt='toggle menu' width={15} height={15} />
+            <button
+                className='top-5 right-10 inline-block absolute cursor-pointer z-40'
+                onClick={toggleModal}
+                aria-label='Close image modal'
+            >
+                <img src={WhiteCloseButton} alt='Close modal' width={15} height={15} />
             </button>
             <div
                 css={css`
@@ -43,10 +46,14 @@ const ImageModal = ({ src, alt, toggleModal }) => {
                 <img
                     src={src}
                     alt={alt}
-                    onClick={handleImageClick}
                     css={css`
                         scale: 0.95;
+                        width: 100% !important;
+                        padding: 0 !important;
                     `}
+                    onKeyDown={() => {}}
+                    onClick={handleImageClick}
+                    role='presentation'
                 />
             </div>
         </div>
@@ -58,25 +65,22 @@ const CustomImageRenderer = ({ src, alt, id, images, ...rest }) => {
     const isDesktop = useMediaQuery('(min-width: 1280px)');
     const toggleModal = () => setIsModalOpen(!isModalOpen);
 
-    const isClickable = images.some((image) => {
-        return image.src === src;
-    });
+    const isClickable = images.some((image) => image.src === src);
 
     return (
         <>
             {isClickable && isDesktop ? (
-                <img
-                    src={src}
-                    alt={alt}
-                    {...rest}
-                    css={css`
-                        cursor: pointer;
-                    `}
-                    onKeyPress={() => {}}
-                    tabIndex="0"
-                    role='presentation'
+                <button
                     onClick={toggleModal}
-                />
+                    aria-label='Open image modal'
+                    css={css`
+                        width: 100%;
+                        border: none;
+                        outline: none;
+                    `}
+                >
+                    <img src={src} alt={alt} {...rest} />
+                </button>
             ) : (
                 <img src={src} alt={alt} id={id} {...rest} />
             )}

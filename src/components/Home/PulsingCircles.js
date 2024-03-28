@@ -29,6 +29,14 @@ const PulsingCircles = ({ tooltipText, position, wrapperStyle, useDebounce = fal
             css={wrapperStyle}
             onMouseEnter={() => handleHoverChange(true)}
             onMouseLeave={() => handleHoverChange(false)}
+            role='button'
+            tabIndex='0'
+            onKeyDown={(event) => {
+                if (event.key === 'Enter') {
+                    handleHoverChange(true);
+                }
+            }}
+            onBlur={() => handleHoverChange(false)}
         >
             <div className='relative flex items-center justify-center w-6 h-6'>
                 <Circle
